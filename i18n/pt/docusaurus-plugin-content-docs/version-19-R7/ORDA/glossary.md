@@ -76,7 +76,7 @@ Class for datastore objects, in which you can add custom functions.
 
 Internal name of the generic DataStore class in the `4D` class store.
 
-## Deep copy
+## Cópia profunda
 
 A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
 
@@ -139,7 +139,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   date
 *   object
 *   collection
-*   picture(\*)
+*   imagem(\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 

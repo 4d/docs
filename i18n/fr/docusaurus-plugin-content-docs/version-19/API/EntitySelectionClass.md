@@ -91,7 +91,7 @@ $employees:=Create entity selection([Employee])
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -139,7 +139,7 @@ A noter que l'entité correspondante est rechargée depuis le datastore.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -210,7 +210,7 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 | Version | Modifications                                        |
 | ------- | ---------------------------------------------------- |
 | v18 R5  | Supporte uniquement les entity selections altérables |
-| v17     | Ajoutées                                             |
+| v17     | Ajout                                                |
 
 </details>
 
@@ -276,7 +276,7 @@ Les appels vers la fonction peuvent être chaînés :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -340,7 +340,7 @@ Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à Ne
 | Version | Modifications                                     |
 | ------- | ------------------------------------------------- |
 | v18 R6  | Retourne undefined si l'entity selection est vide |
-| v17     | Ajoutées                                          |
+| v17     | Ajout                                             |
 
 </details>
 
@@ -391,7 +391,7 @@ Nous voulons obtenir la liste des employés dont le salaire est supérieur au sa
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -439,7 +439,7 @@ Si *entity* et l'entity selection n'appartiennent pas à la même dataclass, une
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -485,7 +485,7 @@ Nous voulons trouver le nombre total d'employés d'une entreprise sans compter c
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -549,7 +549,7 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -611,7 +611,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -671,7 +671,7 @@ Exemple avec l'option `dk stop dropping on first error` :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 
 </details>
 
@@ -772,7 +772,7 @@ Considérons les tables et relations suivantes :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -827,7 +827,7 @@ Il existe cependant une différence entre les deux instructions lorsque la séle
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -877,7 +877,7 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -918,7 +918,7 @@ Form.products.add(Form.product)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -968,7 +968,7 @@ Pour plus d'informations, voir [Entity selections triées vs Entity selections n
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1014,7 +1014,7 @@ Si l'entity selection est vide, la fonction renvoie Null.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1043,7 +1043,7 @@ Les entity selections ont toujours une propriété `.length`.
 
 | Version | Modifications                                     |
 | ------- | ------------------------------------------------- |
-| v17     | Ajoutées                                          |
+| v17     | Ajout                                             |
 | v18 R6  | Retourne undefined si l'entity selection est vide |
 
 </details>
@@ -1092,7 +1092,7 @@ Nous souhaitons connaître le salaire le plus élevé parmi les employées :
 
 | Version | Modifications                                     |
 | ------- | ------------------------------------------------- |
-| v17     | Ajoutées                                          |
+| v17     | Ajout                                             |
 | v18 R6  | Retourne undefined si l'entity selection est vide |
 
 </details>
@@ -1141,7 +1141,7 @@ Nous souhaitons connaître le salaire le plus bas parmi les employées :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1206,7 +1206,7 @@ Vous voulez avoir une sélection d'employées nommées "Jones" qui vivent à New
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1266,7 +1266,7 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1340,7 +1340,7 @@ Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critè
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R6  | Ajoutées      |
+| v17 R6  | Ajout         |
 
 </details>
 
@@ -1462,7 +1462,7 @@ Dans cet exemple, le champ objet "marks" de la dataclass **Students** contient l
 | ------- | ------------------------------------------------- |
 | v17 R6  | Prise en charge des paramètres Formula            |
 | v17 R5  | Prise en charge des placeholders pour les valeurs |
-| v17     | Ajoutées                                          |
+| v17     | Ajout                                             |
 
 </details>
 
@@ -1515,7 +1515,7 @@ Vous trouverez plus d'exemples de requêtes dans la page [`.query()`](DataClassC
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1536,7 +1536,7 @@ Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings**
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1557,7 +1557,7 @@ Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings**
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 
 </details>
 
@@ -1635,7 +1635,7 @@ Dans cet exemple, les langages classiques et ORDA modifient simultanément les m
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1694,7 +1694,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1742,7 +1742,7 @@ $sum:=$sel.sum("salary")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 

@@ -7,7 +7,7 @@ title: Liste des méthodes
 
 [A](#a) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [I](#i) - [M](#m) - [N](#n) - [O](#o) - [P](#p) - [R](#r) - [S](#s)
 
-## Une
+## A
 
 ### VP ADD FORMULA NAME
 
@@ -27,10 +27,10 @@ title: Liste des méthodes
 
 #### Description
 
-The `VP ADD FORMULA NAME` command <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->creates or modifies a named formula in the open document<!-- END REF -->.
+La commande `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->permet de créer ou de modifier une formule nommée dans le document courant<!-- END REF -->.
 > Les formules nommées créées par cette commande sont stockées dans le document.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Passez la formule 4D View Pro que vous souhaitez nommer dans *vpFormula*. Pour plus d'informations sur la syntaxe des formules, veuillez consulter la section [Formules et Fonctions](formulas.md).
 
@@ -71,12 +71,12 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### Description
 
-The `VP ADD RANGE NAME` command <!-- REF #_method_.VP ADD RANGE NAME.Summary -->creates or modifies a named range in the open document<!-- END REF -->.
+La commande `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->crée ou modifie une plage nommée dans le document courant<!-- END REF -->.
 > Les plages nommées créées par cette commande sont stockées dans le document.
 
 Dans *rangeObj*, passez la plage que vous souhaitez nommer, et passez le nouveau nom de la plage dans *name*. Si le nom est déjà utilisé dans le même scope, la nouvelle plage nommée remplace la plage existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-In *options*, you can pass an object that specifies additional options. Les propriétés suivantes sont prises en charge :
+Vous pouvez passer un objet avec des propriétés supplémentaires pour la plage nommée dans *options*. Les propriétés suivantes sont prises en charge :
 
 | Propriété | Type   | Description                                                                                                                                                                                                                                                                                                                                                                |
 | --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -106,15 +106,15 @@ VP ADD RANGE NAME($range;"Total1")
 
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
-| Paramètres | Type |    | Description                              |
-| ---------- | ---- | -- | ---------------------------------------- |
-| rangeObj   | Text | -> | Range object |<!-- END REF -->
+| Paramètres | Type |    | Description                             |
+| ---------- | ---- | -- | --------------------------------------- |
+| rangeObj   | Text | -> | Objet plage |<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP ADD SELECTION` command <!-- REF #_method_.VP ADD SELECTION.Summary -->adds the specified cells to the currently selected cells<!-- END REF -->.
+La commande `VP ADD SELECTION` <!-- REF #_method_.VP ADD SELECTION.Summary -->ajoute les cellules spécifiées aux cellules sélectionnées<!-- END REF -->.
 
 Dans *rangeObj*, passez un objet plage de plusieurs cellules à ajouter à la sélection courante.
 > La cellule active n'est pas modifiée.
@@ -158,11 +158,11 @@ Résultat:
 
 #### Description
 
-The `VP ADD SHEET` command <!-- REF #_method_.VP ADD SHEET.Summary -->inserts a sheet in the document loaded in *vpAreaName*.<!-- END REF -->
+La commande `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insère une feuille dans le document chargé dans *vpAreaName*.<!-- END REF -->
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. Si l'*index* est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes. In *sheet*, you can pass an index for the new sheet.
+Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. If the passed *index* is inferior to or equal to 0, the command inserts the new sheet at the beginning. Si l'*index* est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.
 > L'indexation démarre à 0.
 
 Dans *name*, vous pouvez passer un nom pour la nouvelle feuille. Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
@@ -252,17 +252,17 @@ Pour fusionner les cellules First quarter et Second quarter avec les deux cellul
 
 #### Description
 
-The `VP ADD STYLESHEET` command <!-- REF #_method_.VP ADD STYLESHEET.Summary -->creates or modifies the *styleName* style sheet based upon the combination of the properties specified in *styleObj* in the open document<!-- END REF -->. .
+La commande `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET.Summary -->crée ou modifie la feuille de style *styleName* basée sur la combinaison de propriétés indiquées dans *styleObj* dans le document courant<!-- END REF -->. .
 
 > Les feuilles de style créées par cette commande sont sauvegardées avec le document.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *styleName* vous permet de nommer la feuille de style. Si le nom existe déjà dans le même scope, la nouvelle feuille de style remplace la feuille existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
 Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). Pour consulter la liste complète des propriétés, reportez-vous à la section [Propriétés des objets de style](configuring.md#style-objects-properties).
 
-You can designate where to define the style sheet in the optional *sheet* parameter using the sheet index (indexing starts at 0) or with the following constants:
+Vous pouvez désigner l'emplacement dans lequel vous souhaitez définir la feuille de style dans le paramètre optionnel *sheet*, à l'aide de l'indice de la feuille (la numérotation commence à zéro) ou à l'aide des constantes suivantes :
 
 * `vk current sheet`
 * `vk workbook`
@@ -327,9 +327,9 @@ créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 #### Description
 
-The `VP ALL` command <!-- REF #_method_.VP ALL.Summary -->returns a new range object referencing all cells<!-- END REF -->.
+La commande `VP ALL` <!-- REF #_method_.VP ALL.Summary -->retourne une nouvelle plage référençant toutes les cellules<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
@@ -367,11 +367,11 @@ $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
 
 #### Description
 
-The `VP Cell` command <!-- REF #_method_.VP Cell.Summary -->returns a new range object referencing a specific cell<!-- END REF -->.
+La commande `VP Cell` <!-- REF #_method_.VP Cell.Summary -->retourne une nouvelle plage référençant une cellule<!-- END REF -->.
 
 > Cette commande s'applique aux plages d'une seule cellule. Pour créer une plage de plusieurs cellules, utilisez la commande [VP Cells](#vp-cells).
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *column* définit la colonne de la plage. Passez l'indice de la colonne dans ce paramètre.
 
@@ -406,7 +406,7 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -425,9 +425,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 #### Description
 
-The `VP Cells` command <!-- REF #_method_.VP Cells.Summary -->returns a new range object referencing specific cells<!-- END REF -->.
+La commande `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retourne une nouvelle plage référençant des cellules spécifiques<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *column* définit la première colonne de la plage de cellules. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Si la plage contient plusieurs colonnes, vous devez également utiliser le paramètre *columnCount*.
 
@@ -475,9 +475,9 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 à D7
 
 #### Description
 
-The `VP Column` command <!-- REF #_method_.VP Column.Summary -->returns a new range object referencing a specific column or columns<!-- END REF -->.
+La commande `VP Column` <!-- REF #_method_.VP Column.Summary -->retourne une nouvelle plage référençant une ou plusieurs colonnes<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *column* définit la première colonne de la plage. Passez l'indice de la colonne (la numérotation commence à zéro) dans ce paramètre. Si la plage contient plusieurs colonnes, vous devez également utiliser le paramètre optionnel *columnCount*.
 
@@ -517,7 +517,7 @@ Le code est le suivant :
 
 #### Description
 
-The `VP COLUMN AUTOFIT` command <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->automatically sizes the column(s) in *rangeObj* according to their contents<!-- END REF -->.
+La commande `VP COLUMN AUTOFIT` <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->dimensionne automatiquement la ou les colonne(s) dans *rangeObj* en fonction de leur contenu<!-- END REF -->.
 
 Dans *rangeObj*, passez un objet plage contenant une plage de colonnes dont la taille doit être gérée automatiquement.
 
@@ -560,7 +560,7 @@ redimensionne les colonnes pour correspondre à la taille du contenu :
 
 #### Description
 
-The `VP Combine Ranges` command <!-- REF #_method_.VP Combine Ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
+La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
 Dans *rangeObj*, passez la première plage.
 
@@ -599,7 +599,7 @@ Vous souhaitez combiner des plages de type cellule, colonne et ligne dans une no
 
 #### Description
 
-The `VP Convert from 4D View` command <!-- REF #_method_.VP Convert from 4D View.Summary -->allows you to convert a legacy 4D View document into a 4D View Pro object<!-- END REF -->.
+La commande `VP Convert from 4D View` <!-- REF #_method_.VP Convert from 4D View.Summary -->vous permet de convertir un document 4D View existant en un objet 4D View Pro<!-- END REF -->.
 > Cette commande ne nécessite pas l'installation du plug-in 4D View dans votre environnement.
 
 Dans le paramètre *4DViewDocument*, passez une variable ou un champ BLOB contenant le document 4D View à convertir. La commande retourne un objet 4D View Pro dans lequel toutes les informations stockées à l'origine dans le document 4D View sont converties en attributs 4D View Pro.
@@ -631,7 +631,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 #### Description
 
-The `VP Convert to picture` command <!-- REF #_method_.VP Convert to picture.Summary -->converts the *vpObject* 4D View Pro object (or the *rangeObj* range within *vpObject*) to a SVG picture<!-- END REF -->.
+La commande `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->convertit l'objet 4D View Pro *vpObject* (ou la plage *rangeObj* dans *vpObject*) en une image SVG<!-- END REF -->.
 
 Cette commande est utile, par exemple :
 
@@ -653,7 +653,7 @@ Les contenus de document sont convertis en tenant compte de leurs attributs d'af
 * Hauteur de lignes
 * Largeur de colonnes
 * Visibilité : colonnes / lignes cachées.
-> > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
+> La visibilité du quadrillage dépend de l'attribut de document défini avec [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Résultat
 
@@ -680,7 +680,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajoutées      |
+| v19 R4  | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -699,7 +699,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 
 #### Description
 
-The `VP Copy to object` command <!-- REF #_method_.VP Copy to object.Summary -->copies the contents, style and formulas from *rangeObj* to an object<!-- END REF -->.
+La commande `VP Copy to object` <!-- REF #_method_.VP Copy to object.Summary -->copie le contenu, le style et les formules de *rangeObj* vers un objet<!-- END REF -->.
 
 Dans *rangeObj*, passez la plage de cellules contenant les valeurs, formatages et formules à copier. Si *rangeObj* est une plage combinée, seule la première est utilisée.
 
@@ -743,7 +743,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R6  | Ajoutées      |
+| v19 R6  | Ajout         |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -752,11 +752,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| Paramètres | Type   |    | Description                                        |
-| ---------- | ------ | -- | -------------------------------------------------- |
-| rangeObj   | Object | -> | Objet plage                                        |
-| tableName  | Text   | -> | Name for the table                                 |
-| source     | Text   | -> | Data context property name to display in the table |
+| Paramètres | Type   |    | Description                                                  |
+| ---------- | ------ | -- | ------------------------------------------------------------ |
+| rangeObj   | Object | -> | Objet plage                                                  |
+| tableName  | Text   | -> | Nom de la table                                              |
+| source     | Text   | -> | Nom de la propriété du Data context à afficher dans la table |
 | options    | Object | -> | Options supplémentaires|<!-- END REF -->
 
 |
@@ -962,7 +962,7 @@ saisissez le code suivant :
 
 The `VP EXPORT DOCUMENT` command <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exports the 4D View Pro object attached to the 4D View Pro area *vpAreaName* to a document on disk according to the *filePath* and *paramObj* parameters<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans *filePath*, passez le chemin de destination et le nom du document que vous souhaitez exporter. Si vous ne spécifiez pas de chemin, le document sera sauvegardé au même niveau que le dossier Projet.
 
@@ -1119,7 +1119,7 @@ Voici le résultat :
 
 The `VP Export to object` command <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->. Vous pouvez utiliser cette commande par exemple pour stocker la zone 4D View Pro dans un champ objet de la base de données 4D.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans le paramètre *options*, vous pouvez passer l'option d'export suivante, si nécessaire :
 
@@ -1255,7 +1255,7 @@ var $range;$condition;$result : Object
 
 The `VP FLUSH COMMANDS` command <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->immediately executes stored commands and clears the command buffer<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Afin d'améliorer la performance et de réduire le nombre de requêtes envoyées, les commandes 4D View Pro appelées par le développeur sont stockées temporairement dans un buffer de commandes. Lorsqu'elle est appelée, la commande `VP FLUSH COMMANDS` exécute les commandes en lot au moment de quitter la méthode et vide le buffer de commandes.
 
@@ -1342,7 +1342,7 @@ Voir l'exemple de [`VP Object to font`](#vp-object-to-font).
 
 The `VP Get active cell` command <!-- REF #_method_.VP Get active cell.Summary -->returns a new range object referencing the cell which has the focus and where new data will be entered (the active cell)<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
@@ -1371,7 +1371,7 @@ $activeCell:=VP Get active cell("myVPArea")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -1577,7 +1577,7 @@ $colCount:=VP Get column count("ViewProarea")
 
 The `VP Get current sheet` command <!-- REF #_method_.VP Get current sheet.Summary -->returns the index of the current sheet in *vpAreaName*. La feuille courante est la feuille sélectionnée dans le document.<!-- END REF -->
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 > L'indexation démarre à 0.
 
@@ -1603,7 +1603,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -1749,7 +1749,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 
 The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the *name* parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Passez la plage nommée ou la formule nommée que vous souhaitez lire dans*name*. A noter que les plages nommées sont retournées sous forme de formules contenant des références absolues de cellules.
 
@@ -1849,7 +1849,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 The `VP Get frozen panes` command <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
@@ -1902,7 +1902,7 @@ L'objet retourné contient, par exemple :
 
 The `VP Get names` command <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *scope* vous permet de définir l'espace de la zone dans lequel lire la formule, en passant l'indice de la feuille (la numérotation débute à 0) ou l'une des constantes suivantes :
 
@@ -2113,7 +2113,7 @@ $rowCount:=VP Get row count("ViewProarea")
 
 The `VP Get selection` command <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
@@ -2156,7 +2156,7 @@ $currentSelection:=VP Get selection("myVPArea")
 
 The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -->returns the number of sheets in the document loaded in *vpAreaName*.<!-- END REF -->
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 #### Exemple
 
@@ -2197,7 +2197,7 @@ Pour obtenir le nombre de feuilles et définir la feuille courante comme étant 
 
 The `VP Get sheet index` command <!-- REF #_method_.VP Get sheet index.Summary -->returns the index of a sheet based on its name in *vpAreaName*.<!-- END REF -->
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 Dans *name*, passez le nom de la feuille dont l'index sera retourné. Si aucune feuille nommée *name* n'est trouvée dans le document, la méthode retourne -1.
 > L'indexation démarre à 0.
@@ -2238,7 +2238,7 @@ $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //retourne 2
 
 The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in *vpAreaName*.<!-- END REF -->
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 Dans *sheet*, passez l'index de la feuille dont le nom sera retourné.
 
@@ -2320,7 +2320,7 @@ $options:=VP Get sheet options("ViewProArea")
 
 The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 Dans *sheet*, passez l'index de la page cible. Si *sheet* est omis, la commande s'applique à la feuille courante.
 
@@ -2400,7 +2400,7 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 
 The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->returns the *styleName* style sheet object containing the property values which have been defined<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans *styleName*, passez le nom de la feuille de style que vous souhaitez lire.
 
@@ -2615,7 +2615,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 `VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
 returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 The returned object contains all the workbook options (default and modified ones), in the workbook.
 
@@ -2655,7 +2655,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. Le document importé remplace toutes les données déjà présentes dans la zone.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans *filePath*, passez le chemin et le nom du document à importer. Les formats suivants sont pris en charge :
 
@@ -2742,7 +2742,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->imports and displays the *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. Le contenu de l'objet importé remplace toutes les données insérées auparavant dans la zone.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. Pour plus d'informations sur les objets 4D View Pro, référez-vous à la section [Objet 4D View Pro](languageOverview.html#4d-view-pro-object).
 
@@ -2845,7 +2845,7 @@ Le résultat est le suivant :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajoutées      |
+| v19 R4  | Ajout         |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -2926,7 +2926,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 
 The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *rangeName* indique une plage de cellule nommée existante.
 
@@ -2968,7 +2968,7 @@ Vous souhaitez assigner une valeur à une plage nommée "Total".
 
 The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. Le nouveau document vide remplace toutes les données auparavant insérées dans la zone.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 #### Exemple
 
@@ -3045,7 +3045,7 @@ $cellStyle.font:=VP Object to font($font)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajoutées      |
+| v19 R4  | Ajout         |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3160,7 +3160,7 @@ Ouvrira une fenêtre de dialogue d'impression :
 
 The `VP RECOMPUTE FORMULAS` command <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->immediately evaluates all formulas in *vpAreaName*<!-- END REF -->. Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (ex : si les formules sont modifiées ou si les formules contiennent des appels vers la base). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](#vp-flush-commands) pour exécuter les commandes stockées et vider le tampon de commandes, puis calcule toutes les formules dans le workbook.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 > Assurez-vous que la commande n'a pas été exécutée auparavant à l'aide de `VP RECOMPUTE FORMULAS`, sinon la commande ne fait rien.
 
 #### Exemple
@@ -3195,7 +3195,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 The `VP REMOVE NAME` command <!-- REF #_method_.VP REMOVE NAME.Summary -->removes the named range or named formula passed in the *name* parameter in the defined *scope*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Passez la plage nommée ou la formule nommée que vous souhaitez supprimer dans *name*.
 
@@ -3242,7 +3242,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 
 The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->removes the sheet with the specified *index* from the document loaded in *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *index*, pass the index of the sheet to remove. If the passed *index* does not exist, the command does nothing.
 > L'indexation démarre à 0.
@@ -3321,7 +3321,7 @@ Résultat:
 
 The `VP REMOVE STYLESHEET` command <!-- REF #_method_.VP REMOVE STYLESHEET.Summary -->removes the style sheet passed in the *styleName* from the *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans *styleName*, passez le nom de la feuille de style que vous souhaitez supprimer.
 
@@ -3348,7 +3348,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R6  | Ajoutées      |
+| v19 R6  | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3417,7 +3417,7 @@ The `VP RESET SELECTION` command <!-- REF #_method_.VP RESET SELECTION.Summary -
 
 > Une cellule active par défaut (cellule A1) reste définie pour les commandes 4D View Pro.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
@@ -3455,7 +3455,7 @@ The `VP RESUME COMPUTING` command <!-- REF #_method_.VP RESUME COMPUTING.Summary
 
 La commande réactive le service de calcul de 4D View Pro. Les formules impactées par des modifications apportées durant la suspension des calculs sont mises à jour, et les formules ajoutées après l'exécution de `VP RESUME COMPUTING` sont calculées.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 > Le service de calcul de 4D View Pro maintient un compteur d'actions de suspension/reprise. Ainsi, chaque exécution de commande `VP RESUME COMPUTING` doit être compensée par une exécution correspondante de la commande [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
@@ -3489,7 +3489,7 @@ Voir l'exemple dans [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *row* définit la première ligne de la plage. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. Pass the row index (counting begins at 0) in this parameter.
 
@@ -3796,7 +3796,7 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -4083,7 +4083,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 The `VP SET COLUMN COUNT` command <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->defines the total number of columns in *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Passez le nombre total de colonnes dans le paramètre *columnCount*. *columnCount* doit être supérieur à 0.
 
@@ -4124,7 +4124,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF -->. La feuille courante est la feuille sélectionnée dans le document.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *sheet*, pass the index of the sheet to be set as current sheet. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
 
@@ -4238,7 +4238,7 @@ End case
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -4262,7 +4262,7 @@ End case
 
 The `VP SET DATA CONTEXT` command <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. Images are converted to data URI schemes.
 
@@ -4487,7 +4487,7 @@ Pour plus d'informations sur les modèles et les caractères de formatage, veuil
 
 The `VP SET DEFAULT STYLE` command <!-- REF #_method_.VP SET DEFAULT STYLE.Summary -->defines the style in the *styleObj* as the default style for a *sheet*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Le paramètre *styleObj* vous permet de passer un objet contenant des paramètres de style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. Pour plus d'informations, consultez [Objets style](configuring.md#style-objects).
 
@@ -4689,7 +4689,7 @@ The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary
 * **Colonnes de gauche ou de droite** : Pour les colonnes situées à gauche de la feuille, le trait s'affiche sur le côté droit de la dernière colonne figée. Pour les colonnes situées à droite de la feuille, le trait s'affiche sur le côté gauche de la prmeière colonne figée.
 * **Lignes du haut ou du bas** : Pour les lignes situées en haut de la feuille, le trait s'affiche en-dessous de la première ligne figée. Pour les lignes situées en bas de la feuille, le trait s'affiche au-dessus de la première ligne figée.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Vous pouvez passer un objet définissant les lignes et colonnes à figer dans le paramètre *paneObj*. Si vous fixez la valeur d'une propriété de colonne ou de ligne à zéro, cela réinitialise (ne fige plus) la propriété. Si une propriété est définie sur une valeur inférieure à zéro, la commande ne fait rien. Vous pouvez passer :
 
@@ -4910,7 +4910,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 The `VP SET ROW COUNT` command <!-- REF #_method_.VP SET ROW COUNT.Summary -->defines the total number of rows in *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
 Passez le nombre total de lignes dans le paramètre *rowCount*. *rowCount* doit être supérieur à 0.
 
@@ -5025,7 +5025,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *name*, pass a new name for the sheet.
 
@@ -5195,7 +5195,7 @@ Résultat:
 
 The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
 
@@ -5447,7 +5447,7 @@ $param:=New collection
 `VP SET WORKBOOK OPTIONS` <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Summary -->
 sets the workbook options in *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *optionObj*, pass the workbook options to apply to *vpAreaName*.
 
@@ -5619,7 +5619,7 @@ The `VP SUSPEND COMPUTING` command <!-- REF #_method_.VP SUSPEND COMPUTING.Summa
 
 La commande met en pause les calculs dans 4D View Pro. Les formules déjà calculées restent inchangées, mais les formules ajoutées après `VP SUSPEND COMPUTING` et qui sont exécutées, ne sont pas calculées.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 > Le service de calcul de 4D View Pro maintient un compteur d'actions de suspension/reprise. Ainsi, chaque exécution de `VP SUSPEND COMPUTING` doit être compensée par une exécution correspondante de la commande `VP RESUME COMPUTING`. Toute formule modifiée durant la phase de suspension des calculs sera recalculée lorsque la commande sera exécutée.
 
 #### Exemple

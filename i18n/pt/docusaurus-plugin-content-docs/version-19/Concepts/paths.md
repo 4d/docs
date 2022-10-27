@@ -24,7 +24,7 @@ The following filesystem pathnames are supported:
 | filesystem   | Designates                                         |
 | ------------ | -------------------------------------------------- |
 | "/DATA"      | Current data folder                                |
-| "/LOGS"      | Logs folder                                        |
+| "/LOGS"      | Pasta Logs                                         |
 | "/PACKAGE"   | Database folder (with or without 4dbase extension) |
 | "/PROJECT"   | Project folder                                     |
 | "/RESOURCES" | Current database resources folder                  |

@@ -156,7 +156,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -226,7 +226,7 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -292,7 +292,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -335,7 +335,7 @@ $vSize:=$col.length //$vSize=0
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -388,7 +388,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -437,7 +437,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | Version | Modifications                                                |
 | ------- | ------------------------------------------------------------ |
 | v18 R3  | Nouvelle option *ck shared*. Nouveaux paramètres *groupWith* |
-| v16 R6  | Ajoutées                                                     |
+| v16 R6  | Ajout                                                        |
 
 </details>
 
@@ -565,7 +565,7 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -616,7 +616,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -700,7 +700,7 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -758,7 +758,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -819,7 +819,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -994,7 +994,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1055,7 +1055,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -1140,7 +1140,7 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -1232,7 +1232,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -1312,7 +1312,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1380,7 +1380,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1439,7 +1439,7 @@ Pour une description détaillée de la construction de recherches à l'aide des 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1494,7 +1494,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1542,7 +1542,7 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1605,7 +1605,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R5  | Ajoutées      |
+| v16 R5  | Ajout         |
 
 </details>
 
@@ -1642,7 +1642,7 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -1709,7 +1709,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1763,7 +1763,7 @@ Si la collection est vide, `.max()` retourne *Undefined*.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1817,7 +1817,7 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -1961,7 +1961,7 @@ Tri avec un chemin de propriété :
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -2068,7 +2068,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2120,7 +2120,7 @@ Lorsqu'elle est appliquée à une collection vide, .`pop()` retourne ***undefine
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2183,7 +2183,7 @@ Vous souhaitez trier une collection de chaînes contenant des nombres par valeur
 | Version | Modifications                    |
 | ------- | -------------------------------- |
 | v17 R5  | Prise en charge de querySettings |
-| v16 R6  | Ajoutées                         |
+| v16 R6  | Ajout                            |
 
 </details>
 
@@ -2298,7 +2298,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -2390,7 +2390,7 @@ Avec la méthode *NumberGreaterThan0* suivante :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2454,7 +2454,7 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2517,7 +2517,7 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2560,7 +2560,7 @@ La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->retourne une 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2610,7 +2610,7 @@ Si la collection est vide, cette méthode ne fait rien.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2666,7 +2666,7 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -2753,7 +2753,7 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 | Version | Modifications                |
 | ------- | ---------------------------- |
 | v19 R6  | Prise en charge des formules |
-| v16 R6  | Ajoutées                     |
+| v16 R6  | Ajout                        |
 
 </details>
 
@@ -2841,7 +2841,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //tri alphabétiqu
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 
@@ -2907,7 +2907,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 | Version | Modifications |
 | ------- | ------------- |
-| v16 R6  | Ajoutées      |
+| v16 R6  | Ajout         |
 
 </details>
 

@@ -19,7 +19,7 @@ La classe Blob vous permet de créer et de manipuler des [objets blob](../Concep
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R2  | Ajoutées      |
+| v19 R2  | Ajout         |
 
 </details>
 
@@ -55,7 +55,7 @@ La propriété `.size` <!-- REF #Blob.size.Summary -->retourne la taille d'un `4
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R2  | Ajoutées      |
+| v19 R2  | Ajout         |
 
 </details>
 

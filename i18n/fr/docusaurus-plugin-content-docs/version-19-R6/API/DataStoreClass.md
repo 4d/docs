@@ -36,7 +36,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | Version | Modifications                        |
 | ------- | ------------------------------------ |
 | v18     | Prise en charge du paramètre localID |
-| v17     | Ajoutées                             |
+| v17     | Ajout                                |
 
 </details>
 
@@ -104,7 +104,7 @@ Utilisation du datastore principal de la base 4D :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 
 </details>
 
@@ -212,7 +212,7 @@ En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -244,7 +244,7 @@ Chaque dataclass d'un datastore est disponible en tant que propriété de l'obje
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 
 </details>
 
@@ -279,7 +279,7 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -312,7 +312,7 @@ Si cela se produit, vous pouvez utiliser `.clearAllRemoteContexts()` pour réini
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -387,7 +387,7 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -463,7 +463,7 @@ $info:=$ds.getAllRemoteContexts()
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -532,7 +532,7 @@ Sur un datastore distant :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -583,7 +583,7 @@ Voir l'exemple de la section [.setRemoteContextInfo()](#example-1-3).
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R6  | Ajoutées      |
+| v17 R6  | Ajout         |
 
 </details>
 
@@ -622,7 +622,7 @@ Voir l'exemple 2 de [`.startRequestLog()`](#startrequestlog).
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -655,7 +655,7 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -688,7 +688,7 @@ Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -762,7 +762,7 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -806,7 +806,7 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajoutées      |
+| v19 R5  | Ajout         |
 
 </details>
 
@@ -936,7 +936,7 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R6  | Ajoutées      |
+| v17 R6  | Ajout         |
 
 </details>
 
@@ -1012,7 +1012,7 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 
 </details>
 
@@ -1075,7 +1075,7 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R6  | Ajoutées      |
+| v17 R6  | Ajout         |
 
 </details>
 
@@ -1108,7 +1108,7 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 
 </details>
 

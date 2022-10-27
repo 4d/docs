@@ -27,7 +27,7 @@ Two main locations can be used for static picture path:
 
 ## Visualização
 
-### Scaled to fit
+### Escalado para caber
 
 `JSON grammar: "scaled"`
 

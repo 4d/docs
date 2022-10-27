@@ -34,7 +34,7 @@ Les objets SMTP Transporter sont instanciés avec la commande [SMTP New transpor
 | ------- | ------------------------------------------------- |
 | v18     | Nouvelle propriété logFile                        |
 | v17 R5  | Nouvelles propriétés bodyCharset et headerCharset |
-| v17 R4  | Ajoutées                                          |
+| v17 R4  | Ajout                                             |
 
 </details>
 
@@ -178,7 +178,7 @@ Pour une description des codes de statut SMTP, veuillez vous reporter à [cette 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->**.keepAlive** : Boolean<!-- END REF -->
@@ -203,7 +203,7 @@ La connexion SMTP est automatiquement fermée :
 | Version | Modifications                     |
 | ------- | --------------------------------- |
 | v17 R5  | Prise en charge des contenus Mime |
-| v17 R4  | Ajoutées                          |
+| v17 R4  | Ajout                             |
 
 </details>
 

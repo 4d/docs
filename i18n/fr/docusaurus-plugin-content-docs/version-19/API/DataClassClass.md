@@ -27,7 +27,7 @@ Une [dataclass](ORDA/dsMapping.md#dataclass) fournit une interface objet à une 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -94,7 +94,7 @@ Considérant les propriétés de table suivantes :
 | Version | Modifications                           |
 | ------- | --------------------------------------- |
 | v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajoutées                                |
+| v17     | Ajout                                   |
 
 </details>
 
@@ -144,7 +144,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 | Version | Modifications                           |
 | ------- | --------------------------------------- |
 | v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajoutées                                |
+| v17     | Ajout                                   |
 
 </details>
 
@@ -340,7 +340,7 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -416,7 +416,7 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -469,7 +469,7 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -540,7 +540,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->retourn
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -582,7 +582,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -626,7 +626,7 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 | ------- | ------------------------------------------------- |
 | v17 R6  | Prise en charge des paramètres Formula            |
 | v17 R5  | Prise en charge des placeholders pour les valeurs |
-| v17     | Ajoutées                                          |
+| v17     | Ajout                                             |
 
 </details>
 

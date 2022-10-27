@@ -30,7 +30,7 @@ Pour des informations détaillées sur l'implémentation de la session, veuillez
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -92,7 +92,7 @@ IP:port/4DACTION/action_Session
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -134,7 +134,7 @@ $isGuest:=Session.isGuest() //$isGuest est mis à True
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -165,7 +165,7 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -209,7 +209,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -249,7 +249,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -289,7 +289,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -356,7 +356,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -398,7 +398,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 

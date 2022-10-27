@@ -4,82 +4,82 @@ title: Comencemos
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Le permite integrar las funcionalidades avanzadas de hoja de cálculo en sus proyectos.
+4D View Pro es un [componente 4D](Concepts/components.md) que comprende un [área de formulario 4D](FormObjects/viewProArea_overview.md) y los [métodos](method-list.md) especificos. Le permite integrar las funcionalidades avanzadas de hoja de cálculo en sus proyectos.
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-Una hoja de cálculo es una aplicación que contiene una cuadrícula de celdas en las que se puede introducir información, ejecutar cálculos o mostrar imágenes. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrated in 4D.
+Una hoja de cálculo es una aplicación que contiene una cuadrícula de celdas en las que se puede introducir información, ejecutar cálculos o mostrar imágenes. 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrada en 4D.
 
-Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
+La integración de áreas de 4D View Pro en sus formularios le permite importar y exportar documentos de hojas de cálculo utilizando los comandos 4D View Pro.
 
 ## Instalación y activación
 
-4D View Pro features are directly included in 4D, making it easy to deploy and manage. No se requiere ninguna instalación adicional.
+Las funcionalidades de 4D View Pro se incluyen directamente en 4D, lo que facilita su despliegue y gestión. No se requiere ninguna instalación adicional.
 
-Sin embargo, 4D View Pro requiere una licencia. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
+Sin embargo, 4D View Pro requiere una licencia. Es necesario activar esta licencia en su aplicación para poder utilizar sus funcionalidades. Cuando se utiliza este componente sin licencia, el contenido de un objeto que requiere una función de 4D View Pro no se muestra en tiempo de ejecución, sino que se muestra un mensaje de error:
 
 ![](../assets/en/ViewPro/licenseError.png)
 
 ## Inserción de un área 4D View Pro
 
-4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. Para seleccionar este objeto, haga clic en la última herramienta de la barra de objetos:
+Los documentos de 4D View Pro se muestran y editan manualmente en un [objeto de formulario 4D](FormObjects/viewProArea_overview.md) llamado 4D View Pro. Para seleccionar este objeto, haga clic en la última herramienta de la barra de objetos:
 
 ![](../assets/en/ViewPro/vpArea.png)
 
-You can also select a preconfigured 4D View Pro area in the [Object library](FormEditor/objectLibrary.md).
+También puede seleccionar un área 4D View Pro preconfigurada en la [librería de objetos](FormEditor/objectLibrary.md).
 
-> 4D View Pro areas can also be [created and used offscreen](method-list.md#vp-run-offscreen-area).
+> Las áreas 4D View Pro también pueden ser [creadas y utilizadas fuera de la pantalla](method-list.md#vp-run-offscreen-area).
 
-You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.
+Puede [configurar el área](configuring.md) utilizando la lista de propiedades y los métodos 4D View Pro.
 
 ## Fundamentos de la selección, la entrada y de la navegación
 
-Las hojas de cálculo se componen de líneas y columnas. A cada línea se le asocia un número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. La intersección de una línea y de una columna constituye una celda. Las celdas pueden ser seleccionadas y sus contenidos editados.
+Las hojas de cálculo se componen de líneas y columnas. A cada línea se le asocia un número. A cada columna se le asocia una letra (o grupo de letras una vez que el número de columnas supera el número de letras del alfabeto). La intersección de una línea y de una columna constituye una celda. Las celdas pueden ser seleccionadas y sus contenidos editados.
 
 ### Selección de celdas, columnas y líneas
 
-* To select a cell, simply click on it or use the direction arrows on the keyboard. Su contenido (o fórmula) se muestra dentro de la celda.
+* Para seleccionar una celda, basta con hacer clic en ella o utilizar las flechas de dirección del teclado. Su contenido (o fórmula) se muestra dentro de la celda.
 
-* To select several continuous cells, drag the mouse from one end of the selection to the other. You can also click on the two ends of the selection while holding down the Shift key.
+* Para seleccionar varias celdas continuas, arrastre el ratón de un extremo a otro de la selección. También puede hacer clic en los dos extremos de la selección mientras mantiene presionada la tecla Mayús.
 
 * To select all cells in the spreadsheet, click on the cell at the top left of the area: ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-* To select a column, click on the corresponding letter (or set of letters).
+* Para seleccionar una columna, haga clic en la letra (o conjunto de letras) correspondiente.
 
 * Para seleccionar una línea, haga clic en el número correspondiente.
 
-* To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
+* Para seleccionar un grupo de celdas que no sean continuas, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Comando** (Mac) y haga clic en cada celda que desee seleccionar.
 
 * Para deseleccionar las celdas, basta con hacer clic en cualquier lugar de la hoja de cálculo.
 
 ### Entrada de datos
 
-Double-clicking on a cell allows passing into input mode in the relevant cell. If the cell is not empty, the insertion cursor is placed after the content of the cell.
+Hacer doble clic en una celda permite pasar al modo de entrada en la celda correspondiente. Si la celda no está vacía, el cursor de inserción se coloca después del contenido de la celda.
 
 ![](../assets/en/ViewPro/vpInput.PNG)
 
-Data can be entered directly once a cell is already selected, even if the insertion cursor is not visible. The input then replaces the content of the cell.
+Los datos pueden introducirse directamente una vez seleccionada una celda, incluso si el cursor de inserción no está visible. La entrada entonces reemplaza el contenido de la celda.
 
-The **Tab** key validates the cell input and selects the cell to its right. Combining the **Shift + Tab** keys validates the cell input and selects the cell to its left.
+La tecla **Tab** valida la entrada de la celda y selecciona la celda a su derecha. Combinando las teclas **Mayús + Tab** se valida la entrada de la celda y se selecciona la celda a su izquierda.
 
-The **Carriage return** key validates the cell input and selects the cell below it. Combining the **Shift + Carriage return** keys validates the cell input and selects the cell above it.
+La tecla **Retorno de carro** valida la entrada de la celda y selecciona la celda de abajo. Combinando las teclas **Mayús + Retorno de carro** se valida la entrada de la celda y se selecciona la celda superior.
 
-The direction keys (arrows) allow you to move a cell in the direction indicated by the arrow.
+Las teclas de dirección (flechas) permiten mover una celda en la dirección indicada por la flecha.
 
 ### Utilización del menú contextual
 
-4D View Pro areas benefit from an automatic context menu that offers standard editing features such as copy and paste, but also basic spreadsheet features:
+Las áreas 4D View Pro se benefician de un menú contextual automático que ofrece funciones de edición estándar como copiar y pegar, pero también funciones básicas de hoja de cálculo:
 
 ![](../assets/en/ViewPro/vpContext.PNG)
-> The Copy/Cut and Paste features of the context menu only work within the spreadsheet area, they do not have access to the system pasteboard. System shortcuts such as **Ctrl+c/Ctrl+v** works however and can be used to exchange data between the area and other applications.
+> Las funciones Copiar/Cortar y Pegar del menú contextual sólo funcionan dentro del área de la hoja de cálculo, no tienen acceso al portapapeles del sistema. Sin embargo, los atajos del sistema como **Ctrl+c/Ctrl+v** funcionan y pueden utilizarse para intercambiar datos entre el área y otras aplicaciones.
 
- Depending on the clicked area, the following options are also available:
+ Dependiendo del área seleccionada, también están disponibles las siguientes opciones:
 
-* click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
+* haga clic en el encabezado de una columna o línea: **Insertar**, **Borrar**, **Ocultar**, o **Mostrar** el contenido
 * haga clic en una celda o en un rango de celdas:
-  * **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
+  * **Filtrar**: permite ocultar la línea mediante filtros (ver [Filtrar las líneas](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) en la documentación SpreadJS).
   * **Ordenar**: ordena el contenido de la columna.
-  * **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
+  * **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Utilización de los métodos 4D View Pro

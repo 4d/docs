@@ -48,6 +48,6 @@ title: インストール
 
 :::info
 
-特定のライセンスのアクティベーションですか？ [4Dライセンスの管理](../licenses.md) ページを参照ください。
+特定のライセンスのアクティベーションですか？ Visit the [Managing 4D licenses](../Admin/licenses.md) page.
 
 :::

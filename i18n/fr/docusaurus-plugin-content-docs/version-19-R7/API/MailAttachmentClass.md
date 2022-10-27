@@ -273,7 +273,7 @@ La propriété `.path` contient <!-- REF #MailAttachmentClass.path.Summary -->le
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->

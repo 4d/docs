@@ -187,7 +187,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 #### Descripción
 
-The `VP ADD SPAN` command combines the cells in *rangeObj* as a single span of cells.
+El comando `VP ADD SPAN` combina las celdas de *rangeObj* como un único tramo de celdas.
 
 En *rangeObj*, pase un rango de celdas. The cells in the range are joined to create a larger cell extending across multiple columns and/or rows. Puede pasar varios rangos de celdas para crear varios espacios al mismo tiempo. Tenga en cuenta que si los rangos de celdas se superponen, sólo se utiliza el primer rango de celdas.
 
@@ -1131,9 +1131,9 @@ You can pass the optional *searchCondition* parameter to specify how the search 
 | afterColumn | Integer | El número de la columna justo antes de la columna inicial de la búsqueda. If the *rangeObj* is a combined range, the column number given must be from the first range. Valor por defecto: -1 (inicio de *rangeObj*) |
 | afterRow    | Integer | El número de la línea justo antes de la línea inicial de la búsqueda. If the *rangeObj* is a combined range, the row number given must be from the first range. Valor por defecto: -1 (inicio de *rangeObj*)        |
 | all         | Boolean | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                |
-| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Las letras mayúsculas y minúsculas se consideran iguales. Ej.: "a" es considerada como idéntica a "A".</td></tr><tr><td>`vk find flag none`</td><td>no se consideran los indicadores de búsqueda (por defecto)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Los caracteres genéricos (\*,?) se pueden utilizar en la cadena de búsqueda. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? ? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>Estos marcadores se pueden combinar. For example: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                               |
+| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Las letras mayúsculas y minúsculas se consideran iguales. Ej.: "a" es considerada como idéntica a "A".</td></tr><tr><td>`vk find flag none`</td><td>no se consideran los indicadores de búsqueda (por defecto)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Los caracteres genéricos (\*,?) se pueden utilizar en la cadena de búsqueda. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? ? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>Estos marcadores se pueden combinar. Por ejemplo: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                               |
 | order       | Integer | <table><tr><td>`vk find order by columns`</td><td>La búsqueda se realiza por columnas. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>La búsqueda se realiza por líneas. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                          |
-| target      | Integer | <table><tr><td>`vk find target formula`</td><td>La búsqueda se realiza en la fórmula de la celda</td></tr><tr><td>`vk find target tag`</td><td>La búsqueda se realiza en la etiqueta de la celda</td></tr><tr><td>`vk find target text`</td><td>La búsqueda se realiza en el texto de la celda (por defecto)</td></tr></table><p>Estos marcadores se pueden combinar. For example:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                |
+| target      | Integer | <table><tr><td>`vk find target formula`</td><td>La búsqueda se realiza en la fórmula de la celda</td></tr><tr><td>`vk find target tag`</td><td>La búsqueda se realiza en la etiqueta de la celda</td></tr><tr><td>`vk find target text`</td><td>La búsqueda se realiza en el texto de la celda (por defecto)</td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                |
 
 In the optional *replaceValue* parameter, you can pass text to take the place of any instance of the text in *searchValue* found in the *rangeObj*.
 
@@ -2033,7 +2033,7 @@ $currentSelection:=VP Get selection("myVPArea")
 | Parámetros | Tipo    |    | Descripción                                  |
 | ---------- | ------- | -- | -------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| Resultado  | Integer | <- | Number of sheets|<!-- END REF -->  |
+| Resultado  | Integer | <- | Número de hojas|<!-- END REF -->   |
 
 #### Descripción
 
@@ -2072,7 +2072,7 @@ Obtener el número de hojas y define la hoja actual como la última hoja:
 | ---------- | ------- | -- | -------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
 | name       | Text    | -> | Nombre de la hoja                            |
-| Resultado  | Integer | <- | Sheet index|<!-- END REF -->       |
+| Resultado  | Integer | <- | Índice de la hoja|<!-- END REF --> |
 
 #### Descripción
 
@@ -2841,7 +2841,7 @@ En *fontObj*, pase un objeto que contenga las propiedades de fuente. Se soportan
 | Propiedad | Tipo | Descripción                                                                                                          | Valores posibles                                                                                                                                                                                                                                                                                                         | Obligatorio |
 | --------- | ---- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | family    | text | Define la fuente.                                                                                                    | todo tipo de familia de fuentes estándar o genérica. Ej. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                               | Sí          |
-| size      | text | Define el tamaño de la fuente. The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | un número con una de las siguientes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>          | Sí          |
+| size      | text | Define el tamaño de la fuente. The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | un número con una de las siguientes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>o uno de los siguientes:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>          | Sí          |
 | style     | text | Estilo de fuente.                                                                                                    | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | No          |
 | variant   | text | Especifica el tipo de letra en minúsculas.                                                                           | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | No          |
 | weight    | text | Define el grosor de la fuente.                                                                                       | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | No          |
@@ -3641,10 +3641,10 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                     |
-| ---------- | ------- | -- | ----------------------------------------------- |
-| rangeObj   | Object  | -> | Objeto rango                                    |
-| boolValue  | Boolean | -> | Boolean value to set|<!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción                                             |
+| ---------- | ------- | -- | ------------------------------------------------------- |
+| rangeObj   | Object  | -> | Objeto rango                                            |
+| boolValue  | Boolean | -> | Valor del booleano a definir|<!-- END REF --> |
 
 #### Descripción
 
@@ -3925,7 +3925,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 | Parámetros | Tipo   |    | Descripción                                  |
 | ---------- | ------ | -- | -------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |
-| formulaObj | Object | -> | Formula object|<!-- END REF -->    |
+| formulaObj | Object | -> | Objeto formula|<!-- END REF -->    |
 
 #### Descripción
 
@@ -4017,7 +4017,7 @@ End case
 | dataObj    | Object  | -> | Objeto datos a cargar en el contexto de datos    |
 | dataColl   | Object  | -> | Colección datos a cargar en el contexto de datos |
 | options    | Object  | -> | Opciones adicionales                             |
-| sheet      | Integer | -> | Sheet index|<!-- END REF -->           |
+| sheet      | Integer | -> | Índice de la hoja|<!-- END REF -->     |
 
 #### Descripción
 
@@ -4700,7 +4700,7 @@ VP SET SELECTION($currentSelection)
 | Parámetros | Tipo    |    | Descripción                                  |
 | ---------- | ------- | -- | -------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| number     | Integer | -> | Number of sheets|<!-- END REF -->  |
+| number     | Integer | -> | Número de hojas|<!-- END REF -->   |
 
 #### Descripción
 
@@ -5171,7 +5171,7 @@ En la siguiente tabla se listan las opciones de libros de trabajo disponibles:
 | customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Cada elemento de colección es una colección de cadenas. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).  |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                   |
 | cutCopyIndicatorVisible               | boolean                 | Muestra un indicador al copiar o cortar el elemento seleccionado.                                                                                                                                                                                      |
-| defaultDragFillType                   | number                  | The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Llena automáticamente las celdas. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Rellena las celdas sólo con formato.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table>                                                                                                                                                                             |
+| defaultDragFillType                   | number                  | The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Llena automáticamente las celdas. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Rellena las celdas sólo con formato.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Llena las celdas con series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table>                                                                                                                                                                             |
 | enableAccessibility                   | boolean                 | El soporte de accesibilidad está activado en la hoja de cálculo.                                                                                                                                                                                       |
 | enableFormulaTextbox                  | boolean                 | The formula text box is enabled.                                                                                                                                                                                                                       |
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
@@ -5244,14 +5244,14 @@ In *rangeObj*, pass a range of cells as an object to designate the cells to be v
 
 Los siguientes selectores están disponibles:
 
-| Selector              | Descripción                                                                                                                                                                                                                           | Disponible con *vPos* | Disponible con *hPos* |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
-| `vk position bottom`  | Alineación vertical a la parte inferior de la celda o de la línea.                                                                                                                                                                    | X                     |                       |
-| `vk position center`  | Alineación al centro. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Posición vertical de la vista - celda o línea</li><li>Posición horizontal de la vista - celda o columna</li>                                                           | X                     | X                     |
-| `vk position left`    | Alineación horizontal a la izquierda de la celda o columna                                                                                                                                                                            |                       | X                     |
-| `vk position nearest` | Alineación al límite más cercano (arriba, abajo, izquierda, derecha, centro). The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Posición vertical de la vista (arriba, centro, abajo) - celda o línea </li><li>Posición horizontal de la vista (izquierda, centro, derecha) - celda o columna</li> | X                     | X                     |
-| `vk position right`   | Alineación horizontal a la derecha de la celda o de la columna                                                                                                                                                                        |                       | X                     |
-| `vk position top`     | Alineación vertical a la parte superior de la celda o de la línea                                                                                                                                                                     | X                     |                       |
+| Selector              | Descripción                                                                                                                                                                                                                                  | Disponible con *vPos* | Disponible con *hPos* |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
+| `vk position bottom`  | Alineación vertical a la parte inferior de la celda o de la línea.                                                                                                                                                                           | X                     |                       |
+| `vk position center`  | Alineación al centro. La alineación se aplicará al límite de la celda, línea o columna según la posición de la vista indicada:<li>Posición vertical de la vista - celda o línea</li><li>Posición horizontal de la vista - celda o columna</li>                                                           | X                     | X                     |
+| `vk position left`    | Alineación horizontal a la izquierda de la celda o columna                                                                                                                                                                                   |                       | X                     |
+| `vk position nearest` | Alineación al límite más cercano (arriba, abajo, izquierda, derecha, centro). La alineación se aplicará al límite de la celda, línea o columna según la posición de la vista indicada:<li>Posición vertical de la vista (arriba, centro, abajo) - celda o línea </li><li>Posición horizontal de la vista (izquierda, centro, derecha) - celda o columna</li> | X                     | X                     |
+| `vk position right`   | Alineación horizontal a la derecha de la celda o de la columna                                                                                                                                                                               |                       | X                     |
+| `vk position top`     | Alineación vertical a la parte superior de la celda o de la línea                                                                                                                                                                            | X                     |                       |
 > Este comando sólo es eficaz si es posible reposicionar la vista. For example, if the *rangeObj* is in cell A1 (the first column and the first row) of the current sheet, repositioning the view will make no difference because the vertical and horizontal limits have already been reached (i.e., it is not possible to scroll any higher or any more to the left). The same is true if *rangeObj* is in cell C3 and the view is repositioned to the center or the bottom right. La vista permanece inalterada.
 
 #### Ejemplo

@@ -159,7 +159,7 @@ Esta pasta contém **arquivos de configuração de dados** utilizados para a adm
 | settings.4DSettings | Propriedades personalizadas de o banco de dados para este arquivo de dados                                                                                                                                                                                                               | XML     |
 | directory.json      | Descrição de os grupos e usuários de 4D e seus direitos de acesso quando o banco for lançado com este arquivo de dados.                                                                                                                                                                  | JSON    |
 
-### Logs folder
+### Pasta Logs
 
 The Logs folder contains all log files used by the project. Log files include, in particular:
 

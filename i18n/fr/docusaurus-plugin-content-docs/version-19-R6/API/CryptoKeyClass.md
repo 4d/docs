@@ -46,7 +46,7 @@ ASSERT($status.success)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #4D.CryptoKey.new().Syntax -->
@@ -83,7 +83,7 @@ L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
@@ -99,7 +99,7 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.decrypt().Syntax -->
@@ -147,7 +147,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.encrypt().Syntax -->
@@ -187,7 +187,7 @@ La valeur retournée est un message chiffré.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
@@ -215,7 +215,7 @@ La valeur retournée est la clé privée.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
@@ -244,7 +244,7 @@ La valeur retournée est la clé publique.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.pem.Syntax -->
@@ -261,7 +261,7 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
@@ -302,7 +302,7 @@ La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentat
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -318,7 +318,7 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Texte<!-- END REF -->
@@ -339,7 +339,7 @@ Le <!-- REF #CryptoKey.type.Summary -->type de clé : "RSA", "ECDSA" ou "PEM" <!
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->

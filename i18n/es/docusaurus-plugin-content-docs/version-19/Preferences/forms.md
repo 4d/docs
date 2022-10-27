@@ -4,15 +4,15 @@ title: Página formulario
 ---
 
  
-This page lets you set the default operation and display of the 4D Form editor.
+Esta página le permite establecer el funcionamiento y la visualización por defecto del editor de formularios 4D.
 
 ## Mover
 
-This group of options sets parameters for moving objects using the keyboard or the mouse in the Form editor.
+Este grupo de opciones establece los parámetros para mover objetos utilizando el teclado o el ratón en el editor de formularios.
 
 ### Paso a paso con el teclado
 
-This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the **Shift** key.
+Esta opción permite establecer el valor (en puntos) del paso utilizado para mover o redimensionar un objeto utilizando el teclado y la tecla **Mayús**.
 
 ### Cuando se mueve más allá de los límites de la ventana
 

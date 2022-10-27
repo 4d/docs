@@ -13,7 +13,7 @@ This page allows selecting, creating, or configuring Code Editor themes. A theme
 
 ### Lista de temas
 
-En esta lista, se selecciona el tema que se aplicará al editor de código. All available themes are displayed, including custom themes (if any). 4D ofrece dos temas por defecto:
+En esta lista, se selecciona el tema que se aplicará al editor de código. Se muestran todos los temas disponibles, incluidos los temas personalizados (si los hay). 4D ofrece dos temas por defecto:
 
 * **Tema Light por defecto**
 * **Tema oscuro por defecto**
