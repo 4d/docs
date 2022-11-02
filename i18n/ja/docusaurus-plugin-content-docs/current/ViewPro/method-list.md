@@ -351,15 +351,14 @@ $all:=VP All("ViewProArea") // カレントシートの全セル
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| 引数         | タイプ     |    | 説明                                        |
-| ---------- | ------- | -- | ----------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                   |
-| column     | Longint | -> | シートのインデックス (省略した場合はカレントシート)               |
-| row        | Longint | -> | シートのインデックス (省略した場合はカレントシート)               |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)               |
-| 戻り値        | Object  | <- | 単一セルのレンジオブジェクト|<!-- END REF -->
-
-|
+| 引数         | タイプ     |    | 説明                            |
+| ---------- | ------- | -- | ----------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名       |
+| column     | Longint | -> | カラムのインデックス                    |
+| row        | Longint | -> | 行のインデックス                      |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)   |
+| 戻り値        | Object  | <- | Range object of a single cell |
+<!-- END REF -->
 
 #### 説明
 
@@ -1323,11 +1322,12 @@ End if
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| 引数   | タイプ  |    | 説明                                         |
-| ---- | ---- | -- | ------------------------------------------ |
-| font | Text | -> | フォントのショートハンド文字列|<!-- END REF -->
+| 引数   | タイプ    |    | 説明              |
+| ---- | ------ | -- | --------------- |
+| font | Text   | -> | フォントのショートハンド文字列 |
+| 戻り値  | Object | <- | フォントオブジェクト      |
+<!-- END REF -->
 
-|
 
 #### 説明
 
@@ -1689,11 +1689,13 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| 引数 | タイプ |  | 説明 |
-| -- | --- |  | -- |
-|    |     |  |    |
+| 引数         | タイプ     |    | 説明                                 |
+| ---------- | ------- | -- | ---------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名         |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)        |
+| 戻り値        | Integer | <- | カラムの総数 |<!-- END REF -->
 
-|vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名| |sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)| |Result  |Integer|<-|カラムの総数|<!-- END REF -->
+|
 
 #### 説明
 
@@ -2411,11 +2413,11 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| 引数         | タイプ  |    | 説明                      |
-| ---------- | ---- | -- | ----------------------- |
-| vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 |
-
-|styleName|Text|->|スタイルの名前| |sheet|Integer|->|シートインデックス (省略した場合はカレントシート)|
+| 引数         | タイプ     |    | 説明                          |
+| ---------- | ------- | -- | --------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名     |
+| styleName  | Text    | -> | スタイルの名前                     |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
 
 |戻り値|Object|-|スタイルシートオブジェクト|<!-- END REF -->
 
@@ -2491,7 +2493,6 @@ $styles:=VP Get stylesheets("ViewProArea")
 ```
 
 カレントシートが 2つのスタイルオブジェクトを使用していた場合:
-
 
 ```4d
 [
@@ -5445,11 +5446,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| 引数       | タイプ    |    | 説明                                        |
-| -------- | ------ | -- | ----------------------------------------- |
-| rangeObj | Object | -> | 複数セルのレンジオブジェクト|<!-- END REF -->
+| 引数 | タイプ |  | 説明 |
+| -- | --- |  | -- |
+|    |     |  |    |
 
-|
+|rangeObj |Object|->|複数セルのレンジオブジェクト|<!-- END REF -->
 
 #### 説明
 
