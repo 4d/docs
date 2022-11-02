@@ -3,11 +3,11 @@ id: methods
 title: Página Métodos
 ---
 
-This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
+This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. Se divide en dos secciones a las que se accede mediante las pestañas Tema y Opciones.
 
 ## Temas
 
-This page allows selecting, creating, or configuring Method editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
+This page allows selecting, creating, or configuring Method editor themes. Un tema define la fuente, el tamaño de la fuente, los colores y los estilos de los elementos mostrados del editor de código.
 
 ![](../assets/en/Preferences/themes.png)
 
@@ -24,15 +24,15 @@ A **myTheme** theme is automatically added if you already customized method edit
 
 ### Creación de temas personalizados
 
-Puede crear temas totalmente personalizables. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+Puede crear temas totalmente personalizables. Para crear un tema, seleccione un tema existente y haga clic en el **+** en la parte inferior de la lista de temas. También puede añadir temas personalizados copiando los archivos de temas en la carpeta `4D Editor Themes` (ver más abajo).
 
 ### Archivos de temas personalizados
 
-Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
+Cada tema personalizado se almacena en un único archivo JSON llamado *themeName.json* Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#storage) de 4D.
 
-If key values are not defined in a custom theme, they default to the values from the *Default Light Theme*. If a JSON theme file is invalid, the *Default Light Theme* is loaded and an error is generated.
+Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema *Default Light Theme*. Si un archivo de tema JSON es inválido, se carga el tema *Default Light Theme* y se genera un error.
 
-> When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
+> Cuando un archivo de tema es modificado por un editor externo, 4D debe ser reiniciado para tener en cuenta las modificaciones.
 
 ## Definir el tema
 
@@ -149,13 +149,13 @@ Define la señalización gráfica de las llaves correspondientes en el código. 
 
 #### Resaltado de las variables y campos
 
-Allows to highlight all occurrences of the same variable or field in an open method window.
+Permite resaltar todas las ocurrencias de la misma variable o campo en una ventana de método abierta.
 
 ![](../assets/en/Preferences/optionsVariables.png)
 
 * **No**(por defecto): no resaltado
-* **On cursor**: All occurrences are highlighted when the text is clicked
-* **On selection**: All occurrences are highlighted when the text is selected
+* **Con cursor**: todas las ocurrencias se destacan cuando se hace clic en el texto
+* **Al seleccionar**: se resaltan todas las ocurrencias cuando se selecciona el texto
 
 The highlight color can be set in the [Theme](#theme-definition) page.
 
