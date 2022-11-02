@@ -344,9 +344,9 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
 
 > Pode usar [parametros nomeados](#named-parameters) com a palavra chave `#DECLARE`.
 
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
+- Triggers O parâmetro $0 (Inteiro longo), que é o resultado de um trigger, será digitado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
+- Objetos formulário que aceitam o evento formulário `On Drag Over` O parâmetro $0 (Inteiro longo), que é o resultado do evento formulário `On Drag Over`, será digitado pelo compilador se o parâmetro não tiver sido declarado explícita mente. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 
 ```4d
  C_LONGINT($0)
@@ -360,9 +360,9 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
  End if
 ```
 
-## Wrong parameter type
+## Tipo de parámetro equivocado
 
-Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
+Chamar a um parámetro com um tipo incorreto é um [erro](error-handling.md) que impede a correta execução. Por exemplo se executar os métodos
 
 ```4d
 // method1
@@ -371,21 +371,21 @@ Calling a parameter with an wrong type is an [error](error-handling.md) that pre
 
 ```4d
 // method2
-method1(42) //wrong type, text expected
+method1(42) //tipo incorrecto, texto esperado
 ```
 
-This case is handled by 4D depending on the context:
+Este caso es tratado por 4D dependendo do contexto:
 
-- in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
-- in interpreted projects:
-  - if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
-  - if the parameter was declared using the [sequential syntax](#sequential-parameters) (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
+- em[projetos compilados](interpreted.md), se gera um erro no passo de compilação sempre que seja possível. Senão, um erro é gerado quando o método for chamado.
+- em projetos interpretados:
+  - se o parámetro se declarou utilizando la [sintaxe nomeada](#named-parameters) (`#DECLARE` ou `Function`), se gera um erro quando se chama ao método.
+  - Se o parâmetro for declarado usando a [sintaxe sequencial](#sequential-parameters) (`C_XXX`), nenhum erro é gerado, o método chamado recebe um valor vazio no tipo esperado.
 
-## Input/Output variables
+## Variáveis input output
 
 Dentro da subrotina, pode utilizar os parâmetros $1, $2... da mesma maneira que utilizaria qualquer outra variável local. Entretanto, no caso de usar comandos que modifiquem o valor da variável passada como parâmetro (por exemplo `Find in field`), os parâmetros $1, $2, etc. não podem ser utilizardos diretamente. Primeiro deve copiá-los nas variáveis locais padrão (por exemplo: `$myvar:=$1`).
 
-## Using object properties as named parameters
+## Usando propriedades objeto como parâmetros nomeados
 
 A utilização de objetos como parâmetros permite manejar **parâmetros com nome**. Este estilo de programação é simples, flexível e fácil de ler.
 
@@ -452,7 +452,7 @@ No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opci
 ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 parameter
 ```
 
-4D methods and functions also accept such optional parameters. You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). Por exemplo:
+Métodos e funções 4D também aceitam parâmetros opcionais Pode declarar qualquer número de parâmetros. Se chamar um método ou função com parâmetros menos que declarados, parametros faltantes são processados como valores padrão no modo chamado, [de acordo com seu tipo](data-types.md#default-values). Por exemplo:
 
 ```4d
 // "concate" function of myClass Function concate ($param1 : Text ; $param2 : Text)->$result : Text
@@ -466,7 +466,7 @@ $result:=$param1+" "+$param2
  $class.concate() // Displays " "
 ```
 
-> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
+> Pode chamar um método ou função com mais parãmetros que declarados. Estará disponível dentro do código chamado atraves da  [${N} sintaxe](#parameter-indirection-n).
 
 Utilizando o comando `Count parameters` desde dentro do método chamado, pode detectar o número real de parâmetros e realizar diferentes operações dependendo do que tenha recebido.
 
@@ -495,11 +495,11 @@ Depois de adicionar este método projeto a sua aplicação, pode escrever:
 APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> Quando os parâmetros opcionais forem necessários em seus métodos, também pode considerar o uso de [propriedades objetos parâmetros com nome](#using-objects-properties-as-named-parameters) que oferecem uma forma flexível de manejar um número variável de parâmetros.
 
 ## Valores ou referências
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Por exemplo:
+Quando passar um parâmetro, 4D sempre avalia a expressão do parâmetro no contexto do método que chama e define o **valor resultante** nas variáveis locais $1, $... da subrotina ou função classe As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Por exemplo:
 
 ```4d
  //Here is some code from the method MY_METHOD DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams" ALERT([People]Name)
@@ -530,13 +530,13 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
 2. Ao invés de ter o método `DO_SOMETHING` "faça algo", pode reescrever o método para que devolva um valor. Portanto escreveria:
 
 ```4d
- //Here is some code from the method MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
- ALERT([People]Name)
+ //Esta é uma parte do código do método MY_METHOD
+ DO_SOMETHING(-[People]Name) //Suponha que o valor de [People]Name value seja "williams"
+ ALERT([People]Last Name)
 
- //Here the code of the method DO SOMETHING
- $0:=Uppercase($1)
- ALERT($0)
+  //Este é o código do método DO_SOMETHING
+ $0-:=Uppercase($0-)
+ ALERT($1)
 ```
 
 Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions).
