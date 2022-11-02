@@ -100,7 +100,7 @@ Dado el siguiente código:
 ```4d
  $sel:=$ds.Employee.query("firstname = ab@")
  For each($e;$sel)
-    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
+    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refiere a la tabla Company
  End for each
 ```
 
@@ -123,20 +123,20 @@ All ORDA functions that handle entity selections support the **context** propert
  $querysettings2:=New object("context";"longList")
 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered   
- // and associated to context "shortList"
+ $data:=extractData($sel1) // En el método extractData la optimización asociada
+ // al contexto "shortList" se aplica
 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated   
- // to context "shortList" is applied
+ $data:=extractData($sel2) // En el método extractData una optimización
+ // se activa y asocia al contexto "shortList"
 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization  
- // is triggered and associated to context "longList"
+ $data:=extractDetailedData($sel3) // En el método extractDetailedData una optimización
+ // se activa y asocia al contexto "longList"
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization  
- // associated to context "longList" is applied
+ $data:=extractDetailedData($sel4) // En el método extractDetailedData la optimización
+ // asociada al contexto "longList" se aplica
 ```
 
 #### List box basado en una selección de entidades
@@ -155,9 +155,9 @@ Subsequent requests to server sent by entity browsing functions will also suppor
 For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
 
 ```4d
- $myEntity:=Form.currentElement //current item expression
-  //... do something
- $myEntity:=$myEntity.next() //loads the next entity using the same context
+ $myEntity:=Form.currentElement //expresión del elemento actual
+  //... hacer algo
+ $myEntity:=$myEntity.next() //carga la siguiente entidad utilizando el mismo contexto
 ```
 
 #### Preconfiguración de contextos
@@ -174,11 +174,11 @@ If you want to deliver final applications with the highest level of optimization
 
 ### Caché ORDA
 
-For optimization reasons, data requested from the server via ORDA is loaded in the ORDA remote cache (which is different from the 4D cache). La caché ORDA está organizada por dataclass y vence después de 30 segundos.
+Por razones de optimización, los datos solicitados al servidor a través de ORDA se cargan en la caché remota de ORDA (que es diferente de la caché 4D). La caché ORDA está organizada por dataclass y vence después de 30 segundos.
 
-The data contained in the cache is considered as expired when the timeout is reached. Todo acceso a los datos caducados enviará una petición al servidor. Los datos caducados permanecen en la caché hasta que se necesite el espacio.
+Los datos contenidos en la caché se consideran caducados cuando se alcanza el tiempo de espera. Todo acceso a los datos caducados enviará una petición al servidor. Los datos caducados permanecen en la caché hasta que se necesite el espacio.
 
-Por defecto, la caché ORDA es manejada de forma transparente por 4D. However, you can control its contents using the following ORDA class functions:
+Por defecto, la caché ORDA es manejada de forma transparente por 4D. Sin embargo, puede controlar su contenido utilizando las siguientes funciones de la clase ORDA:
 
 * [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 * [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
