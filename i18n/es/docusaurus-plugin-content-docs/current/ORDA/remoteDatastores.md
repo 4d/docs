@@ -3,11 +3,11 @@ id: datastores
 title: Utilizar un almacén de datos remoto
 ---
 
-A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
+Un [datastore](dsMapping.md#datastore) expuesto en una aplicación 4D se puede acceder simultáneamente a través de diferentes clientes:
 
-- 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command. These accesses are handled by the **HTTP REST server**.
-- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. Estos accesos son gestionados por el **servidor HTTP**.
+- Las aplicaciones 4D remotas que utilizan ORDA para acceder al almacén de datos principal con el comando `ds`. Tenga en cuenta que la aplicación 4D remota puede seguir accediendo a la base de datos en modo clásico. Estos accesos son gestionados por el **servidor de aplicaciones**.
+- Otras aplicaciones 4D (4D remote, 4D Server) abriendo una sesión en el datastore remoto a través del comando [`Open datastore`](../API/DataStoreClass.md#open-datastore). Estos accesos son gestionados por el **servidor HTTP REST**.
+- Las peticiones [4D for iOS o 4D for Android](https://developer.4d.com/go-mobile/) para actualizar las aplicaciones móviles. Estos accesos son gestionados por el **servidor HTTP**.
 
 
 
@@ -31,13 +31,13 @@ Estos principios se ilustran en los gráficos siguientes:
 
 ### Visualización de las sesiones
 
-Processes that manage sessions for datastore access are shown in the 4D Server administration window:
+Los procesos que gestionan las sesiones de acceso al datastore se muestran en la ventana de administración de 4D Server:
 
 *   nombre: "REST Handler: \<process name\>"
 *   tipo: tipo Worker Server HTTP
-*   session: session name is the user name passed to the `Open datastore` command.
+*   sesión: el nombre de la sesión es el nombre de usuario que se pasa al comando `Open datastore`.
 
-In the following example, two processes are running for the same session:
+En el siguiente ejemplo, se están ejecutando dos procesos para la misma sesión:
 
 ![](../assets/en/ORDA/sessionAdmin.png)
 
@@ -109,7 +109,7 @@ Thanks to the optimization, this request will only get data from used attributes
 #### Reutilización de la propiedad context
 
 You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA functions that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
-> You can also create contexts using the [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function.
+> También puede crear contextos utilizando la función [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
 All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). The same optimization context property can be passed to unlimited number of entity selections on the same dataclass. Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
@@ -168,7 +168,7 @@ If you want to deliver final applications with the highest level of optimization
 
 1. Diseñe sus algoritmos.
 2. Run your application and let the automatic learning mechanism fill the optimization contexts.
-3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
+3. Llame la función [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) o [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) para recoger contextos. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
 4. In the final step, call the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function to build contexts at application startup and [use them](#reusing-the-context-property) in your algorithms.
 
 
