@@ -22,7 +22,7 @@ Define o número de colunas numa tabela de miniaturas.
 
 ## Linhas
 
-Sets the number of rows in a thumbnail table.
+Define o número de linhaas numa tabela de miniaturas.
 
 #### Gramática JSON
 
