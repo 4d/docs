@@ -97,4 +97,4 @@ El funcionamiento de la tabla de configuración es el siguiente:
     - Denegar 192.168.* (denegar todas las direcciones que empiecen por 192.168)
     - Autorizar * (y permitir todas las demás direcciones)
 
-By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.
+Por defecto, 4D Server no aplica ninguna restricción de conexión: la primera línea de la tabla contiene la etiqueta Autorizar y el caracter * (todas las direcciones).
