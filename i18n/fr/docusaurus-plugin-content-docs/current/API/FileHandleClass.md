@@ -283,7 +283,9 @@ This property is **read/write**.
 | Résultat   | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -320,7 +322,9 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | Résultat   | Text | <- | Line of text|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
