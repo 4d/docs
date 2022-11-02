@@ -301,7 +301,7 @@ A função `.clearAllRemoteContexts()` <!-- REF #DataStoreClass.clearAllRemoteCo
 
 Esta função é utilizada principalmente no contexto da depuração. Deve lembrar que quando abrir o depurador ele envia petições ao servidor e pesquisa todos os atributos de dataclasse para exibi-los Isso pode sobrecarregar seus contextos com dados desnecessários.
 
-In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts and keep them clean.
+Nestes casos, pode usar `.clearAllRemoteContexts()` para limpar os seus contextos e mantê-los limpos.
 
 #### Veja também
 
@@ -551,22 +551,22 @@ Em um armazém de dados remoto:
 
 #### Descrição
 
-A função `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->.
+A função `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> retorna um objeto que contém informações sobre a otimização de contexto *contextName* na datastore.<!-- END REF -->.
 
-For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+Para saber mais sobre como contextos de otimização podem ser criados veja [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
 #### Objeto devolvido
 
 O objeto retornado tem as propriedades abaixo:
 
-| Propriedade            | Tipo | Descrição                                                                                                                                                                                                                                                                     |
-| ---------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name                   | Text | Nome do contexto                                                                                                                                                                                                                                                              |
-| main                   | Text | Attribute(s) associated to the context (attribute names are separated by a comma)                                                                                                                                                                                             |
-| dataclass              | Text | Nome do dataclass                                                                                                                                                                                                                                                             |
-| currentItem (opcional) | Text | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
+| Propriedade            | Tipo | Descrição                                                                                                                                                                                                                                                                                           |
+| ---------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                   | Text | Nome do contexto                                                                                                                                                                                                                                                                                    |
+| main                   | Text | Atributo(s) associado(s) ao contexto (os nomes dos atributos são separados por uma vírgula)                                                                                                                                                                                                         |
+| dataclass              | Text | Nome do dataclass                                                                                                                                                                                                                                                                                   |
+| currentItem (opcional) | Text | Os atributos do [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) se o contexto for linkado a uma list box. Devolvido como `Nulo` ou elemento de texto vazio se o nome do contexto não for utilizado para uma caixa de listagem, ou se não houver contexto para o actualItem |
 
-Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
+Como os contextos se comportam como filtros de atributos, se *principal* for devolvido vazio, significa que nenhum filtro é aplicado, e que o servidor devolve todos os atributos de dataclass.
 
 #### Exemplo
 
@@ -638,7 +638,7 @@ Ver o exemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 #### Descrição
 
-A função `.isAdminProtected()` <!-- REF #DataStoreClass.isAdminProtected().Summary -->returns `True` if [Data Explorer](Admin/dataExplorer.md) access has been disabled for the working session<!-- END REF -->.
+A função `.isAdminProtected()` <!-- REF #DataStoreClass.isAdminProtected().Summary -->retorna `True` se [Data Explorer](Admin/dataExplorer.md) acesso for desativado para a sessão de trabalho<!-- END REF -->.
 
 Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAdmin`, mas pode ser desativada para evitar qualquer acesso aos dados por parte dos administradores (ver a função [`.setAdminProtection()`](#setadminprotection)).
 
@@ -671,7 +671,7 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 #### Descrição
 
-A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF --> (including [remote datastores](ORDA/remoteDatastores.md)). Está pensado para ser utilizado uma vez, por exemplo no método base `On Startup`.
+A função `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->estabelece todas as seleções de entidade como editável como padrão nas datastore de aplicação atuais.<!-- END REF --> (incluindo [remote datastores](ORDA/remoteDatastores.md)). Está pensado para ser utilizado uma vez, por exemplo no método base `On Startup`.
 
 quando nesta função não for chamada, as novas seleções de entidades podem ser compartilháveis, dependendo da natureza de seu "pai", ou de [como foram criadas](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -706,7 +706,7 @@ quando nesta função não for chamada, as novas seleções de entidades podem s
 
 #### Descrição
 
-A função `.provideDataKey()` <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. Esta função pode ser utilizada ao abrir um banco de dados criptografado, ou ao executar qualquer operação de criptografia que precise da chave de criptografia, como por exemplo voltar a criptografar o arquivo de dados.
+A função `.provideDataKey()` <!-- REF #DataStoreClass.provideDataKey().Summary -->permite oferecer uma chave de criptografia de dados para o arquivo de dados atual da datastore e detecta se a chave corresponder com os dados criptografados.<!-- END REF -->. Esta função pode ser utilizada ao abrir um banco de dados criptografado, ou ao executar qualquer operação de criptografia que precise da chave de criptografia, como por exemplo voltar a criptografar o arquivo de dados.
 > * A função `.provideDataKey()` deve ser chamada em um banco de dados criptografada. Se for chamado em uma database não criptografada, o erro 2003 (a chave de criptografia não corresponde aos dados) é retornada. Utilize o comando `Estado de cifrado do arquivo de dados` para determinar se o banco de dados estiver cifrada.
 > * A função `.provideDataKey()` não pode ser chamada desde um 4D remoto ou uma datastore remoto encriptado.
 
@@ -779,7 +779,7 @@ Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolv
 
 #### Descrição
 
-A função `.setAdminProtection()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->allows disabling any data access on the [web admin port](Admin/webAdmin.md#http-port), including for the [Data Explorer](Admin/dataExplorer.md) in `WebAdmin` sessions<!-- END REF -->.
+A função `.setAdminProtection()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->permite desativar qualquer acesso de dados em [web admin port](Admin/webAdmin.md#http-port), incluindo as sessões [Data Explorer](Admin/dataExplorer.md) in `WebAdmin`<!-- END REF -->.
 
 Por padrão, quando não chamar a função, o acesso aos dados se concede sempre no porto de administração web para uma sessão com privilégio `WebAdmin` utilizando o Explorador de Dados. Em algumas configurações, por exemplo, quando o servidor de aplicações estiver alojado em uma máquina de terceiros, é possivel que não quiser que o administrador possaa ver seus dados, mesmo que possa editar a configuração do servidor, incluindo a configuração da [access key](Admin/webAdmin.md#access-key).
 
@@ -816,41 +816,41 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
-| Parâmetros      | Tipo          |    | Descrição                                                                                            |
-| --------------- | ------------- | -- | ---------------------------------------------------------------------------------------------------- |
-| contextName     | Text          | -> | Nome do contexto                                                                                     |
-| dataClassName   | Text          | -> | Nome da dataclass                                                                                    |
-| dataClassObject | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)                                                           |
-| attributes      | Text          | -> | Lista de atributos separada por vírgulas                                                             |
-| attributesColl  | Collection    | -> | Coleção de nomes de atributos (text)                                                                 |
-| contextType     | Text          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                               |
-| pageLength      | Integer       | -> | Page length of the entity selection linked to the context (default is 80)|<!-- END REF --> |
+| Parâmetros      | Tipo          |    | Descrição                                                                                                 |
+| --------------- | ------------- | -- | --------------------------------------------------------------------------------------------------------- |
+| contextName     | Text          | -> | Nome do contexto                                                                                          |
+| dataClassName   | Text          | -> | Nome da dataclass                                                                                         |
+| dataClassObject | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)                                                                |
+| attributes      | Text          | -> | Lista de atributos separada por vírgulas                                                                  |
+| attributesColl  | Collection    | -> | Coleção de nomes de atributos (text)                                                                      |
+| contextType     | Text          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                                    |
+| pageLength      | Integer       | -> | Duração da página da selecção da entidade ligada ao contexto (por padrão é 80)|<!-- END REF --> |
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
-A função `.setRemoteContextInfo()` <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->. Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->.
+A função `.setRemoteContextInfo()` <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->conecta os atributos de dataclass especificados ao contexto de otimização *contextName*<!-- END REF -->. Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->.
 
-When you pass a context to the ORDA class functions, the REST request optimization is triggered immediately:
+Quando se passa um contexto para as funções da classe ORDA, a optimização do pedido REST é desencadeada imediatamente:
 
-* the first entity is not fully loaded as done in automatic mode
-* pages of 80 entities (or `pageLength` entities) are immediately asked to the server with only the attributes in the context
+* a primeira entidade não é carregada totalmente, como no modo automático
+* páginas de 80 entidades (ou `pageLength`) são imediatamente perguntadas ao servidor com apenas os atributos no contexto
 
-> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/remoteDatastores.md#clientserver-optimization)
+> Para saber mais sobre os contextos de otimização são construidos, veja  [client/server optimization paragraph](../ORDA/remoteDatastores.md#clientserver-optimization)
 
-In *contextName*, pass the name of the optimization context to link to the dataclass attributes.
+em *contextName*, passe o nome do contexto de otimização ao link para os atributos de dataclass.
 
-To designate the dataclass that will receive the context, you can pass a *dataClassName* or a *dataClassObject*.
+Para designar a dataclass que vai receber o contexto, passa  *dataClassName* ou *dataClassObject*.
 
-To designate the attributes to link to the context, pass either a list of attributes separated by a comma in *attributes* (Text), or a collection of attribute names in *attributesColl* (collection of text).
+Para designar o atributo a link ao contexto, passe ou uma lista de atributos separados por uma vírgula em *attributes* (Texto), ou uma coleção de nomes de atributo em *attributesColl* (coleção de texto).
 
-If *attributes* is an empty Text, or *attributesColl* is an empty collection, all the scalar attributes of the dataclass are put in the optimization context. If you pass an attribute that does not exist in the dataclass, the function ignores it and an error is thrown.
+Se *attributes* for um Texto vazio, ou *attributesColl* for uma coleção vazia, todos os atributos escalares da dataclass são colocadas no contexto de otimização. Se passar um atributo que não existir na dataclass, a função a ignora e um erro é enviado.
 
-You can pass a *contextType* to  specify if the context is a standard context or the context of the current entity selection item displayed in a list box:
+Pode passar *contextType* para especificar se o contexto é um contexto padrão ou o contexto do item de seleção de entidade atual exibido em uma list box:
 
-* If set to "main" (default), the *contextName* designates a standard context.
-* If set to "currentItem", the attributes passed are put in the context of the current item.  Ver  [List box baseado na seleção da entidade](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
+* Se estabelecido como "main" (padrão),  *contextName* designa um contexto padrão.
+* Se definido para "currentItem", os atributos passados são colocados no contexto do item actual.  Ver  [List box baseado na seleção da entidade](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
 
 Em *pageLength*, especificar o número de entidades dataclass a solicitar ao servidor.
 
@@ -887,9 +887,9 @@ $info:=$ds.getRemoteContextInfo("contextA")
 
 #### Exemplo 2
 
-The following piece of code requests pages of 30 entities of the `Address` dataclass from the server. As entidades devolvidas contêm apenas o atributo `zipCode`.
+O seguinte pedaço de código solicita páginas de 30 entidades do `Endereço` dataclass do servidor. As entidades devolvidas contêm apenas o atributo `zipCode`.
 
-For each `Address` entity, 20 Persons entities are returned, and they only contain the `lastname` and `firstname` attributes:
+Para cada `endereço` entidade, 20 pessoas entidades são devolvidas, e só contêm os atributos `último nome` e `primeiro nome` :
 
 ```4d
 var $ds : 4D. DataStoreImplementation
@@ -1024,7 +1024,7 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 #### Descrição
 
-A função `.startTransaction()` <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Summary -->cancela a transação<!-- END REF --> aberta pela função [`.startTransaction()`](#starttransaction) no nível correspondente do processo atual para o datastore especificado.
+A função `.startTransaction()` <!-- REF #DataStoreClass.startTransaction().Summary -->inicia uma transação no processo atual na base de dados que corresponde à base de dados à qual se aplica<!-- END REF -->. Summary -->cancela a transação<!-- END REF --> aberta pela função [`.startTransaction()`](#starttransaction) no nível correspondente do processo atual para o datastore especificado.
 > Se chamar a este método no armazém de dados principal (ou seja, o armazém de dados devolvido pelo comando `ds`), a transação se aplica a todas as operações realizadas no armazém de dados principal e no banco de dados subjacente, incluindo portanto ORDA e as linguagens clássicas.
 
 Pode aninhar várias transações (subtransações). Cada transação ou subtransação deve ser eventualmente cancelada ou validada. Note que se cancelar a transação principal, também se cancelam todas suas subtransações, mesmo se tiver validado individualmente mediante a função `.validateTransaction()`.
@@ -1088,7 +1088,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 #### Descrição
 
-A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (em arquivo ou em memória). É particularmente útil quando se registrar um arquivo, já que realmente fecha o documento aberto no disco.
+A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->para o registro de logs de petições ORDA no lado do cliente<!-- END REF --> (em arquivo ou em memória). É particularmente útil quando se registrar um arquivo, já que realmente fecha o documento aberto no disco.
 
 Esta função deve ser chamada em um 4D remoto, do contrário não faz nada. Foi criado para depuração em configurações de cliente/servidor.
 
