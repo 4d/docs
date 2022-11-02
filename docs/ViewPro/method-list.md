@@ -357,10 +357,11 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
-|column|Longint|->|Sheet index (current sheet if omitted)|
-|row|Longint|->|Sheet index (current sheet if omitted)|
+|column|Longint|->|Column index|
+|row|Longint|->|Row index|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
-|Result|Object|<-|Range object of all cells|<!-- END REF -->
+|Result|Object|<-|Range object of a single cell|
+<!-- END REF -->
 
 #### Description
 
@@ -2423,6 +2424,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 ```
 
 In this case, the current sheet uses two style objects:
+
 
 
 ```4d
@@ -5292,6 +5294,7 @@ VP SET ROW COUNT("ViewProArea";5)
 
 |Parameter|Type||Description|
 |---|---|---|---|
+
 |rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Description
