@@ -270,7 +270,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 - Debugger where the value of expressions can be checked
 - Quick Report editor as a formula for a column
 
-### Expression types
+### Tipos de expressões
 
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 

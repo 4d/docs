@@ -58,7 +58,7 @@ Leurs propriétés et fonctions sont les suivantes :
 
 | Version | Modifications                             |
 | ------- | ----------------------------------------- |
-| v18 R3  | Ajoutées                                  |
+| v18 R3  | Ajout                                     |
 | v19     | prise en charge de .sessionCookieSameSite |
 
 </details>
@@ -106,7 +106,7 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
@@ -632,7 +632,7 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Champ "path" du cookie 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 
@@ -672,7 +672,7 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validation d'a
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
@@ -734,7 +734,7 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->

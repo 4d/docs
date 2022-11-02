@@ -21,34 +21,34 @@ Al escribir una fórmula, puede utilizar diferentes atajos:
 
 ![](../assets/en/ViewPro/formulas.PNG)
 
-- escriba la primera letra de una función a ingresar. A pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+- escriba la primera letra de una función a ingresar. Aparece un menú contextual en el que se listan las funciones y referencias disponibles, permitiéndole seleccionar los elementos deseados:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-You can also create named formulas that can be called via their name. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
+También puede crear fórmulas con nombre que pueden ser llamadas a través de su nombre. Para ello, introduzca estas fórmulas utilizando el comando [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name).
 
 ### Operadores y operandos
 
 Todas las fórmulas tienen operandos y operadores:
 
-*   **Operators**: see [Values and operators](#values-and-operators) below.
+*   **Operadores**: ver [Valores y operadores](#valores-y-operadores) abajo.
 *   Los **operandos** incluyen varias categorías:
     *   Los [valores](#values-and-operators) (soportan 5 tipos de datos)
-    *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
+    *   Las [referencias a otras celdas](#cell-references) (relativas, absolutas, mixtas o por nombre)
     *   [funciones estándar de hoja de cálculo](#using-functions)
-    *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
+    *   Las [funciones 4D](#4d-functions) basados en fórmulas 4D y que dan acceso a variables, campos, métodos, comandos o expresiones 4D.
 
 ## Valores y operadores
 
 4D View Pro soporta cinco tipos de datos. Para cada tipo de datos, se soportan valores literales y de operadores específicos.
 
-| Tipos de datos                    | Valores                                               | Operadores                                                                                                                                                                                                                                             |
-| --------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
-| [Fecha](Concepts/dt_date.md)      | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
-| [Hora](Concepts/dt_time.md)       | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
-| [String](Concepts/dt_string.md)   | 'Sophie' o "Sophie"                                   | & (concatenación)                                                                                                                                                                                                                                      |
-| [Boolean](Concepts/dt_boolean.md) | TRUE o FALSE                                          | -                                                                                                                                                                                                                                                      |
+| Tipos de datos                    | Valores                                               | Operadores                                                                                                                                                                                                                                            |
+| --------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (suma)<br/>- (resta)<br/>* (multiplicación)<br/>/ (división)<br/>^ (exponente, el número de veces que hay que multiplicar un número por sí mismo)<br/>% (porcentaje -- dividir el número antes del operador por cien) |
+| [Fecha](Concepts/dt_date.md)      | 10/24/2017                                            | + (fecha + número de días -> fecha)<br/>+ (fecha + hora -> fecha + hora del día)<br/>- (fecha - número de días -> fecha)<br/>- (fecha - fecha -> número de días entre los dos)                                                      |
+| [Hora](Concepts/dt_time.md)       | 10:12:10                                              | Operadores de duración:<br/>+ (adición)<br/>- (sustracción)<br/>* (duración * número -> duración)<br/>/ (duración/ número -> duración)                                                                                      |
+| [String](Concepts/dt_string.md)   | 'Sophie' o "Sophie"                                   | & (concatenación)                                                                                                                                                                                                                                     |
+| [Boolean](Concepts/dt_boolean.md) | TRUE o FALSE                                          | -                                                                                                                                                                                                                                                     |
 
 
 ### Operadores de comparación
@@ -128,7 +128,7 @@ Las funciones de hoja de cálculo son fórmulas predefinidas utilizadas para cal
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) for details and examples.
+Ver [**Lista extendida de funciones de SpreadJS**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) para más detalles y ejemplos.
 
 
 ## Funciones 4D

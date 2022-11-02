@@ -177,8 +177,8 @@ Such a hierarchical system makes it easy to remember to which group a new user s
 Groups are assigned access privileges to specific parts or features of the application:
 
 - Design and Runtime Explorer access,
-- HTTP server,
-- REST server,
+- Servidor HTTP,
+- Servidor REST,
 - Servidor SQL.
 
 These accesses are defined in the Settings dialog. O exemplo abaixo mostra direitos de acesso ao explorador de Execução e ao Design sendo atribuidos ao grupo "Devs":

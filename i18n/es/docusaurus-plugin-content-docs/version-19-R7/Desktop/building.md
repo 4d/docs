@@ -75,7 +75,7 @@ Esta pestaña le permite generar un archivo de estructura compilado estándar y/
 
 Genera una aplicación que sólo contiene código compilado.
 
-This feature creates a *.4dz* file within a `Compiled Database/<project name>` folder. Por ejemplo, si ha llamado a su aplicación "MyProject", 4D creará:
+Esta funcionalidad crea un archivo *.4dz* en una carpeta `Compiled Database/<project name>`. Por ejemplo, si ha llamado a su aplicación "MyProject", 4D creará:
 
 `<destination>/Compiled Database/MyProject/MyProject.4dz`
 
@@ -375,7 +375,7 @@ If the server and/or client part of your double-clickable application is used as
 Los elementos deben ser instalados:
 
 * **en Windows**
-  * **Server application** - in the `Client Server executable/<ApplicationName>Server/Server Database` subfolder.
+  * **Aplicación del servidor** - en la subcarpeta `Client Server executable/<ApplicationName>Server/Server Database`.
   * **Client application** - in the `Client Server executable/<ApplicationName>Client` subfolder.
 
 * **en macOS**
@@ -423,7 +423,7 @@ Customizing the client-side cache folder name can be useful when your client app
 
 ![](../assets/en/Admin/cachea.png)
 
-* Using the `ClientServerSystemFolderName` key (*a single cache folder is used for all servers*):
+* Utilizando la llave `ClientServerSystemFolderName` (*se utiliza una única carpeta de caché para todos los servidores*):
 
 ![](../assets/en/Admin/cacheb.png)
 

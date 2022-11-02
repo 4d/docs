@@ -88,9 +88,9 @@ Cuando esta opción está marcada, se inicia automáticamente un archivo de hist
 
 ### Crear un paquete
 
-When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
+Cuando esta opción está seleccionada, las bases de datos 4D se crean automáticamente en una carpeta con el sufijo .4dbase.
 
-Thanks to this principle, under macOS the database folders appear as packages having specific properties. En Windows, este funcionamiento no tiene ningún impacto particular.
+Gracias a este principio, en macOS las carpetas de las bases aparecen como paquetes con propiedades específicas. En Windows, este funcionamiento no tiene ningún impacto particular.
 
 ### Incluir los tokens en los archivos fuente del proyecto
 

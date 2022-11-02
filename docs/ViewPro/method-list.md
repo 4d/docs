@@ -1302,7 +1302,10 @@ You want to trace the execution of the commands and empty the command buffer:
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|font  |Text|->|Font shorthand string|<!-- END REF -->
+|font  |Text|->|Font shorthand string|  
+|Result  |Object|<-|Font object|
+<!-- END REF -->
+
 
 #### Description
 
@@ -1652,7 +1655,6 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-
 |vpAreaName  |Text|->|4D View Pro area from object name|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Integer|<-|Total number of columns |<!-- END REF -->
@@ -2348,7 +2350,6 @@ VP SET CELL STYLE($range;$style)
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName|Text|->|4D View Pro area form object name|
-
 |styleName|Text|->|Name of style|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
 

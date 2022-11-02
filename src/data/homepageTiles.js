@@ -22,7 +22,7 @@ const Sections = [
           <Translate>Working with a project</Translate>
         </Link>
 		<Link to="Notes/updates" >
-          <Translate>Release Notes</Translate>
+          <i><Translate>Release Notes</Translate></i>
         </Link>
       </div>
     ),

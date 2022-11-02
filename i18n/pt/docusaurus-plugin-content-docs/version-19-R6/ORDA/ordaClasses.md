@@ -326,7 +326,7 @@ The *$event* parameter contains the following properties:
 | attributeName | Text    | Computed attribute name                                                                   |
 | dataClassName | Text    | Nome do dataclass                                                                         |
 | kind          | Text    | "get"                                                                                     |
-| result        | Variant | Optional. Add this property with Null value if you want a scalar attribute to return Null |
+| result        | Variant | Opcional. Add this property with Null value if you want a scalar attribute to return Null |
 
 
 #### Exemplos

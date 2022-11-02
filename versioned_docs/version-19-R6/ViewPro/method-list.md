@@ -1263,7 +1263,9 @@ You want to trace the execution of the commands and empty the command buffer:
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-|font  |Text|->|Font shorthand string|<!-- END REF -->
+|font  |Text|->|Font shorthand string|
+|Result  |Object|<-|Font object|
+<!-- END REF -->
 
 #### Description
 
@@ -1620,7 +1622,6 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 |Parameter|Type| |Description|
 |---|---|---|---|
-
 |vpAreaName  |Text|->|4D View Pro area from object name|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Integer|<-|Total number of columns |<!-- END REF -->
@@ -2981,6 +2982,7 @@ The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary 
 In *rangeObj*, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If *rangeObj* refers to more than one cell, only the first one is used.
 
 In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
+
 
 In the optional *options* parameter, you can specify what to paste in the cell range. Possible values:
 
@@ -4871,6 +4873,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 |sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
 #### Description
+
 
 The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in *vpAreaName*<!-- END REF -->.
 

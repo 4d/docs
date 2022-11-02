@@ -228,7 +228,7 @@ Here are the properties for each exposed attribute that are returned:
 | inverseName | String   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                       |
 
 
-### Primary Key
+### Chave primária
 
 O objeto chave devolve o nome do atributo **name** definido como **chave primária** para a classe de dados.
 

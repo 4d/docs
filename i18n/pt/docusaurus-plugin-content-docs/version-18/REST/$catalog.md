@@ -230,7 +230,7 @@ Here are the properties for each exposed attribute that are returned:
 
 Define os métodos projeto associados à classe de dados, se houver.
 
-### Primary Key
+### Chave primária
 
 O objeto chave devolve o nome do atributo **name** definido como **chave primária** para a classe de dados.
 

@@ -87,7 +87,7 @@ function TilesContainer() {
     </div>
   );
 }
-
+/*
 function Updates() {
   return (
     <div className="container text--right">
@@ -98,6 +98,7 @@ function Updates() {
     </div>
   )
 }
+*/
 
 function Lts() {
   return (
@@ -118,7 +119,6 @@ export default function Home() {
     	<Lts />
 		<HeroBanner />	
         <TilesContainer />
- //       <Updates />
       </main>
     </Layout>
   );

@@ -36,7 +36,7 @@
     "message": "Settings"
   },
   "Preferences": {
-    "message": "Preferences"
+    "message": "Preferências"
   },
   "homepage.administration.title": {
     "message": "Administration"
@@ -279,7 +279,7 @@
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Previous",
+    "message": "Anterior",
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {

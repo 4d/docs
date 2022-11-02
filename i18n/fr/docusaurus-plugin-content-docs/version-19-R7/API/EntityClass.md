@@ -40,7 +40,7 @@ Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/d
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -76,7 +76,7 @@ $myEntity.save() //sauvegarder l'entity
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -117,7 +117,7 @@ Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -318,7 +318,7 @@ vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -424,7 +424,7 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -463,7 +463,7 @@ Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#g
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -548,7 +548,7 @@ Vous pouvez également utiliser une entité relative fournie sous forme d'objet 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -593,7 +593,7 @@ Le code générique suivant duplique toute entité :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -634,7 +634,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19R5   | Ajoutées      |
+| v19R5   | Ajout         |
 
 </details>
 
@@ -692,7 +692,7 @@ $info:=$address.getRemoteContextAttributes()
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -735,7 +735,7 @@ Si l'entité n'appartient pas à une entity selection, la fonction renvoie Null.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -781,7 +781,7 @@ Le stamp (marqueur interne) d'une entité est automatiquement incrémenté par 4
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -829,7 +829,7 @@ La valeur résultante est comprise entre 0 et la longueur de l'entity selection 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -868,7 +868,7 @@ La fonction `.isNew()` <!-- REF #EntityClass.isNew().Summary --> renvoie Vrai si
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -906,7 +906,7 @@ Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#g
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1023,7 +1023,7 @@ Exemple avec option `dk reload if stamp changed` :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1065,7 +1065,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1106,7 +1106,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1169,7 +1169,7 @@ L'objet retourné par `.reload( )` contient les propriétés suivantes :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1303,7 +1303,7 @@ Mise à jour d'une entité avec option `dk auto merge` :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1585,7 +1585,7 @@ Retourne :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1630,7 +1630,7 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 
@@ -1704,7 +1704,7 @@ Dans ce cas :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17     | Ajoutées      |
+| v17     | Ajout         |
 
 </details>
 

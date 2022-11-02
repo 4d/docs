@@ -383,7 +383,7 @@ Customizing the client-side cache folder name can be useful when your client app
 
 ![](../assets/en/Admin/cachea.png)
 
-* Using the `ClientServerSystemFolderName` key (*a single cache folder is used for all servers*):
+* Utilizando la llave `ClientServerSystemFolderName` (*se utiliza una única carpeta de caché para todos los servidores*):
 
 ![](../assets/en/Admin/cacheb.png)
 

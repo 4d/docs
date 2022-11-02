@@ -47,8 +47,8 @@ All formulas have operands and operators:
 | [Número](Concepts/dt_number.md)    | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
 | [Date](Concepts/dt_date.md)        | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
 | [Hora](Concepts/dt_time.md)        | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
-| [String](Concepts/dt_string.md)    | 'Sophie' or "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
-| [Booleano](Concepts/dt_boolean.md) | TRUE or FALSE                                         | -                                                                                                                                                                                                                                                      |
+| [String](Concepts/dt_string.md)    | 'Sophie' ou "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
+| [Booleano](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                                      |
 
 
 ### Comparison operators
@@ -131,7 +131,7 @@ Spreadsheet functions are preset formulas used to calculate cell values. When yo
 See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) for details and examples.
 
 
-## 4D functions
+## Funções 4D
 
 4D View Pro allows you to define and call **4D custom functions**, which execute [4D formulas](API/FunctionClass.md). Using 4D custom functions extends the possibilities of your 4D View Pro documents and allows powerful interactions with the 4D database.
 

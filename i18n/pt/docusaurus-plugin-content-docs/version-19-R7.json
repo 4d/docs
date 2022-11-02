@@ -48,7 +48,7 @@
     "description": "The label for category Settings in sidebar docs"
   },
   "sidebar.docs.category.Preferences": {
-    "message": "Preferences",
+    "message": "Preferências",
     "description": "The label for category Preferences in sidebar docs"
   },
   "sidebar.docs.category.Administration": {
@@ -136,7 +136,7 @@
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {
-    "message": "Form Editor",
+    "message": "Editor de formulários",
     "description": "The label for category Form Editor in sidebar docs"
   },
   "sidebar.docs.category.Form Properties": {
