@@ -14,6 +14,12 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
+### Rutas de acceso
+
+`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+
+
+
 ### Objeto File
 
 |                                                                                                                                                                        |
@@ -410,7 +416,9 @@ ALERT($info.Copyright)
 | newName           | Text      | -> | Nombre completo del archivo trasladado    |
 | Result            | 4D.File   | <- | Archivo movido|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -662,7 +670,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. Para obtener información sobre los BLOB, consulte la sección [BLOB](Conceptos/dt_blob.md).
+La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. .
 
 #### Ejemplo
 
