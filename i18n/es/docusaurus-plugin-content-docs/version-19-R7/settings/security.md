@@ -42,7 +42,7 @@ This page contains options related to data access and protection for your deskto
 
     Cuando esta opción está seleccionada:
     * los componentes 4D están cargados,
-    * each [On Host Database Event database method](https://doc.4d.com/4Dv19/4D/19.1/On-Host-Database-Event-database-method.301-5653908.en.html) of the component (if any) is called by the host database,
+    * cada método base [On Host Database Event](https://doc.4d.com/4Dv19/4D/19.1/On-Host-Database-Event-database-method.301-5653908.en.html) del componente (si lo hay) es llamado por la base local,
     * se ejecuta el código del método.
 
     Cuando no está marcada:
