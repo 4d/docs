@@ -49,11 +49,11 @@ In advanced mode (**Shift+Click** on the operation), additional information is d
 
 ## Botón Instantánea
 
-The **Snapshot** button allows you to copy to the clipboard all the operations displayed in the RTM panel, as well as their related details (process and sub-operation info):
+El botón **Instantánea** permite copiar en el portapapeles todas las operaciones que se muestran en el panel RTM, así como sus detalles relacionados (información de procesos y suboperaciones):
 
 ![](../assets/en/Admin/server-admin-monitor-snapshot.png)
 
 
 ## Mostrar operaciones al menos 5 segundos
 
-If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. Las operaciones retenidas aparecen atenuadas en la lista de operaciones. This feature is useful for getting information about operations that execute very quickly.
+If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. Las operaciones retenidas aparecen atenuadas en la lista de operaciones. Esta función es útil para obtener información sobre las operaciones que se ejecutan muy rápidamente.
