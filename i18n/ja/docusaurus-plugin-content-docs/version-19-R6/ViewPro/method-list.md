@@ -1280,11 +1280,11 @@ End if
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| 引数   | タイプ  |    | 説明                                         |
-| ---- | ---- | -- | ------------------------------------------ |
-| font | Text | -> | フォントのショートハンド文字列|<!-- END REF -->
-
-|
+| 引数   | タイプ    |    | 説明              |
+| ---- | ------ | -- | --------------- |
+| font | Text   | -> | フォントのショートハンド文字列 |
+| 戻り値  | Object | <- | フォントオブジェクト      |
+<!-- END REF -->
 
 #### 説明
 
@@ -1653,11 +1653,13 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| 引数 | タイプ |  | 説明 |
-| -- | --- |  | -- |
-|    |     |  |    |
+| 引数         | タイプ     |    | 説明                                 |
+| ---------- | ------- | -- | ---------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名         |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)        |
+| 戻り値        | Integer | <- | カラムの総数 |<!-- END REF -->
 
-|vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名| |sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)| |Result  |Integer|<-|カラムの総数|<!-- END REF -->
+|
 
 #### 説明
 
@@ -3070,6 +3072,7 @@ $cellStyle.font:=VP Object to font($font)
 *rangeObj* には、値・フォーマット・フォーミュラをペーストする先のセルレンジオブジェクトを渡します。 *rangeObj* が複数のセルを参照している場合は、最初のセルだけが使用されます。
 
 *dataObject* には、ペーストしたい値・フォーマット・フォーミュラを格納しているオブジェクトを渡します。
+
 
 任意の *options* 引数を渡して、セルレンジにペーストする内容を指定することができます。 とりうる値:
 
@@ -5024,6 +5027,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 |
 
 #### 説明
+
 
 `VP SET SHEET NAME` コマンドは、 <!-- REF #_method_.VP SET SHEET NAME.Summary -->*vpAreaName* 引数で指定した View Pro エリア内にロードされているドキュメント内のシート名を変更します<!-- END REF -->。
 
