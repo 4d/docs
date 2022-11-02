@@ -1247,7 +1247,7 @@ End if
 
 #### Descripción
 
-El comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->immediately executes stored commands and clears the command buffer<!-- END REF -->.
+El comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->ejecuta inmediatamente los comandos almacenados y borra el buffer de comandos<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -1274,13 +1274,17 @@ You want to trace the execution of the commands and empty the command buffer:
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| Parámetros | Tipo |    | Descripción                                      |
-| ---------- | ---- | -- | ------------------------------------------------ |
-| font       | Text | -> | Font shorthand string|<!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción           |
+| ---------- | ------ | -- | --------------------- |
+| font       | Text   | -> | Font shorthand string |
+| Result     | Object | <- | Objeto fuente         |
+
+<!-- END REF -->
+
 
 #### Descripción
 
-The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Summary -->devuelve un objeto a partir de una cadena abreviada de fuentes<!-- END REF -->. .
+El comando utilitario `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->devuelve un objeto a partir de una cadena abreviada de fuentes<!-- END REF -->. Este objeto se puede utilizar para establecer u obtener la configuración de las propiedades de la fuente a través de la notación de objetos.
 
 In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
 
@@ -1329,7 +1333,7 @@ Ver el ejemplo de [`VP Object to font`](#vp-object-to-font).
 
 #### Descripción
 
-El comando `VP Get active cell` <!-- REF #_method_.VP Get active cell.Summary -->returns a new range object referencing the cell which has the focus and where new data will be entered (the active cell)<!-- END REF -->.
+El comando `VP Get active cell` <!-- REF #_method_.VP Get active cell.Summary -->devuelve un nuevo objeto rango que hace referencia a la celda activa y en la que se introducirán nuevos datos<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -1624,11 +1628,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
-
-|vpAreaName  |Text|->|4D View Pro area from object name| |sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Integer|<-|Total number of columns |<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                          |
+| ---------- | ------- | -- | ---------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario         |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)          |
+| Result     | Integer | <- | Número total de columnas |<!-- END REF --> |
 
 #### Descripción
 
@@ -2316,11 +2320,11 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parámetros | Tipo |    | Descripción                                  |
-| ---------- | ---- | -- | -------------------------------------------- |
-| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
-
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)|
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
+| styleName  | Text    | -> | Nombre del estilo                            |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
 
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
@@ -2394,7 +2398,6 @@ $styles:=VP Get stylesheets("ViewProArea")
 ```
 
 En este caso, la hoja actual utiliza dos objetos estilo:
-
 
 ```4d
 [
@@ -5242,9 +5245,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                       |
-| ---------- | ------ | -- | ------------------------------------------------- |
-| rangeObj   | Object | -> | Objeto rango de celdas|<!-- END REF --> |
+| Parámetros | Tipo |  | Descripción |
+| ---------- | ---- |  | ----------- |
+|            |      |  |             |
+
+|rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Descripción
 
