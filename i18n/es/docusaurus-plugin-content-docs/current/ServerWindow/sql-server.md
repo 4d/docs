@@ -4,16 +4,16 @@ title: Página servidor SQL
 ---
 
 
-The **SQL Server** page groups together information about the integrated SQL server of 4D Server. It also includes a button that can be used to control the activation of the server.
+La página **Servidor SQL** agrupa información sobre el servidor SQL integrado de 4D Server. También incluye un botón que puede utilizarse para controlar la activación del servidor.
 
 ![](../assets/en/Admin/server-admin-sql-page.png)
 
 
-The upper part of the page provides information about the current status of the SQL server of 4D Server.
+La parte superior de la página provee información sobre el estado actual del servidor SQL de 4D Server.
 
 - **Estado**: Iniciado o Detenido
-- **Starting time**: Date and time the SQL server was last launched.
-- **Uptime**: Time elapsed since last startup of the SQL server.
+- **Hora de inicio**: fecha y hora en que el servidor SQL se inició por última vez.
+- **Duración del funcionamiento**: tiempo transcurrido desde el último arranque del servidor SQL.
 
 ## Iniciar/detener el servidor SQL
 
