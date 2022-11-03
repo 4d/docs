@@ -59,9 +59,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Versión | Modificaciones              |
+| ------- | --------------------------- |
+| v20     | Support of `fk home folder` |
+| v17 R5  | Añadidos                    |
 
 </details>
 
@@ -107,13 +108,14 @@ En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utiliz
 | fk database folder         | 4     | Filesystem asociado: "/PACKAGE"                                                                              |
 | fk desktop folder          | 115   |                                                                                                              |
 | fk documents folder        | 117   | Carpeta Documentos del usuario                                                                               |
+| fk home folder             | 118   | Current home folder of the user (usually `/Users/<username>/`)                                         |
 | fk licenses folder         | 1     | Carpeta que contiene los archivos de licencia 4D de la máquina                                               |
 | fk logs folder             | 7     | Filesystem asociado: "/LOGS"                                                                                 |
 | fk mobileApps folder       | 10    |                                                                                                              |
 | fk remote database folder  | 3     | Carpeta de la base de datos 4D creada en cada máquina 4D remota                                              |
 | fk resources folder        | 6     | Filesystem asociado: "/RESOURCES"                                                                            |
 | fk system folder           | 100   |                                                                                                              |
-| fk user preferences folder | 0     | 4D que almacena los archivos de preferencias del usuario dentro del directorio `\<userName>`.         |
+| fk user preferences folder | 0     | 4D folder that stores user preference files within the user home folder                                      |
 | fk web root folder         | 8     | Carpeta raíz web actual de la base de datos: si está dentro del paquete "/PACKAGE/path", si no ruta completa |
 
 Si el comando se llama desde un componente, pase el *parámetro opcional para obtener la ruta de la base local. En caso contrario, si se omite el* parámetro, siempre se devuelve un objeto null.
