@@ -29,17 +29,17 @@
 }
 
 details {
-  --docusaurus-details-summary-arrow-size: 0.20rem !important;
-  --docusaurus-details-decoration-color: black !important;
-  font-size: 11px !important;
+  //--docusaurus-details-summary-arrow-size: 0.20rem !important;
+  --docusaurus-details-decoration-color: grey !important;
+  //font-size: 11px;
   border: none !important;
   padding: 0 auto !important;
-  margin: 1px auto !important;
+  margin: 10px auto !important;
 }
 
 
 
-.details>summary {
+.details > summary {
   position: relative;
   cursor: pointer;
   list-style: none;
