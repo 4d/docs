@@ -100,7 +100,7 @@ You can choose to access the 4D online documentation site directly or to access 
 
 Indica la ubicación de la documentación HTML estática. Por defecto, se trata de la subcarpeta \Help\Command\language. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
 
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
+Puede modificar esta ubicación como desee, por ejemplo, si quiere mostrar la documentación en un idioma diferente al de la aplicación. La documentación HTML estática puede estar ubicada en otro volumen, en un servidor web, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
 
 ### Sitio Web
 
@@ -110,5 +110,5 @@ Acceso URL a la documentación en línea de la versión en el 4D Doc Center. 4D 
 
 This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
 
-* When it is checked, 4D first looks for the page in the local folder. Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
-* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser.
+* When it is checked, 4D first looks for the page in the local folder. Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
+* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Si no se encuentra, 4D muestra un mensaje de error en el navegador.

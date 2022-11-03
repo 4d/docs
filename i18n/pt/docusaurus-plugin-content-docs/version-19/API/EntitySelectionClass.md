@@ -99,7 +99,7 @@ $employees:=Create entity selection([Employee])
 
 #### Descrição
 
-A notação `EntitySelection[index]` <!-- REF EntitySelectionClass.index.Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
+A notação `EntitySelection[index]` <!-- REF EntitySelectionClass.index.Summary -->permite acessar entidades sem a seleção de entidade usando a sintaxe coleção padrão<!-- END REF -->: passe a posição da entidade que quiser colocar o padrão *index*.
 
 Lembre que a entidade correspondente é recarregada a partir da datastore.
 
@@ -1799,13 +1799,13 @@ Or, you can designate the entity attributes to extract using a filter parameter.
 If a filter is specified for an attribute of the `relatedEntity` kind:
 
 * propertyPath = "relatedEntity" -> it is extracted with simple form
-* propertyPath = "relatedEntity.*" -> all the properties are extracted
-* propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted
+* propertyPath = "relatedEntity.*" -> todas as propriedades foram extraídas
+* propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> só se extraem essas propriedades
 
 If a filter is specified for an attribute of the `relatedEntities` kind:
 
-* propertyPath = "relatedEntities.*" -> all the properties are extracted
-* propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
+* propertyPath = "relatedEntities.*" -> se extraem todas as propriedades
+* propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> só se extraem essas propriedades
 
 In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
@@ -1822,7 +1822,7 @@ An empty collection is returned if:
 
 #### Exemplo 1
 
-The following structure will be used throughout all examples of this section:
+A estrutura abaixo será usada nos exemplos desta seção:
 
 ![](../assets/en/API/dataclassAttribute4.png)
 
@@ -1882,7 +1882,7 @@ Retorna:
 
 #### Exemplo 2
 
-Example with options:
+Exemplo com opções:
 
 ```4d
 var $employeesCollection : Collection

@@ -423,7 +423,7 @@ Dado el siguiente código:
 ```4d
  $sel:=$ds.Employee.query("firstname = ab@")
  For each($e;$sel)
-    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
+    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refiere a la tabla Company
  End for each
 ```
 
@@ -473,7 +473,7 @@ Subsequent requests to server sent by entity browsing methods will also support 
 For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
 
 ```4d
- $myEntity:=Form.currentElement //current item expression
-  //... do something
- $myEntity:=$myEntity.next() //loads the next entity using the same context
+ $myEntity:=Form.currentElement //expresión del elemento actual
+  //... hacer algo
+ $myEntity:=$myEntity.next() //carga la siguiente entidad utilizando el mismo contexto
 ```

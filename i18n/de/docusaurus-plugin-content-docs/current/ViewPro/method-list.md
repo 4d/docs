@@ -351,15 +351,14 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| Parameter  | Typ            |    | Beschreibung                                         |
-| ---------- | -------------- | -- | ---------------------------------------------------- |
-| vpAreaName | Text           | -> | 4D View Pro area form object name                    |
-| column     | Lange Ganzzahl | -> | Sheet index (current sheet if omitted)               |
-| row        | Lange Ganzzahl | -> | Sheet index (current sheet if omitted)               |
-| sheet      | Ganzzahl       | -> | Sheet index (current sheet if omitted)               |
-| Ergebnis   | Objekt         | <- | Range object of all cells|<!-- END REF -->
-
-|
+| Parameter  | Typ            |    | Beschreibung                           |
+| ---------- | -------------- | -- | -------------------------------------- |
+| vpAreaName | Text           | -> | 4D View Pro area form object name      |
+| column     | Lange Ganzzahl | -> | Column index                           |
+| row        | Lange Ganzzahl | -> | Row index                              |
+| sheet      | Ganzzahl       | -> | Sheet index (current sheet if omitted) |
+| Ergebnis   | Objekt         | <- | Range object of a single cell          |
+<!-- END REF -->
 
 #### Beschreibung
 
@@ -1323,11 +1322,12 @@ You want to trace the execution of the commands and empty the command buffer:
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| Parameter | Typ  |    | Beschreibung                                     |
-| --------- | ---- | -- | ------------------------------------------------ |
-| font      | Text | -> | Font shorthand string|<!-- END REF -->
+| Parameter | Typ    |    | Beschreibung          |
+| --------- | ------ | -- | --------------------- |
+| font      | Text   | -> | Font shorthand string |
+| Ergebnis  | Objekt | <- | Font object           |
+<!-- END REF -->
 
-|
 
 #### Beschreibung
 
@@ -1689,11 +1689,13 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |  | ------------ |
-|           |     |  |              |
+| Parameter  | Typ      |    | Beschreibung                                        |
+| ---------- | -------- | -- | --------------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area from object name                   |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)              |
+| Ergebnis   | Ganzzahl | <- | Total number of columns |<!-- END REF -->
 
-|vpAreaName  |Text|->|4D View Pro area from object name| |sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Integer|<-|Total number of columns |<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -2442,11 +2444,11 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parameter  | Typ  |    | Beschreibung                      |
-| ---------- | ---- | -- | --------------------------------- |
-| vpAreaName | Text | -> | 4D View Pro area form object name |
-
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)|
+| Parameter  | Typ      |    | Beschreibung                           |
+| ---------- | -------- | -- | -------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name      |
+| styleName  | Text     | -> | Name of style                          |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted) |
 
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
@@ -2522,7 +2524,6 @@ $styles:=VP Get stylesheets("ViewProArea")
 ```
 
 In this case, the current sheet uses two style objects:
-
 
 ```4d
 [
@@ -5513,11 +5514,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parameter | Typ    |    | Beschreibung                                     |
-| --------- | ------ | -- | ------------------------------------------------ |
-| rangeObj  | Objekt | -> | Range object of cells|<!-- END REF -->
+| Parameter | Typ |  | Beschreibung |
+| --------- | --- |  | ------------ |
+|           |     |  |              |
 
-|
+|rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Beschreibung
 

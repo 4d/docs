@@ -4,14 +4,14 @@ title: Página Mantenimiento
 ---
 
 
-The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. También ofrece acceso a las funciones básicas de mantenimiento:
+La página **Mantenimiento** de la ventana de administración de 4D Server ofrece información relativa al funcionamiento actual de la aplicación. También ofrece acceso a las funciones básicas de mantenimiento:
 
 ![](../assets/en/Admin/server-maintenance.png)
 
 
 ## Última verificación/compactación
 
-These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
+Estas áreas indican la fecha, la hora y el estado de la última [verificación de datos](MSC/verify.md) y [operación de compactación](MSC/compact.md) efectuadas en la base.
 
 ### Verificar registros e índices
 
@@ -85,8 +85,8 @@ This button allows you to load a special server [log configuration file](Debuggi
 
 ### Detener el registro
 
-This button suspends all currently logging operations started on the server. Esta funcionalidad puede ser útil para aligerar temporalmente las tareas del servidor.
+Este botón suspende todas las operaciones de registro iniciadas en el servidor. Esta funcionalidad puede ser útil para aligerar temporalmente las tareas del servidor.
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 
-> You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.
+> Puede pausar y reanudar el registro utilizando el comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html).

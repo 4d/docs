@@ -55,18 +55,18 @@ The returned "__STATUS" object has the following properties:
 | statusText   |                | text    | Descrição do erro, ver abaixo                                                                                                                               |
 | lockKind     |                | number  | Código de bloqueio                                                                                                                                          |
 | lockKindText |                | text    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
-| lockInfo     |                | object  | Informações sobre a origem do bloqueio. Returned properties depend on the lock origin (4D process or REST session).                                         |
-|              |                |         | ***Available only for a 4D process lock:***                                                                                                                 |
+| lockInfo     |                | object  | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                     |
+|              |                |         | ***Disponível só para um processo trava 4D:***                                                                                                              |
 |              | task_id        | number  | ID do processo                                                                                                                                              |
 |              | user_name      | text    | Nome de usuário de sessão na máquina                                                                                                                        |
 |              | user4d_alias   | text    | Nome ou apelido do usuário 4D                                                                                                                               |
 |              | user4d_id      | number  | Id do usuário no diretório do banco de dados 4D                                                                                                             |
 |              | host_name      | text    | Nome da máquina                                                                                                                                             |
 |              | task_name      | text    | Nome de processo                                                                                                                                            |
-|              | client_version | text    | Version of the client                                                                                                                                       |
-|              |                |         | ***Available only for a REST session lock:***                                                                                                               |
+|              | client_version | text    | Versão do cliente                                                                                                                                           |
+|              |                |         | ***Disponível só para um processo trava REST:***                                                                                                            |
 |              | host           | text    | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
-|              | IPAddr         | text    | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
+|              | IPAddr         | text    | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                             |
 |              | recordNumber   | number  | Record number of the locked record                                                                                                                          |
 |              | userAgent      | text    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 

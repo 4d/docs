@@ -60,7 +60,7 @@ En cualquier momento, puede vacíar la caché de las páginas y de las imágenes
 Para ello, puede:
 
 -   4D: haga clic en el botón **Borrar la caché** de la página Web/Opciones (I) de la caja de diálogo de los Parámetros.
--   4D Server: click on the **Clear Cache** button in the HTTP page of the [4D Server Administration window](../ServerWindow/http-server.md).
+-   4D Server: haga clic en el botón **Borrar la caché** de la página HTTP de la ventana [Administración de 4D Server](../ServerWindow/http-server.md).
 
 La caché se borra inmediatamente.
 > También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).

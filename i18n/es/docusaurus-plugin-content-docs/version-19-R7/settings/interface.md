@@ -4,7 +4,7 @@ title: Página interfaz
 ---
 
  
-You use the Interface page to set various options related to the project interface.
+La página Interfaz sirve para establecer varias opciones relacionadas con la interfaz del proyecto.
 
 ## General
 
@@ -54,18 +54,18 @@ El esquema de aplicación principal se aplicará a los formularios por defecto. 
 
 ## Atajos
 
-You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. Estos atajos son idénticos para ambas plataformas. Los iconos de las teclas indican las teclas correspondientes a Windows y a macOS.
+El área de Atajos directos sirve para ver y modificar los atajos por defecto para tres operaciones básicas del formulario 4D en sus aplicaciones de escritorio. Estos atajos son idénticos para ambas plataformas. Los iconos de las teclas indican las teclas correspondientes a Windows y a macOS.
 
 Los accesos directos por defecto son los siguientes:
 
 -   Aceptación de formulario de entrada: **Entrada**
 -   Anulación de entrada: **Esc**
--   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
+-   Añadir al subformulario: **Ctrl+Mayús+/** (Windows) o **Comando+Mayús+/** (macOS)
 
-To change the shortcut of an operation, click the corresponding **Edit** button. Aparece la siguiente caja de diálogo:
+Para cambiar el acceso directo de una operación, haga clic en el botón **Editar** correspondiente. Aparece la siguiente caja de diálogo:
 
 ![](../assets/en/settings/shortcut.png)
 
-To change the shortcut, type the new key combination on your keyboard and click **OK**. If you prefer not to have a shortcut for an operation, click **Clear**.
+Para cambiar el acceso directo, escriba la nueva combinación de teclas en su teclado y haga clic en **OK**. Si prefiere no tener un acceso directo para una operación, haga clic en **Borrar**.
 
 

@@ -382,7 +382,7 @@ A tabela abaixo resume as convenções de nomes em 4D.
 | Propriedades de objetos        | 255              | $o.myAttribute                     |
 | Formulário                     | 31               | "My Custom Web Input"              |
 | Objetos de formulário          | 255              | "MyButton"                         |
-| Project method                 | 31               | M_ADD_CUSTOMERS                  |
+| Método Projeto                 | 31               | M_ADD_CUSTOMERS                  |
 | Comando de plug-in             | 31               | PDF SET ROTATION                   |
 | Conjuntos interprocesso        | `<>` + 255 | `"<>Records to be Archived"` |
 | Conjuntos processo             | 255              | "Current selected records"         |

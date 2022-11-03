@@ -70,11 +70,11 @@ $MyVar:="Goodbye"
 
 Con:
 ```4d
-  ` vPtrA and vPtrB point to the same object
+  vPtrA e vPtrB apontam para o mesmo objecto
  vPtrA:=->anObject
  vPtrB:=->anObject
-  ` vPtrC points to another object
- vPtrC:=->anotherObject
+  ` vPtrC aponta para outro objecto
+ vPtrC:=->outroObject
 ```
 
 | Operação     | Sintaxe           | Retorna  | Expression    | Value |

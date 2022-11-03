@@ -17,7 +17,7 @@ También puede ordenar la lista de los valores de las columnas haciendo clic en 
 
 ## Lista de usuarios
 
-For each user connected to the server, the list provides the following information:
+Para cada usuario conectado al servidor, la lista ofrece la siguiente información:
 
 - Sistema de la máquina cliente (macOS o Windows) como un icono.
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".

@@ -11,9 +11,9 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### Gramática JSON
 
-| Propriedade          | Tipo de dados | Valores possíveis     |
-| -------------------- | ------------- | --------------------- |
-| allowFontColorPicker | boolean       | false (default), true |
+| Propriedade          | Tipo de dados | Valores possíveis    |
+| -------------------- | ------------- | -------------------- |
+| allowFontColorPicker | boolean       | false (padrão), true |
 
 #### Objectos suportados
 
@@ -192,9 +192,9 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis     |
-| --------------- | ------------- | --------------------- |
-| rowStrokeSource | string        | Font color expression |
+| Nome            | Tipo de dados | Valores possíveis   |
+| --------------- | ------------- | ------------------- |
+| rowStrokeSource | string        | Expressão cor fonte |
 
 #### Objectos suportados
 

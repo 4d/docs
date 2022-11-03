@@ -91,7 +91,7 @@ File handle objects cannot be shared.
 The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->.
 
 
-The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
+The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). La valeur par défaut est "native".
 
 > The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
@@ -116,9 +116,9 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.breakModeWrite` property returns <!-- REF #FileHandleClass.breakModeWrite.Summary -->the processing mode for line breaks used when writing to the file<!-- END REF -->.
+La propriété `.breakModeWrite` retourne <!-- REF #FileHandleClass.breakModeWrite.Summary -->le mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier<!-- END REF -->.
 
-The `.breakModeWrite` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
+La propriété `.breakModeWrite` peut être définie lors de la création du handle à l'aide de la fonction [`file.open()`](FileClass.md#open) (voir [la fonction `.open()`](FileClass.md#open) pour plus d'informations). La valeur par défaut est "native".
 
 > The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
@@ -283,7 +283,9 @@ This property is **read/write**.
 | Résultat   | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -320,7 +322,9 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | Résultat   | Text | <- | Line of text|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description

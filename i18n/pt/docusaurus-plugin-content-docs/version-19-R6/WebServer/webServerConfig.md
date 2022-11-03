@@ -415,7 +415,7 @@ Valores possíveis:
 
 - 1 = TLSv1_0
 - 2 = TLSv1_1
-- 3 = TLSv1_2 (default)
+- 3 = TLSv1_2 (padrão)
 - 4 = TLSv1_3
 
 Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.

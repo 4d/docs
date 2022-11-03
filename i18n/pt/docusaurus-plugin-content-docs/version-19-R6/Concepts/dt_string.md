@@ -73,7 +73,7 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
      "n"="ñ"
      "n"="Ñ"
      "A"="å"
-      // and so on
+      // etc.
 ```
 
 **Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
