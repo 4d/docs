@@ -281,7 +281,11 @@ This property is **read/write**.
 | *bytes*    | Real                 | -> | Number of bytes to be read                          |
 | Résultat   | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
+
+
 |
+
+
 
 #### Description
 
@@ -313,9 +317,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.readLine().Params -->
 | Paramètres | Type |    | Description                             |
 | ---------- | ---- | -- | --------------------------------------- |
-| Résultat   | Text | <- | Line of text|<!-- END REF -->
+| Résultat   | Text | <- | Line of text|<!-- END REF --> 
+
+
 
 |
+
+
 
 #### Description
 
@@ -345,13 +353,16 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readText().Params -->
 | Paramètres | Type |    | Description                                   |
 | ---------- | ---- | -- | --------------------------------------------- |
 | *stopChar* | Text | -> | Character(s) at which to stop reading         |
 | Résultat   | Text | <- | Text from the file|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
@@ -386,12 +397,15 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
+
 <!--REF #FileHandleClass.setSize().Params -->
 | Paramètres | Type |    | Description                                                  |
 | ---------- | ---- | -- | ------------------------------------------------------------ |
 | size       | Real | -> | New size of the document in bytes|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
@@ -418,12 +432,15 @@ If the *size* value is less than the current document size, the document content
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeBlob().Params -->
 | Paramètres | Type                 |    | Description                                          |
 | ---------- | -------------------- | -- | ---------------------------------------------------- |
 | *blob*     | [4D.Blob](BlobClass) | -> | Blob to write in the file|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
@@ -451,12 +468,15 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | Paramètres   | Type |    | Description                              |
 | ------------ | ---- | -- | ---------------------------------------- |
 | *lineOfText* | Text | -> | Text to write|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
@@ -483,12 +503,15 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeText().Params -->
 | Paramètres    | Type |    | Description                              |
 | ------------- | ---- | -- | ---------------------------------------- |
 | *textToWrite* | Text | -> | Text to write|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
