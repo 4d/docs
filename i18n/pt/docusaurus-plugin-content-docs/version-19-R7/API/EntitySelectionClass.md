@@ -148,7 +148,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 :::caution
 
-`EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
+`EntitySelection[index]` é uma expressão não atribuível que significa que não pode ser usada como uma referência de entidade editável com métodos como [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
 
 ```4d
  $sel:=ds. Employee.all() //criação da entity selection
@@ -193,7 +193,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 #### Descrição
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Também pode criar seleções de entidades em branco utilizando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create new selection`](#create-new-selection).
+Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valoress para o atributo na seleção de entidades<!-- END REF -->. Também pode criar seleções de entidades em branco utilizando a função [`dataClass.newSelection()`](DataClassClass.md#newselection) ou o comando [`Create new selection`](#create-new-selection).
 
 *   Se o "kind" de *attributeName* é `storage`: `.attributeName` devolve uma coleção de valores do mesmo tipo que *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
@@ -275,33 +275,33 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Parâmetros      | Tipo                |    | Descrição                                                                                     |
-| --------------- | ------------------- |:--:| --------------------------------------------------------------------------------------------- |
-| entity          | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                                          |
-| entitySelection | 4D. EntitySelection | -> | Entity selection to be added to the original entity selection                                 |
-| Resultados      | 4D. EntitySelection | -> | Entity selection including the added *entity* or *entitySelection*|<!-- END REF --> |
+| Parâmetros      | Tipo                |    | Descrição                                                                                  |
+| --------------- | ------------------- |:--:| ------------------------------------------------------------------------------------------ |
+| entity          | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                                       |
+| entitySelection | 4D. EntitySelection | -> | Seleção entidade paara ser adicionado a sellleção entidade originaal                       |
+| Resultados      | 4D. EntitySelection | -> | selelção de entidade inclluindo a *entity* ou *entitySelection*|<!-- END REF --> |
 
 
 #### Descrição
 
-A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* or *entitySelection* to the original entity selection and returns the modified entity selection<!-- END REF -->.
+A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->addiciona a *entity* especificada ou *entitySelection* para a selleção de entidade original e retona a seleção de entidade modificada<!-- END REF -->.
 > Os valores de tipo Date são convertidos em valores numéricos (segundos) e são usados para calcular a média.
 
 :::info warning
 
-The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. As entity selections partilháveis não aceitam a adição de entidades. Para saber mais, consulte [Entity selections compartilháveis ou modificáveis ](ORDA/entities.md#shareable-or-alterable-entity-selections).
+a entity selection deve ser *alterable*, ou seja. foi criada por exemplo por [`.newSelection()`](DataClassClass.md#newselection) ou `Create entity selection`, senão `.add()` vai retornar um erro. As entity selections partilháveis não aceitam a adição de entidades. Para saber mais, consulte [Entity selections compartilháveis ou modificáveis ](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 :::
 
-**Adding an entity**
+**Adicionar uma entidade**
 
 *   Se a entity selection estiver ordenada, *entity* se adiciona ao final da seleção. Se uma referência a mesma entidade já pertencer a seleção de entidades, se duplica e se adiciona uma nova referência.
 *   Se a entity selection não estiver ordenada, *entity* se adiciona em qualquer lugar da seleção, sem uma ordem específica.
 
-**Adding an entity selection**
+**Adicionar uma seleção de entidades**
 
-*   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
-*   If the entity selection is unordered, it becomes ordered.
+*   Se a entity selection estiver ordenada, *entity* se adiciona ao final da seleção. Se as referências às mesmas entidades de *entitySelection* já pertencem à seleção de entidades, se duplicam e se adicionam novas referencias.
+*   Se a seleção de entidade nãofor ordenada, ela fica ordenada.
 > Para saber mais veja [Entity selections ordenada ou não ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 A entity selection modificada é devolvida pela função, de modo que as chamadas à função podem ser encadeados.
@@ -337,7 +337,7 @@ As chamadas à função podem ser encadeadas:
 
 #### Exemplo 3
 
-In a user interface, we have two lists. The user selects items from the list1 to add them to the list2.
+Em uma interface de usuário, temos duas listas. O usuário seleciona itens da lista 1 e as adiciona na lista 2.
 
 ```4d
 $sellist2:=$sellist2.add($sellist1)
@@ -372,7 +372,7 @@ $sellist2:=$sellist2.add($sellist1)
 
 #### Descrição
 
-A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.
+A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->;  se retornar uma nova e não ordenada seleção de entidade que contenha só as entidades referenciaadas tanto na seleção de entidade quanto no parâmetro.
 
 *   Se passar *entity* como parâmetro, se combina esta entidade com a entity selection. Se a entidade pertencer à entity selection, se devolve uma nova entity selection que só contém a entidade. Senão, uma seleção de entidades vazia é retornada.
 *   If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
