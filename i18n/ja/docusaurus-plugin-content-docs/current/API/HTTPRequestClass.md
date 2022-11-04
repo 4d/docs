@@ -76,9 +76,9 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                               |
-| ------ | -------------------------------- |
-| v19 R7 | Support of *decodeData* property |
+| バージョン  | 内容                      |
+| ------ | ----------------------- |
+| v19 R7 | *decodeData* プロパティをサポート |
 
 </details>
 
