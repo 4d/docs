@@ -5,10 +5,10 @@ title: リリースノート
 
 ## 4D v19 R7
 
-- [**4D v19 R7 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19-r7/): 4D v19 R7 の新機能と拡張機能をすべてリストアップしたブログ記事です。
-- [**修正リスト**](https://4d-jp.github.io/283/release-note-version-19r7/): 4D v19 R7 で修正されたバグのリストです。
+Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), the blog post that lists all new features and enhancements in 4D v19 R7.
 
-### ドキュメンテーション更新情報
+
+#### Highlights
 
 - [データエクスプローラー](Admin/dataExplorer#基本) にリレートデータと計算属性、エイリアス属性が表示できます。
 - 新しい [FileHandle](API/FileHandleClass) クラスと、`File` クラスの新しい [`.open()`](API/FileClass#open) 関数。
@@ -18,8 +18,9 @@ title: リリースノート
 - テキストエリアおよび入力フォームオブジェクトにおいて、[角の半径プロパティ](FormObjects/properties_CoordinatesAndSizing#角の半径) をサポート。
 - 4D クラシックランゲージ: doc.4d.com の [新着](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.ja.html) ページ。
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R7): list of all bugs that have been fixed in 4D v19 R7.
 
-### 動作の変更
+#### 動作の変更
 
 - 標準的なインターフェース (OS のファイルエクスプローラなど) との一貫性を保つため、行の選択/ドラッグ＆ドロップに関するリストボックスのルールが変更されました。 連続または不連続の選択行をクリックして移動するだけで、ドラッグできるようになり、**Alt** キーは不要になりました (ひきつづき以前のように使用することはできます)。 **Shift** または **Ctrl/Command** キーが押されている場合、マウスのクリックは押されたとき (マウスダウン) に考慮されます。 リストボックスでのドラッグ＆ドロップの詳細については、[このブログ記事](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) を参照し、[このHDI 4Dプロジェクト](https://github.com/4D-JP/HDI/releases/download/19r7/HDI_LB_DragAndDrop.zip) をダウンロードしてください。
 - 4D v19 R7 から 4D の内部ビルド番号が変更されました:
@@ -29,26 +30,9 @@ title: リリースノート
     特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。
 
 
-### ライブラリの一覧
-
-<details><summary>クリックで展開します</summary>
-
-| ライブラリ    | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
-| -------- | --------- | -------------- | ----------------------------------------------------- |
-| SpreadJS | 15.2.0    | 19 R7          | 4D View Pro エンジン                                      |
-| CEF      | 4692.99   | 19 R5          | Chromium v97。 ディスク上のファイルにアクセスするときも CORSポリシーが適用されます。   |
-| OpenSSL  | 1.1.1n    | 19 R4          |                                                       |
-| libzip   | 1.7.3     | 19 R2          | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
-| webKit   | WKWebView | 19             |                                                       |
-| ICU      | 68.1      | 18 R6          |                                                       |
-| PHP      | 7.3.27    | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
-| libldap  | 2.4.48    | 18 R2          |                                                       |
-</details>
-
-
 ## 過去のリリース
 
-<details><summary>クリックで展開します</summary>
+<details><summary>Click to see the release notes for previous versions</summary>
 
 ### 4D v19 R6
 
@@ -113,6 +97,7 @@ title: リリースノート
 - [IMAPTransporter クラス](API/IMAPTransporterClass): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
 - [File クラス](API/FileClass): 新しい `setAppInfo()` および `getAppInfo()` 関数
 - 新しい [4DEACH](Tags/#4deach-and-4dendeach) 変換タグ
+
 - Web サーバー: 新しい [SameSite セッションcookie](WebServer/webServerConfig#session-cookie-samesite) 設定
 - [フォーム](FormEditor/properties_FormProperties#カラースキーム) および [スタイルシート](FormEditor/createStylesheet#メディアクエリ) 用のダークおよびライトカラースキームサポート
 - [コードエディター環境設定](Preferences/methods#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
@@ -131,5 +116,23 @@ title: リリースノート
 - 新しい [データエクスプローラー](Admin/dataExplorer) インターフェース
 - 新しい Web [ユーザーセッション](WebServer/sessions) および [その API](API/SessionClass)
 
+
+</details>
+
+
+## ライブラリの一覧
+
+<details><summary>Click to see the table of libraries used in 4D</summary>
+
+| ライブラリ    | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
+| -------- | --------- | -------------- | ----------------------------------------------------- |
+| SpreadJS | 15.2.0    | 19 R7          | 4D View Pro エンジン                                      |
+| CEF      | 4692.99   | 19 R5          | Chromium v97。 ディスク上のファイルにアクセスするときも CORSポリシーが適用されます。   |
+| OpenSSL  | 1.1.1n    | 19 R4          |                                                       |
+| libzip   | 1.7.3     | 19 R2          | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
+| webKit   | WKWebView | 19             |                                                       |
+| ICU      | 68.1      | 18 R6          |                                                       |
+| PHP      | 7.3.27    | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| libldap  | 2.4.48    | 18 R2          |                                                       |
 
 </details>
