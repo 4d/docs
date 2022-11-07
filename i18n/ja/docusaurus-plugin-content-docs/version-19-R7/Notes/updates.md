@@ -51,71 +51,71 @@ title: リリースノート
 - ビルドされたクライアント/サーバーアプリケーション:
     - ビルド時に、プロジェクトの [directory.json ファイル](../Users/editing#directoryjson-file) を [サーバーに埋め込む](../Desktop/building#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。 これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
     - ビルドするアプリケーションで、[使用しないモジュールの選択を解除](../Desktop/building#モジュールの選択解除) できるようになりました。
-- [Client/Server optimization](../ORDA/datastores#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/datastores#preconfiguring-contexts) and [ORDA Cache](../ORDA/datastores#orda-cache) for more information. > これらの関数は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
-- [DataClass class](../API/DataClassClass): The new [.getCount()](../API/DataClassClass#getcount) function returns the number of entities in a dataclass.
+- [クライアント/サーバーの最適化](../ORDA/remoteDatastores#クライアントサーバーの最適化): 新しいクラス関数により、ORDAキャッシュと最適化コンテキストの内容を操作することができます。 詳細は、[コンテキストの事前設定](../ORDA/remoteDatastores#コンテキストの事前設定) および [ORDAキャッシュ](../ORDA/remoteDatastores#ordaキャッシュ) を参照ください。 > これらの関数は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
+- [DataClass クラス](../API/DataClassClass): 新しい [.getCount()](../API/DataClassClass#getcount) 関数は、データクラスの総エンティティ数を返します。
 - 4D View Pro:
-    - The new [VP SET DATA CONTEXT](../ViewPro/method-list#vp-set-data-context), [VP Get data context](../ViewPro/method-list#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
-    - [VP EXPORT DOCUMENT](../ViewPro/method-list#vp-get-binding-path) and [VP Export to object](../ViewPro/method-list#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
+    - 新しい [VP SET DATA CONTEXT](../ViewPro/method-list#vp-set-data-context)、[VP Get data context](../ViewPro/method-list#vp-get-data-context)、[VP SET BINDING PATH](../ViewPro/method-list#vp-set-binding-path)、および [VP Get binding path](../ViewPro/method-list#vp-get-binding-path) コマンドを使って、データコンテキストを作成し、その内容をシートのセルにバインドすることができます。
+    - [VP EXPORT DOCUMENT](../ViewPro/method-list#vp-get-binding-path) と [VP Export to object](../ViewPro/method-list#vp-get-binding-path) は、データコンテキストの内容をセルの値としてエクスポートするための新しい `includeBindingSource` オプションを受け付けます。
 
 
 ### 4D v19 R4
 
-- [Alias attributes](../ORDA/ordaClasses#alias-attributes-1) are available in ORDA classes.
-- Support for [break and continue](../Concepts/looping#break-and-continue) statements in loops.
-- Support for [return](../Concepts/control-flow#return-expression) statement and [return expression](../Concepts/parameters#return-expression) to return values.
-- Support for [compound assignment operators](../Concepts/operators#compound-assignment-operators), [short-circuit operators](../Concepts/operators#short-circuit-operators), and [ternary operator](../Concepts/operators#ternary-operator)
-- The [Code Editor](../code-editor/overview) now includes an dropdown tool and supports markers for better code navigation.
-- New Preferences: [**Include tokens in project source files**](../Preferences/general#include-tokens-in-project-source-files) and [**Show clipboards**](../Preferences/methods#show-clipboards) option on the Methods page.
-- New REST request to [lock/unlock](../REST/lock) entities.
-- [4D View Pro](../ViewPro/getting-started) chapter added with new commands: [VP Copy to object](../ViewPro/method-list#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list#vp-paste-from-object).
-- New [SystemWorker class](../API/SystemWorkerClass).
+- ORDAクラス: [エイリアス属性](../ORDA/ordaClasses#エイリアス属性-1) が利用可能に。
+- ループにおける [break と continue](../Concepts/cf_looping#break-と-continue) 文のサポート。
+- [return](../Concepts/control-flow#return-expression) 文と、値を返すための [return {expression}](../Concepts/parameters#return-expression) 文のサポート。
+- [複合代入演算子](../Concepts/operators#複合代入演算子)、[短絡演算子](../Concepts/operators#短絡演算子)、および [三項演算子](../Concepts/operators#三項演算子) のサポート。
+- コードナビゲーションを改善するため、[コードエディター](../code-editor/overview) にドロップダウンツールが追加され、コードにマーカーを追加できるようになりました。
+- 新しい環境設定: 一般ページの [**Project ソースファイルにトークンを含める**](../Preferences/general#project-ソースファイルにトークンを含める) および、メソッドページの [**クリップボードを表示**](../Preferences/methods#クリップボードを表示)。
+- エンティティを [lock/unlock](../REST/lock) するための新しい REST リクエスト。
+- [4D View Pro](../ViewPro/getting-started) の章が次の新コマンドとともに追加されました: [VP Copy to object](../ViewPro/method-list#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list#vp-paste-from-object).
+- 新しい [SystemWorker クラス](../API/SystemWorkerClass)。
 
 
 ### 4D v19 R3
 
-- [Computed properties](../Concepts/classes#function-get-and-function-set) are available in classes.
-- [Computed attributes](../ORDA/ordaClasses#computed-attributes) are available in ORDA classes. They are similar to computed properties but also support [query](../ORDA/ordaClasses#function-query-attributename) and [orderBy](../ORDA/ordaClasses#function-orderby-attributename) functions.
-- New ORDA dataclass attributes: [`exposed`](../API/DataClassAttributeClass#exposed) and [`readOnly`](../API/DataClassAttributeClass#readonly).
-- [ZIP archives](../API/ZipArchiveClass#zip-create-archive) now supports *LZMA* and *xz* compression algorithms.
-- A [new build option](../Desktop/building#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
-- Extended [support of dark mode](../Preferences/general#appearance-macos-only) on macOS.
-- Support of **OAuth2 token object** in [`IMAP New transporter`](../API/IMAPTransporterClass#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass#pop3-new-transporter), and [`SMTP New transporter`](../API/SMTPTransporterClass#smtp-new-transporter).
-- Users can now load a [log configuration file](../Debugging/debugLogFiles#using-a-log-configuration-file) using a button in the [server administration window](../ServerWindow/maintenance#load-logs-configuration-file).
-- Handling [optional parameters](../Concepts/parameters#optional-parameters) is more flexible in the 4D language.
-- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions#preemptive-mode).
+- クラス: [計算プロパティ](../Concepts/classes#function-get-と-function-set) が利用可能に。
+- ORDAクラス: [計算属性](../ORDA/ordaClasses#計算属性) が利用可能に。 計算プロパティと似ていますが、[クエリ](../ORDA/ordaClasses#function-query-attributename) や [orderBy](../ORDA/ordaClasses#function-orderby-attributename) 関数もサポートしています。
+- 新しい ORDAデータクラス属性: [`exposed`](../API/DataClassAttributeClass#exposed) および [`readOnly`](../API/DataClassAttributeClass#readonly)。
+- [ZIPアーカイブ](../API/ZipArchiveClass#zip-create-archive): *LZMA* および *xz* 圧縮アルゴリズムをサポート。
+- [新しいビルドオプション](../Desktop/building#silicon-macos-クライアントからの接続を許可) により、Windows上で Serverアプリケーションに Silicon Macクライアントを組み込むのが簡単になりました。
+- macOS で [ダークモードをサポート](../Preferences/general#アピアランス-macosのみ)。
+- [`IMAP New transporter`](../API/IMAPTransporterClass#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass#pop3-new-transporter), および [`SMTP New transporter`](../API/SMTPTransporterClass#smtp-new-transporter): **OAuth2 トークンオブジェクト** をサポート。
+- [サーバー管理ウィンドウ](../ServerWindow/maintenance#ログ設定ファイルを読み込む) のボタンを使って、[ログ設定ファイル](../Debugging/debugLogFiles#ログ設定ファイルを使用する) を読み込めるようになりました。
+- 4Dランゲージで [任意パラメーター](../Concepts/parameters#任意パラメーター) をより柔軟に扱えるようになりました。
+- Webサーバーセッションのデバッグが [4D Server 上で容易になりました](../WebServer/sessions#プリエンプティブモード)。
 - 新しい [4D NetKit](https://github.com/4d/4D-NetKit) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 
 
 ### 4D v19 R2
 
-- A [default .gitignore file](../Preferences/general#create-gitignore-file) can be created with new projects
-- New [Blob class API](../API/BlobClass) to handle new [`4D.Blob` objects](Concepts/dt_blob#blob-types)
-- `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass#settext)
+- 新規プロジェクト作成時に [デフォルトの.gitignoreファイル](../Preferences/general#gitignore-ファイルを作成する) が作成可能
+- 新しい [`4D.Blob`](../Concepts/dt_blob#blob-の種類) オブジェクトを扱うための新しい[BlobクラスAPI](../API/BlobClass)
+- [`.setText()`](../API/FileClass#settext) におけるデフォルトの改行コード (EOL) の指定と `no-bom` のサポート
 
 
 ### 4D v19
 
-- [IMAPTransporter Class](../API/IMAPTransporterClass): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](../API/FileClass): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- [IMAPTransporter クラス](../API/IMAPTransporterClass): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
+- [File クラス](../API/FileClass): 新しい `setAppInfo()` および `getAppInfo()` 関数
+- 新しい [4DEACH](../Tags/tags#4deach-と-4dendeach) 変換タグ
 
-- Web Server: new [SameSite session cookie](../WebServer/webServerConfig#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](../FormEditor/propertiesForm#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
-- New default dark and light themes in [Code Editor preferences](../Preferences/methods#theme-list).
-- [Native compilation](../Project/compiler#compiler-methods-for) for Silicon processors.
-- [Variable calculation](../FormObjects/propertiesObject#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](../Admin/cli) page.
+- Web サーバー: 新しい [SameSite セッションcookie](../WebServer/webServerConfig#session-cookie-samesite) 設定
+- [フォーム](../FormEditor/properties_FormProperties#カラースキーム) および [スタイルシート](../FormEditor/createStylesheet#メディアクエリ) 用のダークおよびライトカラースキームサポート
+- [コードエディター環境設定](../Preferences/methods#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
+- Apple Silicon プロセッサー用の [ネイティブコンパイル](../Project/compiler#コンパイラーメソッド)
+- エンティティセレクション型リストボックスの列で、[変数の計算](../FormObjects/properties_Object#変数の計算) プロパティがサポートされるようになりました。
+- 新しい包括的な [CLI](../Admin/cli) (コマンドラインインターフェース) ページ
 
 
 
 ### 4D v18 R6
 
-- [Entity Selection Class](../API/EntitySelectionClass): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
-- [IMAP Mail](../API/IMAPTransporterClass), [POP3 Mail](../API/POP3TransporterClass) and [SMTP Mail](../API/SMTPTransporterClass): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass): new `.expunge()` and `.append()` functions
-- New [WebAdmin](../Admin/webAdmin) web server component
-- New [DataExplorer](../Admin/dataExplorer) interface
-- New web [user sessions](../WebServer/sessions) and [their API](../API/SessionClass).
+- [EntitySelection クラス](../API/EntitySelectionClass): `.average()`, `.max()` および `.min()` 関数は、エンティティセレクションが空の場合には *undefined* を返すようになりました。
+- [IMAP Mail](../API/IMAPTransporterClass), [POP3 Mail](../API/POP3TransporterClass) and [SMTP Mail](../API/SMTPTransporterClass): `authenticationMode` プロパティは OAuth 2.0 を有効化します。
+- [IMAP Mail](../API/IMAPTransporterClass): 新しい `.expunge()` および `.append()` 関数の追加。
+- 新しい [Web管理](../Admin/webAdmin) Webサーバーコンポーネント
+- 新しい [データエクスプローラー](../Admin/dataExplorer) インターフェース
+- 新しい Web [ユーザーセッション](../WebServer/sessions) および [その API](../API/SessionClass)
 
 
 </details>
