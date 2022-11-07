@@ -351,13 +351,13 @@ $all:=VP All("ViewProArea") // カレントシートの全セル
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| 引数         | タイプ     |    | 説明                            |
-| ---------- | ------- | -- | ----------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名       |
-| column     | Longint | -> | カラムのインデックス                    |
-| row        | Longint | -> | 行のインデックス                      |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)   |
-| 戻り値        | Object  | <- | Range object of a single cell |
+| 引数         | タイプ     |    | 説明                          |
+| ---------- | ------- | -- | --------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名     |
+| column     | Longint | -> | カラムのインデックス                  |
+| row        | Longint | -> | 行のインデックス                    |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
+| 戻り値        | Object  | <- | 単一セルのレンジオブジェクト              |
 <!-- END REF -->
 
 #### 説明

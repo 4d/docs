@@ -148,7 +148,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 :::caution
 
-`EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
+`EntitySelection[index]` é uma expressão não atribuível que significa que não pode ser usada como uma referência de entidade editável com métodos como [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
 
 ```4d
  $sel:=ds. Employee.all() //criação da entity selection
@@ -293,7 +293,7 @@ a entity selection deve ser *alterable*, ou seja. foi criada por exemplo por [`.
 
 :::
 
-**Adding an entity**
+**Adicionar uma entidade**
 
 *   Se a entity selection estiver ordenada, *entity* se adiciona ao final da seleção. Se uma referência a mesma entidade já pertencer a seleção de entidades, se duplica e se adiciona uma nova referência.
 *   Se a entity selection não estiver ordenada, *entity* se adiciona em qualquer lugar da seleção, sem uma ordem específica.
@@ -372,7 +372,7 @@ $sellist2:=$sellist2.add($sellist1)
 
 #### Descrição
 
-A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combina a seleção da entidade com um parâmetro *entity* ou *entitySelection* utilizando o operador lógico AND<!-- END REF -->; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.
+A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combina a seleção da entidade com um parâmetro *entity* ou *entitySelection* utilizando o operador lógico AND<!-- END REF -->;  se retornar uma nova e não ordenada seleção de entidade que contenha só as entidades referenciaadas tanto na seleção de entidade quanto no parâmetro.
 
 *   Se passar *entity* como parâmetro, se combina esta entidade com a entity selection. Se a entidade pertencer à entity selection, se devolve uma nova entity selection que só contém a entidade. Senão, uma seleção de entidades vazia é retornada.
 *   If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
@@ -437,7 +437,7 @@ Se quisermos ter uma seleção de empregados chamados "Jones" que morem em Nova 
 
 #### Descrição
 
-A função `.average()` <!-- REF #EntitySelectionClass.average().Summary -->returns the arithmetic mean (average) of all the non-null values of *attributePath* in the entity selection<!-- END REF -->.
+A função `.average()` <!-- REF #EntitySelectionClass.average().Summary -->retorna a média aritmética (média) de todos os valores não nulos de *attributePath* na seleção de entidade<!-- END REF -->.
 
 Passe no parâmetro *attributePath* a rota de atributo a avaliar.
 
@@ -490,7 +490,7 @@ Se quisermos obter uma lista de funcionários cujo salário for superior ao sal�
 
 #### Descrição
 
-A função `.contains()` <!-- REF #EntitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->e false de outra forma.
+A função `.contains()` <!-- REF #EntitySelectionClass.contains().Summary -->retorna true se a referência de entidade pertencer à seleção de entidade<!-- END REF -->e false de outra forma.
 
 Em *entity*, especifique a entidade a buscar na entity selection. Se a entidade for Null, a função devolverá false.
 

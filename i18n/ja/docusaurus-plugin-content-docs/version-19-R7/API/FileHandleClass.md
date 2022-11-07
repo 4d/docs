@@ -282,7 +282,11 @@ FileHandle オブジェクトは共有できません。
 | *bytes* | Real                 | -> | 読み取るバイト数                                 |
 | 戻り値     | [4D.Blob](BlobClass) | <- | ファイルから読み取ったバイト<!-- END REF -->
 
+
+
 |
+
+
 
 #### 説明
 
@@ -314,9 +318,13 @@ FileHandle オブジェクトは共有できません。
 <!--REF #FileHandleClass.readLine().Params -->
 | 引数  | タイプ  |    | 説明                                 |
 | --- | ---- | -- | ---------------------------------- |
-| 戻り値 | Text | <- | 1行のテキスト|<!-- END REF -->
+| 戻り値 | Text | <- | 1行のテキスト|<!-- END REF --> 
+
+
 
 |
+
+
 
 #### 説明
 
@@ -346,13 +354,16 @@ FileHandle オブジェクトは共有できません。
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readText().Params -->
 | 引数         | タイプ  |    | 説明                                   |
 | ---------- | ---- | -- | ------------------------------------ |
 | *stopChar* | Text | -> | 読み取りを停止する文字                          |
 | 戻り値        | Text | <- | ファイルのテキスト|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -387,12 +398,15 @@ FileHandle オブジェクトは共有できません。
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
+
 <!--REF #FileHandleClass.setSize().Params -->
 | 引数   | タイプ  |    | 説明                                               |
 | ---- | ---- | -- | ------------------------------------------------ |
 | size | Real | -> | ドキュメントの新しいサイズ (バイト単位)|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -419,12 +433,15 @@ FileHandle オブジェクトは共有できません。
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeBlob().Params -->
 | 引数     | タイプ                  |    | 説明                                        |
 | ------ | -------------------- | -- | ----------------------------------------- |
 | *blob* | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -452,12 +469,15 @@ FileHandle オブジェクトは共有できません。
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | 引数           | タイプ  |    | 説明                                  |
 | ------------ | ---- | -- | ----------------------------------- |
 | *lineOfText* | Text | -> | 書き込むテキスト|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -484,12 +504,15 @@ FileHandle オブジェクトは共有できません。
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeText().Params -->
 | 引数            | タイプ  |    | 説明                                  |
 | ------------- | ---- | -- | ----------------------------------- |
 | *textToWrite* | Text | -> | 書き込むテキスト|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
