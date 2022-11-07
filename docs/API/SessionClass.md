@@ -297,7 +297,7 @@ End if
 
 #### Description
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
+The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->.
 
 - In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
@@ -311,19 +311,15 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 |roles|Text or Collection|<li>String containing a role, or</li><li>Collection of strings containing roles</li>|
 |userName|Text|User name to associate to the session (optional)|
 
-:::note
+:::caution Reminder
 
-`privileges` and `roles` names are not case sensitive.
-
-:::
-
-If the `privileges` or `roles` property contains an invalid name, it is ignored.
-
-:::caution
-
-The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
+- The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
+- `privileges` and `roles` names are case insensitive.
 
 :::
+
+If the `privileges` property contains an invalid name, it is ignored. If the `roles` property contains a role that is not declared in the `roles.json` file, it is ignored.
+
 
 By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
 
