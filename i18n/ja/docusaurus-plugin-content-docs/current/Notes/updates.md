@@ -10,12 +10,12 @@ title: リリースノート
 
 #### ハイライト
 
-- Related data and computed/alias attributes can be displayed in the [Data Explorer](../Admin/dataExplorer#basics).
-- New [FileHandle](../API/FileHandleClass) class and new [`.open()`](../API/FileClass#open) function in the `File` class.
-- [Entity selection Class](../API/EntitySelectionClass): [`.add()`](../API/EntitySelectionClass#add) supports an *entitySelection* parameter, [`.minus()`](../API/EntitySelectionClass#minus) supports a *keepOrder* parameter.
-- 4D View Pro: new table commands [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes).
-- Component namespaces are now [displayed in the Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
-- Text area and Input form objects now support the [corner radius property](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
+- [データエクスプローラー](../Admin/dataExplorer#基本) にリレートデータと計算属性、エイリアス属性が表示できます。
+- 新しい [FileHandle](../API/FileHandleClass) クラスと、`File` クラスの新しい [`.open()`](../API/FileClass#open) 関数。
+- [EntitySelection クラス](../API/EntitySelectionClass): [`.add()`](../API/EntitySelectionClass#add) 関数が *entitySelection* 引数を、[`.minus()`](../API/EntitySelectionClass#minus) 関数が *keepOrder* 引数をサポートするようになりました。
+- 4D View Pro に新しい表組みコマンドが追加されました: [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes)。
+- コンポーネント名前空間が [ エクスプローラーに表示](../Extensions/develop-components#コンポーネント名前空間の宣言) されるようになりました。
+- テキストエリアおよび入力フォームオブジェクトにおいて、[角の半径プロパティ](../FormObjects/properties_CoordinatesAndSizing#角の半径) をサポート。
 - 4D クラシックランゲージ: doc.4d.com の [新着](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.ja.html) ページ。
 - [**修正リスト**](https://4d-jp.github.io/283/release-note-version-19r7/): 4D v19 R7 で修正されたバグのリストです。
@@ -37,19 +37,19 @@ title: リリースノート
 
 ### 4D v19 R6
 
-- New [HTTPRequest](../API/HTTPRequestClass) class.
-- Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](../API/CollectionClass#every), [`.filter()`](../API/CollectionClass#filter), [`.find()`](../API/CollectionClass#find), [`.findIndex()`](../API/CollectionClass#findindex), [`.map()`](../API/CollectionClass#map), [`.orderByMethod()`](../API/CollectionClass#orderbymethod), [`.reduce()`](../API/CollectionClass#reduce), [`.some()`](../API/CollectionClass#some), [`.sort()`](../API/CollectionClass#sort)
+- 新しい [HTTPRequest](../API/HTTPRequestClass) クラス。
+- コードを呼び出す Collectionクラス関数は、*formula* 引数として Formulaオブジェクトをサポートするようになりました: [`.every()`](../API/CollectionClass#every), [`.filter()`](../API/CollectionClass#filter), [`.find()`](../API/CollectionClass#find), [`.findIndex()`](../API/CollectionClass#findindex), [`.map()`](../API/CollectionClass#map), [`.orderByMethod()`](../API/CollectionClass#orderbymethod), [`.reduce()`](../API/CollectionClass#reduce), [`.some()`](../API/CollectionClass#some), [`.sort()`](../API/CollectionClass#sort)
 - リストボックスのセルは、[横方向](FormObjects/properties_CoordinatesAndSizing#横方向パディング) および [縦方向](FormObjects/properties_CoordinatesAndSizing#縦方向パディング) のパディングをサポートするようになりました。
-- 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list#vp-remove-table) commands to handle tables in sheets.
-- Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer#basics).
-- New page explaining [why and how 4D collects data](../Admin/data-collect).
+- 4D View Pro: 新しい [VP CREATE TABLE](../ViewPro/method-list#vp-create-table) と [VP REMOVE TABLE](../ViewPro/method-list#vp-remove-table) コマンドを使用して、シート内のテーブルを操作します。
+- [Webデータエクスプローラー](../Admin/dataExplorer#基本) でリレート属性、計算属性、およびエイリアス属性を表示することができます。
+- [4D がデータを収集する理由と方法](../Admin/data-collect) について詳細を説明する新しいページ
 
 
 
 ### 4D v19 R5
 
 - ビルドされたクライアント/サーバーアプリケーション:
-    - The project [directory.json file](Users/editing#directoryjson-file) can now be [embedded in the server](../Desktop/building#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+    - ビルド時に、プロジェクトの [directory.json ファイル](../Users/editing#directoryjson-file) を [サーバーに埋め込む](../Desktop/building#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。 これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
     - You can now [deselect useless modules](../Desktop/building#deselecting-modules) in your built applications.
 - [Client/Server optimization](../ORDA/datastores#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/datastores#preconfiguring-contexts) and [ORDA Cache](../ORDA/datastores#orda-cache) for more information. > これらの関数は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
 - [DataClass class](../API/DataClassClass): The new [.getCount()](../API/DataClassClass#getcount) function returns the number of entities in a dataclass.
