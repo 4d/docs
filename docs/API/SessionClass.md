@@ -280,6 +280,7 @@ End if
 
 |Version|Changes|
 |---|---|
+|v19 R8|Support of "roles" Settings property|
 |v18 R6|Added|
 
 </details>
@@ -307,11 +308,22 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 |Property|Type|Description|
 |---|---|---|
 |privileges|Text or Collection|<li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li>|
+|roles|Text or Collection|<li>String containing a role, or</li><li>Collection of strings containing roles</li>|
 |userName|Text|User name to associate to the session (optional)|
 
-If the `privileges` property contains an invalid privilege name, it is ignored.
+:::note
 
-> In the current implementation, only the "WebAdmin" privilege is available.
+`privileges` and `roles` names are not case sensitive.
+
+:::
+
+If the `privileges` or `roles` property contains an invalid name, it is ignored.
+
+:::caution
+
+The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
+
+:::
 
 By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
 
