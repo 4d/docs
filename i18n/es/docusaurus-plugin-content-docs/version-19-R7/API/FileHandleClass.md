@@ -372,6 +372,8 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 | ------- | -------------- |
 | v19 R7  | Añadidos       |
 </details>
+
+
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 
