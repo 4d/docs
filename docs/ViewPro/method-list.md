@@ -2565,6 +2565,66 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
+### VP Get table dirty rows
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added
+</details>
+
+<!-- REF #_method_.VP Get table dirty rows.Syntax -->
+**VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
+
+<!-- REF #_method_.VP Get table dirty rows.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|reset|Boolean|->|True to clear the dirty status from the current table, False to keep it untouched. Default=True|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|Result |Collection|<-|Collection of objects with all the items modified since the last reset|<!-- END REF -->
+
+
+#### Description
+
+The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+
+By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass False in the *reset* parameter. 
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+> Indexing starts at 0.
+
+Each *dirty row* object in the returned collection contains the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+|item|object|Modified object of the modified row |
+|originalItem|object|Object before modification|
+|row|integer|Index of the modified row|
+
+If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection. 
+
+#### Example
+
+```4d
+
+```
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
+
+
+
+
 ### VP Get table range
 
 <details><summary>History</summary>
@@ -3111,6 +3171,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 ```
 
 ![](../assets/en/ViewPro/table-insert.png)
+
 
 
 
@@ -4502,7 +4563,6 @@ VP SET COLUMN COUNT("ViewProArea";5)
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
 |Parameter|Type| |Description|
-
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
@@ -5669,6 +5729,70 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
 
+
+
+### VP SET TABLE THEME
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added
+</details>
+
+<!-- REF #_method_.VP SET TABLE THEME.Syntax -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : Object )<!-- END REF -->
+
+<!-- REF #_method_.VP SET TABLE THEME.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|options|Object|->|Table theme properties to modify|<!-- END REF -->
+
+
+#### Description
+
+The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify. 
+
+In the *options* parameter, pass an object that contains the theme properties to modify:
+
+|Property||Type|Description|
+|---|---|---|---|
+|bandColumns||boolean|Value that indicates whether to display an alternating column style|
+|bandRows||boolean|Value that indicates whether to display an alternating row style|
+|highlightFirstColumn||boolean|Value that indicates whether to highlight the first column|
+|highlightLastColumn||boolean|Value that indicates whether to highlight the first column|
+|theme||object / text|text: name of a native theme; object: see properties|
+||firstColumnStripSize|integer|Size of the first alternating column. Default=1 |
+||firstColumnStripStyle|style object|Style of the first alternating column|
+||firstFooterCellStyle|style object|Style of the first footer cell. "highlightFirstColumn" must be true |
+||firstHeaderCellStyle|style object|Style of the first header cell. "highlightFirstColumn" must be true |
+||firstRowStripSize|integer|Size of the first alternating column. Default=1 |
+||firstRowStripStyle|style object| First alternating row style |
+||footerRowStyle|style object|Default style of the footer area |
+||headerRowStyle|style object|Default style of the header area |
+||highlightFirstColumnStyle|Style object|style of the first column. "highlightFirstColumn" must be true |
+||highlightLastColumnStyle|Style object|style of the last column. "highlightLastColumn" must be true |
+||lastFooterCellStyle|style object|Style of the last footer cell. "highlightLastColumn" must be true |
+||lastHeaderCellStyle|style object|Style of the last header cell. "highlightLastColumn" must be true |
+||secondColumnStripSize|integer|Size of the second alternating column. Default=1 |
+||secondColumnStripStyle|style object|Style of the second alternating column |
+||secondRowStripSize|integer|Size of  the second alternating row. Default=1 |
+||secondRowStripStyle|style object|Style of the second alternating row |
+||wholeTableStyle|style object|Default style of the data area. |
+
+
+#### Example
+
+XXX
+
+#### See also
+
+XXX[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
 
 
 
