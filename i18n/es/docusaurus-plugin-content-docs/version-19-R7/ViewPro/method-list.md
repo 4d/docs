@@ -2852,7 +2852,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 #### Descripción
 
 `VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
-returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
+devuelve un objeto que contiene las opciones del workbook en *vpAreaName*<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -2891,16 +2891,16 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descripción
 
-El comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. El documento importado sustituye a los datos ya insertados en el área.
+El comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->importa y muestra el documento designado por *filePath* en el área 4D View Pro *vpAreaName*<!-- END REF -->. El documento importado sustituye a los datos ya insertados en el área.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-In *filePath*, pass the path and name of the document to be imported. Se soportan los siguientes formatos:
+En *filePath*, pase la ruta y el nombre del documento a importar. Se soportan los siguientes formatos:
 
 * Les documents 4D View Pro (extensión ".4vp")
 * Microsoft Excel (extensión ".xlsx")
 
-* text documents (extension ".txt", ".csv", the document must be in utf-8)
+* documentos texto (extension ".txt", ".csv", el documento debe estar en utf-8)
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
 
