@@ -353,6 +353,8 @@ FileHandle オブジェクトは共有できません。
 | ------ | -- |
 | v19 R7 | 追加 |
 </details>
+
+
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 
