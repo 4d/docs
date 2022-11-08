@@ -1127,7 +1127,7 @@ A propriedade `.length` <!-- REF #EntitySelectionClass.length.Summary -->retorna
 
 As entity selections sempre têm uma propriedade `.length`.
 
-> To know the total number of entities in a dataclass, it is recommended to use the [`getCount()`](DataClassClass.md#getcount) function which is more optimized than the `ds.myClass.all().length` expression.
+> Para saber o número total de entidades em uma dataclasse, é recomendado usar a função [`getCount()`](DataClassClass.md#getcount) que é mais otimizada que a expressão `ds.myClass.all().length`.
 
 #### Exemplo
 
@@ -1158,14 +1158,14 @@ As entity selections sempre têm uma propriedade `.length`.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Parâmetros    | Tipo |    | Descrição                                             |
-| ------------- | ---- | -- | ----------------------------------------------------- |
-| attributePath | Text | -> | Rota do atributo que se utilizará para o cálculo      |
-| Resultados    | any  | <- | Highest value of attribute|<!-- END REF --> |
+| Parâmetros    | Tipo |    | Descrição                                         |
+| ------------- | ---- | -- | ------------------------------------------------- |
+| attributePath | Text | -> | Rota do atributo que se utilizará para o cálculo  |
+| Resultados    | any  | <- | Maior valor do atributo<!-- END REF --> |
 
 #### Descrição
 
-A função `.max()` <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
+A função `.max()` <!-- REF #EntitySelectionClass.max().Summary -->retorna o valor mais alto (ou máximo) entre todos os valores de *attributePath* na seleção de entidade<!-- END REF -->. Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
 
 Se passar em *attributePath* uma rota a uma propriedade de objeto que contenha diferentes tipos de valores, a função `.max()` devolverá o valor máximo dentro do primeiro tipo escalar na ordem da lista de tipos 4D como padrão (ver a descrição de [`.sort()`](CollectionClass.md#sort)).
 
@@ -1208,18 +1208,18 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 
 
 <!-- REF #EntitySelectionClass.min().Params -->
-| Parâmetros    | Tipo |    | Descrição                                            |
-| ------------- | ---- |:--:| ---------------------------------------------------- |
-| attributePath | Text | -> | Rota do atributo que se utilizará para o cálculo     |
-| Resultados    | any  | <- | Lowest value of attribute|<!-- END REF --> |
+| Parâmetros    | Tipo |    | Descrição                                          |
+| ------------- | ---- |:--:| -------------------------------------------------- |
+| attributePath | Text | -> | Rota do atributo que se utilizará para o cálculo   |
+| Resultados    | any  | <- | Menor valor do atributo|<!-- END REF --> |
 
 #### Descrição
 
-A função `.min()` <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
+A função `.min()` <!-- REF #EntitySelectionClass.min().Summary --> retorna o menor valor (mínimo) entre todos os valores de attributePath na seleção de entidade<!-- END REF -->.  Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 Se passar em *attributePath* uma rota a uma propriedade objeto que contenha diferentes tipos de valores, a função `.min()` devolverá o valor mínimo dentro do primeiro tipo de valor escalar na ordem da lista de tipos (ver a descrição de [`.sort()`](CollectionClass.md#sort)).
 
-`.min()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
+`.min()` retorna **undefined** se a seleção entidade for vazia ou se *attributePath* não for encontrado no atributo objeto.
 
 Um erro é retornado se:
 
@@ -1228,7 +1228,7 @@ Um erro é retornado se:
 
 #### Exemplo
 
-In this example, we want to find the lowest salary among all the female employees:
+Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionários mulheres:
 
 ```4d
  var $sel : cs. EmpSelection
@@ -1257,11 +1257,11 @@ In this example, we want to find the lowest salary among all the female employee
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
-| Parâmetros      | Tipo                |    | Descrição                                                                                           |
-| --------------- | ------------------- |:--:| --------------------------------------------------------------------------------------------------- |
-| entity          | 4D. Entity          | -> | Entity to substract                                                                                 |
-| entitySelection | 4D. EntitySelection | -> | Entity selection to substract                                                                       |
-| Resultados      | 4D. EntitySelection | <- | New entity selection or a new reference on the existing entity selection|<!-- END REF --> |
+| Parâmetros      | Tipo                |    | Descrição                                                                                                |
+| --------------- | ------------------- |:--:| -------------------------------------------------------------------------------------------------------- |
+| entity          | 4D. Entity          | -> | Entidade a substrair                                                                                     |
+| entitySelection | 4D. EntitySelection | -> | seleção de entidade a subtrair                                                                           |
+| Resultados      | 4D. EntitySelection | <- | Nova seleção de entidade ou uma nova referência na seleção entidade existente.<!-- END REF --> |
 
 #### Descrição
 
