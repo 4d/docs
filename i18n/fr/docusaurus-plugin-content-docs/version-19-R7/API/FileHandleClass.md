@@ -273,7 +273,8 @@ This property is **read/write**.
 | v19 R7  | Ajout         |
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass)<!-- END REF -->
+
 
 <!--REF #FileHandleClass.readBlob().Params -->
 | Paramètres | Type                 |    | Description                                         |
@@ -314,6 +315,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readLine().Params -->
 | Paramètres | Type |    | Description                             |
 | ---------- | ---- | -- | --------------------------------------- |
@@ -350,7 +352,6 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | ------- | ------------- |
 | v19 R7  | Ajout         |
 </details>
-
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 
