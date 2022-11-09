@@ -1267,13 +1267,13 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
-* If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
-* If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*.
+* Se passar *entity* como parâmetro, a função cria uma nova seleção de entidade sem *entity* (se *entity* pertencer à seleção de entidade). Se *entity* não for incluída na seleção de entidade original, uma nova referência para a seleção de entidade é retornada.
+* Se passar *entitySelection* como parâmetro, a função retorna uma seleção de entidade contendo as entidades que pertencem à seleção de entidade original sem as entidades que pertencem a *entitySelection*.
 > > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). A seleção resultante é sempre desordenada.
 
-If the original entity selection or both the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.
+Se a seleção de entidade original ou tanto a seleção de entidade quanto o parâmetro *entitySelection* vazios e uma seleção de entidade vazia é retornada.
 
-If *entitySelection* is empty or if *entity* is Null, a new reference to the original entity selection is returned.
+Se *entitySelection* estiver vazia ou se *entity* for Null, uma nova referência à seleção de entidade original for retornada.
 
 Se a entity selection inicial e o parâmetro não forem relacionados com a mesma dataclass, se produz um erro.
 
@@ -1292,7 +1292,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 #### Exemplo 2
 
-We want to have a selection of female employees named "Jones" who live in New York :
+Se quisermos ter uma seleção de empregados mulheres que se chamam "Jones" que vivem em Nova York:
 
 ```4d
  var $sel1; $sel2; $sel3 : cs. EmployeeSelection
@@ -1321,23 +1321,23 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 
 
 <!-- REF #EntitySelectionClass.or().Params -->
-| Parâmetros      | Tipo                |    | Descrição                                                                                         |
-| --------------- | ------------------- |:--:| ------------------------------------------------------------------------------------------------- |
-| entity          | 4D. Entity          | -> | Entidade a intersectar                                                                            |
-| entitySelection | 4D. EntitySelection | -> | Entity selection a intersectar                                                                    |
-| Resultados      | 4D. EntitySelection | <- | New entity selection or new reference to the original entity selection|<!-- END REF --> |
+| Parâmetros      | Tipo                |    | Descrição                                                                                                 |
+| --------------- | ------------------- |:--:| --------------------------------------------------------------------------------------------------------- |
+| entity          | 4D. Entity          | -> | Entidade a intersectar                                                                                    |
+| entitySelection | 4D. EntitySelection | -> | Entity selection a intersectar                                                                            |
+| Resultados      | 4D. EntitySelection | <- | Nova seleção de entidade ou nova referência para a seleção de entidade original<!-- END REF --> |
 
 #### Descrição
 
-A função `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
+A função `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; retorna uma nova seleção de entidade não ordenada que contenha todas as entidades da seleção de entidade e o parâmetro
 
-* If you pass *entitySelection* as parameter, you compare entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
-* If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
+* Se passar como parâmetro *entitySelection* pode comparar seleções de entidade. Uma nova seleção de entidade que contenha só as entidades que são referenciadas em ambas as seleções sejam retornadas. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
+* Se passar *entitySelection* como parâmetro, pode comparar seleções de entidade. Uma nova seleção de entidade contém as entidades pertencem à seleção de entidade original ou *entitySelection* é retornada (ou não é exclusivo, entidades referenciadas em ambas as seleções não forem duplicadas na seleção resultante).
 > > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). A seleção resultante é sempre desordenada.
 
-If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
+Se a seleção de entidade original e o parâmetro *entitySelection* for vazio, uma seleção de entidade vazia é retornada. Se a seleção de entidade original for vazia, uma referência a  *entitySelection* ou uma seleção de entidade contendo apenas *entity* será retornada.
 
-If *entitySelection* is empty or if *entity* is Null, a new reference to the original entity selection is returned.
+Se *entitySelection* estiver vazia ou se *entity* for Null, uma nova referência à seleção de entidade original for retornada.
 
 Se a entity selection inicial e o parâmetro não forem relacionados com a mesma dataclass, se produz um erro.
 
@@ -1386,25 +1386,25 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 | ----------- | ------------------- |:--:| ------------------------------------------------------------------------- |
 | pathString  | Text                | -> | Rota(s) de atributos e instruções de clasificação para a entity selection |
 | pathObjects | Collection          | -> | Coleção de objetos criterio                                               |
-| Resultados  | 4D. EntitySelection | <- | New entity selection in the specified order|<!-- END REF -->    |
+| Resultados  | 4D. EntitySelection | <- | Nova seleção de entidade em ordem especificada|<!-- END REF --> |
 
 #### Descrição
 
 A função `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
-> * This method does not modify the original entity selection.
+> * Este método não modifica a seleção de entidade original
 * Para saber mais veja [Entity selections ordenada ou não ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
-You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
+Deve usar um parâmetro critério para definir como as entidades são ordenadas. Dois parâmetros diferentes são compatíveis:
 
-* *pathString* (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. The syntax is:
+* *pathString* (Text) : Este parâmetro contém uma fórmula feita de rotas de atributo 1 a x (e opcionalmente) ordenação separado por vírgulas A sintaxe é:
 
 ```4d
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
 ```
 
-The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
+A ordem na qual os atributos forem passados determina a prioridade de ordenação das entidades. Como padrão, atributos são ordenados em ordem ascendente. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
 
-* *pathObjects* (collection): each element of the collection contains an object structured in the following way:
+* *pathObjects* (collection): cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
 ```4d
 {
@@ -1413,10 +1413,10 @@ The order in which the attributes are passed determines the sorting priority of 
 }
 ```
 
-By default, attributes are sorted in ascending order ("descending" is false).
+Como padrão, atributos são ordenados em ordem ascendente ("descendente" é false)
 
-You can add as many objects in the criteria collection as necessary.
-> Null values are evaluated as less than other values.
+Pode adicionar quantos objetos quiser nos critérios da coleção.
+> Valores null são avaliados como menor que outros valores.
 
 #### Exemplo
 
@@ -1457,13 +1457,13 @@ You can add as many objects in the criteria collection as necessary.
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
-| Parâmetros    | Tipo                |    | Descrição                                               |
-| ------------- | ------------------- |:--:| ------------------------------------------------------- |
-| formulaString | Text                | -> | Formula string                                          |
-| formulaObj    | Objeto              | -> | Objecto fórmula                                         |
-| sortOrder     | Integer             | -> | `dk ascending` (default) or `dk descending`             |
-| settings      | Objeto              | -> | Parameter(s) for the formula                            |
-| Resultados    | 4D. EntitySelection | <- | New ordered entity selection|<!-- END REF --> |
+| Parâmetros    | Tipo                |    | Descrição                                                   |
+| ------------- | ------------------- |:--:| ----------------------------------------------------------- |
+| formulaString | Text                | -> | Formula string                                              |
+| formulaObj    | Objeto              | -> | Objecto fórmula                                             |
+| sortOrder     | Integer             | -> | `dk ascending` (normal) ou `dk descending`                  |
+| settings      | Objeto              | -> | Parâmetros da fórmula                                       |
+| Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade ordenada<!-- END REF --> |
 
 #### Descrição
 
