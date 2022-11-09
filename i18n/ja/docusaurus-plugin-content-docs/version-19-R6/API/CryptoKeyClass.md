@@ -65,12 +65,13 @@ ASSERT($status.success)
 
 #### *settings*
 
-| プロパティ           | タイプ     | 説明                            |
-| --------------- | ------- | ----------------------------- |
-| [curve](#curve) | text    | ECDSA 曲線名                     |
-| [pem](#pem)     | text    | ロードする PEM 形式の暗号化キー            |
-| [size](#size)   | integer | RSA キーのサイズ (ビット単位)            |
-| [type](#type)   | text    | キーのタイプ: "RSA", "ECDSA", "PEM" |
+| プロパティ           | タイプ     | 説明                                                                                                                |
+| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
+| [type](#type)   | text    | Defines the type of the key to create: <li>"RSA": generates a RSA key pair, using [.size](#size) as size.</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using [.curve](#curve) as curve. ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。</li><li>"PEM": loads a key pair definition in PEM format, using [.pem](#pem).</li> |
+| [curve](#curve) | text    | ECDSA 曲線名                                                                                                         |
+| [pem](#pem)     | text    | ロードする PEM 形式の暗号化キー                                                                                                |
+| [size](#size)   | integer | RSA キーのサイズ (ビット単位)                                                                                                |
+
 
 #### *CryptoKey*
 
@@ -324,7 +325,7 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
- <!-- REF #CryptoKey.type.Summary -->キーのタイプ: "RSA", "ECDSA", "PEM" <!-- END REF -->。
+<!-- REF #CryptoKey.type.Summary -->キーのタイプ: "RSA", "ECDSA", "PEM" <!-- END REF -->。
 
 - "RSA": `settings.size` に指定されたサイズを [.size](#size) として使った、RSA キーペア
 - "ECDSA": `settings.curve` に指定された曲線を [.curve](#curve) として用いた、楕円曲線デジタル署名アルゴリズム (Elliptic Curve Digital Signature Algorithm) キーペア。 ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。

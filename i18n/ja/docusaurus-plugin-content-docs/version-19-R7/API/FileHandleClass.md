@@ -274,7 +274,8 @@ FileHandle オブジェクトは共有できません。
 | v19 R7 | 追加 |
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass)<!-- END REF -->
+
 
 <!--REF #FileHandleClass.readBlob().Params -->
 | 引数      | タイプ                  |    | 説明                                       |
@@ -315,6 +316,7 @@ FileHandle オブジェクトは共有できません。
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readLine().Params -->
 | 引数  | タイプ  |    | 説明                                 |
 | --- | ---- | -- | ---------------------------------- |
@@ -351,6 +353,7 @@ FileHandle オブジェクトは共有できません。
 | ------ | -- |
 | v19 R7 | 追加 |
 </details>
+
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 

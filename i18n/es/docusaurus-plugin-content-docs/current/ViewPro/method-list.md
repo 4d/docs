@@ -1698,7 +1698,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### Descripción
 
-El comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->returns a default style object for a sheet<!-- END REF -->. . The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method.
+El comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devuelve un objeto style por defecto para una hoja<!-- END REF -->. El objeto devuelto contiene las propiedades básicas de renderización del documento, así como la configuración de estilo por defecto (si la hay) definida previamente por el método [VP SET DEFAULT STYLE](#vp-set-default-style). The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method.
 
 In *vpAreaName*, pass the name property of the 4D View Pro area. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -1835,7 +1835,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### Descripción
 
-El comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->retrieves the formulas from a designated *rangeObj*<!-- END REF -->.
+El comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera las fórmulas de un *rangeObj* designado<!-- END REF -->.
 
 In *rangeObj*, pass a range whose formulas you want to retrieve. If *rangeObj* designates multiple ranges, the formula of the first range is returned. If *rangeObj* does not contain any formulas, the command returns an empty string.
 
@@ -1880,7 +1880,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 #### Descripción
 
-El comando `VP Get frozen panes` <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
+El comando `VP Get frozen panes` <!-- REF #_method_.VP Get frozen panes.Summary -->devuelve un objeto con información sobre las columnas y líneas congeladas en *vpAreaName*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -1888,7 +1888,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica donde se 
 
 ##### Objeto devuelto
 
-The command returns an object describing the frozen columns and rows. Este objeto puede contener las siguientes propiedades:
+El comando devuelve un objeto que describe las columnas y líneas congeladas. Este objeto puede contener las siguientes propiedades:
 
 | Propiedad           | Tipo    | Descripción                                                    |
 | ------------------- | ------- | -------------------------------------------------------------- |
@@ -1899,7 +1899,7 @@ The command returns an object describing the frozen columns and rows. Este objet
 
 #### Ejemplo
 
-You want to retrieve information about the number of frozen columns and rows:
+Quiere recuperar información sobre el número de columnas y líneas congeladas:
 
 ```4d
 var $panesObj : Object
@@ -1959,7 +1959,7 @@ Available properties depend on the type of the named element (named cell, named 
 var $list : Collection
 
 
-$list:=VP Get names("ViewProArea";2) //names in 3rd sheet
+$list:=VP Get names("ViewProArea";2) //nombres en la 3a hoja
 ```
 
 #### Ver también
@@ -1983,7 +1983,7 @@ $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 
 #### Descripción
 
-El comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the *vpAreaName*<!-- END REF -->.
+El comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->devuelve un objeto que contiene los atributos de impresión de *vpAreaName*<!-- END REF -->.
 
 Pass the the name of the 4D View Pro area in *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -2064,7 +2064,7 @@ zoomFactor:1
 
 #### Descripción
 
-El comando `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summary -->returns a collection of properties for any row in the *rangeObj*<!-- END REF -->.
+El comando `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summary -->devuelve una colección de propiedades para las líneas de *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass an object containing a range of the rows whose attributes will be retrieved.
 
@@ -2107,7 +2107,7 @@ $attr:=VP Get row attributes($range)
 
 El comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->devuelve el número total de líneas de la *sheet* designada<!-- END REF -->.
 
-In *vpAreaName*, pass the name property of the 4D View Pro area. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
 You can define where to get the row count in the optional *sheet* parameter using the sheet index (counting begins at 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
@@ -2141,7 +2141,7 @@ $rowCount:=VP Get row count("ViewProarea")
 
 #### Descripción
 
-El comando `VP Get selection` <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
+El comando `VP Get selection` <!-- REF #_method_.VP Get selection.Summary -->devuelve un nuevo objeto rango que hace referencia a las celdas actuales seleccionadas<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -2157,7 +2157,7 @@ The following code will retrieve the coordinates of all the cells in the current
 $currentSelection:=VP Get selection("myVPArea")
 
 
-//returns a range object containing:  
+//devuelve un objeto rango que contiene:
 //$currentSelection.ranges[0].column=5
 //$currentSelection.ranges[0].columnCount=2
 //$currentSelection.ranges[0].row=8
@@ -2184,7 +2184,7 @@ $currentSelection:=VP Get selection("myVPArea")
 
 #### Descripción
 
-El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->returns the number of sheets in the document loaded in *vpAreaName*.<!-- END REF -->
+El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->devuelve el número de hojas en el documento cargado en *vpAreaName*.<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -2198,7 +2198,7 @@ Obtener el número de hojas y define la hoja actual como la última hoja:
 
 ```4d
  $count:=VP Get sheet count("ViewProArea")
-  //set the current sheet to the last sheet (indexing starts at 0)
+  //definir la hoja actual como la última hoja (la indexación comienza en 0)
  VP SET CURRENT SHEET("ViewProArea";$count-1)
 ```
 
@@ -2225,7 +2225,7 @@ Obtener el número de hojas y define la hoja actual como la última hoja:
 
 #### Descripción
 
-El comando `VP Get sheet index` <!-- REF #_method_.VP Get sheet index.Summary -->returns the index of a sheet based on its name in *vpAreaName*.<!-- END REF -->
+El comando `VP Get sheet index` <!-- REF #_method_.VP Get sheet index.Summary -->devuelve el índice de una hoja en función de su nombre en *vpAreaName*.<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -2265,11 +2265,11 @@ $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //devuelve 2
 
 #### Descripción
 
-El comando `VP Get sheet name` <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in *vpAreaName*.<!-- END REF -->
+El comando `VP Get sheet name` <!-- REF #_method_.VP Get sheet name.Summary -->devuelve el nombre de una hoja en función de su índice en *vpAreaName*.<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-In *sheet*, pass the index of the sheet whose name will be returned.
+En *sheet*, pasar el índice de la hoja cuyo nombre se devolverá.
 
 Si el índice de hoja pasado no existe, el método devuelve un nombre vacío.
 > La indexación comienza en 0.
@@ -2319,7 +2319,7 @@ To view the full list of the options, see [Sheet Options](configuring.md#sheet-o
 
 ```4d
 $options:=VP Get sheet options("ViewProArea")
-If($options.colHeaderVisible) //column headers are visible
+If($options.colHeaderVisible) //los encabezados de las columnas son visibles
     ... //do something
 End if
 ```
@@ -2345,7 +2345,7 @@ End if
 
 #### Descripción
 
-El comando `VP Get show print lines` <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
+El comando `VP Get show print lines` <!-- REF #_method_.VP Get show print lines.Summary -->devuelve `True` si las líneas de previsualizacipon de impresión son visibles y `False` si están ocultas.<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -2382,7 +2382,7 @@ The following code checks if preview lines are displayed or hidden in the docume
 
 #### Descripción
 
-El comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
+El comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera las celdas fusionadas (cell spans) de e*rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
 
@@ -2606,7 +2606,7 @@ End if
 
 #### Descripción
 
-El comando `VP Get table column index` <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the *columnName* in the *tableName*<!-- END REF -->.
+El comando `VP Get table column index` <!-- REF #_method_.VP Get table column index.Summary -->devuelve el índice de la columna *columnName* en la tabla *tableName*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -2674,7 +2674,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
 
-If *tableName* is not found, the command returns **null**.
+Si no se encuentra *tableName*, el comando devuelve **null**.
 
 #### Ver también
 
@@ -2706,7 +2706,7 @@ If *tableName* is not found, the command returns **null**.
 
 #### Descripción
 
-El comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
+El comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->devuelve una colección de todos los nombres de tablas definidos en *sheet*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -2722,7 +2722,7 @@ The following code will return a collection of all the table names in the curren
 
 ```4d
 $tables:=VP Get tables("ViewProArea")
-//$tables contains for example ["contextTable","emailTable"]
+//$tables contiene por ejemplo ["contextTable","emailTable"]
 
 ```
 
@@ -2798,7 +2798,7 @@ End if
 
 #### Descripción
 
-El comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated *rangeObj*<!-- END REF -->.
+El comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera los valores del *rangeObj* designado<!-- END REF -->.
 
 In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* includes multiple ranges, only the first range is used.
 
@@ -2815,7 +2815,7 @@ The collection returned by `VP Get values` contains a two-dimensional collection
 Las fechas o las horas son consideradas como un datetime y se completan de la siguiente manera:
 
 * valor de tipo hora - la parte fecha se completa como 30 de diciembre de 1899
-* date value - the time portion is completed as midnight (00:00:00:000)
+* valor de tipo date - la parte de la hora se completa como medianoche (00:00:00:000)
 
 #### Ejemplo
 
@@ -2851,7 +2851,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 #### Descripción
 
 `VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
-returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
+devuelve un objeto que contiene las opciones del workbook en *vpAreaName*<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -2890,16 +2890,16 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descripción
 
-El comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. El documento importado sustituye a los datos ya insertados en el área.
+El comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->importa y muestra el documento designado por *filePath* en el área 4D View Pro *vpAreaName*<!-- END REF -->. El documento importado sustituye a los datos ya insertados en el área.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-In *filePath*, pass the path and name of the document to be imported. Se soportan los siguientes formatos:
+En *filePath*, pase la ruta y el nombre del documento a importar. Se soportan los siguientes formatos:
 
 * Les documents 4D View Pro (extensión ".4vp")
 * Microsoft Excel (extensión ".xlsx")
 
-* text documents (extension ".txt", ".csv", the document must be in utf-8)
+* documentos texto (extension ".txt", ".csv", el documento debe estar en utf-8)
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
 

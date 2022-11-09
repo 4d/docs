@@ -65,12 +65,13 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 
 #### *settings*
 
-| Property        | Typ      | Beschreibung                                |
-| --------------- | -------- | ------------------------------------------- |
-| [curve](#curve) | Text     | Name of ECDSA curve                         |
-| [pem](#pem)     | Text     | PEM definition of an encryption key to load |
-| [size](#size)   | ganzzahl | Size of RSA key in bits                     |
-| [typ](#type)    | Text     | Type of the key: "RSA", "ECDSA", or "PEM"   |
+| Property        | Typ      | Beschreibung                                                                                                      |
+| --------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| [typ](#type)    | Text     | Defines the type of the key to create: <li>"RSA": generates a RSA key pair, using [.size](#size) as size.</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using [.curve](#curve) as curve. Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": loads a key pair definition in PEM format, using [.pem](#pem).</li> |
+| [curve](#curve) | Text     | Name of ECDSA curve                                                                                               |
+| [pem](#pem)     | Text     | PEM definition of an encryption key to load                                                                       |
+| [size](#size)   | ganzzahl | Size of RSA key in bits                                                                                           |
+
 
 #### *CryptoKey*
 
