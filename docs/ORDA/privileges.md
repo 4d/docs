@@ -19,19 +19,19 @@ If the user attempts to execute an action and does not have the appropriate acce
 
 ## Resources
 
-You can assign specific permissions to the following exposed resources in your project:
+You can assign specific permission actions to the following exposed resources in your project:
 
 - the datastore
 - a dataclass
 - a dataclass attribute (including computed attribute and alias attribute)
 - a data model class function
 
-A permission defined at a given level is inherited at lower levels and can be overriden. For example, dataclasses attributes inherit from their dataclass permissions but you can override them for one or more attributes. 
+A permission action defined at a given level is inherited at lower levels and can be overriden. For example, dataclasses attributes inherit from their dataclass permissions but you can override them for one or more attributes. 
 
 ![](../assets/en/ORDA/permission-hierarchy.png)
 
 
-## Actions
+## Permission actions
 
 Available actions depend on the target resource.
 
@@ -45,10 +45,26 @@ Available actions depend on the target resource.
 |**describe**|All the dataclasses are available in the /rest/$catalog API|This dataclass is available in the /rest/$catalog API|This dataclass attribute is available in the /rest/$catalog API|This dataclass function is available in the /rest/$catalog API|
 |**promote**|Not applicable|Not applicable|Not applicable|Associates a given privilege during the execution of the function|
 
+An alias can be read even if there is no permissions on the attributes making the alias.
 
-An alias can be read even if there is no permissions on the attributes making the alias
+Keep in mind that actions are logically embedded, and therefore call a chain of implicit actions:
 
-## Privileges an Roles
+- Read action is granted Describe action automatically.
+- Update and Remove actions are granted Read and Describe actions automatically.
+
+The following graphic shows the interactions between actions:
+
+![](../assets/en/ORDA/implicit.png)
+
+
+
+## Privileges and Roles
+
+A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a user profile. 
+
+- You **create** privileges and roles by associating permission action(s) to resource(s) in the `roles.json` file (see below).
+
+- You **allow** privileges and roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the Session class.
 
 
 
