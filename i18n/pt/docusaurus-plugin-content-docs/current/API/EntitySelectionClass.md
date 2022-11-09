@@ -1337,20 +1337,20 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclui da seleção de entidade que é aplicada a *entity* ou as entidaddes de *entitySelection* e retorna a seleção de entidade resultante<!-- END REF -->.
 
-*   If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
-*   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+*   Se passar *entity* como parâmetro, a função cria uma nova seleção de entidade sem *entity* (se *entity* pertencer à seleção de entidade). Se *entity* não for incluída na seleção de entidade original, uma nova referência para a seleção de entidade é retornada.
+*   Se passar *entitySelection* como parâmetro, a função retorna uma seleção de entidade contendo as entidades que pertencem à seleção de entidade original sem as entidades que pertencem a *entitySelection*. > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
-By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+Como padrão, se omitir o parâmetro *keepOrder* , a seleção de entidade resultado não é ordenada. Se quiser manter a ordem da seleção de entidade original (por exemplo se quiser reutilizar a seleção de entidade em uma interface de usuário) passe a constante `dk keep ordered` em *keepOrder*. Neste caso, o resultado é uma seleção de entidade ordenada e a ordem da seleção de entidade inicial é mantida
 
 :::nota
 
-If you pass `dk keep ordered` in *keepOrder* and the removed *entitySelection* contains entities duplicated in the original entity selection, all occurences of the duplicates are removed.
+Se passar `dk keep ordered` em *keepOrder* e removida *entitySelection* contém entidades duplicadas na seleção de entidade original, todas as ocorrências da duplicada são removidas.
 
 :::
 
-If the original entity selection or both the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.
+Se a seleção de entidade original ou tanto a seleção de entidade quanto o parâmetro *entitySelection* vazios e uma seleção de entidade vazia é retornada.
 
-If *entitySelection* is empty or if *entity* is Null, a new reference to the original entity selection is returned.
+Se *entitySelection* for vazia ou se *entity* for Null, uma nova referência à seleção de entidade original for retornada.
 
 Se a entity selection inicial e o parâmetro não forem relacionados com a mesma dataclass, se produz um erro.
 
@@ -1371,7 +1371,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 #### Exemplo 2
 
-We want to have a selection of female employees named "Jones" who live in New York :
+Se quisermos ter uma seleção de empregados mulheres que se chamam "Jones" que vivem em Nova York:
 
 ```4d
  var $sel1; $sel2; $sel3 : cs. EmployeeSelection
@@ -1382,7 +1382,7 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 
 #### Exemplo 3
 
-In a user interface, we have a list that displays items in a specific order. If the user selects items in the list to remove them, the order must be kept when refreshing the list:
+Em uma interface de usuário se tivermos uma lista que exibe itens em uma ordem específica: Se o usuário selecionar itens na lista para remove-los, a ordem deve ser mantida quando refrescar a lista:
 
 ```4d
 $listsel:=$listsel.minus($selectedItems; dk keep ordered)
@@ -1408,23 +1408,23 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 
 <!-- REF #EntitySelectionClass.or().Params -->
-| Parâmetros      | Tipo                |    | Descrição                                                                                         |
-| --------------- | ------------------- |:--:| ------------------------------------------------------------------------------------------------- |
-| entity          | 4D. Entity          | -> | Entidade a intersectar                                                                            |
-| entitySelection | 4D. EntitySelection | -> | Entity selection a intersectar                                                                    |
-| Resultados      | 4D. EntitySelection | <- | New entity selection or new reference to the original entity selection|<!-- END REF --> |
+| Parâmetros      | Tipo                |    | Descrição                                                                                                 |
+| --------------- | ------------------- |:--:| --------------------------------------------------------------------------------------------------------- |
+| entity          | 4D. Entity          | -> | Entidade a intersectar                                                                                    |
+| entitySelection | 4D. EntitySelection | -> | Entity selection a intersectar                                                                            |
+| Resultados      | 4D. EntitySelection | <- | Nova seleção de entidade ou nova referência para a seleção de entidade original<!-- END REF --> |
 
 #### Descrição
 
-A função `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
+A função `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combina a seleção de entidade com *entity* ou parâmetro*entitySelection* usando o operador lógico (não exclusivo) OR<!-- END REF -->; retorna uma nova seleção de entidade não ordenada que contenha todas as entidades da seleção de entidade e o parâmetro
 
-*   If you pass *entitySelection* as parameter, you compare entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
-*   If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
+*   Se passar como parâmetro *entitySelection* pode comparar seleções de entidade. Uma nova seleção de entidade que contenha só as entidades que são referenciadas em ambas as seleções sejam retornadas. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
+*   Se passar *entitySelection* como parâmetro, pode comparar seleções de entidade. Uma nova seleção de entidade contém as entidades pertencem à seleção de entidade original ou *entitySelection* é retornada (ou não é exclusivo, entidades referenciadas em ambas as seleções não forem duplicadas na seleção resultante).
 > > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). A seleção resultante é sempre desordenada.
 
-If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
+Se a seleção de entidade original e o parâmetro *entitySelection* for vazio, uma seleção de entidade vazia é retornada. Se a seleção de entidade original for vazia, uma referência a  *entitySelection* ou uma seleção de entidade contendo apenas *entity* será retornada.
 
-If *entitySelection* is empty or if *entity* is Null, a new reference to the original entity selection is returned.
+Se *entitySelection* estiver vazia ou se *entity* for Null, uma nova referência à seleção de entidade original for retornada.
 
 Se a entity selection inicial e o parâmetro não forem relacionados com a mesma dataclass, se produz um erro.
 
@@ -1474,25 +1474,25 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 | ----------- | ------------------- |:--:| ------------------------------------------------------------------------- |
 | pathString  | Text                | -> | Rota(s) de atributos e instruções de clasificação para a entity selection |
 | pathObjects | Collection          | -> | Coleção de objetos criterio                                               |
-| Resultados  | 4D. EntitySelection | <- | New entity selection in the specified order|<!-- END REF -->    |
+| Resultados  | 4D. EntitySelection | <- | Nova seleção de entidade em ordem especificada|<!-- END REF --> |
 
 #### Descrição
 
-A função `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
-> * This method does not modify the original entity selection.
-> * For more information on ordered entity selections, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+A função `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->retorna uma nova seleção de entidade ordenada contendo todas as entidades da seleção de entidade na ordem especificada por *pathString* ou critérios*pathObjects* <!-- END REF -->.
+> * Este método não modifica a seleção de entidade original
+> * Para saber mais sobre seleções de entidade, veja a seção[Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
-You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
+Deve usar um parâmetro critério para definir como as entidades são ordenadas. Dois parâmetros diferentes são compatíveis:
 
-*   *pathString* (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. The syntax is:
+*   *pathString* (Text) : Este parâmetro contém uma fórmula feita de rotas de atributo 1 a x (e opcionalmente) ordenação separado por vírgulas A sintaxe é:
 
 ```4d
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
 ```
 
-The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
+A ordem na qual os atributos forem passados determina a prioridade de ordenação das entidades. Como padrão, atributos são ordenados em ordem ascendente. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
 
-*   *pathObjects* (collection): each element of the collection contains an object structured in the following way:
+*   *pathObjects* (collection): cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
 ```4d
 {
@@ -1501,10 +1501,10 @@ The order in which the attributes are passed determines the sorting priority of 
 }
 ```
 
-By default, attributes are sorted in ascending order ("descending" is false).
+Como padrão, atributos são ordenados em ordem ascendente ("descendente" é false)
 
-You can add as many objects in the criteria collection as necessary.
-> Null values are evaluated as less than other values.
+Pode adicionar quantos objetos quiser nos critérios da coleção.
+> Valores null são avaliados como menor que outros valores.
 
 #### Exemplo
 
@@ -1546,13 +1546,13 @@ You can add as many objects in the criteria collection as necessary.
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
-| Parâmetros    | Tipo                |    | Descrição                                               |
-| ------------- | ------------------- |:--:| ------------------------------------------------------- |
-| formulaString | Text                | -> | Formula string                                          |
-| formulaObj    | Objeto              | -> | Objecto fórmula                                         |
-| sortOrder     | Integer             | -> | `dk ascending` (default) or `dk descending`             |
-| settings      | Objeto              | -> | Parameter(s) for the formula                            |
-| Resultados    | 4D. EntitySelection | <- | New ordered entity selection|<!-- END REF --> |
+| Parâmetros    | Tipo                |    | Descrição                                                   |
+| ------------- | ------------------- |:--:| ----------------------------------------------------------- |
+| formulaString | Text                | -> | Formula string                                              |
+| formulaObj    | Objeto              | -> | Objecto fórmula                                             |
+| sortOrder     | Integer             | -> | `dk ascending` (normal) ou `dk descending`                  |
+| settings      | Objeto              | -> | Parâmetros da fórmula                                       |
+| Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade ordenada<!-- END REF --> |
 
 #### Descrição
 
