@@ -2706,16 +2706,26 @@ If *tableName* is not found, the command returns **null**.
 
 #### Description
 
-The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->.
+The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or `VP SET TABLE THEME`(#vp-set-table-name) commands, or through the interface. 
 
-A table theme can be defined using the [`VP CREATE TABLE`](#vp-create-table) or `VP SET TABLE THEME`(#vp-set-table-name) commands, or through the interface. 
-
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to get theme values. 
+In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table. 
 
 The command returns an object with properties and values that describe the current table theme. See the [`VP SET TABLE THEME` command](#vp-table-set-theme) for a detailed description of the returned object.
 
-- the `highlightFirstColumn` and `highlightLastColumn` property are not returned,
-- a full `theme` object is returned, event if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to defined the theme.
+
+
+#### Example
+
+The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+
+```4d
+$param:=New object
+$param.theme:="dark10" //use of a native theme name
+
+VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
+$vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
+$result:=Asserted(Value type($vTheme.theme)=Is object) //true
+```
 
 
 #### See also
