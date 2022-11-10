@@ -311,17 +311,15 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 |roles|Text or Collection|<li>String containing a role, or</li><li>Collection of strings containing roles</li>|
 |userName|Text|User name to associate to the session (optional)|
 
-:::caution Reminder
+:::info
 
-- The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
-- `privileges` and `roles` names are case insensitive.
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
 
 :::
 
-If the `privileges` property contains an invalid name, it is ignored. If the `roles` property contains a role that is not declared in the `roles.json` file, it is ignored.
+If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
 
-
-By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
+By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
 
 The [`userName`](#username) property is available at session object level (read-only).
 
