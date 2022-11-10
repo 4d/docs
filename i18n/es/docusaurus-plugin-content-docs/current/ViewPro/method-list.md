@@ -1016,14 +1016,14 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 
 #### Ejemplo 1
 
-You want to export the contents of the "VPArea" area to a 4D View Pro document on disk:
+Quiere exportar el contenido del área "VPArea" a un documento 4D View Pro en el disco:
 
 ```4d
 var $docPath: Text
 
 $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
 VP EXPORT DOCUMENT("VPArea";$docPath)
-//MyExport.4VP is saved on your disk
+//MyExport.4VP se guarda en su disco
 ```
 
 #### Ejemplo 2
@@ -1041,7 +1041,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 
 #### Ejemplo 3
 
-You want to export a 4D View Pro document in ".xlsx" format and call a method that will launch Microsoft Excel with the document open once the export has completed:
+Desea exportar un documento 4D View Pro en formato ".xlsx" y llamar a un método que inicie Microsoft Excel con el documento abierto una vez completada la exportación:
 
 ```4d
  $params:=New object
@@ -1121,7 +1121,7 @@ En el parámetro *options*, puede pasar las siguientes opciones de exportación,
 | includeFormatInfo    | Boolean | True (por defecto) para incluir la información del formato, en caso contrario false. La información de formato es útil en algunos casos, por ejemplo, para una exportación a SVG. On the other hand, setting this property to False allows reducing export time. |
 | includeBindingSource | Boolean | True (default) to export the current data context values as cell values in the exported object (data contexts themselves are not exported). False en caso contrario. Cell binding is always exported.                                                            |
 
-For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) paragraph.
+Para más información sobre los objetos 4D View Pro, consulte el párrafo [objeto 4D View Pro](configuring.md#4d-view-pro-object).
 
 #### Ejemplo 1
 
@@ -1169,7 +1169,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 #### Descripción
 
-El comando `VP Find` <!-- REF #_method_.VP Find.Summary -->searches the *rangeObj* for the *searchValue*<!-- END REF -->. Optional parameters can be used to refine the search and/or replace any results found.
+El comando `VP Find` <!-- REF #_method_.VP Find.Summary -->busca en *rangeObj* la *searchValue*<!-- END REF -->. Se pueden utilizar parámetros opcionales para afinar la búsqueda y/o sustituir los resultados encontrados.
 
 In the *rangeObj* parameter, pass an object containing a range to search.
 
@@ -1182,15 +1182,15 @@ You can pass the optional *searchCondition* parameter to specify how the search 
 | afterColumn | Integer | El número de la columna justo antes de la columna inicial de la búsqueda. If the *rangeObj* is a combined range, the column number given must be from the first range. Valor por defecto: -1 (inicio de *rangeObj*) |
 | afterRow    | Integer | El número de la línea justo antes de la línea inicial de la búsqueda. If the *rangeObj* is a combined range, the row number given must be from the first range. Valor por defecto: -1 (inicio de *rangeObj*)        |
 | all         | Boolean | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                |
-| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Las letras mayúsculas y minúsculas se consideran iguales. Ej.: "a" es considerada como idéntica a "A".</td></tr><tr><td>`vk find flag none`</td><td>no se consideran los indicadores de búsqueda (por defecto)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Los caracteres genéricos (\*,?) se pueden utilizar en la cadena de búsqueda. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? ? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>Estos marcadores se pueden combinar. Por ejemplo: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                               |
+| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>Todo el contenido de la celda debe coincidir completamente con el valor de búsqueda</td></tr><tr><td>`vk find flag ignore case`</td><td>Las letras mayúsculas y minúsculas se consideran iguales. Ej.: "a" es considerada como idéntica a "A".</td></tr><tr><td>`vk find flag none`</td><td>no se consideran los indicadores de búsqueda (por defecto)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Los caracteres genéricos (\*,?) se pueden utilizar en la cadena de búsqueda. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? ? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>Estos marcadores se pueden combinar. Por ejemplo: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                               |
 | order       | Integer | <table><tr><td>`vk find order by columns`</td><td>La búsqueda se realiza por columnas. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>La búsqueda se realiza por líneas. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                          |
 | target      | Integer | <table><tr><td>`vk find target formula`</td><td>La búsqueda se realiza en la fórmula de la celda</td></tr><tr><td>`vk find target tag`</td><td>La búsqueda se realiza en la etiqueta de la celda</td></tr><tr><td>`vk find target text`</td><td>La búsqueda se realiza en el texto de la celda (por defecto)</td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                |
 
-In the optional *replaceValue* parameter, you can pass text to take the place of any instance of the text in *searchValue* found in the *rangeObj*.
+En el parámetro opcional *replaceValue*, puede pasar un texto para que ocupe el lugar de toda instancia del texto en el *searchValue* encontrado en *rangeObj*.
 
 #### Objeto devuelto
 
-The function returns a range object describing each search value that was found or replaced. Se devuelve un objeto de rango vacío si no se encuentran resultados.
+La función devuelve un objeto de rango que describe cada valor de búsqueda encontrado o reemplazado. Se devuelve un objeto de rango vacío si no se encuentran resultados.
 
 #### Ejemplo 1
 
@@ -1255,9 +1255,9 @@ End if
 
 El comando `VP Find table` <!-- REF #_method_.VP Find table.Summary -->devuelve el nombre de la tabla a la que pertenece la celda de *rangeObj*<!-- END REF -->.
 
-En *rangeObj*, pase un objeto de rango de celdas. If the designated cells do not belong to a table, the command returns an empty string.
+En *rangeObj*, pase un objeto de rango de celdas. Si las celdas designadas no pertenecen a una tabla, el comando devuelve una cadena vacía.
 
-If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
 
 #### Ejemplo
 
@@ -1297,7 +1297,7 @@ El comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->e
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-In order to increase performance and reduce the number of requests sent, the 4D View Pro commands called by the developer are stored in a command buffer. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
+Para aumentar el rendimiento y reducir el número de peticiones enviadas, los comandos 4D View Pro llamados por el desarrollador se almacenan en un buffer de comandos. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
 
 #### Ejemplo
 
@@ -1332,9 +1332,9 @@ Quiere rastrear la ejecución de los comandos y vaciar el buffer:
 
 El comando utilitario `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->devuelve un objeto a partir de una cadena abreviada de fuentes<!-- END REF -->. Este objeto se puede utilizar para establecer u obtener la configuración de las propiedades de la fuente a través de la notación de objetos.
 
-In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
+En el parámetro *font*, pase una cadena de fuente abreviada para especificar las diferentes propiedades de una fuente (por ejemplo, "12 pt Arial"). Puede obtener más información sobre las cadenas de fuentes abreviadas [en esta página](https://www.w3schools.com/cssref/pr_font_font.asp), por ejemplo.
 
-El objeto devuelto contiene los atributos de fuente definidos como propiedades. For more information about the available properties, see the [VP Object to font](#vp-object-to-font) command.
+El objeto devuelto contiene los atributos de fuente definidos como propiedades. Para obtener más información sobre las propiedades disponibles, consulte el comando [Objeto VP a fuente](#vp-object-to-font).
 
 #### Ejemplo 1
 
@@ -1430,7 +1430,7 @@ $activeCell:=VP Get active cell("myVPArea")
 
 #### Descripción
 
-El comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->returns the name of the attribute bound to the cell specified in *rangeObj*<!-- END REF -->.
+El comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->devuelve el nombre del atributo ligado a la celda especificada en *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass an object that is either a cell range or a combined range of cells. Note que:
 
@@ -1478,11 +1478,11 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 
 El comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->devuelve un [objeto estilo](configuring.md#style-objects) para la primera celda del *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range containing the style to retrieve.
+En *rangeObj*, pase un rango que contenga el estilo a recuperar.
 
-* If *rangeObj* contains a cell range, the cell style is returned.
-* If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
-* If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
+* Si *rangeObj* contiene un rango de celdas, se devuelve el estilo de la celda.
+* Si *rangeObj* contiene un rango que no es un rango de celdas, se devuelve el estilo de la primera celda del rango.
+* Si *rangeObj* contiene varios rangos, sólo se devuelve el estilo de la primera celda del primer rango.
 
 #### Ejemplo
 
@@ -1534,9 +1534,9 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 
 #### Descripción
 
-El comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->returns a collection of properties for any column in the *rangeObj*<!-- END REF -->.
+El comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->devuelve una colección de propiedades para las columas de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the columns whose attributes will be retrieved.
+En *rangeObj*, pase un objeto que contenga un rango de columnas cuyos atributos serán recuperados.
 
 The returned collection contains any properties for the columns, whether or not they have been set by the [VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes) command.
 
@@ -1577,7 +1577,7 @@ $attr:=VP Get column attributes($range)
 
 #### Descripción
 
-El comando `VP Get column count` <!-- REF #_method_.VP Get column count.Summary -->returns the total number of columns from the designated *sheet*<!-- END REF -->.
+El comando `VP Get column count` <!-- REF #_method_.VP Get column count.Summary -->devuelve el número total de columnas de la *sheet* designada<!-- END REF -->.
 
 In *vpAreaName*, pass the name property of the 4D View Pro area. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -1700,9 +1700,9 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 El comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devuelve un objeto style por defecto para una hoja<!-- END REF -->. El objeto devuelto contiene las propiedades básicas de renderización del documento, así como la configuración de estilo por defecto (si la hay) definida previamente por el método [VP SET DEFAULT STYLE](#vp-set-default-style). The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method.
 
-In *vpAreaName*, pass the name property of the 4D View Pro area. Si pasa un nombre que no existe, se devuelve un error.
+En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
+Puede definir dónde obtener el recuento de columnas en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual.
 
 #### Ejemplo
 
@@ -1846,7 +1846,7 @@ La colección devuelta es bidimensional:
 
 #### Ejemplo
 
-You want to retrieve the formulas in the Sum and Average columns from this document:
+Quiere recuperar las fórmulas de las columnas Sum y Average de este documento:
 
 ![](../assets/en/ViewPro/cmd_vpGetFormulas.PNG)
 
@@ -1932,7 +1932,7 @@ El objeto devuelto contiene, por ejemplo:
 
 #### Descripción
 
-El comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
+El comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->devuelve una colección de todos los "nombres" definidos en la hoja actual o en el alcance designado en el parámetro *scope*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -4229,7 +4229,7 @@ $result:=VP Run offscreen area($o)
 
 El comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define una celda especificada como activa<!-- END REF -->.
 
-In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell](#vp-cell)). If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell](#vp-cell)). Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
 
 #### Ejemplo
 
