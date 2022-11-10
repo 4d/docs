@@ -109,12 +109,18 @@ The `roles.json` file syntax is the following:
 |||\[].promote|Collection of strings||List of privileges|
 
 
+:::caution Reminder
+
+- The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
+- `privileges` and `roles` names are case insensitive.
+
+:::
 
 ## Initializing the system for deployment
 
-By default if no specific settings are defined in the `roles.json` file, accesses are not restricted. This configuration allows developing the application without having to worry about accesses.
+By default, if no specific parameters are defined in the roles.json file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
 
-However, when the application is about to be deployed, a good practice is to lock all privileges and then, to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder:
+However, when the application is about to be deployed, a good practice is to lock all privileges and then, to configure the file to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder:
    
 ```json title="/Project/Sources/roles.json"
 {
