@@ -309,10 +309,10 @@ VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDo
 
 ### VP All
 
-<!-- REF #_method_.VP ALL.Syntax -->
+<!-- REF #_method_.VP All.Syntax -->
 **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | 引数         | タイプ     |    | 説明                                          |
 | ---------- | ------- | -- | ------------------------------------------- |
@@ -324,7 +324,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDo
 
 #### 説明
 
-`VP ALL` コマンドは、 <!-- REF #_method_.VP ALL.Summary -->すべてのセルを参照する新しいレンジオブジェクトを返します<!-- END REF -->。
+`VP ALL` コマンドは、 <!-- REF #_method_.VP All.Summary -->すべてのセルを参照する新しいレンジオブジェクトを返します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
@@ -346,20 +346,19 @@ $all:=VP All("ViewProArea") // カレントシートの全セル
 
 ### VP Cell
 
-<!-- REF #_method_.VP CELL.Syntax -->
+<!-- REF #_method_.VP Cell.Syntax -->
 **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| 引数         | タイプ     |    | 説明                                          |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                     |
-| column     | Longint | -> | シートのインデックス (省略した場合はカレントシート)                 |
-| row        | Longint | -> | シートのインデックス (省略した場合はカレントシート)                 |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                 |
-| 戻り値        | Object  | <- | すべてのセルのレンジオブジェクト|<!-- END REF -->
-
-|
+| 引数         | タイプ     |    | 説明                          |
+| ---------- | ------- | -- | --------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名     |
+| column     | Longint | -> | カラムのインデックス                  |
+| row        | Longint | -> | 行のインデックス                    |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
+| 戻り値        | Object  | <- | 単一セルのレンジオブジェクト              |
+<!-- END REF -->
 
 #### 説明
 
@@ -535,12 +534,12 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
-<!-- REF #_method_.VP Combine Ranges.Syntax -->
-**VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | 引数            | タイプ    |    | 説明                                             |
 | ------------- | ------ | -- | ---------------------------------------------- |
@@ -552,7 +551,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 #### 説明
 
-`VP Combine Ranges` コマンドは、 <!-- REF #_method_.VP Combine Ranges.Summary -->2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します<!-- END REF -->。 レンジはすべて同じ 4D View Pro エリア内のものでなくてはなりません。
+`VP Combine Ranges` コマンドは、 <!-- REF #_method_.VP Combine ranges.Summary -->2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します<!-- END REF -->。 レンジはすべて同じ 4D View Pro エリア内のものでなくてはなりません。
 
 *rangeObj* には、1つ目のレンジオブジェクトを渡します。
 
@@ -3202,6 +3201,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 ![](../assets/en/ViewPro/table-insert.png)
 
 
+
 #### 参照
 
 [VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP REMOVE TABLE ROWS](#vp-remove-table-rows)
@@ -4582,6 +4582,7 @@ $properties:=New object("width";100;"header";"Hello World")
 
 VP SET COLUMN ATTRIBUTES($column;$properties)
 ```
+
 
 ![](../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 

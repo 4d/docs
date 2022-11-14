@@ -66,7 +66,7 @@ Data is collected during the following events:
 
 
 
-## When is it stored and sent?
+## Where is it stored and sent?
 
 Collected data is written in a text file (JSON format) when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv19/help/command/en/page485.html), i.e.:
 
@@ -78,6 +78,8 @@ Once a week, the file is automatically sent over the network to 4D. The file is 
 ![](../assets/en/Admin/data-collect.png)
 
 > If the file could not be sent for some reason, it is nevertheless deleted and no error message is displayed on the 4D Server side.
+
+The file is sent to the following server address: `https://dcollector.4d.com` (ip: 195.68.52.83).
 
 
 ## Disabling data collection in client/server built applications
