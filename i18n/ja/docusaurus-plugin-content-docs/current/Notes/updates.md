@@ -3,7 +3,29 @@ id: updates
 title: リリースノート
 ---
 
-## 4D v19 R7
+## 4D v19 R8
+
+[**4D v19 R8 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19-r8/): 4D v19 R8 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+
+#### ハイライト
+
+-
+- 4D Language classic: [What's new page](XXX) on doc.4d.com.
+- 4D Write Pro: [What's new page](XXX) on doc.4d.com.
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。
+
+
+#### 動作の変更
+
+- 標準アクションが適用されている [リンクされているポップアップメニューの付いたベベルボタン](../FormObjects/properties_TextAndPicture.md/#ポップアップメニューあり) で、ポップアップメニューのオプションが選択された場合、その標準アクションは実行されなくなりました。
+
+
+## 過去のリリース
+
+<details><summary>過去のリリースについてはこちらをクリックしてください。</summary>
+
+### 4D v19 R7
 
 [**4D v19 R7 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19-r7/): 4D v19 R7 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
@@ -30,10 +52,6 @@ title: リリースノート
 
     特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。
 
-
-## 過去のリリース
-
-<details><summary>過去のリリースについてはこちらをクリックしてください。</summary>
 
 ### 4D v19 R6
 
