@@ -4,15 +4,15 @@ title: Privileges
 ---
 
 
-Protecting data while allowing fast and easy access to authorized people is a major challenge for web applications. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
+Protecting data while allowing fast and easy access to authorized users is a major challenge for web applications. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
 
 
 
 ## Overview
 
-The ORDA security architecture is based upon the concepts of privileges, permission actions, and resources. When a user gets logged, their session is automatically loaded with associated privileges. Every REST request of the session is evaluated against privileges defined in the project's `roles.json` file.
+The ORDA security architecture is based upon the concepts of privileges, permission actions (read, create, etc.), and resources. When users get logged, their session is automatically loaded with associated privileges. Every REST request sent within the session is evaluated against privileges defined in the project's `roles.json` file.
 
-If the user attempts to execute an action and does not have the appropriate access rights, a privilege error is generated or, in the case of missing Read privilege on attributes, a null value is sent. 
+If a user attempts to execute an action and does not have the appropriate access rights, a privilege error is generated or, in the case of missing Read privilege on attributes, a null value is sent. 
 
 ![](../assets/en/ORDA/privileges-schema.png)
 
@@ -63,13 +63,13 @@ The following graphic shows the interactions between actions:
 
 ## Privileges and Roles
 
-A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a user profile. 
+A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role that includes "manageInvoices" and other privileges.
 
 A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. A privilege can include other privileges. 
 
-- You **create** privilege and/or role names in the `roles.json` file (see below). You **define** their scope by assigning them to permission action(s) applied to resource(s).
+- You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the Session class.
+- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
 
 
 
