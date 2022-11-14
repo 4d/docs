@@ -309,10 +309,10 @@ créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 ### VP All
 
-<!-- REF #_method_.VP ALL.Syntax -->
+<!-- REF #_method_.VP All.Syntax -->
 **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | Paramètres | Type    |    | Description                                                   |
 | ---------- | ------- | -- | ------------------------------------------------------------- |
@@ -324,7 +324,7 @@ créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 #### Description
 
-La commande `VP ALL` <!-- REF #_method_.VP ALL.Summary -->retourne une nouvelle plage référençant toutes les cellules<!-- END REF -->.
+La commande `VP ALL` <!-- REF #_method_.VP All.Summary -->retourne une nouvelle plage référençant toutes les cellules<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -346,20 +346,19 @@ $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
 
 ### VP Cell
 
-<!-- REF #_method_.VP CELL.Syntax -->
+<!-- REF #_method_.VP Cell.Syntax -->
 **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| Paramètres | Type    |    | Description                                                   |
-| ---------- | ------- | -- | ------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                       |
-| column     | Longint | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| row        | Longint | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| Résultat   | Object  | <- | Objet plage de toutes les cellules|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| column     | Longint | -> | Indice de la colonne                                     |
+| row        | Longint | -> | Indice de la ligne                                       |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Range object of a single cell                            |
+<!-- END REF -->
 
 #### Description
 
@@ -535,12 +534,12 @@ redimensionne les colonnes pour correspondre à la taille du contenu :
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
-<!-- REF #_method_.VP Combine Ranges.Syntax -->
-**VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | Paramètres    | Type   |    | Description                                                   |
 | ------------- | ------ | -- | ------------------------------------------------------------- |
@@ -552,7 +551,7 @@ redimensionne les colonnes pour correspondre à la taille du contenu :
 
 #### Description
 
-La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
+La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
 Dans *rangeObj*, passez la première plage.
 
@@ -3201,6 +3200,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 ![](../assets/en/ViewPro/table-insert.png)
 
 
+
 #### Voir également
 
 [VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP REMOVE TABLE ROWS](#vp-remove-table-rows)
@@ -4580,6 +4580,7 @@ $properties:=New object("width";100;"header";"Hello World")
 
 VP SET COLUMN ATTRIBUTES($column;$properties)
 ```
+
 
 ![](../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
