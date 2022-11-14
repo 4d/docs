@@ -116,7 +116,7 @@ The `roles.json` file syntax is the following:
 
 :::
 
-## Initializing the system for deployment
+## Initializing privileges for deployment
 
 By default, if no specific parameters are defined in the roles.json file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
 
@@ -205,4 +205,66 @@ However, when the application is about to be deployed, a good practice is to loc
 		]
 	}
 }
+```
+
+## Roles.json example file
+
+Example of file for an Employee/Company database:
+
+```json title="EmpComp/Project/Sources/roles.json"
+{
+	"privileges": [
+		{
+			"privilege": "emp1"
+		},
+		{
+			"privilege": "hr",
+			"includes": [
+				"emp1"
+			]
+		},
+		{
+			"privilege": "ceo",
+			"includes": [
+				"hr"
+			]
+		},
+		{
+			"privilege": "administrator",
+			"includes": [
+				"ceo"
+			]
+		}
+		
+	],
+	"roles": [
+		{
+			"role": "employee",
+			"privileges": [
+				"emp1"
+			]
+		},
+		{
+			"role": "HR",
+			"privileges": [
+				"hr"
+			]
+		},
+		{
+			"role": "admin",
+			"privileges": [
+				"ceo",
+				"administrator"
+			]
+		}
+	],
+	"permissions":
+	{
+		"allowed":[
+			{ "type":"dataclass", "applyTo" : "Employee", "read":"emp1", "create":"hr", "update":"hr", "drop":"hr" },
+			{ "type":"attribute", "applyTo" : "Employee.salary", "read":"hr" },
+			{ "type":"method", "applyTo" : "Employee.getSalary", "execute":"hr" },
+			{ "type":"datastore", "applyTo" : "ds", "read":"employee", "create":"staffManager", "update":"staffManager", "drop":"staffManager", "describe":"formManager" }
+		]
+	}
 ```
