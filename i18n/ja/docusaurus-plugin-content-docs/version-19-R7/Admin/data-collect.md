@@ -66,7 +66,7 @@ title: データ収集について
 
 
 
-## Where is it stored and sent?
+## 保存先と送信先
 
 収集されたデータは、4D Server の終了時にテキストファイル (JSON形式) に書き込まれます。 このファイルは、[Active 4D Folder](https://doc.4d.com/4dv19/help/command/ja/page485.html) に格納されます。 つまり:
 
@@ -79,7 +79,7 @@ title: データ収集について
 
 > 何らかの理由でファイルを送信できなかった場合でも、ファイルは削除され、4D Server にエラーメッセージは表示されません。
 
-The file is sent to the following server address: `https://dcollector.4d.com` (ip: 195.68.52.83).
+このファイルは、次のサーバーアドレスに送信されます: `https://dcollector.4d.com` (ip: 195.68.52.83)。
 
 
 ## ビルドされたクライアント/サーバーアプリケーションで自動データ収集を無効にする
