@@ -560,7 +560,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 #### 説明
 
-The `VP Combine ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します<!-- END REF -->。 レンジはすべて同じ 4D View Pro エリア内のものでなくてはなりません。
+`VP Combine ranges` コマンドは、 <!-- REF #_method_.VP Combine ranges.Summary -->2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します<!-- END REF -->。 レンジはすべて同じ 4D View Pro エリア内のものでなくてはなりません。
 
 *rangeObj* には、1つ目のレンジオブジェクトを渡します。
 
