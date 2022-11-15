@@ -1467,31 +1467,31 @@ Pode adicionar quantos objetos quiser nos critérios da coleção.
 
 #### Descrição
 
-The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
+The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> contendo todas as entidades da seleção de entidade na ordem definida através de *formulaString* ou *formulaObj* e, opcionalmente, os parâmetros*sortOrder* e*settings*.
 > Esta função não modifica a entity selection original.
 
-You can use either a *formulaString* or a *formulaObj* parameter:
+Pode usar *formulaString* ou um parâmetro *formulaObj*:
 
-* *formulaString*: you pass a 4D expression such as "Year of(this.birthDate)".
-* *formulaObj*: pass a valid formula object created using the `Formula` or `Formula from string` command.
+* *formulaString*: passa uma expressão 4D como "Year of(this.birthDate)".
+* *formulaObj*: passa um objeto fórmulada valida criado usando `Formula` ou `Formula from string`.
 
-The *formulaString* or *formulaObj* is executed for each entity of the entity selection and its result is used to define the position of the entity in the returned entity selection. The result must be of a sortable type (boolean, date, number, text, time, null).
-> A null result is always the smallest value.
+*formulaString* ou*formulaObj* é executado para cada entidade da seleção de entidade e seu resultado é usado para definir a posição da entidade na seleção de entidade retornada.. O resultado deve ser um tipo ordenavel (booleano, data, número, texto, hora, null).
+> Um resultado nullé sempre o menor valor.
 
-By default if you omit the *sortOrder* parameter, the resulting entity selection is sorted in ascending order. Optionnally, you can pass one of the following values in the *sortOrder* parameter:
+Como padrão, se omitir o parâmetro *keepOrder*, a seleção de entidade resultado é ordenada de forma ascendente. Opcionalmente pode passar um dos valores abaixo no parâmetro *sortOrder*:
 
-| Constante     | Value | Comentário                     |
-| ------------- | ----- | ------------------------------ |
-| dk ascending  | 0     | Ascending sort order (default) |
-| dk descending | 1     | Descending sort order          |
+| Constante     | Value | Comentário                |
+| ------------- | ----- | ------------------------- |
+| dk ascending  | 0     | Ordem ascendente (padrão) |
+| dk descending | 1     | Ordem descendente         |
 
-Within the *formulaString* or *formulaObj*, the processed entity and thus its attributes are available through the `This` command (for example, `This.lastName`).
+Dentro de *formulaString* ou *formulaObj*, a entidade processada e seus atributos estão disponíveis através do comando `This` (por exemplo, `This.lastName`).
 
 Pode passar parâmetro(s) à fórmula usando a propriedade (objecto) `args` do parâmetro `settings`: a fórmula recebe o objecto `settings.args` em $1.
 
 #### Exemplo 1
 
-Sorting students using a formula provided as text:
+Ordenar estudantes usando uma fórmula fornecida como texto:
 
 ```4d
  var $es1; $es2 : cs. StudentsSelection
@@ -1500,7 +1500,7 @@ Sorting students using a formula provided as text:
  $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
 
-Same sort order but using a formula object:
+Mesma ordem mas usando objeto fórmula:
 
 ```4d
  var $es1; $es2 : cs. StudentsSelection
@@ -1515,7 +1515,7 @@ Same sort order but using a formula object:
 
 Uma fórmula é dada como um objecto de fórmula com parâmetros; `settings.args` objecto é recebido como $1 no método ***computeAverage***.
 
-In this example, the "marks" object field in the **Students** dataClass contains students' grades for each subject. A single formula object is used to compute a student's average grade with different coefficients for schoolA and schoolB.
+Neste exemplo, o objeto campo "marks" em **Students** dataClass contém as notas de estudantes para cada tema. Um objeto fórmula é usado para computar a média das notas dos estudantes com coeficientes diferentes para schoolA e schoolB
 
 ```4d
  var $es1; $es2 : cs. StudentsSelection
@@ -1580,23 +1580,23 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 
 <!-- REF #EntitySelectionClass.query().Params -->
-| Parâmetros    | Tipo                |    | Descrição                                                                                                                                                     |
-| ------------- | ------------------- |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text                | -> | Criterios de pesquisa como string                                                                                                                             |
-| formula       | Objeto              | -> | Criterios de pesquisa como objeto fórmula                                                                                                                     |
-| value         | any                 | -> | Valores a usar para placeholders indexados                                                                                                                    |
-| querySettings | Objeto              | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                                                 |
-| Resultados    | 4D. EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF --> |
+| Parâmetros    | Tipo                |    | Descrição                                                                                                                                                                       |
+| ------------- | ------------------- |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Text                | -> | Criterios de pesquisa como string                                                                                                                                               |
+| formula       | Objeto              | -> | Criterios de pesquisa como objeto fórmula                                                                                                                                       |
+| value         | any                 | -> | Valores a usar para placeholders indexados                                                                                                                                      |
+| querySettings | Objeto              | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                                                                   |
+| Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade feita de entidades da seleção de entidade que satisfazem o critério de pesquisa especificado em  *queryString* ou *formula*|<!-- END REF --> |
 
 #### Descrição
 
-A função `.query()` <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+A função `.query()` <!-- REF #EntitySelectionClass.query().Summary -->pesquisa por entidades que satisfazem o critério de pesquisa especificado em *queryString* ou *formula* e (opcionalmente) *value*(s) entre todas as entidades na seleção de entidade<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 > Esta função não modifica a entity selection original.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
-For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
-> By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
+para informações detalhadas de como usar *queryString*, *value*e *querySettings*, veja a descrição DataClass [`.query()`](DataClassClass.md#query).
+> Como padrão se omitir **order by** em *queryString*, a seleção de entidade retornada é [não ordenada](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note entretanto que em modo Cliente Servidor funciona como uma seleção de entidade ordenada (entidades são adicionadas no final da seleção)
 
 #### Exemplo 1
 
@@ -1608,11 +1608,11 @@ For detailed information on how to build a query using *queryString*, *value*, a
 
 #### Exemplo 2
 
-More examples of queries can be found in the DataClass [`.query()`](DataClassClass.md#query) page.
+A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`.query()`](DataClassClass.md#query) .
 
 #### Veja também
 
-[`.query()`](DataClassClass.md#query) for dataclass
+[`.query()`](DataClassClass.md#query) para dataclass
 
 <!-- END REF -->
 
@@ -1632,9 +1632,9 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 #### Descrição
 
-A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. Summary -->retorna una coleção que contenha os valores de *attributePath* extraídos da entity selection<!-- END REF -->.
+A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da pesquisa como foi realizada em 4D<!-- END REF -->. Summary -->retorna una coleção que contenha os valores de *attributePath* extraídos da entity selection<!-- END REF -->.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+para saber mais veja o parágrafo **querySettings parameter** na página Dataclass[`.query()`](DataClassClass.html#query).
 
 <!-- END REF -->
 
@@ -1654,9 +1654,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 #### Descrição
 
-A propriedade `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A propriedade `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contém uma descrição detalhada da pesquisa antes da execução (ou seja, a pesquisa planejada)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+para saber mais veja o parágrafo **querySettings parameter** na página Dataclass[`.query()`](DataClassClass.html#query).
 
 <!-- END REF -->
 
@@ -1682,15 +1682,15 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
-> This function only works with a remote datastore (client / server or `Open datastore` connection).
+> Esta função só funciona com datastore remota (cliente / servidor ou conexão`Open datastore` ).
 
-A função `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+A função `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> de forma que na próxima vez que 4D exige a seleção de entidade será recarregada da database.
 
-By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
+Como padrão, a cache ORDA local é invaidade depois de 30 segundos. No contexto de aplicações cliente/servidor usando ORDA e a linguagem clássica, este método permite assegurar que a aplicação remota vai sempre funcionar com os últimos dados.
 
 #### Exemplo 1
 
-In this example, classic and ORDA code modify the same data simultaneously:
+Neste exemplo, clássico e ORDA modifica os mesmos dados simultaneamente.
 
 ```4d
  //On a 4D remote
@@ -1699,17 +1699,17 @@ In this example, classic and ORDA code modify the same data simultaneously:
  var $student : cs. StudentsEntity
 
  $selection:=ds. Students.query("lastname=:1";"Collins")
-  //The first entity is loaded in the ORDA cache
+  //A primeira entidade é carregada na cache ORDA
  $student:=$selection.first()
 
-  //Update with classic 4D, ORDA cache is not aware of if
+  //Atualizar com clássico 4D, ORDA cache não está se
  QUERY([Students];[Students]lastname="Collins")
  [Students]lastname:="Colin"
  SAVE RECORD([Students])
 
-  //to get the latest version, the ORDA cache must be invalidated
+  //pra obter a última versão a cache ORDA deve ser invalidada
  $selection.refresh()
-  // Even if cache is not expired, the first entity is reloaded from disk
+  // Mesmo se cache não for expirada, a primeira entidade é carregada do disco
  $student:=$selection.first()
 
   //$student.lastname contains "Colin"
@@ -1717,23 +1717,23 @@ In this example, classic and ORDA code modify the same data simultaneously:
 
 #### Exemplo 2
 
-A list box displays the Form.students entity selection and several clients work on it.
+Uma list box exibe a seleção de entidade Form.students e vários clientes trabalham nele.
 
 ```4d
-// Form method:
+// Método de formulário:
  Case of
     :(Form event code=On Load)
        Form.students:=ds. Students.all()
  End case
   //
   //
-  // On client #1, the user loads, updates, and saves the first entity
-  // On client #2, the user loads, updates, and saves the same entity
+  // Em client #1, o usuário carrega atualiza e salva a primeira entidade
+  // Em client #2, o usuário carrega atualiza e salva a mesma entidade
   //
   //
-  // On client #1:
- Form.students.refresh() // Invalidates the ORDA cache for the Form.students entity selection
-  // The list box content is refreshed from the database with update made by client #2
+  // Em client #1:
+ Form.students.refresh() // Invalida a cache ORDA para a seleção de entidade Form.students
+  // O conteúdo list box é atualizado na database com atuaização feita pelo  client #2
 ```
 
 
@@ -1756,31 +1756,31 @@ A list box displays the Form.students entity selection and several clients work 
 
 
 <!-- REF #EntitySelectionClass.selected().Params -->
-| Parâmetros       | Tipo                |    | Descrição                                                                         |
-| ---------------- | ------------------- |:--:| --------------------------------------------------------------------------------- |
-| selectedEntities | 4D. EntitySelection | -> | Entity selection with entities for which to know the rank in the entity selection |
-| Resultados       | Objeto              | <- | Range(s) of selected entities in entity selection|<!-- END REF -->      |
+| Parâmetros       | Tipo                |    | Descrição                                                                          |
+| ---------------- | ------------------- |:--:| ---------------------------------------------------------------------------------- |
+| selectedEntities | 4D. EntitySelection | -> | Seleção de entidade com entidades para qual saber o ranking da seleção de entidade |
+| Resultados       | Objeto              | <- | Intervalos da seleção de entidade da seleção de entidade<!-- END REF --> |
 
 #### Descrição
 
 A função `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
-Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+Passe o parâmetro *selectedEntities* uma seleção de entidade contendo entidades para qual quiser saber a posição na seleção de entidade original. *selectedEntities* deve ser uma seleção de entidade pertencendo a mesma dataclass que a seleção de entidade original, senão acontece um erro 1587 - "The entity selection comes from an incompatible dataclass" .
 
 #### Resultados
 
 O objeto retornado contém as propriedades abaixo:
 
-| Propriedade    | Tipo       | Descrição                       |
-| -------------- | ---------- | ------------------------------- |
-| ranges         | Collection | Collection of range objects     |
-| ranges[].start | Integer    | First entity index in the range |
-| ranges[].end   | Integer    | Last entity index in the range  |
+| Propriedade    | Tipo       | Descrição                                |
+| -------------- | ---------- | ---------------------------------------- |
+| ranges         | Collection | Coleção de objetos intervalos            |
+| ranges[].start | Integer    | Primeiro indice de entidade do intervalo |
+| ranges[].end   | Integer    | Último indice de entidade no intervalo.  |
 
-If a `ranges` property contains a single entity, `start` = `end`. Index starts at 0.
+Se uma propriedade `ranges` conter uma única entidade, `start` = `end`. Indice começa em 0
 
-The function returns an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
+A função retorna uma coleção vazia da propriedade `ranges` se a seleção de entidade original ou a seleção de entidade é vazia *selectedEntities*.
 
 #### Exemplo
 
@@ -1821,15 +1821,15 @@ $result2:=$invoices.selected($creditSel)
 
 
 <!-- REF #EntitySelectionClass.slice().Params -->
-| Parâmetros | Tipo                |    | Descrição                                                                                 |
-| ---------- | ------------------- |:--:| ----------------------------------------------------------------------------------------- |
-| startFrom  | Integer             | -> | Index to start the operation at (included)                                                |
-| end        | Integer             | -> | Final do índice (não incluído)                                                            |
-| Resultados | 4D. EntitySelection | <- | New entity selection containing sliced entities (shallow copy)|<!-- END REF --> |
+| Parâmetros | Tipo                |    | Descrição                                                                                        |
+| ---------- | ------------------- |:--:| ------------------------------------------------------------------------------------------------ |
+| startFrom  | Integer             | -> | Indice para iniciar a operação em (incluido)                                                     |
+| end        | Integer             | -> | Final do índice (não incluído)                                                                   |
+| Resultados | 4D. EntitySelection | <- | Nova seleção de entidade contendo entidades slices (cópia superficial)<!-- END REF --> |
 
 #### Descrição
 
-A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. Summary --> devolve uma cópia da entity selection original<!-- END REF -->.
+A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna uma porção da seleção de entidade em uma nova seleção de entidade<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. Summary --> devolve uma cópia da entity selection original<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.

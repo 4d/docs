@@ -208,12 +208,18 @@ Pour associer un symbole de pop up menu à un bouton, vous disposez de deux opti
 
 Chaque option précise la relation entre le bouton et le pop up menu associé :
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
-</li><li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.</li>
+- Lorsque le pop up menu est **séparé**, un clic sur la partie gauche du bouton exécute directement l’action courante du bouton ; cette action peut être modifiée via le pop up menu accessible dans la partie droite du bouton.
+- Lorsque le pop up menu est **lié**, un simple clic sur le bouton ne déclenche aucune autre action que l’affichage du pop up menu. Seule la sélection de l’action dans le pop up menu provoque son déclenchement.
+
+:::info
+
+Refer to the [`On Alternative Click` event description](../Events/onAlternativeClick.md) for more information on the handling of events in this case.
+
+:::
 
 ### Gestion du pop up menu
 
-Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L’affichage du pop up menu et de ses valeurs doivent être entièrement gérés par le développeur, notamment à l’aide des `événements formulaire` et des commandes **[Pop up menu dynamique](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** et **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)**.
+Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
 
 #### Grammaire JSON
 
