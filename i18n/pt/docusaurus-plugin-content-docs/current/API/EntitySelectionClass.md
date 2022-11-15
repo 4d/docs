@@ -1931,18 +1931,18 @@ $result2:=$invoices.selected($creditSel)
 A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retorna uma porção da seleção de entidade em uma nova seleção de entidade<!-- END REF -->, selecionada do indice *startFrom* index to the *end* index (*end* não for incluido) ou a última entidade da seleção de entidade. Summary --> devolve uma cópia da entity selection original<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
-The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
+A seleção de entidade retornada contém as entidades especificadas por *startFrom* e todas as entidades subsequentes até, mas não incluindo, a entidade especificada por *end*. Se só o parâmetro *startFrom* for especificado, a entidade de seleção retornada contém todas as entidades de *startFrom* à última entidade da seleção de entidade original.
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). Se o valor calculado < 0, *index* será estabelecido como 0.
-*   If *startFrom >= length*, the function returns an empty entity selection.
-*   If *end* < 0, it is recalculated as *end:=end+length*.
+*   Se *startFrom* < 0, é recalculada como *startFrom:=startFrom+length* (é considerada como o offset do final da entidade de seleção). Se o valor calculado < 0, *index* será estabelecido como 0.
+*   Se *startFrom >= length*, a função retorna uma seleção vazia de entidade.
+*   Se *end* < 0, é recalculada como *end:=end+length*.
 *   Se *end < startFrom* (valores passados ou calculados), o método não faz nada.
 
-If the entity selection contains entities that were dropped in the meantime, they are also returned.
+Se a seleção de entidade contém entidades que foram abandonadas, também serão retornadas.
 
 #### Exemplo 1
 
-You want to get a selection of the first 9 entities of the entity selection:
+Se quiser obter uma seleção das primeiras 9 entidades da seleção de entidade:
 
 ```4d
 var $sel; $sliced : cs. EmployeeSelection
@@ -1982,23 +1982,23 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
-| Parâmetros    | Tipo |    | Descrição                                                 |
-| ------------- | ---- |:--:| --------------------------------------------------------- |
-| attributePath | Text | -> | Rota do atributo que se utilizará para o cálculo          |
-| Resultados    | Real | <- | Sum of entity selection values|<!-- END REF --> |
+| Parâmetros    | Tipo |    | Descrição                                                         |
+| ------------- | ---- |:--:| ----------------------------------------------------------------- |
+| attributePath | Text | -> | Rota do atributo que se utilizará para o cálculo                  |
+| Resultados    | Real | <- | Soma dos valores da seleção de entidade<!-- END REF --> |
 
 #### Descrição
 
 
-A função `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
+A função `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->retorna a soma de todos os valores *attributePath* na seleção de entidade<!-- END REF -->.
 
-`.sum()` returns 0 if the entity selection is empty.
+`.sum()` retorna 0 se a seleção de entidade for vazia.
 
-The sum can only be done on values of number type. If the *attributePath* is an object property, only numerical values are taken into account for the calculation (other value types are ignored). In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, `.sum()` returns 0.
+A soma só pode ser feita em valores do tipo de número. Se o atributo *attributePath* for uma propriedade objecto, apenas valores numéricos são tidos em conta para o cálculo (outros tipos de valores são ignorados). Neste caso, se *attributePath* conduz a uma propriedade que não existe no objecto ou não contém quaisquer valores numéricos, `.sum()` retorna 0.
 
 Um erro é retornado se:
 
-*   *attributePath* is not a numerical or an object attribute,
+*   *attributePath* não é um atributo numérico nem um atributo de objecto,
 *   *attributePath* é um atributo relativo,
 *   *attributePath* não se encontra na classe de dados da entity selection.
 
@@ -2036,44 +2036,44 @@ $sum:=$sel.sum("salary")
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 | Parâmetros   | Tipo       |    | Descrição                                                                                             |
 | ------------ | ---------- |:--:| ----------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | String with entity attribute path(s) to extract                                                       |
-| filterCol    | Collection | -> | Collection of entity attribute path(s) to extract                                                     |
-| options      | Integer    | -> | `dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp                 |
-| begin        | Integer    | -> | Designates the starting index                                                                         |
-| howMany      | Integer    | -> | Number of entities to extract                                                                         |
-| Resultados   | Collection | <- | Collection of objects containing attributes and values of entity selection|<!-- END REF --> |
+| filterString | Text       | -> | String com caminho(s) de atributo(s) de entidade a extrair                                            |
+| filterCol    | Collection | -> | Coleção de caminho(s) de atributo(s) de entidade a extrair                                            |
+| options      | Integer    | -> | `dk com chave primária`: adiciona a chave primária<br/>`dk com selo`: adiciona o selo           |
+| begin        | Integer    | -> | Designa o índice inicial                                                                              |
+| howMany      | Integer    | -> | Número de entidades a extrair                                                                         |
+| Resultados   | Collection | <- | Colecção de objectos contendo atributos e valores de selecção de entidades|<!-- END REF --> |
 
 #### Descrição
 
-The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
+A função `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->cria e devolve uma colecção onde cada elemento é um objecto que contém um conjunto de propriedades e valores <!-- END REF -->correspondentes aos nomes e valores dos atributos para a selecção da entidade.
 
-If no filter parameter is passed or the first parameter contains an empty string or "*", all the attributes are extracted. Attributes with [kind](DataClassAttributeClass.md#kind) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Attributes with kind property as "relatedEntities" are not extracted.
+Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "*", todos os atributos são extraídos. Atributos com [tipo](DataClassAttributeClass.md#kind) propriedade como "relatedEntity" são extraídos com a forma simples: um objecto com propriedade \_KEY (chave primária). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
 
-Or, you can designate the entity attributes to extract using a filter parameter. You can use one of these two filters:
+Ou, pode designar os atributos da entidade a extrair utilizando um parâmetro de filtro. Pode usar um destes dois filtros:
 
-*   *filterString* --a string with property paths separated with commas: "propertyPath1, propertyPath2, ...".
-*   *filterCol* --a collection of strings containing property paths: \["propertyPath1","propertyPath2",...]
+*   *filterString* - uma string com caminhos de propriedade separados por vírgulas: "propertyPath1, propertyPath2, ...".
+*   *filterCol* - uma coleção de strings contendo caminhos de propriedade: \["propertyPath1", "propertyPath2",...
 
 
-If a filter is specified for an attribute of the `relatedEntity` kind:
+Se for especificado um filtro para um atributo do tipo `relatedEntity` :
 
-*   propertyPath = "relatedEntity" -> it is extracted with simple form
+*   propertyPath = "relatedEntity" -> é extraído de forma simples
 *   propertyPath = "relatedEntity.*" -> todas as propriedades foram extraídas
 *   propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> só se extraem essas propriedades
 
 
-If a filter is specified for an attribute of the `relatedEntities` kind:
+Se for especificado um filtro para um atributo do tipo `relatedEntities` :
 
 *   propertyPath = "relatedEntities.*" -> se extraem todas as propriedades
 *   propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> só se extraem essas propriedades
 
 
 
-In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
+No parâmetro *opções* , pode passar os seletores `dk com chave primária` e/ou `dk with stamp`  para adicionar as chaves primárias da entidade e/ou carimbos nos objectos extraídos.
 
-The *begin* parameter allows you to indicate the starting index of the entities to extract. You can pass any value between 0 and entity selection length-1.
+O parâmetro *start* permite indicar o índice inicial das entidades a extrair. Pode passar qualquer valor entre 0 e o comprimento-1 da selecção da entidade.
 
-The *howMany* parameter lets you specify the number of entities to extract, starting with the one specified in *begin*. Dropped entities are not returned but are taken into account according to *howMany*. For example, if *howMany*= 3 and there is 1 dropped entity, only 2 entities are extracted.
+O parâmetro *howMany* permite especificar o número de entidades a extrair, começando com o especificado em *begin*. Dropped entities are not returned but are taken into account according to *howMany*. For example, if *howMany*= 3 and there is 1 dropped entity, only 2 entities are extracted.
 
 If *howMany* > length of the entity selection, the method returns (length - *begin*) objects.
 
