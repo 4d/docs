@@ -203,6 +203,7 @@ A função `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->de
 
 #### *Resultados*
 
+
 O valor devolvido é a chave privada.
 <!-- END REF -->
 
@@ -324,8 +325,7 @@ Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->o tamanho d
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-
-<!-- REF #CryptoKey.type.Summary -->Nome do tipo da chave - "RSA", "ECDSA", "PEM" <!-- END REF -->.
+Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
 - "RSA": um par de chaves RSA, usando `settings.size` como [.size](#size).
 - "ECDSA": um par de chaves de Algoritmos de Assinatura Digital de Curva Elíptica, usando `settings.curve` como [.curve](#curve). Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.
