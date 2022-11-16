@@ -970,35 +970,35 @@ Si no se incluye la extensión, pero se especifica el formato en *paramObj*, el 
 
 El parámetro opcional *paramObj* le permite definir múltiples propiedades para el objeto 4D View Pro exportado y lanzar un método de retrollamada cuando la exportación haya finalizado.
 
-| Propiedad                  | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| format                     | text    | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", or ".pdf". Puede utilizar las siguientes constantes:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D añade la extensión adecuada al nombre del archivo si es necesario. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
-| contraseña                 | text    | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| formula                    | object  | Método de retrollamada que se lanzará cuando la exportación haya finalizado. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).                                                                                                                                                     |
-| valuesOnly                 | boolean | Especifica que sólo los valores de las fórmulas (si las hay) serán exportados.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| includeFormatInfo          | boolean | True to include formatting information, false otherwise (default is true). La información de formato es útil en algunos casos, por ejemplo, para una exportación a SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                         |
-| includeBindingSource       | Boolean | 4DVP únicamente. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False en caso contrario. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                            |
-| sheet                      | number  | PDF únicamente (opcional) - Índice de la hoja a exportar (empezando por 0). -2=todas las hojas visibles (**por defecto**), -1= sólo la hoja actual                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| pdfOptions                 | object  | PDF únicamente (opcional) - Opciones para la exportación en pdf <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>creator</td><td>text</td><td>nombre de la aplicación que creó el documento original a partir del cual se convirtió.</td></tr><tr><td>title</td><td>text</td><td>título del documento.</td></tr><tr><td>author</td><td>text</td><td>nombre de la persona que creó ese documento.</td></tr><tr><td>keywords</td><td>text</td><td>palabras clave asociadas al documento.</td></tr><tr><td>asunto</td><td>text</td><td>asunto del documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| csvOptions                 | object  | CSV únicamente (opcional) - Opciones para la exportación en csv <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>range</td><td>object</td><td>Objeto rango de celdas</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de línea. Por defecto: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de columna. Por defecto: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `\<customProperty>` | any     | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Propiedad                  | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| -------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| format                     | text    | (opcional) Cuando está presente, designa el formato de archivo exportado: ".4vp" (por defecto), ".csv", ".xlsx" o ".pdf". Puede utilizar las siguientes constantes:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D añade la extensión adecuada al nombre del archivo si es necesario. Si el formato especificado no corresponde con la extensión en *filePath*, se añadirá al final de *filePath*. Si no se especifica un formato y no se da ninguna extensión en *filePath*, se utiliza el formato de archivo por defecto. |
+| contraseña                 | text    | Sólo Microsoft Excel (opcional) - Contraseña utilizada para proteger el documento MS Excel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| formula                    | object  | Método de retrollamada que se lanzará cuando la exportación haya finalizado. La utilización de un método de retrollamada es necesaria cuando la exportación es asíncrona (que es el caso de los formatos PDF y Excel) si necesita que se ejecute algún código después de la exportación. El método de retrollamada debe utilizarse con el comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) (ver abajo para más información).                                                                                                                              |
+| valuesOnly                 | boolean | Especifica que sólo los valores de las fórmulas (si las hay) serán exportados.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| includeFormatInfo          | boolean | True para incluir información de formato, false en caso contrario (por defecto es True). La información de formato es útil en algunos casos, por ejemplo, para una exportación a SVG. Por otro lado, poner esta propiedad en **false** permite reducir el tiempo de exportación.                                                                                                                                                                                                                                                                                                     |
+| includeBindingSource       | Boolean | 4DVP únicamente. True (por defecto) para exportar los valores del contexto de datos actual como valores de celda en el documento exportado (los contextos de datos en sí no se exportan). False en caso contrario. El enlace de la celda siempre se exporta. Para la gestión de los contextos de datos y de las fusiones de celdas, ver [VP SET DATA CONTEXT](#vp-set-data-context) y [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                   |
+| sheet                      | number  | PDF únicamente (opcional) - Índice de la hoja a exportar (empezando por 0). -2=todas las hojas visibles (**por defecto**), -1= sólo la hoja actual                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| pdfOptions                 | object  | PDF únicamente (opcional) - Opciones para la exportación en pdf <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>creator</td><td>text</td><td>nombre de la aplicación que creó el documento original a partir del cual se convirtió.</td></tr><tr><td>title</td><td>text</td><td>título del documento.</td></tr><tr><td>author</td><td>text</td><td>nombre de la persona que creó ese documento.</td></tr><tr><td>keywords</td><td>text</td><td>palabras clave asociadas al documento.</td></tr><tr><td>asunto</td><td>text</td><td>asunto del documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| csvOptions                 | object  | CSV únicamente (opcional) - Opciones para la exportación en csv <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>range</td><td>object</td><td>Objeto rango de celdas</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de línea. Por defecto: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de columna. Por defecto: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `\<customProperty>` | any     | Toda propiedad personalizada que estará disponible a través del parámetro $3 en el método de retrollamada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 **Notas sobre el formato Excel**:
 
-* When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. Por ejemplo, los métodos y fórmulas 4D no son soportados por Excel. You can verify other settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* Al exportar un documento 4D View Pro a un archivo con formato Microsoft Excel, pueden perderse algunos parámetros. Por ejemplo, los métodos y fórmulas 4D no son soportados por Excel. Puede verificar otros parámetros con [esta lista de GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+* La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad *formula * del *paramObj* para el código a ejecutar después de la exportación.
 
 **Notas sobre formato PDF**:
 
-* When exporting a 4D View Pro document in PDF, the fonts used in the document are automatically embedded in the PDF file. Only OpenType fonts (.OTF or .TTF files) having a Unicode map can be embedded. If no valid font file is found for a font, a default font is used instead.
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* Al exportar un documento 4D View Pro en PDF, las fuentes utilizadas en el documento se integran automáticamente en el archivo PDF. Sólo se pueden integrar las fuentes OpenType (archivos .OTF o .TTF) que tengan un tabla Unicode. Si no se encuentra un archivo de fuentes válido para una fuente, se utiliza una fuente por defecto.
+* La exportación en este formato se ejecuta de forma asíncrona, utilice la propiedad *formula * del *paramObj* para el código a ejecutar después de la exportación.
 
 **Notas sobre el formato CSV**:
 
-* When exporting a 4D View Pro document to CSV, some settings may be lost, as only the text and values are saved.
-* Todos los valores se guardan como cadenas entre comillas. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
+* Al exportar un documento 4D View Pro al formato CSV, es posible que se pierdan algunos parámetros, ya que sólo se guardan el texto y los valores.
+* Todos los valores se guardan como cadenas entre comillas. Para más información sobre los valores separados por delimitadores, consulte [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
 
-Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
+Una vez finalizada la exportación, `VP EXPORT DOCUMENTO` desencadena automáticamente la ejecución del método definido en la propiedad *formula* de *paramObj*, si se utiliza.
 
 #### Pasar un método retrollamada (fórmula)
 
@@ -1119,7 +1119,7 @@ En el parámetro *options*, puede pasar las siguientes opciones de exportación,
 | Propiedad            | Tipo    | Descripción                                                                                                                                                                                                                                                              |
 | -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | includeFormatInfo    | Boolean | True (por defecto) para incluir la información del formato, en caso contrario false. La información de formato es útil en algunos casos, por ejemplo, para una exportación a SVG. Por otro lado, poner esta propiedad en False permite reducir el tiempo de exportación. |
-| includeBindingSource | Boolean | True (por defecto) para exportar los valores del contexto de datos actual como valores de celda en el objeto exportado (los contextos de datos en sí no se exportan). False en caso contrario. Cell binding is always exported.                                          |
+| includeBindingSource | Boolean | True (por defecto) para exportar los valores del contexto de datos actual como valores de celda en el objeto exportado (los contextos de datos en sí no se exportan). False en caso contrario. El enlace de la celda siempre se exporta.                                 |
 
 Para más información sobre los objetos 4D View Pro, consulte el párrafo [objeto 4D View Pro](configuring.md#4d-view-pro-object).
 
@@ -1661,9 +1661,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 El comando `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->devuelve el contexto de datos actual de una hoja de cálculo<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
 
-In *sheet*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If there is no context for the worksheet, the command returns `Null`.
+En *sheet*, pase el índice de la hoja de la que obtener el contexto de datos. Si no se pasa ningún índice, el comando devuelve el contexto de datos de la hoja de cálculo actual. Si no hay contexto para la hoja de trabajo, el comando devuelve `Null`.
 
-The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](#vp-set-data-context).
+La función devuelve un objeto o una colección dependiendo del tipo de contexto de datos definido con [VP SET DATA CONTEXT](#vp-set-data-context).
 
 #### Ejemplo
 
@@ -2561,7 +2561,7 @@ El comando devuelve un objeto que describe los atributos actuales de la *columna
 | footerFormula       | text    | Column footer formula.                                                                                                          |
 | filterButtonVisible | boolean | True si se muestra el botón de filtro de la columna de la tabla, False en caso contrario.                                       |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Si no se encuentra *tableName* o si el índice de *column* es mayor que el número de columnas, el comando devuelve **null**.
 
 #### Ejemplo
 
@@ -2610,20 +2610,20 @@ El comando `VP Get table column index` <!-- REF #_method_.VP Get table column in
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-In *columnName*, pass the name of the table column for which you want to get the index.
+En *columnName*, pase el nombre de la columna de la tabla para la que desea obtener el índice.
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
 
-If *tableName* or *columnName* is not found, the command returns -1.
+Si no se encuentra *tableName* o *columnName*, el comando devuelve -1.
 
 #### Ejemplo
 
 ```4d
-    // Search the column id according the column name
+    // Buscar el id de la columna según el nombre de la columna
 var $id : Integer
 $id:=VP Get table column index($area; $tableName; "Weight price")
-    // Remove the column by id
+    // Eliminar la columna por id
 VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 ```
 
@@ -2664,12 +2664,12 @@ El comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary --
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
+En el parámetro *onlyData*, puede pasar una de las siguientes constantes para indicar si desea obtener sólo los datos:
 
-| Constante             | Valor | Descripción                                                                       |
-| --------------------- | ----- | --------------------------------------------------------------------------------- |
-| `vk table full range` | 0     | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                 |
+| Constante             | Valor | Descripción                                                                                                  |
+| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
+| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                            |
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
@@ -2761,12 +2761,12 @@ El objeto devuelto contendrá la propiedad `value` y, en caso de un valor fecha 
 | value     | Integer, Real, Boolean, Text, Date | Valor de *rangeObj* (excepto- time)                          |
 | time      | Real                               | Valor hora (en segundos) si el valor es del tipo de fecha js |
 
-If the object returned includes a date or time, it is treated as a datetime and completed as follows:
+Si el objeto devuelto incluye una fecha u hora, se trata como una fecha-hora y se completa de la siguiente manera:
 
-* time value - the date portion is completed as December 30, 1899 in dd/MM/yyyy format (30/12/1899)
-* date value - the time portion is completed as midnight in HH:mm:ss format (00:00:00)
+* valor hora - la parte de la fecha se completa como December 30, 1899 en formato dd/MM/yyyy (30/12/1899)
+* valor fecha - la parte de la hora se completa como medianoche en formato HH:mm:ss (00:00:00)
 
-If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. El comando devuelve un objeto null si la celda está vacía.
+Si *rangeObj* contiene varias celdas o varios rangos, se devuelve el valor de la primera celda. El comando devuelve un objeto null si la celda está vacía.
 
 #### Ejemplo
 
@@ -2800,12 +2800,12 @@ End if
 
 El comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> recupera los valores del *rangeObj* designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* includes multiple ranges, only the first range is used.
+En *rangeObj*, pase un rango cuyos valores desea recuperar. Si *rangeObj* incluye varios rangos, sólo se utiliza el primer rango.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+La colección devuelta por `VP Get values` contiene una colección bidimensional:
 
-* Each element of the first-level collection represents a row and contains a subcollection of values
-* Cada subcolección contiene los valores de las celdas de la línea. Los valores pueden ser Integer, Real, Boolean, Text, Null. If a value is a date or time, it is returned in an object with the following properties:
+* Cada elemento de la colección de primer nivel representa una línea y contiene una subcolección de valores
+* Cada subcolección contiene los valores de las celdas de la línea. Los valores pueden ser Integer, Real, Boolean, Text, Null. Si un valor es de tipo fecha u hora, se devuelve en un objeto con las siguientes propiedades:
 
  | Propiedad | Tipo  | Descripción                                                  |
  | --------- | ----- | ------------------------------------------------------------ |
@@ -2855,9 +2855,9 @@ devuelve un objeto que contiene las opciones del workbook en *vpAreaName*<!-- EN
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-The returned object contains all the workbook options (default and modified ones), in the workbook.
+El objeto devuelto contiene todas las opciones del libro de trabajo (por defecto y modificadas), en el libro de trabajo.
 
-The list of workbook options is referenced in [`VP SET WORKBOOK OPTIONS`'s description](#vp-set-workbook-options).
+La lista de opciones del libro de trabajo está referenciada en la descripción de [`VP SET WORKBOOK OPTIONS`](#vp-set-workbook-options).
 
 #### Ejemplo
 
@@ -2901,28 +2901,28 @@ En *filePath*, pase la ruta y el nombre del documento a importar. Se soportan lo
 
 * documentos texto (extension ".txt", ".csv", el documento debe estar en utf-8)
 
-If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
+Si la extensión del documento no es una extensión reconocida, como `.4vp` o `.xlsx`, el documento se considera un documento texto. Debe pasar una ruta completa, a menos que el documento se encuentre en el mismo nivel que la carpeta Project, en cuyo caso puede pasar sólo su nombre.
 
-> When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+> Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar sus parámetros con [esta lista de GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
 
-An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
+Se devuelve un error si el parámetro `filePath` no es válido, o si el archivo falta o está mal formado.
 
-The optional *paramObj* parameter allows you to define properties for the imported document:
+El parámetro opcional *paramObj* permite definir las propiedades del documento importado:
 
-| Parámetros |                 | Tipo   | Descripción                                                                                                                                                                                                                                                                 |
-| ---------- | --------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                 | object | Un nombre de método de retollamada que se lanzará cuando la importación haya terminado. The method must use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
-| contraseña |                 | text   | Microsoft Excel only (optional) - The password used to protect a MS Excel document.                                                                                                                                                                                         |
-| csvOptions |                 | object | opciones de importación csv                                                                                                                                                                                                                                                 |
-|            | range           | object | Rango de celdas que contiene la primera celda donde se escribirán los datos. If the specified range is not a cell range, only the first cell of the range is used.                                                                                                          |
-|            | rowDelimiter    | text   | Delimitador de línea. Si no está presente, el delimitador es determinado automáticamente por 4D.                                                                                                                                                                            |
-|            | columnDelimiter | text   | Delimitador de columna. Por defecto: ","                                                                                                                                                                                                                                    |
+| Parámetros |                 | Tipo   | Descripción                                                                                                                                                                                                                                                                          |
+| ---------- | --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| formula    |                 | object | Un nombre de método de retollamada que se lanzará cuando la importación haya terminado. El método debe utilizar el comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html). Ver [Pasar un método de retrollamada (fórmula)](#passing-a-callback-method-formula). |
+| contraseña |                 | text   | Sólo Microsoft Excel (opcional) - La contraseña utilizada para proteger un documento MS Excel.                                                                                                                                                                                       |
+| csvOptions |                 | object | opciones de importación csv                                                                                                                                                                                                                                                          |
+|            | range           | object | Rango de celdas que contiene la primera celda donde se escribirán los datos. Si el rango especificado no es un rango de celdas, sólo se utiliza la primera celda del rango.                                                                                                          |
+|            | rowDelimiter    | text   | Delimitador de línea. Si no está presente, el delimitador es determinado automáticamente por 4D.                                                                                                                                                                                     |
+|            | columnDelimiter | text   | Delimitador de columna. Por defecto: ","                                                                                                                                                                                                                                             |
 
-> For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+> Para más información sobre los valores separados por delimitadores, consulte [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 #### Ejemplo 1
 
-You want to import a default 4D View Pro document stored on the disk when the form is open:
+Desea importar un documento 4D View Pro por defecto almacenado en el disco, al abrir el formulario:
 
 ```4d
 C_TEXT($docPath)
@@ -2934,7 +2934,7 @@ End if
 
 #### Ejemplo 2
 
-You want to import a password protected Microsoft Excel document into a 4D View Pro area:
+Desea importar un documento Microsoft Excel protegido por contraseña a un área 4D View Pro:
 
 ```4d
 $o:=New object
@@ -2945,7 +2945,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 
 #### Ejemplo 3
 
-You want to import a `.txt` file that uses a comma (",") as delimiter:
+Quiere importar un archivo `.txt` que utiliza una coma (",") como delimitador:
 
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv.png)
 
@@ -5135,7 +5135,7 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar los parámetros
 
 El comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->asigna una colección de fórmulas que comienzan en el rango de celdas especificado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. If *rangeObj* includes multiple ranges, only the first range is used.
+In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. Si *rangeObj* incluye varios rangos, sólo se utiliza el primer rango.
 
 El parámetro *formulasCol* es una colección bidimensional:
 
