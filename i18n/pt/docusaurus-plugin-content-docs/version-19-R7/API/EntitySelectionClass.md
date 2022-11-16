@@ -2073,14 +2073,14 @@ No parâmetro *opções* , pode passar os seletores `dk com chave primária` e/o
 
 O parâmetro *start* permite indicar o índice inicial das entidades a extrair. Pode passar qualquer valor entre 0 e o comprimento-1 da selecção da entidade.
 
-O parâmetro *howMany* permite especificar o número de entidades a extrair, começando com o especificado em *begin*. Dropped entities are not returned but are taken into account according to *howMany*. For example, if *howMany*= 3 and there is 1 dropped entity, only 2 entities are extracted.
+O parâmetro *howMany* permite especificar o número de entidades a extrair, começando com o especificado em *begin*. As entidades abandonadas não são devolvidas, mas são tidas em conta de acordo com *howMany*. Por exemplo, se *howMany*= 3 e houver 1 entidade abandonada, apenas 2 entidades são extraídas.
 
-If *howMany* > length of the entity selection, the method returns (length - *begin*) objects.
+Se *howMany* > comprimento da selecção da entidade, o método retorna (comprimento - *início*) objectos.
 
-An empty collection is returned if:
+Uma colecção vazia é devolvida se:
 
-*   the entity selection is empty, or
-*   *begin* is greater than the length of the entity selection.
+*   a selecção da entidade está vazia, ou
+*   *begin* é maior do que a duração da selecção da entidade.
 
 
 #### Exemplo 1
@@ -2090,7 +2090,7 @@ A estrutura abaixo será usada nos exemplos desta seção:
 ![](../assets/en/API/dataclassAttribute4.png)
 
 
-Example without filter or options parameter:
+Exemplo sem filtro ou parâmetro de opções:
 
 ```4d
  var $employeesCollection : Collection
@@ -2206,7 +2206,7 @@ Retorna:
 
 #### Exemplo 3
 
-Example with slicing and filtering on properties:
+Exemplo com fatiagem e filtragem nas propriedades:
 
 ```4d
 var $employeesCollection; $filter : Collection
@@ -2242,7 +2242,7 @@ Retorna:
 
 #### Exemplo 4
 
-Example with `relatedEntity` type with simple form:
+Exemplo com `relatedEntity` tipo com formulário simples:
 
 ```4d
 var $employeesCollection : Collection
@@ -2280,7 +2280,7 @@ retorna:
 
 #### Exemplo 5
 
-Example with *filterCol* parameter:
+Exemplo com parâmetro *filterCol*:
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2306,7 +2306,7 @@ Retorna:
 
 #### Exemplo 6
 
-Example with extraction of all properties of a relatedEntity:
+Exemplo com extracção de todas as propriedades de relatedEntity:
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2346,7 +2346,7 @@ Retorna:
 
 #### Exemplo 7
 
-Example with extraction of some properties of a relatedEntity:
+Exemplo com extracção de algumas propriedades de uma relatedEntity:
 
 ```4d
 var $employeesCollection : Collection
@@ -2374,7 +2374,7 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, employer.nam
 
 #### Exemplo 8
 
-Example with extraction of some properties of `relatedEntities`:
+Exemplo com extracção de algumas propriedades de `relatedEntities`:
 
 ```4d
  var $employeesCollection : Collection
@@ -2426,7 +2426,7 @@ Retorna:
 
 #### Exemplo 9
 
-Example with extraction of all properties of `relatedEntities`:
+Exemplo com extração de todas as propriedades de `relatedEntities`:
 
 ```4d
 var $employeesCollection : Collection
