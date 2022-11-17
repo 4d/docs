@@ -4102,22 +4102,22 @@ El comando `VP Run offscreen area` <!-- REF #_method_.VP Run offscreen area.Summ
 
 En el objeto *parameters*, pase una de las siguientes propiedades opcionales. Estas propiedades estarán disponibles a través del comando `This` dentro del método `onEvent` y harán referencia a la instancia:
 
-| Propiedad                  | Tipo            | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| -------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area                       | text            | El nombre del área fuera de la pantalla. Si se omite o es null, se asigna un nombre genérico (por ejemplo, "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| onEvent                    | objet (fórmula) | Un método retro llamada que se lanzará cuando el área fuera de la pantalla esté lista. Puede ser:<li>una función `onEvent` de una clase, o</li><li>un objeto `Formula`</li>By default, the callback method is called on the [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
-| autoQuit                   | boolean         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                           |
-| timeout                    | number          | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. Si se fija en 0, no se aplica ninguna limitación. Valor por defecto: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| result                     | mixto           | Resultado del procesamiento (si hay)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `\<customProperty>` | mixto           | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Propiedad                  | Tipo            | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| area                       | text            | El nombre del área fuera de la pantalla. Si se omite o es null, se asigna un nombre genérico (por ejemplo, "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| onEvent                    | objet (fórmula) | Un método retro llamada que se lanzará cuando el área fuera de la pantalla esté lista. Puede ser:<li>una función `onEvent` de una clase, o</li><li>un objeto `Formula`</li>Por defecto, el método de retrollamada en los eventos [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), o [`On Timer`](Events/onTimer.md). El método de retrollamada puede ser utilizado para acceder a [la variable del objeto 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
+| autoQuit                   | boolean         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                         |
+| timeout                    | number          | Tiempo máximo (expresado en segundos) antes de que el área se cierre automáticamente si no se genera ningún evento. Si se fija en 0, no se aplica ninguna limitación. Valor por defecto: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| result                     | mixto           | Resultado del procesamiento (si hay)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `\<customProperty>` | mixto           | Todo atributo personalizado que esté disponible en el método de retrollamada *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-The following property is automatically added by the command if necessary:
+La siguiente propiedad es añadida automáticamente por el comando si es necesario:
 
 | Propiedad      | Tipo    | Descripción                                                     |
 | -------------- | ------- | --------------------------------------------------------------- |
 | timeoutReached | boolean | Añadido con el valor true si se ha excedido el tiempo de espera |
 
-> The offscreen area is only available during the execution of the `VP Run offscreen area` command. Se destruirá automáticamente una vez finalizada la ejecución.
+> El área fuera de pantalla sólo está disponible durante la ejecución del comando `VP Run offscreen area`. Se destruirá automáticamente una vez finalizada la ejecución.
 
 Los siguientes comandos se pueden utilizar en el método de retrollamada:
 
@@ -4129,14 +4129,14 @@ Los siguientes comandos se pueden utilizar en el método de retrollamada:
 
 #### Ejemplo 1
 
-You want to create an offscreen 4D View Pro area and get the value of a cell:
+Quiere crear un área 4D View Pro fuera de la pantalla y obtener el valor de una celda:
 
 ```4d
-// cs.OffscreenArea class declaration 
+// Declaración de la clase cs.OffscreenArea 
 Class constructor ($path : Text)
  This.filePath:=$path
 
-// This function will be called on each event of the offscreen area 
+// Esta función será llamada en cada evento del área offscreen 
 Function onEvent()
  Case of
   :(FORM Event.code=On VP Ready)
@@ -4156,11 +4156,11 @@ $result:=VP Run offscreen area($o)
 
 #### Ejemplo 2
 
-You want to load a large document offscreen, wait for all calculations to complete evaluating, and export it as a PDF:
+Quiere cargar un documento grande fuera de la pantalla, esperar a que todos los cálculos se completen y exportarlo como PDF:
 
 
 ```4d
-//cs.OffscreenArea class declaration
+//Declaración de clase cs.OffscreenArea 
 Class constructor($pdfPath : Text)
  This.pdfPath:=$pdfPath
  This.autoQuit:=False
@@ -4169,30 +4169,30 @@ Class constructor($pdfPath : Text)
 Function onEvent()
  Case of
      :(FORM Event.code=On VP Ready)
- // Document import
-   VP IMPORT DOCUMENT(This.area;$largeDocument4VP)
+ // Importación de documentos
+   VP IMPORT DOCUMENTO(This.area;$largeDocument4VP)
          This.isWaiting:=True
 
- // Start a timer to verify if all calculations are finished.
- // If during this period the "On VP Range Changed" is thrown, the timer will be restarted
- // The time must be defined according to the computer configuration.
+ // Inicia un temporizador para verificar si todos los cálculos han terminado.
+ // Si durante este periodo se lanza "On VP Range Changed", el temporizador se reiniciará
+ // El tiempo debe ser definido de acuerdo a la configuración del ordenador.
    SET TIMER(60)
 
   :(FORM Event.code=On VP Range Changed)
- // End of calculation detected. Restarts the timer
+ // Detectado el final del cálculo. Reinicia el temporizador
          If(This.isWaiting)
            SET TIMER(60)
          End if
 
   :(FORM Event.code=On Timer)
- // To be sure to not restart the timer if you call others 4D View command after this point
+ // Para asegurarse de no reiniciar el temporizador si llama a otros comandos de 4D View después de este punto
          This.isWaiting:=False
 
- // Stop the timer
+ // Detener el temporizador
    SET TIMER(0)
 
- // Start the PDF export
-        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
+ // Iniciar la exportación del PDF
+        VP EXPORT DOCUMENTO(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
      :(FORM Event.code=On URL Loading Error)
          CANCEL 
@@ -4230,7 +4230,7 @@ $result:=VP Run offscreen area($o)
 
 El comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define una celda especificada como activa<!-- END REF -->.
 
-In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell](#vp-cell)). Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
+En *rangeObj*, pase un rango que contenga una sola celda como objeto (ver [VP Cell](#vp-cell)). Si *rangeObj* no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
 
 #### Ejemplo
 
@@ -4261,27 +4261,27 @@ VP SET ACTIVE CELL($activeCell)
 |
 > **Compatibilidad**
 > 
-> For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
+> Para una mayor flexibilidad, se recomienda utilizar el comando [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) que permite designar fórmulas 4D que pueden ser llamadas desde las áreas 4D View Pro. En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, se ignoran las llamadas a `VP SET ALLOWED METHODS`. 4D View Pro también soporta el comando genérico de 4D `SET ALLOWED METHODS` si no se llama a `VP SET CUSTOM FUNCTIONS` ni a `VP SET ALLOWED METHODS`, sin embargo no se recomienda usar el comando genérico.
 
 
 #### Descripción
 
-El comando `VP SET ALLOWED METHODS` <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.
+El comando `VP SET ALLOWED METHODS` <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designa los métodos proyecto que pueden ser llamados en las fórmulas 4D View Pro<!-- END REF -->. Este comando se aplica a todas las áreas 4D View Pro inicializadas después de su llamada durante la sesión. Se puede llamar varias veces en la misma sesión para inicializar diferentes configuraciones.
 
-By default for security reasons, if you do not execute the `VP SET ALLOWED METHODS` command, no method call is allowed in 4D View Pro areas -- except if 4D's generic `SET ALLOWED METHODS` command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area. error en el área 4D View Pro.
+Por defecto, por razones de seguridad, si no se ejecuta el comando `VP SET ALLOWED METHODS`, no se permite ninguna llamada a métodos en las áreas 4D View Pro -- excepto si se ha utilizado el comando genérico `SET ALLOWED METHODS` (ver nota de compatibilidad). El uso de un método no autorizado en una fórmula muestra un error #NAME? error en el área 4D View Pro.
 
-In the *methodObj* parameter, pass an object in which each property is the name of a function to define in the 4D View Pro areas:
+En el parámetro *methodObj*, pase un objeto en el que cada propiedad es el nombre de una función a definir en las áreas 4D View Pro:
 
-| Propiedad              |            |            | Tipo                 | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------- | ---------- | ---------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<functionName>` |            |            | Object               | Definición de la función personalizada. The `<functionName>` property name defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                                                                                                                                                                                                                                                                                                 |
-|                        | method     |            | Text                 | (obligatorio) Nombre del método proyecto 4D existente a autorizar                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|                        | parameters |            | Colección de objetos | Colección de parámetros (en el orden en que están definidos en el método).                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|                        |            | \[ ].name | Text                 | Name of a parameter to display for the `<functionName>`.**Note**: Parameter names must not contain space characters.                                                                                                                                                                                                                                                                                                                                                                                                      |
-|                        |            | \[ ].type | Number               | Tipo de parámetro. Tipos soportados:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If type is `Is object`, the object has the same structure as the object returned by [`VP Get value`](#vp-get-value). |
-|                        | summary    |            | Text                 | Descripción de la función a mostrar en 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                        | minParams  |            | Number               | Número mínimo de parámetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|                        | maxParams  |            | Number               | Número máximo de parámetros. Passing a number higher than the length of parameters allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                     |
+| Propiedad              |            |            | Tipo                 | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------------- | ---------- | ---------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<functionName>` |            |            | Object               | Definición de la función personalizada. El nombre de la propiedad `<functionName>` define el nombre de la función personalizada que se mostrará en las fórmulas 4D View Pro (no se permiten espacios)                                                                                                                                                                                                                                                                                                                                              |
+|                        | method     |            | Text                 | (obligatorio) Nombre del método proyecto 4D existente a autorizar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                        | parameters |            | Colección de objetos | Colección de parámetros (en el orden en que están definidos en el método).                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|                        |            | \[ ].name | Text                 | Nombre de un parámetro a mostrar para el `<functionName>`. **Nota**: los nombres de los parámetros no deben contener caracteres de espacio.                                                                                                                                                                                                                                                                                                                                                                                                        |
+|                        |            | \[ ].type | Number               | Tipo de parámetro. Tipos soportados:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>Si se omite, por defecto el valor se envía automáticamente con su tipo, excepto los valores de fecha u hora que se envían como un objeto (ver la sección [Parámetros](formulas.md#parameters)). Si el tipo es `Is object`, el objeto tiene la misma estructura que el objeto devuelto por [`VP Obtener valor`](#vp-get-value). |
+|                        | summary    |            | Text                 | Descripción de la función a mostrar en 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                        | minParams  |            | Number               | Número mínimo de parámetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                        | maxParams  |            | Number               | Número máximo de parámetros. Pasar un número superior a la longitud de los parámetros permite declarar parámetros "opcionales" con tipo por defecto                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 #### Ejemplo
 
