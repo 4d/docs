@@ -16,7 +16,7 @@ module.exports = {
           // Docs folder path relative to website dir.
           path: 'docs',
           routeBasePath: '/',
-		  editUrl: 'https://github.com/4D/docs/edit/main/docs/',
+		  editUrl: 'https://github.com/4D/docs/edit/main/',
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
