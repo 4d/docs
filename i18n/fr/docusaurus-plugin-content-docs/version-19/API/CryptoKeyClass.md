@@ -65,12 +65,13 @@ La fonction `.4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée 
 
 #### *settings*
 
-| Propriété       | Type   | Description                                       |
-| --------------- | ------ | ------------------------------------------------- |
-| [curve](#curve) | text   | Nom de la courbe ECDSA                            |
-| [pem](#pem)     | text   | Définition PEM d'une clé de chiffrement à charger |
-| [size](#size)   | entier | Taille de la clé RSA en octets                    |
-| [type](#type)   | text   | Type de clé : "RSA", "ECDSA", ou "PEM"            |
+| Propriété       | Type   | Description                                                                                                       |
+| --------------- | ------ | ----------------------------------------------------------------------------------------------------------------- |
+| [type](#type)   | text   | Defines the type of the key to create: <li>"RSA": generates a RSA key pair, using [.size](#size) as size.</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using [.curve](#curve) as curve. A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM": loads a key pair definition in PEM format, using [.pem](#pem).</li> |
+| [curve](#curve) | text   | Nom de la courbe ECDSA                                                                                            |
+| [pem](#pem)     | text   | Définition PEM d'une clé de chiffrement à charger                                                                 |
+| [size](#size)   | entier | Taille de la clé RSA en octets                                                                                    |
+
 
 #### *CryptoKey*
 
@@ -205,6 +206,7 @@ La fonction `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->r
 
 #### *Résultat*
 
+
 La valeur retournée est la clé privée.
 <!-- END REF -->
 
@@ -324,7 +326,7 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Texte<!-- END REF -->
 
 
-Le <!-- REF #CryptoKey.type.Summary -->type de clé : "RSA", "ECDSA" ou "PEM" <!-- END REF -->.
+Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
 - "RSA" : paire de clés RSA, utilise `settings.size` pour la [.size](#size).
 - "ECDSA" : paire de clés Elliptic Curve Digital Signature Algorithm, utilise `settings.curve` pour la propriété [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.

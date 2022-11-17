@@ -11,13 +11,14 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 #### Highlights
 
 - Listboxes with collection or entity selection datasources now support [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) column property.
-- 4D Language classic: [What's new page]() on doc.4d.com.
-- 4D Write Pro: [What's new page]() on doc.4d.com.
+- 4D Language classic: [What's new page](XXX) on doc.4d.com.
+- 4D Write Pro: [What's new page](XXX) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D v19 R8.
 
 	
 #### Behavior changes
 
+- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected. 
 
 
 ## Previous releases
