@@ -10,7 +10,7 @@ title: リリースノート
 
 #### ハイライト
 
--
+- Listboxes with collection or entity selection datasources now support [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) column property.
 - 4D Language classic: [What's new page](XXX) on doc.4d.com.
 - 4D Write Pro: [What's new page](XXX) on doc.4d.com.
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。
