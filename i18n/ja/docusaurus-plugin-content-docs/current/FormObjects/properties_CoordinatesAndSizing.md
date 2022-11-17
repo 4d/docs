@@ -5,10 +5,18 @@ title: 座標とサイズ
 
 ## 自動行高
 
-このプロパティは、配列型かつ階層のないリストボックスにおいてのみ使用可能です。 このプロパティはデフォルトではチェックされていません。
+This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
-このプロパティが有効化されていると、カラムの内容に応じて各行の高さが 4D によって自動的に計算されます 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
-> リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
+- collection or entity selection,
+- array (non-hierarchical).
+
+このプロパティはデフォルトではチェックされていません。 When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
+
+:::note
+
+リストボックスの [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) プロパティに "拡大" を設定している場合にフォームをリサイズすると、一番右のカラムの幅は必要に応じて最大幅を超えて拡大されます。
+
+:::
 
 このプロパティが有効化されていると、セルの内容がすべて表示され、切り落とされることがないように各行の高さが自動的に計算されます (ただし[ワードラップ](properties_Display.md#ワードラップ) オプションが無効化されている場合を除きます)。
 
@@ -21,7 +29,13 @@ title: 座標とサイズ
 * 行の高さを計算する際には、以下のものは考慮されません:
   * 非表示のカラムの中身
   * プロパティリスト内、あるいはプログラミングによって設定された [行の高さ](#行の高さ) および [行高さ配列](#行高さ配列) プロパティ (あった場合)
-> 自動行高オプションを有効化すると、ランタイムにおいて追加の計算が必要となるため、リストボックスが大量の行数を持つ場合には、スクロール時のスムーズさに影響が出る可能性があります。
+
+:::caution
+
+自動行高オプションを有効化すると、ランタイムにおいて追加の計算が必要となるため、リストボックスが大量の行数を持つ場合には、スクロール時のスムーズさに影響が出る可能性があります。
+
+:::
+
 
 #### JSON 文法
 
@@ -245,7 +259,7 @@ RowHeights{5}:=3
 
 ここで行の単位が "行" であったとすると、リストボックスの 5行目は 3行分の高さになる一方、他の行はデフォルトの高さを保ちます。
 > * 行高さ配列プロパティは、階層リストボックスに対しては効力を持ちません。
-> * 配列型のリストボックスの場合、このプロパティは [自動行高](#自動行高) オプションがチェックされていない場合に限り使用可能です。
+> * For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
 
 #### JSON 文法
 
