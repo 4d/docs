@@ -58,7 +58,7 @@ The table below shows choices available:
 
 | Nome do formato                 | JSON String  | Exemplo (sistema americano)   |
 | ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (default)  | 03/25/20                      |
+| System date short               | - (o padrão) | 03/25/20                      |
 | System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
 | System date long                | systemLong   | Wednesday, March 25, 2020     |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
@@ -87,7 +87,7 @@ The table below shows choices available:
 
 ---
 
-## Number Format
+## Formato do número
 > Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
@@ -107,7 +107,7 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
-For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
+Por exemplo, se quiser exibir números de três dígitos, pode usar o formato ####. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
 > No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
@@ -250,7 +250,7 @@ Picture formats control how pictures appear when displayed or printed. For data 
 
 The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
 
-### Scaled to fit
+### Escalado para caber
 
 `JSON grammar: "scaled"`
 
@@ -320,7 +320,7 @@ The table below shows the Time field display formats and gives examples:
 | MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
 | Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
 | ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                      |
+| System time short            | - (o padrão) | Standard time format defined in the system                                                                                                       | 04:30:25                      |
 | System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                    |
 | System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC               |
 

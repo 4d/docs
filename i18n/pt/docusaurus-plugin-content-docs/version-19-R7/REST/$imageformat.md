@@ -12,8 +12,8 @@ Define which format to use to display images. You can use one of the following f
 | Tipo                    | Descrição                      |
 | ----------------------- | ------------------------------ |
 | "best"                  | Best format based on the image |
-| ".gif" or "image/gif"   | Formato GIF                    |
-| ".png" or "image/png"   | Formato PNG                    |
+| ".gif" ou "image/gif"   | Formato GIF                    |
+| ".png" ou "image/png"   | Formato PNG                    |
 | ".jpeg" or "image/jpeg" | Formato JPEG                   |
 | ".tiff" or "image/tiff" | Formato TIFF                   |
 

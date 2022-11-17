@@ -45,6 +45,6 @@ Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la ac
 
 |
 
-Need to activate specific licenses? Visit the [Managing 4D licenses](../licenses.md) page.
+¿Necesita activar licencias específicas? Visit the [Managing 4D licenses](../Admin/licenses.md) page.
 
 :::

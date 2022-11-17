@@ -1,99 +1,157 @@
 ---
 id: updates
-title: Actualizaciones de la documentación
+title: Release Notes
 ---
 
-La lista de las principales actualizaciones de esta documentación. Para obtener información general sobre las nuevas funcionalidades de los productos 4D, consulte las **release notes** en [doc.4d.com](https://doc.4d.com).
+## 4D v19 R8
+
+Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), the blog post that lists all new features and enhancements in 4D v19 R8.
 
 
-## 4D v19 R7
+#### Highlights
 
-- Los datos relacionados y los atributos calculados/alias pueden mostrarse en el [explorador de datos](Admin/dataExplorer.md#basics).
-- Nueva clase [FileHandle](API/FileHandleClass.md) y nueva función [`.open()`](API/FileClass.md#open) en la clase `File`.
-
-
-## 4D v19 R6
-
-- Nueva clase [HTTPRequest](API/HTTPRequestClass.md).
-- Las funciones colección que pueden llamar al código ahora soportan objetos función como parámetro *fórmula*: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
-- Las celdas listbox soportan el espacio [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) y [vertical ](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding).
-- 4D View Pro: nuevos comandos [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) y [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) para gestionar las tablas en las hojas.
-- Posibilidad de ver los atributos relacionados, calculados y alias en el [explorador de datos web](Admin/dataExplorer.md#basics).
-- Nueva página que explica [por qué y cómo 4D recoge los datos](Admin/data-collect.md).
+-
+- 4D Language classic: [What's new page](XXX) on doc.4d.com.
+- 4D Write Pro: [What's new page](XXX) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D v19 R8.
 
 
-## 4D v19 R5
+#### Behavior changes
+
+- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+
+
+## Previous releases
+
+<details><summary>Click to see the release notes for previous versions</summary>
+
+### 4D v19 R7
+
+Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), the blog post that lists all new features and enhancements in 4D v19 R7.
+
+
+#### Highlights
+
+- Related data and computed/alias attributes can be displayed in the [Data Explorer](../Admin/dataExplorer#basics).
+- New [FileHandle](../API/FileHandleClass) class and new [`.open()`](../API/FileClass#open) function in the `File` class.
+- [Entity selection Class](../API/EntitySelectionClass): [`.add()`](../API/EntitySelectionClass#add) supports an *entitySelection* parameter, [`.minus()`](../API/EntitySelectionClass#minus) supports a *keepOrder* parameter.
+- 4D View Pro: new table commands [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes).
+- Component namespaces are now [displayed in the Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
+- Text area and Input form objects now support the [corner radius property](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
+- 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R7): list of all bugs that have been fixed in 4D v19 R7.
+
+
+#### Behavior changes
+
+- For consistency with standard interfaces (e.g. OS file explorers), list box rules for row selection/drag and drop have been modified. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
+- The 4D internal build numbering has been modified as of 4D v19 R7:
+    - releases up to 4D v19 R6 (included) are numbered 282xxx,
+    - releases from 4D v19 R7 will be numbered 100xxx.
+
+    Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
+
+
+### 4D v19 R6
+
+- New [HTTPRequest](../API/HTTPRequestClass) class.
+- Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](../API/CollectionClass#every), [`.filter()`](../API/CollectionClass#filter), [`.find()`](../API/CollectionClass#find), [`.findIndex()`](../API/CollectionClass#findindex), [`.map()`](../API/CollectionClass#map), [`.orderByMethod()`](../API/CollectionClass#orderbymethod), [`.reduce()`](../API/CollectionClass#reduce), [`.some()`](../API/CollectionClass#some), [`.sort()`](../API/CollectionClass#sort)
+- Listbox cells support [horizontal](FormObjects/propertiesCoordinatesAndSizing#horizontal-padding) and [vertical](FormObjects/propertiesCoordinatesAndSizing#vertical-padding) padding.
+- 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list#vp-remove-table) commands to handle tables in sheets.
+- Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer#basics).
+- New page explaining [why and how 4D collects data](../Admin/data-collect).
+
+
+
+### 4D v19 R5
 
 - Aplicaciones cliente/servidor generadas:
-    - El [archivo directory.json](../Users/handling_users_groups.md#directoryjson-file) del proyecto ahora puede ser [integrado al servidor](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) al momento de la generación, lo que le permite desplegar una aplicación cliente/servidor con una configuración básica de la seguridad de los usuarios y de los grupos.
-    - Ahora puede [deseleccionar los módulos inútiles](../Desktop/building.md#deselecting-modules) en sus aplicaciones generadas.
-
-- [Optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization): nuevas funciones de clase permiten manejar la caché ORDA y el contenido de un contexto de optimización. Para más información [Preconfiguración de contextos](../ORDA/remoteDatastores.md#preconfiguring-contexts) y [Caché ORDA](../ORDA/remoteDatastores.md#orda-cache).
-
-    > Estas funciones están destinadas a los desarrolladores que necesitan personalizar las funciones por defecto de ORDA para las configuraciones específicas. En la mayoría de los casos, no será necesario utilizarlos.
-
-- [clase DataClass](../API/DataClassClass.md): la nueva función [.getCount()](../API/DataClassClass.md#getcount) devuelve el número de entidades de una dataclass.
-
+    - The project [directory.json file](Users/editing#directoryjson-file) can now be [embedded in the server](../Desktop/building#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+    - You can now [deselect useless modules](../Desktop/building#deselecting-modules) in your built applications.
+- [Client/Server optimization](../ORDA/datastores#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/datastores#preconfiguring-contexts) and [ORDA Cache](../ORDA/datastores#orda-cache) for more information. > These functions are intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarlos.
+- [DataClass class](../API/DataClassClass): The new [.getCount()](../API/DataClassClass#getcount) function returns the number of entities in a dataclass.
 - 4D View Pro:
-    - Los nuevos comandos [VP SET DATA CONTEXT](ViewPro/method-list.md#vp-set-data-context), [VP Get data context](ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](ViewPro/method-list.md#vp-get-binding-path) permiten crear contextos de datos y vincular su contenido a las celdas de la hoja.
-    - [VP EXPORT DOCUMENT](ViewPro/method-list.md#vp-get-binding-path) y [VP Export to object](ViewPro/method-list.md#vp-get-binding-path) aceptan ahora la nueva opción `includeBindingSource` que exporta el contenido de un contexto de datos como valores de celda.
+    - The new [VP SET DATA CONTEXT](../ViewPro/method-list#vp-set-data-context), [VP Get data context](../ViewPro/method-list#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
+    - [VP EXPORT DOCUMENT](../ViewPro/method-list#vp-get-binding-path) and [VP Export to object](../ViewPro/method-list#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
 
 
-## 4D v19 R4
+### 4D v19 R4
 
-- [Atributos Alias](ORDA/ordaClasses.md#alias-attributes-1) están disponibles en las clases ORDA.
-
-- Soporte para las instrucciones [break y continue](Concepts/cf_looping.md#break-and-continue) en los bucles.
-- Soporte para la instrucción [return](Concepts/flow-control.md#return-expression) y [la expresión return](Concepts/parameters.md#return-expression) para devolver los valores.
-- Soporte de los [operadores de asignación compuestos](Concepts/operators.md#compound-assignment-operators), [los operadores de cortocircuito](Concepts/operators.md#short-circuit-operators) y del [operador ternario](Concepts/operators.md#ternary-operator)
-- El [editor de código](../code-editor/write-class-method.md#navigation-dropdown) incluye ahora una herramienta desplegable y soporta marcadores para una mejor navegación por el código.
-- Nuevas Preferencias: [**Incluir los tokens en los archivos source del proyecto**](Preferences/general.md#include-tokens-in-project-source-files) y la opción [**Mostrar los portapapeles**](Preferences/methods.md#show-clipboards) en la página Métodos.
-- Nueva petición REST para [bloquear/desbloquear](REST/$lock.md) las entidades.
-- [4D View Pro](ViewPro/getting-started.md) capítulo añadido con nuevos comandos: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
-- Nuevo [Clase SystemWorker](API/SystemWorkerClass.md).
-
-
-## 4D v19 R3
-
-- Las [propiedades calculadas](Concepts/classes.md#function-get-and-function-set) están disponibles en las clases.
-- [Los atributos calculados](ORDA/ordaClasses.md#computed-attributes) están disponibles en las clases ORDA. Son similares a las propiedades calculadas pero también soportan las funciones [query](ORDA/ordaClasses.md#function-query-attributename) y [orderBy](ORDA/ordaClasses.md#function-orderby-attributename).
-- Nuevos atributos de dataclass ORDA: [`exposed`](API/DataClassAttributeClass.md#exposed) y [`readOnly`](API/DataClassAttributeClass.md#readonly).
-- [Los archivos ZIP](API/ZipArchiveClass.md#zip-create-archive) ahora soportan los algoritmos de compresión *LZMA* y *xz*.
-- Una [nueva opción de build](Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita la inclusión de los clientes Silicon Mac en las aplicaciones servidor en Windows.
-- [soporte del modo oscuro](Preferences/general.md#appearance-macos-only) en macOS.
-- Soporte de **OAuth2 token object** en [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter) y [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter).
-- Los usuarios pueden ahora cargar un [archivo de configuración de registro](Debugging/debugLogFiles.md#using-a-log-configuration-file) utilizando un botón en la [ventana de administración del servidor](ServerWindow/maintenance.md#load-logs-configuration-file).
-- La gestión de los [parámetros opcionales](Concepts/parameters.md#optional-parameters) es más flexible en el lenguaje 4D.
-- La depuración de las sesiones de servidor web [es más fácil en 4D Server](WebServer/sessions.md#preemptive-mode).
-- El nuevo componente [4D NetKit](Extensions/overview.md#list-of-4d-components) permite conectar con APIs de terceros como Microsoft Graph.
+- [Alias attributes](../ORDA/ordaClasses#alias-attributes-1) are available in ORDA classes.
+- Support for [break and continue](../Concepts/looping#break-and-continue) statements in loops.
+- Support for [return](../Concepts/control-flow#return-expression) statement and [return expression](../Concepts/parameters#return-expression) to return values.
+- Support for [compound assignment operators](../Concepts/operators#compound-assignment-operators), [short-circuit operators](../Concepts/operators#short-circuit-operators), and [ternary operator](../Concepts/operators#ternary-operator)
+- The [Code Editor](../code-editor/overview) now includes an dropdown tool and supports markers for better code navigation.
+- New Preferences: [**Include tokens in project source files**](../Preferences/general#include-tokens-in-project-source-files) and [**Show clipboards**](../Preferences/methods#show-clipboards) option on the Methods page.
+- New REST request to [lock/unlock](../REST/lock) entities.
+- [4D View Pro](../ViewPro/getting-started) chapter added with new commands: [VP Copy to object](../ViewPro/method-list#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list#vp-paste-from-object).
+- New [SystemWorker class](../API/SystemWorkerClass).
 
 
-## 4D v19 R2
+### 4D v19 R3
 
-- Un [archivo .gitignore por defecto](Preferences/general.md#create-gitignore-file) puede ser creado con nuevos proyectos
-- New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
-- `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
-
-
-## 4D v19
-
-- [IMAPTransporter Class](API/IMAPTransporterClass.md): nuevas funciones `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` y `.unsubscribe()`.
-- [File Class](API/FileClass.md): nuevas funciones `setAppInfo()` y `getAppInfo()`.
-- Nueva etiqueta de transformación [4DEACH](Tags/tags.md#4deach-and-4dendeach).
-- Servidor web: nuevo parámetro [Cookie de sesión SameSite](WebServer/webServerConfig.md#session-cookie-samesite).
-- Soporte de esquema de color oscuro y claro para los [formularios](FormEditor/properties_FormProperties.md#color-scheme) y [hojas de estilo](FormEditor/createStylesheet.md#media-queries)
-- New default dark and light themes in [Code Editor preferences](Preferences/methods.md#theme-list).
-- [Compilación nativa](Project/compiler.md#compiler-methods-for) para procesadores Silicon.
-- La propiedad [cálculo de variables](FormObjects/properties_Object.md#variable-calculation) es ahora soportada por las columnas list box de la selección de entidades.
-- Nueva, página [CLI](Admin/cli.md) completa.
+- [Computed properties](../Concepts/classes#function-get-and-function-set) are available in classes.
+- [Computed attributes](../ORDA/ordaClasses#computed-attributes) are available in ORDA classes. They are similar to computed properties but also support [query](../ORDA/ordaClasses#function-query-attributename) and [orderBy](../ORDA/ordaClasses#function-orderby-attributename) functions.
+- New ORDA dataclass attributes: [`exposed`](../API/DataClassAttributeClass#exposed) and [`readOnly`](../API/DataClassAttributeClass#readonly).
+- [ZIP archives](../API/ZipArchiveClass#zip-create-archive) now supports *LZMA* and *xz* compression algorithms.
+- A [new build option](../Desktop/building#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
+- Extended [support of dark mode](../Preferences/general#appearance-macos-only) on macOS.
+- Support of **OAuth2 token object** in [`IMAP New transporter`](../API/IMAPTransporterClass#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass#pop3-new-transporter), and [`SMTP New transporter`](../API/SMTPTransporterClass#smtp-new-transporter).
+- Users can now load a [log configuration file](../Debugging/debugLogFiles#using-a-log-configuration-file) using a button in the [server administration window](../ServerWindow/maintenance#load-logs-configuration-file).
+- Handling [optional parameters](../Concepts/parameters#optional-parameters) is more flexible in the 4D language.
+- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions#preemptive-mode).
+- The new [4D NetKit](https://github.com/4d/4D-NetKit) component allows you to connect to third-party APIs such as Microsoft Graph.
 
 
+### 4D v19 R2
 
-## 4D v18 R6
+- A [default .gitignore file](../Preferences/general#create-gitignore-file) can be created with new projects
+- New [Blob class API](../API/BlobClass) to handle new [`4D.Blob` objects](Concepts/dt_blob#blob-types)
+- `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass#settext)
 
-- [Entity Selection Class](API/EntitySelectionClass.md): las funciones `.average()`, `.max()` y `.min()` ahora devuelven *undefined* si la selección de entidades está vacía.
-- [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) y [SMTP Mail](API/SMTPTransporterClass.md): la propiedad `authenticationMode` activa a OAuth 2.0
-- [IMAP Mail](API/IMAPTransporterClass.md): nuevas funciones `.expunge()` y `.append()`
-- Nuevo componente [WebAdmin](Admin/webAdmin.md) del servidor web
-- Nueva interfaz [DataExplorer](../Admin/dataExplorer.md)
-- Nuevas [sesiones de usuario](WebServer/sessions.md) web y [su API](API/SessionClass.md).
+
+### 4D v19
+
+- [IMAPTransporter Class](../API/IMAPTransporterClass): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
+- [File Class](../API/FileClass): new `setAppInfo()` and `getAppInfo()` functions.
+- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+
+- Web Server: new [SameSite session cookie](../WebServer/webServerConfig#session-cookie-samesite) setting.
+- Dark and light color scheme support for [forms](../FormEditor/propertiesForm#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
+- New default dark and light themes in [Code Editor preferences](../Preferences/methods#theme-list).
+- [Native compilation](../Project/compiler#compiler-methods-for) for Silicon processors.
+- [Variable calculation](../FormObjects/propertiesObject#variable-calculation) property is now supported by entity selection list box columns.
+- New, comprehensive [CLI](../Admin/cli) page.
+
+
+
+### 4D v18 R6
+
+- [Entity Selection Class](../API/EntitySelectionClass): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
+- [IMAP Mail](../API/IMAPTransporterClass), [POP3 Mail](../API/POP3TransporterClass) and [SMTP Mail](../API/SMTPTransporterClass): `authenticationMode` property enables OAuth 2.0
+- [IMAP Mail](../API/IMAPTransporterClass): new `.expunge()` and `.append()` functions
+- New [WebAdmin](../Admin/webAdmin) web server component
+- New [DataExplorer](../Admin/dataExplorer) interface
+- New web [user sessions](../WebServer/sessions) and [their API](../API/SessionClass).
+
+
+</details>
+
+
+## Library table
+
+<details><summary>Click to see the table of libraries used in 4D</summary>
+
+| Library  | Versión actual | Updated in 4D | Comentario                                                                               |
+| -------- | -------------- | ------------- | ---------------------------------------------------------------------------------------- |
+| SpreadJS | 15.2.0         | 19 R7         | 4D View Pro engine                                                                       |
+| CEF      | 4692.99        | 19 R5         | Chromium v97. CORS policies now also apply when accessing files on disk.                 |
+| OpenSSL  | 1.1.1n         | 19 R4         |                                                                                          |
+| libzip   | 1.7.3          | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
+| webKit   | WKWebView      | 19            |                                                                                          |
+| ICU      | 68.1           | 18 R6         |                                                                                          |
+| PHP      | 7.3.27         | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| libldap  | 2.4.48         | 18 R2         |                                                                                          |
+
+</details>

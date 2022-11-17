@@ -66,7 +66,7 @@ Los datos se recogen durante los siguientes eventos:
 
 
 
-## ¿Cuándo se almacena y envia?
+## Where is it stored and sent?
 
 Los datos recogidos se escriben en un archivo de texto (formato JSON) cuando 4D Server se cierra. El archivo se almacena dentro de la carpeta [active 4D](https://doc.4d.com/4dv19/help/command/en/page485.html), es decir:
 
@@ -78,6 +78,8 @@ Una vez a la semana, el archivo se envía automáticamente por la red a 4D. A co
 ![](../assets/en/Admin/data-collect.png)
 
 > Si el archivo no ha podido ser enviado por alguna razón, no obstante se elimina y no se muestra ningún mensaje de error del lado de 4D Server.
+
+The file is sent to the following server address: `https://dcollector.4d.com` (ip: 195.68.52.83).
 
 
 ## Desactivar la recopilación de datos en las aplicaciones cliente/servidor integradas

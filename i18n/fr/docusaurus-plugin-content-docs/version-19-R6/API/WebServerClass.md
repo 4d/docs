@@ -58,7 +58,7 @@ Leurs propriétés et fonctions sont les suivantes :
 
 | Version | Modifications                             |
 | ------- | ----------------------------------------- |
-| v18 R3  | Ajoutées                                  |
+| v18 R3  | Ajout                                     |
 | v19     | prise en charge de .sessionCookieSameSite |
 
 </details>
@@ -106,7 +106,7 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
@@ -223,7 +223,7 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
 
-<!-- REF #WebServerClass.CORSSettings.Summary -->Liste des hôtes et méthodes autorisées pour le service CORS<!-- END REF --> (voir propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
+Le <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (voir propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
 
 - **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
   - 192.168.5.17:8081
@@ -489,7 +489,7 @@ Par défaut = 80
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
 
 
-<!-- REF #WebServerClass.maxRequestSize.Summary -->Taille maximum (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
+Le <!-- REF #WebServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
 
 Valeurs possibles : 500000 - 2147483647
 
@@ -503,7 +503,7 @@ Valeurs possibles : 500000 - 2147483647
 
 > Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
-<!-- REF #WebServerClass.maxSessions.Summary -->Nombre maximum de sessions legacy simultanées<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Legacy Close Session` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions legacy simultanées ne peut pas dépasser le nombre total de process Web (propriété `maxConcurrentProcesses`, 100 par défaut)
+Le <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Legacy Close Session` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions legacy simultanées ne peut pas dépasser le nombre total de process Web (propriété `maxConcurrentProcesses`, 100 par défaut)
 
 <!-- END REF -->
 
@@ -632,7 +632,7 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Champ "path" du cookie 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 
@@ -672,7 +672,7 @@ Le <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validation d'a
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
@@ -734,7 +734,7 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->

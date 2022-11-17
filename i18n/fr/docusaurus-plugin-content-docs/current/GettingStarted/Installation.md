@@ -49,6 +49,6 @@ Nous vous souhaitons une excellente expérience 4D !
 
 :::info
 
-Need to activate specific licenses? Visit the [Managing 4D licenses](../licenses.md) page.
+Need to activate specific licenses? Visit the [Managing 4D licenses](../Admin/licenses.md) page.
 
 :::

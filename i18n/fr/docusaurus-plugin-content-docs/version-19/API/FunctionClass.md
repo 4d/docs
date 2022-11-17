@@ -107,7 +107,7 @@ Un objet `4D.Function` contient un morceau de code qui peut être exécuté à p
 | Version | Modifications                     |
 | ------- | --------------------------------- |
 | v17 R6  | Renommée (New formula -> Formula) |
-| v17 R3  | Ajoutées                          |
+| v17 R3  | Ajout                             |
 
 </details>
 
@@ -237,7 +237,7 @@ Appeler une formule à l'aide de la notation objet :
 | Version | Modifications                                             |
 | ------- | --------------------------------------------------------- |
 | v17 R6  | Renommée : New formula from string -> Formula from string |
-| v17 R3  | Ajoutées                                                  |
+| v17 R3  | Ajout                                                     |
 
 </details>
 
@@ -286,7 +286,7 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajoutées      |
+| v17 R3  | Ajout         |
 
 </details>
 
@@ -345,7 +345,7 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajoutées      |
+| v17 R3  | Ajout         |
 
 </details>
 
@@ -396,7 +396,7 @@ A noter que `.call()` est similaire à [`.apply()`](#apply), néanmoins les para
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 

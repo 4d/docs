@@ -311,11 +311,11 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 ### VP All
 
-<!-- REF #_method_.VP ALL.Syntax -->
+<!-- REF #_method_.VP All.Syntax -->
 **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | Parameter  | Typ      |    | Beschreibung                                         |
 | ---------- | -------- | -- | ---------------------------------------------------- |
@@ -327,7 +327,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 #### Beschreibung
 
-The `VP ALL` command <!-- REF #_method_.VP ALL.Summary -->returns a new range object referencing all cells<!-- END REF -->.
+The `VP ALL` command <!-- REF #_method_.VP All.Summary -->returns a new range object referencing all cells<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -349,7 +349,7 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 
 ### VP Cell
 
-<!-- REF #_method_.VP CELL.Syntax -->
+<!-- REF #_method_.VP Cell.Syntax -->
 **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 
@@ -542,13 +542,13 @@ Selecting the columns and running this code:
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
-<!-- REF #_method_.VP Combine Ranges.Syntax -->
-**VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | Parameter     | Typ    |    | Beschreibung                                                  |
 | ------------- | ------ | -- | ------------------------------------------------------------- |
@@ -560,7 +560,7 @@ Selecting the columns and running this code:
 
 #### Beschreibung
 
-The `VP Combine Ranges` command <!-- REF #_method_.VP Combine Ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. All of the ranges must be from the same 4D View Pro area.
+The `VP Combine ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. All of the ranges must be from the same 4D View Pro area.
 
 In *rangeObj*, pass the first range object.
 
@@ -1280,11 +1280,11 @@ You want to trace the execution of the commands and empty the command buffer:
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| Parameter | Typ  |    | Beschreibung                                     |
-| --------- | ---- | -- | ------------------------------------------------ |
-| font      | Text | -> | Font shorthand string|<!-- END REF -->
-
-|
+| Parameter | Typ    |    | Beschreibung          |
+| --------- | ------ | -- | --------------------- |
+| font      | Text   | -> | Font shorthand string |
+| Ergebnis  | Objekt | <- | Font object           |
+<!-- END REF -->
 
 #### Beschreibung
 
@@ -1638,6 +1638,7 @@ To get the data context bound to the following cells:
 ```4d
 var $dataContext : Object
 
+
 $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
 ```
 
@@ -1653,11 +1654,13 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |  | ------------ |
-|           |     |  |              |
+| Parameter  | Typ      |    | Beschreibung                                        |
+| ---------- | -------- | -- | --------------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area from object name                   |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)              |
+| Ergebnis   | Ganzzahl | <- | Total number of columns |<!-- END REF -->
 
-|vpAreaName  |Text|->|4D View Pro area from object name| |sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Integer|<-|Total number of columns |<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -3102,6 +3105,7 @@ In *rangeObj*, pass the cell range object where the values, formatting, and/or f
 
 In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
 
+
 In the optional *options* parameter, you can specify what to paste in the cell range. Possible values:
 
 | Constant                                       | Beschreibung                                                         |
@@ -3462,6 +3466,7 @@ You want to deselect all cells (the active cell and any selected cells):
 
 ```4d
 VP RESET SELECTION("myVPArea")
+
 ```
 
 #### See also
@@ -4908,6 +4913,7 @@ The PDF:
 
 #### See also
 
+
 [4D View Pro print attributes](configuring.md#print-attributes)<br/>[VP Convert to picture](#vp-convert-to-picture)<br/>[VP Get print info](#vp-get-print-info)<br/>[VP PRINT](#vp-print)
 
 ### VP SET ROW ATTRIBUTES
@@ -5093,6 +5099,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 #### Beschreibung
 
+
 The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in *vpAreaName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
@@ -5230,6 +5237,7 @@ var $options : Object
 $options:=New object
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
+
 $options.gridline.showHorizontalGridline:=False
 $options.rowHeaderVisible:=False
 $options.colHeaderVisible:=False

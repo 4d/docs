@@ -80,7 +80,7 @@ File handle objects cannot be shared.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
@@ -91,7 +91,7 @@ File handle objects cannot be shared.
 The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->.
 
 
-The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
+The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). La valeur par défaut est "native".
 
 > The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
@@ -108,7 +108,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
@@ -116,9 +116,9 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.breakModeWrite` property returns <!-- REF #FileHandleClass.breakModeWrite.Summary -->the processing mode for line breaks used when writing to the file<!-- END REF -->.
+La propriété `.breakModeWrite` retourne <!-- REF #FileHandleClass.breakModeWrite.Summary -->le mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier<!-- END REF -->.
 
-The `.breakModeWrite` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
+La propriété `.breakModeWrite` peut être définie lors de la création du handle à l'aide de la fonction [`file.open()`](FileClass.md#open) (voir [la fonction `.open()`](FileClass.md#open) pour plus d'informations). La valeur par défaut est "native".
 
 > The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
@@ -136,7 +136,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
@@ -160,7 +160,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
@@ -183,7 +183,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
@@ -216,7 +216,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->**.mode** : Text<!-- END REF -->
@@ -241,7 +241,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
@@ -270,7 +270,7 @@ This property is **read/write**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
@@ -283,7 +283,9 @@ This property is **read/write**.
 | Résultat   | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -308,7 +310,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
@@ -320,7 +322,9 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | Résultat   | Text | <- | Line of text|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -346,7 +350,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
@@ -390,7 +394,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
@@ -425,7 +429,7 @@ If the *size* value is less than the current document size, the document content
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
@@ -461,7 +465,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
@@ -496,7 +500,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->

@@ -117,7 +117,7 @@ At any point, you can drag and drop themes, theme sublists (if any), and theme i
 Este tema le permite seguir los valores de los objetos o expresiones:
 
 * used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
-* used in the previous line of code
+* utilizado en la línea de código anterior
 
 Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Digamos que ejecuta el siguiente método:
 

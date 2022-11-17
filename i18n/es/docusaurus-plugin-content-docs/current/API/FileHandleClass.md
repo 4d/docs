@@ -303,7 +303,9 @@ Esta propiedad es **lectura/escritura**.
 | Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descripción
@@ -340,7 +342,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 | Result     | Text | <- | Línea de texto|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descripción

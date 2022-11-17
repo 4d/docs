@@ -16,6 +16,12 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
+### Chemins d'accès
+
+`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+
+
+
 ### Objet Folder
 
 |                                                                                                                                                                          |
@@ -53,9 +59,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
-| ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| Version | Modifications               |
+| ------- | --------------------------- |
+| v20     | Support of `fk home folder` |
+| v17 R5  | Ajout                       |
 
 </details>
 
@@ -101,13 +108,14 @@ Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier 
 | fk database folder         | 4     | Filesystem associé : "/PACKAGE"                                                                                             |
 | fk desktop folder          | 115   |                                                                                                                             |
 | fk documents folder        | 117   | Dossier Documents de l'utilisateur                                                                                          |
+| fk home folder             | 118   | Current home folder of the user (usually `/Users/<username>/`)                                                        |
 | fk licenses folder         | 1     | Dossier contenant les fichiers de licence 4D de la machine                                                                  |
 | fk logs folder             | 7     | Filesystem associé : "/LOGS"                                                                                                |
 | fk mobileApps folder       | 10    |                                                                                                                             |
 | fk remote database folder  | 3     | Dossier de la base de données 4D créé sur chaque machine 4D distante                                                        |
 | fk resources folder        | 6     | Filesystem associé : "/RESOURCES"                                                                                           |
 | fk system folder           | 100   |                                                                                                                             |
-| fk user preferences folder | 0     | Dossier 4D qui stocke les fichiers de préférence des utilisateurs dans le répertoire `\<userName>`.                  |
+| fk user preferences folder | 0     | 4D folder that stores user preference files within the user home folder                                                     |
 | fk web root folder         | 8     | Dossier racine web courant du projet : "/PACKAGE/chemin" si son emplacement se trouve dans le package, sinon chemin complet |
 
 Si la commande est appelée à partir d'un composant, passez le paramètre optionnel * pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre *, un objet null est systématiquement retourné.
@@ -120,7 +128,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
@@ -142,7 +150,7 @@ La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et ren
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
@@ -199,7 +207,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -255,7 +263,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
@@ -329,7 +337,7 @@ Lorsque la constante `Delete with contents` est passée :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
@@ -385,7 +393,7 @@ Vous souhaitez déplacer et renommer un dossier :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->

@@ -3,10 +3,10 @@ id: datastores
 title: Utilizar un almacén de datos remoto
 ---
 
-A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
+Un [datastore](dsMapping.md#datastore) expuesto en una aplicación 4D se puede acceder simultáneamente a través de diferentes clientes:
 
-- 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**.
+- Las aplicaciones 4D remotas que utilizan ORDA para acceder al almacén de datos principal con el comando `ds`. Tenga en cuenta que la aplicación 4D remota puede seguir accediendo a la base de datos en modo clásico. Estos accesos son gestionados por el **servidor de aplicaciones**.
+- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. Estos accesos son gestionados por el **servidor HTTP REST**.
 - Las peticiones 4D for iOS para actualizar las aplicaciones iOS. Estos accesos son gestionados por el **servidor HTTP**.
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
@@ -29,13 +29,13 @@ Estos principios se ilustran en los gráficos siguientes:
 
 ## Visualización de las sesiones
 
-Processes that manage sessions for datastore access are shown in the 4D Server administration window:
+Los procesos que gestionan las sesiones de acceso al datastore se muestran en la ventana de administración de 4D Server:
 
 - nombre: "REST Handler: \<process name\>"
 - tipo: tipo Worker Server HTTP
 - sesión: el nombre de la sesión es el nombre de usuario que se pasa al comando Open datastore.
 
-In the following example, two processes are running for the same session:
+En el siguiente ejemplo, se están ejecutando dos procesos para la misma sesión:
 
 ![](../assets/en/ORDA/sessionAdmin.png)
 

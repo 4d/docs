@@ -12,7 +12,7 @@ title: Document Class
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
@@ -31,7 +31,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
@@ -51,7 +51,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
@@ -72,7 +72,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.extension.Syntax -->**.extension** : Text<!-- END REF -->
@@ -92,7 +92,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
@@ -112,7 +112,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
@@ -132,7 +132,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
@@ -152,7 +152,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
@@ -172,7 +172,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
@@ -192,7 +192,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.isWritable.Syntax -->**.isWritable** : Boolean<!-- END REF -->
@@ -222,7 +222,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
@@ -242,7 +242,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
@@ -262,7 +262,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.name.Syntax -->**.name** : Text<!-- END REF -->
@@ -282,7 +282,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.original.Syntax -->**.original** : 4D.File<br/>**.original** : 4D.Folder<!-- END REF -->
@@ -307,7 +307,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
@@ -327,7 +327,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -348,7 +348,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -368,7 +368,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.size.Syntax -->**.size** : Real<!-- END REF -->
@@ -388,7 +388,7 @@ Cette propriété est en **lecture seule**.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
@@ -442,7 +442,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | Version | Modifications    |
 | ------- | ---------------- |
 | v19 R2  | Retourne 4D.Blob |
-| v17 R5  | Ajoutées         |
+| v17 R5  | Ajout            |
 </details>
 
 <!-- REF #document.getContent().Syntax -->**.getContent( )** : 4D.Blob<!-- END REF -->
@@ -484,7 +484,7 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
@@ -519,7 +519,7 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #document.getText().Syntax -->**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->

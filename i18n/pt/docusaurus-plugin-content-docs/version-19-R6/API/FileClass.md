@@ -14,6 +14,12 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
+
+### Pathnames
+
+`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+
+
 ### Objeto File
 
 |                                                                                                                                                                        |
@@ -410,7 +416,9 @@ ALERT($info.
 | newName           | Text       | -> | Full name for the moved file          |
 | Resultados        | 4D. File   | <- | Moved file|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 

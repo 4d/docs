@@ -271,7 +271,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | shortcutAccel   | boolean       | true, false (Ctrl Windows/Command macOS)           |
 | shortcutAlt     | boolean       | true, false                                        |
 | shortcutCommand | boolean       | true, false                                        |
-| shortcutControl | boolean       | true, false (macOS Control)                        |
+| shortcutControl | boolean       | true, false (macOS: Control)                       |
 | shortcutShift   | boolean       | true, false                                        |
 |                 |               |                                                    |
 | shortcutKey     | string        | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |

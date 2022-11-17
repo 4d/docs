@@ -3,80 +3,80 @@ id: general
 title: Página general
 ---
 
-This page contains various options to configure the general operation of your 4D application.
+Esta página contiene varias opciones para configurar el funcionamiento general de su aplicación 4D.
 
 ## Opciones
 
 ### Al inicio
 
-This option allows you to configure the default 4D display at startup, when the user launches only the application.
+Esta opción permite configurar la visualización por defecto de 4D al inicio, cuando el usuario lanza únicamente la aplicación.
 
-* **Do nothing**: Only the application window appears, empty.
-* **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-* **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
+* **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
+* **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
+* **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
 > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
 
-* **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
-* **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
-> > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+* **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
+* **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
+> **4D Server**: la aplicación 4D Server ignora esta opción. En este entorno, se utiliza siempre el modo **No hacer nada**.
 
 ### Creación de formularios automática
 
-> This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
+> Esta opción sólo se utiliza en bases de datos binarias; se ignora en la arquitectura proyectos. Ver doc.4d.com.
 
 #### Ventana con pestañas (sólo en macOS)
 
-Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
+A partir de macOS Sierra, las aplicaciones Mac pueden beneficiarse de la función de tabulación automática de ventanas que ayuda a organizar varias ventanas: las ventanas de documentos se apilan en una única ventana principal y se puede navegar a través de pestañas. Esta función es útil en pantallas pequeñas y/o cuando se utiliza un trackpad.
 
-You can benefit from this feature in the following environments (with 4D 64-bit versions only):
+Puede beneficiarse de esta funcionalidad en los siguientes entornos (sólo con las versiones 4D de 64 bits):
 
 * Ventana del editor de métodos
-* Ventana del editor de formularios
+* Ventanas del editor de formularios
 
 Todas las ventanas de estos editores se pueden poner en forma de pestaña:
 
 ![](../assets/en/Preferences/general2.png)
 
-A set of commands in the **Window** menu allows managing the tabs:
+Un conjunto de comandos en el menú **Ventana** permite gestionar las pestañas:
 
 ![](../assets/en/Preferences/general3.png)
 
-In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
+En la caja de diálogo de Preferencias de 4D, la opción **Ventana con pestañas** le permite controlar este funcionamiento:
 
 ![](../assets/en/Preferences/general4.png)
 
 Hay tres opciones disponibles:
 
-* **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
+* **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
 * **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
-* **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+* **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
 
 ### Salir del modo Diseño al ir al modo Aplicación
 
-If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. If this option is not checked (factory setting), the windows of the Design environment remain visible in the background of the Application environment.
+Si esta opción está marcada, cuando el usuario cambia al entorno Aplicación utilizando el comando de menú **Probar la aplicación**, se cierran todas las ventanas del entorno Diseño. Si esta opción no está marcada (configuración de fábrica), las ventanas del entorno Diseño permanecen visibles al fondo del entorno Aplicación.
 
 ### Activar la creación de bases de datos binarias
 
-If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
+Si marca esta opción, se añaden dos elementos en el menú **Archivo > Nuevo** y el botón **Nuevo** de la barra de herramientas:
 
 * **Base de datos...**
 * **Base de datos a partir de una definición de estructura...**
 
 ![](../assets/en/Preferences/general5.png)
 
-These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
+Estos elementos permiten crear bases de datos binarias (ver la sección [Crear una nueva base](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html)). Ya no se proponen por defecto porque 4D recomienda utilizar la arquitectura basada en proyectos para los nuevos desarrollos.
 
 ## Al crear un nuevo proyecto
 
 ### Utilizar archivo historial
 
-When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
+Cuando esta opción está marcada, se inicia automáticamente un archivo de historial que se utiliza cuando se crea una nueva base. Para más información, consulte [Archivo de historial (.journal)](Backup/log.md).
 
 ### Crear un paquete
 
-When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
+Cuando esta opción está seleccionada, las bases de datos 4D se crean automáticamente en una carpeta con el sufijo .4dbase.
 
-Thanks to this principle, under macOS the database folders appear as packages having specific properties. En Windows, este funcionamiento no tiene ningún impacto particular.
+Gracias a este principio, en macOS las carpetas de las bases aparecen como paquetes con propiedades específicas. En Windows, este funcionamiento no tiene ningún impacto particular.
 
 ### Lenguaje de comparación de texte
 
@@ -100,7 +100,7 @@ You can choose to access the 4D online documentation site directly or to access 
 
 Indica la ubicación de la documentación HTML estática. Por defecto, se trata de la subcarpeta \Help\Command\language. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
 
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
+Puede modificar esta ubicación como desee, por ejemplo, si quiere mostrar la documentación en un idioma diferente al de la aplicación. La documentación HTML estática puede estar ubicada en otro volumen, en un servidor web, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
 
 ### Sitio Web
 
@@ -110,5 +110,5 @@ Acceso URL a la documentación en línea de la versión en el 4D Doc Center. 4D 
 
 This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
 
-* When it is checked, 4D first looks for the page in the local folder. Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
-* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser.
+* When it is checked, 4D first looks for the page in the local folder. Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
+* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Si no se encuentra, 4D muestra un mensaje de error en el navegador.

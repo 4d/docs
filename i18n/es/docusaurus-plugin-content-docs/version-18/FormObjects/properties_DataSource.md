@@ -120,7 +120,7 @@ Consulte la sección [Tipo de expresión](properties_Object.md#expression-type).
 
 ## Valores por defecto (lista de)
 
-Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Using the language, you can manage the object by referring to this array.
+Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
 > Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
 
@@ -148,7 +148,7 @@ This description is specific to [selection](listbox_overview.md#selection-list-b
 
 Una expresión 4D que se asociará a una columna. Puede introducir:
 
-- Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+- Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. El valor de la variable se calculará generalmente en el evento `On Display Detail`.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
   - String
@@ -241,9 +241,9 @@ El uso de esta propiedad requiere el cumplimiento de los siguientes principios:
 
 `List boxes colección o entity selection`
 
-Specifies a variable or expression that will be assigned the elements or entities selected by the user.
+Especifica una variable o expresión a la que se asignarán los elementos o entidades seleccionados por el usuario.
 
-- for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
+- para un list box colección, debe utilizar una variable colección o una expresión asignable que acepte colecciones,
 - para un list box selección de entidades, se crea un objeto de selección de entidades. Debe utilizar una variable objeto o una expresión asignable que acepte objetos.
 > Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 

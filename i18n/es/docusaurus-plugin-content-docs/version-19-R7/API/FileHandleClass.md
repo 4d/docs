@@ -293,7 +293,8 @@ Esta propiedad es **lectura/escritura**.
 | v19 R7  | Añadidos       |
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass)<!-- END REF -->
+
 
 <!--REF #FileHandleClass.readBlob().Params -->
 | Parámetros | Tipo                 |    | Descripción                                         |
@@ -301,7 +302,11 @@ Esta propiedad es **lectura/escritura**.
 | *bytes*    | Real                 | -> | Número de bytes a leer                              |
 | Result     | [4D.Blob](BlobClass) | <- | Bytes leídos del archivo|<!-- END REF -->
 
+
+
 |
+
+
 
 #### Descripción
 
@@ -330,12 +335,17 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readLine().Params -->
 | Parámetros | Tipo |    | Descripción                               |
 | ---------- | ---- | -- | ----------------------------------------- |
-| Result     | Text | <- | Línea de texto|<!-- END REF -->
+| Result     | Text | <- | Línea de texto|<!-- END REF --> 
+
+
 
 |
+
+
 
 #### Descripción
 
@@ -363,7 +373,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 | v19 R7  | Añadidos       |
 </details>
 
+
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
+
 
 <!--REF #FileHandleClass.readText().Params -->
 | Parámetros | Tipo |    | Descripción                                  |
@@ -371,7 +383,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 | *stopChar* | Text | -> | Caracter(es) en los que dejar de leer        |
 | Result     | Text | <- | Texto del archivo|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -406,12 +420,15 @@ Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve un
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size*: Real)<!-- END REF -->
 
+
 <!--REF #FileHandleClass.setSize().Params -->
 | Parámetros | Tipo |    | Descripción                                                    |
 | ---------- | ---- | -- | -------------------------------------------------------------- |
 | size       | Real | -> | Nuevo tamaño del documento en bytes|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -438,12 +455,15 @@ Si el valor del *size* es menor que el tamaño actual del documento, el contenid
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeBlob().Params -->
 | Parámetros | Tipo                 |    | Descripción                                              |
 | ---------- | -------------------- | -- | -------------------------------------------------------- |
 | *blob*     | [4D.Blob](BlobClass) | -> | Blob a escribir en el archivo|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -471,12 +491,15 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | Parámetros   | Tipo |    | Descripción                                 |
 | ------------ | ---- | -- | ------------------------------------------- |
 | *lineOfText* | Text | -> | Texto a escribir|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -503,12 +526,15 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeText().Params -->
 | Parámetros    | Tipo |    | Descripción                                 |
 | ------------- | ---- | -- | ------------------------------------------- |
 | *textToWrite* | Text | -> | Texto a escribir|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 

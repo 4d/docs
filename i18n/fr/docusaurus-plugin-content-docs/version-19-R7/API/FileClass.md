@@ -14,6 +14,12 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
+### Chemins d'accès
+
+`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+
+
+
 ### Objet File
 
 |                                                                                                                                                                        |
@@ -57,7 +63,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -131,7 +137,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -152,7 +158,7 @@ La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et renvoie 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF file.create().Note -->
@@ -197,7 +203,7 @@ Création d'un fichier de préférences dans le dossier principal :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -253,7 +259,7 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
@@ -302,7 +308,7 @@ Vous souhaitez supprimer un fichier spécifique dans un sous-dossier :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -397,7 +403,7 @@ ALERT($info.Copyright)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -410,7 +416,9 @@ ALERT($info.Copyright)
 | nouveauNom         | Text      | -> | Nom complet du fichier déplacé             |
 | Résultat           | 4D.File   | <- | Fichier déplacé|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
@@ -442,7 +450,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajoutées      |
+| v19 R7  | Ajout         |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -520,7 +528,7 @@ $fhandle:=$f.open("read")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -563,7 +571,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -647,7 +655,7 @@ $infoPlistFile.setAppInfo($info)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -680,7 +688,7 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 | Version | Modifications                                                                       |
 | ------- | ----------------------------------------------------------------------------------- |
 | v19 R3  | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
-| v17 R5  | Ajoutées                                                                            |
+| v17 R5  | Ajout                                                                               |
 
 </details>
 

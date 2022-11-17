@@ -35,7 +35,7 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 
@@ -157,7 +157,7 @@ La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 
@@ -203,7 +203,7 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 
@@ -252,7 +252,7 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 
@@ -309,7 +309,7 @@ Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 
@@ -370,7 +370,7 @@ La fonction retourne **Null** si :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 
@@ -435,7 +435,7 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 
 </details>
 
@@ -500,7 +500,7 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajoutées      |
+| v18 R2  | Ajout         |
 
 </details>
 

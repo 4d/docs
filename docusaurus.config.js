@@ -116,8 +116,13 @@ module.exports = {
       theme: require("./src/theme/highlight/themes/palenight"),
     },
     "navbar": {
-      "title": "4D Documentation",
-      items: [{
+      title: "4D Documentation",
+       hideOnScroll: true,
+      logo: {
+        alt: "4D Logo",
+        src: "img/logohome.png",
+      },
+	  items: [{
         type: 'docsVersionDropdown',
         position: 'right',
       }, {
@@ -126,7 +131,7 @@ module.exports = {
       },
       ],
     },
-    "image": "../assets/en/logohome.png",
+    //"image": "../assets/en/logohome.png",
     "footer": {
       style: 'dark',
       links: [

@@ -26,9 +26,9 @@ Control characters do not appear in the menu command labels. You should therefor
 | Caracter   | Descrição                   | Utilização                                                    |
 | ---------- | --------------------------- | ------------------------------------------------------------- |
 | (          | open parenthese             | Disable item                                                  |
-| <B         | less than B                 | Bold font                                                     |
-| <I         | less than I                 | Italic font                                                   |
-| <U         | less than U                 | Underline font                                                |
+| <B         | less than B                 | Negrito                                                       |
+| <I         | less than I                 | Itálica                                                       |
+| <U         | menor que U                 | Underline font                                                |
 | !+caracter | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
 | /+caracter | slash+character             | Add character as shortcut                                     |
 

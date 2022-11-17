@@ -295,9 +295,9 @@ will create and apply the following style object named *GreenDashDotStyle*:
 ### VP All
 
 
-<!-- REF #_method_.VP ALL.Syntax --> **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
+<!-- REF #_method_.VP All.Syntax --> **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | Parâmetros | Tipo    |    | Descrição                                            |
 | ---------- | ------- | -- | ---------------------------------------------------- |
@@ -307,7 +307,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 #### Descrição
 
-O comando `VP ALL` <!-- REF #_method_.VP ALL.Summary -->returns a new range object referencing all cells<!-- END REF -->.
+O comando `VP ALL` <!-- REF #_method_.VP All.Summary -->returns a new range object referencing all cells<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -330,17 +330,19 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 ### VP Cell
 
 
-<!-- REF #_method_.VP CELL.Syntax --> **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
+<!-- REF #_method_.VP Cell.Syntax --> **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| Parâmetros | Tipo    |    | Descrição                                            |
-| ---------- | ------- | -- | ---------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                    |
-| column     | Longint | -> | Sheet index (current sheet if omitted)               |
-| row        | Longint | -> | Sheet index (current sheet if omitted)               |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)               |
-| Resultados | Objeto  | <- | Range object of all cells|<!-- END REF --> |
+| Parâmetros | Tipo    |    | Descrição                              |
+| ---------- | ------- | -- | -------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name      |
+| column     | Longint | -> | Column index                           |
+| row        | Longint | -> | Row index                              |
+| sheet      | Integer | -> | Sheet index (current sheet if omitted) |
+| Resultados | Objeto  | <- | Range object of a single cell          |
+
+<!-- END REF -->
 
 #### Descrição
 
@@ -510,12 +512,12 @@ Selecting the columns and running this code:
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
 
-<!-- REF #_method_.VP Combine Ranges.Syntax --> **VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax --> **VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | Parâmetros    | Tipo   |    | Descrição                                                     |
 | ------------- | ------ | -- | ------------------------------------------------------------- |
@@ -525,7 +527,7 @@ Selecting the columns and running this code:
 
 #### Descrição
 
-O comando `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Summary -->returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->.
+O comando `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Summary -->returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->.
 
 In *rangeObj*, pass the first range object.
 
@@ -666,7 +668,7 @@ You can pass an optional *options* parameter with the following properties:
 | Propriedade | Tipo     | Descrição                                                                                                               |
 | ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------- |
 | copy        | Booleano | *True* (default) to keep the copied values, formatting and formulas after the command executes. *False* to remove them. |
-| copyOptions | Longint  | Specifies what is copied or moved. Valores possíveis: <p><table><tr><th>Value</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copies only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copies only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>                                          |
+| copyOptions | Longint  | Specifies what is copied or moved. Valores possíveis: <p><table><tr><th>Value</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copies only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copies only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>                                          |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -1132,9 +1134,9 @@ You can pass the optional *searchCondition* parameter to specify how the search 
 | afterColumn | Integer  | The number of the column just before the starting column of the search. If the *rangeObj* is a combined range, the column number given must be from the first range. Default value: -1 (beginning of the *rangeObj*) |
 | afterRow    | Integer  | The number of the row just before the starting row of the search. If the *rangeObj* is a combined range, the row number given must be from the first range. Default value: -1 (beginning of the *rangeObj*)          |
 | all         | Booleano | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                 |
-| flags       | Integer  | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ex: "a" is the same as "A".</td></tr><tr><td>`vk find flag none`</td><td>no search flags are considered (default)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>These flags can be combined. For example: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                                        |
+| flags       | Integer  | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ex: "a" is the same as "A".</td></tr><tr><td>`vk find flag none`</td><td>no search flags are considered (default)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>These flags can be combined. Por exemplo: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                                        |
 | order       | Integer  | <table><tr><td>`vk find order by columns`</td><td>The search is performed by columns. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>The search is performed by rows. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                           |
-| target      | Integer  | <table><tr><td>`vk find target formula`</td><td>The search is performed in the cell formula</td></tr><tr><td>`vk find target tag`</td><td>The search is performed in the cell tag</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>These flags can be combined. For example:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                 |
+| target      | Integer  | <table><tr><td>`vk find target formula`</td><td>The search is performed in the cell formula</td></tr><tr><td>`vk find target tag`</td><td>The search is performed in the cell tag</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>These flags can be combined. Por exemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                 |
 
 In the optional *replaceValue* parameter, you can pass text to take the place of any instance of the text in *searchValue* found in the *rangeObj*.
 
@@ -1249,9 +1251,13 @@ You want to trace the execution of the commands and empty the command buffer:
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| Parâmetros | Tipo |    | Descrição                                        |
-| ---------- | ---- | -- | ------------------------------------------------ |
-| font       | Text | -> | Font shorthand string|<!-- END REF --> |
+| Parâmetros | Tipo   |    | Descrição             |
+| ---------- | ------ | -- | --------------------- |
+| font       | Text   | -> | Font shorthand string |
+| Resultados | Objeto | <- | Font object           |
+
+<!-- END REF -->
+
 
 #### Descrição
 
@@ -1595,11 +1601,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parâmetros | Tipo |  | Descrição |
-| ---------- | ---- |  | --------- |
-|            |      |  |           |
-
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)| |Result|Object|<-|Style sheet object|<!-- END REF -->
+| Parâmetros | Tipo    |    | Descrição                                           |
+| ---------- | ------- | -- | --------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area from object name                   |
+| sheet      | Integer | -> | Sheet index (current sheet if omitted)              |
+| Resultados | Integer | <- | Total number of columns |<!-- END REF --> |
 
 #### Descrição
 
@@ -2285,11 +2291,11 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parâmetros | Tipo |    | Descrição                         |
-| ---------- | ---- | -- | --------------------------------- |
-| vpAreaName | Text | -> | 4D View Pro area form object name |
-
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)|
+| Parâmetros | Tipo    |    | Descrição                              |
+| ---------- | ------- | -- | -------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name      |
+| styleName  | Text    | -> | Name of style                          |
+| sheet      | Integer | -> | Sheet index (current sheet if omitted) |
 
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
@@ -2363,7 +2369,6 @@ $styles:=VP Get stylesheets("ViewProArea")
 ```
 
 In this case, the current sheet uses two style objects:
-
 
 ```4d
 [
@@ -2518,7 +2523,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | ---------- | ------- | -- | -------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                        |
 | tableName  | Text    | -> | Table name                                               |
-| onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |
+| onlyData   | Integer | -> | `vk table full range` (padrão) ou `vk table data range`  |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)                   |
 | Resultados | Objeto  | <- | Range that contains the table|<!-- END REF --> |
 
@@ -2939,7 +2944,7 @@ The results is:
 | tableName   | Text    | -> | Table name                                                        |
 | column      | Integer | -> | Index in the table of the starting column to insert               |
 | count       | Text    | -> | Number of columns to add (must be >0)                             |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *column*      |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*      |
 | sheet       | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
 
 #### Descrição
@@ -2991,7 +2996,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | tableName   | Text    | -> | Table name                                                        |
 | row         | Integer | -> | Index in the table of the starting row to insert                  |
 | count       | Text    | -> | Number of rows to add (must be >0)                                |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row*         |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*         |
 | sheet       | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
 
 #### Descrição
@@ -3042,6 +3047,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 ![](../assets/en/ViewPro/table-insert.png)
 
 
+
 #### Veja também
 
 [VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP REMOVE TABLE ROWS](#vp-remove-table-rows)
@@ -3086,7 +3092,7 @@ The *options* parameter has several properties:
 | Propriedade  | Tipo     | Descrição                                                                                                                                         |
 | ------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | copy         | Booleano | Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (default) to remove them</li><li>*True* to keep them</li></ul> |
-| pasteOptions | Longint  | Specifies what is pasted. Valores possíveis: <p><table><tr><th>Value</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                            |
+| pasteOptions | Longint  | Specifies what is pasted. Valores possíveis: <p><table><tr><th>Value</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                            |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -3227,7 +3233,7 @@ $font.variant:=vk font variant small caps
 $font.weight:=vk font weight bolder
 
 $cellStyle.font:=VP Object to font($font)
-//$cellStyle.font contains "bolder oblique small-caps 16pt arial"
+//$cellStyle.font contém "bolder oblique small-caps 16pt arial"
 ```
 
 #### Veja também
@@ -4350,6 +4356,7 @@ $column:=VP Column("ViewProArea";1) //column B
 $properties:=New object("width";100;"header";"Hello World") VP SET COLUMN ATTRIBUTES($column;$properties)
 ```
 
+
 ![](../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
 #### Veja também
@@ -5165,9 +5172,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parâmetros | Tipo   |    | Descrição                                        |
-| ---------- | ------ | -- | ------------------------------------------------ |
-| rangeObj   | Objeto | -> | Range object of cells|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição |
+| ---------- | ---- |  | --------- |
+|            |      |  |           |
+
+|rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Descrição
 
@@ -5753,7 +5762,7 @@ The following table lists the available workbook options:
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table>                                                                                                                                                  |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                              |
 | rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
-| scrollbarAppearance                   | number                  | Scrollbar appearance. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>                                                                                                                                                                                  |
+| scrollbarAppearance                   | number                  | Scrollbar appearance. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>                                                                                                                                                                                  |
 | scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                |
 | scrollbarShowMax                      | boolean                 | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                             |
 | scrollByPixel                         | boolean                 | Enable precision scrolling by pixel.                                                                                                                                                                                                                   |
@@ -5810,7 +5819,7 @@ In *rangeObj*, pass a range of cells as an object to designate the cells to be v
 
 The following selectors are available:
 
-| Selector              | Descrição                                                                                                                                                                                                                  | Disponível com *vPos* | Available with *hPos* |
+| Selector              | Descrição                                                                                                                                                                                                                  | Disponível com *vPos* | Disponível com *hPos* |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
 | `vk position bottom`  | Vertical alignment to the bottom of cell or row.                                                                                                                                                                           | X                     |                       |
 | `vk position center`  | Alignment to the center. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position - cell or row</li><li>Horizontal view position - cell or column</li>                                           | X                     | X                     |

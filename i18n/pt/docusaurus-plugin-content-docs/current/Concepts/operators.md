@@ -307,7 +307,7 @@ var $fullname : Text
 $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
-## Truthy and falsy
+## Truthy e falsy
 
 <details><summary>Histórico</summary>
 

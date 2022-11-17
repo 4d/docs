@@ -46,7 +46,7 @@ ASSERT($status.success)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #4D.CryptoKey.new().Syntax -->
@@ -65,12 +65,13 @@ La fonction `.4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée 
 
 #### *settings*
 
-| Propriété       | Type   | Description                                       |
-| --------------- | ------ | ------------------------------------------------- |
-| [curve](#curve) | text   | Nom de la courbe ECDSA                            |
-| [pem](#pem)     | text   | Définition PEM d'une clé de chiffrement à charger |
-| [size](#size)   | entier | Taille de la clé RSA en octets                    |
-| [type](#type)   | text   | Type de clé : "RSA", "ECDSA", ou "PEM"            |
+| Propriété       | Type   | Description                                                                                                       |
+| --------------- | ------ | ----------------------------------------------------------------------------------------------------------------- |
+| [type](#type)   | text   | Defines the type of the key to create: <li>"RSA": generates a RSA key pair, using [.size](#size) as size.</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using [.curve](#curve) as curve. A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM": loads a key pair definition in PEM format, using [.pem](#pem).</li> |
+| [curve](#curve) | text   | Nom de la courbe ECDSA                                                                                            |
+| [pem](#pem)     | text   | Définition PEM d'une clé de chiffrement à charger                                                                 |
+| [size](#size)   | entier | Taille de la clé RSA en octets                                                                                    |
+
 
 #### *CryptoKey*
 
@@ -83,7 +84,7 @@ L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
@@ -99,7 +100,7 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.decrypt().Syntax -->
@@ -147,7 +148,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.encrypt().Syntax -->
@@ -187,7 +188,7 @@ La valeur retournée est un message chiffré.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
@@ -205,6 +206,7 @@ La fonction `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->r
 
 #### *Résultat*
 
+
 La valeur retournée est la clé privée.
 <!-- END REF -->
 
@@ -215,7 +217,7 @@ La valeur retournée est la clé privée.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
@@ -244,7 +246,7 @@ La valeur retournée est la clé publique.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.pem.Syntax -->
@@ -261,7 +263,7 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
@@ -302,7 +304,7 @@ La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentat
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -318,13 +320,13 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Texte<!-- END REF -->
 
 
-Le <!-- REF #CryptoKey.type.Summary -->type de clé : "RSA", "ECDSA" ou "PEM" <!-- END REF -->.
+Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
 - "RSA" : paire de clés RSA, utilise `settings.size` pour la [.size](#size).
 - "ECDSA" : paire de clés Elliptic Curve Digital Signature Algorithm, utilise `settings.curve` pour la propriété [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.
@@ -339,7 +341,7 @@ Le <!-- REF #CryptoKey.type.Summary -->type de clé : "RSA", "ECDSA" ou "PEM" <!
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->

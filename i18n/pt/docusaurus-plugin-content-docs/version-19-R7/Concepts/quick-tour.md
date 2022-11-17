@@ -274,14 +274,14 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 - Quick Report editor as a formula for a column
 
 
-### Expression types
+### Tipos de expressões
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
 | Expression               | Tipo               | Descrição                                                                                                                                                                       |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
+| “Sr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
 | Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
 | 4                        | Número             | This is a number constant, 4.                                                                                                                                                   |
 | 4 * 2                    | Número             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |

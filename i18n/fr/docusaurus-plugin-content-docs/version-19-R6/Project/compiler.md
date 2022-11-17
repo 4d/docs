@@ -137,7 +137,7 @@ Permet de définir le nombre de passes (analyse du code) effectuées par le comp
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 

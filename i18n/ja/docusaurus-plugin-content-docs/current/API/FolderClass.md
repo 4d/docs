@@ -16,6 +16,12 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
+### パス名
+
+`Folder` オブジェクトは、`filesystems` や `posix` シンタックスを含む、いくつかのパス名をサポートしています。 使用できるパス名についての詳細は [**パス名**](../Concepts/paths.md) ページを参照ください。
+
+
+
 ### Folder オブジェクト
 
 |                                                                                                                                                                          |
@@ -53,9 +59,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| バージョン  | 内容                     |
+| ------ | ---------------------- |
+| v20    | `fk home folder` をサポート |
+| v17 R5 | 追加                     |
 
 </details>
 
@@ -101,13 +108,14 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | fk database folder         | 4   | 関連づけられたファイルシステム: "/PACKAGE"                                              |
 | fk desktop folder          | 115 |                                                                          |
 | fk documents folder        | 117 | ユーザーのドキュメントフォルダー                                                         |
+| fk home folder             | 118 | ユーザーのカレントホームフォルダー (通常は `/Users/<username>/`)                       |
 | fk licenses folder         | 1   | マシンの 4Dライセンスファイルを格納しているフォルダー                                             |
 | fk logs folder             | 7   | 関連づけられたファイルシステム: "/LOGS"                                                 |
 | fk mobileApps folder       | 10  |                                                                          |
 | fk remote database folder  | 3   | それぞれの 4Dリモートマシン上に作成された 4Dデータベースフォルダー                                     |
 | fk resources folder        | 6   | 関連づけられたファイルシステム: "/RESOURCES"                                            |
 | fk system folder           | 100 |                                                                          |
-| fk user preferences folder | 0   | ユーザー環境設定ファイルを `\<userName>` ディレクトリに保存している 4Dフォルダー                 |
+| fk user preferences folder | 0   | ユーザー環境設定ファイルを保存している、ユーザーホームフォルダー内の 4Dフォルダー                               |
 | fk web root folder         | 8   | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。そうでない場合はフルパス。 |
 
 コマンドがコンポーネントから呼び出されている場合、`*` 引数を渡してホストデータベースのパスを取得するようにします。 `*` 引数を省略すると、常に null オブジェクトが返されます。

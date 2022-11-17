@@ -282,6 +282,7 @@ This property is **read/write**.
 |Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|<!-- END REF -->
 
 
+
 #### Description
 
 The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
@@ -314,6 +315,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 |Parameter|Type||Description|
 |---|---|---|---|
 |Result|Text|<-|Line of text|<!-- END REF -->
+
 
 
 #### Description

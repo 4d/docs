@@ -16,6 +16,12 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
+### Pathnames
+
+`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+
+
+
 ### Folder object
 
 |                                                                                                                                                                          |
@@ -53,9 +59,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| Version | Changes                     |
+| ------- | --------------------------- |
+| v20     | Support of `fk home folder` |
+| v17 R5  | Added                       |
 
 </details>
 
@@ -101,13 +108,14 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | fk database folder         | 4    | Associated filesystem: "/PACKAGE"                                                                   |
 | fk desktop folder          | 115  |                                                                                                     |
 | fk documents folder        | 117  | Document folder of the user                                                                         |
+| fk home folder             | 118  | Current home folder of the user (usually `/Users/<username>/`)                                |
 | fk licenses folder         | 1    | Folder containing the machine's 4D license files                                                    |
 | fk logs folder             | 7    | Associated filesystem: "/LOGS"                                                                      |
 | fk mobileApps folder       | 10   |                                                                                                     |
 | fk remote database folder  | 3    | 4D database folder created on each 4D remote machine                                                |
 | fk resources folder        | 6    | Associated filesystem: "/RESOURCES"                                                                 |
 | fk system folder           | 100  |                                                                                                     |
-| fk user preferences folder | 0    | 4D folder that stores user preference files within the `\<userName>` directory.              |
+| fk user preferences folder | 0    | 4D folder that stores user preference files within the user home folder                             |
 | fk web root folder         | 8    | Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path |
 
 If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.

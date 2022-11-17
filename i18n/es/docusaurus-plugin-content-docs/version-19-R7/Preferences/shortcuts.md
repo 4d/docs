@@ -3,12 +3,12 @@ id: shortcuts
 title: Página Atajos
 ---
 
-This page lists all the shortcuts used in the 4D Design environment (except for standard "system" shortcuts, such as Ctrl+C/Command+C for the Copy command).
+Esta página lista todos los atajos utilizados en el entorno Diseño de 4D (excepto los atajos "sistema" estándar, como Ctrl+C/Comando+C para el comando Copiar).
 
 ![](../assets/en/Preferences/shortcuts.png)
 
-To modify a shortcut, you can select/deselect the item to modify (Shift, Alt or letter key) in the list. You can also double-click on a shortcut to configure it using a specific dialog box.
+Para modificar un atajo, puede seleccionar/deseleccionar el elemento a modificar (Mayúscula, Alt o tecla de letra) en la lista. También puede hacer doble clic en un acceso directo para configurarlo mediante una caja de diálogo específica.
 
-Note that each shortcut implicitly includes the **Ctrl** (Windows) or **Command** (macOS) key.
+Tenga en cuenta que cada acceso directo incluye implícitamente la tecla **Ctrl** (Windows) o **Comando** (macOS).
 
-If you edit this list, your custom shortcuts settings are stored in a *4DShortcutsvXX.xml* file, created at the same level as the [user preferences file](overview.md#storage). Hence, each time 4D is updated your keyboard shortcut preferences remain. 
+Si edita esta lista, la configuración de sus accesos directos personalizados se almacena en un archivo *4DShortcutsvXX.xml*, creado en el mismo nivel que [el archivo de preferencias usuario](overview.md#storage). Por lo tanto, cada vez que se actualiza 4D se mantienen sus preferencias de atajos de teclado. 

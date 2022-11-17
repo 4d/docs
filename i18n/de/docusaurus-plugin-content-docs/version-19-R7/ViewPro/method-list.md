@@ -309,10 +309,10 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 ### VP All
 
-<!-- REF #_method_.VP ALL.Syntax -->
+<!-- REF #_method_.VP All.Syntax -->
 **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | Parameter  | Typ      |    | Beschreibung                                         |
 | ---------- | -------- | -- | ---------------------------------------------------- |
@@ -324,7 +324,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 #### Beschreibung
 
-The `VP ALL` command <!-- REF #_method_.VP ALL.Summary -->returns a new range object referencing all cells<!-- END REF -->.
+The `VP ALL` command <!-- REF #_method_.VP All.Summary -->returns a new range object referencing all cells<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -346,20 +346,19 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 
 ### VP Cell
 
-<!-- REF #_method_.VP CELL.Syntax -->
+<!-- REF #_method_.VP Cell.Syntax -->
 **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| Parameter  | Typ            |    | Beschreibung                                         |
-| ---------- | -------------- | -- | ---------------------------------------------------- |
-| vpAreaName | Text           | -> | 4D View Pro area form object name                    |
-| column     | Lange Ganzzahl | -> | Sheet index (current sheet if omitted)               |
-| row        | Lange Ganzzahl | -> | Sheet index (current sheet if omitted)               |
-| sheet      | Ganzzahl       | -> | Sheet index (current sheet if omitted)               |
-| Ergebnis   | Objekt         | <- | Range object of all cells|<!-- END REF -->
-
-|
+| Parameter  | Typ            |    | Beschreibung                           |
+| ---------- | -------------- | -- | -------------------------------------- |
+| vpAreaName | Text           | -> | 4D View Pro area form object name      |
+| column     | Lange Ganzzahl | -> | Column index                           |
+| row        | Lange Ganzzahl | -> | Row index                              |
+| sheet      | Ganzzahl       | -> | Sheet index (current sheet if omitted) |
+| Ergebnis   | Objekt         | <- | Range object of a single cell          |
+<!-- END REF -->
 
 #### Beschreibung
 
@@ -535,12 +534,12 @@ Selecting the columns and running this code:
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
-<!-- REF #_method_.VP Combine Ranges.Syntax -->
-**VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | Parameter     | Typ    |    | Beschreibung                                                  |
 | ------------- | ------ | -- | ------------------------------------------------------------- |
@@ -552,7 +551,7 @@ Selecting the columns and running this code:
 
 #### Beschreibung
 
-The `VP Combine Ranges` command <!-- REF #_method_.VP Combine Ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. All of the ranges must be from the same 4D View Pro area.
+The `VP Combine Ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. All of the ranges must be from the same 4D View Pro area.
 
 In *rangeObj*, pass the first range object.
 
@@ -1323,11 +1322,12 @@ You want to trace the execution of the commands and empty the command buffer:
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| Parameter | Typ  |    | Beschreibung                                     |
-| --------- | ---- | -- | ------------------------------------------------ |
-| font      | Text | -> | Font shorthand string|<!-- END REF -->
+| Parameter | Typ    |    | Beschreibung          |
+| --------- | ------ | -- | --------------------- |
+| font      | Text   | -> | Font shorthand string |
+| Ergebnis  | Objekt | <- | Font object           |
+<!-- END REF -->
 
-|
 
 #### Beschreibung
 
@@ -1689,11 +1689,13 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |  | ------------ |
-|           |     |  |              |
+| Parameter  | Typ      |    | Beschreibung                                        |
+| ---------- | -------- | -- | --------------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area from object name                   |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)              |
+| Ergebnis   | Ganzzahl | <- | Total number of columns |<!-- END REF -->
 
-|vpAreaName  |Text|->|4D View Pro area from object name| |sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Integer|<-|Total number of columns |<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -2442,11 +2444,11 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parameter  | Typ  |    | Beschreibung                      |
-| ---------- | ---- | -- | --------------------------------- |
-| vpAreaName | Text | -> | 4D View Pro area form object name |
-
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)|
+| Parameter  | Typ      |    | Beschreibung                           |
+| ---------- | -------- | -- | -------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name      |
+| styleName  | Text     | -> | Name of style                          |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted) |
 
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
@@ -2522,7 +2524,6 @@ $styles:=VP Get stylesheets("ViewProArea")
 ```
 
 In this case, the current sheet uses two style objects:
-
 
 ```4d
 [
@@ -3229,6 +3230,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 ```
 
 ![](../assets/en/ViewPro/table-insert.png)
+
 
 
 #### See also
@@ -4612,6 +4614,7 @@ $properties:=New object("width";100;"header";"Hello World")
 VP SET COLUMN ATTRIBUTES($column;$properties)
 ```
 
+
 ![](../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
 #### See also
@@ -5513,11 +5516,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parameter | Typ    |    | Beschreibung                                     |
-| --------- | ------ | -- | ------------------------------------------------ |
-| rangeObj  | Objekt | -> | Range object of cells|<!-- END REF -->
+| Parameter | Typ |  | Beschreibung |
+| --------- | --- |  | ------------ |
+|           |     |  |              |
 
-|
+|rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Beschreibung
 

@@ -21,6 +21,9 @@ const Sections = [
         <Link to="GettingStarted/creating" >
           <Translate>Working with a project</Translate>
         </Link>
+		<Link to="Notes/updates" >
+          <i><Translate>Release Notes</Translate></i>
+        </Link>
       </div>
     ),
   }, {

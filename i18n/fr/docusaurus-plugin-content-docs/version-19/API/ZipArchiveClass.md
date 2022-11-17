@@ -41,7 +41,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 
 </details>
 
@@ -178,7 +178,7 @@ Vous souhaitez passer une collection de dossiers et de fichiers à compresser à
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 
 </details>
 

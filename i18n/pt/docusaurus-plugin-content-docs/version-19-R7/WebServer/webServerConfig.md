@@ -176,7 +176,7 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 #### Veja também
 [CORS Settings](#cors-settings)
 
-## Enable HTTP
+## Ativar HTTP
 
 | Can be set with                    | Nome                                                             | Comentários |
 | ---------------------------------- | ---------------------------------------------------------------- | ----------- |
@@ -187,7 +187,7 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 Indicates whether or not the web server will accept non-secure connections.
 
 
-## Enable HTTPS
+## Ativar HTTPS
 
 | Can be set with                    | Nome                                                 | Comentários |
 | ---------------------------------- | ---------------------------------------------------- | ----------- |
@@ -198,7 +198,7 @@ Indicates whether or not the web server will accept non-secure connections.
 Status for communication over HTTPS. This option is described in [this section](Admin/tls.md).
 
 
-## Enable HSTS
+## Ativar HSTS
 
 | Can be set with  | Nome                                               | Comentários                                     |
 | ---------------- | -------------------------------------------------- | ----------------------------------------------- |
@@ -445,7 +445,7 @@ Valores possíveis:
 
 - 1 = TLSv1_0
 - 2 = TLSv1_1
-- 3 = TLSv1_2 (default)
+- 3 = TLSv1_2 (padrão)
 - 4 = TLSv1_3
 
 Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.

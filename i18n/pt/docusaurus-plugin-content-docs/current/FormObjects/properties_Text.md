@@ -11,9 +11,9 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### Gramática JSON
 
-| Propriedade          | Tipo de dados | Valores possíveis     |
-| -------------------- | ------------- | --------------------- |
-| allowFontColorPicker | boolean       | false (default), true |
+| Propriedade          | Tipo de dados | Valores possíveis    |
+| -------------------- | ------------- | -------------------- |
+| allowFontColorPicker | boolean       | false (padrão), true |
 
 #### Objectos suportados
 
@@ -192,9 +192,9 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis     |
-| --------------- | ------------- | --------------------- |
-| rowStrokeSource | string        | Font color expression |
+| Nome            | Tipo de dados | Valores possíveis   |
+| --------------- | ------------- | ------------------- |
+| rowStrokeSource | string        | Expressão cor fonte |
 
 #### Objectos suportados
 
@@ -362,7 +362,7 @@ Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser ro
 
 | Orientation value | Resultados                                     |
 | ----------------- | ---------------------------------------------- |
-| 0 (default)       | ![](../assets/en/FormObjects/orientation1.png) |
+| 0 (o padrão)      | ![](../assets/en/FormObjects/orientation1.png) |
 | 90                | ![](../assets/en/FormObjects/orientation2.png) |
 | 180               | ![](../assets/en/FormObjects/orientation3.png) |
 | 270               | ![](../assets/en/FormObjects/orientation4.png) |
