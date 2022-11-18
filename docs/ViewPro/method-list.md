@@ -2231,6 +2231,7 @@ Get the name of the third sheet in the document:
 $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
+
 #### See also
 
 [VP Get sheet index](#vp-get-sheet-index)
@@ -2780,6 +2781,7 @@ $tables:=VP Get tables("ViewProArea")
 #### See also
 
 [VP CREATE TABLE](#vp-create-table)
+
 
 
 
@@ -4093,6 +4095,7 @@ Result:
 |Parameter|Type||Description|
 |---|---|---|---|
 |parameters   |Object|->|Object containing the offscreen area's attributes|
+
 |Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
 
 #### Description
@@ -4110,6 +4113,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 |timeout | number | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60 |
 |result| mixed| Result of the processing (if any)|
 |`\<customProperty>` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
+
 
 The following property is automatically added by the command if necessary:
 
@@ -4928,6 +4932,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
 |Parameter|Type||Description|
+
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
@@ -5804,7 +5809,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
-**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : Object )<!-- END REF -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableThemeOptions )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
@@ -5812,7 +5817,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
-|options|Object|->|Table theme properties to modify|<!-- END REF -->
+|options|cs.ViewPro.TableTheme|->|Table theme properties to modify|<!-- END REF -->
 
 
 #### Description
@@ -5821,55 +5826,7 @@ The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -
 
 In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify. 
 
-In the *options* parameter, pass an object that contains the theme properties to modify:
-
-|Property||Type|Description|
-|---|---|---|---|
-|bandColumns||boolean|Value that indicates whether to display an alternating column style|
-|bandRows||boolean|Value that indicates whether to display an alternating row style|
-|highlightFirstColumn||boolean|Value that indicates whether to highlight the first column|
-|highlightLastColumn||boolean|Value that indicates whether to highlight the first column|
-|theme||object / text|text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes); object: customized theme (see properties below)|
-||firstColumnStripSize|integer|Size of the first alternating column. Default=1 |
-||firstColumnStripStyle|themeStyle object|Style of the first alternating column|
-||firstFooterCellStyle|themeStyle object|Style of the first footer cell. "highlightFirstColumn" must be true |
-||firstHeaderCellStyle|themeStyle object|Style of the first header cell. "highlightFirstColumn" must be true |
-||firstRowStripSize|integer|Size of the first alternating column. Default=1 |
-||firstRowStripStyle|[themeStyle object](#themestyle-object)| First alternating row style |
-||footerRowStyle|[themeStyle object](#themestyle-object)|Default style of the footer area |
-||headerRowStyle|[themeStyle object](#themestyle-object)|Default style of the header area |
-||highlightFirstColumnStyle|[themeStyle object](#themestyle-object)|style of the first column. "highlightFirstColumn" must be true |
-||highlightLastColumnStyle|[themeStyle object](#themestyle-object)|style of the last column. "highlightLastColumn" must be true |
-||lastFooterCellStyle|[themeStyle object](#themestyle-object)|Style of the last footer cell. "highlightLastColumn" must be true |
-||lastHeaderCellStyle|[themeStyle object](#themestyle-object)|Style of the last header cell. "highlightLastColumn" must be true |
-||secondColumnStripSize|integer|Size of the second alternating column. Default=1 |
-||secondColumnStripStyle|[themeStyle object](#themestyle-object)|Style of the second alternating column |
-||secondRowStripSize|integer|Size of  the second alternating row. Default=1 |
-||secondRowStripStyle|[themeStyle object](#themestyle-object)|Style of the second alternating row |
-||wholeTableStyle|[themeStyle object](#themestyle-object)|Default style of the data area. |
-
-##### themeStyle object
-
-A `themeStyle` object supports the following properties:
-
-|Property|Type|Description|
-|---|---|---|
-|backColor|text|[Background color](configuring.md/#background--foreground) of the table|
-|foreColor|text|[Foreground color](configuring.md/#background--foreground) of the table|
-|font|text|Font name (see [**Fonts and text**](configuring.md/#fonts-and-text))|
-|borderLeft|[borderStyleObj](configuring.md/#borders)|Left border line of the table (see note)|
-|borderTop|[borderStyleObj](configuring.md/#borders)|Top border line of the table (see note)|
-|borderRight|[borderStyleObj](configuring.md/#borders)|Right border line of the table (see note)|
-|borderBottom|[borderStyleObj](configuring.md/#borders)|Bottom border line of the table (see note)|
-|borderHorizontal|[borderStyleObj](configuring.md/#borders) |Horizontal border line of the table (see note)|
-|borderVertical|[borderStyleObj](configuring.md/#borders)|Vertical border line of the table (see note)|
-|textDecoration|integer|Text decoration of the table (see [**Fonts and text**](configuring.md/#fonts-and-text))|
-
-:::info note
-
-"diagonal" properties are not supported in *borderStyleObj* objects in this context.
-
-:::
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class](classes.md#tabletheme) that contains the theme properties to modify. 
 
 
 #### Example 1
