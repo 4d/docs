@@ -1,4 +1,148 @@
 {
+	"LineBorder": {
+		"color": {
+			"Syntax": "**.color** : Text",
+			"Summary": "color of the border"
+		},
+		"style": {
+			"Syntax": "**.style** : Integer",
+			"Summary": "style of the border"
+		}
+	},
+	"TableStyle": {
+		"backColor": {
+			"Syntax": "**.backColor** : Text",
+			"Summary": "background color of the table"
+		},
+		"forecolor": {
+			"Syntax": "**.forecolor** : Text",
+			"Summary": "foreground color of the table"
+		},
+		"font": {
+			"Syntax": "**.font** : Text",
+			"Summary": "font name (see **Fonts and text**) of the table"
+		},
+		"textDecoration": {
+			"Syntax": "**.textDecoration** : Integer",
+			"Summary": "text decoration of the table (see **Fonts and text**)"
+		},
+		"borderLeft": {
+			"Syntax": "**.borderLeft** : cs.ViewPro.LineBorder",
+			"Summary": "left border line of the table"
+		},
+		"borderRight": {
+			"Syntax": "**.borderRight** : cs.ViewPro.LineBorder",
+			"Summary": "right border line of the table"
+		},
+		"borderBottom": {
+			"Syntax": "**.borderBottom** : cs.ViewPro.LineBorder",
+			"Summary": "bottom border line of the table"
+		},
+		"borderHorizontal": {
+			"Syntax": "**.borderHorizontal** : cs.ViewPro.LineBorder",
+			"Summary": "horizontal border line of the table"
+		},
+		"borderVertical": {
+			"Syntax": "**.borderVertical** : cs.ViewPro.LineBorder",
+			"Summary": "vertical border line of the table"
+		}
+	},
+	"TableTheme": {
+		"bandRows": {
+			"Syntax": "**.bandRows** : Boolean",
+			"Summary": "indicates whether to display an alternating row style"
+		},
+		"bandColumns": {
+			"Syntax": "**.bandColumns** : Boolean",
+			"Summary": "indicates whether to display an alternating column style"
+		},
+		"highlightLastColumn": {
+			"Syntax": "**.highlightLastColumn** : Boolean",
+			"Summary": "indicates whether to highlight the last column"
+		},
+		"highlightFirstColumn": {
+			"Syntax": "**.highlightFirstColumn** : Boolean",
+			"Summary": "indicates whether to highlight the first column"
+		},
+		"theme": {
+			"Syntax": "**.theme** : cs.ViewPro.TableThemeOptions<br/>**.theme** : Text",
+			"Summary": "defines a table theme"
+		}
+	},
+	"TableThemeOptions": {
+		"firstColumnStripSize": {
+			"Syntax": "**.firstColumnStripSize** : Integer",
+			"Summary": "size of the first alternating column"
+		},
+		"firstColumnStripStyle": {
+			"Syntax": "**.firstColumnStripStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the first alternating column"
+		},
+		"firstFooterCellStyle": {
+			"Syntax": "**.firstFooterCellStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the first footer cell"
+		},
+		"firstHeaderCellStyle": {
+			"Syntax": "**.firstHeaderCellStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the first header cell"
+		},
+		"firstRowStripSize": {
+			"Syntax": "**.firstRowStripSize** : Integer",
+			"Summary": "size of the first alternating column"
+		},
+		"firstRowStripStyle": {
+			"Syntax": "**.firstRowStripStyle** : cs.ViewPro.TableStyle",
+			"Summary": "first alternating row style"
+		},
+		"footerRowStyle": {
+			"Syntax": "**.footerRowStyle** : cs.ViewPro.TableStyle",
+			"Summary": "default style of the footer area"
+		},
+		"headerRowStyle": {
+			"Syntax": "**.headerRowStyle** : cs.ViewPro.TableStyle",
+			"Summary": "default style of the header area"
+		},
+		"highlightFirstColumnStyle": {
+			"Syntax": "**.highlightFirstColumnStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the first column"
+		},
+		"highlightLastColumnStyle": {
+			"Syntax": "**.highlightLastColumnStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the last column"
+		},
+		"lastFooterCellStyle": {
+			"Syntax": "**.lastFooterCellStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the last footer cell"
+		},
+		"lastHeaderCellStyle": {
+			"Syntax": "**.lastHeaderCellStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the last header cell"
+		},
+		"name": {
+			"Syntax": "**.name** : Text",
+			"Summary": "name name of a native SpreadJS theme"
+		},
+		"secondColumnStripSize": {
+			"Syntax": "**.secondColumnStripSize** : Integer",
+			"Summary": "size of the second alternating column"
+		},
+		"secondColumnStripStyle": {
+			"Syntax": "**.secondColumnStripStyle** : cs.ViewPro.TableStyle",
+			"Summary": "style of the second alternating column"
+		},
+		"secondRowStripSize": {
+			"Syntax": "**.secondRowStripSize** : Integer",
+			"Summary": "size of the second alternating column"
+		},
+		"secondRowStripStyle": {
+			"Syntax": "**.secondRowStripStyle** : cs.ViewPro.TableStyle",
+			"Summary": "second alternating row style"
+		},
+		"wholeTableStyle": {
+			"Syntax": "**.wholeTableStyle** : cs.ViewPro.TableStyle",
+			"Summary": "default style of the data area"
+		}
+	},
 	"_method_": {
 		"VP ADD FORMULA NAME": {
 			"Syntax": "**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )",

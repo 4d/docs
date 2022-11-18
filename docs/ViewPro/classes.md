@@ -8,153 +8,120 @@ The following classes can be used in 4D View Pro.
 
 ## LineBorder
 
-<!-- REF #LineBorder.color.Desc -->
 ### .color
 
 <!-- REF #LineBorder.color.Syntax -->**.color** : Text<!-- END REF -->
 
 The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) of the border<!-- END REF -->. Default = black.
 
-<!-- END REF -->
 
-<!-- REF #LineBorder.style.Desc -->
 ### .style
 
 <!-- REF #LineBorder.style.Syntax -->**.style** : Integer<!-- END REF -->
 
 The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Default = empty. 
 
-<!-- END REF -->
 
 
 ## TableStyle
 
-<!-- REF #TableStyle.backColor.Desc -->
 ### .backColor
 
 <!-- REF #TableStyle.backColor.Syntax -->**.backColor** : Text<!-- END REF -->
 
 The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md/#background--foreground) of the table<!-- END REF -->. 
 
-<!-- END REF -->
 
-<!-- REF #TableStyle.forecolor.Desc -->
 ### .forecolor
 
 <!-- REF #TableStyle.forecolor.Syntax -->**.forecolor** : Text<!-- END REF -->
 
 The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md/#background--foreground) of the table<!-- END REF -->. 
 
-<!-- END REF -->
 
 
-<!-- REF #TableStyle.font.Desc -->
 ### .font
 
 <!-- REF #TableStyle.font.Syntax -->**.font** : Text<!-- END REF -->
 
 The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md/#fonts-and-text)) of the table<!-- END REF -->. 
 
-<!-- END REF -->
 
 
-<!-- REF #TableStyle.textDecoration.Desc -->
 ### .textDecoration
 
 <!-- REF #TableStyle.textDecoration.Syntax -->**.textDecoration** : Integer<!-- END REF -->
 
 The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md/#fonts-and-text))<!-- END REF -->. 
 
-<!-- END REF -->
 
-<!-- REF #TableStyle.borderLeft.Desc -->
 ### .borderLeft
 
 <!-- REF #TableStyle.borderLeft.Syntax -->**.borderLeft** : cs.ViewPro.LineBorder<!-- END REF -->
 
 The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->left border line of the table <!-- END REF -->. 
 
-<!-- END REF -->
 
-<!-- REF #TableStyle.borderRight.Desc -->
 ### .borderRight
 
 <!-- REF #TableStyle.borderRight.Syntax -->**.borderRight** : cs.ViewPro.LineBorder<!-- END REF -->
 
 The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->right border line of the table <!-- END REF -->. 
 
-<!-- END REF -->
 
-<!-- REF #TableStyle.borderBottom.Desc -->
 ### .borderBottom
 
 <!-- REF #TableStyle.borderBottom.Syntax -->**.borderBottom** : cs.ViewPro.LineBorder<!-- END REF -->
 
 The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->. 
 
-<!-- END REF -->
 
 
 
-<!-- REF #TableStyle.borderHorizontal.Desc -->
 ### .borderHorizontal
 
 <!-- REF #TableStyle.borderHorizontal.Syntax -->**.borderHorizontal** : cs.ViewPro.LineBorder<!-- END REF -->
 
 The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->. 
 
-<!-- END REF -->
 
-<!-- REF #TableStyle.borderVertical.Desc -->
 ### .borderVertical
 
 <!-- REF #TableStyle.borderVertical.Syntax -->**.borderVertical** : cs.ViewPro.LineBorder<!-- END REF -->
 
 The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summary -->vertical border line of the table <!-- END REF -->. 
 
-<!-- END REF -->
 
 
 
 ## TableTheme
 
-<!-- REF #TableTheme.bandRows.Desc -->
 ### .bandRows
 
 <!-- REF #TableTheme.bandRows.Syntax -->**.bandRows** : Boolean<!-- END REF -->
 
 The `.bandRows` property <!-- REF #TableTheme.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->.
 
-<!-- END REF -->
 
-<!-- REF #TableTheme.bandColumns.Desc -->
 ### .bandColumns
 
 <!-- REF #TableTheme.bandColumns.Syntax -->**.bandColumns** : Boolean<!-- END REF -->
 
 The `.bandColumns` property <!-- REF #TableTheme.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->.
 
-<!-- END REF -->
 
-<!-- REF #TableTheme.highlightLastColumn.Desc -->
 ### .highlightLastColumn
 
 <!-- REF #TableTheme.highlightLastColumn.Syntax -->**.highlightLastColumn** : Boolean<!-- END REF -->
 
 The `.highlightLastColumn` property <!-- REF #TableTheme.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->.
 
-<!-- END REF -->
-
-<!-- REF #TableTheme.highlightFirstColumn.Desc -->
 ### .highlightFirstColumn
 
 <!-- REF #TableTheme.highlightFirstColumn.Syntax -->**.highlightFirstColumn** : Boolean<!-- END REF -->
 
 The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->.
 
-<!-- END REF -->
-
-<!-- REF #TableTheme.theme.Desc -->
 ### .theme
 
 <!-- REF #TableTheme.theme.Syntax -->**.theme** : cs.ViewPro.TableThemeOptions<br/>**.theme** : Text<!-- END REF -->
@@ -162,185 +129,119 @@ The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.S
 
 The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table theme<!-- END REF -->.
 
-<!-- END REF -->
 
 
 
 ## TableThemeOptions
 
-<!-- REF #TableThemeOptions.firstColumnStripSize.Desc -->
 ### .firstColumnStripSize
 
 <!-- REF #TableThemeOptions.firstColumnStripSize.Syntax -->**.firstColumnStripSize** : Integer<!-- END REF -->
 
 The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->size of the first alternating column<!-- END REF -->. Default=1
 
-<!-- END REF -->
-
-<!-- REF #TableThemeOptions.firstColumnStripStyle.Desc -->
 ### .firstColumnStripStyle
 
 <!-- REF #TableThemeOptions.firstColumnStripStyle.Syntax -->**.firstColumnStripStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->style of the first alternating column<!-- END REF -->. 
 
-<!-- END REF -->
-
-<!-- REF #TableThemeOptions.firstFooterCellStyle.Desc -->
 ### .firstFooterCellStyle
 
 <!-- REF #TableThemeOptions.firstFooterCellStyle.Syntax -->**.firstFooterCellStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.firstFooterCellStyle` property is the <!-- REF #TableThemeOptions.firstFooterCellStyle.Summary -->style of the first footer cell<!-- END REF -->. "highlightFirstColumn" must be true.
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.firstHeaderCellStyle.Desc -->
 ### .firstHeaderCellStyle
 
 <!-- REF #TableThemeOptions.firstHeaderCellStyle.Syntax -->**.firstHeaderCellStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->style of the first header cell<!-- END REF -->. "highlightFirstColumn" must be true.
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.firstRowStripSize.Desc -->
 ### .firstRowStripSize
 
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->**.firstRowStripSize** : Integer<!-- END REF -->
 
 The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Default=1.
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.firstRowStripStyle.Desc -->
 ### .firstRowStripStyle
 
 <!-- REF #TableThemeOptions.firstRowStripStyle.Syntax -->**.firstRowStripStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.firstRowStripStyle` property is the <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->first alternating row style<!-- END REF -->.
 
-<!-- END REF -->
-
-<!-- REF #TableThemeOptions.footerRowStyle.Desc -->
 ### .footerRowStyle
 
 <!-- REF #TableThemeOptions.footerRowStyle.Syntax -->**.footerRowStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.footerRowStyle` property is the <!-- REF #TableThemeOptions.footerRowStyle.Summary -->default style of the footer area<!-- END REF -->.
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.headerRowStyle.Desc -->
 ### .headerRowStyle
 
 <!-- REF #TableThemeOptions.headerRowStyle.Syntax -->**.headerRowStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.headerRowStyle` property is the <!-- REF #TableThemeOptions.headerRowStyle.Summary -->default style of the header area<!-- END REF -->.
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.highlightFirstColumnStyle.Desc -->
 ### .highlightFirstColumnStyle
 
 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Syntax -->**.highlightFirstColumnStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.highlightFirstColumnStyle` property is the <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style of the first column<!-- END REF -->. "highlightFirstColumn" must be true. 
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.highlightLastColumnStyle.Desc -->
 ### .highlightLastColumnStyle
 
 <!-- REF #TableThemeOptions.highlightLastColumnStyle.Syntax -->**.highlightLastColumnStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.highlightLastColumnStyle` property is the <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->style of the last column<!-- END REF -->. "highlightLastColumn" must be true. 
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.lastFooterCellStyle.Desc -->
 ### .lastFooterCellStyle
 
 <!-- REF #TableThemeOptions.lastFooterCellStyle.Syntax -->**.lastFooterCellStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->style of the last footer cell<!-- END REF -->. "highlightLastColumn" must be true. 
 
-<!-- END REF -->
-
-<!-- REF #TableThemeOptions.lastHeaderCellStyle.Desc -->
 ### .lastHeaderCellStyle
 
 <!-- REF #TableThemeOptions.lastHeaderCellStyle.Syntax -->**.lastHeaderCellStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style of the last header cell<!-- END REF -->. "highlightLastColumn" must be true. 
 
-<!-- END REF -->
-
-<!-- REF #TableThemeOptions.name.Desc -->
 ### .name
 
 <!-- REF #TableThemeOptions.name.Syntax -->**.name** : Text<!-- END REF -->
 
 The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->. 
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.secondColumnStripSize.Desc -->
 ### .secondColumnStripSize
 
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->**.secondColumnStripSize** : Integer<!-- END REF -->
 
 The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Default=1
 
-<!-- END REF -->
-
-<!-- REF #TableThemeOptions.secondColumnStripStyle.Desc -->
 ### .secondColumnStripStyle
 
 <!-- REF #TableThemeOptions.secondColumnStripStyle.Syntax -->**.secondColumnStripStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->style of the second alternating column<!-- END REF -->. 
 
-<!-- END REF -->
-
-
-
-<!-- REF #TableThemeOptions.secondRowStripSize.Desc -->
 ### .secondRowStripSize
 
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->**.secondRowStripSize** : Integer<!-- END REF -->
 
 The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. Default=1.
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.secondRowStripStyle.Desc -->
 ### .secondRowStripStyle
 
 <!-- REF #TableThemeOptions.secondRowStripStyle.Syntax -->**.secondRowStripStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->second alternating row style<!-- END REF -->.
 
-<!-- END REF -->
-
-
-<!-- REF #TableThemeOptions.wholeTableStyle.Desc -->
 ### .wholeTableStyle
 
 <!-- REF #TableThemeOptions.wholeTableStyle.Syntax -->**.wholeTableStyle** : cs.ViewPro.TableStyle<!-- END REF -->
 
 The `.wholeTableStyle` property is the <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->default style of the data area<!-- END REF -->.
 
-<!-- END REF -->
 
 
 
