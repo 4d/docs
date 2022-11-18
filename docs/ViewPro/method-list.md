@@ -774,7 +774,7 @@ In *options*, you can pass an object with additional options for the table. Poss
 |bandRows|boolean|Value that indicates whether to display an alternating row style|True|
 |highlightFirstColumn|boolean|Value that indicates whether to highlight the first column|False|
 |highlightLastColumn|boolean|Value that indicates whether to highlight the first column|False|
-|theme|object / text|text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/demos/features/pivot-table/pivot-customize/pivot-theme/purejs); object: customized theme (see [`VP TABLE SET THEME`](#vp-table-set-theme) description)||
+|theme|object / text|text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/demos/features/pivot-table/pivot-customize/pivot-theme/purejs); object: object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class||
 |showFooter|Boolean|Display a footer| False
 |showHeader|Boolean|Display a header| True
 |showResizeHandle|Boolean|For tables that don't have a *source*. Display the resize handle| False
@@ -2232,6 +2232,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
 
+
 #### See also
 
 [VP Get sheet index](#vp-get-sheet-index)
@@ -2694,7 +2695,7 @@ If *tableName* is not found, the command returns **null**.
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
-**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : Object<!-- END REF -->
+**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
@@ -2702,17 +2703,16 @@ If *tableName* is not found, the command returns **null**.
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
-|Result|Object|<-|Current table theme property values|<!-- END REF -->
+|Result|[cs.ViewPro.TableTheme](classes.md#tabletheme)|<-|Current table theme property values|<!-- END REF -->
 
 
 #### Description
 
-The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or `VP SET TABLE THEME`(#vp-set-table-name) commands, or through the interface. 
+The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface. 
 
 In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table. 
 
-The command returns an object with properties and values that describe the current table theme. See the [`VP SET TABLE THEME` command](#vp-table-set-theme) for a detailed description of the returned object.
-
+The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme. 
 
 
 #### Example
@@ -2781,6 +2781,7 @@ $tables:=VP Get tables("ViewProArea")
 #### See also
 
 [VP CREATE TABLE](#vp-create-table)
+
 
 
 
@@ -3602,6 +3603,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 //$formula=null
 ```
 
+
 #### See also
 
 [VP Name](#vp-name)
@@ -4256,6 +4258,7 @@ VP SET ACTIVE CELL($activeCell)
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
 
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |methodObj   |Object|->|Allowed methods in the 4D View Pro areas|<!-- END REF -->
@@ -4817,6 +4820,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 #### Example 2
 
 Pass a collection of objects and generate columns automatically:
+
 
 ```4d
 var $options : Object
@@ -5809,7 +5813,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
-**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableThemeOptions )<!-- END REF -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
@@ -5817,7 +5821,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
-|options|cs.ViewPro.TableTheme|->|Table theme properties to modify|<!-- END REF -->
+|options|[cs.ViewPro.TableTheme](classes.md#tabletheme)|->|Table theme properties to modify|<!-- END REF -->
 
 
 #### Description

@@ -144,6 +144,7 @@ The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.S
 
 
 The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table theme<!-- END REF -->.
+If Text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 
@@ -239,7 +240,7 @@ The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeade
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->. 
+The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->. 
 
 ### .secondColumnStripSize
 
