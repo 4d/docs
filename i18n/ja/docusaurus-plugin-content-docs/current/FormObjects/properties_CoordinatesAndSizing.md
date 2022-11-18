@@ -5,12 +5,12 @@ title: 座標とサイズ
 
 ## 自動行高
 
-This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
+このプロパティが利用できるのは、リストボックスの [データソース](properties_Object.md#データソース) が次の場合に限ります:
 
-- collection or entity selection,
-- array (non-hierarchical).
+- コレクションまたはエンティティセレクション
+- 配列 (階層でない)
 
-このプロパティはデフォルトではチェックされていません。 When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
+このプロパティはデフォルトではチェックされていません。 少なくとも 1つのカラムにおいてこのプロパティが有効化されていると、カラムの内容に応じて各行の高さが 4D によって自動的に計算されます 行の高さを計算する際には、このオプションがチェックされているカラムのみが考慮されることに注意が必要です。
 
 :::note
 
@@ -259,7 +259,7 @@ RowHeights{5}:=3
 
 ここで行の単位が "行" であったとすると、リストボックスの 5行目は 3行分の高さになる一方、他の行はデフォルトの高さを保ちます。
 > * 行高さ配列プロパティは、階層リストボックスに対しては効力を持ちません。
-> * For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+> * 配列型およびコレクション/エンティティセレクション型のリストボックスの場合、このプロパティは [自動行高](#自動行高) オプションがチェックされていない場合に限り使用可能です。
 
 #### JSON 文法
 
