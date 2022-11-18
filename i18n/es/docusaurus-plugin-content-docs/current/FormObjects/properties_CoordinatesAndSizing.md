@@ -5,10 +5,18 @@ title: Coordenadas y dimensiones
 
 ## Altura de línea automática
 
-Esta propiedad sólo está disponible para los list box de tipo array, no jerárquicos. Esta propiedad no está seleccionada por defecto.
+This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
-Cuando se utiliza, la altura de cada línea de la columna será calculada automáticamente por 4D, y se tendrá en cuenta el contenido de la columna. Tenga en cuenta que sólo se tendrán en cuenta las columnas con la opción seleccionada para calcular el alto de línea.
-> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandar" fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+- collection or entity selection,
+- array (non-hierarchical).
+
+Esta propiedad no está seleccionada por defecto. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Tenga en cuenta que sólo se tendrán en cuenta las columnas con la opción seleccionada para calcular el alto de línea.
+
+:::nota
+
+Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandar" fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+
+:::
 
 Cuando esta propiedad está activada, la altura de cada línea se calcula automáticamente para que el contenido de la celda quepa por completo sin ser truncado (a menos que la opción [Wordwrap](properties_Display.md#wordwrap) esté desactivada.
 
@@ -21,7 +29,13 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 * El cálculo de la altura de línea no tiene en cuenta:
   * contenido de columna oculta
   * Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
-> > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+
+:::caution
+
+> Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+
+:::
+
 
 #### Gramática JSON
 
@@ -245,7 +259,7 @@ RowHeights{5}:=3
 
 Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea del list box tendrá una altura de tres líneas, mientras que todas las demás líneas mantendrán su altura por defecto.
 > * Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
-> * Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal "Agrandar"](properties_ResizingOptions.md#horizontal-sizing) fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
+> * For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
 
 #### Gramática JSON
 

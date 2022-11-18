@@ -5,10 +5,18 @@ title: Coordonnées & dimensions
 
 ## Hauteur de ligne automatique
 
-Cette propriété n'est disponible que pour les list box de type tableau, non hiérarchiques. Par défaut, cette option n'est pas sélectionnée.
+This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
-Lorsqu'elle est utilisée, la hauteur de chaque ligne de la colonne est automatiquement calculée par 4D, et le contenu de la colonne est pris en compte. A noter que seules les colonnes avec l'option sélectionnée seront prises en compte pour calculer la hauteur de ligne.
-> Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandir" a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
+- collection or entity selection,
+- array (non-hierarchical).
+
+Par défaut, cette option n'est pas sélectionnée. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. A noter que seules les colonnes avec l'option sélectionnée seront prises en compte pour calculer la hauteur de ligne.
+
+:::note
+
+Lors du redimensionnement du formulaire, si la propriété de [dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandir" a été affectée à la list box, la colonne la plus à droite sera agrandie, allant au-delà de sa largeur maximale, si nécessaire.
+
+:::
 
 Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiquement calculée afin d'ajuster entièrement le contenu de la cellule ajusté sans être tronqué (sauf si l'option [Wordwrap](properties_Display.md#wordwrap) est désactivée.
 
@@ -21,7 +29,13 @@ Lorsque cette propriété est activée, la hauteur de chaque ligne est automatiq
 * Le calcul de la hauteur de ligne ne tient pas compte de :
   * du contenu de colonne masqué
   * des propriétés du tableau [Hauteur de ligne](#row-height) et [Tableau hauteur de lignes](#row-height-array) (le cas échéant) définies dans la liste de propriété ou par programmation.
-> > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+
+:::caution
+
+> Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+
+:::
+
 
 #### Grammaire JSON
 
@@ -245,7 +259,7 @@ RowHeights{5}:=3
 
 En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne de la list box aura une hauteur de trois lignes, tandis que chaque autre ligne conservera sa hauteur par défaut.
 > * La propriété Row Height Array n'est pas prise en compte pour les list box hiérarchiques.
-> * Pour les list box de type tableau, cette propriété n'est disponible que si l'option [Hauteur de ligne automatique](#automatic-row-height) n'est pas sélectionnée.
+> * For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
 
 #### Grammaire JSON
 
