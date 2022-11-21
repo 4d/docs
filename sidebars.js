@@ -274,6 +274,7 @@ module.exports =
 								"ViewPro/configuring",
 								"ViewPro/formulas",
 								"ViewPro/method-list",
+								"ViewPro/classes",
 								"ViewPro/advanced-programming"
 									]
 							},

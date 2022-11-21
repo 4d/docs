@@ -1,0 +1,2678 @@
+{
+	"_method_": {
+		"VP ADD FORMULA NAME": {
+			"Syntax": "**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"vpFormula",
+					"Text",
+					"->",
+					"Fórmula 4D View Pro"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"Nombre de la fórmula"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"Opciones de la fórmula nombrada"
+				]
+			],
+			"Summary": "crea o modifica una fórmula temporal en el documento abierto"
+		},
+		"VP ADD RANGE NAME": {
+			"Syntax": "**VP ADD RANGE NAME** ( *rangeObj* : Object ; *name* : Text { ; *options* : Object } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"Nombre de la fórmula"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"Opciones de la fórmula nombrada"
+				]
+			],
+			"Summary": "crea o modifica un rango temporal en el documento abierto"
+		},
+		"VP ADD SELECTION": {
+			"Syntax": "**VP ADD SELECTION** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Text",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "añade las celdas especificadas a las celdas actualmente seleccionadas"
+		},
+		"VP ADD SHEET": {
+			"Syntax": "**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Indice de la nueva hoja"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"Nombre de la hoja"
+				]
+			],
+			"Summary": "inserta una hoja en el documento cargado en *vpAreaName*."
+		},
+		"VP ADD SPAN": {
+			"Syntax": "**VP ADD SPAN** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			]
+		},
+		"VP ADD STYLESHEET": {
+			"Syntax": "**VP ADD STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text ; *styleObj* : Object { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"styleName",
+					"Text",
+					"->",
+					"Nombre del estilo"
+				],
+				[
+					"styleObj",
+					"Object",
+					"->",
+					"Objeto definiendo las propiedades del atributo"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "crea o modifica la hoja de estilo *styleName* basándose en la combinación de las propiedades especificadas en *styleObj* en el documento abierto"
+		},
+		"VP All": {
+			"Syntax": "**VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto rango de todas las celdas"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto de rango que hace referencia a todas las celdas"
+		},
+		"VP Cell": {
+			"Syntax": "**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"column",
+					"Longint",
+					"->",
+					"Índice de la columna"
+				],
+				[
+					"row",
+					"Longint",
+					"->",
+					"Índice de la línea"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto rango de una sola celda"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto de rango que hace referencia a una celda específica"
+		},
+		"VP Cells": {
+			"Syntax": "**VP Cells** ( *vpAreaName* : Text ; *column*: Integer ; *row*: Integer ; *columnCount* : Integer ; *rowCount* : Integer { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"Índice de la columna"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"Índice de la línea"
+				],
+				[
+					"columnCount",
+					"Integer",
+					"->",
+					"Número de columnas"
+				],
+				[
+					"rowCount",
+					"Integer",
+					"->",
+					"Número de líneas"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto rango de celdas"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto de rango que hace referencia a celdas específicas"
+		},
+		"VP Column": {
+			"Syntax": "**VP Column** ( *vpAreaName* : Text ; *column*: Integer ; *columnCount* : Integer { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"Índice de la columna"
+				],
+				[
+					"columnCount",
+					"Integer",
+					"->",
+					"Número de columnas"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto rango de celdas"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto rango que hace referencia a una o varias columnas específicas"
+		},
+		"VP COLUMN AUTOFIT": {
+			"Syntax": "**VP COLUMN AUTOFIT** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "dimensiona automáticamente la(s) columna(s) de *rangeObj* en función de su contenido"
+		},
+		"VP Combine ranges": {
+			"Syntax": "**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"otherRangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto que contiene un rango combinado"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto de rango que integra dos o más objetos rango existentes"
+		},
+		"VP Convert from 4D View": {
+			"Syntax": "**VP Convert from 4D View** ( *4DViewDocument* : Blob ) : Object",
+			"Params": [
+				[
+					"4DViewDocument",
+					"Blob",
+					"->",
+					"Documento 4D View"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto 4D View Pro"
+				]
+			],
+			"Summary": "permite convertir un documento heredado 4D View en un objeto 4D View Pro"
+		},
+		"VP Convert to picture": {
+			"Syntax": "**VP Convert to picture** ( *vpObject* : Object {; *rangeObj* : Object} ) : Picture",
+			"Params": [
+				[
+					"vpObject",
+					"Object",
+					"->",
+					"Objeto 4D View Pro que contiene el área a convertir"
+				],
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Imagen SVG del área"
+				]
+			],
+			"Summary": "convierte el objeto *vpObject* de 4D View Pro (o el rango *rangeObj* dentro de *vpObject*) en una imagen SVG"
+		},
+		"VP Copy to object": {
+			"Syntax": "**VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"Opciones adicionales"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto devuelto. Contiene los datos copiados"
+				]
+			],
+			"Summary": "copia el contenido, el estilo y las fórmulas de *rangeObj* a un objeto"
+		},
+		"VP CREATE TABLE": {
+			"Syntax": "**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"source",
+					"Text",
+					"->",
+					"Nombre de la propiedad del contexto de datos a mostrar en la tabla"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"Opciones adicionales"
+				]
+			],
+			"Summary": "crea una tabla en el rango especificado"
+		},
+		"VP DELETE COLUMNS": {
+			"Syntax": "**VP DELETE COLUMNS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "elimina las columnas en el *rangeObj*"
+		},
+		"VP DELETE ROWS": {
+			"Syntax": "**VP DELETE ROWS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "elimina las líneas en el *rangeObj*"
+		},
+		"VP EXPORT DOCUMENT": {
+			"Syntax": "**VP EXPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text {; *paramObj* : Object} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"filePath",
+					"Text",
+					"->",
+					"Ruta de acceso del documento"
+				],
+				[
+					"paramObj",
+					"Object",
+					"->",
+					"Opciones de exportación"
+				]
+			],
+			"Summary": "exporta el objeto 4D View Pro adjunto al área 4D View Pro *vpAreaName* a un documento en disco según los parámetros *filePath* y *paramObj*"
+		},
+		"VP Export to object": {
+			"Syntax": "**VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"Opciones de exportación"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto 4D View Pro"
+				]
+			],
+			"Summary": "devuelve el objeto 4D View Pro adjunto al área 4D View Pro *vpAreaName*"
+		},
+		"VP Find": {
+			"Syntax": "**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object } ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object ; *replaceValue* : Text ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"searchValue",
+					"Text",
+					"->",
+					"Valor de búsqueda"
+				],
+				[
+					"searchCondition",
+					"Object",
+					"->",
+					"Objeto que contiene la(s) condición(es) de búsqueda"
+				],
+				[
+					"replaceValue",
+					"Text",
+					"->",
+					"Valor de reemplazo"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto rango"
+				]
+			],
+			"Summary": "busca en *rangeObj* la *searchValue*"
+		},
+		"VP Find table": {
+			"Syntax": "**VP Find table** ( *rangeObj* : Object ) : Text",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Rango de celdas"
+				],
+				[
+					"Result",
+					"Text",
+					"<-",
+					"Nombre de la tabla"
+				]
+			],
+			"Summary": "devuelve el nombre de la tabla a la que pertenece la celda de *rangeObj*"
+		},
+		"VP FLUSH COMMANDS": {
+			"Syntax": "**VP FLUSH COMMANDS** (  *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				]
+			],
+			"Summary": "ejecuta inmediatamente los comandos almacenados y borra el buffer de comandos"
+		},
+		"VP Font to object": {
+			"Syntax": "**VP Font to object** (  *font* : Text ) : Object",
+			"Params": [
+				[
+					"font",
+					"Text",
+					"->",
+					"Cadena abreviada para la fuente"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto fuente"
+				]
+			],
+			"Summary": "devuelve un objeto a partir de una cadena abreviada de fuentes"
+		},
+		"VP Get active cell": {
+			"Syntax": "**VP Get active cell** (  *vpAreaName* : Text { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto rango de una sola celda"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto rango que hace referencia a la celda activa y en la que se introducirán nuevos datos"
+		},
+		"VP Get binding path": {
+			"Syntax": "**VP Get binding path** ( *rangeObj* : Object ) : Text",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Text",
+					"<-",
+					"Nombre del atributo vinculado a la celda"
+				]
+			],
+			"Summary": "devuelve el nombre del atributo ligado a la celda especificada en *rangeObj*"
+		},
+		"VP Get cell style": {
+			"Syntax": "**VP Get cell style** (  *rangeObj* : Object ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto style"
+				]
+			],
+			"Summary": "devuelve un objeto estilo para la primera celda del *rangeObj*"
+		},
+		"VP Get column attributes": {
+			"Syntax": "**VP Get column attributes** (  *rangeObj* : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Collection",
+					"<-",
+					"Colección de propiedades de columnas"
+				]
+			],
+			"Summary": "devuelve una colección de propiedades para las columas de *rangeObj*"
+		},
+		"VP Get column count": {
+			"Syntax": "**VP Get column count** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Integer",
+					"<-",
+					"Número total de columnas"
+				]
+			],
+			"Summary": "devuelve el número total de columnas de la *sheet* designada"
+		},
+		"VP Get current sheet": {
+			"Syntax": "**VP Get current sheet** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"Resultado",
+					"Integer",
+					"<-",
+					"Indice de la hoja actual"
+				]
+			],
+			"Summary": "devuelve el índice de la hoja actual en *vpAreaName*. La hoja actual es la hoja seleccionada en el documento."
+		},
+		"VP Get data context": {
+			"Syntax": "**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Object",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja para obtener el contexto de datos"
+				],
+				[
+					"Result",
+					"Object &#124; Collection",
+					"<-",
+					"Contexto de los datos"
+				]
+			],
+			"Summary": "devuelve el contexto de datos actual de una hoja de cálculo"
+		},
+		"VP Get default style": {
+			"Syntax": "**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Integer",
+					"<-",
+					"Número total de columnas"
+				]
+			],
+			"Summary": "devuelve un objeto style por defecto para una hoja"
+		},
+		"VP Get formula": {
+			"Syntax": "**VP Get formula** ( *rangeObj* : Object) : Text",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Text",
+					"<-",
+					"Formula"
+				]
+			],
+			"Summary": "recupera la fórmula de un rango de celdas designado"
+		},
+		"VP Get formula by name": {
+			"Syntax": "**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"Nombre del rango nombrado"
+				],
+				[
+					"scope",
+					"Number",
+					"->",
+					"Alcance objetivo (por defecto=hoja actual)"
+				],
+				[
+					"Result",
+					"Text",
+					"<-",
+					"Definición de la fórmula o rango con nombre"
+				]
+			],
+			"Summary": "devuelve la fórmula y el comentario correspondientes al rango con nombre o a la fórmula con nombre pasados en el parámetro *name*, o **null** si no existe en el alcance definido"
+		},
+		"VP Get formulas": {
+			"Syntax": "**VP Get formulas** ( *rangeObj* : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Collection",
+					"<-",
+					"Colección de valores de una fórmula"
+				]
+			],
+			"Summary": "recupera las fórmulas de un *rangeObj* designado"
+		},
+		"VP Get frozen panes": {
+			"Syntax": "**VP Get frozen panes** ( vpAreaName : Text { ; sheet : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto que contiene la información de las columnas y líneas congeladas"
+				]
+			],
+			"Summary": "devuelve un objeto con información sobre las columnas y líneas congeladas en *vpAreaName*"
+		},
+		"VP Get names": {
+			"Syntax": "**VP Get names** ( vpAreaName : Text { ; scope : Number } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"scope",
+					"Number",
+					"->",
+					"Alcance objetivo (por defecto= hoja actual)"
+				],
+				[
+					"Result",
+					"Collection",
+					"<-",
+					"Nombres existentes en el alcance definido"
+				]
+			],
+			"Summary": "devuelve una colección de todos los \"nombres\" definidos en la hoja actual o en el alcance designado en el parámetro *scope*"
+		},
+		"VP Get print info": {
+			"Syntax": "**VP Get print info** ( vpAreaName : Text { ; sheet : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto que contiene la información de impresión"
+				]
+			],
+			"Summary": "devuelve un objeto que contiene los atributos de impresión de *vpAreaName*"
+		},
+		"VP Get row attributes": {
+			"Syntax": "**VP Get row attributes** ( rangeObj : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Collection",
+					"<-",
+					"Colección de propiedades de la línea"
+				]
+			],
+			"Summary": "devuelve una colección de propiedades para las líneas de *rangeObj*"
+		},
+		"VP Get row count": {
+			"Syntax": "**VP Get row count** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Integer",
+					"<-",
+					"Número total de líneas"
+				]
+			],
+			"Summary": "devuelve el número total de líneas de la *sheet* designada"
+		},
+		"VP Get selection": {
+			"Syntax": "**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto rango de celdas"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto rango que hace referencia a las celdas actuales seleccionadas"
+		},
+		"VP Get sheet count": {
+			"Syntax": "**VP Get sheet count** ( *vpAreaName* : Text ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"Resultado",
+					"Integer",
+					"<-",
+					"Número de hojas"
+				]
+			],
+			"Summary": "devuelve el número de hojas en el documento cargado en *vpAreaName*."
+		},
+		"VP Get sheet index": {
+			"Syntax": "**VP Get sheet index** ( *vpAreaName* : Text ; *name* : Text ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"Nombre de la hoja"
+				],
+				[
+					"Resultado",
+					"Integer",
+					"<-",
+					"Índice de la hoja"
+				]
+			],
+			"Summary": "devuelve el índice de una hoja en función de su nombre en *vpAreaName*."
+		},
+		"VP Get sheet name": {
+			"Syntax": "**VP Get sheet name** ( *vpAreaName* : Text ; *sheet* : Integer ) : Text",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja"
+				],
+				[
+					"Resultado",
+					"Text",
+					"<-",
+					"Nombre de la hoja"
+				]
+			],
+			"Summary": "devuelve el nombre de una hoja en función de su índice en *vpAreaName*."
+		},
+		"VP Get sheet options": {
+			"Syntax": "**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto opciones de la hoja"
+				]
+			],
+			"Summary": "devuelve un objeto que contiene las opciones relativas a la hoja actual del área *vpAreaName*"
+		},
+		"VP Get show print lines": {
+			"Syntax": "**VP Get show print lines** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Boolean",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"<-",
+					"Índice de la hoja"
+				],
+				[
+					"Resultado",
+					"Boolean",
+					"<-",
+					"True si las líneas de impresión son visibles, de lo contrario False"
+				]
+			],
+			"Summary": "devuelve `True` si las líneas de previsualizacipon de impresión son visibles y `False` si están ocultas."
+		},
+		"VP Get spans": {
+			"Syntax": "**VP Get spans** ( *rangeObj* : Object ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto de celdas fusionadas en el rango definido"
+				]
+			],
+			"Summary": "recupera las celdas fusionadas (cell spans) de e*rangeObj*"
+		},
+		"VP Get stylesheet": {
+			"Syntax": "**VP Get stylesheet** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"styleName",
+					"Text",
+					"->",
+					"Nombre del estilo"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Style sheet object"
+				]
+			],
+			"Summary": "devuelve el objeto hoja de estilo *styleName* que contiene los valores de las propiedades que se han definido"
+		},
+		"VP Get stylesheets": {
+			"Syntax": "**VP Get stylesheets** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Alcance objetivo (por defecto = hoja actual)"
+				],
+				[
+					"Result",
+					"Collection",
+					"<-",
+					"Colección de objetos de hojas de estilo"
+				]
+			],
+			"Summary": "devuelve la colección de objetos hoja de estilo definidos en la *sheet* designada"
+		},
+		"VP Get table column attributes": {
+			"Syntax": "**VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"Índice de la columna en la tabla"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Atributos de la *columna*"
+				]
+			],
+			"Summary": "devuelve los atributos actuales de la *column* especificada en *tableName*"
+		},
+		"VP Get table column index": {
+			"Syntax": "**VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"columnName",
+					"Text",
+					"->",
+					"Nombre de la columna de la tabla"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Integer",
+					"<-",
+					"Índice de *columnName*"
+				]
+			],
+			"Summary": "devuelve el índice de la columna *columnName* en la tabla *tableName*"
+		},
+		"VP Get table range": {
+			"Syntax": "**VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"onlyData",
+					"Integer",
+					"->",
+					"`vk table full range` (por defecto) o `vk table data range`"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Rango que contiene la tabla"
+				]
+			],
+			"Summary": "devuelve el rango de *tableName*"
+		},
+		"VP Get tables": {
+			"Syntax": "**VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Collection",
+					"<-",
+					"Colección de textos con todos los nombres de las tablas"
+				]
+			],
+			"Summary": "devuelve una colección de todos los nombres de tablas definidos en *sheet*"
+		},
+		"VP Get value": {
+			"Syntax": "**VP Get value** ( *rangeObj* : Object ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto que contiene un valor de celda"
+				]
+			],
+			"Summary": "recupera un valor de celda de un rango de celdas designado"
+		},
+		"VP Get values": {
+			"Syntax": "**VP Get values** ( *rangeObj* : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"Result",
+					"Collection",
+					"<-",
+					"Colección de valores"
+				]
+			],
+			"Summary": "recupera los valores del *rangeObj* designado"
+		},
+		"VP Get workbook options": {
+			"Syntax": "**VP Get workbook options** ( *vpAreaName* : Text ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Objeto que contiene las opciones del libro de trabajo"
+				]
+			]
+		},
+		"Get workbook options": {
+			"Summary": "devuelve un objeto que contiene las opciones del workbook en *vpAreaName*"
+		},
+		"VP IMPORT DOCUMENT": {
+			"Syntax": "**VP IMPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text { ; *paramObj* : Object} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"filePath",
+					"Text",
+					"->",
+					"Ruta de acceso del documento"
+				],
+				[
+					"paramObj",
+					"Object",
+					"->",
+					"Opciones de importación"
+				]
+			],
+			"Summary": "importa y muestra el documento designado por *filePath* en el área 4D View Pro *vpAreaName*"
+		},
+		"VP IMPORT FROM OBJECT": {
+			"Syntax": "**VP IMPORT FROM OBJECT** ( *vpAreaName* : Text  { ; *viewPro* : Object} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"viewPro",
+					"Object",
+					"->",
+					"Objeto 4D View Pro"
+				]
+			],
+			"Summary": "importa y muestra el objeto 4D View Pro *viewPro* en el área 4D View Pro *vpAreaName*"
+		},
+		"VP INSERT COLUMNS": {
+			"Syntax": "**VP INSERT COLUMNS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "inserta columnas en el *rangeObj*"
+		},
+		"VP INSERT ROWS": {
+			"Syntax": "**VP INSERT ROWS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "inserta las líneas definidas por el *rangeObj*"
+		},
+		"VP INSERT TABLE COLUMNS": {
+			"Syntax": "**VP INSERT TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"Índice en la tabla de la columna inicial a insertar"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"Número de columnas a añadir (debe ser >0)"
+				],
+				[
+					"insertAfter",
+					"Integer",
+					"->",
+					"`vk table insert before` o `vk table insert after` *column*"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "inserta una o *count* columna(s) vacía(s) en la tabla especificada *tableName* en el índice *column* especificado"
+		},
+		"VP INSERT TABLE ROWS": {
+			"Syntax": "**VP INSERT TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"Índice en la tabla de la línea inicial a insertar"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"Número de líneas a añadir (debe ser >0)"
+				],
+				[
+					"insertAfter",
+					"Integer",
+					"->",
+					"`vk table insert before` o `vk table insert after` *row*"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "elimina una o *count* línea(s) vacías en la tabla *tableName* especificada en el índice *row* especificado"
+		},
+		"VP MOVE CELLS": {
+			"Syntax": "**VP MOVE CELLS** ( *originRange* : Object ; *targetRange* : Object ; *options* : Object )",
+			"Params": [
+				[
+					"originRange",
+					"Object",
+					"->",
+					"Rango de celdas desde donde copiar"
+				],
+				[
+					"targetRange",
+					"Object",
+					"->",
+					"Rango de destino para los valores, el formato y las fórmulas"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"Opciones adicionales"
+				]
+			],
+			"Summary": "mueve o copia los valores, el estilo y las fórmulas de *originRange* a *targetRange*"
+		},
+		"VP Name": {
+			"Syntax": "**VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"rangeName",
+					"Text",
+					"->",
+					"Nombre del rango existente"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Ubicación del rango (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Rango de nombre"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto rango que hace referencia a un rango con nombre"
+		},
+		"VP NEW DOCUMENT": {
+			"Syntax": "**VP NEW DOCUMENT** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				]
+			],
+			"Summary": "carga y muestra un nuevo documento por defecto en el objeto de área de formulario de 4D View Pro *vpAreaName*"
+		},
+		"VP Object to font": {
+			"Syntax": "**VP Object to font** ( *fontObj* : Object ) : Text",
+			"Params": [
+				[
+					"font object",
+					"Object",
+					"->",
+					"Objeto fuente"
+				],
+				[
+					"Result",
+					"Text",
+					"<-",
+					"Cadena de texto corto de la fuente"
+				]
+			],
+			"Summary": "devuelve una cadena de caracteres de *fontObj*"
+		},
+		"PASTE FROM OBJECT": {
+			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto de rango de celda"
+				],
+				[
+					"dataObject",
+					"Object",
+					"->",
+					"Objeto que contiene los datos a pegar"
+				],
+				[
+					"options",
+					"Longint",
+					"->",
+					"Especifica lo que se pega"
+				]
+			],
+			"Summary": "pega el contenido, el estilo y las fórmulas almacenadas en *dataObject* al objeto *rangeObj*"
+		},
+		"VP PRINT": {
+			"Syntax": "**VP PRINT** ( *vpAreaName* : Text  { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "abre una ventana de diálogo de impresión para imprimir *vpAreaName*"
+		},
+		"VP RECOMPUTE FORMULAS": {
+			"Syntax": "**VP RECOMPUTE FORMULAS** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				]
+			],
+			"Summary": "evalúa inmediatamente todas las fórmulas en *vpAreaName*"
+		},
+		"VP REMOVE NAME": {
+			"Syntax": "**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"Nombre del rango nombrado o fórmula nombrada a eliminar"
+				],
+				[
+					"scope",
+					"Integer",
+					"->",
+					"Alcance objetivo (por defecto=hoja actual)"
+				]
+			],
+			"Summary": "elimina el rango con nombre o la fórmula con nombre pasada en el parámetro *name* en el *scope* definido"
+		},
+		"VP REMOVE SHEET": {
+			"Syntax": "**VP REMOVE SHEET** ( *vpAreaName* : Text ; *index*: Integer )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"index",
+					"Integer",
+					"->",
+					"Índice de la hoja a eliminar"
+				]
+			],
+			"Summary": "elimina la hoja con el *index* especificado del documento cargado en *vpAreaName*"
+		},
+		"VP REMOVE SPAN": {
+			"Syntax": "**VP REMOVE SPAN** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "elimina el span de las celdas en *rangeObj*"
+		},
+		"VP REMOVE STYLESHEET": {
+			"Syntax": "**VP REMOVE STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"styleName",
+					"Text",
+					"->",
+					"Nombre del estilo a eliminar"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "elimina la hoja de estilo pasada en *styleName* del *vpAreaName*"
+		},
+		"VP REMOVE TABLE": {
+			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla a eliminar"
+				],
+				[
+					"options",
+					"Integer",
+					"->",
+					"Opciones adicionales"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "elimina una tabla"
+		},
+		"VP REMOVE TABLE COLUMNS": {
+			"Syntax": "**VP REMOVE TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"Índice en la tabla de la columna inicial a eliminar"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"Número de columnas a eliminar (debe ser >0)"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "elimina una o *count* columna(s) en *tableName* especificada en el índice *column* especificado"
+		},
+		"VP REMOVE TABLE ROWS": {
+			"Syntax": "**VP REMOVE TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"Índice en la tabla de la línea inicial a eliminar"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"Número de líneas a eliminar (debe ser >0)"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "elimina una o *count* línea(s) de *tableName* especificada en el índice *row* especificado"
+		},
+		"VP RESET SELECTION": {
+			"Syntax": "**VP RESET SELECTION** ( *vpAreaName* : Text { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "anula la selección de todas las celdas, con lo que no hay selección actual ni celda activa visible"
+		},
+		"VP RESIZE TABLE": {
+			"Syntax": "**VP RESIZE TABLE** ( *rangeObj* : Object; *tableName* : Text )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Nuevo rango para la tabla"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				]
+			],
+			"Summary": "cambia el tamaño de *tableName* con respecto a *rangeObj*"
+		},
+		"VP RESUME COMPUTING": {
+			"Syntax": "**VP RESUME COMPUTING** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				]
+			],
+			"Summary": "reinicia el cálculo de las fórmulas en *vpAreaName*"
+		},
+		"VP Row": {
+			"Syntax": "**VP Row** ( *vpAreaName* : Text; *row* : Integer { ; *rowCount* : Integer { ; *sheet* : Integer } } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"Índice de la línea"
+				],
+				[
+					"rowCount",
+					"Integer",
+					"->",
+					"Número de líneas"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				],
+				[
+					"Result",
+					"Object",
+					"<-",
+					"Rango de línea(s)"
+				]
+			],
+			"Summary": "devuelve un nuevo objeto rango que hace referencia a una o varias líneas específicas"
+		},
+		"VP ROW AUTOFIT": {
+			"Syntax": "**VP ROW AUTOFIT** ( *rangeObj* : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "dimensiona automáticamente la(s) línea(s) en *rangeObj* en función de su contenido"
+		},
+		"VP Run offscreen area": {
+			"Syntax": "**VP Run offscreen area** ( *parameters* : Object) : Mixed",
+			"Params": [
+				[
+					"parameters",
+					"Object",
+					"->",
+					"Objeto que contiene los atributos del área fuera de pantalla"
+				],
+				[
+					"Result",
+					"Mixed",
+					"<-",
+					"Propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor"
+				]
+			],
+			"Summary": "crea un área fuera de la pantalla en la memoria que puede utilizarse para procesar los comandos y funciones del área 4D View Pro"
+		},
+		"VP SET ACTIVE CELL": {
+			"Syntax": "**VP SET ACTIVE CELL** ( *rangeObj* : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				]
+			],
+			"Summary": "define una celda especificada como activa"
+		},
+		"VP SET ALLOWED METHODS": {
+			"Syntax": "**VP SET ALLOWED METHODS** ( *methodObj* : Object)",
+			"Params": [
+				[
+					"methodObj",
+					"Object",
+					"->",
+					"Métodos permitidos en las áreas 4D View Pro"
+				]
+			],
+			"Summary": "designa los métodos proyecto que pueden ser llamados en las fórmulas 4D View Pro"
+		},
+		"VP SET BINDING PATH": {
+			"Syntax": "**VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"dataContextAttribute",
+					"Text",
+					"->",
+					"Nombre del atributo a vincular a *rangeObj*"
+				]
+			],
+			"Summary": "vincula un atributo del contexto de datos de una hoja a *rangeObj*"
+		},
+		"VP SET BOOLEAN VALUE": {
+			"Syntax": "**VP SET BOOLEAN VALUE** ( *rangeObj* : Object  ; *boolValue* : Boolean)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"boolValue",
+					"Boolean",
+					"->",
+					"Valor del booleano a definir"
+				]
+			],
+			"Summary": "asigna un valor booleano especificado a un rango de celdas designado"
+		},
+		"VP SET BORDER": {
+			"Syntax": "**VP SET BORDER** ( *rangeObj* : Object ; *borderStyleObj* : Object  ; *borderPosObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"borderStyleObj",
+					"Object",
+					"->",
+					"Objeto que contiene el estilo de línea de borde"
+				],
+				[
+					"borderPosObj",
+					"Object",
+					"->",
+					"Object containing border placement"
+				]
+			],
+			"Summary": "applies the border style(s) defined in *borderStyleObj* and *borderPosObj* to the range defined in the *rangeObj*"
+		},
+		"VP SET CELL STYLE": {
+			"Syntax": "**VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"styleObj",
+					"Object",
+					"->",
+					"Objeto style"
+				]
+			],
+			"Summary": "applies the style(s) defined in the *styleObj* to the cells defined in the *rangeObj*"
+		},
+		"VP SET COLUMN ATTRIBUTES": {
+			"Syntax": "**VP SET COLUMN ATTRIBUTES** ( *rangeObj* : Object  ; *propertyObj* : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"propertyObj",
+					"Object",
+					"->",
+					"Objeto que contiene las propiedades de columna"
+				]
+			],
+			"Summary": "applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*"
+		},
+		"VP SET COLUMN COUNT": {
+			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"columnCount",
+					"Integer",
+					"->",
+					"Número de columnas"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "defines the total number of columns in *vpAreaName*"
+		},
+		"VP SET CURRENT SHEET": {
+			"Syntax": "**VP SET CURRENT SHEET** ( *vpAreaName* : Text ; *sheet* : Integer)",
+			"Params": [
+				[
+					"---",
+					"---",
+					"---",
+					"---",
+					"",
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro area form object name",
+					"",
+					"sheet",
+					"Integer",
+					"<-",
+					"Index of the new current sheet"
+				]
+			],
+			"Summary": "establece la hoja actual en *vpAreaName*"
+		},
+		"VP SET CUSTOM FUNCTIONS": {
+			"Syntax": "**VP SET CUSTOM FUNCTIONS** ( *vpAreaName* : Text ; *formulaObj* : Object  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"formulaObj",
+					"Object",
+					"->",
+					"Objeto formula"
+				]
+			],
+			"Summary": "designates the 4D formulas that can be called directly from 4D View Pro formulas"
+		},
+		"VP SET DATA CONTEXT": {
+			"Syntax": "**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object } {; *sheet* : Integer} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object } {; *sheet* : Integer} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Object",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"dataObj",
+					"Object",
+					"->",
+					"Objeto datos a cargar en el contexto de datos"
+				],
+				[
+					"dataColl",
+					"Object",
+					"->",
+					"Colección datos a cargar en el contexto de datos"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"Opciones adicionales"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja"
+				]
+			],
+			"Summary": "sets the data context of a sheet"
+		},
+		"VP SET DATE TIME VALUE": {
+			"Syntax": "**VP SET DATE TIME VALUE** ( *rangeObj* : Object ; *dateValue* : Date ; *timeValue* : Time {; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"dateValue",
+					"Fecha",
+					"->",
+					"Valor date a definir"
+				],
+				[
+					"timeValue",
+					"Hora",
+					"->",
+					"Valor hora a definir"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"Formato del valor"
+				]
+			],
+			"Summary": "assigns a specified date and time value to a designated cell range"
+		},
+		"VP SET DATE VALUE": {
+			"Syntax": "**VP SET DATE VALUE** ( *rangeObj* : Object ; *dateValue* : Date { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"dateValue",
+					"Fecha",
+					"->",
+					"Valor date a definir"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"Formato del valor"
+				]
+			],
+			"Summary": "assigns a specified date value to a designated cell range"
+		},
+		"VP SET DEFAULT STYLE": {
+			"Syntax": "**VP SET DEFAULT STYLE** ( *vpAreaName* : Text ; *styleObj* : Object { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"styleObj",
+					"Object",
+					"->",
+					"Objeto style"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (por defecto = hoja actual)"
+				]
+			],
+			"Summary": "defines the style in the *styleObj* as the default style for a *sheet*"
+		},
+		"VP SET FIELD": {
+			"Syntax": "**VP SET FIELD** ( *rangeObj* : Object ; *field* : Pointer { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"campo",
+					"Puntero",
+					"->",
+					"Referencia al campo en la estructura virtual"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"Formato del campo"
+				]
+			],
+			"Summary": "assigns a 4D database virtual field to a designated cell range"
+		},
+		"VP SET FORMULA": {
+			"Syntax": "**VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"formula",
+					"Text",
+					"->",
+					"Fórmula o método 4D"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"Formato del campo"
+				]
+			],
+			"Summary": "assigns a specified formula or 4D method to a designated cell range"
+		},
+		"VP SET FORMULAS": {
+			"Syntax": "**VP SET FORMULAS** ( *rangeObj* : Object ; *formulasCol* : Collection )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto de rango de celda"
+				],
+				[
+					"formulasCol",
+					"Collection",
+					"->",
+					"Colección de fórmulas"
+				]
+			],
+			"Summary": "asigna una colección de fórmulas que comienzan en el rango de celdas especificado"
+		},
+		"VP SET FROZEN PANES": {
+			"Syntax": "**VP SET FROZEN PANES** ( *vpAreaName* : Text ; *paneObj* : Object { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"paneObj",
+					"Object",
+					"->",
+					"Objeto que contiene la información de las columnas y líneas congeladas"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*"
+		},
+		"VP SET NUM VALUE": {
+			"Syntax": "**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"numberValue",
+					"Number",
+					"->",
+					"Valor del número a definir"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"Formato del valor"
+				]
+			],
+			"Summary": "asigna un valor numérico especificado a un rango de celdas designado"
+		},
+		"VP SET PRINT INFO": {
+			"Syntax": "**VP SET PRINT INFO** ( *vpAreaName* : Text ; *printInfo* : Object { ; *sheet* : Integer }  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro"
+				],
+				[
+					"printInfo",
+					"Object",
+					"->",
+					"Objeto que contiene los atributos de impresión"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "define los atributos a utilizar cuando se imprime el *vpAreaName*"
+		},
+		"VP SET ROW ATTRIBUTES": {
+			"Syntax": "**VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Rango de líneas"
+				],
+				[
+					"propertyObj",
+					"Object",
+					"->",
+					"Objeto que contiene las propiedades de las líneas"
+				]
+			],
+			"Summary": "applies the attributes defined in the *propertyObj* to the rows in the *rangeObj*"
+		},
+		"VP SET ROW COUNT": {
+			"Syntax": "**VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"rowCount",
+					"Integer",
+					"->",
+					"Número de líneas"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "defines the total number of rows in *vpAreaName*"
+		},
+		"VP SET SELECTION": {
+			"Syntax": "**VP SET SELECTION** ( *rangeObj* : Object  )",
+			"Params": [
+				[
+					"",
+					"",
+					"",
+					""
+				],
+				[],
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Range object of cells"
+				]
+			],
+			"Summary": "defines the specified cells as the selection and the first cell as the active cell"
+		},
+		"VP SET SHEET COUNT": {
+			"Syntax": "**VP SET SHEET COUNT** ( *vpAreaName* : Text ; *number* : Integer  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"number",
+					"Integer",
+					"->",
+					"Número de hojas"
+				]
+			],
+			"Summary": "sets the number of sheets in *vpAreaName*"
+		},
+		"VP SET SHEET NAME": {
+			"Syntax": "**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"Nuevo nombre para la hoja"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja a renombrar"
+				]
+			],
+			"Summary": "cambia el nombre de una hoja del documento cargado en *vpAreaName*"
+		},
+		"VP SET SHEET OPTIONS": {
+			"Syntax": "**VP SET SHEET OPTIONS** ( *vpAreaName* : Text; *sheetOptions* : Object { ; *sheet* : Integer}  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Object",
+					"->",
+					"Nombre del área 4D View Pro"
+				],
+				[
+					"sheetOptions",
+					"Object",
+					"->",
+					"Opciones de la hoja a definir"
+				],
+				[
+					"sheet",
+					"Object",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "allows defining various sheet options of the *vpAreaName* area"
+		},
+		"VP SET SHOW PRINT LINES": {
+			"Syntax": "**VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; *sheet* : Integer} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"visible",
+					"Boolean",
+					"->",
+					"Líneas de impresión mostradas si True (por defecto), ocultas si es False"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "sets whether to display print preview lines in a spreadsheet."
+		},
+		"VP SET TABLE COLUMN ATTRIBUTES": {
+			"Syntax": "**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"Nombre de la tabla"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"Índice de la columna en la tabla"
+				],
+				[
+					"attributes",
+					"Object",
+					"->",
+					"Atributo(s) a aplicar a la *column*"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"Índice de la hoja (hoja actual si se omite)"
+				]
+			],
+			"Summary": "applies the defined *attributes* to the *column* in the *tableName*"
+		},
+		"VP SET TEXT VALUE": {
+			"Syntax": "**VP SET TEXT VALUE** ( *rangeObj* : Object ; *textValue* : Text { ; *formatPattern* : Text }  )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"textValue",
+					"Text",
+					"->",
+					"Valor texto a definir"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"Formato del valor"
+				]
+			],
+			"Summary": "assigns a specified text value to a designated cell range"
+		},
+		"VP SET TIME VALUE": {
+			"Syntax": "**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"timeValue",
+					"Text",
+					"->",
+					"Valor hora a definir"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"Formato del valor"
+				]
+			],
+			"Summary": "assigns a specified time value to a designated cell range"
+		},
+		"VP SET VALUE": {
+			"Syntax": "**VP SET VALUE** ( *rangeObj* : Object ; *valueObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"valueObj",
+					"Object",
+					"->",
+					"Valores de la celda y opciones de formato"
+				]
+			],
+			"Summary": "asigna un valor especificado a un rango de celdas designado"
+		},
+		"VP SET VALUES": {
+			"Syntax": "**VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[
+					"valuesCol",
+					"Collection",
+					"->",
+					"Colección de valores"
+				]
+			],
+			"Summary": "assigns a collection of values starting at the specified cell range"
+		},
+		"VP SET WORKBOOK OPTIONS": {
+			"Syntax": "**VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre de objeto formulario área 4D View Pro"
+				],
+				[
+					"optionObj",
+					"Object",
+					"->",
+					"Objeto que contiene las opciones del libro de trabajo a definir"
+				]
+			],
+			"Summary": "sets the workbook options in *vpAreaName*"
+		},
+		"VP SHOW CELL": {
+			"Syntax": "**VP SHOW CELL** ( *rangeObj* : Object { ; *vPos* : Integer; *hPos* : Integer } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"Objeto rango"
+				],
+				[],
+				[
+					"vPos",
+					"Integer",
+					"->",
+					"Vertical view position of cell or row",
+					"",
+					"hPos",
+					"Integer",
+					"->",
+					"Horizontal view position of cell or row"
+				]
+			],
+			"Summary": "vertically and horizontally repositions the view of the *rangeObj*"
+		},
+		"VP SUSPEND COMPUTING": {
+			"Syntax": "**VP SUSPEND COMPUTING** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"Nombre del área 4D View Pro en el formulario"
+				]
+			],
+			"Summary": "detiene el cálculo de todas las fórmulas en *vpAreaName*"
+		}
+	},
+	"File": {
+		"_inheritedFrom_": "Document"
+	},
+	"Folder": {
+		"_inheritedFrom_": "Directory"
+	},
+	"ZipFile": {
+		"_inheritedFrom_": "Document"
+	},
+	"ZipFolder": {
+		"_inheritedFrom_": "Directory"
+	},
+	"SMTPTransporter": {
+		"_inheritedFrom_": "Transporter"
+	},
+	"POP3Transporter": {
+		"_inheritedFrom_": "Transporter"
+	},
+	"IMAPTransporter": {
+		"_inheritedFrom_": "Transporter"
+	}
+}
