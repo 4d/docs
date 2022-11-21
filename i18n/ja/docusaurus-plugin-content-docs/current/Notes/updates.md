@@ -10,7 +10,11 @@ title: リリースノート
 
 #### ハイライト
 
+
 - コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
+- 4D View Pro:
+    - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
+    - new [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) command
 - 4D Language classic: [What's new page](XXX) on doc.4d.com.
 - 4D Write Pro: [What's new page](XXX) on doc.4d.com.
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。
