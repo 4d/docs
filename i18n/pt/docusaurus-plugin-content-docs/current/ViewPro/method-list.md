@@ -704,10 +704,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                            |
-| ------ | ----------------------------------- |
-| v19 R7 | Support of `allowAutoExpand` option |
-| v19 R6 | Adicionado                          |
+| Versão | Mudanças                                                                                                    |
+| ------ | ----------------------------------------------------------------------------------------------------------- |
+| v19 R8 | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| v19 R7 | Support of `allowAutoExpand` option                                                                         |
+| v19 R6 | Adicionado                                                                                                  |
 </details>
 
 
@@ -743,14 +744,21 @@ In *source*, you can pass a property name of a [data context](#vp-set-data-conte
 
 In *options*, you can pass an object with additional options for the table. Valores possíveis:
 
-| Propriedade           | Tipo       | Descrição                                                                                  | Valor padrão |
-| --------------------- | ---------- | ------------------------------------------------------------------------------------------ | ------------ |
-| allowAutoExpand       | Booleano   | True to expand columns or rows of the table when values are added in empty adjacent cells. | True         |
-| showFooter            | Booleano   | Display a footer                                                                           | False        |
-| showHeader            | Booleano   | Display a header                                                                           | True         |
-| showResizeHandle      | Booleano   | For tables that don't have a *source*. Display the resize handle                           | False        |
-| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Indefinido   |
-| useFooterDropDownList | Booleano   | Use a dropdown list in footer cells that calculate the total value of a column             | False        |
+| Propriedade           | Tipo          | Descrição                                                                                                                                                                                                             | Valor padrão |
+| --------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| allowAutoExpand       | Booleano      | True to expand columns or rows of the table when values are added in empty adjacent cells.                                                                                                                            | True         |
+| bandColumns           | boolean       | Value that indicates whether to display an alternating column style                                                                                                                                                   | False        |
+| bandRows              | boolean       | Value that indicates whether to display an alternating row style                                                                                                                                                      | True         |
+| highlightFirstColumn  | boolean       | Value that indicates whether to highlight the first column                                                                                                                                                            | False        |
+| highlightLastColumn   | boolean       | Value that indicates whether to highlight the first column                                                                                                                                                            | False        |
+| theme                 | object / text | text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/demos/features/pivot-table/pivot-customize/pivot-theme/purejs); object: object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class |              |
+| showFooter            | Booleano      | Display a footer                                                                                                                                                                                                      | False        |
+| showHeader            | Booleano      | Display a header                                                                                                                                                                                                      | True         |
+| showResizeHandle      | Booleano      | For tables that don't have a *source*. Display the resize handle                                                                                                                                                      | False        |
+| tableColumns          | Collection    | Collection of objects used to create the table's columns (see below)                                                                                                                                                  | Indefinido   |
+| useFooterDropDownList | Booleano      | Use a dropdown list in footer cells that calculate the total value of a column                                                                                                                                        | False        |
+
+
 
 The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
 
@@ -814,7 +822,7 @@ Here's the result:
 
 #### Veja também
 
-[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 ## D
@@ -2168,6 +2176,8 @@ Get the name of the third sheet in the document:
 $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
+
+
 #### Veja também
 
 [VP Get sheet index](#vp-get-sheet-index)
@@ -2505,6 +2515,69 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
+### VP Get table dirty rows
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R8 | Adicionado |
+</details>
+
+
+<!-- REF #_method_.VP Get table dirty rows.Syntax --> **VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
+
+<!-- REF #_method_.VP Get table dirty rows.Params -->
+
+| Parâmetros | Tipo       |    | Descrição                                                                                         |
+| ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | 4D View Pro area form object name                                                                 |
+| tableName  | Text       | -> | Table name                                                                                        |
+| reset      | Booleano   | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True   |
+| sheet      | Integer    | -> | Sheet index (current sheet if omitted)                                                            |
+| Resultados | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF --> |
+
+
+#### Descrição
+
+The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+
+By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+> Indexing starts at 0.
+
+Each *dirty row* object in the returned collection contains the following properties:
+
+| Propriedade  | Tipo    | Descrição                           |
+| ------------ | ------- | ----------------------------------- |
+| item         | object  | Modified object of the modified row |
+| originalItem | object  | Object before modification          |
+| row          | integer | Index of the modified row           |
+
+If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
+
+#### Exemplo
+
+You want to count the number of edited rows:
+
+```4d
+$dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
+VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
+```
+
+#### Veja também
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
+
+
+
+
 ### VP Get table range
 
 <details><summary>Histórico</summary>
@@ -2548,6 +2621,55 @@ If *tableName* is not found, the command returns **null**.
 #### Veja também
 
 [VP RESIZE TABLE](#vp-resize-table)<br/> [VP Find table](#vp-find-table)
+
+
+### VP Get table theme
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R8 | Adicionado |
+</details>
+
+
+<!-- REF #_method_.VP Get table theme.Syntax --> **VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
+
+<!-- REF #_method_.VP Get table theme.Params -->
+
+| Parâmetros | Tipo                                           |    | Descrição                                                      |
+| ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
+| vpAreaName | Text                                           | -> | 4D View Pro area form object name                              |
+| tableName  | Text                                           | -> | Table name                                                     |
+| Resultados | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF --> |
+
+
+#### Descrição
+
+The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
+
+In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
+
+The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme.
+
+
+#### Exemplo
+
+The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+
+```4d
+$param:=New object
+$param.theme:="dark10" //use of a native theme name
+
+VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
+$vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
+$result:=Asserted(Value type($vTheme.theme)=Is object) //true
+```
+
+
+#### Veja também
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme))
 
 
 
@@ -2596,6 +2718,8 @@ $tables:=VP Get tables("ViewProArea")
 #### Veja também
 
 [VP CREATE TABLE](#vp-create-table)
+
+
 
 
 
@@ -3048,6 +3172,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 
 
+
 #### Veja também
 
 [VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP REMOVE TABLE ROWS](#vp-remove-table-rows)
@@ -3404,6 +3529,7 @@ VP ADD RANGE NAME("Total1";$range) VP REMOVE NAME("ViewProArea";"Total1")
 $formula:=VP Get formula by name("ViewProArea";"Total1")
 //$formula=null
 ```
+
 
 #### Veja também
 
@@ -3894,10 +4020,11 @@ Resultados:
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Parâmetros | Tipo   |    | Descrição                                                                                                  |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
-| parameters | Objeto | -> | Object containing the offscreen area's attributes                                                          |
-| Resultados | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF --> |
+| Parâmetros | Tipo   |    | Descrição                                         |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| parameters | Objeto | -> | Object containing the offscreen area's attributes |
+
+|Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
 
 #### Descrição
 
@@ -3905,14 +4032,12 @@ O comando `VP Run offscreen area` <!-- REF #_method_.VP Run offscreen area.Summa
 
 In *parameters* object, pass any of the following optional properties. These properties will be available through the `This` command within the `onEvent` method and reference the instance:
 
-| Propriedade                | Tipo             | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| -------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area                       | text             | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| onEvent                    | object (formula) | A callback method that will be launched when the offscreen area is ready. It can be either:<li>an `onEvent` function of a class, or</li><li>a `Formula` object</li>By default, the callback method is called on the [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
-| autoQuit                   | boolean          | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                     |
-| timeout                    | number           | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| result                     | misto            | Result of the processing (if any)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `\<customProperty>` | misto            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Propriedade | Tipo | Descrição                                                                                                |
+| ----------- | ---- | -------------------------------------------------------------------------------------------------------- |
+| area        | text | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1"). |
+
+|onEvent | object (formula)| A callback method that will be launched when the offscreen area is ready. It can be either:<li>an `onEvent` function of a class, or</li><li>a `Formula` object</li>By default, the callback method is called on the [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable).| |autoQuit | boolean | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method. | |timeout | number | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60 | |result| mixed| Result of the processing (if any)| |`\&#060;customProperty&#062;` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
+
 
 The following property is automatically added by the command if necessary:
 
@@ -4050,6 +4175,7 @@ VP SET ACTIVE CELL($activeCell)
 <!-- REF #_method_.VP SET ALLOWED METHODS.Syntax --> **VP SET ALLOWED METHODS** ( *methodObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
+
 
 | Parâmetros | Tipo   |    | Descrição                                                           |
 | ---------- | ------ | -- | ------------------------------------------------------------------- |
@@ -4410,9 +4536,10 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-|Parameter|Type| |Description|
-
-|---|---|---|---| |vpAreaName| Text|->|4D View Pro area form object name| |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
+| Parâmetros | Tipo    |    | Descrição                                                 |
+| ---------- | ------- | -- | --------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                         |
+| sheet      | Integer | <- | Index of the new current sheet|<!-- END REF --> |
 
 #### Descrição
 
@@ -4594,6 +4721,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 Pass a collection of objects and generate columns automatically:
 
+
 ```4d
 var $options : Object
 var $data : Collection
@@ -4699,11 +4827,9 @@ The optional *formatPattern* defines a pattern for the *dateValue* and *timeValu
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-| Parâmetros    | Tipo   |    | Descrição                                  |
-| ------------- | ------ | -- | ------------------------------------------ |
-| rangeObj      | Objeto | -> | Range object                               |
-| dateValue     | Date   | -> | Date value to set                          |
-| formatPattern | Text   | -> | Format of value|<!-- END REF --> |
+|Parameter|Type||Description|
+
+|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Descrição
 
@@ -5410,6 +5536,7 @@ In *visible*, pass `True` to display the print lines, and `False` to hide them. 
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 
+
 > Indexing starts at 0.
 
 The position of a spreadsheet's print lines varies according to that spreadsheet's page breaks.
@@ -5534,6 +5661,86 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
 
+
+
+### VP SET TABLE THEME
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R8 | Adicionado |
+</details>
+
+
+<!-- REF #_method_.VP SET TABLE THEME.Syntax --> **VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
+
+<!-- REF #_method_.VP SET TABLE THEME.Params -->
+
+| Parâmetros | Tipo                                           |    | Descrição                                                   |
+| ---------- | ---------------------------------------------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text                                           | -> | 4D View Pro area form object name                           |
+| tableName  | Text                                           | -> | Table name                                                  |
+| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | Table theme properties to modify|<!-- END REF --> |
+
+
+#### Descrição
+
+The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify.
+
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class](classes.md#tabletheme) that contains the theme properties to modify.
+
+
+#### Exemplo 1
+
+You want to set a predefined theme to a table:
+
+```4d
+$param:=New object()
+$param.theme:="medium2"
+VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
+```
+
+#### Exemplo 2
+
+You want to have this alternate column rendering:
+
+![](../assets/en/ViewPro/col-bandering.png)
+
+```4d
+// Enable the band column rendering
+$param:=New object
+$param.bandColumns:=True
+$param.bandRows:=False
+
+// Create the theme object with header and column styles
+$param.theme:=New object
+
+$styleHeader:=New object
+$styleHeader.backColor:="#FFE45C"
+$styleHeader.foreColor:="#03045E"
+$param.theme.headerRowStyle:=$styleHeader
+
+$styleColumn1:=New object
+$styleColumn1.backColor:="#0077B6"
+$styleColumn1.foreColor:="#03045E"
+$param.theme.firstColumnStripStyle:=$styleColumn1
+
+$styleColumn2:=New object
+$styleColumn2.backColor:="#CAF0F8"
+$styleColumn2.foreColor:="#03045E"
+$param.theme.secondColumnStripStyle:=$styleColumn2
+
+VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
+
+```
+
+
+#### Veja também
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme))
 
 
 
@@ -5671,6 +5878,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 
 The *valuesCol* parameter is two-dimensional:
 
+
 * The first-level collection contains subcollections of values. Each subcollection defines a row. Pass an empty collection to skip a row.
 * Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:
 
@@ -5741,10 +5949,10 @@ The following table lists the available workbook options:
 | autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table>                                                                                                                                             |
 | backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                          |
 | backgroundImage                       | string / picture / file | Background image for the area.                                                                                                                                                                                                                         |
-| backgroundImageLayout                 | number                  | How the background image is displayed. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Fills the area.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                  |
+| backgroundImageLayout                 | number                  | How the background image is displayed. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Fills the area.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                 |
 | calcOnDemand                          | boolean                 | Formulas are calculated only when they are demanded.                                                                                                                                                                                                   |
-| columnResizeMode                      | number                  | Resize mode for columns. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                                |
-| copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                    |
+| columnResizeMode                      | number                  | Resize mode for columns. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                               |
+| copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                   |
 | customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).         |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                   |
 | cutCopyIndicatorVisible               | boolean                 | Display an indicator when copying or cutting the selected item.                                                                                                                                                                                        |
