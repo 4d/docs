@@ -114,7 +114,8 @@ module.exports = {
       },
     },
     prism: {
-      theme: require("./src/theme/highlight/themes/palenight"),
+      theme: require('prism-react-renderer/themes/github'),
+      darkTheme: require('prism-react-renderer/themes/palenight'),
     },
     "navbar": {
       title: "4D Documentation",
