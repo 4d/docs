@@ -24,6 +24,99 @@ The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](confi
 The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Default = empty. 
 
 
+## TableColumns
+
+
+
+## TableOptions
+
+### .allowAutoExpand
+
+<!-- REF #TableOptions.allowAutoExpand.Syntax -->
+**.allowAutoExpand** : Boolean<!-- END REF -->
+
+The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. Default = True
+
+
+### .bandColumns
+
+<!-- REF #TableOptions.bandColumns.Syntax -->
+**.bandColumns** : Boolean<!-- END REF -->
+
+The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Default = False
+
+
+### .bandRows
+
+<!-- REF #TableOptions.bandRows.Syntax -->
+**.bandRows** : Boolean<!-- END REF -->
+
+The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->. Default = True
+
+
+### .highlightLastColumn
+
+<!-- REF #TableOptions.highlightLastColumn.Syntax -->
+**.highlightLastColumn** : Boolean<!-- END REF -->
+
+The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. Default = False
+
+### .highlightFirstColumn
+
+<!-- REF #TableOptions.highlightFirstColumn.Syntax -->
+**.highlightFirstColumn** : Boolean<!-- END REF -->
+
+The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Default = False 
+
+
+### .showFooter
+
+<!-- REF #TableOptions.showFooter.Syntax -->
+**.showFooter** : Boolean<!-- END REF -->
+
+The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. Default = False 
+
+### .showHeader
+
+<!-- REF #TableOptions.showHeader.Syntax -->
+**.showHeader** : Boolean<!-- END REF -->
+
+The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicates whether to display a header<!-- END REF -->. Default = True 
+
+### .showResizeHandle
+
+<!-- REF #TableOptions.showResizeHandle.Syntax -->
+**.showResizeHandle** : Boolean<!-- END REF -->
+
+The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Default = False 
+
+### .tableColumns
+
+<!-- REF #TableOptions.tableColumns.Syntax -->
+**.tableColumns** : Collection<!-- END REF -->
+
+The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumns](#tablecolumns) objects used to create the table's columns<!-- END REF -->. 
+
+
+
+### .theme
+
+<!-- REF #TableTheme.theme.Syntax -->
+**.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme** : Text<!-- END REF -->
+
+
+The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table theme<!-- END REF -->.
+If Text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+
+
+### .useFooterDropDownList
+
+<!-- REF #TableOptions.useFooterDropDownList.Syntax -->
+**.useFooterDropDownList** : Boolean<!-- END REF -->
+
+The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Default = False 
+
+
 
 ## TableStyle
 
