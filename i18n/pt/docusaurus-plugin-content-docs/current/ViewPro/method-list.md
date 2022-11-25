@@ -712,16 +712,16 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 </details>
 
 
-<!-- REF #_method_.VP CREATE TABLE.Syntax --> **VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )<!-- END REF -->
+<!-- REF #_method_.VP CREATE TABLE.Syntax --> **VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| Parâmetros | Tipo   |    | Descrição                                          |
-| ---------- | ------ | -- | -------------------------------------------------- |
-| rangeObj   | Objeto | -> | Range object                                       |
-| tableName  | Text   | -> | Name for the table                                 |
-| source     | Text   | -> | Data context property name to display in the table |
-| options    | Objeto | -> | Additional options|<!-- END REF -->      |
+| Parâmetros | Tipo                                               |    | Descrição                                          |
+| ---------- | -------------------------------------------------- | -- | -------------------------------------------------- |
+| rangeObj   | Objeto                                             | -> | Range object                                       |
+| tableName  | Text                                               | -> | Name for the table                                 |
+| source     | Text                                               | -> | Data context property name to display in the table |
+| options    | [cs.ViewPro.TableOptions](classes.md#tableoptions) | -> | Additional options|<!-- END REF -->      |
 
 #### Descrição
 
@@ -742,33 +742,9 @@ In *source*, you can pass a property name of a [data context](#vp-set-data-conte
   * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
   * If the specified *source* cannot be fully displayed in the document, no table is created.
 
-In *options*, you can pass an object with additional options for the table. Valores possíveis:
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
 
-| Propriedade           | Tipo          | Descrição                                                                                                                                                                                                             | Valor padrão |
-| --------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| allowAutoExpand       | Booleano      | True to expand columns or rows of the table when values are added in empty adjacent cells.                                                                                                                            | True         |
-| bandColumns           | boolean       | Value that indicates whether to display an alternating column style                                                                                                                                                   | False        |
-| bandRows              | boolean       | Value that indicates whether to display an alternating row style                                                                                                                                                      | True         |
-| highlightFirstColumn  | boolean       | Value that indicates whether to highlight the first column                                                                                                                                                            | False        |
-| highlightLastColumn   | boolean       | Value that indicates whether to highlight the first column                                                                                                                                                            | False        |
-| theme                 | object / text | text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/demos/features/pivot-table/pivot-customize/pivot-theme/purejs); object: object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class |              |
-| showFooter            | Booleano      | Display a footer                                                                                                                                                                                                      | False        |
-| showHeader            | Booleano      | Display a header                                                                                                                                                                                                      | True         |
-| showResizeHandle      | Booleano      | For tables that don't have a *source*. Display the resize handle                                                                                                                                                      | False        |
-| tableColumns          | Collection    | Collection of objects used to create the table's columns (see below)                                                                                                                                                  | Indefinido   |
-| useFooterDropDownList | Booleano      | Use a dropdown list in footer cells that calculate the total value of a column                                                                                                                                        | False        |
-
-
-
-The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
-
-  | Propriedade | Tipo | Descrição                                        | Obrigatório |
-  | ----------- | ---- | ------------------------------------------------ | ----------- |
-  | dataField   | Text | table column's property name in the data context | No          |
-  | formatter   | Text | table column's formatter                         | No          |
-  | name        | Text | table column's name                              | Sim         |
-
-The length of the *tableColumns* collection must be equal to the range column count:
+Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. The length of the *tableColumns* collection must be equal to the range column count:
 
   * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
   * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
@@ -802,18 +778,22 @@ var $data : Object
 $data:=New object()
 $data.people:=New collection()
 $data.people.push(New object("firstName"; "John"; "lastName"; "Smith"; "email"; "johnsmith@gmail.com"))
-$data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"; "marypoppins@gmail.com")) VP SET DATA CONTEXT("ViewProArea"; $data)
+$data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"; "marypoppins@gmail.com"))
+
+
+VP SET DATA CONTEXT("ViewProArea"; $data)
 
 // Define the columns for the table
-var $options : Object
+var $options : cs.ViewPro.TableOptions
 
-$options:=New object
+$options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
 
-// Create a table from the "people" collection VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
+// Create a table from the "people" collection
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
 Here's the result:
@@ -2567,6 +2547,7 @@ If *tableName* is not found or if it does not contain a modified column, the com
 You want to count the number of edited rows:
 
 ```4d
+var $dirty : Collection
 $dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
 VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 ```
@@ -2658,7 +2639,8 @@ The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tablethe
 The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
 
 ```4d
-$param:=New object
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
 $param.theme:="dark10" //use of a native theme name
 
 VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
@@ -2669,7 +2651,7 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 #### Veja também
 
-[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme))
+[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 
@@ -5698,7 +5680,8 @@ In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class
 You want to set a predefined theme to a table:
 
 ```4d
-$param:=New object()
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
 $param.theme:="medium2"
 VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 ```
@@ -5710,26 +5693,30 @@ You want to have this alternate column rendering:
 ![](../assets/en/ViewPro/col-bandering.png)
 
 ```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+
 // Enable the band column rendering
-$param:=New object
 $param.bandColumns:=True
 $param.bandRows:=False
 
 // Create the theme object with header and column styles
-$param.theme:=New object
+$param.theme:=cs.ViewPro.TableThemeOptions.new()
 
-$styleHeader:=New object
-$styleHeader.backColor:="#FFE45C"
+var $styleHeader; $styleColumn; $styleColumn2 : cs.ViewPro.TableStyle
+
+$styleHeader:=cs.ViewPro.TableStyle.new()
+$styleHeader.backColor:="Gold"
 $styleHeader.foreColor:="#03045E"
 $param.theme.headerRowStyle:=$styleHeader
 
-$styleColumn1:=New object
-$styleColumn1.backColor:="#0077B6"
+$styleColumn1:=cs.ViewPro.TableStyle.new()
+$styleColumn1.backColor:="SkyBlue"
 $styleColumn1.foreColor:="#03045E"
 $param.theme.firstColumnStripStyle:=$styleColumn1
 
-$styleColumn2:=New object
-$styleColumn2.backColor:="#CAF0F8"
+$styleColumn2:=cs.ViewPro.TableStyle.new()
+$styleColumn2.backColor:="LightCyan"
 $styleColumn2.foreColor:="#03045E"
 $param.theme.secondColumnStripStyle:=$styleColumn2
 
@@ -5740,7 +5727,7 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 #### Veja também
 
-[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme))
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme)
 
 
 
