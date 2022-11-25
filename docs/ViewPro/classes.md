@@ -26,6 +26,28 @@ The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](confi
 
 ## TableColumns
 
+### .dataField
+
+<!-- REF #TableColumns.dataField.Syntax -->
+**.dataField** : Text<!-- END REF -->
+
+The `.dataField` property <!-- REF #TableColumns.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
+
+### .formatter
+
+<!-- REF #TableColumns.formatter.Syntax -->
+**.formatter** : Text<!-- END REF -->
+
+The `.formatter` property <!-- REF #TableColumns.formatter.Summary -->contains the table column's formatter<!-- END REF -->.
+
+### .name
+
+<!-- REF #TableColumns.name.Syntax -->
+**.name** : Text<!-- END REF -->
+
+The `.name` property <!-- REF #TableColumns.name.Summary -->contains the table column's name<!-- END REF --> (mandatory).
+
+
 
 
 ## TableOptions
@@ -183,6 +205,7 @@ The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary --
 ### .borderHorizontal
 
 <!-- REF #TableStyle.borderHorizontal.Syntax -->
+
 **.borderHorizontal** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
 The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->. 

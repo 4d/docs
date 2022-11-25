@@ -735,7 +735,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
-**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )<!-- END REF -->
+**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
@@ -744,7 +744,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 |rangeObj|Object|->|Range object|
 |tableName|Text|->|Name for the table|
 |source|Text|->|Data context property name to display in the table|
-|options|Object|->|Additional options|<!-- END REF -->
+|options|cs.ViewPro.TableOptions|->|Additional options|<!-- END REF -->
 
 #### Description
 
@@ -765,33 +765,9 @@ In *source*, you can pass a property name of a [data context](#vp-set-data-conte
   * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*. 
   * If the specified *source* cannot be fully displayed in the document, no table is created.
 
-In *options*, you can pass an object with additional options for the table. Possible values are:
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set. 
 
-|Property|Type|Description|Default value
-|---|---|---|---|
-|allowAutoExpand|Boolean|True to expand columns or rows of the table when values are added in empty adjacent cells.| True
-|bandColumns|boolean|Value that indicates whether to display an alternating column style|False|
-|bandRows|boolean|Value that indicates whether to display an alternating row style|True|
-|highlightFirstColumn|boolean|Value that indicates whether to highlight the first column|False|
-|highlightLastColumn|boolean|Value that indicates whether to highlight the first column|False|
-|theme|object / text|text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/demos/features/pivot-table/pivot-customize/pivot-theme/purejs); object: object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class||
-|showFooter|Boolean|Display a footer| False
-|showHeader|Boolean|Display a header| True
-|showResizeHandle|Boolean|For tables that don't have a *source*. Display the resize handle| False
-|tableColumns|Collection|Collection of objects used to create the table's columns (see below)| Undefined
-|useFooterDropDownList|Boolean|Use a dropdown list in footer cells that calculate the total value of a column| False
-
-
-
-The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
-
-  |Property|Type|Description|Mandatory
-  |---|---|---|---|
-  |dataField|Text| table column's property name in the data context| No
-  |formatter|Text| table column's formatter | No
-  |name|Text| table column's name | Yes
-  
-The length of the *tableColumns* collection must be equal to the range column count:
+Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. The length of the *tableColumns* collection must be equal to the range column count:
 
   * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
   * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
