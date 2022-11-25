@@ -744,7 +744,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 |rangeObj|Object|->|Range object|
 |tableName|Text|->|Name for the table|
 |source|Text|->|Data context property name to display in the table|
-|options|cs.ViewPro.TableOptions|->|Additional options|<!-- END REF -->
+|options|[cs.ViewPro.TableOptions](classes.md#tableoptions)|->|Additional options|<!-- END REF -->
 
 #### Description
 
@@ -807,13 +807,13 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
 // Define the columns for the table
-var $options : Object
+var $options : cs.ViewPro.TableOptions
 
-$options:=New object
+$options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
 
 // Create a table from the "people" collection
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
@@ -2603,6 +2603,7 @@ If *tableName* is not found or if it does not contain a modified column, the com
 You want to count the number of edited rows:
 
 ```4d
+var $dirty : Collection
 $dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
 VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 ```
@@ -2696,7 +2697,8 @@ The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tablethe
 The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
 
 ```4d
-$param:=New object
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
 $param.theme:="dark10" //use of a native theme name
 
 VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
@@ -2707,7 +2709,7 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 #### See also
 
-[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme))
+[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 
@@ -5814,7 +5816,8 @@ In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class
 You want to set a predefined theme to a table:
 
 ```4d
-$param:=New object()
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
 $param.theme:="medium2"
 VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 ```
@@ -5826,26 +5829,30 @@ You want to have this alternate column rendering:
 ![](../assets/en/ViewPro/col-bandering.png)
 
 ```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+
 // Enable the band column rendering
-$param:=New object
 $param.bandColumns:=True
 $param.bandRows:=False
 
 // Create the theme object with header and column styles
-$param.theme:=New object
+$param.theme:=cs.ViewPro.TableThemeOptions.new()
 
-$styleHeader:=New object
-$styleHeader.backColor:="#FFE45C"
+var $styleHeader; $styleColumn; $styleColumn2 : cs.ViewPro.TableStyle
+
+$styleHeader:=cs.ViewPro.TableStyle.new()
+$styleHeader.backColor:="Gold"
 $styleHeader.foreColor:="#03045E"
 $param.theme.headerRowStyle:=$styleHeader
 
-$styleColumn1:=New object
-$styleColumn1.backColor:="#0077B6"
+$styleColumn1:=cs.ViewPro.TableStyle.new()
+$styleColumn1.backColor:="SkyBlue"
 $styleColumn1.foreColor:="#03045E"
 $param.theme.firstColumnStripStyle:=$styleColumn1
 
-$styleColumn2:=New object
-$styleColumn2.backColor:="#CAF0F8"
+$styleColumn2:=cs.ViewPro.TableStyle.new()
+$styleColumn2.backColor:="LightCyan"
 $styleColumn2.foreColor:="#03045E"
 $param.theme.secondColumnStripStyle:=$styleColumn2
 
@@ -5856,7 +5863,7 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 #### See also
 
-[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme))
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme)
 
 
 
