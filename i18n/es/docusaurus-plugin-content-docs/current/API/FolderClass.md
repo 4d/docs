@@ -61,7 +61,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 | Versión | Modificaciones              |
 | ------- | --------------------------- |
-| v20     | Support of `fk home folder` |
+| v19 R8  | Support of `fk home folder` |
 | v17 R5  | Añadidos                    |
 
 </details>

@@ -743,16 +743,16 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
-**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )<!-- END REF -->
+**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| 引数        | タイプ    |    | 説明                                  |
-| --------- | ------ | -- | ----------------------------------- |
-| rangeObj  | Object | -> | レンジオブジェクト                           |
-| tableName | Text   | -> | 表組みの名称                              |
-| source    | Text   | -> | 表に表示するデータコンテキストプロパティ名               |
-| options   | Object | -> | 追加のオプション|<!-- END REF -->
+| 引数        | タイプ                                                |    | 説明                                  |
+| --------- | -------------------------------------------------- | -- | ----------------------------------- |
+| rangeObj  | Object                                             | -> | レンジオブジェクト                           |
+| tableName | Text                                               | -> | 表組みの名称                              |
+| source    | Text                                               | -> | 表に表示するデータコンテキストプロパティ名               |
+| options   | [cs.ViewPro.TableOptions](classes.md#tableoptions) | -> | 追加のオプション|<!-- END REF -->
 
 |
 
@@ -775,33 +775,9 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
   * *source* を指定しない場合、コマンドは *rangeObj* が定義するサイズの空の表を作成します。
   * 指定された *source* をドキュメント内に完全に表示できない場合、表は作成されません。
 
-*options* には、表組み用の追加オプションを格納したオブジェクトを渡せます。 とりうる値:
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
 
-| プロパティ                 | タイプ           | 説明                                                                                                                                                                                                                    | デフォルト値 |
-| --------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| allowAutoExpand       | Boolean       | 隣接する空のセルに値が追加されたとき、表の列または行を拡張する場合は true                                                                                                                                                                               | true   |
-| bandColumns           | boolean       | Value that indicates whether to display an alternating column style                                                                                                                                                   | false  |
-| bandRows              | boolean       | Value that indicates whether to display an alternating row style                                                                                                                                                      | true   |
-| highlightFirstColumn  | boolean       | Value that indicates whether to highlight the first column                                                                                                                                                            | false  |
-| highlightLastColumn   | boolean       | Value that indicates whether to highlight the first column                                                                                                                                                            | false  |
-| theme                 | object / text | text: name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/demos/features/pivot-table/pivot-customize/pivot-theme/purejs); object: object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class |        |
-| showFooter            | Boolean       | フッターを表示                                                                                                                                                                                                               | false  |
-| showHeader            | Boolean       | ヘッダーを表示                                                                                                                                                                                                               | true   |
-| showResizeHandle      | Boolean       | *source* を持たない表の場合。 リサイズハンドルを表示                                                                                                                                                                                       | false  |
-| tableColumns          | Collection    | 表の列を作成するために使用されるオブジェクトのコレクション (下記参照)                                                                                                                                                                                  | 未定義    |
-| useFooterDropDownList | Boolean       | 列の合計値を計算するフッターセルでドロップダウンリストを使用                                                                                                                                                                                        | false  |
-
-
-
-*tableColumns* コレクションは、表の列の構造を決定します。 コレクション内の各オブジェクトは以下の値を持ちます:
-
-  | プロパティ     | タイプ  | 説明                       | 必須 |
-  | --------- | ---- | ------------------------ | -- |
-  | dataField | Text | データコンテキストにおける、表の列のプロパティ名 | ×  |
-  | formatter | Text | 表の列のフォーマッター              | ×  |
-  | name      | Text | 表の列の名前                   | ◯  |
-
-*tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
+Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. *tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
 
   * *rangeObj* の列数が *tableColumns* の列数より多い場合、表は追加の空列で埋められます。
   * *rangeObj* の列数が *tableColumns* の列数より少ない場合、表はレンジの列数のみを表示します。
@@ -829,7 +805,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 データコンテキストを使用した表組みを作成します:
 
 ```4d
-// データコンテキストの設定します
+// Set a data context
 var $data : Object
 
 $data:=New object()
@@ -840,16 +816,16 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// 表の列を定義します
-var $options : Object
+// Define the columns for the table
+var $options : cs.ViewPro.TableOptions
 
-$options:=New object
+$options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
 
-// "people" コレクションから表を作成します
+// Create a table from the "people" collection
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
@@ -2700,6 +2676,7 @@ If *tableName* is not found or if it does not contain a modified column, the com
 You want to count the number of edited rows:
 
 ```4d
+var $dirty : Collection
 $dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
 VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 ```
@@ -2796,7 +2773,8 @@ The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tablethe
 The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
 
 ```4d
-$param:=New object
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
 $param.theme:="dark10" //use of a native theme name
 
 VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
@@ -2807,7 +2785,7 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 #### 参照
 
-[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme))
+[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 
@@ -6002,7 +5980,8 @@ In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class
 You want to set a predefined theme to a table:
 
 ```4d
-$param:=New object()
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
 $param.theme:="medium2"
 VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 ```
@@ -6014,26 +5993,30 @@ You want to have this alternate column rendering:
 ![](../assets/en/ViewPro/col-bandering.png)
 
 ```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+
 // Enable the band column rendering
-$param:=New object
 $param.bandColumns:=True
 $param.bandRows:=False
 
 // Create the theme object with header and column styles
-$param.theme:=New object
+$param.theme:=cs.ViewPro.TableThemeOptions.new()
 
-$styleHeader:=New object
-$styleHeader.backColor:="#FFE45C"
+var $styleHeader; $styleColumn; $styleColumn2 : cs.ViewPro.TableStyle
+
+$styleHeader:=cs.ViewPro.TableStyle.new()
+$styleHeader.backColor:="Gold"
 $styleHeader.foreColor:="#03045E"
 $param.theme.headerRowStyle:=$styleHeader
 
-$styleColumn1:=New object
-$styleColumn1.backColor:="#0077B6"
+$styleColumn1:=cs.ViewPro.TableStyle.new()
+$styleColumn1.backColor:="SkyBlue"
 $styleColumn1.foreColor:="#03045E"
 $param.theme.firstColumnStripStyle:=$styleColumn1
 
-$styleColumn2:=New object
-$styleColumn2.backColor:="#CAF0F8"
+$styleColumn2:=cs.ViewPro.TableStyle.new()
+$styleColumn2.backColor:="LightCyan"
 $styleColumn2.foreColor:="#03045E"
 $param.theme.secondColumnStripStyle:=$styleColumn2
 
@@ -6044,7 +6027,7 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 #### 参照
 
-[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme))
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme)
 
 
 

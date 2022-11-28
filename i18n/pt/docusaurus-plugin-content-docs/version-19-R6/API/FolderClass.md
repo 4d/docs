@@ -18,7 +18,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Pathnames
 
-`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
 
 
 ### Objecto Folder
@@ -80,7 +80,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -88,12 +88,12 @@ In the *path* parameter, pass a folder path string. You can use a custom string 
 
 > Only absolute pathnames are supported with the `Folder` command.
 
-By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType* . Estão disponíveis as seguintes constantes:
 
-| Constante        | Value | Comentário                                                                              |
-| ---------------- | ----- | --------------------------------------------------------------------------------------- |
-| fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
-| fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
+| Constante        | Value | Comentário                                                                                               |
+| ---------------- | ----- | -------------------------------------------------------------------------------------------------------- |
+| fk platform path | 1     | Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma) |
+| fk posix path    | 0     | Caminho expresso com a sintaxe POSIX (por padrão)                                                        |
 
 **Folder ( folderConstant { ; \* } )**
 
@@ -226,7 +226,7 @@ A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->creat
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
+By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. Estão disponíveis as seguintes constantes:
 
 | Constante          | Value | Comentário                 |
 | ------------------ | ----- | -------------------------- |
