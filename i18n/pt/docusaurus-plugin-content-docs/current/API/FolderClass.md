@@ -168,7 +168,7 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->creates and re
 
 A função `.create()` <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+Se necessário, a função cria a pasta hierachy como descrito na [platformPath](#platformpath) ou [caminho](#path) propriedades. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
 **Valor retornado**
 
@@ -218,22 +218,22 @@ End if
 <!--REF #FolderClass.createAlias().Params -->
 | Parâmetros        | Tipo       |    | Descrição                                              |
 | ----------------- | ---------- | -- | ------------------------------------------------------ |
-| destinationFolder | 4D. Folder | -> | Destination folder for the alias or shortcut           |
-| aliasName         | Text       | -> | Name of the alias or shortcut                          |
-| aliasType         | Integer    | -> | Type of the alias link                                 |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho           |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                           |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                          |
 | Resultados        | 4D. File   | <- | Alias or shortcut reference|<!-- END REF --> |
 
 #### Descrição
 
-A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um pseudónimo (macOS) ou um atalho (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. Estão disponíveis as seguintes constantes:
+Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType* . Estão disponíveis as seguintes constantes:
 
 | Constante          | Value | Comentário                 |
 | ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (default)       |
+| `fk alias link`    | 0     | Alias link (padrão)        |
 | `fk symbolic link` | 1     | Symbolic link (macOS only) |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
