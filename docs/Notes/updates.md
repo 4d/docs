@@ -22,6 +22,7 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 #### Behavior changes
 
+- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) property. 
 - When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
 
 
