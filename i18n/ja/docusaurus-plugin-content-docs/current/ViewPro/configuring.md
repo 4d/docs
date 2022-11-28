@@ -403,7 +403,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 ### スタイルオブジェクトとスタイルシート
 
-スタイルオブジェクトには、スタイル設定が格納されます。 これらはスタイルシートで使用するか、あるいはそのまま使用することができます。 スタイルオブジェクトはスタイルシートと組み合わせて使用することもでき、ドキュメントの他の部分に影響を及ぼすことなく個別のセルレンジに異なる設定を指定することもできます。 [VP SET CELL STYLE](method-list.md#vp-set-cell-style) および [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) コマンドでは、スタイルオブジェクトを直接使用することができます。 You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](method-list.md#vp-set-table-theme) or [VP CREATE TABLE](method-list.md#vp-create-table) commands.
+スタイルオブジェクトには、スタイル設定が格納されます。 これらはスタイルシートで使用するか、あるいはそのまま使用することができます。 スタイルオブジェクトはスタイルシートと組み合わせて使用することもでき、ドキュメントの他の部分に影響を及ぼすことなく個別のセルレンジに異なる設定を指定することもできます。 [VP SET CELL STYLE](method-list.md#vp-set-cell-style) および [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) コマンドでは、スタイルオブジェクトを直接使用することができます。 [VP SET TABLE THEME](method-list.md#vp-set-table-theme) または [VP CREATE TABLE](method-list.md#vp-create-table) コマンドを使用してカスタムテーブルテーマを定義する場合にも、スタイル オブジェクトが使用できます。
 
 **スタイルシート** は、プロパティの組み合わせをスタイルオブジェクトにまとめたもので、それによって 4D View Pro ドキュメントのすべてのセルの見た目を指定します。 ドキュメントとともに保存されたスタイルシートを使用して、単一のシート、複数のシート、あるいはワークブック全体に対してプロパティを設定することができます。 4D View Pro スタイルシートは作成時に名前が与えられ、この名前はスタイルシートの "name" プロパティに保存されます。 これによりスタイルシートの使用が容易になり、また注意深く命名することで、その定義と目的を分かりやすくすることもできます (例: Letterhead_internal、Letterhead_external、など)。
 
