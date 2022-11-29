@@ -735,11 +735,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                                                          |
-| ------ | ----------------------------------------------------------------------------------------------------------- |
-| v19 R8 | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | `allowAutoExpand` オプションをサポート                                                                                |
-| v19 R6 | 追加                                                                                                          |
+| バージョン  | 内容                                                                                              |
+| ------ | ----------------------------------------------------------------------------------------------- |
+| v19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| v19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
+| v19 R6 | 追加                                                                                              |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -775,9 +775,9 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
   * *source* を指定しない場合、コマンドは *rangeObj* が定義するサイズの空の表を作成します。
   * 指定された *source* をドキュメント内に完全に表示できない場合、表は作成されません。
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
+*options* には、設定する表プロパティを格納する [`cs.ViewPro.TableOptions` クラス](classes.md#tableoptions) のオブジェクトを渡します。
 
-Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. *tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
+*options* オブジェクトの中で、*tableColumns* コレクションが、表の列のデータ構造を決定します。 *tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
 
   * *rangeObj* の列数が *tableColumns* の列数より多い場合、表は追加の空列で埋められます。
   * *rangeObj* の列数が *tableColumns* の列数より少ない場合、表はレンジの列数のみを表示します。
@@ -805,7 +805,7 @@ Within the *options* object, the *tableColumns* collection determines the struct
 データコンテキストを使用した表組みを作成します:
 
 ```4d
-// Set a data context
+// データコンテキストを設定します
 var $data : Object
 
 $data:=New object()
@@ -816,7 +816,7 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// Define the columns for the table
+// 表の列を定義します
 var $options : cs.ViewPro.TableOptions
 
 $options:=cs.ViewPro.TableOptions.new()
@@ -825,7 +825,7 @@ $options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "da
 $options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
 $options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
 
-// Create a table from the "people" collection
+// "people" コレクションから表を作成します
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
@@ -2635,13 +2635,13 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| 引数         | タイプ        |    | 説明                                                                                                |
-| ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text       | -> | 4D View Pro フォームオブジェクト名                                                                           |
-| tableName  | Text       | -> | 表組みの名称                                                                                            |
-| reset      | Boolean    | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True   |
-| sheet      | Integer    | -> | シートのインデックス (省略した場合はカレントシート)                                                                       |
-| 戻り値        | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF -->
+| 引数         | タイプ        |    | 説明                                                                    |
+| ---------- | ---------- | -- | --------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | 4D View Pro フォームオブジェクト名                                               |
+| tableName  | Text       | -> | 表組みの名称                                                                |
+| reset      | Boolean    | -> | 現在の表から "ダーティ" ステータスをクリアするには true、そのままにするには false を指定します。 デフォルト = true |
+| sheet      | Integer    | -> | シートのインデックス (省略した場合はカレントシート)                                           |
+| 戻り値        | Collection | <- | 前回のリセット以降に変更された全項目を格納するオブジェクトのコレクション|<!-- END REF -->
 
 
 |
@@ -2649,31 +2649,31 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 #### 説明
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->。
+`VP Get table dirty rows` コマンドは、 <!-- REF #_method_.VP Get table dirty rows.Summary -->*tableName* が指定する表組みの前回のリセット以降に変更された項目を含む *dirty row* ("ダーティ" な行) のオブジェクトのコレクションを返します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+*tableName* には、変更された行を取得したい表組みの名称を渡します。 なお、[データコンテキスト](#vp-set-data-context) にバインドされている列の変更のみが考慮されます。
 
-By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
+デフォルトでは、このコマンドを呼び出すと、現在のテーブルから *ダーティ* のステータスをクリアします。 この状態をリセットせずに維持するには、*reset* に `false` を渡します。
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
-Each *dirty row* object in the returned collection contains the following properties:
+返されるコレクション内の各 *dirty row* ("ダーティ" な行) オブジェクトは、以下のプロパティを含みます:
 
-| プロパティ        | タイプ     | 説明                                  |
-| ------------ | ------- | ----------------------------------- |
-| item         | object  | Modified object of the modified row |
-| originalItem | object  | Object before modification          |
-| row          | integer | Index of the modified row           |
+| プロパティ        | タイプ     | 説明              |
+| ------------ | ------- | --------------- |
+| item         | object  | 変更された行の変更オブジェクト |
+| originalItem | object  | 変更前のオブジェクト      |
+| row          | integer | 変更された行のインデックス   |
 
-If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
+*tableName* が見つからない場合、または変更された列が含まれていない場合、コマンドは空のコレクションを返します。
 
 #### 例題
 
-You want to count the number of edited rows:
+変更された行の数を取得します:
 
 ```4d
 var $dirty : Collection
@@ -2749,11 +2749,11 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| 引数         | タイプ                                            |    | 説明                                                             |
-| ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
-| vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                                        |
-| tableName  | Text                                           | -> | 表組みの名称                                                         |
-| 戻り値        | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF -->
+| 引数         | タイプ                                            |    | 説明                                        |
+| ---------- | ---------------------------------------------- | -- | ----------------------------------------- |
+| vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                   |
+| tableName  | Text                                           | -> | 表組みの名称                                    |
+| 戻り値        | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | 現在の表テーマのプロパティ値|<!-- END REF -->
 
 
 |
@@ -2761,25 +2761,25 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 #### 説明
 
-The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->。 A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
+`VP Get table theme` コマンドは、 <!-- REF #_method_.VP Get table theme.Summary -->*tableName* で指定した表組みの現在のテーマのプロパティ値を返します<!-- END REF -->。 表組みのテーマは、[`VP CREATE TABLE`](#vp-create-table) または [`VP SET TABLE THEME`](#vp-set-table-theme) コマンド、もしくはインターフェースから設定することができます。
 
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
+*vpAreaName* には 4D View Pro エリアの名前を渡します。*tableName* には表組みの名前を渡します。
 
-The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme.
+このコマンドは、現在の表テーマを記述するプロパティと値を格納する、[cs.ViewPro.TableTheme](classes.md#tabletheme) クラスのオブジェクトを返します。
 
 
 #### 例題
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+[ネイティブ SpreadJS テーマ](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) 名を使用してテーマを定義した場合でも、このコマンドは完全な `theme` オブジェクトを返します。
 
 ```4d
 var $param : cs.ViewPro.TableTheme
 $param:=cs.ViewPro.TableTheme.new()
-$param.theme:="dark10" //use of a native theme name
+$param.theme:="dark10" // ネイティブテーマ名を使用します
 
 VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
 $vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
-$result:=Asserted(Value type($vTheme.theme)=Is object) //true
+$result:=Asserted(Value type($vTheme.theme)=Is object) // true
 ```
 
 
@@ -4204,7 +4204,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 | ---------- | ------ | -- | ------------------------ |
 | parameters | Object | -> | オフスクリーンエリアの属性を格納するオブジェクト |
 
-|Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
+|Result   |Mixed|<-|`.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
 
 #### 説明
 
@@ -4216,7 +4216,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 | ----- | ---- | ----------------------------------------------------------------------- |
 | area  | text | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。 |
 
-|onEvent | object (formula)| A callback method that will be launched when the offscreen area is ready. 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable).| |autoQuit | boolean | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method. | |timeout | number | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. 0 に設定した場合、エリアは自動的には閉まりません。 Default value: 60 | |result| mixed| Result of the processing (if any)| |`\&#060;customProperty&#062;` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
+|onEvent | object (フォーミュラ)| オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。|autoQuit | boolean | True (デフォルト値) の場合、[`On End URL Loading`](Events/onEndUrlLoading.md) または [`On URL Loading Error`](Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。 | |timeout | number | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60 | |result| mixed| 処理の結果 (あれば)| |`\&#060;customProperty&#062;` | mixed|  *onEvent* コールバックメソッドで利用可能なカスタムの属性。 |
 
 
 以下のプロパティは、必要に応じてコマンドによって自動的に追加されます:
@@ -5056,9 +5056,9 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parameter|Type||Description|
+|引数|タイプ||説明|
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|---||---|| |rangeObj |Object|->|レンジオブジェクト| |dateValue |Date|->|設定する日付値| |formatPattern |Text|->|値のフォーマット|<!-- END REF -->
 
 #### 説明
 
@@ -5956,11 +5956,11 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
-| 引数         | タイプ                                            |    | 説明                                                          |
-| ---------- | ---------------------------------------------- | -- | ----------------------------------------------------------- |
-| vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                                     |
-| tableName  | Text                                           | -> | 表組みの名称                                                      |
-| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | Table theme properties to modify|<!-- END REF -->
+| 引数         | タイプ                                            |    | 説明                                        |
+| ---------- | ---------------------------------------------- | -- | ----------------------------------------- |
+| vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                   |
+| tableName  | Text                                           | -> | 表組みの名称                                    |
+| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | 設定する表テーマのプロパティ|<!-- END REF -->
 
 
 |
@@ -5968,16 +5968,16 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 #### 説明
 
-The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->。
+`VP SET TABLE THEME` コマンドは、 <!-- REF #_method_.VP SET TABLE THEME.Summary -->*tableName* の表の現在のテーマを変更します<!-- END REF -->。
 
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify.
+*vpAreaName* には 4D View Pro エリアの名前を渡します。*tableName* には変更する表の名前を渡します。
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class](classes.md#tabletheme) that contains the theme properties to modify.
+*options* には、設定するテーマプロパティを格納する [`cs.ViewPro.TableTheme` クラス](classes.md#tabletheme) のオブジェクトを渡します。
 
 
 #### 例題 1
 
-You want to set a predefined theme to a table:
+あらかじめ定義されたテーマを表に設定します:
 
 ```4d
 var $param : cs.ViewPro.TableTheme
@@ -5988,7 +5988,7 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 #### 例題 2
 
-You want to have this alternate column rendering:
+交互の列表示を設定します:
 
 ![](../assets/en/ViewPro/col-bandering.png)
 
@@ -5996,11 +5996,11 @@ You want to have this alternate column rendering:
 var $param : cs.ViewPro.TableTheme
 $param:=cs.ViewPro.TableTheme.new()
 
-// Enable the band column rendering
+// 交互の列の表示を有効にします
 $param.bandColumns:=True
 $param.bandRows:=False
 
-// Create the theme object with header and column styles
+// ヘッダーと列のスタイル用のテーマオブジェクトを作成します
 $param.theme:=cs.ViewPro.TableThemeOptions.new()
 
 var $styleHeader; $styleColumn; $styleColumn2 : cs.ViewPro.TableStyle
