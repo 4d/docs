@@ -64,12 +64,12 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un
 
 #### *settings*
 
-| Propiedad       | Tipo    | Descripción                                                                                                       |
-| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
-| [type](#type)   | text    | Defines the type of the key to create: <li>"RSA": generates a RSA key pair, using [.size](#size) as size.</li><li>"ECDSA": generates an Elliptic Curve Digital Signature Algorithm key pair, using [.curve](#curve) as curve. Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.</li><li>"PEM": loads a key pair definition in PEM format, using [.pem](#pem).</li> |
-| [curve](#curve) | text    | Nombre de la curva ECDSA                                                                                          |
-| [pem](#pem)     | text    | Definición PEM de una llave de cifrado a cargar                                                                   |
-| [size](#size)   | integer | Tamaño de la llave RSA en bits                                                                                    |
+| Propiedad       | Tipo    | Descripción                                                                                                    |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| [type](#type)   | text    | Define el tipo de la llave a crear: <li>"RSA": genera un par de llaves RSA, utilizando [.size](#size) como tamaño.</li><li>"ECDSA": genera un par de llaves Elliptic Curve Digital Signature Algorithm, utilizando [.curve](#curve) como curva. Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.</li><li>"PEM": carga una definición de par de llaves en formato PEM, utilizando [.pem](#pem).</li> |
+| [curve](#curve) | text    | Nombre de la curva ECDSA                                                                                       |
+| [pem](#pem)     | text    | Definición PEM de una llave de cifrado a cargar                                                                |
+| [size](#size)   | integer | Tamaño de la llave RSA en bits                                                                                 |
 
 
 #### *CryptoKey*
@@ -325,7 +325,7 @@ Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño d
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
+Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
 - "RSA": un par de llaves RSA, utilizando l`settings.size` como [.size](#size).
 - "ECDSA": un par de llaves del Algoritmo Elliptic Curve Digital Signature Algorithm, utilizando `settings.curve` como [.curve](#curve). Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.
