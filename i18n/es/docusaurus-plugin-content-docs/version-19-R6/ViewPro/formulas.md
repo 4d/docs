@@ -92,12 +92,12 @@ Esta fórmula se refiere a las celdas C6 y C7. That is, 4D View Pro is instructe
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 
 - A reference that changes is called a **relative reference**, and refers to a cell by how far left/right and up/down it is from the cell with the formula.
-- A reference that always points to a particular cell is called an **absolute reference**.
-- You can also create a mixed reference which always points to a fixed row or column.
+- Una referencia que siempre apunta a una celda particular se denomina **referencia absoluta**.
+- También puede crear una referencia mixta que apunte siempre a una línea o columna fija.
 
 ### Notación de las referencias
 
-If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. You may make the reference an absolute reference by putting a dollar sign in front of the letter and the number, as in `$C$5`.
+Si sólo utiliza coordenadas de celda, por ejemplo, `C5`, 4D View Pro interpreta la referencia como relativa. Puede hacer que la referencia sea absoluta poniendo un signo de dólar delante de la letra y el número, como en `$C$5`.
 
 You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
 
@@ -105,17 +105,17 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 La siguiente tabla muestra el efecto de las diferentes notaciones:
 
-| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                        |
-| ------------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5                 | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                       |
-| $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                        |
-| $C5                | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.               |
-| C$5                | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                |
-| Nombre de la celda | Absoluto           | La referencia es absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                                     |
+| ------------------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5                 | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                                    |
+| $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                                     |
+| $C5                | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                            |
+| C$5                | Mixed              | La referencia es siempre la línea 5, pero la referencia de la columna es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez |
+| Nombre de la celda | Absoluto           | La referencia es absoluta. Siempre se referirá a la [celda o rango nombrado](method-list.md#vp-add-range-name) sin importar donde se use la referencia.         |
 
 ## Funciones integradas
 
-Las funciones de hoja de cálculo son fórmulas predefinidas utilizadas para calcular los valores de las celdas. When you type the first letter of the function to enter, a pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+Las funciones de hoja de cálculo son fórmulas predefinidas utilizadas para calcular los valores de las celdas. Al teclear la primera letra de la función a introducir, aparece un menú emergente con las funciones y referencias disponibles, que permite seleccionar los elementos deseados:
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
@@ -123,9 +123,9 @@ Ver [**Lista extendida de funciones de SpreadJS**](https://www.grapecity.com/spr
 
 ## Funciones 4D
 
-4D View Pro allows you to define and call **4D custom functions**, which execute [4D formulas](API/FunctionClass.md). Using 4D custom functions extends the possibilities of your 4D View Pro documents and allows powerful interactions with the 4D database.
+4D View Pro le permite definir y llamar ** las funciones 4D personalizadas**, que ejecutan las [fórmulas 4D](API/FunctionClass.md). El uso de las funciones personalizadas 4D extiende las posibilidades de sus documentos 4D View Pro y permite interacciones avanzadas con la base de datos 4D.
 
-4D custom functions provide access, from within your 4D View Pro formulas, to:
+Las funciones personalizadas 4D permiten acceder, desde sus fórmulas 4D View Pro, a:
 
 - variables proceso 4D,
 - campos,
