@@ -224,12 +224,12 @@ Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType* . Estão disponíveis as seguintes constantes:
 
-| Constante          | Value | Comentário                 |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (padrão)        |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| Constante          | Value | Comentário                   |
+| ------------------ | ----- | ---------------------------- |
+| `fk alias link`    | 0     | Alias link (padrão)          |
+| `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+No Windows, é sempre criado um atalho (arquivo .lnk) (o parâmetro *aliasType* é ignorado).
 
 **Objeto devolvido**
 
@@ -237,7 +237,7 @@ A `4D. File` object with the `isAlias` property set to **true**.
 
 #### Exemplo
 
-You want to create an alias to a file in your database folder:
+Se quiser criar um alias para um arquivo na sua pasta database:
 
 ```4d
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
@@ -271,16 +271,16 @@ You want to create an alias to a file in your database folder:
 
 #### Descrição
 
-A função `.delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+A função `.delete()` <!-- REF #FileClass.delete().Summary -->apaga o arquivo<!-- END REF -->.
 
-If the file is currently open, an error is generated.
+Se o arquivo estiver aberto atualmente, um erro é gerado.
 
-If the file does not exist on disk, the function does nothing (no error is generated).
-> **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
+> **ATENÇÃO**: `.delete( )` pode apagar qualquer arquivo de um disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete( )` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 #### Exemplo
 
-You want to delete a specific file in the database folder:
+Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -312,19 +312,19 @@ You want to delete a specific file in the database folder:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                        |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| Resultados | Objeto | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                            |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
+| Resultados | Objeto | <- | Conteúdo do recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna os conteúdos de um arquivo **.exe**, **.dll** ou **.plist** como um objeto.<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o arquivo não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função devolve um objecto vazio (não é gerado nenhum erro).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
 **Returned object with a .exe or .dll file**
 
@@ -508,9 +508,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. The function must be used with an existing .exe, .dll or .plist file.
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
 ***info* parameter object with a .exe or .dll file**
 
