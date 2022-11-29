@@ -229,12 +229,12 @@ Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType* . Estão disponíveis as seguintes constantes:
 
-| Constante          | Value | Comentário                 |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (padrão)        |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| Constante          | Value | Comentário                   |
+| ------------------ | ----- | ---------------------------- |
+| `fk alias link`    | 0     | Alias link (padrão)          |
+| `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+No Windows, é sempre criado um atalho (arquivo .lnk) (o parâmetro *aliasType* é ignorado).
 
 **Objeto devolvido**
 
