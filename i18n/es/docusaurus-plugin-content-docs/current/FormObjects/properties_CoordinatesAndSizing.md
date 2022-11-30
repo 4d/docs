@@ -7,7 +7,7 @@ title: Coordenadas y dimensiones
 
 This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
-- collection or entity selection,
+- collection o entity selection,
 - array (non-hierarchical).
 
 Esta propiedad no está seleccionada por defecto. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Tenga en cuenta que sólo se tendrán en cuenta las columnas con la opción seleccionada para calcular el alto de línea.

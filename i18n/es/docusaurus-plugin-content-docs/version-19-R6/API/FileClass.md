@@ -17,7 +17,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 ### Rutas de acceso
 
-`File` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxis `filesystems` o `posix`. Los nombres de ruta soportados se detallan en la página [**Pathnames**](../Concepts/paths.md).
 
 
 ### Objeto File

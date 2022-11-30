@@ -3,11 +3,11 @@ id: FileHandleClass
 title: FileHandle
 ---
 
-The `FileHandle` class has functions that allow you to sequentially read from or append contents to an opened [`File`](FileClass) object. A file handle can access any part of a document.
+La classe `FileHandle` contient des fonctions qui vous permettent de lire séquentiellement ou d'ajouter du contenu à un objet [`File`](FileClass) ouvert. Un handle de fichier peut accéder à n'importe quelle partie d'un document.
 
-File handle objects are created with the [`file.open()`](FileClass#open) function.
+Les objets de type File handle sont créés avec la fonction [`file.open()`](FileClass#open).
 
-> To read or write a whole document at once, you might consider using the [file.getText()](FileClass.md#gettext) and [file.setText()](FileClass.md#settext) functions.
+> Pour lire ou écrire un document entier en une seule fois, vous pouvez envisager d'utiliser les fonctions [file.getText()](FileClass.md#gettext) et [file.setText()](FileClass.md#settext).
 
 Thanks to the standard 4D object *refcounting*, a file handle is automatically deleted when it is no longer referenced and thus, the requested [`File`](FileClass) object is automatically closed. Consequently, with file handles you don't need to worry about closing documents.
 

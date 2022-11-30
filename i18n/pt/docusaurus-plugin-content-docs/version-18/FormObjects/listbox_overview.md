@@ -5,7 +5,7 @@ title: List Box
 
 ## Visão Geral
 
-List boxes são objetos ativos complexos que permitem exibir e ingressar dados como colunas sincronizadas. Podem ser conectadas aos conteúdos de banco de dados como seleções de entidade e seleções de registro, ou para conteúdos de linguagem como coleções e arrays. They include advanced features regarding data entry, column sorting, event management, customized appearance, moving of columns, etc.
+List boxes são objetos ativos complexos que permitem exibir e ingressar dados como colunas sincronizadas. Podem ser conectadas aos conteúdos de banco de dados como seleções de entidade e seleções de registro, ou para conteúdos de linguagem como coleções e arrays. Incluem características avançadas relativas à entrada de dados, classificação de colunas, gestão de eventos, aspecto personalizado, movimentação de colunas, etc.
 
 ![](../assets/en/FormObjects/listbox.png)
 
@@ -512,7 +512,7 @@ Uma list box hierárquica é uma list box na qual o conteúdo da primeira coluna
 
 > Apenas [list boxes de tipo array](#array-list-boxes) podem ser hierárquicos.
 
-Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
+As caixas de listagem hierárquica são uma forma particular de representar dados, mas não modificam a estrutura de dados (matrizes). As caixas de listagem hierárquica são geridas exactamente da mesma forma que as caixas de listagem normais.
 
 ### Definir a hierarquia
 
@@ -564,64 +564,64 @@ Quando a primeira coluna for selecionada e especificada como hierárquica pode u
 
 Quando um formulário que conter uma list box hierárquica for aberto pela primeira vez, como padrão todas as linhas são expandidas.
 
-A break row and a hierarchical "node" are automatically added in the list box when values are repeated in the arrays. For example, imagine a list box containing four arrays specifying cities, each city being characterized by its country, its region, its name and its number of inhabitants:
+Uma linha de quebra e um "nó" hierárquico são automaticamente adicionados na caixa de listagem quando os valores são repetidos nas matrizes. Por exemplo, imagine uma caixa de listagem contendo quatro arrays especificando cidades, sendo cada cidade caracterizada pelo seu país, a sua região, o seu nome e o seu número de habitantes:
 
 ![](../assets/en/FormObjects/hierarch1.png)
 
-If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:
+Se esta caixa de listagem for apresentada de forma hierárquica (sendo as três primeiras arrays incluídas na hierarquia), obtém-se:
 
 ![](../assets/en/FormObjects/hierarch2.png)
 
-The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
+As matrizes não são ordenadas antes de a hierarquia ser construída. Se, por exemplo, uma matriz contém os dados AAABBAACC, a hierarquia obtida é a seguinte:
 
     > &gt; A B A C
 
-To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
+Para expandir ou colapsar um "nó" hierárquico, pode simplesmente clicar sobre ele. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
 
-When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.
+Quando valores do tipo de data ou hora são incluídos numa caixa de listagem hierárquica, eles são exibidos no formato de sistema curto.
 
-#### Sorts in hierarchical list boxes
+#### Ordenar em caixas de listagem hierárquica
 
-In a list box in hierarchical mode, a standard sort (carried out by clicking on the header of a list box column) is always constructed as follows:
+Numa caixa de listagem em modo hierárquico, uma ordenação padrão (realizada clicando no cabeçalho de uma coluna da caixa de listagem) é sempre construída da seguinte forma:
 
-* In the first place, all the levels of the hierarchical column (first column) are automatically sorted by ascending order.
-* The sort is then carried out by ascending or descending order (according to the user action) on the values of the column that was clicked.
-* All the columns are synchronized.
-* During subsequent sorts carried out on non-hierarchical columns of the list box, only the last level of the first column is sorted. It is possible to modify the sorting of this column by clicking on its header.
+* Em primeiro lugar, todos os níveis da coluna hierárquica (primeira coluna) são automaticamente ordenados por ordem ascendente.
+* A ordenação é então efectuada por ordem ascendente ou descendente (de acordo com a acção do utilizador) sobre os valores da coluna que foi clicada.
+* Todas as colunas são sincronizadas.
+* Durante ordenações posteriores realizadas em colunas não hierárquicas da caixa de listagem, apenas o último nível da primeira coluna é classificado. É possível modificar a ordenação desta coluna, clicando no seu cabeçalho.
 
-Given for example the following list box, in which no specific sort is specified:
+Dada, por exemplo, a seguinte caixa de listagem, na qual não é especificado nenhum tipo específico:
 
 ![](../assets/en/FormObjects/hierarch3.png)
 
-If you click on the "Population" header to sort the populations by ascending (or alternately descending) order, the data appear as follows:
+Se clicar no cabeçalho "População" para ordenar as populações por ordem ascendente (ou alternadamente descendente), os dados aparecem como se segue:
 
 ![](../assets/en/FormObjects/hierarch4.png)
 
-As for all list boxes, you can [disable the standard sort mechanism](properties_Action.md#sortable) and manage sorts using programming.
+Como para todas as caixas de listagem, pode [desactivar o mecanismo de ordenação padrão](properties_Action.md#sortable) e gerir os tipos usando programação.
 
-#### Selections and positions in hierarchical list boxes
+#### Seleções e posições em caixas de listagem hierárquica
 
-A hierarchical list box displays a variable number of rows on screen according to the expanded/collapsed state of the hierarchical nodes. This does not however mean that the number of rows of the arrays vary. Only the display is modified, not the data. It is important to understand this principle because programmed management of hierarchical list boxes is always based on the data of the arrays, not on the displayed data. In particular, the break rows added automatically are not taken into account in the display options arrays (see below).
+Uma caixa de listagem hierárquica exibe um número variável de linhas na tela, de acordo com o estado expandido/colocado dos nós hierárquicos. Isto não significa, contudo, que o número de filas das matrizes varie. Apenas o visor é modificado, não os dados. É importante compreender este princípio porque a gestão programada das caixas de listagem hierárquica é sempre baseada nos dados das matrizes, não nos dados apresentados. Em particular, as linhas de intervalo adicionadas automaticamente não são tidas em conta nas matrizes de opções de visualização (ver abaixo).
 
-Let’s look at the following arrays for example:
+Vejamos, por exemplo, as seguintes matrizes:
 
 ![](../assets/en/FormObjects/hierarch5.png)
 
-If these arrays are represented hierarchically, the row "Quimper" will not be displayed on the second row, but on the fourth, because of the two break rows that are added:
+Se estes conjuntos forem representados hierarquicamente, a linha "Quimper" não será exibida na segunda linha, mas sim na quarta, devido às duas linhas de interrupção que são adicionadas:
 
 ![](../assets/en/FormObjects/hierarch6.png)
 
-Regardless of how the data are displayed in the list box (hierarchically or not), if you want to change the row containing "Quimper" to bold, you must use the statement Style{2} = bold. Only the position of the row in the arrays is taken into account.
+Independentemente de como os dados são exibidos na caixa da lista (hierarquicamente ou não), se quiser alterar a linha que contém "Quimper" para negrito, deve utilizar a declaração Style{2} = negrito. Apenas a posição da fila nas matrizes é tida em conta.
 
-This principle is implemented for internal arrays that can be used to manage:
+Este princípio é implementado para as matrizes internas que podem ser utilizadas para gerir:
 
 * cores
-* background colors
+* cores de fundo
 * estilos
-* hidden rows
+* filas ocultas
 * seleções
 
-For example, if you want to select the row containing Rennes, you must pass:
+Por exemplo, se quiser seleccionar a fila que contém Rennes, deve passar:
 
 ```4d
  ->MyListbox{3}:=True
@@ -629,80 +629,80 @@ For example, if you want to select the row containing Rennes, you must pass:
 
 Non-hierarchical representation: ![](../assets/en/FormObjects/hierarch7.png) Hierarchical representation: ![](../assets/en/FormObjects/hierarch8.png)
 
-> If one or more rows are hidden because their parents are collapsed, they are no longer selected. Only the rows that are visible (either directly or by scrolling) can be selected. In other words, rows cannot be both hidden and selected.
+> Se uma ou mais filas estiverem escondidas porque os seus pais estão desmoronados, já não são seleccionados. Apenas as linhas visíveis (directamente ou por rolagem) podem ser seleccionadas. Por outras palavras, as filas não podem ser tanto escondidas como seleccionadas.
 
-As with selections, the `LISTBOX GET CELL POSITION` command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, `LISTBOX GET CELL POSITION` will return the same position: (3;2).
+Tal como com as selecções, o comando `LISTBOX GET CELL POSITION` devolverá os mesmos valores para uma caixa de listagem hierárquica e uma caixa de listagem não hierárquica. Isto significa que em ambos os exemplos abaixo, `LISTBOX GET CELL POSITION` irá devolver a mesma posição: (3;2).
 
-*Non-hierarchical representation:* ![](../assets/en/FormObjects/hierarch9.png)
+*Representação não-hierárquica:* ![](../assets/en/FormObjects/hierarch9.png)
 
-*Hierarchical representation:* ![](../assets/en/FormObjects/hierarch10.png)
+*Representação hierárquica:* ![](../assets/en/FormObjects/hierarch10.png)
 
-When all the rows of a sub-hierarchy are hidden, the break line is automatically hidden. In the above example, if rows 1 to 3 are hidden, the "Brittany" break row will not appear.
+Quando todas as filas de uma sub-hierarquia estão escondidas, a linha de quebra é automaticamente escondida. No exemplo acima, se as linhas 1 a 3 estiverem escondidas, a linha de quebra "Bretanha" não aparecerá.
 
 #### Linhas de quebra
 
-If the user selects a break row, `LISTBOX GET CELL POSITION` returns the first occurrence of the row in the corresponding array. In the following case:
+Se o usuário selecionar uma linha de quebra, `LISTBOX GET CELL POSITION` devolve a primeira ocorrência da linha na matriz correspondente. No caso seguinte:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` returns (2;4). To select a break row by programming, you will need to use the `LISTBOX SELECT BREAK` command.
+... `LISTBOX GET CELL POSITION` retorna (2;4). Para selecionar uma linha de quebra por programação, terá de utilizar o comando `LISTBOX SELECT BREAK` .
 
-Break rows are not taken into account in the internal arrays used to manage the graphic appearance of list boxes (styles and colors). It is however possible to modify these characteristics for break rows via the graphic management commands for objects. You simply need to execute the appropriate commands on the arrays that constitute the hierarchy.
+As linhas de quebra não são tidas em conta nos arrays internos utilizados para gerir o aspecto gráfico das caixas de listagem (estilos e cores). No entanto, é possível modificar estas características para linhas de quebra através dos comandos de gestão gráfica dos objectos. Basta executar os comandos apropriados nas matrizes que constituem a hierarquia.
 
-Given for example the following list box (the names of the associated arrays are specified in parentheses):
+Dada, por exemplo, a seguinte caixa de listagem (os nomes dos arrays associados são especificados entre parênteses):
 
-*Non-hierarchical representation:* ![](../assets/en/FormObjects/hierarch12.png)
+*Representação não-hierárquica:* ![](../assets/en/FormObjects/hierarch12.png)
 
-*Hierarchical representation:* ![](../assets/en/FormObjects/hierarch13.png)
+*Representação hierárquica:* ![](../assets/en/FormObjects/hierarch13.png)
 
-In hierarchical mode, break levels are not taken into account by the style modification arrays named `tStyle` and `tColors`. To modify the color or style of break levels, you must execute the following statements:
+No modo hierárquico, os níveis de quebra não são tidos em conta pelos arrays de modificação de estilo denominadas `tStyle` e `tColors`. Para modificar a cor ou o estilo dos níveis de quebra, é necessário executar as seguintes declarações:
 
 ```4d
  OBJECT SET RGB COLORS(T1;0x0000FF;0xB0B0B0)
  OBJECT SET FONT STYLE(T2;Bold)
 ```
-> In this context, only the syntax using the array variable can function with the object property commands because the arrays do not have any associated object.
+> Neste contexto, apenas a sintaxe usando a variável array pode funcionar com os comandos de propriedade do objecto porque as arrays não têm nenhum objecto associado.
 
 Resultados:
 
 ![](../assets/en/FormObjects/hierarch14.png)
 
-#### Optimized management of expand/collapse
+#### Gestão otimizada da expansão/colapso
 
-You can optimize hierarchical list boxes display and management using the `On Expand` and `On Collapse` form events.
+Pode optimizar a exibição e gestão de caixas de listagem hierárquica usando os eventos de formulário `On Expand` e `On Collapse`.
 
-A hierarchical list box is built from the contents of its arrays so it can only be displayed when all these arrays are loaded into memory. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the `SELECTION TO ARRAY` command), not only because of the display speed but also the memory used.
+Uma caixa de listagem hierárquica é construída a partir do conteúdo de seus arrays de modo a só poder ser exibida quando todas estas matrizes são carregadas na memória. Isto torna difícil construir grandes caixas de listagem hierárquica com base em arrays gerados a partir de dados (através do comando `SELECTION TO ARRAY` ), não só devido à velocidade de visualização mas também à memória utilizada.
 
-Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
+Usando os formulários `On Expand` e `On Collapse` , os eventos podem ultrapassar estas restrições: por exemplo, é possível exibir apenas parte da hierarquia e carregar/descarregar as arrays a qualquer momento, com base nas ações dos usuários. No contexto destes eventos, o comando `LISTBOX GET CELL POSITION` devolve a célula onde o usuário clicou para expandir ou colapsar uma fila.
 
-In this case, you must fill and empty arrays through the code. The principles to be implemented are:
+Neste caso, é necessário preencher e esvaziar os arrays através do código. Os princípios a serem implementados são os seguintes:
 
-* When the list box is displayed, only the first array must be filled. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons: ![](../assets/en/FormObjects/hierarch15.png)
+* Quando a caixa de listagem é exibida, apenas o primeiro array deve ser preenchido No entanto, deve criar um segundo array com valores vazios para que a caixa de listagem exiba os botões de expansão/colapso: ![](../assets/en/FormObjects/hierarch15.png)
 
-* When a user clicks on an expand button, you can process the `On Expand` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command. ![](../assets/en/FormObjects/hierarch16.png)
+* Quando um usuário clicar num botão de expansão, pode processar o evento `On Expand` . O comando `LISTBOX GET CELL POSITION` devolve a célula em questão e permite-lhe construir a hierarquia apropriada: preenche o primeiro array com os valores repetidos e a segunda com os valores enviados do comando `SELECTION TO ARRAY` e insere tantas linhas quantas forem necessárias na caixa de listagem usando o comando `LISTBOX INSERT ROWS` . ![](../assets/en/FormObjects/hierarch16.png)
 
-* When a user clicks on a collapse button, you can process the `On Collapse` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned: you remove as many rows as needed from the list box using the `LISTBOX DELETE ROWS` command.
+* Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse` . O comando `LISTBOX GET CELL POSITION` devolve a célula em questão: retira-se tantas filas quantas forem necessárias da caixa de listagem usando o comando `LISTBOX DELETE ROWS` .
 
 ## Arrays objetos nas colunas (4D View Pro)
 
-List box columns can handle object arrays. Since object arrays can contain different kinds of data, this powerful new feature allows you to mix different input types in the rows of a single column, and display various widgets as well. For example, you could insert a text input in the first row, a check box in the second, and a drop-down list in the third. Object arrays also provide access to new kinds of widgets, such as buttons or color pickers.
+As colunas da caixa de listagem podem tratar de arrays de objectos. Uma vez que os arrays de objectos podem conter diferentes tipos de dados, esta nova e poderosa característica permite-lhe misturar diferentes tipos de entrada nas linhas de uma única coluna, e exibir também vários widgets. Por exemplo, poderia inserir uma entrada de texto na primeira linha, uma caixa de verificação na segunda, e uma lista drop down na terceira. Os arrays de objetos também fornecem acesso a novos tipos de widgets, tais como botões ou seletores de cores.
 
-The following list box was designed using an object array:
+A seguinte caixa de listagem foi concebida utilizando uma matriz de objectos:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray.png)
 > **Nota sobre as licenças**: a possibilidade de utilizar arrays de objetos nas list boxes é o primeiro passo para a próxima ferramenta "4D View Pro" que substituirá progressivamente ao plug-in 4D View. O uso desta funcionalidade exige ter uma licença válida de 4D View. Para saber mais, consulte o site Web de 4D.
 
-### Configuring an object array column
+### Configuração de uma coluna de matriz de objectos
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
+Para atribuir uma array de objectos a uma coluna de caixa de listagem, basta definir o nome da array de objectos na lista de propriedades (campo "Nome da Variável"), ou usando o comando [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) , como em qualquer coluna baseada em array. Na lista de propriedades, pode agora selecionar Objecto como "Tipo de Expressão" para a coluna:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
-Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. These types of columns can also be hidden.
+Estão disponíveis propriedades padrão relacionadas com coordenadas, tamanho e estilo para colunas de objectos. Pode defini-los usando a lista de propriedades, ou programando o estilo, cor da fonte, cor de fundo e visibilidade para cada linha de uma coluna de caixa de lista de tipo de objecto. Estes tipos de colunas também podem ser ocultados.
 
-However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:
+No entanto, o tema Fonte de Dados não está disponível para as colunas da caixa de listagem tipo objecto. De fato, o conteúdo de cada célula de coluna é baseado em atributos encontrados no elemento correspondente da array de objectos. Cada elemento da array pode definir:
 
-the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write "Hello World!" in an object column using this simple code:
+the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d  
 ARRAY OBJECT(obColumn;0) //column array
@@ -722,73 +722,73 @@ ARRAY OBJECT(obColumn;0) //column array
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
-> Display format and entry filters cannot be set for an object column. They automatically depend on the value type.
+> O formato de visualização e os filtros de entrada não podem ser definidos para uma coluna de objectos. Dependem automaticamente do tipo de valor.
 
-#### valueType and data display
+#### valueType e visualização de dados
 
-When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
+Quando uma coluna de caixa de listagem é associada a uma array de objectos, a forma como uma célula é exibida, introduzida, ou editada, é baseada no atributo valueType do elemento da array. Os valores suportados são os tipos de valores:
 
-* "text": for a text value
-* "real": for a numeric value that can include separators like a `\&#060;space&#062;`, `&#060;.&#062;`, or `&#060;,&#062;`
-* "integer": for an integer value
-* "boolean": for a True/False value
-* "color": to define a background color
-* "event": to display a button with a label.
+* "texto": para um valor de texto
+* "real": para um valor numérico que pode incluir separadores como um `\&#060; espaço&#062;`, `&#060;.&#062;`, ou `&#060;,&#062;`
+* "integer": para um valor inteiro
+* "booleano": para um valor Verdadeiro/Falso
+* "cor": para definir uma cor de fundo
+* "evento": para exibir um botão com um rótulo.
 
-4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
+4D utiliza widgets padrão no que respeita ao valor "valueType" (ou seja, um "texto" é exibido como um widget de entrada de texto, um "booleano" como uma caixa de verificação), mas também estão disponíveis exibições alternativas através de opções (*por exemplo*, um real também pode ser representado como um menu drop-down). A tabela seguinte mostra a visualização por defeito, bem como as alternativas para cada tipo de valor:
 
-| valueType | Default widget                                 | Alternative widget(s)                                                                          |
-| --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| text      | entrada de texto                               | drop-down menu (required list) or combo box (choice list)                                      |
-| real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
-| integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| boolean   | caixa de verificação                           | drop-down menu (required list)                                                                 |
-| color     | cor de fundo                                   | text                                                                                           |
-| event     | button with label                              |                                                                                                |
-|           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
+| valueType | Widget padrão                                       | Widgets alternativos                                                                                            |
+| --------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| text      | entrada de texto                                    | menu drop-down (lista obrigatória) ou caixa combinada (lista de escolha)                                        |
+| real      | entrada de texto controlada (números e separadores) | menu drop-down (lista obrigatória) ou caixa combinada (lista de escolha)                                        |
+| integer   | entrada de texto controlada (apenas números)        | menu drop down (lista necessária) ou caixa combinada (lista de escolha) ou caixa de verificação de três estados |
+| boolean   | caixa de verificação                                | menu drop-down (lista obrigatória)                                                                              |
+| color     | cor de fundo                                        | text                                                                                                            |
+| event     | botão com rótulo                                    |                                                                                                                 |
+|           |                                                     | Todos os widgets podem ter um botão de alternância de unidade adicional ou um botão de elipse ligado à célula.  |
 
-You set the cell display and options using specific attributes in each object (see below).
+Define-se a visualização e opções de células usando atributos específicos em cada objecto (ver abaixo).
 
-#### Display formats and entry filters
+#### Formatos de visualização e filtros de entrada
 
-You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
+Não é possível definir formatos de exibição ou filtros de entrada para colunas de caixas de listagem de tipos de objectos. São automaticamente definidos de acordo com o tipo de valor. Estes estão listados na tabela seguinte:
 
-| Tipo de valor | Default format                                             | Entry control         |
-| ------------- | ---------------------------------------------------------- | --------------------- |
-| text          | same as defined in object                                  | any (no control)      |
-| real          | same as defined in object (using system decimal separator) | "0-9" e "." e "-"     |
-|               |                                                            | "0-9" e "." se min>=0 |
-| integer       | same as defined in object                                  | "0-9" e "-"           |
-|               |                                                            | "0-9" se min>=0       |
-| Booleano      | caixa de verificação                                       | N/A                   |
-| color         | N/A                                                        | N/A                   |
-| event         | N/A                                                        | N/A                   |
+| Tipo de valor | Formato predefinido                                                        | Controlo de entrada     |
+| ------------- | -------------------------------------------------------------------------- | ----------------------- |
+| text          | o mesmo que definido no objecto                                            | qualquer (sem controlo) |
+| real          | o mesmo que definido no objeto (utilizando o separador decimal do sistema) | "0-9" e "." e "-"       |
+|               |                                                                            | "0-9" e "." se min>=0   |
+| integer       | o mesmo que definido no objecto                                            | "0-9" e "-"             |
+|               |                                                                            | "0-9" se min>=0         |
+| Booleano      | caixa de verificação                                                       | N/A                     |
+| color         | N/A                                                                        | N/A                     |
+| event         | N/A                                                                        | N/A                     |
 
 ### Attributes
 
-Each element of the object array is an object that can contain one or more attributes that will define the cell contents and data display (see example above).
+Cada elemento da array de objetos é um objecto que pode conter um ou mais atributos que definirão o conteúdo da célula e a exibição dos dados (ver exemplo acima).
 
-The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
+O único atributo obrigatório é "valueType" e os seus valores suportados são "text", "real", "integer", "boolean", "color", e "event". A tabela seguinte lista todos os atributos suportados nas arrays de objectos da caixa de listagem, dependendo do valor "valueType" (quaisquer outros atributos são ignorados). Os formatos de exibição são detalhados e são fornecidos exemplos abaixo.
 
-|                       | valueType                               | text | real | integer | boolean | color | event |
-| --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *Descrição*                             |      |      |         |         |       |       |
-| value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
-| min                   | minimum value                           |      | x    | x       |         |       |       |
-| max                   | maximum value                           |      | x    | x       |         |       |       |
-| behavior              | "threeStates" value                     |      |      | x       |         |       |       |
-| requiredList          | drop-down list defined in object        | x    | x    | x       |         |       |       |
-| choiceList            | combo box defined in object             | x    | x    | x       |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x       |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x       |         |       |       |
-| saveAs                | "reference" or "value"                  | x    | x    | x       |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x    | x    | x       |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x    | x    | x       |         |       |       |
-| unitList              | array of X elements                     | x    | x    | x       |         |       |       |
-| unitReference         | index of selected element               | x    | x    | x       |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x    | x    | x       |         |       |       |
-| unitsListName         | 4D list name for units                  | x    | x    | x       |         |       |       |
-| alternateButton       | add an alternate button                 | x    | x    | x       | x       | x     |       |
+|                       | valueType                                  | text | real | integer | boolean | color | event |
+| --------------------- | ------------------------------------------ | ---- | ---- | ------- | ------- | ----- | ----- |
+| *Attributes*          | *Descrição*                                |      |      |         |         |       |       |
+| value                 | valor da célula (entrada ou saída)         | x    | x    | x       |         |       |       |
+| min                   | valor mínimo                               |      | x    | x       |         |       |       |
+| max                   | valor máximo                               |      | x    | x       |         |       |       |
+| behavior              | "valor "três Estados                       |      |      | x       |         |       |       |
+| requiredList          | lista drop down definida no objecto        | x    | x    | x       |         |       |       |
+| choiceList            | combo box definida no objecto              | x    | x    | x       |         |       |       |
+| requiredListReference | 4D lista ref, depende do valor "saveAs     | x    | x    | x       |         |       |       |
+| requiredListName      | Nome da lista 4D, depende do valor "saveAs | x    | x    | x       |         |       |       |
+| saveAs                | "referência" ou "valor                     | x    | x    | x       |         |       |       |
+| choiceListReference   | 4D lista ref, mostrar caixa combinada      | x    | x    | x       |         |       |       |
+| choiceListName        | Nome da lista 4D, mostrar caixa combinada  | x    | x    | x       |         |       |       |
+| unitList              | array de X elementos                       | x    | x    | x       |         |       |       |
+| unitReference         | índice de elementos seleccionados          | x    | x    | x       |         |       |       |
+| unitsListReference    | 4D lista ref para unidades                 | x    | x    | x       |         |       |       |
+| unitsListName         | 4D nome da lista para unidades             | x    | x    | x       |         |       |       |
+| alternateButton       | adicionar um botão alternativo             | x    | x    | x       | x       | x     |       |
 
 #### value
 
