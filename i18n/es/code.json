@@ -153,7 +153,7 @@
     "message": "4D banner logo"
   },
   "homepage.hero.title": {
-    "message": "Documentation for 4D developers"
+    "message": "Documentación para desarrolladores 4D"
   },
   "Documentation updates": {
     "message": "Actualizaciones de la documentación"
@@ -469,7 +469,7 @@
     "description": "The label for save recent search button"
   },
   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
-    "message": "Remove this search from history",
+    "message": "Eliminar esta búsqueda del historial",
     "description": "The label for remove recent search button"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
