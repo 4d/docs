@@ -24,28 +24,28 @@ The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](confi
 The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Default = empty.
 
 
-## TableColumns
+## TableColumn
 
 ### .dataField
 
-<!-- REF #TableColumns.dataField.Syntax -->
+<!-- REF #TableColumn.dataField.Syntax -->
 **.dataField** : Text<!-- END REF -->
 
-The `.dataField` property <!-- REF #TableColumns.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
+The `.dataField` property <!-- REF #TableColumn.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
 
 ### .formatter
 
-<!-- REF #TableColumns.formatter.Syntax -->
+<!-- REF #TableColumn.formatter.Syntax -->
 **.formatter** : Text<!-- END REF -->
 
-The `.formatter` property <!-- REF #TableColumns.formatter.Summary -->contains the table column's formatter<!-- END REF -->.
+The `.formatter` property <!-- REF #TableColumn.formatter.Summary -->contains the table column's formatter<!-- END REF -->.
 
 ### .name
 
-<!-- REF #TableColumns.name.Syntax -->
+<!-- REF #TableColumn.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-A propriedade `.name` <!-- REF #TableColumns.name.Summary -->contains the table column's name<!-- END REF --> (mandatory).
+A propriedade `.name` <!-- REF #TableColumn.name.Summary -->contains the table column's name<!-- END REF --> (mandatory).
 
 
 
@@ -117,7 +117,7 @@ The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary
 <!-- REF #TableOptions.tableColumns.Syntax -->
 **.tableColumns** : Collection<!-- END REF -->
 
-The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumns](#tablecolumns) objects used to create the table's columns<!-- END REF -->.
+The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->.
 
 
 

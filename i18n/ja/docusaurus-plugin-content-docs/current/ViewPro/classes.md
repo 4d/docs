@@ -24,28 +24,28 @@ title: クラス
 `.style` プロパティは、 <!-- REF #LineBorder.style.Summary -->境界線の [スタイル](configuring.md#境界線) を指定します<!-- END REF -->。 デフォルト = empty。
 
 
-## TableColumns
+## TableColumn
 
 ### .dataField
 
-<!-- REF #TableColumns.dataField.Syntax -->
+<!-- REF #TableColumn.dataField.Syntax -->
 **.dataField** : Text<!-- END REF -->
 
-`.dataField` プロパティは、 <!-- REF #TableColumns.dataField.Summary -->データコンテキストにおける、表の列のプロパティ名を格納します<!-- END REF -->。
+`.dataField` プロパティは、 <!-- REF #TableColumn.dataField.Summary -->データコンテキストにおける、表の列のプロパティ名を格納します<!-- END REF -->。
 
 ### .formatter
 
-<!-- REF #TableColumns.formatter.Syntax -->
+<!-- REF #TableColumn.formatter.Syntax -->
 **.formatter** : Text<!-- END REF -->
 
-`.formatter` プロパティは、 <!-- REF #TableColumns.formatter.Summary -->表の列のフォーマッターを格納します<!-- END REF -->。
+`.formatter` プロパティは、 <!-- REF #TableColumn.formatter.Summary -->表の列のフォーマッターを格納します<!-- END REF -->。
 
 ### .name
 
-<!-- REF #TableColumns.name.Syntax -->
+<!-- REF #TableColumn.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-`.name` プロパティは、 <!-- REF #TableColumns.name.Summary -->表の列の名前を格納します<!-- END REF --> (必須)。
+`.name` プロパティは、 <!-- REF #TableColumn.name.Summary -->表の列の名前を格納します<!-- END REF --> (必須)。
 
 
 
@@ -117,7 +117,7 @@ title: クラス
 <!-- REF #TableOptions.tableColumns.Syntax -->
 **.tableColumns** : Collection<!-- END REF -->
 
-`.tableColumns` プロパティは、 <!-- REF #TableOptions.tableColumns.Summary -->表の列を作成するのに使用される [cs.ViewPro.TableColumns](#tablecolumns) オブジェクトのコレクションです<!-- END REF -->。
+`.tableColumns` プロパティは、 <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->。
 
 
 

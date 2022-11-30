@@ -7,8 +7,8 @@ title: リリースノート
 
 #### ハイライト
 
-- 4D v19.5 is certified on Windows 11 22H2
-- 4D v19.5 is certified on macOS Ventura (macOS 13)
+- 4D v19.5 は Windows 11 22H2 対応です。
+- 4D v19.5 は macOS Ventura (macOS 13) 対応です。
 - SpreadJS のバージョンが更新されました (14.1.6)。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19.5): 4D v19.5 で修正されたバグのリストです。
 
