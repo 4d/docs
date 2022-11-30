@@ -65,7 +65,7 @@ The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -
 <!-- REF #TableOptions.bandColumns.Syntax -->
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Default = False
+The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Por defecto = False
 
 
 ### .bandRows
@@ -81,14 +81,14 @@ The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates wh
 <!-- REF #TableOptions.highlightLastColumn.Syntax -->
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. Default = False
+The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. Por defecto = False
 
 ### .highlightFirstColumn
 
 <!-- REF #TableOptions.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Default = False
+The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Por defecto = False
 
 
 ### .showFooter
@@ -96,7 +96,7 @@ The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn
 <!-- REF #TableOptions.showFooter.Syntax -->
 **.showFooter** : Boolean<!-- END REF -->
 
-The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. Default = False
+The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. Por defecto = False
 
 ### .showHeader
 
@@ -110,7 +110,7 @@ The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicate
 <!-- REF #TableOptions.showResizeHandle.Syntax -->
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Default = False
+The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Por defecto = False
 
 ### .tableColumns
 
@@ -137,7 +137,7 @@ See the [native SpreadJS themes](https://www.grapecity.com/spreadjs/api/classes/
 <!-- REF #TableOptions.useFooterDropDownList.Syntax -->
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Default = False
+The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Por defecto = False
 
 
 
@@ -190,7 +190,7 @@ The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->lef
 <!-- REF #TableStyle.borderRight.Syntax -->
 **.borderRight** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->right border line of the table <!-- END REF -->.
+The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->línea del borde derecho de la tabla <!-- END REF -->.
 
 
 ### .borderBottom
@@ -217,7 +217,7 @@ The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Su
 <!-- REF #TableStyle.borderVertical.Syntax -->
 **.borderVertical** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summary -->vertical border line of the table <!-- END REF -->.
+The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summary -->línea de borde vertical de la tabla <!-- END REF -->.
 
 
 
@@ -272,7 +272,7 @@ The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table them
 <!-- REF #TableThemeOptions.firstColumnStripSize.Syntax -->
 **.firstColumnStripSize** : Integer<!-- END REF -->
 
-The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->size of the first alternating column<!-- END REF -->. Default=1
+The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->size of the first alternating column<!-- END REF -->. Por defecto=1
 
 ### .firstColumnStripStyle
 
@@ -286,21 +286,21 @@ The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstCo
 <!-- REF #TableThemeOptions.firstFooterCellStyle.Syntax -->
 **.firstFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstFooterCellStyle` property is the <!-- REF #TableThemeOptions.firstFooterCellStyle.Summary -->style of the first footer cell<!-- END REF -->. "highlightFirstColumn" must be true.
+The `.firstFooterCellStyle` property is the <!-- REF #TableThemeOptions.firstFooterCellStyle.Summary -->estilo de la primera celda del pie de página<!-- END REF -->. "highlightFirstColumn" must be true.
 
 ### .firstHeaderCellStyle
 
 <!-- REF #TableThemeOptions.firstHeaderCellStyle.Syntax -->
 **.firstHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->style of the first header cell<!-- END REF -->. "highlightFirstColumn" must be true.
+The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->estilo de la primera celda del encabezado<!-- END REF -->. "highlightFirstColumn" must be true.
 
 ### .firstRowStripSize
 
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Default=1.
+The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Por defecto=1.
 
 ### .firstRowStripStyle
 
@@ -342,14 +342,14 @@ The `.highlightLastColumnStyle` property is the <!-- REF #TableThemeOptions.high
 <!-- REF #TableThemeOptions.lastFooterCellStyle.Syntax -->
 **.lastFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->style of the last footer cell<!-- END REF -->. "highlightLastColumn" must be true.
+The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->estilo de la última celda del pie de página<!-- END REF -->. "highlightLastColumn" must be true.
 
 ### .lastHeaderCellStyle
 
 <!-- REF #TableThemeOptions.lastHeaderCellStyle.Syntax -->
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->style of the last header cell<!-- END REF -->. "highlightLastColumn" must be true.
+The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->estilo de la última celda del encabezado<!-- END REF -->. "highlightLastColumn" must be true.
 
 ### .name
 
@@ -363,7 +363,7 @@ The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of 
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Default=1
+The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Por defecto=1
 
 ### .secondColumnStripStyle
 
@@ -377,7 +377,7 @@ The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.second
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. Default=1.
+The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. Por defecto=1.
 
 ### .secondRowStripStyle
 
@@ -391,7 +391,7 @@ The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRow
 <!-- REF #TableThemeOptions.wholeTableStyle.Syntax -->
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.wholeTableStyle` property is the <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->default style of the data area<!-- END REF -->.
+The `.wholeTableStyle` property is the <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo por defecto del área de datos<!-- END REF -->.
 
 
 
