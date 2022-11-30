@@ -1405,7 +1405,7 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 #### Descripción
 
-La función `.indices()` funciona exactamente igual que la función [`.query()`](#query) pero <!-- REF #collection.indices().Summary -->devuelve los índices, en la colección original, de los elementos de la colección de objetos que coinciden con las condiciones de búsqueda de *queryString*<!-- END REF -->, and not elements themselves. Los índices se devuelven en orden ascendente.
+La función `.indices()` funciona exactamente igual que la función [`.query()`](#query) pero <!-- REF #collection.indices().Summary -->devuelve los índices, en la colección original, de los elementos de la colección de objetos que coinciden con las condiciones de búsqueda de *queryString*<!-- END REF -->y no los elementos en sí mismos. Los índices se devuelven en orden ascendente.
 > Esta función no modifica la colección original.
 
 El parámetro *queryString* utiliza la siguiente sintaxis:
