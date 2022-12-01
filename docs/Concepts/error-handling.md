@@ -10,7 +10,11 @@ Error handling meets two main needs:
 - finding out and fixing potential errors and bugs in your code during the development phase,
 - catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface. 
 
->It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine, and could log errors in a dedicated file for further analyses. 
+:::tip Good practice
+
+It is highly recommended to install a global error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine (if run with interface), and could log errors in a dedicated file for further analyses. 
+
+:::
 
 
 ## Error or status
@@ -24,15 +28,26 @@ Other "unpredictable" errors include disk write error, network failure, or in ge
 
 In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
-This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. For example:
+An error-handling method can be set for different execution contexts:
+
+- for the current process- a local error handler will be only called for errors that occurred in the current process,
+- for the whole application- a global error handler will be called for all errors that occurred in the application execution context,
+- for the components- it will be called in the host for all errors that occurred in the components.
+
+You can install a global error handler that will serve as fallback and specific local error methods for certain processes. 
+
+Error handlers are called in interpreted or compiled mode. To *install* this project method, you just need to call the [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) command with the project method name and scope as parameters. For example:
 
 ```4d
-ON ERR CALL("IO_ERRORS") //Installs the error-handling method
+ON ERR CALL("IO_Errors";ek local) //Installs a local error-handling method
+ON ERR CALL("globalHandler";ek global) //Installs a global error-handling method
+ON ERR CALL("componentHandler";ek errors from components) //Installs an error-handling method for components
 ```
 
-To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
+To stop catching errors in an execution context and give back hand, call `ON ERR CALL` with an empty string:
+
 ```4d
-ON ERR CALL("") //gives back control to 4D
+ON ERR CALL("";ek local) //gives back control for the local process
 ```
 
 The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. It is particularly useful in the context of generic code because it enables you to temporarily change and then restore the error-catching method:
