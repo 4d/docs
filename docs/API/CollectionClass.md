@@ -2334,6 +2334,96 @@ With the following ***Flatten*** method:
 
 
 
+
+<!-- REF collection.reduceRight().Desc -->
+## .reduceRight()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+
+
+<!-- REF #collection.reduceRight().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formula|4D.Function|->|Formula object|
+|methodName|Text|->|Name of a method|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
+|param |expression|->|Parameter(s) to pass|
+|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|<!-- END REF -->
+
+
+#### Description
+
+
+The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+
+>This function does not modify the original collection.
+
+You designate the callback to be executed to evaluate collection elements using either:
+
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+
+You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+
+The callback receives the following parameters:
+
+*	in *$1.value*: element value to be processed
+*	in *$2: param*
+*	in *$N...*: *paramN...*
+
+The callback sets the following parameter(s):
+
+*	*$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+*	*$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+
+
+#### Example 1
+
+
+```4d
+var $c : Collection
+$c:=New collection(5;3;5;1;3;4;4;6;2;2)
+$r:=$c.reduceRight(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //returns 86400
+```
+
+
+#### Example 2
+
+This example allows reducing several collection elements to a single one:
+
+```4d
+ var $c;$r : Collection
+ $c:=New collection
+ $c.push(New collection(0;1))
+ $c.push(New collection(2;3))
+ $c.push(New collection(4;5))
+ $c.push(New collection(6;7))
+ $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
+```
+
+With the following ***Flatten*** method:
+
+```4d
+ If($1.accumulator=Null)
+    $1.accumulator:=New collection
+ End if
+ $1.accumulator.combine($1.value)
+```
+
+<!-- END REF -->
+
+
+
 <!-- REF collection.remove().Desc -->
 ## .remove()
 
