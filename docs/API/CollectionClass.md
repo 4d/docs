@@ -1279,6 +1279,70 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 
 
+<!-- REF collection.includes().Desc -->
+## .includes()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #collection.includes().Syntax -->**.includes**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Boolean <!-- END REF -->
+
+
+<!-- REF #collection.includes().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|toSearch|expression|->|Expression to search in the collection|
+|startFrom|Integer|->|Index to start the search at|
+|Result|Boolean |<-|True if toSearch is found in the collection|<!-- END REF -->
+
+
+#### Description
+
+The `.includes()` function <!-- REF #collection.includes().Summary -->return True if the *toSearch* expression is found among collection elements, otherwise False <!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+In *toSearch*, pass the expression to find in the collection. You can pass:
+
+*	a scalar value (text, number, boolean, date),
+*	the null value,
+*	an object or a collection reference.
+
+*toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
+
+Optionally, you can pass the index of collection from which to start the search in *startFrom*.
+
+*	If *startFrom* >= the collection's length, False is returned, which means the collection is not searched.
+*	If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
+	**Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+*	If *startFrom* = 0, the whole collection is searched (default).
+
+#### Example
+
+
+
+```4d
+ var $col : Collection
+ var $in : Boolean
+ $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5)
+ $in:=$col.includes(3) //True
+ $in:=$col.includes(5;5) //True
+ $in:=$col.includes("al@") //True
+ $in:=$col.includes("Hello") //False
+```
+
+<!-- END REF -->
+
+
+
+
+
 
 <!-- REF collection.indexOf().Desc -->
 ## .indexOf()
