@@ -4957,7 +4957,7 @@ VP SET ROW COUNT("ViewProArea";5)
 
 El comando `VP SET SELECTION` <!-- REF #_method_.VP SET SELECTION.Summary -->defines the specified cells as the selection and the first cell as the active cell<!-- END REF -->.
 
-In *rangeObj*, pass a range object of cells to designate as the current selection.
+En *rangeObj*, pase un objeto rango de celdas a designar como selección actual.
 
 #### Ejemplo
 
@@ -4991,7 +4991,7 @@ VP SET SELECTION($currentSelection)
 
 El comando `VP SET SHEET COUNT` <!-- REF #_method_.VP SET SHEET COUNT.Summary -->sets the number of sheets in *vpAreaName*<!-- END REF -->.
 
-In `number`, pass a number corresponding to how many sheets the document will contain after the command is executed.
+En `number`, pase un número correspondiente a cuántas hojas contendrá el documento tras la ejecución del comando.
 > **Warning**: The command will delete sheets if the previous amount of sheets in your document is superior to the number passed. For example, if there are 5 sheets in your document and you set the sheet count to 3, the command will delete sheets number 4 and 5.
 
 #### Ejemplo
@@ -5212,11 +5212,11 @@ En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 > La indexación comienza en 0.
 
-The position of a spreadsheet's print lines varies according to that spreadsheet's page breaks.
+La posición de las líneas de impresión de una hoja de cálculo varía según los saltos de página de dicha hoja.
 
 #### Ejemplo
 
-The following code displays print lines in a document's second sheet:
+El siguiente código muestra las líneas de impresión en la segunda hoja de un documento:
 
 ```4d
 VP SET SHOW PRINT LINES("ViewProArea";True;1)
