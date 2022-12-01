@@ -223,6 +223,48 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 
 
+
+<!-- REF collection.at().Desc -->
+## .at()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #collection.at().Syntax -->**.at**(  *index* : Integer ) : Variant <!-- END REF -->
+
+
+<!-- REF #collection.at().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|index|Integer|->|Index of element to return|
+|Result|Variant |<-|🏗|<!-- END REF -->
+
+
+#### Description
+
+The `.at()` function <!-- REF #collection.at().Summary --> 🏗 <!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+
+
+#### Example
+
+
+
+```4d
+🏗
+```
+
+<!-- END REF -->
+
+
 <!-- REF collection.average().Desc -->
 ## .average()
 
@@ -1278,6 +1320,130 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 
 
+<!-- REF collection.first().Desc -->
+## .first()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #collection.first().Syntax -->**.first**() : Variant <!-- END REF -->
+
+
+<!-- REF #collection.first().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Variant |<-|🏗|<!-- END REF -->
+
+
+#### Description
+
+The `.first()` function <!-- REF #collection.first().Summary --> 🏗 <!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+
+
+#### Example
+
+
+
+```4d
+🏗
+```
+
+<!-- END REF -->
+
+
+
+
+<!-- REF collection.flat().Desc -->
+## .flat()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #collection.flat().Syntax -->**.flat**( { **depth**: Integer } ) : Collection <!-- END REF -->
+
+
+<!-- REF #collection.flat().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection |<-|🏗|<!-- END REF -->
+
+
+#### Description
+
+The `.flat()` function <!-- REF #collection.flat().Summary --> 🏗 <!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+
+
+#### Example
+
+
+
+```4d
+🏗
+```
+
+<!-- END REF -->
+
+
+
+<!-- REF collection.flatMap().Desc -->
+## .flatMap()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #collection.flatMap().Syntax -->**.flatMap**( { **depth**: Integer } ) : Collection <!-- END REF -->
+
+
+<!-- REF #collection.flatMap().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Collection |<-|🏗|<!-- END REF -->
+
+
+#### Description
+
+The `.flat()` function <!-- REF #collection.flatMap().Summary --> 🏗 <!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+
+
+#### Example
+
+
+
+```4d
+🏗
+```
+
+<!-- END REF -->
+
+
+
 
 <!-- REF collection.includes().Desc -->
 ## .includes()
@@ -1564,6 +1730,48 @@ By default, null or empty elements of the collection are returned in the resulti
  $c:=New collection(1;2;3;"Paris";Null;"";4;5)
  $t1:=$c.join("|") //1|2|3|Paris|null||4|5
  $t2:=$c.join("|";ck ignore null or empty) //1|2|3|Paris|4|5
+```
+
+<!-- END REF -->
+
+
+
+
+<!-- REF collection.last().Desc -->
+## .last()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #collection.last().Syntax -->**.last**() : Variant <!-- END REF -->
+
+
+<!-- REF #collection.last().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|Variant |<-|🏗|<!-- END REF -->
+
+
+#### Description
+
+The `.last()` function <!-- REF #collection.last().Summary --> 🏗 <!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+
+
+#### Example
+
+
+
+```4d
+🏗
 ```
 
 <!-- END REF -->
