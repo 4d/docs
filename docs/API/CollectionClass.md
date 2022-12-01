@@ -1337,24 +1337,35 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 <!-- REF #collection.first().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Variant |<-|🏗|<!-- END REF -->
+|Result|Boolean, Text, Number, Collection, Object, Date |<-|the first element of the collection|<!-- END REF -->
 
 
 #### Description
 
-The `.first()` function <!-- REF #collection.first().Summary --> 🏗 <!-- END REF -->.
+The `.first()` function <!-- REF #collection.first().Summary --> returns the element in first position of the collection. <!-- END REF -->.
 
 
 >This function does not modify the original collection.
 
 
 
-#### Example
+#### Example 1
 
 
 
 ```4d
-🏗
+$col:=New collection(10; 20; 30; 40; 50)
+$first:=$col.first() // 10
+
+$first:=New collection().first() // undefined
+```
+
+#### Example 2
+
+
+```4d
+Function first($collectionOrSelection: Variant) -> Variant
+	return $collectionOrSelection.first()
 ```
 
 <!-- END REF -->
@@ -1754,28 +1765,37 @@ By default, null or empty elements of the collection are returned in the resulti
 <!-- REF #collection.last().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Variant |<-|🏗|<!-- END REF -->
+|Result|Boolean, Text, Number, Collection, Object, Date |<-|the last element of the collection|<!-- END REF -->
 
 
 #### Description
 
-The `.last()` function <!-- REF #collection.last().Summary --> 🏗 <!-- END REF -->.
+The `.last()` function <!-- REF #collection.last().Summary --> returns the element in last position of the collection. <!-- END REF -->.
 
 
 >This function does not modify the original collection.
 
 
-
-#### Example
+#### Example 1
 
 
 
 ```4d
-🏗
+$col:=New collection(10; 20; 30; 40; 50)
+$first:=$col.last() // 50
+
+$first:=New collection().last() // undefined
+```
+
+#### Example 2
+
+
+```4d
+Function last($collectionOrSelection: Variant) -> Variant
+	return $collectionOrSelection.last()
 ```
 
 <!-- END REF -->
-
 
 
 
