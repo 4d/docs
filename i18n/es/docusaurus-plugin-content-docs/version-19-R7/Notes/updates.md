@@ -132,8 +132,8 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 | OpenSSL  | 1.1.1n         | 19 R4         |                                                                                          |
 | libzip   | 1.7.3          | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
 | webKit   | WKWebView      | 19            |                                                                                          |
-| ICU      | 68.1           | 18 R6         |                                                                                          |
-| PHP      | 7.3.27         | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| ICU      | 68.1           | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| PHP      | 7.3.27         | 18 R6         |                                                                                          |
 | libldap  | 2.4.48         | 18 R2         |                                                                                          |
 
 </details>
