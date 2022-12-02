@@ -1443,30 +1443,50 @@ $col.flat(MAXINT)
 
 </details>
 
-<!-- REF #collection.flatMap().Syntax -->**.flatMap**( { **depth**: Integer } ) : Collection <!-- END REF -->
-
+<!-- REF #collection.flatMap().Syntax -->**.map**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection |<-|🏗|<!-- END REF -->
-
+|formula|4D.Function|->|Formula object|
+|methodName|Text|->|Name of a method|
+|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
+|Result|Collection |<-|Collection of transformed values and flattened by a depth of 1.|<!-- END REF -->
 
 #### Description
 
-The `.flat()` function <!-- REF #collection.flatMap().Summary --> 🏗 <!-- END REF -->.
-
+The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1.<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). It is identical to a map() followed by a flat() of depth 1.
 
 >This function does not modify the original collection.
 
+
+You designate the callback to be executed to evaluate collection elements using either:
+
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any operation, with or without the parameter(s) and must return new transformed value to add to the resulting collection. It receives an `Object` in first parameter ($1).
+
+The callback receives the following parameters:
+
+*	in *$1.value*: element value to be evaluated
+*	in *$2*: param
+*	in *$N...*: paramN...
+
+It can set the following parameter(s):
+
+*	(mandatory if you used a method) *$1.result* (any type): new transformed value to add to the resulting collection
+*	*$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
 
 #### Example
 
 
-
 ```4d
-🏗
+var $c; $c2 : Collection
+$c:=New collection(1; 4; 9; 10; 20)
+$c2:=$c.flatMap(Formula(New collection($1.value;Round(($1.value/$2)*100; 2))); $c.sum())
+  //$c2=[1, 2.27, 4, 9.09,9, 20.45,10, 22.73, 20, 45.45]
 ```
 
 <!-- END REF -->
