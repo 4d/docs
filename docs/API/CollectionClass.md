@@ -1331,18 +1331,18 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 </details>
 
-<!-- REF #collection.first().Syntax -->**.first**() : Variant <!-- END REF -->
+<!-- REF #collection.first().Syntax -->**.first**() : any <!-- END REF -->
 
 
 <!-- REF #collection.first().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|the first element of the collection|<!-- END REF -->
+|Result|any|<-|First element of collection|<!-- END REF -->
 
 
 #### Description
 
-The `.first()` function <!-- REF #collection.first().Summary --> returns the element in first position of the collection. <!-- END REF -->.
+The `.first()` function <!-- REF #collection.first().Summary -->returns the first element from the collection. <!-- END REF -->.
 
 
 >This function does not modify the original collection.
@@ -1759,18 +1759,18 @@ By default, null or empty elements of the collection are returned in the resulti
 
 </details>
 
-<!-- REF #collection.last().Syntax -->**.last**() : Variant <!-- END REF -->
+<!-- REF #collection.last().Syntax -->**.last**() : any <!-- END REF -->
 
 
 <!-- REF #collection.last().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|the last element of the collection|<!-- END REF -->
+|Result|any |<-|Last element of collection|<!-- END REF -->
 
 
 #### Description
 
-The `.last()` function <!-- REF #collection.last().Summary --> returns the element in last position of the collection. <!-- END REF -->.
+The `.last()` function <!-- REF #collection.last().Summary -->returns the last element from the collection. <!-- END REF -->.
 
 
 >This function does not modify the original collection.
