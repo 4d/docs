@@ -3,7 +3,7 @@ id: write-class-method
 title: Editor de código
 ---
 
-4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more.
+4D tiene un poderoso editor de código integrado que ofrece un amplio conjunto de funcionalidades para la edición de código altamente productivo, como la finalización inteligente de código, la navegación de código, la depuración, la búsqueda y más.
 
 ![](../assets/en/code-editor/code-editor-overview.png)
 
