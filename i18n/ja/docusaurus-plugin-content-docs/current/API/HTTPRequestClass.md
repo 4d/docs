@@ -265,6 +265,14 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 <!-- REF #HTTPRequestClass.response.Desc -->
 ## .response
 
+<details><summary>履歴</summary>
+
+| バージョン  | 内容                                                             |
+| ------ | -------------------------------------------------------------- |
+| v19 R8 | `.headers` returns lowercase names. New `.rawHeaders` property |
+
+</details>
+
 <!-- REF #HTTPRequestClass.response.Syntax -->**response** : Object<!-- END REF -->
 
 #### 説明
@@ -273,12 +281,13 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 `response` オブジェクトは共有できないオブジェクトです。 このオブジェクトは次のプロパティを提供します:
 
-| プロパティ       | タイプ     | 説明                                                                                                     |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| .body       | Variant | レスポンスのボディ。 メッセージのデータ型は [`dataType`](#datatype) プロパティによって定義されています。 ボディがまだ受信されていない場合は未定義です。              |
-| .headers    | Object  | レスポンスのヘッダー。 `headers.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 |
-| .status     | Number  | レスポンスのステータスコード                                                                                         |
-| .statusText | Text    | ステータスコードを説明するメッセージ                                                                                     |
+| プロパティ       | タイプ     | 説明                                                                                                                                                                                                        |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | レスポンスのボディ。 メッセージのデータ型は [`dataType`](#datatype) プロパティによって定義されています。 ボディがまだ受信されていない場合は未定義です。                                                                                                                 |
+| .headers    | Object  | レスポンスのヘッダー。 Header names are returned in lowercase. `<headername>.key` = value (value can be a collection if the same key appears multiple times). ヘッダーがまだ受信されていない場合は未定義です。                         |
+| .status     | Number  | レスポンスのステータスコード                                                                                                                                                                                            |
+| .statusText | Text    | ステータスコードを説明するメッセージ                                                                                                                                                                                        |
+| .rawHeaders | Object  | レスポンスのヘッダー。 Header names are returned untouched (with their original case). `<headerName>.key` = value (value can be a collection if the same key appears multiple times). ヘッダーがまだ受信されていない場合は未定義です。 |
 
 <!-- END REF -->
 
