@@ -1395,24 +1395,37 @@ Function first($collectionOrSelection: Variant) -> Variant
 <!-- REF #collection.flat().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection |<-|🏗|<!-- END REF -->
+|depth|Integer |->|The depth level specifying how deep a nested collection structure should be flattened. Defaults to 1.|
+|Result|Collection |<-|Flattened collection|<!-- END REF -->
 
 
 #### Description
 
-The `.flat()` function <!-- REF #collection.flat().Summary --> 🏗 <!-- END REF -->.
+The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified depth<!-- END REF -->.
 
 
 >This function does not modify the original collection.
 
 
-
 #### Example
 
 
-
 ```4d
-🏗
+$col:=New collection(1; 2; New collection(3; 4))
+$col.flat()
+// [1, 2, 3, 4]
+
+$col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
+$col.flat()
+// [1, 2, 3, 4, [5, 6]]
+
+$col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
+$col.flat(2)
+// [1, 2, 3, 4, 5, 6]
+
+$col:=New collection(1; 2; New collection(3; 4; 5; 6; New collection(7; 8; New collection(9; 10))))
+$col.flat(MAXINT)
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 <!-- END REF -->
