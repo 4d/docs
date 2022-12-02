@@ -117,7 +117,7 @@ title: クラス
 <!-- REF #TableOptions.tableColumns.Syntax -->
 **.tableColumns** : Collection<!-- END REF -->
 
-`.tableColumns` プロパティは、 <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->。
+`.tableColumns` プロパティは、 <!-- REF #TableOptions.tableColumns.Summary -->表の列を作成するのに使用される [cs.ViewPro.TableColumn](#tablecolumn) オブジェクトのコレクションです<!-- END REF -->。
 
 
 
