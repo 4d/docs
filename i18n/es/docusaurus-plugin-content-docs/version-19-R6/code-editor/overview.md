@@ -4,77 +4,77 @@ title: Sobre el código 4D
 ---
 
 
-The 4D code used across your application is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md).
+El código 4D utilizado en su aplicación está escrito en los [métodos](../Concepts/methods.md) y las [clases](../Concepts/classes.md).
 
-The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](write-class-method.md) to work with your code.
+El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eliminar su código. Por lo general, utilizará el [editor de código de 4D](write-class-method.md) para trabajar con su código.
 
 
 ## Creación de métodos
 
-A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
+Un método en 4D se almacena en un archivo **.4dm** ubicado en la carpeta correspondiente de la carpeta [`/Project/Sources/`](../Project/architecture.md#sources).
 
-You can create [several types of methods](../Concepts/methods.md):
+Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
-- All types of methods can be created or opened from the **Explorer** window (except Object methods which are managed from the [Form editor](../FormEditor/formEditor.md)).
-- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](write-class-method.md#shortcuts).
-- Triggers can also be created or opened from the Structure editor.
-- Form methods can also be created or opened from the [Form editor](../FormEditor/formEditor.md).
+- Todos los tipos de métodos pueden crearse o abrirse desde la ventana del **Explorador** (excepto los métodos Objeto que se gestionan desde el [editor de formularios](../FormEditor/formEditor.md)).
+- Los métodos proyecto también pueden crearse o abrirse desde el menú **Archivo** o la barra de herramientas (**Nuevo/Método...** o **Abrir/Método...**) o utilizando los accesos directos de la ventana del [editor de código](write-class-method.md#shortcuts).
+- Los triggers también pueden crearse o abrirse desde el editor de Estructura.
+- Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
 ## Crear clases
 
-A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. El nombre del archivo es el nombre de la clase.
+Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase.
 
-You can create a class file from the **File** menu or toolbar (**New/Class...**) or in the **Methods** page of the **Explorer** window.
+Puede crear un archivo de clase desde el menú **Archivo** o la barra de herramientas (**Nuevo/Clase...**) o en la página **Métodos** de la ventana **Explorador**.
 
-For more information, please refer to the [Classes](../Concepts/classes.md) section.
+Para más información, consulte la sección [Clases](../Concepts/classes.md).
 
 
-## Eliminando métodos o clases
+## Eliminar los métodos o las clases
 
 Para eliminar un método o clase existente, puede:
 
-- on your disk, remove the *.4dm* file from the "Sources" folder,
-- in the 4D Explorer, select the method or class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+- en su disco, elimine el archivo *.4dm* de la carpeta "Sources",
+- en el Explorador de 4D, seleccione el método o la clase y haga clic ![](../assets/en/Users/MinussNew.png) o elija **Mover a la Papelera** en el menú contextual.
 
-> To delete an object method, choose **Clear Object Method** from the [Form editor](../FormEditor/formEditor.md) (**Object** menu or context menu).
+> Para eliminar un método objeto, seleccione **Borrar el método de objeto** en el [editor de formularios](../FormEditor/formEditor.md) (menú **Objeto** o menú contextual).
 
 
 ## Importar y exportar el código
 
-Puede importar y exportar un método o un código de una clase en forma de archivo. These commands are found in the **Method** menu of the Code editor.
+Puede importar y exportar un método o un código de una clase en forma de archivo. Estos comandos se encuentran en el menú **Método** del editor de código.
 
-- When you select the **Export Method...** command, a standard file saving dialog box appears, allowing you to choose the name, location and format of the export file (see below). As with printing, exporting does not take the collapsed state of code structures into account and the entire code is exported.
-- When you select the **Import Method...** command, a standard file opening dialog box appears, allowing you to designate the file to be imported. La importación sustituye el texto seleccionado en el método. To replace an existing method by an imported method, select the entire contents of the method before carrying out the import.
+- Cuando se selecciona el comando **Exportar el método...**, aparece una caja de diálogo estándar para guardar archivos, que permite elegir el nombre, la ubicación y el formato del archivo de exportación (ver abajo). Al igual que con la impresión, la exportación no tiene en cuenta el estado contraído de las estructuras de código y se exporta todo el código.
+- Cuando se selecciona el comando **Importar el método...**, aparece una caja de diálogo estándar de apertura de archivos que permite designar el archivo a importar. La importación sustituye el texto seleccionado en el método. Para reemplazar un método existente por un método importado, seleccione todo el contenido del método antes de realizar la importación.
 
-The import/export function is multi-platform: a method exported under Mac OS can be imported under Windows and vice versa; 4D handles the conversion of characters when necessary.
+La función de importación/exportación es multiplataforma: un método exportado en Mac OS puede ser importado en Windows y viceversa; 4D se encarga de la conversión de caracteres cuando es necesario.
 
 4D puede exportar e importar métodos en dos formatos:
 
-- 4D method (extension *.c4d*): In this format, methods are exported in encoded form. Los nombres de los objetos están tokenizados. This format is used in particular for exchanging methods between 4D applications and plug-ins in different languages. Por el contrario, no es posible visualizarlos en un editor de texto.
-- Text (extension *.txt*): In this format, methods are exported in text-only form. In this case, the methods are readable using a standard text editor or a source control tool.
+- Método 4D (extensión *.c4d*): en este formato, los métodos se exportan codificados. Los nombres de los objetos están tokenizados (se transforman en referencias). Este formato se utiliza especialmente para el intercambio de métodos entre las aplicaciones 4D y los plug-ins en diferentes idiomas. Por el contrario, no es posible visualizarlos en un editor de texto.
+- Texto (extensión *.txt*): en este formato, los métodos se exportan en forma de texto. En este caso, los métodos se pueden leer con un editor de texto estándar o con una herramienta de control de código fuente.
 
 
 ## Propiedades del método proyecto
 
-After creating a project method, you can rename it and modify its properties. Project method properties mainly concern their access and security conditions (access by users, integrated servers or services) as well as their execution mode.
+Después de crear un método proyecto, puede cambiar su nombre y modificar sus propiedades. Las propiedades de los métodos proyecto se refieren principalmente a sus condiciones de acceso y de seguridad (acceso de usuarios, servidores integrados o servicios), así como a su modo de ejecución.
 
-Los otros tipos de métodos no tienen propiedades específicas. Their properties are related to those of the objects to which they are attached.
+Los otros tipos de métodos no tienen propiedades específicas. Sus propiedades están relacionadas con las de los objetos a los que están unidos.
 
-To display the **Method Properties** dialog box for a project method, you can either:
+Para mostrar la caja de diálogo **Propiedades del método** para un método proyecto, puede:
 
-- in the [Code Editor](write-class-method.md), select the **Method Properties...** command in the **Method** menu,
-- or on the **Methods** page of the Explorer, **right-click** on the project method and select **Method Properties...** in the context menu or options menu.
+- en el [editor de código](write-class-method.md), seleccione el comando **Propiedades del método...** en el menú **Método**,
+- o en la página **Métodos** del Explorador, **haga clic derecho** en el método proyecto y seleccione **Propiedades del método...** en el menú contextual o en el menú de opciones.
 
 
-> A batch setting function allows you to modify a property for all or part of the database project methods in a single operation (see [Batch setting for method attributes](#batch-setting-for-method-attributes)).
+> Una función de parámetrización global permite modificar una propiedad para todos o parte de los métodos proyecto de la base en una sola operación (ver [Modificar atributos de los métodos globalmente](#batch-setting-for-method-attributes)).
 
 #### Nombre
 
-You can change the name of a project method in the **Name** area of the **Method Properties** window or in the Explorer.
+Puede cambiar el nombre de un método proyecto en el área **Nombre** de la ventana **Propiedades del método** o en el Explorador.
 
-The new name must comply with 4D naming rules (see [Identifiers](../Concepts/identifiers.md)). If a method with the same name already exists, 4D displays a message saying that the method name has already been used. Si es necesario, 4D ordena de nuevo la lista de métodos.
+El nuevo nombre debe cumplir con las reglas de denominación de 4D (ver [Identificadores](../Concepts/identifiers.md)). Si ya existe un método con el mismo nombre, 4D muestra un mensaje diciendo que el nombre del método ya ha sido utilizado. Si es necesario, 4D ordena de nuevo la lista de métodos.
 
-**Warning:** Changing the name of a method already used in the database can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. You can rename the method manually but it is strongly recommended to use the renaming function for project methods, described in [Renaming](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). With this function, you can automatically update the name wherever the method is called throughout the Design environment.
+**Atención:** el cambio del nombre de un método ya utilizado en la base de datos puede invalidar todos los métodos o fórmulas que utilice el antiguo nombre del método y corre el riesgo de interrumpir el funcionamiento de la aplicación. Puede cambiar el nombre del método manualmente, pero se recomienda utilizar la función de cambio de nombre de los métodos proyecto, descrita en [Renombrar](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Con esta función, puede actualizar automáticamente el nombre siempre que se llame al método en todo el entorno Diseño.
 
 With 4D Server, the method name is changed on the server when you finish editing it. If more than one user is modifying the method name at the same time, the final method name will be the name specified by the last user to finish editing it. You may want to specify a method owner so that only certain users can change the method's name
 
@@ -183,11 +183,11 @@ Para la configuración por lotes de los atributos del método:
 2.  In the "Matching method name:" area, enter a string that lets you designate the methods you want to modify as a batch. The character string is used as a search criterion for the method names. Utilice el carácter comodín @ para ayudar a definir los grupos de métodos:
    -   To designate methods whose names begin with..., type @ at the end of the string. Por ejemplo: web@
     -   To designate methods whose names contain..., type @ in the middle of the string. Por ejemplo: web@write
-    -   To designate methods whose names end with..., type @ at the beginning of the string. Por ejemplo: @write
+    -   Para designar los métodos cuyos nombres terminan en..., escriba @ al inicio de la cadena. Por ejemplo: @write
     -   To designate all of the methods, just type @ in the area.\
       **Notes:**
         -   La búsqueda no tiene en cuenta las mayúsculas/minúsculas.
         -   You can enter several @ characters in the string, for example dtro_@web@pro.@
-3.  In the "Attribute to Modify" area, choose an attribute from the drop-down list, then click on the **True** or **False** radio button corresponding to the value to be applied. **Note:** If the "Published in WSDL" attribute is set to True, it will only be applied to project methods already containing the "Offered as a Web Service" attribute.
-4.  Haga clic en **Aplicar**. The modification is applied instantly to all the project methods designated by the character string entered.
+3.  En el área "Atributo a modificar", elija un atributo de la lista desplegable y, a continuación, haga clic en el botón radio **True** o **False** correspondiente al valor que debe aplicarse. **Nota:** si el atributo "Publicado en WSDL" se establece como True, sólo se aplicará a los métodos proyecto que ya contengan el atributo "Ofrecido como servicio web".
+4.  Haga clic en **Aplicar**. La modificación se aplica instantáneamente a todos los métodos proyecto designados por la cadena de caracteres introducida.
 
