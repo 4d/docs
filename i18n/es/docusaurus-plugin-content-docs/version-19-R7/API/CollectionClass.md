@@ -200,7 +200,7 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 *   shared object(*)
 *   shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
 
-:::nota
+:::note
 
 Esta función modifica la colección original.
 
