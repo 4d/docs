@@ -235,31 +235,36 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 </details>
 
-<!-- REF #collection.at().Syntax -->**.at**(  *index* : Integer ) : Variant <!-- END REF -->
+<!-- REF #collection.at().Syntax -->**.at**(  *index* : Integer ) : any <!-- END REF -->
 
 
 <!-- REF #collection.at().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |index|Integer|->|Index of element to return|
-|Result|Variant |<-|🏗|<!-- END REF -->
+|Result|Variant |<-|The element at that index|<!-- END REF -->
 
 
 #### Description
 
-The `.at()` function <!-- REF #collection.at().Summary --> 🏗 <!-- END REF -->.
+The `.at()` function <!-- REF #collection.at().Summary -->returns the item at wanted index, allowing for positive and negative integers.<!-- END REF -->.
 
 
 >This function does not modify the original collection.
 
-
+Negative integers count back from the last item in the collection.
 
 #### Example
 
 
 
 ```4d
-🏗
+$col:=New collection(10; 20; 30; 40; 50)
+$element:=$col.at(0) // 10)
+$element:=$col.at(1) // 20
+$element:=$col.at(-1) // 50
+$element:=$col.at(-2) // 40
+$element:=$col.at(10) // undefined
 ```
 
 <!-- END REF -->
