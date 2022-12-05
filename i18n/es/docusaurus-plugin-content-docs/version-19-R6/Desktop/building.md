@@ -358,16 +358,16 @@ La carpeta `<ApplicationName>Client` contiene la parte cliente de la aplicación
 
 El contenido de estas carpetas varía en función de la plataforma actual:
 
-* *Windows* - Each folder contains the application executable file, named `<ApplicationName>Client.exe` for the client part and `<ApplicationName>Server.exe` for the server part as well as the corresponding .rsr files. Las carpetas también contienen varios archivos y carpetas necesarios para que las aplicaciones funcionen y elementos personalizados que pueden estar en las carpetas originales de 4D Volume Desktop y 4D Server.
+* *Windows* - Cada carpeta contiene el archivo ejecutable de la aplicación, denominado `<ApplicationName>Client.exe` para la parte cliente y `<ApplicationName>Server.exe` para la parte servidor, así como los archivos .rsr correspondientes. Las carpetas también contienen varios archivos y carpetas necesarios para que las aplicaciones funcionen y elementos personalizados que pueden estar en las carpetas originales de 4D Volume Desktop y 4D Server.
 * *macOS* - Cada carpeta contiene únicamente el paquete de la aplicación, denominado `<ApplicationName>Client` para la parte cliente y `<ApplicationName>Server` para la parte servidor. Cada paquete contiene todos los elementos necesarios para que la aplicación funcione. En macOS, un paquete se lanza haciendo doble clic en él.
 
- > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. In order to modify it, you must first display its contents (**Control+click** on the icon).
+ > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. Puede visualizar su contenido (**Control+clic** en el icono) para poder modificarlo.
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `<ApplicationName>Server` folder/package. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido.
+Si ha marcado la opción "Permitir la actualización automática de la aplicación cliente", se añade una subcarpeta adicional llamada *Upgrade4DClient* en la carpeta/paquete `<ApplicationName>Server`. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido.
 
 #### Ubicación de los archivos web
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Estos elementos son los siguientes:
+Si la parte servidor y/o la del cliente de su aplicación ejecutable se utiliza como servidor web, los archivos y carpetas requeridos por el servidor deben instalarse en ubicaciones específicas. Estos elementos son los siguientes:
 
 * archivos *cert.pem* y *key.pem* (opcional): etos archivos se utilizan para las conexiones TLS y por los comandos de encriptación de datos,
 * Carpeta raíz web por defecto (WebFolder).
@@ -379,47 +379,47 @@ Los elementos deben ser instalados:
   * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
 
 * **en macOS**
-  * **Server application** - next to the `<ApplicationName>Server` software package.
-  * **Client application** - next to the `<ApplicationName>Client` software package.
+  * **Aplicación del servidor** - junto al paquete de software `<ApplicationName>Server`.
+  * **Aplicación cliente** - junto al paquete de software `<ApplicationName>Cliente`.
 
 ### Integrar una aplicación cliente monopuesto
 
-4D permite integrar una estructura compilada en la aplicación Cliente. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
+4D permite integrar una estructura compilada en la aplicación Cliente. Esta funcionalidad puede utilizarse, por ejemplo, para ofrecer a los usuarios una aplicación "portal", que da acceso a diferentes aplicaciones del servidor gracias al comando `OPEN DATABASE` que ejecuta un archivo `.4dlink`.
 
-To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `DatabaseToEmbedInClientMacFolder` keys in the *buildApp* settings file. When one of these keys is present, the client application building process generates a single-user application: the compiled structure, instead of the *EnginedServer.4Dlink* file, is placed in the "Database" folder.
+Para activar esta funcionalidad, añada las llaves `DatabaseToEmbedInClientWinFolder` y/o `DatabaseToEmbedInClientMacFolder` en el archivo de configuración *buildApp*. Cuando una de estas llaves está presente, el proceso de generación de la aplicación cliente genera una aplicación monopuesto: la estructura compilada, en lugar del archivo *EnginedServer.4Dlink*, se coloca en la carpeta "Database".
 
-* If a default data folder exists in the single-user application, a licence is embedded.
-* If no default data folder exists in the single-user application, it will be executed without data file and without licence.
+* Si existe una carpeta de datos por defecto en la aplicación monopuesto, se integra una licencia.
+* Si no existe una carpeta de datos por defecto en la aplicación monopuesto, ésta se ejecutará sin archivo de datos y sin licencia.
 
 El escenario básico es:
 
-1. In the Build application dialog box, select the "Build compiled structure" option to produce a .4DZ or .4DC for the application to be used in single-user mode.
-2. In the *buildApp.4DSettings* file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
+1. En la caja de diálogo del Generador de aplicaciones, seleccione la opción "Generar una estructura compilada" para producir un .4DZ o un .4DC para utilizar la aplicación en modo monopuesto.
+2. En el archivo *buildApp.4DSettings* de la aplicación cliente-servidor, utilice la(s) siguiente(s) llave(s) xml para indicar la ruta de la carpeta que contiene la aplicación compilada monopuesto:
 
 * `DatabaseToEmbedInClientWinFolder`
 * `DatabaseToEmbedInClientMacFolder`
 
 3. Genere la aplicación cliente-servidor. Esto tendrá los siguientes efectos:
 
-* the whole folder of the single user application is copied inside the "Database" folder of the merged client
-* the *EnginedServer.4Dlink* file of the "Database" folder is not generated
-* the .4DC, .4DZ, .4DIndy files of the single user application copy are renamed using the name of the merged client
-* the `PublishName` key is not copied in the *info.plist* of the merged client
-* if the single-user application does not have a "Default data" folder, the merged client will run with no data.
+* la carpeta de la aplicación monopuesto se copia completa dentro de la carpeta "Database" del cliente fusionado
+* el archivo *EnginedServer.4Dlink* de la carpeta "Database" no se genera
+* los archivos .4DC, .4DZ, .4DIndy de la copia de la aplicación monopuesto se renombran utilizando el nombre del cliente fusionado
+* la llave `PublishName` no se copia en el *info.plist* del cliente fusionado
+* si la aplicación monopuesto no tiene una carpeta "Data" por defecto, el cliente fusionado se ejecutará sin datos.
 
-Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
+Las funcionalidades de actualización automática de 4D Server (número [versión actual](#current-version), comando `SET UPDATE FOLDER`...) funcionan con una aplicación monopuesto, como con una aplicación remota estándar. Al conectarse, la aplicación monopuesto compara su llave `CurrentVers` con el rango de versión 4D Server. Si está fuera del rango, la aplicación cliente actualizada se descarga del servidor y el Updater lanza el proceso de actualización local.
 
 ### Personalizar nombres de carpeta de caché cliente y/o servidor
 
-Client and server cache folders are used to store shared elements such as resources or components. Son necesarios para gestionar los intercambios entre el servidor y los clientes remotos. Client/server applications use default pathnames for both client and server system cache folders.
+Las carpetas de caché cliente y servidor se utilizan para almacenar elementos compartidos, como recursos o componentes. Son necesarios para gestionar los intercambios entre el servidor y los clientes remotos. Las aplicaciones cliente/servidor utilizan las rutas de acceso por defecto para las carpetas de caché sistema del cliente y servidor.
 
-In some specific cases, you might need to customize the names of these folders to implement specific architectures (see below). 4D provides you with the `ClientServerSystemFolderName` and `ServerStructureFolderName` keys to be set in the *buildApp* settings file.
+En algunos casos específicos, puede ser necesario personalizar los nombres de estas carpetas para implementar arquitecturas específicas (ver abajo). 4D le ofrece las llaves `ClientServerSystemFolderName` y `ServerStructureFolderName` a definir en el archivo de parámetros *buildApp*.
 
 #### Carpeta de caché cliente
 
-Customizing the client-side cache folder name can be useful when your client application is used to connect to several merged servers which are similar but use different data sets. In this case, to save multiple unnecessary downloads of identical local resources, you can use the same custom local cache folder.
+La personalización del nombre de la carpeta de caché del lado del cliente puede ser útil cuando su aplicación cliente se utiliza para conectarse a varios servidores fusionados que son similares pero utilizan diferentes conjuntos de datos. En este caso, para ahorrar múltiples descargas innecesarias de recursos locales idénticos, puede utilizar la misma carpeta de caché local personalizada.
 
-* Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
+* Configuración por defecto (*para cada conexión a un servidor, una carpeta caché específica se descarga/actualiza*):
 
 ![](../assets/en/Admin/cachea.png)
 
@@ -429,9 +429,9 @@ Customizing the client-side cache folder name can be useful when your client app
 
 #### Carpeta de caché del servidor
 
-Customizing the server-side cache folder name is useful when you run several identical server applications built with different 4D versions on the same computer. If you want each server to use its own set of resources, you need to customize the server cache folder.
+La personalización del nombre de la carpeta de caché del lado del servidor es útil cuando se ejecutan varias aplicaciones servidor idénticas creadas con diferentes versiones de 4D en el mismo ordenador. Si quiere que cada servidor utilice su propio conjunto de recursos, debe personalizar la carpeta de caché del servidor.
 
-* Default configuration (*same server applications share the same cache folder*):
+* Configuración por defecto (*las mismas aplicaciones servidor comparten la misma carpeta de caché*):
 
 ![](../assets/en/Admin/cacheServera.png)
 
@@ -441,7 +441,7 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 ## Página Plugins y componentes
 
-On this tab, you set each [**plug-in**](Concepts/plug-ins.md), [**component**](Concepts/components.md), and [**module**](#deselecting-modules) that you will use in your stand-alone or client/server application.
+En esta pestaña, se configura cada [**plug-in**](Concepts/plug-ins.md), [**componente**](Concepts/components.md) y [**módulo**](#deselecting-modules) que utilizará en su aplicación autónoma o cliente/servidor.
 
 La página lista los elementos cargados por la aplicación 4D actual:
 
@@ -449,24 +449,24 @@ La página lista los elementos cargados por la aplicación 4D actual:
 
 * La columna **Activa** indica los elementos que se integrarán en la aplicación generada. Todos los elementos están marcados por defecto. Para excluir un plug-in, un componente o un módulo, desmarque la casilla de selección situada junto a él.
 
-* **Plugins and components** column - Displays the name of the plug-in/component/module.
+* columna **Plugins y componentes** - Muestra el nombre del plug-in/componente/módulo.
 
-* **ID** column - Displays the element's identification number (if any).
+* Columna **ID** - Muestra el número de identificación del elemento (si lo hay).
 
-* **Type** column - Indicates the type of item: Plug-in, Component, or Module.
+* Columna **Tipo** - Indica el tipo de elemento: Plug-in, Componente o Módulo.
 
 ### Añadiendo plug-ins o componentes
 
-If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
+Si desea integrar otros plug-ins o componentes en la aplicación ejecutable, sólo tiene que colocarlos en una carpeta **PlugIns** o **Components** junto a la aplicación 4D Volume Desktop o junto a la aplicación 4D Server. El mecanismo para copiar el contenido de la carpeta de la aplicación fuente (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) puede utilizarse para integrar todo tipo de archivo en la aplicación ejecutable.
 
-If there is a conflict between two different versions of the same plug-in (one loaded by 4D and the other located in the source application folder), priority goes to the plug-in installed in the 4D Volume Desktop/4D Server folder. However, if there are two instances of the same component, the application will not open.
-> The use of plug-ins and/or components in a deployment version may require license numbers.
+Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargada por 4D y la otra ubicada en la carpeta de la aplicación fuente), la prioridad la tiene el plug-in instalado en la carpeta de 4D Volume Desktop/4D Server. Sin embargo, si hay dos instancias de un mismo componente, la aplicación no se abrirá.
+> El uso de plug-ins y/o componentes en una versión de despliegue puede requerir números de licencia.
 
 ### Desmarcar módulos
 
-A module is a built-in code library used by 4D to control specific features. If you know that your built application does not use any of the features covered by a module, you can deselect it in the list to reduce the size of your application files.
+Un módulo es una librería de código integrada que 4D utiliza para controlar funcionalidades específicas. Si sabe que su aplicación generada no utiliza ninguna de las funcionalidades cubiertas por un módulo, puede desmarcarlo en la lista para reducir el tamaño de los archivos de su aplicación.
 
-> **Warning:** Deselecting a module could prevent your built application from working as expected. Si no está 100% seguro de que un módulo nunca será llamado por su aplicación, se recomienda mantenerlo seleccionado.
+> **Atención:** deseleccionar un módulo podría impedir que su aplicación generada funcione como se espera. Si no está 100% seguro de que un módulo nunca será llamado por su aplicación, se recomienda mantenerlo seleccionado.
 
 Los siguientes módulos opcionales pueden ser deseleccionados:
 
@@ -479,9 +479,9 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 * **SpellChecker**: Se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
 * **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single-user-applications).
 
-## Página Licences & Certificado
+## Página licencias y certificados
 
-La página de Licencias & Certificados puede utilizarse para:
+La página de Licencias y certificados puede utilizarse para:
 
 * designe el número o los números de licencia que desea integrar en su aplicación ejecutable monopuesto
 * firmar la aplicación mediante un certificado en macOS.
@@ -693,17 +693,17 @@ Puede elegir si mostrar o no la caja de diálogo estándar de selección de serv
 
 En principio, la actualización de las aplicaciones servidor o de las aplicaciones monopuesto fusionadas requiere la intervención del usuario (o la programación de rutinas de sistema personalizadas): cada vez que esté disponible una nueva versión de la aplicación fusionada, hay que salir de la aplicación en producción y sustituir manualmente los archivos antiguos por los nuevos; a continuación, reiniciar la aplicación y seleccionar el archivo de datos actual.
 
-Este procedimiento puede automatizarse en gran medida mediante los siguientes comandos de lenguaje: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), and also [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) para el seguimiento de las operaciones. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. It can be a menu command or a process running in the background and checking at regular intervals for the presence of an archive on a server.
+Este procedimiento puede automatizarse en gran medida mediante los siguientes comandos de lenguaje: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), and also [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) para el seguimiento de las operaciones. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
 
-> You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> También dispone de llaves XML para elevar los privilegios de instalación y poder utilizar archivos protegidos en Windows (consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
 Este es el escenario para actualizar un servidor o una aplicación unipersonal fusionada:
 
-1. You transfer, for example using an HTTP server, the new version of the server application or the merged single-user application onto the machine in production.
-2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).
-3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. La versión anterior ha sido renombrada.
+1. Se transfiere, por ejemplo utilizando un servidor HTTP, la nueva versión de la aplicación servidor o la aplicación monopuesto fusionada a la máquina en producción.
+2. En la aplicación en producción, se llama al comando `SET UPDATE FOLDER`: este comando designa la ubicación de la carpeta donde se encuentra la actualización "pendiente" de la aplicación actual. Opcionalmente, puede copiar en esta carpeta los elementos personalizados de la versión en producción (archivos usuario).
+3. En la aplicación en producción, llame al comando `RESTART 4D`: este comando desencadena automáticamente la ejecución de un programa utilitario llamado "updater" que sale de la aplicación actual, la reemplaza utilizando la actualización "pendiente" si se especifica una y reinicia la aplicación con el archivo de datos actual. La versión anterior ha sido renombrada.
 
-> This sequence is compatible with Windows server applications run as a Service.
+> Esta secuencia es compatible con las aplicaciones servidor de Windows que se ejecutan como servicio.
 
 ### Update log
 

@@ -368,11 +368,11 @@ El atributo de escala se utiliza para la optimización y el ajuste de la impresi
 | bestFitColumns | boolean      | El ancho de la columna se ajusta para adaptarse al ancho del texto más grande para la impresión. Valor por defecto: "false" |
 | bestFitRows    | boolean      | La altura de la línea se ajusta a la altura del texto más alto para la impresión. Valor por defecto: "false"                |
 | fitPagesTall   | entero largo | The number of vertical pages (portrait orientation) to check when optimizing printing. Por defecto = -1                     |
-| fitPagesWide   | entero largo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Por defecto = -1                  |
+| fitPagesWide   | entero largo | El número de páginas horizontales (orientación horizontal) a comprobar cuando se optimiza la impresión. Por defecto = -1    |
 
 ### Mostrar / Ocultar
 
-Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
+Los atributos Mostrar / Ocultar se utilizan para especificar la visibilidad (impresión) de los elementos de área 4D View Pro.
 
 | Propiedad        | Tipo         | Descripción                                                                                                                                                                                                     |
 | ---------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

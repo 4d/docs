@@ -10,7 +10,11 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 #### Highlights
 
--
+
+- Listboxes with collection or entity selection datasources now support [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) column property.
+- 4D View Pro:
+    - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
+    - new [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) command
 - 4D Language classic: [What's new page](XXX) on doc.4d.com.
 - 4D Write Pro: [What's new page](XXX) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D v19 R8.
@@ -18,7 +22,9 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 #### Behavior changes
 
+- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) property.
 - When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+- In Web areas using blink (CEF), dialogs displayed from external scripts are now blocking if not called from a `setTimeout()` JS function. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
 ## Previous releases
@@ -146,12 +152,12 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 | Library  | Current version | Updated in 4D | Comentário                                                                               |
 | -------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
 | SpreadJS | 15.2.0          | 19 R7         | 4D View Pro engine                                                                       |
-| CEF      | 4692.99         | 19 R5         | Chromium v97. CORS policies now also apply when accessing files on disk.                 |
+| CEF      | 106.0.27        | 19 R8         | Chromium 106.0.5249.103                                                                  |
 | OpenSSL  | 1.1.1n          | 19 R4         |                                                                                          |
 | libzip   | 1.7.3           | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
 | webKit   | WKWebView       | 19            |                                                                                          |
-| ICU      | 68.1            | 18 R6         |                                                                                          |
-| PHP      | 7.3.27          | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| ICU      | 68.1            | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| PHP      | 7.3.27          | 18 R6         |                                                                                          |
 | libldap  | 2.4.48          | 18 R2         |                                                                                          |
 
 </details>

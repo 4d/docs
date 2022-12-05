@@ -17,7 +17,7 @@ Um [array](Concepts/arrays.md) é uma lista de valores na memória que são refe
 
 Objetos lista drop down são iniciados ao carregar uma lista de valores em um array. Pode fazer isso de várias maneiras:
 
-* Enter a list of default values in the object properties by selecting `"\&#060;Static List&#062;"` in the [Data Source](properties_DataSource.md) theme of the Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
+* Introduza uma lista de valores por defeito nas propriedades do objecto seleccionando `"\&#060;Static List&#062;"` no tema [Data Source](properties_DataSource.md) da Lista de Propriedades. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
 
 * Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. Por exemplo:
 

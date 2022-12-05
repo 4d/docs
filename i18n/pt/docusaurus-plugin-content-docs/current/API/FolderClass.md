@@ -18,7 +18,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Pathnames
 
-`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Supported pathnames are detailed in the [**Pathnames**](../Concepts/paths.md) page.
+`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
 
 
 
@@ -61,7 +61,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 | Versão | Mudanças                    |
 | ------ | --------------------------- |
-| v20    | Support of `fk home folder` |
+| v19 R8 | Support of `fk home folder` |
 | v17 R5 | Adicionado                  |
 
 </details>
@@ -82,7 +82,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -90,12 +90,12 @@ In the *path* parameter, pass a folder path string. You can use a custom string 
 
 > Only absolute pathnames are supported with the `Folder` command.
 
-By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType* . Estão disponíveis as seguintes constantes:
 
-| Constante        | Value | Comentário                                                                              |
-| ---------------- | ----- | --------------------------------------------------------------------------------------- |
-| fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
-| fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
+| Constante        | Value | Comentário                                                                                               |
+| ---------------- | ----- | -------------------------------------------------------------------------------------------------------- |
+| fk platform path | 1     | Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma) |
+| fk posix path    | 0     | Caminho expresso com a sintaxe POSIX (por padrão)                                                        |
 
 **Folder ( folderConstant { ; \* } )**
 
@@ -168,7 +168,7 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->creates and re
 
 A função `.create()` <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+Se necessário, a função cria a pasta hierachy como descrito na [platformPath](#platformpath) ou [caminho](#path) propriedades. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
 **Valor retornado**
 
@@ -218,25 +218,25 @@ End if
 <!--REF #FolderClass.createAlias().Params -->
 | Parâmetros        | Tipo       |    | Descrição                                              |
 | ----------------- | ---------- | -- | ------------------------------------------------------ |
-| destinationFolder | 4D. Folder | -> | Destination folder for the alias or shortcut           |
-| aliasName         | Text       | -> | Name of the alias or shortcut                          |
-| aliasType         | Integer    | -> | Type of the alias link                                 |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho           |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                           |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                          |
 | Resultados        | 4D. File   | <- | Alias or shortcut reference|<!-- END REF --> |
 
 #### Descrição
 
-A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um pseudónimo (macOS) ou um atalho (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
+Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType* . Estão disponíveis as seguintes constantes:
 
-| Constante          | Value | Comentário                 |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (default)       |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| Constante          | Value | Comentário                   |
+| ------------------ | ----- | ---------------------------- |
+| `fk alias link`    | 0     | Alias link (padrão)          |
+| `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+No Windows, é sempre criado um atalho (arquivo .lnk) (o parâmetro *aliasType* é ignorado).
 
 **Objeto devolvido**
 
@@ -415,7 +415,7 @@ You want to move and rename a folder:
 
 A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um arquivo com o mesmo nome, é devolvido um erro.
 
 **Objeto devolvido**
 

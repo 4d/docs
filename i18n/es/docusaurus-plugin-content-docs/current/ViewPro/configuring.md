@@ -368,11 +368,11 @@ El atributo de escala se utiliza para la optimización y el ajuste de la impresi
 | bestFitColumns | boolean      | El ancho de la columna se ajusta para adaptarse al ancho del texto más grande para la impresión. Valor por defecto: "false" |
 | bestFitRows    | boolean      | La altura de la línea se ajusta a la altura del texto más alto para la impresión. Valor por defecto: "false"                |
 | fitPagesTall   | entero largo | The number of vertical pages (portrait orientation) to check when optimizing printing. Por defecto = -1                     |
-| fitPagesWide   | entero largo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Por defecto = -1                  |
+| fitPagesWide   | entero largo | El número de páginas horizontales (orientación horizontal) a comprobar cuando se optimiza la impresión. Por defecto = -1    |
 
 ### Mostrar / Ocultar
 
-Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
+Los atributos Mostrar / Ocultar se utilizan para especificar la visibilidad (impresión) de los elementos de área 4D View Pro.
 
 | Propiedad        | Tipo         | Descripción                                                                                                                                                                                                     |
 | ---------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -403,7 +403,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 ### Objetos de estilo & Hojas de estilo
 
-Style objects contain the style settings. Se pueden utilizar en una hoja de estilo o por su cuenta. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands.
+Style objects contain the style settings. Se pueden utilizar en una hoja de estilo o por su cuenta. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](method-list.md#vp-set-table-theme) or [VP CREATE TABLE](method-list.md#vp-create-table) commands.
 
 A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
 

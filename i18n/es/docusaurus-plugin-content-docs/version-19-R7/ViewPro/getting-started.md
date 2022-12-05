@@ -85,7 +85,7 @@ Las áreas 4D View Pro se benefician de un menú contextual automático que ofre
 *   haga clic en una celda o en un rango de celdas:
     *   **Filtrar**: permite ocultar la línea mediante filtros (ver [Filtrar las líneas](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) en la documentación SpreadJS).
     *   **Ordenar**: ordena el contenido de la columna.
-    *   **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
+    *   **Insertar comentario**: permite al usuario introducir un comentario para un área. Cuando se ha introducido un comentario para un área, la celda superior izquierda del área muestra un pequeño triángulo rojo:  
       ![](../assets/en/ViewPro/vpContext2.PNG)
 
 
@@ -93,11 +93,11 @@ Las áreas 4D View Pro se benefician de un menú contextual automático que ofre
 
 4D View Pro methods can be used in the 4D Code Editor, just like 4D language commands.
 
-Since 4D View Pro is a built-in 4D component, you can access its list of methods from the Explorer, in the **Component Methods** section:
+Como 4D View Pro es un componente 4D intregado, puede acceder a su lista de métodos desde el Explorador, en la sección **Métodos componentes**:
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-For a detailed list of component methods, see [Method list](method-list.md).
+Para una lista detallada de los métodos componentes, ver [Lista de los métodos](method-list.md).
 
 ### Abordando un área 4D View Pro
 
@@ -105,9 +105,9 @@ Un área 4D View Pro maneja varios objetos y elementos.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property.
+La mayoría de los métodos 4D View Pro requieren un parámetro *vpAreaName*, que es el [**nombre del área de formulario 4D View Pro**](FormObjects/viewProArea_overview.md) (objeto de formulario 4D). Este nombre es la propiedad del [nombre del objeto](FormObjects/properties_Object.md#object-name).
 
-For example, if you want to set the total number of columns of an area named "myVpArea", you write:
+Por ejemplo, si quiere definir el número total de columnas de un área llamada "myVpArea", escriba:
 
 ```4d
 VP SET COLUMN COUNT("myVpArea";5)
@@ -115,12 +115,12 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 
 
-> When loading a 4D View Pro object in a form area, 4D generates the [On VP Ready](../Events/onVpReady.md) form event once the whole area is loaded. You must execute any 4D View Pro code handling the area in this event, otherwise an error is returned.
+> Cuando se carga un objeto 4D View Pro en un área de formulario, 4D genera el evento formulario [On VP Ready](../Events/onVpReady.md) una vez que se carga toda el área. Debe ejecutar todo código 4D View Pro que maneje el área en este evento, de lo contrario se devuelve un error.
 
 
 ### Utilización de objetos de rango
 
-Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. Esta área puede estar compuesta de una o varias celdas. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
+Algunos métodos 4D View Pro requieren un parámetro *rangeObj*. En 4D View Pro, un rango es un objeto que hace referencia a un área en una hoja de cálculo. Esta área puede estar compuesta de una o varias celdas. Utilizando los métodos 4D View Pro, puede crear rangos y pasarlos a otros métodos para leer o escribir en lugares específicos de su documento.
 
 Por ejemplo, para crear un objeto rango para las siguientes celdas:
 
@@ -133,12 +133,12 @@ var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 a D7
 ```
 
-You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](method-list.md#vp-set-border)).
+Luego, puede pasar `$myRange` a otro método 4D View Pro para modificar estas celdas (por ejemplo, añadir un borde al conjunto de celdas con [VP SET BORDER](method-list.md#vp-set-border)).
 
 Los objetos rango 4D View Pro se componen de varias propiedades:
 
 *   area - El nombre del área 4D View Pro
-*   rangos - Una colección de objeto(s) rango. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
+*   rangos - Una colección de objeto(s) rango. Las propiedades disponibles en cada objeto de rango dependen del tipo de objeto rango. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
 
 | Propiedad |                   | Tipo       | Descripción                                                                         | Disponible para                                                |
 | --------- | ----------------- | ---------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |

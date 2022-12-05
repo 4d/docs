@@ -10,15 +10,21 @@ title: リリースノート
 
 #### ハイライト
 
--
-- 4D Language classic: [What's new page](XXX) on doc.4d.com.
-- 4D Write Pro: [What's new page](XXX) on doc.4d.com.
+
+- コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
+- 4D View Pro:
+    - 表組みにおけるテーマのサポート: 新しい [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) および [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) コマンドの追加、[VP CREATE TABLE](../ViewPro/method-list#vp-create-table) コマンドにテーマオプションを追加
+    - 新しい [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) コマンドの追加
+- 4D クラシックランゲージ: doc.4d.com の [新着](XXX) ページ。
+- 4D Write Pro: doc.4d.com の [新着](XXX) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。
 
 
 #### 動作の変更
 
+- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) property.
 - 標準アクションが適用されている [リンクされているポップアップメニューの付いたベベルボタン](../FormObjects/properties_TextAndPicture.md/#ポップアップメニューあり) で、ポップアップメニューのオプションが選択された場合、その標準アクションは実行されなくなりました。
+- Blink (CEF) を使用する Webエリアにおいて、外部スクリプトによって表示されるダイアログは、 `setTimeout()` JS 関数から呼び出されていないとブロックされるようになりました。 これは、現在のCEFのアップデートにより、`alert()` や `print()` などの関数によって表示されるダイアログが、OS ではなく Web エリアで処理されるようになったためです。 [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/ja/page1029.html) と [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/ja/page1043.html) 参照。
 
 
 ## 過去のリリース
@@ -146,12 +152,12 @@ title: リリースノート
 | ライブラリ    | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
 | -------- | --------- | -------------- | ----------------------------------------------------- |
 | SpreadJS | 15.2.0    | 19 R7          | 4D View Pro エンジン                                      |
-| CEF      | 4692.99   | 19 R5          | Chromium v97。 ディスク上のファイルにアクセスするときも CORSポリシーが適用されます。   |
+| CEF      | 106.0.27  | 19 R8          | Chromium 106.0.5249.103                               |
 | OpenSSL  | 1.1.1n    | 19 R4          |                                                       |
 | libzip   | 1.7.3     | 19 R2          | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
 | webKit   | WKWebView | 19             |                                                       |
-| ICU      | 68.1      | 18 R6          |                                                       |
-| PHP      | 7.3.27    | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| ICU      | 68.1      | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| PHP      | 7.3.27    | 18 R6          |                                                       |
 | libldap  | 2.4.48    | 18 R2          |                                                       |
 
 </details>

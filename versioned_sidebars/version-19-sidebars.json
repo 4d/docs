@@ -1,7 +1,8 @@
 {
   "docs": {
     "Getting Started": [
-      "GettingStarted/installation"
+      "GettingStarted/installation",
+	  "Notes/updates"
     ],
     "Project Management": [
       "Project/overview",

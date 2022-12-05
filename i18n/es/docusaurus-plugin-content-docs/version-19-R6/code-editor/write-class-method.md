@@ -3,7 +3,7 @@ id: write-class-method
 title: Editor de código
 ---
 
-4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more.
+4D tiene un poderoso editor de código integrado que ofrece un amplio conjunto de funcionalidades para la edición de código altamente productivo, como la finalización inteligente de código, la navegación de código, la depuración, la búsqueda y más.
 
 ![](../assets/en/code-editor/code-editor-overview.png)
 
@@ -165,7 +165,16 @@ In the Code Editor, the drag-and-drop mechanism is activated as soon as a portio
 
 You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. 4D considerará todas las líneas a la vez. Por ejemplo, ambas sentencias son equivalentes:
 
-![](../assets/en/code-editor/entry-several-lines.png)
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 
 ### Changing case
 
@@ -481,7 +490,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 
 4D le permite asociar marcadores con ciertas líneas en sus métodos. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 
-![](https://doc.4d.com/4Dv19R4/picture/443304/pict443304.en.png)
+![](../assets/en/code-editor/bookm.png)
 
 A bookmark moves along with its original row if additional rows are inserted in the method. Los marcadores se guardan con los métodos.
 

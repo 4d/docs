@@ -61,7 +61,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 | バージョン  | 内容                     |
 | ------ | ---------------------- |
-| v20    | `fk home folder` をサポート |
+| v19 R8 | `fk home folder` をサポート |
 | v17 R5 | 追加                     |
 
 </details>

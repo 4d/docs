@@ -729,12 +729,13 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 |Version|Changes|
 |---|---|
+|v19 R8|Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme`
 |v19 R7|Support of `allowAutoExpand` option
 |v19 R6|Added
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
-**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )<!-- END REF -->
+**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
@@ -743,7 +744,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 |rangeObj|Object|->|Range object|
 |tableName|Text|->|Name for the table|
 |source|Text|->|Data context property name to display in the table|
-|options|Object|->|Additional options|<!-- END REF -->
+|options|[cs.ViewPro.TableOptions](classes.md#tableoptions)|->|Additional options|<!-- END REF -->
 
 #### Description
 
@@ -764,26 +765,9 @@ In *source*, you can pass a property name of a [data context](#vp-set-data-conte
   * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*. 
   * If the specified *source* cannot be fully displayed in the document, no table is created.
 
-In *options*, you can pass an object with additional options for the table. Possible values are:
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set. 
 
-|Property|Type|Description|Default value
-|---|---|---|---|
-|allowAutoExpand|Boolean|True to expand columns or rows of the table when values are added in empty adjacent cells.| True
-|showFooter|Boolean|Display a footer| False
-|showHeader|Boolean|Display a header| True
-|showResizeHandle|Boolean|For tables that don't have a *source*. Display the resize handle| False
-|tableColumns|Collection|Collection of objects used to create the table's columns (see below)| Undefined
-|useFooterDropDownList|Boolean|Use a dropdown list in footer cells that calculate the total value of a column| False
-
-The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
-
-  |Property|Type|Description|Mandatory
-  |---|---|---|---|
-  |dataField|Text| table column's property name in the data context| No
-  |formatter|Text| table column's formatter | No
-  |name|Text| table column's name | Yes
-  
-The length of the *tableColumns* collection must be equal to the range column count:
+Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. The length of the *tableColumns* collection must be equal to the range column count:
 
   * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
   * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
@@ -823,13 +807,13 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
 // Define the columns for the table
-var $options : Object
+var $options : cs.ViewPro.TableOptions
 
-$options:=New object
+$options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
 
 // Create a table from the "people" collection
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
@@ -841,7 +825,7 @@ Here's the result:
 
 #### See also
 
-[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 ## D
@@ -964,7 +948,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |formula| object |Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).|
 |valuesOnly| boolean| Specifies that only the values from formulas (if any) will be exported.|
 |includeFormatInfo| boolean| True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.|
-|includeBindingSource| Boolean | 4DVP only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).|
+|includeBindingSource| Boolean | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).|
 |sheet| number| PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only|
 |pdfOptions| object| PDF only (optional) - Options for pdf export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>title of the document.</td></tr><tr><td>author</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>|
 |csvOptions|object| CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: ","</td></tr></table></p>|
@@ -2223,6 +2207,8 @@ Get the name of the third sheet in the document:
 $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
+
+
 #### See also
 
 [VP Get sheet index](#vp-get-sheet-index)
@@ -2565,6 +2551,70 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
+### VP Get table dirty rows
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added
+</details>
+
+<!-- REF #_method_.VP Get table dirty rows.Syntax -->
+**VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
+
+<!-- REF #_method_.VP Get table dirty rows.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|reset|Boolean|->|True to clear the dirty status from the current table, False to keep it untouched. Default=True|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|Result |Collection|<-|Collection of objects with all the items modified since the last reset|<!-- END REF -->
+
+
+#### Description
+
+The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+
+By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter. 
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+> Indexing starts at 0.
+
+Each *dirty row* object in the returned collection contains the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+|item|object|Modified object of the modified row |
+|originalItem|object|Object before modification|
+|row|integer|Index of the modified row|
+
+If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection. 
+
+#### Example
+
+You want to count the number of edited rows:
+
+```4d
+var $dirty : Collection
+$dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
+VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
+```
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
+
+
+
+
 ### VP Get table range
 
 <details><summary>History</summary>
@@ -2610,6 +2660,57 @@ If *tableName* is not found, the command returns **null**.
 
 [VP RESIZE TABLE](#vp-resize-table)<br/>
 [VP Find table](#vp-find-table)
+
+
+### VP Get table theme
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added
+</details>
+
+<!-- REF #_method_.VP Get table theme.Syntax -->
+
+**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
+
+<!-- REF #_method_.VP Get table theme.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|Result|[cs.ViewPro.TableTheme](classes.md#tabletheme)|<-|Current table theme property values|<!-- END REF -->
+
+
+#### Description
+
+The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface. 
+
+In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table. 
+
+The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme. 
+
+
+#### Example
+
+The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+
+```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+$param.theme:="dark10" //use of a native theme name
+
+VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
+$vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
+$result:=Asserted(Value type($vTheme.theme)=Is object) //true
+```
+
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 
@@ -2659,6 +2760,8 @@ $tables:=VP Get tables("ViewProArea")
 #### See also
 
 [VP CREATE TABLE](#vp-create-table)
+
+
 
 
 
@@ -3114,6 +3217,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 
 
+
 #### See also
 
 [VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP REMOVE TABLE ROWS](#vp-remove-table-rows)
@@ -3159,6 +3263,7 @@ The *options* parameter has several properties:
 |---|---|---|
 |copy|Boolean|Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (default) to remove them</li><li>*True* to keep them</li></ul>|
 |pasteOptions|Longint|Specifies what is pasted. Possible values: <p><table><tr><th>Value</th><th>Description</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>|
+
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -3477,6 +3582,7 @@ VP REMOVE NAME("ViewProArea";"Total1")
 $formula:=VP Get formula by name("ViewProArea";"Total1")
 //$formula=null
 ```
+
 
 #### See also
 
@@ -3971,6 +4077,7 @@ Result:
 |Parameter|Type||Description|
 |---|---|---|---|
 |parameters   |Object|->|Object containing the offscreen area's attributes|
+
 |Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
 
 #### Description
@@ -3982,11 +4089,13 @@ In *parameters* object, pass any of the following optional properties. These pro
 |Property  |Type  |Description|
 |---|---|---|
 |area | text |The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1"). |
+
 |onEvent | object (formula)| A callback method that will be launched when the offscreen area is ready. It can be either:<li>an `onEvent` function of a class, or</li><li>a `Formula` object</li>By default, the callback method is called on the [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable).|
 |autoQuit | boolean | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method. |
 |timeout | number | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60 |
 |result| mixed| Result of the processing (if any)|
 |`\<customProperty>` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
+
 
 The following property is automatically added by the command if necessary:
 
@@ -4128,6 +4237,7 @@ VP SET ACTIVE CELL($activeCell)
 **VP SET ALLOWED METHODS** ( *methodObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
+
 
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -4502,7 +4612,6 @@ VP SET COLUMN COUNT("ViewProArea";5)
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
 |Parameter|Type| |Description|
-
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
 |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
@@ -4692,6 +4801,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 Pass a collection of objects and generate columns automatically:
 
+
 ```4d
 var $options : Object
 var $data : Collection
@@ -4806,6 +4916,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
 |Parameter|Type||Description|
+
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
@@ -5544,6 +5655,7 @@ In *visible*, pass `True` to display the print lines, and `False` to hide them. 
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 
+
 > Indexing starts at 0.
 
 The position of a spreadsheet's print lines varies according to that spreadsheet's page breaks.
@@ -5609,6 +5721,7 @@ In the *attributes* parameter, pass an object that contains the properties to se
 
 In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 
+
 >Indexing starts at 0.
 
 If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing. 
@@ -5669,6 +5782,91 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
 
+
+
+### VP SET TABLE THEME
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added
+</details>
+
+<!-- REF #_method_.VP SET TABLE THEME.Syntax -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
+
+<!-- REF #_method_.VP SET TABLE THEME.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|options|[cs.ViewPro.TableTheme](classes.md#tabletheme)|->|Table theme properties to modify|<!-- END REF -->
+
+
+#### Description
+
+The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify. 
+
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableTheme` class](classes.md#tabletheme) that contains the theme properties to modify. 
+
+
+#### Example 1
+
+You want to set a predefined theme to a table:
+
+```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+$param.theme:="medium2"
+VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
+```
+
+#### Example 2
+
+You want to have this alternate column rendering:
+
+![](../assets/en/ViewPro/col-bandering.png)
+
+```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+
+// Enable the band column rendering
+$param.bandColumns:=True
+$param.bandRows:=False
+
+// Create the theme object with header and column styles
+$param.theme:=cs.ViewPro.TableThemeOptions.new()
+
+var $styleHeader; $styleColumn; $styleColumn2 : cs.ViewPro.TableStyle
+
+$styleHeader:=cs.ViewPro.TableStyle.new()
+$styleHeader.backColor:="Gold"
+$styleHeader.foreColor:="#03045E"
+$param.theme.headerRowStyle:=$styleHeader
+
+$styleColumn1:=cs.ViewPro.TableStyle.new()
+$styleColumn1.backColor:="SkyBlue"
+$styleColumn1.foreColor:="#03045E"
+$param.theme.firstColumnStripStyle:=$styleColumn1
+
+$styleColumn2:=cs.ViewPro.TableStyle.new()
+$styleColumn2.backColor:="LightCyan"
+$styleColumn2.foreColor:="#03045E"
+$param.theme.secondColumnStripStyle:=$styleColumn2
+
+VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
+
+```
+
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme)
 
 
 
@@ -5825,6 +6023,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 >* If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
 
 The *valuesCol* parameter is two-dimensional:
+
 
 * The first-level collection contains subcollections of values. Each subcollection defines a row. Pass an empty collection to skip a row.
 * Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:

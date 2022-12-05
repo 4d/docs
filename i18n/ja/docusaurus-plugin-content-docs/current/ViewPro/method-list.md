@@ -735,23 +735,24 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                           |
-| ------ | ---------------------------- |
-| v19 R7 | `allowAutoExpand` オプションをサポート |
-| v19 R6 | 追加                           |
+| バージョン  | 内容                                                                                              |
+| ------ | ----------------------------------------------------------------------------------------------- |
+| v19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| v19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
+| v19 R6 | 追加                                                                                              |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
-**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )<!-- END REF -->
+**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : cs.ViewPro.TableOptions} )<!-- END REF -->
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| 引数        | タイプ    |    | 説明                                  |
-| --------- | ------ | -- | ----------------------------------- |
-| rangeObj  | Object | -> | レンジオブジェクト                           |
-| tableName | Text   | -> | 表組みの名称                              |
-| source    | Text   | -> | 表に表示するデータコンテキストプロパティ名               |
-| options   | Object | -> | 追加のオプション|<!-- END REF -->
+| 引数        | タイプ                                                |    | 説明                                  |
+| --------- | -------------------------------------------------- | -- | ----------------------------------- |
+| rangeObj  | Object                                             | -> | レンジオブジェクト                           |
+| tableName | Text                                               | -> | 表組みの名称                              |
+| source    | Text                                               | -> | 表に表示するデータコンテキストプロパティ名               |
+| options   | [cs.ViewPro.TableOptions](classes.md#tableoptions) | -> | 追加のオプション|<!-- END REF -->
 
 |
 
@@ -774,26 +775,9 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
   * *source* を指定しない場合、コマンドは *rangeObj* が定義するサイズの空の表を作成します。
   * 指定された *source* をドキュメント内に完全に表示できない場合、表は作成されません。
 
-*options* には、表組み用の追加オプションを格納したオブジェクトを渡せます。 とりうる値:
+*options* には、設定する表プロパティを格納する [`cs.ViewPro.TableOptions` クラス](classes.md#tableoptions) のオブジェクトを渡します。
 
-| プロパティ                 | タイプ        | 説明                                      | デフォルト値 |
-| --------------------- | ---------- | --------------------------------------- | ------ |
-| allowAutoExpand       | Boolean    | 隣接する空のセルに値が追加されたとき、表の列または行を拡張する場合は true | true   |
-| showFooter            | Boolean    | フッターを表示                                 | false  |
-| showHeader            | Boolean    | ヘッダーを表示                                 | true   |
-| showResizeHandle      | Boolean    | *source* を持たない表の場合。 リサイズハンドルを表示         | false  |
-| tableColumns          | Collection | 表の列を作成するために使用されるオブジェクトのコレクション (下記参照)    | 未定義    |
-| useFooterDropDownList | Boolean    | 列の合計値を計算するフッターセルでドロップダウンリストを使用          | false  |
-
-*tableColumns* コレクションは、表の列の構造を決定します。 コレクション内の各オブジェクトは以下の値を持ちます:
-
-  | プロパティ     | タイプ  | 説明                       | 必須 |
-  | --------- | ---- | ------------------------ | -- |
-  | dataField | Text | データコンテキストにおける、表の列のプロパティ名 | ×  |
-  | formatter | Text | 表の列のフォーマッター              | ×  |
-  | name      | Text | 表の列の名前                   | ◯  |
-
-*tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
+*options* オブジェクトの中で、*tableColumns* コレクションが、表の列のデータ構造を決定します。 *tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
 
   * *rangeObj* の列数が *tableColumns* の列数より多い場合、表は追加の空列で埋められます。
   * *rangeObj* の列数が *tableColumns* の列数より少ない場合、表はレンジの列数のみを表示します。
@@ -821,7 +805,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 データコンテキストを使用した表組みを作成します:
 
 ```4d
-// データコンテキストの設定します
+// データコンテキストを設定します
 var $data : Object
 
 $data:=New object()
@@ -833,13 +817,13 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
 // 表の列を定義します
-var $options : Object
+var $options : cs.ViewPro.TableOptions
 
-$options:=New object
+$options:=cs.ViewPro.TableOptions.new()
 $options.tableColumns:=New collection()
-$options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstName"))
-$options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
-$options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "First name"; "dataField"; "firstName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Last name"; "dataField"; "lastName"))
+$options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataField"; "email"))
 
 // "people" コレクションから表を作成します
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
@@ -851,7 +835,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); 
 
 #### 参照
 
-[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 ## D
@@ -978,7 +962,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 | formula                    | object  | 書き出しが完了した際に呼び出されるコールバックメソッド名。 書き出しが非同期でおこなわれる (PDF および Excel 形式での書き出しが該当します) 場合かつ、書き出し後にコードを実行したい場合には、コールバックメソッドが必要です。 コールバックメソッドは [`Formula`](https://doc.4d.com/4dv19/help/command/ja/page1597.html) コマンドと使用する必要があります (詳細は以下を参照ください)。                                                                                                                         |
 | valuesOnly                 | boolean | フォーミュラ (あれば) の値のみを書き出すかどうかを指定します。                                                                                                                                                                                                                                                                                                                               |
 | includeFormatInfo          | boolean | フォーマット (書式) 情報を含めるには true、それ以外の場合には false (デフォルトは true)。 フォーマット情報は特定の場合 (例: SVGへの書き出しなど) において有用です。 一方で、このプロパティを **false** に設定することで書き出し時間を短縮することもできます。                                                                                                                                                                                                           |
-| includeBindingSource       | Boolean | 4DVP のみ。 true (デフォルト) の場合、カレントデータコンテキストの値を、書き出したドキュメントのセルの値としてエクスポートします (データコンテキスト自体はエクスポートされません)。 それ以外は false。 セルバインドは常にエクスポートされます。 データコンテキストおよびセルバインドの管理については、[VP SET DATA CONTEXT](#vp-set-data-context) および [VP SET BINDING PATH](#vp-set-binding-path) を参照ください。                                                                                            |
+| includeBindingSource       | Boolean | 4DVP および Microsoft Excel のみ。 true (デフォルト) の場合、カレントデータコンテキストの値を、書き出したドキュメントのセルの値としてエクスポートします (データコンテキスト自体はエクスポートされません)。 それ以外は false。 セルバインドは常にエクスポートされます。 データコンテキストおよびセルバインドの管理については、[VP SET DATA CONTEXT](#vp-set-data-context) および [VP SET BINDING PATH](#vp-set-binding-path) を参照ください。                                                                        |
 | sheet                      | number  | PDF のみ (任意) - 書き出すシートのインデックス (0 起点)。 -2 = 表示されている全シート (デフォルト)、-1 = カレントシートのみ                                                                                                                                                                                                                                                                                    |
 | pdfOptions                 | object  | PDFのみ (任意) - pdf 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>creator</td><td>text</td><td>変換されたドキュメントの変換元を作成したアプリケーション名。</td></tr><tr><td>title</td><td>text</td><td>ドキュメント名。</td></tr><tr><td>author</td><td>text</td><td>ドキュメントの作成者の名前。</td></tr><tr><td>keywords</td><td>text</td><td>ドキュメントに割り当てられたキーワード。</td></tr><tr><td>subject</td><td>text</td><td>ドキュメントの題名。</td></tr></table></p>                                                                                                                                                                                                                                                                                                           |
 | csvOptions                 | object  | CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 デフォルト: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                           |
@@ -2283,6 +2267,8 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返し�
 $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
+
+
 #### 参照
 
 [VP Get sheet index](#vp-get-sheet-index)
@@ -2635,6 +2621,73 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
+### VP Get table dirty rows
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R8 | 追加 |
+</details>
+
+<!-- REF #_method_.VP Get table dirty rows.Syntax -->
+**VP Get table dirty rows** ( *vpAreaName* : Text ; *tableName* : Text { ; *reset* : Boolean {; *sheet* : Integer }} ) : Collection<!-- END REF -->
+
+<!-- REF #_method_.VP Get table dirty rows.Params -->
+
+| 引数         | タイプ        |    | 説明                                                                    |
+| ---------- | ---------- | -- | --------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | 4D View Pro フォームオブジェクト名                                               |
+| tableName  | Text       | -> | 表組みの名称                                                                |
+| reset      | Boolean    | -> | 現在の表から "ダーティ" ステータスをクリアするには true、そのままにするには false を指定します。 デフォルト = true |
+| sheet      | Integer    | -> | シートのインデックス (省略した場合はカレントシート)                                           |
+| 戻り値        | Collection | <- | 前回のリセット以降に変更された全項目を格納するオブジェクトのコレクション|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`VP Get table dirty rows` コマンドは、 <!-- REF #_method_.VP Get table dirty rows.Summary -->*tableName* が指定する表組みの前回のリセット以降に変更された項目を含む *dirty row* ("ダーティ" な行) のオブジェクトのコレクションを返します<!-- END REF -->。
+
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
+
+*tableName* には、変更された行を取得したい表組みの名称を渡します。 なお、[データコンテキスト](#vp-set-data-context) にバインドされている列の変更のみが考慮されます。
+
+デフォルトでは、このコマンドを呼び出すと、現在のテーブルから *ダーティ* のステータスをクリアします。 この状態をリセットせずに維持するには、*reset* に `false` を渡します。
+
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
+
+> インデックスは 0 起点です。
+
+返されるコレクション内の各 *dirty row* ("ダーティ" な行) オブジェクトは、以下のプロパティを含みます:
+
+| プロパティ        | タイプ     | 説明              |
+| ------------ | ------- | --------------- |
+| item         | object  | 変更された行の変更オブジェクト |
+| originalItem | object  | 変更前のオブジェクト      |
+| row          | integer | 変更された行のインデックス   |
+
+*tableName* が見つからない場合、または変更された列が含まれていない場合、コマンドは空のコレクションを返します。
+
+#### 例題
+
+変更された行の数を取得します:
+
+```4d
+var $dirty : Collection
+$dirty:=VP Get table dirty rows("ViewProArea"; "ContextTable"; False)
+VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
+```
+
+#### 参照
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
+
+
+
+
 ### VP Get table range
 
 <details><summary>履歴</summary>
@@ -2680,6 +2733,60 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 #### 参照
 
 [VP RESIZE TABLE](#vp-resize-table)<br/> [VP Find table](#vp-find-table)
+
+
+### VP Get table theme
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R8 | 追加 |
+</details>
+
+<!-- REF #_method_.VP Get table theme.Syntax -->
+
+**VP Get table theme** ( *vpAreaName* : Text ; *tableName* : Text ) : cs.ViewPro.TableTheme<!-- END REF -->
+
+<!-- REF #_method_.VP Get table theme.Params -->
+
+| 引数         | タイプ                                            |    | 説明                                        |
+| ---------- | ---------------------------------------------- | -- | ----------------------------------------- |
+| vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                   |
+| tableName  | Text                                           | -> | 表組みの名称                                    |
+| 戻り値        | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | 現在の表テーマのプロパティ値|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`VP Get table theme` コマンドは、 <!-- REF #_method_.VP Get table theme.Summary -->*tableName* で指定した表組みの現在のテーマのプロパティ値を返します<!-- END REF -->。 表組みのテーマは、[`VP CREATE TABLE`](#vp-create-table) または [`VP SET TABLE THEME`](#vp-set-table-theme) コマンド、もしくはインターフェースから設定することができます。
+
+*vpAreaName* には 4D View Pro エリアの名前を渡します。*tableName* には表組みの名前を渡します。
+
+このコマンドは、現在の表テーマを記述するプロパティと値を格納する、[cs.ViewPro.TableTheme](classes.md#tabletheme) クラスのオブジェクトを返します。
+
+
+#### 例題
+
+[ネイティブ SpreadJS テーマ](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) 名を使用してテーマを定義した場合でも、このコマンドは完全な `theme` オブジェクトを返します。
+
+```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+$param.theme:="dark10" // ネイティブテーマ名を使用します
+
+VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
+$vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
+$result:=Asserted(Value type($vTheme.theme)=Is object) // true
+```
+
+
+#### 参照
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
 
 
 
@@ -2730,6 +2837,8 @@ $tables:=VP Get tables("ViewProArea")
 #### 参照
 
 [VP CREATE TABLE](#vp-create-table)
+
+
 
 
 
@@ -3202,6 +3311,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 
 
+
 #### 参照
 
 [VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP REMOVE TABLE ROWS](#vp-remove-table-rows)
@@ -3249,6 +3359,7 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 | ------------ | ------- | ------------------------------------------------------------------------------- |
 | copy         | Boolean | *originRange* のセルの値・書式・フォーミュラをコマンド実行後に削除するかどうかを指定します:<ul><li>削除するには false (デフォルト)。</li><li>保持するには true。</li></ul> |
 | pasteOptions | Longint | ペーストする内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値・フォーマット・フォーミュラを含むすべてのデータオブジェクトをペーストします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをペーストします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをペーストします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをペーストします。</td></tr></table></p>                                |
+
 
 [ワークブックオプション](#vp-set-workbook-options) で定義されている貼り付けオプションが考慮されます。
 
@@ -3579,6 +3690,7 @@ VP REMOVE NAME("ViewProArea";"Total1")
 $formula:=VP Get formula by name("ViewProArea";"Total1")
 // $formula=null
 ```
+
 
 #### 参照
 
@@ -4090,12 +4202,11 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| 引数         | タイプ    |    | 説明                                                                               |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| parameters | Object | -> | オフスクリーンエリアの属性を格納するオブジェクト                                                         |
-| 戻り値        | Mixed  | <- | `.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
+| 引数         | タイプ    |    | 説明                       |
+| ---------- | ------ | -- | ------------------------ |
+| parameters | Object | -> | オフスクリーンエリアの属性を格納するオブジェクト |
 
-|
+|Result   |Mixed|<-|`.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
 
 #### 説明
 
@@ -4103,14 +4214,12 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 *parameters* オブジェクトには、以下の任意のプロパティのいずれかを渡します。 これらのプロパティは `onEvent` コールバックメソッド内において `This` コマンドを介して利用可能であり、そのインスタンスを参照することができます:
 
-| プロパティ                      | タイプ             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area                       | text            | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| onEvent                    | object (フォーミュラ) | オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。 |
-| autoQuit                   | boolean         | True (デフォルト値) の場合、[`On End URL Loading`](Events/onEndUrlLoading.md) または [`On URL Loading Error`](Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。                                                                                                                                                                                                                                                                                                                     |
-| timeout                    | number          | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| result                     | mixed           | 処理の結果 (あれば)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `\<customProperty>` | mixed           | *onEvent* コールバックメソッドで利用可能なカスタムの属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| プロパティ | タイプ  | 説明                                                                      |
+| ----- | ---- | ----------------------------------------------------------------------- |
+| area  | text | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。 |
+
+|onEvent | object (フォーミュラ)| オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。|autoQuit | boolean | True (デフォルト値) の場合、[`On End URL Loading`](Events/onEndUrlLoading.md) または [`On URL Loading Error`](Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。 | |timeout | number | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60 | |result| mixed| 処理の結果 (あれば)| |`\&#060;customProperty&#062;` | mixed|  *onEvent* コールバックメソッドで利用可能なカスタムの属性。 |
+
 
 以下のプロパティは、必要に応じてコマンドによって自動的に追加されます:
 
@@ -4254,6 +4363,7 @@ VP SET ACTIVE CELL($activeCell)
 **VP SET ALLOWED METHODS** ( *methodObj* : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
+
 
 | 引数        | タイプ    |    | 説明                                                      |
 | --------- | ------ | -- | ------------------------------------------------------- |
@@ -4639,9 +4749,12 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-|引数|タイプ| |説明|
+| 引数         | タイプ     |    | 説明                                           |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                      |
+| sheet      | Integer | <- | 新しいカレントシートのインデックス|<!-- END REF -->
 
-|---|---|---|---| |vpAreaName| Text|->|4D View Pro フォームオブジェクト名| |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
+|
 
 #### 説明
 
@@ -4829,6 +4942,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 オブジェクトのコレクションを受け渡して、カラムを自動生成します:
 
+
 ```4d
 var $options : Object
 var $data : Collection
@@ -4944,13 +5058,9 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-| 引数            | タイプ    |    | 説明                                  |
-| ------------- | ------ | -- | ----------------------------------- |
-| rangeObj      | Object | -> | レンジオブジェクト                           |
-| dateValue     | Date   | -> | 設定する日付値                             |
-| formatPattern | Text   | -> | 値のフォーマット|<!-- END REF -->
+|引数|タイプ||説明|
 
-|
+|---||---|| |rangeObj |Object|->|レンジオブジェクト| |dateValue |Date|->|設定する日付値| |formatPattern |Text|->|値のフォーマット|<!-- END REF -->
 
 #### 説明
 
@@ -5705,6 +5815,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 
+
 > インデックスは 0 起点です。
 
 スプレッドシートの印刷線の位置は、スプレッドシートの改ページの位置によって変化します。
@@ -5831,6 +5942,94 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
 
+
+
+### VP SET TABLE THEME
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R8 | 追加 |
+</details>
+
+<!-- REF #_method_.VP SET TABLE THEME.Syntax -->
+**VP SET TABLE THEME** ( *vpAreaName* : Text ; *tableName* : Text ; *options* : cs.ViewPro.TableTheme )<!-- END REF -->
+
+<!-- REF #_method_.VP SET TABLE THEME.Params -->
+
+| 引数         | タイプ                                            |    | 説明                                        |
+| ---------- | ---------------------------------------------- | -- | ----------------------------------------- |
+| vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                   |
+| tableName  | Text                                           | -> | 表組みの名称                                    |
+| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | 設定する表テーマのプロパティ|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`VP SET TABLE THEME` コマンドは、 <!-- REF #_method_.VP SET TABLE THEME.Summary -->*tableName* の表の現在のテーマを変更します<!-- END REF -->。
+
+*vpAreaName* には 4D View Pro エリアの名前を渡します。*tableName* には変更する表の名前を渡します。
+
+*options* には、設定するテーマプロパティを格納する [`cs.ViewPro.TableTheme` クラス](classes.md#tabletheme) のオブジェクトを渡します。
+
+
+#### 例題 1
+
+あらかじめ定義されたテーマを表に設定します:
+
+```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+$param.theme:="medium2"
+VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
+```
+
+#### 例題 2
+
+交互の列表示を設定します:
+
+![](../assets/en/ViewPro/col-bandering.png)
+
+```4d
+var $param : cs.ViewPro.TableTheme
+$param:=cs.ViewPro.TableTheme.new()
+
+// 交互の列の表示を有効にします
+$param.bandColumns:=True
+$param.bandRows:=False
+
+// ヘッダーと列のスタイル用のテーマオブジェクトを作成します
+$param.theme:=cs.ViewPro.TableThemeOptions.new()
+
+var $styleHeader; $styleColumn; $styleColumn2 : cs.ViewPro.TableStyle
+
+$styleHeader:=cs.ViewPro.TableStyle.new()
+$styleHeader.backColor:="Gold"
+$styleHeader.foreColor:="#03045E"
+$param.theme.headerRowStyle:=$styleHeader
+
+$styleColumn1:=cs.ViewPro.TableStyle.new()
+$styleColumn1.backColor:="SkyBlue"
+$styleColumn1.foreColor:="#03045E"
+$param.theme.firstColumnStripStyle:=$styleColumn1
+
+$styleColumn2:=cs.ViewPro.TableStyle.new()
+$styleColumn2.backColor:="LightCyan"
+$styleColumn2.foreColor:="#03045E"
+$param.theme.secondColumnStripStyle:=$styleColumn2
+
+VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
+
+```
+
+
+#### 参照
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Get table theme](#vp-get-table-theme)
 
 
 
@@ -5996,6 +6195,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 *valuesCol* 引数は 2次元構造のコレクションです:
 
+
 * 第1レベルのコレクションは、値のサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。 行をスキップするには空のコレクションを渡します。
 * それぞれのサブコレクションは行におけるセルの値を定義します。 値は整数、実数、ブール、テキスト、日付、Null、オブジェクトのいずれかです。 値がオブジェクトの場合、以下のプロパティを持つことができます:
 
@@ -6070,10 +6270,10 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 | autoFitType                           | number                  | セル内やヘッダー内に収まるよう、内容をフォーマットします。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> 内容をセル内に収めます。</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> 内容をセル内・ヘッダー内に収めます。</td></tr></table>                                                                                                                            |
 | backColor                             | string                  | エリアの背景色を表すカラー文字列 (例: "red"、"#FFFF00"、"rgb(255,0,0)"、"Accent 5")。 backgroundImage を設定している場合、背景色は非表示になります。                                                                                   |
 | backgroundImage                       | string / picture / file | エリアの背景画像。                                                                                                                                                                                  |
-| backgroundImageLayout                 | number                  | 背景画像のレイアウト。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk image layout center </td><td>1</td><td> エリアの中央に表示。</td></tr><tr><td> vk image layout none </td><td>3</td><td> エリアの左上に元のサイズで表示。</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> エリアを埋めるように拡大表示。</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> アスペクト比を維持して表示。</td></tr></table>                                                                                                                                              |
+| backgroundImageLayout                 | number                  | 背景画像のレイアウト。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk image layout center </td><td>1</td><td> エリアの中央に表示。</td></tr><tr><td> vk image layout none </td><td>3</td><td> エリアの左上に元のサイズで表示。</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> エリアを埋めるように拡大表示。</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> アスペクト比を維持して表示。</td></tr></table>                                                                                                                                             |
 | calcOnDemand                          | boolean                 | 要求されたときのみフォーミュラを計算します。                                                                                                                                                                     |
-| columnResizeMode                      | number                  | カラムのリサイズモード。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> 通常のリサイズモード (残りのカラムに影響します)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> split モード (残りのカラムに影響しません)</td></tr></table>                                                                                                                                             |
-| copyPasteHeaderOptions                | number                  | データのコピー/ペースト時に含めるヘッダーについて指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> データのコピー時: 選択ヘッダーを含めます。データのペースト時: 選択ヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> データのコピー時: 選択されたカラムヘッダーを含めます。データのペースト時: 選択されたカラムヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> データのコピー時: ヘッダーを含めません。データのペースト時: ヘッダーを上書きしません。</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  データのコピー時: 選択された行ヘッダーを含めます。データのペースト時: 選択された行ヘッダーを上書きします。</td></tr></table>                                                                                                                          |
+| columnResizeMode                      | number                  | カラムのリサイズモード。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> 通常のリサイズモード (残りのカラムに影響します)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> split モード (残りのカラムに影響しません)</td></tr></table>                                                                                                                                            |
+| copyPasteHeaderOptions                | number                  | データのコピー/ペースト時に含めるヘッダーについて指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> データのコピー時: 選択ヘッダーを含めます。データのペースト時: 選択ヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> データのコピー時: 選択されたカラムヘッダーを含めます。データのペースト時: 選択されたカラムヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> データのコピー時: ヘッダーを含めません。データのペースト時: ヘッダーを上書きしません。</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  データのコピー時: 選択された行ヘッダーを含めます。データのペースト時: 選択された行ヘッダーを上書きします。</td></tr></table>                                                                                                                         |
 | customList                            | collection              | ドラッグ＆フィルをカスタマイズするためのリストです。フィルの際には、このリストに合致する値が入力されます。 各コレクション要素は、文字列のコレクションです。 [GrapeCity の Webサイト](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b) 参照。           |
 | cutCopyIndicatorBorderColor           | string                  | ユーザーが選択をカットまたはコピーしたときの領域の境界色。                                                                                                                                                              |
 | cutCopyIndicatorVisible               | boolean                 | コピーまたはカットされた際の領域を表示します。                                                                                                                                                                    |
