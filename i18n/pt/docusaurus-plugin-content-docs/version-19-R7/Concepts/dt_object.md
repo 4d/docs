@@ -5,7 +5,7 @@ title: Objeto
 
 Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objectos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
 
-- Um nome de uma propriedade é sempre um texto, por exemplo "nome". It must follow [specific rules](identifiers.md#object-properties).
+- Um nome de uma propriedade é sempre um texto, por exemplo "nome". Deve seguir [regras específicas](identifiers.md#object-properties).
 
 - Um valor de propriedade pode ser do seguinte tipo:
     - number (Real, Integer, etc.)
@@ -14,21 +14,21 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
     - boolean
     - ponteiro (armazenado como tal, avaliado usando o comando `JSON Stringify` ou quando copiando),
     - data (tipo de data ou cadeia de formato de data ISO)
-    - object(1) (objects can be nested on several levels)
+    - objecto(1) (os objectos podem ser aninhados em vários níveis)
     - imagem(2)
     - collection
 
-(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.
+(1)Os objectos ORDA, tais como [entidades](ORDA/dsMapping.md#entity) ou [seleções de entidades](ORDA/dsMapping.md#entity-selection) não podem ser armazenados em **campos de objectos**; no entanto, são totalmente suportados em **variáveis de objectos** em memória.
 
-(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(2)Quando exposto como texto no depurador ou exportado para o JSON, as propriedades do objeto da imagem imprimem "[Imagem do objecto]".
 
 **Atenção:** lembre que os nomes de atributos diferenciam entre maiúsculas e minúsculas.
 
-You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+Gerencia variáveis do tipo Objecto, campos ou expressões usando a notação de objecto [](dt_object.md#syntax-basics) ou os comandos clássicos disponíveis no tema **Objects (Language)** . Note-se que comandos específicos do tema **Consultas** tais como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, ou `ORDER BY ATTRIBUTE` podem ser utilizados para realizar o processamento em campos de objectos.
 
-Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. You can use such values wherever 4D expressions are expected:
+Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Pode utilizar tais valores sempre que se esperem expressões 4D:
 
-- in 4D code, either written in the methods (Code Editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- em código 4D, quer escritos nos métodos (Editor de Código) ou externalizados (fórmulas, ficheiros de etiquetas 4D processados por `PROCESS 4D TAGS` ou no Servidor Web, ficheiros de exportação, documentos 4D Write Pro...),
 - nas áreas de expressão do depurador e do explorador de Runtime,
 - na lista de propriedades do editor de formulários para objectos de formulários: Variável ou Campo de expressão, bem como várias caixas de selecção e expressões de colunas (Fonte de dados, cor de fundo, estilo, ou cor da fonte).
 
@@ -153,7 +153,7 @@ Para saber mais, veja a descrição do comando `Null`
 
 A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Normalmente ao tentar ler ou atribuir expressões indefinidas, 4D gera erros. Isso não acontece nos casos abaixo:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
+- Ler uma propriedade de um objeto ou valor indefinido retorna indefinido; atribuir um valor indefinido a variáveis (exceto arrays) tem o mesmo efeito que chamar `CLEAR VARIABLE` com eles:
 
 ```4d
      C_OBJECT($o)
