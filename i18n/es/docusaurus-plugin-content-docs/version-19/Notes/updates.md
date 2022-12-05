@@ -34,8 +34,8 @@ Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 | CEF      | 4324           | 19                | Chromium v88. Permite la compilación nativa en las plataformas Apple Silicon.                                 |
 | OpenSSL  | 1.1.1n         | 19.3              |                                                                                                               |
 | webKit   | WKWebView      | 19                |                                                                                                               |
-| ICU      | 68.1           | 18 R6             |                                                                                                               |
-| PHP      | 7.3.27         | 18 R6             | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
+| ICU      | 68.1           | 18 R6             | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
+| PHP      | 7.3.27         | 18 R6             |                                                                                                               |
 | libldap  | 2.4.48         | 18 R2             |                                                                                                               |
 
 </details>

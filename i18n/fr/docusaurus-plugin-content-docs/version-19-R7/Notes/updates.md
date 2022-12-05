@@ -8,7 +8,7 @@ title: Release Notes
 Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), the blog post that lists all new features and enhancements in 4D v19 R7.
 
 
-#### Highlights
+#### Points forts
 
 - Related data and computed/alias attributes can be displayed in the [Data Explorer](../Admin/dataExplorer#basics).
 - New [FileHandle](../API/FileHandleClass) class and new [`.open()`](../API/FileClass#open) function in the `File` class.
@@ -31,7 +31,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
     Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
 
 
-## Previous releases
+## Versions précédentes
 
 <details><summary>Click to see the release notes for previous versions</summary>
 
@@ -121,19 +121,19 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 </details>
 
 
-## Library table
+## Tableau des bibliothèques
 
 <details><summary>Click to see the table of libraries used in 4D</summary>
 
-| Library  | Version courante | Updated in 4D | Commentaire                                                                              |
-| -------- | ---------------- | ------------- | ---------------------------------------------------------------------------------------- |
-| SpreadJS | 15.2.0           | 19 R7         | 4D View Pro engine                                                                       |
-| CEF      | 4692.99          | 19 R5         | Chromium v97. CORS policies now also apply when accessing files on disk.                 |
-| OpenSSL  | 1.1.1n           | 19 R4         |                                                                                          |
-| libzip   | 1.7.3            | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
-| webKit   | WKWebView        | 19            |                                                                                          |
-| ICU      | 68.1             | 18 R6         |                                                                                          |
-| PHP      | 7.3.27           | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| libldap  | 2.4.48           | 18 R2         |                                                                                          |
+| Bibliothèque | Version courante | Mise à jour dans 4D | Commentaire                                                                                                   |
+| ------------ | ---------------- | ------------------- | ------------------------------------------------------------------------------------------------------------- |
+| SpreadJS     | 15.2.0           | 19 R7               | Moteur 4D View Pro                                                                                            |
+| CEF          | 4692.99          | 19 R5               | Chromium v97. CORS policies now also apply when accessing files on disk.                                      |
+| OpenSSL      | 1.1.1n           | 19 R4               |                                                                                                               |
+| libzip       | 1.7.3            | 19 R2               | Used by zip class, 4D Write Pro, svg and serverNet components                                                 |
+| webKit       | WKWebView        | 19                  |                                                                                                               |
+| ICU          | 68.1             | 18 R6               | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets. |
+| PHP          | 7.3.27           | 18 R6               |                                                                                                               |
+| libldap      | 2.4.48           | 18 R2               |                                                                                                               |
 
 </details>

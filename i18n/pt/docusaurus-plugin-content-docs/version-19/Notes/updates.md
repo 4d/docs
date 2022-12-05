@@ -15,7 +15,7 @@ title: Notas de Lançamento
 
 ## Lançamentos anteriores
 
-:::dica
+:::tip
 
 Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), o post do blog que lista todas as novas funcionalidades e melhorias em 4D v19 LTS.
 
@@ -34,8 +34,8 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 | CEF        | 4324         | 19               | Crómio v88. Permite a compilação nativa em plataformas Apple Silicon.                    |
 | OpenSSL    | 1.1.1n       | 19.3             |                                                                                          |
 | webKit     | WKWebView    | 19               |                                                                                          |
-| ICU        | 68.1         | 18 R6            |                                                                                          |
-| PHP        | 7.3.27       | 18 R6            | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| ICU        | 68.1         | 18 R6            | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| PHP        | 7.3.27       | 18 R6            |                                                                                          |
 | libldap    | 2.4.48       | 18 R2            |                                                                                          |
 
 </details>

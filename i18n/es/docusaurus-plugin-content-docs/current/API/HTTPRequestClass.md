@@ -265,6 +265,14 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 <!-- REF #HTTPRequestClass.response.Desc -->
 ## .response
 
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones                                                 |
+| ------- | -------------------------------------------------------------- |
+| v19 R8  | `.headers` returns lowercase names. New `.rawHeaders` property |
+
+</details>
+
 <!-- REF #HTTPRequestClass.response.Syntax -->**response**: Object<!-- END REF -->
 
 #### Descripción
@@ -273,12 +281,13 @@ La propiedad `.response` contiene <!-- REF #HTTPRequestClass.response.Summary --
 
 Un objeto `response` es un objeto no compartible. Ofrece las siguientes propiedades:
 
-| Propiedad   | Tipo    | Descripción                                                                                                                                                                           |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Cuerpo de la respuesta. El tipo del mensaje se define según la propiedad [`dataType`](#datatype). Indefinido si el cuerpo no se ha recibido todavía                                   |
-| .headers    | Object  | Encabezados de la respuesta. `headers.key` = value (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún. |
-| .status     | Number  | Código de estado de la respuesta                                                                                                                                                      |
-| .statusText | Text    | Mensaje explicando el código de estado                                                                                                                                                |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                               |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | Cuerpo de la respuesta. El tipo del mensaje se define según la propiedad [`dataType`](#datatype). Indefinido si el cuerpo no se ha recibido todavía                                                                                                       |
+| .headers    | Object  | Encabezados de la respuesta. Header names are returned in lowercase. `<headername>.key` = value (value can be a collection if the same key appears multiple times). Indefinido si el los encabezados no se ha recibido aún.                         |
+| .status     | Number  | Código de estado de la respuesta                                                                                                                                                                                                                          |
+| .statusText | Text    | Mensaje explicando el código de estado                                                                                                                                                                                                                    |
+| .rawHeaders | Object  | Encabezados de la respuesta. Header names are returned untouched (with their original case). `<headerName>.key` = value (value can be a collection if the same key appears multiple times). Indefinido si el los encabezados no se ha recibido aún. |
 
 <!-- END REF -->
 

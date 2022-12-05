@@ -198,7 +198,7 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 *   objeto compartido(*)
 *   shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
 
-:::nota
+:::note
 
 Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
 
