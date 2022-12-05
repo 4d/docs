@@ -481,7 +481,7 @@ Voici un exemple :
 
 The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet contents. It is automatically handled by 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](method-list.md#vp-import-from-object) or [VP Export to object](method-list.md#vp-export-to-object) methods.
 
-It contains the following properties:
+Il contient les propriétés suivantes :
 
 | Propriété    | Value type | Description                                  |
 | ------------ | ---------- | -------------------------------------------- |
@@ -496,7 +496,7 @@ It contains the following properties:
 The 4D View Pro form object variable is the [object](Concepts/dt_object.md) variable associated to the 4D View Pro form area. It manages information used by the 4D View Pro object.
 > The 4D View Pro form object variable is for information purposes only (i.e., debugging). Under no circumstances should it be modified.
 
-It contains the following properties:
+Il contient les propriétés suivantes :
 
 | Propriété              | Value type | Description                                                                                                                                                                                                                                                                                                                  |
 | ---------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
