@@ -29,7 +29,7 @@ Clase extendida disponible para un objeto del modelo de datos.
 
 ## Data model object
 
-Database objects available through the ORDA concept, i.e. datastore, dataclasses, entities and entity selections.
+Objetos de base de datos disponibles a través del concepto ORDA, es decir, datastore, dataclasses, entities y entity selections.
 
 ## Data model function
 
@@ -37,7 +37,7 @@ Función de una clase de modelo de datos ORDA.
 
 ## Dataclass
 
-Una dataclass es un modelo de objeto que describe los datos. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Cada campo de la tabla es un atributo de la dataclass.
+Una dataclass es un modelo de objeto que describe los datos. Las tablas de la base de datos suministradas por el datastore se manejan mediante clases de datos. Cada tabla de la base de datos ofrecida por el almacén de datos tiene una clase de datos correspondiente con el mismo nombre. Cada campo de la tabla es un atributo de la dataclass.
 
 Un dataclass está relacionado con un único datastore.
 
