@@ -29,7 +29,7 @@ Código para la(s) función(es) de clase usuarios.
 
 ## Atributo calculado
 
-Un atributo calculado no almacena realmente información. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
+Un atributo calculado no almacena realmente información. En cambio, determina su valor basándose en otros valores de la misma entidad o de otras entidades, atributos o funciones. Cuando se hace referencia a un atributo calculado, se evalúa el "cálculo" subyacente para determinar el valor. Los atributos calculados pueden incluso asignarse a valores en los que el código definido por el usuario determina qué hacer durante la asignación.
 
 ## Data model class
 
@@ -37,7 +37,7 @@ Clase extendida disponible para un objeto del modelo de datos.
 
 ## Data model object
 
-Database objects available through the ORDA concept, i.e. datastore, dataclasses, entities and entity selections.
+Objetos de base de datos disponibles a través del concepto ORDA, es decir, datastore, dataclasses, entities y entity selections.
 
 ## Data model function
 
@@ -45,7 +45,7 @@ Función de una clase de modelo de datos ORDA.
 
 ## Dataclass
 
-Una dataclass es un modelo de objeto que describe los datos. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Cada campo de la tabla es un atributo de la dataclass.
+Una dataclass es un modelo de objeto que describe los datos. Las tablas de la base de datos suministradas por el datastore se manejan mediante clases de datos. Cada tabla de la base de datos ofrecida por el almacén de datos tiene una clase de datos correspondiente con el mismo nombre. Cada campo de la tabla es un atributo de la dataclass.
 
 Un dataclass está relacionado con un único datastore.
 
