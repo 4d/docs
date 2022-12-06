@@ -16,41 +16,45 @@ The `WebSocketServer` class API allows you to create and handle WebSocket connec
 A WebSocket server is a TCP application listening on any port of the server, and uses a specific protocol. This technology allows the server to send real-time updates asynchronously, without requiring the client to submit explicit requests. For more information on WebSocket servers, read [this page](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) on developer.mozilla.org.
 
 
-### WSServer object
+### WebSocketServer object
 
 WebSocket server objects provide the following properties and functions:
 
-### Summary
-
 ||
 |---|
-|[<!-- INCLUDE #WebServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.accessKeyDefined.Summary -->|
+|[<!-- INCLUDE #WebSocketServerClass.connections.Syntax -->](#connections)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.connections.Summary -->|
+|[<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
+|[<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
+|[<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->|
+|[<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate())&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
+|[<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->|
+
 
 
 ## 4D.WebSocketServer.new()
 
 
-<!-- REF #4D.WebSocketServer.new().Syntax -->**4D.WebSocketServer.new**( *WSSHandler* : Object { ; *parameters* : Object } ) : 4D.WebSocketServer<!-- END REF -->
+<!-- REF #4D.WebSocketServer.new().Syntax -->**4D.WebSocketServer.new**( *WSSHandler* : Object { ; *options* : Object } ) : 4D.WebSocketServer<!-- END REF -->
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |WSSHandler|Object|->|Declares the WebSocket callbacks|
-|parameters|Object|->|WebSocket configuration parameters|
-|Result|4D.WebSocketServer|<-|New HTTPRequest object|<!-- END REF -->
+|options|Object|->|WebSocket configuration parameters|
+|Result|4D.WebSocketServer|<-|New WebSocketServer object|<!-- END REF -->
 
 
-The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server using the specified *WSSHandler* functions and (optionally) *parameters*, and returns a `4D.WebSocketServer` object<!-- END REF -->.
+The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server using the specified *WSSHandler* functions and (optionally) *options*, and returns a `4D.WebSocketServer` object<!-- END REF -->.
 
 Calling this function requires that the [4D Web Server](WebServerClass.md) is started. The **host** and **port** of the WebSocket server are the same as the host and port of the 4D Web Server.
 
 
 
 
-#### `WSSHandler` parameter
+### *WSSHandler* parameter
 
-In the *WSSHandler* parameter, pass an object that can contain the following properties:
+In the *WSSHandler* parameter, pass an object that contains the following properties:
 
 |Property|Type|Description|Default|
 |---|---|---|---|
@@ -109,7 +113,7 @@ Event emitted when an error occurs on the WebSocket server.
 Event emitted when an error occurs on the WebSocket server.
 
 
-**WSHandler.onConnection**(*WSServer* : Object ; *param* : Object) : HandlerOption | null 
+**WSHandler.onConnection**(*WSServer* : Object ; *param* : Object) : handler | null 
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
@@ -117,729 +121,172 @@ Event emitted when an error occurs on the WebSocket server.
 |param||Object|<-|Parameters|
 ||type|Text||"connection"|
 ||request|Object||`request` object. Contains information on the connection request (see below)|
-|handler||Object|->|`connectionHandler` object (see below). If the function returns a `connectionHandler` object, a `Connection` object is automatically created and added to the connection collection. (connection.new(HandlerOPtion) -> Connection object). If the returned value is null or undefined, the connection is canceled.|
+|handler||Object|->|[`connectionHandler` object](#connectionhandler-object) (see below). If the function returns a `connectionHandler` object, a `4D.WebSocketConnection` object is automatically created and added to the [collection of connections]. This object is then received as parameter in each function of the `connectionHandler` object. If the returned value is null or undefined, the connection is canceled.|
 
 Callback called when the handshake is complete.
 
 
+### `request` object
 
+A `request` object contains the following properties:
 
-|Parameter|Type|
-|---|---|
-|WSServer|[`HTTPRequest` object](#httprequest-object)|
-|$param2|[`Event` object](#event-object)|
+|Parameter|Type|Description|
+|---------|---|---|
+|headers|Object|The client HTTP GET request. `headers.key=value` (value can be a collection if the same key appears multiple times)|
+|query|Object|Object that contains the URL parameters. For example, if parameters are: `?key1=value1&key2=value2` -> `query.key1=value1`, `query.key2=value2`|
+|url|Text|contains only the URL that is present in the actual HTTP request. Ex: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"|
+|remoteAddress|Text|IP Address of the client|
 
 
-Event emitted when the websocket server is started.
+### `connectionHandler` object
 
+A `connectionHandler` object contains the following functions:
 
-All callback functions receive two object parameters:
+|Parameter|Type|Description|
+|---------|---|---|
+|onOpen |[Function](FunctionClass.md)|Function called when the `4D.WebSocketConnection` is created|
+|onMessage|[Function](FunctionClass.md)|Function called when a new message is received from this connection|
+|onTerminate |[Function](FunctionClass.md)|Function called when this connection is terminated|
+|onError|[Function](FunctionClass.md)|Function called when an error occured|
 
-|Parameter|Type|
-|---|---|
-|$param1|[`HTTPRequest` object](#httprequest-object)|
-|$param2|[`Event` object](#event-object)|
 
+**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *param* : Object)
 
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|ws||4D.WebSocketConnection|<-|Current WebSocket connection object|
+|param||Object|<-|Parameters|
+||type|Text||"open"|
 
+Called when the `connectionHandler` object is created (after `WSS.onConnection` event).
 
+**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *param* : Object)
 
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|ws||4D.WebSocketConnection|<-|Current WebSocket connection object|
+|param||Object|<-|Parameters|
+||type|Text||"message"|
+||data|Text / Blob / Object||data sent by the client|
 
+Callback for WebSocket data. Called each time the WebSocket receives data.
 
+**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *param* : Object)
 
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|ws||4D.WebSocketConnection|<-|Current WebSocket connection object|
+|param||Object|<-|Parameters|
+||type|Text||"terminate"|
+||code|Number||Status code indicating why the connection has been closed. If the WebSocket does not return an error code, `code` is set to 1005 if no error occurred or to 1006 if there was an error.|
+||reason|Text||String explaining why the connection has been closed. If the websocket doesn't return an reason, code is undefined|
 
+Function called when the WebSocket is closed.
 
+**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *param* : Object)
 
+|Parameter|||Type||Description|
+|----|-----|---|---|:---:|------|
+|ws|||4D.WebSocketConnection|<-|Current WebSocket connection object|
+|param|||Object|<-|Parameters|
+||type||Text||"terminate"|
+||status||Object|||
+|||HTTPError|Text||HTTP error or last error returned in the 4D error stack|
+|||errors|Collection ||Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
 
+Function called when an error has occurred.
 
 
+### *options* parameter
 
-By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
+In the optional *options* parameter, pass an object that contains the following properties:
 
-|Constant|Value|Comment|
-|---|---|---|
-|`Web server database`|1|Current database Web server (default if omitted)|
-|`Web server host database`|2|Web server of the host database of a component|
-|`Web server receiving request`|3|Web server that received the request (target Web server)|
-
-The returned Web server object contains the current values of the Web server properties.
-
-#### Example  
-
-From your component, you want to know if the Web server of the host database is started:
-
-```4d
-  // Method of a component
- var $hostWS : 4D.WebServer
- $hostWS:=WEB Server(Web server host database)
- If($hostWS.isRunning)
-    ...
- End if
-```
-
-## WEB Server list
-
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v18 R3|Added
-</details>
-
-<!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
-
-
-<!-- REF #_command_.WEB Server list.Params -->
-
-|Parameter|Type||Description|
-|---|---|----|---|
-|Result|Collection|<-|Collection of the available Web server objects|
-
-<!-- END REF -->
-
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
-
-A 4D application can contain anywhere from one to several Web servers:
-
-- one Web server for the host database (default Web server)
-- one Web server for each component.
-
-All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
-
-> The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
-
-You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
-
-#### Example  
-
-We want to know how many running web servers are available:
-
-```4d
- var $wSList : Collection
- var $vRun : Integer
-
- $wSList:=WEB Server list
- $vRun:=$wSList.countValues(True;"isRunning")
- ALERT(String($vRun)+" web server(s) running on "+String($wSList.length)+" available.")
-
-```
-
-## .accessKeyDefined
-
-<!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
-
-
-The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. This property is used by the WebAdmin web server to validate the security configuration of the administration interface.
-
-<!-- REF WebServerClass.certificateFolder.Desc -->
-
-## .certificateFolder
-
-<!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
-
-
-Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter of the [`.start()`](#start) function, it can be a [`Folder` object](FolderClass.md).
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.characterSet.Desc -->
-
-## .characterSet
-
-<!-- REF #WebServerClass.characterSet.Syntax -->**.characterSet** : Number<br/>**.characterSet** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. The default value actually depends on the language of the OS. Can be a MIBEnum integer or a Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Here is the list of identifiers corresponding to the character sets supported by the 4D Web Server:
-
-- 4 = ISO-8859-1
-- 12 = ISO-8859-9
-- 13 = ISO-8859-10
-- 17 = Shift-JIS
-- 2024 = Windows-31J
-- 2026 = Big5
-- 38 = euc-kr
-- 106 = UTF-8
-- 2250 = Windows-1250
-- 2251 = Windows-1251
-- 2253 = Windows-1253
-- 2255 = Windows-1255
-- 2256 = Windows-1256
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.cipherSuite.Desc -->
-
-## .cipherSuite
-
-<!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Sets the priority of ciphering algorithms implemented by the 4D web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.CORSEnabled.Desc -->
-
-## .CORSEnabled
-
-<!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
-
-Default: False (disabled)
-
-For more information about CORS, please refer to the [Cross-origin resource sharing page](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.CORSSettings.Desc -->
-
-## .CORSSettings
-
-<!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.CORSSettings.Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Each object must contain a **host** property and, optionally, a **methods** property:
-
-- **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. If *host* is not present or empty, the object is ignored. Several syntaxes are supported:
-  - 192.168.5.17:8081
-  - 192.168.5.17
-  - 192.168.*
-  - 192.168.*:8081
-  - <http://192.168.5.17:8081>
-  - <http://*.myDomain.com>
-  - <http://myProject.myDomain.com>
-  - *.myDomain.com
-  - myProject.myDomain.com
-  - \*
-
-- **methods** (text, optional): Accepted HTTP method(s) for the corresponding CORS host. Separate each method with a ";" (e,g,: "post;get"). If *methods* is empty, null, or undefined, all methods are enabled.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.debugLog.Desc -->
-
-## .debugLog
-
-<!-- REF #WebServerClass.debugLog.Syntax -->**.debugLog** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log file<!-- END REF --> (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number).
-
-- 0 = disabled
-- 1 = enabled without body parts (body size is provided in this case)
-- 3 = enabled with body parts in response only
-- 5 = enabled with body parts in request only
-- 7 = enabled with body parts in response and request
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.defaultHomepage.Desc -->
-
-## .defaultHomepage
-
-<!-- REF #WebServerClass.defaultHomepage.Syntax -->**.defaultHomepage** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HSTSEnabled.Desc -->
-
-## .HSTSEnabled
-
-<!-- REF #WebServerClass.HSTSEnabled.Syntax -->**.HSTSEnabled** : Boolean<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) status<!-- END REF -->. HSTS allows the Web server to declare that browsers should only interact with it via secure HTTPS connections. Browsers will record the HSTS information the first time they receive a response from the web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the `HSTSMaxAge` property. HSTS requires that HTTPS is enabled on the server. HTTP must also be enabled to allow initial client connections.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HSTSMaxAge.Desc -->
-
-## .HSTSMaxAge
-
-<!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HSTSMaxAge.Summary -->maximum length of time (in seconds) that HSTS is active for each new client connection<!-- END REF -->. This information is stored on the client side for the specified duration.
-
-Default value: 63072000 (2 years).
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HTTPCompressionLevel.Desc -->
-
-## .HTTPCompressionLevel
-
-<!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed).
-
-Possible values:
-
-- 1 to 9 (where 1 is the fastest compression and 9 the highest).
-- -1 = set a compromise between speed and rate of compression.
-
-Default = 1 (faster compression).
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HTTPCompressionThreshold.Desc -->
-
-## .HTTPCompressionThreshold
-
-<!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->size threshold (bytes) for requests below which exchanges should not be compressed<!-- END REF -->. This setting is useful in order to avoid losing machine time by compressing small exchanges.
-
-Default compression threshold = 1024 bytes
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HTTPEnabled.Desc -->
-
-## .HTTPEnabled
-
-<!-- REF #WebServerClass.HTTPEnabled.Syntax -->**.HTTPEnabled** : Boolean<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HTTPPort.Desc -->
-
-## .HTTPPort
-
-<!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
-
-Default = 80
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HTTPTrace.Desc -->
-
-## .HTTPTrace
-
-<!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HTTPSEnabled.Desc -->
-
-## .HTTPSEnabled
-
-<!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.HTTPSPort.Desc -->
-
-## .HTTPSPort
-
-<!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
-
-Default = 443
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.inactiveProcessTimeout.Desc -->
-
-## .inactiveProcessTimeout
-
-<!-- REF #WebServerClass.inactiveProcessTimeout.Syntax -->**.inactiveProcessTimeout** : Number<!-- END REF -->
-
-> This property is not returned in [scalable sessions mode](#scalablesession).
-
-The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
-
-Default = 480 minutes
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.inactiveSessionTimeout.Desc -->
-
-## .inactiveSessionTimeout
-
-<!-- REF #WebServerClass.inactiveSessionTimeout.Syntax -->**.inactiveSessionTimeout** : Number<!-- END REF -->
-
-> This property is not returned in [scalable sessions mode](#scalablesession).
-
-The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
-
-Default = 480 minutes
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.IPAddressToListen.Desc -->
-
-## .IPAddressToListen
-
-<!-- REF #WebServerClass.IPAddressToListen.Syntax -->**.IPAddressToListen** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which the 4D Web Server will receive HTTP requests<!-- END REF -->. By default, no specific address is defined. Both IPv6 string formats and IPv4 string formats are supported.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.isRunning.Desc -->
-
-## .isRunning
-
-<!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
-
-
-*Read-only property*
-
-The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.keepSession.Desc -->
-
-## .keepSession
-
-<!-- REF #WebServerClass.keepSession.Syntax -->**.keepSession** : Boolean<!-- END REF -->
-
-
-Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
-
-##### See also
-
-[.scalableSession](#scalablesession)
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.logRecording.Desc -->
-
-## .logRecording
-
-<!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
-
-- 0 = Do not record (default)
-- 1 = Record in CLF format
-- 2 = Record in DLF format
-- 3 = Record in ELF format
-- 4 = Record in WLF format
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.maxConcurrentProcesses.Desc -->
-
-## .maxConcurrentProcesses
-
-<!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->maximum number of concurrent web processes supported by the web server<!-- END REF -->. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.
-
-Possible values: 10 - 32000
-
-Default = 100
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.maxRequestSize.Desc -->
-
-## .maxRequestSize
-
-<!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.maxRequestSize.Summary -->maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passing the maximum value (2147483647) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it.
-
-Possible values: 500000 - 2147483647
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.maxSessions.Desc -->
-
-## .maxSessions
-
-<!-- REF #WebServerClass.maxSessions.Syntax -->**.maxSessions** : Number<!-- END REF -->
-
-> This property is not returned in [scalable sessions mode](#scalablesession).
-
-The <!-- REF #WebServerClass.maxSessions.Summary -->maximum number of simultaneous legacy sessions<!-- END REF -->. When you reach the limit, the oldest legacy session is closed (and `On Web Legacy Close Session` database method is called) if the web server needs to create a new one. The number of simultaneous legacy sessions cannot exceed the total number of web processes (`maxConcurrentProcesses` property, 100 by default)
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.minTLSVersion.Desc -->
-
-## .minTLSVersion
-
-<!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Number<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
-
-Possible values:
-
-- 1 = TLSv1_0
-- 2 = TLSv1_1
-- 3 = TLSv1_2 (default)
-- 4 = TLSv1_3
-
-If modified, the server must be restarted to use the new value.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.name.Desc -->
-
-## .name
-
-<!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
-
-
-*Read-only property*
-
-The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.openSSLVersion.Desc -->
-
-## .openSSLVersion
-
-<!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
-
-
-*Read-only property*
-
-The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.perfectForwardSecrecy.Desc -->
-
-## .perfectForwardSecrecy
-
-<!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
-
-
-*Read-only property*
-
-The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.rootFolder.Desc -->
-## .rootFolder
-
-<!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<!-- END REF -->. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.scalableSession.Desc -->
-## .scalableSession
-
-<!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
-
-
-Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
-
-##### See also
-
-[.keepSession](#keepsession)
-<!-- END REF -->
-
-<!-- REF WebServerClass.sessionCookieDomain.Desc -->
-
-## .sessionCookieDomain
-
-<!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.sessionCookieName.Desc -->
-
-## .sessionCookieName
-
-<!-- REF #WebServerClass.sessionCookieName.Syntax -->**.sessionCookieName** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
-
-*Read-only property*
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.sessionCookiePath.Desc -->
-
-## .sessionCookiePath
-
-<!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.sessionCookieSameSite.Desc -->
-
-## .sessionCookieSameSite
-
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v19|Added|
-
-</details>
-
-<!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
-
-
-The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
-
-
-|Constant|Value|Description|
-|---|---|---|
-|Web SameSite Strict|"Strict"|*Default value* - Cookies are only sent in a first-party context|
-|Web SameSite Lax|"Lax"|Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link).|
-|Web SameSite None|"None"|Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests.
-
-See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-samesite) description for detailed information.
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.sessionIPAddressValidation.Desc -->
-
-## .sessionIPAddressValidation
-
-<!-- REF #WebServerClass.sessionIPAddressValidation.Syntax -->**.sessionIPAddressValidation** : Boolean<!-- END REF -->
-
-> This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
-
-
-The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).
-
-<!-- END REF -->
-
-<!-- REF WebServerClass.start().Desc -->
-
-## .start()
-
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v18 R3|Added
-</details>
-
-<!-- REF #WebServerClass.start().Syntax -->
-**.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
-
-
-<!-- REF #WebServerClass.start().Params -->
-
-|Parameter|Type||Description|
-|---|---|----|---|
-|settings|Object|->|Web server settings to set at startup|  
-|Result|Object|<-|Status of the web server startup|
-
-<!-- END REF -->
-
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
-
-The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
-
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
-
-Customized session settings will be reset when the [`.stop()`](#stop) function is called.
-
-#### Returned object
-
-The function returns an object describing the Web server launch status. This object can contain the following properties:
-
-|Property|| Type| Description|
+|Property|Type|Description|Default|
 |---|---|---|---|
-|success||Boolean|True if the web server was correctly started, False otherwise
-|errors ||Collection|4D error stack (not returned if the web server started successfully)|
-||\[].errCode|Number| 4D error code|
-||\[].message|Text|Description of the 4D error |
-||\[].componentSignature|Text|Signature of the internal component which returned the error|
+|path|Text|Represents the path to access the WebSocket server. If no path is defined, the WebSocket server manages all the connections|undefined|
+|dataType|Text|Type of the data received through the `connectionHandler.onMessage` and the data send by [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) function. Values: "text", "blob","object"). If "object": (send) transforms object into a json format and sends it; (reception): receives json format and transforms it into object|text|
 
->If the Web server was already launched, an error is returned.
 
-#### Example
+<!-- REF #WebSocketServerClass.connections.Desc -->
+## .connections
 
-```4d
- var $settings;$result : Object
- var $webServer : 4D.WebServer
+<!-- REF #WebSocketServerClass.connections.Syntax -->**connections** : Collection<!-- END REF -->
 
- $settings:=New object("HTTPPort";8080;"defaultHomepage";"myAdminHomepage.html")
+#### Description
 
- $webServer:=WEB Server
- $result:=$webServer.start($settings)
- If($result.success)
-  //...
- End if
-```
+The `.connections` property contains <!-- REF #WebSocketServerClass.connections.Summary -->all current connections handled by the WebSocket server<!-- END REF -->. Each element of the collection is a [`WebSocketConnection` object](WebSocketConnectionClass.md). 
+
+When a connection is terminated, its [`status`](WebSocketConnectionClass.md#status) changes to "Closed" and it is removed from this collection.
 
 <!-- END REF -->
 
-<!-- REF WebServerClass.stop().Desc -->
-
-## .stop()
-
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v18 R3|Added
-</details>
-
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
 
 
-<!-- REF #WebServerClass.stop().Params -->
+<!-- REF #WebSocketServerClass.dataType.Desc -->
+## .dataType
 
+<!-- REF #WebSocketServerClass.dataType.Syntax -->**dataType** : Text<!-- END REF -->
+
+#### Description
+
+The `.dataType` property contains <!-- REF #WebSocketServerClass.dataType.Summary -->the type of the data received or sent<!-- END REF -->.
+
+This property is read-only.
+<!-- END REF -->
+
+
+<!-- REF #WebSocketServerClass.handler.Desc -->
+## .handler
+
+<!-- REF #WebSocketServerClass.handler.Syntax -->**handler** : Object<!-- END REF -->
+
+#### Description
+
+The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
+
+<!-- END REF -->
+
+
+<!-- REF #WebSocketServerClass.path.Desc -->
+## .path
+
+<!-- REF #WebSocketServerClass.path.Syntax -->**path** : Text<!-- END REF -->
+
+#### Description
+
+The `.path` property contains <!-- REF #WebSocketServerClass.path.Summary -->the pattern of the path to access the WebSocket server<!-- END REF -->. If no path was defined, the WebSocket server manages all connections.
+
+This property is read-only.
+<!-- END REF -->
+
+
+<!-- REF #WebSocketServerClass.terminate().Desc -->
+## .terminate()
+
+<!-- REF #WebSocketServerClass.terminate().Syntax -->**.terminate()**<!-- END REF -->
+
+
+<!-- REF #WebSocketServerClass.terminate().Params -->
 |Parameter|Type||Description|
-|---|---|----|---|
+|---------|--- |:---:|------|
 ||||Does not require any parameters|<!-- END REF -->
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
-If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
+#### Description
 
->This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
-
-#### Example
-
-To stop the database Web server:
-
-```4d
- var $webServer : 4D.WebServer
-
- $webServer:=WEB Server(Web server database)
- $webServer.stop()
-```
+The `.terminate()` function <!-- REF #WebSocketServerClass.terminate().Summary -->closes the WebSocket server<!-- END REF -->. 
 
 <!-- END REF -->
+
+<!-- REF #WebSocketServerClass.terminated.Desc -->
+## .terminated
+
+<!-- REF #WebSocketServerClass.terminated.Syntax -->**terminated** : Boolean<!-- END REF -->
+
+#### Description
+
+The `.terminated` property contains <!-- REF #WebSocketServerClass.terminated.Summary -->True if the WebSocket server is closed<!-- END REF -->. 
+
+This property is read-only.
+<!-- END REF -->
+
