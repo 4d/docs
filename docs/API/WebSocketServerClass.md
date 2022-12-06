@@ -3,85 +3,156 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+<details><summary>History</summary>
 
-The `WebSocketServer` class API allows you to create and manage websocket connections between 4D and web clients. 
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+The `WebSocketServer` class API allows you to create and handle WebSocket connections between 4D and web clients. 
+
+A WebSocket server is a TCP application listening on any port of the server, and uses a specific protocol. This technology allows the server to send real-time updates asynchronously, without requiring the client to submit explicit requests. For more information on WebSocket servers, read [this page](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) on developer.mozilla.org.
 
 
+### WSServer object
 
-### Web Server object
-
-Web server objects are instantiated with the [`WEB Server`](#web-server) command.
-
-They provide the following properties and functions:
+WebSocket server objects provide the following properties and functions:
 
 ### Summary
 
 ||
 |---|
 |[<!-- INCLUDE #WebServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.accessKeyDefined.Summary -->|
-|[<!-- INCLUDE #WebServerClass.certificateFolder.Syntax -->](#certificatefolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.certificateFolder.Summary -->|
-|[<!-- INCLUDE #WebServerClass.characterSet.Syntax -->](#characterset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.characterSet.Summary -->|
-|[<!-- INCLUDE #WebServerClass.cipherSuite.Syntax -->](#ciphersuite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.cipherSuite.Summary -->|
-|[<!-- INCLUDE #WebServerClass.CORSEnabled.Syntax -->](#corsenabled)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.CORSEnabled.Summary -->|
-|[<!-- INCLUDE #WebServerClass.CORSSettings.Syntax -->](#corssettings)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.CORSSettings.Summary --> |
-|[<!-- INCLUDE #WebServerClass.debugLog.Syntax -->](#debuglog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.debugLog.Summary -->|
-|[<!-- INCLUDE #WebServerClass.defaultHomepage.Syntax -->](#defaulthomepage)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.defaultHomepage.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HSTSEnabled.Syntax -->](#hstsenabled)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HSTSEnabled.Summary --> |
-|[<!-- INCLUDE #WebServerClass.HSTSMaxAge.Syntax -->](#hstsmaxage)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HSTSMaxAge.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HTTPCompressionLevel.Syntax -->](#httpcompressionlevel)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HTTPCompressionLevel.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HTTPCompressionThreshold.Syntax -->](#httpcompressionthreshold)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HTTPCompressionThreshold.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HTTPEnabled.Syntax -->](#httpenabled)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HTTPEnabled.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HTTPPort.Syntax -->](#httpport)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HTTPPort.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HTTPTrace.Syntax -->](#httptrace)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HTTPTrace.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HTTPSEnabled.Syntax -->](#httpsenabled)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HTTPSEnabled.Summary -->|
-|[<!-- INCLUDE #WebServerClass.HTTPSPort.Syntax -->](#httpsport)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.HTTPSPort.Summary -->|
-|[<!-- INCLUDE #WebServerClass.inactiveProcessTimeout.Syntax -->](#inactiveprocesstimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.inactiveProcessTimeout.Summary -->|
-|[<!-- INCLUDE #WebServerClass.inactiveSessionTimeout.Syntax -->](#inactivesessiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.inactiveSessionTimeout.Summary -->|
-|[<!-- INCLUDE #WebServerClass.IPAddressToListen.Syntax -->](#ipaddresstolisten)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.IPAddressToListen.Summary -->|
-|[<!-- INCLUDE #WebServerClass.isRunning.Syntax -->](#isrunning)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.isRunning.Summary -->|
-|[<!-- INCLUDE #WebServerClass.keepSession.Syntax -->](#keepsession)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.keepSession.Summary -->|
-|[<!-- INCLUDE #WebServerClass.logRecording.Syntax -->](#logrecording)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.logRecording.Summary -->|
-|[<!-- INCLUDE #WebServerClass.maxConcurrentProcesses.Syntax -->](#maxconcurrentprocesses)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.maxConcurrentProcesses.Summary -->|
-|[<!-- INCLUDE #WebServerClass.maxRequestSize.Syntax -->](#maxrequestsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.maxRequestSize.Summary -->|
-|[<!-- INCLUDE #WebServerClass.maxSessions.Syntax -->](#maxsessions)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.maxSessions.Summary -->|
-|[<!-- INCLUDE #WebServerClass.minTLSVersion.Syntax -->](#mintlsversion)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.minTLSVersion.Summary -->|
-|[<!-- INCLUDE #WebServerClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.name.Summary -->|
-|[<!-- INCLUDE #WebServerClass.openSSLVersion.Syntax -->](#opensslversion)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.openSSLVersion.Summary -->|
-|[<!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Syntax -->](#perfectforwardsecrecy)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Summary -->|
-|[<!-- INCLUDE #WebServerClass.rootFolder.Syntax -->](#rootfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.rootFolder.Summary -->|
-|[<!-- INCLUDE #WebServerClass.scalableSession.Syntax -->](#scalablesession)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.scalableSession.Summary -->|
-[<!-- INCLUDE #WebServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieDomain.Summary -->|
-|[<!-- INCLUDE #WebServerClass.sessionCookieName.Syntax -->](#sessioncookiename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieName.Summary -->|
-|[<!-- INCLUDE #WebServerClass.sessionCookiePath.Syntax -->](#sessioncookiepath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookiePath.Summary -->|
-|[<!-- INCLUDE #WebServerClass.sessionCookieSameSite.Syntax -->](#sessioncookiesamesite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieSameSite.Summary -->|
-|[<!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Summary -->|
-|[<!-- INCLUDE #WebServerClass.start().Syntax -->](#start)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.start().Summary -->|
-|[<!-- INCLUDE #WebServerClass.stop().Syntax -->](#stop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.stop().Summary -->|
-
-## WEB Server
-
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v18 R3|Added|
-|v19|support for .sessionCookieSameSite|
-
-</details>
-
-<!-- REF #_command_.WEB Server.Syntax -->**WEB Server** : 4D.WebServer<br/>**WEB Server**( *option* : Integer ) : 4D.WebServer<!-- END REF -->
 
 
-<!-- REF #_command_.WEB Server.Params -->
+## 4D.WebSocketServer.new()
 
+
+<!-- REF #4D.WebSocketServer.new().Syntax -->**4D.WebSocketServer.new**( *WSSHandler* : Object { ; *parameters* : Object } ) : 4D.WebSocketServer<!-- END REF -->
+
+
+<!-- REF #4D.HTTPRequest.new().Params -->
 |Parameter|Type||Description|
-|---|---|----|---|
-|option|Integer|->|Web server to get (default if omitted = `Web server database`)|  
-|Result|4D.WebServer|<-|Web server object|
+|---------|--- |:---:|------|
+|WSSHandler|Object|->|Declares the WebSocket callbacks|
+|parameters|Object|->|WebSocket configuration parameters|
+|Result|4D.WebSocketServer|<-|New HTTPRequest object|<!-- END REF -->
 
-<!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
+The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server using the specified *WSSHandler* functions and (optionally) *parameters*, and returns a `4D.WebSocketServer` object<!-- END REF -->.
+
+Calling this function requires that the [4D Web Server](WebServerClass.md) is started. The **host** and **port** of the WebSocket server are the same as the host and port of the 4D Web Server.
+
+
+
+
+#### `WSSHandler` parameter
+
+In the *WSSHandler* parameter, pass an object that can contain the following properties:
+
+|Property|Type|Description|Default|
+|---|---|---|---|
+|onOpen|[Function](FunctionClass.md)|Callback when the WebSocket server is started (see below)|undefined|
+|onTerminate|[Function](FunctionClass.md)|Callback when the WebSocket server is terminated (see below)|undefined|
+|onConnection|[Function](FunctionClass.md)|Callback when a new client connection is started (see below)|undefined|
+|onError|[Function](FunctionClass.md)|Callback when an error has occurred (see below)|undefined|
+
+
+**WSHandler.onOpen**(*WSServer* : Object ; *param* : Object)
+
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
+|param||Object|<-|Parameters|
+||type|Text||"open"|
+
+Event emitted when the websocket server is started.
+
+
+**WSHandler.onTerminate**(*WSServer* : Object ; *param* : Object)
+
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
+|param||Object|<-|Parameters|
+||type|Text||"terminate"|
+
+Event emitted when the HTTP server or the WebSocket server is closed.
+
+
+**WSHandler.onError**(*WSServer* : Object ; *param* : Object)
+
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
+|param||Object|<-|Parameters|
+||type|Text||"error"|
+||statusText|Text||HTTP error or last error returned in the 4D error stack|
+||errors|Collection||Collection of 4D errors stack in case of execution error<li>[ ].errCode (number) -  4D error code</li><li>[ ].message (text) - Description of the 4D error</li><li>[ ].componentSignature (text) - Signature of the internal component which returned the error</li>|
+
+
+Event emitted when an error occurs on the WebSocket server.
+
+**WSHandler.onError**(*WSServer* : Object ; *param* : Object)
+
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
+|param||Object|<-|Parameters|
+||type|Text||"error"|
+||statusText|Text||HTTP error or last error returned in the 4D error stack|
+||errors|Collection||Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
+
+
+Event emitted when an error occurs on the WebSocket server.
+
+
+**WSHandler.onConnection**(*WSServer* : Object ; *param* : Object) : HandlerOption | null 
+
+|Parameter||Type||Description|
+|---------|---|---|:---:|------|
+|WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
+|param||Object|<-|Parameters|
+||type|Text||"connection"|
+||request|Object||`request` object. Contains information on the connection request (see below)|
+|handler||Object|->|`connectionHandler` object (see below). If the function returns a `connectionHandler` object, a `Connection` object is automatically created and added to the connection collection. (connection.new(HandlerOPtion) -> Connection object). If the returned value is null or undefined, the connection is canceled.|
+
+Callback called when the handshake is complete.
+
+
+
+
+|Parameter|Type|
+|---|---|
+|WSServer|[`HTTPRequest` object](#httprequest-object)|
+|$param2|[`Event` object](#event-object)|
+
+
+Event emitted when the websocket server is started.
+
+
+All callback functions receive two object parameters:
+
+|Parameter|Type|
+|---|---|
+|$param1|[`HTTPRequest` object](#httprequest-object)|
+|$param2|[`Event` object](#event-object)|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
 
