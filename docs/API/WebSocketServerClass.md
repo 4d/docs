@@ -11,9 +11,66 @@ title: WebSocketServer
 
 </details>
 
-The `WebSocketServer` class API allows you to create and handle WebSocket connections between 4D and web clients. 
+The `WebSocketServer` class API allows you to create and configure a WebSocket server in 4D.
 
-A WebSocket server is a TCP application listening on any port of the server, and uses a specific protocol. This technology allows the server to send real-time updates asynchronously, without requiring the client to submit explicit requests. For more information on WebSocket servers, read [this page](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) on developer.mozilla.org.
+Once a 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class API](WebSocketConnectionClass.md).
+
+:::info
+
+A WebSocket server is a TCP application that listens on any port of the server, and uses a specific protocol. This technology allows the server to send real-time updates asynchronously, without requiring the client to submit explicit requests. For more information on WebSocket servers, read [this page on developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers).
+
+:::
+
+:::info See also
+
+See also [this blog post]( https://blog.4d.com/websocket-server/) about the 4D WebSocket server.
+
+:::
+
+### Example
+
+Creating a WebSocket server in a worker:
+
+```4d
+var $handler:cs.WSSHandler
+$handler:=cs.WSSHandler.new()
+
+CALL WORKER("WebSocketServer"; Formula(WSS:=4D.WebSocketServer.new($handler)))
+```
+
+The `WSSHandler` class defines the WebSocket server functions:
+
+```4d
+//WSSHandler class
+
+Class constructor
+
+Function onOpen($wss : Object; $param : Object)
+LogFile("*** Server started")
+
+Function onTerminate($wss : Object; $param : Object)
+LogFile("*** Server closed")
+
+Function onError($wss : Object; $param : Object)
+LogFile("!!! Server error: "+$param.statusText)
+
+Function onConnection($wss : Object; $param : Object) : Object
+
+	If (VerifyAddress($param.request.remoteAddress))
+		// The VerifyAddress method validates the client address
+		// The returned WSConnectionHandler object will be used 
+		// by 4D to instantiate the 4D.WebSocketConnection object
+		// related to this connection
+		return cs.WSConnectionHandler.new()   
+		// See WebSocketConnection class
+	Else 
+		// The connection is cancelled		
+		return Null 
+	End if 
+```
+
+See the example for the [WebSocketConnection class](WebSocketConnectionClass.md#example) to have an illustration of message management in a WebSocket connection.
+
 
 
 ### WebSocketServer object
@@ -121,7 +178,7 @@ Event emitted when an error occurs on the WebSocket server.
 |param||Object|<-|Parameters|
 ||type|Text||"connection"|
 ||request|Object||`request` object. Contains information on the connection request (see below)|
-|handler||Object|->|[`connectionHandler` object](#connectionhandler-object) (see below). If the function returns a `connectionHandler` object, a `4D.WebSocketConnection` object is automatically created and added to the [collection of connections]. This object is then received as parameter in each function of the `connectionHandler` object. If the returned value is null or undefined, the connection is canceled.|
+|handler||Object|->|[`connectionHandler` object](#connectionhandler-object) (see below). If the function returns a `connectionHandler` object, a `4D.WebSocketConnection` object is automatically created and added to the [collection of connections](#connections). This object is then received as parameter in each function of the `connectionHandler` object. If the returned value is null or undefined, the connection is cancelled.|
 
 Callback called when the handshake is complete.
 
