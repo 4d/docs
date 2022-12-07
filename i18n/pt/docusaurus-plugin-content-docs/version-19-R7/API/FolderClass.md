@@ -5,11 +5,11 @@ title: Folder
 
 
 
-`Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
+`Folder` os objectos são criados com o comando [`Folder`](#folder) . Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando `Folder` para criar uma nova pasta, é criado um objecto válido `Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()`](#create) .
 
 ### Exemplo
 
-The following example creates a "JohnSmith" folder:
+O exemplo seguinte cria uma pasta "JohnSmith":
 
 ```code4d
 Form.curfolder:=Folder(fk database folder)
@@ -18,7 +18,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Pathnames
 
-`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
+Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems` ou `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
 
 
 
@@ -71,23 +71,23 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF #_command_.Folder.Params -->
-| Parâmetros     | Tipo       |    | Descrição                                           |
-| -------------- | ---------- |:--:| --------------------------------------------------- |
-| path           | Text       | -> | Folder path                                         |
-| folderConstant | Integer    | -> | 4D folder constant                                  |
-| pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path` |
-| *              |            | -> | * to return folder of host database                 |
-| Resultados     | 4D. Folder | <- | New folder object|<!-- END REF -->        |
+| Parâmetros     | Tipo       |    | Descrição                                             |
+| -------------- | ---------- |:--:| ----------------------------------------------------- |
+| path           | Text       | -> | Rota de pasta                                         |
+| folderConstant | Integer    | -> | Constante Pasta 4D                                    |
+| pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path`   |
+| *              |            | -> | * para devolver a pasta da base de dados do anfitrião |
+| Resultados     | 4D. Folder | <- | Novo Objeto Folder|<!-- END REF -->         |
 
 #### Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
+No parâmetro *path* , passe uma string de rotas de pasta. Pode utilizar uma string personalizada ou um sistema de arquivos (por exemplo, "/DATA").
 
-> Only absolute pathnames are supported with the `Folder` command.
+> Apenas são compatíveis com os nomes de caminho absolutos com o comando `Folder` .
 
 Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType* . Estão disponíveis as seguintes constantes:
 
@@ -98,15 +98,15 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar co
 
 **Folder ( folderConstant { ; \* } )**
 
-In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
+No parâmetro *folderConstant* , passe uma pasta 4D incorporada ou de sistema, utilizando uma das seguintes constantes:
 
 | Constante                  | Value | Comentário                                                                                          |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                     |
-| fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
-| fk database folder         | 4     | Associated filesystem: "/PACKAGE"                                                                   |
+| fk data folder             | 9     | Sistema de ficheiros associado: "/DATA"                                                             |
+| fk database folder         | 4     | Sistema de arquivos associado: "/PACKAGE"                                                           |
 | fk desktop folder          | 115   |                                                                                                     |
-| fk documents folder        | 117   | Document folder of the user                                                                         |
+| fk documents folder        | 117   | Pasta de documentos do utilizador                                                                   |
 | fk licenses folder         | 1     | Folder containing the machine's 4D license files                                                    |
 | fk logs folder             | 7     | Associated filesystem: "/LOGS"                                                                      |
 | fk mobileApps folder       | 10    |                                                                                                     |
@@ -135,7 +135,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### Descrição
 
-A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D. Folder.new()`.
 
