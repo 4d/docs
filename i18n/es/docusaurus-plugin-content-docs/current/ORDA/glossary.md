@@ -145,11 +145,11 @@ En esta documentación, el tipo de datos "Mixto" se utiliza para designar los di
 
 ## Bloqueo optimista
 
-In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. El bloqueo optimista sólo está disponible en la implementación ORDA. Ver también " Bloqueo pesimista ".
+En el modo "bloqueo optimista", las entidades no se bloquean explícitamente antes de actualizarlas. Cada entidad tiene un marcador interno que se incrementa automáticamente cada vez que la entidad se guarda en el disco. Los métodos entity.save( ) o entity.drop( ) devolverán un error si el marcador de la entidad cargada (en memoria) y el marcador de la entidad en el disco no coinciden, o si la entidad ha sido suprimida. El bloqueo optimista sólo está disponible en la implementación ORDA. Ver también " Bloqueo pesimista ".
 
 ## Bloqueo pesimista
 
-A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. El lenguaje 4D clásico sólo permite bloqueos pesimistas. Ver "Bloqueo optimista".
+Un "bloqueo pesimista" significa que una entidad se bloquea antes de que se acceda a ella, utilizando el método entity.lock( ). Los otros procesos no pueden actualizar ni suprimir la entidad hasta que se desbloquee. El lenguaje 4D clásico sólo permite bloqueos pesimistas. Ver "Bloqueo optimista".
 
 ## Propiedad
 
@@ -170,41 +170,41 @@ Estas son dataclasses vinculadas por los atributos de relación.
 
 ## Atributo relacional
 
-Relation attributes are used to conceptualize relations between dataclasses (many-to-one and one-to-many).
+Los atributos de relación se utilizan para conceptualizar las relaciones entre las clases de datos (muchos a uno y uno a muchos).
 
-*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   Relación Muchos a uno (la dataclassA hace referencia a una instancia de la dataclassB): un atributo de relación está disponible en la dataclassA y hace referencia a una instancia de dataclassB.
+*   Relación Uno a muchos (una ocurrencia de la dataclassB hace referencia a varias ocurrencias de la dataclassA): un atributo de relación está disponible en la dataclassB y hace referencia a varias instancias de la dataclassA.
 
 Una dataclass puede tener atributos de relación recursivos.
 
-In an entity, the value of a relation attribute can be an entity or an entity selection.
+En una entidad, el valor de un atributo de relación puede ser una entidad o una selección de entidades.
 
 ## Related entities
 
-A related entity can be seen as the instance of a relation attribute in a dataclass.
+Una entidad relacionada puede verse como la instancia de un atributo de relación en una clase de datos.
 
-Entity selections may refer to related entities according to the relation attributes defined in the corresponding dataclasses.
+Las selecciones de entidades pueden referirse a entidades relacionadas según los atributos de relación definidos en las clases de datos correspondientes.
 
 ## Remote datastore
 
-A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). Este uso se somete a un sistema de licencia.
+Una base de datos 4D abierta en un servidor 4D o 4D Server (disponible a través de HTTP) y expuesta como recurso REST. Esta base de datos puede ser referenciada localmente como un Datastore desde otras estaciones de trabajo, donde se le asigna un locaID. El almacén de datos remoto puede utilizarse mediante los conceptos ORDA (almacén de datos, clase de datos, selección de entidades...). Este uso se somete a un sistema de licencia.
 
 ## Session
 
-When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). Se genera una cookie de sesión y se asocia al identificador del datastore local.
+Cuando la aplicación 4D se conecta a un datastore Remoto, se crea una sesión en el 4D Server (HTTP). Se genera una cookie de sesión y se asocia al identificador del datastore local.
 
 Cada vez que se abre una nueva sesión, se utiliza una licencia. Cada vez que se cierra una sesión, se libera la licencia.
 
-Las sesiones inactivas se cierran automáticamente después de un tiempo de espera. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
+Las sesiones inactivas se cierran automáticamente después de un tiempo de espera. El tiempo de espera por defecto es de 48 horas, puede ser fijado por el desarrollador (debe ser >= 60 minutos).
 
 ## Copia superficial (Shallow copy)
 
-A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. Ver también Copia profunda.
+Una copia superficial sólo duplica la estructura de los elementos y mantiene las mismas referencias internas. Tras una copia superficial, dos colecciones compartirán los elementos individuales. Ver también Copia profunda.
 
 ## Stamp
 
-Utilizado en tecnología de bloqueo "optimista". All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+Utilizado en tecnología de bloqueo "optimista". Todas las entidades tienen un contador interno, el marcador, que se incrementa cada vez que se guarda la entidad. Al comparar automáticamente los marcadores entre una entidad que se está guardando y su versión almacenada en disco, 4D puede evitar las modificaciones concurrentes en las mismas entidades.
 
 ## Atributo de almacenamiento
 
-A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. Un atributo de almacenamiento contiene un único valor para cada entidad de la clase.
+Un atributo de almacenamiento (a veces llamado atributo escalar) es el tipo más básico de atributo en una clase de datastore y corresponde más directamente a un campo en una base de datos relacional. Un atributo de almacenamiento contiene un único valor para cada entidad de la clase.

@@ -5,40 +5,40 @@ title: Clases del modelo de datos
 
 
 
-ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
+ORDA permite crear funciones de clase de alto nivel arriba del modelo de datos. Esto le permite escribir código orientado al negocio y "publicarlo" como una API. Los almacenes de datos, las clases de datos, las selecciones de entidades y las entidades están disponibles como objetos de clase que pueden contener funciones.
 
-For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. Sería tan sencillo como llamar:
+Por ejemplo, podría crear una función `getNextWithHigherSalary()` en la clase `EmployeeEntity` para devolver los empleados con un salario superior al seleccionado. Sería tan sencillo como llamar:
 
 ```4d
 $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
 ```
 
-Developers can not only use these functions in local datastores, but also in client/server and remote architectures:
+Los desarrolladores no sólo pueden utilizar estas funciones en almacenes de datos locales, sino también en arquitecturas cliente/servidor y remotas:
 
 ```4d
  //$cityManager es la referencia de un datastore remoto
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
-Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained and reused with a high level of security:
+Gracias a esta funcionalidad, toda la lógica de negocio de su aplicación 4D puede ser almacenada como una capa independiente para que pueda ser fácilmente mantenida y reutilizada con un alto nivel de seguridad:
 
-- You can "hide" the overall complexity of the underlying physical structure and only expose understandable and ready-to-use functions.
+- Puede "ocultar" la complejidad global de la estructura física subyacente y exponer únicamente funciones comprensibles y listas para usar.
 
-- If the physical structure evolves, you can simply adapt function code and client applications will continue to call them transparently.
+- Si la estructura física evoluciona, basta con adaptar el código de las funciones y las aplicaciones cliente seguirán llamándolas de forma transparente.
 
 - By default, all of your data model class functions are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](../assets/en/ORDA/api.png)
 
-In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object.
+Además, 4D [precrea automáticamente](#creating-classes) las clases para cada objeto del modelo de datos disponible.
 
-## Architecture
+## Arquitectura
 
-ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
+ORDA ofrece **clases genéricas** expuestas a través del [class store](Concepts/classes.md#class-stores) **`4D`**, así como **clases usuario** (que extienden las clases genéricas) expuestas en el [class store](Concepts/classes.md#class-stores) **`cs`**:
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. Las clases ORDA siguientes están disponibles:
+Todas las clases de modelo de datos ORDA se exponen como propiedades del class store **`cs`**. Las clases ORDA siguientes están disponibles:
 
 | Class                       | Nombre del ejemplo   | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,14 +47,14 @@ All ORDA data model classes are exposed as properties of the **`cs`** class stor
 | cs.*DataClassName*Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs.*DataClassName*Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
 
-> ORDA user classes are stored as regular class files (.4dm) in the Classes subfolder of the project [(see below)](#class-files).
+> Las clases usuario ORDA se almacenan como archivos de clase estándar (.4dm) en la subcarpeta Classes del proyecto [(ver más abajo)](#class-files).
 
-Also, object instances from ORDA data model user classes benefit from their parent's properties and functions:
+Además, las instancias de objeto de clases usuario de los modelos de datos ORDA se benefician de las propiedades y funciones de sus padres:
 
-- a Datastore class object can call functions from the [ORDA Datastore generic class](API/DataStoreClass.md).
-- a Dataclass class object can call functions from the [ORDA Dataclass generic class](API/DataClassClass.md).
-- an Entity selection class object can call functions from the [ORDA Entity selection generic class](API/EntitySelectionClass.md).
-- an Entity class object can call functions from the [ORDA Entity generic class](API/EntityClass.md).
+- un objeto de clase Datastore puede llamar las funciones de la [clase genérica ORDA Datastore](API/DataStoreClass.md).
+- un objeto de clase Dataclass puede llamar las funciones de la [clase genérica ORDA Dataclass](API/DataClassClass.md).
+- un objeto de clase Entity selection puede llamar las funciones de la [clase genérica ORDA Entity selection](API/EntitySelectionClass.md).
+- un objeto de clase Entity puede llamar las funciones de la [clase genérica ORDA Entity](API/EntityClass.md).
 
 ## Descripción de la clase
 
@@ -67,12 +67,12 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 ### Clase DataStore
 
-A 4D database exposes its own DataStore class in the `cs` class store.
+Una base de datos 4D expone su propia clase DataStore en el class store `cs`.
 
 - **Extends**: 4D.DataStoreImplementation
 - **Nombre de clase**: cs.DataStore
 
-You can create functions in the DataStore class that will be available through the `ds` object.
+Puede crear funciones en la clase DataStore que estarán disponibles a través del objeto `ds`.
 
 #### Ejemplo
 
@@ -93,10 +93,10 @@ $desc:=ds.getDesc() //"Database exposing..."
 
 ### Clase DataClass
 
-Each table exposed with ORDA offers a DataClass class in the `cs` class store.
+Cada tabla expuesta con ORDA ofrece una clase DataClass en el class store `cs`.
 
 - **Extends**: 4D.DataClass
-- **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
+- **Nombre de clase**: cs.*DataClassName* (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.Employee
 
 #### Ejemplo
@@ -115,7 +115,7 @@ Function GetBestOnes()
  $0:=$sel
 ```
 
-Then you can get an entity selection of the "best" companies by executing:
+A continuación, puede obtener una selección de entidades de las "mejores" empresas ejecutando:
 
 ```4d
  var $best : cs.CompanySelection
@@ -124,7 +124,7 @@ Then you can get an entity selection of the "best" companies by executing:
 
 #### Ejemplo con un datastore remoto
 
-The following *City* catalog is exposed in a remote datastore (partial view):
+El catálogo *City* siguiente está expuesto en un datastore remoto (vista parcial):
 
 ![](../assets/en/ORDA/Orda_example.png)
 
@@ -155,7 +155,7 @@ La aplicación cliente abre una sesión en el datastore remoto:
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
 ```
 
-Then a client application can use the API to get the city matching a zip code (for example) from a form:
+A continuación, una aplicación cliente puede utilizar la API para obtener la ciudad correspondiente al código postal (por ejemplo) a partir de un formulario:
 
 ```4d
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
@@ -164,10 +164,10 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ### Clase EntitySelection
 
-Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
+Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store `cs`.
 
 - **Extends**: 4D.EntitySelection
-- **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
+- **Nombre de clase**: *DataClassName*Selection (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.EmployeeSelection
 
 #### Ejemplo
@@ -186,7 +186,7 @@ Function withSalaryGreaterThanAverage
 
 ```
 
-Then you can get employees with a salary greater than the average in any entity selection by executing:
+A continuación, puede obtener los empleados con un salario superior a la media en cualquier selección de entidades mediante la ejecución:
 
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
@@ -194,10 +194,10 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 ### Entity Class
 
-Each table exposed with ORDA offers an Entity class in the `cs` class store.
+Cada tabla expuesta con ORDA ofrece una clase Entity en el class store `cs`.
 
 - **Extends**: 4D.Entity
-- **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
+- **Nombre de clase**: *DataClassName*Entity (donde *DataClassName* es el nombre de la tabla)
 - **Ejemplo**: cs.CityEntity
 
 #### Ejemplo
@@ -232,17 +232,17 @@ End if
 
 ### Reglas específicas
 
-When creating or editing data model classes, you must pay attention to the following rules:
+Al crear o editar clases de modelos de datos, debe prestar atención a las siguientes reglas:
 
-- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. En particular:
-  - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
+- Dado que se utilizan para definir nombres de clase DataClass automáticos en el [class store](Concepts/classes.md#class-stores) **cs**, las tablas 4D deben nombrarse para evitar todo conflicto en el espacio de nombres **cs**. En particular:
+  - No dé el mismo nombre a una tabla 4D y a una [clase de usuarios](Concepts/classes.md#class-names). En tal caso, el constructor de la clase usuario queda inutilizado (el compilador devuelve una advertencia).
   - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
-- When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement exactly matches the parent class name (remember that they're case sensitive). For example, `Class extends EntitySelection` for an entity selection class.
+- Cuando defina una clase, asegúrese de que la instrucción [`Class extends`](Concepts/classes.md#class-extends-classnameclass) corresponda exactamente al nombre de la clase padre (recuerde que es sensible a mayúsculas y minúsculas). Por ejemplo, `Class extends EntitySelection` para una clase de selección de entidades.
 
-- You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular method as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
+- No se puede instanciar un objeto de clase de modelo de datos con la palabra clave `new()` (se devuelve un error). Debe utilizar uno de los métodos estándar listados en la columna [`Instanciado por` de la tabla de las clases ORDA](#architecture).
 
-- You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
+- No puede sobrescribir una función de clase ORDA nativa del [class store](Concepts/classes.md#class-stores) **`4D`** con una función de clase usuario de modelo de datos.
 
 ## Funciones expuestas y no expuestas
 
