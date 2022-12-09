@@ -319,11 +319,11 @@ Se crea un atributo calculado definiendo un accesor `get` en la [**clase entity 
 
 También pueden definirse en la clase entity otras funciones de atributos calculados (`set`, `query` y `orderBy`). Son opcionales.
 
-Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#this) designa la entidad. Computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions.
+Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#this) designa la entidad. Los atributos calculados pueden utilizarse y manejarse como cualquier atributo de dataclass, es decir, serán procesados por las funciones de [clase entity](API/EntityClass.md) o [clase entity selection](API/EntitySelectionClass.md).
 
-> ORDA computed attributes are not [**exposed**](#exposed-vs-non-exposed-functions) by default. You expose a computed attribute by adding the `exposed` keyword to the **get function** definition.
+> Los atributos calculados de ORDA no son [**expuestos**](#exposed-vs-non-exposed-functions) por defecto. Para exponer un atributo calculado, añada la palabra clave `exposed` a la definición de la función **get **.
 
-> **get and set functions** can have the [**local**](#local-functions) property to optimize client/server processing.
+> **Las funciones get y set** pueden tener la propiedad [**local**](#local-functions) para optimizar el procesamiento cliente/servidor.
 
 
 ### `Function get <attributeName>`
@@ -334,11 +334,11 @@ Dentro de las funciones de atributos calculados, [`This`](Concepts/classes.md#th
 {local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
-The *getter* function is mandatory to declare the *attributeName* computed attribute. Whenever the *attributeName* is accessed, 4D evaluates the `Function get` code and returns the *$result* value.
+La función *getter* es obligatoria para declarar el atributo calculado *attributeName*. Cada vez que se accede al atributo *attributeName*, 4D evalúa el código `Function get` y devuelve el valor *$result*.
 
 > Un atributo calculado puede utilizar el valor de otro(s) atributo(s) calculado(s). Las llamadas recursivas generan errores.
 
-The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. Se permiten los siguientes tipos resultantes:
+La función *getter* define el tipo de datos del atributo calculado gracias al parámetro *$result*. Se permiten los siguientes tipos resultantes:
 
 - Scalar (text, boolean, date, time, number)
 - Object
@@ -349,12 +349,12 @@ The *getter* function defines the data type of the computed attribute thanks to 
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Tipo    | Descripción                                                                               |
-| ------------- | ------- | ----------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nombre de atributo calculado                                                              |
-| dataClassName | Text    | Nombre de la clase de datos                                                               |
-| kind          | Text    | "get"                                                                                     |
-| result        | Variant | Opcional. Add this property with Null value if you want a scalar attribute to return Null |
+| Propiedad     | Tipo    | Descripción                                                                                  |
+| ------------- | ------- | -------------------------------------------------------------------------------------------- |
+| attributeName | Text    | Nombre de atributo calculado                                                                 |
+| dataClassName | Text    | Nombre de la clase de datos                                                                  |
+| kind          | Text    | "get"                                                                                        |
+| result        | Variant | Opcional. Añada esta propiedad con valor Null si desea que un atributo escalar devuelva Null |
 
 
 #### Ejemplos
@@ -384,7 +384,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 
 ```
 
-- A computed attribute can be based upon an entity selection related attribute:
+- Un atributo calculado puede basarse en un atributo relacionado con una entity selection:
 
 ```4d
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
@@ -406,9 +406,9 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 // code
 ```
 
-The *setter* function executes whenever a value is assigned to the attribute. This function usually processes the input value(s) and the result is dispatched between one or more other attributes.
+La función *setter* se ejecuta cada vez que se asigna un valor al atributo. Esta función suele procesar los valores de entrada y el resultado se envía entre uno o varios atributos.
 
-The *$value* parameter receives the value assigned to the attribute.
+El parámetro *$value* recibe el valor asignado al atributo.
 
 El parámetro *$event* contiene las siguientes propiedades:
 
@@ -444,30 +444,30 @@ Function query <attributeName>($event : Object) -> $result : Object
 
 Esta función soporta tres sintaxis:
 
-- With the first syntax, you handle the whole query through the `$event.result` object property.
+- Con la primera sintaxis, se maneja toda la consulta a través de la propiedad del objeto `$event.result`.
 - Con la segunda y tercera sintaxis, la función devuelve un valor en *$result*:
     - Si *$result* es un texto, debe ser una cadena de consulta válida
-    - If *$result* is an Object, it must contain two properties:
+    - Si *$result* es un Objeto, debe contener dos propiedades:
 
     | Propiedad          | Tipo       | Descripción                                                         |
     | ------------------ | ---------- | ------------------------------------------------------------------- |
     | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
-    | $result.parameters | Collection | valors para marcadores                                              |
+    | $result.parameters | Collection | valores para marcadores                                             |
 
-The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+La función `query` se ejecuta cada vez que se lanza una consulta que utiliza el atributo calculado. Resulta útil personalizar y optimizar las consultas basándose en los atributos indexados. Cuando la función `query` no está implementada para un atributo calculado, la búsqueda es siempre secuencial (basada en la evaluación de todos los valores utilizando la función `get <AttributeName>`).
 
 > The following features are not supported: - calling a `query` function on computed attributes of type Entity or Entity selection, - using the `order by` keyword in the resulting query string.
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                       |
-| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Text    | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                      |
-| dataClassName | Text    | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                       |
-| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                           |
-| value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                          |
-| operator      | Text    | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (igual a, @ no es comodín)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (mayor o igual que)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
-| result        | Variant | Valor a tratar por el atributo calculado. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                               |
+| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| attributeName | Text    | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                                |
+| dataClassName | Text    | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                                 |
+| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                     |
+| value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                                    |
+| operator      | Text    | Operador de consulta (ver también la función de clase [`query`](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (igual a, @ no es comodín)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (mayor o igual que)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
+| result        | Variant | Valor a tratar por el atributo calculado. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                                         |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
 
