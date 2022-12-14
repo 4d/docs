@@ -16,6 +16,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 |[<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 |[<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
@@ -27,6 +28,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.unlock().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.validateTransaction().Summary --> |
 
 ## ds
@@ -368,6 +370,75 @@ You want to know the number of encrypted tables in the current data file:
 ```
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.flushAndLock().Desc -->
+## .flushAndLock()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.flushAndLock().Syntax -->**.flushAndLock()** : Boolean<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.flushAndLock().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Boolean|<-|True if successful|<!-- END REF -->
+
+
+#### Description
+
+The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes to perform write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example. 
+
+:::info
+
+This function can only be called on the local datastore ([`ds`](#ds)). 
+
+:::
+
+The `.flushAndLock()` function returns `True` if the datastore has been successfully locked for the other processes. 
+ 
+Once this function is executed, write operations such as `.save()` and `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
+
+If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked. 
+
+The datastore is unlocked when:
+
+- the [`.unlock()`](#unlock) function is called in the same process, or
+- the process that called the `.flushAndLock()` function is killed.
+
+:::note
+
+When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
+
+:::
+
+
+#### Example
+
+You want to create a compressed archive of the data folder:
+
+```4d
+$dataFolder:=Folder(fk data folder)
+$zip:=Folder(fk database folder).file("Snapshot.zip")
+
+$result:=ds.flushAndLock()
+If ($result && ds.locked())
+	ZIP Create archive($dataFolder; $zip)
+	$result:=ds.unlock()
+End if 
+```
+
+#### See also
+
+[.locked()](#locked)<br/>[.unlock()](#unlock)
+
 
 <!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
@@ -1070,6 +1141,43 @@ This function must be called on a remote 4D, otherwise it does nothing. It is de
 See examples for [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.unlock().Desc -->
+## .unlock()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.unlock().Syntax -->**.unlock()** : Boolean<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.unlock().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Boolean|<-|True if successful|<!-- END REF -->
+
+
+#### Description
+
+The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the database set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function. 
+
+If the current lock is correctly removed, the function returns `True`. If it was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore. 
+
+The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise it returns `False` and the lock is not removed.
+
+If the `.unlock()` function is called in an unlocked datastore, it returns `False`.
+
+
+#### See also
+
+[.flushAndLock()](#flushandlock)<br/>[.locked()](#locked)
+
 
 <!-- REF DataStoreClass.validateTransaction().Desc -->
 ## .validateTransaction()
