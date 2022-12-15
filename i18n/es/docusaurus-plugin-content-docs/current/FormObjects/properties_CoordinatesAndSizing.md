@@ -12,7 +12,7 @@ This property is only available for list boxes with the following [data sources]
 
 Esta propiedad no está seleccionada por defecto. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Tenga en cuenta que sólo se tendrán en cuenta las columnas con la opción seleccionada para calcular el alto de línea.
 
-:::nota
+:::note
 
 Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandar" fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
 
@@ -129,7 +129,7 @@ Define la redondez de las esquinas (en píxeles) del objeto. Por defecto, el val
 
 El valor mínimo es 0, en este caso se dibuja un objeto estándar no redondeado. El valor máximo depende del tamaño del rectángulo (no puede superar la mitad del tamaño del lado más corto del rectángulo) y se calcula dinámicamente.
 
-:::nota
+:::note
 
 Con [áreas de texto](text.md) y [entradas](input_overview.md):
 
