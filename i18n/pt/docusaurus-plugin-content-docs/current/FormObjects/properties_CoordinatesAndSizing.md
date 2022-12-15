@@ -12,7 +12,7 @@ This property is only available for list boxes with the following [data sources]
 
 The property is not selected by default. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
 
-:::nota
+:::note
 
 When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
@@ -129,7 +129,7 @@ Defines the corner roundness (in pixels) of the object. By default, the radius v
 
 Minimum value is 0, in this case a standard non-rounded object rectangle is drawn. Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
 
-:::nota
+:::note
 
 With [text areas](text.md) and [inputs](input_overview.md):
 
