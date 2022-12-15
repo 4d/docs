@@ -20,7 +20,7 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md):
 - Los triggers también pueden crearse o abrirse desde el editor de Estructura.
 - Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
-## Crear clases
+## Crear las clases
 
 Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase.
 
