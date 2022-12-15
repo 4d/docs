@@ -21,6 +21,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.locked().Syntax -->](#locked)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.locked().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
@@ -404,7 +405,7 @@ This function can only be called on the local datastore ([`ds`](#ds)).
 
 The `.flushAndLock()` function returns `True` if the datastore has been successfully locked for the other processes. 
  
-Once this function is executed, write operations such as `.save()` and `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
+Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
 
 If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked. 
 
@@ -413,12 +414,14 @@ The datastore is unlocked when:
 - the [`.unlock()`](#unlock) function is called in the same process, or
 - the process that called the `.flushAndLock()` function is killed.
 
-:::note
-
 When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
 
-:::
 
+:::caution
+
+Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction. 
+
+:::
 
 #### Example
 
@@ -697,6 +700,45 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 [`.setAdminProtection()`](#setadminprotection)
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.locked().Desc -->
+## .locked()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.locked().Syntax -->**.locked()** : Boolean<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.locked().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Boolean|<-|True if successful|<!-- END REF -->
+
+
+#### Description
+
+The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->. 
+
+You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the datafile, for example.
+
+:::caution
+
+The function will also return `True` if the datastore was locked by another administration feature such as backup or vss (see [.flushAndLock()](#flushandlock)).  
+
+:::
+
+
+#### See also
+
+[.flushAndLock()](#flushandlock)<br/>[.unlock()](#unlock)
+
 
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
