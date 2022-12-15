@@ -175,30 +175,30 @@ Puede asignar o modificar el valor de un atributo de entidad asociado "1" a part
 
 ## Crear una entity selection
 
-You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
+Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) de la siguiente manera:
 
-*   Querying the entities [in a dataclass](API/DataClassClass.md#query) or in an [existing entity selection](API/EntitySelectionClass.md#query);
-*   Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
-*   Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-*   Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
-*   Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
-*   Using a relation attribute of type "related entities" (see below).
+*   Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
+*   Utilice la función de dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
+*   Utilice el comando `Create entity selection` o la función de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) para crear una selección de entidades vacía;
+*   Utilice la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una selección de entidades existente;
+*   Utilice una de las diversas funciones de [Entity selection class](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
+*   Utilizando un atributo de relación de tipo "related entities" (ver abajo).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Tenga en cuenta que una selección de entidades sólo contiene referencias a entidades. Diferentes selecciones de entidades pueden contener las referencias a las mismas entidades.
+Puede crear y utilizar simultáneamente tantas selecciones de entidades diferentes como desee para una dataclass. Tenga en cuenta que una selección de entidades sólo contiene referencias a entidades. Diferentes selecciones de entidades pueden contener las referencias a las mismas entidades.
 
 ### Entity selections compartibles o modificables
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
+Una entity selection puede ser **compartible** (legible por múltiples procesos, pero no alterable después de la creación) o **modificable** (soporta la función [`.add()`](API/EntitySelectionClass.md#add), pero sólo utilizable por el proceso actual).
 
 #### Propiedades
 
-A **shareable** entity selection has the following characteristics:
+Una entity selection **compartible** tiene las siguientes características:
 
-- it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
-- no permite la adición de nuevas entidades. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
+- puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o trabajadores;
+- puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo (no tiene un * identificador de bloqueo*);
+- no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a una entity selection compartible, primero debe transformarla en una entity selection no compartible mediante la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 
-> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+> La mayoría de las funciones entity selection (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportan selecciones de entidades compartibles, ya que no necesitan alterar la selección de entidades original (devuelven una nueva).
 
 An **alterable** entity selection has the following characteristics:
 
