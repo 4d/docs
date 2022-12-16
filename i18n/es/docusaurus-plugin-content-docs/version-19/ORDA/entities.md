@@ -196,42 +196,42 @@ Una entity selection **compartible** tiene las siguientes características:
 
 > La mayoría de las funciones entity selection (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportan selecciones de entidades compartibles, ya que no necesitan alterar la selección de entidades original (devuelven una nueva).
 
-An **alterable** entity selection has the following characteristics:
+Una entity selection **modificable** tiene las siguientes características:
 
-* it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
-* it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
+* no puede compartirse entre los procesos, ni almacenarse en un objeto o colección compartido. Si se intenta almacenar una entity selection no compartible en un objeto o colección compartido, se producirá un error (-10721 - Tipo de valor no soportado en un objeto o colección compartido);
+* acepta la adición de nuevas entidades, es decir, soporta la función [`.add()`](API/EntitySelectionClass.md#add).
 
 #### ¿Cómo se definen?
 
-The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g.
+La naturaleza **compartible** o **modificable** de una entity selection se define cuando se crea (no puede modificarse posteriormente). Puede conocer la naturaleza de una entity selection utilizando la función [.isAlterable()](API/EntitySelectionClass.md#isalterable) o el comando `OB Is shared`.
 
-A new entity selection is **shareable** in the following cases:
+Una nueva entity selection es **compartible** en los siguientes casos:
 
-* the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-* the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
-* the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
-
-Ejemplo:
-
-```4d
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
-```
-
-A new entity selection is **alterable** in the following cases:
-
-* the new entity selection created blank using the [dataClass.newSelection()](API/DataClassClass.md#newselection) function or `Create entity selection` command,
-* the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+* la nueva entity selection resulta de una función de clase ORDA aplicada a una dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
+* la nueva entity selection se basa en una relación [entidad.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos pero la entidad no pertenece a una entity selection.
+* la nueva entity selection se copia explícitamente como compartible con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, con la opción `ck shared`).
 
 Ejemplo:
 
 ```4d
-$toModify:=ds.Company.all().copy() //$toModify es alterable
+$myComp:=ds.Empresa.get(2) //$myComp no pertenece a una entity selection
+$employees:=$myComp.empleados //$employees es compartible
 ```
 
-A new entity selection **inherits** from the original entity selection nature in the following cases:
+Una nueva entity selection es **compartible** en los siguientes casos:
 
-* the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. .
+* la nueva entity selection creada en un espacio vacío utilizando la función [dataClass.newSelection()](API/DataClassClass.md#newselection) o el comando `Create entity selection`,
+* la nueva entity selection se copia explícitamente como modificable con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, sin la opción `ck shared`).
+
+Ejemplo:
+
+```4d
+$toModify:=ds.Company.all().copy() //$toModify es modificable
+```
+
+Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
+
+* la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 * la nueva selección de entidades se basa en una relación:
   * [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
   * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
