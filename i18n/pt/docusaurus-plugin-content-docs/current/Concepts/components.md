@@ -24,7 +24,7 @@ When an installed component contains methods, classes, and functions, they appea
 
 ![alt-text](../assets/en/Concepts/components-explorer.png)
 
-:::nota
+:::note
 
 If the component is compiled, its [namespace](../Extensions/develop-components.md#declaring-the-component-namespace) is written between parentheses after its name. Use this namespace to access the component's functions.
 
