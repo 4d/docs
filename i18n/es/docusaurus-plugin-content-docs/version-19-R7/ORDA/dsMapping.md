@@ -3,16 +3,16 @@ id: dsmapping
 title: Objeto del modelo de datos
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying database structure. También ofrece acceso a los datos a través de los objetos selección de entidades (entity selection) y entidad (entity). As a result, ORDA exposes the whole database as a set of data model objects.
+La tecnología ORDA se basa en un mapeo automático de una estructura de base subyacente. También ofrece acceso a los datos a través de los objetos selección de entidades (entity selection) y entidad (entity). Como resultado, ORDA expone toda la base de datos como un conjunto de objetos del modelo de datos.
 
 
-## Cartografía de la estructura
+## Mapeo de la estructura
 
-When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+Cuando se llama a un datastore utilizando el comando [`ds`](API/DataStoreClass.md#ds) o [`Open datastore`](API/DataStoreClass.md#open-datastore), 4D referencia automáticamente las tablas y los campos de la estructura 4D correspondiente como propiedades del objeto [datastore](#datastore) devuelto:
 
 *   Las tablas correspondientes a las dataclasses.
 *   Los campos corresponden a los atributos de almacenamiento.
-*   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
+*   Las relaciones se mapean a los atributos de relación: los nombres de relación, definidos en el editor de estructura, se utilizan como nombres de atributo de relación.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 
@@ -25,7 +25,7 @@ Se aplican las siguientes reglas para todas las conversiones:
 *   Un datastore sólo hace referencia a las tablas con una sola llave primaria. Las siguientes tablas no están referenciadas:
     *   Tablas sin llave primaria
     *   Tablas con llaves primarias compuestas.
-*   BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type.
+*   Los campos BLOB están disponibles automáticamente como atributos del tipo [objeto Blob](Concepts/dt_blob.md#blob-types).
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
