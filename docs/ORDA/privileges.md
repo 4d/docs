@@ -30,7 +30,7 @@ A permission action defined at a given level is inherited by default at higher l
 
 Let's consider the following diagram:
 
-![](../assets/en/ORDA/permission.png)
+![](../assets/en/ORDA/permissions.png)
 
 The following permission(s) will be required to execute any action on entities:
 
