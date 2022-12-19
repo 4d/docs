@@ -10,14 +10,14 @@ Protecting data while allowing fast and easy access to authorized users is a maj
 
 ## Overview
 
-The ORDA security architecture is based upon the concepts of privileges, permission actions (read, create, etc.), and resources. When users get logged, their session is automatically loaded with associated privileges. Every REST request sent within the session is evaluated against privileges defined in the project's `roles.json` file.
+The ORDA security architecture is based upon the concepts of privileges, permission actions (read, create, etc.), and resources. When users get logged, their session is automatically loaded with associated privilege(s). Every user request sent within the session is evaluated against privileges defined in the project's `roles.json` file.
 
 If a user attempts to execute an action and does not have the appropriate access rights, a privilege error is generated or, in the case of missing Read privilege on attributes, a null value is sent. 
 
 ![](../assets/en/ORDA/privileges-schema.png)
 
 
-## Resources
+## Resources and permission hierarchy
 
 You can assign specific permission actions to the following exposed resources in your project:
 
@@ -26,38 +26,41 @@ You can assign specific permission actions to the following exposed resources in
 - a dataclass attribute (including computed attribute and alias attribute)
 - a data model class function
 
-A permission action defined at a given level is inherited at lower levels and can be overriden. For example, dataclasses attributes inherit from their dataclass permissions but you can override them for one or more attributes. 
+A permission action defined at a given level is inherited by default at higher levels. It can also be overriden, i.e. you can set additional permissions. In particular, attributes inherit from their dataclass permissions but you can set other permissions for one or more attributes, in which case both dataclass and attribute permission will be necessary to execute an action. 
 
-![](../assets/en/ORDA/permission-hierarchy.png)
+Let's consider the following diagram:
+
+![](../assets/en/ORDA/permission.png)
+
+The following permission(s) will be required to execute any action on entities:
+
+- For attributes A1 to A4: **Green**
+- For attribute B1: **Blue**
+- For attribute B2: **Blue**+**Red**
+- For attributes C1 and C2: **Green**+**Red**
+- For attribute C3: **Green**
+
 
 
 ## Permission actions
 
-Available actions depend on the target resource.
+Available actions depend on the target resource. In addition, some permission actions have dependencies.
 
-|Actions|datastore|dataclass|dataclass attribute|data model function|
+|Actions|datastore|dataclass|attribute|data model function|
 |---|---|---|---|---|			
-|**create**|Create data in any dataclass|Create data in this dataclass|Create a not null value for this attribute (except for alias)|Not applicable|
-|**update**|Update data in any dataclass|Update data in this dataclass|Update this attribute content with a not null value (except for alias)|Not applicable|
-|**read**|Read data in any dataclass|Read data in this dataclass|Read this attribute content|Not applicable|
-|**drop**|Delete data in any dataclass|Delete data in this dataclass|Delete a not null value for this attribute (except for alias and computed attribute)|Not applicable|
-|**execute**|Execute any function on the project (datastore, dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|Not applicable|Run this function|
-|**describe**|All the dataclasses are available in the /rest/$catalog API|This dataclass is available in the /rest/$catalog API|This dataclass attribute is available in the /rest/$catalog API|This dataclass function is available in the /rest/$catalog API|
-|**promote**|Not applicable|Not applicable|Not applicable|Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session|
+|**create**|Create entity in any dataclass|Create entity in this dataclass|Create an entity with a value different from default value allowed for this attribute (see notes below). *Requires **create** permission on the dataclass*|n/a|
+|**read**|Read data in any dataclass|Read data in this dataclass|Read this attribute content|n/a|
+|**update**|Update data in any dataclass. *Requires **read** permission on the datastore*|Update data in this dataclass. *Requires **read** permission on the dataclass*|Update this attribute content (i.e. the attribute is returned by the [`touchedAttributes()`](../API/EntityClass.md#touchedattributes-) function). *Requires **update** permission on the dataclass and **read** permission on the dataclass and the attribute*|n/a|
+|**drop**|Delete data in any dataclass. *Requires **read** permission on the datastore*|Delete data in this dataclass. *Requires **read** permission on the dataclass*|Delete a not null value for this attribute (except for alias and computed attribute). *Requires **drop** permission on the dataclass and **read** permission on the dataclass and the attribute*|n/a|
+|**execute**|Execute any function on the project (datastore, dataclass, entity selection, entity)|Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions|n/a|Run this function|
+|**describe**|All the dataclasses are available in the /rest/$catalog API|This dataclass is available in the /rest/$catalog API|This attribute is available in the /rest/$catalog API. *Requires **describe** permission on the dataclass*|This dataclass function is available in the /rest/$catalog API|
+|**promote**|n/a|n/a|n/a|Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. *Requires **execute** permission on data model function*|
 
-Alias can be read even if there is no permissions on the attributes upon which it is built.
-A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
+**Notes:**
 
-Keep in mind that actions are logically embedded, and therefore call a chain of implicit actions:
-
-- Read action is granted Describe action automatically.
-- Update and Drop actions are granted Read and Describe actions automatically.
-- On the other hand, if Read action is no allowed, Update and Drop actions are not allowed; Execute and Promote actions are also not allowed for an ORDA Data Model function related to an entity or an entity selection.
-
-
-The following graphic shows the interactions between actions:
-
-![](../assets/en/ORDA/implicit.png)
+- Alias can be read even if there is no permissions on the attributes upon which it is built.
+- A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
+- Default values: In the current implementation, only *Null* is available as default value.
 
 
 
