@@ -20,7 +20,7 @@ Puede crear [varios tipos de métodos](../Concepts/methods.md):
 - Los triggers también pueden crearse o abrirse desde el editor de Estructura.
 - Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
-## Crear clases
+## Crear las clases
 
 Una clase usuario en 4D está definida por un archivo de método específico (**.4dm**), almacenado en la carpeta [`/Project/Sources/Classes/`](../Project/architecture.md#sources). El nombre del archivo es el nombre de la clase.
 
@@ -140,53 +140,53 @@ Este atributo le permite publicar el método actual como servicio web accesible 
 
 En el Explorador, los métodos proyecto que se ofrecen como Servicio Web reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
 
-**Nota:** no es posible publicar un método como servicio web si su nombre incluye caracteres que no cumplen con la nomenclatura XML (por ejemplo espacios). If the method name is not in keeping with this, 4D does not assign the property.
+**Nota:** no es posible publicar un método como servicio web si su nombre incluye caracteres que no cumplen con la nomenclatura XML (por ejemplo espacios). Si el nombre del método no cumple con esto, 4D no asigna la propiedad.
 
 ##### Publicado en WSDL
 
-This attribute is only available when the "Web Service" attribute is checked. Permite incluir el método actual en el WSDL de la aplicación 4D. For more information about this, refer to [Generation of the WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
+Este atributo sólo está disponible si el atributo "Servicio Web" está marcado. Permite incluir el método actual en el WSDL de la aplicación 4D. Para obtener más información al respecto, consulte [Generación del WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
-In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
+En el Explorador, los métodos proyecto que se ofrecen como Servicio Web y se publican en el WSDL reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
 ##### Etiquetas 4D y URLs (4DACTION...)
 
-This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/tags.md).
+Esta opción se utiliza para reforzar la seguridad del servidor web 4D: cuando no está marcada, el método proyecto no puede ejecutarse a través de una petición HTTP que contenga la URL especial [4DACTION](../WebServer/httpRequests.md#4daction) utilizada para llamar a los métodos 4D, ni las etiquetas especiales [4DSCRIPT, 4DTEXT y 4DHTML](../Tags/tags.md).
 
-In the Explorer, project methods with this attribute are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
+En el Explorador, los métodos proyecto con este atributo reciben un icono específico![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
 
-Por razones de seguridad, esta opción está desmarcada por defecto. Each method that can be executed using the special Web URL or tags must be indicated individually.
+Por razones de seguridad, esta opción está desmarcada por defecto. Cada método que pueda ejecutarse utilizando las URLs y las etiquetas especiales debe indicarse individualmente.
 
 ##### SQL
 
-When it is checked, this option allows the project method to be executed by the SQL engine of 4D. By default, it is not selected, which means that, unless explicitly authorized, 4D project methods are protected and cannot be called by the SQL engine of 4D.
+Cuando está marcada, esta opción permite que el método proyecto sea ejecutado por el motor SQL de 4D. Por defecto, no está seleccionado, lo que significa que, a menos que se autorice explícitamente, los métodos proyecto de 4D están protegidos y no pueden ser llamados por el motor SQL de 4D.
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  tags or the [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) command.
+Esta propiedad se aplica a todas las peticiones SQL internas y externas --- ejecutadas a través del driver ODBC, el código SQL insertado en las etiquetas [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  o el comando [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html).
 
 **Notas:**
 
--   Even if a method has the "SQL" attribute, access rights set at the level of the database settings and method properties are taken into account for the execution of the method.
--   The ODBC **SQLProcedure** function only returns project methods with the "SQL" attribute.
+-   Aunque un método tenga el atributo "SQL", los derechos de acceso definidos a nivel de las propiedades de la base y de las propiedades del método se tienen en cuenta para la ejecución del método.
+-   La función ODBC **SQLProcedure** sólo devuelve los métodos proyecto con el atributo "SQL".
 
-For more information, refer to [4D SQL engine implementation](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) in the 4D SQL manual.
+Para más información, consulte [Implementación del motor SQL de 4D](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) en el manual SQL de 4D.
 
 ##### Servidor REST
 
-*This option is deprecated because it relies on legacy current record and current selection concepts. It is recommended to use** [ORDA data model class functions](https://developer.4d.com/docs/en/REST/classFunctions.html) for REST access. *
+*Esta opción es obsoleta porque se basa en conceptos heredados de registro actual y de selección actual. Se recomienda utilizar** [las funciones de clase del modelo de datos ORDA](https://developer.4d.com/docs/en/REST/classFunctions.html) para los accesos REST. *
 
-#### Ajuste de atributos del método por lotes
+#### Modificar de atributos globalmente
 
-Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) for all or part of the database project methods in a single operation. This feature is especially useful for modifying the attributes of a large number of project methods. It can also be used during development to apply common attributes to groups of similar methods quickly.
+Utilizando la caja de diálogo "Atributos de los métodos", puede modificar un atributo de método proyecto (Invisible, Ofrecido como servicio web, etc.) para todos o parte de los métodos de la base en una sola operación. Esta funcionalidad es especialmente útil para modificar los atributos de un gran número de métodos proyecto. También puede utilizarse durante el desarrollo para aplicar rápidamente los atributos comunes a grupos de métodos similares.
 
-Para la configuración por lotes de los atributos del método:
+Para la configuración global de los atributos del método:
 
-1.  On the [Methods Page](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) of the 4D Explorer, expand the options menu, then choose the **Batch setting of attributes...** command. The **Attributes for methods** dialog appears.
+1.  En la página [Métodos](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) del Explorador 4D, despliegue el menú de opciones y elija el comando **Modificar atributos globalmente...**. Aparece la caja de diálogo **Atributos de los métodos**.
 
-2.  In the "Matching method name:" area, enter a string that lets you designate the methods you want to modify as a batch. The character string is used as a search criterion for the method names.
+2.  En el área "Nombre del método coincidente:", introduzca una cadena que le permita designar los métodos que desea modificar globalmente. La cadena de caracteres se utiliza como criterio de búsqueda para los nombres de los métodos.
 
-Utilice el carácter comodín @ para ayudar a definir los grupos de métodos:
+Utilice el caracter comodín @ para ayudar a definir los grupos de métodos:
 
-- To designate methods whose names begin with..., type @ at the end of the string. Por ejemplo: `web@`
-- To designate methods whose names contain..., type @ in the middle of the string. Por ejemplo: `web@write`
+- Para designar métodos cuyos nombres empiezan por..., escriba @ al final de la cadena. Por ejemplo: `web@`
+- Para designar los métodos cuyos nombres contengan..., escriba @ en medio de la cadena. Por ejemplo: `web@write`
 - Para designar los métodos cuyos nombres terminan en..., escriba @ al inicio de la cadena. Por ejemplo: `@escribir`
 - Para designar todos los métodos, basta con escribir @ en el área.
 
