@@ -257,16 +257,16 @@ $comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
 
 #### Compartir una selección de entidades entre procesos (ejemplo)
 
-You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
+Se trabaja con dos selecciones de entidades que se quieren pasar a un proceso worker para que envíe correos a las personas adecuadas:
 
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Obtenemos selecciones de entidades para facturas pagadas y no pagadas
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
+//Pasamos referencias de selección de entidades como parámetros al worker
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
@@ -280,7 +280,7 @@ El método `sendMails`:
 
  var $server; $transporter; $email; $status : Object
 
-  //Prepare emails
+  //Preparar emails
  $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
@@ -289,16 +289,16 @@ El método `sendMails`:
  $email:=New object()
  $email.from:="myName@company.com"
 
-  //Loops on entity selections
+  //Bucles en selecciones de entidades
  For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // email address of the customer
+    $email.to:=$invoice.customer.address // dirección de correo electrónico del cliente
     $email.subject:="Payment OK for invoice # "+String($invoice.number)
 
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // email address of the customer
+    $email.to:=$invoice.customer.address // dirección de correo electrónico del cliente
     $email.subject:="Please pay invoice # "+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
