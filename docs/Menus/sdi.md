@@ -29,6 +29,12 @@ Once enabled, to work in SDI mode in your application, you can either:
 - select **Test Application in SDI Mode** from the **Run** menu on Windows, or
 - build a merged application (standalone and/or client application) and execute it on Windows.
 
+:::info
+
+You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+
+:::
+
 ## Managing applications in SDI mode
 
 Executing a 4D application in SDI mode does not require any specific implementation: existing menu bars are automatically moved in SDI windows themselves. However, you need to pay attention to specific principles that are listed below.
