@@ -45,7 +45,7 @@ Windows can therefore be used in MDI or SDI modes without having to recalculate 
 
 #### About the splash screen
 
-- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
+- If the **Splash screen** interface option was [selected in the Settings](../settings/interface.md#display-windows), the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
 - If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
 
 ### Automatic quit
