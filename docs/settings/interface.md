@@ -36,17 +36,16 @@ You can set the [frequency for cache flushing](database.md#memory-page) in **Set
 
 -   **Printing progress**: Lets you enable or disable the display of the printing progress dialog box when printing.
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](https://doc.4d.com/4Dv19R8/4D/19-R8/SDI-mode-on-Windows.300-6125947.en.html) in your application if executed in a supported context, i.e. the [test application feature] or a [merged application] running under Windows. 
+-   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
 
+	![](../assets/en/settings/sdi-mdi.png)
+	
 :::note
 
-This option can be selected on macOS but will be ignored when the application is executed on this platform.
+This option can be selected on macOS but will be ignored when the application is executed on this platform. The **Run** menu only contains **Test Application**.
 
 :::
 
-When you select this option on Windows, the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
-
-![](../assets/en/settings/sdi-mdi.png)
 
 
 ### Appearance  

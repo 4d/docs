@@ -4,25 +4,30 @@ title: SDI mode on Windows
 ---
 
 
-On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar. SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window.
+On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar. SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window.
 
-> The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
+:::info
+
+The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
+
+:::
 
 ## SDI mode availability
 
-The SDI mode is available in the following execution environment only:
+The SDI mode is available in the following execution environments only:
 
 - Windows
-- Merged stand-alone or client 4D application
+- Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
+- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.  
 
 ## Enabling the SDI mode
 
-Enabling and using the SDI mode in your application require the following steps:
+To enable the SDI mode in your application, just check the **Use SDI mode on Windows** option in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows).
 
-1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
-2. Build a merged application (standalone and/or client application).
+Once enabled, to work in SDI mode in your application, you can either:
 
-Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
+- select **Test Application in SDI Mode** from the **Run** menu on Windows, or
+- build a merged application (standalone and/or client application) and execute it on Windows.
 
 ## Managing applications in SDI mode
 
