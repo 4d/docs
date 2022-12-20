@@ -24,16 +24,17 @@ The SDI mode is available in the following execution environments only:
 
 To enable the SDI mode in your application, just check the **Use SDI mode on Windows** option in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows).
 
-Once enabled, to work in SDI mode in your application, you can either:
+Once enabled, to actually run your application in SDI mode, you can either:
 
-- select **Test Application in SDI Mode** from the **Run** menu on Windows, or
-- build a merged application (standalone and/or client application) and execute it on Windows.
+- build a merged application (standalone and/or client application) and execute it on Windows, or
+- select **Test Application in SDI Mode** from the **Run** menu on Windows to test the development.
 
 :::info
 
-You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+Because the development environment is still in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
 
 :::
+
 
 ## Managing applications in SDI mode
 
@@ -81,3 +82,9 @@ Although it is transparently handled by 4D, the SDI mode introduces small variat
 |`GET MOUSE`|Global coordinates are relative to the screen|
 |`GET WINDOW RECT`|When -1 is passed in window parameter, the command returns 0;0;0;0|
 |`On Drop database method`|Not supported|
+
+:::info
+
+You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+
+:::
