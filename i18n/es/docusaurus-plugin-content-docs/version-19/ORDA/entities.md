@@ -251,16 +251,16 @@ $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 
 #### Compartir una selección de entidades entre procesos (ejemplo)
 
-You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
+Se trabaja con dos selecciones de entidades que se quieren pasar a un proceso worker para que envíe correos a las personas adecuadas:
 
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Obtenemos selecciones de entidades para facturas pagadas y no pagadas
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
+//Pasamos referencias de selección de entidades como parámetros al worker
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
