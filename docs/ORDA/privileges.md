@@ -39,10 +39,9 @@ Let's consider the following diagram:
 The following permission(s) will be required to execute any action on entities:
 
 - For attributes A1 to A3: **Green**
-- For attribute B1: **Blue**
-- For attribute B2: **Blue**+**Orange**
-- For attributes C1 and C2: **Orange**
-- For attribute C3: **Green**+**Orange**
+- For attributes B1 and B2: **Blue**
+- For attributes C1 and C2: **Green**
+- For attribute C3: **Orange**
 
 
 
