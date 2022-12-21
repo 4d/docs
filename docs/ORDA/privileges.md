@@ -12,7 +12,7 @@ Protecting data while allowing fast and easy access to authorized users is a maj
 
 The ORDA security architecture is based upon the concepts of privileges, permission actions (read, create, etc.), and resources. 
 
-When users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function
+When users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
 
 Every user request sent within the session is evaluated against privileges defined in the project's `roles.json` file.
 
@@ -30,25 +30,18 @@ You can assign specific permission actions to the following exposed resources in
 - a dataclass attribute (including computed attribute and alias attribute)
 - a data model class function
 
-A permission action defined at a given level is inherited by default at lowel levels. It can also be overriden, i.e. you can set additional permissions. In particular, attributes inherit from their dataclass permissions but you can set permissions for one or more attributes, in which case you limit their access to those permissions only. 
+A permission action defined at a given level is inherited by default at lowel levels:
 
-Let's consider the following diagram:
-
-![](../assets/en/ORDA/permissions2.png)
-
-The following permission(s) will be required to execute any action on entities:
-
-- For attributes A1 to A3: **Green**
-- For attributes B1 and B2: **Blue**
-- For attributes C1 and C2: **Green**
-- For attribute C3: **Orange**
+- A permission action defined at the datastore level is automatically assigned to all dataclasses.
+- A permission action defined at a dataclass level overrides the datastore setting (if any). By default, all attributes of the dataclass inherit from the dataclass permission(s).
+- Unlike dataclass permissions, permission actions defined at the attribute level do not override the parent dataclass permission(s), they are added to. 
 
 
 
 ## Permission actions
 
 
-Available actions depend on the target resource. 
+Available actions are related to target resource. 
 
 Note that some permission actions have *implicit dependencies*. It means that the corresponding permission must not be disallowed. It can be allowed through inheritance. 
 
@@ -153,7 +146,7 @@ The `roles.json` file syntax is the following:
 
 ## Initializing privileges for deployment
 
-By default, if no specific parameters are defined in the roles.json file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
+By default, if no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
 
 However, when the application is about to be deployed, a good practice is to lock all privileges and then, to configure the file to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder:
    
@@ -240,294 +233,5 @@ However, when the application is about to be deployed, a good practice is to loc
 
 		]
 	}
-}
-```
-
-## Roles.json example file
-
-Example of ``Roles.json file for an medical application. Note that we first assign "nobody" permissions to initialize the system. "nobody" are never assigned to any session.
-
-```json title="Patients/Project/Sources/roles.json"
-{
-	"permissions": {
-		"allowed": [
-			{
-				"applyTo": "ds",
-				"type": "datastore",
-				"read": [
-					"nobody"
-				],
-				"create": [
-					"nobody"
-				],
-				"update": [
-					"nobody"
-				],
-				"drop": [
-					"nobody"
-				],
-				"execute": [
-					"nobody"
-				]
-			},
-			{
-				"applyTo": "UserInfo",
-				"type": "dataclass",
-				"read": [
-					"anActor"
-				]
-			},
-			{
-				"applyTo": "UserInfo.authenticate",
-				"type": "method",
-				"promote": [
-					"anActor"
-				],
-				"execute": [
-					"guest"
-				]
-			},
-			{
-				"applyTo": "Utility",
-				"type": "dataclass",
-				"execute": [
-					"anActor"
-				]
-			},
-			{
-				"applyTo": "Appointment",
-				"type": "dataclass",
-				"execute": [
-					"anActor"
-				],
-				"read": [
-					"admin",
-					"intern",
-					"patient"
-				],
-				"drop": [
-					"admin",
-					"doctor",
-					"patient"
-				],
-				"update": [
-					"intern"
-				],
-				"create": [
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Utility.loadOffsets",
-				"type": "method",
-				"execute": [
-					"admin"
-				]
-			},
-			{
-				"applyTo": "Appointment.deleteFrom",
-				"type": "method",
-				"execute": [
-					"admin"
-				]
-			},
-			{
-				"applyTo": "Patient",
-				"type": "dataclass",
-				"read": [
-					"intern",
-					"patient"
-				],
-				"drop": [
-					"patient"
-				],
-				"execute": [
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Record",
-				"type": "dataclass",
-				"read": [
-					"intern",
-					"patient"
-				],
-				"create": [
-					"intern"
-				],
-				"update": [
-					"intern"
-				]
-			},
-			{
-				"applyTo": "Appointment.updateMe",
-				"type": "method",
-				"execute": [
-					"intern"
-				]
-			},
-			{
-				"applyTo": "Doctor",
-				"type": "dataclass",
-				"read": [
-					"intern",
-					"patient"
-				],
-				"execute": [
-					"intern"
-				]
-			},
-			{
-				"applyTo": "Record.personalNotes",
-				"type": "attribute",
-				"read": [
-					"intern"
-				],
-				"create": [
-					"doctor"
-				],
-				"update": [
-					"doctor"
-				],
-				"drop": [
-					"doctor"
-				]
-			},
-			{
-				"applyTo": "Appointment.dropMe",
-				"type": "method",
-				"execute": [
-					"doctor",
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Appointment.initMe",
-				"type": "method",
-				"execute": [
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Appointment.createAppointment",
-				"type": "method",
-				"execute": [
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Appointment.check",
-				"type": "method",
-				"execute": [
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Doctor.search",
-				"type": "method",
-				"execute": [
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Speciality",
-				"type": "dataclass",
-				"read": [
-					"patient"
-				]
-			},
-			{
-				"applyTo": "Utility.checkRolesConsistency",
-				"type": "method",
-				"execute": [
-					"guest"
-				]
-			},
-			{
-				"applyTo": "Utility.rolesErrors",
-				"type": "method",
-				"execute": [
-					"guest"
-				]
-			},
-			{
-				"applyTo": "Utility.getAuthenticationError",
-				"type": "method",
-				"execute": [
-					"guest"
-				]
-			}
-		]
-	},
-	"privileges": [
-		{
-			"id": "dQHF6NwihU2BREEBR9rDao",
-			"privilege": "nobody",
-			"includes": []
-		},
-		{
-			"id": "61eQR37NdpNA3E9BDEGxWc",
-			"privilege": "anActor",
-			"includes": []
-		},
-		{
-			"id": "si4xJgAkGAGRqZtvRUbzMn",
-			"privilege": "patient",
-			"includes": [
-				"anActor"
-			]
-		},
-		{
-			"id": "69zBSwFXncVVX2qM27Zrvh",
-			"privilege": "intern",
-			"includes": [
-				"anActor"
-			]
-		},
-		{
-			"id": "gfzERNibcPjeE8BWhVmDi9",
-			"privilege": "doctor",
-			"includes": [
-				"intern"
-			]
-		},
-		{
-			"id": "4a2dUeCUFiwtToX3ioQgWZ",
-			"privilege": "admin",
-			"includes": [
-				"anActor"
-			]
-		}
-	],
-	"roles": [
-		{
-			"id": "tkvRCgvByZ6tZD6kvjerow",
-			"role": "A Patient",
-			"privileges": [
-				"patient"
-			]
-		},
-		{
-			"id": "2zeeREEgyWrMj248tRqF2D",
-			"role": "A Doctor",
-			"privileges": [
-				"doctor"
-			]
-		},
-		{
-			"id": "daF7HZHmteFgzKQ15G47Rs",
-			"role": "An Admin",
-			"privileges": [
-				"admin"
-			]
-		},
-		{
-			"id": "utHkKNtorR5W47FwE7fbKf",
-			"role": "An Intern",
-			"privileges": [
-				"intern"
-			]
-		}
-	]
 }
 ```
