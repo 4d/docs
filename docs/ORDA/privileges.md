@@ -30,7 +30,7 @@ You can assign specific permission actions to the following exposed resources in
 - a dataclass attribute (including computed attribute and alias attribute)
 - a data model class function
 
-A permission action defined at a given level is inherited by default at lowel levels. It can also be overriden, i.e. you can set additional permissions. In particular, attributes inherit from their dataclass permissions but you can set permissions for one or more attributes, in which case you filter permissions. 
+A permission action defined at a given level is inherited by default at lowel levels. It can also be overriden, i.e. you can set additional permissions. In particular, attributes inherit from their dataclass permissions but you can set permissions for one or more attributes, in which case you limit their access to those permissions only. 
 
 Let's consider the following diagram:
 
