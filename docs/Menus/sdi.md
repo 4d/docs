@@ -50,10 +50,14 @@ Menus are added above windows without modifiying their contents size:
 
 Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
 
-#### About the splash screen
+#### Splash screen
 
 - If the **Splash screen** interface option was [selected in the Settings](../settings/interface.md#display-windows), the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
 - If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
+
+### Debugger
+
+When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode. 
 
 ### Automatic quit
 
