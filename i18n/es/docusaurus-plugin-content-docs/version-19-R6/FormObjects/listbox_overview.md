@@ -553,24 +553,24 @@ El valor de la [variable encabezado de una columna](properties_Object.md#variabl
 
 * Si la variable se establece en 2, la columna se clasifica en orden descendente y se muestra la flecha de clasificación. ![](../assets/en/FormObjects/sorticon2.png)
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
+> Sólo las [variables](Concepts/variables.md) declaradas o dinámicas pueden utilizarse como variables de encabezado de columna. Otros tipos de [expresiones](Concepts/quick-tour.md#expressions) como `Form.sortValue` no son soportadas.
 
-You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+Puede definir el valor de la variable (por ejemplo, Header2:=2) para "forzar" la visualización de la flecha de ordenación. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
 
-> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> El comando [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) ofrece soporte específico para iconos en los encabezados de los list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
 
 ## Gestión de los colores, estilos y visualización de las líneas
 
-There are several different ways to set background colors, font colors and font styles for list boxes:
+Hay varias formas de definir los colores de fondo, los colores de fuente y los estilos de fuente en los list box:
 
-* at the level of the [list box object properties](#list-box-objects),
+* al nivel de las [propiedades del objeto list box](#list-box-objects),
 * a nivel de las [propiedades de la columna](#list-box-columns),
-* using [arrays or expressions properties](#using-arrays-and-expressions) for the list box and/or for each column,
-* at the level of the text of each cell (if [multi-style text](properties_Text.md#multi-style)).
+* utilizando los [arrays o expresiones](#using-arrays-and-expressions) para el list box y/o para cada columna,
+* a nivel del texto de cada celda (si [texto multi-estilo](properties_Text.md#multi-style)).
 
 ### Prioridad & herencia
 
-Priority and inheritance principles are observed when the same property is set at more than one level.
+Los principios de prioridad y de herencia se observan cuando la misma propiedad se define en más de un nivel.
 
 | Nivel de prioridad | Ubicación del parámetro                                                                  |
 | ------------------ | ---------------------------------------------------------------------------------------- |
