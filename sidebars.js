@@ -87,6 +87,7 @@ module.exports =
 						"ORDA/ordaClasses",
 						"ORDA/entities",
 						"ORDA/datastores",
+						"ORDA/privileges",
 						"ORDA/glossary"
 					],
 				},

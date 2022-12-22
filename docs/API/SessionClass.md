@@ -280,6 +280,7 @@ End if
 
 |Version|Changes|
 |---|---|
+|v19 R8|Support of "roles" Settings property|
 |v18 R6|Added|
 
 </details>
@@ -296,7 +297,7 @@ End if
 
 #### Description
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
+The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->.
 
 - In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
@@ -307,13 +308,18 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 |Property|Type|Description|
 |---|---|---|
 |privileges|Text or Collection|<li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li>|
+|roles|Text or Collection|<li>String containing a role, or</li><li>Collection of strings containing roles</li>|
 |userName|Text|User name to associate to the session (optional)|
 
-If the `privileges` property contains an invalid privilege name, it is ignored.
+:::info
 
-> In the current implementation, only the "WebAdmin" privilege is available.
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
 
-By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
+:::
+
+If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+
+By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
 
 The [`userName`](#username) property is available at session object level (read-only).
 
