@@ -4,25 +4,37 @@ title: Windows での SDIモード
 ---
 
 
-Windows において、組みこみ 4Dアプリケーションを SDI (シングルドキュメントインターフェース) アプリケーションとして設定することができます。 SDIアプリケーションでは、それぞれのウィンドウが互いに独立し、それぞれが独自のメニューバーを持つことができます。 SDIアプリケーションは MDI (マルチドキュメントインターフェース) に対する概念で、MDI ではすべてのウィンドウが一つのメインウィンドウの中に含まれ、それに依存した作りになっています。
+On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. SDIアプリケーションでは、それぞれのウィンドウが互いに独立し、それぞれが独自のメニューバーを持つことができます。 SDIアプリケーションは MDI (マルチドキュメントインターフェース) に対する概念で、MDI ではすべてのウィンドウが一つのメインウィンドウの中に含まれ、それに依存した作りになっています。
 
-> SDI/MDI という概念は macOS には存在しません。 この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
+:::info
+
+SDI/MDI という概念は macOS には存在しません。 この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
+
+:::
 
 ## SDIモード利用条件
 
-SDIモードは以下の実行環境に限り利用可能です:
+The SDI mode is available in the following execution environments only:
 
 - Windows
-- 組み込みスタンドアロン4Dアプリケーション、またはクライアント4Dアプリケーション
+- Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
+- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
 
 ## SDIモードの有効化
 
-アプリケーションにおいて SDIモードを有効化し使用する手順は次の通りです:
+To enable the SDI mode in your application, just check the **Use SDI mode on Windows** option in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows).
 
-1. ストラクチャー設定ダイアログボックスの "インターフェース" ページ内にある **WindowsでSDIモードを使用する** オプションをチェックします。
-2. 組み込みアプリケーションをビルドします (スタンドアロンまたはクライアントアプリケーション)。
+Once enabled, to actually run your application in SDI mode, you can either:
 
-その後、サポートされているコンテキスト (上記参照) において実行されると、組み込みアプリケーションは自動的に SDIモードで実行されます。
+- build a merged application (standalone and/or client application) and execute it on Windows, or
+- select **Test Application in SDI Mode** from the **Run** menu on Windows to test the development.
+
+:::info
+
+Because the development environment is executed in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+
+:::
+
 
 ## SDIモードでのアプリケーションの管理
 
@@ -38,10 +50,14 @@ SDIモードでは、同プロセス中に開かれたすべてのドキュメ�
 
 このため、ウィンドウは MDIモードあるいは SDIモードのどちらにおいてもオブジェクトの位置を再計算することなく使用することができます。
 
-#### スプラッシュスクリーンについての注意:
+#### スプラッシュスクリーン
 
-- ストラクチャー設定において **スプラッシュスクリーン** インターフェースオプションが選択されていた場合、スプラッシュウィンドウは、MDIウィンドウであれば表示されていたメニューをすべて格納します。 MDIモード同様、スプラッシュスクリーンを閉じるとアプリケーションを終了することになるという点に注意してください。
+- If the **Splash screen** interface option was [selected in the Settings](../settings/interface.md#display-windows), the splash window will contain any menus that would have been displayed in the MDI window. MDIモード同様、スプラッシュスクリーンを閉じるとアプリケーションを終了することになるという点に注意してください。
 - スプラッシュスクリーンオプションが選択されていなかった場合、メニューは開かれているウィンドウにおいて、プログラマーの選択に応じて表示されます。
+
+### デバッガー
+
+When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode.
 
 ### 自動終了
 
@@ -52,9 +68,14 @@ MDIモードで実行時、ユーザーによってアプリケーションウ�
 - ユーザーがこれ以上アプリケーションとやりとりすることができない
 - 生きているユーザープロセスがない
 - 4Dプロセスあるいはワーカープロセスはイベント待機中である
-- Webサーバーが開始されていない
+- the Web server is not started
+- the [WebAdmin server](../Admin/webAdmin.md) is not started.
 
-> *quit* (終了) 標準アクションが割り当てられているメニューが呼び出された場合、そのメニューがどこから呼ばれたものであろうと、アプリケーションは終了し、すべてのウィンドウが閉じられます。
+:::note
+
+*quit* (終了) 標準アクションが割り当てられているメニューが呼び出された場合、そのメニューがどこから呼ばれたものであろうと、アプリケーションは終了し、すべてのウィンドウが閉じられます。
+
+:::
 
 ## ランゲージ
 
@@ -70,3 +91,9 @@ MDIモードで実行時、ユーザーによってアプリケーションウ�
 | `GET MOUSE`                       | グローバル座標はスクリーンからの相対位置になります                                                                                                                                                |
 | `GET WINDOW RECT`                 | window パラメーターに -1 を渡した場合、コマンドは 0;0;0;0 を返します                                                                                                                             |
 | `On Drop database method`         | サポートされていません                                                                                                                                                              |
+
+:::info
+
+You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+
+:::

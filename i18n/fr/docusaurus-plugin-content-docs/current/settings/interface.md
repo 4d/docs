@@ -19,19 +19,33 @@ Le bouton **Sélectionner...** vous permet de définir la police et la taille de
 La police et la taille de police par défaut dépendent de la plate-forme d'exécution de 4D.
 
 > Les parties suivantes de 4D sont également affectées par cette propriété : <li>certaines zones d’aperçu de l’Explorateur,</li><li>la règle de L'Editeur de formulaires</li>
+### Display Windows
+
 D'autres options permettent de configurer l'affichage de diverses fenêtres du mode Application.
 
 -   **Accueil** : lorsque cette option est désélectionnée, la [fenêtre d’accueil (ou “splash screen”) de la barre de menus courante](Menus/bars.md#splash-screen) en mode Application n’apparaît pas. Lorsque vous masquez cette fenêtre, c'est à vous de gérer l'affichage de toutes vos fenêtres par programmation, par exemple dans la méthode base `On Startup`.
 
 -   **Ecriture du cache** : Lorsque cette option est cochée, 4D affiche une fenêtre en bas à gauche de l'écran pendant que les données du cache sont vidées. Etant donné que cette opération bloque momentanément les actions de l'utilisateur, l'affichage de cette fenêtre lui permet de savoir que l'écriture du cache est en cours.
 
-    > Vous pouvez définir la [fréquence d'écriture du cache](database.md#memory-page) dans **Propriétés** > **Base de données** > **Mémoire**.
+:::note
+
+Vous pouvez définir la [fréquence d'écriture du cache](database.md#memory-page) dans **Propriétés** > **Base de données** > **Mémoire**.
+
+:::
 
 -   **Progression de l'impression** : permet, lors de l'impression, d'activer ou de désactiver l'affichage de la boîte de dialogue de progression de l'impression.
 
--   **Utiliser le mode SDI sous Windows** : Lorsque cette option est cochée, 4D active automatiquement le mode SDI (Single-Document Interface) dans votre application fusionnée si elle est exécutée dans un contexte pris en charge.
+-   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
 
-    > Cette option peut être sélectionnée sur macOS mais sera ignorée lorsque l'application sera exécutée sur cette plateforme.
+    ![](../assets/en/settings/sdi-mdi.png)
+
+:::note
+
+Cette option peut être sélectionnée sur macOS mais sera ignorée lorsque l'application sera exécutée sur cette plateforme.
+
+:::
+
+
 
 ### Apparence
 

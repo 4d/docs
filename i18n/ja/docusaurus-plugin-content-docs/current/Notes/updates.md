@@ -12,6 +12,7 @@ title: リリースノート
 
 
 - コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
+- Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
 - 4D View Pro:
     - 表組みにおけるテーマのサポート: 新しい [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) および [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) コマンドの追加、[VP CREATE TABLE](../ViewPro/method-list#vp-create-table) コマンドにテーマオプションを追加
     - 新しい [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) コマンドの追加

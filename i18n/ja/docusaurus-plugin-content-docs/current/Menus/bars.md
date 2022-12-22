@@ -40,4 +40,10 @@ title: メニューバーの管理
 
 すると、メニューバーとスプラッシュスクリーンのプレビューが表示されます。 メニューや階層メニューを表示させることができます。 ただし、プレビュー状態のメニューを選択してもコマンドは実行されません。 メニューやツールバーの動作を確認するには、**実行** メニューから **アプリケーションモード** を選択します。
 
+:::info
 
+If the **Use SDI mode on Windows** option is selected in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows), the **Test Application** menu allows you to test your application in [SDI or MDI mode](sdi/md) on Windows:
+
+![](../assets/en/settings/sdi-mdi.png)
+
+:::
