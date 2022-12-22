@@ -31,7 +31,7 @@ Once enabled, to actually run your application in SDI mode, you can either:
 
 :::info
 
-Because the development environment is still in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+Because the development environment is executed in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
 
 :::
 

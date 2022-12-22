@@ -42,7 +42,7 @@ You can set the [frequency for cache flushing](database.md#memory-page) in **Set
 	
 :::note
 
-This option can be selected on macOS but will be ignored when the application is executed on this platform. The **Run** menu only contains **Test Application**.
+This option can be selected on macOS but will be ignored when the application is executed on this platform.
 
 :::
 
