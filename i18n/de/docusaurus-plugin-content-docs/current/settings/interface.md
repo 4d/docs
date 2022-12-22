@@ -19,19 +19,33 @@ Click **Select...** to set the font and size for the characters used by the `MES
 The default font and its size depend on the platform where 4D is running.
 
 > This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
+### Display Windows
+
 Other options configure the display of various windows in the Application mode.
 
 -   **Splash screen**: When this option is deselected, the [splash screen of the current menu bar](Menus/bars.md#splash-screen) does not appear in the Application mode. When you hide this window, it is up to you to manage the display of all your windows by programming, for example in the `On Startup` database method.
 
 -   **Flushing progress**: When this option is checked, 4D displays a window at the bottom left of the screen while the data in the cache is flushed. Since this operation momentarily blocks user actions, displaying this window lets them know that flushing is underway.
 
-    > You can set the [frequency for cache flushing](database.md#memory-page) in **Settings** > **Database** > **Memory**.
+:::note
+
+You can set the [frequency for cache flushing](database.md#memory-page) in **Settings** > **Database** > **Memory**.
+
+:::
 
 -   **Printing progress**: Lets you enable or disable the display of the printing progress dialog box when printing.
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the SDI mode (Single-Document Interface) in your merged application if executed in a supported context.
+-   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
 
-    > This option can be selected on macOS but will be ignored when the application is executed on this platform.
+    ![](../assets/en/settings/sdi-mdi.png)
+
+:::note
+
+This option can be selected on macOS but will be ignored when the application is executed on this platform.
+
+:::
+
+
 
 ### Appearance
 
