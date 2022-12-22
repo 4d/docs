@@ -14,6 +14,11 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
+### Rutas de acceso
+
+Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxis `filesystems` o `posix`. Los nombres de ruta soportados se detallan en la página [**Pathnames**](../Concepts/paths.md).
+
+
 ### Objeto File
 
 |                                                                                                                                                                        |

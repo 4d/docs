@@ -16,6 +16,12 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
+### Rutas de acceso
+
+Los objetos `Folder` soportan varios nombres de ruta, incluyendo las sintaxis `filesystems` o `posix`. Los nombres de ruta soportados se detallan en la página [**Pathnames**](../Concepts/paths.md).
+
+
+
 ### Objeto Folder
 
 |                                                                                                                                                                          |

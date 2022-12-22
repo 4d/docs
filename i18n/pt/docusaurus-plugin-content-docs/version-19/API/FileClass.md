@@ -3,16 +3,21 @@ id: FileClass
 title: File
 ---
 
-`File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+`Os objectos do ficheiro` são criados com o comando [`Arquivo`](#file) . Contêm referências a ficheiros de disco que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando `File` para criar um novo ficheiro, é criado um objecto válido `File` mas nada é realmente armazenado no disco até chamar a função [`file.create( )`](#create) .
 
 ### Exemplo
 
-The following example creates a preferences file in the project folder:
+O exemplo seguinte cria um arquivo de preferências na pasta do projecto:
 
 ```code4d
 var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
+
+### Pathnames
+
+`Os objectos` suportam vários pathnames, incluindo `filesystems` ou `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
+
 
 ### Objeto File
 
@@ -67,62 +72,62 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | Parâmetros   | Tipo     |    | Descrição                                           |
 | ------------ | -------- |:--:| --------------------------------------------------- |
 | path         | Text     | -> | Rota do arquivo                                     |
-| fileConstant | Integer  | -> | 4D file constant                                    |
+| fileConstant | Integer  | -> | Constante de arquivo 4D                             |
 | pathType     | Integer  | -> | `fk posix path` (por defeito) ou `fk platform path` |
-| *            |          | -> | * to return file of host database                   |
-| Resultados   | 4D. File | <- | New file object|<!-- END REF -->
+| *            |          | -> | * para devolver o arquivo da base de dados anfitriã |
+| Resultados   | 4D. File | <- | Novo objeto arquivo|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `File` <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
+O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. O comando aceita duas sintaxes:
 
 **File ( path { ; pathType } { ; \* })**
 
-In the *path* parameter, pass a file path string. You can use a custom string or a filesystem (e.g., "/DATA/myfile.txt").
+No parâmetro *path* , passe um file path string. Pode utilizar uma string personalizada ou um sistema de ficheiros (por exemplo, "/DATA/myfile.txt").
 
-> Only absolute pathnames are supported with the `File` command.
+> Apenas são compatíveis os nomes de caminho absolutos com o comando `File` .
 
-By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType* . Estão disponíveis as seguintes constantes:
 
-| Constante        | Value | Comentário                                                                              |
-| ---------------- | ----- | --------------------------------------------------------------------------------------- |
-| fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
-| fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
+| Constante        | Value | Comentário                                                                                               |
+| ---------------- | ----- | -------------------------------------------------------------------------------------------------------- |
+| fk platform path | 1     | Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma) |
+| fk posix path    | 0     | Caminho expresso com a sintaxe POSIX (por padrão)                                                        |
 
 **File ( fileConstant { ; \* } )**
 
-In the *fileConstant* parameter, pass a 4D built-in or system file, using one of the following constants:
+No parâmetro *fileConstant* , passe um ficheiro 4D incorporado ou de sistema, utilizando uma das constantes seguintes:
 
-| Constante                         | Value | Comentário                                                                                                                                                                                                                                                                                                                                                                                               |
-| --------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Backup history file               | 19    | Backup history file (see Configuration and trace files). Stored in the backup destination folder.                                                                                                                                                                                                                                                                                                        |
-| Backup log file                   | 13    | Current backup journal file. Stored in the application Logs folder.                                                                                                                                                                                                                                                                                                                                      |
-| Backup settings file              | 1     | Default backup.4DSettings file (xml format), stored in the Settings folder of the project                                                                                                                                                                                                                                                                                                                |
-| Backup settings file for data     | 17    | backup.4DSettings file (xml format) for the data file, stored in the Settings folder of the data folder                                                                                                                                                                                                                                                                                                  |
-| Build application log file        | 14    | Current log file in xml format of the application builder. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                                    |
-| Build application settings file   | 20    | Default settings file of the application builder ("buildApp.4DSettings"). Stored in the Settings folder of the project.                                                                                                                                                                                                                                                                                  |
-| Compacting log file               | 6     | Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Stored in the Logs folder.                                                                                                                                                                                                                                                        |
-| Current backup settings file      | 18    | backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file                                                                                                                                                                                                                                   |
-| Debug log file                    | 12    | Log file created by the `SET DATABASE PARAMETER(Debug log recording)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                |
-| Diagnostic log file               | 11    | Log file created by the `SET DATABASE PARAMETER(Diagnostic log recording)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                           |
-| Directory file                    | 16    | directory.json file, containing the description of users and groups (if any) for the project application. It can be located either in the user settings folder (default, global to the project), or in the data settings folder (specific to a data file).                                                                                                                                               |
-| HTTP debug log file               | 9     | Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                              |
-| HTTP log file                     | 8     | Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.                                                                                                                                                                                                                                                                                                              |
-| IMAP Log file                     | 23    | Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                           |
-| Last backup file                  | 2     | Last backup file, named `\<applicationName>[bkpNum].4BK`, stored at a custom location.                                                                                                                                                                                                                                                                                                            |
-| Last journal integration log file | 22    | Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred                                                                                                                                                                                            |
-| Repair log file                   | 7     | Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Stored in the Logs folder.                                                                                                                                                                                                                                                                               |
-| Request log file                  | 10    | Standard client/server request log file (excluding Web requests) created by the `SET DATABASE PARAMETER(4D Server log recording)` or `SET DATABASE PARAMETER(Client log recording)` commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
-| SMTP log file                     | 15    | Log file created by the `SET DATABASE PARAMETER(SMTP Log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                           |
-| User settings file                | 3     | settings.4DSettings file for all data files, stored in Preferences folder next to structure file if enabled.                                                                                                                                                                                                                                                                                             |
-| User settings file for data       | 4     | settings.4DSettings file for current data file, stored in Preferences folder next to the data file.                                                                                                                                                                                                                                                                                                      |
-| Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Stored in the Logs folder.                                                                                                                                                                                                                                             |
+| Constante                         | Value | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Backup history file               | 19    | Arquivo de histórico de cópias de segurança (ver Arquivos de configuração e rastreio). Armazenado na pasta de destino de cópia de segurança.                                                                                                                                                                                                                                                                                                  |
+| Backup log file                   | 13    | Arquivo atual do diário de backup. Armazenado na pasta Logs da aplicação.                                                                                                                                                                                                                                                                                                                                                                     |
+| Backup settings file              | 1     | Arquivo padrão backup.4DSettings (formato xml), armazenado na pasta Settings do projecto                                                                                                                                                                                                                                                                                                                                                      |
+| Backup settings file for data     | 17    | backup.4DSettings file (formato xml) para o arquivo de dados, armazenado na pasta Settings da pasta de dados                                                                                                                                                                                                                                                                                                                                  |
+| Build application log file        | 14    | Arquivo de registo atual em formato xml do construtor da aplicação. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                 |
+| Build application settings file   | 20    | Arquivo de configurações padrão do construtor da aplicação ("buildApp.4DSettings"). Armazenado na pasta Settings do projecto.                                                                                                                                                                                                                                                                                                                 |
+| Compacting log file               | 6     | Arquivo de registo da mais recente compactação feita com o comando Compact data file ou o centro de Manutenção e segurança. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                         |
+| Current backup settings file      | 18    | arquivo backup.4DSettings utilizado actualmente pela aplicação. Pode ser o arquivo de definições de backup (predefinido) ou um arquivo personalizado de definições de backup do usuário definido para o arquivo de dados                                                                                                                                                                                                                      |
+| Debug log file                    | 12    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(Debug log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                              |
+| Diagnostic log file               | 11    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(Diagnostic log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                         |
+| Directory file                    | 16    | directório.json, contendo a descrição dos usuários e grupos (se houver) para a aplicação do projecto. Pode ser localizado ou na pasta de configurações do usuário (por padrão, global ao projecto), ou na pasta de definições de dados (específica a um arquivo de dados).                                                                                                                                                                    |
+| HTTP debug log file               | 9     | Arquivo de registo criado pelo comando `WEB SET OPTION(Web debug log)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                            |
+| HTTP log file                     | 8     | Arquivo de registo criado pelo comando `WEB SET OPTION(Web log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                        |
+| IMAP Log file                     | 23    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(IMAP Log)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                         |
+| Last backup file                  | 2     | Último arrquivo de cópia de segurança, denominado `\<applicationName>[bkpNum].4BK`, armazenado num local personalizado.                                                                                                                                                                                                                                                                                                                |
+| Last journal integration log file | 22    | Nome completo do último arquivo de registo de integração do diário (armazenado na pasta Logs da aplicação restaurada), se existir. Este arquivo é criado, em modo de auto-reparação, assim que ocorrer a integração de um arquivo de registo                                                                                                                                                                                                  |
+| Repair log file                   | 7     | Arquivo de registo das reparações da base de dados efetuadas na base de dados no Centro de Manutenção e Segurança (MSC). Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                            |
+| Request log file                  | 10    | Arquivo padrão de registo de pedido de cliente/servidor (excluindo pedidos Web) criado pelos comandos `SET DATABASE PARAMETER(4D Server log recording)` ou `SET DATABASE PARAMETER(Client log recording)` . Se executado no servidor, o ficheiro de registo do servidor é devolvido (armazenado na pasta Logs do servidor). Se executado no cliente, o arquivo de registo do cliente é devolvido (armazenado na pasta local Logs do cliente). |
+| SMTP log file                     | 15    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(SMTP Log)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                         |
+| User settings file                | 3     | settings.4DSettings arquivo para todos os arquivos de dados, guardados na pasta Preferências ao lado do arquivo de estrutura, se ativado.                                                                                                                                                                                                                                                                                                     |
+| User settings file for data       | 4     | arquivo settings.4DSettings para dados atual, guardado na pasta Preferências ao lado do arquivo de dados.                                                                                                                                                                                                                                                                                                                                     |
+| Verification log file             | 5     | Arquivo Log criado pelos comandos `VERIFY CURRENT DATA FILE` e `VERIFY DATA FILE` ou pelo Maintenance and Security Center (MSC). Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                    |
 
-If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
+Se o alvo *fileConstant* não existir, um objecto nulo é devolvido. Não se levantam erros.
 
-If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
+Se o comando for chamado a partir de um componente, passe o parâmetro opcional `*` para obter o caminho da base de dados anfitriã. Caso contrário, se omitir o parâmetro `*` , um objecto nulo é sempre devolvido.
 
 ## 4D. File.new()
 
@@ -138,7 +143,7 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 #### Descrição
 
-A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D. File.new()`.
 
@@ -161,26 +166,26 @@ A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->creates and return
 
 
 <!--REF #FileClass.create().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                             |
-| ---------- | -------- | -- | ------------------------------------------------------------------------------------- |
-| Resultados | Booleano | <- | True if the file was created successfully, false otherwise|<!-- END REF -->
+| Parâmetros | Tipo     |    | Descrição                                                                                      |
+| ---------- | -------- | -- | ---------------------------------------------------------------------------------------------- |
+| Resultados | Booleano | <- | Verdadeiro se o arquivo foi criado com sucesso, falso caso contrário<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.create()` <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+A função `.create()` <!-- REF #FileClass.create().Summary -->cria um arquivo em disco de acordo com as propriedades do objecto `File`<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.
+Se necessário, a função cria a pasta hierachy como descrito na [platformPath](#platformpath) ou [caminho](#path) propriedades. Se o arquivo já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
 **Valor retornado**
 
-* **True** if the file is created successfully;
-* **False** if a file with the same name already exists or if an error occured.
+* **Verdadeiro** se o arquivo for criado com sucesso;
+* **Falso** se já existir um arquivo com o mesmo nome ou se tiver ocorrido um erro.
 
 #### Exemplo
 
-Creation of a preferences file in the database folder:
+Criação de um arquivo de preferências na pasta da base de dados:
 
 ```4d
  var $created : Boolean
@@ -202,29 +207,29 @@ Creation of a preferences file in the database folder:
 
 
 <!--REF #FileClass.createAlias().Params -->
-| Parâmetros        | Tipo       |    | Descrição                                                   |
-| ----------------- | ---------- | -- | ----------------------------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Destination folder for the alias or shortcut                |
-| aliasName         | Text       | -> | Name of the alias or shortcut                               |
-| aliasType         | Integer    | -> | Type of the alias link                                      |
-| Resultados        | 4D. File   | <- | Alias or shortcut file reference|<!-- END REF -->
+| Parâmetros        | Tipo       |    | Descrição                                                                |
+| ----------------- | ---------- | -- | ------------------------------------------------------------------------ |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho                             |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                                             |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                                            |
+| Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+A função `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->cria um pseudónimo (macOS) ou um atalho (Windows)<!-- END REF --> para o arquivo com o nome *aliasName* especificado na pasta designada pelo objecto *destinationFolder* .
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
+Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType* . Estão disponíveis as seguintes constantes:
 
-| Constante          | Value | Comentário                 |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (default)       |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| Constante          | Value | Comentário                   |
+| ------------------ | ----- | ---------------------------- |
+| `fk alias link`    | 0     | Alias link (padrão)          |
+| `fk symbolic link` | 1     | Link simbólico (só em macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+No Windows, é sempre criado um atalho (arquivo .lnk) (o parâmetro *aliasType* é ignorado).
 
 **Objeto devolvido**
 
@@ -232,7 +237,7 @@ A `4D. File` object with the `isAlias` property set to **true**.
 
 #### Exemplo
 
-You want to create an alias to a file in your database folder:
+Se quiser criar um alias para um arquivo na sua pasta database:
 
 ```4d
  $myFile:=Folder(fk documents folder).file("Archives/ReadMe.txt")
@@ -266,16 +271,16 @@ You want to create an alias to a file in your database folder:
 
 #### Descrição
 
-A função `.delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+A função `.delete()` <!-- REF #FileClass.delete().Summary -->apaga o arquivo<!-- END REF -->.
 
-If the file is currently open, an error is generated.
+Se o arquivo estiver aberto atualmente, um erro é gerado.
 
-If the file does not exist on disk, the function does nothing (no error is generated).
-> **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
+> **ATENÇÃO**: `.delete( )` pode apagar qualquer arquivo de um disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete( )` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 #### Exemplo
 
-You want to delete a specific file in the database folder:
+Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -307,25 +312,25 @@ You want to delete a specific file in the database folder:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                        |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| Resultados | Objeto | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                            |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
+| Resultados | Objeto | <- | Conteúdo do recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna os conteúdos de um arquivo **.exe**, **.dll** ou **.plist** como um objeto.<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o arquivo não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função devolve um objecto vazio (não é gerado nenhum erro).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-**Returned object with a .exe or .dll file**
+**Objeto devolvido com um arquivo .exe ou .dll**
 
-> Reading a .exe or .dll is only possible on Windows.
+> A leitura de um .exe ou .dll só é possível no Windows.
 
-All property values are Text.
+Todos os valores de propriedade são Texto.
 
 | Propriedade  | Tipo |
 | ------------ | ---- |
@@ -334,9 +339,9 @@ All property values are Text.
 
 |CompanyName|Text| |LegalCopyright|Text| |ProductVersion|Text| |FileDescription|Text| |FileVersion|Text| |OriginalFilename|Text|
 
-**Returned object with a .plist file**
+**Objecto devolvido com um arquivo .plist**
 
-The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
+O conteúdo do arquivo xml é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é devolvido como um objeto JSON e `.plist array` é devolvido como um JSON array.
 
 #### Exemplo
 
@@ -395,11 +400,11 @@ ALERT($info.
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parâmetros        | Tipo       |    | Descrição                             |
-| ----------------- | ---------- | -- | ------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                      |
-| newName           | Text       | -> | Full name for the moved file          |
-| Resultados        | 4D. File   | <- | Moved file|<!-- END REF -->
+| Parâmetros        | Tipo       |    | Descrição                                 |
+| ----------------- | ---------- | -- | ----------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                          |
+| newName           | Text       | -> | Nome completo para o arquivo movido       |
+| Resultados        | 4D. File   | <- | Arquivo movido|<!-- END REF -->
 
 
 |
@@ -407,11 +412,11 @@ ALERT($info.
 
 #### Descrição
 
-A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o arquivo `` para o objeto especificado *destinationFolder*<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName* . O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
@@ -450,20 +455,20 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parâmetros | Tipo     |    | Descrição                               |
-| ---------- | -------- | -- | --------------------------------------- |
-| newName    | Text     | -> | New full name for the file              |
-| Resultados | 4D. File | <- | Renamed file|<!-- END REF -->
+| Parâmetros | Tipo     |    | Descrição                                    |
+| ---------- | -------- | -- | -------------------------------------------- |
+| newName    | Text     | -> | Novo nome completo para o arquivo            |
+| Resultados | 4D. File | <- | Renomeado arquivo|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.rename()` <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o arquivo com o nome que passou em *newName* e devolve o objecto renomeado `File`<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um arquivo com o mesmo nome, é devolvido um erro.
 
-Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+Note que a função modifica o nome completo do ficheiro, isto é, se não passar uma extensão em *newName*, o ficheiro terá um nome sem uma extensão.
 
 **Objeto devolvido**
 
@@ -471,7 +476,7 @@ O objecto `File` renomeado.
 
 #### Exemplo
 
-You want to rename "ReadMe.txt" in "ReadMe_new.txt":
+Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -493,25 +498,25 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                                   |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info       | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                                              |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------ |
+| info       | Objeto | -> | Propriedades para escrever no recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. The function must be used with an existing .exe, .dll or .plist file.
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-***info* parameter object with a .exe or .dll file**
+***info* objecto de parâmetro com um arquivo .exe ou .dll**
 
-> Writing a .exe or .dll file information is only possible on Windows.
+> A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
+Cada propriedade válida definida no parâmetro de objecto *info* está escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo |
 | ---------------- | ---- |
@@ -524,15 +529,15 @@ Each valid property set in the *info* object parameter is written in the version
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
+Se passar um texto nulo ou vazio como valor, uma string vazia é escrita na propriedade. Se passar um tipo de valor diferente do texto, este é transformado em string.
 
-***info* parameter object with a .plist file**
+***info* objeto de parâmetro com um arquivo  .plist**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
+Cada propriedade válida definida no parâmetro do objecto *info* está escrita no arquivo  .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
+Se um conjunto de chaves no parâmetro *info* já estiver definido no arquivo .plist, o seu valor é atualizado, mantendo o seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
 
-> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
+> Para definir um valor de tipo de data, o formato a utilizar é uma string de carimbo temporal json formada em ISO UTC sem milissegundos ("2003-02-01T01:02:03Z") como no editor plist de Xcode.
 
 #### Exemplo
 
@@ -577,9 +582,9 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parâmetros | Tipo |    | Descrição                                            |
-| ---------- | ---- | -- | ---------------------------------------------------- |
-| content    | BLOB | -> | New contents for the file|<!-- END REF -->
+| Parâmetros | Tipo |    | Descrição                                                 |
+| ---------- | ---- | -- | --------------------------------------------------------- |
+| content    | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
 
 
 |
@@ -587,7 +592,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descrição
 
-A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 
@@ -613,7 +618,7 @@ A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->rewrites 
 <!--REF #FileClass.setText().Params -->
 | Parâmetros  | Tipo    |    | Descrição                                                              |
 | ----------- | ------- | -- | ---------------------------------------------------------------------- |
-| text        | Text    | -> | Text to store in the file                                              |
+| text        | Text    | -> | Texto a armazenar no arquivo                                           |
 | charSetName | Text    | -> | Nome do conjunto de caracteres                                         |
 | charSetNum  | Integer | -> | Número de conjuntos de caracteres                                      |
 | breakMode   | Integer | -> | Modo de processamento para quebras de linha|<!-- END REF -->
@@ -624,13 +629,13 @@ A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->rewrites 
 
 #### Descrição
 
-A função `.setText()` <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve o texto ** como o novo conteúdo do arquivo<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
+Se o arquivo referenciado no arquivo `` não existir no disco, ele é criado pela função. Quando o arquivo já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
+No texto **, passe o texto para escrever para o arquivo. Pode ser um literal ("o meu texto"), ou um campo de texto 4D ou variável.
 
-Optionally, you can designate the character set to be used for writing the contents. Você pode passar também:
+Opcionalmente, pode designar o conjunto de caracteres a ser utilizado para a escrita do conteúdo. Você pode passar também:
 
 * in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 * ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
@@ -639,15 +644,15 @@ Optionally, you can designate the character set to be used for writing the conte
 
 If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
+Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no arquivo. The following constants, found in the **System Documents** theme are available:
 
-| Constante                     | Value | Comentário                                                                                                                                               |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                           |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Documento com CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
-| `Documento com CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
-| `Documento com LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
+| Constante                     | Value | Comentário                                                                                                                                                      |
+| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                                  |
+| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (line feed) em macOS, CRLF (carriage return + line feed) em Windows |
+| `Documento com CRLF`          | 2     | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows                                                        |
+| `Documento com CR`            | 3     | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS                                                               |
+| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                          |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 

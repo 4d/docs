@@ -115,7 +115,7 @@ Define la redondez de las esquinas (en píxeles) del objeto. Por defecto, el val
 
 El valor mínimo es 0, en este caso se dibuja un objeto estándar no redondeado. El valor máximo depende del tamaño del rectángulo (no puede superar la mitad del tamaño del lado más corto del rectángulo) y se calcula dinámicamente.
 
-:::nota
+:::note
 
 Con [áreas de texto](text.md) y [entradas](input_overview.md):
 

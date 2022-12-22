@@ -76,7 +76,7 @@ module.exports =
 				{
 						  type: 'link',
 						  label: '4D Language Reference', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Language-Reference.100-5910320.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html', 
 				},
 				{
 					type: "category",
@@ -275,6 +275,7 @@ module.exports =
 								"ViewPro/configuring",
 								"ViewPro/formulas",
 								"ViewPro/method-list",
+								"ViewPro/classes",
 								"ViewPro/advanced-programming"
 									]
 							},

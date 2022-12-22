@@ -39,39 +39,39 @@ Si los valores de las teclas no se definen en un tema personalizado, se ajustan 
 Definir un tema significa:
 
 - definir una fuente y un tamaño de fuente para todo el editor de código,
-- assigning specific styles and colors to each 4D language element (fields, tables, variables, parameters, SQL, etc.), SQL language element (keywords, functions, etc.), and color backgrounds.
+- asignar los estilos y los colores específicos a cada elemento del lenguaje 4D (campos, tablas, variables, parámetros, SQL, etc.), a cada elemento del lenguaje SQL (palabras clave, funciones, etc.) y a los fondos de color.
 
-Combining different colors and styles is particularly useful for code maintenance purposes.
+La combinación de colores y de estilos diferentes es especialmente útil para el mantenimiento del código.
 
 ### Fuentes y tamaños de fuente
 
-The **font** and **font size** menus allows you to select the font name and size used in the Code Editor entry area for all categories.
+Los menús **fuente** y **tamaño de fuente** le permiten seleccionar el nombre y el tamaño de la fuente utilizada en el área de entrada del Editor de código para todas las categorías.
 
 ### Lenguaje 4D y lenguaje SQL
 
-You can set different font styles and colors (font color or background color) for each type of language element. Puede seleccionar los elementos que desea personalizar en la lista de categorías.
+Puede definir diferentes estilos de fuente y colores de fuente (color de fuente o color de fondo) para cada tipo de elemento del lenguaje. Puede seleccionar los elementos que desea personalizar en la lista de categorías.
 
 
 ### Otros estilos
 
-These options configure the various colors used in the Code Editor and debugger interfaces.
+Estas opciones configuran los distintos colores utilizados en las interfaces del Editor de código y del depurador.
 
 ![](../assets/en/Preferences/categories.png)
 
 
-|                                                        | Descripción                                                                                                                                                              |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Color de fondo**                                     | Color de fondo de la ventana del editor de código.                                                                                                                       |
-| **Borde de la línea en ejecución en el depurador**     | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Color de fondo de la línea del cursor**              | Color de fondo de la línea que contiene el cursor.                                                                                                                       |
-| **Color de fondo de la línea en ejecución**            | Color de fondo de la línea que se está ejecutando en el depurador.                                                                                                       |
-| **Resaltar las palabras encontradas**                  | Color de resaltado de las palabras encontradas en una búsqueda.                                                                                                          |
-| **Destacar los paréntesis**                            | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
-| **Resaltado de los bloques**                           | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
-| **Resaltar la misma variable o campo**                 | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
-| **Resaltado de la línea en ejecución en el depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                          |
-| **Texto sugerido**                                     | Color del texto de autocompletar sugerido por el Editor de Código.                                                                                                       |
+|                                                        | Descripción                                                                                                                                                                                  |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Color de fondo**                                     | Color de fondo de la ventana del editor de código.                                                                                                                                           |
+| **Borde de la línea en ejecución en el depurador**     | Color del borde que rodea la línea que se está ejecutando en el depurador cuando la opción "Resaltar la línea en ejecución" está activada en la página [Opciones](#options).                 |
+| **Color de fondo de la línea del cursor**              | Color de fondo de la línea que contiene el cursor.                                                                                                                                           |
+| **Color de fondo de la línea en ejecución**            | Color de fondo de la línea que se está ejecutando en el depurador.                                                                                                                           |
+| **Resaltar las palabras encontradas**                  | Color de resaltado de las palabras encontradas en una búsqueda.                                                                                                                              |
+| **Destacar los paréntesis**                            | Color de resaltado de los paréntesis correspondientes (se utiliza cuando los pares de paréntesis se señalan mediante resaltado, ver [Opciones](#options)).                                   |
+| **Resaltado de los bloques**                           | Color de resaltado de los bloques lógicos seleccionados cuando la opción "Resaltar bloques lógicos" está activada en las [Opciones](#options).                                               |
+| **Resaltar la misma variable o campo**                 | Color de resaltado para las otras ocurrencias de la misma variable o del mismo texto de campo cuando una de las opciones "Resaltar variables y texto" está activada en [Opciones](#options). |
+| **Resaltado de la línea en ejecución en el depurador** | Color de resaltado de la línea que se está ejecutando en el depurador cuando la opción "Resaltar línea en ejecución" está activada en [Opciones](#options).                                  |
+| **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                                              |
+| **Texto sugerido**                                     | Color del texto de autocompletar sugerido por el Editor de Código.                                                                                                                           |
 
 
 
@@ -87,13 +87,13 @@ Esta página configura las opciones de visualización del Editor de Código.
 
 
 
-#### Lenguaje de programación 4D (Utilice los parámetros regionales del sistema)
+#### Lenguaje de programación 4D (Utilizar los parámetros regionales del sistema)
 
-Allows you to disable/enable the "international" code settings for the local 4D application.
-- **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
-- **checked**: Regional settings are used in 4D methods.
+Permite desactivar/activar los parámetros del código "internacional" para la aplicación 4D local.
+- **no seleccionado** (por defecto): los parámetros English-US y el lenguaje de programación inglés se utilizan en los métodos 4D.
+- **seleccionado**: los parámetros regionales se utilizan en los métodos 4D.
 
-> If you modify this option, you need to restart the 4D application so that the change is taken into account.
+> Si modifica esta opción, deberá reiniciar la aplicación 4D para que se tenga en cuenta el cambio.
 
 #### Indentación
 
@@ -103,15 +103,15 @@ El código 4D es indentado automáticamente para revelar su estructura:
 
 ![](../assets/en/Preferences/optionsIndent.png)
 
-Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Se puede utilizar una indentación más estrecha para limitar el desplazamiento horizontal.
+Modificar este valor por defecto puede ser útil si sus métodos contienen algoritmos complejos con muchos niveles de integración. Se puede utilizar una indentación más estrecha para limitar el desplazamiento horizontal.
 
 #### Mostrar los números de línea
 
-Lets you display the line numbers by default in each window of the Code Editor. You can also show/hide line numbers for the current window directly from the Code Editor.
+Le permite mostrar los números de línea por defecto en cada ventana del Editor de Código. También puede mostrar/ocultar los números de línea de la ventana actual directamente desde el Editor de código.
 
 #### Mostrar las listas
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
+Le permite elegir si mostrar o no las listas de objetos (Comandos, Tablas y campos, etc.) por defecto cuando se abre la ventana del Editor de Código. También puede mostrar u ocultar cada lista directamente desde el Editor de código.
 
 #### Mostrar los portapapeles
 
@@ -123,21 +123,21 @@ Los correspondientes [atajos al portapapeles](https://doc.4d.com/4Dv19R3/4D/19-R
 
 #### Resaltado de los bloques lógicos
 
-When checked, the whole code belonging to a logical block (If/End if for example) is highlighted when the mouse is placed over the expanded node:
+Cuando está seleccionada, todo el código perteneciente a un bloque lógico (If/End if por ejemplo) se resalta cuando el ratón se sitúa sobre el nodo expandido:
 
 ![](../assets/en/Preferences/optionsLogicalBlocks.png)
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+El color de resaltado se puede definir en la página [Tema](#theme-definition).
 
 #### Mostrar siempre las líneas de bloques
 
-Permite ocultar permanentemente las líneas verticales de bloques. Las líneas de bloque están diseñadas para conectar visualmente los nodos. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
+Permite ocultar permanentemente las líneas verticales de bloques. Las líneas de bloque están diseñadas para conectar visualmente los nodos. Por defecto, siempre se muestran (excepto cuando los iconos contraer/desplegar están ocultos, ver más abajo).
 
 ![](../assets/en/Preferences/optionsBlockLines.png)
 
 #### Ocultar los iconos contraer/expandir
 
-Allows you to hide all expand/collapse icons by default when displaying code. When the option is checked, node icons (as well as local block lines, see above), are displayed temporarily when the mouse is placed over a node:
+Permite ocultar todos los iconos expandir/desplegar por defecto al mostrar el código. Cuando la opción está seleccionada, los iconos de nodo (así como las líneas de bloque locales, ver arriba), se muestran temporalmente cuando el ratón se sitúa sobre un nodo:
 
 ![](../assets/en/Preferences/optionsHideIcons.png)
 
@@ -145,9 +145,9 @@ Allows you to hide all expand/collapse icons by default when displaying code. Wh
 
 Activa la inserción automática de () y de llaves de cierre mientras se escribe el código. Esta opción controla dos funcionalidades automáticas:
 
-- **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. For example, if you type "C_OB" and press Tab, 4D writes "C_OBJECT()" and sets the insertion point inside the ().
+- **par de paréntesis ()<**: se añade después de un comando 4D, una palabra clave o un método proyecto insertado desde una lista de sugerencias o de finalización, si el elemento insertado requiere uno o más argumentos obligatorios. Por ejemplo, si escribe "C_OB" y presionaa Tab, 4D escribe "C_OBJECT()" y fija el punto de inserción dentro del ().
 
-- **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". This feature allows inserting matching pairs of symbols at the insertion point or surrounding a selected text. For example, if you highlight a string and type a single ", the whole selected string will be enclosed in "":
+- **cierre }, ), ], o "**: caracter que se añade al escribir respectivamente una apertura {, (, ], o ". Esta función permite insertar pares de símbolos coincidentes en el punto de inserción o alrededor de un texto seleccionado. Por ejemplo, si resalta una cadena de caracteres y escribe un simple caracter ", toda la cadena seleccionada quedará encerrada en "":
 
 ![](../assets/en/Preferences/optionsClosing.png)  
 ![](../assets/en/Preferences/optionsClosing2.png)
@@ -172,11 +172,11 @@ Permite resaltar todas las ocurrencias de la misma variable o campo en una venta
 - **Con cursor**: todas las ocurrencias se destacan cuando se hace clic en el texto
 - **Al seleccionar**: se resaltan todas las ocurrencias cuando se selecciona el texto
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+El color de resaltado se puede definir en la página [Tema](#theme-definition).
 
 #### Depurar (Resaltar la línea en ejecución)
 
-Highlights the line that is currenty running in the debugger in addition to the regular yellow arrow indicator.
+Resalta la línea que se está ejecutando actualmente en el depurador, además del indicador de flecha amarilla.
 
 ![](../assets/en/Preferences/optionsLine.png)
 
@@ -184,11 +184,11 @@ Si deselecciona esta opción, sólo se mostrará la flecha amarilla.
 
 ### Sugerencias
 
-This area lets you configure autocomplete mechanisms in the Code Editor to adapt it to your own work habits.
+Esta área le permite configurar los mecanismos de autocompletar en el Editor de código para adaptarlo a sus propios hábitos de trabajo.
 
 |                                   | Descripción                                                                                                                                                                                                                                                          |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Apertura automática de la ventana | Activa la visualización automática de la ventana de sugerencias para:<ul><li>Constantes</li><li>Variables (locales e interproceso) y atributos de objetos</li><li>Tablas</li><li>Prototipos (es decir las funciones de clase)</li></ul><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> Puede desactivar este funcionamiento para determinados elementos del lenguaje desmarcando su opción correspondiente. |
-| Validación de una sugerencia      | Sets the entry context that allows the Code Editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                   |
+| Apertura automática de la ventana | Activa la visualización automática de la ventana de sugerencias para:<ul><li>Constantes</li><li>Variables (locales e interproceso) y atributos de objetos</li><li>Tablas</li><li>Prototipos (es decir las funciones de clase)</li></ul><p>Por ejemplo, cuando la opción "Variables (locales o interproceso) y atributos de objetos" está seleccionada, aparece una lista de sugerencias al escribir el caracter $:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> Puede desactivar este funcionamiento para determinados elementos del lenguaje desmarcando su opción correspondiente. |
+| Validación de una sugerencia      | Define el contexto de entrada que permite al Editor de Código validar automáticamente la sugerencia actual mostrada en la ventana de autocompletar.<ul><li>**Tabulación y delimitadores**<br/>Cuando se selecciona esta opción, puede validar la selección actual con la tecla Tab o con cualquier delimitador pertinente al contexto. Por ejemplo, si introduce "ALE" y luego "(", 4D escribe automáticamente "ALERT(" en el editor. Esta es la lista de delimitadores que se tienen en cuenta:<br/> ( ; : = < [ {</li><li>**Sólo tabulador**<br/>Cuando se selecciona esta opción, sólo se puede utilizar el tabulador para insertar la sugerencia actual. Esto puede utilizarse más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de elementos, como ${1}.**Note**: También puede hacer doble clic en la ventana o presionar la tecla Retorno de carro para validar una sugerencia.</li></ul>                                                                                         |
 	
 

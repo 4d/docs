@@ -292,9 +292,9 @@ will create and apply the following style object named *GreenDashDotStyle*:
 ### VP All
 
 
-<!-- REF #_method_.VP ALL.Syntax --> **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
+<!-- REF #_method_.VP All.Syntax --> **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | Parâmetros | Tipo    |    | Descrição                                            |
 | ---------- | ------- | -- | ---------------------------------------------------- |
@@ -304,7 +304,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 #### Descrição
 
-O comando `VP ALL` <!-- REF #_method_.VP ALL.Summary -->returns a new range object referencing all cells<!-- END REF -->.
+O comando `VP ALL` <!-- REF #_method_.VP All.Summary -->returns a new range object referencing all cells<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -327,7 +327,7 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 ### VP Cell
 
 
-<!-- REF #_method_.VP CELL.Syntax --> **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
+<!-- REF #_method_.VP Cell.Syntax --> **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
@@ -508,12 +508,12 @@ Selecting the columns and running this code:
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
 
-<!-- REF #_method_.VP Combine Ranges.Syntax --> **VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax --> **VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | Parâmetros    | Tipo   |    | Descrição                                                     |
 | ------------- | ------ | -- | ------------------------------------------------------------- |
@@ -523,7 +523,7 @@ Selecting the columns and running this code:
 
 #### Descrição
 
-O comando `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Summary -->returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->.
+The `VP Combine ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Summary -->returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->.
 
 In *rangeObj*, pass the first range object.
 
@@ -1525,6 +1525,7 @@ To get the data context bound to the following cells:
 
 ```4d
 var $dataContext : Object
+
 
 $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
 ```
@@ -3201,6 +3202,7 @@ You want to deselect all cells (the active cell and any selected cells):
 
 ```4d
 VP RESET SELECTION("myVPArea")
+
 ```
 
 #### Veja também
@@ -4497,6 +4499,7 @@ O PDF:
 
 #### Veja também
 
+
 [4D View Pro print attributes](configuring.md#print-attributes)<br/>[VP Convert to picture](#vp-convert-to-picture)<br/>[VP Get print info](#vp-get-print-info)<br/>[VP PRINT](#vp-print)
 
 ### VP SET ROW ATTRIBUTES
@@ -4791,9 +4794,12 @@ var $options : Object
 $options:=New object
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
+
 $options.gridline.showHorizontalGridline:=False
 $options.rowHeaderVisible:=False
-$options.colHeaderVisible:=False VP SET SHEET OPTIONS("ViewProArea";$options)
+$options.colHeaderVisible:=False
+
+VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
 Resultados:

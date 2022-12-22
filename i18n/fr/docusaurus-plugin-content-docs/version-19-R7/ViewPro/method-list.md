@@ -309,10 +309,10 @@ créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 ### VP All
 
-<!-- REF #_method_.VP ALL.Syntax -->
+<!-- REF #_method_.VP All.Syntax -->
 **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | Paramètres | Type    |    | Description                                                   |
 | ---------- | ------- | -- | ------------------------------------------------------------- |
@@ -324,7 +324,7 @@ créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 #### Description
 
-La commande `VP ALL` <!-- REF #_method_.VP ALL.Summary -->retourne une nouvelle plage référençant toutes les cellules<!-- END REF -->.
+La commande `VP ALL` <!-- REF #_method_.VP All.Summary -->retourne une nouvelle plage référençant toutes les cellules<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -346,20 +346,19 @@ $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
 
 ### VP Cell
 
-<!-- REF #_method_.VP CELL.Syntax -->
+<!-- REF #_method_.VP Cell.Syntax -->
 **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| Paramètres | Type    |    | Description                                                   |
-| ---------- | ------- | -- | ------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                       |
-| column     | Longint | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| row        | Longint | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| Résultat   | Object  | <- | Objet plage de toutes les cellules|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| column     | Longint | -> | Indice de la colonne                                     |
+| row        | Longint | -> | Indice de la ligne                                       |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Range object of a single cell                            |
+<!-- END REF -->
 
 #### Description
 
@@ -535,12 +534,12 @@ redimensionne les colonnes pour correspondre à la taille du contenu :
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
-<!-- REF #_method_.VP Combine Ranges.Syntax -->
-**VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | Paramètres    | Type   |    | Description                                                   |
 | ------------- | ------ | -- | ------------------------------------------------------------- |
@@ -552,7 +551,7 @@ redimensionne les colonnes pour correspondre à la taille du contenu :
 
 #### Description
 
-La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
+La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
 Dans *rangeObj*, passez la première plage.
 
@@ -783,7 +782,7 @@ In *options*, you can pass an object with additional options for the table. Vale
 | showFooter            | Boolean    | Display a footer                                                                           | False                |
 | showHeader            | Boolean    | Display a header                                                                           | Vrai                 |
 | showResizeHandle      | Boolean    | For tables that don't have a *source*. Display the resize handle                           | False                |
-| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Indéfini             |
+| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Undefined            |
 | useFooterDropDownList | Boolean    | Use a dropdown list in footer cells that calculate the total value of a column             | False                |
 
 The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
@@ -979,7 +978,7 @@ Le paramètre optionnel *paramObj* vous permet de définir plusieurs propriété
 | formula                    | object  | Méthode callback à lancer lorsque l'export est terminé. L'utilisation d'une méthode callback est nécessaire lorsque l'export est asynchrone (ce qui est le cas pour les formats PDF et Excel) si vous avez besoin d'un code à exécuter après l'export. La méthode callback doit être utilisée avec la commande [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) (voir ci-dessous pour plus d'informations).                                                                                                                                                       |
 | valuesOnly                 | boolean | Précise que seules les valeurs issues de formules (le cas échéant) seront exportées.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | includeFormatInfo          | boolean | True pour inclure les informations de formatage, sinon False (True par défaut). Les informations de formatage sont utiles dans certains cas, par exemple pour un export en SVG. D'un autre côté, mettre cette propriété à **false** permet de réduire la durée de l'export.                                                                                                                                                                                                                                                                                                          |
-| includeBindingSource       | Boolean | 4DVP uniquement. True (par défaut) pour exporter les valeurs du contexte de données courant en tant que valeurs de cellule dans le document exporté (les contextes de données eux-mêmes ne sont pas exportés). Sinon Faux. La liaison de cellule est toujours exportée. Pour la gestion des contextes de données et des fusions de cellules, voir [VP SET DATA CONTEXT](#vp-set-data-context) et [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                        |
+| includeBindingSource       | Boolean | 4DVP and Microsoft Excel only. True (par défaut) pour exporter les valeurs du contexte de données courant en tant que valeurs de cellule dans le document exporté (les contextes de données eux-mêmes ne sont pas exportés). Sinon Faux. La liaison de cellule est toujours exportée. Pour la gestion des contextes de données et des fusions de cellules, voir [VP SET DATA CONTEXT](#vp-set-data-context) et [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                          |
 | sheet                      | number  | PDF uniquement (optionnel) - Numéro de la feuille à exporter (débute à 0). -2=toutes les feuilles visibles (par défaut), -1=feuille courante uniquement                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | pdfOptions                 | object  | PDF uniquement (optionnel) - Options pour l'export en PDF <p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>creator</td><td>text</td><td>nom de l'application qui a créé le document original à partir duquel il a été converti.</td></tr><tr><td>title</td><td>text</td><td>titre du document.</td></tr><tr><td>author</td><td>text</td><td>nom de la personne ayant créé ce document.</td></tr><tr><td>keywords</td><td>text</td><td>mots-clés associés au document.</td></tr><tr><td>subject</td><td>text</td><td>sujet du document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | csvOptions                 | object  | CSV uniquement (optionnel) - Options pour l'export en CSV <p><table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Objet plage de toutes les cellules</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Délimiteur de ligne. Par défaut : "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Délimiteur de colonne. Par défaut : ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -3201,6 +3200,8 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 ![](../assets/en/ViewPro/table-insert.png)
 
 
+
+
 #### Voir également
 
 [VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP REMOVE TABLE ROWS](#vp-remove-table-rows)
@@ -4580,6 +4581,7 @@ $properties:=New object("width";100;"header";"Hello World")
 
 VP SET COLUMN ATTRIBUTES($column;$properties)
 ```
+
 
 ![](../assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 

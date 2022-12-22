@@ -44,7 +44,7 @@ As funções são chamadas no objecto correspondente no datastore do servidor.
 
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
 
-The following rules apply:
+As regras abaixo são válidas:
 
 - Parameters must be passed in the **body of the POST request**
 - Parameters must be enclosed within a collection (JSON format)

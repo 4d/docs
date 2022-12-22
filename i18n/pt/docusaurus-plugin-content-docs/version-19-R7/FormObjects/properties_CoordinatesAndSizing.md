@@ -115,7 +115,7 @@ Defines the corner roundness (in pixels) of the object. By default, the radius v
 
 Minimum value is 0, in this case a standard non-rounded object rectangle is drawn. Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
 
-:::nota
+:::note
 
 With [text areas](text.md) and [inputs](input_overview.md):
 

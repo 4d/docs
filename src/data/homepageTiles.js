@@ -44,7 +44,7 @@ const Sections = [
         <Link to="Concepts/about">
           <Translate>Language Concepts</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
+        <Link to="https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html" >
           <Translate>Language Reference (4D Doc Center)</Translate>
         </Link>
         <Link to="ORDA/overview" >

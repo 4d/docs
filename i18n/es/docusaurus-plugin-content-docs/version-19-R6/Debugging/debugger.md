@@ -231,8 +231,8 @@ Additional options are available from the contextual menu of the Watch pane.
 
 ![context-menu](../assets/en/Debugging/contextual-menu.png)
 
-* **Collapse All**: Collapses all levels of the hierarchical list.
-* **Expand All**: Expand all levels of the hierarchical list.
+* **Contraer**: contracta todos los niveles de la lista jerárquica.
+* **Desplegar todo**: despliega todos los niveles de la lista jerárquica.
 * **Mostrar los tipos**: muestra el tipo de cada elemento (cuando es apropiado).
 * **Mostrar números de campos y tablas**: muestra el número de cada tabla o campo. Es útil si trabaja con números de tabla o de campo, o con punteros utilizando comandos como `Table` o `Field`.
 * **Mostrar los iconos**: muestra un icono que denota el tipo de objeto para cada objeto. Puede desactivar esta opción para acelerar la visualización, o simplemente porque prefiere utilizar sólo la opción **Mostrar los tipos**.
@@ -333,7 +333,7 @@ Esta área también le permite añadir o eliminar lod [** puntos de ruptura**](b
 
 ### Tips
 
-Hover your pointer over any expression to display a tool tip that indicates:
+Al pasar el puntero sobre una expresión, para mostrr un mensaje de ayuda que indica:
 
 * el tipo declarado de la expresión
 * el valor actual de la expresión
@@ -378,7 +378,7 @@ Por ejemplo:
   // ...
 ```
 
-Say the program counter is set to the line `If (This condition)`. Al hacer clic en el botón **Step over**, el contador del programa se mueve directamente a la línea `DO_SOMETHING_ELSE`. Para examinar los resultados de la línea `DO_SOMETHING`, puede mover el contador del programa a esa línea y ejecutarla.
+Digamos que el contador del programa se define en la línea `If (This condition)`. Al hacer clic en el botón **Step over**, el contador del programa se mueve directamente a la línea `DO_SOMETHING_ELSE`. Para examinar los resultados de la línea `DO_SOMETHING`, puede mover el contador del programa a esa línea y ejecutarla.
 
 ### Menú contextual
 

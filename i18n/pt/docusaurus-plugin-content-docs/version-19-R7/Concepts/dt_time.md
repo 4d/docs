@@ -9,7 +9,7 @@ As Horas estão no formato 24 horas.
 
 Um valor de Hora pode ser tratado como um número. O número retornado de uma Hora será o número de segundos desde a maia noite (00:00:00) contidos nesse valor de hora.
 
-**Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Nota:** No manual *4D Referência Linguística* , os parâmetros de Tempo nas descrições de comando são indicados como Tempo, exceto quando marcados de outra forma.
 
 ## Constantes literais de tipo hora
 
@@ -27,7 +27,7 @@ Aqui são exemplos de constantes de tipo hora:
 
 Uma hora nula se escreve ?00:00:00?
 
-**Tip:** The Code Editor includes a shortcut for entering a null time. Para escrever uma hora nula, introduza o sinal de interrogação (?) e aperte Enter.
+**Dica:** O Editor de Código inclui um atalho para a entrada de um tempo nulo. Para escrever uma hora nula, introduza o sinal de interrogação (?) e aperte Enter.
 
 ## Operadores de horas
 

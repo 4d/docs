@@ -5,11 +5,18 @@ title: Coordinates & Sizing
 
 ## Automatic Row Height
 
-This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
+This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
-When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
+- collection or entity selection,
+- array (non-hierarchical).
 
->When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+The property is not selected by default. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
+
+:::note
+
+When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+
+:::
 
 When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
 
@@ -23,7 +30,12 @@ When this property is enabled, the height of every row is automatically calculat
   * hidden column contents
   * [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 
->Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+:::caution
+
+Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+
+:::
+
 
 #### JSON Grammar
 
@@ -253,7 +265,7 @@ RowHeights{5}:=3
 Assuming that the unit of the rows is "lines," then the fifth row of the list box will have a height of three lines, while every other row will keep its default height.
 
 >* The Row Height Array property is not taken into account for hierarchical list boxes.
->* For array-based list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+>* For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
 
 #### JSON Grammar
 

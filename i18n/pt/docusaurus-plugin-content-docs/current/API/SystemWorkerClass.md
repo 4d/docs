@@ -3,9 +3,9 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-System workers allow the 4D code to call any external process (a shell command, PHP, etc.) on the same machine. System workers are called asynchronously. By using callbacks, 4D makes it possible to communicate both ways.
+Os trabalhadores do sistema permitem que o código 4D chame qualquer processo externo (um comando shell, PHP, etc.) na mesma máquina. Os trabalhadores do sistema são chamados assíncronos. Ao utilizar os callbacks, 4D torna possível a comunicação de ambas as maneiras.
 
-The `SystemWorker` class is available from the `4D` class store.
+A classe `SystemWorker` está disponível na loja de classes `4D` .
 
 ### Exemplo
 
@@ -63,11 +63,11 @@ $myMacWorker:= 4D. SystemWorker.new("chmod +x /folder/myfile.sh")
 
 
 <!-- REF #4D.SystemWorker.new().Params -->
-| Parâmetros  | Tipo             |    | Descrição                                                     |
-| ----------- | ---------------- |:--:| ------------------------------------------------------------- |
-| commandLine | Text             | -> | Command line to execute                                       |
-| options     | Objeto           | -> | Worker parameters                                             |
-| result      | 4D. SystemWorker | <- | New asynchronous System worker or null if process not started |
+| Parâmetros  | Tipo             |    | Descrição                                                                     |
+| ----------- | ---------------- |:--:| ----------------------------------------------------------------------------- |
+| commandLine | Text             | -> | Linha de comando a executar                                                   |
+| options     | Objeto           | -> | Parâmetros do trabalhador                                                     |
+| result      | 4D. SystemWorker | <- | Novo trabalhador do Sistema assíncrono ou nulo se o processo não for iniciado |
 
 <!-- END REF -->
 
@@ -75,54 +75,54 @@ $myMacWorker:= 4D. SystemWorker.new("chmod +x /folder/myfile.sh")
 
 The `.commandLine` property <!-- REF #4D.SystemWorker.new().Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->.
 
-The returned system worker object can be used to post messages to the worker and get the worker output.
+O objecto worker do sistema devolvido pode ser utilizado para postar mensagens ao worker e obter a saída do worker.
 
-If an error occurs during the creation of the proxy object, the function returns a `null` object and an error is thrown.
+Se ocorrer um erro durante a criação do objecto proxy, a função devolve um objecto `null` e é lançado um erro.
 
-In the *commandLine* parameter, pass the full path of the application's file to be executed (posix syntax), as well as any required arguments, if necessary. If you pass only the application name, 4D will use the `PATH` environment variable to locate the executable.
+No parâmetro *commandLine* , passar o caminho completo do arquivo da aplicação a ser executado (sintaxe posix), bem como quaisquer argumentos necessários, se necessário. Se passar apenas o nome da aplicação, 4D utilizará a variável de ambiente `PATH` para localizar o executável.
 
-**Warning:** This function can only launch executable applications; it cannot execute instructions that are part of the shell (command interpreter). For example, under Windows it is not possible to use this command to execute the `dir` instruction.
+**Advertência:** Esta função só pode lançar aplicações executáveis; não pode executar instruções que fazem parte da shell (intérprete de comandos). Por exemplo, sob Windows não é possível utilizar este comando para executar a instrução `dir` .
 
-#### *options* Object
+#### Objeto *opções*
 
-In the *options* parameter, pass an object that can contain the following properties:
+No parâmetro *opções* , passe um objeto que possa conter as seguintes propriedades:
 
-| Propriedade      | Tipo     | Predefinição | Descrição                                                                                                                                                                                                                                                                                            |
-| ---------------- | -------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onResponse       | Formula  | indefinido   | Callback for system worker messages. This callback is called once the complete response is received. It receives two objects as parameters (see below)                                                                                                                                               |
-| onData           | Formula  | indefinido   | Callback for system worker data. This callback is called each time the system worker receives data. It receives two objects as parameters (see below)                                                                                                                                                |
-| onDataError      | Formula  | indefinido   | Callback for the external process errors (*stderr* of the external process). It receives two objects as parameters (see below)                                                                                                                                                                       |
-| onError          | Formula  | indefinido   | Callback for execution errors, returned by the system worker in case of unusual runtime conditions (system errors). It receives two objects as parameters (see below)                                                                                                                                |
-| onTerminate      | Formula  | indefinido   | Callback when the external process is terminated. It receives two objects as parameters (see below)                                                                                                                                                                                                  |
-| timeout          | Número   | indefinido   | Time in seconds before the process is killed if it is still alive                                                                                                                                                                                                                                    |
-| dataType         | Text     | "text"       | Type of the response body content. Possible values: "text" (default), "blob".                                                                                                                                                                                                                        |
-| encoding         | Text     | "UTF-8"      | Only if `dataType="text"`. Encoding of the response body content. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                                       |
-| variables        | Objeto   |              | Sets custom environment variables for the system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Values are converted into strings when possible. The value cannot contain a '='. If not defined, the system worker inherits from the 4D environment. |
-| currentDirectory | Folder   |              | Working directory in which the process is executed                                                                                                                                                                                                                                                   |
-| hideWindow       | Booleano | true         | (Windows) Hide the application window (if possible) or the Windows console                                                                                                                                                                                                                           |
+| Propriedade      | Tipo     | Predefinição | Descrição                                                                                                                                                                                                                                                                                                                       |
+| ---------------- | -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| onResponse       | Formula  | indefinido   | Chamada de retorno para mensagens de worker do sistema. Esta chamada de retorno é chamada assim que a resposta completa é recebida. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                           |
+| onData           | Formula  | indefinido   | Chamada de retorno para os dados do worker do sistema. Esta chamada de retorno é chamada cada vez que o worker do sistema recebe dados. Recebe dois objetos como parâmetros (ver abaixo)                                                                                                                                        |
+| onDataError      | Formula  | indefinido   | Chamada de retorno para os erros do processo externo (*stderr* do processo externo). Recebe dois objetos como parâmetros (ver abaixo)                                                                                                                                                                                           |
+| onError          | Formula  | indefinido   | Chamada de retorno para erros de execução, devolvida pelo worker do sistema em caso de condições anormais de tempo de execução (erros de sistema). Recebe dois objetos como parâmetros (ver abaixo)                                                                                                                             |
+| onTerminate      | Formula  | indefinido   | Chamada de retorno quando o processo externo é terminado. Recebe dois objetos como parâmetros (ver abaixo)                                                                                                                                                                                                                      |
+| timeout          | Número   | indefinido   | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                       |
+| dataType         | Text     | "text"       | Tipo de conteúdo do corpo de resposta. Possíveis valores: "texto" (por defeito), "bolha".                                                                                                                                                                                                                                       |
+| encoding         | Text     | "UTF-8"      | Apenas se `dataType="text"`. Codificação do conteúdo do corpo de resposta. Para a lista de valores disponíveis, ver a [`CONVERTA DO TEXTO`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) descrição do comando                                                                                                       |
+| variables        | Objeto   |              | Define variáveis de ambiente personalizadas para o trabalhador do sistema. Sintaxe: `variables.key=value`, onde `key` é o nome da variável e `valor` o seu valor. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o trabalhador do sistema herda do ambiente 4D. |
+| currentDirectory | Folder   |              | Directório de trabalho em que o processo é executado                                                                                                                                                                                                                                                                            |
+| hideWindow       | Booleano | true         | (Windows) Esconder a janela de aplicação (se possível) ou a consola Windows                                                                                                                                                                                                                                                     |
 
-All callback functions receive two object parameters. Their contents depend on the callback:
+Todas as funções de chamada de retorno recebem dois parâmetros de objectos. O seu conteúdo depende do retorno da chamada:
 
-| Parâmetros   | Tipo         | *onResponse* | *onData*      | *onDataError* | *onError*    | *onTerminate* |
-| ------------ | ------------ | ------------ | ------------- | ------------- | ------------ | ------------- |
-| $param1      | Objeto       | SystemWorker | SystemWorker  | SystemWorker  | SystemWorker | SystemWorker  |
-| $param2.type | Text         | "response"   | "data"        | "erro"        | "erro"       | "termination" |
-| $param2.data | Text ou Blob |              | received data | dados de erro |              |               |
+| Parâmetros   | Tipo         | *onResponse* | *onData*        | *onDataError* | *onError*    | *onTerminate* |
+| ------------ | ------------ | ------------ | --------------- | ------------- | ------------ | ------------- |
+| $param1      | Objeto       | SystemWorker | SystemWorker    | SystemWorker  | SystemWorker | SystemWorker  |
+| $param2.type | Text         | "response"   | "data"          | "erro"        | "erro"       | "termination" |
+| $param2.data | Text ou Blob |              | dados recebidos | dados de erro |              |               |
 
-Here is the sequence of callback calls:
+Aqui está a sequência de chamadas de retorno:
 
-1. `onData` and `onDataError` are executed one or several times
-2. if called, `onError` is executed once (stops the system worker processing)
-3. if no error occured, `onResponse` is executed once
-4. `onTerminate` is always executed
+1. `onData` e `onDataError` são executados uma ou várias vezes
+2. se chamado, `onError` é executado uma vez (pára o processamento do trabalhador do sistema)
+3. se não ocorreu nenhum erro, `onResponse` é executado uma vez
+4. `onTerminate` é sempre executado
 
 #### Valor retornado
 
-The function returns a system worker object on which you can call functions and properties of the SystemWorker class.
+A função devolve um objecto de trabalhador do sistema sobre o qual se pode chamar funções e propriedades da classe SystemWorker.
 
-#### Examples on Windows
+#### Exemplos no Windows
 
-1. To open Notepad and open a specific document:
+1. Para abrir o Bloco de Notas e abrir um documento específico:
 
 ```4d
 var $sw : 4D. SystemWorker
@@ -133,7 +133,7 @@ $options.hideWindow:= False
 $sw:=4D. SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
 ```
 
-2. Run npm install in the console:
+2. Executar npm instalar na consola:
 
 ```4d
 var $folder : 4D. Folder
@@ -149,7 +149,7 @@ $worker:=4D. SystemWorker.new("cmd /c npm install";$options)
 
 ```
 
-3. To launch the Microsoft® Word® application and open a specific document:
+3. Para lançar a aplicação Microsoft® Word® e abrir um documento específico:
 
 ```4d
 $mydoc:="C:\\Program Files\\Microsoft Office\\Office15\\WINWORD.EXE C:\\Tempo\\output.txt"
@@ -157,7 +157,7 @@ var $sw : 4D. SystemWorker
 $sw:=4D. SystemWorker.new($mydoc)
 ```
 
-4. To launch a command with the current directory and post a message:
+4. Para lançar um comando com o diretório atual e publicar uma mensagem:
 
 ```4d
 var $param : Object
@@ -170,7 +170,7 @@ $sys.postMessage("This is a postMessage")
 $sys.closeInput()
 ```
 
-5. To allow the user to open an external document on Windows:
+5. Para permitir que o utilizador abra um documento externo no Windows:
 
 ```4d
 $docname:=Select document("";"*.*";"Choose the file to open";0)
@@ -180,9 +180,9 @@ If(OK=1)
 End if
 ```
 
-#### Examples on macOS
+#### Exemplos em macOS
 
-1. Edit a text file (`cat` is the macOS command used to edit files). In this example, the full access path of the command is passed:
+1. Editar um arquivo de texto (`cat` é o comando macOS utilizado para editar arquivos). Neste exemplo, o caminho de acesso completo do comando é passado:
 
 ```4d
 
@@ -192,14 +192,14 @@ $sw.wait() //synchronous execution
 
 ```
 
-2. To launch an independent "graphic" application, it is preferable to use the `open` system command (in this case, the code has the same effect as double-clicking the application):
+2. Para lançar uma aplicação "gráfica" independente, é preferível utilizar o comando do sistema `abrir` (neste caso, o código tem o mesmo efeito que um duplo clique na aplicação):
 
 ```4d
 var $sw : 4D. SystemWorker
 $sw:=4D. SystemWorker.new ("open /Applications/Calculator.app")
 ```
 
-3. To get the contents of the "Users" folder (ls -l is the macOS equivalent of the dir command in DOS).
+3. Para obter o conteúdo da pasta "Users" (ls -l é o equivalente em macOS do comando dir em DOS).
 
 ```4d
 var $systemworker : 4D. SystemWorker
@@ -213,7 +213,7 @@ $error:=$systemworker.errors
 
 ```
 
-4. Same command as above, but using a sample "Params" user class to show how to handle callback functions:
+4. O mesmo comando que acima, mas usando uma amostra de classe de utilizador "Params" para mostrar como lidar com as funções de callback:
 
 ```4d
 
@@ -264,9 +264,9 @@ $systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 
 #### Descrição
 
-A função `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
+A função `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->fecha o fluxo de entrada (*stdin*) do processo externo<!-- END REF -->.
 
-When the executable waits for all data to be received through `postMessage()`, `.closeInput()` is useful to indicate to the executable that data sending is finished and that it can proceed.
+Quando o executável espera que todos os dados sejam recebidos através de `postMessage()`, `.closeInput()` é útil para indicar ao executável que o envio de dados está terminado e que pode prosseguir.
 
 #### Exemplo
 
@@ -282,8 +282,8 @@ $worker:= 4D. SystemWorker.new($gzip;New object("dataType";"blob"))
 
 // Send the compressed file on stdin.
 $worker.postMessage($input)
-// Note that we call closeInput() to indicate we're done.
-// gzip (and most program waiting data from stdin) will wait for more data until the input is explicitely closed.
+// Note que chamamos closeInput() para indicar que terminámos.
+// gzip (e a maioria dos dados de espera do programa stdin) esperará por mais dados até que a entrada seja explícitamente fechada.
 $worker.closeInput()
 $worker.wait()
 
@@ -328,7 +328,7 @@ The `.pid` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->cont
 
 #### Descrição
 
-A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
+A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contém o tipo de conteúdo do corpo de resposta<!-- END REF -->. .
 
 Essa propriedade é **apenas leitura**.
 
@@ -342,7 +342,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. .
+A propriedade `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contém a codificação do conteúdo do corpo de resposta<!-- END REF -->. .
 
 Essa propriedade é **apenas leitura**.
 
@@ -356,17 +356,17 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.erros` <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
+A propriedade `.erros` <!-- REF #SystemWorkerClass.errors.Summary -->contém uma colecção de erros 4D em caso de erro(s) de execução<!-- END REF -->.
 
-Each element of the collection is an object with the following properties:
+Cada elemento da coleção é um objeto com as seguintes propriedades:
 
-| Propriedade            | Tipo   | Descrição                                                    |
-| ---------------------- | ------ | ------------------------------------------------------------ |
-| [].errorCode           | number | 4D error code                                                |
-| [].message             | text   | Description of the 4D error                                  |
-| [ ].componentSignature | text   | Signature of the internal component which returned the error |
+| Propriedade             | Tipo   | Descrição                                            |
+| ----------------------- | ------ | ---------------------------------------------------- |
+| [].errorCode            | number | Código de erro 4D                                    |
+| [].message              | text   | Descrição do erro 4D                                 |
+| [ ].ComponenteSignature | text   | Assinatura da componente interna que devolveu o erro |
 
-If no error occured, `.errors` contains an empty collection.
+Se não ocorreu qualquer erro, `.errors` contém uma coleção vazia.
 
 <!-- END REF -->
 
@@ -378,7 +378,7 @@ If no error occured, `.errors` contains an empty collection.
 
 #### Descrição
 
-A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contém o código de saída devolvido pelo processo externo<!-- END REF -->. Summary -->contains **true** if the external process is terminated<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -388,11 +388,11 @@ Essa propriedade é **apenas leitura**.
 ## .hideWindow
 
 
-<!-- REF #SystemWorkerClass.hideWindow.Syntax --> **.hideWindow** : Boolean<!-- END REF -->
+<!-- REF #SystemWorkerClass.hideWindow.Syntax --> **.hideWindow** : Booleano<!-- END REF -->
 
 #### Descrição
 
-A propriedade `.hideWindow` <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->.
+A propriedade `.hideWindow` <!-- REF #SystemWorkerClass.hideWindow.Summary -->pode ser usado para esconder a janela da consola DOS ou a janela do executável lançado (**Windows only**)<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -421,18 +421,18 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
-| Parâmetros  | Tipo |    | Descrição                                                         |
-| ----------- | ---- |:--:| ----------------------------------------------------------------- |
-| message     | Text | -> | Text to write on the input stream (stdin) of the external process |
-| messageBLOB | Blob | -> | Bytes write on the input stream|<!-- END REF -->        |
+| Parâmetros  | Tipo |    | Descrição                                                           |
+| ----------- | ---- |:--:| ------------------------------------------------------------------- |
+| message     | Text | -> | Texto para escrever no fluxo de entrada (stdin) do processo externo |
+| messageBLOB | Blob | -> | Os bytes escrevem no fluxo de entrada<!-- END REF -->     |
 
 #### Descrição
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
+A função `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary -->permite escrever no fluxo de entrada (stdin) do processo externo<!-- END REF -->. Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
 
-The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
+A função `.postMessage()` também aceita um valor do tipo Blob em *messageBLOB* para passar em *stdin*, para que possa publicar dados binários.
 
-You can use the `.dataType` property of the [options object](#options-object) to make response body return Blob values.
+Pode utilizar a propriedade `.dataType` do objecto [options object](#options-object) para fazer retornar valores Blob do corpo de resposta.
 
 <!-- END REF -->
 
@@ -444,9 +444,9 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 #### Descrição
 
-A propriedade `.response` <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
+A propriedade `.response` <!-- REF #SystemWorkerClass.response.Summary -->contém a concatenação de todos os dados devolvidos uma vez terminado o pedido<!-- END REF -->ou seja, a mensagem completa recebida da saída do processo.
 
-The type of the message is defined according to the [`dataType`](#datatype) attribute.
+O tipo da mensagem é definido de acordo com o atributo [`dataType`](#datatype) .
 
 Essa propriedade é **apenas leitura**.
 
@@ -460,7 +460,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains the concatenation of all the errors returned, once the request is terminated<!-- END REF -->.
+O `.responseError` propriedade <!-- REF #SystemWorkerClass.responseError.Summary -->contém a concatenação de todos os erros devolvidos, uma vez terminado o pedido<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -481,7 +481,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->.
 
-This function sends the instruction to terminate and give control back to the executing script.
+Esta função envia a instrução para terminar e devolver o controlo ao guião de execução.
 
 <!-- END REF -->
 
@@ -489,7 +489,7 @@ This function sends the instruction to terminate and give control back to the ex
 ## .terminated
 
 
-<!-- REF #SystemWorkerClass.terminated.Syntax --> **.terminated** : Boolean<!-- END REF -->
+<!-- REF #SystemWorkerClass.terminated.Syntax --> **.terminado** : Booleano<!-- END REF -->
 
 #### Descrição
 
@@ -532,23 +532,23 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| Parâmetros | Tipo             |    | Descrição                                      |
-| ---------- | ---------------- |:--:| ---------------------------------------------- |
-| timeout    | Real             | -> | Waiting time (in seconds)                      |
-| Resultados | 4D. SystemWorker | <- | SystemWorker object|<!-- END REF --> |
+| Parâmetros | Tipo             |    | Descrição                                       |
+| ---------- | ---------------- |:--:| ----------------------------------------------- |
+| timeout    | Real             | -> | Tempo de espera (em segundos)                   |
+| Resultados | 4D. SystemWorker | <- | SystemWorker objecto|<!-- END REF --> |
 
 #### Descrição
 
-A função `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+A função `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera até ao final do `SystemWorker` execução ou o tempo limite especificado **<!-- END REF -->.
 
-In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
+Em *timeout*, passe um valor em segundos. O script `SystemWorker` aguardará o processo externo pelo tempo definido no parâmetro *timeout* . Se omitir o parâmetro *timeout* , a execução do guião esperará indefinidamente.
 
-Actually, `.wait()` waits until the end of processing of the `onTerminate` formula, except if the *timeout* is reached. If *timeout* is reached, the `SystemWorker` is not killed.
+Na verdade, `.wait()` espera até ao fim do processamento da fórmula `onTerminate` , excepto se o tempo limite ** for alcançado. Se *timeout* for alcançado, o `SystemWorker` não é morto.
 
-During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
+Durante uma execução `.wait()` , são executadas funções de callback, especialmente callbacks de outros eventos ou de outros `SystemWorker` instâncias. Pode sair de um `.wait()` ligando para [`terminate()`](#terminate) a partir de uma chamada de retorno.
 
-This function returns the SystemWorker object.
+Esta função devolve o objecto SystemWorker.
 
-> This function is not necessary if you created the `SystemWorker` from a 4D worker process.
+> Esta função não é necessária se tiver criado o `SystemWorker` a partir de um processo de trabalhador 4D.
 
 <!-- END REF -->

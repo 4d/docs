@@ -311,11 +311,11 @@ créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 ### VP All
 
-<!-- REF #_method_.VP ALL.Syntax -->
+<!-- REF #_method_.VP All.Syntax -->
 **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 
-<!-- REF #_method_.VP ALL.Params -->
+<!-- REF #_method_.VP All.Params -->
 
 | Paramètres | Type    |    | Description                                                   |
 | ---------- | ------- | -- | ------------------------------------------------------------- |
@@ -327,7 +327,7 @@ créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 #### Description
 
-La commande `VP ALL` <!-- REF #_method_.VP ALL.Summary -->retourne une nouvelle plage référençant toutes les cellules<!-- END REF -->.
+La commande `VP ALL` <!-- REF #_method_.VP All.Summary -->retourne une nouvelle plage référençant toutes les cellules<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -349,7 +349,7 @@ $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
 
 ### VP Cell
 
-<!-- REF #_method_.VP CELL.Syntax -->
+<!-- REF #_method_.VP Cell.Syntax -->
 **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
 
@@ -542,13 +542,13 @@ redimensionne les colonnes pour correspondre à la taille du contenu :
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
-### VP Combine Ranges
+### VP Combine ranges
 
-<!-- REF #_method_.VP Combine Ranges.Syntax -->
-**VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+<!-- REF #_method_.VP Combine ranges.Syntax -->
+**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
 
 
-<!-- REF #_method_.VP Combine Ranges.Params -->
+<!-- REF #_method_.VP Combine ranges.Params -->
 
 | Paramètres    | Type   |    | Description                                                   |
 | ------------- | ------ | -- | ------------------------------------------------------------- |
@@ -560,7 +560,7 @@ redimensionne les colonnes pour correspondre à la taille du contenu :
 
 #### Description
 
-La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
+The `VP Combine ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
 Dans *rangeObj*, passez la première plage.
 
@@ -787,7 +787,7 @@ In *options*, you can pass an object with additional options for the table. Vale
 | showFooter            | Boolean    | Display a footer                                                               | False                |
 | showHeader            | Boolean    | Display a header                                                               | Vrai                 |
 | showResizeHandle      | Boolean    | For tables that don't have a *source*. Display the resize handle               | False                |
-| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)           | Indéfini             |
+| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)           | Undefined            |
 | useFooterDropDownList | Boolean    | Use a dropdown list in footer cells that calculate the total value of a column | False                |
 
 The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
@@ -1637,6 +1637,7 @@ To get the data context bound to the following cells:
 
 ```4d
 var $dataContext : Object
+
 
 $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
 ```
@@ -3432,6 +3433,7 @@ Vous souhaitez déselectionner toutes les cellules (la cellule active et toute a
 
 ```4d
 VP RESET SELECTION("myVPArea")
+
 ```
 
 #### Voir également
@@ -4841,6 +4843,7 @@ Le PDF :
 
 #### Voir également
 
+
 [4D View Pro print attributes](configuring.md#print-attributes)<br/>[VP Convert to picture](#vp-convert-to-picture)<br/>[VP Get print info](#vp-get-print-info)<br/>[VP PRINT](#vp-print)
 
 ### VP SET ROW ATTRIBUTES
@@ -5164,6 +5167,7 @@ var $options : Object
 $options:=New object
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
+
 $options.gridline.showHorizontalGridline:=False
 $options.rowHeaderVisible:=False
 $options.colHeaderVisible:=False

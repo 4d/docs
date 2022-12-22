@@ -167,7 +167,16 @@ By default, the drag-and-drop mechanism moves the selected text. In order to cop
 
 You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. 4D will consider all the lines at once. For example, both the following statements are equivalent:
 
-![](../assets/en/code-editor/entry-several-lines.png)
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 
 ### Changing case  
 
@@ -503,7 +512,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 
 4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 
-![](https://doc.4d.com/4Dv19R4/picture/443304/pict443304.en.png)
+![](../assets/en/code-editor/bookm.png)
 
 A bookmark moves along with its original row if additional rows are inserted in the method. Bookmarks are saved with the methods.
 

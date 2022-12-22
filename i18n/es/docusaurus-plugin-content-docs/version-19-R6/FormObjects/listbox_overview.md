@@ -903,7 +903,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | requiredListReference | 4D list ref, depends on "saveAs" value            | x    | x    | x       |         |       |        |
 | requiredListName      | Nombre de la lista 4D, depende del valor "saveAs" | x    | x    | x       |         |       |        |
 | saveAs                | "reference" o "value"                             | x    | x    | x       |         |       |        |
-| choiceListReference   | 4D list ref, display combo box                    | x    | x    | x       |         |       |        |
+| choiceListReference   | RefList 4D, muestra un combo box                  | x    | x    | x       |         |       |        |
 | choiceListName        | Nombre de la lista 4D, mostrar combo box          | x    | x    | x       |         |       |        |
 | unitList              | array de X elementos                              | x    | x    | x       |         |       |        |
 | unitReference         | índice del elemento seleccionado                  | x    | x    | x       |         |       |        |

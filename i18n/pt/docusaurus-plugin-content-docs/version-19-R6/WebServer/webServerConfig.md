@@ -296,7 +296,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 | webServer object | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |             |
 | `WEB SET OPTION` | `Web inactive session timeout`                                           |             |
 
-Life duration (in minutes) of inactive sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
+Life duration (in minutes) of inactive sessions (duration set in cookie). No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
 
 Default: 480 minutes (pass 0 to restore the default value)
 
@@ -388,7 +388,7 @@ By default, the value is 100. You can set the number anywhere between 10 and 320
 
 Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
 
-This limit is used to avoid web server saturation due to incoming requests that are too large. This limit is used to avoid web server saturation due to incoming requests that are too large.
+Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. This limit is used to avoid web server saturation due to incoming requests that are too large.
 
 Possible values: 500 000 to 2 147 483 648.
 
@@ -409,7 +409,7 @@ Default value: 100 (pass 0 to restore the default value).
 | ---------------- | ------------------------------------------------------ | ----------- |
 | webServer object | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
 
-Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.
+Minimum TLS version accepted for connections. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
 
 Valores possíveis:
 
@@ -541,7 +541,7 @@ Scalable session management enabling status for the 4D web server. Web server se
 | webServer object | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION` | `Web session cookie domain`                                        |             |
 
-Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
+Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
 
 ## Session Cookie Name
 
@@ -559,7 +559,7 @@ Name of the cookie used for saving the session ID. Default = "4DSID".
 | webServer object | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |             |
 | `WEB SET OPTION` | `Web session cookie path`                                      |             |
 
-"path" field of the session cookie. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
+"path" field of the session cookie. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
 
 ## Session Cookie SameSite
 
@@ -601,7 +601,7 @@ This option controls the support of HTTP synchronization requests containing dep
 
 > This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
 
-IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
+IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
 
 #### Send Extended Characters Directly
 

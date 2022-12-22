@@ -1,0 +1,2678 @@
+{
+	"_method_": {
+		"VP ADD FORMULA NAME": {
+			"Syntax": "**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"vpFormula",
+					"Text",
+					"->",
+					"4D View Pro フォーミュラ"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"フォーミュラの名称"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"命名フォーミュラのオプション"
+				]
+			],
+			"Summary": "開いているドキュメント内において命名されたフォーミュラを作成、または編集します"
+		},
+		"VP ADD RANGE NAME": {
+			"Syntax": "**VP ADD RANGE NAME** ( *rangeObj* : Object ; *name* : Text { ; *options* : Object } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"フォーミュラの名称"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"命名フォーミュラのオプション"
+				]
+			],
+			"Summary": "開いているドキュメント内に命名レンジを作成、または編集します"
+		},
+		"VP ADD SELECTION": {
+			"Syntax": "**VP ADD SELECTION** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Text",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "指定されたセルを、現在選択されているセル範囲に追加します"
+		},
+		"VP ADD SHEET": {
+			"Syntax": "**VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"新しいシートのインデックス"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"シート名"
+				]
+			],
+			"Summary": "*vpAreaName* にロードされているドキュメントにシートを挿入します。"
+		},
+		"VP ADD SPAN": {
+			"Syntax": "**VP ADD SPAN** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			]
+		},
+		"VP ADD STYLESHEET": {
+			"Syntax": "**VP ADD STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text ; *styleObj* : Object { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"styleName",
+					"Text",
+					"->",
+					"スタイルの名前"
+				],
+				[
+					"styleObj",
+					"Object",
+					"->",
+					"属性設定を定義するオブジェクト"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "開いているドキュメント内にて、*styleName* 引数で指定したスタイルシートを、*styleObj* 引数のプロパティの組み合わせに基づいて作成または変更します"
+		},
+		"VP All": {
+			"Syntax": "**VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"すべてのセルのレンジオブジェクト"
+				]
+			],
+			"Summary": "すべてのセルを参照する新しいレンジオブジェクトを返します"
+		},
+		"VP Cell": {
+			"Syntax": "**VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"column",
+					"Longint",
+					"->",
+					"カラムのインデックス"
+				],
+				[
+					"row",
+					"Longint",
+					"->",
+					"行のインデックス"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"単一セルのレンジオブジェクト"
+				]
+			],
+			"Summary": "特定のセルを参照する新しいレンジオブジェクトを返します"
+		},
+		"VP Cells": {
+			"Syntax": "**VP Cells** ( *vpAreaName* : Text ; *column*: Integer ; *row*: Integer ; *columnCount* : Integer ; *rowCount* : Integer { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"カラムのインデックス"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"行のインデックス"
+				],
+				[
+					"columnCount",
+					"Integer",
+					"->",
+					"カラム数"
+				],
+				[
+					"rowCount",
+					"Integer",
+					"->",
+					"行数"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"複数セルのレンジオブジェクト"
+				]
+			],
+			"Summary": "指定された複数のセルを参照する新しいレンジオブジェクトを返します"
+		},
+		"VP Column": {
+			"Syntax": "**VP Column** ( *vpAreaName* : Text ; *column*: Integer ; *columnCount* : Integer { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"カラムのインデックス"
+				],
+				[
+					"columnCount",
+					"Integer",
+					"->",
+					"カラム数"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"複数セルのレンジオブジェクト"
+				]
+			],
+			"Summary": "特定のカラム、あるいは複数のカラムを参照する新しいレンジオブジェクトを返します"
+		},
+		"VP COLUMN AUTOFIT": {
+			"Syntax": "**VP COLUMN AUTOFIT** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数のレンジ内にあるカラムを、そのコンテンツに応じて自動的にリサイズします"
+		},
+		"VP Combine ranges": {
+			"Syntax": "**VP Combine ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"otherRangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"統合されたレンジを格納したオブジェクト"
+				]
+			],
+			"Summary": "2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します"
+		},
+		"VP Convert from 4D View": {
+			"Syntax": "**VP Convert from 4D View** ( *4DViewDocument* : Blob ) : Object",
+			"Params": [
+				[
+					"4DViewDocument",
+					"Blob",
+					"->",
+					"4D View ドキュメント"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"4D View Pro オブジェクト"
+				]
+			],
+			"Summary": "旧式の 4D View ドキュメントを 4D View Pro オブジェクトへと変換することができます"
+		},
+		"VP Convert to picture": {
+			"Syntax": "**VP Convert to picture** ( *vpObject* : Object {; *rangeObj* : Object} ) : Picture",
+			"Params": [
+				[
+					"vpObject",
+					"Object",
+					"->",
+					"変換するエリアを格納した 4D View Pro オブジェクト"
+				],
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"エリアの SVGピクチャー"
+				]
+			],
+			"Summary": "*vpObject* 引数で指定した 4D View Pro オブジェクト (あるいは *vpObject* 内にある、*rangeObj* 引数で指定したレンジ) を、SVGピクチャーに変換します"
+		},
+		"VP Copy to object": {
+			"Syntax": "**VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"追加のオプション"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"返されるオブジェクト。 コピーされたデータが格納されています"
+				]
+			],
+			"Summary": "*rangeObj* のコンテンツ、スタイル、フォーミュラをオブジェクトにコピーします"
+		},
+		"VP CREATE TABLE": {
+			"Syntax": "**VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"source",
+					"Text",
+					"->",
+					"表に表示するデータコンテキストプロパティ名"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"追加のオプション"
+				]
+			],
+			"Summary": "指定のレンジ内に表組みを作成します"
+		},
+		"VP DELETE COLUMNS": {
+			"Syntax": "**VP DELETE COLUMNS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したカラムを削除します"
+		},
+		"VP DELETE ROWS": {
+			"Syntax": "**VP DELETE ROWS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定した行を削除します"
+		},
+		"VP EXPORT DOCUMENT": {
+			"Syntax": "**VP EXPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text {; *paramObj* : Object} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"filePath",
+					"Text",
+					"->",
+					"ドキュメントのパス名"
+				],
+				[
+					"paramObj",
+					"Object",
+					"->",
+					"書き出しのオプション"
+				]
+			],
+			"Summary": "*vpAreaName* で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを、*filePath* と *paramObj* で指定したとおりにディスク上のドキュメントに書き出します"
+		},
+		"VP Export to object": {
+			"Syntax": "**VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"書き出しのオプション"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"4D View Pro オブジェクト"
+				]
+			],
+			"Summary": "*vpAreaName* で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを返します"
+		},
+		"VP Find": {
+			"Syntax": "**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object } ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object ; *replaceValue* : Text ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"searchValue",
+					"Text",
+					"->",
+					"検索値"
+				],
+				[
+					"searchCondition",
+					"Object",
+					"->",
+					"検索条件を格納したオブジェクト"
+				],
+				[
+					"replaceValue",
+					"Text",
+					"->",
+					"置き換え値"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* に指定したレンジ内で *searchValue* に指定した値を検索します"
+		},
+		"VP Find table": {
+			"Syntax": "**VP Find table** ( *rangeObj* : Object ) : Text",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"セルのレンジ"
+				],
+				[
+					"戻り値",
+					"Text",
+					"<-",
+					"表組みの名称"
+				]
+			],
+			"Summary": "*rangeObj* で指定したセルが所属する表組みの名称を返します"
+		},
+		"VP FLUSH COMMANDS": {
+			"Syntax": "**VP FLUSH COMMANDS** (  *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				]
+			],
+			"Summary": "保存されているコマンドをただちに実行し、コマンドバッファをクリアします"
+		},
+		"VP Font to object": {
+			"Syntax": "**VP Font to object** (  *font* : Text ) : Object",
+			"Params": [
+				[
+					"font",
+					"Text",
+					"->",
+					"フォントのショートハンド文字列"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"フォントオブジェクト"
+				]
+			],
+			"Summary": "フォントのショートハンド文字列からオブジェクトを返します"
+		},
+		"VP Get active cell": {
+			"Syntax": "**VP Get active cell** (  *vpAreaName* : Text { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"単一セルのレンジオブジェクト"
+				]
+			],
+			"Summary": "フォーカスを持ち、データ入力されようとしてるセル (アクティブセル) を参照する新しいレンジオブジェクトを返します"
+		},
+		"VP Get binding path": {
+			"Syntax": "**VP Get binding path** ( *rangeObj* : Object ) : Text",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Text",
+					"<-",
+					"セルにバインドされた属性の名称"
+				]
+			],
+			"Summary": "*rangeObj* で指定したセルにバインドされた属性の名称を返します"
+		},
+		"VP Get cell style": {
+			"Syntax": "**VP Get cell style** (  *rangeObj* : Object ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"スタイルオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したレンジの最初のセルの スタイルオブジェクト を返します"
+		},
+		"VP Get column attributes": {
+			"Syntax": "**VP Get column attributes** (  *rangeObj* : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Collection",
+					"<-",
+					"カラムプロパティのコレクション"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したレンジ内にあるカラムのプロパティのコレクションを返します"
+		},
+		"VP Get column count": {
+			"Syntax": "**VP Get column count** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro エリアフォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Integer",
+					"<-",
+					"カラムの総数"
+				]
+			],
+			"Summary": "*sheet* 引数で指定したシートにおけるカラムの総数を返します"
+		},
+		"VP Get current sheet": {
+			"Syntax": "**VP Get current sheet** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"ファンクションの戻り値",
+					"Integer",
+					"<-",
+					"カレントシートのインデックス"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定した View Pro エリアのカレントシートのインデックスを返します。 カレントシートとは、ドキュメント内で選択されているシートのことです。"
+		},
+		"VP Get data context": {
+			"Syntax": "**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Object",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"データコンテキストを取得するシートのインデックス"
+				],
+				[
+					"戻り値",
+					"Object &#124; Collection",
+					"<-",
+					"データコンテキスト"
+				]
+			],
+			"Summary": "ワークシートのカレントのデータコンテキストを返します"
+		},
+		"VP Get default style": {
+			"Syntax": "**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro エリアフォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Integer",
+					"<-",
+					"カラムの総数"
+				]
+			],
+			"Summary": "シートのデフォルトスタイルオブジェクトを返します"
+		},
+		"VP Get formula": {
+			"Syntax": "**VP Get formula** ( *rangeObj* : Object) : Text",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Text",
+					"<-",
+					"フォーミュラ"
+				]
+			],
+			"Summary": "指定したセルレンジのフォーミュラを取得します"
+		},
+		"VP Get formula by name": {
+			"Syntax": "**VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"命名レンジの名前"
+				],
+				[
+					"scope",
+					"Number",
+					"->",
+					"ターゲットのスコープ (デフォルト=カレントシート)"
+				],
+				[
+					"戻り値",
+					"Text",
+					"<-",
+					"命名フォーミュラ、または命名レンジの定義"
+				]
+			],
+			"Summary": "*name* 引数で指定された名前の命名フォーミュラ、あるいは命名レンジに対応したフォーミュラとコメントを返します (定義されたスコープにそれらが存在しない場合には **null** が返されます)"
+		},
+		"VP Get formulas": {
+			"Syntax": "**VP Get formulas** ( *rangeObj* : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Collection",
+					"<-",
+					"フォーミュラ値のコレクション"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したレンジからフォーミュラを取得します"
+		},
+		"VP Get frozen panes": {
+			"Syntax": "**VP Get frozen panes** ( vpAreaName : Text { ; sheet : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"固定化されたカラムと行についての情報を格納したオブジェクト"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定した View Pro エリア内の、固定化されたカラムと行についての情報を格納したオブジェクトを返します"
+		},
+		"VP Get names": {
+			"Syntax": "**VP Get names** ( vpAreaName : Text { ; scope : Number } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"scope",
+					"Number",
+					"->",
+					"ターゲットのスコープ (デフォルト = カレントシート)"
+				],
+				[
+					"戻り値",
+					"Collection",
+					"<-",
+					"定義されたスコープ内に存在する名前"
+				]
+			],
+			"Summary": "カレントシートまたは *scope* 引数で指定されたスコープ内において定義されているすべての \"名前\" のコレクションを返します"
+		},
+		"VP Get print info": {
+			"Syntax": "**VP Get print info** ( vpAreaName : Text { ; sheet : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"印刷情報のオブジェクト"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリアの印刷属性を格納したオブジェクトを返します"
+		},
+		"VP Get row attributes": {
+			"Syntax": "**VP Get row attributes** ( rangeObj : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Collection",
+					"<-",
+					"行プロパティのコレクション"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したレンジ内にある行のプロパティのコレクションを返します"
+		},
+		"VP Get row count": {
+			"Syntax": "**VP Get row count** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro エリアフォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Integer",
+					"<-",
+					"行の総数"
+				]
+			],
+			"Summary": "*sheet* 引数で指定したシートにおける行の総数を返します"
+		},
+		"VP Get selection": {
+			"Syntax": "**VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro エリアフォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"複数セルのレンジオブジェクト"
+				]
+			],
+			"Summary": "現在選択されているセルを参照する新しいレンジオブジェクトを返します"
+		},
+		"VP Get sheet count": {
+			"Syntax": "**VP Get sheet count** ( *vpAreaName* : Text ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"ファンクションの戻り値",
+					"Integer",
+					"<-",
+					"シートの数"
+				]
+			],
+			"Summary": "*vpAreaName* で指定したエリアにロードされているドキュメント内にあるシート数を返します"
+		},
+		"VP Get sheet index": {
+			"Syntax": "**VP Get sheet index** ( *vpAreaName* : Text ; *name* : Text ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"シート名"
+				],
+				[
+					"ファンクションの戻り値",
+					"Integer",
+					"<-",
+					"シートのインデックス"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリア内の、シート名で指定したシートのインデックスを返します"
+		},
+		"VP Get sheet name": {
+			"Syntax": "**VP Get sheet name** ( *vpAreaName* : Text ; *sheet* : Integer ) : Text",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス"
+				],
+				[
+					"ファンクションの戻り値",
+					"Text",
+					"<-",
+					"シート名"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリア内の、インデックスで指定したシートの名前を返します。"
+		},
+		"VP Get sheet options": {
+			"Syntax": "**VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro エリアフォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"シートオプションのブジェクト"
+				]
+			],
+			"Summary": "*vpAreaName* で指定したエリア内の、カレントのシートオプションを格納したオブジェクトを返します"
+		},
+		"VP Get show print lines": {
+			"Syntax": "**VP Get show print lines** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Boolean",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"<-",
+					"シートのインデックス"
+				],
+				[
+					"ファンクションの戻り値",
+					"Boolean",
+					"<-",
+					"印刷線が表示状態であれば true、それ以外は false"
+				]
+			],
+			"Summary": "印刷プレビューの線が表示状態であれば `true` を、非表示であれば `false` を返します。"
+		},
+		"VP Get spans": {
+			"Syntax": "**VP Get spans** ( *rangeObj* : Object ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"指定レンジ内にあるセル結合のオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* で指定したレンジ内にあるセル結合を取得します"
+		},
+		"VP Get stylesheet": {
+			"Syntax": "**VP Get stylesheet** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"styleName",
+					"Text",
+					"->",
+					"スタイルの名前"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[],
+				[
+					"戻り値",
+					"Object",
+					"-",
+					"スタイルシートオブジェクト"
+				]
+			],
+			"Summary": "*styleName* で指定した、定義済のプロパティ値を格納したスタイルシートオブジェクトを返します"
+		},
+		"VP Get stylesheets": {
+			"Syntax": "**VP Get stylesheets** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"ターゲットのスコープ (デフォルト = カレントシート)"
+				],
+				[
+					"戻り値",
+					"Collection",
+					"<-",
+					"スタイルシートオブジェクトのコレクション"
+				]
+			],
+			"Summary": "*sheet* で指定されたスコープにおいて定義されているスタイルシートのコレクションを返します"
+		},
+		"VP Get table column attributes": {
+			"Syntax": "**VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"表の列のインデックス"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"*column* の属性"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みの *column* でインデックスを指定した列のカレント属性を返します"
+		},
+		"VP Get table column index": {
+			"Syntax": "**VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"columnName",
+					"Text",
+					"->",
+					"列の名称"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Integer",
+					"<-",
+					"*columnName* のインデックス"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みの *columnName* で指定した列のインデックスを返します"
+		},
+		"VP Get table range": {
+			"Syntax": "**VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"onlyData",
+					"Integer",
+					"->",
+					"`vk table full range` (デフォルト) または `vk table data range`"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"表組みが含まれるレンジ"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みが含まれるレンジを返します"
+		},
+		"VP Get tables": {
+			"Syntax": "**VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Collection",
+					"<-",
+					"表組みの名称をすべて格納するテキストのコレクション"
+				]
+			],
+			"Summary": "*sheet* で指定されたスコープにおいて定義されている表組み名のコレクションを返します"
+		},
+		"VP Get value": {
+			"Syntax": "**VP Get value** ( *rangeObj* : Object ) : Object",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"セルの値を格納したオブジェクト"
+				]
+			],
+			"Summary": "指定されたセルレンジからセルの値を取得します"
+		},
+		"VP Get values": {
+			"Syntax": "**VP Get values** ( *rangeObj* : Object ) : Collection",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"戻り値",
+					"Collection",
+					"<-",
+					"値のコレクション"
+				]
+			],
+			"Summary": "*rangeObj* で指定したレンジの値をすべて取得します"
+		},
+		"VP Get workbook options": {
+			"Syntax": "**VP Get workbook options** ( *vpAreaName* : Text ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"ワークブックオプションを格納したオブジェクト"
+				]
+			]
+		},
+		"Get workbook options": {
+			"Summary": "*vpAreaName* で指定したエリアのワークブックオプションをすべて格納したオブジェクトを返します"
+		},
+		"VP IMPORT DOCUMENT": {
+			"Syntax": "**VP IMPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text { ; *paramObj* : Object} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"filePath",
+					"Text",
+					"->",
+					"ドキュメントのパス名"
+				],
+				[
+					"paramObj",
+					"Object",
+					"->",
+					"読み込みのオプション"
+				]
+			],
+			"Summary": "*vpAreaName* で指定した 4D View Pro エリアに、*filePath* 引数のドキュメントを読み込んで表示させます"
+		},
+		"VP IMPORT FROM OBJECT": {
+			"Syntax": "**VP IMPORT FROM OBJECT** ( *vpAreaName* : Text  { ; *viewPro* : Object} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"viewPro",
+					"Object",
+					"->",
+					"4D View Pro オブジェクト"
+				]
+			],
+			"Summary": "*vpAreaName* で指定した 4D View Pro エリアに *viewPro* の 4D View Pro オブジェクトを読み込んで表示させます"
+		},
+		"VP INSERT COLUMNS": {
+			"Syntax": "**VP INSERT COLUMNS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したレンジにカラムを挿入します"
+		},
+		"VP INSERT ROWS": {
+			"Syntax": "**VP INSERT ROWS** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したレンジに行を挿入します"
+		},
+		"VP INSERT TABLE COLUMNS": {
+			"Syntax": "**VP INSERT TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"列の挿入場所を指定する表組み内のインデックス"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"挿入する列の数 (>0)"
+				],
+				[
+					"insertAfter",
+					"Integer",
+					"->",
+					"`vk table insert before` または `vk table insert after`"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みの *column* で指定した列インデックスに、1つまたは *count* で指定した数の空の列を挿入します"
+		},
+		"VP INSERT TABLE ROWS": {
+			"Syntax": "**VP INSERT TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *insertAfter* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"行の挿入場所を指定する表組み内のインデックス"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"挿入する行の数 (>0)"
+				],
+				[
+					"insertAfter",
+					"Integer",
+					"->",
+					"`vk table insert before` または `vk table insert after`"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みの *row* で指定した行インデックスに、1つまたは *count* で指定した数の空の行を挿入します"
+		},
+		"VP MOVE CELLS": {
+			"Syntax": "**VP MOVE CELLS** ( *originRange* : Object ; *targetRange* : Object ; *options* : Object )",
+			"Params": [
+				[
+					"originRange",
+					"Object",
+					"->",
+					"移動 (コピー) 元のセルレンジ"
+				],
+				[
+					"targetRange",
+					"Object",
+					"->",
+					"値・書式・フォーミュラの移動 (コピー) 先レンジ"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"追加のオプション"
+				]
+			],
+			"Summary": "*originRange* の値・書式・フォーミュラを *targetRange* に移動またはコピーします"
+		},
+		"VP Name": {
+			"Syntax": "**VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"rangeName",
+					"Text",
+					"->",
+					"既存のレンジ名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"レンジの場所 (省略時はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"rangeName のレンジオブジェクト"
+				]
+			],
+			"Summary": "命名レンジを参照する新しいレンジオブジェクトを返します"
+		},
+		"VP NEW DOCUMENT": {
+			"Syntax": "**VP NEW DOCUMENT** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				]
+			],
+			"Summary": "*vpAreaName* で指定した 4D View Pro エリアに、新規のデフォルトドキュメントを読み込んで表示させます"
+		},
+		"VP Object to font": {
+			"Syntax": "**VP Object to font** ( *fontObj* : Object ) : Text",
+			"Params": [
+				[
+					"fontObj",
+					"Object",
+					"->",
+					"フォントオブジェクト"
+				],
+				[
+					"戻り値",
+					"Text",
+					"<-",
+					"フォントのショートハンド文字列"
+				]
+			],
+			"Summary": "*fontObj* 引数で指定したフォントオブジェクトからフォントのショートハンド文字列を返します"
+		},
+		"PASTE FROM OBJECT": {
+			"Syntax": "**VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"セルレンジオブジェクト"
+				],
+				[
+					"dataObject",
+					"Object",
+					"->",
+					"ペーストするデータを格納したオブジェクト"
+				],
+				[
+					"options",
+					"Longint",
+					"->",
+					"ペーストする内容を指定します"
+				]
+			],
+			"Summary": "*dataObject* のコンテンツ・スタイル・フォーミュラを *rangeObj* セルレンジオブジェクトにペーストします"
+		},
+		"VP PRINT": {
+			"Syntax": "**VP PRINT** ( *vpAreaName* : Text  { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリアを印刷する印刷ダイアログウィンドウを開きます"
+		},
+		"VP RECOMPUTE FORMULAS": {
+			"Syntax": "**VP RECOMPUTE FORMULAS** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリアの全フォーミュラを即座に評価します"
+		},
+		"VP REMOVE NAME": {
+			"Syntax": "**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"削除する命名レンジまたは命名フォーミュラの名前"
+				],
+				[
+					"scope",
+					"Integer",
+					"->",
+					"ターゲットのスコープ (デフォルト=カレントシート)"
+				]
+			],
+			"Summary": "*name* の命名レンジまたは命名フォーミュラを、定義された *scope* のスコープから削除します"
+		},
+		"VP REMOVE SHEET": {
+			"Syntax": "**VP REMOVE SHEET** ( *vpAreaName* : Text ; *index*: Integer )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"index",
+					"Integer",
+					"->",
+					"削除するシートのインデックス"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリアにロードされているドキュメントから、*index* 引数で指定したインデックスのシートを削除します"
+		},
+		"VP REMOVE SPAN": {
+			"Syntax": "**VP REMOVE SPAN** ( *rangeObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* で指定したレンジ内のセル結合を解除します"
+		},
+		"VP REMOVE STYLESHEET": {
+			"Syntax": "**VP REMOVE STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"styleName",
+					"Text",
+					"->",
+					"削除するスタイルの名前"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリアから、*styleName* で指定したスタイルシートを削除します"
+		},
+		"VP REMOVE TABLE": {
+			"Syntax": "**VP REMOVE TABLE** ( *vpAreaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro エリア名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"削除する表組みの名称"
+				],
+				[
+					"options",
+					"Integer",
+					"->",
+					"追加のオプション"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "表組みを削除します"
+		},
+		"VP REMOVE TABLE COLUMNS": {
+			"Syntax": "**VP REMOVE TABLE COLUMNS** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *count* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"列の削除の開始場所を指定する表組み内のインデックス"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"削除する列の数 (>0)"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みの *column* で指定した列インデックスから、1つまたは *count* で指定した数の列を削除します"
+		},
+		"VP REMOVE TABLE ROWS": {
+			"Syntax": "**VP REMOVE TABLE ROWS** ( *vpAreaName* : Text ; *tableName* : Text ; *row* : Integer {; *count* : Integer {; *sheet* : Integer }}} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"行の削除の開始場所を指定する表組み内のインデックス"
+				],
+				[
+					"count",
+					"Text",
+					"->",
+					"削除する行の数 (>0)"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みの *row* で指定した行インデックスから、1つまたは *count* で指定した数の行を削除します"
+		},
+		"VP RESET SELECTION": {
+			"Syntax": "**VP RESET SELECTION** ( *vpAreaName* : Text { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "すべてのセル選択を解除し、その結果カレントセレクション (またはアクティブセル) がなくなります"
+		},
+		"VP RESIZE TABLE": {
+			"Syntax": "**VP RESIZE TABLE** ( *rangeObj* : Object; *tableName* : Text )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"表組みの新しいレンジ"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組み名"
+				]
+			],
+			"Summary": "*rangeObj* で指定したレンジの大きさに *tableName* で指定した表組みをリサイズします"
+		},
+		"VP RESUME COMPUTING": {
+			"Syntax": "**VP RESUME COMPUTING** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリア内の計算を再開します"
+		},
+		"VP Row": {
+			"Syntax": "**VP Row** ( *vpAreaName* : Text; *row* : Integer { ; *rowCount* : Integer { ; *sheet* : Integer } } ) : Object",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"row",
+					"Integer",
+					"->",
+					"行のインデックス"
+				],
+				[
+					"rowCount",
+					"Integer",
+					"->",
+					"行数"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				],
+				[
+					"戻り値",
+					"Object",
+					"<-",
+					"行のレンジオブジェクト"
+				]
+			],
+			"Summary": "特定の行、あるいは複数の行を参照する新しいレンジオブジェクトを返します"
+		},
+		"VP ROW AUTOFIT": {
+			"Syntax": "**VP ROW AUTOFIT** ( *rangeObj* : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数のレンジ内にある行を、そのコンテンツに応じて自動的にリサイズします"
+		},
+		"VP Run offscreen area": {
+			"Syntax": "**VP Run offscreen area** ( *parameters* : Object) : Mixed",
+			"Params": [
+				[
+					"parameters",
+					"Object",
+					"->",
+					"オフスクリーンエリアの属性を格納するオブジェクト"
+				],
+				[
+					"戻り値",
+					"Mixed",
+					"<-",
+					"`.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null"
+				]
+			],
+			"Summary": "メモリ内にオフスクリーンエリアを作成し、これを利用して 4D View Pro エリアのコマンドやファンクションを処理することができます"
+		},
+		"VP SET ACTIVE CELL": {
+			"Syntax": "**VP SET ACTIVE CELL** ( *rangeObj* : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				]
+			],
+			"Summary": "指定したセルをアクティブセルにします"
+		},
+		"VP SET ALLOWED METHODS": {
+			"Syntax": "**VP SET ALLOWED METHODS** ( *methodObj* : Object)",
+			"Params": [
+				[
+					"methodObj",
+					"Object",
+					"->",
+					"4D View Pro エリアでの実行を許可するメソッド"
+				]
+			],
+			"Summary": "4D View Pro フォーミュラから呼び出し可能なプロジェクトメソッドを指定します"
+		},
+		"VP SET BINDING PATH": {
+			"Syntax": "**VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"dataContextAttribute",
+					"Text",
+					"->",
+					"*rangeObj* にバインドする属性の名称"
+				]
+			],
+			"Summary": "*rangeObj* で指定したレンジに、シートのデータコンテキストの属性をバインドします"
+		},
+		"VP SET BOOLEAN VALUE": {
+			"Syntax": "**VP SET BOOLEAN VALUE** ( *rangeObj* : Object  ; *boolValue* : Boolean)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"boolValue",
+					"Boolean",
+					"->",
+					"設定するブール値"
+				]
+			],
+			"Summary": "指定のセルレンジにブール値を割り当てます"
+		},
+		"VP SET BORDER": {
+			"Syntax": "**VP SET BORDER** ( *rangeObj* : Object ; *borderStyleObj* : Object  ; *borderPosObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"borderStyleObj",
+					"Object",
+					"->",
+					"境界線スタイルを格納したオブジェクト"
+				],
+				[
+					"borderPosObj",
+					"Object",
+					"->",
+					"境界線の位置を格納したオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* のレンジに *borderStyleObj* および *borderPosObj* で定義される境界線スタイルを適用します"
+		},
+		"VP SET CELL STYLE": {
+			"Syntax": "**VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"styleObj",
+					"Object",
+					"->",
+					"スタイルオブジェクト"
+				]
+			],
+			"Summary": "*styleObj* に定義されているスタイルを、*rangeObj* で定義されたセルに適用します"
+		},
+		"VP SET COLUMN ATTRIBUTES": {
+			"Syntax": "**VP SET COLUMN ATTRIBUTES** ( *rangeObj* : Object  ; *propertyObj* : Object)",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"propertyObj",
+					"Object",
+					"->",
+					"カラムプロパティを格納したオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定したカラムに対して *propertyObj* 引数で定義されている属性を適用します"
+		},
+		"VP SET COLUMN COUNT": {
+			"Syntax": "**VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"columnCount",
+					"Integer",
+					"->",
+					"カラム数"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*vpAreaName* 引数内にあるカラムの総数を定義します"
+		},
+		"VP SET CURRENT SHEET": {
+			"Syntax": "**VP SET CURRENT SHEET** ( *vpAreaName* : Text ; *sheet* : Integer)",
+			"Params": [
+				[
+					"---",
+					"---",
+					"---",
+					"---",
+					"",
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名",
+					"",
+					"sheet",
+					"Integer",
+					"<-",
+					"Index of the new current sheet"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定した View Pro エリアのカレントシートを設定します"
+		},
+		"VP SET CUSTOM FUNCTIONS": {
+			"Syntax": "**VP SET CUSTOM FUNCTIONS** ( *vpAreaName* : Text ; *formulaObj* : Object  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"formulaObj",
+					"Object",
+					"->",
+					"フォーミュラオブジェクト"
+				]
+			],
+			"Summary": "4D View Pro フォーミュラから直接呼び出し可能な 4Dフォーミュラを指定します"
+		},
+		"VP SET DATA CONTEXT": {
+			"Syntax": "**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object } {; *sheet* : Integer} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object } {; *sheet* : Integer} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Object",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"dataObj",
+					"Object",
+					"->",
+					"データコンテキストに読み込むデータオブジェクト"
+				],
+				[
+					"dataColl",
+					"Object",
+					"->",
+					"データコンテキストに読み込むデータのコレクション"
+				],
+				[
+					"options",
+					"Object",
+					"->",
+					"追加のオプション"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス"
+				]
+			],
+			"Summary": "シートのデータコンテキストを設定します"
+		},
+		"VP SET DATE TIME VALUE": {
+			"Syntax": "**VP SET DATE TIME VALUE** ( *rangeObj* : Object ; *dateValue* : Date ; *timeValue* : Time {; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"dateValue",
+					"Date",
+					"->",
+					"設定する日付値"
+				],
+				[
+					"timeValue",
+					"Time",
+					"->",
+					"設定する時間値"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"値のフォーマット"
+				]
+			],
+			"Summary": "指定されたセルレンジに日付・時間値を割り当てます"
+		},
+		"VP SET DATE VALUE": {
+			"Syntax": "**VP SET DATE VALUE** ( *rangeObj* : Object ; *dateValue* : Date { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"dateValue",
+					"Date",
+					"->",
+					"設定する日付値"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"値のフォーマット"
+				]
+			],
+			"Summary": "指定されたセルレンジに日付値を割り当てます"
+		},
+		"VP SET DEFAULT STYLE": {
+			"Syntax": "**VP SET DEFAULT STYLE** ( *vpAreaName* : Text ; *styleObj* : Object { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"styleObj",
+					"Object",
+					"->",
+					"スタイルオブジェクト"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートインデックス (デフォルト=カレントシート)"
+				]
+			],
+			"Summary": "*sheet* で指定したシートに対して、*styleObj* 引数のスタイルをデフォルトスタイルとして定義します"
+		},
+		"VP SET FIELD": {
+			"Syntax": "**VP SET FIELD** ( *rangeObj* : Object ; *field* : Pointer { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"フィールド",
+					"ポインター",
+					"->",
+					"仮想ストラクチャーのフィールドへの参照"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"フィールドのフォーマット"
+				]
+			],
+			"Summary": "指定されたセルレンジに、4Dデータベースの仮想フィールドを割り当てます"
+		},
+		"VP SET FORMULA": {
+			"Syntax": "**VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"formula",
+					"Text",
+					"->",
+					"フォーミュラまたは 4Dメソッド"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"フィールドのフォーマット"
+				]
+			],
+			"Summary": "指定されたセルレンジにフォーミュラまたは 4Dメソッドを割り当てます"
+		},
+		"VP SET FORMULAS": {
+			"Syntax": "**VP SET FORMULAS** ( *rangeObj* : Object ; *formulasCol* : Collection )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"セルレンジオブジェクト"
+				],
+				[
+					"formulasCol",
+					"Collection",
+					"->",
+					"フォーミュラのコレクション"
+				]
+			],
+			"Summary": "指定のセルレンジから開始してフォーミュラのコレクションを割り当てていきます"
+		},
+		"VP SET FROZEN PANES": {
+			"Syntax": "**VP SET FROZEN PANES** ( *vpAreaName* : Text ; *paneObj* : Object { ; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"paneObj",
+					"Object",
+					"->",
+					"固定化されたカラムと行についての情報を格納したオブジェクト"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定した View Pro エリア内の、*paneObj* 引数のカラムと行の固定化ステータスを設定します"
+		},
+		"VP SET NUM VALUE": {
+			"Syntax": "**VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"numberValue",
+					"Number",
+					"->",
+					"設定する数値"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"値のフォーマット"
+				]
+			],
+			"Summary": "指定のセルレンジに数値を割り当てます"
+		},
+		"VP SET PRINT INFO": {
+			"Syntax": "**VP SET PRINT INFO** ( *vpAreaName* : Text ; *printInfo* : Object { ; *sheet* : Integer }  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro エリア名"
+				],
+				[
+					"printInfo",
+					"Object",
+					"->",
+					"印刷属性を格納するオブジェクト"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリアを印刷する際に使用する属性を定義します"
+		},
+		"VP SET ROW ATTRIBUTES": {
+			"Syntax": "**VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"行レンジ"
+				],
+				[
+					"propertyObj",
+					"Object",
+					"->",
+					"行のプロパティを格納したオブジェクト"
+				]
+			],
+			"Summary": "*rangeObj* 引数で指定した行に対して *propertyObj* 引数で定義されている属性を適用します"
+		},
+		"VP SET ROW COUNT": {
+			"Syntax": "**VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"rowCount",
+					"Integer",
+					"->",
+					"行数"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*vpAreaName* 引数内にある行の総数を定義します"
+		},
+		"VP SET SELECTION": {
+			"Syntax": "**VP SET SELECTION** ( *rangeObj* : Object  )",
+			"Params": [
+				[
+					"",
+					"",
+					"",
+					""
+				],
+				[],
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"複数セルのレンジオブジェクト"
+				]
+			],
+			"Summary": "指定のセルレンジを選択し、その先頭セルをアクティブセルに設定します"
+		},
+		"VP SET SHEET COUNT": {
+			"Syntax": "**VP SET SHEET COUNT** ( *vpAreaName* : Text ; *number* : Integer  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"number",
+					"Integer",
+					"->",
+					"シートの数"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定した View Pro エリア内のシートの数を設定します"
+		},
+		"VP SET SHEET NAME": {
+			"Syntax": "**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"name",
+					"Text",
+					"->",
+					"シートの新しい名称"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"名称変更するシートのインデックス"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定した View Pro エリア内にロードされているドキュメント内のシート名を変更します"
+		},
+		"VP SET SHEET OPTIONS": {
+			"Syntax": "**VP SET SHEET OPTIONS** ( *vpAreaName* : Text; *sheetOptions* : Object { ; *sheet* : Integer}  )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Object",
+					"->",
+					"4D View Pro エリア名"
+				],
+				[
+					"sheetOptions",
+					"Object",
+					"->",
+					"設定するシートオプション"
+				],
+				[
+					"sheet",
+					"Object",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で名前を指定した View Pro エリアの様々なシートオプションを設定します"
+		},
+		"VP SET SHOW PRINT LINES": {
+			"Syntax": "**VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; *sheet* : Integer} )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"visible",
+					"Boolean",
+					"->",
+					"印刷線を表示する場合は true (デフォルト)、非表示の場合は false"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "スプレッドシート内で印刷プレビュー線を表示するかどうかを設定します"
+		},
+		"VP SET TABLE COLUMN ATTRIBUTES": {
+			"Syntax": "**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"tableName",
+					"Text",
+					"->",
+					"表組みの名称"
+				],
+				[
+					"column",
+					"Integer",
+					"->",
+					"表の列のインデックス"
+				],
+				[
+					"attributes",
+					"Object",
+					"->",
+					"*column* の列に適用する属性"
+				],
+				[
+					"sheet",
+					"Integer",
+					"->",
+					"シートのインデックス (省略した場合はカレントシート)"
+				]
+			],
+			"Summary": "*tableName* で指定した表組みの *column* でインデックスを指定した列に *attributes* の属性を適用します"
+		},
+		"VP SET TEXT VALUE": {
+			"Syntax": "**VP SET TEXT VALUE** ( *rangeObj* : Object ; *textValue* : Text { ; *formatPattern* : Text }  )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"textValue",
+					"Text",
+					"->",
+					"設定するテキスト値"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"値のフォーマット"
+				]
+			],
+			"Summary": "指定されたセルレンジにテキスト値を割り当てます"
+		},
+		"VP SET TIME VALUE": {
+			"Syntax": "**VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"timeValue",
+					"Text",
+					"->",
+					"設定する時間値"
+				],
+				[
+					"formatPattern",
+					"Text",
+					"->",
+					"値のフォーマット"
+				]
+			],
+			"Summary": "指定されたセルレンジに時間値を割り当てます"
+		},
+		"VP SET VALUE": {
+			"Syntax": "**VP SET VALUE** ( *rangeObj* : Object ; *valueObj* : Object )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"valueObj",
+					"Object",
+					"->",
+					"セルの値とフォーマットオプション"
+				]
+			],
+			"Summary": "指定されたセルレンジに値を割り当てます"
+		},
+		"VP SET VALUES": {
+			"Syntax": "**VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[
+					"valuesCol",
+					"Collection",
+					"->",
+					"値のコレクション"
+				]
+			],
+			"Summary": "指定のセルレンジから開始して値のコレクションを割り当てていきます"
+		},
+		"VP SET WORKBOOK OPTIONS": {
+			"Syntax": "**VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				],
+				[
+					"optionObj",
+					"Object",
+					"->",
+					"設定するワークブックオプションを格納したオブジェクト"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定した View Pro エリアのワークブックオプションを設定します"
+		},
+		"VP SHOW CELL": {
+			"Syntax": "**VP SHOW CELL** ( *rangeObj* : Object { ; *vPos* : Integer; *hPos* : Integer } )",
+			"Params": [
+				[
+					"rangeObj",
+					"Object",
+					"->",
+					"レンジオブジェクト"
+				],
+				[],
+				[
+					"vPos",
+					"Integer",
+					"->",
+					"セルあるいは行の縦方向の表示位置",
+					"",
+					"hPos",
+					"Integer",
+					"->",
+					"セルあるいはカラムの横方向の表示位置"
+				]
+			],
+			"Summary": "*rangeObj* で指定したレンジの表示位置を変更します"
+		},
+		"VP SUSPEND COMPUTING": {
+			"Syntax": "**VP SUSPEND COMPUTING** ( *vpAreaName* : Text )",
+			"Params": [
+				[
+					"vpAreaName",
+					"Text",
+					"->",
+					"4D View Pro フォームオブジェクト名"
+				]
+			],
+			"Summary": "*vpAreaName* 引数で指定したエリア内の計算をすべて停止します"
+		}
+	},
+	"File": {
+		"_inheritedFrom_": "Document"
+	},
+	"Folder": {
+		"_inheritedFrom_": "Directory"
+	},
+	"ZipFile": {
+		"_inheritedFrom_": "Document"
+	},
+	"ZipFolder": {
+		"_inheritedFrom_": "Directory"
+	},
+	"SMTPTransporter": {
+		"_inheritedFrom_": "Transporter"
+	},
+	"POP3Transporter": {
+		"_inheritedFrom_": "Transporter"
+	},
+	"IMAPTransporter": {
+		"_inheritedFrom_": "Transporter"
+	}
+}

@@ -265,6 +265,14 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 <!-- REF #HTTPRequestClass.response.Desc -->
 ## .response
 
+<details><summary>History</summary>
+
+| Version | Changes                                                        |
+| ------- | -------------------------------------------------------------- |
+| v19 R8  | `.headers` returns lowercase names. New `.rawHeaders` property |
+
+</details>
+
 <!-- REF #HTTPRequestClass.response.Syntax -->**response** : Object<!-- END REF -->
 
 #### Beschreibung
@@ -273,12 +281,13 @@ The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary --
 
 A `response` object is a non-sharable object. It provides the following properties:
 
-| Property    | Typ     | Beschreibung                                                                                                                                                            |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Body of the response. The type of the message is defined according to the [`dataType`](#datatype) property. Undefined if the body has not been received yet             |
-| .headers    | Objekt  | Headers of the response. `headers.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet. |
-| .status     | Zahl    | Status code of the response                                                                                                                                             |
-| .statusText | Text    | Message explaining the status code                                                                                                                                      |
+| Property    | Typ     | Beschreibung                                                                                                                                                                                                                                       |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | Body of the response. The type of the message is defined according to the [`dataType`](#datatype) property. Undefined if the body has not been received yet                                                                                        |
+| .headers    | Objekt  | Headers of the response. Header names are returned in lowercase. `<headername>.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet.                         |
+| .status     | Zahl    | Status code of the response                                                                                                                                                                                                                        |
+| .statusText | Text    | Message explaining the status code                                                                                                                                                                                                                 |
+| .rawHeaders | Objekt  | Headers of the response. Header names are returned untouched (with their original case). `<headerName>.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet. |
 
 <!-- END REF -->
 
