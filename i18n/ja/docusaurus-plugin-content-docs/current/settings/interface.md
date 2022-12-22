@@ -19,19 +19,33 @@ title: インターフェースページ
 4D が実行されているプラットフォームによって、デフォルトのフォントとサイズは異なります。
 
 > このプロパティは 4D の以下の部分にも影響します: <li>エクスプローラーの特定のプレビューエリア</li><li>フォームエディターのルーラー</li>
+### Display Windows
+
 他のオプションでは、アプリケーションモードでのさまざまなウィンドウの表示を設定します。
 
 -   **スプラッシュスクリーン**: このオプションが選択解除されていると、アプリケーションモードにおいて、[カレントメニューバーのスプラッシュスクリーン](Menus/bars.md#スプラッシュスクリーン) は表示されません。 このウィンドウを非表示にした場合、ウィンドウの表示は、たとえば `On Startup` データベースメソッドによってプログラムで管理しなければなりません。
 
 -   **フラッシュの進捗状況**: このオプションがチェックされていると、キャッシュデータがフラッシュされる際、4D は画面左下にウィンドウを表示します。 この処理はユーザー操作を一時的にブロックするため、ウィンドウを表示することでフラッシュがおこなわれていることをユーザーに通知することができます。
 
-    > **設定 ＞ データベース ＞ メモリ** ページで [キャッシュフラッシュの周期](database.md#メモリページ) を設定できます。
+:::note
+
+**設定 ＞ データベース ＞ メモリ** ページで [キャッシュフラッシュの周期](database.md#メモリページ) を設定できます。
+
+:::
 
 -   **印刷の進捗状況**: 印刷時の印刷進捗状況を表示するダイアログを有効または無効にします。
 
--   **WindowsでSDIモードを使用する**: このオプションが選択されていると、対応している環境で組み込みアプリが実行された場合に、4D は自動で SDIモード (Single-Document Interface) を有効にします。
+-   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
 
-    > このオプションは macOS でも有効にできますが、同プラットフォーム上で実行の際には無視されます。
+    ![](../assets/en/settings/sdi-mdi.png)
+
+:::note
+
+このオプションは macOS でも有効にできますが、同プラットフォーム上で実行の際には無視されます。
+
+:::
+
+
 
 ### アピアランス
 
