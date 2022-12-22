@@ -40,4 +40,10 @@ To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X
 
 4D displays a preview of the menu bar as well as the splash screen. You can scroll down the menus and sub-menus to preview their contents. However, these menus are not active. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
 
+:::info
 
+If the **Use SDI mode on Windows** option is selected in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows), the **Test Application** menu allows you to test your application in [SDI or MDI mode](sdi/md) on Windows:
+
+![](../assets/en/settings/sdi-mdi.png)
+
+:::
