@@ -4,25 +4,37 @@ title: Mode SDI bajo Windows
 ---
 
 
-En Windows, los desarrolladores 4D pueden configurar sus aplicaciones fusionadas 4D para que funcionen como aplicaciones SDI (Single-Document Interface). En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
+On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
 
-> El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las aplicaciones de Windows y las opciones relacionadas se ignoran en macOS.
+|
+
+El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las aplicaciones de Windows y las opciones relacionadas se ignoran en macOS.
+
+:::
 
 ## Disponibilidad del modo SDI
 
-El modo SDI sólo está disponible en el siguiente entorno de ejecución:
+The SDI mode is available in the following execution environments only:
 
 - Windows
-- Aplicación 4D fusionada, monopuesto o cliente
+- Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
+- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
 
 ## Activación del modo SDI
 
-La activación y el uso del modo SDI en su aplicación requieren los siguientes pasos:
+To enable the SDI mode in your application, just check the **Use SDI mode on Windows** option in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows).
 
-1. Seleccione la opción **Utilizar el modo SDI en Windows** en la página "Interfaz" de la caja de diálogo de las Propiedades.
-2. Crear una aplicación fusionada (monopuesto y/o aplicación cliente).
+Once enabled, to actually run your application in SDI mode, you can either:
 
-Entonces, cuando se ejecute en un contexto soportado (ver arriba), la aplicación fusionada funcionará automáticamente en modo SDI.
+- build a merged application (standalone and/or client application) and execute it on Windows, or
+- select **Test Application in SDI Mode** from the **Run** menu on Windows to test the development.
+
+|
+
+Because the development environment is executed in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+
+:::
+
 
 ## Gestión de aplicaciones en modo SDI
 
@@ -38,10 +50,14 @@ Los menús se añaden sobre las ventanas sin modificar el tamaño de su contenid
 
 Así, las ventanas pueden utilizarse en los modos MDI o SDI sin tener que recalcular la posición de los objetos.
 
-#### Sobre la pantalla de inicio
+#### Pantalla de bienvenida
 
-- Si se seleccionó la opción de interfaz **Pantalla de bienvenida** en las Propiedades, la ventana de bienvenida contendrá los menús que se habrían mostrado en la ventana MDI. Tenga en cuenta también que al cerrar la ventana de la pantalla de inicio se saldrá de la aplicación, al igual que en el modo MDI.
+- If the **Splash screen** interface option was [selected in the Settings](../settings/interface.md#display-windows), the splash window will contain any menus that would have been displayed in the MDI window. Tenga en cuenta también que al cerrar la ventana de la pantalla de inicio se saldrá de la aplicación, al igual que en el modo MDI.
 - Si no se ha seleccionado la opción de pantalla de bienvenida, los menús se mostrarán sólo en las ventanas abiertas, según las elecciones del desarrollador.
+
+### Debugger
+
+When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode.
 
 ### Salida automática
 
@@ -52,9 +68,14 @@ Para manejar este caso, las aplicaciones 4D ejecutadas en modo SDI incluyen un m
 - el usuario no puede seguir interactuando con la aplicación
 - no hay procesos de usuario en curso
 - Los procesos 4D o workers están esperando un evento
-- el servidor web no se ha lanzado.
+- the Web server is not started
+- the [WebAdmin server](../Admin/webAdmin.md) is not started.
 
-> Cuando se llama a un menú con una acción estándar asociada *salir*, la aplicación sale y se cierran todas las ventanas, sea cual sea el lugar desde el que se llamó al menú.
+:::note
+
+Cuando se llama a un menú con una acción estándar asociada *salir*, la aplicación sale y se cierran todas las ventanas, sea cual sea el lugar desde el que se llamó al menú.
+
+:::
 
 ## Lenguaje
 
@@ -70,3 +91,9 @@ Aunque es manejado de forma transparente por 4D, el modo SDI introduce pequeñas
 | `GET MOUSE`                       | Las coordenadas globales son relativas a la pantalla                                                                                                                                                                                                                                                                   |
 | `GET WINDOW RECT`                 | Cuando se pasa -1 en el parámetro ventana, el comando devuelve 0;0;0;0                                                                                                                                                                                                                                                 |
 | `On Drop database method`         | No soportado                                                                                                                                                                                                                                                                                                           |
+
+|
+
+You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+
+:::
