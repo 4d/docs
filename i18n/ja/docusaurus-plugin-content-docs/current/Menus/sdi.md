@@ -4,7 +4,7 @@ title: Windows での SDIモード
 ---
 
 
-On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. SDIアプリケーションでは、それぞれのウィンドウが互いに独立し、それぞれが独自のメニューバーを持つことができます。 SDIアプリケーションは MDI (マルチドキュメントインターフェース) に対する概念で、MDI ではすべてのウィンドウが一つのメインウィンドウの中に含まれ、それに依存した作りになっています。
+Windows において、組みこみ 4Dアプリケーションを SDI (シングルドキュメントインターフェース) アプリケーションとして設定しテストすることができます。 SDIアプリケーションでは、それぞれのウィンドウが互いに独立し、それぞれが独自のメニューバーを持つことができます。 SDIアプリケーションは MDI (マルチドキュメントインターフェース) に対する概念で、MDI ではすべてのウィンドウが一つのメインウィンドウの中に含まれ、それに依存した作りになっています。
 
 :::info
 
@@ -14,19 +14,19 @@ SDI/MDI という概念は macOS には存在しません。 この機能は Win
 
 ## SDIモード利用条件
 
-The SDI mode is available in the following execution environments only:
+SDIモードは以下の実行環境に限り利用可能です:
 
 - Windows
-- Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
+- 組み込みの [スタンドアロン](../Desktop/building#スタンドアロンアプリケーションをビルド) または [クライアント](../Desktop/building#クライアントアプリケーションをビルド) 4Dアプリケーション
 - [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
 
 ## SDIモードの有効化
 
-To enable the SDI mode in your application, just check the **Use SDI mode on Windows** option in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows).
+アプリケーションで SDIモードを有効にするには、[ストラクチャー設定ダイアログボックスの "インターフェース" ページ](../settings/interface#ウィンドウの表示) 内にある **WindowsでSDIモードを使用する** オプションがチェックするだけです。
 
-Once enabled, to actually run your application in SDI mode, you can either:
+有効化した後、アプリケーションを実際に SDIモードで実行するには、次のいずれかの方法があります:
 
-- build a merged application (standalone and/or client application) and execute it on Windows, or
+- 組み込みアプリケーション (スタンドアロンまたはクライアントアプリケーション) をビルドし、Windows で実行します。
 - select **Test Application in SDI Mode** from the **Run** menu on Windows to test the development.
 
 :::info
@@ -52,12 +52,12 @@ SDIモードでは、同プロセス中に開かれたすべてのドキュメ�
 
 #### スプラッシュスクリーン
 
-- If the **Splash screen** interface option was [selected in the Settings](../settings/interface.md#display-windows), the splash window will contain any menus that would have been displayed in the MDI window. MDIモード同様、スプラッシュスクリーンを閉じるとアプリケーションを終了することになるという点に注意してください。
+- [ストラクチャー設定](../settings/interface#ウィンドウの表示) において **スプラッシュスクリーン** インターフェースオプションが選択されていた場合、スプラッシュウィンドウは、MDIウィンドウであれば表示されていたメニューをすべて格納します。 MDIモード同様、スプラッシュスクリーンを閉じるとアプリケーションを終了することになるという点に注意してください。
 - スプラッシュスクリーンオプションが選択されていなかった場合、メニューは開かれているウィンドウにおいて、プログラマーの選択に応じて表示されます。
 
 ### デバッガー
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode.
+SDIモードで表示されている場合、[デバッガーウィンドウ](../Debugging/debugger.md) には [編集ボタン](../Debugging/debugger.md#ツールバーボタン) がありません。これは、開発環境に切り替えるにあたって実行を中断し、MDIモードでアプリケーションを再起動する必要があるためです。
 
 ### 自動終了
 
@@ -68,8 +68,8 @@ MDIモードで実行時、ユーザーによってアプリケーションウ�
 - ユーザーがこれ以上アプリケーションとやりとりすることができない
 - 生きているユーザープロセスがない
 - 4Dプロセスあるいはワーカープロセスはイベント待機中である
-- the Web server is not started
-- the [WebAdmin server](../Admin/webAdmin.md) is not started.
+- Webサーバーが開始されていない
+- [WebAdmin](../Admin/webAdmin.md) サーバーが開始されていない
 
 :::note
 
@@ -94,6 +94,6 @@ MDIモードで実行時、ユーザーによってアプリケーションウ�
 
 :::info
 
-You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+[**Get application info**](https://doc.4d.com/4dv19R/help/command/ja/page1599.html) コマンドを使用すると、Windows で現在実行中のモードを確認することができます。
 
 :::
