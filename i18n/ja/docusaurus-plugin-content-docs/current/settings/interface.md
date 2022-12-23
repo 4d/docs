@@ -19,7 +19,7 @@ title: インターフェースページ
 4D が実行されているプラットフォームによって、デフォルトのフォントとサイズは異なります。
 
 > このプロパティは 4D の以下の部分にも影響します: <li>エクスプローラーの特定のプレビューエリア</li><li>フォームエディターのルーラー</li>
-### Display Windows
+### ウィンドウの表示
 
 他のオプションでは、アプリケーションモードでのさまざまなウィンドウの表示を設定します。
 
@@ -35,7 +35,7 @@ title: インターフェースページ
 
 -   **印刷の進捗状況**: 印刷時の印刷進捗状況を表示するダイアログを有効または無効にします。
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
+-   **WindowsでSDIモードを使用する**: このオプションが選択されていると、[対応している環境](../Menus/sdi.md#SDIモード利用条件) で組み込みアプリが実行された場合に、4D は自動で [SDIモード (Single-Document Interface)](../Menus/sdi.md) を有効にします。 このオプションを選択すると、Windows では、4D メニューバーの **実行** メニューからアプリケーションの実行モードが選択できます:
 
     ![](../assets/en/settings/sdi-mdi.png)
 
