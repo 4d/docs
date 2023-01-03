@@ -309,7 +309,7 @@ Class extends <ParentClass>
 
 クラス継承は次のルールに沿っている必要があります:
 
-- ユーザークラスはビルトインクラスを継承できません (例外は 4D.Object で、すべてのユーザークラスにデフォルトで継承されます)
+- A user class cannot extend a built-in class (except 4D.Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
 - ユーザークラスは、別のプロジェクトやコンポーネントのユーザークラスを継承できません。
 - ユーザークラスは、自身を継承することはできません。
 - 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。
@@ -323,19 +323,20 @@ Class extends <ParentClass>
 `Polygon` クラスを継承した `Square` クラスを作成します。
 
 ```4d
-// クラス: Square
+//Class: Square
 
-// パス: Classes/Square.4dm 
+//path: Classes/Square.4dm 
 
 Class extends Polygon
 
+
 Class constructor ($side : Integer)
 
- // 親クラスのコンストラクターを呼び出します
- // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
+ // It calls the parent class's constructor with lengths
+ // provided for the Polygon's width and height
  Super($side;$side)
- // 派生クラスにおいては、'This' を使用するより先に
- // Super を呼び出しておく必要があります
+ // In derived classes, Super must be called before you
+ // can use 'This'
  This.name:="Square"
 
  Function getArea()
