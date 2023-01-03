@@ -206,7 +206,7 @@ In the application code, class functions are called as member methods of the obj
 - use of a "4D.Function" class member method:
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
-
+ 
 > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
 >
 > - the compiler does not generate any error (which is different compared to regular methods),
@@ -404,7 +404,7 @@ The `Class extends` keyword is used in class declaration to create a user class 
 
 Class extension must respect the following rules:
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
+- A user class cannot extend a built-in class (except 4D.Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
 - A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
@@ -462,7 +462,7 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
 - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
-
+ 
 ```4d
 // inside myClass constructor
 var $text1; $text2 : Text
@@ -560,7 +560,7 @@ This -> Object
 ```
 
 |Parameter|Type||Description|  
-|---|---|---|---|
+|---|---|---|---| 
 |Result|object|<-|Current object|
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
