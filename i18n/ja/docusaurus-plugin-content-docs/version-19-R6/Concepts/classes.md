@@ -398,7 +398,7 @@ Class extends <ParentClass>
 
 クラス継承は次のルールに沿っている必要があります:
 
-- ユーザークラスはビルトインクラスを継承できません (例外は 4D.Object で、すべてのユーザークラスにデフォルトで継承されます)
+- A user class cannot extend a built-in class (except 4D.Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
 - ユーザークラスは、別のプロジェクトやコンポーネントのユーザークラスを継承できません。
 - ユーザークラスは、自身を継承することはできません。
 - 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。
