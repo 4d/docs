@@ -12,6 +12,7 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 
 - Listboxes with collection or entity selection datasources now support [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) column property.
+- ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
 - 4D View Pro:
     - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
@@ -154,7 +155,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 | -------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
 | SpreadJS | 15.2.5          | 19 R8         | 4D View Pro engine                                                                       |
 | CEF      | 106.0.27        | 19 R8         | Chromium 106.0.5249.103                                                                  |
-| OpenSSL  | 1.1.1n          | 19 R4         |                                                                                          |
+| OpenSSL  | 1.1.1s          | 19 R7         |                                                                                          |
 | libzip   | 1.7.3           | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
 | webKit   | WKWebView       | 19            |                                                                                          |
 | ICU      | 68.1            | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
