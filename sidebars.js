@@ -196,6 +196,7 @@ module.exports =
 						"ServerWindow/sql-server",
 						"ServerWindow/http-server",
 						"ServerWindow/real-time-monitor",
+						"ServerWindow/remote-admin",
 					],
 				},
 				{
