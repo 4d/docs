@@ -380,41 +380,45 @@ You want to know the number of encrypted tables in the current data file:
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
-<!-- REF #DataStoreClass.flushAndLock().Syntax -->**.flushAndLock()** : Boolean<!-- END REF -->
+<!-- REF #DataStoreClass.flushAndLock().Syntax -->**.flushAndLock()**<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if successful|<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
 
-The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes to perform write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example. 
+The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example. 
 
 :::info
 
-This function can only be called on the local datastore ([`ds`](#ds)). 
+This function can only be called:
+
+- on the local datastore ([`ds`](#ds)).
+- in client/server environment, on the server machine. 
 
 :::
 
-The `.flushAndLock()` function returns `True` if the datastore has been successfully locked for the other processes. 
- 
-Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
+Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked. 
 
-If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked. 
+When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
 
 The datastore is unlocked when:
 
 - the [`.unlock()`](#unlock) function is called in the same process, or
 - the process that called the `.flushAndLock()` function is killed.
 
-When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
+
+If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked. 
+
+An error is triggered if the `.flushAndLock()` function cannot be executed (e.g. it is run on a remote 4D), .
 
 
 :::caution
@@ -425,17 +429,14 @@ Other 4D features and services including [backup](../Backup/backup.md), [vss](ht
 
 #### Example
 
-You want to create a compressed archive of the data folder:
+You want to create an archive of the data folder:
 
 ```4d
 $dataFolder:=Folder(fk data folder)
-$zip:=Folder(fk database folder).file("Snapshot.zip")
 
-$result:=ds.flushAndLock()
-If ($result && ds.locked())
-	ZIP Create archive($dataFolder; $zip)
-	$result:=ds.unlock()
-End if 
+ds.flushAndLock()
+$dataFoldercopy:=$dataFolder.copyTo(fk documents folder+"/copyData/")
+ds.unlock()
 ```
 
 #### See also
@@ -709,7 +710,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
@@ -719,14 +720,14 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- REF #DataStoreClass.locked().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if successful|<!-- END REF -->
+|Result|Boolean|<-|True if locked|<!-- END REF -->
 
 
 #### Description
 
 The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->. 
 
-You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the datafile, for example.
+You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
 
 :::caution
 
@@ -1192,28 +1193,28 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
-<!-- REF #DataStoreClass.unlock().Syntax -->**.unlock()** : Boolean<!-- END REF -->
+<!-- REF #DataStoreClass.unlock().Syntax -->**.unlock()**<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.unlock().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if successful|<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
 
-The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the database, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function. 
+The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function. 
 
-If the current lock is correctly removed, the function returns `True`. If it was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore. 
+If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore. 
 
-The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise it returns `False` and the lock is not removed.
+The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
 
-If the `.unlock()` function is called in an unlocked datastore, it returns `False`.
+If the `.unlock()` function is called in an unlocked datastore, it does nothing.
 
 
 #### See also
