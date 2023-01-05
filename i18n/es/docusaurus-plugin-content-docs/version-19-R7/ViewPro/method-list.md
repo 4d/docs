@@ -4921,7 +4921,7 @@ El parámetro *dateValue* indica un valor de fecha que se asignará a *rangeObj*
 
 El parámetro *timeValue* indica un valor hora (expresado en segundos) que se asignará al *rangeObj*.
 
-The optional *formatPattern* defines a pattern for the *dateValue* and *timeValue* parameters. For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
+El parámetro opcional *formatPattern* define un modelo para los parámetros *dateValue* y *timeValue*. Para más información sobre los modelos y los caracteres de formato, consulte la sección [Formatos fecha y hora](configuring.md#date-and-time-formats).
 
 #### Ejemplo
 
@@ -4969,7 +4969,7 @@ El parámetro opcional *formatPattern* define un modelo para el parámetro *date
 | `vk pattern short date` | Formato ISO 8601 corto para la fecha    | "MM/dd/yyyy"                    |
 | `vk pattern year month` | Formato ISO 8601 para el mes y el año   | "yyyy MMMM"                     |
 
-For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
+Para más información sobre los modelos y los caracteres de formato, consulte la sección [Formatos fecha y hora](configuring.md#date-and-time-formats).
 
 #### Ejemplo
 
