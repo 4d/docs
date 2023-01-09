@@ -429,14 +429,22 @@ Other 4D features and services including [backup](../Backup/backup.md), [vss](ht
 
 #### Example
 
-You want to create an archive of the data folder:
+You want to create a copy of the data folder along with its current journal file:
 
 ```4d
-$dataFolder:=Folder(fk data folder)
+$destination:=Folder(fk documents folder).folder("Archive") 
+$destination.create()
 
-ds.flushAndLock()
-$dataFoldercopy:=$dataFolder.copyTo(fk documents folder+"/copyData/")
-ds.unlock()
+ds.flushAndLock() //Block write operations from other processes
+
+$dataFolder:=Folder(fk data folder) 
+$dataFolder.copyTo($destination) //Copy the data folder
+
+$oldJournalPath:=New log file //Close the journal and create a new one
+$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal.moveTo($destination) //Save the old journal with data
+
+ds.unlock() //Our copy is over, we can now unlock the datastore
 ```
 
 #### See also
