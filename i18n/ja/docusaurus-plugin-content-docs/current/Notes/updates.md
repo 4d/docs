@@ -10,7 +10,7 @@ title: リリースノート
 
 #### ハイライト
 
-
+- Error management methods can be installed for [global and component execution contexts](../Concepts/error-handling.md#scope-and-components).
 - コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
 - ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.

@@ -9,7 +9,12 @@ La gestión de errores responde a dos necesidades principales:
 
 - descubrir y corregir posibles errores y fallos en el código durante la fase de desarrollo,
 - detectar y recuperar errores inesperados en las aplicaciones desplegadas; en particular, puede sustituir los diálogos de error del sistema (disco lleno, archivo perdido, etc.) por su propia interfaz.
-> > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Este método evitaría la aparición de cajas de diálogo inesperadas en el servidor, y podría registrar los errores en un archivo específico para su posterior análisis.
+
+:::tip Good practice
+
+It is highly recommended to install a global error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine (if run with interface), and could log errors in a dedicated file for further analyses.
+
+:::
 
 
 ## Error o estado
@@ -21,52 +26,78 @@ Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de
 
 ## Instalación de un método de gestión de errores
 
-En 4D, todos los errores pueden ser captados y manejados en un método proyecto específico, el método **gestión de errores** (o **captura de errores**).
+In 4D, all errors can be caught and handled by specific project methods, named **error-handling** (or **error-catching**) methods.
 
-Este método proyecto se instala para el proceso actual y será llamado automáticamente para cualquier error que se produzca en el proceso, en modo interpretado o compilado. Para *instalar* este método proyecto, basta con llamar al comando `ON ERR CALL` con el nombre del método proyecto como parámetro. Por ejemplo:
+Once installed, error handlers are automatically called in interpreted or compiled mode in case of error in the 4D application or one of its components. A different error handler can be called depending on the execution context (see below).
+
+To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) command with the project method name and (optionnally) scope as parameters. Por ejemplo:
 
 ```4d
-ON ERR CALL("IO_ERRORS") //Instala el método de gestión de errores
+ON ERR CALL("IO_Errors";ek local) //Installs a local error-handling method
 ```
 
-Para dejar de detectar errores y devolver el control a 4D, llame a `ON ERR CALL` con una cadena vacía:
+To stop catching errors for an execution context and give back hand, call `ON ERR CALL` with an empty string:
+
 ```4d
-ON ERR CALL("") //devuelve el control a 4D
+ON ERR CALL("";ek local) //gives back control for the local process
 ```
 
-El comando `Method called on error` le permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
+The  [`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704.html) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
 
 ```4d
- $methCurrent:=Method called on error
- ON ERR CALL("NewMethod")
-  //Si no se puede abrir el documento, se genera un error
+ $methCurrent:=Method called on error(ek local)
+ ON ERR CALL("NewMethod";ek local)
+  //If the document cannot be opened, an error is generated
  $ref:=Open document("MyDocument")
-  //Reinstalación del método anterior
- ON ERR CALL($methCurrent)
+  //Reinstallation of previous method
+ ON ERR CALL($methCurrent;ek local)
 
 ```
 
 ### Alcance y componentes
 
-Se puede definir un único método de captura de errores para toda la aplicación o diferentes métodos por módulo de aplicación. Sin embargo, sólo se puede instalar un método por proceso.
+An error-handling method can be set for different execution contexts:
 
-Un método de gestión de errores instalado por el comando `ON ERR CALL` sólo se aplica únicamente a la aplicación en ejecución. En el caso de un error generado por un **componente**, no se llama al método `ON ERR CALL` de gestión de errores de la aplicación local, y viceversa.
+- for the **current process**- a local error handler will be only called for errors that occurred in the current process,
+- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context,
+- for the **components**- it will be called in the host for all errors that occurred in the components.
+
+Ejemplos:
+
+```4d
+ON ERR CALL("IO_Errors";ek local) //Installs a local error-handling method
+ON ERR CALL("globalHandler";ek global) //Installs a global error-handling method
+ON ERR CALL("componentHandler";ek errors from components) //Installs an error-handling method for components
+```
+
+You can install a global error handler that will serve as "fallback" and specific local error handlers for certain processes. A global error handler is also useful on the server to avoid error dialogs on the server when run with interface.
+
+Se puede definir un único método de captura de errores para toda la aplicación o diferentes métodos por módulo de aplicación. However, only one method can be installed per execution context.
+
+When an error occurs, only one method is called, even if several "concurrent" error handlers are installed:
+
+- if the error occurs in the current process, the local handler is called and NOT the global handler;
+- if the error occurs in a component and the component has its own error handler, the error handler of the component is called and NOT the "errors from components" handler of the host application.
 
 
 ### Manejo de errores dentro del método
 
-Dentro del método de error personalizado, tiene acceso a varias piezas de información que le ayudarán a identificar el error:
+Within a custom error method, you have access to several pieces of information that will help you identifying the error:
 
-- variables sistema (*):
+- dedicated system variables:
 
   - `Error` (entero largo): código de error
   - `Error method`(texto): nombre del método que ha provocado el error
   - `Error line` (entero largo): número de línea del método que ha provocado el error
   - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
 
-(*) 4D mantiene automáticamente una serie de variables llamadas **variables sistema**, que responden a diferentes necesidades. Consulte el *Manual del lenguaje de 4D*.
+|
 
-- el comando `GET LAST ERROR STACK` que devuelve información sobre la pila de errores actual de la aplicación 4D.
+4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
+
+:::
+
+- the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) command that returns a collection of the current stack of errors that occurred in the 4D application. You can also use the [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
 - el comando `Get call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
 
 
