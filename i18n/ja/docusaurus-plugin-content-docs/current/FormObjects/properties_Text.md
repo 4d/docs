@@ -287,25 +287,25 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 | unselectable   | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。 このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。 チェックボックスやリストといったコントロール類は引き続き稼働します。 この設定はリストボックスの選択モードが "なし" の場合には無視されます。 デフォルト値: false。 |
 | disabled       | boolean | 対応する行を無効化します。 このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。 テキストや、(チェックボックス、リストなどの) コントロール類は暗くなっているかグレーアウトされます。 デフォルト値: false。                                                                                                |
 
-The special "cell" property allows you to apply a set of properties to a single column:
+特別な "cell" プロパティを使用すると、特定の列にプロパティをまとめて適用することができます:
 
-| プロパティ名 |              |                | タイプ    | 説明                                                                                                                                                                              |
-| ------ | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cell   |              |                | object | Properties to apply to single column(s)                                                                                                                                         |
-|        | *columnName* |                | object | *columnName* is the object name of the list box column                                                                                                                          |
-|        |              | *propertyName* | string | "stroke", "fill", "fontStyle", "fontWeight", or "textDecoration" property (see above). **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。 |
+| プロパティ名 |              |                | タイプ    | 説明                                                                                                                                                                       |
+| ------ | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| cell   |              |                | object | 特定の列に適用するプロパティ                                                                                                                                                           |
+|        | *columnName* |                | object | *columnName* はリストボックス列のオブジェクト名です。                                                                                                                                        |
+|        |              | *propertyName* | string | "stroke", "fill", "fontStyle", "fontWeight", または "textDecoration" プロパティ (前述参照)。 **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。 |
 
 > このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
 
 **例題**
 
-In a *Color* project method, write the following code:
+*Color* プロジェクトメソッドに以下のコードを書きます:
 
 ```4d
-//Color method
-//Sets font color for certain rows and background color for Col2 and Col3 columns
+// Color メソッド
+// 特定の行に対してフォントカラーを、そしてカラム Col2 および Col3 に対して背景色を設定します:
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Col2";New object("fill";"black");\
     "Col3";New object("fill";"red"))
@@ -314,15 +314,15 @@ Else
 End if
 ```
 
-**Best Practice:** For optimization reasons, it is usually recommended to create the `meta.cell` object once in the form method:
+**ベストプラクティス:** 最適化のため、このような場合にはフォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
 
 ```4d
-  //form method
+  // フォームメソッド
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Col2";New object("fill";"black");\
         "Col3";New object("fill";"red"))  
- // you can also define other style sets  
+ // 他のスタイルセットも定義できます  
        Form.colStyle2:=New object("Col2";New object("fill";"green");\
         "Col3";New object("fontWeight";"bold"))  
  End case
@@ -335,7 +335,7 @@ End if
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle // より良いパフォーマンスのため、同じオブジェクトを再利用します
  Else
     Form.meta.stroke:="orange"
     Form.meta.cell:=Form.colStyle2
