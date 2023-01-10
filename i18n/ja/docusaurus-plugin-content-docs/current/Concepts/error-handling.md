@@ -10,9 +10,9 @@ title: エラー処理
 - 開発フェーズにおいて、問題となりうるコードのエラーやバグを発見して修正したい。
 - 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など) を独自のインターフェースに置換できます。
 
-:::tip Good practice
+:::tip グッドプラクティス
 
-It is highly recommended to install a global error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine (if run with interface), and could log errors in a dedicated file for further analyses.
+サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 このメソッドによって、サーバーマシンにおいて予期せぬダイアログが表示されることを防ぎ (インターフェース付きでサーバーが実行されている場合)、エラーの調査に必要なログを専用ファイルにとることができます。
 
 :::
 
@@ -26,9 +26,9 @@ It is highly recommended to install a global error-handling method on 4D Server,
 
 ## エラー処理メソッドの実装
 
-In 4D, all errors can be caught and handled by specific project methods, named **error-handling** (or **error-catching**) methods.
+4D においては、エラー専用のプロジェクトメソッドである **エラー処理** (または **エラーキャッチ**) メソッド内ですべてのエラーをキャッチし、処理することができます。
 
-Once installed, error handlers are automatically called in interpreted or compiled mode in case of error in the 4D application or one of its components. A different error handler can be called depending on the execution context (see below).
+インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 A different error handler can be called depending on the execution context (see below).
 
 To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) command with the project method name and (optionnally) scope as parameters. 例:
 
@@ -42,14 +42,14 @@ To stop catching errors for an execution context and give back hand, call `ON ER
 ON ERR CALL("";ek local) //gives back control for the local process
 ```
 
-The  [`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704.html) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](https://doc.4d.com/4dv19/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
  ON ERR CALL("NewMethod";ek local)
-  //If the document cannot be opened, an error is generated
+  // ドキュメントが開けない場合にエラーが生成されます
  $ref:=Open document("MyDocument")
-  //Reinstallation of previous method
+  // 前のエラー処理メソッドに戻します
  ON ERR CALL($methCurrent;ek local)
 
 ```
@@ -72,7 +72,7 @@ ON ERR CALL("componentHandler";ek errors from components) //Installs an error-ha
 
 You can install a global error handler that will serve as "fallback" and specific local error handlers for certain processes. A global error handler is also useful on the server to avoid error dialogs on the server when run with interface.
 
-アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 However, only one method can be installed per execution context.
+アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 ただし、一つの実行コンテキストにつき実装できるのは一つのメソッドのみです。
 
 When an error occurs, only one method is called, even if several "concurrent" error handlers are installed:
 
@@ -82,9 +82,9 @@ When an error occurs, only one method is called, even if several "concurrent" er
 
 ### メソッド内でのエラー処理
 
-Within a custom error method, you have access to several pieces of information that will help you identifying the error:
+独自に作成したエラー処理メソッド内では、エラーを調査するための情報がいくつか提供されています:
 
-- dedicated system variables:
+- 専用のシステム変数:
 
   - `Error` (倍長整数): エラーコード
   - `Error method` (テキスト): エラーを生成したメソッドの名称
@@ -93,7 +93,7 @@ Within a custom error method, you have access to several pieces of information t
 
 :::info
 
-4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
+4D は、いくつかの **システム変数** と呼ばれる専用の変数を自動的に管理しています。 *4D ランゲージリファレンスマニュアル* を参照ください。
 
 :::
 
