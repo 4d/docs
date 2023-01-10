@@ -150,9 +150,9 @@ The `roles.json` file syntax is the following:
 
 The `roles.json` file is parsed by 4D at startup. You need to restart the application if you want modifications in this file to be taken into account.
 
-In case of error(s) when parsing the `roles.json` file, 4D loads the project but disables the global access protection - this allows the developer to access the files and to fix the error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/Architecture.md#logs) and describes the error line(s). This file is automatically deleted when the `roles.json` file no longer contains error(s). 
+In case of error(s) when parsing the `roles.json` file, 4D loads the project but disables the global access protection - this allows the developer to access the files and to fix the error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). This file is automatically deleted when the `roles.json` file no longer contains error(s). 
 
-It is recommended to check at startup if a `Roles_Errors.json` file exists in the [Logs folder](../Project/Architecture.md#logs), which means that there was a parsing error and that accesses will not limited. You can write for example:
+It is recommended to check at startup if a `Roles_Errors.json` file exists in the [Logs folder](../Project/architecture.md#logs), which means that there was a parsing error and that accesses will not limited. You can write for example:
 
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
