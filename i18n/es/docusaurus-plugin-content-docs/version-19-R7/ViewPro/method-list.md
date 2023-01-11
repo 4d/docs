@@ -5084,7 +5084,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 El comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
-En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
+En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, la fórmula especificada se vinculará en cada celda.
 
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
