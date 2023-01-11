@@ -18,7 +18,7 @@ SDIモードは以下の実行環境に限り利用可能です:
 
 - Windows
 - 組み込みの [スタンドアロン](../Desktop/building#スタンドアロンアプリケーションをビルド) または [クライアント](../Desktop/building#クライアントアプリケーションをビルド) 4Dアプリケーション
-- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
+- **実行** メニューにて提供されている [** アプリケーションをテスト** 機能](bars.md#メニューバーのプレビュー) から利用可能です。
 
 ## SDIモードの有効化
 
@@ -27,11 +27,11 @@ SDIモードは以下の実行環境に限り利用可能です:
 有効化した後、アプリケーションを実際に SDIモードで実行するには、次のいずれかの方法があります:
 
 - 組み込みアプリケーション (スタンドアロンまたはクライアントアプリケーション) をビルドし、Windows で実行します。
-- select **Test Application in SDI Mode** from the **Run** menu on Windows to test the development.
+- Windows で **実行** メニューから **アプリケーションをテスト(SDIモード)** を選択します。
 
 :::info
 
-Because the development environment is executed in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+開発環境は MDI で実行されるため、**アプリケーションをテスト(SDIモード)** のメニューを選択して開発モードからランタイムモードに切り替えることは、アプリケーションを再起動することを意味します。
 
 :::
 
