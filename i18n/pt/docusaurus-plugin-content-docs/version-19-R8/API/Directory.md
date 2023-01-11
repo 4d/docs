@@ -129,7 +129,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.size` devolve <!-- REF #directory.hidden.Summary --> true se a pasta for definida como "escondida" ao nível do sistema<!-- END REF -->, e false de outra forma.
+A propriedade `.size` devolve <!-- REF #directory.hidden.Summary --> true se a pasta for definida como "escondida" ao nível do sistema<!-- END REF -->e false de outra forma.
 
 Essa propriedade é **apenas leitura**.
 
