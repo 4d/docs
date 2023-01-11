@@ -9,6 +9,10 @@ title: Glossaire
 
 
 
+## Action
+
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+
 ## Attribut
 
 Un attribut est la plus petite cellule de stockage dans une base de données relationnelle (voir aussi [Attribut relationnel](#relation-attribute)). Ne confondez pas les attributs de la dataclass et les attributs d'entités :
@@ -98,6 +102,7 @@ Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête e
 
 Une sélection d'entités contient :
 
+
 *   un ensemble de 0 à X références d'entités,
 *   une propriété length (toujours),
 *   les propriétés queryPlan et queryPath (si demandées lors de la requête).
@@ -151,6 +156,11 @@ En mode "verrouillage optimiste", les entités ne sont pas verrouillées explici
 
 Un "verrouillage pessimiste" signifie qu'une entité est verrouillée avant que l'on y accède, en utilisant la méthode entity.lock( ). Les autres process ne peuvent ni mettre à jour ni supprimer l'entité tant qu'elle n'est pas déverrouillée. Le langage 4D classique n'autorise que les verrouillages pessimistes. Voir "Verrouillage optimiste".
 
+
+## Privilege
+
+The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+
 ## Propriété
 
 Voir [Attribut](#attribute).
@@ -188,6 +198,17 @@ Les sélections d'entités peuvent faire référence à des entités relatives s
 ## Remote datastore
 
 Une base de données 4D ouverte sur 4D ou 4D Server (disponible via HTTP) et exposée en tant que ressource REST. Cette base de données peut être référencée localement en tant que Datastore à partir d'autres postes de travail, où un locaID lui est attribué. Le datastore distant peut être utilisé à travers les concepts ORDA (datastore, dataclass, sélection d'entités, etc.). Cette utilisation est soumise à un système de licence.
+
+
+## Ressource
+
+An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+
+
+## Role
+
+A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+
 
 ## Session
 
