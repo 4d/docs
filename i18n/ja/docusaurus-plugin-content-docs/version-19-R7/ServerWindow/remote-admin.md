@@ -1,26 +1,26 @@
 ---
 id: remote-admin
-title: Administration from Remote Machines
+title: リモートマシンからの管理
 ---
 
-You can administer the 4D Server application from a remote 4D (client machine) by opening the 4D Server administration window on the client machine.
+クライアントマシンで 4D Server 管理の画面を開くと、リモートから 4D Server アプリケーションを管理することができます。
 
-## Opening the administration window on a remote 4D machine
+## リモートの 4D マシンで管理画面を開く
 
-To open a server administration window from a client machine, you must be connected to the remote database as a Designer or Administrator. Otherwise, when you attempt to open the administration window, a privilege error (-9991) is generated.
+クライアントマシンからサーバー管理画面を開くには、デザイナーまたは管理者としてリモートデータベースに接続している必要があります。 そうでない場合、管理画面を開こうとすると、権限エラー (-9991) が発生します。
 
-This window can be accessed in one of two manners:
+この画面には、次のいずれかの方法でアクセスできます:
 
-- Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
-- Execute the `OPEN ADMINISTRATION WINDOW` command.
+- **ヘルプ** メニューから **管理画面** コマンドを選択するか、4Dツールバーの対応するボタンをクリックします。
+- `OPEN ADMINISTRATION WINDOW` コマンドを実行します。
 
-A [server administration window](monitor.md) then appears on the client machine.
+すると、[サーバー管理画面](monitor.md) がクライアントマシンに表示されます。
 
 
-## Specificities of administration via a remote 4D machine
+## リモート 4D マシンからの管理の特徴
 
-A client machine displaying the server administration window has access to all the available information and can act upon the processes and the starting/stopping of servers. When the server administration window is displayed on a remote machine, there are nevertheless certain restrictions and specific features concerning its operation:
+サーバー管理画面を表示しているクライアントマシンは、利用可能な情報すべてにアクセスでき、サーバーの起動/停止やプロセスの操作をおこなえます。 しかしながら、サーバー管理画面がリモートマシンに表示されている場合には、一定の制限と特有の機能に留意が必要です:
 
-- On the [Process page](processes.md), it is not possible to debug a user process (since the debug window appears on the server machine).
-- On the [Maintenance Page](maintenance.md), it is possible to execute actions that cause all the clients to be disconnected and the server to be restarted (compacting and restarting operations). In this case, the client machine requesting the operation is automatically reconnected on restarting.
-- On the [Maintenance Page](maintenance.md), the **View Report** buttons are renamed **Download Report** after the execution of a maintenance operation. These files are downloaded into the local database folder on the client machine before being displayed.
+- [プロセスページ](processes.md) では、ユーザープロセスをデバッグすることはできません (サーバーマシンにデバッグウィンドウが表示されるため)。
+- [メンテナンスページ](maintenance.md) では、すべてのクライアントを切断し、サーバーを再起動するアクション (データ圧縮およびサーバー再起動) を実行できます。 この場合、操作を実行したクライアントマシンは、再起動時に自動的に再接続されます。
+- [メンテナンスページ](maintenance.md) では、メンテナンス操作の実行後、**レポートの表示** ボタンが **レポートのダウンロード** という名前に変更されます。 これらのファイルは、クライアントマシンのローカルデータベースフォルダーにダウンロードされてから表示されます。
