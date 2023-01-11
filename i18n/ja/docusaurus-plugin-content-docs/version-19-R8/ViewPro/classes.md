@@ -300,7 +300,7 @@ title: クラス
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-`.firstRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->交互の行の奇数行のサイズを指定します<!-- END REF -->。 デフォルト = 1。
+`.firstRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->交互の列の奇数列のサイズを指定します<!-- END REF -->。 デフォルト = 1。
 
 ### .firstRowStripStyle
 
@@ -377,7 +377,7 @@ title: クラス
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-`.secondRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->交互の行の偶数行のサイズを指定します<!-- END REF -->。 デフォルト = 1。
+`.secondRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->交互の列の偶数列のサイズを指定します<!-- END REF -->。 デフォルト = 1。
 
 ### .secondRowStripStyle
 
