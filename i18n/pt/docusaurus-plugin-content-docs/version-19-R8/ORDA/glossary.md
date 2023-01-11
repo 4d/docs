@@ -9,6 +9,10 @@ title: Glossary
 
 
 
+## Ação
+
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+
 ## Atributo
 
 An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
@@ -98,6 +102,7 @@ An entity selection is an object. When querying the datastore, an entity selecti
 
 An entity selection contains:
 
+
 *   a set of 0 to X entity references,
 *   a length property (always),
 *   queryPlan and queryPath properties (if asked while querying).
@@ -151,6 +156,11 @@ In "optimistic lock" mode, entities are not locked explicitly before updating th
 
 A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 
+
+## Privilege
+
+The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+
 ## Propriedade
 
 See [Attribute](#attribute).
@@ -188,6 +198,17 @@ Entity selections may refer to related entities according to the relation attrib
 ## Remote datastore
 
 A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). This use is submitted to a licencing system.
+
+
+## Recurso
+
+An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+
+
+## Role
+
+A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+
 
 ## Session
 
