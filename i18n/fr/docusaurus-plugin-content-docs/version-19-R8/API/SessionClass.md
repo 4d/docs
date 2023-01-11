@@ -287,9 +287,10 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
-| ------- | ------------- |
-| v18 R6  | Ajout         |
+| Version | Modifications                        |
+| ------- | ------------------------------------ |
+| v19 R8  | Support of "roles" Settings property |
+| v18 R6  | Ajout                                |
 
 </details>
 
@@ -307,7 +308,7 @@ End if
 
 #### Description
 
-La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associe le(s) privilège(s) défini(s) dans le paramètre à la session<!-- END REF -->.
+La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->.
 
 - Dans le paramètre *privilege*, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
 
@@ -318,13 +319,18 @@ La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary --
 | Propriété  | Type               | Description                                           |
 | ---------- | ------------------ | ----------------------------------------------------- |
 | privileges | Text ou Collection | <li>Chaîne contenant un nom de privilège, ou</li><li>Collection de chaînes contenant des noms de privilèges</li>    |
+| roles      | Text ou Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li>   |
 | userName   | Text               | Nom d'utilisateur à associer à la session (optionnel) |
 
-Si la propriété `privileges` contient un nom de privilège invalide, il est ignoré.
+:::info
 
-> Dans l'implémentation actuelle, seul le privilège "WebAdmin" est disponible.
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
 
-Par défaut lorsqu'aucun privilège n'est associé à la session, la session est une [session Guest](#isguest).
+:::
+
+If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+
+By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
 
 La propriété [`userName`](#username) est accessible au niveau de l'objet session (lecture seulement).
 
