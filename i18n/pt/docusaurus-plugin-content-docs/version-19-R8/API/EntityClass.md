@@ -381,6 +381,7 @@ O objecto devolvido por `.drop( )` contém as seguintes propriedades:
 | `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista.<br/>**Associated statusText**: "Já bloqueado"                                                                                                                      |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>**Associado statusText**: "Outro erro"                                                            |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><li>**Associated statusText***: "O carimbo mudou"</li> |
+| `dk status wrong permission`              | 1     | The current privileges do not allow the drop of the entity. **Associated statusText**: "Permission Error"                                                                                                                      |
 
 #### Exemplo 1
 
@@ -1260,6 +1261,7 @@ Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` d
 | `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista. **Associated statusText**: "Já bloqueado"                                                                                                                                                                   |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                        |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br/>**Associated statusText**: "Stamp has changed" |
+| `dk status wrong permission`              | 1     | The current privileges do not allow the save of the entity. **Associated statusText**: "Permission Error"                                                                                                                                                         |
 
 #### Exemplo 1
 
