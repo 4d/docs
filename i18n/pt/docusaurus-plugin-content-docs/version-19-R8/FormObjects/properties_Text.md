@@ -120,9 +120,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis            |
-| ---------- | ------------- | ---------------------------- |
-| fontFamily | string        | Nome da família da fonte CSS |
+| Nome       | Tipo de dados | Valores possíveis    |
+| ---------- | ------------- | -------------------- |
+| fontFamily | string        | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objectos suportados
@@ -227,7 +227,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
