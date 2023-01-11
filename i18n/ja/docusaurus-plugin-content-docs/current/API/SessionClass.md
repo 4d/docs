@@ -289,9 +289,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R6 | 追加 |
+| バージョン  | 内容                                   |
+| ------ | ------------------------------------ |
+| v19 R8 | Support of "roles" Settings property |
+| v18 R6 | 追加                                   |
 
 </details>
 
@@ -309,7 +310,7 @@ End if
 
 #### 説明
 
-`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->引数として渡したアクセス権をセッションと紐づけます<!-- END REF -->。
+`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->。
 
 - *privilege* には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
 
@@ -317,16 +318,21 @@ End if
 
 - *settings* には、以下のプロパティを持つオブジェクトを渡します:
 
-| プロパティ      | タイプ                 | 説明                                                 |
-| ---------- | ------------------- | -------------------------------------------------- |
-| privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li> |
-| userName   | Text                | (任意) セッションと紐づけるユーザー名                               |
+| プロパティ      | タイプ                 | 説明                                                  |
+| ---------- | ------------------- | --------------------------------------------------- |
+| privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li>  |
+| roles      | Text または Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li> |
+| userName   | Text                | (任意) セッションと紐づけるユーザー名                                |
 
-無効なアクセス権名を含む場合、`privileges` プロパティは無視されます。
+:::info
 
-> 現在の実装では、"WebAdmin" アクセス権のみ利用可能です。
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
 
-セッションにアクセス権が紐づいていない場合、そのセッションはデフォルトで [ゲストセッション](#isguest) です。
+:::
+
+If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+
+By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
 
 [`userName`](#username) プロパティは Session オブジェクトレベルで利用可能です (読み取り専用)。
 

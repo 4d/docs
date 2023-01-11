@@ -328,6 +328,7 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 
 Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
+
 - "RSA" : paire de clés RSA, utilise `settings.size` pour la [.size](#size).
 - "ECDSA" : paire de clés Elliptic Curve Digital Signature Algorithm, utilise `settings.curve` pour la propriété [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.
 - "PEM" : Définition de paire de clés au format PEM, utilise `settings.pem` pour la propriété [.pem](#pem).

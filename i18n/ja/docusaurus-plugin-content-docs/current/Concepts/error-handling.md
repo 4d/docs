@@ -28,18 +28,18 @@ title: エラー処理
 
 4D においては、エラー専用のプロジェクトメソッドである **エラー処理** (または **エラーキャッチ**) メソッド内ですべてのエラーをキャッチし、処理することができます。
 
-インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 A different error handler can be called depending on the execution context (see below).
+インストールされたエラーハンドラーは、4Dアプリケーションまたはそのコンポーネントでエラーが発生した場合、インタープリターモードまたはコンパイル済モードで自動的に呼び出されます。 実行コンテキストに応じて、異なるエラーハンドラーを呼び出すこともできます (後述参照)。
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) command with the project method name and (optionnally) scope as parameters. 例:
+エラー処理用のプロジェクトメソッドを *実装* するには、[`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/ja/page155.html) コマンドをコールし、当該プロジェクトメソッド名と (任意で) スコープを引数として渡します。 例:
 
 ```4d
-ON ERR CALL("IO_Errors";ek local) //Installs a local error-handling method
+ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドを実装します
 ```
 
-To stop catching errors for an execution context and give back hand, call `ON ERR CALL` with an empty string:
+実行コンテキストにおいてエラーの検知を中止するには、空の文字列を指定して再度 `ON ERR CALL` コマンドをコールします:
 
 ```4d
-ON ERR CALL("";ek local) //gives back control for the local process
+ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
 [`Method called on error`](https://doc.4d.com/4dv19/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
@@ -56,28 +56,28 @@ ON ERR CALL("";ek local) //gives back control for the local process
 
 ### スコープとコンポーネント
 
-An error-handling method can be set for different execution contexts:
+エラー処理メソッドは、実行コンテキストごとに設定することができます:
 
-- for the **current process**- a local error handler will be only called for errors that occurred in the current process,
-- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context,
-- for the **components**- it will be called in the host for all errors that occurred in the components.
+- **カレントプロセス** - ローカルなエラーハンドラーはカレントプロセスで発生したエラーに対してのみ呼び出されます。
+- **アプリケーション全体** - グローバルなエラーハンドラーは、アプリケーションの実行コンテキストで発生したすべてのエラーに対して呼び出されます。
+- **コンポーネント** - コンポーネント内で発生したすべてのエラーに対して、ホスト内で呼び出されます。
 
 例:
 
 ```4d
-ON ERR CALL("IO_Errors";ek local) //Installs a local error-handling method
-ON ERR CALL("globalHandler";ek global) //Installs a global error-handling method
-ON ERR CALL("componentHandler";ek errors from components) //Installs an error-handling method for components
+ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッドをインストールします
+ON ERR CALL("globalHandler";ek global) // グローバルなエラー処理メソッドをインストールします
+ON ERR CALL("componentHandler";ek errors from components) // コンポーネント用のエラー処理メソッドをインストールします
 ```
 
-You can install a global error handler that will serve as "fallback" and specific local error handlers for certain processes. A global error handler is also useful on the server to avoid error dialogs on the server when run with interface.
+"フォールバック" として機能するグローバルエラーハンドラーと、特定プロセス専用のローカルエラーハンドラーを同時にインストールすることができます。 グローバルなエラーハンドラーは、インターフェース付きでサーバーを実行している場合にエラーダイアログの表示を避けるためにも有効です。
 
 アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 ただし、一つの実行コンテキストにつき実装できるのは一つのメソッドのみです。
 
-When an error occurs, only one method is called, even if several "concurrent" error handlers are installed:
+複数のエラーハンドラーが同時にインストールされている場合でも、エラー発生時に呼び出されるのは 1つのみです:
 
-- if the error occurs in the current process, the local handler is called and NOT the global handler;
-- if the error occurs in a component and the component has its own error handler, the error handler of the component is called and NOT the "errors from components" handler of the host application.
+- カレントプロセスでエラーが発生した場合、ローカルハンドラーが呼ばれ、グローバルハンドラーは呼ばれません。
+- コンポーネントでエラーが発生し、かつ、そのコンポーネントにおいて独自のエラーハンドラーが実装されている場合、ホストアプリケーションのコンポーネント用ハンドラーではなく、コンポーネント自身のエラーハンドラーが呼び出されます。
 
 
 ### メソッド内でのエラー処理
@@ -97,7 +97,7 @@ When an error occurs, only one method is called, even if several "concurrent" er
 
 :::
 
-- the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) command that returns a collection of the current stack of errors that occurred in the 4D application. You can also use the [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
+- [`Last errors`](https://doc.4d.com/4dv19/help/command/ja/page1799.html) コマンドは、4Dアプリケーションのカレントエラースタックに関する情報をコレクションとして返します。 また、同じ情報を配列として返す [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/ja/page1015.html) コマンドを使用することもできます。
 - `Get call chain` コマンドは、カレントプロセス内における、メソッド呼び出しチェーンの各ステップを詳細に説明するオブジェクトのコレクションを返します。
 
 

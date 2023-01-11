@@ -96,7 +96,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 #### Descrição
 
-A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->cria e envia um pedido HTTP para o servidor HTTP definido em *url* com as opções definidas **, e devolve um objecto `4D.HTTPRequest`<!-- END REF -->.
+A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
 
 O objeto devolvido `HTTPRequest` é utilizado para processar respostas do servidor HTTP e métodos de chamada.
 
@@ -175,7 +175,7 @@ An `event` object is returned when a [callback function](#callback-functions) is
 | .dados      | blob | Received data. It is always *undefined* except in the `onData` callback               |
 | .type       | text | Type of event. Possible values: "response", "error", "headers", "data", or "terminate |
 
-#### objecto autenticação
+#### authentication object
 
 An authentication object handles the `options.serverAuthentication` or `options.proxyAuthentication` property. It can contain the following properties:
 

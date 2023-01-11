@@ -276,9 +276,10 @@ If (Session.isGuest())
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Versão | Mudanças                             |
+| ------ | ------------------------------------ |
+| v19 R8 | Support of "roles" Settings property |
+| v18 R6 | Adicionado                           |
 
 </details>
 
@@ -296,7 +297,7 @@ If (Session.isGuest())
 
 #### Descrição
 
-A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associa à sessão o(s) privilégio(s) definido(s) no parâmetro<!-- END REF -->.
+A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->.
 
 - No parâmetro *privilege*, passe uma string contendo um nome de privilégio (ou vários nomes de privilégio separados por vígulas).
 
@@ -304,16 +305,21 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 
 - No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
-| Propriedade | Tipo               | Descrição                                          |
-| ----------- | ------------------ | -------------------------------------------------- |
-| privileges  | Text ou Collection | <li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li> |
-| userName    | Text               | Nome de usuário associado à sessão (opcional)      |
+| Propriedade | Tipo               | Descrição                                           |
+| ----------- | ------------------ | --------------------------------------------------- |
+| privileges  | Text ou Collection | <li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li>  |
+| roles       | Text ou Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li> |
+| userName    | Text               | Nome de usuário associado à sessão (opcional)       |
 
-Se a propriedade `privileges` conter um nome de privilégio inválido, é ignorado.
+:::info
 
-> Na implementação atual, só o privilégio "WebAdmin" está disponível.
+Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
 
-Como padrão quando não houver um privilégio associado à sessão, a sessão é [Guest session](#isguest).
+:::
+
+If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+
+By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
 
 A propriedade [`userName`](#username) está disponível no nível do objeto da sessão (apenas leitura).
 

@@ -283,7 +283,7 @@
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "次",
+    "message": "開発中",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.versionBadge.label": {
@@ -552,5 +552,8 @@
   "theme.tags.tagsPageTitle": {
     "message": "タグ",
     "description": "The title of the tag list page"
+  },
+  "Release Notes": {
+    "message": "リリースノート"
   }
 }

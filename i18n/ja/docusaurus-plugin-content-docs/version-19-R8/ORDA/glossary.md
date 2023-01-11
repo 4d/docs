@@ -9,6 +9,10 @@ title: 用語集
 
 
 
+## 動作
+
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+
 ## 属性
 
 属性とは、リレーショナルデータベース内における最小の保存セルです ([リレーション属性](#リレーション属性) も参照してください)。 データクラス属性とエンティティ属性を混同しないようにしてください:
@@ -84,7 +88,7 @@ ORDA データモデルクラスの関数。
 
 `ds` は、[データストア](dsMapping.md#データストア) のオブジェクト参照を返す 4Dランゲージコマンドです。 この参照は 4D のメインデータベースが提供するデータストアに合致します。
 
-## エンティティ
+## Entity
 
 エンティティとは、データクラスモデルに対応するオブジェクトです。 エンンティティには、データクラスと同じ属性が格納されます。
 
@@ -97,6 +101,7 @@ ORDA データモデルクラスの関数。
 エンティティセレクションは、一つのオブジェクトです。 データストアをクエリすると、エンティティセレクションが返されます。 エンティティセレクションとは、同じデータクラスに所属するエンティティへの参照のセットのことです。
 
 エンティティセレクションは以下を格納します:
+
 
 *   0 から X までのエンティティ参照のセット
 *   length プロパティ(常に存在します)
@@ -132,13 +137,13 @@ $myClass.query("name = smith")
 
 このドキュメントでは、データクラス属性に保存可能な値の様々な型を指定するために、"ミックス" データ型が使用されます。 :
 
-*   数値
-*   テキスト
+*   number
+*   text
 *   null
-*   ブール
-*   日付
-*   オブジェクト
-*   コレクション
+*   boolean
+*   date
+*   object
+*   collection
 *   ピクチャー (\*)
 
 *(\*) ピクチャー型は* `entitySelection.max( )` *などの統計型メソッドではサポートされていません。*
@@ -150,6 +155,11 @@ $myClass.query("name = smith")
 ## ペシミスティック・ロック
 
 "ペシミスティック・ロック" とは、`entity.lock( )` メソッドにより、エンティティがアクセスされる前にそれをロックすることを意味します。 ロックが解除されるまで、他のプロセスからはそのエンティティを更新することも、ドロップすることもできません。 クラシック 4Dランゲージにおいてはペシミスティック・ロックのみが利用可能です。 [オプティミスティック・ロック](#オプティミスティック・ロック) も合わせて参照してください。
+
+
+## Privilege
+
+The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
 
 ## プロパティ
 
@@ -189,7 +199,18 @@ ORDA オブジェクトとは関わりのないユーザークラス。
 
 4D または (HTTP経由で利用可能な) 4D Server 上で開かれている、REST リソースとして公開された 4Dデータベース。 このデータベースは他のマシンにおいてデータストアとしてローカルに参照することができ、その際には割り当てられた locaID で識別されます。 リモートデータストアは ORDA の概念 (データストア、データクラス、エンティティセレクション等) を使って利用できます。 利用にあたってはライセンスが消費されます。
 
-## セッション
+
+## リソース
+
+An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+
+
+## Role
+
+A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+
+
+## Session
 
 4Dアプリケーションがリモートデータストアに接続すると、4D Server (HTTP) 上では セッション が作成されます。 セッションcookie が生成され、ローカルデータストアID と紐づけられます。
 
@@ -201,7 +222,7 @@ ORDA オブジェクトとは関わりのないユーザークラス。
 
 シャロウコピーは、要素の構造のみを複製し、同じ内部参照を保持します。 シャロウコピーのあと、二つのコレクションに格納された個々の要素は同じものが共有されています。 [ディープコピー](#ディープコピー) も合わせて参照してください。
 
-## スタンプ
+## 記号
 
 "オプティミステック" ロックテクノロジーにおいて使用されるものです。 すべてのエンティティにはスタンプと呼ばれる内部カウンターがあり、エンティティが保存されるたびにインクリメントされていきます。 エンティティ内のスタンプとディスク上に保存されているエンティティのスタンプを自動的に比較することで、4D は同じエンティティへの書き込みの衝突を防いでいます。
 
