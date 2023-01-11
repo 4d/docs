@@ -422,7 +422,7 @@ El valor de la [variable asociada al encabezado de una columna](properties_Objec
 * If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
   ![](../assets/en/FormObjects/sorticon1.png)
 
-* If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
+* Si la variable se establece en 2, la columna se clasifica en orden descendente y se muestra la flecha de clasificación.  
   ![](../assets/en/FormObjects/sorticon2.png)
 
 You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
