@@ -11,7 +11,7 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 #### Highlights
 
 - Error management methods can be installed for [global and component execution contexts](../Concepts/error-handling.md#scope-and-components).
-- Listboxes with collection or entity selection datasources now support [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) column property.
+- Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
 - ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
 - 4D View Pro:
