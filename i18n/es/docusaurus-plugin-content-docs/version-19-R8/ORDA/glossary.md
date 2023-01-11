@@ -9,6 +9,10 @@ title: Glosario
 
 
 
+## Acción
+
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+
 ## Atributo
 
 Un atributo es la celda de almacenamiento más pequeña de una base de datos relacional (ver también [Atributo relacional](#relación-atributo)). No hay que confundir los atributos de la dataclass con los atributos de las entidades:
@@ -98,6 +102,7 @@ Una selección de entidades es un objeto. Cuando se consulta el datastore, se de
 
 Una selección de entidades contiene:
 
+
 *   un conjunto de 0 a X referencias de entidades,
 *   una propiedad length (siempre),
 *   las propiedades queryPlan y queryPath (si se preguntan durante la consulta).
@@ -151,6 +156,11 @@ En el modo "bloqueo optimista", las entidades no se bloquean explícitamente ant
 
 Un "bloqueo pesimista" significa que una entidad se bloquea antes de que se acceda a ella, utilizando el método entity.lock( ). Los otros procesos no pueden actualizar ni suprimir la entidad hasta que se desbloquee. El lenguaje 4D clásico sólo permite bloqueos pesimistas. Ver "Bloqueo optimista".
 
+
+## Privilege
+
+The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+
 ## Propiedad
 
 Ver [Atributo](#attribute).
@@ -188,6 +198,17 @@ Las selecciones de entidades pueden referirse a entidades relacionadas según lo
 ## Remote datastore
 
 Una base de datos 4D abierta en un servidor 4D o 4D Server (disponible a través de HTTP) y expuesta como recurso REST. Esta base de datos puede ser referenciada localmente como un Datastore desde otras estaciones de trabajo, donde se le asigna un locaID. El almacén de datos remoto puede utilizarse mediante los conceptos ORDA (almacén de datos, clase de datos, selección de entidades...). Este uso se somete a un sistema de licencia.
+
+
+## Recurso
+
+An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+
+
+## Role
+
+A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+
 
 ## Session
 
