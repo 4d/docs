@@ -9,6 +9,10 @@ title: 用語集
 
 
 
+## 動作
+
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+
 ## 属性
 
 属性とは、リレーショナルデータベース内における最小の保存セルです ([リレーション属性](#リレーション属性) も参照してください)。 データクラス属性とエンティティ属性を混同しないようにしてください:
@@ -98,6 +102,7 @@ ORDA データモデルクラスの関数。
 
 エンティティセレクションは以下を格納します:
 
+
 *   0 から X までのエンティティ参照のセット
 *   length プロパティ(常に存在します)
 *   queryPlan および queryPath プロパティ (クエリ時に要求した場合に存在します)
@@ -151,6 +156,11 @@ $myClass.query("name = smith")
 
 "ペシミスティック・ロック" とは、`entity.lock( )` メソッドにより、エンティティがアクセスされる前にそれをロックすることを意味します。 ロックが解除されるまで、他のプロセスからはそのエンティティを更新することも、ドロップすることもできません。 クラシック 4Dランゲージにおいてはペシミスティック・ロックのみが利用可能です。 [オプティミスティック・ロック](#オプティミスティック・ロック) も合わせて参照してください。
 
+
+## Privilege
+
+The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+
 ## プロパティ
 
 [属性](#属性) を参照してください。
@@ -188,6 +198,17 @@ ORDA オブジェクトとは関わりのないユーザークラス。
 ## リモートデータストア
 
 4D または (HTTP経由で利用可能な) 4D Server 上で開かれている、REST リソースとして公開された 4Dデータベース。 このデータベースは他のマシンにおいてデータストアとしてローカルに参照することができ、その際には割り当てられた locaID で識別されます。 リモートデータストアは ORDA の概念 (データストア、データクラス、エンティティセレクション等) を使って利用できます。 利用にあたってはライセンスが消費されます。
+
+
+## リソース
+
+An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+
+
+## Role
+
+A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+
 
 ## セッション
 

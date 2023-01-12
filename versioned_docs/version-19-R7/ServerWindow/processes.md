@@ -58,12 +58,11 @@ Each process is identified by an icon as well as a type. The color and form of t
 |![](../assets/en/Admin/server-icon-4.png)|Web Server|
 |![](../assets/en/Admin/server-icon-5.png)|SOAP Server|
 |![](../assets/en/Admin/server-icon-6.png)|Protected 4D client process (development process of a connected 4D)|
-|![](../assets/en/Admin/server-icon-7.png)|Main 4D client process (main process of a connected 4D). Collaborative process, equivalent on the server of the process created on the client machine)|
+|![](../assets/en/Admin/server-icon-7.png)|Main process of a connected 4D client or process created with `New process` on a connected 4D client (Collaborative process, equivalent on the server of the process created on the client machine)|
 |![](../assets/en/Admin/server-icon-8.png)|4D client base process (process parallel to a 4D client process. Preemptive process responsible for controlling the corresponding main 4D client process)|
 |![](../assets/en/Admin/server-icon-9.png)|Spare process (former or future "4D client database process")|
 |![](../assets/en/Admin/server-icon-10.png)|SQL server worker process|
 |![](../assets/en/Admin/server-icon-11.png)|HTTP server worker process|
-|![](../assets/en/Admin/server-icon-12.png)|4D client process (process running on the connected 4D)|
 |![](../assets/en/Admin/server-icon-13.png)|Stored procedure (process launched by a connected 4D and running on the server)|
 |![](../assets/en/Admin/server-icon-14.png)|Web method (launched by a 4DACTION for example)|
 |![](../assets/en/Admin/server-icon-15.png)|Web method (preemptive)|

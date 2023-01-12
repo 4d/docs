@@ -87,6 +87,7 @@ module.exports =
 						"ORDA/ordaClasses",
 						"ORDA/entities",
 						"ORDA/datastores",
+						"ORDA/privileges",
 						"ORDA/glossary"
 					],
 				},
@@ -195,6 +196,7 @@ module.exports =
 						"ServerWindow/sql-server",
 						"ServerWindow/http-server",
 						"ServerWindow/real-time-monitor",
+						"ServerWindow/remote-admin",
 					],
 				},
 				{

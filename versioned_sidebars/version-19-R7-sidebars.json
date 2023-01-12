@@ -192,7 +192,8 @@
             "ServerWindow/application-server",
             "ServerWindow/sql-server",
             "ServerWindow/http-server",
-            "ServerWindow/real-time-monitor"
+            "ServerWindow/real-time-monitor",
+            "ServerWindow/remote-admin"
           ]
         },
         {
