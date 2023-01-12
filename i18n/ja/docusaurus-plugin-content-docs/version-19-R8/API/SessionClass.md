@@ -310,7 +310,7 @@ End if
 
 #### 説明
 
-`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->。
+`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->引数として渡したアクセス権やロールをセッションと紐づけます<!-- END REF -->。
 
 - *privilege* には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
 
@@ -321,7 +321,7 @@ End if
 | プロパティ      | タイプ                 | 説明                                                  |
 | ---------- | ------------------- | --------------------------------------------------- |
 | privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li>  |
-| roles      | Text または Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li> |
+| roles      | Text または Collection | <li>ロールの文字列</li><li>ロールの文字列のコレクション</li> |
 | userName   | Text                | (任意) セッションと紐づけるユーザー名                                |
 
 :::info

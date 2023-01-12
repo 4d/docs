@@ -11,7 +11,7 @@ title: 用語集
 
 ## 動作
 
-Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+[リソース上](#リソース) に対しておこなえるアクションを指します。 利用可能なアクションは、create (作成)、read (読み取り)、update (更新)、delete (削除)、execute (実行)、promote (昇格)、および describe (記述) です。
 
 ## 属性
 
@@ -157,9 +157,9 @@ $myClass.query("name = smith")
 "ペシミスティック・ロック" とは、`entity.lock( )` メソッドにより、エンティティがアクセスされる前にそれをロックすることを意味します。 ロックが解除されるまで、他のプロセスからはそのエンティティを更新することも、ドロップすることもできません。 クラシック 4Dランゲージにおいてはペシミスティック・ロックのみが利用可能です。 [オプティミスティック・ロック](#オプティミスティック・ロック) も合わせて参照してください。
 
 
-## Privilege
+## 権限
 
-The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+[リソース](#リソース) に対する実行が許可された [アクション](#アクション) の範囲のことです。 ビジネスロジックに応じて、複数の権限を [ロール](#ロール) としてまとめることができます。
 
 ## プロパティ
 
@@ -205,9 +205,9 @@ ORDA オブジェクトとは関わりのないユーザークラス。
 An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
 
 
-## Role
+## ロール
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+ロールとは、管理者が使用することを目的とした、公開された [権限](#権限) のことです。 ロールは 1つ以上の権限を持つことができます。
 
 
 ## Session

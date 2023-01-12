@@ -10,7 +10,7 @@ title: 権限
 
 ## 概要
 
-ORDA のセキュリティアーキテクチャーは、権限、パーミッションアクション (read、create など)、およびリソースの概念に基づいています。
+ORDA のセキュリティアーキテクチャーは、権限、許諾アクション (read、create など)、およびリソースの概念に基づいています。
 
 ユーザーがログインすると、そのセッションには自動的に関連する権限がロードされます。 権限は、[`session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数を使用して、セッションに割り当てられます。
 
@@ -23,17 +23,17 @@ ORDA のセキュリティアーキテクチャーは、権限、パーミッシ
 
 ## リソース
 
-プロジェクト内の以下の公開リソースに対して、許可アクションをそれぞれ割り当てることができます:
+プロジェクト内の以下の公開リソースに対して、許諾アクションをそれぞれ割り当てることができます:
 
 - データストア
 - データクラス
 - 属性 (計算属性およびエイリアス属性を含む)
 - データモデルクラス関数
 
-あるレベルで定義されたパーミッションアクションは基本的に下位レベルに継承されますが、設定可能なパーミッションは複数あります:
+あるレベルで定義された許諾アクションは基本的に下位レベルに継承されますが、複数のレベルで設定することもできます:
 
-- A permission action defined at the datastore level is automatically assigned to all dataclasses.
-- A permission action defined at a dataclass level overrides the datastore setting (if any). By default, all attributes of the dataclass inherit from the dataclass permission(s).
+- データストアレベルで定義された許諾アクションは、自動的にすべてのデータクラスに割り当てられます。
+- データクラスレベルで定義された許諾アクションは、データストアの設定をオーバーライドします (あれば)。 By default, all attributes of the dataclass inherit from the dataclass permission(s).
 - Unlike dataclass permissions, a permission action defined at the attribute level does not override the parent dataclass permission(s), but is added to. For example, if you assigned the "general" privilege to a dataclass and the "detail" privilege to an attribute of the dataclass, both "general" and "detail" privileges must be set to the session to access the attribute.
 
 
