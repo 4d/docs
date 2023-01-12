@@ -1663,7 +1663,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.map()` 関数は、 <!-- REF #collection.map().Summary -->元のコレクションの各要素に対して *formula* フォーミュラまたは *methodName* メソッドを呼び出した結果に基づいた、新しいコレクションを作成します<!-- END REF -->。 オプションで、*param* パラメーターに、*formula* または *methodName* に渡す引数を指定することができます。 `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
+`.map()` 関数は、 <!-- REF #collection.map().Summary -->元のコレクションの各要素に対して *formula* フォーミュラまたは *methodName* メソッドを呼び出した結果に基づいた、新しいコレクションを作成します<!-- END REF -->。 オプションで、*param* パラメーターに、*formula* または *methodName* に渡す引数を指定することができます。 `.map()` は常に、元のコレクションと同じサイズのコレクションを返します (*$1.stop* が使用された場合を除く (後述参照))。
 > このコマンドは、元のコレクションを変更しません。
 
 
