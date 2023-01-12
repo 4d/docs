@@ -994,8 +994,9 @@ You want to log ORDA client requests in memory:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 |Parameter|Type||Description|
-|---|---|---|---|
+|---|---|:---:|---|
 ||||Does not require any parameters|<!-- END REF -->
+
 
 #### Description
 
