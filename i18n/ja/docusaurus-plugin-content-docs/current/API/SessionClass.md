@@ -289,10 +289,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                   |
-| ------ | ------------------------------------ |
-| v19 R8 | Support of "roles" Settings property |
-| v18 R6 | 追加                                   |
+| バージョン  | 内容               |
+| ------ | ---------------- |
+| v19 R8 | roles プロパティをサポート |
+| v18 R6 | 追加               |
 
 </details>
 
@@ -310,7 +310,7 @@ End if
 
 #### 説明
 
-`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->。
+`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->引数として渡したアクセス権やロールをセッションと紐づけます<!-- END REF -->。
 
 - *privilege* には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
 
@@ -321,18 +321,18 @@ End if
 | プロパティ      | タイプ                 | 説明                                                  |
 | ---------- | ------------------- | --------------------------------------------------- |
 | privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li>  |
-| roles      | Text または Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li> |
+| roles      | Text または Collection | <li>ロールの文字列</li><li>ロールの文字列のコレクション</li> |
 | userName   | Text                | (任意) セッションと紐づけるユーザー名                                |
 
 :::info
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
+権限とロールは、プロジェクトの [`roles.json`](../ORDA/privileges.md#rolesjson-ファイル) ファイルで定義されます。 詳細については、[**権限**](../ORDA/privileges.md) を参照してください。
 
 :::
 
-If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+`privileges` または `roles` プロパティに、[`roles.json`](../ORDA/privileges.md#rolesjson-ファイル) ファイルで宣言されていない名前が含まれている場合、その名前は無視されます。
 
-By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
+セッションにアクセス権またはロールが紐づいていない場合、そのセッションはデフォルトで [ゲストセッション](#isguest) です。
 
 [`userName`](#username) プロパティは Session オブジェクトレベルで利用可能です (読み取り専用)。
 
