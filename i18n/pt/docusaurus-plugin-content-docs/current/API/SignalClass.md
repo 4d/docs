@@ -105,7 +105,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D. Signal<!-- END REF -->
+<!-- REF #_command_.New signal.Syntax -->|<!-- END REF -->
 
 
 <!-- REF #_command_.New signal.Params -->
@@ -210,7 +210,7 @@ Essa propriedade é**apenas escrita**.
 
 #### Descrição
 
-A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado actual do objecto `Sinal`<!-- END REF -->. Quando se cria um sinal, `.signaled` é **False**. When the signal is created, `.signaled` is **False**.
+A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado actual do objecto `Sinal`<!-- END REF -->. . Quando se cria um sinal, `.signaled` é **False**.
 
 Essa propriedade é **apenas leitura**.
 
