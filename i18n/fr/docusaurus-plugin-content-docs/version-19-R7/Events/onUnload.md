@@ -20,7 +20,7 @@ Tous les objets du formulaire (de n'importe quelle page) dont la propriété d'�
 
 ### Sous-formulaire
 
-L'événement `On Unload` est généré à la fermeture du sous-formulaire (cet événement doit également avoir été activé au niveau du formulaire parent pour être pris en compte). L'événement est généré avant ceux du formulaire parent. The event is generated before those of the parent form.
+L'événement `On Unload` est généré à la fermeture du sous-formulaire (cet événement doit également avoir été activé au niveau du formulaire parent pour être pris en compte). L'événement est généré avant ceux du formulaire parent. L'événement est généré avant ceux du formulaire parent.
 
 
 ### Voir également
