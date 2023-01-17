@@ -56,7 +56,7 @@ Para poder crear un archivo de historial directamente, la base de datos debe est
 - El archivo de datos está en blanco,
 - Acaba de realizar una copia de seguridad de la base y aún no se han realizado cambios en los datos.
 
-En todos los demás casos, al validar el cuadro de diálogo de las Propiedades de la base, aparecerá un cuadro de diálogo de alerta para informarle que es necesario realizar una copia de seguridad. Si hace clic en **Aceptar**, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the database.
+En todos los demás casos, al validar el cuadro de diálogo de las Propiedades de la base, aparecerá un cuadro de diálogo de alerta para informarle que es necesario realizar una copia de seguridad. Si hace clic en **Aceptar**, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en **Aceptar**, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. If you click **OK**, the backup begins immediately, then the log file is activated.
 
 Sin tener que hacer nada más, todas las operaciones realizadas sobre los datos se registran en este archivo y se utilizarán en el futuro cuando se abra la base.
 
