@@ -50,7 +50,7 @@ ASSERT($status.success)
 </details>
 
 
-<!-- REF #4D.CryptoKey.new().Syntax --> **4D. CryptoKey.new**( *settings* : Object ) : 4D. CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax --> `CryptoKey` deve conter uma chave válida **privada**.<!-- END REF -->
 
 
 
@@ -60,7 +60,7 @@ ASSERT($status.success)
 | settings   | Objeto        | -> | Parâmetros para gerar ou carregar um par de chaves                           |
 | result     | 4D. CryptoKey | <- | Objeto que contém um par de chaves de criptografia<!-- END REF --> |
 
-A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objecto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objecto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
+A função `4D. CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objecto `4D. CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objecto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
 
 #### *settings*
 
@@ -129,7 +129,7 @@ A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decifra o parâ
 
 #### *Resultados*
 
-A chave deveser do estilo RSA, o algoritmo é RSA-OAEP (ver [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+`CryptoKey` deve conter uma chave válida **publica**.
 
 | Propriedade | Tipo       | Descrição                                                                |
 | ----------- | ---------- | ------------------------------------------------------------------------ |
@@ -168,11 +168,11 @@ A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta o par�
 
 ##### *options*
 
-| Propriedade       | Tipo | Descrição                                                                                                                                                         |
-| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                        |
-| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".            |
-| encodingDecrypted | text | Codificação utilizada para converter o parâmetro `mensagem` na representação binaria a encriptar Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
+| Propriedade       | Tipo | Descrição                                                                                                                                                     |
+| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                    |
+| encodingEncrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".        |
+| encodingDecrypted | text | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 #### *Resultados*
 
@@ -366,11 +366,11 @@ A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica a assina
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash        | text    | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | pss         | boolean | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                                                     |
-| encoding    | text    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Por padrão é "Base64".                                                             |
+| encoding    | text    | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Can be "Base64", or "Base64URL". Por padrão é "Base64".                                              |
 
 #### *Resultados*
 
-`CryptoKey` deve conter uma chave válida **publica**.
+A função devolve um objeto "status" com a propriedade `success`estabelecida para `true` se `message` puder ser verificada com êxito (ou seja, se a assinatura coincidir).
 
 A função devolve um objeto "status" com a propriedade `success`estabelecida para `true` se `message` puder ser verificada com êxito (ou seja, se a assinatura coincidir).
 
