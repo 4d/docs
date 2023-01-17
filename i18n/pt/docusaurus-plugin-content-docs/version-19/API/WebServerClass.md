@@ -14,8 +14,8 @@ Eles oferecem as propriedades abaixo e funções:
 
 ### Resumo
 
-|                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #WebServerClass.accessKeyDefined.Syntax -->](#accesskeydefined)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.accessKeyDefined.Summary -->|
 | [<!-- INCLUDE #WebServerClass.certificateFolder.Syntax -->](#certificatefolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.certificateFolder.Summary -->|
 | [<!-- INCLUDE #WebServerClass.characterSet.Syntax -->](#characterset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.characterSet.Summary -->|
@@ -48,13 +48,9 @@ Eles oferecem as propriedades abaixo e funções:
 | [<!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Syntax -->](#perfectforwardsecrecy)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Summary -->|
 | [<!-- INCLUDE #WebServerClass.rootFolder.Syntax -->](#rootfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.rootFolder.Summary -->|
 | [<!-- INCLUDE #WebServerClass.scalableSession.Syntax -->](#scalablesession)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.scalableSession.Summary -->|
-| [<!-- INCLUDE #WebServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieDomain.Summary -->|
-| [<!-- INCLUDE #WebServerClass.sessionCookieName.Syntax -->](#sessioncookiename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieName.Summary -->|
-| [<!-- INCLUDE #WebServerClass.sessionCookiePath.Syntax -->](#sessioncookiepath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookiePath.Summary -->|
-| [<!-- INCLUDE #WebServerClass.sessionCookieSameSite.Syntax -->](#sessioncookiesamesite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieSameSite.Summary -->|
-| [<!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Summary -->|
-| [<!-- INCLUDE #WebServerClass.start().Syntax -->](#start)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.start().Summary -->|
-| [<!-- INCLUDE #WebServerClass.stop().Syntax -->](#stop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.stop().Summary -->|
+
+
+[<!-- INCLUDE #WebServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieDomain.Summary -->| |[<!-- INCLUDE #WebServerClass.sessionCookieName.Syntax -->](#sessioncookiename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieName.Summary -->| |[<!-- INCLUDE #WebServerClass.sessionCookiePath.Syntax -->](#sessioncookiepath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookiePath.Summary -->| |[<!-- INCLUDE #WebServerClass.sessionCookieSameSite.Syntax -->](#sessioncookiesamesite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionCookieSameSite.Summary -->| |[<!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Syntax -->](#sessionipaddressvalidation)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.sessionIPAddressValidation.Summary -->| |[<!-- INCLUDE #WebServerClass.start().Syntax -->](#start)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.start().Summary -->| |[<!-- INCLUDE #WebServerClass.stop().Syntax -->](#stop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebServerClass.stop().Summary -->|
 
 ## WEB Server
 
@@ -81,12 +77,12 @@ Eles oferecem as propriedades abaixo e funções:
 
 O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retorna o objeto padrão web server ou o objeto web server definido através do parâmetro *option*<!-- END REF -->.
 
-Por padrão, se o parâmetro *opção* for omitido, o comando retorna uma referência ao servidor Web do banco de dados, i. . o servidor web padrão. Para designar o servidor da Web para retornar, você pode passar uma das seguintes constantes no parâmetro de *opção*:
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION` . No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
 | Constante                                    | Value | Comentário                                                  |
 | -------------------------------------------- | ----- | ----------------------------------------------------------- |
 | `Web server database`                        | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
-| `Web server database`                        | 2     | Servidor Web do banco de dados de host de um componente     |
+| `Parâmetros`                                 | 2     | Servidor Web do banco de dados de host de um componente     |
 | `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
 
 O objeto Servidor Web retornado contém os valores atuais das propriedades do Servidor Web.
@@ -227,7 +223,8 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts permitidos e métodos para o serviço CORS<!-- END REF --> (ver propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **métodos**:
+Contém <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts permitidos e métodos para o serviço CORS<!-- END REF --> (ver propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **métodos**:
+
 
 - **host** (texto, obrigatório): Nome de domínio ou endereço IP onde as páginas externas são permitidas de enviar requisições de dados para o servidor através do CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Se *host* não estiver presente ou vazio, o objeto é ignorado. Várias sintaxes são suportadas:
   - 192.168.5.17:8081
@@ -287,6 +284,7 @@ O <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado HTTP Strict Transport S
 <!-- REF WebServerClass.HSTSMaxAge.Desc -->
 
 ## .HSTSMaxAge
+
 
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
@@ -395,7 +393,7 @@ O padrão = 443
 
 > Esta propriedade não é retornada em [scalable sessions mode](#scalablesession).
 
-O <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->Duração (em minutos) dos processos de sessão legado inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
+O <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->O Duração (em minutos) dos processos de sessão legado inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
 
 Default = 480 minutos
 
@@ -433,7 +431,7 @@ O <!-- REF #WebServerClass.IPAddressToListen.Summary -->Endereço IP no qual o s
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
 
-*Propriedade apenas leitura*
+*Propriedade só de leitura*
 
 O <!-- REF #WebServerClass.isRunning.Summary -->estado execução do servidor web<!-- END REF -->.
 
@@ -493,7 +491,7 @@ Normal = 100
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.maxRequestSize.Summary -->tamanho máximo (em bytes) de petições HTTP entrando (POST) que o web server está autorizado a processar<!-- END REF -->. Passar o valor máximo (2147483647) significa na prática que não é estabelecido um limite. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Se um pedido atingir este limite, o servidor web rejeita-o.
+Contém <!-- REF #WebServerClass.maxRequestSize.Summary -->tamanho máximo (em bytes) de petições HTTP entrando (POST) que o web server está autorizado a processar<!-- END REF -->. Passar o valor máximo (2147483647) significa na prática que não é estabelecido um limite. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Se um pedido atingir este limite, o servidor web rejeita-o.
 
 Valores possíveis: 500000 - 2147483647
 
@@ -507,7 +505,7 @@ Valores possíveis: 500000 - 2147483647
 
 > Esta propriedade não é retornada em [scalable sessions mode](#scalablesession).
 
-O <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de sessões de legado simultâneas<!-- END REF -->. Quando se atinge o limite, a sessão de legado mais antiga é encerrada (e `On Web Legacy Close Session` método de base de dados é chamado) se o servidor web precisar de criar um novo. O número de sessões legadas em simultâneo não pode exceder o número total de processos web (`maxConcurrentProcesses` propriedade, 100 por padrão)
+Contém <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de sessões de legado simultâneas<!-- END REF -->. Quando se atinge o limite, a sessão de legado mais antiga é encerrada (e `On Web Legacy Close Session` método de base de dados é chamado) se o servidor web precisar de criar um novo. O número de sessões legadas em simultâneo não pode exceder o número total de processos web (`maxConcurrentProcesses` propriedade, 100 por padrão)
 
 <!-- END REF -->
 
@@ -538,7 +536,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 
-*Propriedade apenas leitura*
+*Propriedade só de leitura*
 
 O <!-- REF #WebServerClass.name.Summary -->nome da aplicação do servidor web<!-- END REF -->.
 
@@ -551,7 +549,7 @@ O <!-- REF #WebServerClass.name.Summary -->nome da aplicação do servidor web<!
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
 
-*Propriedade apenas leitura*
+*Propriedade só de leitura*
 
 O <!-- REF #WebServerClass.openSSLVersion.Summary -->versão da biblioteca OpenSSL utilizada<!-- END REF -->.
 
@@ -564,7 +562,7 @@ O <!-- REF #WebServerClass.openSSLVersion.Summary -->versão da biblioteca OpenS
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
 
-*Propriedade apenas leitura*
+*Propriedade só de leitura*
 
 O <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilidade do PFS no servidor<!-- END REF -->.
 
@@ -613,7 +611,7 @@ O <!-- REF #WebServerClass.sessionCookieDomain.Summary -->campo "domínio" do co
 
 O <!-- REF #WebServerClass.sessionCookieName.Summary -->nome do cookie utilizado para guardar o ID da sessão<!-- END REF -->.
 
-*Propriedade apenas leitura*
+*Propriedade só de leitura*
 
 <!-- END REF -->
 
@@ -741,11 +739,10 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 | v18 R3 | Adicionado |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Parâmetros | Tipo |  | Descrição                                             |
 | ---------- | ---- |  | ----------------------------------------------------- |
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
