@@ -60,7 +60,7 @@ Si el código descrito anteriormente fuera un método llamado `MODIFICAR CLIENTE
  PRINT SELECTION([Customers])
 ```
 
-Esta posibilidad simplifica enormemente sus métodos. This capability simplifies your methods dramatically. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. De este modo, sus métodos se convierten en extensiones del lenguaje 4D.
+Esta posibilidad simplifica enormemente sus métodos. Esta posibilidad simplifica enormemente sus métodos. Esta es la segunda razón para utilizar subrutinas: clarificar sus métodos. De este modo, sus métodos se convierten en extensiones del lenguaje 4D.
 
 Si necesita cambiar su método de búsqueda de clientes en esta base de ejemplo, tendrá que cambiar sólo un método, no diez. Esta es la siguiente razón para utilizar subrutinas: facilitar los cambios en sus métodos.
 
@@ -195,6 +195,9 @@ Para este ejemplo, suponemos que los valores de los campos son únicos (no hay d
        ALERT($vtTheWholeStory)
     End if
  End if
+       ALERT($vtTheWholeStory)
+    End if
+ End if
 ```
 
 2. También puede proceder así:
@@ -205,6 +208,8 @@ Para este ejemplo, suponemos que los valores de los campos son únicos (no hay d
     QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
     If(Records in selection([Friends and Relatives])>0)
        ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
+    End if
+ End if
     End if
  End if
     End if
