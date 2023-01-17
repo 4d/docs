@@ -51,7 +51,7 @@ Los objetos `DataClassAttribute` tienen propiedades que puede leer para obtener 
 
 #### Descripción
 
-La propiedad `.autoFilled` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contiene True si el valor del atributo es rellenado automáticamente por 4D<!-- END REF -->. Esta propiedad corresponde a las siguientes propiedades de campo 4D:
+La propiedad `.fieldType` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contiene el tipo de base de datos 4D del atributo<!-- END REF -->. .
 
 * "Autoincremento", para campos de tipo numérico
 * "Auto UUID", para los campos UUID (tipo alfa).
@@ -263,7 +263,7 @@ Dada la siguiente tabla y relación:
 La propiedad `.mandatory` <!-- REF DataClassAttributeClass.mandatory.Summary -->contiene True si se rechaza la entrada de valores nulos para el atributo<!-- END REF -->.
 
 Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEntities".
-> Para la programación genérica, se puede utilizar **Bool**(dataClassAttribute.mandatory) para obtener un valor válido (false) aunque no se devuelva `.mandatory`.
+> Comentario
 > **Atención**: esta propiedad corresponde a la propiedad del campo "Reject NULL value input" a nivel de la base de datos 4D. No tiene relación con la propiedad "Obligatorio" existente, que es una opción de control de entrada de datos para una tabla.
 
 <!-- END REF -->
@@ -283,7 +283,7 @@ Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEn
 
 #### Descripción
 
-La propiedad `.name` <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->.
+La propiedad `.name` <!-- REF DataClassAttributeClass.name.Summary -->La propiedad `.name`<!-- END REF -->.
 
 #### Ejemplo
 
