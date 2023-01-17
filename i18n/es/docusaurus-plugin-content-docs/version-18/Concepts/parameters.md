@@ -42,6 +42,8 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 //pass the !05/05/10! date as parameter to the SetCalendarDate  
 // in the context of a subform  
 //pase la fecha !05/05/10! como parámetro del SetCalendarDate  
+// en el contexto de un subformulario  
+//pase la fecha !05/05/10! como parámetro del SetCalendarDate  
 // en el contexto de un subformulario
 ```
 
@@ -86,7 +88,7 @@ NewPhrase:=Uppercase4("This is good.")
 
 En este ejemplo, la variable *NewPhrase* recibe “THIS is good.”
 
-El resultado de la función, `$0`, es una variable local dentro de la subrutina. Puede utilizarse como tal dentro de la subrutina. It can be used as such within the subroutine. Dentro de la subrutina, puede utilizar `$0` de la misma manera que utilizaría cualquier otra variable local. Es 4D quien devuelve el valor de `$0` (tal y como está cuando la subrutina termina) al método llamado.
+El resultado de la función, `$0`, es una variable local dentro de la subrutina. Puede utilizarse como tal dentro de la subrutina. Puede utilizarse como tal dentro de la subrutina. Dentro de la subrutina, puede utilizar `$0` de la misma manera que utilizaría cualquier otra variable local. Es 4D quien devuelve el valor de `$0` (tal y como está cuando la subrutina termina) al método llamado.
 
 
 ## Declaración de parámetros
@@ -394,7 +396,7 @@ Esta función puede llamarse ahora de varias formas:
 ```
 
 
-### Declaración de parámetros genéricos
+### Utilización de los parámetros genéricos
 
 Al igual que con otras variables locales, no es obligatorio declarar los parámetros genéricos mediante una directiva del compilador. Sin embargo, se recomienda para evitar toda ambigüedad. Para declarar estos parámetros, se utiliza una directiva del compilador a la que se pasa ${N} como parámetro, donde N especifica el primer parámetro genérico.
 
@@ -402,6 +404,6 @@ Al igual que con otras variables locales, no es obligatorio declarar los paráme
  C_LONGINT(${4})
 ```
 
-Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo entero largo. $1, $2 y $3 pueden ser de cualquier tipo de datos. Sin embargo, si se utiliza $2 por indirección, el tipo de datos utilizado será el tipo genérico. $1, $2 and $3 can be of any data type.
+Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo entero largo. $1, $2 y $3 pueden ser de cualquier tipo de datos. Sin embargo, si se utiliza $2 por indirección, el tipo de datos utilizado será el tipo genérico. $1, $2 y $3 pueden ser de cualquier tipo de datos.
 
 **Nota:** el número en la declaración tiene que ser una constante y no una variable.
