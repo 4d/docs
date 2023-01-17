@@ -17,14 +17,65 @@ In the 4D language and for object field attributes, null values are managed thro
 
 ## Undefined
 
-Undefined is not actually a data type. It denotes a variable that has not yet been defined. A function (a project method that returns a result) can return an undefined value if, within the method, the function result ($0) is assigned an undefined expression (an expression calculated with at least one undefined variable). A field cannot be undefined (the `Undefined` command always returns False for a field). A variant variable has **undefined** as default value.
+Undefined is not actually a data type. It denotes an expression that has not yet been defined. A function (a project method that returns a result) can return an undefined value if, within the method, the function result ($0) is assigned an undefined expression (an expression calculated with at least one undefined variable). A field cannot be undefined (the `Undefined` command always returns False for a field). A variant variable has **undefined** as default value.
+
+
+## Null operators
+
+To avoid unnecessary execution errors when object properties are missing, Null supports several comparison operators.
+
+|Operation |Syntax |Returns |Expression |Value|
+|---|---|---|---|---|
+|Equality |Null = Null |Boolean |a.nullProp = b.nullProp |True|
+|  |Null = Undefined |Boolean|a.nullProp = b.undefinedProp |True|
+|  |Null = *scalar types* (see below) |Boolean|a.nullProp = 42 |False|
+|  |Null = *complex types* (see below) |Boolean|a.nullProp = $object |True|
+|Inequality |Null # Null |Boolean |a.nullProp # b.nullProp |False|
+|  |Null # Undefined |Boolean|a.nullProp # b.undefinedProp |False|
+|  |Null # *scalar types* (see below) |Boolean|a.nullProp # 42 |True|
+|  |Null # *complex types* (see below) |Boolean|a.nullProp # $object |False|
+
+- *scalar types* = string, Date, Time, Boolean, number, Blob
+- *complex types* = Pointer, Picture, Object, Collection
+
+:::info
+
+Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported with Null values and return an error.
+
+:::
+
+## Undefined operators
+
+To avoid unnecessary execution errors when object properties are missing, Undefined supports several comparison operators.
+
+|Operation |Syntax |Returns |Expression |Value|
+|---|---|---|---|---|
+|Equality |Undefined = Undefined |Boolean|a.undefinedProp = b.undefinedProp |True|
+| |Undefined = Null |Boolean |a.undefinedProp = c.nullProp |True|
+| |Undefined = *other types* (see below) |Boolean|a.undefinedProp = 42 |False|
+|Inequality |Undefined # Undefined |Boolean|a.undefinedProp # b.undefinedProp |False|
+|  |Undefined # Null |Boolean|a.undefinedProp # b.nullProp |False|
+|  |Undefined # Undefined |Boolean|a.undefinedProp # b.undefinedProp |False|
+|  |Undefined # *other types* (see below) |Boolean|a.undefinedProp # 42 |True|
+|Greater than |Undefined `>` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `>` "abc" |False|
+|Less than |Undefined `<` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `<` "abc" |False|
+|Greater than or equal to |Undefined `>=` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `>=` "abc" |False|
+|Less than or equal to |Undefined `<=` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `<=` "abc" |False|
+
+- *other types* = string, Date, Time, Boolean, number, Blob, Pointer, Picture, Object, Collection
+
+:::info
+
+Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators between Undefined and Pointer, Picture, Blob, Object, Collection, Variant, Undefined or Null values are not supported and return an error.
+
+:::
 
 ## Examples 
 
 Here are the different results of the `Undefined` command as well as the `Null` command with object properties, depending on the context:
 
 ```4d
-C_OBJECT($vEmp)
+var $vEmp : Object
 $vEmp:=New object
 $vEmp.name:="Smith"
 $vEmp.children:=Null
@@ -38,3 +89,24 @@ $null:=($vEmp.children=Null) //True
 $undefined:=Undefined($vEmp.parent) // True
 $null:=($vEmp.parent=Null) //True
 ```
+
+```4d
+var $vObj : Object
+
+$vObj:=New object
+$vObj.isNull:=Null
+
+$vObj.a = 42 //False
+$vObj.a = $vObj.isNull //True
+$vObj.a = $vObj.b  //True
+
+$vObj.a # $vObj.b  //False
+$vObj.a # $vObj.isNull  //False
+$vObj.a # 42 //True
+
+$vObj.a > "hello"  //False
+$vObj.a > $vObj.b  //Error
+$vObj.a > $vObj.isNull  //Error
+
+```
+
