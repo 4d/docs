@@ -18,7 +18,8 @@ Every user request sent within the session is evaluated against privileges defin
 
 If a user attempts to execute an action and does not have the appropriate access rights, a privilege error is generated or, in the case of missing Read permission on attributes, they are not sent.
 
-![](../assets/en/ORDA/privileges-schema.png)
+![schema](../assets/en/ORDA/privileges-schema.png)
+
 
 
 ## Resources
@@ -157,8 +158,12 @@ It is recommended to check at startup if a `Roles_Errors.json` file exists in th
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 …
+If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
+…
 Else // you can prevent the project to open
  ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
+ QUIT 4D
+End if
  QUIT 4D
 End if 
 ```
