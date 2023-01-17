@@ -147,6 +147,10 @@ La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
        ALERT("Error: "+$status.statusText)
     End if
  End if
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
@@ -269,7 +273,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 ##### Descripción
 
-La función `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* en el buzón designado por el [`transportador POP3`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el email.
+La función `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* en el buzón designado por el [`transportador POP3`](#pop3-transporter-object)<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
 
 Pase en *msgNumber* el número del mensaje a recuperar. Este número es devuelto en la propiedad number por la función [`.getMailInfoList()`](#getmailinfolist).
 
@@ -326,7 +330,7 @@ Quiere saber el remitente del primer correo del buzón:
 
 ##### Descripción
 
-La función `.getMailInfo()` <!-- REF #POP3TransporterClass.getMailInfo().Summary -->devuelve un objeto `mailInfo` correspondiente al *msgNumber* en el buzón designado por el [`transportista POP3`](#pop3-transporter-object)<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo POP3.
+La función `.getMailInfo()` <!-- REF #POP3TransporterClass.getMailInfo().Summary -->devuelve un objeto `mailInfo` correspondiente al *msgNumber* en el buzón designado por el [`transportista POP3`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el email.
 
 En *msgNumber*, pase el número del mensaje a recuperar. Este número es devuelto en la propiedad number por el método [`.getMailInfoList()`](#getmailinfolist).
 
@@ -360,6 +364,7 @@ El método devuelve **Null** si:
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
  End if
 ```
