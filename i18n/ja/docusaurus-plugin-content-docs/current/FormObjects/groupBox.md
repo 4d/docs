@@ -6,7 +6,7 @@ title: グループボックス
 グループボックスはスタティックオブジェクトの一つで、複数のフォームオブジェクトを視覚的にまとめます。
 
 ![](../assets/en/FormObjects/groupBox.png)
-> グループボックスの名前はスタティックテキストです。これは他の 4D ラベルと同様にローカライズすることができます (4D デザインリファレンスの [スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) および [付録 B: XLIFF アーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) の章を参照ください)。
+> グループボックスの名前はスタティックテキストです。 これは他の 4D ラベルと同様にローカライズすることができます (4D デザインリファレンスの [スタティックテキスト中で参照を使用する](https://doc.4d.com/4Dv18/4D/18/Using-references-in-static-text.300-4575714.ja.html) および [付録 B: XLIFF アーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) の章を参照ください)。
 
 
 
