@@ -19,7 +19,7 @@ title: Document クラス
 
 #### 説明
 
-`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->ファイルの作成日を返します<!-- END REF -->。
+`.creationDate` プロパティは、 <!-- REF #document.creationDate.Summary -->`.creationDate` プロパティは、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -177,7 +177,7 @@ title: Document クラス
 
 #### 説明
 
-`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->ファイルに対しては常に false を返します。<!-- END REF -->。
+`.isFolder` プロパティは、 <!-- REF #document.isFolder.Summary -->`.copyTo()` 関数は、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -227,7 +227,7 @@ title: Document クラス
 
 #### 説明
 
-`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->ファイルの最終変更日を返します<!-- END REF -->。
+`.modificationDate` プロパティは、 <!-- REF #document.modificationDate.Summary -->`.modificationDate` プロパティは、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -312,7 +312,7 @@ title: Document クラス
 
 #### 説明
 
-`.parent` プロパティは、 <!-- REF #document.parent.Summary -->対象ファイルの親フォルダーオブジェクトを返します<!-- END REF -->。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
+`.parent` プロパティは、 <!-- REF #document.parent.Summary -->`.parent` プロパティは、<!-- END REF -->。 パスがシステムパスを表す場合 (例: "/DATA/")、システムパスが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -332,7 +332,7 @@ title: Document クラス
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #document.path.Summary -->ファイルの POSIXパスを返します<!-- END REF -->。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
+`.path` プロパティは、 <!-- REF #document.path.Summary -->`.path` プロパティは、<!-- END REF -->。 パスがファイルシステムを表す場合 (例: "/DATA/")、ファイルシステムが返されます。
 
 このプロパティは **読み取り専用** です。
 
@@ -352,7 +352,7 @@ title: Document クラス
 
 #### 説明
 
-`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->カレントプラットフォームのシンタックスで表現されたファイルのパスを返します<!-- END REF -->。
+`.platformPath` プロパティは、 <!-- REF #document.platformPath.Summary -->`.platformPath` プロパティは、<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -403,11 +403,11 @@ title: Document クラス
 
 #### 説明
 
-`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`File` オブジェクトを、*destinationFolder* 引数で指定したフォルダーへとコピーします <!-- END REF -->。
+`.copyTo()` 関数は、 <!-- REF #document.copyTo().Summary -->`.isFolder` プロパティは、 <!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-デフォルトで、ファイルは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
+デフォルトで、ファイルは元の名前を維持したままコピーされます。 コピーの際にフォルダー名を変更したい場合、新しい名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。
 
 *destinationFolder* 引数が指定するフォルダー内に同じ名前のファイルが既に存在する場合、4D はデフォルトでエラーを生成します。 *overwrite* に `fk overwrite` 定数を渡すことで、既存のフォルダーを無視して上書きすることができます:
 
@@ -453,7 +453,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### 説明
 
-`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `BLOB` を返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->`.getContent()` 関数は、<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
@@ -546,13 +546,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 *breakMode* には、ドキュメントの改行文字に対しておこなう処理を指定する倍長整数を渡します。 "System Documents" テーマの、以下の定数を使用することができます:
 
-| 定数                            | 値 | 説明                                                                                                        |
-| ----------------------------- | - | --------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                |
-| `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                      |
-| `Document with CR`            | 3 | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                  |
-| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                     |
+| 定数                            | 値 | 説明                                                                                                         |
+| ----------------------------- | - | ---------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0 | 何も処理をしません。                                                                                                 |
+| `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。 macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
+| `Document with CRLF`          | 2 | 改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。                                                       |
+| `Document with CR`            | 3 | 改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。                                                                   |
+| `Document with LF`            | 4 | 改行は Unixフォーマット (LF、ラインフィード) へと変換されます。                                                                      |
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
@@ -577,11 +577,11 @@ id name price vat
  $txt:=$myFile.getText()
 ```
 
-以下の結果が `$txt` に得られます:
+この場合、`$txt` の値は次の通りです:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-このとき、区切り文字は `\t` (タブ) で、改行コードは `\r\n` (CRLF) です。
+このとき、改行コードは `\n` (LF) です。
 
 以下は、同じファイルで改行コードが異なる例です:
 
@@ -589,10 +589,10 @@ id name price vat
  $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
-この場合、`$txt` の値は次の通りです:
+以下の結果が `$txt` に得られます:
 
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
-このとき、改行コードは `\n` (LF) です。
+このとき、区切り文字は `\t` (タブ) で、改行コードは `\r\n` (CRLF) です。
 
 <!-- END REF -->
