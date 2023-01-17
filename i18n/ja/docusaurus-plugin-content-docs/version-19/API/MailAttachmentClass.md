@@ -53,7 +53,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 - ファイルパスを渡していれば、そのファイル名と拡張子が使用されます。
 - BLOB を渡していれば、拡張子がないランダムな名前が自動的に生成されます。
 
-任意の *cid* 引数を使用すると、添付ファイルの内部ID を渡すことができます。 この ID は `Content-Id` ヘッダーの値で、HTMLメッセージにおいてのみ使用されます。 cid を使い、`\<img src="cid:ID">` のような HTMLタグによってメッセージ本文で定義された参照と添付ファイルが紐づけられます。 これはつまり、添付ファイルの中身 (例: ピクチャー) がメールクライアント上ではメッセージ本文内に表示されるべきであることを意味しています。 最終的な表示は、メールクライアントによって若干異なる可能性があります。 *cid* を使用したくない場合、空の文字列を引数として渡します。
+任意の *cid* 引数を使用すると、添付ファイルの内部ID を渡すことができます。 この ID は `Content-Id` ヘッダーの値で、HTMLメッセージにおいてのみ使用されます。 cid を使い、`\&#060;img src="cid:ID"&#062;` のような HTMLタグによってメッセージ本文で定義された参照と添付ファイルが紐づけられます。 これはつまり、添付ファイルの中身 (例: ピクチャー) がメールクライアント上ではメッセージ本文内に表示されるべきであることを意味しています。 最終的な表示は、メールクライアントによって若干異なる可能性があります。 *cid* を使用したくない場合、空の文字列を引数として渡します。
 
 任意の *type* 引数を渡すと、添付ファイルの `content-type` を明示的に設定することができます。 たとえば、MIMEタイプを定義する文字列 ("video/mpeg"など) を渡すことができます。 この content-type の値は拡張子とは関係なく添付ファイルに対して設定されます。 MIMEタイプについての詳細は、[Wikipedia 上のMIME に関するページ](https://ja.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions) を参照ください。
 
@@ -80,10 +80,10 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 任意の *disposition* 引数を渡して、添付ファイルの `content-disposition` ヘッダーを指定できます。 "Mail" 定数テーマ内の、以下の定数のいずれか 1つを渡すことができます:
 
-| 定数                          | 値            | 説明                                                                                                                              |
-| --------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| mail disposition attachment | "attachment" | Content-disposition ヘッダーの値を "attachment" に設定します。これは添付ファイルはメッセージ内でリンクとして提供される必要があることを意味します。                                      |
-| mail disposition inline     | "inline"     | Content-disposition ヘッダーの値を "inline" に設定します。これは添付ファイルはメッセージ本文内の、"cid" の位置にレンダリングされる必要があることを意味します。 レンダリングの結果はメールクライアントによって異なります。 |
+| 定数                          | 値            | 説明                                                                                          |
+| --------------------------- | ------------ | ------------------------------------------------------------------------------------------- |
+| mail disposition attachment | "attachment" | Content-disposition ヘッダーの値を "attachment" に設定します。 これは添付ファイルはメッセージ内でリンクとして提供される必要があることを意味します。 |
+| mail disposition inline     | "inline"     | "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 レンダリングの結果はメールクライアントによって異なります。            |
 
 *disposition* 引数が省略された場合はデフォルトで:
 
@@ -153,6 +153,10 @@ $email.textBody:="添付のとおり、新しい年次レポートをご連絡�
 $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx"))
 
 $transporter.send($email)
+"
+$email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx"))
+
+$transporter.send($email)
 ```
 
 ## 4D.MailAttachment.new()
@@ -211,7 +215,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を BLOB として返します<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
+`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->`.type` プロパティは、<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
 ## .name
 
