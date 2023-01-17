@@ -29,7 +29,7 @@ Les informations affichées permettent d’identifier la source et le contexte d
 
 - **Table** : table à laquelle appartient l’enregistrement ajouté/supprimé/modifié ou le BLOB.
 - **Clé primaire/BLOB** : contenu de la clé primaire de l'enregistrement (lorsque la clé primaire est composée de plusieurs champs, les valeurs sont séparées par des points-virgules), ou numéro de séquence du BLOB impliqué dans l’opération.
-- **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération. Taille : taille en octets des données traitées par l’opération.
+- **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération.
 - **Taille** : taille (en octets) des données traitées par l’opération.
 - **Date et Heure** : date et heure à laquelle l’opération a été effectuée.
 - **Utilisateur** : nom de l’utilisateur ayant effectué l’opération. En version client-serveur, le nom de la machine du poste client s'affiche. En version monoposte, l'ID de l’utilisateur s'affiche. Si les mots de passe de 4D ne sont pas activés, cette colonne est vide.
