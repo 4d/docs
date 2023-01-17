@@ -117,11 +117,11 @@ This area groups the generic options used during the compilation process.
 
 #### Generate symbol file
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 #### Generate error file
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
 
 #### Compilation Path
 
@@ -283,7 +283,7 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 | On Intel Mac   |      &#10003;       |       &#10003;        |        &#10003;         |
 | On Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
 
-Both compilers are integrated into 4D. Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
+Both compilers are integrated into 4D. Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option. Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
 
 ### Classic Compiler
 
