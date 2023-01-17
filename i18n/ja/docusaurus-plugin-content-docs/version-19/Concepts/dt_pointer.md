@@ -23,7 +23,7 @@ title: ポインター
 | オブジェクト | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
-## ポインターの基本
+## ポインターの使用例
 
 ポインターの使用方法について例題を用いて説明します。 以下の例は、ポインターを通して変数にアクセスする方法を示します。 まず、変数を作成します:
 
@@ -54,13 +54,13 @@ $MyPointer を使用して $MyVar の値を変更することもできます。 
 ```4d
 $MyPointer->:="Goodbye"
 ```
-この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
+この2つの $MyPointer-> を使用した例のとおり、$MyVar を使用するのとまったく同じ動作が実行されます。 以下の2つのステートメントも、同一の動作を実行します。 両方とも、変数 $MyVar の現在の値をアラートボックスに表示します:
 
 ```4d
 ALERT($MyPointer->)
 ALERT($MyVar)
 ```
-以下の2つのステートメントも、同一の動作を実行します。両方とも $MyVar に、文字列 "Goodbye" を代入します:
+以下の2つのステートメントも、同一の動作を実行します。 両方とも $MyVar に、文字列 "Goodbye" を代入します:
 ```4d
 $MyPointer->:="Goodbye"
 $MyVar:="Goodbye"
@@ -168,6 +168,7 @@ SORT ARRAY($ArrPtr->;>) // 配列の並べ替え
   //takeTwo プロジェクトメソッド
   //$1 – 文字列フィールドまたは変数へのポインター。 これを大文字に変換します。
   //$2 – 文字列フィールドまたは変数へのポインター。 これを小文字に変換します。
+ これを小文字に変換します。
  $1->:=Uppercase($1->)
  $2->:=Lowercase($2->)
 ```
@@ -198,7 +199,7 @@ takeTwo(->[myTable]myField;->$MyVar)
 - $PointerOne:=->$MyVar --> 変数 $PointerOne に、変数 $MyVar へのポインターを代入しています。
 - $PointerTwo:=->$PointerOne --> 新たな変数 $PointerTwo に、$MyVar を参照する $PointerOne へのポインターを代入しています。
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVarを示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、文字列 "Goodbye" が $MyVar に代入されます。
-- ALERT (($PointerTwo->)->) --> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 結果として、アラートボックスには $MyVar の内容が表示されます。
+- ALERT (($PointerTwo->)->) --> 先の説明と同様に $PointerTwo-> は $PointerOne を示し、$PointerOne は $MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。 つまり、($PointerTwo->)-> は、$MyVar を示しています。
 
 以下の例では、$MyVar に "Hello" が代入されます:
 ```4d
