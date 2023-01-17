@@ -189,7 +189,7 @@ Al igual que la página de Constantes de la ventana del Explorador, este tema mu
 
 #### Semáforos
 
-Este tema lista los semáforos locales que se están configurando actualmente. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.
+Este tema lista los semáforos locales que se están configurando actualmente. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. Las expresiones de este tema no pueden ser modificadas.
 
 #### Procesos
 
