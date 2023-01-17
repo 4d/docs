@@ -67,7 +67,7 @@ Si `.new()` si appelé sur une classe qui n'existe pas, une erreur est retourné
 
 #### Exemples
 
-Pour créer une nouvelle instance de la classe Person :
+Pour créer une nouvelle instance de la classe Person avec des paramètres :
 
 ```4d
 var $person : cs.Person  
@@ -75,7 +75,7 @@ $person:=cs.Person.new() //créer la nouvelle instance
 //$person contient les fonctions de la classe
 ```
 
-Pour créer une nouvelle instance de la classe Person avec des paramètres :
+Pour créer une nouvelle instance de la classe Person :
 
 ```4d
 //Class: Person.4dm
