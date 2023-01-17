@@ -19,7 +19,7 @@ Les objets de type Combo box acceptent deux options relatives aux listes de choi
 
 - [Insertion automatique](properties_DataSource.md#automatic-insertion) : entraînera l’ajout automatique d'une valeur dans la liste stockée en mémoire lorsque l’utilisateur saisit une valeur leur non présente dans la liste de choix associée à la combo box.
 - [Exclusion ](properties_RangeOfValues.md#excluded-list) (liste de valeurs exclues) : permet d'établir une liste dont les valeurs ne peuvent pas être saisies dans la combo box. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
-> > Associating a [list of required values](properties_RangeOfValues.md#required-list) is not available for combo boxes. Dans le cadre d’une interface, si l’objet doit proposer une liste finie de valeurs obligatoires, il est nécessaire d’utiliser un objet de type [Liste déroulante](dropdownList_Overview.md#overview).
+> > > Associating a [list of required values](properties_RangeOfValues.md#required-list) is not available for combo boxes. Dans le cadre d’une interface, si l’objet doit proposer une liste finie de valeurs obligatoires, il est nécessaire d’utiliser un objet de type [Liste déroulante](dropdownList_Overview.md#overview).
 
 ## Propriétés prises en charge
 
