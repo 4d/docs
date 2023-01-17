@@ -56,7 +56,7 @@ Há vários tipos de list boxes com seus próprios comportamentos e propriedades
 - **Arrays**: cada coluna é conectada a um array 4D. List boxes baseadas em array podem ser exibidas como [list boxes hierárquicas](listbox_overview.md#hierarchical-list-boxes).
 - **Seleção** (**Seleção atual** ou **Seleções nomeadas**): cada coluna é conectada a uma expressão (por exemplo um campo) que é avaliado para cada registro da seleção.
 - **Coleção ou seleção de entidade**: cada coluna é conectada a uma expressão que é avaliada para todo elemento da coleção ou toda entidade da seleção de entidade.
-> > It is not possible to combine different list box types in the same list box object. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
+> > > It is not possible to combine different list box types in the same list box object. A fonte de dados é estabelecida quando a list box é criada. Não é mais possível modificar por programação.
 
 
 ### Gerenciando list boxes
@@ -311,7 +311,7 @@ Pode estabelecer propriedades padrão (texto, cor de fundo, etc) para cada colun
 
 ## Cabeçalhos de list box
 
-> Para poder acessar as propriedades de um cabeçalho deve ativar a opção[Exibir rodapés](properties_Footers.md#display-footers).
+> Para poder acessar às propriedades dos cabeçalhos de um list box, deve ativar a opção [Mostrar cabeçalhos](properties_Headers.md#display-headers) da list box.
 
 Quando mostrar os cabeçalhos, pode selecionar um cabeçalho no editor de formulários clicando nele quando o objeto List Box estiver selecioando:
 
@@ -337,7 +337,7 @@ Quando o comando `OBJECT SET VISIBLE` for usado com um cabeçalho, é aplicado a
 
 
 ## Rodapés de list box
-> Para poder acessar às propriedades dos cabeçalhos de um list box, deve ativar a opção [Mostrar cabeçalhos](properties_Headers.md#display-headers) da list box.
+> Para poder acessar as propriedades de um cabeçalho deve ativar a opção[Exibir rodapés](properties_Footers.md#display-footers).
 
 List boxes podem conter "cabeçalhos" não editáveis, exibindo informação adicional. No caso de dados mostrados em formato de tabela, os rodapés são geralmente usados para exibir cálculos como totais ou médias.
 
@@ -754,7 +754,7 @@ If this list box is displayed in hierarchical form (the first three arrays being
 
 The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
 
-    > &gt; A B A C
+    > &gt; > A B A C
 
 To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
 
