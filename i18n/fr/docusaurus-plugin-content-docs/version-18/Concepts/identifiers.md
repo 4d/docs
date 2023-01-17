@@ -11,7 +11,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 - Un nom doit commencer par un caractère alphabétique, un tiret bas ou un dollar ("$") (à noter que le symbole dollar peut désigner un élément local, voir ci-dessous).
 - Le nom peut ensuite contenir des caractères alphabétiques, des caractères numériques, des espaces et des tirets bas (_).
-- Les points (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Les points (".") Les points (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
 - Les virgules, barres de fraction, guillemets et deux points (:) sont interdits.
 - Les caractères réservés car utilisés comme opérateurs, comme l’astérisque (*) ou le +, sont interdits.
 - Les noms réservés, c'est-à-dire les noms de commandes 4D (`Date`, `Time`, etc), les mots-clés (If, For, etc.) et les constantes.
@@ -20,7 +20,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 ### Règles supplémentaires pour les propriétés d'objet et les noms ORDA
 
 - Les espaces sont interdits.
-- Les points (".") Periods (".") and brackets ("[ ]") are not allowed.
+- Les points (".") Les points (".") Periods (".") and brackets ("[ ]") are not allowed.
 - Les noms sont sensibles à la casse.
 
 ### Règles supplémentaires pour SQL
