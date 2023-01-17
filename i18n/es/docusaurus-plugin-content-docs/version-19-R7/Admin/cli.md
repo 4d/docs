@@ -69,13 +69,13 @@ open ~/Desktop/4D.app
 %HOMEPATH%\Desktop\4D\4D.exe
 ```
 
-Lance la aplicación:
+Lanzar la aplicación con un archivo paquete en macOS:
 
 ```bash
 yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
 
-Lanzar la aplicación con un archivo paquete en macOS:
+Lance la aplicación:
 
 *   macOS:
 
@@ -94,7 +94,7 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 
 
 
-Lanzar la aplicación con un archivo proyecto:
+Lanzar la aplicación con un archivo proyecto y un archivo de datos:
 
 *   macOS:
 
@@ -112,7 +112,7 @@ or:
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-Lanzar la aplicación con un archivo proyecto y un archivo de datos:
+Lanzar la aplicación con un archivo .4DLink:
 
 *   macOS:
 
@@ -136,7 +136,7 @@ open "~/Desktop/4D Server.app" ~/Desktop/MyDatabase.4DLink
 %HOMEPATH%\Desktop\4D Server.exe" %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
-Lanzar la aplicación con un archivo .4DLink:
+Lanzar la aplicación en modo compilado y crear un archivo de datos si no está disponible:
 
 *   macOS:
 
@@ -152,7 +152,7 @@ open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled -
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-Lanzar la aplicación en modo compilado y crear un archivo de datos si no está disponible:
+Lanzar la aplicación con un archivo proyecto y un archivo de datos y pasar una cadena como parámetro usuario:
 
 *   macOS:
 
