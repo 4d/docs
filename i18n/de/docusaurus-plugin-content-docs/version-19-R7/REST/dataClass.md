@@ -60,7 +60,7 @@ Return all the data for a specific dataclass.
 
 **Result**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -135,7 +135,7 @@ Return all the data for a specific dataclass.
 .....//more entities here 
     ]
 }
-````
+```
 
 
 ## {dataClass}({key})
@@ -164,7 +164,7 @@ The following request returns all the public data in the Company dataclass whose
 
 **Result**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -183,7 +183,7 @@ The following request returns all the public data in the Company dataclass whose
         }
     }
 }
-````
+```
 
 
 
