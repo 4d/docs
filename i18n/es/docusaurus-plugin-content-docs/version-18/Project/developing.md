@@ -13,7 +13,7 @@ El desarrollo multiusuario se gestiona a través de herramientas estándar de co
 
 ## Acceso al archivo de proyecto
 
-Cuando trabaja en un proyecto en 4D Developer, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
+Cuando trabaja en un proyecto en 4D Developer, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones.
 
 4D Developer incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
 
