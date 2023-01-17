@@ -51,7 +51,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 #### 説明
 
-`SMTP New transporter` コマンドは、 <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。この SMTP接続は、*server* 引数の指定に応じてを設定され、コマンドの戻り値は新しい *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。
+`SMTP New transporter` コマンドは、 <!-- REF #_command_.SMTP New transporter.Summary -->新規の SMTP接続を設定します<!-- END REF --> 。 この SMTP接続は、*server* 引数の指定に応じてを設定され、コマンドの戻り値は新しい *[SMTP transporter](#smtp-transporter-オブジェクト)* オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。
 
 > このコマンドは SMTPサーバーとの接続を開始しません。 SMTP接続は、実際には [`.send()`](#send) 関数が実行された時に開かれます。  
 > 
@@ -162,6 +162,10 @@ SMTPステータスコードについての詳細は [こちらのページ](htt
  Else
     ALERT("エラー # "+String($status.status)+", "+$status.statusText)
  End if
+ ")
+ Else
+    ALERT("エラー # "+String($status.status)+", "+$status.statusText)
+ End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
@@ -221,7 +225,7 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 `.send()` 関数は、 <!-- REF #SMTPTransporterClass.send().Summary -->[*mail*](EmailObjectClass.md#email-オブジェクト) 引数が指定するメールメッセージを、`transporter` オブジェクトが定義する SMTPサーバーへと送信し、ステータスオブジェクトを返します<!-- END REF -->。
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
-この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。それ以外の場合には、接続は `transporter` オブジェクトが消去されるまで開いたままになります。 詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。
+この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが **false** であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。 詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。
 
 *mail*には、送信する有効な [`Email` オブジェクト](EmailObjectClass.md#email-オブジェクト) を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。
 
