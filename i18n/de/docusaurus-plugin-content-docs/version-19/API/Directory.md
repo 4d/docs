@@ -529,6 +529,7 @@ You want to know if there are invisible files in the Database folder:
     ALERT("Database folder contains hidden files.")
  End if
  End if
+ End if
 ```
 
 #### Beispiel 2
