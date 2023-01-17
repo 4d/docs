@@ -37,7 +37,7 @@ title: メソッド一覧
 
 名前をつけたいレンジを *rangeObj* に、新しいレンジの名前は *name* に渡します。 同じスコープ内で名前が既に使用されている場合、新しい命名レンジは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。
 
-*options* 引数には、命名フォーミュラの追加プロパティを格納したオブジェクト型を渡すことができます。 以下のオブジェクトプロパティがサポートされています:
+*options* 引数には、命名フォーミュラの追加プロパティを格納したオブジェクト型を渡すことができます。 以下のプロパティがサポートされています:
 
 | プロパティ   | タイプ    | 説明                                                                                                                                                                                                                                                            |
 | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 *name* 引数には、新しいフォーミュラの名前を渡します。 同じスコープ内で名前が既に使用されている場合、新しい命名フォーミュラは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。
 
-*options* 引数には、命名レンジの追加プロパティを格納したオブジェクト型を渡すことができます。 以下のオブジェクトプロパティがサポートされています:
+*options* 引数には、命名レンジの追加プロパティを格納したオブジェクト型を渡すことができます。 以下のプロパティがサポートされています:
 
 | プロパティ   | タイプ    | 説明                                                                                                                                                                                                                                                      |
 | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### 例題
 
-あるセルレンジに対して命名レンジを作成します:
+内容
 
 ```4d
 $range:=VP Cell("ViewProArea";2;10)
@@ -117,16 +117,16 @@ VP ADD RANGE NAME($range;"Total1")
 
 `VP ADD SELECTION` コマンドは、 <!-- REF #_method_.VP ADD SELECTION.Summary -->指定されたセルを、現在選択されているセル範囲に追加します<!-- END REF -->。
 
-*rangeObj* には、カレントセレクションに追加するセルのレンジオブジェクトを渡します。
+計算停止ボタンのコード:
 > アクティブセルは変更されません。
 
 #### 例題
 
-以下のようにセルが選択されている場合:
+|引数|タイプ||説明|
 
 ![](../assets/en/ViewPro/cmd_vpAddSelection1.PNG)
 
-以下のコードを実行すると、指定したセルを選択範囲に追加します:
+|
 
 ```4d
 $currentSelection:=VP Cells("myVPArea";3;4;2;3)
@@ -169,11 +169,11 @@ VP ADD SELECTION($currentSelection)
 
 #### 例題
 
-ドキュメントには現在 3つのシートがあります:
+○
 
 ![vp-document-with-3-sheets](../assets/en/ViewPro/vp-sheet-3.png)
 
-新しいシートを 3つ目の位置 (インデックスは 2) に挿入し、名前を "March" にします:
+|
 
 ```4d
 VP ADD SHEET("ViewProArea";2;"March")
@@ -200,7 +200,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 #### 説明
 
-`VP ADD SPAN` コマンドは、*rangeObj* に渡したセルを単一のセルに結合します。
+次のセレクターが利用可能です:
 
 *rangeObj* には、セルのレンジオブジェクトを渡します。 レンジ内のセルは結合され、複数のカラム/行にまたがる大きなセルが作成されます。 複数のセルレンジを渡すことで、一度に複数の結合セルを作成することもできます。 ただし、セルレンジが重なった場合、最初のセルレンジのみが使用されます。
 
@@ -209,7 +209,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 #### 例題
 
-"First quarter" セルと "Second quarter" セルを、それぞれ右 2つのセルと結合し、"South area" セルは下 2つのセルと結合します:
+タイプ
 
 ![initial-document](../assets/en/ViewPro/vp-add-span.png)
 
@@ -265,9 +265,9 @@ VP ADD SHEET("ViewProArea";2;"March")
 * `vk current sheet`
 * `vk workbook`
 
-同じ *styleName* のスタイルシートが、ワークブックレベルとシートレベルとで定義されている場合、シートレベルのスタイルが優先されます。
+エリアを埋めるように拡大表示。
 
-スタイルシートを適用するには、[VP SET DEFAULT STYLE](#vp-set-default-style) または [VP SET CELL STYLE](#vp-set-cell-style) コマンドを使用します。
+フォーミュラが反復計算される最大回数。
 
 #### 例題
 
@@ -291,7 +291,7 @@ VP ADD STYLESHEET("ViewProArea";"GreenDashDotStyle";$styles)
 VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDotStyle"))
 ```
 
-*GreenDashDotStyle* という名前の、以下のようなスタイルオブジェクトを作成します:
+列のフッターのフォーミュラ。
 
 ```
 {
@@ -332,7 +332,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDo
 
 #### 例題
 
-カレントスプレッドシートにおいて、全セルのレンジオブジェクトを定義します:
+|
 
 ```4d
 $all:=VP All("ViewProArea") // カレントシートの全セル
@@ -378,11 +378,11 @@ $all:=VP All("ViewProArea") // カレントシートの全セル
 
 #### 例題
 
-以下に表示されている (カレントスプレッドシートの) セルに対するレンジオブジェクトを定義します:
+|
 
 ![vp-cell](../assets/en/ViewPro/cmd_vpCell.png)
 
-以下のようにコードを書くことができます:
+設定するワークブックオプションを格納したオブジェクト|
 
 ```4d
 $cell:=VP Cell("ViewProArea";2;4) // C5
@@ -436,11 +436,11 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 #### 例題
 
-(カレントシートにおいて) 以下のセルのレンジオブジェクトを定義します:
+|
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-以下のようにコードを書くことができます:
+設定するワークブックオプションを格納したオブジェクト|
 
 ```4d
 $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
@@ -475,17 +475,17 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 *column* 引数で、カラムレンジの先頭カラムを指定します。 この引数としてカラムのインデックス (0 起点) を渡します。 レンジが複数カラムにわたる場合には、任意の *columnCount* 引数も併せて使用します。
 
-任意の *columnCount* には、レンジに含まれるカラム数を指定することができます。 *columnCount* 引数は 0 より大きい値でなくてはなりません。 省略時、デフォルトで値は 1 に設定され、カラム型のレンジが作成されます。
+*vpAreaName* 引数内にあるカラムの総数を定義します *columnCount* 引数は 0 より大きい値でなくてはなりません。 省略時、デフォルトで値は 1 に設定され、カラム型のレンジが作成されます。
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合、または `vk current sheet` を渡した場合、カレントスプレッドシートが使用されます。
 
 #### 例題
 
-以下に表示されている (カレントスプレッドシートの) カラムに対するレンジオブジェクトを定義します:
+○
 
 ![](../assets/en/ViewPro/cmd_vpColumn.PNG)
 
-以下のようにコードを書くことができます:
+設定するワークブックオプションを格納したオブジェクト|
 
 ```4d
  $column:=VP Column("ViewProArea";3) // カラム D
@@ -512,21 +512,21 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 `VP COLUMN AUTOFIT` コマンドは、 <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->*rangeObj* 引数のレンジ内にあるカラムを、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
 
-*rangeObj* 引数として、サイズを自動調整したいカラムを格納しているレンジオブジェクトを渡します。
+フォーミュラを削除します:
 
 #### 例題
 
-以下のカラムはすべて同じサイズで、一部のテキストが表示しきれていません:
+命名フォーミュラに割り当てられたコメント
 
 ![](../assets/en/ViewPro/cmd_vpColumnAutoFit1.PNG)
 
-カラムを選択して、以下のコードを実行すると:
+内容
 
 ```4d
  VP COLUMN AUTOFIT(VP Get selection("ViewProarea"))
 ```
 
-コンテンツに合うようにカラムがリサイズされます:
+説明
 
 ![](../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
@@ -553,14 +553,14 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 `VP Combine Ranges` コマンドは、 <!-- REF #_method_.VP Combine ranges.Summary -->2つ以上のレンジオブジェクトを統合した新しいレンジオブジェクトを返します<!-- END REF -->。 レンジはすべて同じ 4D View Pro エリア内のものでなくてはなりません。
 
-*rangeObj* には、1つ目のレンジオブジェクトを渡します。
+大きなドキュメントをオフスクリーンで読み込み、計算の評価が完了するのを待ってドキュメントを PDF として書き出します:
 
-*otherRangeObj* には、*rangeObj* のレンジオブジェクトと統合させる他のレンジオブジェクトを渡します。
+*rangeObj* 引数として、サイズを自動調整したいカラムを格納しているレンジオブジェクトを渡します。
 > このコマンドは *rangeObj* および *otherRangeObj* のオブジェクトを参照によって組み合わせます。
 
 #### 例題
 
-セル、カラム、行のレンジオブジェクトを、新規レンジオブジェクトにまとめます:
+履歴
 
 ```4d
  $cell:=VP Cell("ViewProArea";2;4) // C5
@@ -597,7 +597,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 #### 例題
 
-BLOB に保存されている 4D View エリアから 4D View Pro オブジェクトを取得します:
+|
 
 ```4d
 C_OBJECT($vpObj)
@@ -623,7 +623,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 `VP Convert to picture` コマンドは、 <!-- REF #_method_.VP Convert to picture.Summary -->*vpObject* 引数で指定した 4D View Pro オブジェクト (あるいは *vpObject* 内にある、*rangeObj* 引数で指定したレンジ) を、SVGピクチャーに変換します<!-- END REF -->。
 
-このコマンドは以下のような場合に有用です:
+*options* には、設定するテーマプロパティを格納する [`cs.ViewPro.TableTheme` クラス](classes.md#tabletheme) のオブジェクトを渡します。
 
 * 4D View Pro ドキュメントを 4D Write Pro ドキュメントなど、他のドキュメントに埋め込みたい場合
 * 4D View Pro ドキュメントを、4D View Pro エリアに読み込まずに印刷したい場合
@@ -643,15 +643,15 @@ $vpObj:=VP Convert from 4D View($pvblob)
 * 行高さ
 * カラム幅
 * 非表示のカラム / 行 > 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
-> 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
+> ユーザーが計算を停止/再開できるように、フォーム上に 2つボタンを追加します:
 
 #### ファンクションの戻り値
 
-コマンドは SVGフォーマットのピクチャーを返します。
+◯
 
 #### 例題
 
-4D View Pro エリアを SVG に変換し、結果をプレビューするためピクチャー変数に戻り値を代入します:
+内容
 
 ```4d
 C_OBJECT($vpAreaObj)
@@ -694,20 +694,20 @@ $vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出しま�
 
 *rangeObj* には、コピーしたい値、フォーマット、フォーミュラを格納しているセルレンジを渡します。 *rangeObj* が結合レンジの場合は、最初のものだけが使用されます。
 
-任意の *options* 引数として、以下のプロパティを渡すことができます。
+ブログ記事 (英文): End of document loading
 
 | プロパティ       | タイプ     | 説明                                                           |
 | ----------- | ------- | ------------------------------------------------------------ |
 | copy        | Boolean | コマンド実行後もコピーされた値、書式、数式が保持するには *true* (デフォルト)。 削除するには *false*。 |
 | copyOptions | Longint | コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをコピーします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをコピーします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをコピーします。</td></tr></table></p>          |
 
-[ワークブックオプション](#vp-set-workbook-options) で定義されている貼り付けオプションが考慮されます。
+4D View Pro フォームオブジェクト名
 
-このコマンドは、コピーされたデータを含むオブジェクトを返します。
+シートのタブ、固定化された線、枠線、選択範囲の背景と選択範囲の境界線のカラーをカスタマイズします:
 
 #### 例題
 
-あるレンジのコンテンツ、値、フォーマット、フォーミュラをオブジェクトに格納し、それを別のレンジに貼り付けます:
+参照
 
 ```4d
 var $originRange; $targetRange; $dataObject; $options : Object
@@ -761,7 +761,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
-*rangeObj* 引数には、表の作成場所としたいセルのレンジを渡します。
+履歴
 
 *tableName* には、表組みの名称を渡します。 名称は次の条件を満たさなくてはなりません:
 
@@ -793,7 +793,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
   | formatter | Text | 表の列のフォーマッター              | ×  |
   | name      | Text | 表の列の名前                   | ◯  |
 
-*tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
+*options* オブジェクトの中で、*tableColumns* コレクションが、表の列のデータ構造を決定します。
 
   * *rangeObj* の列数が *tableColumns* の列数より多い場合、表は追加の空列で埋められます。
   * *rangeObj* の列数が *tableColumns* の列数より少ない場合、表はレンジの列数のみを表示します。
@@ -805,7 +805,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 ```4d
 ([{ LastName: \"Freehafer\", FirstName: \"Nancy\"},{ LastName: \"John\", FirstName: \"Doe\"})
 ```
-この場合、列のタイトルは `LastName` と `FirstName` になります。
+タイプ
 
 * スカラー値のコレクションを各行のデータとして渡すには、それらはサブコレクションとしてコレクションに格納されている必要があります:
 
@@ -818,7 +818,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### 例題
 
-データコンテキストを使用した表組みを作成します:
+|
 
 ```4d
 // データコンテキストの設定します
@@ -877,15 +877,15 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); 
 
 * レンジにカラムと行の両方が含まれる場合、カラムのみが削除されます。
 * レンジに行しか含まれていない場合、コマンドは何もしません。 > カラムは右から左に向かって削除されます。
-> カラムは右から左に向かって削除されます。
+> > カラムは右から左に向かって削除されます。 > カラムは右から左に向かって削除されます。
 
 #### 例題
 
-ユーザーが選択したカラムを削除します (以下の画像の B、C、D のカラムを削除します):
+内容
 
 ![](../assets/en/ViewPro/cmd_vpDeleteColumns.PNG)
 
-以下のコードを実行します:
+変更されたワークブックオプションはドキュメントとともに保存されます。
 
 ```4d
 VP DELETE COLUMNS(VP Get selection("ViewProArea"))
@@ -915,16 +915,16 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 *rangeObj* 引数には、削除する行を指定するレンジオブジェクトを渡します。 渡すレンジについては、以下の点に注意してください:
 
 * レンジにカラムと行の両方が含まれる場合、行のみが削除されます。
-* レンジにカラムしか含まれていない場合、コマンドは何もしません。 > 行は下から上に向かって削除されます。
+* レンジにカラムしか含まれていない場合、コマンドは何もしません。
 > 行は下から上に向かって削除されます。
 
 #### 例題
 
-ユーザーが選択した行を削除します (以下の画像の 1、2、3行目を削除します):
+○
 
 ![](../assets/en/ViewPro/cmd_vpDeleteRows.PNG)
 
-以下のコードを実行します:
+変更されたワークブックオプションはドキュメントとともに保存されます。
 
 ```4d
 
@@ -960,7 +960,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 *filePath* には書き出すドキュメントのパスとファイル名を渡します。 パスを指定しない場合、ドキュメントは Projectフォルダーと同階層に保存されます。
 
-ドキュメント名に拡張子を付けることで、書き出すドキュメントの形式を指定することができます:
+ドラッグ＆フィルの Tip を表示します。
 
 * 4D View Pro (".4vp")
 * Microsoft Excel (".xlsx")
@@ -969,7 +969,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 ファイル名に拡張子が含まれていなくても、*paramObj* 引数によって形式が指定されている場合、書き出されたファイルには形式に対応する拡張子がつけられます。 ただし CSV形式の場合には拡張子がつきません。
 
-任意の *paramObj* 引数を渡すと、書き出される 4D View Pro オブジェクトの複数のプロパティに加えて、書き出しが完了した際に呼び出されるコールバックメソッド名を定義することができます。
+次のルールが適用されます:
 
 | プロパティ                      | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                              |
 | -------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -984,22 +984,22 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 | csvOptions                 | object  | CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 デフォルト: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                           |
 | `\<customProperty>` | any     | コールバックメソッドの $3 引数を通して利用可能な任意のプロパティ。                                                                                                                                                                                                                                                                                                                             |
 
-**Excel 形式についての注意**:
+内容
 
 * 4D View Pro ドキュメントを Microsoft Excel 形式のファイルに書き出す場合、一部の設定が失われる可能性があります。 たとえば、4Dメソッドとフォーミュラは Excel ではサポートされません。 [GrapeCity にある一覧](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html) にて、その他の設定を確認することができます。
 * このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の *formula* プロパティを使用します。
 
-**PDF 形式についての注意**:
+内容
 
 * 4D View Pro ドキュメントを PDF 形式に書き出す場合、ドキュメントで使用されているフォントは自動的に PDF ファイルに埋め込まれます。 ただし、埋め込み可能なのは Unicode マップを持つ OpenType フォント (.OTF または .TTF ファイル) のみです。 フォントに対して有効なフォントファイルが見つからない場合、デフォルトのフォントが代用されます。
 * このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の *formula* プロパティを使用します。
 
-**CSV 形式についての注意**:
+内容
 
 * 4D View Pro ドキュメントを CSV 形式に書き出す場合、テキストと値のみが保存されるため、一部の設定が失われる可能性があります。
 * すべての値は二重引用符で括られた形で保存されます。 ユーザー定義区切りの値 (DSV) に関する詳細については、こちらの [Wikipedia の記事](https://en.wikipedia.org/wiki/Delimiter-separated_values) (英文) を参照ください。
 
-書き出し操作が完了すると、`VP EXPORT DOCUMENT` は自動的に、*paramObj* オブジェクトの *formula* プロパティに設定されたメソッドをトリガーします (設定されていれば)。
+アスペクト比を維持して表示。
 
 #### コールバックメソッド (フォーミュラ) の渡し方
 
@@ -1017,7 +1017,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 #### 例題 1
 
-"VPArea" エリアのコンテンツをディスク上の 4D View Pro ドキュメントに書き出します:
+|
 
 ```4d
 var $docPath: Text
@@ -1029,7 +1029,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 
 #### 例題 2
 
-カレントシートを PDF に書き出します:
+|
 
 ```4d
 var $params: Object
@@ -1042,7 +1042,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 
 #### 例題 3
 
-4D View Pro ドキュメントを ".xlsx" 形式に書き出して、書き出し完了後にそのドキュメントをMicrosoft Excel で開くメソッドを呼び出します:
+|
 
 ```4d
  $params:=New object
@@ -1053,7 +1053,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
 ```
 
-***AfterExport*** メソッド:
+内容
 
 ```4d
  C_TEXT($1;$2)
@@ -1072,7 +1072,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 
 #### 例題 4
 
-カレントシートを、縦棒 (|) 区切りの `.txt` ファイルに書き出します:
+説明
 
 ![example-export-csv](../assets/en/ViewPro/vp-export-document-csv.png)
 
@@ -1111,22 +1111,22 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 #### 説明
 
-`VP Export to object` コマンドは、 <!-- REF #_method_.VP Export to object.Summary --> *vpAreaName* で指定した 4D View Pro エリアに関連付けられている 4D View Pro オブジェクトを返します<!-- END REF -->。 このコマンドによって、たとえば 4D View Pro エリアを 4Dデータベースのオブジェクトフィールドに保存することができます。
+`VP Export to object` コマンドは、 <!-- REF #_method_.VP Export to object.Summary --> `VP Export to object` コマンドは、<!-- END REF -->。 このコマンドによって、たとえば 4D View Pro エリアを 4Dデータベースのオブジェクトフィールドに保存することができます。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*options* 引数として、必要に応じて以下の書き出しオプションを渡すことができます:
+列のフッターのフォーミュラ。
 
 | プロパティ                | タイプ     | 説明                                                                                                                                          |
 | -------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | includeFormatInfo    | Boolean | フォーマット (書式) 情報を含めるには true (デフォルト)、それ以外の場合には false。 フォーマット情報は特定の場合 (例: SVGへの書き出しなど) において有用です。 一方で、このプロパティを false に設定することで書き出し時間を短縮することもできます。 |
 | includeBindingSource | Boolean | true (デフォルト) の場合、カレントデータコンテキストの値を、書き出したオブジェクトのセルの値としてエクスポートします (データコンテキスト自体はエクスポートされません)。 それ以外は false。 セルバインドは常にエクスポートされます。                 |
 
-4D View Pro オブジェクトについての詳細は [4D View Pro オブジェクト](configuring.md#4d-view-pro-オブジェクト) を参照ください。
+ドキュメントには現在シートが 1つあります:
 
 #### 例題 1
 
-4D View Pro エリアの "version" プロパティを取得します:
+|
 
 ```4d
 var $vpAreaObj : Object
@@ -1138,7 +1138,7 @@ $vpVersion:=$vpAreaObj.version
 
 #### 例題 2
 
-フォーマット (書式) 情報を含めてエリアを書き出します:
+|
 
 ```4d
 var $vpObj : Object
@@ -1170,13 +1170,13 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 #### 説明
 
-`VP Find` コマンドは、 <!-- REF #_method_.VP Find.Summary -->*rangeObj* に指定したレンジ内で *searchValue* に指定した値を検索します<!-- END REF -->。 任意の引数を渡すことで、検索条件を詳細に指定したり、検索結果を置換したりすることができます。
+`VP Find` コマンドは、 <!-- REF #_method_.VP Find.Summary -->`VP Find` コマンドは、<!-- END REF -->。 任意の引数を渡すことで、検索条件を詳細に指定したり、検索結果を置換したりすることができます。
 
-*rangeObj* 引数として、検索対象のレンジを格納したオブジェクトを渡します。
+フォーミュラを削除します:
 
-*searchValue* 引数として、*rangeObj* に指定したレンジ内で検索するテキスト値を渡します。
+履歴
 
-任意の *searchCondition* 引数を渡すことで、検索がどのように実行されるかを指定することができます。 以下のオブジェクトプロパティがサポートされています:
+任意の *searchCondition* 引数を渡すことで、検索がどのように実行されるかを指定することができます。 以下のプロパティがサポートされています:
 
 | プロパティ       | タイプ     | 説明                                                                                                          |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------- |
@@ -1187,7 +1187,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 | order       | Integer | <table><tr><td>`vk find order by columns`</td><td>検索がカラムごとに実行されます。 カラムの各行が検索されたあとに次のカラムへと移動します。</td></tr><tr><td>`vk find order by rows`</td><td>検索が行ごとに実行されます。 行の各カラムが検索されたあとに次の行へと移動します (デフォルト)。</td></tr></table>                                                                                  |
 | target      | Integer | <table><tr><td>`vk find target formula`</td><td>セルフォーミュラ内で検索がおこなわれます。</td></tr><tr><td>`vk find target tag`</td><td>セルタグ内で検索がおこなわれます。</td></tr><tr><td>`vk find target text`</td><td>セルテキスト内で検索がおこなわれます (デフォルト)。</td></tr></table><p>フラグは組み合わせることができます。 例:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                        |
 
-任意の *replaceValue* 引数として、*rangeObj* 内で見つかった *searchValue* の値のテキストを置換するテキストを渡すことができます。
+履歴
 
 #### 返されるオブジェクト
 
@@ -1195,7 +1195,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 #### 例題 1
 
-"Total" という単語が入っている最初のセルを見つけるには:
+|
 
 ```4d
 var $range;$result : Object
@@ -1207,7 +1207,7 @@ $result:=VP Find($range;"Total")
 
 #### 例題 2
 
-"Total" のセルを検出し、それを "Grand Total" で置き換えるには:
+|
 
 ```4d
 var $range;$condition;$result : Object
@@ -1258,7 +1258,7 @@ End if
 
 *rangeObj* には、セルのレンジオブジェクトを渡します。 指定したセルが表組みの一部でない場合、コマンドは空の文字列を返します。
 
-*rangeObj* 引数のレンジが単独セルのレンジでない場合、あるいは複数レンジを指定している場合、最初のレンジの先頭セルが使用されます。
+以下のようにコードを書くことができます:
 
 #### 例題
 
@@ -1266,7 +1266,8 @@ End if
 If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
      $tableName:=VP Find table(FORM Event.range)
      If ($tableName#"")
-         ALERT("表組み "+$tableName+" は変更されました。")
+         ALERT("表組み "+$tableName+" は変更されました。
+     ")
      End if 
 End if
 ```
@@ -1302,7 +1303,7 @@ End if
 
 #### 例題
 
-コマンドの実行をトレースし、コマンドバッファを空にします:
+互換性
 
 ```4d
 
@@ -1331,7 +1332,7 @@ End if
 
 #### 説明
 
-`VP Font to object` ユーティリティコマンドは、 <!-- REF #_method_.VP Font to object.Summary -->フォントのショートハンド文字列からオブジェクトを返します<!-- END REF -->。 このオブジェクトはその後、オブジェクト記法を通してフォントプロパティ設定を取得・設定するのに使用することができます。
+`VP Font to object` ユーティリティコマンドは、 <!-- REF #_method_.VP Font to object.Summary -->`VP Font to object` ユーティリティコマンドは、<!-- END REF -->。 このオブジェクトはその後、オブジェクト記法を通してフォントプロパティ設定を取得・設定するのに使用することができます。
 
 *font* には、フォントのショートハンド文字列を渡してフォントのプロパティを指定します (例: "12 pt Arial")。 フォントのショートハンド文字列についての詳細は、[こちら](https://www.w3schools.com/cssref/pr_font_font.asp) を参照ください。
 
@@ -1339,13 +1340,13 @@ End if
 
 #### 例題 1
 
-以下のコードを実行すると:
+セルフォーミュラ内で検索がおこなわれます。
 
 ```4d
 $font:=VP Font to object("16pt arial")
 ```
 
-以下の $font オブジェクトが返されます:
+|columnCount | Integer | シートの左側にある固定化されたカラム| |trailingColumnCount |Integer | シートの右側にある固定化されたカラム| |rowCount | Integer |  シートの上側にある固定化された行 | |trailingRowCount | Integer |  シートの下側にある固定化された行|
 
 ```4d
 {
@@ -1357,7 +1358,7 @@ size:16pt
 
 #### 例題 2
 
-[`VP Object to font`](#vp-object-to-font) の例題を参照ください。
+カレントシートを第3シートに設定します:
 
 #### 参照
 
@@ -1392,7 +1393,7 @@ size:16pt
 
 ![](../assets/en/ViewPro/cmd_vpGetActiveCell.PNG)
 
-以下のコードを実行するとアクティブセルの座標が取得できます:
+|
 
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
@@ -1479,7 +1480,7 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 
 `VP Get cell style` コマンドは、 <!-- REF #_method_.VP Get cell style.Summary -->*rangeObj* 引数で指定したレンジの最初のセルの [スタイルオブジェクト](configuring.md#スタイルオブジェクト) を返します<!-- END REF -->。
 
-*rangeObj* 引数で、スタイルを取得するレンジを指定します。
+出力されたPDF:
 
 * *rangeObj* 引数としてセルレンジを渡した場合、セルのスタイルが返されます。
 * *rangeObj* 引数として、セルレンジではないレンジを渡した場合、そのレンジ内の最初のセルのスタイルが返されます。
@@ -1487,11 +1488,11 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 
 #### 例題
 
-選択されたセル (B2) のスタイルの詳細を取得します:
+|
 
 ![](../assets/en/ViewPro/cmd_vpGetCellStyle.PNG)
 
-以下のコードを実行すると:
+セルフォーミュラ内で検索がおこなわれます。
 
 ```4d
 $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
@@ -1537,9 +1538,9 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 
 `VP Get column attributes` コマンドは、 <!-- REF #_method_.VP Get column attributes.Summary -->*rangeObj* 引数で指定したレンジ内にあるカラムのプロパティのコレクションを返します<!-- END REF -->。
 
-*rangeObj* 引数には、属性を取得したいカラムのレンジを格納しているオブジェクトを渡します。
+ワークブック内の全フォーミュラを更新します:
 
-[VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションにはカラムの属性がすべて返されます。
+4D View Pro エリアにおいて、2つのメソッドを許可します:
 
 #### 例題
 
@@ -1553,7 +1554,7 @@ $range:=VP Column("ViewProArea";1;2)
 $attr:=VP Get column attributes($range)
 ```
 
-渡したレンジ内の属性のコレクションを返します:
+日付
 
 ![](../assets/en/ViewPro/cmd_vpGetColumnAttributes.PNG)
 
@@ -1586,7 +1587,7 @@ $attr:=VP Get column attributes($range)
 
 #### 例題
 
-以下のコードを実行すると、4D View Pro エリア内のカラムの数が返されます:
+|
 
 ```4d
 C_Integer($colCount)
@@ -1621,11 +1622,11 @@ $colCount:=VP Get column count("ViewProarea")
 
 #### 例題
 
-3番目のシートが選択されている場合:
+[VP SET ROW ATTRIBUTES](#vp-set-row-attributes) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションには行の属性がすべて返されます。
 
 ![third-sheet](../assets/en/ViewPro/vp-sheet-3-select.png)
 
-コマンドは 2 を返します:
+結合セル内の非表示データは、フォーミュラを使用することでアクセス可能です (フォーミュラは左上端セルから始まります)。
 
 ```4d
 $index:=VP Get current sheet("ViewProArea")
@@ -1660,15 +1661,15 @@ $index:=VP Get current sheet("ViewProArea")
 
 #### 説明
 
-`VP Get data context` コマンドは、 <!-- REF #_method_.VP Get data context.Summary -->ワークシートのカレントのデータコンテキストを返します<!-- END REF -->。 返されるコンテキストには、データコンテキストの内容に対しておこなわれた変更を含みます。
+`VP Get data context` コマンドは、 <!-- REF #_method_.VP Get data context.Summary -->`VP Get data context` コマンドは、<!-- END REF -->。 返されるコンテキストには、データコンテキストの内容に対しておこなわれた変更を含みます。
 
 *sheet* には、データコンテキストを取得するシートのインデックスを渡します。 インデックスを省略した場合、コマンドはカレントワークシートのデータコンテキストを返します。 ワークシートのコンテキストが存在しない場合、コマンドは `Null` を返します。
 
-[VP SET DATA CONTEXT](#vp-set-data-context) により設定されたデータコンテキストの種類によって、関数はオブジェクトまたはコレクションを返します。
+C5:D10 のレンジ以外のセルをすべて保護します:
 
 #### 例題
 
-次のセルにバインドされたデータコンテキストを取得します:
+|
 
 ![](../assets/en/ViewPro/vp-set-data-context-bind.png)
 
@@ -1699,7 +1700,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### 説明
 
-`VP Get default style` コマンドは、 <!-- REF #_method_.VP Get default style.Summary -->シートのデフォルトスタイルオブジェクトを返します<!-- END REF -->。 返されるオブジェクトには、ドキュメントの基本的なレンダリングプロパティに加え、[VP SET DEFAULT STYLE](#vp-set-default-style) コマンドによって事前に設定されたデフォルトのスタイル設定 (あれば) が格納されます。 スタイルプロパティの詳細な情報については、[スタイルオブジェクトとスタイルシート](configuring.md#スタイルオブジェクトとスタイルシート) を参照ください。
+`VP Get default style` コマンドは、 <!-- REF #_method_.VP Get default style.Summary -->`VP Get default style` コマンドは、<!-- END REF -->。 返されるオブジェクトには、ドキュメントの基本的なレンダリングプロパティに加え、[VP SET DEFAULT STYLE](#vp-set-default-style) コマンドによって事前に設定されたデフォルトのスタイル設定 (あれば) が格納されます。 スタイルプロパティの詳細な情報については、[スタイルオブジェクトとスタイルシート](configuring.md#スタイルオブジェクトとスタイルシート) を参照ください。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
@@ -1707,17 +1708,17 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### 例題
 
-このドキュメントのデフォルトスタイルを取得したい場合:
+|
 
 ![](../assets/en/ViewPro/cmd_vpGetDefaultStyle.PNG)
 
-以下のコードを実行すると:
+セルフォーミュラ内で検索がおこなわれます。
 
 ```4d
 $defaultStyle:=VP Get default style("myDoc")
 ```
 
-*$defaultStyle* オブジェクトに以下のような情報が返されます:
+履歴
 
 ```4d
 {
@@ -1789,7 +1790,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 
 *name* には、取得したい命名レンジあるいは命名フォーミュラの名前を渡します。 命名レンジは、絶対セル参照を格納したフォーミュラとして返されるという点に注意してください。
 
-*scope* 引数を使用することで、フォーミュラを取得するスコープを定義できます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:
+*scope* 引数を使用することで、名前を取得するスコープを定義できます。 その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:
 
 * `vk current sheet`
 * `vk workbook`
@@ -1840,18 +1841,18 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 *rangeObj* 引数で、フォーミュラを取得したいレンジを指定します。 *rangeObj* 引数のレンジが複数レンジを指定している場合、最初のレンジのフォーミュラが返されます。 *rangeObj* 引数のレンジにフォーミュラが一つも含まれていない場合には、コマンドは空の文字列を返します。
 
-返されるコレクションは 2次元構造になっています:
+[VP SUSPEND COMPUTING](#vp-suspend-computing) の例題を参照ください。
 
 * 第1レベルのコレクションは、フォーミュラのサブコレクションを格納しています。 それぞれのサブコレクションは行をあらわします。
 * それぞれのサブコレクションは行におけるセルの値を定義します。 値は、セルのフォーミュラを格納しているテキスト要素です。
 
 #### 例題
 
-このドキュメントの総計行と平均行のフォーミュラを取得します:
+|
 
 ![](../assets/en/ViewPro/cmd_vpGetFormulas.PNG)
 
-以下のコードを使用することができます:
+スプレッドシートの印刷線の位置は、スプレッドシートの改ページの位置によって変化します。
 
 ```4d
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
@@ -1900,7 +1901,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 #### 例題
 
-固定化されたカラムと行についての情報を取得します:
+|
 
 ```4d
 var $panesObj : Object
@@ -1908,7 +1909,7 @@ var $panesObj : Object
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
-戻り値のオブジェクトには、以下のようなものが格納されています:
+◯
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -1937,7 +1938,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*scope* 引数を使用することで、名前を取得するスコープを定義できます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:
+内容
 
 * `vk current sheet`
 * `vk workbook`
@@ -1952,7 +1953,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 | result\[ ].formula | Text | formula        |
 | result\[ ].comment | Text | 名前に割り当てられたコメント |
 
-返されるプロパティは、命名された要素のタイプ (命名セル、命名レンジ、または命名フォーミュラ) に応じて異なります。
+結果:
 
 #### 例題
 
@@ -1992,13 +1993,13 @@ $list:=VP Get names("ViewProArea";2) // 3番目のシートにある名前
 
 #### 例題
 
-以下のコードを実行すると:
+セルフォーミュラ内で検索がおこなわれます。
 
 ```4d
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-[VP SET PRINT INFO](#vp-set-print-info) コマンドで設定された、4D View Pro エリアの以下のような印刷属性を返します:
+|
 
 ```4d
 {
@@ -2067,13 +2068,13 @@ zoomFactor:1
 
 `VP Get row attributes` コマンドは、 <!-- REF #_method_.VP Get row attributes.Summary -->*rangeObj* 引数で指定したレンジ内にある行のプロパティのコレクションを返します<!-- END REF -->。
 
-*rangeObj* 引数には、属性を取得したい行のレンジを格納しているオブジェクトを渡します。
+改ページがある場合:
 
-[VP SET ROW ATTRIBUTES](#vp-set-row-attributes) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションには行の属性がすべて返されます。
+結果:
 
 #### 例題
 
-以下のコードは、指定したレンジ内の行属性のコレクションを返します:
+|
 
 ```4d
 var $range : Object
@@ -2114,7 +2115,7 @@ $attr:=VP Get row attributes($range)
 
 #### 例題
 
-以下のコードを実行すると、4D View Pro エリア内の行の数が返されます:
+|
 
 ```4d
 var $rowCount : Integer
@@ -2152,7 +2153,7 @@ $rowCount:=VP Get row count("ViewProarea")
 
 ![](../assets/en/ViewPro/cmd_vpGetSelection.PNG)
 
-以下のコードを実行すると、現在選択されているセルの座標がすべて取得できます:
+|
 
 ```4d
 $currentSelection:=VP Get selection("myVPArea")
@@ -2185,17 +2186,17 @@ $currentSelection:=VP Get selection("myVPArea")
 
 #### 説明
 
-`VP Get sheet count` コマンドは、 <!-- REF #_method_.VP Get sheet count.Summary -->*vpAreaName* で指定したエリアにロードされているドキュメント内にあるシート数を返します<!-- END REF -->
+`VP Get sheet count` コマンドは、 <!-- REF #_method_.VP Get sheet count.Summary -->*name* には、インデックスを返して欲しいシートの名前を渡します。<!-- END REF -->
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 #### 例題
 
-以下のドキュメントにおいて:
+*rangeObj* 引数として、検索対象のレンジを格納したオブジェクトを渡します。
 
 ![](../assets/en/ViewPro/vp-sheet-3.png)
 
-シート数を取得し、最後のシートをカレントシートに設定します:
+|
 
 ```4d
  $count:=VP Get sheet count("ViewProArea")
@@ -2226,20 +2227,20 @@ $currentSelection:=VP Get selection("myVPArea")
 
 #### 説明
 
-`VP Get sheet index` コマンドは、 <!-- REF #_method_.VP Get sheet index.Summary -->*vpAreaName* 引数で指定したエリア内の、シート名で指定したシートのインデックスを返します<!-- END REF -->
+`VP Get sheet index` コマンドは、 <!-- REF #_method_.VP Get sheet index.Summary -->*sheet* には、ターゲットシートのインデックスを渡します。<!-- END REF -->
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*name* には、インデックスを返して欲しいシートの名前を渡します。 *name* 引数のシート名がドキュメント内に見つからない場合、コマンドは -1 を返します。
+*sheet* には、ターゲットシートのインデックスを渡します。 *sheet* が省略された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
 
 #### 例題
 
-以下のドキュメントにおいて:
+*rangeObj* 引数として、検索対象のレンジを格納したオブジェクトを渡します。
 
 ![](../assets/en/ViewPro/vp-sheet-index-name.png)
 
-"Total first quarter" という名前のシートのインデックスを取得します:
+|
 
 ```4d
 $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返します
@@ -2266,18 +2267,18 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返し�
 
 #### 説明
 
-`VP Get sheet name` コマンドは、 <!-- REF #_method_.VP Get sheet name.Summary -->*vpAreaName* 引数で指定したエリア内の、インデックスで指定したシートの名前を返します。<!-- END REF -->
+`VP Get sheet name` コマンドは、 <!-- REF #_method_.VP Get sheet name.Summary -->任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。<!-- END REF -->
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*sheet* には、名前を返して欲しいシートのインデックスを渡します。
+4D View Pro エリアの "version" プロパティを取得します:
 
-渡したシートインデックスが存在しない場合、コマンドは空の文字列を返します。
+以下のように書くことができます:
 > インデックスは 0 起点です。
 
 #### 例題
 
-ドキュメント内の 3つめのシートの名前を取得します:
+|
 
 ```4d
 $sheetName:=VP Get sheet name("ViewProArea";2)
@@ -2314,7 +2315,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 コマンドは、利用可能なシートオプションのカレント値をすべて格納したオブジェクトを返します。 オプションの値は、ユーザーあるいは [VP SET SHEET OPTIONS](#vp-set-sheet-options) コマンドによって変更される可能性があります。
 
-オプション一覧については、[シートオプション](configuring.md#シートオプション) を参照ください。
+以下の $font オブジェクトが返されます:
 
 #### 例題
 
@@ -2346,17 +2347,17 @@ End if
 
 #### 説明
 
-`VP Get show print lines` コマンドは、 <!-- REF #_method_.VP Get show print lines.Summary -->印刷プレビューの線が表示状態であれば `true` を、非表示であれば `false` を返します。<!-- END REF -->
+`VP Get show print lines` コマンドは、 <!-- REF #_method_.VP Get show print lines.Summary -->`VP Get show print lines` コマンドは、<!-- END REF -->
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*sheet* には、ターゲットシートのインデックスを渡します。 *sheet* が省略された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 
 > インデックスは 0 起点です。
 
 #### 例題
 
-以下のコードは、ドキュメントの印刷プレビュー線の表示状態をチェックします:
+セルへのフォーミュラの入力を許可します。
 
 ```4d
  var $result : Boolean
@@ -2389,7 +2390,7 @@ End if
 
 #### 例題
 
-ドキュメント内の結合セルにおいて、テキストを中央揃えに変更します:
+|
 
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
@@ -2419,7 +2420,7 @@ VP SET CELL STYLE($range;$style)
 | styleName  | Text    | -> | スタイルの名前                     |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
 
-|戻り値|Object|-|スタイルシートオブジェクト|<!-- END REF -->
+先頭行の前に 3行挿入します:<!-- END REF -->
 
 #### 説明
 
@@ -2427,7 +2428,7 @@ VP SET CELL STYLE($range;$style)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*styleName* には、取得するスタイルシートの名前を渡します。
+返されるコレクションは 2次元構造になっています:
 
 任意の *sheet* 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
@@ -2442,7 +2443,7 @@ VP SET CELL STYLE($range;$style)
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-カレントシートの *GreenDashDotStyle* スタイルオブジェクトを返します:
+引数
 
 ```4d
 {
@@ -2479,20 +2480,20 @@ borderTop:{color:green,style:10}
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-任意の *sheet* 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
+任意の *sheet* 引数を使用することで、スタイルシートをどこに定義するかを指定することができます。 シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
 * `vk current sheet`
 * `vk workbook`
 
 #### 例題
 
-以下のコードは、カレントシート内にある全スタイルオブジェクトのコレクションを返します:
+参照
 
 ```4d
 $styles:=VP Get stylesheets("ViewProArea")
 ```
 
-カレントシートが 2つのスタイルオブジェクトを使用していた場合:
+○
 
 ```4d
 [
@@ -2552,7 +2553,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
 
-このコマンドは、*column* のカレント属性を格納するオブジェクトを返します:
+|
 
 | プロパティ               | タイプ     | 説明                                                 |
 | ------------------- | ------- | -------------------------------------------------- |
@@ -2562,7 +2563,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 | footerFormula       | text    | 列のフッターのフォーミュラ。                                     |
 | filterButtonVisible | boolean | 列のフィルターボタンが表示されている場合には true、そうでない場合は false。        |
 
-*tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは **null** を返します。
+"VPArea" エリアのコンテンツをディスク上の 4D View Pro ドキュメントに書き出します:
 
 #### 例題
 
@@ -2571,7 +2572,8 @@ var $attributes : Object
 $attributes:=VP Get table column attributes("ViewProArea"; $tableName; 1)
 If ($attributes.dataField#"")
      ...
-End if
+")
+ End if
 ```
 
 #### 参照
@@ -2611,12 +2613,12 @@ End if
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*columnName* には、インデックスを取得する表組みの列の名前を渡します。
+//cs.OffscreenArea クラス宣言 Class constructor($pdfPath : Text) This.pdfPath:=$pdfPath This.autoQuit:=False This.isWaiting:=False Function onEvent() Case of :(FORM Event.code=On VP Ready) // ドキュメントの読み込み VP IMPORT DOCUMENT(This.area;$largeDocument4VP) This.isWaiting:=True // 計算が完了したかを検証するタイマーをスタートさせます // この間に "On VP Range Changed" イベントが発生した場合、タイマーはリスタートされます // 時間はコンピューターの設定に応じて定義されなければなりません SET TIMER(60) :(FORM Event.code=On VP Range Changed) // 計算の完了を感知し、 タイマーを再スタートさせます If(This.isWaiting) SET TIMER(60) End if :(FORM Event.code=On Timer) // この時点以降、他の 4D View コマンドを呼び出してもタイマーが再スタートしないようにします This.isWaiting:=False // タイマーを停止します SET TIMER(0) // PDF 書き出しを開始します VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT))) :(FORM Event.code=On URL Loading Error) CANCEL End case
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
 
-*tableName* で指定した表組み、または *columnName* で指定した列が見つからない場合、コマンドは -1 を返します。
+フォーマット (書式) 情報を含めてエリアを書き出します:
 
 #### 例題
 
@@ -2665,21 +2667,21 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*onlyData* 引数に次のいずれかの定数を渡すことで、データ部のみを対象とするかを指定できます:
+内容
 
 | 定数                    | 値 | 説明                                                |
 | --------------------- | - | ------------------------------------------------- |
 | `vk table full range` | 0 | フッターとヘッダーを含む表組みの全エリアを含むセルレンジを取得します (省略した場合のデフォルト) |
 | `vk table data range` | 1 | 表組みのデータエリアのみを含むセルレンジを取得します                        |
 
-*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 `VP Get sheet index` コマンドは、
 > インデックスは 0 起点です。
 
-*tableName* に指定した名称の表組みが見つからない場合、コマンドは **null** を返します。
+あるレンジのコンテンツ、値、フォーマット、フォーミュラをオブジェクトに格納し、それを別のレンジに貼り付けます:
 
 #### 参照
 
-[VP RESIZE TABLE](#vp-resize-table)<br/> [VP Find table](#vp-find-table)
+以下のコードを実行すると:
 
 
 
@@ -2711,14 +2713,14 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 `VP Get sheet index` コマンドは、
 > インデックスは 0 起点です。
 
 
 
 #### 例題
 
-以下のコードは、カレントシート内にある全表組み名のコレクションを返します:
+|
 
 
 ```4d
@@ -2751,18 +2753,18 @@ $tables:=VP Get tables("ViewProArea")
 
 `VP Get value` コマンドは、 <!-- REF #_method_.VP Get value.Summary -->指定されたセルレンジからセルの値を取得します<!-- END REF -->。
 
-*rangeObj* 引数で、値を取得したいレンジを指定します。
+履歴
 
 #### 返されるオブジェクト
 
-返されるオブジェクトには `value` プロパティと、JS日付値の場合に返される `time` プロパティが格納されます:
+3つ目のシートの名前を "Total first quarter" に変更します:
 
 | プロパティ | タイプ                                | 説明                           |
 | ----- | ---------------------------------- | ---------------------------- |
 | value | Integer, Real, Boolean, Text, Date | *rangeObj* レンジの値 (ただし時間型を除く) |
 | time  | Real                               | 値が js 日付型の場合、時間値 (秒単位)       |
 
-返されるオブジェクトに日付または時間が含まれている場合、これは "日付時間"として扱われ、以下のように補完されます:
+非表示のレンジへの貼り付けについて指定します。
 
 * 時間値 - 日付部分は DD/MM/YYYY フォーマットの、1899年12月30日 (30/12/1899) として補完されます。
 * 日付値 - 時間部分は HH:MM:SS フォーマットの、真夜中 (00:00:00) として補完されます。
@@ -2803,7 +2805,7 @@ End if
 
 *rangeObj* 引数で、値を取得したいレンジを指定します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
 
-`VP Get values` によって返されるコレクションは、2次元構造のコレクションです:
+履歴
 
 * 第1レベルのコレクションの各要素は行を表し、値のサブコレクションを格納しています。
 * 各サブコレクションはその行のセル値を格納しています。 値は整数、実数、ブール、テキスト、Null のいずれかです。 値が日付または時間の場合には、以下のプロパティを持つオブジェクトとして返されます:
@@ -2813,14 +2815,14 @@ End if
  | value | Date | セルの値 (時間部分を除く)         |
  | time  | Real | 値が js 日付型の場合、時間値 (秒単位) |
 
-日付または時間は 日付時間 (datetime) として扱われ、以下のように補完されます:
+4D View Pro フォームオブジェクト名
 
 * 時間値 - 日付部分は 1899年12月30日として補完されます。
 * 日付値 - 時間部分は真夜中 (00:00:00:000) として補完されます。
 
 #### 例題
 
-C4 から G6 までの値を取得します:
+履歴
 
 ![](../assets/en/ViewPro/cmd_vpGetValues.PNG)
 
@@ -2842,23 +2844,23 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-| 引数         | タイプ    |    | 説明                                                |
-| ---------- | ------ | -- | ------------------------------------------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                           |
-| 戻り値        | Object | <- | ワークブックオプションを格納したオブジェクト|<!-- END REF -->
+| 引数         | タイプ    |    | 説明                            |
+| ---------- | ------ | -- | ----------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名       |
+| 戻り値        | Object | <- | 結果:<!-- END REF -->
 
 |
 
 #### 説明
 
 `VP Get workbook options` コマンドは、 <!-- REF #_method_.Get workbook options.Summary -->
-*vpAreaName* で指定したエリアのワークブックオプションをすべて格納したオブジェクトを返します<!-- END REF -->
+任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。<!-- END REF -->
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-返されるオブジェクトには、ワークブック内のワークブックオプションの値 (デフォルト値および変更値) がすべて格納されています。
+以下のコードを使用することができます:
 
-ワークブックオプションの一覧については [`VP SET WORKBOOK OPTIONS` の説明](#vp-set-workbook-options) を参照ください。
+C4 から G6 までの値を取得します:
 
 #### 例題
 
@@ -2891,7 +2893,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### 説明
 
-`VP IMPORT DOCUMENT` コマンドは、 <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに、*filePath* 引数のドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだドキュメントによって置換されます。
+`VP IMPORT DOCUMENT` コマンドは、 <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->`VP IMPORT DOCUMENT` コマンドは、<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだドキュメントによって置換されます。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
@@ -2906,9 +2908,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 > Microsoft Excel 形式のファイルを 4D View Pro ドキュメントに読み込む場合、一部の設定が失われる可能性があります。 [GrapeCity にある一覧](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html) にて、設定を検証することができます。
 
-`filePath` 引数が無効だった場合や、対象ファイルが存在しなかったり、壊れたりしている場合には、エラーが返されます。
+次の表は、利用可能なワークブックオプションの一覧です:
 
-任意の *paramObj* 引数を渡すことで、読み込まれるドキュメントのプロパティを定義することができます:
+内容
 
 | 引数         |                 | タイプ    | 説明                                                                                                                                                                             |
 | ---------- | --------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2919,11 +2921,11 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 |            | rowDelimiter    | text   | 行の区切り文字。 渡されなかった場合、区切り文字は 4D によって自動的に定義されます。                                                                                                                                   |
 |            | columnDelimiter | text   | カラムの区切り文字。 デフォルト: ","                                                                                                                                                          |
 
-> CSV形式およびユーザー定義区切りの値 (DSV) に関する詳細については、こちらの [Wikipedia の記事](https://en.wikipedia.org/wiki/Delimiter-separated_values) (英文) を参照ください。
+> 履歴
 
 #### 例題 1
 
-フォームが開かれたときに、ディスク上に保存されているデフォルトの 4D View Pro ドキュメントを読み込みます:
+|
 
 ```4d
 C_TEXT($docPath)
@@ -2935,7 +2937,7 @@ End if
 
 #### 例題 2
 
-パスワードで保護されている Microsoft Excel ドキュメントを 4D View Pro エリアに読み込みます:
+|
 
 ```4d
 $o:=New object
@@ -2946,7 +2948,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 
 #### 例題 3
 
-カンマ (",") を区切り文字として使用している `.txt` ファイルを読み込みます:
+`Formula` オブジェクト
 
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv.png)
 
@@ -2956,7 +2958,7 @@ $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
 
-このようになります: ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
+**警告** * `VP SET CUSTOM FUNCTIONS` が呼び出された場合、[VP SET ALLOWED METHODS](#vp-set-allowed-methods) コマンドにより許可されたメソッド (あれば) は同 4D View Pro エリアにおいて無視されます。 * `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### 参照
 
@@ -2979,17 +2981,17 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 #### 説明
 
-`VP IMPORT FROM OBJECT` コマンドは、 <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに *viewPro* の 4D View Pro オブジェクトを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだオブジェクトのデータで置換されます。
+`VP IMPORT FROM OBJECT` コマンドは、 <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->`VP IMPORT FROM OBJECT` コマンドは、<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは読み込んだオブジェクトのデータで置換されます。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
 *viewPro* には有効な 4D View Pro オブジェクトを渡します。 このオブジェクトは手動で作成するほか、[VP Export to object](#vp-export-to-object) を使って取得することができます。 4D View Pro オブジェクトについての詳細は [4D View Pro オブジェクト](configuring.md#4d-view-pro-オブジェクト) を参照ください。
 
-*viewPro* オブジェクトが無効な場合には、エラーが返されます。
+カレントシートを PDF に書き出します:
 
 #### 例題
 
-オブジェクトフィールドに保存してあるスプレッドシートを読み込みます:
+|
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
@@ -3019,17 +3021,17 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 
 *rangeObj* には、開始カラム (新しいカラムが挿入される場所を指定するカラム) と挿入するカラムの数を格納したオブジェクトを渡します。 挿入するカラムの数が省略された場合 (定義されていない場合)、カラムは 1列だけ挿入されます。
 
-新しいカラムは、*rangeObj* 引数で指定した開始カラムの直前 (すぐ左側) に挿入されます。
+コマンドの実行をトレースし、コマンドバッファを空にします:
 
 #### 例題
 
-2番目のカラムの前にカラムを3列挿入します:
+○
 
 ```4d
 VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
 ```
 
-このようになります:
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 ![](../assets/en/ViewPro/cmd_vpInsertColumns.PNG)
 
@@ -3056,17 +3058,17 @@ VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
 
 *rangeObj* には、開始行 (新しい行が挿入される場所を指定する行) と挿入する行数を格納したオブジェクトを渡します。 挿入する行数が省略された場合 (定義されていない場合) には、1行だけ挿入されます。
 
-新しい行は、*rangeObj* 引数で指定した開始行の直前 (すぐ上) に挿入されます。
+戻り値
 
 #### 例題
 
-先頭行の前に 3行挿入します:
+○
 
 ```4d
 VP INSERT ROWS(VP Row("ViewProArea";0;3))
 ```
 
-このようになります:
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 ![](../assets/en/ViewPro/cmd_vpInsertRows.PNG)
 
@@ -3103,9 +3105,9 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 `VP INSERT TABLE COLUMNS` コマンドは、 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->*tableName* で指定した表組みの *column* で指定した列インデックスに、1つまたは *count* で指定した数の空の列を挿入します<!-- END REF -->。
 
-このコマンドで列を挿入した場合、通常は [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) コマンドを使用してその内容を編集します。
+以下のコードを実行すると、4D View Pro エリアを PDFドキュメントに出力します:
 
-*insertAfter* パラメーターに以下の定数のいずれかを渡すことで、*column* に指定した列インデックスの前または後に列を挿入するかを指定できます。
+ワークブックオプションを格納したオブジェクト|
 
 | 定数                       | 値 | 説明                              |
 | ------------------------ | - | ------------------------------- |
@@ -3114,12 +3116,12 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 このコマンドは、シート内ではなく、*tableName* の表組みに列を挿入します。 したがって、シートの総列数は、このコマンドの影響を受けません。 表組みより右側にデータがある場合は、挿入された列の数に応じて自動的に右に移動します。
 
-*tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
+コールバックメソッドでは、以下のコマンドを使用することができます:
 
 
 #### 例題
 
-[VP INSERT TABLE ROWS](#vp-insert-table-rows) および [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) の例題を参照ください。
+引数
 
 
 #### 参照
@@ -3157,7 +3159,7 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 `VP INSERT TABLE ROWS` コマンドは、 <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->*tableName* で指定した表組みの *row* で指定した行インデックスに、1つまたは *count* で指定した数の空の行を挿入します<!-- END REF -->。
 
-*insertAfter* パラメーターに以下の定数のいずれかを渡すことで、*row* に指定した行インデックスの前または後に行を挿入するかを指定できます。
+内容
 
 | 定数                       | 値 | 説明                           |
 | ------------------------ | - | ---------------------------- |
@@ -3166,14 +3168,14 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 このコマンドは、シート内ではなく、*tableName* の表組みに行を挿入します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、挿入された行の数に応じて自動的に下に移動します。
 
-*tableName* の表組みが [データコンテキスト](#vp-set-data-context) にバインドされている場合、このコマンドはコレクションに新しい空の要素を挿入します。
+以下のコードは、ドキュメントの印刷プレビュー線の表示状態をチェックします:
 
-*tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
+コールバックメソッドでは、以下のコマンドを使用することができます:
 
 
 #### 例題
 
-データコンテキストを使用した表組みを作成します:
+|
 
 ```4d
 var $context : Object
@@ -3191,7 +3193,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 
 ![](../assets/en/ViewPro/table-base.png)
 
-表組みに 2行と 2列を挿入したい場合、次のように書きます:
+|
 
 ```4d
 VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
@@ -3238,24 +3240,24 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 `VP MOVE CELLS` コマンドは、 <!-- REF #_method_.VP MOVE CELLS.Summary -->*originRange* の値・書式・フォーミュラを *targetRange* に移動またはコピーします<!-- END REF -->。
 
-*originRange* と *targetRange* は異なる 4D View Pro エリアを参照することができます。
+データコンテキストを使用した表組みを作成します:
 
 *originRange* には、移動またはコピーする値・書式・フォーミュラが格納されているレンジオブジェクトを渡します。 *originRange* が結合レンジの場合は、最初のものだけが使用されます。
 
-*targetRange* には、値・書式・フォーミュラのコピー先または移動先であるターゲットレンジを渡します。
+ビルトインのコンテキストメニューの使用を許可します。
 
-*options* は、複数のプロパティを持ちます:
+履歴
 
-| プロパティ        | タイプ     | 説明                                                                              |
-| ------------ | ------- | ------------------------------------------------------------------------------- |
-| copy         | Boolean | *originRange* のセルの値・書式・フォーミュラをコマンド実行後に削除するかどうかを指定します:<ul><li>削除するには false (デフォルト)。</li><li>保持するには true。</li></ul> |
-| pasteOptions | Longint | ペーストする内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値・フォーマット・フォーミュラを含むすべてのデータオブジェクトをペーストします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをペーストします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをペーストします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをペーストします。</td></tr></table></p>                                |
+| プロパティ        | タイプ     | 説明                                               |
+| ------------ | ------- | ------------------------------------------------ |
+| copy         | Boolean | 内容<ul><li>削除するには false (デフォルト)。</li><li>保持するには true。</li></ul>                     |
+| pasteOptions | Longint | ペーストする内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td>`vk clipboard options all` (デフォルト)</td><td>値・フォーマット・フォーミュラを含むすべてのデータオブジェクトをペーストします。</td></tr><tr><td>`vk clipboard options formatting`</td><td>フォーマットだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas`</td><td>フォーミュラだけをペーストします。</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>フォーミュラとフォーマットをペーストします。</td></tr><tr><td>`vk clipboard options values`</td><td>値だけをペーストします。</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>値とフォーマットをペーストします。</td></tr></table></p> |
 
-[ワークブックオプション](#vp-set-workbook-options) で定義されている貼り付けオプションが考慮されます。
+4D View Pro フォームオブジェクト名
 
 #### 例題
 
-内容・値・書式・フォーミュラをコピーします:
+|
 
 ```4d
 var $originRange; $targetRange; $options : Object
@@ -3299,7 +3301,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*rangeName* には、既存のセルレンジ名を渡します。
+履歴
 
 任意の *sheet* 引数として、*rangeName* のレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートあるいはワークブック全体を明示的に選択することができます:
 
@@ -3308,7 +3310,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 
 #### 例題
 
-"Total" という名前のレンジに値を渡します:
+このコマンドは、以下の場合には何もしません:
 
 ```4d
 // B5 のセルを "Total" と命名します
@@ -3336,13 +3338,13 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 
 #### 説明
 
-`VP NEW DOCUMENT` コマンドは、 <!-- REF #_method_.VP NEW DOCUMENT.Summary -->*vpAreaName* で指定した 4D View Pro エリアに、新規のデフォルトドキュメントを読み込んで表示させます<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは新規の空ドキュメントによって置換されます。
+`VP NEW DOCUMENT` コマンドは、 <!-- REF #_method_.VP NEW DOCUMENT.Summary -->`VP NEW DOCUMENT` コマンドは、<!-- END REF -->。 エリア内に挿入されていたデータがあれば、それらは新規の空ドキュメントによって置換されます。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
 #### 例題
 
-"myVPArea" フォームオブジェクトに空ドキュメントを表示します:
+|
 
 ```4d
 VP NEW DOCUMENT("myVPArea")
@@ -3374,19 +3376,19 @@ VP NEW DOCUMENT("myVPArea")
 
 `VP Object to font` コマンドは、 <!-- REF #_method_.VP Object to font.Summary -->*fontObj* 引数で指定したフォントオブジェクトからフォントのショートハンド文字列を返します<!-- END REF -->。
 
-*fontObj* には、フォントプロパティを格納するオブジェクトを渡します。 以下のオブジェクトプロパティがサポートされています:
+*fontObj* には、フォントプロパティを格納するオブジェクトを渡します。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                             | とりうる値                                                                                                                                                                                                                                                                                                                    | 必須 |
-| ------- | ---- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -- |
-| family  | text | フォントを指定します。                                                                                    | 標準の、あるいは一般的なフォントファミリー。 例:  "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                             | ◯  |
-| size    | text | フォントのサイズを定義します。"font-size/line-height" の形で line-height をfont-size に追加することもできます: 例: "15pt/20pt" | 以下のいずれかの単位を伴う数値: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>あるいは、以下の定数のいずれか 1つ:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>                                            | ◯  |
-| style   | text | フォントのスタイル。                                                                                     | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | ×  |
-| variant | text | スモールキャピタルのフォントを定義します。                                                                          | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | ×  |
-| weight  | text | フォントの太さを定義します。                                                                                 | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | ×  |
+| プロパティ   | タイプ  | 説明                                                                                              | とりうる値                                                                                                                                                                                                                                                                                                                    | 必須 |
+| ------- | ---- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -- |
+| family  | text | フォントを指定します。                                                                                     | 標準の、あるいは一般的なフォントファミリー。 例:  例:  "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                         | ◯  |
+| size    | text | フォントのサイズを定義します。 "font-size/line-height" の形で line-height をfont-size に追加することもできます: 例: "15pt/20pt" | 以下のいずれかの単位を伴う数値: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>あるいは、以下の定数のいずれか 1つ:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>                                            | ◯  |
+| style   | text | フォントのスタイル。                                                                                      | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | ×  |
+| variant | text | スモールキャピタルのフォントを定義します。                                                                           | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | ×  |
+| weight  | text | フォントの太さを定義します。                                                                                  | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | ×  |
 
-このオブジェクトは [VP Font to object](#vp-font-to-object) コマンドで作成することができます。
+セル選択 (アクティブセルと選択セル) をすべて解除します:
 
-返されるショートハンド文字列は、たとえば [VP SET CELL STYLE](#vp-set-cell-style) を使って、セルの "font" プロパティに割り当てることができます。
+フォームが開かれたときに、ディスク上に保存されているデフォルトの 4D View Pro ドキュメントを読み込みます:
 
 #### 例題
 
@@ -3436,7 +3438,7 @@ $cellStyle.font:=VP Object to font($font)
 
 *rangeObj* には、値・フォーマット・フォーミュラをペーストする先のセルレンジオブジェクトを渡します。 *rangeObj* が複数のセルを参照している場合は、最初のセルだけが使用されます。
 
-*dataObject* には、ペーストしたい値・フォーマット・フォーミュラを格納しているオブジェクトを渡します。
+参照
 
 任意の *options* 引数を渡して、セルレンジにペーストする内容を指定することができます。 とりうる値:
 
@@ -3449,13 +3451,13 @@ $cellStyle.font:=VP Object to font($font)
 | `vk clipboard options values`                  | 値だけをペーストします。                             |
 | `vk clipboard options value and formatting`    | 値とフォーマットをペーストします。                        |
 
-[ワークブックオプション](#vp-set-workbook-options) で定義されている貼り付けオプションが考慮されます。
+4D View Pro フォームオブジェクト名
 
-dataObject に存在しない要素を *options* で指定した場合 (例: フォーミュラ) コマンドはなにもしません。
+2列目のカラムの幅を変更して、ヘッダーを設定します:
 
 #### 例題
 
-[VP Copy to object](#vp-copy-to-object) の例題を参照ください。
+あらかじめ定義されたテーマを表に設定します:
 
 #### 参照
 
@@ -3487,8 +3489,8 @@ dataObject に存在しない要素を *options* で指定した場合 (例: フ
 * `vk current sheet`
 * `vk workbook`
 
-> * 4D View Pro エリアは、`VP PRINT` コマンドによってのみ印刷可能です。
-> * 4Dコマンドの **印刷** テーマのコマンドは、`VP PRINT` ではサポートされません。
+> * 返されるオブジェクトに日付または時間が含まれている場合、これは "日付時間"として扱われ、以下のように補完されます:
+> * このドキュメントの総計行と平均行のフォーミュラを取得します:
 > * このコマンドは、最終的なエンドユーザーが個別に印刷を実行することを想定しています。 自動化印刷ジョブについては、[VP EXPORT DOCUMENT](#vp-export-document) コマンドで 4D View Pro エリアを PDF に書き出すことが推奨されます。
 
 #### 例題
@@ -3499,7 +3501,7 @@ dataObject に存在しない要素を *options* で指定した場合 (例: フ
  VP PRINT("myVPArea")
 ```
 
-印刷ダイアログウィンドウを開きます:
+[VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes) コマンドを使用して属性を設定してる/いないに関わらず、返されるコレクションにはカラムの属性がすべて返されます。
 
 ![](../assets/en/ViewPro/cmd_vpPrint.PNG)
 
@@ -3524,15 +3526,15 @@ dataObject に存在しない要素を *options* で指定した場合 (例: フ
 
 #### 説明
 
-`VP RECOMPUTE FORMULAS` コマンドは、 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->*vpAreaName* 引数で指定したエリアの全フォーミュラを即座に評価します<!-- END REF -->。 デフォルトでは、4D はフォーミュラを挿入時、読み込み時、そして書き出し時のタイミングで自動計算します。 `VP RECOMPUTE FORMULAS` コマンドを使用すると、任意のタイミングで強制的に計算を実行することができます(例: フォーミュラに変更が加えられた場合、またはフォーミュラがデータベースへの呼び出しを格納している場合など)。 コマンドは [VP FLUSH COMMANDS](#vp-flush-commands) コマンドを実行することで、実行保留されていたコマンドをすべて実行し、コマンドバッファをクリアします。
+`VP RECOMPUTE FORMULAS` コマンドは、 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->`VP RECOMPUTE FORMULAS` コマンドは、<!-- END REF -->。 デフォルトでは、4D はフォーミュラを挿入時、読み込み時、そして書き出し時のタイミングで自動計算します。 `VP RECOMPUTE FORMULAS` コマンドを使用すると、任意のタイミングで強制的に計算を実行することができます(例: フォーミュラに変更が加えられた場合、またはフォーミュラがデータベースへの呼び出しを格納している場合など)。 コマンドは [VP FLUSH COMMANDS](#vp-flush-commands) コマンドを実行することで、実行保留されていたコマンドをすべて実行し、コマンドバッファをクリアします。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
-> `VP RECOMPUTE FORMULAS` コマンドを使用する前に [VP SUSPEND COMPUTING](#vp-suspend-computing)コマンドが実行されていないようにしてください。
+> 渡したレンジ内の属性のコレクションを返します:
 
 
 #### 例題
 
-ワークブック内の全フォーミュラを更新します:
+|
 
 ```4d
 VP RECOMPUTE FORMULAS("ViewProArea")
@@ -3563,9 +3565,9 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*name* には、削除したい命名レンジあるいは命名フォーミュラの名前を渡します。
+履歴
 
-*scope* 引数を使用することで、命名レンジまたは命名フォーミュラをどこから削除するのか、指定することができます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:
+内容
 
 * `vk current sheet`
 * `vk workbook`
@@ -3614,11 +3616,11 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 
 #### 例題
 
-ドキュメントには現在 3つのシートがあります:
+`VP RECOMPUTE FORMULAS` コマンドを使用する前に [VP SUSPEND COMPUTING](#vp-suspend-computing)コマンドが実行されていないようにしてください。
 
 ![](../assets/en/ViewPro/vp-sheet-3.png)
 
-3つ目のシートを削除します:
+`VP SET CUSTOM FUNCTIONS` が同一セッション中に同じエリアに対して複数回呼び出された場合、最後の呼び出しのみが有効になります。
 
 ```4d
 VP REMOVE SHEET("ViewProArea";2)
@@ -3645,7 +3647,7 @@ VP REMOVE SHEET("ViewProArea";2)
 
 #### 例題
 
-ドキュメントのセル結合をすべて解除します:
+|
 
 ![](../assets/en/ViewPro/cmd_vpRemoveSpan1.PNG)
 
@@ -3687,16 +3689,16 @@ VP REMOVE SHEET("ViewProArea";2)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*styleName* 引数には、削除するスタイルシートの名前を渡します。
+参照
 
-任意の *sheet* 引数を使用することで、スタイルシートをどこから削除するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
+参照
 
 * `vk current sheet`
 * `vk workbook`
 
 #### 例題
 
-カレントシートから、*GreenDashDotStyle* スタイルオブジェクトを削除します:
+参照
 
 ```4d
 VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
@@ -3733,9 +3735,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 `VP REMOVE TABLE` コマンドは、 <!-- REF #_method_.VP REMOVE TABLE.Summary -->表組みを削除します<!-- END REF --> ([VP CREATE TABLE](#vp-create-table) で作成した表組み)。
 
-*vpAreaName* には、削除したい表組みが置かれている 4D View Pro エリアの名前を渡します。
+履歴
 
-*tableName* には、削除する表組みの名称を渡します。
+履歴
 
 *options* には、追加のオプションを指定できます。 とりうる値:
 
@@ -3749,7 +3751,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 #### 例題
 
-2番目のシートの "people" の表組みを削除し、セルのデータは保持します:
+|
 
 ```4d
 VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
@@ -3786,17 +3788,17 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 #### 説明
 
-`VP REMOVE TABLE COLUMNS` コマンドは、 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->*tableName* で指定した表組みの *column* で指定した列インデックスから、1つまたは *count* で指定した数の列を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
+`VP REMOVE TABLE COLUMNS` コマンドは、 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->`VP REMOVE TABLE COLUMNS` コマンドは、<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
 
 このコマンドは、シートではなく、*tableName* の表組みから列を削除します。 したがって、シートの総列数は、このコマンドの影響を受けません。 表組みより右側にデータがある場合は、削除された列の数に応じて自動的に左に移動します。
 
-*tableName* の表組みが存在しない場合には、何も起こりません。
+"ViewProArea" 内で allowExtendpasteRange オプションを設定します:
 
 
 
 #### 例題
 
-"dataTable" 表組みの 3列目から 2列を削除します:
+|
 
 ```4d
 VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
@@ -3834,18 +3836,18 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 #### 説明
 
-`VP REMOVE TABLE ROWS` コマンドは、 <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->*tableName* で指定した表組みの *row* で指定した行インデックスから、1つまたは *count* で指定した数の行を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
+`VP REMOVE TABLE ROWS` コマンドは、 <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->`VP REMOVE TABLE ROWS` コマンドは、<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
 
-このコマンドは、シートではなく、*tableName* の表組みから行を削除します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、削除された行の数に応じて自動的に上に移動します。
+このコマンドは、シートではなく、*tableName* の表組みから行を削除します。 したがって、シートの総行数は、このコマンドの影響を受けません。 したがって、シートの総行数は、このコマンドの影響を受けません。
 
-*tableName* の表組みが [データコンテキスト](#vp-set-data-context) にバインドされている場合、このコマンドはコレクションから要素を削除します。
+内容・値・書式・フォーミュラをコピーします:
 
-*tableName* の表組みが存在しない場合には、何も起こりません。
+"ViewProArea" 内で allowExtendpasteRange オプションを設定します:
 
 
 #### 例題
 
-"dataTable" 表組みの 3行目から 2行を削除します:
+|
 
 ```4d
 VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
@@ -3876,7 +3878,7 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 
 `VP RESET SELECTION` コマンドは、 <!-- REF #_method_.VP RESET SELECTION.Summary -->すべてのセル選択を解除し、その結果カレントセレクション (またはアクティブセル) がなくなります<!-- END REF -->。
 
-> 4D View Pro コマンドに対して定義されているデフォルトのアクティブセル (A1 セル) は残ります。
+> データコンテキストを使用した表組みを作成します:
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
@@ -3886,7 +3888,7 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 
 #### 例題
 
-セル選択 (アクティブセルと選択セル) をすべて解除します:
+|
 
 ```4d
 VP RESET SELECTION("myVPArea")
@@ -3930,12 +3932,12 @@ VP RESET SELECTION("myVPArea")
     - 行が追加された場合、データは削除されます。
     - 列が追加された場合、データは保持され、新しい列に表示されます。
 
-*tableName* の表組みが存在しない場合には、何も起こりません。
+"ViewProArea" 内で allowExtendpasteRange オプションを設定します:
 
 
 #### 例題
 
-データコンテキストを使用した表組みを作成します:
+|
 
 ```4d
 var $context : Object
@@ -3994,7 +3996,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 #### 例題
 
-[VP SUSPEND COMPUTING](#vp-suspend-computing) の例題を参照ください。
+3つ目のシートを削除します:
 
 #### 参照
 
@@ -4023,9 +4025,9 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*row* 引数で、セルレンジの先頭行を指定します。 この引数として行のインデックス (0 起点) を渡します。 レンジが複数行にわたる場合には、任意の *rowCount* 引数も併せて使用します。
+任意の *columnCount* には、レンジに含まれるカラム数を指定することができます。 この引数として行のインデックス (0 起点) を渡します。 レンジが複数行にわたる場合には、任意の *rowCount* 引数も併せて使用します。
 
-任意の *rowCount* には、レンジに含まれる行数を指定することができます。 *rowCount* 引数は 0 より大きい値でなくてはなりません。 省略時、デフォルトで値は 1 に設定されます。
+*vpAreaName* 引数内にある行の総数を定義します *rowCount* 引数は 0 より大きい値でなくてはなりません。 省略時、デフォルトで値は 1 に設定されます。
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
 
@@ -4033,7 +4035,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 #### 例題
 
-以下に表示されている (カレントスプレッドシートの) 行に対するレンジオブジェクトを定義します:
+|
 
 ![](../assets/en/ViewPro/cmd_vpRow.PNG)
 
@@ -4064,11 +4066,11 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 `VP ROW AUTOFIT` コマンドは、 <!-- REF #_method_.VP ROW AUTOFIT.Summary -->*rangeObj* 引数のレンジ内にある行を、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
 
-*rangeObj* 引数として、サイズを自動調整したい行を格納しているレンジオブジェクトを渡します。
+履歴
 
 #### 例題
 
-以下の行では、テキストを正しく表示できていません:
+|
 
 ![](../assets/en/ViewPro/cmd_vpRowAutoFit1.PNG)
 
@@ -4107,13 +4109,13 @@ $row:=VP Row("ViewProArea";9) // 10行目
 | プロパティ                      | タイプ             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | -------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | area                       | text            | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| onEvent                    | object (フォーミュラ) | オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。 |
-| autoQuit                   | boolean         | True (デフォルト値) の場合、[`On End URL Loading`](Events/onEndUrlLoading.md) または [`On URL Loading Error`](Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。                                                                                                                                                                                                                                                                                                                     |
+| onEvent                    | object (フォーミュラ) | オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>ユーザーが選択した行を削除します (以下の画像の 1、2、3行目を削除します):</li><li>以下のコードは 4D View Pro エリア内に 5つの行を定義します:</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。 |
+| autoQuit                   | boolean         | True (デフォルト値) の場合、[`On End URL Loading`](Events/onEndUrlLoading.md) または [`On URL Loading Error`](Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。 False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。                                                                                                                                                                                                                                                                                                                    |
 | timeout                    | number          | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | result                     | mixed           | 処理の結果 (あれば)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `\<customProperty>` | mixed           | *onEvent* コールバックメソッドで利用可能なカスタムの属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-以下のプロパティは、必要に応じてコマンドによって自動的に追加されます:
+履歴
 
 | プロパティ          | タイプ     | 説明                           |
 | -------------- | ------- | ---------------------------- |
@@ -4121,7 +4123,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 > オフスクリーンエリアは、`VP Run offscreen area` コマンドの実行中にしか利用できません。 実行が終わるとエリアは自動的に消去されます。
 
-コールバックメソッドでは、以下のコマンドを使用することができます:
+内容
 
 * `ACCEPT`
 * `CANCEL`
@@ -4131,7 +4133,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 #### 例題 1
 
-オフスクリーンの 4D View Pro エリアを作成し、そこからセルの値を取得します:
+|
 
 ```4d
 // cs.OffscreenArea クラス宣言 
@@ -4149,7 +4151,7 @@ Function onEvent()
     End case
 ```
 
-*OffscreenArea* コールバックメソッドの内容は以下の通りです:
+履歴
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -4158,7 +4160,7 @@ $result:=VP Run offscreen area($o)
 
 #### 例題 2
 
-大きなドキュメントをオフスクリーンで読み込み、計算の評価が完了するのを待ってドキュメントを PDF として書き出します:
+参照
 
 
 ```4d
@@ -4201,7 +4203,7 @@ Function onEvent()
     End case
 ```
 
-*OffscreenArea* コールバックメソッドの内容は以下の通りです:
+履歴
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -4211,7 +4213,7 @@ $result:=VP Run offscreen area($o)
 
 #### 参照
 
-[ブログ記事 (英文): End of document loading](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
+[*vpAreaName* には、4D View Pro エリアの名前を渡します。](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
 
 ## S
 
@@ -4232,11 +4234,11 @@ $result:=VP Run offscreen area($o)
 
 `VP SET ACTIVE CELL` コマンドは、 <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->指定したセルをアクティブセルにします<!-- END REF -->。
 
-*rangeObj* 引数には、単独のセルを格納するレンジオブジェクトを渡します ([VP Cell](#vp-cell) 参照)。 *rangeObj* 引数のレンジが単独セルのレンジでない場合、あるいは複数レンジを指定している場合、最初のレンジの先頭セルが使用されます。
+*rangeObj* 引数には、単独のセルを格納するレンジオブジェクトを渡します ([VP Cell](#vp-cell) 参照)。 以下のようにコードを書くことができます:
 
 #### 例題
 
-カラム D、行 5 のセルをアクティブセルに設定します:
+|
 
 ```4d
 $activeCell:=VP Cell("myVPArea";3;4)
@@ -4268,18 +4270,18 @@ VP SET ACTIVE CELL($activeCell)
 
 #### 説明
 
-`VP SET ALLOWED METHODS` コマンドは、 <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->4D View Pro フォーミュラから呼び出し可能なプロジェクトメソッドを指定します<!-- END REF -->。 このコマンドは、呼び出し後のセッション中に初期化される 4D View Pro エリアすべてに対して適用されます。 同じセッション中において異なる設定で初期化をするために、複数回呼び出すこともできます。
+`VP SET ALLOWED METHODS` コマンドは、 <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->`VP SET ALLOWED METHODS` コマンドは、<!-- END REF -->。 このコマンドは、呼び出し後のセッション中に初期化される 4D View Pro エリアすべてに対して適用されます。 同じセッション中において異なる設定で初期化をするために、複数回呼び出すこともできます。
 
 セキュリティ上の理由により、 `VP SET ALLOWED METHODS` コマンドを実行していない場合のデフォルトでは、4D View Pro エリアにおいてはメソッドの呼び出しは許可されません (ただし、4D の汎用的な `SET ALLOWED METHODS` コマンドが呼び出されていた場合を除きます (前述の互換性に関する注記参照)。 許可されていないのメソッドをフォーミュラ内で使用した場合には、4D View Pro エリアに #NAME? エラーが表示されます。
 
-*methodObj* には、4D View Pro エリア内で定義したいファンクションの名前をプロパティとして格納しているオブジェクトを渡します:
+履歴
 
 | プロパティ                  |            |            | タイプ                 | 説明                                                                                                                                                                                                                                                                                                                                                                                       |
 | ---------------------- | ---------- | ---------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<functionName>` |            |            | Object              | カスタムファンクションの名前。 `<customFunction>` プロパティ名は、4D View Pro フォーミュラで表示するカスタムファンクションの名前を定義します (スペースは使用できません)                                                                                                                                                                                                                                                                              |
 |                        | method     |            | Text                | (必須) 許可する既存の 4D プロジェクトメソッドの名前                                                                                                                                                                                                                                                                                                                                                            |
 |                        | parameters |            | Object の Collection | 引数のコレクション (メソッド内で定義されている順)                                                                                                                                                                                                                                                                                                                                                               |
-|                        |            | \[ ].name | Text                | `<functionName>` 用に表示する引数の名前。**注**: 引数の名前にスペースを含めることはできません。                                                                                                                                                                                                                                                                                                                        |
+|                        |            | \[ ].name | Text                | `<functionName>` 用に表示する引数の名前。 **注**: 引数の名前にスペースを含めることはできません。                                                                                                                                                                                                                                                                                                                       |
 |                        |            | \[ ].type | Number              | 引数の型。 サポートされている型:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>省略時のデフォルトでは、値は型と一緒に渡されますが、日付と時間の値に関してはオブジェクトとして送られます ([引数](formulas.md#引数) の章を参照ください)。 type が `Is object` の場合、そのオブジェクトは [`VP Get value`](#vp-get-value) によって返されるオブジェクトと同じ構造を持ちます。 |
 |                        | summary    |            | Text                | 4D View Pro に表示するファンクションの説明                                                                                                                                                                                                                                                                                                                                                              |
 |                        | minParams  |            | Number              | 引数の最小の数                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -4287,7 +4289,7 @@ VP SET ACTIVE CELL($activeCell)
 
 #### 例題
 
-4D View Pro エリアにおいて、2つのメソッドを許可します:
+|
 
 ```4d
 C_OBJECT($allowed)
@@ -4310,7 +4312,7 @@ $allowed.Byebye.maxParams:=3
 VP SET ALLOWED METHODS($allowed)
 ```
 
-このコードが実行されたあと、定義されたファンクションは 4D View Pro フォーミュラで使用することができるようになります:
+内容
 
 ![](../assets/en/ViewPro/cmd_vpSetAllowedMethods.PNG)
 
@@ -4344,20 +4346,20 @@ VP SET ALLOWED METHODS($allowed)
 
 #### 説明
 
-`VP SET BINDING PATH` コマンドは、 <!-- REF #_method_.VP SET BINDING PATH.Summary -->*rangeObj* で指定したレンジに、シートのデータコンテキストの属性をバインドします<!-- END REF -->。 機能するには、[SET DATA CONTEXT](#vp-set-data-context) を使ってデータコンテキストを設定する必要があります。 読み込まれたデータコンテキストが属性を含む場合、*dataContextAttribute* の値が *rangeObj* のセルに自動的に表示されます。
+`VP SET BINDING PATH` コマンドは、 <!-- REF #_method_.VP SET BINDING PATH.Summary -->`VP SET BINDING PATH` コマンドは、<!-- END REF -->。 機能するには、[SET DATA CONTEXT](#vp-set-data-context) を使ってデータコンテキストを設定する必要があります。 読み込まれたデータコンテキストが属性を含む場合、*dataContextAttribute* の値が *rangeObj* のセルに自動的に表示されます。
 
 *rangeObj* 引数には、セルレンジまたは複合セルレンジのオブジェクトを渡します。
 
 * *rangeObj* のレンジが複数セルを含む場合、コマンドは最初のセルに属性をバインドします。
 * *rangeObj* 引数が複数のレンジを含む場合、コマンドは最初のレンジの最初のセルに属性をバインドします。
 
-*dataContextAttribute* には、*rangeObj* にバインドする属性の名称を渡します。 *dataContextAttribute* が空の文字列だった場合、関数は属性のバインドを解除します。
+*dataContextAttribute* が空の文字列だった場合、関数は属性のバインドを解除します。 *dataContextAttribute* には、*rangeObj* にバインドする属性の名称を渡します。
 
 > コレクション型の属性はサポートされていません。 コレクション属性の名前を渡した場合、コマンドは何もしません。
 
 #### 例題
 
-データコンテキストを設定し、`firstName` と `lastName` の属性をセルにバインドします:
+コマンドは SVGフォーマットのピクチャーを返します。
 
 ```4d
 var $p : Object
@@ -4399,7 +4401,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
 
-*boolValue* 引数には、*rangeObj* のセルレンジに割り当てるブール値 (**true** あるいは **false**) を渡します。
+履歴
 
 #### 例題
 
@@ -4440,7 +4442,7 @@ VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 | color | text    | 境界線のカラーを定義します。 デフォルト = black   | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                                |
 | style | Integer | 境界線のスタイルを定義します。 デフォルト = empty。 | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
-*borderStyleObj* の境界線スタイルの位置 (どこに境界線を引くか) は *borderPosObj* 引数で定義します:
+履歴
 
 | プロパティ           | タイプ     | 説明                        |
 | --------------- | ------- | ------------------------- |
@@ -4456,7 +4458,7 @@ VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 
 #### 例題 1
 
-以下のコードは、レンジ全体の外周に境界線を生成します:
+|
 
 ```4d
 $border:=New object("color";"red";"style";vk line style thick)
@@ -4468,7 +4470,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 #### 例題 2
 
-以下のコードは、`VP SET BORDER` と [`VP SET CELL STYLE`](#vp-set-cell-style) で境界線を設定した場合の違いを示します:
+|
 
 ```4d
 // VP SET BORDER で境界線を設定します
@@ -4509,16 +4511,16 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 `VP SET CELL STYLE` コマンドは、 <!-- REF #_method_.VP SET CELL STYLE.Summary -->*styleObj* に定義されているスタイルを、*rangeObj* で定義されたセルに適用します<!-- END REF -->。
 
 *rangeObj* 引数には、スタイルを適用したいセルのレンジを渡します。 *rangeObj* に複数のセルが含まれる場合、スタイルはそれぞれのセルに割り当てられます。
-> `VP SET CELL STYLE` で適用された境界線は、*rangeObj* の各セルに対して適用されます。これに対して [VP SET BORDER](#vp-set-border) コマンドは境界線を *rangeObj* のレンジ全体に対して適用されます。
+> 履歴
 
 *styleObj* にはスタイル設定を格納したオブジェクトを渡します。 既存のスタイルシートを使用することもできますし、新しいスタイルを作成することも可能です。 *styleObj* に既存のスタイルシートと、追加のスタイル設定の両方が格納されている場合、既存のスタイルシートが先に適用され、そのあとに追加の設定が適用されます。
 
-スタイルを削除してデフォルトのスタイル設定 (あれば) に戻すには、NULL値を渡します:
+参照
 
 * *styleObj* 引数として NULL値を渡した場合、*rangeObj* のレンジのスタイルシートはすべて削除されます。
 * 属性に NULL値を指定すると、当該属性は *rangeObj* から削除されます。
 
-スタイルオブジェクトとスタイルシートの詳細については、[スタイルオブジェクト](configuring.md#スタイルオブジェクト) を参照ください。
+カラムが生成された後の結果です:
 
 #### 例題
 
@@ -4559,7 +4561,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 `VP SET COLUMN ATTRIBUTES` コマンドは、 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> *rangeObj* 引数で指定したカラムに対して *propertyObj* 引数で定義されている属性を適用します<!-- END REF -->。
 
-*rangeObj* 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性はカラムに対してのみ適用されます。
+*rangeObj* 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性は行に対してのみ適用されます。
 
 *propertyObj* 引数は、*rangeObj* 引数のレンジ内のカラムに対して適用する属性を指定します。 指定できる属性は以下の通りです:
 
@@ -4573,7 +4575,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 #### 例題
 
-2列目のカラムの幅を変更して、ヘッダーを設定します:
+参照
 
 ```4d
 C_OBJECT($column;$properties)
@@ -4621,7 +4623,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 #### 例題
 
-以下のコードは 4D View Pro エリア内に 5つのカラムを定義します:
+内容
 
 ```4d
 VP SET COLUMN COUNT("ViewProArea";5)
@@ -4640,13 +4642,13 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-|引数|タイプ| |説明|
+C5:D10 のレンジ以外のセルをすべて保護します:
 
-|---|---|---|---| |vpAreaName| Text|->|4D View Pro フォームオブジェクト名| |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
+改ページがある場合:<-|Index of the new current sheet|<!-- END REF -->
 
 #### 説明
 
-`VP SET CURRENT SHEET` コマンドは、 <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->*vpAreaName* 引数で指定した View Pro エリアのカレントシートを設定します<!-- END REF --> 。 カレントシートとは、ドキュメント内で選択されているシートのことです。
+`VP SET CURRENT SHEET` コマンドは、 <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->*vpAreaName* 引数で指定したエリア内の、インデックスで指定したシートの名前を返します。<!-- END REF --> 。 カレントシートとは、ドキュメント内で選択されているシートのことです。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
@@ -4656,11 +4658,11 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 #### 例題
 
-ドキュメントの最初のシートがカレントシートになっています:
+○
 
 ![first-sheet-selected](../assets/en/ViewPro/vp-sheet-3-select.png)
 
-カレントシートを第3シートに設定します:
+○
 
 ```4d
 VP SET CURRENT SHEET("ViewProArea";2)
@@ -4692,29 +4694,29 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 `VP SET CUSTOM FUNCTIONS` で指定されたフォーミュラは、最初の文字が入力されるとポップアップメニューに表示されます。 詳細については [式と関数](formulas.md) を参照ください。
 
-> `VP SET CUSTOM FUNCTIONS` が同一セッション中に同じエリアに対して複数回呼び出された場合、最後の呼び出しのみが有効になります。
+> ドラッグ＆フィルを許可します。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
 *formulaObj* 引数として、4D View Pro フォーミュラから呼び出し可能な 4Dフォーミュラと、その追加のプロパティを格納したオブジェクトを渡します。 *formulaObj* 引数の各 `customFunction` プロパティが 4D View Pro エリア内でのファンクション名になります。
 
-| プロパティ                    |            |            | タイプ                 | 説明                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------ | ---------- | ---------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<customFunction>` |            |            | Object              | カスタムファンクションの名前。 `<customFunction>` は、4D View Pro フォーミュラで表示するカスタムファンクションの名前を定義します (スペースは使用できません)                                                                                                                                                                                                                                                                                                         |
-|                          | formula    |            | Object              | 4Dフォーミュラオブジェクト (必須)。 `Formula` コマンド参照。                                                                                                                                                                                                                                                                                                                                                                        |
-|                          | parameters |            | Object の Collection | 引数のコレクション (フォーミュラ内で定義されている順)                                                                                                                                                                                                                                                                                                                                                                                  |
-|                          |            | \[ ].name | Text                | 4D View Pro に表示する引数の名前。                                                                                                                                                                                                                                                                                                                                                                                       |
-|                          |            | \[ ].type | Number              | 引数の型。 サポートされている型:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>*type* 省略時、またはデフォルト値 (-1) が渡された場合、値は型と一緒に渡されますが、日付と時間の値に関してはオブジェクトとして送られます ([引数](formulas.md#引数) の章を参照ください)。*type* が `Is object` の場合、そのオブジェクトは [VP Get value](#vp-get-value) によって返されるオブジェクトと同じ構造を持ちます。 |
-|                          | summary    |            | Text                | 4D View Pro に表示するフォーミュラの説明                                                                                                                                                                                                                                                                                                                                                                                    |
-|                          | minParams  |            | Number              | 引数の最小の数                                                                                                                                                                                                                                                                                                                                                                                                       |
-|                          | maxParams  |            | Number              | 引数の最大の数。 ここに *parameters* の length より大きな値を渡すことによって、デフォルトの型を持つ "任意の" 引数を宣言できるようになります。                                                                                                                                                                                                                                                                                                                          |
+| プロパティ                    |            |            | タイプ                 | 説明                                                                                                                                                                                                                               |
+| ------------------------ | ---------- | ---------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<customFunction>` |            |            | Object              | カスタムファンクションの名前。 カスタムファンクションの名前。 `<customFunction>` プロパティ名は、4D View Pro フォーミュラで表示するカスタムファンクションの名前を定義します (スペースは使用できません)                                                                                                      |
+|                          | formula    |            | Object              | 4Dフォーミュラオブジェクト (必須)。 `Formula` コマンド参照。                                                                                                                                                                                           |
+|                          | parameters |            | Object の Collection | 引数のコレクション (フォーミュラ内で定義されている順)                                                                                                                                                                                                     |
+|                          |            | \[ ].name | Text                | 4D View Pro に表示する引数の名前。                                                                                                                                                                                                          |
+|                          |            | \[ ].type | Number              | 引数の型。 サポートされている型:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>2番目の行の高さを変更して、ヘッダーを設定します: |
+|                          | summary    |            | Text                | 4D View Pro に表示するフォーミュラの説明                                                                                                                                                                                                       |
+|                          | minParams  |            | Number              | 引数の最小の数                                                                                                                                                                                                                          |
+|                          | maxParams  |            | Number              | 引数の最大の数。 ここに *parameters* の length より大きな値を渡すことによって、デフォルトの型を持つ "任意の" 引数を宣言できるようになります。                                                                                                                                             |
 > **警告**
-> * `VP SET CUSTOM FUNCTIONS` が呼び出された場合、[VP SET ALLOWED METHODS](#vp-set-allowed-methods) コマンドにより許可されたメソッド (あれば) は同 4D View Pro エリアにおいて無視されます。
+> * データコンテキストを使用した表組みを作成します:
 > * `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
 #### 例題
 
-4D View Pro エリア内で、フォーミュラオブジェクトを使用して、数値を追加/顧客の苗字/顧客の性別を取得します:
+|
 
 ```4d
 Case of
@@ -4781,13 +4783,13 @@ End case
 
 #### 説明
 
-`VP SET DATA CONTEXT` コマンドは、 <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->シートのデータコンテキストを設定します<!-- END REF -->。 データコンテキストは、ワークシートにバインドされたオブジェクトまたはコレクションで、自動生成オプションまたは [VP SET BINDING PATH](#vp-set-binding-path) メソッドを使用することで、シートのセルにその内容を自動的に表示させることができます。 他方、[VP Get data context](#vp-get-data-context) コマンドは、ユーザーによる編集が含まれたコンテキストを返すことができます。
+`VP SET DATA CONTEXT` コマンドは、 <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->`VP SET DATA CONTEXT` コマンドは、<!-- END REF -->。 データコンテキストは、ワークシートにバインドされたオブジェクトまたはコレクションで、自動生成オプションまたは [VP SET BINDING PATH](#vp-set-binding-path) メソッドを使用することで、シートのセルにその内容を自動的に表示させることができます。 他方、[VP Get data context](#vp-get-data-context) コマンドは、ユーザーによる編集が含まれたコンテキストを返すことができます。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
 *dataObj* または *dataColl* には、データコンテキストに読み込むデータを格納したオブジェクトまたはコレクションを渡します。 ピクチャーはデータURIスキームに変換されます。
 
-*dataObj* または *dataColl* に時間値を渡すには、次のプロパティを持つオブジェクトにカプセル化します ([例題 4](#例題-4---日付と時間のシンタックス) 参照):
+結果:
 
 | プロパティ | タイプ                                      | 説明                   |
 | ----- | ---------------------------------------- | -------------------- |
@@ -4807,7 +4809,7 @@ End case
 
 #### 例題
 
-オブジェクトを受け渡し、先頭行のセルにコンテキストデータをバインドします:
+|
 
 ```4d
 var $data : Object
@@ -4828,7 +4830,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 #### 例題 2
 
-オブジェクトのコレクションを受け渡して、カラムを自動生成します:
+×
 
 ```4d
 var $options : Object
@@ -4888,7 +4890,7 @@ $options:=New object("autoGenerateColumns"; True)
 VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 ```
 
-カラムが生成された後の結果です:
+内容
 
 ![](../assets/en/ViewPro/vp-set-data-context-date-time.png)
 
@@ -4918,9 +4920,9 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-*dateValue* 引数に、*rangeObj* 引数のレンジに割り当てたい日付値を指定します。
+ドキュメントのセル結合をすべて解除します:
 
-*timeValue* 引数に、*rangeObj* 引数のレンジに割り当てたい時間値 (秒単位) を指定します。
+このドキュメントのデフォルトスタイルを取得したい場合:
 
 任意の *formatPattern* 引数は、*dateValue* および *timeValue* 引数に対するパターンを定義します。 パターンおよびフォーマット文字に関しての情報については、[日付と時間のフォーマット](configuring.md#日付と時間のフォーマット) の章を参照してください。
 
@@ -4959,7 +4961,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 *rangeObj* には、値を割り当てたいセルのレンジを渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-*dateValue* 引数に、*rangeObj* 引数のレンジに割り当てたい日付値を指定します。
+ドキュメントのセル結合をすべて解除します:
 
 任意の *formatPattern* 引数は、*dateValue* 引数に対するパターンを定義します。 カスタムのフォーマット、または以下の定数のいずれかを渡します:
 
@@ -5050,7 +5052,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 `VP SET FIELD` コマンドは、 <!-- REF #_method_.VP SET FIELD.Summary -->指定されたセルレンジに、4Dデータベースの仮想フィールドを割り当てます<!-- END REF -->。
 
-*rangeObj* には、値を割り当てたいセルのレンジを渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定されたフィールドはそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジを渡します。 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。
 
 *field* 引数は、*rangeObj* のレンジに対して割り当てられる 4Dデータベースの [仮想フィールド](formulas.md#仮想ストラクチャーを使ったフィールド参照) を指定します。 フォーミュラバーには、*field* の仮想ストラクチャー名が表示されます。 *rangeObj* に含まれるセルに既存のコンテンツがあった場合、そのコンテンツは *field* で上書きされます。
 
@@ -5085,15 +5087,15 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 `VP SET FORMULA` コマンドは、 <!-- REF #_method_.VP SET FORMULA.Summary -->指定されたセルレンジにフォーミュラまたは 4Dメソッドを割り当てます<!-- END REF -->。
 
-*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定されたフォーミュラはそれぞれのセルに対して繰り返し割り当てられます。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* には、値を割り当てたいセルのレンジを渡します。
 
-*formula* 引数に、*rangeObj* 引数のレンジに割り当てたいフォーミュラまたは 4Dメソッド名を指定します。
+履歴
 
 > *formula* が文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。 4Dメソッドを使用する場合、そのメソッドは [`SET ALLOWED METHODS`](#vp-set-allowed-method) コマンドで許可されている必要があります。
 
-任意の *formatPattern* 引数は、*formula* に対する [パターン](configuring.md#セルフォーマット) を定義します。
+内容
 
-*rangeObj* 内のフォーミュラは、空の文字列 ("") で置き換えることで削除することができます。
+履歴
 
 #### 例題 1
 
@@ -5103,7 +5105,7 @@ VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 
 #### 例題 2
 
-フォーミュラを削除します:
+インデックスは 0 起点です。
 
 ```4d
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"")
@@ -5139,14 +5141,14 @@ VP SET FORMULA($range;"SUM(A1,B7,C11)") // 引数の区切り文字に ","
 
 *rangeObj* には、フォーミュラを割り当てたいセルのレンジ ([VP Cell](#vp-cell) で作成されたレンジ) を渡します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
 
-*formulasCol* 引数は 2次元構造のコレクションです:
+履歴
 
 * 第1レベルのコレクションは、フォーミュラのサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。
 * それぞれのサブコレクションは行におけるセルの値を定義します。 値は、セルに割り当てるフォーミュラを格納したテキスト要素でなくてはなりません。
 
 > フォーミュラが文字列の場合、数値の区切り文字にピリオド `.` そして引数の区切り文字にカンマ `,` を使用します。 4Dメソッドを使用する場合、そのメソッドは [`SET ALLOWED METHODS`](#vp-set-allowed-method) コマンドで許可されている必要があります。
 
-*rangeObj* 内のフォーミュラは、空の文字列 ("") で置き換えることで削除することができます。
+内容
 
 #### 例題 1
 
@@ -5168,7 +5170,7 @@ $0:=$1*3.33
 
 #### 例題 2
 
-フォーミュラを削除します:
+[VP SET DATA CONTEXT](#vp-set-data-context) により設定されたデータコンテキストの種類によって、関数はオブジェクトまたはコレクションを返します。
 
 ```4d
 $formulas:=New collection
@@ -5198,7 +5200,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 
 #### 説明
 
-`VP SET FROZEN PANES` コマンドは、 <!-- REF #_method_.VP SET FROZEN PANES.Summary -->*vpAreaName* 引数で指定した View Pro エリア内の、*paneObj* 引数のカラムと行の固定化ステータスを設定します<!-- END REF -->。 固定化されたカラムと行は固定された位置に表示され続け、ドキュメントの他の部分がスクロールされても移動しません。 そのカラムと行が固定化されていることを示すために、太い実線が表示されます。 実線の位置は、固定化されたカラムまたは行がシートのどこにあるかによって変わります:
+`VP SET FROZEN PANES` コマンドは、 <!-- REF #_method_.VP SET FROZEN PANES.Summary -->`VP SET FROZEN PANES` コマンドは、<!-- END REF -->。 固定化されたカラムと行は固定された位置に表示され続け、ドキュメントの他の部分がスクロールされても移動しません。 そのカラムと行が固定化されていることを示すために、太い実線が表示されます。 実線の位置は、固定化されたカラムまたは行がシートのどこにあるかによって変わります:
 
 * **左または右にあるカラム**: シートの左側にあるカラムについては、実線は最後に固定化されたカラム (最も右のカラム) の右側に表示されます。 シートの右側に表示されているカラムについては、実線は最初に固定化されたカラム (最も左のカラム) の左側に表示されます。
 * **上または下にある行**: シートの上部にある行については、実線は最後に固定化された行 (最も下の行) の下側に表示されます。 シートの下部に表示されている行については、実線は最初に固定化された行 (最も上の行) の上側に表示されます。
@@ -5211,7 +5213,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 | ----- | --- | -- |
 |       |     |    |
 
-|columnCount | Integer | シートの左側にある固定化されたカラム| |trailingColumnCount |Integer | シートの右側にある固定化されたカラム| |rowCount | Integer |  シートの上側にある固定化された行 | |trailingRowCount | Integer |  シートの下側にある固定化された行|
+参照
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
 
@@ -5219,7 +5221,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 
 #### 例題
 
-左側の最初の 3つのカラム、右側にある 2つのカラム、そして最初の行を固定化します:
+内容
 
 ```4d
 C_OBJECT($panes)
@@ -5259,9 +5261,9 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-*numberValue* 引数に、*rangeObj* 引数のレンジに割り当てたい数値を指定します。
+ドキュメントの最初のシートがカレントシートになっています:
 
-任意の *formatPattern* 引数は、*numberValue* に対する [パターン](configuring.md#セルフォーマット) を定義します。
+BLOB に保存されている 4D View エリアから 4D View Pro オブジェクトを取得します:
 
 #### 例題
 
@@ -5306,7 +5308,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 #### 例題
 
-以下のコードを実行すると、4D View Pro エリアを PDFドキュメントに出力します:
+|
 
 
 ```4d
@@ -5344,7 +5346,7 @@ VP SET PRINT INFO ("ViewProArea";$printInfo)
 VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(ALERT("PDF ready!"))))
 ```
 
-出力されたPDF:
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 ![](../assets/en/ViewPro/cmd_vpSetPrintInfo.PNG)
 
@@ -5370,7 +5372,7 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 
 `VP SET ROW ATTRIBUTES` コマンドは、 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->*rangeObj* 引数で指定した行に対して *propertyObj* 引数で定義されている属性を適用します<!-- END REF -->。
 
-*rangeObj* 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性は行に対してのみ適用されます。
+*rangeObj* 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性はカラムに対してのみ適用されます。
 
 *propertyObj* 引数は、*rangeObj* 引数のレンジ内の行に対して適用する属性を指定します。 指定できる属性は以下の通りです:
 
@@ -5384,7 +5386,7 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 
 #### 例題
 
-2番目の行の高さを変更して、ヘッダーを設定します:
+|
 
 ```4d
 var $row; $properties : Object
@@ -5430,7 +5432,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 #### 例題
 
-以下のコードは 4D View Pro エリア内に 5つの行を定義します:
+内容
 
 ```4d
 VP SET ROW COUNT("ViewProArea";5)
@@ -5453,13 +5455,13 @@ VP SET ROW COUNT("ViewProArea";5)
 | -- | --- |  | -- |
 |    |     |  |    |
 
-|rangeObj |Object|->|複数セルのレンジオブジェクト|<!-- END REF -->
+パターンおよびフォーマット文字に関しての情報については、[日付と時間のフォーマット](configuring.md#日付と時間のフォーマット) の章を参照してください。<!-- END REF -->
 
 #### 説明
 
 `VP SET SELECTION` コマンドは、 <!-- REF #_method_.VP SET SELECTION.Summary -->指定のセルレンジを選択し、その先頭セルをアクティブセルに設定します<!-- END REF -->。
 
-*rangeObj* には、カレントセレクションとして定義するセルのレンジオブジェクトを渡します。
+印刷ダイアログウィンドウを開きます:
 
 #### 例題
 
@@ -5492,16 +5494,16 @@ VP SET SELECTION($currentSelection)
 
 `VP SET SHEET COUNT` コマンドは、 <!-- REF #_method_.VP SET SHEET COUNT.Summary -->*vpAreaName* 引数で指定した View Pro エリア内のシートの数を設定します<!-- END REF -->。
 
-`number` 引数には、コマンド実行後にドキュメントが格納するシート数を指定する数値を渡します。
+ドラッグ＆フィルダイアログを表示します。
 > **警告**: このコマンドは、現在のシート数より少ない数字を渡した場合にはシートを削除します。 たとえば、ドキュメント内にシートが 5つあり、このコマンドでシートを 3つに設定した場合には、シート4 と 5 は削除されます。
 
 #### 例題
 
-ドキュメントには現在シートが 1つあります:
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 ![](../assets/en/ViewPro/vp-sheet-1.png)
 
-シート数を 3つに設定します:
+|
 
 ```4d
 VP SET SHEET COUNT("ViewProArea";3)
@@ -5534,17 +5536,17 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*name* 引数として、シートの新しい名前を渡します。
+内容
 
-*sheet* 引数には、名称変更するシートのインデックスを渡します。
+内容
 
 > インデックスは 0 起点です。
 
-*index* が省略された場合、コマンドはカレントシートを名称変更します。
+選択されたセル (B2) のスタイルの詳細を取得します:
 
 新しい名前には、次の文字を含めることはできません: `*, :, [, ], ?,\,/`
 
-このコマンドは、以下の場合には何もしません:
+*vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 * 新しい名前に禁止文字が含まれている
 * 新しい名前が空の文字列である
@@ -5553,7 +5555,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 #### 例題
 
-3つ目のシートの名前を "Total first quarter" に変更します:
+|
 
 ```4d
 VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
@@ -5590,7 +5592,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 #### 例題 1
 
-C5:D10 のレンジ以外のセルをすべて保護します:
+|
 
 ```4d
 // カレントシートでセルの保護を有効化します
@@ -5606,7 +5608,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 
 #### 例題 2
 
-ドキュメントを保護しつつ、ユーザーが行とカラムをリサイズできるようにします:
+参照
 
 ```4d
 var $options : Object
@@ -5626,7 +5628,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 #### 例題 3
 
-シートのタブ、固定化された線、枠線、選択範囲の背景と選択範囲の境界線のカラーをカスタマイズします:
+|
 
 ```4d
 var $options : Object
@@ -5658,7 +5660,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options;2)
 
 #### 例題 4
 
-枠線と、行ヘッダー/カラムヘッダーを非表示にします:
+以下のドキュメントにおいて:
 
 ```4d
 var $options : Object
@@ -5704,15 +5706,15 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 *visible* には、印刷線を表示するには `True`、非表示にするには `False` を渡します。 デフォルトでは `True` が渡されます。
 
-*sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
+*sheet* には、ターゲットシートのインデックスを渡します。 `VP Get sheet index` コマンドは、
 
 > インデックスは 0 起点です。
 
-スプレッドシートの印刷線の位置は、スプレッドシートの改ページの位置によって変化します。
+このコードが実行されたあと、定義されたファンクションは 4D View Pro フォーミュラで使用することができるようになります:
 
 #### 例題
 
-以下のコードはドキュメントの 2番目のシートの印刷線を表示させます:
+|
 
 ```4d
 VP SET SHOW PRINT LINES("ViewProArea";True;1)
@@ -5721,7 +5723,7 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 
 ![set-show-print-lines](../assets/en/ViewPro/vp-set-show-print-lines.png)
 
-改ページがある場合:
+*tableName* が見つからない場合、または変更された列が含まれていない場合、コマンドは空のコレクションを返します。
 
 ![set-show-print-lines-with-page-break](../assets/en/ViewPro/vp-set-show-print-lines-page-break.png)
 
@@ -5760,7 +5762,7 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*attributes* 引数には、設定するプロパティを含むオブジェクトを渡します:
+参照
 
 | プロパティ               | タイプ     | 説明                                                                                                                                           |
 | ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -5774,12 +5776,12 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
 
-*tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは何もしません。
+4D View Pro エリアを SVG に変換し、結果をプレビューするためピクチャー変数に戻り値を代入します:
 
 
 #### 例題
 
-データコンテキストを使用した表組みを作成します:
+|
 
 ```4d
 var $context;$options : Object
@@ -5802,7 +5804,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $opti
 
 ![](../assets/en/ViewPro/table-inserta.png)
 
-その後、データコンテキストからデータを取得する列を挿入し、フィルターボタンをいくつか非表示にします:
+参照
 
 ```4d
     // 列を挿入します
@@ -5857,9 +5859,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-*textValue* 引数に、*rangeObj* 引数のレンジに割り当てたいテキスト値を指定します。
+連続データでフィルします。
 
-任意の *formatPattern* 引数は、*textValue* に対する [パターン](configuring.md#セルフォーマット) を定義します。
+以下のコードを実行すると:
 
 #### 例題
 
@@ -5892,9 +5894,9 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
-*timeValue* 引数に、*rangeObj* 引数のレンジに割り当てる時間 (秒単位) を指定します。
+"Total" のセルを検出し、それを "Grand Total" で置き換えるには:
 
-任意の *formatPattern* 引数は、*timeValue* に対する [パターン](configuring.md#セルフォーマット) を定義します。
+以下のコードを実行すると:
 
 #### 例題
 
@@ -5928,17 +5930,17 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 `VP SET VALUE` コマンドは、 <!-- REF #_method_.VP SET VALUE.Summary -->指定されたセルレンジに値を割り当てます<!-- END REF -->。
 
-このコマンドを使用すると、汎用的なコードで *rangeObj* のレンジに様々な型の値とそのフォーマットを設定できます。それに対して [`VP SET TEXT VALUE`](#vp-set-text-value) や [`VP SET NUM VALUE`](#vp-set-num-value) などの他のコマンドは、設定する値の型が限定されています。
+日付または時間は 日付時間 (datetime) として扱われ、以下のように補完されます:
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
 *valueObj* 引数は、*rangeObj* のレンジに対して割り当てたい値と[フォーマット](configuring.md#セルフォーマット) のプロパティを格納しているオブジェクトです。 このオブジェクトには以下のプロパティを含めることができます:
 
-| プロパティ  | タイプ                                      | 説明                                                                                        |
-| ------ | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
-| value  | Integer, Real, Boolean, Text, Date, Null | *rangeObj* のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。                            |
-| time   | Real                                     | *rangeObj* のレンジに対して割り当てる時間 (秒単位)                                                          |
-| format | Text                                     | 値や日時に対するパターン パターンおよびフォーマット文字に関しての情報については、[セルフォーマット](configuring.md#セルフォーマット) の章を参照してください。 |
+| プロパティ  | タイプ                                      | 説明                                                                                            |
+| ------ | ---------------------------------------- | --------------------------------------------------------------------------------------------- |
+| value  | Integer, Real, Boolean, Text, Date, Null | *rangeObj* のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。                                |
+| time   | Real                                     | *rangeObj* のレンジに対して割り当てる時間 (秒単位)                                                              |
+| format | Text                                     | 値や日時に対するパターン 任意の *formatPattern* 引数は、*textValue* に対する [パターン](configuring.md#セルフォーマット) を定義します。 |
 
 #### 例題
 
@@ -5991,11 +5993,11 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 `VP SET VALUES` コマンドは、 <!-- REF #_method_.VP SET VALUES.Summary -->指定のセルレンジから開始して値のコレクションを割り当てていきます<!-- END REF -->。
 
-*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数で定義されたセルは、開始ポイントを決定します。
-> * *rangeObj* がセルレンジではない場合、レンジの最初のセルが使用されます。
-> * *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジの先頭セルのみが使用されます。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
+> * 以下のようにコードを書くことができます:
+> * 以下のようにコードを書くことができます:
 
-*valuesCol* 引数は 2次元構造のコレクションです:
+参照
 
 * 第1レベルのコレクションは、値のサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。 行をスキップするには空のコレクションを渡します。
 * それぞれのサブコレクションは行におけるセルの値を定義します。 値は整数、実数、ブール、テキスト、日付、Null、オブジェクトのいずれかです。 値がオブジェクトの場合、以下のプロパティを持つことができます:
@@ -6030,10 +6032,10 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 **VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
-| 引数         | タイプ    |    | 説明                                                    |
-| ---------- | ------ | -- | ----------------------------------------------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                               |
-| optionObj  | Object | -> | 設定するワークブックオプションを格納したオブジェクト|<!-- END REF -->
+| 引数         | タイプ    |    | 説明                            |
+| ---------- | ------ | -- | ----------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名       |
+| optionObj  | Object | -> | 結果:<!-- END REF -->
 
 |
 
@@ -6044,13 +6046,13 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-*optionObj*には、*vpAreaName* のエリアに対して適用するワークブックオプションを渡します。
+結果:
 
-*optionObj* 引数が空の場合、このコマンドは何もしません。
+ドキュメント名に拡張子を付けることで、書き出すドキュメントの形式を指定することができます:
 
-変更されたワークブックオプションはドキュメントとともに保存されます。
+以下のコードは、レンジ全体の外周に境界線を生成します:
 
-次の表は、利用可能なワークブックオプションの一覧です:
+`filePath` 引数が無効だった場合や、対象ファイルが存在しなかったり、壊れたりしている場合には、エラーが返されます。
 
 | プロパティ                                 | タイプ                     | 説明                                                                                                                                                                                         |
 | ------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -6065,7 +6067,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 | allowUserDeselect                     | boolean                 | 選択範囲から特定のセルを除外することを許可します。                                                                                                                                                                  |
 | allowUserDragDrop                     | boolean                 | レンジデータのドラッグ＆ドロップを許可します。                                                                                                                                                                    |
 | allowUserDragFill                     | boolean                 | ドラッグ＆フィルを許可します。                                                                                                                                                                            |
-| allowUserEditFormula                  | boolean                 | セルへのフォーミュラの入力を許可します。                                                                                                                                                                       |
+| allowUserEditFormula                  | boolean                 | 4D View Pro オブジェクトについての詳細は [4D View Pro オブジェクト](configuring.md#4d-view-pro-オブジェクト) を参照ください。                                                                                                |
 | allowUserResize                       | boolean                 | カラムと行のリサイズを許可します。                                                                                                                                                                          |
 | allowUserZoom                         | boolean                 | ズームを許可します (Ctrl + マウスホイール)。                                                                                                                                                                |
 | autoFitType                           | number                  | セル内やヘッダー内に収まるよう、内容をフォーマットします。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> 内容をセル内に収めます。</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> 内容をセル内・ヘッダー内に収めます。</td></tr></table>                                                                                                                            |
@@ -6074,7 +6076,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 | backgroundImageLayout                 | number                  | 背景画像のレイアウト。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk image layout center </td><td>1</td><td> エリアの中央に表示。</td></tr><tr><td> vk image layout none </td><td>3</td><td> エリアの左上に元のサイズで表示。</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> エリアを埋めるように拡大表示。</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> アスペクト比を維持して表示。</td></tr></table>                                                                                                                                              |
 | calcOnDemand                          | boolean                 | 要求されたときのみフォーミュラを計算します。                                                                                                                                                                     |
 | columnResizeMode                      | number                  | カラムのリサイズモード。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> 通常のリサイズモード (残りのカラムに影響します)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> split モード (残りのカラムに影響しません)</td></tr></table>                                                                                                                                             |
-| copyPasteHeaderOptions                | number                  | データのコピー/ペースト時に含めるヘッダーについて指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> データのコピー時: 選択ヘッダーを含めます。データのペースト時: 選択ヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> データのコピー時: 選択されたカラムヘッダーを含めます。データのペースト時: 選択されたカラムヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> データのコピー時: ヘッダーを含めません。データのペースト時: ヘッダーを上書きしません。</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  データのコピー時: 選択された行ヘッダーを含めます。データのペースト時: 選択された行ヘッダーを上書きします。</td></tr></table>                                                                                                                          |
+| copyPasteHeaderOptions                | number                  | データのコピー/ペースト時に含めるヘッダーについて指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> データのコピー時: 選択ヘッダーを含めます。</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> データのコピー時: 選択されたカラムヘッダーを含めます。</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> データのコピー時: ヘッダーを含めません。データのペースト時: ヘッダーを上書きしません。</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  データのコピー時: 選択された行ヘッダーを含めます。</td></tr></table>                                                                                                                          |
 | customList                            | collection              | ドラッグ＆フィルをカスタマイズするためのリストです。フィルの際には、このリストに合致する値が入力されます。 各コレクション要素は、文字列のコレクションです。 [GrapeCity の Webサイト](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b) 参照。           |
 | cutCopyIndicatorBorderColor           | string                  | ユーザーが選択をカットまたはコピーしたときの領域の境界色。                                                                                                                                                              |
 | cutCopyIndicatorVisible               | boolean                 | コピーまたはカットされた際の領域を表示します。                                                                                                                                                                    |
@@ -6115,7 +6117,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 #### 例題
 
-"ViewProArea" 内で allowExtendpasteRange オプションを設定します:
+*tableName* の表組みが存在しない場合には、何も起こりません。
 
 ```4d
 var $workbookOptions : Object
@@ -6141,7 +6143,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 | -------- | ------ | -- | --------- |
 | rangeObj | Object | -> | レンジオブジェクト |
 
-|vPos  |Integer|->|セルあるいは行の縦方向の表示位置| |hPos  |Integer|->|セルあるいはカラムの横方向の表示位置|<!-- END REF -->
+以下のプロパティは、必要に応じてコマンドによって自動的に追加されます:<!-- END REF -->
 
 #### 説明
 
@@ -6149,7 +6151,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 *rangeObj* 引数には、表示位置を指定するセルのレンジオブジェクトを渡します。 *rangeObj* で指定したレンジの表示位置は、*vPos* および *hPos* 引数に従って縦・横に移動します。 *rangeObj* の縦方向の表示位置は *vPos* 引数で、横方向の表示位置は　*hPos* 引数で指定します。
 
-次のセレクターが利用可能です:
+*styleName* 引数には、削除するスタイルシートの名前を渡します。
 
 | セレクター                 | 説明                                                                                                         | *vPos* で利用可 | *hPos* で利用可 |
 | --------------------- | ---------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
@@ -6163,7 +6165,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 #### 例題
 
-AY カラムの 51 行目のセルを 4D View Pro エリアの中央に表示します:
+|
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
@@ -6175,7 +6177,7 @@ VP SHOW CELL($displayCell;vk position center;vk position center)
 
 ![](../assets/en/ViewPro/cmd_vpShowCell1.PNG)
 
-先ほどのコードの縦および横方向のセレクターを変更して、AY51 セルを 4D View Pro エリアの右上に表示します:
+|
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
@@ -6206,7 +6208,7 @@ VP SHOW CELL($displayCell;vk position top;vk position right)
 
 #### 説明
 
-`VP SUSPEND COMPUTING` コマンドは、 <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->*vpAreaName* 引数で指定したエリア内の計算をすべて停止します<!-- END REF -->。 このコマンドは、4D View Pro エリア内の計算を停止したい場合、たとえばフォーミュラを手動で編集している際に、最終的な編集が完了するまでエラーが発生しないようにするのに便利です。
+`VP SUSPEND COMPUTING` コマンドは、 <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->`VP SUSPEND COMPUTING` コマンドは、<!-- END REF -->。 このコマンドは、4D View Pro エリア内の計算を停止したい場合、たとえばフォーミュラを手動で編集している際に、最終的な編集が完了するまでエラーが発生しないようにするのに便利です。
 
 このコマンドは 4D View Pro 内の計算機能を停止します。 すでに計算済みのフォーミュラはそのままですが、`VP SUSPEND COMPUTING` の実行後に追加されたフォーミュラは計算されません。
 
@@ -6215,11 +6217,11 @@ VP SHOW CELL($displayCell;vk position top;vk position right)
 
 #### 例題
 
-ユーザーが計算を停止/再開できるように、フォーム上に 2つボタンを追加します:
+参照
 
 ![](../assets/en/ViewPro/cmd_vpStopCalculations.PNG)
 
-計算停止ボタンのコード:
+*tableName* の表組みが [データコンテキスト](#vp-set-data-context) にバインドされている場合、このコマンドはコレクションに新しい空の要素を挿入します。
 
 ```4d
  // ユーザーが情報を入力する間、計算を停止します
