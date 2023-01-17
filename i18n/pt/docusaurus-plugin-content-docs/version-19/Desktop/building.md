@@ -219,7 +219,7 @@ Click on the **[...]** button and use the *Browse for folder* dialog box to loca
 
 #### Current version
 
-Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. You may then accept or reject connections by client applications according to their version number.
+Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. Used to indicate the current version number for the application generated.
 
 #### Data linking mode
 
@@ -314,14 +314,14 @@ There are many possible causes for this error. When you get this message, it is 
 Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, `<ApplicationName>Client` and `<ApplicationName>Server`.
 > These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
 
-The `<ApplicationName>Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. This folder must be installed on each client machine. The `<ApplicationName>Server` folder contains the server portion of the application.
+This folder must be installed on each client machine. The `<ApplicationName>Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. The `<ApplicationName>Server` folder contains the server portion of the application.
 
 The contents of these folders vary depending on the current platform:
 
 * *Windows* - Each folder contains the application executable file, named `<ApplicationName>Client.exe` for the client part and `<ApplicationName>Server.exe` for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-* *macOS* - Each folder contains only the application package, named `<ApplicationName> Client` for the client part and `<ApplicationName> Server` for the server part. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
+* *macOS* - Each folder contains only the application package, named `<ApplicationName> Client` for the client part and `<ApplicationName> Server` for the server part. Each package contains all the necessary items for the application to work. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
 
- > The macOS packages built contain the same items as the Windows subfolders. In order to modify it, you must first display its contents (**Control+click** on the icon).
+ > > The macOS packages built contain the same items as the Windows subfolders. In order to modify it, you must first display its contents (**Control+click** on the icon).
 
 If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `<ApplicationName>Server` folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This subfolder contains the client application in macOS and/or Windows format as a compressed file.
 
