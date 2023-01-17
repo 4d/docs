@@ -353,7 +353,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 #### Beschreibung
 
-The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->The `.getMails()` function<!-- END REF -->.
+The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->The `.copy()` function<!-- END REF -->.
 
 You can pass:
 
@@ -497,6 +497,10 @@ $status:=$transporter.createBox("Invoices")
 
 If ($status.success)
 ALERT("Mailbox creation successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
 Else
 ALERT("Error: "+$status.statusText)
 End if
@@ -678,6 +682,10 @@ $status:=$transporter.deleteBox($name)
 
 If ($status.success)
  ALERT("Mailbox deletion successful!")
+ Else
+ ALERT("Error: "+$status.statusText)
+ End if
+End if
  Else
  ALERT("Error: "+$status.statusText)
  End if
@@ -957,7 +965,7 @@ Mailbox name delimiter character.
 
 #### Beschreibung
 
-The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. This function allows you to locally handle the email contents.
+The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->The `.getMail()` function<!-- END REF -->. This function allows you to locally handle the email contents.
 
 In the first parameter, you can pass either:
 
@@ -1020,13 +1028,14 @@ You want to get the message with ID = 1:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| Parameter | Typ        |    | Beschreibung                                                                       |
-| --------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
-| ids       | Collection | -> | Collection of message ID                                                           |
-| startMsg  | Ganzzahl   | -> | Sequence number of the first message                                               |
-| endMsg    | Ganzzahl   | -> | Sequence number of the last message                                                |
-| options   | Objekt     | -> | Message handling instructions                                                      |
-| Ergebnis  | Objekt     | <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
+| Parameter | Typ        |    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------- | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ids       | Collection | -> | Collection of message ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| startMsg  | Ganzzahl   | -> | Sequence number of the first message                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| endMsg    | Ganzzahl   | -> | Sequence number of the last message                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| options   | Objekt     | -> | Message handling instructions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Ergebnis  | Objekt     | <- | var $server,$boxInfo,$result : Object var $transporter : 4D.IMAPTransporter $server:=New object $server.host:="imap.gmail.com" //Mandatory $server.port:=993 $server.user:="4d@gmail.com" $server.password:="XXXXXXXX" //create transporter $transporter:=IMAP New transporter($server) //select mailbox $boxInfo:=$transporter.selectBox("INBOX") If($boxInfo.mailCount&gt;0) // retrieve the headers of the last 20 messages without marking them as read     $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+     New object("withBody";False;"updateSeen";False)) For each($mail;$result.list) // ... End for each End if End for each End if<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
 |
 
@@ -1145,9 +1154,9 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 * **True** - to mark the message as "seen" (indicating the message has been read)
 * **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
-> * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
+> * > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
-> * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
+> * > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 
 #### Ergebnis
 
@@ -1372,7 +1381,7 @@ The function returns a collection of strings (unique IDs).
 
 #### Beschreibung
 
-The `.delete()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
+The `.delete()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->The `.removeFlags()` function<!-- END REF -->.
 
 In the `msgIDs` parameter, you can pass either:
 
@@ -1510,6 +1519,10 @@ End if
    ALERT("Error: "+$status.statusText)
  End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
+End if
 ```
 
 <!-- END REF -->
@@ -1542,7 +1555,7 @@ End if
 
 > This function is based upon the specification for the [IMAP protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-The `.searchMails()` function <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. .
+searches for messages that match the given *searchCriteria* in the current mailbox <!-- REF #IMAPTransporterClass.searchMails().Summary -->The `.searchMails()` function<!-- END REF -->. .
 
 *searchCriteria* is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. A search key may be a single or multiple items. Beispiel:
 
@@ -1678,7 +1691,7 @@ Search-keys may request the value to search for:
 
 #### Beschreibung
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+selects the *name* mailbox as the current mailbox <!-- REF #IMAPTransporterClass.selectBox().Summary -->The `.selectBox()` function<!-- END REF -->. This function allows you to retrieve information about the mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
 In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
@@ -1791,6 +1804,10 @@ End if
    ALERT("Error: "+$status.statusText)
    End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
 ```
 
 <!-- END REF -->
@@ -1859,6 +1876,10 @@ $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
    ALERT("Mailbox unsubscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if
