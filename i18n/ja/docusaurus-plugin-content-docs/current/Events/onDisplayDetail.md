@@ -27,7 +27,7 @@ title: On Display Detail
 
 > ヘッダーエリアは、[`On Header`](onHeader.md) イベントで処理されます。
 
-`On Display Detail` イベントから、ダイアログボックスを表示する 4Dコマンドを呼び出すことはできません。これはシンタックスエラーを起こします。 以下のコマンドが該当します: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, `MODIFY SELECTION`。
+`On Display Detail` イベントから、ダイアログボックスを表示する 4Dコマンドを呼び出すことはできません。 以下のコマンドが該当します: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, `MODIFY SELECTION`。
 
 
 ### セレクションリストボックス
