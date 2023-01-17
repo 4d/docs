@@ -104,7 +104,7 @@ You can display and modify form and object properties using the Property List. I
 
 To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
 
-#### Navigation shortcuts
+#### Shortcuts
 
 You can navigate in the Property List using the following shortcuts:
 
@@ -114,6 +114,8 @@ You can navigate in the Property List using the following shortcuts:
 - **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
 - **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
 - **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
+
 
 ## Manipulating Form Objects
 
@@ -125,6 +127,7 @@ You can add objects to forms in several ways:
 - By dragging and dropping the object from the object bar
 - By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
 - By dragging and dropping an object from another form,
+
 
 - By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
 
@@ -148,7 +151,7 @@ To select an object using the toolbar:
 To select an object using the Property List:
 
 1. Choose the object’s name from the Object List drop-down list located at the top of the Property List.Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. To deselect an object, click outside the object’s boundary or **Shift+click** the object.
-> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> > > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selecting multiple objects
 
@@ -248,7 +251,7 @@ The alignment tools in the toolbar and in the Align submenu of the Object menu a
 
 ![](../assets/en/FormEditor/alignmentMenu.png)
 
-When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
+When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” This object is the “anchor.” This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
 
 ![](../assets/en/FormEditor/alignmentTools.png)
 
