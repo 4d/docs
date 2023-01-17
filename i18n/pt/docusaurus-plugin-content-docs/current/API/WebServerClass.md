@@ -77,12 +77,12 @@ Eles oferecem as propriedades abaixo e funções:
 
 O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retorna o objeto padrão web server ou o objeto web server definido através do parâmetro *option*<!-- END REF -->.
 
-Por padrão, se o parâmetro *opção* for omitido, o comando retorna uma referência ao servidor Web do banco de dados, i. . o servidor web padrão. Para designar o servidor da Web para retornar, você pode passar uma das seguintes constantes no parâmetro de *opção*:
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION` . No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
 | Constante                                    | Value | Comentário                                                  |
 | -------------------------------------------- | ----- | ----------------------------------------------------------- |
 | `Web server database`                        | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
-| `Web server database`                        | 2     | Servidor Web do banco de dados de host de um componente     |
+| `Parâmetros`                                 | 2     | Servidor Web do banco de dados de host de um componente     |
 | `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
 
 O objeto Servidor Web retornado contém os valores atuais das propriedades do Servidor Web.
@@ -285,6 +285,7 @@ O <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado HTTP Strict Transport S
 
 ## .HSTSMaxAge
 
+
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
@@ -392,7 +393,7 @@ O padrão = 443
 
 > Esta propriedade não é retornada em [scalable sessions mode](#scalablesession).
 
-O <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->Duração (em minutos) dos processos de sessão legado inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
+O <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->O Duração (em minutos) dos processos de sessão legado inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
 
 Default = 480 minutos
 
@@ -430,7 +431,7 @@ O <!-- REF #WebServerClass.IPAddressToListen.Summary -->Endereço IP no qual o s
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
 
-*Propriedade apenas leitura*
+*Propriedade só de leitura*
 
 O <!-- REF #WebServerClass.isRunning.Summary -->estado execução do servidor web<!-- END REF -->.
 
@@ -738,11 +739,10 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 | v18 R3 | Adicionado |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Parâmetros | Tipo |  | Descrição                                             |
 | ---------- | ---- |  | ----------------------------------------------------- |
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
