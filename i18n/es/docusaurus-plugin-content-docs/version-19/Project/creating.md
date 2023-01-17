@@ -100,7 +100,7 @@ Los archivos `.4DLink` también pueden crearse con un editor XML.
 
 Cuando trabaja en un proyecto en 4D, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Las modificaciones se guardan en el disco cuando se selecciona una opción de menú **Guardar**, o cuando la ventana del editor pierde o recupera el foco.
 
-Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
+Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones.
 
 El marco de desarrollo 4D incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
 
