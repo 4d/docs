@@ -376,6 +376,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
  Else
     ALERT("This database is not encrypted.")
  End if
+ Else
+    ALERT("This database is not encrypted.")
+ End if
 ```
 
 <!-- END REF -->
@@ -479,7 +482,7 @@ $info:=$ds.getAllRemoteContexts()
 
 #### Descripción
 
-La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.getInfo()` function<!-- END REF -->. Esta función es útil para configurar el código genérico.
+La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->La función `.getInfo()`<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -1023,7 +1026,9 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
