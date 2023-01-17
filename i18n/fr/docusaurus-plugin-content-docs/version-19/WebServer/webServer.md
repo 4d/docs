@@ -22,7 +22,7 @@ La sécurité des données est présente à tous les stades d'implémentation du
 
 * **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-* **Contrôle de l'usage des ressources du serveur** (par exemple, via l'option qui détermine [le nombre maximum de process web simultanés](webServerConfig.html#maximum-concurrent-web-processes)).
+* **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([`Sur authentification Web`](authentication.md#on-web-authentication) pour le serveur web et [`Sur authentification REST`](REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
 * **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
   * [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
