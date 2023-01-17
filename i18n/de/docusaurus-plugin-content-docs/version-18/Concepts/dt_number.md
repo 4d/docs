@@ -100,18 +100,18 @@ Beim Arbeiten mit Bit Operatoren müssen Sie sich den Wert vom Typ Lange Ganzzah
 
 Da jedes Bit entweder 0 oder 1 ist, können Sie sich einen Wert vom Typ Lange Ganzzahl auch als Wert vorstellen, der 32 Boolean Werte speichern kann. Ein Bit gleich 1 bedeutet **Wahr**, ein Bit gleich 0 bedeutet **Falsch**.
 
-Ein Ausdruck mit Bit Operator gibt einen Wert von Typ Lange Ganzzahl zurück, mit Ausnahme des Operators Bit Test. Hier wird ein Wert vom Typ Boolean zurückgegeben. Es gibt folgende Bit Operatoren:
+Ein Ausdruck mit Bit Operator gibt einen Wert von Typ Lange Ganzzahl zurück, mit Ausnahme des Operators Bit Test. Es gibt folgende Bit Operatoren:
 
-| Operation                 | Operator  | Syntax              | Ergibt                    |
-| ------------------------- | --------- | ------------------- | ------------------------- |
-| Bitweises UND             | &         | Lang & Lang         | Lang                      |
-| Bitweises ODER (inklusiv) | &#124;    | Lang &#124; Lang    | Lang                      |
-| Bitweises ODER (exklusiv) | \^&#124; | Lang \^&#124; Lang | Lang                      |
-| Left Bit Shift            | <<        | Lang << Lang        | Lang (siehe Hinweis 1)    |
-| Right Bit Shift           | >>        | Lang >> Lang        | Lang (siehe Hinweis 1)    |
-| Bit setzen                | ?+        | Lang ?+ Lang        | Lang (siehe Hinweis 2)    |
-| Bit löschen               | ?-        | Lang ?- Lang        | Lang (siehe Hinweis 2)    |
-| Bit Test                  | ??        | Long ?? Long Lang   | Boolean (siehe Hinweis 2) |
+| Operation                 | Operator  | Syntax                 | Ergibt                    |
+| ------------------------- | --------- | ---------------------- | ------------------------- |
+| Bitweises UND             | &         | Lang & Lang            | Lang                      |
+| Bitweises ODER (inklusiv) | &#124;    | Lang &#124; Lang       | Lang                      |
+| Bitweises ODER (exklusiv) | \^&#124; | Lang \^&#124; Lang    | Lang                      |
+| Left Bit Shift            | <<        | Lang << Lang           | Lang (siehe Hinweis 1)    |
+| Right Bit Shift           | >>        | Lang >> Lang           | Lang (siehe Hinweis 1)    |
+| Bit setzen                | ?+        | Lang ?+ Lang           | Lang (siehe Hinweis 2)    |
+| Bit löschen               | ?-        | Lang ?- Lang           | Lang (siehe Hinweis 2)    |
+| Bit Test                  | ??        | Long ?? Long Lang Lang | Boolean (siehe Hinweis 2) |
 
 #### Hinweise
 
@@ -125,7 +125,7 @@ Folgende Tabelle zeigt die Bit Operatoren und ihre Auswirkung:
 | Bitweises UND             | Jedes resultierende Bit ist das logische UND der Bits in den beiden Operanden. Hier ist die logische UND Tabelle:<ul><li>1 & 1 --> 1</li><li>0 & 1 --> 0</li>1 & 0 --> 0<li>0 & 0 --> 0</li></ul>Das resultierende Bit ist 1, wenn beide Bits der Operanden 1 sind; sonst ist das resultierende Bit 0.                                                                                                                                                                   |
 | Bitweises ODER (inklusiv) | Jedes resultierende Bit ist das logische ODER der Bits in den beiden Operanden. Hier ist die logische ODER Tabelle:<ul><li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li></ul> Das resultierende Bit ist 1, wenn mindestens einer der Bit Operanden 1 ist; sonst ist das resultierende Bit 0.                                                                                                                                                        |
 | Bitweises ODER (exklusiv) | Jedes resultierende Bit ist das logische XODER der Bits in den beiden Operanden. Hier ist die logische XODER Tabelle: <ul><li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li></ul> Das resultierende Bit ist 1, wenn mindestens einer der Bit Operanden 1 ist; sonst ist das resultierende Bit 0.                                                                                                                                                      |
-| Left Bit Shift            | Der resultierende Wert wird auf den ersten Operanden gesetzt, dann werden die Bits um die im zweiten Operanden angegebenen Stellen nach links verschoben. Die Bits auf der linken Seite gehen verloren, die neuen Bits auf der rechten Seite werden auf 0 gesetzt. The bits on the left are lost and the new bits on the right are set to 0.                                                                      |
+| Left Bit Shift            | Der resultierende Wert wird auf den ersten Operanden gesetzt, dann werden die Bits um die im zweiten Operanden angegebenen Stellen nach links verschoben. Die Bits auf der linken Seite gehen verloren, die neuen Bits auf der rechten Seite werden auf 0 gesetzt. Die Bits auf der linken Seite gehen verloren, die neuen Bits auf der rechten Seite werden auf 0 gesetzt.                                       |
 | Right Bit Shift           | Der resultierende Wert wird auf den ersten Operanden gesetzt, dann werden die Bits um die vom zweiten Operanden angegebenen Stellen nach rechts verschoben. Die Bits auf der rechten Seite gehen verloren, die neuen Bits auf der linken Seite werden auf 0 gesetzt. **Hinweis:** Werden nur die positiven Werte berücksichtigt, ist das Verschieben um N Bits nach rechts dasselbe wie das Dividieren durch 2^N. |
 | Bit setzen                | Der resultierende Wert wird auf den ersten Operanden gesetzt, dann wird das Bit, dessen Stelle im zweiten Operanden angegeben ist, auf 1 gesetzt. Die anderen Bits bleiben unverändert.                                                                                                                                                                                                                           |
 | Bit löschen               | Der resultierende Wert wird auf den ersten Operanden gesetzt, dann wird das Bit, dessen Stelle im zweiten Operanden angegeben ist, auf 0 gesetzt. Die anderen Bits bleiben unverändert.                                                                                                                                                                                                                           |
@@ -142,4 +142,4 @@ Folgende Tabelle zeigt die Bit Operatoren und ihre Auswirkung:
 | Right Bit Shift           | 0x0000FFFF >> 8                 | 0x000000FF |
 | Bit setzen                | 0x00000000 ?+ 16                | 0x00010000 |
 | Bit löschen               | 0x00010000 ?- 16                | 0x00000000 |
-| Bit Test                  | 0x00010000 ?? 16 16             | Wahr       |
+| Bit Test                  | 0x00010000 ?? 16 16 16          | Wahr       |
