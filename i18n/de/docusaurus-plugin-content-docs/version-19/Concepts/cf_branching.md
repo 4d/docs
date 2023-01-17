@@ -34,6 +34,7 @@ Beachten Sie, dass der Boolean Ausdruck immer voll gewertet wird. Siehe hierzu f
     ...
  End if
  End if
+ End if
 ```
 
 The expression is TRUE only if both methods are TRUE. Jedoch, selbst wenn _MethodA_ FALSE zurückgibt, bewertet 4D weiter _MethodB_, was unnötig Zeit verbraucht. In diesem Fall ist folgende Struktur besser geeignet:
@@ -42,6 +43,8 @@ The expression is TRUE only if both methods are TRUE. Jedoch, selbst wenn _Metho
  If(MethodA)
     If(MethodB)
        ...
+    End if
+ End if
     End if
  End if
 ```
@@ -57,6 +60,7 @@ Das Ergebnis ist gleich, und _MethodB_ wird nur bei Bedarf bewertet.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
+ End if
  End if
  End if 
 ```
@@ -134,9 +138,16 @@ Dieses Beispiel prüft eine numerische Variable und zeigt eine Warnung mit einem
     :(vResult=1) //Test if the number is 1
        ALERT("One.") Case of
     :(vResult=1) //Test if the number is 1
+       ALERT("One.") Case of
+    :(vResult=1) //Test if the number is 1
        ALERT("One.") //If it is 1, display an alert
     :(vResult=2) //Test if the number is 2
        ALERT("Two.") //If it is 2, display an alert
+    :(vResult=3) //Test if the number is 3
+       ALERT("Three.") //If it is 3, display an alert
+    Else //If it is not 1, 2, or 3, display an alert
+       ALERT("It was not one, two, or three.")
+ End case //If it is 2, display an alert
     :(vResult=3) //Test if the number is 3
        ALERT("Three.") //If it is 3, display an alert
     Else //If it is not 1, 2, or 3, display an alert
@@ -165,10 +176,30 @@ Zum Vergleich folgt hier dieselbe Methode mit der Abfrage `If...Else...End if`:
           ALERT("It was not one, two, or three.")
        End if
     End if
+ End if If(vResult=1) //Test if the number is 1
+    ALERT("One.") If(vResult=1) //Test if the number is 1
+    ALERT("One.") //If it is 1, display an alert
+ Else
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
+    Else
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
  End if //If it is 2, display an alert
     Else
        If(vResult=3) //Test if the number is 3
           ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
+          ALERT("It was not one, two, or three.")
+       If(MethodA)
+    If(MethodB)
+       ...
+    End if
+ End if //If it is 3, display an alert
        Else //If it is not 1, 2, or 3, display an alert
           ALERT("It was not one, two, or three.")
        If(MethodA)
