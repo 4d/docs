@@ -345,6 +345,7 @@ Function get fullAddress()->$result : Object
 // Class: MyClass Class Constructor({$parameterName : type; ...})
 // code
 // code
+// code
 ```
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
@@ -381,7 +382,7 @@ The `Class extends` keyword is used in class declaration to create a user class 
 
 Class extension must respect the following rules:
 
-- A user class cannot extend a built-in class (except 4D.Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
+- A user class cannot extend a built-in class (except 4D. Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
 - A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
