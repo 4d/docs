@@ -101,4 +101,10 @@ $myNewBlob:=$myBlob.slice(0; 5)
 
 $myString:=Convert to text($myNewBlob; "UTF-8")
 // $myString contiene "Hello"
+
+// Crear un nuevo 4D.Blob a partir de $myBlob
+$myNewBlob:=$myBlob.slice(0; 5)
+
+$myString:=Convert to text($myNewBlob; "UTF-8")
+// $myString contiene "Hello"
 ```
