@@ -65,7 +65,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->$tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs") If($tempo.exists) $tempo.delete() ALERT("User preference file deleted.") End if End if<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -139,11 +139,11 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+**4D. File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. File<br/>**4D. File.new** ( *fileConstant* : Integer { ; * } ) : 4D. File<!-- END REF -->
 
 #### Descrição
 
-A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
+A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D. File.new()`.
 
@@ -451,7 +451,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. File<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->|<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
@@ -508,7 +508,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. The function must be used with an existing .exe, .dll or .plist file.
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente.
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
@@ -592,7 +592,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descrição
 
-A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB <!-- REF #FileClass.setContent().Summary -->A função `.setContent()`<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 
