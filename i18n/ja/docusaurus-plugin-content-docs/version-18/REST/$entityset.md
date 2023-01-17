@@ -41,7 +41,7 @@ title: "$entityset"
 
 ### 説明
 
-`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$operator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$operator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$operator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。 このとき、`$operator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
 このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 
