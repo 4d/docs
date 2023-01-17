@@ -56,7 +56,7 @@ In order for you to be able to create a log file directly, the database must be 
 - The data file is blank,
 - You just performed a backup of the database and no changes have yet been made to the data.
 
-In all other cases, when you validate the Database Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the database.
+In all other cases, when you validate the Database Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **OK**, the backup begins immediately, then the log file is activated.
 
 Without having to do anything else, all operations performed on the data are logged in this file and it will be used in the future when the database is opened.
 
