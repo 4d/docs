@@ -89,7 +89,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 ### 4D v19 R2
 
 - A [default .gitignore file](../Preferences/general#create-gitignore-file) can be created with new projects
-- New [Blob class API](../API/BlobClass) to handle new [`4D.Blob` objects](Concepts/dt_blob#blob-types)
+- New [Blob class API](../API/BlobClass) to handle new [`4D. Blob` objects](Concepts/dt_blob#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass#settext)
 
 
