@@ -23,9 +23,9 @@ Die Schaltfläche **Wiederherstellen** startet die manuelle Wiederherstellung de
 
 ## Mehrere Logbücher der Daten nacheinander integrieren
 
-Mit der Option **Logbuch/Logbücher nach Wiederherstellung integrieren** können Sie mehrere Logbücher hintereinander in eine Anwendung integrieren. Haben Sie z.B. 4 Logbücher (.4BL) passend zu 4 Backups, können Sie das erste Backup wiederherstellen und dann die Logbücher (data log) der Reihe nach integrieren. Auf diese Weise können Sie z. B. eine Datei wiederherstellen, auch wenn die letzten Backup-Dateien fehlen.
+Mit der Option **Logbuch/Logbücher nach Wiederherstellung integrieren** können Sie mehrere Logbücher hintereinander in eine Anwendung integrieren. Haben Sie z.B. 4 Logbücher (.4BL) passend zu 4 Backups, können Sie das erste Backup wiederherstellen und dann die Logbücher (data log) der Reihe nach integrieren. Auf diese Weise können Sie z. B. eine Datei wiederherstellen, auch wenn die letzten Backup-Dateien fehlen. Auf diese Weise können Sie z. B. eine Datei wiederherstellen, auch wenn die letzten Backup-Dateien fehlen.
 
-Ist diese Option markiert, zeigt 4D nach dem Wiederherstellen den Standard Öffnen-Dialog. Hier können Sie das entsprechende Logbuch auswählen. Der Öffnen-Dialog erscheint erneut nach jeder Integration, bis er abgebrochen wird.
+Ist diese Option markiert, zeigt 4D nach dem Wiederherstellen den Standard Öffnen-Dialog. Der Öffnen-Dialog erscheint erneut nach jeder Integration, bis er abgebrochen wird.
 
 ## Eine verschlüsselte Anwendung wiederherstellen
 
