@@ -58,7 +58,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
 **結果**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -133,7 +133,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 .....//more entities here 
     ]
 }
-````
+```
 
 ## {dataClass}({key})
 
@@ -161,7 +161,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
 **結果**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -180,7 +180,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
         }
     }
 }
-````
+```
 
 ## {dataClass}:{attribute}(value)
 
