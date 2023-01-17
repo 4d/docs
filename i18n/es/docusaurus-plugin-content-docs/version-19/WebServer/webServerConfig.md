@@ -157,7 +157,7 @@ Si no se especifica ninguna página de inicio por defecto, se llama al método b
 | `WEB SET OPTION`              | `Web CORS enabled`                                 | 0 (desactivado, por defecto) o 1 (activado)          |
 | Caja de diálogo de parámetros | Página Options (II)/Activar CORS                   | Sin marcar por defecto                               |
 
-El servidor web 4D implementa el cross-origin resource sharing (CORS) para permitir que páginas web específicas servidas desde otro dominio accedan a los recursos de la aplicación web actual a través de llamadas XHR, por ejemplo, utilizando REST. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Cuando está habilitado, las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver Parámetros CORS más adelante). En este caso, si un dominio o un método no autorizado envía una petición cross-site, se rechaza con una respuesta de error "403 - prohibido".
+El servidor web 4D implementa el cross-origin resource sharing (CORS) para permitir que páginas web específicas servidas desde otro dominio accedan a los recursos de la aplicación web actual a través de llamadas XHR, por ejemplo, utilizando REST. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Cuando está habilitado, las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver Parámetros CORS más adelante).
 
 Cuando se desactiva (por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS.
 
@@ -448,7 +448,7 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 Algunos robots (motores de búsqueda, arañas...) recorren los servidores web y las páginas estáticas. Si no quiere que los robots puedan acceder a todo su sitio, puede definir las URLs a las que no pueden acceder.
 
-Para ello, ponga el archivo ROBOTS.TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
+Para ello, ponga el archivo ROBOTS. TXT en la raíz del servidor. Este archivo debe estar estructurado de la siguiente manera:
 
 ```4d
    User-Agent: <name>
