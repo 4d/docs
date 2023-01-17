@@ -97,7 +97,7 @@ El objeto status devuelto contiene las siguientes propiedades:
 
 #### Ejemplo 1
 
-Para comprimir un `4D.File`:
+Para comprimir un `4D.Folder` sin la carpeta misma:
 
 ```4d
  var $file; $destination : 4D.File
@@ -111,7 +111,7 @@ Para comprimir un `4D.File`:
 
 #### Ejemplo 2
 
-Para comprimir un `4D.Folder` sin la carpeta misma:
+Para comprimir un `4D.File`:
 
 ```4d
  var $folder : 4D.Folder
