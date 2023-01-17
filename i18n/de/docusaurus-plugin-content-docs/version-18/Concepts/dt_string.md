@@ -61,13 +61,13 @@ In Strings lassen sich folgende Escape Sequenzen verwenden:
 ## String Vergleiche
 
 - Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach [Schlüsselwörter](dt_string.md#keywords), siehe unten).
-- Bei String Vergleichen wird die Groß- und Kleinschreibung ignoriert, so gibt "a"="A" `TRUE` zurück. Wollen Sie die Schreibweise von zwei Zeichen überprüfen, vergleichen Sie deren Zeichen Codes. So ergibt z. B. folgender Ausdruck `FALSE`:
+- Bei String Vergleichen wird die Groß- und Kleinschreibung ignoriert, so gibt "a"="A" `TRUE` zurück. Wollen Sie die Schreibweise von zwei Zeichen überprüfen, vergleichen Sie deren Zeichen Codes. folgender Ausdruck `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
 
-- Bei String Vergleichen werden diakritische Zeichen wie die entsprechenden Zeichen ohne Akzente behandelt. So ergibt z. B. folgender Ausdruck `TRUE`:
+- Bei String Vergleichen werden diakritische Zeichen wie die entsprechenden Zeichen ohne Akzente behandelt. folgender Ausdruck `TRUE`:
 
 ```4d
      "n"="ñ"
@@ -76,11 +76,11 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
       // and so on
 ```
 
-**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist normalerweise das gleiche Format wie das System, kann aber auf eine andere Sprache eingestellt werden. Je nach Sprache können diakritische Zeichen anders bewertet oder sortiert werden.
+**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**.
 
 ### Joker Zeichen (@)
 
-Die 4D Programmiersprache unterstützt **@** als Joker Zeichen. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
+Die 4D Programmiersprache unterstützt **@** als Joker Zeichen. @ kann für beliebig viele Zeichen stehen. folgender Ausdruck `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
@@ -131,7 +131,7 @@ Der folgende Ausdruck wird korrekt interpretiert:
 
 ### Schlüsselwörter
 
-Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörter" in "Texten" nur im ganzen berücksichtigt. Der Operator **%** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. eine Vorsilbe. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Ein Apostroph, z. B. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
+Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörter" in "Texten" nur im ganzen berücksichtigt. Der Operator **%** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Returns True
@@ -179,11 +179,13 @@ Diese Syntax mit dem gewünschten Zeichen innerhalb eines Ausdrucks gibt es als 
  End if
     End if
  End if
+    End if
+ End if
 ```
 
 ### Bemerkung zu ungültigem Zeichenzugriff
 
-Beim Einsatz der Symbole für direkten Zeichenzugriff müssen Sie vorhandene Zeichen im String auf dieselbe Weise wie vorhandene Elemente in einem Array ansprechen. Sprechen Sie beispielsweise das 20. Zeichen einer Textvariablen an, muss diese Variable auch mindestens 20 Zeichen enthalten. Ist das nicht der Fall,
+Beim Einsatz der Symbole für direkten Zeichenzugriff müssen Sie vorhandene Zeichen im String auf dieselbe Weise wie vorhandene Elemente in einem Array ansprechen. Sprechen Sie beispielsweise das 20. Zeichen einer Textvariablen an, muss diese Variable auch mindestens 20 Zeichen enthalten.
 
 - verursacht das im interpretierten Modus keinen Syntaxfehler.
 - kann das im kompilierten Modus (mit deaktivierter Bereichsprüfung) zu einem Absturz wegen Speicherüberlauf führen, z. B. wenn Sie ein Zeichen nach dem Ende eines String oder Textes schreiben.
