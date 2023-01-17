@@ -205,7 +205,7 @@ title: Transporter クラス
 
 `.headerCharset` プロパティは、 <!-- REF #transporter.headerCharset.Summary --> メールヘッダーで使用される文字セットとエンコーディングを格納します<!-- END REF -->。 ヘッダーにはメールの次の要素を含みます:
 
-- 件名
+- 内容
 - 添付ファイル名
 - メール名
 
@@ -285,7 +285,7 @@ title: Transporter クラス
 
 #### 説明
 
-`.port` プロパティは、 <!-- REF #transporter.port.Summary --> メール通信に使用されるポート番号を格納します<!-- END REF -->。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
+`.port` プロパティは、 <!-- REF #transporter.port.Summary --> メール通信に使用されるポート番号を格納します<!-- END REF -->。 。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -359,7 +359,7 @@ title: Transporter クラス
 
 #### 説明
 
-`.checkConnection()` 関数は、 <!-- REF #transporter.checkConnection().Summary --> transporter オブジェクトが保存する情報を使用して接続をチェックします<!-- END REF -->。必要なら再接続をし、そのステータスを返します。 この関数を使用して、ユーザーから提供された値が有効かどうかを検証することができます。
+`.checkConnection()` 関数は、 <!-- REF #transporter.checkConnection().Summary --> transporter オブジェクトが保存する情報を使用して接続をチェックします<!-- END REF -->必要なら再接続をし、そのステータスを返します。 この関数を使用して、ユーザーから提供された値が有効かどうかを検証することができます。
 
 #### 返されるオブジェクト
 
