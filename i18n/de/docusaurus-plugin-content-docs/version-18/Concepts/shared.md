@@ -35,7 +35,7 @@ Jedoch müssen alle Anweisungen zum Ändern in shared object oder collection in 
  End Use
 ```
 
-Shared object/collection lässt sich zur selben Zeit immer nur von einem Prozess verändern. A shared object/collection can only be modified by one process at a time. . Trying to modify a shared object/collection without at least one `Use...End use` generates an error. Ruft ein Prozess `Use...End use` in shared object/collection auf, das bereits von einem anderen Prozess benutzt wird, wird er bis zum Entsperren durch `End use` in Wartestellung gesetzt (es wird kein Fehler generiert). Deshalb sollten Anweisungen innerhalb der Struktur `Use...End use` rasch ablaufen und die Elemente so bald wie möglich entsperren  und Sie sollten ein shared object/collection nicht direkt auf der Oberfläche ändern, also z.B. über ein Dialogfenster.
+Shared object/collection lässt sich zur selben Zeit immer nur von einem Prozess verändern. A shared object/collection can only be modified by one process at a time. . Trying to modify a shared object/collection without at least one `Use...End use` generates an error. Ruft ein Prozess `Use...End use` in shared object/collection auf, das bereits von einem anderen Prozess benutzt wird, wird er bis zum Entsperren durch `End use` in Wartestellung gesetzt (es wird kein Fehler generiert). Deshalb sollten Anweisungen innerhalb der Struktur `Use...End use` rasch ablaufen und die Elemente so bald wie möglich entsperren  und Sie sollten ein shared object/collection nicht direkt auf der Oberfläche ändern, also z.B. über ein Dialogfenster. und Sie sollten ein shared object/collection nicht direkt auf der Oberfläche ändern, also z.B. über ein Dialogfenster.
 
 Shared objects/collections lassen sich auch Eigenschaften oder Elementen von anderen shared objects/collections zuweisen. Das erstellt **shared groups**. Eine shared group wird automatisch erstellt, wenn ein shared object/collection als Eigenschaftswert oder Element eines anderen shared object/collection gesetzt wird. Shared groups erlauben das Einbinden von shared objects/collections. Dafür gelten jedoch zusätzliche Regeln:
 
@@ -53,12 +53,12 @@ Eigenschaften oder Elemente von shared object/collection lassen sich ohne die St
 Sind dagegen mehrere Werte logisch miteinander verbunden, sollte shared object/collection aus Konsistenzgründen in der Struktur `Use...End use` gelesen werden.
 
 ### Duplizieren
-Standardmäßig wird bei Aufruf von `OB Copy/collection. copy( `) mit shared object/collection (oder darin enthaltenen shared objects/collections) ein reguläres Objekt bzw. Collection (not shared) mit den enthaltenen Objekten (falls vorhanden) zurückgegeben.
+Standardmäßig wird bei Aufruf von `OB Copy/collection. copy(`) mit shared object/collection (oder darin enthaltenen shared objects/collections) ein reguläres Objekt bzw. Collection (not shared) mit den enthaltenen Objekten (falls vorhanden) zurückgegeben.
 
 ### Storage
 **Storage** ist ein einmaliges shared object, das automatisch in jeder Anwendung und auf jedem Rechner verfügbar ist. Es wird vom Befehl `Storage` zurückgegeben. Sie können es verwenden, um auf alle während der Sitzung definierten shared objects/collections zu verweisen, die über jeden preemptive oder standardmäßige Prozesse verfügbar sein sollen.
 
-Beachten Sie, dass das `Storage` Objekt, im Gegensatz zu den standardmäßigen shared objects, keine shared group erstellt, wenn shared objects/collections als Eigenschaft hinzugefügt werden. Auf diese Weise lässt sich das **Storage** Objekt ohne Sperren aller verbundenen shared objects/collections verwenden.
+Der Aufruf von `Use` in shared object/collection innerhalb einer Gruppe sperrt die Eigenschaften/Elemente aller shared objects/collections, die zur gleichen Gruppe gehören und erhöht ihren Sperrschlüssel. Auf diese Weise lässt sich das **Storage** Objekt ohne Sperren aller verbundenen shared objects/collections verwenden.
 
 Weitere Informationen dazu finden Sie unter dem Befehl `Storage`.
 
