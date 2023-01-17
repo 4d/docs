@@ -232,7 +232,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult1 (toutes les différences sont retournées) :
+vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont retournés)
 
 ```4d
 [
@@ -281,7 +281,7 @@ vCompareResult2 (seules les différences sur $attributesToInspect sont retourné
 ]
 ```
 
-vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont retournés)
+vCompareResult1 (toutes les différences sont retournées) :
 
 ```4d
 [
@@ -339,7 +339,7 @@ La fonction `.drop()` <!-- REF #EntityClass.drop().Summary -->supprime du datast
 
 Dans une application multiprocess ou multi-utilisateurs, la fonction `.drop()` est exécutée en mode ["verrouillage optimiste"](ORDA/entities.md#verrouillage-d-une-entite) dans lequel un marqueur de verrouillage interne est automatiquement incrémenté à chaque sauvegarde de l'enregistrement.
 
-Par défaut, lorsque le paramètre *mode* est omis, la méthode retourne une erreur (cf. ci-dessous) si l'entité a été modifiée (i.e. le marqueur interne a changé) entre-temps par un autre process ou utilisateur.
+|
 
 Sinon, vous pouvez passer l'option `dk force drop if stamp changed` dans le paramètre *mode* : dans ce cas, l'entité est supprimée même si la valeur du marqueur interne est différente (si la clé primaire est identique).
 
@@ -442,7 +442,7 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 
 La fonction `.first()` <!-- REF #EntityClass.first().Summary -->retourne une référence vers l'entité en première position dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
 #### Exemple
 
@@ -886,7 +886,7 @@ La fonction `.isNew()` <!-- REF #EntityClass.isNew().Summary --> renvoie Vrai si
 
 La fonction `.last()` <!-- REF #EntityClass.last().Summary -->retourne une référence vers l'entité en dernière position dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
 #### Exemple
 
@@ -934,7 +934,7 @@ Un enregistrement verrouillé peut être déverrouillé :
 
 > Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
 
-Par défaut, lorsque le paramètre *mode* est omis, la méthode retourne une erreur (cf. ci-dessous) si l'entité a été modifiée (i.e. le marqueur interne a changé) entre-temps par un autre process ou utilisateur.
+|
 
 Sinon, vous pouvez passer l'option `dk reload if stamp changed` dans le paramètre *mode* : dans ce cas, aucune erreur n'est générée et l'entité est simplement rechargée si le stamp a changé (si l'entité existe toujours et si la clé primaire est toujours la même).
 
@@ -1041,7 +1041,7 @@ Exemple avec option `dk reload if stamp changed` :
 
 La fonction `.next()` <!-- REF #EntityClass.next().Summary -->retourne une référence vers l'entité suivante dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
@@ -1083,7 +1083,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 La fonction `.previous()` <!-- REF #EntityClass.previous().Summary --> retourne une référence vers l'entité précédente dans l'entity selection à laquelle appartient l'entité<!-- END REF -->.
 
-Si l'entité n'appartient à aucune entity selection existante (i.e. [.getSelection()](#getselection) retourne Null), la fonction renvoie une valeur Null.
+|
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
@@ -1138,7 +1138,7 @@ L'objet retourné par `.reload( )` contient les propriétés suivantes :
 
 | Constante                                 | Value | Commentaire                                                                                                                                                                                                                        |
 | ----------------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | L'entité n'existe plus dans les données. Cette erreur peut se produire dans les cas suivants :<br/><li>l'entité a été supprimée (le stamp est modifié et l'espace mémoire est libéré)</li><li>l'entité a été supprimée et remplacée par une autre avec une clé primaire différente (le stamp est modifié et une nouvelle entité occupe l'espace mémoire). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Avec `.lock( )`, cette erreur peut être retournée lorsque l'option dk reload if stamp changed est utilisée.</li><br/>***statusText associé*** : "Entity does not exist anymore" |
+| `dk status entity does not exist anymore` | 5     | L'entité n'existe plus dans les données. Cette erreur peut se produire dans les cas suivants :<br/><li>l'entité a été supprimée (le stamp est modifié et l'espace mémoire est libéré)</li><li>l'entité a été supprimée et remplacée par une autre avec une clé primaire différente (le stamp est modifié et une nouvelle entité occupe l'espace mémoire). l'entité a été supprimée et remplacée par une autre avec une clé primaire différente (le stamp est modifié et une nouvelle entité occupe l'espace mémoire). Avec `.lock( )`, cette erreur peut être retournée lorsque l'option dk reload if stamp changed est utilisée.</li><br/>***statusText associé*** : "Entity does not exist anymore" |
 | `dk status serious error`                 | 4     | Une erreur critique peut être une erreur de bas niveau de la base de données (ex. clé dupliquée), une erreur matérielle, etc.<br/>***statusText associé*** : "Other error"                                                   |
 
 #### Exemple
@@ -1192,7 +1192,7 @@ La sauvegarde est effectuée si et seulement si au moins un attribut de l'entit�
 
 Dans une application multi-utilisateur ou multi-process, la fonction `.save()` est exécutée avec le mécanisme du ["verrouillage optimiste"](ORDA/entities.md#entity-locking), dans lequel un compteur interne (stamp) est automatiquement incrémenté à chaque sauvegarde de l'enregistrement.
 
-Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
+|
 
 Sinon, vous pouvez passer l'option `dk auto merge` dans le paramètre *mode* afin d'activer le mode "automatic merge". Dans ce mode, une modification simultanée effectuée par un autre process/utilisateur sur la même entité mais sur un attribut différent ne génère pas d'erreur. Les données effectivement stockées dans l'enregistrement résultent alors de la combinaison (le "merge") des modifications non-concurrentes (si des modifications ont été effectuées sur le même attribut, la sauvegarde échoue et une erreur est retournée, même en mode "automatic merge").
 > Le mode de fusion automatique n'est pas disponible pour les attributs de type Image, Objet et Texte lorsqu'ils sont stockés en dehors de l'enregistrement. Des modifications simultanées de ces attributs entraîneront une erreur "`dk status stamp has changed`".
@@ -1230,8 +1230,8 @@ Les valeurs suivantes peuvent être retournées dans les propriétés `status` e
 
 | Constante                                 | Value | Commentaire                                                                                                                                                                                                                                                                                |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk status automerge failed`              | 6     | (Uniquement si l'option `dk auto merge` est utilisée) Echec du mécanisme de merge automatique lors de la sauvegarde de l'entité. **statusText associé **: "Auto merge failed".                                                                                                             |
-| `dk status entity does not exist anymore` | 5     | L'entité n'existe plus dans les données. Cette erreur peut se produire dans les cas suivants :<br/><li>l'entité a été supprimée (le stamp est modifié et l'espace mémoire est libéré)</li><li>l'entité a été supprimée et remplacée par une autre avec une clé primaire différente (le stamp est modifié et une nouvelle entité occupe l'espace mémoire). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Avec `.lock( )`, cette erreur peut être retournée lorsque l'option dk reload if stamp changed est utilisée.</li><br/>**statusText associé** : "Entity does not exist anymore"                                                           |
+| `dk status automerge failed`              | 6     | vrai si l'action de suppression a été effectuée avec succès, sinon Faux.                                                                                                                                                                                                                   |
+| `dk status entity does not exist anymore` | 5     | L'entité n'existe plus dans les données. Cette erreur peut se produire dans les cas suivants :<br/><li>l'entité a été supprimée (le stamp est modifié et l'espace mémoire est libéré)</li><li>l'entité a été supprimée et remplacée par une autre avec une clé primaire différente (le stamp est modifié et une nouvelle entité occupe l'espace mémoire). l'entité a été supprimée et remplacée par une autre avec une clé primaire différente (le stamp est modifié et une nouvelle entité occupe l'espace mémoire). Avec `.lock( )`, cette erreur peut être retournée lorsque l'option dk reload if stamp changed est utilisée.</li><br/>**statusText associé** : "Entity does not exist anymore"                                                           |
 | `dk status locked`                        | 3     | L'entité est verrouillée par un verrou pessimiste.<br/>**statusText associé** : "Already locked"                                                                                                                                                                                     |
 | `dk status serious error`                 | 4     | Une erreur critique peut être une erreur de bas niveau de la base de données (ex. clé dupliquée), une erreur matérielle, etc.<br/>**statusText associé** : "Other error"                                                                                                             |
 | `dk status stamp has changed`             | 2     | La valeur du marqueur interne (stamp) de l'entité ne correspond pas à celle de l'entité stockée dans les données (verrouillage optimiste).<br/><li>avec `.save( )` : erreur uniquement si l'option `dk auto merge` n'est pas utilisée</li><li>avec `.drop( )` : erreur uniquement si l'option `dk force drop if stamp changed` n'est pas utilisée</li><li>avec `.lock( )` : erreur uniquement si l'option `dk reload if stamp changed` n'est pas utilisée</li><br/>**statusText associé** : "Stamp has changed" |
