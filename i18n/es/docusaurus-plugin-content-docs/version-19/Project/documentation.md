@@ -148,7 +148,7 @@ _italic_
  \``` 4d  
 C_TEXT($txt)  
 $txt:="Hello world!"  
-\` `` \`</code>
+\` ``
 
 - La etiqueta de la tabla es soportada:
 
