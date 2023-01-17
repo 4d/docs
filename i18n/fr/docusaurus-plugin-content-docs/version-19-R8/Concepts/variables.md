@@ -30,6 +30,9 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
  // et affecte la date courante + 30 jours
 ```
 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
+
 ### Utilisation du mot-clé `var`
 
 Il est recommandé de déclarer les variables à l'aide du mot-clé `var`, car cette syntaxe permet de lier les variables objet aux classes. L'utilisation de cette syntaxe améliore les suggestions de l'éditeur de code et les fonctionnalités type-ahead.
@@ -126,6 +129,7 @@ Voici quelques déclarations de variables simples :
 ```
 
 **Note :** Les tableaux sont un type particulier de variables (un tableau est une série ordonnée de variables du même type). Les tableaux sont déclarés avec des commandes spécifiques, telles que `ARRAY LONGINT(alAnArray;10)`. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+
 
 ## Assigner des valeurs
 
