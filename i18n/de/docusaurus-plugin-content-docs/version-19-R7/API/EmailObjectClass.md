@@ -198,7 +198,7 @@ For better deliverability, it is recommended to use the same from and sender add
 
 #### Beschreibung
 
-The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. This property allows users to add extended (registered) headers or user-defined (not registered, starting with "X") headers.
+The `.htmlBody` property contains the <!-- REF #EmailObjectClass.headers.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. .
 
 > If an `EmailHeader` object property defines a header such as "from" or "cc" which is already set as a property at the mail level, the `EmailHeader` property is ignored.
 
@@ -215,7 +215,7 @@ Every object of the headers collection can contain the following properties:
 
 #### Beschreibung
 
-The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. .
+The `.textBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. .
 
 ## .id
 
@@ -350,7 +350,7 @@ The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary 
 
 #### Beschreibung
 
-The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. .
+The `.headers` property contains a <!-- REF #EmailObjectClass.textBody.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. .
 
 ## .to
 
