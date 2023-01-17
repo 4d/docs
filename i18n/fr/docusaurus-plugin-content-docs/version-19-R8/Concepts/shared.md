@@ -120,7 +120,7 @@ Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inve
  C_OBJECT($inventory)
  $what:=$1 //pour une meilleure lisibilité
  $inventory:=$2
- 
+
  $count:=CountMethod($what) //méthode de comptage des produits
  Use($inventory) //Utiliser l'objet partagé
     $inventory[$what]:=$count  //stockage des résultats pour cet article
