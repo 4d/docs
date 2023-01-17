@@ -157,7 +157,7 @@ Si vous ne spécifiez aucune page d'accueil par défaut, la méthode base `On We
 | `WEB SET OPTION`         | `Web CORS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)    |
 | Fenêtre de configuration | Page Options (II) > Activer CORS                   | Décoché par défaut                         |
 
-Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous).
+Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous).
 
 Lorsqu'elle est désactivée (par défaut), toutes les demandes intersites envoyées avec CORS sont ignorées.
 
@@ -373,7 +373,7 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 | `WEB SET OPTION`         | `Web max concurrent processes`                                           |              |
 | Fenêtre de configuration | Options (I) > Process Web simultanés maxi                                |              |
 
-Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
+Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
 La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
@@ -499,7 +499,7 @@ Vous pouvez désigner un autre dossier HTML racine comme page d'accueil par déf
 
 - Le chemin est relatif au [dossier du projet](Project/architecture.md#project-folder) (4D local et 4D Server) ou au dossier contenant l'application 4D ou le package logiciel (4D en mode distant).
 - Le chemin ext exprimé avec la syntaxe POSIX (les dossiers sont séparés par un slash (/)),
-- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (deux points) avant le nom de dossier
+- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (deux points) avant le nom de dossier (deux points) avant le nom de dossier
 - Le chemin ne doit pas commencer par un slash (sauf si vous souhaitez que le dossier racine HTML soit le dossier distant du projet ou de 4D, mais pour interdire l'accès aux dossiers ci-dessus, auquel cas vous pouvez passer "/" comme dossier racine).
 
 Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web" du dossier "MyWebApp", entrez "MyWebApp/Web".
