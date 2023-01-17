@@ -309,7 +309,7 @@ End if
 
 #### Beschreibung
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
+The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->The `.setPrivileges()` function<!-- END REF -->.
 
 - In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
 
