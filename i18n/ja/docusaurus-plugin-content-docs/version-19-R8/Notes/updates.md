@@ -12,8 +12,8 @@ title: リリースノート
 
 - [グローバルおよびコンポーネントの実行コンテキスト](../Concepts/error-handling.md#スコープとコンポーネント) に対してエラー処理メソッドを実装することができます。
 - コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](../FormObjects/properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
-- ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
-- Windows で [SDIモードでのアプリケーションモードのテスト](../Menus/sdi.md#sdiモード利用条件) をサポート。
+- ORDA: [`setPrivileges()`](../API/SessionClass.md#setprivileges) を使ってセッションに割り当てる [権限](../ORDA/privileges.md) を定義するための *roles.json* ファイルをサポート。
+- Windows で [SDIモードでのアプリケーションのテスト](../Menus/sdi.md#sdiモード利用条件) をサポート。
 - 4D View Pro:
     - 表組みにおけるテーマのサポート: 新しい [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) および [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) コマンドの追加、[VP CREATE TABLE](../ViewPro/method-list#vp-create-table) コマンドにテーマオプションを追加
     - 新しい [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) コマンドの追加
