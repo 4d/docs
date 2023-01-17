@@ -14,9 +14,9 @@ Die Seite enthält die Schaltflächen für Aktionen, über die Sie direkt auf di
 
 
 - **Datensätze und Indizes prüfen:** Startet den kompletten Prozess zum Überprüfen der Daten.
-- **Nur Datensätze prüfen**: Startet nur den Prozess zum Überprüfen der Datensätze, d. h. Indizes werden nicht geprüft.
-- **Nur Indizes prüfen**: Startet nur den Prozess zum Überprüfen der Indizes, d. h. Datensätze werden nicht geprüft.
-> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+- **Nur Datensätze prüfen**: Startet nur den Prozess zum Überprüfen der Datensätze, d. h.
+- **Nur Indizes prüfen**: Startet nur den Prozess zum Überprüfen der Indizes, d. h.
+> > > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 
 ## Logbuch öffnen
