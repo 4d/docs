@@ -72,7 +72,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et la base h�
 
 - La commande `Pointeur vers` ne retournera pas un pointeur vers une variable de la base hôte si elle est appelée depuis un composant et inversement.
 
-- L’architecture des composants autorise la coexistence, au sein d’une même base interprétée, de composants interprétés et compilés (à l’inverse, seuls des composants compilés peuvent être utilisés dans une base compilée). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode.
+- L’architecture des composants autorise la coexistence, au sein d’une même base interprétée, de composants interprétés et compilés (à l’inverse, seuls des composants compilés peuvent être utilisés dans une base compilée). L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété.
 - Si le composant C définit la variable `mavarC`, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur `->mavarC`.
 - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution.
 
@@ -160,7 +160,7 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 
 ## Utilisation de formulaires
 
-- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Only “project forms” (forms that are not associated with any specific table) can be used in a component.
+- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant.
 - Un composant peut faire appel à des formulaires table de la base hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
 **Note :** Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant de la base hôte sera affiché, dans le contexte de la base hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
@@ -169,7 +169,7 @@ Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par l
 
 ## Utilisation de tables et de champs
 
-Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D de la base matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. However, you can create and use external databases, and then use their tables and fields according to your needs. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
+Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D de la base matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
 
 ### Exemple
 
@@ -252,7 +252,7 @@ Les composants peuvent utiliser des ressources. Si le composant est d’architec
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
+Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» Dans une base de données hôte contenant un ou plusieurs composants, chaque composant ainsi que les bases de données hôte ont leur propre «chaîne de ressources» In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
 
 ## Aide en ligne des composants
 
