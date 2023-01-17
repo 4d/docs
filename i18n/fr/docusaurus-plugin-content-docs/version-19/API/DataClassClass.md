@@ -186,7 +186,7 @@ Pour chaque objet de *objectCol* :
 
 Les objets de *objectCol* peuvent contenir un ou plusieurs objet(s) imbriqué(s) décrivant une ou plusieurs entité(s) relative(s), ce qui peut être utile pour créer ou modifier des relations entre les entités.
 
-Les objets imbriqués décrivant les entités relatives doivent contenir une propriété "\_\_KEY" (contenant la valeur de la clé primaire de l'entité relative) ou la clé primaire de l'entité relative elle-même. L'utilisation de la propriété \_\_KEY permet de ne pas dépendre du nom de l'attribut clé primaire.
+> The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. L'utilisation de la propriété \_\_KEY permet de ne pas dépendre du nom de l'attribut clé primaire.
 > Ce mécanisme ne permet pas de créer ou de modifier les entités liées.
 
 **Stamp**
@@ -669,7 +669,7 @@ où :
 
   * **Text** : la chaine de formule doit être précédée de la déclaration `eval()`, afin que l'analyseur de requêtes évalue l'expression correctement. Par exemple : *"eval(length(This.lastname) >=30)"*
   * **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide des commandes [`Formula`](FunctionClass.md#formula) ou [`Formula from string`](FunctionClass.md#formula-from-string).
-> * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * > * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
 > * Si la formule n'est pas le seul critère de recherche, le système d'optimisation des requêtes pourra prioriser le traitement d'autres critères (ex : attributs indexés) et ainsi, la formule sera évaluée uniquement pour un sous-ensemble d'entités.
 
  Les formules contenues dans les requêtes peuvent recevoir des paramètres via $1. Ce point est détaillé dans le paragraphe **Paramètre formula** ci-dessous.
@@ -706,7 +706,7 @@ où :
  | OU          | &#124;,&#124;&#124;, or |
 
 * **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
-> > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> > > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Utilisation des guillemets**
 
@@ -791,7 +791,7 @@ Cette fonctionnalité est disponible uniquement pour les recherches dans les dat
 
 :::
 
-Lorsque vous effectuez des recherches parmi des attributs objets de dataclass contenant des collections à l'aide de plusieurs arguments de requête reliés par l'opérateur AND, vous souhaiterez éventuellement vous assurer que seules les entités contenant des éléments correspondant à tous les arguments soient retournées, et non les entités où des arguments peuvent être trouvés dans différents éléments. Pour ce faire, vous devez relier les arguments de requête aux éléments de collection, de sorte que seuls les éléments uniques contenant des arguments reliés soient retournés.
+Pour ce faire, vous devez relier les arguments de requête aux éléments de collection, de sorte que seuls les éléments uniques contenant des arguments reliés soient retournés. Lorsque vous effectuez des recherches parmi des attributs objets de dataclass contenant des collections à l'aide de plusieurs arguments de requête reliés par l'opérateur AND, vous souhaiterez éventuellement vous assurer que seules les entités contenant des éléments correspondant à tous les arguments soient retournées, et non les entités où des arguments peuvent être trouvés dans différents éléments.
 
 Par exemple, avec les deux entités suivantes :
 
@@ -846,7 +846,7 @@ La formule doit avoir été créée à l'aide de la commande `Formula` ou `Formu
 * *formula* est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.
 * dans *formula*, l'entité est disponible via l'objet `This`.
 * si l'objet `Formula` est **null**, l'erreur 1626 ("Attente d'un texte ou d'une formule") est générée, que vous pouvez intercepter à l'aide d'une méthode installée avec `ON ERR CALL`.
-> > For security reasons, formula calls within `query(`) member methods can be disallowed. Voir la description du paramètre *querySettings*.
+> > > For security reasons, formula calls within `query(`) member methods can be disallowed. Voir la description du paramètre *querySettings*.
 
 **Passer des paramètres aux formules**
 
@@ -952,7 +952,7 @@ Recherche avec des placeholders indexés avec tri décroissant :
 $entitySelection:=ds.Student.query("nationality = :1 order by campus.name desc, lastname";"French")
 ```
 
-Recherche avec des placeholders nommés pour les valeurs :
+Recherche avec des placeholders indexés pour les attributs et avec des placeholders nommés pour les valeurs :
 
 ```4d
 var $querySettings : Object
@@ -1028,7 +1028,7 @@ $es:=ds.Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name")
   //salesperson est une entité reliée
 ```
 
-Recherche avec des placeholders indexés pour les attributs et avec des placeholders nommés pour les valeurs :
+Recherche avec des placeholders indexés pour les attributs et les valeurs :
 
 ```4d
 var $es : cs.EmployeeSelection
@@ -1039,7 +1039,7 @@ $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"
   //salesperson est une entité reliée
 ```
 
-Recherche avec des placeholders indexés pour les attributs et les valeurs :
+Recherche avec des placeholders nommés pour les valeurs :
 
 ```4d
 var $es : cs.EmployeeSelection
