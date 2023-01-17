@@ -67,6 +67,25 @@ $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
     $lines.push($fhandle.readLine())
 End while
+For ($line; 1; 4)
+    $fhandle.writeLine($text+String($line))
+End for
+
+//Lectura utilizando un carácter de parada y un parámetro objeto
+$o:=New object()
+$o.mode:="read"
+$o.charset:="UTF-8"
+$o.breakModeRead:=Document with CRLF
+$stopChar:="!"
+$fhandle:=$f.open($o)
+$text:=$fhandle.readText($stopChar)
+
+//Lectura línea a línea
+$lines:=New collection
+$fhandle:=$f.open("read")
+While (Not($fhandle.eof))
+    $lines.push($fhandle.readLine())
+End while
 
 ```
 
@@ -468,7 +487,7 @@ Si el valor del *size* es menor que el tamaño actual del documento, el contenid
 
 La función `.writeBlob()` <!-- REF #FileHandleClass.writeBlob().Summary -->escribe *blob* en el archivo, empezando por la posición actual <!-- END REF -->.
 
-Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último byte escrito.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último delimitador de fin de línea.
 
 #### Ver también
 
@@ -504,7 +523,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 La función `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->escribe *lineOfText* contenido en la posición actual e inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeText()](#writetext)). Por defecto, se utiliza el delimitador de fin de línea, pero se puede definir otro delimitador al [abrir el manejador del archivo](FileClass.md#open) definiendo la propiedad [`.breakModeRead`](#breakmodewrite).
 
-Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último delimitador de fin de línea.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último byte escrito.
 
 #### Ver también
 
@@ -537,7 +556,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 #### Descripción
 
-La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escribe *textToWrite* contenido en la posición actual y no inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). Esta función reemplaza todos los delimitadores originales de final de línea. This function replaces all original end-of-line delimiters.
+La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escribe *textToWrite* contenido en la posición actual y no inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). Esta función reemplaza todos los delimitadores originales de final de línea. Esta función reemplaza todos los delimitadores originales de final de línea.
 
 Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del siguiente delimitador de fin de línea.
 
