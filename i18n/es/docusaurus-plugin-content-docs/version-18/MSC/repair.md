@@ -18,11 +18,11 @@ Nombre de la ruta del archivo de datos actual. El botón **[...]** puede utiliza
 
 ### Carpeta de copia de seguridad de los archivos originales
 
-Por defecto, el archivo de datos original se duplicará antes de la operación de reparación. By default, the original data file will be duplicated before the repair operation. El segundo botón **[...]** se puede utilizar para especificar otra ubicación para guardar los archivos originales antes de iniciar la reparación. Esta opción se puede utilizar más particularmente cuando se reparan archivos voluminosos mientras se utilizan diferentes discos.
+Por defecto, el archivo de datos original se duplicará antes de la operación de reparación. Por defecto, el archivo de datos original se duplicará antes de la operación de reparación. El segundo botón **[...]** se puede utilizar para especificar otra ubicación para guardar los archivos originales antes de iniciar la reparación. Esta opción se puede utilizar más particularmente cuando se reparan archivos voluminosos mientras se utilizan diferentes discos.
 
 ### Archivos reparados
 
-4D crea un nuevo archivo de datos vacío en la ubicación del archivo original. 4D creates a new blank data file at the location of the original file. El archivo vacío se llena con los datos recuperados.
+4D crea un nuevo archivo de datos vacío en la ubicación del archivo original. 4D crea un nuevo archivo de datos vacío en la ubicación del archivo original. El archivo vacío se llena con los datos recuperados.
 
 ## Reparación estándar
 
