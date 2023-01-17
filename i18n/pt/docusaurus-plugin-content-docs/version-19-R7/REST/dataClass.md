@@ -60,7 +60,7 @@ Retorna todas as datas para uma classe de dados específica.
 
 **Resultadoi**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -135,7 +135,7 @@ Retorna todas as datas para uma classe de dados específica.
 .....//more entities here 
     ]
 }
-````
+```
 
 
 ## {dataClass}({key})
@@ -164,7 +164,7 @@ A petição abaixo retorna todos os dados públicos na dataclass Company cuja ch
 
 **Resultadoi**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -183,7 +183,7 @@ A petição abaixo retorna todos os dados públicos na dataclass Company cuja ch
         }
     }
 }
-````
+```
 
 
 
