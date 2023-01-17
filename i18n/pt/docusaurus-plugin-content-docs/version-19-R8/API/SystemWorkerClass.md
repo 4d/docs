@@ -360,11 +360,11 @@ A propriedade `.erros` <!-- REF #SystemWorkerClass.errors.Summary -->contém uma
 
 Cada elemento da coleção é um objeto com as seguintes propriedades:
 
-| Propriedade             | Tipo   | Descrição                                                    |
-| ----------------------- | ------ | ------------------------------------------------------------ |
-| [].errorCode            | number | 4D error code                                                |
-| [].message              | text   | Description of the 4D error                                  |
-| [ ].ComponenteSignature | text   | Signature of the internal component which returned the error |
+| Propriedade              | Tipo   | Descrição                                                    |
+| ------------------------ | ------ | ------------------------------------------------------------ |
+| [].errorCode             | number | 4D error code                                                |
+| [].message               | text   | Description of the 4D error                                  |
+| [ ]. ComponenteSignature | text   | Signature of the internal component which returned the error |
 
 Se não ocorreu qualquer erro, `.errors` contém uma coleção vazia.
 
