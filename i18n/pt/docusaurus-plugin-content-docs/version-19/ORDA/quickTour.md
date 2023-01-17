@@ -90,7 +90,7 @@ A lista de usuários exibe todos os usuários, incluindo o[Designer and the Admi
 
 4D adiciona um novo usuário para a lista, chamado "Novo usuárioX" como padrão.
 
-3. Digite o nome de usuário. Enter the user name. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
+3. Digite o nome de usuário. Digite o nome de usuário. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
 
 4. Para digitar uma senha para o usuário, clique o botão **Edit...** na área de propriedades de usuário e digite a senha daus vezes na caixa de diálogo. Pode usar até 15 caracteres alfanuméricos para a senha. O editor de senhas é sensível a maiúsculas ou minúsculas.
 
