@@ -123,11 +123,11 @@ Esta área agrupa las opciones genéricas utilizadas durante el proceso de compi
 
 #### Generar el archivo de símbolos
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#symbol-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
 
 #### Generar archivo de errores
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#symbol-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
+Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](Project/architecture.md#logs) del proyecto.
 
 
 #### Ruta de compilación
