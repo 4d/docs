@@ -35,7 +35,7 @@ Toute instruction de modification d'objet ou de collection partagé(e) doit êtr
 End Use
 ```
 
-Un objet/une collection partagé(e) ne peut être modifié(e) que par un seul process à la fois. `Use` verrouille les propriétés de l'objet/la collection pour les autres threads (process), alors que le `End use` utiliser final déverrouille tous les objets et collections. Toute tentative de modification d'un objet/d'une collection partagé(e) sans au moins un appel à `Use...End use` génère une erreur. Lorsqu'un process appelle `Use...End use` avec un objet/une collection partagé(e) qui est déjà "utilisé(e)" par un autre process, il est simplement mis en attente jusqu'à ce qu'il soit déverrouillé par l'appel à `End use` (aucune erreur n'est générée). En conséquence, les instructions situées à l'intérieur des structures `Use...End use` doivent toujours s'exécuter rapidement et déverrouiller les éléments dès que possible. Il est donc fortement déconseillé de modifier un objet ou une collection partagé(e) directement depuis l'interface, par exemple depuis une boîte de dialogue.
+Un objet/une collection partagé(e) ne peut être modifié(e) que par un seul process à la fois. Un objet/une collection partagé(e) ne peut être modifié(e) que par un seul process à la fois. Toute tentative de modification d'un objet/d'une collection partagé(e) sans au moins un appel à `Use...End use` génère une erreur. Lorsqu'un process appelle `Use...End use` avec un objet/une collection partagé(e) qui est déjà "utilisé(e)" par un autre process, il est simplement mis en attente jusqu'à ce qu'il soit déverrouillé par l'appel à `End use` (aucune erreur n'est générée). En conséquence, les instructions situées à l'intérieur des structures `Use...End use` doivent toujours s'exécuter rapidement et déverrouiller les éléments dès que possible. Il est donc fortement déconseillé de modifier un objet ou une collection partagé(e) directement depuis l'interface, par exemple depuis une boîte de dialogue.
 
 L'assignation d'objets/collections partagé(e) s à des propriétés ou éléments d'autres objets/collections partagé(e) s est autorisée et entraîne la création de **groupes partagés**. Un groupe partagé est automatiquement créé lorsqu'un objet ou une collection partagé(e) est assigné(e) en tant que valeur de propriété ou élément à un autre objet ou collection partagé(e). Les groupes partagés permettent d'imbriquer des objets et collections partagé(e)s mais nécessitent d'observer des règles supplémentaires :
 
@@ -115,7 +115,7 @@ Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inve
  C_OBJECT($inventory)
  $what:=$1 //pour une meilleure lisibilité
  $inventory:=$2
- 
+
  $count:=CountMethod($what) //méthode de comptage des produits
  Use($inventory) //Utiliser l'objet partagé
     $inventory[$what]:=$count  //stockage des résultats pour cet article
