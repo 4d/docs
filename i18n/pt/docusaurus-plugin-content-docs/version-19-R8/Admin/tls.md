@@ -70,7 +70,7 @@ Para poder utilizar o protocolo TLS com o servidor, deve instalar o **key.pem** 
 
 Para serem utilizados pelo servidor web 4D, os arquivos **key.pem** e **cert.pem** devem ser colocados:
 
-- com 4D em modo local ou 4D Server, ao lado da pasta de projetos [](Project/architecture.md#project-folder)
+- com 4D em modo local ou 4D Server, ao lado da pasta de projetos
 - com 4D em modo remoto, esses arquivos devem estar na pasta de banco de dados cliente na máquina remota (para saber mais sobre a localização dessa pasta, veja o comando  [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) ).
 
 Deve copiar esses arquivos manualmente na máquina remota.
