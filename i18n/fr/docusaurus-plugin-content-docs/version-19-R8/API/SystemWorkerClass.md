@@ -337,7 +337,7 @@ La propriété `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.
 
 #### Description
 
-La propriété `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contient le type du contenu du corps de la réponse<!-- END REF -->. Valeurs possibles : "text" ou "blob".
+La propriété `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contient le type du contenu du corps de la réponse<!-- END REF -->. .
 
 Cette propriété est en **lecture seule**.
 
@@ -490,7 +490,7 @@ La propriété `.responseError` <!-- REF #SystemWorkerClass.responseError.Summar
 
 #### Description
 
-La fonction `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->force le `SystemWorker ` à mettre fin à son exécution<!-- END REF -->.
+La fonction `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->force le `SystemWorker` à mettre fin à son exécution<!-- END REF -->.
 
 Cette fonction envoie l'instruction de terminer et de redonner le contrôle au script en cours d'exécution.
 
