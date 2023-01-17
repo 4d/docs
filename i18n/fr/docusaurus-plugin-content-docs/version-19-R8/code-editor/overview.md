@@ -179,7 +179,7 @@ La boîte de dialogue “Attributs des méthodes” permet de modifier un attrib
 
 Pour modifier globalement les attributs des méthodes :
 
-1.  Dans la Page Méthodes de l'Explorateur de 4D, déployez le menu d'options puis choisissez la commande **Modifier attributs globalement...** La boîte de dialogue **Attributs des méthodes** apparaît.
+1.  Dans la Page Méthodes de l'Explorateur de 4D, déployez le menu d'options puis choisissez la commande **Modifier attributs globalement...** La boîte de dialogue **Attributs des méthodes** apparaît. La boîte de dialogue **Attributs des méthodes** apparaît.
 
 2.  Dans la zone “Méthodes à modifier”, saisissez une chaîne de caractères permettant de désigner les méthodes que vous souhaitez modifier globalement. La chaîne de caractères est utilisée comme critère de recherche des noms de méthodes.
 
