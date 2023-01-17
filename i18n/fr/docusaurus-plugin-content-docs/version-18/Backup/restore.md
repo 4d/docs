@@ -19,7 +19,7 @@ title: Restitution
 
 Vous pouvez restituer manuellement le contenu d’une archive générée par le module de sauvegarde. Une restitution manuelle peut être nécessaire par exemple pour restituer la totalité du contenu d’une archive (fichiers de structure et/ou fichiers joints inclus) ou à des fins de recherche sur des archives. La restitution manuelle peut éventuellement s’accompagner de l’intégration de l’historique courant.
 
-La restitution manuelle des sauvegardes peut être réalisée soit via une boîte de dialogue standard d’ouverture de document, soit via la page [“Restitution”](MSC/restore) du Centre de sécurité et de maintenance (CSM). La restitution via une boîte de dialogue standard permet de restituer n’importe quelle archive. Restoring via the MSC provides more options and allows the archive contents to be previewed.
+La restitution manuelle des sauvegardes peut être réalisée soit via une boîte de dialogue standard d’ouverture de document, soit via la page [“Restitution”](MSC/restore) du Centre de sécurité et de maintenance (CSM). La restitution via une boîte de dialogue standard permet de restituer n’importe quelle archive. La restitution via une boîte de dialogue standard permet de restituer n’importe quelle archive.
 
 Pour restituer manuellement une sauvegarde via une boîte de dialogue standard :
 
