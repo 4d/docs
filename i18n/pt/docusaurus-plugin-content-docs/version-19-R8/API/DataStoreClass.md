@@ -62,7 +62,7 @@ Também pode obter uma referencia em um datastore remoto aberto passando seu id 
 
 Se não encontrar nenhum armazém de dados *localID*, o comando devolve **Null**.
 
-Os objectos disponíveis no site `cs.Datastore` são mapeados a partir da base de dados alvo no que respeita às regras gerais da [ORDA](ORDA/dsMapping.md#general-rules).
+Os objectos disponíveis no site `cs. Datastore` são mapeados a partir da base de dados alvo no que respeita às regras gerais da [ORDA](ORDA/dsMapping.md#general-rules).
 
 #### Exemplo 1
 
@@ -134,7 +134,7 @@ Se não se encontrar nenhum banco de dados coincidente, `Open datastore` devolve
 
 *localID* é um alias local para a sessão aberta no armazém de dados remoto. Se *localID* já existir na aplicação, se utiliza. Em caso contrário, se cria uma nova sessão *localID* quando se utiliza o objeto datastore.
 
-Os objectos disponíveis no site `cs.Datastore` são mapeados a partir da base de dados alvo no que respeita às regras gerais da [ORDA](ORDA/dsMapping.md#general-rules).
+Os objectos disponíveis no site `cs. Datastore` são mapeados a partir da base de dados alvo no que respeita às regras gerais da [ORDA](ORDA/dsMapping.md#general-rules).
 
 Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma referência sobre o mesmo objeto datastore:
 
@@ -146,14 +146,14 @@ Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma re
 
 Passe em *connectionInfo* um objeto que desceva o armazém de dados remoto ao que quiser se conectar. Pode conter as propriedades abaixo (todas as propriedades são opcionais menos *hostname*):
 
-| Propriedade | Tipo     | Descrição                                                                                                                                                                                                                                                                                                                                 |
-| ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Text     | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                          |
-| user        | Text     | Nome de usuario                                                                                                                                                                                                                                                                                                                           |
-| senha       | Text     | senha de usuario                                                                                                                                                                                                                                                                                                                          |
-| idleTimeout | Longint  | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se for omitido, o valor normal é 60 minutos (1hora) O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60). Para saber mais informação, consulte **Fechamento de sessões**. |
-| tls         | Booleano | Utilize uma conexão segura(*). Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                |
-| type        | Text     | Deve ser "4D Server"                                                                                                                                                                                                                                                                                                                      |
+| Propriedade | Tipo     | Descrição                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname    | Text     | Nome ou endereço IP da database remota + ":" + número de porta (o numero de porta é obrigatório)                                                                                                                                                                                                                                                                                              |
+| user        | Text     | Nome de usuario                                                                                                                                                                                                                                                                                                                                                                               |
+| senha       | Text     | senha de usuario                                                                                                                                                                                                                                                                                                                                                                              |
+| idleTimeout | Longint  | Tempo de espera da sessão de inatividade (em minutos) depois do qual a sessão é fechada automaticamente por 4D. Se for omitido, o valor normal é 60 minutos (1hora) Se for omitido, o valor normal é 60 minutos (1hora) O valor não pode ser inferior a 60: se definir um valor inferior, o tempo de espera se eleva até 60). Para saber mais informação, consulte **Fechamento de sessões**. |
+| tls         | Booleano | Utilize uma conexão segura(*). Se for omitido, o normal é falso Se for omitido, o normal é falso Usar uma conexão segura é recomendado sempre que possível.                                                                                                                                                                                                                                   |
+| type        | Text     | Deve ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                          |
 
 (*) Se tls for true, se utiliza o protocolo HTTPS se:
 
@@ -299,7 +299,7 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 A função `.clearAllRemoteContexts()` <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->limpa todos os atributos para todos os contextos activos no datastore<!-- END REF -->.
 
-Esta função é utilizada principalmente no contexto da depuração. Deve lembrar que quando abrir o depurador ele envia petições ao servidor e pesquisa todos os atributos de dataclasse para exibi-los Isso pode sobrecarregar seus contextos com dados desnecessários.
+Esta função é utilizada principalmente no contexto da depuração. Deve lembrar que quando abrir o depurador ele envia petições ao servidor e pesquisa todos os atributos de dataclasse para exibi-los Isso pode sobrecarregar seus contextos com dados desnecessários. Isso pode sobrecarregar seus contextos com dados desnecessários.
 
 Nestes casos, pode usar `.clearAllRemoteContexts()` para limpar os seus contextos e mantê-los limpos.
 
@@ -372,6 +372,9 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
        End if
     End for each
     ALERT(String($vcount)+" encrypted table(s) in this datastore.")
+ Else
+    ALERT("This database is not encrypted.")
+ End if
  Else
     ALERT("This database is not encrypted.")
  End if
@@ -478,16 +481,16 @@ $info:=$ds.getAllRemoteContexts()
 
 #### Descrição
 
-A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devolve um objecto que fornece informação sobre o datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->A função `.getInfo()`<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Objeto devolvido**
 
-| Propriedade | Tipo    | Descrição                                                                                                                                                               |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type        | string  | <li>"4D": armazém de dados principal, disponível através de ds </li><li>"4D Server": datastore remoto, aberto com Open datastore</li>                                                                                                                      |
-| networked   | boolean | <li>True: a datastore se alcança através de uma conexão de rede.</li><li>False: não se alcança a datastore através de uma conexão de rede (base de dados local)</li>                                                                                                                    |
-| localID     | text    | ID do armazém de dados na máquina. Corresponde à string localId dada com o comando `Open datastore`. String vazia ("") para o datastore principal.                      |
-| connection  | object  | Objeto descrevendo a conexão remota da datastore (não retornado para datastore principal) Propriedades disponiveis: Propriedades disponiveis:<table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>hostname</td><td>text</td><td>Endereço IP ou nome da datastore remota + ":" + número porta</td></tr><tr><td>tls</td><td>boolean</td><td>True se conexão segura for usada com a datastore remota</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tempo de inatividade da sessão (em minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado no datastore remoto</td></tr></table> |
+| Propriedade | Tipo    | Descrição                                                                                                                                                                                         |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type        | string  | <li>"4D": armazém de dados principal, disponível através de ds </li><li>"4D Server": datastore remoto, aberto com Open datastore</li>                                                                                                                                                |
+| networked   | boolean | <li>True: a datastore se alcança através de uma conexão de rede.</li><li>False: não se alcança a datastore através de uma conexão de rede (base de dados local)</li>                                                                                                                                              |
+| localID     | text    | ID do armazém de dados na máquina. Corresponde à string localId dada com o comando `Open datastore`. String vazia ("") para o datastore principal.                                                |
+| connection  | object  | Objeto descrevendo a conexão remota da datastore (não retornado para datastore principal) Propriedades disponiveis: Propriedades disponiveis: Propriedades disponiveis:<table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>hostname</td><td>text</td><td>Endereço IP ou nome da datastore remota + ":" + número porta</td></tr><tr><td>tls</td><td>boolean</td><td>True se conexão segura for usada com a datastore remota</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tempo de inatividade da sessão (em minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado no datastore remoto</td></tr></table> |
 
 * Se a função `.getInfo()` for executada em um 4D Server ou 4D monoposto, `networked` é False.
 * Se a função `.getInfo()` for executada em um 4D remoto, `networked` é True
@@ -1019,8 +1022,9 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Parâmetros | Tipo |  | Descrição                                             |
-| ---------- | ---- |  | ----------------------------------------------------- |
+| ---------- | ---- |::| ----------------------------------------------------- |
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
+
 
 #### Descrição
 
