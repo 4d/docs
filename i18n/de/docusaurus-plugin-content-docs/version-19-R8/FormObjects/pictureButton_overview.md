@@ -56,7 +56,7 @@ The following other modes are available:
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
 
 ## Supported Properties
 
