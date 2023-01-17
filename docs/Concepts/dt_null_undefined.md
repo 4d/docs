@@ -25,12 +25,12 @@ Undefined is not actually a data type. It denotes a variable that has not yet be
 
 |Operation |Syntax |Returns |Expression |Value|
 |---|---|---|---|---|
-|Equality |Null = Null |Boolean |a.nullProp = b.nullProp |True|
-|  |Null = Undefined |Boolean|a.nullProp = b.undefinedProp |True|
-|  |Null = *scalar value* |Boolean|a.nullProp = 42 |False|
-|Inequality |Null # Null |Boolean |a.nullProp # b.nullProp |False|
-|  |Null # Undefined |Boolean|a.nullProp # b.undefinedProp |False|
-|  |Null # *scalar value* (see below) |Boolean|a.nullProp # 42 |True|
+|Equality |Null `=` Null |Boolean |a.nullProp `=` b.nullProp |True|
+|  |Null `=` Undefined |Boolean|a.nullProp `=` b.undefinedProp |True|
+|  |Null `=` *scalar value* |Boolean|a.nullProp `=` 42 |False|
+|Inequality |Null `#` Null |Boolean |a.nullProp `#` b.nullProp |False|
+|  |Null `#` Undefined |Boolean|a.nullProp `#` b.undefinedProp |False|
+|  |Null `#` *scalar value*|Boolean|a.nullProp `#` 42 |True|
 
 *scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ex:
 
@@ -53,13 +53,13 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 
 |Operation |Syntax |Returns |Expression |Value|
 |---|---|---|---|---|
-|Equality |Undefined = Undefined |Boolean|a.undefinedProp = b.undefinedProp |True|
-| |Undefined = Null |Boolean |a.undefinedProp = c.nullProp |True|
-| |Undefined = *other values*  |Boolean|a.undefinedProp = 42 |False|
-|Inequality |Undefined # Undefined |Boolean|a.undefinedProp # b.undefinedProp |False|
-|  |Undefined # Null |Boolean|a.undefinedProp # b.nullProp |False|
-|  |Undefined # Undefined |Boolean|a.undefinedProp # b.undefinedProp |False|
-|  |Undefined # *other values* |Boolean|a.undefinedProp # 42 |True|
+|Equality |Undefined `=` Undefined |Boolean|a.undefinedProp `=` b.undefinedProp |True|
+| |Undefined `=` Null |Boolean |a.undefinedProp `=` c.nullProp |True|
+| |Undefined `=` *other values*  |Boolean|a.undefinedProp `=` 42 |False|
+|Inequality |Undefined `#` Undefined |Boolean|a.undefinedProp `#` b.undefinedProp |False|
+|  |Undefined `#` Null |Boolean|a.undefinedProp `#` b.nullProp |False|
+|  |Undefined `#` Undefined |Boolean|a.undefinedProp `#` b.undefinedProp |False|
+|  |Undefined `#` *other values* |Boolean|a.undefinedProp `#` 42 |True|
 |Greater than |Undefined `>` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `>` "abc" |False|
 |Less than |Undefined `<` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `<` "abc" |False|
 |Greater than or equal to |Undefined `>=` string, Date, Time, Boolean, number |Boolean  |a.undefinedProp `>=` "abc" |False|
@@ -69,7 +69,7 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 
 :::info
 
-Comparisons of Undefined values with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators and Pointer, Picture, Blob, Object, Collection, Undefined or Null values are not supported and return an error.
+Comparisons of Undefined values with Pointer, Picture, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
 
 :::
 
@@ -85,13 +85,13 @@ $vEmp.name:="Smith"
 
 $vEmp.children:=Null
  
-$result:=Undefined($vEmp.name) // False
+$result:=Undefined($vEmp.name) //False
 $result:=($vEmp.name=Null) //False
  
-$result:=Undefined($vEmp.children) // False
+$result:=Undefined($vEmp.children) //False
 $result:=($vEmp.children=Null) //True
  
-$result:=Undefined($vEmp.parent) // True
+$result:=Undefined($vEmp.parent) //True
 $result:=($vEmp.parent=Null) //True
 ```
 
@@ -100,24 +100,24 @@ Examples of comparison results with undefined and null values:
 ```4d
 var $result : Boolean
 var $vObj : Object
-var $vCol : Collection
+var $vVar : Variant
 
 $vObj:=New object
 $vObj.null:=Null
-//note that $vCol is not assigned 
+//note that $vVar is not assigned 
 
 $result:=($vObj.undefined=42) //False
 $result:=($vObj.undefined=$vObj.null) //True
-$result:=($vObj.undefined=$vCol)  //True
+$result:=($vObj.undefined=$vVar)  //True
 
 $result:=($vObj.undefined#$vObj.null) //False
 $result:=($vObj.undefined#42) //True
-$result:=($vObj.undefined#$vCol) //False
+$result:=($vObj.undefined#$vVar) //False
 
 $result:=($vObj.undefined>"hello") //False
-$result:=($vObj.undefined>$vCol)  //Error
+$result:=($vObj.undefined>$vVar)  //Error
 $result:=($vObj.undefined>$vObj.null)  //Error
-$result:=($vCol < 42) //False
+$result:=($vVar < 42) //False
 
 ```
 

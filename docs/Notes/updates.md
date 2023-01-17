@@ -10,7 +10,7 @@ Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), 
 
 #### Highlights
 
-- To help simplify code, some comparison operators can be [used with Null and Undefined](../Concepts/dt_null_undefined.md#null-operators) values without generating errors.
+- To simplify code, some comparison operators can now be used with [Undefined values](../Concepts/dt_null_undefined.md#undefined-operators) without generating errors.
 
 
 - 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
