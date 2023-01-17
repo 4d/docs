@@ -80,7 +80,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### Beschreibung
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+creates and returns a new object of the `4D.Folder` type <!-- REF #_command_.Folder.Summary -->The `Folder` command<!-- END REF -->. The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -134,7 +134,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### Beschreibung
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->The `Folder` command<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`.
 
@@ -190,6 +190,9 @@ Creation of the "/Archives2019/January/" folder in the database folder:
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
  ALERT("The "+$newFolder.name+" folder was created.")
+Else
+ ALERT("Impossible to create a "+$newFolder.name+" folder.")
+End if
 Else
  ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
