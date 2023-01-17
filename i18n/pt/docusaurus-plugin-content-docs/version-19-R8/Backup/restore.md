@@ -5,7 +5,7 @@ title: Restaurar
 
 4D lhe permite restaurar conjuntos inteiros de dados de aplicações no caso de que se apresente um incidente, independentemente da causa do mesmo. Podem ocorrer dois tipos principais de incidentes:
 
-- A parada inesperada de uma aplicação enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the application can require different operations:
+- A parada inesperada de uma aplicação enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the application can require different operations:
     - Se a cache estiver vazia, a aplicação abre normalmente. Quaisquer mudanças feitas na aplicação foram registradas. Este caso não exige nenhuma operação particular
     - Se a cache conter operações, o arquivo de dados está intacto mas exige integrar o arquivo de histórico atual.
     - Se a cache estiver no processo de ser escrita, o arquivo de dados está provavelmente danificado. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado.
@@ -24,7 +24,7 @@ A restauração manual de backups pode ser realizada via a caixa de diálogo de 
 
 Para restaurar a aplicação manualmente vai uma caixa de diálogo padrão:
 
-1. Escolha **Restaurar...** no menu da aplicação 4D **File**. Não é obrigatório que um projeto de aplicação esteja aberto OR Execute the `RESTORE` command from a 4D method. Uma caixa de diálogo de abertura de arquivos vai aparecer.
+1. Escolha **Restaurar...** no menu da aplicação 4D **File**. Não é obrigatório que um projeto de aplicação esteja aberto Não é obrigatório que um projeto de aplicação esteja aberto OR Execute the `RESTORE` command from a 4D method. Uma caixa de diálogo de abertura de arquivos vai aparecer.
 2. Selecione um arquivo de backup (.4bk) ou um arquivo de backup de histórico (.4bl) para ser restaurado e clique **Abrir**. Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Como padrão 4D restaura os arquivos em uma pasta chamada *Archivename* (sem extensão) que fica do lado do arquivo. Pode exibir a rota:
 
 ![](../assets/en/Backup/backup07.png)
