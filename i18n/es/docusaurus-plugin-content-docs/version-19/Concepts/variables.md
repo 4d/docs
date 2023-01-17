@@ -31,6 +31,8 @@ Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de decla
  // and assigns the current date plus 30 days
 ```
 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
 
 ### Utilizando la palabra clave `var`
 
@@ -110,7 +112,7 @@ var $entity : cs.EmployeeEntity
 
 ### Utilizando un C_ directive
 
-> **Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
+> **Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
 Las directivas del tema "Compilador" permiten declarar variables de tipos básicos.
 
@@ -190,7 +192,7 @@ Con frecuencia, en una aplicación, se necesitan pequeñas piezas de informació
 
 Este método simplemente pide al usuario que introduzca un ID. Pone la respuesta en una variable local, $vsID, y luego busca el ID que el usuario introdujo. Cuando este método termina, la variable local $vsID se borra de la memoria. Este funcionamiento está bien, porque la variable se necesita sólo una vez y sólo en este método.
 
-**Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
+**Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
 ### Variables proceso
 
