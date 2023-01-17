@@ -376,6 +376,9 @@ You want to know the number of encrypted tables in the current data file:
  Else
     ALERT("This database is not encrypted.")
  End if
+ Else
+    ALERT("This database is not encrypted.")
+ End if
 ```
 
 <!-- END REF -->
@@ -1021,10 +1024,12 @@ You want to log ORDA client requests in memory:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Parameter | Typ |  | Beschreibung                                               |
-| --------- | --- |  | ---------------------------------------------------------- |
+| --------- | --- |::| ---------------------------------------------------------- |
 |           |     |  | Does not require any parameters|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 
@@ -1058,6 +1063,12 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
     $status:=$person.save()
  End if
  ...
+ ...
+ If($error)
+    $ds.cancelTransaction()
+ Else
+    $ds.validateTransaction()
+ End if
  ...
  If($error)
     $ds.cancelTransaction()
