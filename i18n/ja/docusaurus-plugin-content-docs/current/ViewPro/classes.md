@@ -57,7 +57,7 @@ title: クラス
 <!-- REF #TableOptions.allowAutoExpand.Syntax -->
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-`.allowAutoExpand` プロパティは、 <!-- REF #TableOptions.allowAutoExpand.Summary -->隣接する空のセルに値が追加されたとき、表の列または行を拡張するかどうかを示します<!-- END REF -->。 デフォルト = true
+`.allowAutoExpand` プロパティは、 <!-- REF #TableOptions.allowAutoExpand.Summary -->隣接する空のセルに値が追加されたとき、表の列または行を拡張するかどうかを示します<!-- END REF -->。 。
 
 
 ### .bandColumns
@@ -65,7 +65,7 @@ title: クラス
 <!-- REF #TableOptions.bandColumns.Syntax -->
 **.bandColumns** : Boolean<!-- END REF -->
 
-`.bandColumns` プロパティは、 <!-- REF #TableOptions.bandColumns.Summary -->列において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
+`.bandColumns` プロパティは、 <!-- REF #TableOptions.bandColumns.Summary -->列において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 。
 
 
 ### .bandRows
@@ -73,7 +73,7 @@ title: クラス
 <!-- REF #TableOptions.bandRows.Syntax -->
 **.bandRows** : Boolean<!-- END REF -->
 
-`.bandRows` プロパティは、 <!-- REF #TableOptions.bandRows.Summary -->行において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 デフォルト = true
+`.bandRows` プロパティは、 <!-- REF #TableOptions.bandRows.Summary -->行において交互のスタイルを表示するかどうかを示します<!-- END REF -->。 。
 
 
 ### .highlightLastColumn
@@ -81,14 +81,14 @@ title: クラス
 <!-- REF #TableOptions.highlightLastColumn.Syntax -->
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-`.highlightLastColumn` プロパティは、 <!-- REF #TableOptions.highlightLastColumn.Summary -->最後の列をハイライト表示するかどうかを示します<!-- END REF -->。 デフォルト = false
+`.highlightLastColumn` プロパティは、 <!-- REF #TableOptions.highlightLastColumn.Summary -->最後の列をハイライト表示するかどうかを示します<!-- END REF -->。 。
 
 ### .highlightFirstColumn
 
 <!-- REF #TableOptions.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-`.highlightFirstColumn` プロパティは、 <!-- REF #TableOptions.highlightFirstColumn.Summary -->先頭の列をハイライト表示するかどうかを示します<!-- END REF -->。 デフォルト = false
+`.highlightFirstColumn` プロパティは、 <!-- REF #TableOptions.highlightFirstColumn.Summary -->先頭の列をハイライト表示するかどうかを示します<!-- END REF -->。 。
 
 
 ### .showFooter
@@ -96,21 +96,21 @@ title: クラス
 <!-- REF #TableOptions.showFooter.Syntax -->
 **.showFooter** : Boolean<!-- END REF -->
 
-`.showFooter` プロパティは、 <!-- REF #TableOptions.showFooter.Summary -->フッターを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
+`.showFooter` プロパティは、 <!-- REF #TableOptions.showFooter.Summary -->フッターを表示するかどうかを示します<!-- END REF -->。 。
 
 ### .showHeader
 
 <!-- REF #TableOptions.showHeader.Syntax -->
 **.showHeader** : Boolean<!-- END REF -->
 
-`.showHeader` プロパティは、 <!-- REF #TableOptions.showHeader.Summary -->ヘッダーを表示するかどうかを示します<!-- END REF -->。 デフォルト = true
+`.showHeader` プロパティは、 <!-- REF #TableOptions.showHeader.Summary -->ヘッダーを表示するかどうかを示します<!-- END REF -->。 。
 
 ### .showResizeHandle
 
 <!-- REF #TableOptions.showResizeHandle.Syntax -->
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-`.showResizeHandle` プロパティは、 <!-- REF #TableOptions.showResizeHandle.Summary -->*source* を持たない表において、リサイズハンドルを表示するかどうかを示します<!-- END REF -->。 デフォルト = false
+`.showResizeHandle` プロパティは、 <!-- REF #TableOptions.showResizeHandle.Summary -->*source* を持たない表において、リサイズハンドルを表示するかどうかを示します<!-- END REF -->。 。
 
 ### .tableColumns
 
@@ -127,7 +127,7 @@ title: クラス
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<!-- END REF -->
 
 
-`.theme` プロパティは、 <!-- REF #TableTheme.theme.Summary -->表のテーマを定義します  (SpreadJS のネイティブテーマ名のテキスト値も可)<!-- END REF -->。
+`.theme` プロパティは、 <!-- REF #TableTheme.theme.Summary -->表のテーマを定義します 表のテーマを定義します  (SpreadJS のネイティブテーマ名のテキスト値も可)<!-- END REF -->。
 
 [ネイティブSpreadJSテーマ](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) を参照ください。
 
@@ -137,7 +137,7 @@ title: クラス
 <!-- REF #TableOptions.useFooterDropDownList.Syntax -->
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-`.useFooterDropDownList` プロパティは、 <!-- REF #TableOptions.useFooterDropDownList.Summary -->列の合計値を計算するフッターセルでドロップダウンリストを使用するかを示します<!-- END REF -->。 デフォルト = false
+`.useFooterDropDownList` プロパティは、 <!-- REF #TableOptions.useFooterDropDownList.Summary -->列の合計値を計算するフッターセルでドロップダウンリストを使用するかを示します<!-- END REF -->。 。
 
 
 
@@ -209,7 +209,7 @@ title: クラス
 
 **.borderHorizontal** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-`.borderBottom` プロパティは、 <!-- REF #TableStyle.borderHorizontal.Summary -->表の横の外枠線を定義します <!-- END REF -->。
+`.borderVerical` プロパティは、 <!-- REF #TableStyle.borderHorizontal.Summary -->表の縦の外枠線を定義します <!-- END REF -->。
 
 
 ### .borderVertical
@@ -217,7 +217,7 @@ title: クラス
 <!-- REF #TableStyle.borderVertical.Syntax -->
 **.borderVertical** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-`.borderVerical` プロパティは、 <!-- REF #TableStyle.borderVertical.Summary -->表の縦の外枠線を定義します <!-- END REF -->。
+`.borderBottom` プロパティは、 <!-- REF #TableStyle.borderVertical.Summary -->表の横の外枠線を定義します <!-- END REF -->。
 
 
 
@@ -293,7 +293,7 @@ title: クラス
 <!-- REF #TableThemeOptions.firstHeaderCellStyle.Syntax -->
 **.firstHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.firstHeaderCellStyle` プロパティは、 <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->ヘッダーの先頭セルのスタイルを指定します<!-- END REF -->。 "highlightFirstColumn" が true でなくてはなりません。
+ヘッダーの先頭セルのスタイルを指定します <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->`.firstHeaderCellStyle` プロパティは、<!-- END REF -->。 "highlightFirstColumn" が true でなくてはなりません。
 
 ### .firstRowStripSize
 
@@ -328,7 +328,7 @@ title: クラス
 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Syntax -->
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.highlightFirstColumnStyle` プロパティは、 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->先頭列のスタイルを指定します<!-- END REF -->。 "highlightFirstColumn" が true でなくてはなりません。
+先頭列のスタイルを指定します <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->`.highlightFirstColumnStyle` プロパティは、<!-- END REF -->。 "highlightFirstColumn" が true でなくてはなりません。
 
 ### .highlightLastColumnStyle
 
@@ -342,14 +342,14 @@ title: クラス
 <!-- REF #TableThemeOptions.lastFooterCellStyle.Syntax -->
 **.lastFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.lastFooterCellStyle` プロパティは、 <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->フッターの最後のセルのスタイルを指定します<!-- END REF -->。 "highlightLastColumn" が true でなくてはなりません。
+フッターの最後のセルのスタイルを指定します <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->`.lastFooterCellStyle` プロパティは、<!-- END REF -->。 "highlightLastColumn" が true でなくてはなりません。
 
 ### .lastHeaderCellStyle
 
 <!-- REF #TableThemeOptions.lastHeaderCellStyle.Syntax -->
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.lastHeaderCellStyle` プロパティは、 <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->ヘッダーの最後のセルのスタイルを指定します<!-- END REF -->。 "highlightLastColumn" が true でなくてはなりません。
+ヘッダーの最後のセルのスタイルを指定します <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->`.lastHeaderCellStyle` プロパティは、<!-- END REF -->。 "highlightLastColumn" が true でなくてはなりません。
 
 ### .name
 
@@ -363,7 +363,7 @@ title: クラス
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-`.secondColumnStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->交互の列の偶数列のサイズを指定します<!-- END REF -->。 デフォルト = 1
+交互の列の偶数列のサイズを指定します <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->`.secondColumnStripSize` プロパティは、<!-- END REF -->。 デフォルト = 1
 
 ### .secondColumnStripStyle
 
