@@ -18,11 +18,11 @@ Pfadname der aktuellen Datendatei. Über die Schaltfläche ** [...]** können Si
 
 ### Ordner Backup der Originaldateien
 
-Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert  By default, the original data file will be duplicated before the repair operation. Über die zweite Schaltfläche **[...]** können Sie vor dem Reparieren einen anderen Ort zum Speichern der Originaldateien angeben. Diese Möglichkeit ist insbesondere beim Reparieren umfangreicher Dateien auf verschiedenen Festplatten hilfreich.
+Standardmäßig wird die Originaldatei vor dem Reparieren dupliziert  und im Unterordner “Replaced files (repairing)” im Anwendungsordner abgelegt. By default, the original data file will be duplicated before the repair operation. Über die zweite Schaltfläche **[...]** können Sie vor dem Reparieren einen anderen Ort zum Speichern der Originaldateien angeben. Diese Möglichkeit ist insbesondere beim Reparieren umfangreicher Dateien auf verschiedenen Festplatten hilfreich.
 
 ### Reparierte Dateien
 
-4D erstellt eine neue leere Datendatei an der Stelle der Originaldatei. 4D creates a new blank data file at the location of the original file. Die leere Datei wird mit den wiederhergestellten Daten gefüllt.
+4D erstellt eine neue leere Datendatei an der Stelle der Originaldatei. 4D erstellt eine neue leere Datendatei an der Stelle der Originaldatei. Die leere Datei wird mit den wiederhergestellten Daten gefüllt.
 
 ## Standard Reparatur
 
