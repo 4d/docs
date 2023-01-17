@@ -71,7 +71,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 El editor de código 4D permite el uso de secuencias de escape. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
-El caracter `\` también se utiliza como separador en los nombres de ruta Windows. En general, 4D interpretará correctamente los nombres de ruta Windows que se introduzcan en el editor de código sustituyendo las barras invertidas simples `\` por barras invertidas dobles ``\\`. Por ejemplo,``C:\Folder`se convertirá en `C:\\Folder`.
+El caracter `\` también se utiliza como separador en los nombres de ruta Windows. En general, 4D interpretará correctamente los nombres de ruta Windows que se introduzcan en el editor de código sustituyendo las barras invertidas simples `\` por barras invertidas dobles ``\\`. Por ejemplo,``C:\Folder`se convertirá en`C:\\Folder`.
 
 Sin embargo, si escribe `C:\MyDocuments\New`, 4D mostrará `C:\\MyDocuments\New`. En este caso, la segunda `\` se interpreta incorrectamente como `\N` (una secuencia de escape existente). Por lo tanto, debe introducir un doble "-" cuando quiera insertar una barra invertida antes de un caracter que se utiliza en una de las secuencias de escape reconocidas por 4D.
 
