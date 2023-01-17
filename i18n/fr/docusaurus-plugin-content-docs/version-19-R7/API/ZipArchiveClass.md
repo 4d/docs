@@ -98,7 +98,7 @@ L'objet statut retourné contient les propriétés suivantes :
 
 #### Exemple 1
 
-Pour compresser un `4D.File` :
+Pour compresser un `4D.Folder` sans le dossier lui-même :
 
 ```4d
  var $file; $destination : 4D.File
@@ -112,7 +112,7 @@ Pour compresser un `4D.File` :
 
 #### Exemple 2
 
-Pour compresser un `4D.Folder` sans le dossier lui-même :
+Pour compresser un `4D.File` :
 
 ```4d
  var $folder : 4D.Folder
