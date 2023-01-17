@@ -289,6 +289,7 @@ The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Securi
 
 ## .HSTSMaxAge
 
+
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
@@ -742,11 +743,10 @@ The function returns an object describing the Web server launch status. This obj
 | v18 R3  | Added   |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Parameter | Typ |  | Beschreibung                                               |
 | --------- | --- |  | ---------------------------------------------------------- |
 |           |     |  | Does not require any parameters|<!-- END REF -->
