@@ -164,7 +164,7 @@ The ability to run one or more [actions](#actions) on [resources](#resource). Se
 ## Propriété
 
 Voir [Attribut](#attribute).
-> > *Attributes* and *properties* are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> > Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## PropertyPath
 
