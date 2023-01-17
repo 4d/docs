@@ -144,7 +144,7 @@ $c:=a+b
 
     The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays: At this point the Line Objects theme displays:
+3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays: The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays: At this point the Line Objects theme displays:
 
     | $c | Undefiniert |
     | -- | ----------- |
@@ -370,6 +370,7 @@ Beispiel:
 
 ```4d
   // ...
+ // ...
  // ...
  If(This condition)
     DO_SOMETHING
