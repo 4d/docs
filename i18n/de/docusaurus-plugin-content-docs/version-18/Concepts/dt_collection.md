@@ -55,7 +55,7 @@ Beispiel:
 Sie können zwei Arten von Collections erstellen:
 
 - regular (non-shared) Collections mit dem Befehl `New collection`. Diese Collection lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
-- shared Collections mit dem Befehl `New shared collection`. Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. These collections can be shared between processes, including preemptive threads. Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
+- shared Collections mit dem Befehl `New shared collection`. Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
 
 ## Collection Methoden
 
