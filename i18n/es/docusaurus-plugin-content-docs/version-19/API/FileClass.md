@@ -289,6 +289,7 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
     ALERT("User preference file deleted.")
  End if
  End if
+ End if
 ```
 <!-- END REF -->
 
@@ -508,7 +509,7 @@ Quieresrenombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades de *info* como contenido informativo de un archivo **.exe**, **.dll** o **.plist**<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función no hace nada (no se genera ningún error).
+La función debe utilizarse con un archivo .exe, .dll o .plist existente. La función debe utilizarse con un archivo .exe, .dll o .plist existente.
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
