@@ -33,7 +33,7 @@ Auch wenn die Datentypen in der Regel gleich sind, sind bestimmte Typen auf Date
 
 ## Standardwerte
 
-Werden Variablen über eine Compiler Direktive typisiert, empfangen sie einen Standardwert, den sie während der Arbeitssitzung beibehalten, solange sie nicht zugewiesen werden.
+When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned.
 
 The default value depends on the variable type:
 
