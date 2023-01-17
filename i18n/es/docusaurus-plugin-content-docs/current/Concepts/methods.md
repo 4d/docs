@@ -249,6 +249,9 @@ Para este ejemplo, suponemos que los valores de los campos son únicos (no hay d
        ALERT($vtTheWholeStory)
     End if
  End if
+       ALERT($vtTheWholeStory)
+    End if
+ End if
 ```
 
 2. También puede proceder así:
@@ -259,6 +262,8 @@ Para este ejemplo, suponemos que los valores de los campos son únicos (no hay d
     QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
     If(Records in selection([Friends and Relatives])>0)
        ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
+    End if
+ End if
     End if
  End if
     End if
