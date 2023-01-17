@@ -11,7 +11,7 @@ Regardless of the simplicity or complexity of a method or function, you will alw
     - `While... End while`
     - `Repeat... Until`
     - `For... End for`
-    - `For each...End for each`<br/> The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Each looping structure can be used in either way, but `While` loops and `Repeat` loops are more appropriate for repeating until a condition is met, and `For` loops are more appropriate for looping a specified number of times. `For each...End for each` allows mixing both ways and is designed to loop within objects and collections.
+    - `For each... End for each`<br/> The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Each looping structure can be used in either way, but `While` loops and `Repeat` loops are more appropriate for repeating until a condition is met, and `For` loops are more appropriate for looping a specified number of times. `For each... End for each` allows mixing both ways and is designed to loop within objects and collections.
 
 **Note:** 4D allows you to embed programming structures up to a "depth" of 512 levels.
 
