@@ -196,7 +196,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 #### Beschreibung
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](DataClassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
+Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->Any dataclass attribute can be used as a property of an entity selection to return<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](DataClassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
 
 *   If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Duplications are removed (an unordered entity selection is returned).
@@ -307,9 +307,9 @@ The entity selection must be *alterable*, i.e. it has been created for example b
 
 **Adding an entity selection**
 
-*   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
+*   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned.
 *   If the entity selection is unordered, it becomes ordered.
-> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+> > For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
 
 The modified entity selection is returned by the function, so that function calls can be chained.
 
@@ -383,8 +383,8 @@ $sellist2:=$sellist2.add($sellist1)
 The `.and()` function <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.
 
 *   If you pass *entity* as parameter, you combine this entity with the entity selection. If the entity belongs to the entity selection, a new entity selection containing only the entity is returned. Otherwise, an empty entity selection is returned.
-*   If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
-> > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
+*   If you pass *entitySelection* as parameter, you compare entity selections. If the entity belongs to the entity selection, a new reference to the entity selection is returned. A new entity selection that contains only the entities that are referenced in both selections is returned.
+> > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
 
 If the original entity selection or the *entitySelection* parameter is empty, or if the *entity* is Null, an empty entity selection is returned.
 
@@ -728,7 +728,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 #### Beschreibung
 
-The `.drop()` function <!-- REF #EntitySelectionClass.drop().Summary -->removes the entities belonging to the entity selection from the table related to its dataclass within the datastore<!-- END REF -->. The entity selection remains in memory.
+The `.drop()` function <!-- REF #EntitySelectionClass.drop().Summary -->The `.drop()` function<!-- END REF -->. The entity selection remains in memory.
 > Removing entities is permanent and cannot be undone. It is recommended to call this action in a transaction in order to have a rollback option.
 
 If a locked entity is encountered during the execution of `.drop()`, it is not removed. By default, the method processes all entities of the entity selection and returns non-droppable entities in the entity selection. If you want the method to stop execution at the first encountered non-droppable entity, pass the `dk stop dropping on first error` constant in the *mode* parameter.
@@ -900,7 +900,7 @@ Given the following table and relation:
 
 #### Beschreibung
 
-The `.first()` function <!-- REF #EntitySelectionClass.first().Summary -->returns a reference to the entity in the first position of the entity selection<!-- END REF -->.
+The `.first()` function <!-- REF #EntitySelectionClass.first().Summary -->The `.orderBy()` function<!-- END REF -->.
 
 The result of this function is similar to:
 
@@ -1080,6 +1080,7 @@ End if
 ...
 Form.products.add(Form.product)
 Form.products.add(Form.product)
+Form.products.add(Form.product)
 ```
 
 
@@ -1164,7 +1165,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 #### Beschreibung
 
-The `.last()` function <!-- REF #EntitySelectionClass.last().Summary -->returns a reference to the entity in last position of the entity selection<!-- END REF -->.
+The `.last()` function <!-- REF #EntitySelectionClass.last().Summary -->The `.sum()` function<!-- END REF -->.
 
 The result of this function is similar to:
 
@@ -1207,7 +1208,7 @@ If the entity selection is empty, the function returns Null.
 
 #### Beschreibung
 
-The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. If the entity selection is empty, it returns 0.
+The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->The `.length` property<!-- END REF -->. If the entity selection is empty, it returns 0.
 
 Entity selections always have a `.length` property.
 
@@ -1250,7 +1251,7 @@ Entity selections always have a `.length` property.
 
 #### Beschreibung
 
-The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
+The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->The `.max()` function<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
 
 If you pass in *attributePath* a path to an object property containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](CollectionClass.md#sort) description).
 
@@ -1304,7 +1305,7 @@ We want to find the highest salary among all the female employees:
 
 #### Beschreibung
 
-The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
+The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> The `.min()` function<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
 
 If you pass in *attributePath* a path to an object property containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](CollectionClass.md#sort) description).
 
@@ -1360,9 +1361,9 @@ In this example, we want to find the lowest salary among all the female employee
 The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 *   If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
-*   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+*   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
-By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
 
 :::note
 
@@ -1442,9 +1443,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 The `.or()` function <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
 
-*   If you pass *entitySelection* as parameter, you compare entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. A new entity selection that contains only the entities that are referenced in both selections is returned.
-*   If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
-> > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
+*   By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+*   Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+> > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
 
@@ -1753,7 +1754,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 #### Beschreibung
 
-The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->The `.queryPath` property<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
 For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
@@ -1778,7 +1779,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 #### Beschreibung
 
-The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> The `.queryPlan` property<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
 For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
@@ -1897,7 +1898,7 @@ A list box displays the Form.students entity selection and several clients work 
 The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
 > This function does not modify the original entity selection.
 
-Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
 
 #### Ergebnis
 
@@ -1965,7 +1966,7 @@ $result2:=$invoices.selected($creditSel)
 
 #### Beschreibung
 
-The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
+The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->The `.slice()` function<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
 > This function does not modify the original entity selection.
 
 If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
@@ -2096,13 +2097,13 @@ If a filter is specified for an attribute of the `relatedEntity` kind:
 
 *   propertyPath = "relatedEntity" -> it is extracted with simple form
 *   propertyPath = "relatedEntity.*" -> all the properties are extracted
-*   propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted -> only those properties are extracted
+*   propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted -> only those properties are extracted -> only those properties are extracted
 
 
 If a filter is specified for an attribute of the `relatedEntities` kind:
 
 *   propertyPath = "relatedEntities.*" -> all the properties are extracted
-*   propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted -> only those properties are extracted
+*   propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted -> only those properties are extracted -> only those properties are extracted
 
 
 
