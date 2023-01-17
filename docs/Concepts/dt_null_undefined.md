@@ -32,7 +32,7 @@ Undefined is not actually a data type. It denotes a variable that has not yet be
 |  |Null # Undefined |Boolean|a.nullProp # b.undefinedProp |False|
 |  |Null # *scalar value* (see below) |Boolean|a.nullProp # 42 |True|
 
-*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection, Variant) have undefined or null default value. Ex:
+*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ex:
 
 ```4d
 var $object : Object
@@ -69,7 +69,7 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 
 :::info
 
-Comparisons of Undefined values with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators and Pointer, Picture, Blob, Object, Collection, Variant, Undefined or Null values are not supported and return an error.
+Comparisons of Undefined values with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators and Pointer, Picture, Blob, Object, Collection, Undefined or Null values are not supported and return an error.
 
 :::
 
@@ -79,45 +79,45 @@ Here are the different results of the `Undefined` command as well as the `Null` 
 
 ```4d
 var $vEmp : Object
+var $result : Boolean
 $vEmp:=New object
 $vEmp.name:="Smith"
 
 $vEmp.children:=Null
  
-$undefined:=Undefined($vEmp.name) // False
-$null:=($vEmp.name=Null) //False
+$result:=Undefined($vEmp.name) // False
+$result:=($vEmp.name=Null) //False
  
-$undefined:=Undefined($vEmp.children) // False
-$null:=($vEmp.children=Null) //True
+$result:=Undefined($vEmp.children) // False
+$result:=($vEmp.children=Null) //True
  
-$undefined:=Undefined($vEmp.parent) // True
-$null:=($vEmp.parent=Null) //True
+$result:=Undefined($vEmp.parent) // True
+$result:=($vEmp.parent=Null) //True
 ```
 
 Examples of comparison results with undefined and null values:
 
 ```4d
+var $result : Boolean
 var $vObj : Object
 var $vCol : Collection
-//note that $vCol is not assigned 
 
 $vObj:=New object
-$vObj.isNull:=Null
+$vObj.null:=Null
+//note that $vCol is not assigned 
 
-$vObj.a = 42 //False
-$vObj.a = $vObj.isNull //True
-$vObj.a = $vObj.b  //True
-$vObj.a = $vCol  //True
+$result:=($vObj.undefined=42) //False
+$result:=($vObj.undefined=$vObj.null) //True
+$result:=($vObj.undefined=$vCol)  //True
 
-$vObj.a # $vObj.b  //False
-$vObj.a # $vObj.isNull  //False
-$vObj.a # 42 //True
-$vObj.a # $vCol //False
+$result:=($vObj.undefined#$vObj.null) //False
+$result:=($vObj.undefined#42) //True
+$result:=($vObj.undefined#$vCol) //False
 
-$vObj.a > "hello"  //False
-$vObj.a > $vObj.b  //Error
-$vObj.a > $vObj.isNull  //Error
-$vCol < 42 //False
+$result:=($vObj.undefined>"hello") //False
+$result:=($vObj.undefined>$vCol)  //Error
+$result:=($vObj.undefined>$vObj.null)  //Error
+$result:=($vCol < 42) //False
 
 ```
 
