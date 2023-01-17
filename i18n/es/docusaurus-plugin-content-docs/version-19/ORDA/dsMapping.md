@@ -159,7 +159,7 @@ Además, los siguientes atributos relacionales también estarán disponibles aut
 
 * en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 * en la dataclass Company: el atributo **companyProjects**, del tipo "relatedEntities"; para cada empresa existe un cierto número de proyectos relacionados.
-> La propiedad Manual o Automática de una relación de base de datos no tiene efecto en ORDA.
+> > La propiedad Manual o Automática de una relación de base de datos no tiene efecto en ORDA.
 
 Todos los atributos de la dataclass se exponen como propiedades de la dataclass:
 
