@@ -12,7 +12,7 @@ This property defines the color scheme for the form. This property defines the c
 
 *   dark - light text on a dark background
 *   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
-> A defined color scheme can not be overridden by a CSS.
+> > A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -141,7 +141,7 @@ When the option is used, if the window is opened using the `Open form window` co
 
 *   the current page,
 *   the position, size and visibility of each form object (including the size and visibility of list box columns).
-> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
 
 When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
 
