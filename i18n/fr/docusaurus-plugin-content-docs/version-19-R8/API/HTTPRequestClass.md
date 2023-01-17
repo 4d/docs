@@ -247,7 +247,7 @@ La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary --
 
 #### Description
 
-The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->la `method` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->la `method` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -258,7 +258,7 @@ The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->la 
 
 #### Description
 
-La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocol` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
+La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocol` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. . S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
 
 <!-- END REF -->
 
@@ -298,7 +298,7 @@ Un objet `response` est un objet non partageable. Il contient les propriétés s
 
 #### Description
 
-La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->le `returnResponseBody` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->La propriété `.headers` contient<!-- END REF -->. le `returnResponseBody` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)
 
 <!-- END REF -->
 
@@ -319,7 +319,7 @@ La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnR
 
 > Cette fonction est thread-safe.
 
-La fonction `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->met fin à la requête HTTP<!-- END REF -->. .
+La fonction `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->met fin à la requête HTTP<!-- END REF -->. La fonction `.terminate()`
 
 <!-- END REF -->
 
@@ -341,7 +341,7 @@ La propriété `.terminated` contient <!-- REF #HTTPRequestClass.terminated.Summ
 
 #### Description
 
-La propriété `.timeout` contient <!-- REF #HTTPRequestClass.timeout.Summary -->le `timeout` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propriété `.timeout` contient <!-- REF #HTTPRequestClass.timeout.Summary -->le `timeout` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. le `timeout` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)
 
 <!-- END REF -->
 
