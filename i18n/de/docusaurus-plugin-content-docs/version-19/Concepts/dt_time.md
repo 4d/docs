@@ -34,26 +34,26 @@ Eine Leerzeit wird als ?00:00:00? angegeben.
 | Operation               | Syntax       | Ergibt  | Ausdruck                | Wert       |
 | ----------------------- | ------------ | ------- | ----------------------- | ---------- |
 | Addition                | Zeit + Zeit  | Zeit    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraktion             | Zeit – Zeit  | Zeit    | ?02:03:04? ?01:02:03?   | ?01:01:01? |
+| Subtraktion             | Zeit – Zeit  | Zeit    | ?02:03:04? ?02:03:04?   | ?01:01:01? |
 | Addition                | Zeit + Zahl  | Zahl    | ?02:03:04? ?01:02:03?   | 7449       |
-| Subtraktion             | Zeit – Zahl  | Zahl    | ?02:03:04? ?01:02:03?   | 7319       |
-| Multiplikation          | Zeit * Zahl  | Zahl    | ?02:03:04? ?01:02:03?   | 14768      |
+| Subtraktion             | Zeit – Zahl  | Zahl    | ?02:03:04? ?02:03:04?   | 7319       |
+| Multiplikation          | Zeit * Zahl  | Zahl    | ?02:03:04? ?02:03:04?   | 14768      |
 | Division                | Zeit / Zahl  | Zahl    | ?02:03:04? ?02:03:04?   | 3692       |
-| Ganzzahlige Division    | Zeit \ Zahl | Zahl    | ?02:03:04? ?01:02:03?   | 3692       |
+| Ganzzahlige Division    | Zeit \ Zahl | Zahl    | ?02:03:04? ?02:03:04?   | 3692       |
 | Modulo                  | Zeit % Zeit  | Zeit    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                  | Zeit % Zahl  | Zahl    | ?02:03:04? % 2          | 0          |
-| Gleichheit              | Zeit = Zeit  | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
-|                         |              |         | ?01:02:03? ?01:02:04?   | Falsch     |
+| Modulo                  | Zeit % Zahl  | Zahl    | ?02:03:04? ?02:03:04?   | 0          |
+| Gleichheit              | Zeit = Zeit  | Boolean | ?01:02:03? ?01:02:03?   | Wahr       |
+|                         |              |         | ?01:02:03? ?01:02:03?   | Falsch     |
 | Ungleichheit            | Zeit # Zeit  | Boolean | ?01:02:03? ?01:02:03?   | Wahr       |
 |                         |              |         | ?01:02:03? ?01:02:03?   | Falsch     |
-| Größer als              | Zeit > Zeit  | Boolean | ?01:02:03? < ?01:02:04? | Wahr       |
-|                         |              |         | ?01:02:03? < ?01:02:04? | Falsch     |
-| Kleiner als             | Zeit < Zeit  | Boolean | ?01:02:03? ?01:02:04?   | Wahr       |
+| Größer als              | Zeit > Zeit  | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
+|                         |              |         | ?01:02:03? >=?01:02:03? | Falsch     |
+| Kleiner als             | Zeit < Zeit  | Boolean | ?01:02:03? ?01:02:03?   | Wahr       |
 |                         |              |         | ?01:02:03? ?01:02:03?   | Falsch     |
-| Größer als oder gleich  | Zeit >= Zeit | Boolean | ?01:02:03? >=?01:02:03? | Wahr       |
-|                         |              |         | ?01:02:03? >=?01:02:04? | Falsch     |
-| Kleiner als oder gleich | Zeit <= Zeit | Boolean | ?01:02:03? <=?01:02:03? | Wahr       |
-|                         |              |         | ?01:02:03? <=?01:02:03? | Falsch     |
+| Größer als oder gleich  | Zeit >= Zeit | Boolean | ?01:02:03? ?01:02:03?   | Wahr       |
+|                         |              |         | ?01:02:03? ?01:02:03?   | Falsch     |
+| Kleiner als oder gleich | Zeit <= Zeit | Boolean | ?01:02:03? ?01:02:03?   | Wahr       |
+|                         |              |         | ?01:02:03? ?01:02:03?   | Falsch     |
 
 ### Beispiel 1
 
