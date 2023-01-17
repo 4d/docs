@@ -7,7 +7,7 @@ Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder**
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
-Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. Sie wollen z. B. eine Textvariable in einem Feld vom gleichen Typ speichern:
+Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. eine Textvariable in einem Feld vom gleichen Typ speichern:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -30,6 +30,8 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
  // 4D guesses it is of date type  
  // and assigns the current date plus 30 days
 ```
+
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
 
 
 ### Das Schlüsselwort `var` verwenden
