@@ -58,7 +58,7 @@ Retourne toutes les données d'une dataclass spécifique.
 
 **Résultat** :
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -133,7 +133,7 @@ Retourne toutes les données d'une dataclass spécifique.
 .....//plus d'entités ici 
     ]
 }
-````
+```
 
 ## {dataClass}({clé})
 
@@ -161,7 +161,7 @@ La requête suivante retourne toutes les données publiques de la dataclass Comp
 
 **Résultat** :
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -180,7 +180,7 @@ La requête suivante retourne toutes les données publiques de la dataclass Comp
         }
     }
 }
-````
+```
 
 ## {dataClass}:{attribut}(valeur)
 
