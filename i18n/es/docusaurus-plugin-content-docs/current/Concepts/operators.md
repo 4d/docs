@@ -37,6 +37,9 @@ $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection $myNumber:=3 //assigns 3 to MyNumber variable  
 $myDate:=!2018/01/21! //assigns a date literal
 $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
+$col:=New collection //$col is initialized with an empty collection $myNumber:=3 //assigns 3 to MyNumber variable  
+$myDate:=!2018/01/21! //assigns a date literal
+$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
 ```
 
@@ -76,30 +79,30 @@ $a+=2 // $a=3
 
 Se admiten los siguientes operadores de asignación compuestos:
 
-| Operador       | Sintaxis           | Asigna  | Ejemplo                                                                        |
-| -------------- | ------------------ | ------- | ------------------------------------------------------------------------------ |
-| Adición        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                              |
-|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                             |
-|                | Date += Number     | Fecha   | `$d+=5 //$d:=$d+5`                                                             |
-|                | Time += Time       | Hora    | `$t1+=$t2 //$t1:=$t1+$t2`                                                      |
-|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                                          |
-|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                        |
-|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`            |
-| Resta          | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                             |
-|                | Date -= Number     | Fecha   | `$d-=5 //$d:=$d-5`                                                             |
-|                | Time -= Time       | Hora    | `$t1-=$t2 //$t1:=$t1-$t2`                                                      |
-|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                                          |
-|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (mover horizontalemente $p1 de 5 píxeles a la izquierda)` |
-| División       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                             |
-|                | Time /= Time       | Hora    | `$t1/=$t2 //$t1:=$t1/$t2`                                                      |
-|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                                          |
-|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (añadir $p2 debajo de $p1)`                           |
-|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (desplazar verticalmente $p1 de 5 píxeles)`               |
-| Multiplicación | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                    |
-|                | Number *= Number   | Number  | `$n*=5 //$n:=$n*5`                                                             |
-|                | Time *= Time       | Hora    | `$t1*=$t2 //$t1:=$t1*$t2`                                                      |
-|                | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                                          |
-|                | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                                 |
+| Operador       | Sintaxis           | Asignación | Ejemplo                                                                        |
+| -------------- | ------------------ | ---------- | ------------------------------------------------------------------------------ |
+| Adición        | Text += Text       | Text       | `$t+=" World"  //$t:=$t+" World"`                                              |
+|                | Number += Number   | Number     | `$n+=5 //$n:=$n+5`                                                             |
+|                | Date += Number     | Fecha      | `$d+=5 //$d:=$d+5`                                                             |
+|                | Time += Time       | Hora       | `$t1+=$t2 //$t1:=$t1+$t2`                                                      |
+|                | Time += Number     | Number     | `$t1+=5 //$t1:=$t1+5`                                                          |
+|                | Picture += Picture | Picture    | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                        |
+|                | Picture += Number  | Picture    | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`            |
+| Resta          | Number -= Number   | Number     | `$n-=5 //$n:=$n-5`                                                             |
+|                | Date -= Number     | Fecha      | `$d-=5 //$d:=$d-5`                                                             |
+|                | Time -= Time       | Hora       | `$t1-=$t2 //$t1:=$t1-$t2`                                                      |
+|                | Time -= Number     | Number     | `$t1-=5 //$t1:=$t1-5`                                                          |
+|                | Picture -= Number  | Picture    | `$p1-=5 //$p1:=$p1-5 (mover horizontalemente $p1 de 5 píxeles a la izquierda)` |
+| División       | Number /= Number   | Number     | `$n/=5 //$n:=$n/5`                                                             |
+|                | Time /= Time       | Hora       | `$t1/=$t2 //$t1:=$t1/$t2`                                                      |
+|                | Time /= Number     | Number     | `$t1/=5 //$t1:=$t1/5`                                                          |
+|                | Picture /= Picture | Picture    | `$p1/=$p2 //$p1:=$p1/$p2 (añadir $p2 debajo de $p1)`                           |
+|                | Picture /= Number  | Picture    | `$p1/=5 //$p1:=$p1/5 (desplazar verticalmente $p1 de 5 píxeles)`               |
+| Multiplicación | Text *= Number     | Text       | `$t*="abc"  //$t:=$t*"abc"`                                                    |
+|                | Number *= Number   | Number     | `$n*=5 //$n:=$n*5`                                                             |
+|                | Time *= Time       | Hora       | `$t1*=$t2 //$t1:=$t1*$t2`                                                      |
+|                | Time *= Number     | Number     | `$t1*=5 //$t1:=$t1*5`                                                          |
+|                | Picture *= Number  | Picture    | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                                 |
 
 Estos operadores se aplican a todas las [expresiones asignables](quick-tour.md#assignable-vs-non-assignable-expressions) (excepto de las imágenes como propiedades de objeto o elementos de colección).
 
@@ -132,6 +135,26 @@ $x3/=2 // $x3=5
 
 
 // Multiplication
+$x2:=10
+$x2*=5 // $x2=10
+
+$t2:="Hello" 
+$t2*=2 // $t2="HelloHello"
+$d+=10 //$d=!2000-11-20!
+
+// Resta
+$x1:=10
+$x1-=5 //$x1=5
+
+$d1:=!2000-11-10!
+$d1-=10 // $d1=!2000-10-31!
+
+// División
+$x3:=10
+$x3/=2 // $x3=5
+
+
+// Multiplicación
 $x2:=10
 $x2*=5 // $x2=10
 
@@ -202,6 +225,7 @@ $v:= "Hello" && "World" //"World"
 $v:=False && 0 // False
 $v:=0 && False // False
 $v:=5 && !00-00-00! // 00/00/00
+$v := 5 && 10 && "hello" //"hello" // 00/00/00
 $v := 5 && 10 && "hello" //"hello" // 00/00/00
 $v := 5 && 10 && "hello" //"hello"
 ```
@@ -329,6 +353,8 @@ $beverage:=($age>=21) ? "Beer" : "Juice"
 
 ALERT($beverage) // "Beer" "Beer" : "Juice"
 
+ALERT($beverage) // "Beer" "Beer" : "Juice"
+
 ALERT($beverage) // "Beer"
 ```
 
@@ -340,7 +366,7 @@ Este ejemplo almacena el nombre completo de una persona en una variable, y manej
 var $fullname : Text
 
 // If one of the names is missing, store the one that exists, otherwise store an empty string
-$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || "" ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
+$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || "" ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || "" ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
 ## Truthy y falsy
@@ -382,7 +408,7 @@ Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-
 $value:=$object.value || $defaultValue
 ```
 
-... se obtiene el valor por defecto cada vez que *$object* no contenga la propieda `valor ` O cuando sea *null*. Por lo tanto, este operador comprueba la existencia o utilidad del valor en lugar de un valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
+... se obtiene el valor por defecto cada vez que *$object* no contenga la propieda `valor` O cuando sea *null*. Por lo tanto, este operador comprueba la existencia o utilidad del valor en lugar de un valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
 
 En cuanto a los valores que representan las colecciones, los objetos o las cadenas, los valores "vacíos" se consideran como **falsy**. Es útil cuando se quiere asignar un valor por defecto cuando se encuentra un valor vacío.
 
