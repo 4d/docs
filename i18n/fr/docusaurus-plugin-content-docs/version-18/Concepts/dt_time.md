@@ -40,18 +40,18 @@ Une heure nulle s’écrit ?00:00:00?
 | Division entière    | Heure \ Nombre | Number   | ?02:03:04? ?01:02:03?   | 3692       |
 | Modulo              | Heure % Heure   | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
 | Modulo              | Heure % Nombre  | Number   | ?02:03:04? ?02:03:04?   | 0          |
-| Egalité             | Heure = Heure   | Boolean  | ?01:02:03? >=?01:02:03? | Vrai       |
+| Egalité             | Heure = Heure   | Boolean  | ?01:02:03? ?01:02:03?   | Vrai       |
 |                     |                 |          | ?01:02:03? ?01:02:04?   | False      |
 | Inégalité           | Heure # Heure   | Boolean  | ?01:02:03? ?01:02:03?   | Vrai       |
 |                     |                 |          | ?01:02:03? ?01:02:03?   | False      |
-| Supérieur à         | Heure > Heure   | Boolean  | ?01:02:03? < ?01:02:04? | Vrai       |
-|                     |                 |          | ?01:02:03? < ?01:02:04? | False      |
+| Supérieur à         | Heure > Heure   | Boolean  | ?01:02:03? >=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? >=?01:02:03? | False      |
 | Inférieur à         | Heure < Heure   | Boolean  | ?01:02:03? ?01:02:04?   | Vrai       |
 |                     |                 |          | ?01:02:03? ?01:02:03?   | False      |
-| Supérieur ou égal à | Heure >= Heure  | Boolean  | ?01:02:03? >=?01:02:03? | Vrai       |
-|                     |                 |          | ?01:02:03? >=?01:02:04? | False      |
-| Inférieur ou égal à | Heure <= Heure  | Boolean  | ?01:02:03? <=?01:02:03? | Vrai       |
-|                     |                 |          | ?01:02:03? <=?01:02:03? | False      |
+| Supérieur ou égal à | Heure >= Heure  | Boolean  | ?01:02:03? ?01:02:03?   | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:03?   | False      |
+| Inférieur ou égal à | Heure <= Heure  | Boolean  | ?01:02:03? ?01:02:03?   | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:03?   | False      |
 
 ### Exemple 1
 
