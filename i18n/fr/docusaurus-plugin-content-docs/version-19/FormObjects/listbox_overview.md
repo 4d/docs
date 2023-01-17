@@ -53,7 +53,7 @@ Il existe différents types de list box avec leurs propres comportements et prop
 * **Tableaux**: chaque colonne est liée à un tableau 4D. Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques).
 * **Sélection** (**Sélection courante** ou **Sélection temporaire**) : chaque colonne est liée à une expression (par exemple un champ) qui est évaluée pour chaque enregistrement de la sélection.
 * **Collection ou Entity selection** : chaque colonne est liée à une expression qui est évaluée pour chaque élément de la collection ou chaque entité de l'entity selection.
-> Il n'est pas possible de combiner différents types de list box dans le même objet list box. La source de données est définie lors de la création de la list box. Il n'est alors plus possible de la modifier par programmation.
+> > Il n'est pas possible de combiner différents types de list box dans le même objet list box. La source de données est définie lors de la création de la list box. Il n'est alors plus possible de la modifier par programmation.
 
 ### Gestion des list box
 
@@ -113,7 +113,7 @@ Les propriétés prises en charge dépendent du type de list box.
 | ------------------------------------------------------------------------------------------- | ---------------- | ------------------- | --------------------------------------- |
 | [Couleur de fond alternée](properties_BackgroundAndBorder.md#alternate-background-color)    | X                | X                   | X                                       |
 | [Couleur de fond](properties_BackgroundAndBorder.md#background-color)                       | X                | X                   | X                                       |
-| [Gras](properties_Text.md#bold)                                                             | X                | X                   | X                                       |
+| [Souligné](properties_Text.md#bold)                                                         | X                | X                   | X                                       |
 | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) |                  | X                   | X                                       |
 | [Style de la bordure](properties_BackgroundAndBorder.md#border-line-style)                  | X                | X                   | X                                       |
 | [Bas](properties_CoordinatesAndSizing.md#bottom)                                            | X                | X                   | X                                       |
@@ -285,7 +285,7 @@ Vous pouvez définir pour chaque colonne de List box des propriétés standard (
 
 ## En-têtes de list box
 
-> Pour pouvoir accéder aux propriétés des en-têtes d'une list box, vous devez avoir coché l'option [Afficher en-têtes](properties_Headers.md#display-headers) dans la Liste des propriétés de la list box.
+> Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
 
 Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans l'éditeur de formulaires en cliquant dessus lorsque l'objet List box est sélectionné :
 
@@ -306,7 +306,7 @@ Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un en-tête, elle es
 [Gras](properties_Text.md#bold) - [Css Class](properties_Object.md#css-class) - [Police](properties_Text.md#font) - [Couleur de fond](properties_Text.md#font-color) - [Message d'aide](properties_Help.md#help-tip) - [Alignement horizontal ](properties_Text.md#horizontal-alignment) - [Emplacement de l'icône](properties_TextAndPicture.md#icon-location) - [Italique](properties_Text.md#italic) - [Nom](properties_Object.md#object-name) - [Chemin d'accès](properties_TextAndPicture.md#picture-pathname) - [Titre](properties_Object.md#title) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Alignement vertical](properties_Text.md#vertical-alignment) - [Largeur](properties_CoordinatesAndSizing.md#width)
 
 ## Pieds de list box
-> Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
+> Pour pouvoir accéder aux propriétés des en-têtes d'une list box, vous devez avoir coché l'option [Afficher en-têtes](properties_Headers.md#display-headers) dans la Liste des propriétés de la list box.
 
 Les List box peuvent contenir des zones de "pied de page" non saisissables, affichant des informations supplémentaires. Dans les données présentées sous forme de tableaux, les pieds sont généralement utilisés pour afficher des calculs, tels que des sommes ou des moyennes.
 
@@ -410,7 +410,7 @@ La gestion des sélections s'effectue différemment selon que la list box de typ
 Lorsque l'option [Cacher surlignage sélection](properties_Appearance.md#cacher-surlignage-selection) est sélectionnée, vous devez gérer la représentation visuelle des sélections dans la list box à l'aide des options d'interface disponibles. Comme les sélections elles-mêmes sont gérées par 4D, cela signifie que :
 
 * Pour les list box de type tableau, vous devez parcourir le tableau booléen associé à la list box afin de déterminer quelles lignes sont sélectionnées.
-* Pour les list box de type sélection, vous devez vérifier si l'enregistrement courant (c.-à-d. la ligne courante) appartient à l'ensemble spécifié dans la propriété [Ensemble surlignage](properties_ListBox.md#ensemble-surlignage) de la list box.
+* Propriétés spécifiques des list box
 
 Vous pouvez alors définir par programmation des couleurs d'arrière-plan, des couleurs ou des styles de polices spécifiques permettant de visualiser l'apparence des lignes sélectionnées. Pour cela, vous pouvez utiliser des tableaux ou des expressions en fonction du type de list box affiché (cf. sections suivantes).
 
@@ -616,7 +616,7 @@ Selon le type de list box, vous pouvez utiliser différentes propriétés pour p
 | -------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Couleur de fond      | [Tableau couleurs de fond](properties_BackgroundAndBorder.md#row-background-color-array) | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) | [Expression couleur de fond](properties_BackgroundAndBorder.md#expression-couleur-de-fond) ou [Meta info expression](properties_Text.md#meta-info-expression) |
 | Couleur de la police | [Tableau couleurs de police](properties_Text.md#row-font-color-array)                    | [Expression couleur police](properties_Text.md#font-color-expression)                       | [Expression couleur police](properties_Text.md#expression-couleur-police) or [Meta info expression](properties_Text.md#meta-info-expression)                  |
- Style de police|
+
 
 [Tableau de styles](properties_Text.md#tableau-de-styles)|[Expression style](properties_Text.md#expression-style)|[Expression style](properties_Text.md#expression-style) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Tableau de contrôle des lignes](properties_ListBox.md#tableau-de-controle-des-lignes)|-|-|
 
@@ -652,7 +652,7 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 * Configurer manuellement les éléments hiérarchiques via la liste des propriétés dans l’éditeur de formulaires (ou éditer le formulaire JSON).
 * Générer visuellement la hiérarchie à l’aide du pop up menu de gestion des list box, dans l’éditeur de formulaires.
-* Utiliser les commandes [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) et [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html). Ces commandes sont décrites dans le *manuel Langage de 4D*.
+* Utiliser les commandes [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) et [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html).
 
 #### Propriété List box hiérarchique
 
@@ -706,7 +706,7 @@ Si cette list box est affichée sous forme hiérarchique (les trois premiers tab
 
 Les tableaux ne sont pas triés avant la construction de la hiérarchie. Si par exemple un tableau contient les données AAABBAACC, la hiérarchie obtenue sera :
 
-    > &gt; A B A C
+    > &gt; > A B A C
 
 Pour déployer ou contracter un "nœud" hiérarchique, cliquez dessus. Si vous effectuez **Alt+clic** (Windows) ou **Option+clic** (macOS) sur le nœud, tous ses sous-éléments seront déployés ou contractés. Ces opérations peuvent également être effectuées par programmation à l'aide des commandes `LISTBOX EXPAND` et `LISTBOX COLLAPSE`.
 
@@ -765,15 +765,15 @@ Représentation non hiérarchique : ![](../assets/en/FormObjects/hierarch7.png) 
 
 Tout comme pour les sélections, la commande `LISTBOX GET CELL POSITION` retournera les mêmes valeurs pour une list box hiérarchique et une list box non hiérarchique. Cela signifie que dans les deux exemples ci-dessous, `LISTBOX GET CELL POSITION` retournera la même position : (3;2).
 
-*Représentation non hiérarchique :* ![](../assets/en/FormObjects/hierarch9.png)
+*Représentation hiérarchique :* ![](../assets/en/FormObjects/hierarch9.png)
 
-*Représentation hiérarchique :* ![](../assets/en/FormObjects/hierarch10.png)
+*Représentation non hiérarchique :* ![](../assets/en/FormObjects/hierarch10.png)
 
 Lorsque toutes les lignes d’une sous-hiérarchie sont masquées, la ligne de rupture est automatiquement masquée. Dans l’exemple ci-dessus, si les lignes 1 à 3 sont masquées, la ligne de rupture "Bretagne" n’apparaîtra pas.
 
 #### Lignes de rupture
 
-Si l’utilisateur sélectionne une ligne de rupture, `LISTBOX GET CELL POSITION` retourne la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant . Dans le cas suivant :
+Si l’utilisateur sélectionne une ligne de rupture, `LISTBOX GET CELL POSITION` retourne la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant :
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
@@ -783,9 +783,9 @@ Les lignes de rupture ne sont pas prises en compte dans les tableaux internes pe
 
 Soit par exemple la list box suivante (les noms des tableaux associés sont précisés entre parenthèses) :
 
-*Représentation non hiérarchique :* ![](../assets/en/FormObjects/hierarch12.png)
+*Représentation hiérarchique :* ![](../assets/en/FormObjects/hierarch12.png)
 
-*Représentation hiérarchique :* ![](../assets/en/FormObjects/hierarch13.png)
+*Représentation non hiérarchique :* ![](../assets/en/FormObjects/hierarch13.png)
 
 En mode hiérarchique, les niveaux de rupture ne sont pas pris en compte par les tableaux de modification de style nommés `tStyle` et `tCouleurs`. Pour modifier la couleur ou le style des niveaux de rupture, vous devez exécuter les instructions suivantes :
 
@@ -836,10 +836,11 @@ Toutefois, le thème Source de données n'est pas disponible pour les colonnes o
 le type de valeur (obligatoire) : texte, couleur, événement, etc. la valeur elle-même (optionnel) : utilisé aussi bien pour la saisie que pour l'affichage. le mode d'affichage du contenu de la cellule (optionnel) : bouton, liste, etc. des paramètres supplémentaires (optionnel) : dépend du type de valeur Pour définir ces propriétés, vous devez placer les attributs adéquats dans l'objet (la liste des attributs disponibles est fournie ci-dessous). Par exemple, vous pouvez écrire "Hello World!" dans une colonne objet à l'aide de ce simple code :
 
 ```4d  
-ARRAY OBJECT(obColumn;0) //tableau de la colonne
- C_OBJECT($ob) //premier élément
- OB SET($ob;"valueType";"text") //définit le type de valeur (obligatoire)
- OB SET($ob;"value";"Hello World!") //définit la valeur
+C_OBJECT($ob1)
+$entry:="Hello world!" ARRAY OBJECT(obColumn;0) //column array
+ C_OBJECT($ob) //first element
+ OB SET($ob;"valueType";"text") //defines the value type (mandatory)
+ OB SET($ob;"value";"Hello World!") //defines the value
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -1114,10 +1115,10 @@ Voici un exemple :
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
-ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
+ARRAY OBJECT(obColumn;0) //tableau de la colonne
+ C_OBJECT($ob) //premier élément
+ OB SET($ob;"valueType";"text") //définit le type de valeur (obligatoire)
+ OB SET($ob;"value";"Hello World!") //définit la valeur
  APPEND TO ARRAY(obColumn;$ob)
 ```
 
@@ -1157,7 +1158,7 @@ OB SET($ob;"label";"Edit...")
 
 ### Gestion des événements
 
-Plusieurs événements peuvent être gérés dans les colonnes de list box de type tableau d'objets. Voici une synthèse des événements spécifiques :
+Plusieurs événements peuvent être gérés dans les colonnes de list box de type tableau d'objets.
 
 * **Sur données modifiées** : L'événement `On Data Change` est généré en cas de modification d'une valeur de la colonne, quel que soit le widget :
   * zone de saisie de texte
