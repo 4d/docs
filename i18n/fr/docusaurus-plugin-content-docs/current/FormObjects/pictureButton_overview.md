@@ -56,7 +56,7 @@ Les autres modes disponibles sont les suivants :
 - [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
-> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numérotation des images dans le tableau débute à 0.
+> [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numérotation des images dans le tableau débute à 0.
 
 ## Propriétés prises en charge
 
