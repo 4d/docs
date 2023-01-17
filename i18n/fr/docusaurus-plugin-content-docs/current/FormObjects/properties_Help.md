@@ -16,7 +16,7 @@ Vous pouvez soit :
 
 - désigner une info-bulle existante, préalablement spécifiée dans l'éditeur de [messages d'aide](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) de 4D.
 - ou saisir directement le message d'aide sous forme de chaîne. Cela vous permet de profiter de l'architecture XLIFF. Vous pouvez saisir ici une référence XLIFF afin d'afficher un message dans le langage de l'application (pour plus d'informations sur XLIFF, reportez-vous à [l'Annexe B: Architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). Vous pouvez également utiliser des références 4D ([voir Utilisation de références en texte statique](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
-> > In macOS, displaying help tips is not supported in pop-up type windows.
+> > > In macOS, displaying help tips is not supported in pop-up type windows.
 
 #### Grammaire JSON
 
