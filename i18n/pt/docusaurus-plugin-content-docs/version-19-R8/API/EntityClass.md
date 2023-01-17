@@ -95,7 +95,7 @@ O tipo de valor do atributo depende do tipo do atributo [atributo](DataClassAttr
 
 #### Descrição
 
-A função `.clone()` <!-- REF #EntityClass.clone().Summary -->cria em memória uma nova entidade referenciando o mesmo registro como a entidade original<!-- END REF -->. Esta função permite que você atualize as entidades separadamente.
+A função `.isNew()` <!-- REF #EntityClass.clone().Summary -->retorna True se a entidade a qual for aplicada foi recém criada e não foi ainda salva na datastore.<!-- END REF -->. .
 > Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando o [`. ave( )`](#save) função for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
@@ -126,7 +126,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 </details>
 
 
-<!-- REF #EntityClass.diff().Syntax -->**.diff**( *entityToCompare* : 4D. Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
+<!-- REF #EntityClass.diff().Syntax -->|<!-- END REF -->
 
 
 
@@ -361,7 +361,7 @@ O objecto devolvido por `.drop( )` contém as seguintes propriedades:
 |               |                           |                        | ***Disponível apenas em caso de erro de bloqueio pessimista:***                                                         |
 | LockKindText  |                           | text                   | "Bloqueado pelo registro"                                                                                               |
 | lockInfo      |                           | object                 | Informações sobre a origem do bloqueio                                                                                  |
-|               | task_id                   | number                 | Process ID                                                                                                              |
+|               | task_id                   | number                 | ID do processo                                                                                                          |
 |               | user_name                 | text                   | Nome de usuário de sessão na máquina                                                                                    |
 |               | user4d_alias              | text                   | Pseudônimo do usuário se definido por `SET USER ALIAS`, caso contrário, nome de usuário no diretório 4D                 |
 |               | host_name                 | text                   | Nome da máquina                                                                                                         |
@@ -447,8 +447,7 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 #### Descrição
 
-A função `.first()` <!-- REF #EntityClass.first().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.
-<!-- END REF -->.
+A função `.first()` <!-- REF #EntityClass.first().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
 
 Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.getSelection( )](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -901,8 +900,7 @@ A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> retorna True se 
 
 #### Descrição
 
-A função `.last()` <!-- REF #EntityClass.last().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.
-<!-- END REF -->.
+A função `.last()` <!-- REF #EntityClass.last().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
 
 Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.getSelection( )](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -1060,8 +1058,7 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 #### Descrição
 
-A função `.next()` <!-- REF #EntityClass.next().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.
-<!-- END REF -->.
+A função `.next()` <!-- REF #EntityClass.next().Summary -->retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -1104,8 +1101,7 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 #### Descrição
 
-A função `.previous()` <!-- REF #EntityClass.previous().Summary --> retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.
-<!-- END REF -->.
+A função `.previous()` <!-- REF #EntityClass.previous().Summary --> retorna uma referência à entidade na primeira posição da seleção de entidade a qual a entidade pertence.<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -1163,7 +1159,7 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 | Constante                                 | Value | Comentário                                                                                                                                                                                                        |
 | ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>***statusText associado***: "a entidade já não existe" |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>***statusText associado***: "a entidade já não existe" |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>***Texto status associado***: "Outro erro"                                           |
 
 #### Exemplo
@@ -1212,7 +1208,7 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 #### Descrição
 
-A função `.save()` <!-- REF #EntityClass.save().Summary -->salva as mudanças feitas na entidade<!-- END REF --> na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
+A função `.save()` <!-- REF #EntityClass.save().Summary -->salva as mudanças feitas na entidade<!-- END REF --> na tabela relacionada para a dataClass na tabela relacionada para a dataClass Deve salvar este método depois de criar ou modificar uma entidade se quiser salvar as mudanças feitas nela.
 
 A operação de salvar é realizada só se ao menos um atributo de entidade foi "tocado" (ver [`.touched()`](#touched) e funções [`.touchedAttributes()`](#touchedattributes) ). Senão a função não faz nada (o trigger não é ativado)
 
@@ -1238,7 +1234,7 @@ O objeto retornado por `.save()` contém as propriedades a seguir:
 |              |                    |                        | ***Disponível só no caso de erro de tranca pessimista***:                                                                |
 | lockKindText |                    | text                   | "Bloqueado pelo registro"                                                                                                |
 | lockInfo     |                    | object                 | Informações sobre a origem do bloqueio                                                                                   |
-|              | task_id            | number                 | Process ID                                                                                                               |
+|              | task_id            | number                 | ID do processo                                                                                                           |
 |              | user_name          | text                   | Nome de usuário de sessão na máquina                                                                                     |
 |              | user4d_alias       | text                   | Pseudônimo do usuário se definido por `SET USER ALIAS`, caso contrário, nome de usuário no diretório 4D                  |
 |              | host_name          | text                   | Nome da máquina                                                                                                          |
@@ -1257,7 +1253,7 @@ Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` d
 | Constante                                 | Value | Comentário                                                                                                                                                                                                                                                        |
 | ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status automerge failed`              | 6     | (Só se utiliza a opção `dk auto merge`) A opção de fusão automática falhou ao salvar a entidade.**StatusText associado**: "Fusão automática falhou"                                                                                                               |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                    |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br/><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br/>**statusText asociado**: "A entidade já não existe"                                                    |
 | `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista. **Associated statusText**: "Já bloqueado"                                                                                                                                                                   |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                        |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br/>**Associated statusText**: "Stamp has changed" |
