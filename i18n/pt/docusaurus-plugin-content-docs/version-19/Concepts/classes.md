@@ -264,6 +264,7 @@ $area:=$rect.getArea() //5000
 // Class: MyClass Class Constructor({$parameterName : type; ...})
 // code
 // code
+// code
 ```
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
@@ -300,7 +301,7 @@ The `Class extends` keyword is used in class declaration to create a user class 
 
 Class extension must respect the following rules:
 
-- A user class cannot extend a built-in class (except 4D.Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
+- A user class cannot extend a built-in class (except 4D. Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
 - A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
@@ -316,12 +317,7 @@ This example creates a class called `Square` from a class called `Polygon`.
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm 
-
-Class extends Polygon
-
-
-Class constructor ($side : Integer)
+//path: Classes/Square.4dm Class extends Polygon Class constructor ($side : Integer)
 
  // It calls the parent class's constructor with lengths
  // provided for the Polygon's width and height
@@ -383,9 +379,13 @@ This example illustrates the use of `Super` in a class constructor. The command 
 
 // Function definition
 
-Function getArea()
- var $0 : Integer
- $0:=(This.height)*(This.width)
+// Class: Rectangle Class constructor($width : Integer; $height : Integer)
+ This.name:="Rectangle"
+ This.height:=$height
+ This.width:=$width Function sayName()
+ ALERT("Hi, I am a "+This.name+".")
+
+// Function definition
 ```
 
 ```4d
