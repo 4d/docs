@@ -32,7 +32,7 @@ Undefined is not actually a data type. It denotes a variable that has not yet be
 |  |Null # Undefined |Boolean|a.nullProp # b.undefinedProp |False|
 |  |Null # *scalar value* (see below) |Boolean|a.nullProp # 42 |True|
 
-*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is either undefined nor null. Other types (Pointer, Picture, Object, Collection, Variant) are undefined or null when they are declared but not assigned. Ex:
+*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection, Variant) have undefined or null default value. Ex:
 
 ```4d
 var $object : Object
