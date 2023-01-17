@@ -11,7 +11,7 @@ As regras abaixo são aplicadas à todas as estruturas de 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Pontos (".") Pontos (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
 - Não são permitidos vírgulas, barras inclinadas, aspas nem dois pontos.
 - Os caracteres reservados para seu uso como oepradores como * e + não estão permitidos.
 - Não use nomes reservados, ou seja, nomes de comando 4D (`Date`, `Time`, etc), palavras chaves (If, For, etc.), e constantes.
@@ -20,7 +20,7 @@ As regras abaixo são aplicadas à todas as estruturas de 4D.
 ### Regras adicionais para as propriedades dos objetos e os nomes ORDA
 
 - Os caracteres de espaço não estão permitidos.
-- Pontos (".") Periods (".") and brackets ("[ ]") are not allowed.
+- Pontos (".") Pontos (".") Periods (".") and brackets ("[ ]") are not allowed.
 - Os nomes são sensíveis às maiúsculas e minúsculas.
 
 ### Regras adicionais para SQL
@@ -180,7 +180,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 ## Atributos de objetos
 
-Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".")  entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
+Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".")  entre o nome do objeto (ou do atributo) e o nome do atributo. entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
 
 Exemplos:
 
@@ -338,10 +338,8 @@ Para designar uma seleção nomeada se utiliza uma expressão de tipo string que
 Exemplos:
 
 ```4d
- //Seleção nomeada interprocesso
-USE NAMED SELECTION([Customers];"<>ByZipcode")
- //Seleção nomeada processo
-USE NAMED SELECTION([Customers];"<>ByZipcode")
+ //Seleção nomeada interprocesso USE NAMED SELECTION([Customers];"<>ByZipcode")
+ //Seleção nomeada processo USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
 ## Processos
