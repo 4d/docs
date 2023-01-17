@@ -208,7 +208,7 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descripción
 
-La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->The `.getContent()` function<!-- END REF -->. Puede utilizar esta función con los objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](#mail-convert-from-mime).
+La función `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->La función `.getContent()`<!-- END REF -->. Puede utilizar esta función con los objetos adjuntos recibidos por el comando [`MAIL Convert from MIME`](#mail-convert-from-mime).
 
 ## .name
 
@@ -242,7 +242,7 @@ La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la r
 
 #### Descripción
 
-La propiedad `.platformPath` devuelve <!-- REF #MailAttachmentClass.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #MailAttachmentClass.platformPath.Summary -->La propiedad `.platformPath` devuelve<!-- END REF -->.
 
 ## .type
 
