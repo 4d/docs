@@ -147,6 +147,10 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
        ALERT("Error: "+$status.statusText)
     End if
  End if
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
@@ -360,6 +364,7 @@ The method returns **Null** if:
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
  End if
 ```
