@@ -59,6 +59,9 @@ Function add($x : Integer)
     $0:=$x+$2
 ```
 
+### Inicialização
+
+When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
 
 
 
@@ -173,7 +176,7 @@ No código método, o valor de cada parâmetro é automaticamente copiado em var
 O valor a devolver é posto na variável local `$0`.
 
 
-Por exemplo, a função abaixo, chamada `Uppercase4`, devolve uma string com os quatro  primeiros caracteres da string que foram passados em maiúsculas:
+Abaixo está um exemplo que utiliza o método Uppercase4:
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
@@ -209,11 +212,11 @@ As expressões de tabelas ou arrays só podem ser passadas [como referência uti
 
 ## Indireção dos parâmetros (${N})
 
-Métodos de projeto 4D aceita um número de variáveis de parâmetros. Pode abordar esses parâmetros com um `For...End for` loop, o comando [`parâmetros de contagem`](https://doc.4d.com/4dv19/help/command/en/page259.html) e o parâmetro **sintaxe de indireção**. Dentro do método, um endereço de indireção é formatado `${N}`, onde `N` é uma expressão numérica. `${N}` se denomina un **parâmetro genérico**.
+Métodos de projeto 4D aceita um número de variáveis de parâmetros. Pode abordar esses parâmetros com um `For... End for` loop, o comando [`parâmetros de contagem`](https://doc.4d.com/4dv19/help/command/en/page259.html) e o parâmetro **sintaxe de indireção**. Dentro do método, um endereço de indireção é formatado `${N}`, onde `N` é uma expressão numérica. `${N}` se denomina un **parâmetro genérico**.
 
 
 
-### Usar parâmetros genéricos
+### Declaração de parâmetros genéricos
 
 Por exemplo, considere uma função que some os valores e devolva a soma formatada segundo um formato que se passa como parâmetro. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
@@ -247,13 +250,13 @@ End for
 Este método pode sr chamado:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //extra parameters are passed
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //extra parameters are passed
 ```
 
 > A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
 
 
-### Declaração de parâmetros genéricos
+### Usar parâmetros genéricos
 
 Da mesma forma que com outras variáveis locais, não é obrigatório declarar os parâmetros genéricos mediante uma diretiva de compilador. Entretanto é recomendado que se evite qualquer ambiguidade. Os parâmetros genéricos não declarados obtêm automaticamente o tipo [Variante](dt_variant.md) .
 
@@ -265,7 +268,7 @@ Para declarar parâmetros genéricos, se utiliza uma diretriz do compilador à q
 
 > A declaração de parámetros genéricos só pode ser feita com [a sintaxe sequencial](#sequential-parameters).
 
-Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo texto $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 e $3 podem ser de qualquer tipo de dados.
+Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo texto $1, $2 e $3 podem ser de qualquer tipo de dados. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 e $3 podem ser de qualquer tipo de dados.
 
 > O número na declaração tem que ser uma constante e não uma variável.
 
@@ -411,6 +414,7 @@ Isso oferece uma poderosa maneira de definir [parâmetros opcionais](#optional-p
 No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e produzirão erross se faltarão. Para evitar isso, pode escrever:
 
 ```4d
+
   //ChangeAge
  var $1; $para : Object
  $para:=$1  
@@ -419,7 +423,7 @@ No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e
 ```
 Ambos parâmetros são opcionais: se não forem preenchidos, o resultado será "é 10 anos de idade", mas nenhum erro será gerado.
 
-Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva:
+Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplicações é muito simples e seguro. Imagine que depois perceba de que adicionar 10 anos não funciona sempre. You need another parameter to set how many years to add. You write: Escreva: Escreva:
 
 ```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
@@ -481,7 +485,7 @@ APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;
 
 ## Valores ou referências
 
-Quando passar um parâmetro, 4D sempre avalia a expressão do parâmetro no contexto do método que chama e define o **valor resultante** nas variáveis locais $1, $... da subrotina ou função classe As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Por exemplo:
+Quando passar um parâmetro, 4D sempre avalia a expressão do parâmetro no contexto do método que chama e define o **valor resultante** nas variáveis locais $1, $... da subrotina ou função classe As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Por exemplo:
 
 ```4d
     //Here is some code from the method MY_METHOD DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams" ALERT([People]Name)
