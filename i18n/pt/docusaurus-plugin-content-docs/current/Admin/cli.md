@@ -75,7 +75,7 @@ Lança a aplicação com um arquivo pacote em macOS:
 yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
 
-Lançar a aplicação com um arquivo de projeto:
+Lançar a aplicação com um arquivo de projeto e um arquivo de dados:
 
 *   macOS:
 
@@ -94,7 +94,7 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 
 
 
-Lançar a aplicação com um arquivo de projeto e um arquivo de dados:
+Lançar a aplicação com um arquivo de projeto:
 
 *   macOS:
 
