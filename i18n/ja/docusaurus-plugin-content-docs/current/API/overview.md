@@ -7,7 +7,7 @@ title: クラス API の概要
 
 - 関数は、インスタンスに対し、() 演算子を使って呼び出します。 例: `collection.sort()`。
 
-- プロパティにアクセスする場合は、カッコを使いません。例: `file.creationTime`。 また、\[] シンタックスも使用可能です。例: `file["creationTime"]`。
+- プロパティにアクセスする場合は、カッコを使いません。 例: `file.creationTime`。 また、\[] シンタックスも使用可能です。 例: `file["creationTime"]`。
 
 ## 表記規則
 
