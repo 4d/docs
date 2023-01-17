@@ -3,7 +3,7 @@ id: installation
 title: Instalación y activación
 ---
 
-¡Bienvenido a 4D! ¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D. Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.
+¡Bienvenido a 4D! ¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D. ¡Bienvenido a 4D! ¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D.
 
 ## Configuración requerida
 
