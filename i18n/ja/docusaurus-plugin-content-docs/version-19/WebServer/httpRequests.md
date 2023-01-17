@@ -84,7 +84,7 @@ title: HTTPリクエストの処理
 ### $3 - Webクライアントの IPアドレス
 
 $3 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
-> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
+> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。 たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
 ### $4 - サーバー IPアドレス
 
@@ -97,7 +97,7 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 ## /4DACTION
 
-***/4DACTION/****MethodName*<br/> ***/4DACTION/****MethodName/Param*
+*/4DACTION/****MethodName*<br/> ***/4DACTION/****MethodName/Param*
 
 | 引数         | タイプ  |    | 説明                    |
 | ---------- | ---- |:--:| --------------------- |
@@ -108,7 +108,7 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 この URL を使用して、任意の *Param* テキスト引数とともに *MethodName* に指定した 4Dプロジェクトメソッドを呼び出すことができます。 このメソッドは引数を *$1* に受け取ります。
 
-- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
+- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。 メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
 - `/4DACTION/MyMethod/Param` リクエストを受け取ると、4D は `On Web Authentication` データベースメソッド (あれば) を呼び出します。
 
 `4DACTION/` は、スタティックな Webページの URL に割り当てることもできます:
@@ -147,7 +147,7 @@ WEB SEND BLOB($BLOB;"image/png")
 
 ### 4DACTION を使用してフォームをポスト
 
-4D Webサーバーでは、ポストされたフォームを使用することもできます。これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
+4D Webサーバーでは、ポストされたフォームを使用することもできます。 これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
 
 フォームは 2つのメソッドを使用してサブミットできます (4D では両方のタイプを使用できます):
 
@@ -210,7 +210,8 @@ OK="Search"
   // このページには変数 vLIST の参照が含まれています
   // たとえば <!--4DHTML vLIST--> など
   //...
-End if
+")
+ End if
 ```
 
 ## HTTPリクエストから値を取得する
@@ -240,30 +241,22 @@ if(formObj.vtUserName.value!=""){
 return true
 } else {
 alert("Enter your name, then try again.")
-return false
+<html>
+<head>
+  <title>Welcome</title>
+  <script language="JavaScript"><!--
+function GetBrowserInformation(formObj){
+formObj.vtNav_appName.value = navigator.appName
+formObj.vtNav_appVersion.value = navigator.appVersion
+formObj.vtNav_appCodeName.value = navigator.appCodeName
+formObj.vtNav_userAgent.value = navigator.userAgent
+return true
 }
-}
-//--></script>
-</head>
-<body>
-<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
- name="frmWelcome"
- onsubmit="return GetBrowserInformation(frmWelcome)">
-  <h1>Welcome to Spiders United</h1>
-  <b>Please enter your name:</b>
-  <input name="vtUserName" value="" size="30" type="text"></p>
-
-<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
-<input name="vsbRegister" value="Register" type="submit">
-<input name="vsbInformation" value="Information" type="submit"></p>
-
-<input name="vtNav_appName" value="" type="hidden"> 
-<input name="vtNav_appVersion" value="" type="hidden"> 
-<input name="vtNav_appCodeName" value="" type="hidden">
-<input name="vtNav_userAgent" value="" type="hidden"></p>
-</form>
-</body>
-</html>
+function LogOn(formObj){
+if(formObj.vtUserName.value!=""){
+return true
+} else {
+alert("Enter your name, then try again.")
 ```
 
 4D が Webブラウザーにページを送信すると、以下のように表示されます:
@@ -322,7 +315,7 @@ HTMLではすべてのオブジェクトがテキストオブジェクトであ�
 
 4D Webサーバーには、リクエストの処理をカスタマイズするための、低レベル Webコマンドがいくつか用意されています。
 
-- `WEB GET HTTP BODY` コマンドは、ボディをそのままの状態でテキストとして返します。これを必要に応じて解析することができます。
+- `WEB GET HTTP BODY` コマンドは、ボディをそのままの状態でテキストとして返します。
 - `WEB GET HTTP HEADER` コマンドは、リクエストのヘッダーを返します。 カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
 - `WEB GET BODY PART` と `WEB Get body part count` コマンドは、マルチパートリクエストのボディパートを解析して、テキスト値を取得するだけでなく、ポストされたファイルもBLOBに取得します。
 
