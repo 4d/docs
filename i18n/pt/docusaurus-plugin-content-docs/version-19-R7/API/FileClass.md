@@ -67,7 +67,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->$tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs") If($tempo.exists) $tempo.delete() ALERT("User preference file deleted.") End if End if<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -141,11 +141,11 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+**4D. File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. File<br/>**4D. File.new** ( *fileConstant* : Integer { ; * } ) : 4D. File<!-- END REF -->
 
 #### Descrição
 
-A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
+A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D. File.new()`.
 
@@ -453,21 +453,21 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | v19 R7 | Adicionado |
 </details>
 
-<!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
+<!--REF #FileClass.open().Syntax -->$tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs") If($tempo.exists) $tempo.delete() ALERT("User preference file deleted.") End if End if<!-- END REF -->
 
 
 <!--REF #FileClass.open().Params -->
-| Parâmetros | Tipo                             |    | Descrição                                                         |
-| ---------- | -------------------------------- | -- | ----------------------------------------------------------------- |
-| mode       | Text                             | -> | Modo de abertura: "ler", "escrever", "anexar".                    |
-| options    | Objeto                           | -> | Opções de abertura                                                |
-| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto de manipulação de arquivos|<!-- END REF -->
+| Parâmetros | Tipo                              |    | Descrição                                                         |
+| ---------- | --------------------------------- | -- | ----------------------------------------------------------------- |
+| mode       | Text                              | -> | Modo de abertura: "ler", "escrever", "anexar".                    |
+| options    | Objeto                            | -> | Opções de abertura                                                |
+| Resultados | [4D. FileHandle](FileHandleClass) | <- | Novo objeto de manipulação de arquivos|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.open()` <!-- REF #FileClass.open().Summary -->cria e devolve um novo objeto [4D.FileHandle](FileHandleClass) no arquivo, no modo especificado ** ou com as opções especificadas **<!-- END REF -->. Pode utilizar funções e propriedades da classe [4D.FileHandle](FileHandleClass) para escrever, ler, ou anexar conteúdo ao arquivo.
+A função `.open()` <!-- REF #FileClass.open().Summary -->cria e devolve um novo objeto [4D. FileHandle](FileHandleClass) no arquivo, no modo especificado ** ou com as opções especificadas **<!-- END REF -->. Pode utilizar funções e propriedades da classe [4D. FileHandle](FileHandleClass) para escrever, ler, ou anexar conteúdo ao arquivo.
 
 Se utilizar o parâmetro *modo* (texto), passe o modo de abertura para a manipulação do arquivo:
 
@@ -504,8 +504,8 @@ Os documentos `.breakModeRead` e `.breakModeWrite` indicam o processamento a apl
 Pretende criar um cabo de arquivo para a leitura do arquivo "ReadMe.txt":
 
 ```4d
-var $f : 4D.File
-var $fhandle : 4D.FileHandle
+var $f : 4D. File
+var $fhandle : 4D. FileHandle
 
 $f:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
 $fhandle:=$f.open("read")
@@ -531,7 +531,7 @@ $fhandle:=$f.open("read")
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. File<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->|<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
@@ -588,7 +588,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. The function must be used with an existing .exe, .dll or .plist file.
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente.
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
@@ -670,7 +670,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descrição
 
-A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB <!-- REF #FileClass.setContent().Summary -->A função `.setContent()`<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 
