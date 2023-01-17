@@ -60,7 +60,7 @@ Devuelve todos los datos de una clase de datos específica.
 
 **Resultado**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -135,7 +135,7 @@ Devuelve todos los datos de una clase de datos específica.
 .....//more entities here 
     ]
 }
-````
+```
 
 
 ## {dataClass}({key})
@@ -164,7 +164,7 @@ La siguiente petición devuelve todos los datos públicos de la clase de datos C
 
 **Resultado**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -183,7 +183,7 @@ La siguiente petición devuelve todos los datos públicos de la clase de datos C
         }
     }
 }
-````
+```
 
 
 
