@@ -32,7 +32,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 </details>
 
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *file* : 4D. File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D. ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *blob* : 4D. Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
@@ -40,7 +40,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
 | file        | 4D. File           | -> | arquivo anexo                                                         |
 | zipFile     | 4D. ZipFile        | -> | Arquivo zip                                                           |
-| blob        | 4D.Blob            | -> | Blob contendo o anexo                                                 |
+| blob        | 4D. Blob           | -> | Blob contendo o anexo                                                 |
 | path        | Text               | -> | Rota do arquivo anexo                                                 |
 | name        | Text               | -> | Nome + extensão usado pelo cliente email para designar o anexo        |
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
@@ -171,7 +171,7 @@ $transporter.send($email)
 </details>
 
 
-<!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #4D.MailAttachment.new().Syntax -->**4D. MailAttachment.new**( *file* : 4D. File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**4D. MailAttachment.new**( *zipFile* : 4D. ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**4D. MailAttachment.new**( *blob* : 4D. Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**4D. MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
@@ -179,7 +179,7 @@ $transporter.send($email)
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
 | file        | 4D. File           | -> | arquivo anexo                                                         |
 | zipFile     | 4D. ZipFile        | -> | Arquivo zip                                                           |
-| blob        | 4D.Blob            | -> | Blob contendo o anexo                                                 |
+| blob        | 4D. Blob           | -> | Blob contendo o anexo                                                 |
 | path        | Text               | -> | Rota do arquivo anexo                                                 |
 | name        | Text               | -> | Nome + extensão usado pelo cliente email para designar o anexo        |
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
@@ -190,7 +190,7 @@ $transporter.send($email)
 
 #### Descrição
 
-A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D.MailAttachment`<!-- END REF -->. Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
+A função `4D. MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D. MailAttachment`<!-- END REF -->. . Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
 
 
 ## .cid
@@ -226,14 +226,14 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parâmetros | Tipo    |    | Descrição                                    |
-| ---------- | ------- |:--:| -------------------------------------------- |
-| Resultados | 4D.Blob | <- | Conteúdo do anexo|<!-- END REF --> |
+| Parâmetros | Tipo     |    | Descrição                                    |
+| ---------- | -------- |:--:| -------------------------------------------- |
+| Resultados | 4D. Blob | <- | Conteúdo do anexo|<!-- END REF --> |
 
 
 #### Descrição
 
-A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devolve o conteúdo do objecto anexo num objecto `4D.Blob`<!-- END REF -->. Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
+A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devolve o conteúdo do objecto anexo num objecto `4D. Blob`<!-- END REF -->. Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 
 
@@ -273,7 +273,7 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->o ca
 
 #### Descrição
 
-A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->o caminho do arquivo anexo expresso com a sintaxe da plataforma actual<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->A propriedade `.platformPath` devolve<!-- END REF -->.
 
 
 ## .type
