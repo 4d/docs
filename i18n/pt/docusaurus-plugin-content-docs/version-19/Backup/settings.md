@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Parâmetros da cópia de segurança
+title: Backups periódicos
 ---
 
 Os parâmetros da cópia de segurança são definidas através de três páginas na caixa de diálogo Propriedades. Pode estabelecer:
