@@ -285,6 +285,7 @@ Le <!-- REF #WebServerClass.HSTSEnabled.Summary -->statut du HTTP Strict Transpo
 
 ## .HSTSMaxAge
 
+
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
@@ -477,7 +478,7 @@ Le <!-- REF #WebServerClass.logRecording.Summary -->mode d'enregistrement du log
 
 Le <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->nombre maximal de process Web simultanés pris en charge par le serveur Web<!-- END REF -->. Lorsque ce nombre (moins un) est atteint, 4D ne crée aucun autre process et retourne le statut HTTP 503 - Service Unavailable to all new requests.
 
-Valeurs possibles : 500000 - 2147483648
+Valeurs possibles : 500000 - 2147483647
 
 Par défaut = 80
 
@@ -492,7 +493,7 @@ Par défaut = 80
 
 Contient le <!-- REF #WebServerClass.maxRequestSize.Summary -->taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur web est autorisé à traiter<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
 
-Valeurs possibles : 500000 - 2147483647
+Valeurs possibles : 500000 - 2147483648
 
 <!-- END REF -->
 
@@ -563,7 +564,7 @@ Le <!-- REF #WebServerClass.openSSLVersion.Summary -->version de la bibliothèqu
 
 *Propriété en lecture seulement.*
 
-Le <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité de PFS sur le serveur<!-- END REF -->.
+Le <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->La disponibilité de PFS sur le serveur<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -738,11 +739,10 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 | v18 R3  | Ajout         |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Paramètres | Type |  | Description                                            |
 | ---------- | ---- |  | ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
