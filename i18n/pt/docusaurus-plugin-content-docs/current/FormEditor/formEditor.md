@@ -105,7 +105,7 @@ You can display and modify form and object properties using the Property List. I
 
 To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
 
-#### Navigation shortcuts
+#### Shortcuts
 
 You can navigate in the Property List using the following shortcuts:
 
@@ -115,6 +115,8 @@ You can navigate in the Property List using the following shortcuts:
 - **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
 - **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
 - **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
+
 
 ## Manipulating Form Objects
 
@@ -151,7 +153,7 @@ To select an object using the toolbar:
 To select an object using the Property List:
 
 1. Choose the object’s name from the Object List drop-down list located at the top of the Property List. Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. To deselect an object, click outside the object’s boundary or **Shift+click** the object.
-> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> > > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selecting multiple objects
 
@@ -578,6 +580,7 @@ Here are a few important things to know before you start working with views:
 ### Managing views
 
 #### Creating views
+
 
 Any object created in a form is placed in the first view ("View 1") of the form. The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (see [Renaming views](#renaming-views)), however it remains the default view.
 
