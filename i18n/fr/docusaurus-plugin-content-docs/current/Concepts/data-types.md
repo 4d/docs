@@ -33,7 +33,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 ## Valeurs par défaut
 
-Au moment de leur typage via une directive de compilation, les variables reçoivent une valeur par défaut, qu'elles conserveront au cours de la session tant qu'elles n'auront pas été affectées.
+When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned.
 
 La valeur par défaut dépend du type de variable :
 
