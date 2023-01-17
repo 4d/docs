@@ -67,7 +67,7 @@ Form.myDrop.currentValue //"oranges"
 Form.myDrop.index //3
 ```
 
-### Utiliser un tableau
+### Utiliser une énumération
 
 Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. A drop-down list can display an array as a list of values when you click on it.
 
