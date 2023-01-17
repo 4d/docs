@@ -18,7 +18,7 @@ Cette option permet de configurer l’affichage proposé par défaut par 4D au d
 
 * **Dialogue d’ouverture du projet distant** : 4D affiche la boîte de dialogue standard de connexion avec 4D Server, permettant de désigner une base de données publiée sur le réseau.
 * **Dialogue Assistant de bienvenue** (réglage d'usine) : 4D affiche la boîte de dialogue de l'Assistant de bienvenue.
-> > **4D Server**: The 4D Server application ignores this option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
+> > > **4D Server**: The 4D Server application ignores this option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
 
 ### Création de formulaire automatique
 
@@ -110,5 +110,5 @@ Accès URL à la documentation en ligne de la version sur 4D Doc Center. 4D cré
 
 Cette option (cochée par défaut) définit là où 4D recherchera la page de documentation qui a été appelée via l'Explorateur ou la touche F1.
 
-* Lorsqu'elle est cochée, 4D recherche d'abord la page dans le dossier local. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. If it is found, 4D displays the page in the current browser. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
+* Lorsqu'elle est cochée, 4D recherche d'abord la page dans le dossier local. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
 * Lorsqu'elle n'est pas cochée, 4D recherche la page souhaitée directement dans la documentation en ligne du site Web et l'affiche dans le navigateur en cours. Si elle n'est pas trouvée, 4D affiche un message d'erreur dans le navigateur.
