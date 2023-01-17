@@ -27,9 +27,9 @@ Diese Seite gibt einen Überblick über die Tabellen in Ihrer Anwendung:
 Die Seite listet alle Tabellen der Anwendung - auch die ausgeblendeten - mit den dazugehörigen Merkmalen:
 
 - **ID**: Interne Nummer der Tabelle.
-- **Tabellen**: Name der Tabelle Namen von gelöschten Tabellen erscheinen in Klammern (wenn sie noch im Papierkorb sind).
+- **Tabellen**: Name der Tabelle Namen von gelöschten Tabellen erscheinen in Klammern (wenn sie noch im Papierkorb sind). Namen von gelöschten Tabellen erscheinen in Klammern (wenn sie noch im Papierkorb sind).
 - **Datensätze**: Gesamtanzahl der Datensätze in der Tabelle. Ist ein Datensatz beschädigt oder nicht lesbar, erscheint *Error* anstelle der Zahl. Dann können Sie abwägen, ob Sie die Tools zum Prüfen und Reparieren einsetzen.
-- **Felder**: Anzahl der Felder in der Tabelle Ausgeblendete Felder werden mitgezählt, gelöschte Felder dagegen nicht.
+- **Felder**: Anzahl der Felder in der Tabelle Ausgeblendete Felder werden mitgezählt, gelöschte Felder dagegen nicht. Ausgeblendete Felder werden mitgezählt, gelöschte Felder dagegen nicht.
 - **Indizes**: Anzahl der verschiedenen Indizes in der Tabelle
 - **Verschlüsselbar**: Ist dieses Attribut aktiv, wird es für die Tabelle auf der Strukturebene ausgewählt (siehe unter Abschnitt **Verschlüsselbar** im Handbuch 4D Designmodus).
 - **Verschlüsselt**: Ist dieses Attribut aktiv, werden die Datensätze der Tabelle in der Datendatei verschlüsselt. *Hinweis:** Bei Inkonsistenz zwischen der Option Verschlüsselbar und Verschlüsselt müssen Sie den Verschlüsselungsstatus der Datendatei auf der Seite **Verschlüsseln* des MSC prüfen.
