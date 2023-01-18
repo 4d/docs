@@ -5,7 +5,7 @@ title: Restore
 
 4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:
 
-- The unexpected stoppage of a database while in use. This incident can occur because of a power outage, system element failure, etc. This incident can occur because of a power outage, system element failure, etc. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
+- The unexpected stoppage of a database while in use. This incident can occur because of a power outage, system element failure, etc. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
   - If the cache was empty, the database opens normally. Any changes made in the database were recorded. This case does not require any particular operation.
   - If the cache contains operations, the data file is intact but it requires integrating the current log file.
   - If the cache was in the process of being written, the data file is probably damaged. The last backup must be restored and the current log file must be integrated.
