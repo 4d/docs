@@ -28,7 +28,7 @@ Webエリアで実行される JavaScripe コードから 4Dメソッドを呼�
 ---
 ## 進捗状況変数
 
-倍長整数型変数の名前です。 この変数には 0 から 100 までの値が格納され、この数値は Webエリアに表示されるページのロードされたパーセンテージを表します。 手動で変更することはできません。
+倍長整数型変数の名前です。 この変数には 0 から 100 までの値が格納され、この数値は Webエリアに表示されるページのロードされたパーセンテージを表します。 この変数は 4D が自動で更新します。手動で変更することはできません。
 
 #### JSON 文法
 
@@ -57,8 +57,8 @@ Webエリアで実行される JavaScripe コードから 4Dメソッドを呼�
 
 URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドと同じ効果をもたらします。 しかしながら、以下の違いに注意してください。
 - ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドは両方の記法を受け付けます。
-- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドを実行しても効果はありません。
-- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加します。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドはこれを付加しません。
+- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドはこの場合にエラーを生成します。
+- URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは "http://" を付加します。[WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドはこれを付加しません。
 - Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドを実行しても効果はありません。一方、URL変数に値を代入すると、カレントURL が更新されます。
 
 #### JSON 文法
@@ -86,7 +86,7 @@ URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-450484
 
 ただし、Blinkエンジンには以下のような制約があることに注意してください:
     *   [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.ja.html): このコマンドを使用する場合、([WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.ja.html) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
-    *   Java applet およびプラグインの実行は常に無効化されています。 これらの設定は Blink にて変更できません。 [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.ja.html) および [WA GET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-GET-PREFERENCE.301-5232945.ja.html) コマンドでの以下のセレクターは無視されます:
+    *   Blink の Webエリアにおいては、JavaScript の実行は常に許可されており、無効化することはできません。Java applet およびプラグインの実行は常に無効化されています。 これらの設定は Blink にて変更できません。 [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.ja.html) および [WA GET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-GET-PREFERENCE.301-5232945.ja.html) コマンドでの以下のセレクターは無視されます:
         *   `WA enable Java applets`
         *   `WA enable JavaScript`
         *   `WA enable plugins`
