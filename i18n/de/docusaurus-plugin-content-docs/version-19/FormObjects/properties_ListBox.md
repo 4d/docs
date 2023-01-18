@@ -55,7 +55,7 @@ Sets the action to be performed when a user double-clicks on a row in the list b
 * **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
 * **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
 * **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> > > Double-clicking an empty row is ignored in list boxes.
+> > Double-clicking an empty row is ignored in list boxes.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
 
@@ -101,7 +101,7 @@ Locked columns and static columns are two separate and independent functionaliti
 
 * Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
 * Static columns cannot be moved by drag and drop within the list box.
-> > > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+> > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
 
 These properties interact as follows:
 
