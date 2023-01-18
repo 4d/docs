@@ -163,17 +163,17 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 4D View Pro では IS0 8601 の日付と時間パターンを示す以下の定数を提供しています:
 
-| 定数                                        | 値                                    | 説明                                                                                                                           |
-| ----------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| `vk pattern full date time`               | "*fullDateTimePattern*"              | カレント言語設定における ISO 8601 フォーマットの完全な日付と時間。 アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy HH:mm:ss"                                     |
-| `vk pattern long date`                    | "*longDatePattern*"                  | カレント言語設定における ISO 8601 フォーマットの完全な日付。 アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy"                                                 |
-| `vk pattern long time`                    | "*longTimePattern*"                  | カレント言語設定における ISO 8601 フォーマットの時間。 アメリカ合衆国でのデフォルトパターン: "HH:mm:ss"                                                              |
-| `vk pattern month day`                    | "*monthDayPattern*"                  | カレント言語設定における ISO 8601 フォーマットの月日の日付。 アメリカ合衆国でのデフォルトパターン: "MMMM dd"                                                            |
-| `vk pattern short date`                   | "*shortDatePattern*"                 | カレント言語設定における省略形の ISO 8601 フォーマットの日付。 アメリカ合衆国でのデフォルトパターン: "MM/dd/yyyy"                                                        |
-| `vk pattern short time`                   | "*shortTimePattern*"                 | カレント言語設定における省略形の ISO 8601 フォーマットの時間。 アメリカ合衆国でのデフォルトパターン: "HH:mm"                                                             |
-| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | カレント言語設定における、並べ替え可能な ISO 8601 フォーマットの日付と時間。 アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"          |
-| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | カレント言語設定における、UTCを使用した並べ替え可能な ISO 8601 フォーマットの日付と時間。 アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
-| `vk pattern year month`                   | "*yearMonthPattern*"                 | カレント言語設定における ISO 8601 フォーマットの年月。 アメリカ合衆国でのデフォルトパターン: "yyyy MMMM"                                                             |
+| 定数                                        | 値                                    | 説明                                                                                                                          |
+| ----------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `vk pattern full date time`               | "*fullDateTimePattern*"              | カレント言語設定における ISO 8601 フォーマットの完全な日付と時間。アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy HH:mm:ss"                                     |
+| `vk pattern long date`                    | "*longDatePattern*"                  | カレント言語設定における ISO 8601 フォーマットの完全な日付。アメリカ合衆国でのデフォルトパターン: "dddd, dd MMMM yyyy"                                                 |
+| `vk pattern long time`                    | "*longTimePattern*"                  | カレント言語設定における ISO 8601 フォーマットの時間。アメリカ合衆国でのデフォルトパターン: "HH:mm:ss"                                                              |
+| `vk pattern month day`                    | "*monthDayPattern*"                  | カレント言語設定における ISO 8601 フォーマットの月日の日付。アメリカ合衆国でのデフォルトパターン: "MMMM dd"                                                            |
+| `vk pattern short date`                   | "*shortDatePattern*"                 | カレント言語設定における省略形の ISO 8601 フォーマットの日付。アメリカ合衆国でのデフォルトパターン: "MM/dd/yyyy"                                                        |
+| `vk pattern short time`                   | "*shortTimePattern*"                 | カレント言語設定における省略形の ISO 8601 フォーマットの時間。アメリカ合衆国でのデフォルトパターン: "HH:mm"                                                             |
+| `vk pattern sortable date time`           | "*sortableDateTimePattern*"          | カレント言語設定における、並べ替え可能な ISO 8601 フォーマットの日付と時間。アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"          |
+| `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | カレント言語設定における、UTCを使用した並べ替え可能な ISO 8601 フォーマットの日付と時間。アメリカ合衆国でのデフォルトパターン: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
+| `vk pattern year month`                   | "*yearMonthPattern*"                 | カレント言語設定における ISO 8601 フォーマットの年月。アメリカ合衆国でのデフォルトパターン: "yyyy MMMM"                                                             |
 
 #### 例題
 
@@ -202,10 +202,10 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | 時間 |                            |                               | (2:03:05 PM)      |
 |    | h                          | 先頭のゼロなしの時間。 0-23の値            | 2                 |
 |    | hh                         | 先頭のゼロありの時間。 00-23の値           | 02                |
-|    | m                          | 先頭のゼロなしの秒数。 0-59の値            | 3                 |
-|    | mm                         | 先頭のゼロありの秒数。 00-59の値           | 03                |
-|    | s                          | 先頭のゼロなしの分数。 0-59の値            | 5                 |
-|    | ss                         | 先頭のゼロありの分数。 00-59の値           | 05                |
+|    | m                          | 先頭のゼロなしの分数。 0-59の値            | 3                 |
+|    | mm                         | 先頭のゼロありの分数。 00-59の値           | 03                |
+|    | s                          | 先頭のゼロなしの秒数。 0-59の値            | 5                 |
+|    | ss                         | 先頭のゼロありの秒数。 00-59の値           | 05                |
 |    | \[h]                      | 経過時間の時間数                      | 14 (24 を超える表示も可能) |
 |    | \[mm]                     | 経過時間の分数                       | 843               |
 |    | \[ss]                     | 経過時間の秒数                       | 50585             |
@@ -293,9 +293,9 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | T  | 現在の時刻                      | printInfo.headerLeft:="時刻は &T です"                                      | 時刻は 16:30:36 です                                      |
 | G  | ピクチャー                      | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S  | 打ち消し線                      | printInfo.headerLeft:="&Sこれはテキストです"                                    | ~~これはテキストです~~                                        |
-| U  | 下線                         | printInfo.headerLeft:="&Uこれはテキストです"                                    | これはテキストです (下線) (下線)                                  |
-| B  | 太字                         | printInfo.headerLeft:="&Bこれはテキストです"                                    | **これはテキストです (下線)**                                   |
-| I  | イタリック                      | printInfo.headerLeft:="&Iこれはテキストです"                                    | *これはテキストです (下線)*                                     |
+| U  | 下線                         | printInfo.headerLeft:="&Uこれはテキストです"                                    | これはテキストです (下線)                                       |
+| B  | 太字                         | printInfo.headerLeft:="&Bこれはテキストです"                                    | **これはテキストです**                                        |
+| I  | イタリック                      | printInfo.headerLeft:="&Iこれはテキストです"                                    | *これはテキストです*                                          |
 | "  | フォント指定                     | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K  | 文字カラー指定                    | printInfo.headerLeft:="&KFF0000これはテキストです"                              | これはテキストです (赤字)。                                      |
 | F  | ワークブック名                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
@@ -310,8 +310,8 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | margin |        | object | 印刷マージン                              |
 |        | top    | 倍長整数   | 上部マージン、100分の1インチ単位。 デフォルト値 = 75     |
 |        | bottom | 倍長整数   | 下部マージン、100分の1インチ単位。 デフォルト値 = 75     |
-|        | left   | 倍長整数   | 右マージン、100分の1インチ単位。 デフォルト値 = 70      |
-|        | right  | 倍長整数   | 左マージン、100分の1インチ単位。 デフォルト値 = 70      |
+|        | left   | 倍長整数   | 左マージン、100分の1インチ単位。 デフォルト値 = 70      |
+|        | right  | 倍長整数   | 右マージン、100分の1インチ単位。 デフォルト値 = 70      |
 |        | header | 倍長整数   | ヘッダーのオフセット、100分の1インチ単位。 デフォルト値 = 30 |
 |        | footer | 倍長整数   | フッターのオフセット、100分の1インチ単位。 デフォルト値 = 30 |
 
@@ -332,7 +332,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | --------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | blackAndWhite   | boolean | 白黒で印刷します。 <p>デフォルト値 = false</p><p>**注**: PDF はこの属性に影響されません。 PDF のカラーはそのままです。</p>                                                                                                          |
 | centering       | 倍長整数    | 印刷ページ上でコンテンツをどのように中央揃えするかを指定します。 とりうる値: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (デフォルト), `vk print centering vertical` |
-| firstPageNumber | 倍長整数    | 最初のページに印刷するページ番号。 デフォルト値 = 1                                                                                                                                         |
+| firstPageNumber | 倍長整数    | 最初のページに印刷するページ番号。デフォルト値 = 1                                                                                                                                          |
 | pageOrder       | 倍長整数    | ページの印刷順。 とりうる値: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                    |
 | pageRange       | text    | 印刷されるページの範囲                                                                                                                                                          |
 | qualityFactor   | 倍長整数    | 印刷の品質指定 (1 - 8)。  高ければ印刷の質は高くなりますが、印刷のパフォーマンスに影響する可能性があります。<p>デフォルト値 = 2</p>                                                                                 |
@@ -346,12 +346,12 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 * カスタムサイズ - height と width 属性を使用
 * 規格サイズ - kind 属性を使用
 
-| プロパティ     |        | タイプ    | 説明                                                                               |
-| --------- | ------ | ------ | -------------------------------------------------------------------------------- |
-| paperSize |        | object | 印刷に使用する用紙の寸法 (height、width) または規格 (kind)                                         |
-|           | height | 倍長整数   | 用紙の高さ、100分の1インチ単位                                                                |
-|           | width  | 倍長整数   | 用紙の幅、100分の1インチ単位                                                                 |
-|           | kind   | text   | 用紙の規格サイズの名前 (例: A2、A4、legal、など)。 `GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" |
+| プロパティ     |        | タイプ    | 説明                                                                              |
+| --------- | ------ | ------ | ------------------------------------------------------------------------------- |
+| paperSize |        | object | 印刷に使用する用紙の寸法 (height、width) または規格 (kind)                                        |
+|           | height | 倍長整数   | 用紙の高さ、100分の1インチ単位                                                               |
+|           | width  | 倍長整数   | 用紙の幅、100分の1インチ単位                                                                |
+|           | kind   | text   | 用紙の規格サイズの名前 (例: A2、A4、legal、など)。`GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" |
 
 * `height` と `width` プロパティで用紙サイズを指定した場合、[`VP Get print info`](./method-list.md#vp-get-print-info) が返す用紙サイズ属性の `kind` プロパティ値は `custom` です。
 
@@ -376,7 +376,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 | プロパティ            | タイプ     | 説明                                                                                                                                                    |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean | 外枠の境界線を印刷します。 デフォルト値 = true                                                                                                                           |
+| showBorder       | boolean | 外枠の境界線を印刷します。デフォルト値 = true                                                                                                                            |
 | showColumnHeader | 倍長整数    | カラムヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
 | showGridLine     | boolean | 枠線を印刷します。 デフォルト値 = false                                                                                                                              |
 | showRowHeader    | 倍長整数    | 行ヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
@@ -409,7 +409,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 スタイルシートは [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) コマンドで作成され、[VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) あるいは [VP SET CELL STYLE](method-list.md#vp-set-cell-style) コマンドで適用されます。 スタイルシートは [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet) コマンドで削除できます。
 
-[VP Get stylesheet](method-list.md#vp-get-stylesheet) コマンドを使用することでスタイルシートのスタイルオブジェクトを取得できます。 また、[VP Get stylesheets](method-list.md#vp-get-stylesheets) コマンドを使用して複数のスタイルシートのスタイルオブジェクトのコレクションを取得することもできます。
+[VP Get stylesheet](method-list.md#vp-get-stylesheet) コマンドを使用することでスタイルシートのスタイルオブジェクトを取得できます。また、[VP Get stylesheets](method-list.md#vp-get-stylesheets) コマンドを使用して複数のスタイルシートのスタイルオブジェクトのコレクションを取得することもできます。
 
 ### スタイルオブジェクトプロパティ
 
