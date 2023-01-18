@@ -289,7 +289,7 @@ A `response` object is a non-sharable object. It provides the following properti
 
 #### Beschreibung
 
-The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->The `.headers` property contains<!-- END REF -->. the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)
+The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -310,7 +310,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > This function is thread-safe.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. The `.terminate()` function
+The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -332,7 +332,7 @@ The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Beschreibung
 
-The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->The `.protocol` property contains<!-- END REF -->. the `timeout` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)
+The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->the `timeout` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
