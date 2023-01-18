@@ -38,7 +38,8 @@ $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!" $fhandle:=$f.open($o)
+$stopChar:="!"
+$fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
 // 1行ずつ読み取ります
@@ -448,7 +449,7 @@ FileHandle オブジェクトは共有できません。
 
 `.writeBlob()` 関数は、 <!-- REF #FileHandleClass.writeBlob().Summary -->ファイルの現在の位置から *blob* に渡した Blob を書き込みます <!-- END REF -->。
 
-この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだ改行文字の後に更新されます。
+この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだバイトの後に更新されます。
 
 #### 参照
 
@@ -484,7 +485,7 @@ FileHandle オブジェクトは共有できません。
 
 `.writeLine()` 関数は、 <!-- REF #FileHandleClass.writeLine().Summary -->現在の位置に *lineOfText* の内容を書き込み、改行文字を挿入します<!-- END REF --> ([.writeText()](#writetext) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
-この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだバイトの後に更新されます。
+この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に書き込んだ改行文字の後に更新されます。
 
 #### 参照
 
@@ -517,7 +518,7 @@ FileHandle オブジェクトは共有できません。
 
 #### 説明
 
-`.writeText()` 関数は、 <!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 この関数は、元の改行文字をすべて置き換えます。 この関数は、元の改行文字をすべて置き換えます。
+`.writeText()` 関数は、 <!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 この関数は、元の改行文字をすべて置き換えます。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) は、次の改行文字の後に更新されます。
 
