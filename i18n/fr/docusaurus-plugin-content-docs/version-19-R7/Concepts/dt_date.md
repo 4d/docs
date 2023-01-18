@@ -37,7 +37,7 @@ Une date nulle s’écrit _!00-00-00!_.
 | Soustraction        | Date - Numérique | Date     | !2017-01-20! !2017-01-01!    | !2017-01-11! |
 | Egalité             | Date = Date      | Boolean  | !2017-01-20! = !2017-01-01!  | Vrai         |
 |                     |                  |          | !2017-01-20! !2017-01-20!    | False        |
-| Inégalité           | Date # Date      | Boolean  | !2017-01-20! !2017-01-20!    | Vrai         |
+| Inégalité           | Date # Date      | Boolean  | !2017-01-20! !2017-01-01!    | Vrai         |
 |                     |                  |          | !2017-01-20! !2017-01-20!    | False        |
 | Supérieur à         | Date > Date      | Boolean  | !2017-01-20! !2017-01-20!    | Vrai         |
 |                     |                  |          | !2017-01-20! !2017-01-20!    | False        |
