@@ -164,9 +164,6 @@ Pour une description des codes de statut SMTP, veuillez vous reporter à [cette 
  Else
     ALERT("Error # "+String($status.status)+", "+$status.statusText)
  End if
- Else
-    ALERT("Error # "+String($status.status)+", "+$status.statusText)
- End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
