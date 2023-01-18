@@ -9,7 +9,7 @@ Die Fehlerverwaltung erfüllt zwei Hauptanforderungen:
 
 - potenzielle Fehler und Bugs in Ihrem Code während der Entwicklungsphase herausfinden und beheben,
 - Unerwartete Fehler in Anwendungen im Einsatz abfangen und beseitigen; insbesondere können Sie Fehlermeldungen des Systems (Festplatte voll, fehlende Datei usw.) durch Ihre eigene Oberfläche ersetzen.
-> > > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Denn solch eine Methode kann vermeiden, dass unerwartete Dialogfenster auf dem Serverrechner erscheinen, und außerdem Fehler in einer speziellen Datei für weitere Analysen protokollieren.
+> > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Denn solch eine Methode kann vermeiden, dass unerwartete Dialogfenster auf dem Serverrechner erscheinen, und außerdem Fehler in einer speziellen Datei für weitere Analysen protokollieren.
 
 
 ## Fehler oder Status
@@ -64,7 +64,7 @@ Within the custom error method, you have access to several pieces of information
   - `Error line` (Lange Ganzzahl): Zeilennummer in der Methode, die den Fehler ausgelöst hat.
   - `Error formula` (Text): Formel des 4D Code (Rohtext), der den Fehler verursacht hat.
 
-(*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*. Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache</em>.
+(*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.</p>
 
 - Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück.
 - Der Befehl `Get call chain` gibt eine Collection von Objekten zurück, die jeden Schritt der Aufruffolge der Methode im aktuellen Prozess beschreiben.
@@ -97,8 +97,6 @@ ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
     ALERT("File not found.")
-End if
-ON ERR CALL("")
 End if
 ON ERR CALL("")
 End if
