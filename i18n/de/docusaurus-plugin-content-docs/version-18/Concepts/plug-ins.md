@@ -30,7 +30,7 @@ Ein Plug-In enthält in der Regel einen Satz Routinen für den 4D Entwickler. Es
 
 ### Wichtiger Hinweis:
 
-Ein Plug-In kann sehr einfach sein, mit nur einer Routine zum Ausführen einer kleinen Aufgabe, oder sehr komplex mit hunderten von Routinen und Bereichen. Jeder Plug-in-Entwickler sollte jedoch bedenken, dass ein Plug-in ein Musterteil von Code ist. Es ist das Plug-In, das in 4D läuft, und nicht andersherum. Als ein Code-Teil ist es der Host von 4D und keine eigenständige Anwendung. Es nutzt CPU Zeit und Speicher gemeinsam mit 4D und anderen Plug-Ins. Es sollte also ein freundlicher Code sein, der nur das enthält, was zur Ausführung notwendig ist. Beispielsweise sollte ein Plug-In in langen Schleifen `PA_Yield()` aufrufen, um dem 4D Planungssystem Zeit zu geben, es sei denn, seine Aufgabe ist sowohl für dieses als auch für die Datenbank kritisch.
+Ein Plug-In kann sehr einfach sein, mit nur einer Routine zum Ausführen einer kleinen Aufgabe, oder sehr komplex mit hunderten von Routinen und Bereichen. Es gibt virtuell kein Limit, was ein Plug-In tun kann. Jeder Plug-in-Entwickler sollte jedoch bedenken, dass ein Plug-in ein Musterteil von Code ist. Es ist das Plug-In, das in 4D läuft, und nicht andersherum. Als ein Code-Teil ist es der Host von 4D und keine eigenständige Anwendung. Es nutzt CPU Zeit und Speicher gemeinsam mit 4D und anderen Plug-Ins. Es sollte also ein freundlicher Code sein, der nur das enthält, was zur Ausführung notwendig ist. Beispielsweise sollte ein Plug-In in langen Schleifen `PA_Yield()` aufrufen, um dem 4D Planungssystem Zeit zu geben, es sei denn, seine Aufgabe ist sowohl für dieses als auch für die Datenbank kritisch.
 
 ## Ein Plug-In erstellen
 
@@ -57,4 +57,4 @@ Ihre Wahl richtet sich danach, wie Sie das Plug-In einsetzen wollen.
 
 Liegt dasselbe Plug-In an beiden Stellen, lädt 4D nur das Plug-In, welches neben der Struktur liegt. Existieren in einer Anwendung mit einkompilierter 4D Volume Desktop mehrere Instanzen desselben Plug-In, lässt sich die Anwendung nicht öffnen.
 
-4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Öffnen Sie dann Ihre Anwendung mit 4D. Then open your database with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use. Then open your database with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+4D lädt die Plug-Ins beim Starten des Programms. Beenden Sie deshalb 4D, bevor Sie diese installieren. Öffnen Sie dann Ihre Anwendung mit 4D. Then open your database with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
