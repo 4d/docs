@@ -376,9 +376,6 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
  Else
     ALERT("This database is not encrypted.")
  End if
- Else
-    ALERT("This database is not encrypted.")
- End if
 ```
 
 <!-- END REF -->
@@ -482,7 +479,7 @@ $info:=$ds.getAllRemoteContexts()
 
 #### Description
 
-La fonction `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->La fonction `.getInfo()`<!-- END REF -->. Cette fonction est utile pour l'écriture de code générique.
+La fonction `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retourne un objet qui fournit des informations sur le datastore<!-- END REF -->. Cette fonction est utile pour l'écriture de code générique.
 
 **Objet retourné**
 
