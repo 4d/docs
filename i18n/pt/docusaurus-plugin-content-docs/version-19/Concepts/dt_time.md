@@ -34,26 +34,26 @@ Uma hora nula se escreve ?00:00:00?
 | Operação             | Sintaxe        | Retorna  | Expression              | Value      |
 | -------------------- | -------------- | -------- | ----------------------- | ---------- |
 | Adição               | Hora + Hora    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtração            | Hora – Hora    | Hora     | ?02:03:04? ?02:03:04?   | ?01:01:01? |
+| Subtração            | Hora – Hora    | Hora     | ?02:03:04? ?01:02:03?   | ?01:01:01? |
 | Adição               | Hora + Número  | Número   | ?02:03:04? ?01:02:03?   | 7449       |
-| Subtração            | Hora – Número  | Número   | ?02:03:04? ?02:03:04?   | 7319       |
-| Multiplicação        | Hora * Número  | Número   | ?02:03:04? ?02:03:04?   | 14768      |
+| Subtração            | Hora – Número  | Número   | ?02:03:04? ?01:02:03?   | 7319       |
+| Multiplicação        | Hora * Número  | Número   | ?02:03:04? ?01:02:03?   | 14768      |
 | Divisão              | Hora / Número  | Número   | ?02:03:04? ?02:03:04?   | 3692       |
-| Divisão inteira      | Hora \ Número | Número   | ?02:03:04? ?02:03:04?   | 3692       |
+| Divisão inteira      | Hora \ Número | Número   | ?02:03:04? ?01:02:03?   | 3692       |
 | Módulo               | Hora % Hora    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Módulo               | Hora % Número  | Número   | ?02:03:04? ?02:03:04?   | 0          |
-| Igual                | Hora = Hora    | Booleano | ?01:02:03? ?01:02:03?   | True       |
-|                      |                |          | ?01:02:03? ?01:02:03?   | False      |
+| Módulo               | Hora % Número  | Número   | ?02:03:04? % 2          | 0          |
+| Igual                | Hora = Hora    | Booleano | ?01:02:03? >=?01:02:03? | True       |
+|                      |                |          | ?01:02:03? ?01:02:04?   | False      |
 | Desigualdade         | Hora # Hora    | Booleano | ?01:02:03? ?01:02:03?   | True       |
 |                      |                |          | ?01:02:03? ?01:02:03?   | False      |
-| Maior que            | Hora > Hora    | Booleano | ?01:02:03? >=?01:02:03? | True       |
-|                      |                |          | ?01:02:03? >=?01:02:03? | False      |
-| Menor que            | Hora < Hora    | Booleano | ?01:02:03? ?01:02:03?   | True       |
+| Maior que            | Hora > Hora    | Booleano | ?01:02:03? < ?01:02:04? | True       |
+|                      |                |          | ?01:02:03? < ?01:02:04? | False      |
+| Menor que            | Hora < Hora    | Booleano | ?01:02:03? ?01:02:04?   | True       |
 |                      |                |          | ?01:02:03? ?01:02:03?   | False      |
-| Maior ou igual a     | Hora >= Hora   | Booleano | ?01:02:03? ?01:02:03?   | True       |
-|                      |                |          | ?01:02:03? ?01:02:03?   | False      |
-| Menor que ou igual a | Hora <= Hora   | Booleano | ?01:02:03? ?01:02:03?   | True       |
-|                      |                |          | ?01:02:03? ?01:02:03?   | False      |
+| Maior ou igual a     | Hora >= Hora   | Booleano | ?01:02:03? >=?01:02:03? | True       |
+|                      |                |          | ?01:02:03? >=?01:02:04? | False      |
+| Menor que ou igual a | Hora <= Hora   | Booleano | ?01:02:03? <=?01:02:03? | True       |
+|                      |                |          | ?01:02:03? <=?01:02:03? | False      |
 
 ### Exemplo 1
 
