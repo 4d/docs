@@ -1,6 +1,6 @@
 ---
 id: EntityClass
-title: Entité (entity)
+title: Entity
 ---
 
 Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/dsMapping.md#dataclass), tel un enregistrement de la table correspondant à la dataclass contenue dans son datastore associé. Elle contient les mêmes attributs que la dataclass ainsi que les valeurs des données et des propriétés et fonctions spécifiques.
@@ -376,7 +376,7 @@ L'objet retourné par `.drop( )` contient les propriétés suivantes :
 | `dk status locked`                        | 3     | L'entité est verrouillée par un verrou pessimiste.<br/>**statusText associé** : "Already locked"                                                                                                                                                    |
 | `dk status serious error`                 | 4     | Une erreur critique peut être une erreur de bas niveau de la base de données (ex. clé dupliquée), une erreur matérielle, etc.<br/>**statusText associé** : "Other error"                                                                            |
 | `dk status stamp has changed`             | 2     | La valeur du marqueur interne (stamp) de l'entité ne correspond pas à celle de l'entité stockée dans les données (verrouillage optimiste).<br/><li>avec `.save( )` : erreur uniquement si l'option `dk auto merge` n'est pas utilisée</li><li>avec `.drop( )` : erreur uniquement si l'option `dk force drop if stamp changed` n'est pas utilisée</li><li>avec `.lock( )` : erreur uniquement si l'option `dk reload if stamp changed` n'est pas utilisée</li><li>**statusText associé** : "Stamp has changed"</li> |
-| `dk status wrong permission`              | 1     | The current privileges do not allow the drop of the entity. **Associated statusText**: "Permission Error"                                                                                                                                                 |
+| `dk status wrong permission`              | 1     | Les privilèges courants ne permettent pas de supprimer l'entité. **statusText associé** : "Permission error"                                                                                                                                              |
 
 #### Exemple 1
 
@@ -1236,7 +1236,7 @@ Les valeurs suivantes peuvent être retournées dans les propriétés `status` e
 | `dk status locked`                        | 3     | L'entité est verrouillée par un verrou pessimiste.<br/>**statusText associé** : "Already locked"                                                                                                                                                                                     |
 | `dk status serious error`                 | 4     | Une erreur critique peut être une erreur de bas niveau de la base de données (ex. clé dupliquée), une erreur matérielle, etc.<br/>**statusText associé** : "Other error"                                                                                                             |
 | `dk status stamp has changed`             | 2     | La valeur du marqueur interne (stamp) de l'entité ne correspond pas à celle de l'entité stockée dans les données (verrouillage optimiste).<br/><li>avec `.save( )` : erreur uniquement si l'option `dk auto merge` n'est pas utilisée</li><li>avec `.drop( )` : erreur uniquement si l'option `dk force drop if stamp changed` n'est pas utilisée</li><li>avec `.lock( )` : erreur uniquement si l'option `dk reload if stamp changed` n'est pas utilisée</li><br/>**statusText associé** : "Stamp has changed" |
-| `dk status wrong permission`              | 1     | The current privileges do not allow the save of the entity. **Associated statusText**: "Permission Error"                                                                                                                                                                                  |
+| `dk status wrong permission`              | 1     | Les privilèges courants ne permettent pas de sauvegarder l'entité. **statusText associé** : "Permission error"                                                                                                                                                                             |
 
 #### Exemple 1
 
