@@ -48,7 +48,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 #### Beschreibung
 
-The `.fieldType` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains the 4D database type of the attribute<!-- END REF -->. .
+The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
 
 * "Autoincrement", for numeric type fields
 * "Auto UUID", for UUID (alpha type) fields.
