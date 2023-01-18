@@ -18,11 +18,11 @@ Chemin d’accès du fichier de données courant. Le bouton **[...]** permet de 
 
 ### Dossier de sauvegarde
 
-Par défaut, le fichier de données original sera dupliqué avant réparation. Par défaut, le fichier de données original sera dupliqué avant réparation. Le second bouton **[...]** permet de désigner un autre emplacement pour les sauvegardes des fichiers originaux effectuées avant réparation. Cette option permet notamment de réparer des fichiers volumineux en utilisant différents disques.
+Par défaut, le fichier de données original sera dupliqué avant réparation. By default, the original data file will be duplicated before the repair operation. Le second bouton **[...]** permet de désigner un autre emplacement pour les sauvegardes des fichiers originaux effectuées avant réparation. Cette option permet notamment de réparer des fichiers volumineux en utilisant différents disques.
 
 ### Fichiers réparés
 
-4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. 4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. Le fichier vide est rempli avec les données récupérées.
+4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. 4D creates a new blank data file at the location of the original file. Le fichier vide est rempli avec les données récupérées.
 
 ## Réparation standard
 
