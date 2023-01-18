@@ -9,12 +9,12 @@ title: データタイプの概要
 
 | データタイプ                                  | データベース  | ランゲージ   | [`var` 宣言](variables.md#var-キーワードによる宣言) | [`C_` または `ARRAY` 宣言](variables.md#c_-指示子による宣言) |
 | --------------------------------------- | ------- | ------- | --------------------------------------- | ----------------------------------------------- |
-| [整数](dt_string.md)                      | ◯       | テキストに変換 | -                                       | -                                               |
+| [文字列](dt_string.md)                     | ◯       | テキストに変換 | -                                       | -                                               |
 | [Text](Concepts/dt_string.md)           | ◯       | ◯       | `Text`                                  | `C_TEXT`, `ARRAY TEXT`                          |
 | [日付](Concepts/dt_date.md)               | ◯       | ◯       | `日付`                                    | `C_DATE`, `ARRAY DATE`                          |
 | [時間](Concepts/dt_time.md)               | ◯       | ◯       | `時間`                                    | `C_TIME`, `ARRAY TIME`                          |
 | [Boolean](Concepts/dt_boolean.md)       | ◯       | ◯       | `Boolean`                               | `C_BOOLEAN`, `ARRAY BOOLEAN`                    |
-| [Integer](Concepts/dt_number.md)        | ◯       | ブールに変換  | `Integer`                               | `ARRAY INTEGER`                                 |
+| [Integer](Concepts/dt_number.md)        | ◯       | 倍長整数に変換 | `Integer`                               | `ARRAY INTEGER`                                 |
 | [Longint](Concepts/dt_number.md)        | ◯       | ◯       | `Integer`                               | `C_LONGINT`, `ARRAY LONGINT`                    |
 | [64ビット整数](Concepts/dt_number.md)        | ◯ (SQL) | 実数に変換   | -                                       | -                                               |
 | [Real](Concepts/dt_number.md)           | ◯       | ◯       | `Real`                                  | `C_REAL`, `ARRAY REAL`                          |
@@ -59,13 +59,13 @@ title: データタイプの概要
 
 次の表は、基本のデータタイプ、変換できるデータタイプ、それを実行する際に使用するコマンドを示しています:
 
-| データタイプ  | 文字列に変換   | 実数    | 日付   | 時間   | ブールに変換 |
-| ------- | -------- | ----- | ---- | ---- | ------ |
-| 文字列 (1) |          | `Num` | `日付` | `時間` | `Bool` |
-| 数値 (2)  | `String` |       |      |      | `Bool` |
-| 日付      | `String` |       |      |      | `Bool` |
-| 時間      | `String` |       |      |      | `Bool` |
-| Boolean |          | `Num` |      |      |        |
+| データタイプ  | 文字列に変換   | 数値に変換 | 日付に変換 | 時間に変換 | ブールに変換 |
+| ------- | -------- | ----- | ----- | ----- | ------ |
+| 文字列 (1) |          | `Num` | `日付`  | `時間`  | `Bool` |
+| 数値 (2)  | `String` |       |       |       | `Bool` |
+| 日付      | `String` |       |       |       | `Bool` |
+| 時間      | `String` |       |       |       | `Bool` |
+| Boolean |          | `Num` |       |       |        |
 
 (1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
 
