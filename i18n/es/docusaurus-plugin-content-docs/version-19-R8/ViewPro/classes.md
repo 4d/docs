@@ -57,7 +57,7 @@ La propiedad `.name` <!-- REF #TableColumn.name.Summary -->contains the table co
 <!-- REF #TableOptions.allowAutoExpand.Syntax -->
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. .
+The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. Default = True
 
 
 ### .bandColumns
@@ -65,7 +65,7 @@ The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -
 <!-- REF #TableOptions.bandColumns.Syntax -->
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. .
+The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Por defecto = False
 
 
 ### .bandRows
@@ -73,7 +73,7 @@ The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indica
 <!-- REF #TableOptions.bandRows.Syntax -->
 **.bandRows** : Boolean<!-- END REF -->
 
-The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->. .
+The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->. Default = True
 
 
 ### .highlightLastColumn
@@ -81,14 +81,14 @@ The `.bandRows` property <!-- REF #TableOptions.bandRows.Summary -->indicates wh
 <!-- REF #TableOptions.highlightLastColumn.Syntax -->
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. .
+The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. Por defecto = False
 
 ### .highlightFirstColumn
 
 <!-- REF #TableOptions.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. .
+The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Por defecto = False
 
 
 ### .showFooter
@@ -96,21 +96,21 @@ The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn
 <!-- REF #TableOptions.showFooter.Syntax -->
 **.showFooter** : Boolean<!-- END REF -->
 
-The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. .
+The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. Por defecto = False
 
 ### .showHeader
 
 <!-- REF #TableOptions.showHeader.Syntax -->
 **.showHeader** : Boolean<!-- END REF -->
 
-The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicates whether to display a header<!-- END REF -->. .
+The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicates whether to display a header<!-- END REF -->. Default = True
 
 ### .showResizeHandle
 
 <!-- REF #TableOptions.showResizeHandle.Syntax -->
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. .
+The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Por defecto = False
 
 ### .tableColumns
 
@@ -137,7 +137,7 @@ See the [native SpreadJS themes](https://www.grapecity.com/spreadjs/api/classes/
 <!-- REF #TableOptions.useFooterDropDownList.Syntax -->
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. .
+The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Por defecto = False
 
 
 
@@ -293,7 +293,7 @@ The `.firstFooterCellStyle` property is the <!-- REF #TableThemeOptions.firstFoo
 <!-- REF #TableThemeOptions.firstHeaderCellStyle.Syntax -->
 **.firstHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-estilo de la primera celda del encabezado <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->The `.firstHeaderCellStyle` property is the<!-- END REF -->. "highlightFirstColumn" must be true.
+The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHeaderCellStyle.Summary -->estilo de la primera celda del encabezado<!-- END REF -->. "highlightFirstColumn" must be true.
 
 ### .firstRowStripSize
 
@@ -328,7 +328,7 @@ The `.headerRowStyle` property is the <!-- REF #TableThemeOptions.headerRowStyle
 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Syntax -->
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-style of the first column <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->The `.highlightFirstColumnStyle` property is the<!-- END REF -->. "highlightFirstColumn" must be true.
+The `.highlightFirstColumnStyle` property is the <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->style of the first column<!-- END REF -->. "highlightFirstColumn" must be true.
 
 ### .highlightLastColumnStyle
 
@@ -342,14 +342,14 @@ The `.highlightLastColumnStyle` property is the <!-- REF #TableThemeOptions.high
 <!-- REF #TableThemeOptions.lastFooterCellStyle.Syntax -->
 **.lastFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-estilo de la última celda del pie de página <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->The `.lastFooterCellStyle` property is the<!-- END REF -->. "highlightLastColumn" must be true.
+The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->estilo de la última celda del pie de página<!-- END REF -->. "highlightLastColumn" must be true.
 
 ### .lastHeaderCellStyle
 
 <!-- REF #TableThemeOptions.lastHeaderCellStyle.Syntax -->
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-estilo de la última celda del encabezado <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->The `.lastHeaderCellStyle` property is the<!-- END REF -->. "highlightLastColumn" must be true.
+The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->estilo de la última celda del encabezado<!-- END REF -->. "highlightLastColumn" must be true.
 
 ### .name
 
@@ -363,7 +363,7 @@ The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of 
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-size of the second alternating column <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->The `.secondColumnStripSize` property is the<!-- END REF -->. Por defecto=1
+The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Por defecto=1
 
 ### .secondColumnStripStyle
 
@@ -377,7 +377,7 @@ The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.second
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->The `.secondColumnStripSize` property is the<!-- END REF -->. Por defecto=1.
+The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. Por defecto=1.
 
 ### .secondRowStripStyle
 
