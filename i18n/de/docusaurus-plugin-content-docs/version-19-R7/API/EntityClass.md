@@ -92,7 +92,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 
 #### Beschreibung
 
-The `.isNew()` function <!-- REF #EntityClass.clone().Summary -->returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. .
+The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
 > Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
 
 This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which [`.isNew()`](#isnew) returns **True**).
@@ -1340,12 +1340,12 @@ If a filter is specified for attributes of the relatedEntity [kind](DataClassAtt
 
 * propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
 * propertyPath = "relatedEntity.*" -> all the properties are extracted
-* propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted -> only those properties are extracted
+* propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted
 
 If a filter is specified for attributes of the relatedEntities [kind](DataClassAttributeClass.md#kind):
 
 * propertyPath = "relatedEntities.*" -> all the properties are extracted
-* propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted -> only those properties are extracted
+* propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted
 
 In the *options* parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
