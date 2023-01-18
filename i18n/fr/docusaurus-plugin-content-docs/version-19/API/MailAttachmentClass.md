@@ -210,7 +210,7 @@ La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition
 
 #### Description
 
-La fonction `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->La fonction `.getContent()`<!-- END REF -->. Vous pouvez utiliser cette fonction avec les objets pièce jointe reçus par la commande [`MAIL Convert from MIME`](#mail-convert-from-mime).
+La fonction `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->The `.getContent()` function<!-- END REF -->. Vous pouvez utiliser cette fonction avec les objets pièce jointe reçus par la commande [`MAIL Convert from MIME`](#mail-convert-from-mime).
 
 ## .name
 
