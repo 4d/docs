@@ -92,7 +92,7 @@ El tipo de valor del atributo depende del tipo [kind](DataClassAttributeClass.md
 
 #### Descripción
 
-La función `.isNew()` <!-- REF #EntityClass.clone().Summary -->devuelve True si la entidad a la que se aplica acaba de ser creada y aún no se ha guardado en el almacén de datos<!-- END REF -->. .
+La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->. Esta función permite actualizar las entidades por separado.
 > Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save( )`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
@@ -232,7 +232,7 @@ $diff2:
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
 ```
 
-vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
+vCompareResult1 (se devuelven todas las diferencias):
 
 ```4d
 [
@@ -281,7 +281,7 @@ vCompareResult2 (sólo se devuelven las diferencias en $attributesToInspect)
 ]
 ```
 
-vCompareResult1 (se devuelven todas las diferencias):
+vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 ```4d
 [
@@ -846,7 +846,7 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 #### Descripción
 
-La función `.clone()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no se ha guardado en el almacén de datos<!-- END REF -->. .
+La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no se ha guardado en el almacén de datos<!-- END REF -->. .
 
 #### Ejemplo
 
@@ -973,7 +973,7 @@ El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 |                  | component signature | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                |
 |                  | errCode             | number                | Código de error                                                                                                                                                      |
 
-(\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
+(\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
 
 | Constante                                 | Valor | Comentario                                                                                                                                                                                                                                                     |
 | ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1363,7 +1363,7 @@ Sin parámetro de filtro:
 employeeObject:=employeeSelected.toObject()
 ```
 
-Versión
+Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 ```4d
 {
@@ -1394,7 +1394,7 @@ Extraer la llave primaria y el sello:
 employeeObject:=employeeSelected.toObject("";dk with primary key+dk with stamp)
 ```
 
-Versión
+Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 ```4d
 {
@@ -1496,7 +1496,7 @@ Extracción de algunas propiedades de `relatedEntities`:
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
 ```
 
-Versión
+Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 ```4d
 {
@@ -1524,7 +1524,7 @@ Obtenga una `relatedEntity` en un formulario simple:
  employeeObject:=employeeSelected.toObject($coll)
 ```
 
-Versión
+Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 ```4d
 {
@@ -1543,7 +1543,7 @@ Extracción de todas las propiedades de una `Entidad relacionada`:
  employeeObject:=employeeSelected.toObject("employer.*")
 ```
 
-Versión
+Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 ```4d
 {
@@ -1568,7 +1568,7 @@ Extracción de algunas propiedades de una `Entidad relacionada`:
  employeeObject:=employeeSelected.toObject($col)
 ```
 
-Versión
+Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 ```4d
 {
