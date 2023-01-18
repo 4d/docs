@@ -297,6 +297,7 @@ El <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado del HTTP Strict Transp
 ## .HSTSMaxAge
 
 
+
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
@@ -779,22 +780,23 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 </details>
 
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
+
+
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF --> |
 
-La función `.stop()` <!-- REF #WebServerClass.stop().Summary -->detiene el servidor web en el que se aplica<!-- END REF -->.
+The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
-Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierran, una vez que las peticiones actualmente gestionadas han finalizado. Si el servidor web no se ha iniciado, el método no hace nada.
+If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
 > Esta función reinicia los parámetros web personalizados definidos para la sesión mediante el parámetro *settings* de la función [`.start()`](#start), si la hubiera.
 
 #### Ejemplo
 
-Para detener el servidor web de la base de datos:
+To stop the database Web server:
 
 ```4d
  var $webServer : 4D.WebServer

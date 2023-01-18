@@ -30,6 +30,9 @@ Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de decla
  // and assigns the current date plus 30 days
 ```
 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
+
 ### Utilizando la palabra clave `var`
 
 Se recomienda declarar las variables utilizando la palabra clave `var` ya que esta sintaxis permite vincular las variables objeto con las clases. Using this syntax enhances code editor suggestions and type-ahead features.
@@ -128,6 +131,7 @@ C_DATE($vdCurDate) // La variable local $vdCurDate se declara como una variable 
 
 **Nota:** los array son un tipo particular de variables (un array es una serie ordenada de variables del mismo tipo). Los arrays se declaran con comandos específicos, como `ARRAY LONGINT(alAnArray;10)`. Para más información, consulte [Arrays](Concepts/arrays.md).
 
+
 ## Asignar los valores
 
 Los datos pueden introducirse y copiarse en variables y arrays. Poner datos en una variable se llama **asignar los datos a la variable** y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos.
@@ -140,7 +144,7 @@ MyNumber:=3
 
 crea la variable _MyNumber_ y pone en ella el número 3. Si MyNumber ya existe, entonces toma el valor 3.
 
-> Normalmente no se recomienda crear variables sin [declarar su tipo](#crear-variables).
+> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
 Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
 

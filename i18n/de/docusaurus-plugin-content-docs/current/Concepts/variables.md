@@ -30,6 +30,9 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
  // and assigns the current date plus 30 days
 ```
 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
+
 ### Das Schlüsselwort `var` verwenden
 
 Es wird empfohlen, Variablen mit dem Schlüsselwort `var` zu deklarieren, da sich mit dieser Syntax Objektvariablen mit Klassen verbinden lassen. Diese Syntax verbessert die Vorschläge und type-ahead Features im Code-Editor.
@@ -128,6 +131,7 @@ Hier sehen Sie einige grundlegende Variablendeklarationen:
 
 **Hinweis:** Arrays sind ein spezieller Variablentyp (ein Array ist eine sortierte Reihe von Variablen vom gleichen Typ). Arrays werden mit spezifischen Befehlen deklariert, wie z.B. `ARRAY LONGINT(alAnArray;10)`. Weitere Informationen dazu finden Sie unter [Arrays](Concepts/arrays.md).
 
+
 ## Daten zuweisen
 
 Daten lassen sich in Variablen und Arrays setzen und daraus kopieren. Daten in eine Variable setzen heißt, **der Variablen die Daten zuweisen**. Das geschieht über den Zuweisungsoperator (:=). Der Zuweisungsoperator wird auch verwendet, um Feldern Daten zuzuweisen.
@@ -140,7 +144,7 @@ MyNumber:=3
 
 erstellt die Variable _ MyNumber_ und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#variablen-erstellen) zu erstellen.
+> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie _ MyNumber_ auf die rechte Seite des Zuweisungsoperators:
 

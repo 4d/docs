@@ -31,6 +31,8 @@ Sie erstellen Variablen, indem Sie diese deklarieren. Die 4D Programmiersprache 
  // and assigns the current date plus 30 days
 ```
 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
 
 ### Das Schlüsselwort `var` verwenden
 
@@ -145,7 +147,7 @@ MyNumber:=3
 
 erstellt die Variable _ MyNumber_ und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#variablen-erstellen) zu erstellen.
+> It is usually not recommended to create variables without [declaring their type](#creating-variables).
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie _ MyNumber_ auf die rechte Seite des Zuweisungsoperators:
 

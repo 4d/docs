@@ -4722,29 +4722,31 @@ Case of
        var $o : Object
        $o:=New object
 
-// Define "addnum" function from a method named "addnum"
+// Define la función "addnum" desde un método llamado "addnum"
        $o.addnum:=New object
        $o.addnum.formula:=Formula(addnum)
        $o.addnum.parameters:=New collection
        $o.addnum.parameters.push(New object("name";"num1";"type";Is Integer))
        $o.addnum.parameters.push(New object("name";"num2";"type";Is Integer))
 
-// Define "ClientLastName" function from a database field
+// Definir la función "ClientLastName" desde un campo de base
        $o.ClientLastName:=New object
        $o.ClientLastName.formula:=Formula([Customers]lastname)
        $o.ClientLastName.summary:="Lastname of the current client"
 
-// Define "label" function from a 4D expression with one parameter
+// Definir la función "label" desde una expresión 4D con un parámetro
        $o.label:=New object
        $o.label.formula:=Formula(ds.Customers.get($1).label)
        $o.label.parameters:=New collection
        $o.label.parameters.push(New object("name";"ID";"type";Is Integer))
 
-// Define "Title" function from a variable named "Title"
+// Definir la función "Title" desde una variable llamada "Title"
        $o.Title:=New object
        $o.Title.formula:=Formula(Title)
 
        VP SET CUSTOM FUNCTIONS("ViewProArea";$o)
+
+End case
 
 End case
 ```
@@ -5086,7 +5088,7 @@ El comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->assigns
 
 En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, la fórmula especificada se vinculará en cada celda.
 
-The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
+El parámetro *formula* indica un nombre de fórmula o de método 4D a asignar a *rangeObj*.
 
 > If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
 

@@ -104,16 +104,18 @@ You can display and modify form and object properties using the Property List. I
 
 To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
 
-#### Raccourcis de navigation
+#### Raccourcis
 
-Vous pouvez naviguer dans la Liste des propriétés à l’aide des raccourcis suivants :
+You can use the following shortcuts in the Property List:
 
 - **Touches fléchées** haut ou bas ↑ ↓ : déplacement de cellule en cellule.
 - **Touches fléchées** gauche ou droite ← → : déploie/contracte les thèmes ou les menus.
 - **PgUp** et **PgDn** : sélectionne la première ou la dernière cellule visible de la liste affichée.
 - **Début** et **Fin** : sélectionne la première ou la dernière cellule de la liste.
-- **Ctrl+clic** (Windows) ou **Commande+clic** (Mac OS) sur un événement : sélectionne/désélectionne tous les événements, en fonction de l’état initial de l’événement sur lequel vous avez cliqué.
-- **Ctrl+clic** (Windows) ou **Commande+clic** (Mac OS) sur un intitulé de thème : déploie/contracte tous les thèmes.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
+
 
 ## Manipulating Form Objects
 
@@ -125,6 +127,7 @@ Vous pouvez ajouter des objets dans un formulaire de nombreuses manières :
 - Par glisser-déposer depuis la barre d'objets
 - Par glisser-déposer ou copier-coller depuis la [bibliothèque d'objets](objectLibrary.md) préconfigurés
 - Par glisser-déposer depuis un autre formulaire,
+
 
 - Par glisser-déposer depuis l'Explorateur (champs) ou les éditeurs du mode Développement (énumérations, images, etc.)
 

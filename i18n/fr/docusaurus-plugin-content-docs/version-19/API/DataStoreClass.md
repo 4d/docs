@@ -731,7 +731,9 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
 | ---------- | ---- |  | ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
 
+
 |
+
 
 #### Description
 

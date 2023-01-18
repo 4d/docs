@@ -3,6 +3,27 @@ id: updates
 title: リリースノート
 ---
 
+## 4D v20
+
+Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D v20.
+
+
+#### ハイライト
+
+- To simplify code, some comparison operators can now be used with [Undefined values](../Concepts/dt_null_undefined.md#undefined-operators) without generating errors.
+
+
+- 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。
+
+
+#### 動作の変更
+
+- HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) プロパティを使用します。
+
+
+
 ## 4D v19 R8
 
 [**4D v19 R8 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19-r8/): 4D v19 R8 の新機能と拡張機能をすべてリストアップしたブログ記事です。
@@ -12,13 +33,13 @@ title: リリースノート
 
 - [グローバルおよびコンポーネントの実行コンテキスト](../Concepts/error-handling.md#スコープとコンポーネント) に対してエラー処理メソッドを実装することができます。
 - コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](../FormObjects/properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
-- ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
-- Windows で [SDIモードでのアプリケーションモードのテスト](../Menus/sdi.md#sdiモード利用条件) をサポート。
+- ORDA: [`setPrivileges()`](../API/SessionClass.md#setprivileges) を使ってセッションに割り当てる [権限](../ORDA/privileges.md) を定義するための *roles.json* ファイルをサポート。
+- Windows で [SDIモードでのアプリケーションのテスト](../Menus/sdi.md#sdiモード利用条件) をサポート。
 - 4D View Pro:
     - 表組みにおけるテーマのサポート: 新しい [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) および [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) コマンドの追加、[VP CREATE TABLE](../ViewPro/method-list#vp-create-table) コマンドにテーマオプションを追加
     - 新しい [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) コマンドの追加
-- 4D クラシックランゲージ: doc.4d.com の [新着](XXX) ページ。
-- 4D Write Pro: doc.4d.com の [新着](XXX) ページ。
+- 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。
 
 

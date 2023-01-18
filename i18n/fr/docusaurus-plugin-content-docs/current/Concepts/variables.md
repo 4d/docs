@@ -30,6 +30,9 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
  // et affecte la date courante + 30 jours
 ```
 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
+
 ### Utilisation du mot-clé `var`
 
 Il est recommandé de déclarer les variables à l'aide du mot-clé `var`, car cette syntaxe permet de lier les variables objet aux classes. L'utilisation de cette syntaxe améliore les suggestions de l'éditeur de code et les fonctionnalités type-ahead.
@@ -127,6 +130,7 @@ Voici quelques déclarations de variables simples :
 
 **Note :** Les tableaux sont un type particulier de variables (un tableau est une série ordonnée de variables du même type). Les tableaux sont déclarés avec des commandes spécifiques, telles que `ARRAY LONGINT(alAnArray;10)`. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
+
 ## Assigner des valeurs
 
 Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle **assigner une valeur (ou affecter une valeur)** et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
@@ -139,7 +143,7 @@ MonNombre:=3
 
 crée la variable _MonNombre_ et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
-> Il n’est généralement pas recommandé de créer des variables sans [déclarer leur type](#creating-variables).
+> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
 Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer _MonNombre_ à droite de l’opérateur d’assignation :
 

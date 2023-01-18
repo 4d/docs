@@ -104,16 +104,18 @@ title: フォームエディター
 
 プロパティリストを表示/非表示にするには、**フォーム** メニュー、またはフォームエディターのコンテキストメニューから **プロパティリスト** を選択します。 さらに、フォームの空のエリアをダブルクリックすることでも表示させることができます。
 
-#### ナビゲーションショートカット
+#### ショートカット
 
-次のショートカットを使用し、プロパティリスト内を移動することができます:
+You can use the following shortcuts in the Property List:
 
 - **矢印キー** ↑ ↓: あるセルから別のセルへ移動します。
 - **矢印キー** ← →: テーマを展開/縮小するか、入力モードに入ります。
 - **PgUp** と **PgDn**: プロパティリスト内をスクロールします。
 - **Home** と **End**: プロパティリストの最初または最後のセルを表示するようスクロールします。
-- イベント上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : クリックしたイベントの最初の状態に応じて、リストの各イベントを選択/選択解除します。
-- テーマレベル上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : リストのすべてのテーマを展開/縮小します。
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
+
 
 ## フォームオブジェクトの操作
 
@@ -125,6 +127,7 @@ title: フォームエディター
 - オブジェクトバーからオブジェクトをドラッグ＆ドロップする。
 - 定義済み [オブジェクトライブラリ](objectLibrary.md) から選択したオブジェクトをドラッグ＆ドロップあるいはコピー/ペーストする。
 - 他のフォームからオブジェクトをドラッグ＆ドロップする。
+
 
 - エクスプローラー (フィールド) やデザインモードの他のエディター (リストやピクチャー等) からオブジェクトをドラッグ＆ドロップする。
 

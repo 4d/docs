@@ -4,7 +4,7 @@ title: Gestión de usuarios y grupos 4D
 ---
 
 
-4D ofrece a los usuarios ciertos privilegios de acceso estándar y ciertas prerrogativas. Una vez iniciado un sistema de usuarios y grupos, estos privilegios estándar toman efecto.
+4D ofrece a los usuarios ciertos privilegios de acceso estándar y ciertas prerrogativas específicas. Una vez iniciado un sistema de usuarios y grupos, estos privilegios estándar toman efecto.
 
 ## Diseñador y administrador
 

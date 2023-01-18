@@ -2761,7 +2761,7 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 #### Descripción
 
-The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
+El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
 
 In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
 
@@ -4205,7 +4205,7 @@ Resultado:
 | ---------- | ------ | -- | ------------------------------------------------------------ |
 | parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla |
 
-|Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
+|Result   |Mixed|<-|`.result` propiedad del objeto `.onEvent`, o Null si no devuelve un valor|<!-- END REF -->
 
 #### Descripción
 
@@ -4217,7 +4217,7 @@ En el objeto *parameters*, pase una de las siguientes propiedades opcionales. Es
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------- |
 | area      | text | El nombre del área fuera de la pantalla. Si se omite o es null, se asigna un nombre genérico (por ejemplo, "OffscreenArea1"). |
 
-|onEvent | object (formula)| A callback method that will be launched when the offscreen area is ready. Puede ser:<li>una función `onEvent` de una clase, o</li><li>un objeto `Formula`</li>Por defecto, el método de retrollamada en los eventos [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), o [`On Timer`](Events/onTimer.md). The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable).| |autoQuit | boolean | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method. | |timeout | number | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. Si se fija en 0, no se aplica ninguna limitación. Default value: 60 | |result| mixed| Result of the processing (if any)| |`\&#060;customProperty&#062;` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
+|onEvent | object (formula)| Un método de retrollamada que se lanzará cuando el área fuera de pantalla esté lista. Puede ser:<li>una función `onEvent` de una clase, o</li><li>un objeto `Formula`</li>Por defecto, el método de retrollamada en los eventos [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), o [`On Timer`](Events/onTimer.md). The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable).| |autoQuit | boolean | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method. | |timeout | number | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. Si se fija en 0, no se aplica ninguna limitación. Default value: 60 | |result| mixed| Result of the processing (if any)| |`\&#060;customProperty&#062;` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
 
 
 La siguiente propiedad es añadida automáticamente por el comando si es necesario:
@@ -4834,29 +4834,31 @@ Case of
        var $o : Object
        $o:=New object
 
-// Define "addnum" function from a method named "addnum"
+// Define la función "addnum" desde un método llamado "addnum"
        $o.addnum:=New object
        $o.addnum.formula:=Formula(addnum)
        $o.addnum.parameters:=New collection
        $o.addnum.parameters.push(New object("name";"num1";"type";Is Integer))
        $o.addnum.parameters.push(New object("name";"num2";"type";Is Integer))
 
-// Define "ClientLastName" function from a database field
+// Definir la función "ClientLastName" desde un campo de base
        $o.ClientLastName:=New object
        $o.ClientLastName.formula:=Formula([Customers]lastname)
        $o.ClientLastName.summary:="Lastname of the current client"
 
-// Define "label" function from a 4D expression with one parameter
+// Definir la función "label" desde una expresión 4D con un parámetro
        $o.label:=New object
        $o.label.formula:=Formula(ds.Customers.get($1).label)
        $o.label.parameters:=New collection
        $o.label.parameters.push(New object("name";"ID";"type";Is Integer))
 
-// Define "Title" function from a variable named "Title"
+// Definir la función "Title" desde una variable llamada "Title"
        $o.Title:=New object
        $o.Title.formula:=Formula(Title)
 
        VP SET CUSTOM FUNCTIONS("ViewProArea";$o)
+
+End case
 
 End case
 ```
@@ -5063,7 +5065,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 #### Descripción
 
-El comando `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
+El comando `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary -->asigna un valor de fecha especificado a un rango de celdas designado<!-- END REF -->.
 
 En *rangeObj*, pase un rango de la(s) celda(s) cuyo valor desea indicar. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
@@ -5195,7 +5197,7 @@ El comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->asigna 
 
 En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, la fórmula especificada se vinculará en cada celda.
 
-The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
+El parámetro *formula* indica un nombre de fórmula o de método 4D a asignar a *rangeObj*.
 
 > If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
 

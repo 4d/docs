@@ -1019,8 +1019,9 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Parâmetros | Tipo |  | Descrição                                             |
-| ---------- | ---- |  | ----------------------------------------------------- |
+| ---------- | ---- |::| ----------------------------------------------------- |
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
+
 
 #### Descrição
 

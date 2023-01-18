@@ -247,7 +247,7 @@ La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary --
 
 #### Description
 
-The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->la `method` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->la `method` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 

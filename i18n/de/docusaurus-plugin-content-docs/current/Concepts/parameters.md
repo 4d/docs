@@ -59,6 +59,9 @@ Function add($x : Integer)
     $0:=$x+$2
 ```
 
+### Initialisierung
+
+When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
 
 
 

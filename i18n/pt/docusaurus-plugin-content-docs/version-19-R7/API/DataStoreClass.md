@@ -1022,6 +1022,7 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 | ---------- | ---- |  | ----------------------------------------------------- |
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
+
 #### Descrição
 
 A função `.startTransaction()` <!-- REF #DataStoreClass.startTransaction().Summary -->inicia uma transação no processo atual na base de dados que corresponde à base de dados à qual se aplica<!-- END REF -->. Summary -->cancela a transação<!-- END REF --> aberta pela função [`.startTransaction()`](#starttransaction) no nível correspondente do processo atual para o datastore especificado.

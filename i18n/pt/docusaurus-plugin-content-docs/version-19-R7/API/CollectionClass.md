@@ -1576,7 +1576,7 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 
 #### Descrição
 
-A função `.map()` <!-- REF #collection.map().Summary -->cria uma nova coleção com base no resultado da chamada da *fórmula* 4D ou método *methodName*  sobre cada elemento da coleção original<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
+A função `.map()` <!-- REF #collection.map().Summary -->cria uma nova coleção com base no resultado da chamada da *fórmula* 4D ou método *methodName*  sobre cada elemento da coleção original<!-- END REF -->. Opcionalmente, pode passar parâmetros para *fórmula* ou *methodName* usando o(s) parâmetro(s) *param* . `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
 > Essa função não modifica a coleção original.
 
 

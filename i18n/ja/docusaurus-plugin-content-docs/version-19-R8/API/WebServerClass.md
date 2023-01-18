@@ -285,6 +285,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 ## .HSTSMaxAge
 
+
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
@@ -721,25 +722,24 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 | v18 R3 | 追加 |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | 引数 | タイプ |  | 説明                                           |
 | -- | --- |  | -------------------------------------------- |
 |    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 |
 
-`.stop()` 関数は、 <!-- REF #WebServerClass.stop().Summary -->対象の Webサーバーを停止します<!-- END REF -->。
+The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->。
 
-Webサーバーが開始されている場合は、処理中のリクエストが完了次第、すべての Web接続と Webプロセスが閉じられます。 Webサーバーが開始されていなかった場合、関数はなにもしません。
+If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
 > この関数は、[`.start()`](#start) 関数の *settings* 引数を使用してセッションに対して定義したカスタマイズされた Web設定があった場合、それらをリセットします。
 
 #### 例題
 
-データベースWebサーバーを停止します:
+To stop the database Web server:
 
 ```4d
  var $webServer : 4D.WebServer
