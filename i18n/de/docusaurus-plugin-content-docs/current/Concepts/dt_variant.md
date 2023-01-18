@@ -61,9 +61,6 @@ End case
 : (Value type($1)=Is text)
 ...
 End case
-: (Value type($1)=Is text)
-...
-End case
 ```
 
 > Sind Variablen vom Typ Variant nicht erforderlich (z.B. wenn der Datentyp bekannt ist), empfehlen wir, Variablen mit festen Typen zu verwenden. Denn sie bieten bessere Performance, klareren Code und sind für den Compiler hilfreich, da sie Fehler durch Übergeben unerwarteter Datentypen vermeiden. 
