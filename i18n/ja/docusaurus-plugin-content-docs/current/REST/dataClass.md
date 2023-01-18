@@ -10,11 +10,11 @@ title: dataClass
 | シンタックス                                                                      | 例題                                       | 説明                                       |
 | --------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | [**{dataClass}**](#dataClass)                                               | `/Employee`                              | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
-| [**{dataClass}({key})**](#dataclasskey)                                     | `/Employee(22)`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
+| [**{dataClass}[{key}]**](#dataclasskey)                                     | `/Employee[22]`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
 | [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)              | `/Employee:firstName(John)`              | 指定した属性値を持つ 1件のエンティティのデータを返します            |
 | [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#関数の呼び出し)       | `/City/getCity`                          | DataClassクラス関数を実行します                     |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#関数の呼び出し) | `/City/getPopulation/?$filter="ID<3"` | EntitySelectionクラス関数を実行します               |
-| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#関数の呼び出し)   | `City(2)/getPopulation`                  | Entityクラス関数を実行します                        |
+| [**{dataClass}/{EntitySelectionClassFunction}**](ClassFunctions.md#関数の呼び出し) | `/City/getPopulation/?$filter="ID<3"` | EntitySelectionクラス関数を実行します               |
+| [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#関数の呼び出し)   | `City[2]/getPopulation`                  | Entityクラス関数を実行します                        |
 
 > 関数の呼び出しについての詳細は [ORDAクラス関数](ClassFunctions.md) を参照ください。
 
@@ -46,7 +46,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 | __TIMESTAMP | 日付     | エンティティが最後に編集された日時を記録するタイムスタンプ                      |
 | __STAMP     | Number | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ |
 
-取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). 例:
 
  `GET  /rest/Company/name,address`
 
@@ -138,29 +138,29 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 ```
 
 
-## {dataClass}({key})
+## {dataClass}\[{key}]
 
-データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company(22) または Company("IT0911AB2200")` など)。
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
 
 ### 説明
 
 データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
-返されるデータについての詳細は [{DataClass}](#dataclass) を参照ください。
+For more information about the data returned, refer to [{DataClass}](#dataclass).
 
-取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). 例:
 
- `GET  /rest/Company(1)/name,address`
+ `GET  /rest/Company[1]/name,address`
 
 `$expand` を使ってリレーション属性を展開するには、次のように指示します:
 
- `GET  /rest/Company(1)/name,address,staff?$expand=staff`
+ `GET  /rest/Company[1]/name,address,staff?$expand=staff`
 
 ### 例題
 
 次のリクエストは、Company データクラスで主キーが 1 であるエンティティの公開データをすべて返します。
 
- `GET  /rest/Company(1)`
+ `GET  /rest/Company[1]`
 
 **結果**:
 
@@ -197,7 +197,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). 例:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
