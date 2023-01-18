@@ -267,6 +267,7 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
  C_TEXT($addr)
  $addr:="endereço"
  For($i;1;4)
-    $Emp[$addr+String($i)]:=""". Fim para
+    $Emp[$addr+String($i)]:=""".
+ Fim para
   // cria 4 propriedades vazias "address1...address4" no objecto $Emp
 ```
