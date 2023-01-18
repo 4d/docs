@@ -258,7 +258,7 @@ La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.method.Summary -->el 
 
 #### Descripción
 
-La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary -->el `protocol` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. . Si se ha omitido o si se ha utilizado "auto", contiene la versión del protocolo utilizada.
+La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary -->el `protocol` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se ha omitido o si se ha utilizado "auto", contiene la versión del protocolo utilizada.
 
 <!-- END REF -->
 
@@ -289,7 +289,7 @@ Un objeto `response` es un objeto no compartible. Ofrece las siguientes propieda
 
 #### Descripción
 
-La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->La propiedad `.returnResponseBody` contiene<!-- END REF -->. Si se omite, contiene True.
+La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->el `returnResponseBody` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se omite, contiene True.
 
 <!-- END REF -->
 
@@ -310,14 +310,14 @@ La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnRes
 
 > Esta función es hilo seguro.
 
-La función `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta la petición HTTP<!-- END REF -->. La función `.terminate()`
+La función `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta la petición HTTP<!-- END REF -->. .
 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.terminated.Desc -->
 ## .terminated
 
-<!-- REF #HTTPRequestClass.terminated.Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
+<!-- REF #HTTPRequestClass.terminated.Syntax -->**terminated**: Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -328,18 +328,18 @@ La propiedad `.terminated` contiene <!-- REF #HTTPRequestClass.terminated.Summar
 <!-- REF #HTTPRequestClass.timeout.Desc -->
 ## .timeout
 
-<!-- REF #HTTPRequestClass.timeout.Syntax -->**terminated**: Boolean<!-- END REF -->
+<!-- REF #HTTPRequestClass.timeout.Syntax -->**timeout**: Real<!-- END REF -->
 
 #### Descripción
 
-La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->La propiedad `.headers` contiene<!-- END REF -->. el `timeout` pasado en el objeto [`options<`](#options-parameter) al llamar a [new()](#4dhttprequestnew)
+La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->el `timeout` pasado en el objeto [`options<`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.url.Desc -->
 ## .url
 
-<!-- REF #HTTPRequestClass.url.Syntax -->**timeout**: Real<!-- END REF -->
+<!-- REF #HTTPRequestClass.url.Syntax -->**url**: Text<!-- END REF -->
 
 #### Descripción
 
@@ -350,7 +350,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 <!-- REF #HTTPRequestClass.wait().Desc -->
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->**url**: Text<!-- END REF -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 
 <!-- REF #HTTPRequestClass.wait().Params -->
