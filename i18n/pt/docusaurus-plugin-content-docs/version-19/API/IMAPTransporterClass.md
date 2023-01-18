@@ -353,7 +353,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 #### Descrição
 
-A função `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->A função `.getMails()`<!-- END REF -->.
+A função `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
 Pode passar:
 
@@ -480,27 +480,29 @@ The function returns an object describing the IMAP status:
 To create a new “Invoices” mailbox:
 
 ```4d
-var $pw; $name : text
-var $options; $transporter; $status : object
+var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter
 
-$options:=New object
+ $server:=New object
+ $server.host:="imap.gmail.com" //Mandatory
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
 
-$pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com"
-$options.user:="test@gmail.com"
-$options.password:=$pw
+  //create transporter
+ $transporter:=IMAP New transporter($server)
 
-$transporter:=IMAP New transporter($options)
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("INBOX")
 
-$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
-$status:=$transporter.unsubscribe($name) If ($status.success)
-   ALERT("Mailbox unsubscription successful!")
-   Else
-   ALERT("Error: "+$status.statusText)
-   End if
-   Else
-   ALERT("Error: "+$status.statusText)
-   End if
-End if
+  If($boxInfo.mailCount>0)
+        // retrieve the headers of the last 20 messages without marking them as read
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+        New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+        // ...
+End for each
+ End if
 ```
 
 <!-- END REF -->
@@ -660,22 +662,24 @@ var $options; $transporter; $status : object
 
 $options:=New object
 
-$pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com"
+$pw:=Request("Please enter your password:")
+
+If(OK=1) $options.host:="imap.gmail.com"
 $options.user:="test@gmail.com"
 $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
-$status:=$transporter.subscribe($name) If ($status.success)
-   ALERT("Mailbox subscription successful!")
-   Else
-   ALERT("Error: "+$status.statusText)
-   End if
-   Else
-   ALERT("Error: "+$status.statusText)
-   End if
+// delete mailbox
+$name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
+$status:=$transporter.deleteBox($name)
+
+If ($status.success)
+ ALERT("Mailbox deletion successful!")
+ Else
+ ALERT("Error: "+$status.statusText)
  End if
+End if
 ```
 
 <!-- END REF -->
@@ -947,7 +951,7 @@ Mailbox name delimiter character.
 
 #### Descrição
 
-A função `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->A função `.getMail()`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
+A função `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
 In the first parameter, you can pass either:
 
@@ -1010,13 +1014,13 @@ You want to get the message with ID = 1:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                                  |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| ids        | Collection | -> | Collection of message ID                                                   |
-| startMsg   | Integer    | -> | Sequence number of the first message                                       |
-| endMsg     | Integer    | -> | Sequence number of the last message                                        |
-| options    | Objeto     | -> | Message handling instructions                                              |
-| Resultados | Objeto     | <- | Parâmetros<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
+| Parâmetros | Tipo       |    | Descrição                                                                          |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
+| ids        | Collection | -> | Collection of message ID                                                           |
+| startMsg   | Integer    | -> | Sequence number of the first message                                               |
+| endMsg     | Integer    | -> | Sequence number of the last message                                                |
+| options    | Objeto     | -> | Message handling instructions                                                      |
+| Resultados | Objeto     | <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
 
 |
@@ -1025,7 +1029,7 @@ You want to get the message with ID = 1:
 #### Descrição
 
 
-A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMails().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
+A função `.getMails()` <!-- REF #IMAPTransporterClass.getMails().Summary -->returns an object containing a collection of `Email` objects<!-- END REF -->.
 
 **First Syntax:**
 
@@ -1088,11 +1092,11 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
  $boxInfo:=$transporter.selectBox("INBOX")
 
   If($boxInfo.mailCount>0)
-        // retrieve the headers of the last 20 messages without marking them as read
+  // retrieve the headers of the last 20 messages without marking them as read
     $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-        New object("withBody";False;"updateSeen";False))
+     New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
-        // ...
+    // ...
     End if
 ```
 
@@ -1124,7 +1128,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 #### Descrição
 
-A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
 
 In the first parameter, you can pass either:
 
@@ -1473,28 +1477,29 @@ The function returns an object describing the IMAP status:
 To to rename your “Invoices” mailbox to “Bills”:
 
 ```4d
-var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+var $pw : text
+var $options; $transporter; $status : object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
 
-  //create transporter
- $transporter:=IMAP New transporter($server)
+$pw:=Request("Please enter your password:")
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("INBOX")
+If(OK=1) $options.host:="imap.gmail.com"
 
-  If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-     New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-    // ...
-   End if
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+// rename mailbox
+$status:=$transporter.renameBox("Invoices"; "Bills")
+
+If ($status.success)
+   ALERT("Mailbox renaming successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
+End if
 ```
 
 <!-- END REF -->
@@ -1586,11 +1591,11 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 Search-keys may request the value to search for:
 
-* **Search-keys with a field-name value**: the field-name is the name of a header field. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+* **Search-keys with a date value**: the date is a string that must be formatted as follows: *date-day+"-"+date-month+"-"+date-year* where date-day indicates the number of the day of the month (max. 2 characters), date-month indicates the name of the month (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) and date-year indicates the year (4 characters). Example: `searchCriteria = SENTBEFORE 1-Feb-2020` (a date does not usually need to be quoted since it does not contain any special characters)
 
 * **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. Matching is not case-sensitive.
 
-* **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
+* **Search-keys with a field-name value**: the field-name is the name of a header field. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
 * **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
 
@@ -1661,7 +1666,7 @@ Search-keys may request the value to search for:
 
 #### Descrição
 
-selects the *name* mailbox as the current mailbox <!-- REF #IMAPTransporterClass.selectBox().Summary -->A função `.selectBox()`<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
+A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
 In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
@@ -1819,24 +1824,23 @@ The function returns an object describing the IMAP status:
 To unsubscribe from the "Atlas Corp” mailbox in the "Bills" hierarchy:
 
 ```4d
-var $pw : text
+var $pw; $name : text
 var $options; $transporter; $status : object
 
 $options:=New object
 
 $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com"
-
 $options.user:="test@gmail.com"
 $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// rename mailbox
-$status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success)
-   ALERT("Mailbox renaming successful!")
+$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
+$status:=$transporter.unsubscribe($name) If ($status.success)
+   ALERT("Mailbox unsubscription successful!")
    Else
    ALERT("Error: "+$status.statusText)
- End if
+   End if
    Else
    ALERT("Error: "+$status.statusText)
    End if
