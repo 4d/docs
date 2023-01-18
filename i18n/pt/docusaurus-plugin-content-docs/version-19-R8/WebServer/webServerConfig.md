@@ -416,7 +416,7 @@ By default, the value is 100. You can set the number anywhere between 10 and 320
 
 Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
 
-Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes.
+Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. This limit is used to avoid web server saturation due to incoming requests that are too large.
 
 Possible values: 500 000 to 2 147 483 648.
 
@@ -552,7 +552,7 @@ You can designate another default HTML root folder by entering its pathname.
 
 - The path is relative to the [Project folder](Project/architecture.md#project-folder) (4D local and 4D Server) or to the folder containing the 4D application or software package (4D in remote mode).
 - The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
-- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name (two periods) before the folder name
+- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name
 - The path must not start with a slash (except if you want the HTML root folder to be the Project or 4D remote folder, but for access to the folders above to be forbidden, in which case you can pass "/" as the root folder).
 
 For example, if you want the HTML root folder to be the "Web" subfolder in the "MyWebApp" folder, enter "MyWebApp/Web".
