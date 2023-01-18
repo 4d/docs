@@ -15,13 +15,14 @@ Graças ao objecto padrão 4D *refcounting*, um handle de arquivo é automaticam
 ### Exemplo
 
 ```code4d
-var $f : 4D. File
-var $fhandle : 4D. FileHandle
+var $f : 4D.File
+var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
 //Escrever linha por linha do início
 $fhandle:=$f.open("write")
-$text:="Hello World" For ($line; 1; 4)
+$text:="Hello World"
+For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
@@ -91,7 +92,7 @@ Os objectos handle de arquivos não podem ser partilhados.
 A propriedade `.breakModeRead` devolve <!-- REF #FileHandleClass.breakModeRead.Summary -->o modo de processamento para quebras de linha utilizado na leitura do arquivo<!-- END REF -->.
 
 
-A propriedade `.breakModeWrite` pode ser definida na criação do handle com a função [`file.open()`](FileClass.md#open) (ver [a função `.open()` função](FileClass.md#open) para mais informações). O padrão é "nativo".
+A propriedade `.breakModeRead` pode ser definida na criação do cabo com a função [`file.open()`](FileClass.md#open) (ver [o `.open()` function](FileClass.md#open) para mais informações). O padrão é "nativo".
 
 > A propriedade `.breakModeRead` contém sempre um valor de texto, mesmo que a opção `.open()` tenha sido definida usando um número (constante).
 
@@ -118,7 +119,7 @@ Essa propriedade é **apenas leitura**.
 
 A propriedade `.breakModeWrite` devolve <!-- REF #FileHandleClass.breakModeWrite.Summary -->o modo de processamento para quebras de linha utilizado quando se escreve no arquivo<!-- END REF -->.
 
-A propriedade `.breakModeRead` pode ser definida na criação do cabo com a função [`file.open()`](FileClass.md#open) (ver [o `.open()` function](FileClass.md#open) para mais informações). O padrão é "nativo".
+A propriedade `.breakModeWrite` pode ser definida na criação do handle com a função [`file.open()`](FileClass.md#open) (ver [a função `.open()` função](FileClass.md#open) para mais informações). O padrão é "nativo".
 
 > A propriedade `.breakModeWrite` contém sempre um valor de texto, mesmo que a opção `.open()` tenha sido definida utilizando um número (constante).
 
@@ -273,14 +274,14 @@ Esta propriedade é **read/write**.
 | v19 R7 | Adicionado |
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D. Blob](BlobClass)<!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass)<!-- END REF -->
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| Parâmetros | Tipo                  |    | Descrição                                         |
-| ---------- | --------------------- | -- | ------------------------------------------------- |
-| *bytes*    | Real                  | -> | Número de bytes a ler                             |
-| Resultados | [4D. Blob](BlobClass) | <- | Bytes lidos do arquivo|<!-- END REF -->
+| Parâmetros | Tipo                 |    | Descrição                                         |
+| ---------- | -------------------- | -- | ------------------------------------------------- |
+| *bytes*    | Real                 | -> | Número de bytes a ler                             |
+| Resultados | [4D.Blob](BlobClass) | <- | Bytes lidos do arquivo|<!-- END REF -->
 
 
 
@@ -433,13 +434,13 @@ Se o tamanho ** for inferior ao tamanho atual do documento, o conteúdo do docum
 | v19 R7 | Adicionado |
 </details>
 
-<!--REF #FileHandleClass.writeBlob().Syntax -->| <!-- END REF -->
+<!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| Parâmetros | Tipo                  |    | Descrição                                                |
-| ---------- | --------------------- | -- | -------------------------------------------------------- |
-| *blob*     | [4D. Blob](BlobClass) | -> | Blob para escrever no arquivo|<!-- END REF -->
+| Parâmetros | Tipo                 |    | Descrição                                                |
+| ---------- | -------------------- | -- | -------------------------------------------------------- |
+| *blob*     | [4D.Blob](BlobClass) | -> | Blob para escrever no arquivo|<!-- END REF -->
 
 
 |
@@ -449,7 +450,7 @@ Se o tamanho ** for inferior ao tamanho atual do documento, o conteúdo do docum
 
 A função `.writeBlob()` <!-- REF #FileHandleClass.writeBlob().Summary -->escreve *blob* no arquivo, a partir da posição atual <!-- END REF -->.
 
-Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após o delimitador de fim de linha.
+Quando esta função for executada, a posição atual ([.offset](#offset)) é atualizada depois do último byte escrito.
 
 #### Veja também
 
@@ -485,7 +486,7 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 A função `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->escreve *lineOfText* conteúdo na posição atual e insere um delimitador de fim de linha<!-- END REF --> (ao contrário da função [.writeText()](#writetext)). Como padrão, é utilizado um delimitador nativo de fim de linha, mas pode definir outro delimitador quando [abrir o handle do arquivo](FileClass.md#open) definindo a propriedade [`.breakModeWrite`](#breakmodewrite) .
 
-Quando esta função for executada, a posição atual ([.offset](#offset)) é atualizada depois do último byte escrito.
+Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após o delimitador de fim de linha.
 
 #### Veja também
 
@@ -518,7 +519,7 @@ Quando esta função for executada, a posição atual ([.offset](#offset)) é at
 
 #### Descrição
 
-A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais. Esta função substitui todos os delimitadores de fim de linha originais.
+A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais. Como padrão, é utilizado o delimitador nativo, mas pode definir outro delimitador quando [abrir o handle do arquivo](FileClass.md#open) definindo a propriedade [`.breakModeWrite`](#breakmodewrite) .
 
 Quando esta função for executada, a posição atual ([.offset](#offset)) é atualizada após o próximo delimitador de fim de linha.
 
