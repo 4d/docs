@@ -11,7 +11,7 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 
 - Ein Name muss mit einem Buchstaben, einem Unterstrich oder einem Dollarzeichen ("$") beginnen (Beachten Sie, dass das Dollarzeichen ein Element auf lokaler Ebene kennzeichnen kann, siehe unten.).
 - Der Name kann Buchstaben, Zahlen, Leerzeichen und den Unterstrich ("_") enthalten.
-- Punkte (".") Punkte (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Punkte (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
 - Kommas, Schrägstriche, Anführungszeichen und Doppelpunkte sind nicht erlaubt.
 - Zeichen, die für Operatoren reserviert sind, wie z.B. * und +, sind nicht erlaubt.
 - Verwenden Sie keine reservierten Namen, d.h. 4D Befehlsnamen (`Date`, `Time`, usw.), Schlüsselwörter (If, For, usw.) und Konstanten.
@@ -20,7 +20,7 @@ Die folgenden Regeln gelten für alle 4D Frameworks.
 ### Zusätzliche Regeln für Namen von Objekteigenschaften und ORDA
 
 - Leerzeichen sind nicht erlaubt.
-- Punkte (".") Punkte (".") Periods (".") and brackets ("[ ]") are not allowed.
+- Punkte (".") Periods (".") and brackets ("[ ]") are not allowed.
 - Wichtig: Groß- und Kleinschreibung wird unterschieden.
 
 ### Zusätzliche Regeln für SQL
@@ -128,7 +128,7 @@ ARRAY INTEGER(aiBigArray;10000)
 
 ### Lokale Arrays
 
-Der Name eines lokalen Prozesses beginnt mit dem Dollarzeichen $. You denote a local process if the name of the process is preceded by a dollar ($) sign. The process name can contain up to 255 characters, not including the dollar sign.
+Der Name eines lokalen Array beginnt mit dem Dollarzeichen ($) Der Name eines lokalen Array kann ohne Dollarzeichen max. 31 Zeichen lang sein.
 
 Beispiele:
 
@@ -250,7 +250,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Projektmethoden können Parameter (Argumente) akzeptieren. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. Parameter stehen in Klammern nach dem Methodennamen.
+Projektmethoden können Parameter (Argumente) akzeptieren. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. In addition, multiple consecutive (and last) parameters can be addressed with the syntax ${n}where n, numeric expression, is the number of the parameter.
 
 Innerhalb einer Funktion enthält die lokale Variable $0 den zurückzugebenden Wert.
 
