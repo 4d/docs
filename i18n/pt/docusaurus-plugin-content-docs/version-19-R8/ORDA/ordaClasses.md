@@ -849,7 +849,8 @@ On the *StudentsEntity* class:
 Class extends Entity
 
 local Function age() -> $age: Variant
-    If (This.birthDate#!00-00-00!)
+
+If (This.birthDate#!00-00-00!)
     If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
 Else 
