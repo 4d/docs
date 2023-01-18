@@ -289,7 +289,6 @@ You want to delete a specific file in the database folder:
     ALERT("User preference file deleted.")
  End if
  End if
- End if
 ```
 <!-- END REF -->
 
