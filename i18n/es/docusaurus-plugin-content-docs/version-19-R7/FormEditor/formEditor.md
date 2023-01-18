@@ -107,14 +107,14 @@ Para mostrar/ocultar la lista de propiedades, seleccione **Lista de propiedades*
 
 #### Atajos
 
-Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
+You can use the following shortcuts in the Property List:
 
 - **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
 - **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
 - **PgUp** y **PgDn**: selecciona la primera o la última celda visible de la lista mostrada.
 - **Inicio** y **Fin**: selecciona la primera o la última celda de la lista.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en la etiqueta de tema: contrae/despliega todos los temas de la lista.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a theme label: Used to Collapse/Expand every theme in the list.
 - **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
 
 
@@ -153,7 +153,7 @@ Para seleccionar un objeto utilizando la barra de herramientas:
 Para seleccionar un objeto utilizando la Lista de propiedades:
 
 1. Seleccione el nombre del objeto en la lista desplegable de objetos situada en la parte superior de la lista de propiedades. Con estos dos métodos, puede seleccionar un objeto que esté oculto por otros objetos o que se encuentre fuera del área visible de la ventana actual. Para deseleccionar un objeto, haga clic fuera del límite del objeto o **Mayúsculas+clic** en el objeto.
-> > > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selección de múltiples objetos
 
@@ -268,7 +268,7 @@ Para mostrar esta caja de diálogo, seleccione los objetos que desee alinear y, 
 
 - En las áreas "Alineación izquierda/derecha" y/o "Alineación superior/inferior", haga clic en el icono que corresponde a la alineación que desea realizar.<p>El área de ejemplo muestra los resultados de su selección.</p>
 
-- Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Ver** o **Aplicar**. En este caso, 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla.<p>Para alinear los objetos a un objeto específico, seleccione la opción **Alinear en** y seleccione el objeto al que desea que se alineen los demás objetos de la lista de objetos. En este caso, la posición del objeto de referencia no se alterará.</p>
+- Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Ver** o **Aplicar**. En este caso, 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>Para alinear los objetos a un objeto específico, seleccione la opción **Alinear en** y seleccione el objeto al que desea que se alineen los demás objetos de la lista de objetos. En este caso, la posición del objeto de referencia no se alterará.</p>
 
 Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. Los objetos se alinean entonces en el editor de formularios, pero como la caja de diálogo permanece en el primer plano, aún puede cancelar o aplicar la alineación.
 > Esta caja de diálogo le permite alinear y distribuir objetos en una sola operación. Para más información sobre cómo distribuir objetos, consulte [Repartir objetos](#distribuir-objetos).
@@ -291,7 +291,7 @@ En cuanto a la distribución de los objetos, 4D ofrece una distancia basada en l
 ![](../assets/en/FormEditor/magneticGrid2.png)
 
 Este funcionamiento se aplica a todos los tipos de objetos de los formularios. La rejilla magnética puede activarse o desactivarse en cualquier momento utilizando el comando **Activar la rejilla magnética** del menú **Formulario** o del menú contextual del editor. También es posible definir la activación de esta función por defecto en la página **Preferencias** > **Formularios** (opción **Activar la alineación automática por defecto**). Puede activar o desactivar manualmente la rejilla magnética cuando se selecciona un objeto presionando la tecla **Ctrl** (Windows) o **Control** (macOS) .
-> La rejilla magnética también influye en el redimensionamiento manual de los objetos.
+> Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+clic** / **Comando+Mayús+clic** para seleccionar cada objeto sucesivamente bajando un plano con cada clic.
 
 ### Distribuir los objetos
 
@@ -312,7 +312,7 @@ Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
 3. En las áreas Alineación izquierda/derecha y/o Alineación superior/inferior, haga clic en el icono de distribución estándar: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(Icono de distribución horizontal estándar)</p>El área de ejemplo muestra los resultados de su selección.
 
-4. Para efectuar una repartición estándar que utilice el esquema estándar, haga clic en **Previsualización** o *Aplicar*.<p>En este caso, 4D realizará una distribución estándar, de modo que los objetos se dispongan con la misma cantidad de espacio entre ellos.</p>Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla.<p>Para efectuar una distribución específica, seleccione la opción **Distribuir** (por ejemplo, si desea distribuir los objetos en función de la distancia a su lado derecho). Esta opción actúa como un interruptor. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:</p>
+4. Para efectuar una repartición estándar que utilice el esquema estándar, haga clic en **Previsualización** o *Aplicar*.<p>En este caso, 4D realizará una distribución estándar, de modo que los objetos se dispongan con la misma cantidad de espacio entre ellos.</p>For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>Para efectuar una distribución específica, seleccione la opción **Distribuir** (por ejemplo, si desea distribuir los objetos en función de la distancia a su lado derecho). Esta opción actúa como un interruptor. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:</p>
 
 - Horizontalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los lados izquierdo, central (hor.) y derecho de los objetos seleccionados.
 - Verticalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los bordes superiores, centros (vert.) y bordes inferiores de los objetos seleccionados.
