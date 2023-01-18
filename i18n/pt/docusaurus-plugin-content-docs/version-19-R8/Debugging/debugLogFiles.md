@@ -456,7 +456,37 @@ The log configuration file is a `.json` file that can contain the following prop
             "type": "object",
             "properties": {
                 "state": {
-                    "description":
+                    "description": "Enable/Disable SMTP log recording (form 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "IMAPLogs": {
+            "description": "Configuration for IMAP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable IMAP log recording (form 0 to N)",
+                    "type": "integer"
+                }
+            }
+        },
+        "ORDALogs": {
+            "description": "Configuration for ORDA logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable ORDA logs (0 or 1)",
+                    "type": "integer"
+                },
+                "filename": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
 ```
 
 ### Exemplo
