@@ -36,7 +36,7 @@ In solch einer Situation, also bei einer unkontrolliert ablaufenden Methode kön
 ### Beispiel
 
 ```4d
- CONFIRM("Add a new record?") CONFIRM("Add a new record?") //The user wants to add a record? CONFIRM("Add a new record?") //The user wants to add a record?
+ CONFIRM("Add a new record?") CONFIRM("Add a new record?") //The user wants to add a record?
  While(OK=1) //Loop as long as the user wants to
     ADD RECORD([aTable]) //Add a new record
  End while //The loop always ends with End while
@@ -331,7 +331,7 @@ Bei jeder Wiederholung der Schleife wird die Variable _Current_Item_ automatisch
 
 - Ist die Variable _Current_Item_ vom Typ Objekt oder Collection (z.B. wenn _Expression_ eine Collection von Objekten oder von Collections ist), wird durch Ändern dieser Variablen automatisch das zutreffende Element der Collection geändert (weil Objekte und Collections beide dieselbe Referenz nutzen). Bei einer Variablen mit einem skalaren Typ wird nur die Variable geändert.
 - Die Variable _Current_Item_ muss vom gleichen Typ wie die Elemente der Collection sein. Ist ein Element davon nicht vom gleichen Typ wie die Variable, wird ein Fehler generiert und die Schleife stoppt.
-- Enthält die Collection Elemente mit einem Wert **Null**, wird ein Fehler generiert, wenn der Variablentyp von _Current_Item_ keine **Null** Werte unterstützt, wie z. B.
+- Enthält die Collection Elemente mit einem Wert **Null**, wird ein Fehler generiert, wenn der Variablentyp von _Current_Item_ keine **Null** Werte unterstützt, wie z. B. der Typ Lange Ganzzahl.
 
 #### Beispiel
 
@@ -449,7 +449,7 @@ Beispiel:
 
 ### Bedingungen Until und While
 
-Sie können die Ausführung von `For each...End for each` durch Einfügen einer Bedingung `Until` oder `While` in der Schleife steuern. Bei einer Anweisung `While(condition)` stoppt der Durchlauf dagegen, sobald condition mit `Falsch` gewertet wird.
+Sie können die Ausführung von `For each...End for each` durch Einfügen einer Bedingung `Until` oder `While` in der Schleife steuern. Ist eine Anweisung `Until(condition)` in der Schleife vorhanden, stoppt der Durchlauf, sobald condition mit `Wahr` gewertet wird. Bei einer Anweisung `While(condition)` stoppt der Durchlauf dagegen, sobald condition mit `Falsch` gewertet wird.
 
 Sie können je nach Bedarf ein anderes Schlüsselwort verwenden:
 
