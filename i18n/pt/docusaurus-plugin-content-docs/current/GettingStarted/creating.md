@@ -102,7 +102,7 @@ That folder is divided into two subfolders:
 
 ## File saving
 
-Quando trabalhar em um projeto em 4D Developer, pode usar os editores integrados de 4D para criar, modificar ou salvar elementos da estrutura, os métodos, os formulários, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
 Quando trabalhar em um projeto em 4D Developer, pode usar os editores integrados de 4D para criar, modificar ou salvar elementos da estrutura, os métodos, os formulários, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
 
