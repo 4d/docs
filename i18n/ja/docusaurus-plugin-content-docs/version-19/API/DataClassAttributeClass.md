@@ -10,7 +10,7 @@ title: DataClassAttribute
  revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-このコードは、*nameAttribute* および *revenuesAttribute* 変数に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。 その代わりに、属性自身への参照を返します。 値を管理するには、[**エンティティ**](EntityClass.md) を使用する必要があります。
+このコードは、*nameAttribute* および *revenuesAttribute* 変数に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 値を管理するには、[**エンティティ**](EntityClass.md) を使用する必要があります。
 
 `DataClassAttribute` オブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 
@@ -190,7 +190,7 @@ title: DataClassAttribute
 
 `.kind` プロパティは、 <!-- REF DataClassAttributeClass.kind.Summary -->属性の種類を格納します<!-- END REF -->。 以下のいずれかの値が返されます:
 
-* "storage": ストレージ (あるいはスカラー) 属性。 つまり、属性は値を保存しており、他の属性への参照ではありません。
+* "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
 * "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
 * "relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)
 
@@ -227,8 +227,8 @@ title: DataClassAttribute
 `.mandatory` プロパティは、 <!-- REF DataClassAttributeClass.mandatory.Summary -->属性において Null値の入力が拒否されている場合に true です<!-- END REF -->。
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
-> 参照
-> 汎用的なプログラミングのために、`.mandatory` が返されない場合でも **Bool** (dataClassAttribute.mandatory) と書くことで、有効な値 (false) を受け取ることができます。 **警告**: このプロパティは、4Dデータベースレベルの "Null値の入力を拒否" フィールドプロパティと対応しています。 フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。
+> 汎用的なプログラミングのために、`.mandatory` が返されない場合でも **Bool** (dataClassAttribute.mandatory) と書くことで、有効な値 (false) を受け取ることができます。
+> **警告**: このプロパティは、4Dデータベースレベルの "Null値の入力を拒否" フィールドプロパティと対応しています。 フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。
 
 <!-- END REF -->
 
@@ -247,7 +247,7 @@ title: DataClassAttribute
 
 #### 説明
 
-`.name` プロパティは、 <!-- REF DataClassAttributeClass.name.Summary -->`.name` プロパティは、<!-- END REF -->。
+`.name` プロパティは、 <!-- REF DataClassAttributeClass.name.Summary -->`dataClassAttribute` オブジェクトの名称を文字列として返します<!-- END REF -->。
 
 #### 例題
 
