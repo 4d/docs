@@ -7,7 +7,7 @@ Daten in 4D werden auf zwei ganz unterschiedliche Weisen gespeichert. **Felder**
 
 Beim Einrichten Ihrer 4D Datenbank legen Sie die Namen und Typen Ihrer Datenfelder fest. Variablen sind ganz ähnlich—Sie geben diesen auch Namen und verschiedene Typen (siehe unter [Datentypen](Concepts/data-types.md)).
 
-Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. eine Textvariable in einem Feld vom gleichen Typ speichern:
+Ist die Variable angelegt, können Sie diese überall in Ihrer Anwendung verwenden, wo sie benötigt wird. Sie wollen z. B. eine Textvariable in einem Feld vom gleichen Typ speichern:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -144,7 +144,7 @@ MyNumber:=3
 
 erstellt die Variable _ MyNumber_ und setzt die Zahl 3 ein. Existiert MyNumber bereits, wird einfach die Zahl 3 eingesetzt.
 
-> In der Regel wird davon abgeraten, Variablen [ohne Deklarieren eines Typs](#variablen-erstellen) zu erstellen.
+> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
 Natürlich wären Variablen nicht sehr hilfreich, wenn Sie keine Daten daraus erhalten könnten. Sie verwenden wieder den Zuweisungsoperator. Wollen Sie den Wert von MyNumber z.B. in ein Feld mit Namen [Products]Size setzen, schreiben Sie _ MyNumber_ auf die rechte Seite des Zuweisungsoperators:
 
