@@ -28,7 +28,6 @@ arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
 MyVar:=Length("Acme") //assigns the result of the function (4) to MyVar
 $myDate:=!2018/01/21! //assigns a date literal
 $myHour:=?08:12:55? //assigns a time literal //asigna una fecha literal
-$myHour:=?08:12:55? //asigna una hora literal //asigna una fecha literal
 $myHour:=?08:12:55? //asigna una hora literal
 ```
 
@@ -186,7 +185,6 @@ $f:=New object
 $f.message:=New formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 $f.message() //displays "Hello world!"
-$f.message() //displays "Hello world!"
 ```
 
 Para acceder a un elemento de la colección, debe pasar el número del elemento entre corchetes:
@@ -255,7 +253,7 @@ This.name:="Square"
 
 
 ## Operadores
-Cuando se utiliza el lenguaje, es raro que se quiera simplemente un dato. Es más probable que quiera hacer algo con esos datos. Estos cálculos se realizan con operadores. Los operadores, en general, toman dos datos y realizan una operación sobre ellos que da como resultado un nuevo dato. Usted ya conoce a la mayoría de los operadores. Usted ya conoce a la mayoría de los operadores. You are already familiar with many operators.
+Cuando se utiliza el lenguaje, es raro que se quiera simplemente un dato. Es más probable que quiera hacer algo con esos datos. Estos cálculos se realizan con operadores. Los operadores, en general, toman dos datos y realizan una operación sobre ellos que da como resultado un nuevo dato. Usted ya conoce a la mayoría de los operadores. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
 
 | Operador | Operación      | Ejemplo   |
 | -------- | -------------- | --------- |
@@ -268,11 +266,11 @@ Los operadores numéricos son sólo un tipo de operador disponible. 4D soporta m
 
 Los mismos símbolos se utilizan a menudo para diferentes operaciones, dependiendo del tipo de datos. Por ejemplo, el signo más (+) realiza diferentes operaciones con diferentes datos:
 
-| Tipos de datos | Operación        | Ejemplo                                                                                                                        |
-| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Number         | Adición          | 1 + 2 suma los números y da como resultado 3                                                                                   |
-| String         | Concatenación    | "Hola" + "a todos" concatena (une) las cadenas y da como resultado "Hola a todos"                                              |
-| Fecha y Número | Adición de fecha | !1989-01-01! !1989-01-01! !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
+| Tipos de datos | Operación        | Ejemplo                                                                                                           |
+| -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Number         | Adición          | 1 + 2 suma los números y da como resultado 3                                                                      |
+| String         | Concatenación    | "Hola" + "a todos" concatena (une) las cadenas y da como resultado "Hola a todos"                                 |
+| Fecha y Número | Adición de fecha | !1989-01-01! !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
 
 ## Expresiones
@@ -293,30 +291,30 @@ Las expresiones son rara vez "autónomas." Hay varios lugares en 4D donde una ex
 ### Tese de expresiones
 Se hace referencia a una expresión por el tipo de datos que devuelve. Hay varios tipos de expresiones. En la siguiente tabla se dan ejemplos de cada tipo de expresión.
 
-| Expression                                                                                                                | Tipo                   | Descripción                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                                                                                                                   | String                 | La palabra Hola es una constante cadena, indicada por las comillas dobles.                                                                                           |
-| “Hello ” + “there”                                                                                                        | String                 | Dos cadenas, "Hola" y "a todos", se suman (concatenan) con el operador de concatenación de cadenas (+). Se devuelve la cadena "Hola".                                |
-| “Sr. ” + [People]Name                                                                                                     | String                 | Se concatenan dos cadenas: la cadena "Sr." y el valor actual del campo Nombre de la tabla Personas. Si el campo contiene "Smith", la expresión devuelve "Mr. Smith". |
-| Uppercase("smith")                                                                                                        | String                 | Esta expresión utiliza `Uppercase`, un comando del lenguaje, para convertir la cadena "smith" a mayúsculas. Devuelve “SMITH”.                                        |
-| 4                                                                                                                         | Number                 | Se trata de una constante numérica, 4.                                                                                                                               |
-| 4 * 2                                                                                                                     | Number                 | Dos números, 4 y 2, se multiplican utilizando el operador de multiplicación (*). El resultado es el número 8.                                                        |
-| myButton                                                                                                                  | Number                 | Es una variable asociada a un botón. Devuelve el valor actual del botón: 1 si se ha hecho clic, 0 si no.                                                             |
-| !1997-01-25!                                                                                                              | Fecha                  | Esta es una constante fecha para la fecha 1/25/97 (25 de enero de 1997).                                                                                             |
-| Current date+ 30                                                                                                          | Fecha                  | Esta es una expresión de tipo Fecha que utiliza el comando `Current date` para obtener la fecha de hoy. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.   |
-| ?8:05:30?                                                                                                                 | Hora                   | Es una constante hora que representa 8 horas, 5 minutos y 30 segundos.                                                                                               |
-| ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? + ?1:02:03? | Hora                   | Esta expresión suma dos horas y devuelve la hora 3:05:07.                                                                                                            |
-| True                                                                                                                      | Boolean                | Este comando devuelve el valor booleano TRUE.                                                                                                                        |
-| 10 # 20                                                                                                                   | Boolean                | Se trata de una comparación lógica entre dos números. El símbolo número (#) significa "es diferente de". Como 10 "es diferente de" 20, la expresión devuelve TRUE.   |
-| “ABC” = “XYZ”                                                                                                             | Boolean                | Se trata de una comparación lógica entre dos cadenas. Son diferentes, por lo que la expresión devuelve FALSE.                                                        |
-| My Picture + 50                                                                                                           | Picture                | Esta expresión toma la imagen en My Picture, la mueve 50 píxeles a la derecha y devuelve la imagen resultante.                                                       |
-| ->[People]Name                                                                                                            | Puntero                | Esta expresión devuelve un puntero al campo llamado [People]Name.                                                                                                    |
-| Table (1)                                                                                                                 | Puntero                | Este es un comando que devuelve un puntero a la primera tabla.                                                                                                       |
-| JSON Parse (MyString)                                                                                                     | Object                 | Este es un comando que devuelve MyString como un objeto (si el formato es el adecuado)                                                                               |
-| JSON Parse (MyJSONArray)                                                                                                  | Collection             | Este es un comando que devuelve MyJSONArray en forma de colección (si el formato es el adecuado)                                                                     |
-| Form.pageNumber                                                                                                           | Propiedad objeto       | Una propiedad objeto es una expresión que puede ser de todo tipo soportado                                                                                           |
-| Col[5]                                                                                                                    | Elementos de colección | Un elemento de colección es una expresión que puede ser de todo tipo soportado                                                                                       |
-| $entitySel[0]                                                                                                             | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. Este tipo de expresión es **no asignable**                                          |
+| Expression                                                                                          | Tipo                   | Descripción                                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                                                                                             | String                 | La palabra Hola es una constante cadena, indicada por las comillas dobles.                                                                                           |
+| “Hello ” + “there”                                                                                  | String                 | Dos cadenas, "Hola" y "a todos", se suman (concatenan) con el operador de concatenación de cadenas (+). Se devuelve la cadena "Hola".                                |
+| “Sr. ” + [People]Name                                                                               | String                 | Se concatenan dos cadenas: la cadena "Sr." y el valor actual del campo Nombre de la tabla Personas. Si el campo contiene "Smith", la expresión devuelve "Mr. Smith". |
+| Uppercase("smith")                                                                                  | String                 | Esta expresión utiliza `Uppercase`, un comando del lenguaje, para convertir la cadena "smith" a mayúsculas. Devuelve “SMITH”.                                        |
+| 4                                                                                                   | Number                 | Se trata de una constante numérica, 4.                                                                                                                               |
+| 4 * 2                                                                                               | Number                 | Dos números, 4 y 2, se multiplican utilizando el operador de multiplicación (*). El resultado es el número 8.                                                        |
+| myButton                                                                                            | Number                 | Es una variable asociada a un botón. Devuelve el valor actual del botón: 1 si se ha hecho clic, 0 si no.                                                             |
+| !1997-01-25!                                                                                        | Fecha                  | Esta es una constante fecha para la fecha 1/25/97 (25 de enero de 1997).                                                                                             |
+| Current date+ 30                                                                                    | Fecha                  | Esta es una expresión de tipo Fecha que utiliza el comando `Current date` para obtener la fecha de hoy. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.   |
+| ?8:05:30?                                                                                           | Hora                   | Es una constante hora que representa 8 horas, 5 minutos y 30 segundos.                                                                                               |
+| ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? + ?1:02:03? | Hora                   | Esta expresión suma dos horas y devuelve la hora 3:05:07.                                                                                                            |
+| True                                                                                                | Boolean                | Este comando devuelve el valor booleano TRUE.                                                                                                                        |
+| 10 # 20                                                                                             | Boolean                | Se trata de una comparación lógica entre dos números. El símbolo número (#) significa "es diferente de". Como 10 "es diferente de" 20, la expresión devuelve TRUE.   |
+| “ABC” = “XYZ”                                                                                       | Boolean                | Se trata de una comparación lógica entre dos cadenas. Son diferentes, por lo que la expresión devuelve FALSE.                                                        |
+| My Picture + 50                                                                                     | Picture                | Esta expresión toma la imagen en My Picture, la mueve 50 píxeles a la derecha y devuelve la imagen resultante.                                                       |
+| ->[People]Name                                                                                      | Puntero                | Esta expresión devuelve un puntero al campo llamado [People]Name.                                                                                                    |
+| Table (1)                                                                                           | Puntero                | Este es un comando que devuelve un puntero a la primera tabla.                                                                                                       |
+| JSON Parse (MyString)                                                                               | Object                 | Este es un comando que devuelve MyString como un objeto (si el formato es el adecuado)                                                                               |
+| JSON Parse (MyJSONArray)                                                                            | Collection             | Este es un comando que devuelve MyJSONArray en forma de colección (si el formato es el adecuado)                                                                     |
+| Form.pageNumber                                                                                     | Propiedad objeto       | Una propiedad objeto es una expresión que puede ser de todo tipo soportado                                                                                           |
+| Col[5]                                                                                              | Elementos de colección | Un elemento de colección es una expresión que puede ser de todo tipo soportado                                                                                       |
+| $entitySel[0]                                                                                       | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. Este tipo de expresión es **no asignable**                                          |
 
 ### Expresiones asignables y no asignables
 
