@@ -369,7 +369,6 @@ Function get fullAddress()->$result : Object
 Class Constructor({$parameterName : type; ...})
 // code
 // code
-// code
 ```
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
@@ -495,12 +494,6 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
-
-// Function definition
-Function getArea()
- var $0 : Integer
-
- $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()
