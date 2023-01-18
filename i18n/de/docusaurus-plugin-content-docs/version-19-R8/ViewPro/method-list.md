@@ -643,7 +643,7 @@ Document contents are converted with respect to their viewing attributes, includ
 * Row height
 * Column width
 * Hidden columns / rows.
-> > > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
+> > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Function result
 
@@ -777,7 +777,7 @@ In *source*, you can pass a property name of a [data context](#vp-set-data-conte
 
 In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
 
-The length of the *tableColumns* collection must be equal to the range column count: Within the *options* object, the *tableColumns* collection determines the structure of the table's columns.
+Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. The length of the *tableColumns* collection must be equal to the range column count:
 
   * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
   * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
@@ -861,7 +861,7 @@ In *rangeObj*, pass an object containing a range of columns to remove. If the pa
 
 * both columns and rows, only the columns are removed.
 * only rows, the command does nothing.
-> > > Columns are deleted from right to left.
+> > Columns are deleted from right to left.
 
 #### Beispiel
 
@@ -900,7 +900,7 @@ In *rangeObj*, pass an object containing a range of rows  to remove. If the pass
 
 * both columns and rows, only the rows  are removed.
 * only columns, the command does nothing.
-> > > Rows are deleted from bottom to top.
+> > Rows are deleted from bottom to top.
 
 #### Beispiel
 
@@ -1095,7 +1095,7 @@ Here's the result:
 
 #### Beschreibung
 
-The `VP SET CUSTOM FUNCTIONS` command <!-- REF #_method_.VP Export to object.Summary --> The `VP Export to object` command<!-- END REF -->. designates the 4D formulas that can be called directly from 4D View Pro formulas
+The `VP Export to object` command <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->. You can use this command for example to store the 4D View Pro area in a 4D database object field.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -1154,7 +1154,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 #### Beschreibung
 
-The `VP Find` command <!-- REF #_method_.VP Find.Summary -->The `VP Find` command<!-- END REF -->. Optional parameters can be used to refine the search and/or replace any results found.
+The `VP Find` command <!-- REF #_method_.VP Find.Summary -->searches the *rangeObj* for the *searchValue*<!-- END REF -->. Optional parameters can be used to refine the search and/or replace any results found.
 
 In the *rangeObj* parameter, pass an object containing a range to search.
 
@@ -1253,8 +1253,6 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
          ALERT("The "+$tableName+" table has been modified.")
      End if 
 End if
-     End if 
-End if
 ```
 
 
@@ -1317,7 +1315,7 @@ You want to trace the execution of the commands and empty the command buffer:
 
 #### Beschreibung
 
-The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Summary -->returns an object from a font shorthand string<!-- END REF -->. returns an object from a font shorthand string
+The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Summary -->returns an object from a font shorthand string<!-- END REF -->. .
 
 In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
 
@@ -1646,7 +1644,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 #### Beschreibung
 
-The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->The `VP Get data context` command<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
+The `VP Get data context` command <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
 
 In *sheet*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If there is no context for the worksheet, the command returns `Null`.
 
@@ -2243,11 +2241,11 @@ Get the sheet count and set the current sheet to the last sheet:
 
 #### Beschreibung
 
-The `VP Get sheet index` command <!-- REF #_method_.VP Get sheet index.Summary -->In *name*, pass the name of the sheet whose index will be returned.<!-- END REF -->
+The `VP Get sheet index` command <!-- REF #_method_.VP Get sheet index.Summary -->returns the index of a sheet based on its name in *vpAreaName*.<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In *index*, pass the index of the sheet to remove. If the passed *index* does not exist, the command does nothing.
+In *name*, pass the name of the sheet whose index will be returned. If no sheet named *name* is found in the document, the method returns -1.
 > Indexing starts at 0.
 
 #### Beispiel
@@ -2283,7 +2281,7 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 
 #### Beschreibung
 
-The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->In *sheet*, pass the index of the target sheet.<!-- END REF -->
+The `VP Get sheet name` command <!-- REF #_method_.VP Get sheet name.Summary -->returns the name of a sheet based on its index in *vpAreaName*.<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -2365,11 +2363,11 @@ End if
 
 #### Beschreibung
 
-The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->The `VP Get show print lines` command<!-- END REF -->
+The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines.Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+In *sheet*, pass the index of the target sheet. If *sheet* is omitted, the command applies to the current sheet.
 
 > Indexing starts at 0.
 
@@ -2591,7 +2589,6 @@ $attributes:=VP Get table column attributes("ViewProArea"; $tableName; 1)
 If ($attributes.dataField#"")
      ...
 End if
-End if
 ```
 
 #### See also
@@ -2759,7 +2756,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0    | Get the cell range for the table area with footer and header (default if omitted) |
 | `vk table data range` | 1    | Get the cell range for the table data area only                                   |
 
-In *sheet*, pass the index of the target sheet. The `VP Get sheet index` command
+In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 > Indexing starts at 0.
 
 If *tableName* is not found, the command returns **null**.
@@ -2852,7 +2849,7 @@ The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns 
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In *sheet*, pass the index of the target sheet. The `VP Get sheet index` command
+In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 > Indexing starts at 0.
 
 
@@ -3034,7 +3031,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Beschreibung
 
-The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->The `VP IMPORT DOCUMENT` command<!-- END REF -->. The imported document replaces any data already inserted in the area.
+The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. The imported document replaces any data already inserted in the area.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -3099,7 +3096,7 @@ $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
 
-Zahl![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
+|![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### See also
 
@@ -3122,7 +3119,7 @@ Zahl![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png
 
 #### Beschreibung
 
-The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->The `VP IMPORT FROM OBJECT` command<!-- END REF -->. The imported object contents replaces any data already inserted in the area.
+The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->imports and displays the *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. The imported object contents replaces any data already inserted in the area.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -3480,7 +3477,7 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 
 #### Beschreibung
 
-The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->The `VP NEW DOCUMENT` command<!-- END REF -->. The new empty document replaces any data already inserted in the area.
+The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. The new empty document replaces any data already inserted in the area.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -3668,7 +3665,7 @@ The following code:
 
 #### Beschreibung
 
-The `VP RECOMPUTE FORMULAS` command <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->The `VP RECOMPUTE FORMULAS` command<!-- END REF -->. By default, 4D automatically computes formulas when they are inserted, imported, or exported. `VP RECOMPUTE FORMULAS` allows you to force the compute at any time (e.g, in case modifications are made to the formulas or if the formulas contain calls to the database). The command launches the execution of the [VP FLUSH COMMANDS](#vp-flush-commands) command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.
+The `VP RECOMPUTE FORMULAS` command <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->immediately evaluates all formulas in *vpAreaName*<!-- END REF -->. By default, 4D automatically computes formulas when they are inserted, imported, or exported. `VP RECOMPUTE FORMULAS` allows you to force the compute at any time (e.g, in case modifications are made to the formulas or if the formulas contain calls to the database). The command launches the execution of the [VP FLUSH COMMANDS](#vp-flush-commands) command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 > Be sure the [VP SUSPEND COMPUTING](#vp-suspend-computing) command has not been executed before using `VP RECOMPUTE FORMULAS`, otherwise the command does nothing.
@@ -3754,7 +3751,7 @@ The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->remo
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+In *index*, pass the index of the sheet to remove. If the passed *index* does not exist, the command does nothing.
 > Indexing starts at 0.
 
 #### Beispiel
@@ -3931,7 +3928,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 #### Beschreibung
 
-The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->The `VP REMOVE TABLE COLUMNS` command<!-- END REF -->. The command removes values and styles.
+The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. The command removes values and styles.
 
 The command removes columns from the *tableName* table, NOT from the sheet. The total number of columns of the sheet is not impacted by the command. The total number of columns of the sheet is not impacted by the command.
 
@@ -3979,7 +3976,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 #### Beschreibung
 
-The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->The `VP REMOVE TABLE ROWS` command<!-- END REF -->. The command removes values and styles.
+The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->removes one or *count* row(s) from the specified *tableName* at the specified *row* index<!-- END REF -->. The command removes values and styles.
 
 This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
 
@@ -4168,7 +4165,7 @@ The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range ob
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-In the *row* parameter, you can define the row(s) of the cell range's position. Pass the row index (counting begins at 0) in this parameter. *rowCount* must be greater than 0.
+The *column* parameter defines the first column of the column range. Pass the row index (counting begins at 0) in this parameter. Pass the row index (counting begins at 0) in this parameter.
 
 In the *row* parameter, you can define the row(s) of the cell range's position. *rowCount* must be greater than 0. Pass the row index (counting begins at 0) in this parameter.
 
@@ -4411,7 +4408,7 @@ VP SET ACTIVE CELL($activeCell)
 
 #### Beschreibung
 
-The `VP SET ALLOWED METHODS` command <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->The `VP SET ALLOWED METHODS` command<!-- END REF -->. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.
+The `VP SET ALLOWED METHODS` command <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.
 
 By default for security reasons, if you do not execute the `VP SET ALLOWED METHODS` command, no method call is allowed in 4D View Pro areas -- except if 4D's generic `SET ALLOWED METHODS` command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area.
 
@@ -4487,14 +4484,14 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 #### Beschreibung
 
-The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->The `VP SET BINDING PATH` command<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
 In *rangeObj*, pass an object that is either a cell range or a combined range of cells.
 
 * If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
 * If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
 
-If *dataContextAttribute* is an empty string, the function removes the current binding. In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*.
+In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
 
 > Attributes of type collection are not supported. When you pass the name of a collection attribute, the command does nothing.
 
@@ -4792,7 +4789,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 #### Beschreibung
 
-The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->The `VP SET CURRENT SHEET` command<!-- END REF --> . The current sheet is the selected sheet in the document.
+The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . The current sheet is the selected sheet in the document.
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -4834,7 +4831,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 #### Beschreibung
 
-The `VP ADD STYLESHEET` command <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. creates or modifies the *styleName* style sheet based upon the combination of the properties specified in *styleObj* in the open document
+The `VP SET CUSTOM FUNCTIONS` command <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. .
 
 The formulas specified by `VP SET CUSTOM FUNCTIONS` appear in a pop-up menu when the first letter of their name is entered. See the [Formulas and Functions](formulas.md) page.
 
@@ -4927,7 +4924,7 @@ End case
 
 #### Beschreibung
 
-The `VP SET DATA CONTEXT` command <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->The `VP SET DATA CONTEXT` command<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
+The `VP SET DATA CONTEXT` command <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -5496,43 +5493,6 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 $printInfo:=New object
 
 //define print attributes
-$printInfo.headerCenter:="&BS.H.I.E.L.D. var $printInfo : Object
-
-//declare print attributes object
-$printInfo:=New object
-
-//define print attributes
-$printInfo.headerCenter:="&BS.H.I.E.L.D. &A Sales Per Region"
-$printInfo.firstPageNumber:=1
-$printInfo.footerRight:="page &P of &N"
-$printInfo.orientation:=vk print page orientation landscape
-$printInfo.centering:=vk print centering horizontal
-$printInfo.columnStart:=0
-$printInfo.columnEnd:=8
-$printInfo.rowStart:=0
-$printInfo.rowEnd:=24
-
-$printInfo.showGridLine:=True
-
-//Add corporate logo
-$printInfo.headerLeftImage:=logo.png
-$printInfo.headerLeft:="&G"
-
-$printInfo.showRowHeader:=vk print visibility hide
-$printInfo.showColumnHeader:=vk print visibility hide
-$printInfo.fitPagesWide:=1
-$printInfo.fitPagesTall:=1
-
-//print PDF document
-VP SET PRINT INFO ("ViewProArea";$printInfo)
-
-//export the PDF
-VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(ALERT("PDF ready!")))) var $printInfo : Object
-
-//declare print attributes object
-$printInfo:=New object
-
-//define print attributes
 $printInfo.headerCenter:="&BS.H.I.E.L.D. &A Sales Per Region"
 $printInfo.firstPageNumber:=1
 $printInfo.footerRight:="page &P of &N"
@@ -5921,7 +5881,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area.
 
 In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
 
-In *sheet*, pass the index of the target sheet. The `VP Get sheet index` command
+In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 
 
 > Indexing starts at 0.
@@ -6514,7 +6474,7 @@ Ergebnis:
 
 #### Beschreibung
 
-The `VP SUSPEND COMPUTING` command <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->The `VP SUSPEND COMPUTING` command<!-- END REF -->. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.
+The `VP SUSPEND COMPUTING` command <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->stops the calculation of all formulas in *vpAreaName*<!-- END REF -->. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.
 
 The command pauses the calculation service in 4D View Pro. Formulas that have already been calculated remain unchanged, however any formulas added after `VP SUSPEND COMPUTING` command  is executed are not calculated.
 
