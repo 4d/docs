@@ -18,7 +18,7 @@ Esta opción permite configurar la visualización por defecto de 4D al inicio, c
 
 * **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
 * **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
-> > **4D Server**: la aplicación 4D Server ignora esta opción. En este entorno, se utiliza siempre el modo **No hacer nada**.
+> **4D Server**: la aplicación 4D Server ignora esta opción. En este entorno, se utiliza siempre el modo **No hacer nada**.
 
 ### Creación de formularios automática
 
@@ -110,5 +110,5 @@ Acceso URL a la documentación en línea de la versión en el 4D Doc Center. 4D 
 
 This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
 
-* When it is checked, 4D first looks for the page in the local folder. Si se encuentra, 4D muestra la página en el navegador actual. Si se encuentra, 4D muestra la página en el navegador actual. Esto permite acceder a la documentación incluso cuando se está desconectado.
+* When it is checked, 4D first looks for the page in the local folder. Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
 * When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Si no se encuentra, 4D muestra un mensaje de error en el navegador.
