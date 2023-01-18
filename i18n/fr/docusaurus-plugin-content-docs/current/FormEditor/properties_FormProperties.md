@@ -12,7 +12,7 @@ This property defines the color scheme for the form. This property defines the c
 
 *   dark - light text on a dark background
 *   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
-> light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
+> Le nombre de caractères pour un nom de fenêtre est limité à 31.
 
 #### Grammaire JSON
 
@@ -141,7 +141,7 @@ Lorsque cette option est cochée, si la fenêtre est ouverte via la commande `Cr
 
 *   la page courante,
 *   la position, la taille et la visibilité de chaque objet du formulaire (y compris la taille et la visibilité des colonnes de list box).
-> > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
+> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
 
 Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/properties_Object.md#save-value) est en outre disponible pour certains objets.
 
@@ -167,7 +167,7 @@ Vous pouvez utiliser des références dynamiques pour définir les noms de fenê
 *   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
 *   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
 
-> Le nombre de caractères pour un nom de fenêtre est limité à 31.
+> > Le nombre de caractères pour un nom de fenêtre est limité à 31.
 
 #### Grammaire JSON
 
