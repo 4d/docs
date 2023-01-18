@@ -14,19 +14,19 @@ Como os outros tipos de campo que podem reter uma grande quantidade de dados (ta
 Usando a linguagem 4D, há duas maneiras de lidar com um blob:
 
 - **como um valor escalar**: um blob pode ser armazenado numa variável ou campo Blob e alterado.
-- **as an object (`4D. Blob`)**: a `4D. Blob` is a blob object. Pode encapsular um blob ou parte dele num `4D. Blob` sem alterar o blob original. Este método chama-se [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Para mais informações sobre como instanciar um `4D. Blob`, ver [Blob Class](../API/BlobClass.md).
+- **as an object (`4D. Blob`)**: a `4D. Blob` is a blob object. Pode encapsular um blob ou parte dele num `4D.Blob` sem alterar o blob original. Este método chama-se [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Para mais informações sobre como instanciar um `4D.Blob`, ver [Blob Class](../API/BlobClass.md).
 
 Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determinar qual se adequa às suas necessidades:
 
-|                                     | Blob | 4D. Blob |
-| ----------------------------------- |:----:|:--------:|
-| Editável                            | Sim  |   Não    |
-| Partilhável em objectos e colecções |  No  |   Sim    |
-| Passado por referência\*          | Não  |   Sim    |
-| Desempenho ao acessar aos bytes     |  +   |    -     |
-| Tamanho máximo                      | 2GB  |  Memory  |
+|                                     | Blob | 4D.Blob |
+| ----------------------------------- |:----:|:-------:|
+| Editável                            | Sim  |   Não   |
+| Partilhável em objectos e colecções |  No  |   Sim   |
+| Passado por referência\*          | Não  |   Sim   |
+| Desempenho ao acessar aos bytes     |  +   |    -    |
+| Tamanho máximo                      | 2GB  | Memory  |
 
-\*Diferente dos comandos 4D concebidos para tomar uma bolha escalar como parâmetro, passar um blob escalar para um método duplica-o na memória. Ao trabalhar com métodos, a utilização de objectos blob (`4D. Blob`) é mais eficiente, uma vez que são passados por referência.
+\*Diferente dos comandos 4D concebidos para tomar uma bolha escalar como parâmetro, passar um blob escalar para um método duplica-o na memória. Ao trabalhar com métodos, a utilização de objectos blob (`4D.Blob`) é mais eficiente, uma vez que são passados por referência.
 
 > Como padrão, 4D estabelece o tamanho blob máximo para 2GB mas esse limite de tamanho pode ser menor dependendo de seu SO e de quanto espaço estiver disponível.
 
