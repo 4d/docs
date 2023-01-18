@@ -37,7 +37,7 @@ Chaque paramètre de générateur d'application est stocké en tant que clé XML
 
 Les paramètres par défaut sont utilisés lors de la première utilisation de la boîte de dialogue du Générateur d'application. Le contenu du fichier est mis à jour, si nécessaire, lorsque vous cliquez sur **Construire** ou **Enregistrer les paramètres**. Vous pouvez définir plusieurs autres fichiers de paramètres XML pour le même projet et les utiliser à l'aide de la commande [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html).
 
-Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application.
+Les clés XML fournissent des options supplémentaires à celles affichées dans la boîte de dialogue du Générateur d'application. XML keys provide additional options besides those displayed in the Build Application dialog box.
 
 ### Fichier d'historique
 
@@ -70,7 +70,7 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database
 
 `\&#060;destination\&#062;/Compiled Database/\&#060;database name&#062;/\MyProject.4dz`
 
-> Un fichier .4dz est essentiellement une version compressée du dossier du projet. Un fichier .4dz est essentiellement une version compressée du dossier du projet. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
+> Un fichier .4dz est essentiellement une version compressée du dossier du projet. A .4dz file is essentially a zipped (packed) version of the project folder. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
 #### Inclure les dossiers associés
 
@@ -86,7 +86,7 @@ Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier Comp
 
 `\&#060;destination&#062;/Components/name.4dbase/\&#060;name&#062;.4DZ`
 
-Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier *Component* contenant le dossier *MyComponent.4dbase* :
+Le dossier *MyComponent.4dbase* contient :
 
 * fichier *MyComponent.4DZ*
 * Un dossier *Resources* - toutes les ressources associées sont automatiquement copiées dans ce dossier. Les autres composants et/ou dossiers de plugins ne sont pas copiés (un composant ne peut pas utiliser de plug-ins ou d'autres composants).
@@ -163,7 +163,7 @@ Lors de la construction de l’application exécutable, 4D duplique le contenu d
 * Installer une version de 4D Volume Desktop correspondant à une langue spécifique ;
 * Ajouter un dossier *PlugIns* personnalisé ;
 * Personnaliser le contenu du dossier *Resources*.
-> Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
+> The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
 
 #### Emplacements des fichiers Web
 
@@ -196,7 +196,7 @@ Une fois générée, une application client/serveur se compose de deux parties h
 En outre, l’application client/serveur est personnalisée et son maniement est simplifié :
 
 * Pour lancer la partie serveur, l’utilisateur double-clique simplement sur l’application serveur : il n’est pas nécessaire de sélectionner le fichier projet. The database does not need to be selected.
-* Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur : il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur : il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). Il est également possible de “forcer” l’affichage de la boîte de dialogue de connexion standard en maintenant la touche **Option** (macOS) ou **Alt** (Windows) enfoncée lors du lancement de l’application cliente. Seule la partie cliente peut se connecter à la partie serveur correspondante. Si un utilisateur tente de se connecter à la partie serveur à l’aide d’une application 4D standard, un message d’erreur est retourné et la connexion est impossible.
+* Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur : il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion. To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. Le client cible le serveur soit via son nom, lorsque client et serveur sont sur le même sous-réseau, soit via son adresse IP, à définir via la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si la connexion échoue, [des mécanismes alternatifs spécifiques peuvent être mis en place](#management-of-client-connections). Il est également possible de “forcer” l’affichage de la boîte de dialogue de connexion standard en maintenant la touche **Option** (macOS) ou **Alt** (Windows) enfoncée lors du lancement de l’application cliente. Seule la partie cliente peut se connecter à la partie serveur correspondante. Si un utilisateur tente de se connecter à la partie serveur à l’aide d’une application 4D standard, un message d’erreur est retourné et la connexion est impossible.
 * Une application client/serveur peut être paramétrée de telle sorte que la partie cliente [puisse être mise à jour automatiquement via le réseau](#copy-of-client-applications-in-the-server-application).
 * Il est également possible d'automatiser la mise à jour de la partie serveur moyennant l'utilisation d'une séquence de commandes du langage ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) et [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
 
@@ -232,11 +232,11 @@ Cochez cette option pour générer la partie cliente de votre application lors d
 
 #### 4D Volume Desktop
 
-Vous devez désigner sur votre disque l’emplacement de l’application 4D Volume Desktop à utiliser. Ce 4D Volume Desktop doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application cliente). Si vous souhaitez générer une version de l’application cliente pour la plate-forme “concurrente”, vous devez répéter l'opération en utilisant une application 4D tournant sur cette plate-forme. Cette étape est nécessaire uniquement pour la version initiale de l'application cliente car les mises à jour suivantes pourront être gérées directement depuis une seule plate-forme via le mécanisme des mises à jour automatiques. Pour plus d’informations sur ce point, reportez-vous au paragraphe [Personnaliser les dossiers 4D Server et/ou 4D Client](#customizing-4d-server-and-or-4d-client-folders).
+Vous devez désigner sur votre disque l’emplacement de l’application 4D Volume Desktop à utiliser. Ce 4D Volume Desktop doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application cliente). Si vous souhaitez générer une version de l’application cliente pour la plate-forme “concurrente”, vous devez répéter l'opération en utilisant une application 4D tournant sur cette plate-forme. Cette étape est nécessaire uniquement pour la version initiale de l'application cliente car les mises à jour suivantes pourront être gérées directement depuis une seule plate-forme via le mécanisme des mises à jour automatiques. Vous devez désigner sur votre disque l’emplacement de l’application 4D Volume Desktop à utiliser. Ce 4D Volume Desktop doit correspondre à la plate-forme courante (qui sera également la plate-forme de l’application cliente). Si vous souhaitez générer une version de l’application cliente pour la plate-forme “concurrente”, vous devez répéter l'opération en utilisant une application 4D tournant sur cette plate-forme. Cette étape est nécessaire uniquement pour la version initiale de l'application cliente car les mises à jour suivantes pourront être gérées directement depuis une seule plate-forme via le mécanisme des mises à jour automatiques. Pour plus d’informations sur ce point, reportez-vous au paragraphe [Personnaliser les dossiers 4D Server et/ou 4D Client](#customizing-4d-server-and-or-4d-client-folders).
 
 > Le numéro de version de 4D Volume Desktop doit correspondre à celui du 4D Developer Edition. Par exemple, si vous utilisez 4D Developer v18, vous devez sélectionner un 4D Volume Desktop v18.
 
-Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. Les différents scénarios proposés sont décrits dans la section [Gestion de la connexion des applications clientes](#management-of-client-connections).
+Si vous souhaitez que l'application cliente se connecte au serveur via une adresse spécifique (autre que le nom du serveur publié sur le sous-réseau), vous devez utiliser la clé XML `IPAddress` dans le fichier buildapp.4DSettings. If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. Vous pouvez également mettre en place des mécanismes spécifiques en cas d'échec de la connexion. Les différents scénarios proposés sont décrits dans la section [Gestion de la connexion des applications clientes](#management-of-client-connections).
 
 #### Copie des applications clientes dans l'application serveur
 
@@ -253,7 +253,7 @@ Les options de cette zone permettent de mettre en place le mécanisme de mise à
 
 Dans la pratique, la proposition de mise à jour des applications clientes découle automatiquement de la mise à jour de l’application serveur.
 
-Pour activer cette fonctionnalité, ajoutez les clés `DatabaseToEmbedInClientWinFolder` et/ou `DatabaseToEmbedInClientMacFolder` dans le fichier de configuration *buildApp*. Lorsque l'une de ces clés est présente, le processus de génération de l'application cliente génère une application monoposte : la structure compilée, au lieu du fichier *EnginedServer.4Dlink*, est placée dans le dossier "Database".
+Le principe est le suivant : lors de la génération d’une nouvelle version de l’application client-serveur depuis le générateur d’applications, la nouvelle partie cliente est copiée sous forme compressée dans le sous-dossier **Upgrade4DClient** du dossier **NomApplication** Server (sous macOS, ces dossiers sont inclus dans le progiciel serveur). Si vous avez suivi le processus de génération d’une application cliente multi-plate-forme, un fichier *. 4darchive* de mise à jour est disponible pour chaque plate-forme :
 
 Pour provoquer la mise à jour des applications clientes, il suffit de remplacer l’ancienne version de l’application serveur par la nouvelle puis de l’exécuter. Le reste du processus est automatique.
 
@@ -284,14 +284,14 @@ Les causes possibles de cette erreur sont multiples. Lorsque vous rencontrez ce 
 A l’issue du processus de génération d’une application client-serveur, vous devez trouver dans le dossier de destination un nouveau dossier nommé **Client Server executable**. This folder contains two subfolders, `\&#060;ApplicationName&#062;Client` and `\&#060;ApplicationName&#062;Server`.
 > Ces dossiers ne sont pas générés si une erreur est survenue. Dans ce cas, ouvrez le [fichier d’historique](#log-file) pour connaître la cause de l’erreur.
 
-The `\&#060;ApplicationName&#062;Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. The `<ApplicationName>Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. The `\&#060;ApplicationName&#062;Server` folder contains the server portion of the application.
+The `\&#060;ApplicationName&#062;Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. The `\&#060;ApplicationName&#062;Server` folder contains the server portion of the application.
 
 Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
 
 * *Windows* - Each folder contains the application executable file, named `\&#060;ApplicationName&#062;Client.exe`for the client part and `\&#060;ApplicationName&#062;Server.exe` for the server part as well as the corresponding .rsr files. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
 * *macOS* - Each folder contains only the application package, named `\&#060;ApplicationName&#062; Client` for the client part and `\&#060;ApplicationName&#062; Server` for the server part. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
 
- > > The macOS packages built contain the same items as the Windows subfolders. In order to modify it, you must first display its contents (**Control+click** on the icon).
+ > Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. In order to modify it, you must first display its contents (**Control+click** on the icon).
 
 If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
 
@@ -531,7 +531,7 @@ Ce mécanisme permet de prendre en charge le cas où le serveur cible primaire e
 
 ### Accès à la boîte de dialogue de sélection de serveur en cas d'erreur
 
-Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélection de serveur sur les applications clientes fusionnées lorsque le serveur ne répond pas. La configuration dans ce cas dépend de la valeur de la clé XML [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) sur le poste qui génère l'application client/serveur.
+Vous pouvez choisir d'afficher ou non la boîte de dialogue standard de sélection de serveur sur les applications clientes fusionnées lorsque le serveur ne répond pas. La configuration dans ce cas dépend de la valeur de la clé XML [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) sur le poste qui génère l'application client/serveur. Vous disposez de trois possibilités :
 
 * **Affichage d'un message d'erreur sans accès possible à la boîte de dialogue de sélection de serveur**. Fonctionnement par défaut. L'application peut uniquement quitter.  
   Clé Xml `ServerSelectionAllowed` : valeur **False** ou clé omise ![](../assets/en/Project/connect1.png)
