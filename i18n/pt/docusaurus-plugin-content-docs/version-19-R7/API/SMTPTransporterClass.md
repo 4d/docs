@@ -166,9 +166,6 @@ For information about SMTP status codes, please refer to [this page](https://www
  Else
     ALERT("Error # "+String($status.status)+", "+$status.statusText)
  End if
- Else
-    ALERT("Error # "+String($status.status)+", "+$status.statusText)
- End if
 ```
 
 
