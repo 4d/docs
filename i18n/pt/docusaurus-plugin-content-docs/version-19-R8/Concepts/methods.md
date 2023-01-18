@@ -257,8 +257,6 @@ For this example, we assume the values in the fields are unique (there are no tw
  End if
     End if
  End if
-    End if
- End if
 ```
 
 with the recursive function `Genealogy of` listed here:
