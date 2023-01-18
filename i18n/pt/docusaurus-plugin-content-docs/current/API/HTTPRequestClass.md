@@ -21,8 +21,14 @@ Criar uma classe `MyHttpRequestOptions` para as opções de pedido:
 
 ```4d
 Class constructor($method : Text; $headers : Object; $body : Text)
-This.method:=$method This.headers:=$headers This.body:=$body Function onResponse($request : 4D.HTTPRequest; $event : Object)
-//Método My onResponse, se quiser manejar a petição de forma assincronica Function onError($request : 4D.HTTPRequest; $event : Object)
+This.method:=$method
+This.headers:=$headers
+This.body:=$body
+
+Function onResponse($request : 4D.HTTPRequest; $event : Object)
+//Método My onResponse, se quiser manejar a petição de forma assincronica
+
+Function onError($request : 4D.HTTPRequest; $event : Object)
 //Método My onError, se quiser manejar a petição de forma assincrônica
 ```
 
@@ -33,8 +39,8 @@ var $headers : Object
 $headers:=New object()
 $headers["field1"]:="value1"
 
-var myHttpRequestOptions : cs. MyHttpRequestOptions
-myHttpRequestOptions := cs. MyHttpRequestOptions.new("GET"; $headers; "")
+var myHttpRequestOptions : cs.MyHttpRequestOptions
+myHttpRequestOptions := cs.MyHttpRequestOptions.new("GET"; $headers; "")
 
 var $request : 4D.HTTPRequest
 $request:=4D.HTTPRequest.new("www.google.com"; myHttpRequestOptions)
@@ -292,7 +298,7 @@ A `response` object is a non-sharable object. It provides the following properti
 
 #### Descrição
 
-A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->A propriedade `.returnResponseBody` contém<!-- END REF -->. If it was omitted, contains True.
+A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains True.
 
 <!-- END REF -->
 
@@ -313,7 +319,7 @@ A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnRes
 
 > This function is thread-safe.
 
-A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->A função `.terminate()`<!-- END REF -->. It triggers the `onTerminate` event.
+A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. It triggers the `onTerminate` event.
 
 <!-- END REF -->
 
@@ -335,7 +341,7 @@ A propriedade `.terminated` contém <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Descrição
 
-A propriedade `.timeout` contém <!-- REF #HTTPRequestClass.timeout.Summary -->A propriedade `.timeout` contém<!-- END REF -->. If it was omitted, contains Undefined.
+A propriedade `.timeout` contém <!-- REF #HTTPRequestClass.timeout.Summary -->the `timeout` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains Undefined.
 
 <!-- END REF -->
 
