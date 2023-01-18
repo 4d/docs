@@ -17,7 +17,7 @@ Les boutons image peuvent être utilisés de deux manières :
   | Switch when Roll Over      | switchWhenRollover     | vrai  |
   | Use Last Frame as Disabled | useLastFrameAsDisabled | vrai  |
 
-* Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
+* Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 
@@ -53,7 +53,7 @@ Les autres modes disponibles sont les suivants :
 * [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
 * [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 * [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
-> [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numérotation des images dans le tableau débute à 0.
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numérotation des images dans le tableau débute à 0.
 
 ## Propriétés prises en charge
 
