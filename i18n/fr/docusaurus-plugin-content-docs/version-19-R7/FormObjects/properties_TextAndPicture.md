@@ -201,7 +201,7 @@ L’apparence et l’emplacement de ce symbole dépend du style de bouton et de 
 
 Pour associer un symbole de pop up menu à un bouton, vous disposez de deux options d’affichage :
 
-|                         Séparé                          |                           Séparé                           |
+|                         Séparé                          |                           Et Lié                           |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
 > La disponibilité effective d’un mode “Séparé” dépend du style de bouton et de la plate-forme.
