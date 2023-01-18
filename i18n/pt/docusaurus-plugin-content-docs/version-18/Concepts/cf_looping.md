@@ -190,7 +190,7 @@ Let's go back to the first `For... End for` example. O seguinte exemplo executa 
  End for
 ```
 
-Here is the equivalent `While... End while` loop:
+Here is the equivalent `Repeat... Until` loop:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -199,7 +199,7 @@ Here is the equivalent `While... End while` loop:
  End while
 ```
 
-Here is the equivalent `Repeat... Until` loop:
+Here is the equivalent `While... End while` loop:
 ```4d
  $i:=1 //Initializa o contador
  Repeat
