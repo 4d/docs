@@ -82,7 +82,7 @@ Los objetos `Folder` soportan varios nombres de ruta, incluyendo las sintaxis `f
 
 #### Descripción
 
-crea y devuelve un nuevo objeto del tipo `4D.Folder` <!-- REF #_command_.Folder.Summary -->El comando `Folder`<!-- END REF -->. El comando acepta dos sintaxis:
+El comando `Folder` <!-- REF #_command_.Folder.Summary -->crea y devuelve un nuevo objeto del tipo `4D.Folder`<!-- END REF -->. El comando acepta dos sintaxis:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -137,7 +137,7 @@ Si el comando se llama desde un componente, pase el *parámetro opcional para ob
 
 #### Descripción
 
-La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->El comando `Folder`<!-- END REF -->. Es idéntico al comando [`Folder`](#folder) (acceso directo).
+La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.Folder`<!-- END REF -->. Es idéntico al comando [`Folder`](#folder) (acceso directo).
 
 > Se recomienda utilizar el comando de acceso directo[`Folder<`](#folder) en lugar de `4D.Folder.new()`.
 
@@ -193,9 +193,6 @@ Creación de la carpeta "/Archives2019/January/" en la carpeta de la base:
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
  ALERT("The "+$newFolder.name+" folder was created.")
-Else
- ALERT("Impossible to create a "+$newFolder.name+" folder.")
-End if
 Else
  ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
