@@ -21,7 +21,7 @@ DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
 Parameter werden durch Strichpunkte (;) voneinander getrennt. Ihr Wert wird im Moment des Aufrufs bewertet.
 
-In der Unterroutine (die aufgerufene Methode) wird der Wert jedes Parameters automatisch in fortlaufend nummerierte lokale Variablen kopiert: $1, $2, $3, usw. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter.
+In der Unterroutine (die aufgerufene Methode) wird der Wert jedes Parameters automatisch in fortlaufend nummerierte lokale Variablen kopiert: $1, $2, $3, usw. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter.
 
 ```4d
   //Code of the method DO SOMETHING
@@ -85,7 +85,7 @@ NewPhrase:=Uppercase4("This is good.")
 
 Die Variable *$NewPhrase* erhält “THIS is good.”
 
-Das Funktionsergebnis `$0` ist eine lokale Variable innerhalb der Unterroutine. Sie lässt sich als solche innerhalb der Unterroutine verwenden. Sie lässt sich als solche innerhalb der Unterroutine verwenden. Innerhalb der Unterroutine können Sie `$0` auf dieselbe Weise wie jede andere lokale Variable verwenden. Es ist 4D, das den Wert von `$0` (genauso wenn die Unterroutine endet) an die aufgerufene Methode zurückgibt.
+Das Funktionsergebnis `$0` ist eine lokale Variable innerhalb der Unterroutine. Sie lässt sich als solche innerhalb der Unterroutine verwenden. It can be used as such within the subroutine. Innerhalb der Unterroutine können Sie `$0` auf dieselbe Weise wie jede andere lokale Variable verwenden. Es ist 4D, das den Wert von `$0` (genauso wenn die Unterroutine endet) an die aufgerufene Methode zurückgibt.
 
 
 ## Parameter deklarieren
@@ -163,26 +163,16 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     End if
     ...
  End if
-    C_LONGINT($0)
- If(Form event=On Drag Over)
-    $0:=0
-    ...
     If($DataType=Is picture)
        $0:=-1
     End if
     ...
- End if
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
  End if
 ```
 
 ## Werte oder Referenzen
 
-Übergeben Sie einen Parameter, bewertet 4D den Parameterausdruck immer im Kontext der aufrufenden Methode und setzt den **Ergebniswert** in die lokalen Variablen $1, $2... in der Unterroutine (siehe [Parameter verwenden](#using-parameters)). Die lokalen Variablen/Parameter sind nicht die aktuellen Felder, Variablen oder Ausdrücke, die von der aufrufenden Methode übergeben werden; sie enthalten nur die Werte, die übergeben wurden. Die lokalen Variablen/Parameter sind nicht die aktuellen Felder, Variablen oder Ausdrücke, die von der aufrufenden Methode übergeben werden; sie enthalten nur die Werte, die übergeben wurden. Beispiel:
+Übergeben Sie einen Parameter, bewertet 4D den Parameterausdruck immer im Kontext der aufrufenden Methode und setzt den **Ergebniswert** in die lokalen Variablen $1, $2... in der Unterroutine (siehe [Parameter verwenden](#using-parameters)). Die lokalen Variablen/Parameter sind nicht die aktuellen Felder, Variablen oder Ausdrücke, die von der aufrufenden Methode übergeben werden; sie enthalten nur die Werte, die übergeben wurden. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Beispiel:
 
 ```4d
     //Here is some code from the method MY_METHOD
@@ -233,7 +223,7 @@ Daten vom Typ Objekt und Collection werden automatisch über eine Referenz verwa
 
 Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](Concepts/dt_pointer.md#zeiger-als-parameter-in-methoden), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
 
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //extra parameters are passed
+Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als Parameter sendet:
 
 ```4d
   //CreatePerson
