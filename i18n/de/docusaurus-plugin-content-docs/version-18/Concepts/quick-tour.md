@@ -35,7 +35,7 @@ Der Zuordnungsoperator := unterscheidet sich von den anderen Operatoren. Er komb
 
 ## Variablen
 
-Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit einem `C_XXX` Befehl. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
+Die 4D Sprache ist stark typisiert, obwohl in vielen Fällen eine gewisse Flexibilität erlaubt ist. Sie erstellen eine typisierte Variable mit einem `C_XXX` Befehl. Um z. B. eine Variable vom Typ Datum zu erstellen, können Sie schreiben:
 
 ```4d
 C_DATE(MyDate) //Date type for MyDate variable
@@ -57,7 +57,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Sie können Objekte und Collections der 4D Programmiersprache mit der Objektnotation verwalten, um ihre Werte zu erhalten oder zu setzen. Beispiel:
+Einige Befehle sind an Collections oder Objekte gebunden. In diesem Fall werden sie Methoden genannt und mit der Objektnotation verwendet. Beispiel:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -185,7 +185,7 @@ myColl[3]  //access to 4th element of the collection
 
 ## Operatoren
 
-In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil wollen. Es ist eher so, dass Sie etwas für oder mit diesen Daten durchführen wollen. Dafür verwenden Sie Operatoren. Operatoren führen in der Regel mit 2 Teilen von Daten eine Operation aus, die ein neues Datenteil ergeben. Sie kennen bereits viele Operatoren. Sie kennen bereits viele Operatoren. You are already familiar with many operators.
+In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil wollen. Es ist eher so, dass Sie etwas für oder mit diesen Daten durchführen wollen. Dafür verwenden Sie Operatoren. Operatoren führen in der Regel mit 2 Teilen von Daten eine Operation aus, die ein neues Datenteil ergeben. Sie kennen bereits viele Operatoren. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
 
 | Operator | Operation      | Beispiel       |
 | -------- | -------------- | -------------- |
@@ -194,7 +194,7 @@ In der Programmiersprache kommt es selten vor, dass Sie nur einen Datenteil woll
 | *        | Multiplikation | 2 * 3 ergibt 6 |
 | /        | Division       | 6 / 2 ergibt 3 |
 
-Numerische Operatoren sind ein Typ der verfügbaren Operatoren. 4D unterstützt viele verschiedene Datentypen, wie Zahlen, Text, Datum und Bilder.
+Numerische Operatoren sind ein Typ der verfügbaren Operatoren. 4D unterstützt viele verschiedene Datentypen, wie Zahlen, Text, Datum und Bilder. So gibt es auch Operatoren, um Operationen mit den verschiedenen Datentypen auszuführen.
 
 Je nach Datentyp werden die gleichen Symbole oft für verschiedene Operationen verwendet. Zum Beispiel führt das Pluszeichen (+) je nach Datentyp unterschiedliche Operationen aus:
 
@@ -300,14 +300,13 @@ For($vCounter;1;100) //Starting loop
 
 #### Eingebundene oder mehrzeilige Kommentare (/**/)
 
-Umklammern Sie Inhalt mit den Zeichen `/*` ... `*/`, um eingebundene Kommentare oder mehrzeilige Kommentarblöcke zu erstellen. Beide Arten beginnen mit `/*` und enden mit `*/`.
+Umklammern Sie Inhalt mit den Zeichen `/*` ... `*/`, um eingebundene Kommentare oder mehrzeilige Kommentarblöcke zu erstellen. Beide Arten beginnen mit ` /*` und enden mit `*/`.
 
 - **Eingebundene Kommentare** können überall im Code eingefügt werden. Beispiel:
 
 ```4d
 For /* inline comment */ ($vCounter;1;100)
  ...
-End for
 End for
 End for
 ```
@@ -323,7 +322,6 @@ comments
  */
 */
 ...
-End for
 End for
 End for
 ```
