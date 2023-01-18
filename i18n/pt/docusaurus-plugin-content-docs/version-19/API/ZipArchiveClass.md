@@ -64,7 +64,7 @@ O comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary --
 
 You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parameter:
 
-- *fileToZip*: simplesmente passar  `4D. File` para compactar.
+- *fileToZip*: simplesmente passar  `4D.File` para compactar.
 
 - *folderToZip*: You pass a `4D. Folder` to compress. Nesse caso, o parâmetro *options* permite compactar só os conteúdos da pasta (ou seja, excluir a pasta parente). Como padrão, `ZIP Create archive` compacta a pasta e seus conteúdos, assim a operação de descompactação vai recriar a pasta. Se quiser que a operação de descompactação restaure apenas os conteúdos da pasta, passe a cosntante `ZIP Without enclosing folder` no parâmetro *options*.
 
