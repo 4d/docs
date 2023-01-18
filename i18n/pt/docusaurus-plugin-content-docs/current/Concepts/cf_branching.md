@@ -59,7 +59,6 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
  Else
     ALERT("You did not enter a name.")
  End if
- End if
  End if 
 ```
 
@@ -144,12 +143,6 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
     Else //Se não for 1, 2, ou 3, exibe um alerta
        ALERT("It was not one, two, or three.")
  //statement(s)
- End case //Se for 2, exibe um alerta
-    :(vResult=3) //Testa se o número é 3
-       ALERT("Three.") //Se for 3, exibe um alerta
-    Else //Se não for 1, 2, ou 3, exibe um alerta
-       ALERT("It was not one, two, or three.")
- //statement(s)
  End case
 ```
 
@@ -157,15 +150,15 @@ For comparison, here is the `If... Else... End if` version of the same method:
 
 ```4d
  If(vResult=1) //Teste se o número é 1
-    ALERT("One.") If(vResult=1) //Test if the number is 1
+    ALERT("One.") If(vResult=1) //Teste se o número é 1
     ALERT("One.") //If it is 1, display an alert
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Teste se o número é  2
+       ALERT("Two.") //Se for 2, exibe um alerta
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exibe um alerta
+       Else //Se não for 1, 2, ou 3,  exibe um alerta
           ALERT("It was not one, two, or three.")
        End if
     End if
@@ -186,16 +179,6 @@ Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
-    :(vResult=1)
-       ...
-```
-
-No código anterior, a presença da segunda condição não é detectada, já que o teste "vResult=1" ramifica o código antes de qualquer outro teste. Para que o código funcione corretamente, pode escrevê-lo assim:
-
-```4d
- Case of
     :(vResult=1) //Test if the number is 1
        ALERT("One.") //If it is 1, display an alert
     :(vResult=2) //Test if the number is 2
@@ -207,9 +190,27 @@ No código anterior, a presença da segunda condição não é detectada, já qu
  End case
 ```
 
+No código anterior, a presença da segunda condição não é detectada, já que o teste "vResult=1" ramifica o código antes de qualquer outro teste. Para que o código funcione corretamente, pode escrevê-lo assim:
+
+```4d
+ If(vResult=1) //Test if the number is 1
+    ALERT("One.") //If it is 1, display an alert
+ Else
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
+    Else
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if
+```
+
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)
