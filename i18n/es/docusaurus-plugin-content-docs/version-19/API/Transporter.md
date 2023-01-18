@@ -182,7 +182,7 @@ La propiedad `.bodyCharset` contiene <!-- REF #transporter.bodyCharset.Summary -
 
 #### Descripción
 
-La propiedad `.sendTimeOut` contiene <!-- REF #transporter.connectionTimeOut.Summary -->el tiempo de espera máximo (en segundos) de una llamada a `.send( )` antes de que se produzca un timeout<!-- END REF -->. .
+La propiedad `.connectionTimeOut` contiene <!-- REF #transporter.connectionTimeOut.Summary -->el tiempo de espera máximo (en segundos) autorizado para establecer una conexión con el servidor<!-- END REF -->. Por defecto, si la propiedad no se ha definido en el objeto servidor (utilizado para crear el objeto transportador con `SMTP New transporter`, `POP3 New transporter`, o `IMAP New transporter`), el valor es 30.
 
 <!-- END REF -->
 
@@ -309,7 +309,7 @@ La propiedad `.port` contiene <!-- REF #transporter.port.Summary --> el número 
 
 #### Descripción
 
-La propiedad `.connectionTimeOut` contiene <!-- REF #transporter.sendTimeOut.Summary --> el tiempo de espera máximo (en segundos) de una llamada a `.send( )` antes de que se produzca un timeout<!-- END REF -->. .
+La propiedad `.sendTimeOut` contiene <!-- REF #transporter.sendTimeOut.Summary --> el tiempo de espera máximo (en segundos) de una llamada a `.send( )` antes de que se produzca un timeout<!-- END REF -->. .
 
 <!-- END REF -->
 
