@@ -46,7 +46,7 @@ Essa propriedade é **apenas leitura**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->Parâmetros<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( *param* : any { *;...paramN* } ) : 4D. Class<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
@@ -67,7 +67,7 @@ Se `.new()` for chamado em uma classe não existente, um erro é retornado.
 
 #### Exemplos
 
-Para criar uma nova instância da classe Person com parâmetros:
+Para criar uma nova instância da classe Person:
 
 ```4d
 var $person : cs. Person  
@@ -75,7 +75,7 @@ $person:=cs. Person.new() //create the new instance
 //$person contains functions of the class
 ```
 
-Para criar uma nova instância da classe Person:
+Para criar uma nova instância da classe Person com parâmetros:
 
 ```4d
 //Class: Person.4dm Class constructor($firstname : Text; $lastname : Text; $age : Integer)
@@ -106,7 +106,7 @@ $person:=cs. Person.new("John";"Doe";40)
 
 </details>
 
-<!-- REF #ClassClass.superclass.Syntax -->|<!-- END REF -->
+<!-- REF #ClassClass.superclass.Syntax -->**.superclass** : 4D. Class<!-- END REF -->
 
 #### Descrição
 
