@@ -84,7 +84,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.extension` <!-- REF #directory.extension.Summary -->devolve a extensão do nome da pasta (se houver)<!-- END REF -->. Uma extensão sempre começa com "." Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
+A propriedade `.extension` <!-- REF #directory.extension.Summary -->devolve a extensão do nome da pasta (se houver)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
 
 Essa propriedade é **apenas leitura**.
 
@@ -394,7 +394,7 @@ Essa propriedade é **apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D. Folder<!-- END REF -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.copyTo().Params -->
@@ -528,7 +528,6 @@ Se quiser saber se há arquivos invisíveis na pasta Database:
  $noInvisible:=Folder(fk database folder).files(fk ignore invisible)
  If($all.length#$noInvisible.length)
     ALERT("Database folder contains hidden files.")
- End if
  End if
  End if
 ```
