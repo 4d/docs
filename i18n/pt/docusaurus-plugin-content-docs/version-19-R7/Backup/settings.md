@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Backups periódicos
+title: Parâmetros da cópia de segurança
 ---
 
 Backup settings are defined through three pages in the [Settings dialog box](../settings/overview.md). Pode estabelecer:
