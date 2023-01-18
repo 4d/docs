@@ -84,13 +84,13 @@ To allow a role in a session:
 
 exposed Function authenticate($identifier : Text; $password : Text)->$result : Text
 
-    var $user : cs. UsersEntity
+    var $user : cs.UsersEntity
 
     Session.clearPrivileges()
 
     $result:="Your are authenticated as Guest"
 
-    $user:=ds. Users.query("identifier = :1"; $identifier).first()
+    $user:=ds.Users.query("identifier = :1"; $identifier).first()
 
     If ($user#Null)
         If (Verify password hash($password; $user.password))
@@ -160,7 +160,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // you can prevent the project to open
  ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
  QUIT 4D
- End if 
+End if 
 ```
 
 ## Initializing privileges for deployment
