@@ -396,15 +396,12 @@ This example of code inserted in a static HTML page displays a different label a
 ...
 <BODY>
 ...
-<BODY>
-...
 <!--#4DIF (vname#"")-->
 Names starting with <!--#4DTEXT vname-->.
 <!--#4DELSE-->
 No name has been found.
 <!--#4DENDIF-->
 ...
-</BODY>
 </BODY>
 </BODY>
 ```
@@ -485,8 +482,6 @@ The following code:
  End while
     NEXT RECORD([People])
  End while
-    NEXT RECORD([People])
- End while
 ```
 
 ### `<!--#4DLOOP array-->`
@@ -509,7 +504,6 @@ The following code example:
  For($Elem;1;Size of array(arr_names))
     arr_names:=$Elem
     ...
- End for
  End for
  End for
 ```
@@ -558,7 +552,6 @@ The `my_method` method can be as follows:
  Else
     If($1<50)
        ...
-       var:=...
        var:=...
        $0:=True
     Else
