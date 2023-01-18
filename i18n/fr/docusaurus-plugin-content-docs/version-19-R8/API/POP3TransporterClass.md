@@ -148,10 +148,6 @@ La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
        ALERT("Error: "+$status.statusText)
     End if
  End if
-    Else
-       ALERT("Error: "+$status.statusText)
-    End if
- End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
@@ -218,7 +214,7 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Paramètres | Type   |    | Description                              |
 | ---------- | ------ |:--:| ---------------------------------------- |
-| Résultat   | Object | <- | objet boxInfo|<!-- END REF -->
+| Résultat   | Object | <- | Objet boxInfo|<!-- END REF -->
 
 |
 
@@ -365,7 +361,6 @@ La fonction retourne **Null** si :
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
- End if
  End if
  End if
 ```
