@@ -327,7 +327,7 @@ Outre la variété de méthodes de recherche, vous pouvez également utiliser de
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée.
+La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
 
 
 ## Verrouillage d'une entité
