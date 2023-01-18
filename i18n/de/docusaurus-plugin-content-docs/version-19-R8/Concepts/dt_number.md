@@ -100,18 +100,18 @@ Beim Arbeiten mit Bit Operatoren müssen Sie sich den Wert vom Typ Lange Ganzzah
 
 Da jedes Bit entweder 0 oder 1 ist, können Sie sich einen Wert vom Typ Lange Ganzzahl auch als Wert vorstellen, der 32 Boolean Werte speichern kann. Ein Bit gleich 1 bedeutet **Wahr**, ein Bit gleich 0 bedeutet **Falsch**.
 
-Ein Ausdruck mit Bit Operator gibt einen Wert von Typ Lange Ganzzahl zurück, mit Ausnahme des Operators Bit Test. Es gibt folgende Bit Operatoren:
+Ein Ausdruck mit Bit Operator gibt einen Wert von Typ Lange Ganzzahl zurück, mit Ausnahme des Operators Bit Test. Hier wird ein Wert vom Typ Boolean zurückgegeben. Es gibt folgende Bit Operatoren:
 
-| Operation                 | Operator  | Syntax                 | Ergibt                    |
-| ------------------------- | --------- | ---------------------- | ------------------------- |
-| Bitweises UND             | &         | Lang & Lang            | Lang                      |
-| Bitweises ODER (inklusiv) | &#124;    | Lang &#124; Lang       | Lang                      |
-| Bitweises ODER (exklusiv) | \^&#124; | Lang \^&#124; Lang    | Lang                      |
-| Left Bit Shift            | <<        | Lang << Lang           | Lang (siehe Hinweis 1)    |
-| Right Bit Shift           | >>        | Lang >> Lang           | Lang (siehe Hinweis 1)    |
-| Bit setzen                | ?+        | Lang ?+ Lang           | Lang (siehe Hinweis 2)    |
-| Bit löschen               | ?-        | Lang ?- Lang           | Lang (siehe Hinweis 2)    |
-| Bit Test                  | ??        | Long ?? Long Lang Lang | Boolean (siehe Hinweis 2) |
+| Operation                 | Operator  | Syntax              | Ergibt                    |
+| ------------------------- | --------- | ------------------- | ------------------------- |
+| Bitweises UND             | &         | Lang & Lang         | Lang                      |
+| Bitweises ODER (inklusiv) | &#124;    | Lang &#124; Lang    | Lang                      |
+| Bitweises ODER (exklusiv) | \^&#124; | Lang \^&#124; Lang | Lang                      |
+| Left Bit Shift            | <<        | Lang << Lang        | Lang (siehe Hinweis 1)    |
+| Right Bit Shift           | >>        | Lang >> Lang        | Lang (siehe Hinweis 1)    |
+| Bit setzen                | ?+        | Lang ?+ Lang        | Lang (siehe Hinweis 2)    |
+| Bit löschen               | ?-        | Lang ?- Lang        | Lang (siehe Hinweis 2)    |
+| Bit Test                  | ??        | Long ?? Long Lang   | Boolean (siehe Hinweis 2) |
 
 #### Hinweise
 
@@ -138,4 +138,4 @@ Folgende Tabelle zeigt die Bit Operatoren und ihre Auswirkung:
 | Right Bit Shift           | 0x0000FFFF >> 8                 | 0x000000FF |
 | Bit setzen                | 0x00000000 ?+ 16                | 0x00010000 |
 | Bit löschen               | 0x00010000 ?- 16                | 0x00000000 |
-| Bit Test                  | 0x00010000 ?? 16 16 16          | Wahr       |
+| Bit Test                  | 0x00010000 ?? 16 16             | Wahr       |
