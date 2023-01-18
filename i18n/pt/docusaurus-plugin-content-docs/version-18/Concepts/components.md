@@ -38,7 +38,7 @@ Para proteger efetivamente os métodos projeto de um componente, simplesmente co
 
 Todos os métodos de projeto de um banco de dados matriz são incluídos por definição no componente (o banco de dados é o componente) o que significa que pode ser chamado e executado pelo componente.
 
-Por outro lado, como padrão esses métodos projeto não serão visíveis, nem poderão ser chamados no banco de dados host local. No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local Esses métodos de projeto podem ser chamados no código do banco de dados local/host (mas não podem ser modificados no editor Métodos do banco de dados host). No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local Esses métodos de projeto podem ser chamados no código do banco de dados local/host (mas não podem ser modificados no editor Métodos do banco de dados host). Estes métodos formam os **pontos de entrada** no componente.
+Por outro lado, como padrão esses métodos projeto não serão visíveis, nem poderão ser chamados no banco de dados host local. No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local Esses métodos de projeto podem ser chamados no código do banco de dados local/host (mas não podem ser modificados no editor Métodos do banco de dados host). Estes métodos formam os **pontos de entrada** no componente.
 
 **Nota:** por outro lado, por razões de segurança, o comportamento normal não permite executar métodos de projeto pertencentes ao banco de dados  local. Em certos casos, pode precisar dar permissão para que um componente acesse os métodos projetos de seu banco de dados host. Para fazer isso, deve atribuir explicitamente os métodos de projeto do banco host que queira que tenham acesso aos componentes.
 
@@ -72,7 +72,7 @@ Quando usar ponteiros para que os componentes se comuniquem com o banco de dados
 
 - O comando `Get pointer` não devolverá um ponteiro a uma variável do banco de dados local se for chamada desde um componente e vice versa.
 
-- A arquitetura de componentes permite a coexistência, dentro do mesmo banco de dados interpretado, de componentes interpretados e compilados (por outro lado, em um banco de dados compilado só podem ser usados  componentes compilados). Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado. Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado.
+- A arquitetura de componentes permite a coexistência, dentro do mesmo banco de dados interpretado, de componentes interpretados e compilados (por outro lado, em um banco de dados compilado só podem ser usados  componentes compilados). Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado. In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode.
 - Se o componente C definir a variável `myCvar` , o componente I pode acessar ao valor desta variável utilizando o ponteiro `->myCvar`.
 - Se o componente I definir a variável `myIvar` , o componente C não pode acessar essa variável usando o ponteiro `->myIvar`. Esta sintaxe causa um erro de execução.
 
@@ -156,7 +156,7 @@ Um [método de gestião de erros](Concepts/error-handling.md) instalado pelo com
 
 ## Uso de formulários
 
-- Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente.
+- Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Only “project forms” (forms that are not associated with any specific table) can be used in a component.
 - Um componente pode chamar formulários tabelas do banco de dados local. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
 
 **Nota:** se um componente utilizar o comando `ADD RECORD`, se mostrará o formulário de entrada atual do banco de dados local, no contexto do banco local. Por isso se o formulário incluir variáveis, o componente não terá acesso ao formulário.
@@ -165,7 +165,7 @@ Um [método de gestião de erros](Concepts/error-handling.md) instalado pelo com
 
 ## Uso de tabelas e campos
 
-Um componente não pode usar as tabelas e campos definidos na estrutura 4D do banco de dados matriz. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
+Um componente não pode usar as tabelas e campos definidos na estrutura 4D do banco de dados matriz. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. However, you can create and use external databases, and then use their tables and fields according to your needs. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
 
 ### Exemplo
 
