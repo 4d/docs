@@ -228,7 +228,7 @@ A propriedade `.mandatory` <!-- REF DataClassAttributeClass.mandatory.Summary --
 
 Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > **.size** : Integer
-> **.size** : Integer **Aviso**: Essas propriedade corresponde à propriedade de campo "Reject NULL value input" ao nível do banco de dados 4D. Não tem relação com a propriedade existente "Mandatory"/obrigatório que é uma opção de controle de entrada de dados para uma tabela.
+> **Aviso**: Essas propriedade corresponde à propriedade de campo "Reject NULL value input" ao nível do banco de dados 4D. Não tem relação com a propriedade existente "Mandatory"/obrigatório que é uma opção de controle de entrada de dados para uma tabela.
 
 <!-- END REF -->
 
@@ -247,7 +247,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 #### Descrição
 
-A propriedade `.name` <!-- REF DataClassAttributeClass.name.Summary -->A propriedade `.name`<!-- END REF -->.
+A propriedade `.name` <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->.
 
 #### Exemplo
 
