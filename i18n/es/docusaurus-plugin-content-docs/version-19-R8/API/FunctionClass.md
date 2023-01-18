@@ -70,9 +70,9 @@ Para mayor comodidad, cuando la fórmula se compone de un único método proyect
  var $f : 4D.Function
 
  $f:=Formula(myMethod)
-  //Writing Formula(myMethod($1;$2)) no es necesario
- $text:=$f.call(Null;"Hello";"World") //devuelve "Hello World"
- $text:=$f.call() //devuelve "How are you?"
+  //Writing Formula(myMethod($1;$2)) is not necessary
+ $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
+ $text:=$f.call() //returns "How are you?"
 
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
@@ -186,7 +186,7 @@ Una fórmula simple:
 
 #### Ejemplo 2
 
-Una fórmula utilizando un método proyecto con parámetros:
+Una fórmula utilizando variables locales:
 
 ```4d
 
@@ -201,7 +201,7 @@ Una fórmula utilizando un método proyecto con parámetros:
 
 #### Ejemplo 3
 
-Una fórmula utilizando variables locales:
+Una fórmula sencilla que utiliza parámetros:
 
 ```4d
  $o:=New object("f";Formula($1+$2))
@@ -211,7 +211,7 @@ Una fórmula utilizando variables locales:
 
 #### Ejemplo 4
 
-Una fórmula sencilla que utiliza parámetros:
+Una fórmula utilizando un método proyecto con parámetros:
 
 ```4d
  $o:=New object("f";Formula(myMethod))
