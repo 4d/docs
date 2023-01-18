@@ -162,7 +162,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova colecção partilhada vazia ou pré-carregada<!-- END REF --> e devolve a sua referência.
 
-A adição de um elemento a esta colecção deve ser rodeada pela estrutura de utilização [`Use... End`](Concepts/shared.md#useend-use) , caso contrário é gerado um erro. Ler um elemento sem a estrutura é entretanto possível.
+A adição de um elemento a esta colecção deve ser rodeada pela estrutura de utilização [`Use...End`](Concepts/shared.md#useend-use) , caso contrário é gerado um erro. Ler um elemento sem a estrutura é entretanto possível.
 > Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
 
 Se não quiser passar parâmetros, `New shared collection` cria uma coleção vazia partilhada e retorna sua referência.
@@ -757,7 +757,7 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 #### Descrição
 
-A função `.every()` <!-- REF #collection.every().Summary -->A função `.every()`<!-- END REF -->.
+A função `.every()` <!-- REF #collection.every().Summary -->The `.every()` function<!-- END REF -->.
 
 Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. Este método recebe um `Object` como primeiro parâmetro ($1) e deve estabelecer *$1.result* para **true** para o primeiro elemento que cumprir a condição.
 
@@ -835,7 +835,7 @@ Com o método ***TypeLookUp***:
 </details>
 
 
-<!-- REF #collection.extract().Syntax -->Parâmetro(s) a passar<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 
@@ -970,7 +970,7 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 #### Descrição
 
-A função `.map()` <!-- REF #collection.filter().Summary -->The `.filter()` function<!-- END REF -->. Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.filter()` <!-- REF #collection.filter().Summary -->The `.filter()` function<!-- END REF -->. Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
@@ -1062,10 +1062,10 @@ O código para ***TypeLookUp*** é:
 
 #### Descrição
 
-A função `.find()` <!-- REF #collection.find().Summary -->A função `.find()`<!-- END REF -->.
+A função `.find()` <!-- REF #collection.find().Summary -->The `.indexOf()` function<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
-Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional).
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
 *methodName* recebe os parâmetros abaixo:
 
@@ -1157,10 +1157,10 @@ O código para ***TypeLookUp*** é:
 
 #### Descrição
 
-A função `.find()` <!-- REF #collection.findIndex().Summary -->A função `.find()`<!-- END REF -->.
+A função `.find()` <!-- REF #collection.findIndex().Summary -->The `.findIndex()` function<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
-Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s).
 
 *methodName* recebe os parâmetros abaixo:
 
@@ -1292,7 +1292,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
 > Essa função não modifica a coleção original.
 
-Para obter informação detalhada sobre como construir uma consulta utilizando os parâmetros *queryString*, *value* e *querySettings*, consulte a descrição da função [`dataClass.query()`](DataClassClass.md#query).
+O parâmetro *queryString* usa a sintaxe abaixo:
 
 ```4d
 valor de comparação propertyPath {valor de comparação logicalOperator propertyPath}
@@ -1447,7 +1447,7 @@ Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
 
 Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa reversa em *startFrom*.
 
-Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa reversa em *startFrom*.
+Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 * Se *startFrom* >= o tamanho da coleção menos um (coll.length-1), a coleção inteira é pesquisada (padrão).
 * Se *index* < 0, será recalculado como *startFrom:=startFrom+length* (é considerado como o offset do final da coleção). Se o valor calculado for negativo, -1 é retornado (a coleção não é pesquisada). **Nota**: Mesmo se *startFrom* for negativo, a coleção ainda é pesquisada da direita para esquerda.
@@ -1526,7 +1526,7 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 
 #### Descrição
 
-A função `.filter()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente pode passar parâmetros a*methodName* usando os parâmetros *param*. `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
+A função `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente pode passar parâmetros a*methodName* usando os parâmetros *param*. `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
 > Essa função não modifica a coleção original.
 
 Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
@@ -1551,7 +1551,7 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
   //$c2=[2.27,9.09,20.45,22.73,45.45]
 ```
 
-*methodName* recebe os parâmetros abaixo:
+*methodName* estabelece os parâmetros abaixo:
 
 ```4d
  var $1 : Object
@@ -1589,11 +1589,11 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
 A função `.max()` <!-- REF #collection.max().Summary -->devolve o elemento com o maior valor na colecção<!-- END REF --> (o último elemento da colecção como seria classificado em ordem ascendente utilizando a função [.sort()``](#sort)).
 > Essa função não modifica a coleção original.
 
-shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
-
 Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores máximos você quer obter.
 
 Se a coleção estiver vazia, `.max()` devolve *Undefined*.
+
+Se *end* < 0 , é recalculado como sendo *end:=end+length*.
 
 #### Exemplo
 
@@ -1695,7 +1695,7 @@ Se não passar nenhum parâmetro, a função ordena os valores escalares da cole
 
 Também pode passar um parâmetro de critérios para definir como devem ordenar-se os elementos da coleção. Três sintaxes são compatíveis com esse parâmetro:
 
-* *pathStrings* : Text (fórmula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contém uma fórmula composta de 1 a x rotas de propriedades e (opcionalmente) ordens de classificação, separados por vírgulas. A ordem na qual as propriedades são passadas determina a prioridade de ordenação dos elementos da coleção Como padrão as propriedades são ordenadas de forma ascendente. Como padrão as propriedades são ordenadas de forma ascendente. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
+* *pathStrings* : Text (fórmula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contém uma fórmula composta de 1 a x rotas de propriedades e (opcionalmente) ordens de classificação, separados por vírgulas. A ordem na qual as propriedades são passadas determina a prioridade de ordenação dos elementos da coleção Como padrão as propriedades são ordenadas de forma ascendente. Pode definir a ordem de clasificação de uma propriedade na string de critérios, separado da rota da propriedade por um só espaço: passe "asc" para ordenar em ordem ascendente ou "desc" em ordem descendente.
 
 * *pathObjects* : Collection. Pode adicionar tantos objetos na coleção *pathObjects* como seja necessário. Como padrão, as propriedades se classificam em ordem ascendente ("descending" é false). Cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
@@ -1741,7 +1741,7 @@ Ordenar uma coleção de números em ordem ascendente e descendente:
 
 #### Exemplo 2
 
-Ordenar uma coleção de objetos com uma rota de propriedades:
+Ordenar uma coleção de objetos a partir de uma fórmula de texto com nomes de propriedades:
 
 ```4d
  var $c; $c2 : Collection
@@ -1754,7 +1754,7 @@ Ordenar uma coleção de objetos com uma rota de propriedades:
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Ordenar uma coleção de objetos utilizando uma coleção de objetos critério:
+Ordenar uma coleção de objetos com uma rota de propriedades:
 
 ```4d
  var $c; $c2 : Collection
@@ -1767,7 +1767,7 @@ Ordenar uma coleção de objetos utilizando uma coleção de objetos critério:
 
 #### Exemplo 3
 
-Ordenar uma coleção de objetos a partir de uma fórmula de texto com nomes de propriedades:
+Ordenar uma coleção de objetos utilizando uma coleção de objetos critério:
 
 ```4d
  var $crit; $c; $c2 : COllection
@@ -1820,7 +1820,7 @@ Ordenar com uma rota de propriedade:
 
 #### Descrição
 
-A função `.orderBy()` <!-- REF #collection.orderByMethod().Summary -->A função `.orderBy()`<!-- END REF -->.
+A função `.orderBy()` <!-- REF #collection.orderByMethod().Summary -->The `.orderByMethod()` function<!-- END REF -->.
 
 Esta função devolve uma *cópia superficial*, o que significa que os objetos ou coleções de ambas coleções compartem a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
@@ -1837,7 +1837,7 @@ Em *methodName*, passe um método de comparação que compare dois valores e dev
 
 #### Exemplo 1
 
-Se quiser ordenar a coleção de strings de acordo com seu tamanho:
+Se quiser ordenar a coleção de strings em ordem numérica ao invés de ordem alfabética:
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -1855,7 +1855,7 @@ Se quiser ordenar a coleção de strings de acordo com seu tamanho:
 
 #### Exemplo 2
 
-Se quiser ordenar a coleção de strings em ordem numérica ao invés de ordem alfabética:
+Se quiser ordenar a coleção de strings de acordo com seu tamanho:
 
 ```4d
  var $fruits; $c2 : Collection
@@ -2026,13 +2026,13 @@ Se quiser ordenar a coleção resultante:
 A função `.query()` <!-- REF #collection.query().Summary -->devolve todos os elementos de uma coleção de objectos que correspondem às condições de pesquisa <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
-Para obter informação detalhada sobre como construir uma consulta utilizando os parâmetros *queryString*, *value* e *querySettings*, consulte a descrição da função [`dataClass.query()`](DataClassClass.md#query).
+O parâmetro *queryString* usa a sintaxe abaixo:
 
 ```4d
 valor de comparação propertyPath {valor de comparação logicalOperator propertyPath}
 ```
 
-O parâmetro *queryString* usa a sintaxe abaixo:
+Para obter informação detalhada sobre como construir uma consulta utilizando os parâmetros *queryString*, *value* e *querySettings*, consulte a descrição da função [`dataClass.query()`](DataClassClass.md#query).
 
 > As fórmulas não tem compatibilidade com a função `collection.query()`, nem com o parâmetro *queryString* nem como parâmetro do objeto *fórmula*.
 
@@ -2063,14 +2063,14 @@ O parâmetro *queryString* usa a sintaxe abaixo:
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
-Este exemplo devolve as pessoas cujo nome não começa por uma string de uma variável (introduzida pelo usuário, por exemplo):
+Este exemplo devolve as pessoas cujo nome contém "in":
 
 ```4d
  $col:=$c.query("name = :1";"@in@")
   //$col=[{name:Winch...},{name:Sterling...}]
 ```
 
-Este exemplo devolve as pessoas cujo nome contém "in":
+Este exemplo devolve as pessoas cujo nome não começa por uma string de uma variável (introduzida pelo usuário, por exemplo):
 
 ```4d
  $col:=$c.query("name # :1";$aString+"@")
@@ -2124,7 +2124,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 
 #### Descrição
 
-A função `.reduce()` <!-- REF #collection.reduce().Summary -->A função `.reduce()`<!-- END REF -->.
+A função `.reduce()` <!-- REF #collection.reduce().Summary -->The `.reduce()` function<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Em *methodName*, passe o nome do método para usar para avaliar elementos de coleção, junto com os parâmetros em param (opcional). *methodName* toma cada elemento da coleção e realiza todas as operações desejadas para acumular o resultado em *$1.accumulator*, que se devolve em *$1.value*.
@@ -2150,7 +2150,7 @@ Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$
  $r:=$c.reduce("Multiply";1) //returns 86400
 ```
 
-*methodName* recebe os parâmetros abaixo:
+Com o método ***Multiply***:
 
 ```4d
  If(Value type($1.value)=Is real)
@@ -2213,7 +2213,7 @@ A função `.remove()` <!-- REF #collection.remove().Summary -->insere elementos
 > Essa função modifica a coleção original.
 
 Em *index*, passe a posição onde deseja que o elemento seja retirado da colecção.
-> **Aviso**: Lembre que elementos coleção são numerados a partir de 0. Se *startFrom* < 0, é considerada como offset do final da coleção (*startFrom:=startFrom+length*).
+> **Aviso**: Lembre que elementos coleção são numerados a partir de 0. If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
 
 * Se *index* < 0, será recalculado como  *index:=index+length* (é considerado como o offset do final da coleção).
 * Se o valor calculado < 0, *index* será estabelecido como 0.
@@ -2320,8 +2320,14 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->devolve uma c�
 #### Exemplo
 
 ```4d
- var $c;$c2;$c3 : Collection
- var $f : 4D.
+ var $c : Collection
+ $c:=New collection
+ $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
+ $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 
