@@ -186,7 +186,7 @@ This property is **read-only**.
 
 #### Beschreibung
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->The `.platformPath` property returns<!-- END REF -->.
+The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
 
 This property is **read-only**.
 
@@ -281,7 +281,7 @@ This property is **read-only**.
 
 #### Beschreibung
 
-The `.name` property returns <!-- REF #document.name.Summary -->The `.isFile` property returns<!-- END REF -->.
+The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
 This property is **read-only**.
 
