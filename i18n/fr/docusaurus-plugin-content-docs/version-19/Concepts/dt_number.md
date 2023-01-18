@@ -102,16 +102,16 @@ Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une 
 
 Une expression utilisant un opérateur sur les bits retourne une valeur de type Entier long, à l'exception de l'opérateur Tester bit avec lequel l'expression retournée est du type Booléen. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
-| Opération             | Opérateur | Syntaxe                   | Retourne                |
-| --------------------- | --------- | ------------------------- | ----------------------- |
-| ET                    | &         | long & E. E. long         | E. long                 |
-| OU (inclusif)         | &#124;    | long &#124; E. long       | E. long                 |
-| OU (exclusif)         | \^&#124; | long \^&#124; E. long    | E. long                 |
-| Décaler bits à gauche | <<        | E. Long << E. Long        | long (voir note n°1)    |
-| Décaler bits à droite | >>        | E. Long >> E. Long        | long (voir note n°1)    |
-| Mettre bit à 1        | ?+        | long ?+ E. E. long        | long (voir note n°2)    |
-| Mettre bit à 0        | ?-        | long ??                   | long (voir note n°2)    |
-| Tester bit            | ??        | long \^&#124; E. E. long | Booléen (voir note n°2) |
+| Opération             | Opérateur | Syntaxe                | Retourne                |
+| --------------------- | --------- | ---------------------- | ----------------------- |
+| ET                    | &         | long & E. E. long      | E. long                 |
+| OU (inclusif)         | &#124;    | long &#124; E. long    | E. long                 |
+| OU (exclusif)         | \^&#124; | long \^&#124; E. long | E. long                 |
+| Décaler bits à gauche | <<        | E. Long << E. Long     | long (voir note n°1)    |
+| Décaler bits à droite | >>        | E. Long >> E. Long     | long (voir note n°1)    |
+| Mettre bit à 1        | ?+        | long ?+ E. E. long     | long (voir note n°2)    |
+| Mettre bit à 0        | ?-        | long ??                | long (voir note n°2)    |
+| Tester bit            | ??        | long & E. E. long      | Booléen (voir note n°2) |
 
 #### Notes
 
@@ -123,7 +123,9 @@ Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effe
 | Opération | Description                                                                                                                                              |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ET        | Chaque bit retourné est le résultat de l'opération ET logique appliquée aux deux bits opérandes. Voici la table du ET logique :<li>1 & 1 --> 1</li> |
-<li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.| |Bitwise OR (inclusive)|Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.| |Bitwise OR (exclusive)|Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.| |Right Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.| |Bit Set|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. |Bit Clear|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. |Bit Test|Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Retourne Faux si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 0.|
+<li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.| |Bitwise OR (inclusive)|Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.| |Bitwise OR (exclusive)|Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.| |Left Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. Les bits auparavant situés à gauche sont perdus et les nouveaux bits situés à droite ont la valeur 0. 
+
+**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.| |Right Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.| |Bit Set|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. |Bit Clear|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. |Bit Test|Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Retourne Faux si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 0.|
 
 ### Exemples
 
