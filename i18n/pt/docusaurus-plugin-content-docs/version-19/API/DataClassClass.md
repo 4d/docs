@@ -98,7 +98,7 @@ Considerando as propriedades de tabela abaixo:
 
 </details>
 
-<!-- REF #DataClassClass.all().Syntax -->Você não vai conseguir o resultado esperado porque o valor null será avaliado por 4D como um erro resultante da avaliação de parâmetro (por exemplo, um atributo de outra pesquisa) Para este tipo de pesquisa, deve usar a sintaxe de pesquisa direta: Para este tipo de pesquisa, deve usar a sintaxe de pesquisa direta:<!-- END REF -->
+<!-- REF #DataClassClass.all().Syntax -->**.all** ( { *settings* : Object } ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #DataClassClass.all().Params -->
@@ -148,7 +148,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 </details>
 
-<!-- REF #DataClassClass.fromCollection().Syntax -->|<!-- END REF -->
+<!-- REF #DataClassClass.fromCollection().Syntax -->**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
@@ -344,7 +344,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 </details>
 
-<!-- REF #DataClassClass.get().Syntax -->|<!-- END REF -->
+<!-- REF #DataClassClass.get().Syntax -->**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D. Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.<!-- END REF -->
 
 
 <!-- REF #DataClassClass.get().Params -->
@@ -360,7 +360,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 A função `.get()` <!-- REF #DataClassClass.get().Summary -->consulta a folha de dados para recuperar a entidade que corresponde ao parâmetro *primaryKey*<!-- END REF -->.
 
-Em *primaryKey*, passe o valor da chave primária da entidade a recuperar Em *primaryKey*, passe o valor da chave primária da entidade a recuperar Em *primaryKey*, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Também pode se assegurar que o valor de chave primária seja sempre retornado como Texto ao usar a função [`.getKey()`](EntityClass.md#getkey) com o parâmetro`dk key as string`.
+Em *primaryKey*, passe o valor da chave primária da entidade a recuperar Em *primaryKey*, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Também pode se assegurar que o valor de chave primária seja sempre retornado como Texto ao usar a função [`.getKey()`](EntityClass.md#getkey) com o parâmetro`dk key as string`.
 
 Se nenhuma entidade for encontrada com  *primaryKey*, uma entidade**Null** é retornada.
 
@@ -544,7 +544,7 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 </details>
 
-<!-- REF #DataClassClass.new().Syntax -->Pesquisa com uma instrução NOT: <!-- END REF -->
+<!-- REF #DataClassClass.new().Syntax -->**.new()** : 4D. Entity <!-- END REF -->
 
 
 <!-- REF #DataClassClass.new().Params -->
@@ -586,7 +586,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 </details>
 
-<!-- REF #DataClassClass.newSelection().Syntax -->Pode usar parêntesis na pesquisa para dar prioridade ao cálculo Por exemplo, pode organizar uma pesquisa da seguinte maneira: Por exemplo, pode organizar uma pesquisa da seguinte maneira: <!-- END REF -->
+<!-- REF #DataClassClass.newSelection().Syntax -->**.newSelection**( { *keepOrder* : Integer } ) : 4D. EntitySelection <!-- END REF -->
 
 
 <!-- REF #DataClassClass.newSelection().Params -->
@@ -630,7 +630,7 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->| <!-- END REF -->
+<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D. EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D. EntitySelection <!-- END REF -->
 
 
 <!-- REF #DataClassClass.query().Params -->
@@ -652,7 +652,7 @@ Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazi
 
 **parâmetro queryString**
 
-Para obter informação detalhada sobre como construir uma consulta utilizando os parâmetros *queryString*, *value* e *querySettings*, consulte a descrição da função [`dataClass.query()`](DataClassClass.md#query).
+O parâmetro *queryString* usa a sintaxe abaixo:
 
 ```4d
 attributePath|formula comparator value   
@@ -669,7 +669,7 @@ onde:
 
   * **Text**: A string de fórmula deve ser precidida da declaração `eval( )`,para que o parser da pesquisa avalie a expressão corretamente. Por exemplo: *"eval(length(This.lastname) >=30)"*
   * **Object**: o objeto [formula](FunctionClass.md) é passado como um **placeholder** (ver abaixo). A fórmula deve ter sido criada usando  [`Formula`](FunctionClass.md#formula) ou o comando[`Formula from string`](FunctionClass.md#formula-from-string) command.
-> * > * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
 > * Se a fórmula não for o único critério de pesquisa, o otimizador de motor debusca poderia processar outros critérios previamente (por exemplo atributos indexados) e assim, a fórmula poderia ser avaliada apenas para um subconjunto de entidades.
 
  Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto é detalhado no parágrafo **Parâmetro fórmula** mais abaixo.
@@ -706,7 +706,7 @@ onde:
  | OU        | &#124;,&#124;&#124;, or |
 
 * **order by attributePath**: pode incluir uma declaração order by *attributePath* na pesquisa para que os dados resultantes sejam ordenados de acordo com esta declaração. Pode utilizar várias instruções de ordenação, separadas por vírgulas (por exemplo, ordenação por *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente.
-> > > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Usar aspas**
 
@@ -791,7 +791,7 @@ Esta funcionalidade só está disponível em consultas de dataclasses e [selecç
 
 :::
 
-Para fazer isso, é necessário vincular os argumentos de pesquisa para elementos de coleção, para que apenas elementos únicos contendo argumentos linkados são encontrados. Ao pesquisar dentro de atributos de objectos dataclass contendo colecções utilizando múltiplos argumentos de consulta unidos pelo operador AND, poderá querer certificar-se de que apenas entidades contendo elementos que correspondem a todos os argumentos são devolvidas, e não entidades onde os argumentos podem ser encontrados em diferentes elementos.
+Ao pesquisar dentro de atributos de objectos dataclass contendo colecções utilizando múltiplos argumentos de consulta unidos pelo operador AND, poderá querer certificar-se de que apenas entidades contendo elementos que correspondem a todos os argumentos são devolvidas, e não entidades onde os argumentos podem ser encontrados em diferentes elementos. Para fazer isso, é necessário vincular os argumentos de pesquisa para elementos de coleção, para que apenas elementos únicos contendo argumentos linkados são encontrados.
 
 Por exemplo, com as duas entidades abaixo:
 
@@ -844,7 +844,7 @@ A fórmula deve ter sido criada com o comando `Formula` ou `Formula from string`
 * *fórmula* se avalia para cada entidade e deve devolver true ou false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 * dentro da *fórmula*, a entidade está disponível através do objeto `This`.
 * Se o objeto `Formula` for **null**, o errro 1626 ("Expecting a text or formula") é gerado, então pode interceptar a chamada com o método instalado `ON ERR CALL`.
-> > > For security reasons, formula calls within `query(`) member methods can be disallowed. Veja a descrição do parâmetro *querySettings*.
+> > For security reasons, formula calls within `query(`) member methods can be disallowed. Veja a descrição do parâmetro *querySettings*.
 
 **Passar parâmetros a fórmulas**
 
@@ -866,7 +866,7 @@ No exemplo 3 são oferecidos mais exemplos.
 
 **parâmetro querySettings**
 
-No  parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
+No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
 | Propriedade   | Tipo     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
