@@ -98,7 +98,7 @@ End if
 
 #### 例題 1
 
-フォルダー自体は圧縮せずに `4D.Folder` の中身だけを圧縮します:
+`4D.File` を圧縮します:
 
 ```4d
  var $file; $destination : 4D.File
@@ -112,7 +112,7 @@ End if
 
 #### 例題 2
 
-`4D.File` を圧縮します:
+フォルダー自体は圧縮せずに `4D.Folder` の中身だけを圧縮します:
 
 ```4d
  var $folder : 4D.Folder
@@ -216,7 +216,7 @@ $err:=ZIP Create archive($zip; $destination)
 
 `ZIP Read archive` コマンドは、 <!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->。
 
-> このコマンドは ZIPアーカイブを展開することはしません。 その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
+> このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
 
 *zipFile* 引数として、圧縮された ZIPアーカイブを参照している `4D.File` オブジェクトを渡します。 ターゲットのアーカイブファイルは `ZIP Read archive` が実行を終えるまで (全コンテンツ/参照が取得/解放されるまで) は開いた状態となり、その後自動的に閉じられます。
 
