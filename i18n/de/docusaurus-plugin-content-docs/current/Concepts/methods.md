@@ -18,7 +18,7 @@ In der 4D Programmiersprache gibt es verschiedene Kategorien von Methoden. Die K
 | **Objekt (Widget) Methode**                      | Automatisch, wenn ein Ereignis das Objekt betrifft, dem die Methode zugeordnet ist                                          | Nein                 | Eigenschaft eines Formularobjekts (auch Widget genannt)                                                                                                                                                          |
 | **Formularmethode**                              | Automatisch, wenn ein Ereignis das Formular betrifft, dem die Methode zugeordnet ist                                        | Nein                 | Eigenschaft eines Formulars. Sie können eine Formularmethode zum Verwalten von Daten und Objekten verwenden. Für diese Zwecke ist es jedoch generell einfacher und effizienter, eine Objektmethode zu verwenden. |
 | **Trigger** (auch bekannt als *Tabellenmethode*) | Automatisch, jedes Mal wenn Sie die Datensätze einer Tabelle bearbeiten (Hinzufügen, Löschen, Ändern)                       | Nein                 | Eigenschaft einer Tabelle. Trigger sind Methoden, die “illegale” Operationen mit Datensätzen in Ihrer Datenbank verhindern.                                                                                      |
-| **Datenbankmethoden**                            | Automatisch, wenn ein Ereignis in der Arbeitssitzung eintritt                                                               | Ja (vordefiniert)    | There are 16 database methods in 4D. See Database methods section Siehe Abschnitt zu Datenbankmethoden Siehe Abschnitt zu Datenbankmethoden                                                                      |
+| **Datenbankmethoden**                            | Automatisch, wenn ein Ereignis in der Arbeitssitzung eintritt                                                               | Ja (vordefiniert)    | There are 16 database methods in 4D. See Database methods section Siehe Abschnitt zu Datenbankmethoden                                                                                                           |
 
 > Die 4D Programmiersprache unterstützt auch **Class functions**, die im Kontext der Instanz eines Objekts aufgerufen werden. Class Functions können integriert sein (*z.B.* `collection.orderBy()` oder `entity.save()`) oder vom 4D Entwickler [erstellt worden sein](classes.md#class-function).
 
@@ -177,7 +177,7 @@ However, for testing and debugging purposes, 4D lets you manually execute projec
 
 The following execution modes are available:
 
-- From the [Code Editor](../code-editor/overview.md) window,
+- Die Methode A ruft die Methode B auf, die A aufruft, so ruft A wieder B auf, usw.
 - Eine Methode kann sich selbst aufrufen.
 
 #### From the Code Editor
@@ -260,8 +260,6 @@ Für dieses Beispiel nehmen wir an, dass die Werte der Datenfelder einmalig sind
  End if
     End if
  End if
-    End if
- End if
 ```
 
 mit der rekursiven Methode `Genealogy of`:
@@ -280,7 +278,7 @@ mit der rekursiven Methode `Genealogy of`:
 
 Beachten Sie die Methode `Genealogy of`, die sich selbst aufruft.
 
-Die erste Möglichkeit ist ein **iterativer Algorithmus**,  Die erste Möglichkeit ist ein **iterativer Algorithmus**,  die zweite ein **rekursiver Algorithmus**.
+Die erste Möglichkeit ist ein **iterativer Algorithmus**,  die zweite ein **rekursiver Algorithmus**.
 
 Sie können beim Einfügen von Code wie im oben aufgeführten Beispiel sowohl iterative als auch rekursive Methoden schreiben. Rekursion macht die Programmierung im allgemeinen präziser, leichter zu lesen und zu warten, sie ist jedoch nicht zwingend.
 
