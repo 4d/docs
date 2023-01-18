@@ -12,7 +12,7 @@ Vous pouvez combiner les deux fonctionnalités et utiliser les menus créés dan
 
 ## Barre de menu par défaut
 
-Une application personnalisée doit contenir au moins une barre de menu avec un menu. Une application personnalisée doit contenir au moins une barre de menu avec un menu. La barre de menus par défaut (Barre n°1) comporte des menus standard et une commande de retour au mode Développement.
+Une application personnalisée doit contenir au moins une barre de menu avec un menu. A custom application must contain at least one menu bar with one menu. La barre de menus par défaut (Barre n°1) comporte des menus standard et une commande de retour au mode Développement.
 
 Ce mécanisme permet à l’utilisateur d’accéder au mode Application dès la création de la base. La barre de menus n°1 est automatiquement appelée lorsque la commande **Tester l’application** est sélectionnée dans le menu **Exécution**.
 
@@ -21,7 +21,7 @@ La barre de menus par défaut contient trois menus : Fichier, Edition et Mode.
 - **Fichier** : ce menu comporte uniquement la commande **Quitter**. L’action automatique *Quitter* est associée à la commande, ce qui a pour effet de provoquer la fermeture de l’application.
 - **Edition** : menu standard et entièrement modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode** : par défaut, ce menu contient la commande **Retour au mode Développement**, permettant de sortir du mode Application.
-> > > Menu items appear *in italics* because they consist of references and not hard-coded text. Pour plus d’informations sur ce point, reportez-vous à la section [Utiliser des références dans les titres de menus](properties.md#title).
+> > Menu items appear *in italics* because they consist of references and not hard-coded text. Pour plus d’informations sur ce point, reportez-vous à la section [Utiliser des références dans les titres de menus](properties.md#title).
 
 Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des barres de menus supplémentaires.
 
