@@ -33,7 +33,7 @@ Dann wird der Prozess zum Verschlüsseln gestartet. Wurde das MSC im Standardmod
 
 War der Prozess zum Verschlüsseln erfolgreich, zeigt die Seite Verschlüsseln Schaltflächen für Wartungsoperationen beim Verschlüsseln.
 
-**Warnung:** 4D erstellt beim Verschlüsseln eine neue leere Datendatei und füllt sie mit Daten aus der ursprünglichen Datendatei. Datensätze aus "verschlüsselbaren" Tabellen werden verschlüsselt und dann kopiert, andere Datensätze werden nur kopiert. War die Operation erfolgreich, wird die ursprüngliche Datendatei in den Ordner "Replaced Files (Encrypting)" geschoben. Wollen Sie eine verschlüsselte Datendatei ausliefern, stellen Sie sicher, dass zuvor alle unverschlüsselten Datendateien aus dem Anwendungsordner verschoben/entfernt wurden.
+**Warnung:** 4D erstellt beim Verschlüsseln eine neue leere Datendatei und füllt sie mit Daten aus der ursprünglichen Datendatei. Datensätze aus "verschlüsselbaren" Tabellen werden verschlüsselt und dann kopiert, andere Datensätze werden nur kopiert. (Außerdem wird eine Komprimierung durchgeführt). War die Operation erfolgreich, wird die ursprüngliche Datendatei in den Ordner "Replaced Files (Encrypting)" geschoben. Wollen Sie eine verschlüsselte Datendatei ausliefern, stellen Sie sicher, dass zuvor alle unverschlüsselten Datendateien aus dem Anwendungsordner verschoben/entfernt wurden.
 
 ## Wartungsoperationen beim Verschlüsseln
 
@@ -49,7 +49,7 @@ Aus Sicherheitsgründen wird bei allen Wartungsoperationen für Verschlüsselung
 An dieser Stelle haben Sie zwei Möglichkeiten:
 
 - Sie geben die aktuelle Passphrase(2) ein und klicken auf **OK**. ODER
-- einen USB Key an und klicken auf die Schaltfläche **Gerät scannen**.
+- Sie schließen ein Gerät, z. B. einen USB Key an und klicken auf die Schaltfläche **Gerät scannen**.
 
 (1) The 4D keychain stores all valid data encrpytion keys entered during the application session. (2) The current passphrase is the passphrase used to generate the current encryption key.
 
@@ -66,7 +66,7 @@ The data file is properly re-encrypted with the current key and a confirmation m
 
 ### Passphrase verändern und Daten erneut verschlüsseln
 
-Diese Operation bietet sich an, wenn Sie Ihren aktuellen Verschlüsselungscode für Daten verändern müssen, um bestimmte Sicherheitsregeln einzuhalten (z. B. um bestimmte Sicherheitsregeln einzuhalten (z. B. wenn ein Admin das Unternehmen verlassen hat).
+Diese Operation bietet sich an, wenn Sie Ihren aktuellen Verschlüsselungscode für Daten verändern müssen, um bestimmte Sicherheitsregeln einzuhalten (z. B. wenn ein Admin das Unternehmen verlassen hat).
 
 1. Wählen Sie die Option **Ändern Sie Ihre Passphrase und verschlüsseln Sie die Daten erneut**.
 2. Geben Sie den aktuellen Verschlüsselungscode für Daten ein.
@@ -95,7 +95,7 @@ Aufeinanderfolgende Verschlüsselungscodes lassen sich auf dem gleichen Gerät s
 
 ## Logbuch
 
-Ist das Komprimieren abgeschlossen, erzeugt 4D eine Datei im Ordner Logs der Anwendung Ist das Komprimieren abgeschlossen, erzeugt 4D eine Datei im Ordner Logs der Anwendung im XML Format mit Namen "*Anwendungsname_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" oder "*Anwendungsname_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
+Ist das Komprimieren abgeschlossen, erzeugt 4D eine Datei im Ordner Logs der Anwendung im XML Format mit Namen "*Anwendungsname_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" oder "*Anwendungsname_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 Immer wenn ein neues Logbuch angelegt wurde, erscheint auf der Seite Verschlüsselt unten die Schaltfläche Logbuch anzeigen.
 
