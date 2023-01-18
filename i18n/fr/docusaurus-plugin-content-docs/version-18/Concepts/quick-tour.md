@@ -35,7 +35,7 @@ Vous devez impérativement distinguer l'opérateur d'affectation := des autres o
 
 ## Variables
 
-Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide d'une commande `C_XXX`. Par exemple, pour créer une variable du type date, vous pouvez écrire : Par exemple, pour créer une variable du type date, vous pouvez écrire :
+Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide d'une commande `C_XXX`. Par exemple, pour créer une variable du type date, vous pouvez écrire :
 
 ```4d
 C_DATE(MyDate) //Type date pour la variable MyDate
@@ -136,7 +136,7 @@ A noter que les données de type chaîne et numérique peuvent être associées 
 
 Cependant, il est important, lorsque vous utilisez le langage, de ne pas mélanger les différents types de données. Tout comme il est absurde de stocker la valeur “ABC” dans un champ de type Date, il est absurde de donner la valeur “ABC” à une variable utilisée pour des dates. Dans la plupart des cas, 4D est très tolérant et tentera d’utiliser de manière logique ce que vous faites. Par exemple, si vous additionnez un nombre x et une date, 4D déduira que vous voulez ajouter x jours à la date, mais si vous tentez d’ajouter une chaîne à une date, 4D vous préviendra que cette opération est impossible.
 
-Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données en d’autres types. Par exemple, si vous voulez créer un numéro de matricule commençant par des chiffres et se terminant par des lettres, telles que "abc", vous pouvez écrire : vous pouvez écrire : vous pouvez écrire :
+Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données en d’autres types. Par exemple, si vous voulez créer un numéro de matricule commençant par des chiffres et se terminant par des lettres, telles que "abc", vous pouvez écrire : vous pouvez écrire :
 
 ```4d
 [Produits]Matricule:=String(Numéro)+"abc"
@@ -220,7 +220,7 @@ Les expressions sont rarement «autonomes». Expressions rarely “stand alone.�
 
 ### Types d’expressions
 
-Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Il existe plusieurs types d’expressions : Il existe plusieurs types d’expressions : Le tableau suivant fournit des exemples de chaque type d'expression.
+Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Il existe plusieurs types d’expressions : Le tableau suivant fournit des exemples de chaque type d'expression.
 
 | Expression              | Type                  | Description                                                                                                                                                                          |
 | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
