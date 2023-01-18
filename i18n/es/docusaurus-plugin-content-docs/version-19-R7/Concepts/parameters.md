@@ -35,8 +35,6 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //pass the !05/05/20! date as parameter to the SetCalendarDate  
 //in the context of a subform  
 //pase la fecha !05/05/20! como parámetro de SetCalendarDate  
-//en el contexto de un subformulario  
-//pase la fecha !05/05/20! como parámetro de SetCalendarDate  
 //en el contexto de un subformulario
 ```
 
@@ -184,13 +182,13 @@ En el código del método, el valor de cada parámetro se copia automáticamente
 El valor a devolver se pone automáticamente en la variable local `$0`.
 
 
-El siguiente es un ejemplo que utiliza el método Uppercase4:
+Por ejemplo, el siguiente método, llamado `Uppercase4`, devuelve una cadena con los cuatro primeros caracteres de la cadena que se han pasado en mayúsculas:
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-Por ejemplo, el siguiente método, llamado `Uppercase4`, devuelve una cadena con los cuatro primeros caracteres de la cadena que se han pasado en mayúsculas:
+El siguiente es un ejemplo que utiliza el método Uppercase4:
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
@@ -262,7 +260,7 @@ Los métodos proyecto 4D aceptan un número variable de parámetros. Puede dirig
 
 
 
-### Declaración de parámetros genéricos
+### Utilización de los parámetros genéricos
 
 Por ejemplo, considere un método que suma valores y devuelve la suma formateada según un formato que se pasa como parámetro. Cada vez que se llama a este método, el número de valores a sumar puede variar. Debemos pasar los valores como parámetros al método y el formato en forma de cadena de caracteres. El número de valores puede variar de una llamada a otra.
 
@@ -297,13 +295,13 @@ End for
 Este método se puede llamar:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //se pasan parámetros adicionales
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //se pasan parámetros adicionales
 ```
 
 > La indirección de parámetros se gestiona mejor si se respeta la siguiente convención: si sólo algunos de los parámetros se dirigen por indirección, deben pasarse después de los demás.
 
 
-### Utilización de los parámetros genéricos
+### Declaración de parámetros genéricos
 
 Al igual que con otras variables locales, no es obligatorio declarar los parámetros genéricos mediante una directiva del compilador. Sin embargo, se recomienda para evitar toda ambigüedad. Los parámetros genéricos no declarados obtienen automáticamente el tipo [Variant](dt_variant.md).
 
