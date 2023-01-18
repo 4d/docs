@@ -478,7 +478,7 @@ Le <!-- REF #WebServerClass.logRecording.Summary -->mode d'enregistrement du log
 
 Le <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->nombre maximal de process Web simultanés pris en charge par le serveur Web<!-- END REF -->. Lorsque ce nombre (moins un) est atteint, 4D ne crée aucun autre process et retourne le statut HTTP 503 - Service Unavailable to all new requests.
 
-Valeurs possibles : 500000 - 2147483647
+Valeurs possibles : 500000 - 2147483648
 
 Par défaut = 80
 
@@ -493,7 +493,7 @@ Par défaut = 80
 
 Contient le <!-- REF #WebServerClass.maxRequestSize.Summary -->taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur web est autorisé à traiter<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
 
-Valeurs possibles : 500000 - 2147483648
+Valeurs possibles : 500000 - 2147483647
 
 <!-- END REF -->
 
@@ -564,7 +564,7 @@ Le <!-- REF #WebServerClass.openSSLVersion.Summary -->version de la bibliothèqu
 
 *Propriété en lecture seulement.*
 
-Le <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->La disponibilité de PFS sur le serveur<!-- END REF -->.
+Le <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité de PFS sur le serveur<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -749,14 +749,14 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 |
 
-La fonction `.stop()` <!-- REF #WebServerClass.stop().Summary -->arrête le serveur web sur lequel elle est appliquée<!-- END REF -->.
+The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
-Si le serveur Web était lancé, toutes les connexions Web et tous les process Web sont fermés une fois que les requêtes actuellement traitées sont terminées. Si le serveur Web n'était pas démarré, la fonction ne fait rien.
+If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
 > Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre *settings* de la fonction [`.start()`](#start), le cas échéant.
 
 #### Exemple
 
-Pour arrêter le serveur Web de la base :
+To stop the database Web server:
 
 ```4d
  var $webServer : 4D.WebServer
