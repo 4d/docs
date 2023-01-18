@@ -329,7 +329,7 @@ La collection doit contenir uniquement des éléments du même type. Dans le cas
 
 A chaque itération de la boucle, la variable _Elément_courant_ reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
+- The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the _Current_Item_ variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable _Elément_courant_ ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
 
