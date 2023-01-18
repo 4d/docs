@@ -130,7 +130,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 #### *Résultat*
 
-La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
+La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 | Propriété | Type       | Description                                                                 |
 | --------- | ---------- | --------------------------------------------------------------------------- |
@@ -280,7 +280,7 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
-`CryptoKey` doit contenir une clé **privée** valide.
+**.type** : Texte
 
 #### *options*
 
@@ -310,7 +310,7 @@ La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentat
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. .
+Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. Habituellement 2048 (par défaut).
 
 <!-- REF CryptoKey.type -->
 ## .type
@@ -375,7 +375,7 @@ La `CryptoKey` doit contenir une clé **publique** valide.
 
 #### *Résultat*
 
-La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
+`CryptoKey` doit contenir une clé **publique** valide.
 
 La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
 
