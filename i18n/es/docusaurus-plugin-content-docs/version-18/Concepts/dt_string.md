@@ -187,7 +187,6 @@ Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres e
 
 ```
 //Muy malo y desagradable, ¡Boo!
- //Muy malo y desagradable, ¡Boo!
  //Very bad and nasty thing to do, boo!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
