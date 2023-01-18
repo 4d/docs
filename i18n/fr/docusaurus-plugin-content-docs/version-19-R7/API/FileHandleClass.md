@@ -38,7 +38,8 @@ $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:=" !" $fhandle:=$f.open($o)
+$stopChar:=" !"
+$fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
 //Lecture ligne par ligne
@@ -449,7 +450,7 @@ Si la valeur de *size* est inférieure à la taille courante du document, le con
 
 La fonction `.writeBlob()` <!-- REF #FileHandleClass.writeBlob().Summary -->écrit le *blob* dans le fichier, à partir de la position courante <!-- END REF -->.
 
-Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le délimiteur de fin de ligne.
+Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le dernier octet écrit.
 
 #### Voir également
 
@@ -485,7 +486,7 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 La fonction `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->écrit le contenu de *lineOfText* à la position courante et insère un délimiteur de fin de ligne<!-- END REF --> (contrairement à la fonction [.writeText()](#writetext)). Par défaut, un délimiteur de fin de ligne natif est utilisé, mais vous pouvez définir un autre délimiteur lors de la [création du file handle](FileClass.md#open) en définissant la propriété [`.breakModeWrite`](#breakmodewrite).
 
-Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le dernier octet écrit.
+Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le délimiteur de fin de ligne.
 
 #### Voir également
 
@@ -518,7 +519,7 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 #### Description
 
-La fonction `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->écrit le contenu de *textToWrite* à la position courante et n'insère pas de délimiteur de fin de ligne final<!-- END REF --> (contrairement à la fonction [.writeLine()](#writeline)). Cette fonction remplace tous les délimiteurs de fin de ligne originaux. Cette fonction remplace tous les délimiteurs de fin de ligne originaux.
+La fonction `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->écrit le contenu de *textToWrite* à la position courante et n'insère pas de délimiteur de fin de ligne final<!-- END REF --> (contrairement à la fonction [.writeLine()](#writeline)). Cette fonction remplace tous les délimiteurs de fin de ligne originaux. Par défaut, le délimiteur natif est utilisé, mais vous pouvez définir un autre délimiteur lors de la [création du file handle](FileClass.md#open) en définissant la propriété [`.breakModeWrite`](#breakmodewrite).
 
 Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le prochain délimiteur de fin de ligne.
 
