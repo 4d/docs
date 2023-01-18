@@ -13,7 +13,7 @@ Le développement multi-utilisateur est géré via des outils de contrôle de ve
 
 ## Accès au fichier de projet
 
-Lorsque vous travaillez sur un projet dans 4D Developer, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits.
+Lorsque vous travaillez sur un projet dans 4D Developer, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
 
 4D Developer comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
 
