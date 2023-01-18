@@ -176,13 +176,13 @@ Dans le code de la méthode, la valeur de chaque paramètre est automatiquement 
 La valeur à retourner est automatiquement placée dans la variable locale `$0`.
 
 
-Voici un exemple qui utilise la méthode Uppercase4 :
+Par exemple, la méthode suivante, appelée `Uppercase4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-Par exemple, la méthode suivante, appelée `Uppercase4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
+Voici un exemple qui utilise la méthode Uppercase4 :
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
@@ -216,7 +216,7 @@ Les méthodes projets 4D acceptent un nombre variable de paramètres. Vous pouve
 
 
 
-### Déclaration des paramètres génériques
+### Utilisation des paramètres génériques
 
 Par un exemple, considérons une méthode qui calcule une somme de valeurs retournée suivant un format passé comme paramètre. A chaque appel à cette méthode, le nombre de valeurs à additionner peut varier. Il faudra donc passer comme paramètre à notre méthode les valeurs, en nombre variable, et le format, exprimé sous forme d’une chaîne de caractères.
 
@@ -257,7 +257,7 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //des paramètres supplémentair
 > Pour une bonne gestion de cette indirection, il est important de respecter la convention suivante : si tous les paramètres ne sont pas adressés par indirection, ce qui est le cas le plus fréquent, il faut que les paramètres adressés par indirection soient passés en fin de liste.
 
 
-### Utilisation des paramètres génériques
+### Déclaration des paramètres génériques
 
 De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Les paramètres génériques non déclarés obtiennent automatiquement le type [Variant](dt_variant.md).
 
