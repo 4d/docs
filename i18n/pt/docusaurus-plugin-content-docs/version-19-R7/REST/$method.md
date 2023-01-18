@@ -106,7 +106,8 @@ If the request was successful, the following response is returned:
 ```json
 {
     "ok": true
-} If the entity set wasn't found, an error is returned:
+}
+If the entity set wasn't found, an error is returned:
 
 {
     "__ERROR": [
