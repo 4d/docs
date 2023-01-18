@@ -190,7 +190,7 @@ http://localhost/rest/Friends
 - ユーザーは、専用の非公開テーブル (例: *WebUsers*) に保存されます。
 - [暗号化](MSC/encrypt.md) することも可能な *WebUsers* テーブルには、ユーザーのログイン名とパスワードのハッシュが保存されています。
 
-1. いくつかのフィールドを持つテーブルを作成します。 たとえば:
+1. いくつかのフィールドを持つテーブルを作成します。たとえば:
 
 ![](../assets/en/WebServer/helloUsers.png)
 
@@ -249,8 +249,7 @@ If ($user#Null) // ユーザーが見つかった場合
     End if 
 Else 
     WEB SEND TEXT("Wrong user name or password.")
-")
- End if 
+End if 
 ```
 
 3. コードエディターの **[i]** ボタンでメソッドプロパティを表示し、`4DタグとURL(4DACTION...)` オプションにチェックを入れて **OK** をクリックします。
