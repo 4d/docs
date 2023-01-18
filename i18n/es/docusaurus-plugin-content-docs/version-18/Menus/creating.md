@@ -12,7 +12,7 @@ Puede combinar ambas funcionalidades y utilizar los menús creados en la estruct
 
 ## Barra de menús por defecto
 
-Una aplicación personalizada debe contener al menos una barra de menús con un menú. Una aplicación personalizada debe contener al menos una barra de menús con un menú. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
+Una aplicación personalizada debe contener al menos una barra de menús con un menú. A custom application must contain at least one menu bar with one menu. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
 
 Esto permite al usuario acceder al modo Aplicación tan pronto como se crea la base. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 
@@ -21,7 +21,7 @@ La barra de menús por defecto incluye tres menús:
 - **Archivo**: sólo incluye el comando **Salir**. La acción estándar *Salir* está asociada al comando, que hace que la aplicación salga.
 - **Editar**: menú estándar y totalmente editable. Las funciones de edición, como copiar, pegar, etc., se definen mediante acciones estándar.
 - **Modo**: contiene, por defecto, el comando **Volver al modo Diseño**, que se utiliza para salir del modo Aplicación.
-> > > Menu items appear *in italics* because they consist of references and not hard-coded text. Consulte [Propiedad Título](properties.md#title).
+> > Menu items appear *in italics* because they consist of references and not hard-coded text. Consulte [Propiedad Título](properties.md#title).
 
 Puede modificar esta barra de menú como desee o crear otras adicionales.
 
