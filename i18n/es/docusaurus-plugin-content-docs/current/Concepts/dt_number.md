@@ -102,16 +102,16 @@ Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor 
 
 Una expresión que utiliza un operador bitwise devuelve un valor Entero largo, excepto para el operador Bit Test, donde la expresión devuelve un valor Booleano. La siguiente tabla lista los operadores a nivel de bits y su sintaxis:
 
-| Operación       | Operador  | Sintaxis               | Devuelve             |
-| --------------- | --------- | ---------------------- | -------------------- |
-| Y               | &         | Long & Long            | Long                 |
-| O (inclusive)   | &#124;    | Long &#124; Long       | Long                 |
-| O (exclusivo)   | \^&#124; | Long \^&#124; Long    | Long                 |
-| Left Bit Shift  | <<        | Long << Long           | Long (ver nota 1)    |
-| Right Bit Shift | >>        | Long >> Long           | Long (ver nota 1)    |
-| Bit Set         | ?+        | Long ?+ Long           | Long (ver nota 2)    |
-| Probar bit      | ?-        | Long ?- Long           | Long (ver nota 2)    |
-| Probar bit      | ??        | Long ?? Long Long Long | Boolean (ver nota 2) |
+| Operación         | Operador  | Sintaxis            | Devuelve             |
+| ----------------- | --------- | ------------------- | -------------------- |
+| Y                 | &         | Long & Long         | Long                 |
+| O (inclusive)     | &#124;    | Long &#124; Long    | Long                 |
+| O (exclusivo)     | \^&#124; | Long \^&#124; Long | Long                 |
+| Left Bit Shift    | <<        | Long << Long        | Long (ver nota 1)    |
+| Right Bit Shift   | >>        | Long >> Long        | Long (ver nota 1)    |
+| Bit Set           | ?+        | Long ?+ Long        | Long (ver nota 2)    |
+| Poner el bit en 0 | ?-        | Long ?- Long        | Long (ver nota 2)    |
+| Probar bit        | ??        | Long ?? Long Long   | Boolean (ver nota 2) |
 
 #### Notas
 
@@ -129,13 +129,13 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 
 ### Ejemplos
 
-| Operación       | Ejemplo                         | Result     |
-| --------------- | ------------------------------- | ---------- |
-| Y               | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
-| O (inclusive)   | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
-| O (exclusivo)   | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
-| Left Bit Shift  | 0x0000FFFF << 8                 | 0x00FFFF00 |
-| Right Bit Shift | 0x0000FFFF >> 8                 | 0x000000FF |
-| Bit Set         | 0x00000000 ?+ 16                | 0x00010000 |
-| Probar bit      | 0x00010000 ?- 16                | 0x00000000 |
-| Probar bit      | 0x00010000 ?? 16 16 16          | True       |
+| Operación         | Ejemplo                         | Result     |
+| ----------------- | ------------------------------- | ---------- |
+| Y                 | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
+| O (inclusive)     | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
+| O (exclusivo)     | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
+| Left Bit Shift    | 0x0000FFFF << 8                 | 0x00FFFF00 |
+| Right Bit Shift   | 0x0000FFFF >> 8                 | 0x000000FF |
+| Bit Set           | 0x00000000 ?+ 16                | 0x00010000 |
+| Poner el bit en 0 | 0x00010000 ?- 16                | 0x00000000 |
+| Probar bit        | 0x00010000 ?? 16 16             | True       |
