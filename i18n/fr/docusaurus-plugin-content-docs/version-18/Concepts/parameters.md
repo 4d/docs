@@ -84,7 +84,7 @@ NouvellePhrase:=Majuscules4("Bien joué.")
 
 Dans ce cas, la variable *NouvellePhrase* prend la valeur “BIEN joué.”
 
-Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Dans une sous-méthode, vous pouvez utiliser `$0` comme n'importe quelle autre variable locale. C'est 4D qui retourne la valeur finale de `$0` (sa valeur au moment où la sous-routine se termine) à la méthode appelée.
+Le retour de fonction, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. It can be used as such within the subroutine. Dans une sous-méthode, vous pouvez utiliser `$0` comme n'importe quelle autre variable locale. C'est 4D qui retourne la valeur finale de `$0` (sa valeur au moment où la sous-routine se termine) à la méthode appelée.
 
 
 ## Déclaration des paramètres
@@ -166,7 +166,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## Valeurs ou références
 
-Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2 etc. dans la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Par exemple :
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2 etc. dans la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple :
 
 ```4d
     //Voici du code extrait de la méthode MY_METHOD
@@ -392,7 +392,7 @@ Cette fonction pourra être appelée de diverses manières :
 ```
 
 
-### Utilisation des paramètres génériques
+### Déclaration des paramètres génériques
 
 De même que pour les autres variables locales, la déclaration du paramètre générique par directive de compilation n’est pas obligatoire. Il est néanmoins recommandé d'éviter toute ambiguïté. Pour déclarer ces paramètres, utilisez une directive de compilateur à laquelle vous passez ${N} comme paramètre, où N est le premier paramètre générique.
 
