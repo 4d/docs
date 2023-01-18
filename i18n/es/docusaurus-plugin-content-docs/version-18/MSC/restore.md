@@ -19,7 +19,7 @@ Cuando se selecciona una copia de seguridad en esta lista, la parte derecha de l
 - **Ruta**: ruta de acceso completa del archivo de copia de seguridad seleccionado. Al hacer clic en el botón Mostrar se abre el archivo de copia de seguridad en una ventana del sistema.
 - **Fecha y hora**: fecha y hora de la copia de seguridad.
 - **Contenido**: contenido del archivo de copia de seguridad. Cada elemento de la lista tiene una casilla de selección al lado que se puede utilizar para indicar si se quiere restaurar o no. También puede utilizar los botones **Seleccionar todo** o **Deseleccionar todo** para definir la lista de los elementos que deben restaurarse.
-- **Carpeta de destino de los archivos restaurados**: carpeta donde se colocarán los archivos restaurados. **Carpeta de destino de los archivos restaurados**: carpeta donde se colocarán los archivos restaurados. Para cambiar esta ubicación, haga clic en **[...]** y designe la carpeta en la que desea colocar los archivos restaurados.
+- **Carpeta de destino de los archivos restaurados**: carpeta donde se colocarán los archivos restaurados. **Destination folder of the restored files**: Folder where the restored files will be placed. Para cambiar esta ubicación, haga clic en **[...]** y designe la carpeta en la que desea colocar los archivos restaurados.
 
 El botón **Restaurar** lanza la restauración manual del elemento o elementos seleccionados.
 
