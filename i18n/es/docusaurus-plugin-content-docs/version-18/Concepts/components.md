@@ -71,7 +71,7 @@ Cuando se utilizan punteros para que los componentes y la base local se comuniqu
 
 - El comando `Get pointer` no devolverá un puntero a una variable de la base local si se llama desde un componente y viceversa.
 
-- La arquitectura de componentes permite la coexistencia, dentro de la misma base interpretada, de componentes interpretados y compilados (a la inversa, en una base compilada sólo pueden utilizarse componentes compilados). Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado. Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado.
+- La arquitectura de componentes permite la coexistencia, dentro de la misma base interpretada, de componentes interpretados y compilados (a la inversa, en una base compilada sólo pueden utilizarse componentes compilados). Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado. In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode.
 - Si el componente C define la variable `myCvar`, el componente I puede acceder al valor de esta variable utilizando el puntero `->myCvar`.
 - Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxis provoca un error de ejecución.
 
@@ -159,7 +159,7 @@ Un [método de gestión de errores](Concepts/error-handling.md) instalado por el
 
 ## Utilización de formularios
 
-- Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente.
+- Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Only “project forms” (forms that are not associated with any specific table) can be used in a component.
 - Un componente puede llamar a formularios tabla de la base local. Tenga en cuenta que en este caso es necesario utilizar punteros en lugar de nombres de tablas entre paréntesis [] para especificar los formularios en el código del componente.
 
 **Nota:** si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual de la base local, en el contexto de ésta. Por consiguiente, si el formulario incluye variables, el componente no tendrá acceso a ellas.
@@ -168,7 +168,7 @@ Un [método de gestión de errores](Concepts/error-handling.md) instalado por el
 
 ## Uso de tablas y campos
 
-Un componente no puede utilizar las tablas y campos definidos en la estructura 4D de la base matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
+Un componente no puede utilizar las tablas y campos definidos en la estructura 4D de la base matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. However, you can create and use external databases, and then use their tables and fields according to your needs. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
 
 ### Ejemplo
 
