@@ -9,7 +9,7 @@ La gestión de errores responde a dos necesidades principales:
 
 - descubrir y corregir posibles errores y fallos en el código durante la fase de desarrollo,
 - detectar y recuperar errores inesperados en las aplicaciones desplegadas; en particular, puede sustituir los diálogos de error del sistema (disco lleno, archivo perdido, etc.) por su propia interfaz.
-> > > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Este método evitaría la aparición de cajas de diálogo inesperadas en el servidor, y podría registrar los errores en un archivo específico para su posterior análisis.
+> > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Este método evitaría la aparición de cajas de diálogo inesperadas en el servidor, y podría registrar los errores en un archivo específico para su posterior análisis.
 
 ## Instalación de un método de gestión de errores
 
@@ -86,8 +86,6 @@ ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
     ALERT("File not found.")
-End if
-ON ERR CALL("")
 End if
 ON ERR CALL("")
 End if
