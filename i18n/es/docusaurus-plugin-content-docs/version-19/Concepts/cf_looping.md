@@ -30,7 +30,7 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 ### Ejemplo
 
 ```4d
- CONFIRM("¿Añadir un nuevo registro?") CONFIRM("Add a new record?") //The user wants to add a record? CONFIRM("Add a new record?") //The user wants to add a record?
+ CONFIRM("¿Añadir un nuevo registro?") CONFIRM("Add a new record?") //The user wants to add a record?
  While(OK=1) //Bucle mientras el usuario quiera
     ADD RECORD([aTable]) /Añadir un nuevo registro
  End while //El bucle siempre termina con End while
@@ -304,14 +304,14 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 
 ### Bucle en las colecciones
 
-La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. El número de bucles se basa en el número de elementos de la colección.
 
 La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
 
 En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
 - Si la variable _Current_Item_ es de tipo objeto o de tipo colección (es decir, si _Expresión_ es una colección de objetos o de colecciones), al modificar esta variable se modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
-- End for each</code> se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 - Si la colección contiene elementos con un valor **Null**, se generará un error si el tipo de variable _Current_Item_ no soporta valores **Null** (como las variables de tipo entero largo).
 
 #### Ejemplo
