@@ -231,7 +231,7 @@ $toModify:=ds.Company.all().copy() //$toModify es modificable
 
 Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
 
-* la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) . .
+* la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 * la nueva entity selection se basa en una relación:
   * [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado de uno a muchos y la entidad pertenece a una entity selection (de la misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
   * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (de la misma naturaleza que la entity selection),
@@ -320,7 +320,7 @@ Además de la variedad de formas en que puede consultar, también puede utilizar
   //Todas las facturas con al menos un elemento relacionado con una pieza en $myParts
 ```
 
-La última línea devolverá en $myInvoices una selección de entidades de todas las facturas que tengan al menos un elemento de factura relacionado con una pieza en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad.
+La última línea devolverá en $myInvoices una selección de entidades de todas las facturas que tengan al menos un elemento de factura relacionado con una pieza en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
 
 ## Bloqueo de una entidad
 
