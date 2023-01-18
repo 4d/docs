@@ -55,7 +55,6 @@ Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
     ALERT("You did not enter a name.")
  End if
  End if
- End if
 ```
 
 **Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
@@ -154,19 +153,10 @@ A titre de comparaison, voici la version avec `If...Else...End if` de la même m
 
 ```4d
  If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
+    ALERT("One.") //Si le chiffre est 1, afficher une alerte
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if If(vResult=1) //Tester si le chiffre est 1
+    If:(vResult=2) //Tester si le chiffre est 2
+       ALERT("Two.") If(vResult=1) //Tester si le chiffre est 1
     ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
     ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
     ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
@@ -219,16 +209,6 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
-    :(vResult=1)
-       ...
-```
-
-... les instructions associées au cas complexe ne seront jamais exécutées. En effet, pour que ce cas soit TRUE, ses deux conditions booléennes doivent l’être. Or, la première condition est celle du cas simple situé précédemment. Lorsqu'elle est TRUE, le cas simple est exécuté et 4D sort de la structure conditionnelle, sans évaluer le cas complexe. Pour que ce type de méthode fonctionne, vous devez écrire :
-
-```4d
- Case of
     :(vResult=1) //Test if the number is 1
        ALERT("One.") //If it is 1, display an alert
     :(vResult=2) //Test if the number is 2
@@ -240,12 +220,31 @@ Par conséquent, lorsque vous testez dans la même méthode des cas simples et d
  End case
 ```
 
+... les instructions associées au cas complexe ne seront jamais exécutées. En effet, pour que ce cas soit TRUE, ses deux conditions booléennes doivent l’être. Or, la première condition est celle du cas simple situé précédemment. Lorsqu'elle est TRUE, le cas simple est exécuté et 4D sort de la structure conditionnelle, sans évaluer le cas complexe. Pour que ce type de méthode fonctionne, vous devez écrire :
+
+```4d
+ If(vResult=1) //Test if the number is 1
+    ALERT("One.") //If it is 1, display an alert
+ Else
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
+    Else
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if
+```
+
 **Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans toutes les alternatives. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
 ```4d
  Case of
     :(Expression_booléenne)
     :(Expression_booléenne)
-      ...
+        instruction(s)
+       ...
 
     :(Expression_booléenne)
        instruction(s)
@@ -259,8 +258,7 @@ ou :
  Case of
     :(Expression_booléenne)
     :(Expression_booléenne)
-        instruction(s)
-       ...
+      ...
 
     :(Expression_booléenne)
        instruction(s)
