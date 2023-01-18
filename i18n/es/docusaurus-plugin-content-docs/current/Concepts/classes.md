@@ -369,7 +369,6 @@ Function get fullAddress()->$result : Object
 Class Constructor({$parameterName : type; ...})
 // code
 // code
-// Class:
 ```
 
 Una función class constructor, que puede aceptar los [parámetros](#parameters), puede ser utilizada para definir una clase usuario.
@@ -486,24 +485,27 @@ Super.doSomething(42) //llama a la función "doSomething"
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
-//Class: Square
+// Class: Rectangle
+Class constructor($width : Integer; $height : Integer)
+ This.name:="Rectangle"
+ This.height:=$height
+ This.width:=$width
 
-Class extends Rectangle
 
-Class constructor ($side : Integer)
+Function sayName()
+ ALERT("Hi, I am a "+This.name+".")
 
- // Llama al class constructor de la clase padre con longitudes
- // proporcionadas para el ancho y alto del rectángulo
- Super($side;$side)
- // En las clases derivadas, Super debe ser llamado antes de que 
- // pueda utilizar 'This'
- This.
-
-ame:="Square"
-
+// Function definition
 Function getArea()
- C_LONGINT($0)
- $0:=This.height*This.width
+ var $0 : Integer
+
+ $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+ var $0 : Integer
+
+ $0:=(This.height)*(This.width)
 ```
 
 ```4d
