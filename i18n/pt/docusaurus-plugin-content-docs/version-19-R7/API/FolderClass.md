@@ -66,7 +66,7 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 </details>
 
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D. Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 
 
@@ -130,12 +130,12 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 
-<!-- REF #4D.Folder.new().Syntax --> **4D. Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. Folder<br/>**4D. Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D. Folder<!-- END REF -->
+<!-- REF #4D.Folder.new().Syntax --> **4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 
 #### Descrição
 
-A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D. Folder.new()`.
 
@@ -190,9 +190,6 @@ Criação da pasta "/Arquivos2019/Janeiro/" na pasta da base de dados:
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
  ALERT("The "+$newFolder.name+" folder was created.")
-Else
- ALERT("Impossible to create a "+$newFolder.name+" folder.")
-End if
 Else
  ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
