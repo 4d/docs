@@ -92,7 +92,7 @@ Es gelten folgende Regeln:
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
 
-eine Function `getArea()` mit zwei Parametern aufrufen:
+Sie können z. B. eine Function `getArea()` mit zwei Parametern aufrufen:
 
 ```4d
 $area:=$o.getArea(50;100)
@@ -152,11 +152,11 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## Sequentielle Parameter
 
-Als Alternative zur Syntax [benannte Parameter](#parameter-mit-namen) können Sie Parameter über fortlaufend nummerierte Variablen deklarieren: **$1**, **$2**, **$3**, usw. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter.
+Als Alternative zur Syntax [benannte Parameter](#parameter-mit-namen) können Sie Parameter über fortlaufend nummerierte Variablen deklarieren: **$1**, **$2**, **$3**, usw. Die Nummerierung der lokalen Variablen zeigt die Reihenfolge der Parameter.
 
 > Auch wenn Class Functions diese Syntax unterstützen, empfehlen wir hier, die Syntax [benannte Parameter](#parameter-mit-namen) zu verwenden.
 
-eine Projektmethode `DO_SOMETHING` mit drei Parametern aufrufen:
+Sie können z. B. eine Projektmethode `DO_SOMETHING` mit drei Parametern aufrufen:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
@@ -180,13 +180,13 @@ Im Code der Methode wird der Wert jedes Parameters automatisch in die Variablen 
 Der zurückzugebende Wert wird automatisch in die lokale Variable `$0` gesetzt.
 
 
-Hier ein Beispiel mit der Methode Uppercase4:
+Zum Beispiel gibt die folgende Methode mit Namen `Uppercase4` einen String zurück, der seine ersten vier Zeichen in Großbuchstaben gesetzt hat:
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-Zum Beispiel gibt die folgende Methode mit Namen `Uppercase4` einen String zurück, der seine ersten vier Zeichen in Großbuchstaben gesetzt hat:
+Hier ein Beispiel mit der Methode Uppercase4:
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
@@ -394,20 +394,10 @@ C_TEXT($1;$2;$3;$4;$5;$6)
     End if
     ...
  End if
-    C_LONGINT($0)
- If(Form event=On Drag Over)
-    $0:=0
-    ...
     If($DataType=Is picture)
        $0:=-1
     End if
     ...
- End if
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
  End if
 ```
 
@@ -559,7 +549,7 @@ APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document
 APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
 ```
 
-> Werden optionale Parameter in Ihren Methoden benötigt, können Sie \[Objekteigenschaften als benannte Parameter\](#objekteigenschaften-als-genannte parameter-verwenden) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
+> Werden optionale Parameter in Ihren Methoden benötigt, können Sie [Objekteigenschaften als benannte Parameter](#objekteigenschaften-als-genannte parameter-verwenden) verwenden. Das ist ein flexibler Weg zum Verwalten variabler Parameteranzahlen.
 
 
 
@@ -616,7 +606,7 @@ Daten vom Typ Objekt und Collection werden automatisch über eine Referenz verwa
 
 Werden also solche Datentypen als Parameter verwendet, enthalten `$1, $2...` keine *Werte*, sondern *Referenzen*. Eine Änderung des Werts von Parameter `$1, $2...` in der Unterroutine wird überall, wo Quellobjekt oder Collection verwendet wird, weitergegeben. Das ist dasselbe Prinzip wie für [Zeiger](dt_pointer.md#zeiger-als-parameter-in-methoden), außer dass die Parameter `$1, $2...` in der Unterroutine nicht dereferenziert werden müssen.
 
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //extra parameters are passed
+Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als Parameter sendet:
 
 ```4d
   //CreatePerson
