@@ -107,14 +107,14 @@ To display/hide the Property List, choose **Property List** from the **Form** me
 
 #### Shortcuts
 
-You can navigate in the Property List using the following shortcuts:
+You can use the following shortcuts in the Property List:
 
 - **Arrow key**s ↑ ↓: Used to go from one cell to another.
 - **Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
 - **PgUp** and **PgDn**: Used to scroll the Property List contents.
 - **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
-- **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
-- **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a theme label: Used to Collapse/Expand every theme in the list.
 - **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
 
 
@@ -153,7 +153,7 @@ To select an object using the toolbar:
 To select an object using the Property List:
 
 1. Choose the object’s name from the Object List drop-down list located at the top of the Property List. Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. To deselect an object, click outside the object’s boundary or **Shift+click** the object.
-> > > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selecting multiple objects
 
