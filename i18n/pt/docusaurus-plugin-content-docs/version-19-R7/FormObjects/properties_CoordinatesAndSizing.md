@@ -7,7 +7,7 @@ title: Coordinates & Sizing
 
 This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
 
-When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
+When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
 > When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
