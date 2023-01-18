@@ -106,14 +106,14 @@ Para mostrar/ocultar la lista de propiedades, seleccione **Lista de propiedades*
 
 #### Atajos
 
-Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
+You can use the following shortcuts in the Property List:
 
 - **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
 - **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
 - **PgUp** y **PgDn**: selecciona la primera o la última celda visible de la lista mostrada.
 - **Inicio** y **Fin**: selecciona la primera o la última celda de la lista.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en la etiqueta de tema: contrae/despliega todos los temas de la lista.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a theme label: Used to Collapse/Expand every theme in the list.
 - **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
 
 
@@ -151,7 +151,7 @@ Para seleccionar un objeto utilizando la barra de herramientas:
 Para seleccionar un objeto utilizando la Lista de propiedades:
 
 1. Choose the object’s name from the Object List drop-down list located at the top of the Property List. Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. Para deseleccionar un objeto, haga clic fuera del límite del objeto o **Mayúsculas+clic** en el objeto.
-> > > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selección de múltiples objetos
 
@@ -288,7 +288,7 @@ En cuanto a la distribución de los objetos, 4D ofrece una distancia basada en l
 ![](../assets/en/FormEditor/magneticGrid2.png)
 
 Este funcionamiento se aplica a todos los tipos de objetos de los formularios. La rejilla magnética puede activarse o desactivarse en cualquier momento utilizando el comando **Activar la rejilla magnética** del menú **Formulario** o del menú contextual del editor. También es posible definir la activación de esta función por defecto en la página **Preferencias** > **Formularios** (opción **Activar la alineación automática por defecto**). Puede activar o desactivar manualmente la rejilla magnética cuando se selecciona un objeto presionando la tecla **Ctrl** (Windows) o **Control** (macOS) .
-> La rejilla magnética también influye en el redimensionamiento manual de los objetos.
+> Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+clic** / **Comando+Mayús+clic** para seleccionar cada objeto sucesivamente bajando un plano con cada clic.
 
 ### Distribuir los objetos
 
