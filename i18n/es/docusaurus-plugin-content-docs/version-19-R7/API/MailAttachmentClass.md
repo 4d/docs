@@ -279,7 +279,7 @@ La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la r
 
 #### Descripción
 
-La propiedad `.platformPath` devuelve <!-- REF #MailAttachmentClass.platformPath.Summary -->La propiedad `.platformPath` devuelve<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #MailAttachmentClass.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
 
 
 ## .type
