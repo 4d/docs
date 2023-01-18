@@ -11,7 +11,7 @@ title: HTTPRequest
 
 </details>
 
-このクラスを使って、次のようにリクエストを作成できます:
+`HTTPRequest` クラスを使って、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を扱うことができます。このオブジェクトは、HTTPサーバーへのリクエストの設定と送信、および HTTPサーバーのレスポンスを処理するのに使用します。
 
 `HTTPRequest` クラスは、`4D` クラスストアにて提供されています。 HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
 
@@ -145,7 +145,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | proxyAuthentication  | [authentication オブジェクト](#authentication-object) | プロキシ認証のためのオブジェクト                                                                                                                                                         | undefined   |
 | serverAuthentication | [authentication オブジェクト](#authentication-object) | サーバー認証のためのオブジェクト                                                                                                                                                         | undefined   |
 | returnResponseBody   | Boolean                                         | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                           | true        |
-| timeout              | Real                                            | タイムアウト (秒単位) タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                 | 未定義         |
+| timeout              | Real                                            | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                              | 未定義         |
 
 
 #### コールバック関数
@@ -236,7 +236,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.headers` プロパティは、 <!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します 。<!-- END REF -->。 (省略された場合は空のオブジェクト)
+`.headers` プロパティは、 <!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します<!-- END REF -->。 (省略された場合は空のオブジェクト)
 
 <!-- END REF -->
 
@@ -247,7 +247,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.method` プロパティは、 <!-- REF #HTTPRequestClass.method.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `method` を格納します 。<!-- END REF -->。 (省略された場合は "GET")
+`.method` プロパティは、 <!-- REF #HTTPRequestClass.method.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `method` を格納します<!-- END REF -->。 (省略された場合は "GET")
 
 <!-- END REF -->
 
@@ -258,7 +258,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.protocol` プロパティは、 <!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します 。<!-- END REF -->。 (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
+`.protocol` プロパティは、 <!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します<!-- END REF -->。 (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
 
 <!-- END REF -->
 
@@ -273,12 +273,12 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 `response` オブジェクトは共有できないオブジェクトです。 このオブジェクトは次のプロパティを提供します:
 
-| プロパティ       | タイプ     | 説明                                                                                                                              |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | レスポンスのボディ。 メッセージのデータ型は [`dataType`](#datatype) プロパティによって定義されています。 ボディがまだ受信されていない場合は未定義です。                                       |
-| .headers    | Object  | レスポンスのヘッダー。 `headers.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 ヘッダーがまだ受信されていない場合は未定義です。 |
-| .status     | Number  | レスポンスのステータスコード                                                                                                                  |
-| .statusText | Text    | ステータスコードを説明するメッセージ                                                                                                              |
+| プロパティ       | タイプ     | 説明                                                                                                     |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------ |
+| .body       | Variant | レスポンスのボディ。 メッセージのデータ型は [`dataType`](#datatype) プロパティによって定義されています。 ボディがまだ受信されていない場合は未定義です。              |
+| .headers    | Object  | レスポンスのヘッダー。 `headers.key` = value (同じ key が複数指定されている場合、*value* はコレクションでありえます) ヘッダーがまだ受信されていない場合は未定義です。 |
+| .status     | Number  | レスポンスのステータスコード                                                                                         |
+| .statusText | Text    | ステータスコードを説明するメッセージ                                                                                     |
 
 <!-- END REF -->
 
@@ -289,7 +289,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->`.returnResponseBody` プロパティは、<!-- END REF -->。 (省略された場合は true)。
+`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `returnResponseBody` を格納します<!-- END REF -->。 (省略された場合は true)。
 
 <!-- END REF -->
 
@@ -310,7 +310,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 > この関数はスレッドセーフです。
 
-`.terminate()` 関数は、 <!-- REF #HTTPRequestClass.terminate().Summary -->`.terminate()` 関数は、<!-- END REF -->。 また、`onTerminate` イベントをトリガーします。
+`.terminate()` 関数は、 <!-- REF #HTTPRequestClass.terminate().Summary -->HTTPリクエストを中止します<!-- END REF -->。 また、`onTerminate` イベントをトリガーします。
 
 <!-- END REF -->
 
@@ -332,7 +332,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 説明
 
-`.timeout` プロパティは、 <!-- REF #HTTPRequestClass.timeout.Summary -->`.timeout` プロパティは、<!-- END REF -->。 (省略された場合は未定義)。
+`.timeout` プロパティは、 <!-- REF #HTTPRequestClass.timeout.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `timeout` を格納します<!-- END REF -->。 (省略された場合は未定義)。
 
 <!-- END REF -->
 
