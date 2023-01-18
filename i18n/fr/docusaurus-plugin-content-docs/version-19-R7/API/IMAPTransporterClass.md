@@ -153,7 +153,7 @@ La fonction `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 #### Description
 
-La fonction `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->ajoute des flags (drapeaux) aux `msgIDs` pour les `keywords` spécifiés<!-- END REF -->.
+La fonction `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->ajoute des flags (drapeaux) aux `msgIDs ` pour les `keywords` spécifiés<!-- END REF -->.
 
 Dans le paramètre `msgIDs`, vous pouvez passer soit :
 
@@ -353,7 +353,7 @@ La propriété `.checkConnectionDelay` contient <!-- REF #IMAPTransporterClass.c
 
 #### Description
 
-La fonction `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->La fonction `.getMails()`<!-- END REF -->.
+La fonction `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->copie les messages définis par *msgsIDs* ou *allMsgs* dans la *destinationBox* sur le serveur IMAP<!-- END REF -->.
 
 Vous pouvez passer :
 
@@ -445,7 +445,7 @@ Pour copier tous les messages de la boîte de réception courante :
 <!-- REF #IMAPTransporterClass.createBox().Params -->
 | Paramètres | Type   |    | Description                                                             |
 | ---------- | ------ |:--:| ----------------------------------------------------------------------- |
-| name       | Text   | -> | Nouveau nom de la boîte de réception                                    |
+| name       | Text   | -> | Nom de la nouvelle mailbox                                              |
 | Résultat   | Object | <- | Statut de l'opération de création de mailbox|<!-- END REF -->
 
 |
@@ -657,29 +657,29 @@ La fonction retourne un objet décrivant le statut IMAP :
 Vous souhaitez supprimer la boîte enfant "Nova Orion Industries" à l'intérieur de la boîte "Bills" :
 
 ```4d
-var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+var $pw; $name : text
+var $options; $transporter; $status : object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
 
-  //create transporter
- $transporter:=IMAP New transporter($server)
+$pw:=Request("Please enter your password:")
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("INBOX")
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
 
-  If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-     New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-    // ...
- End for each
+$transporter:=IMAP New transporter($options)
+
+// delete mailbox
+$name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
+$status:=$transporter.deleteBox($name)
+
+If ($status.success)
+ ALERT("Mailbox deletion successful!")
+ Else
+ ALERT("Error: "+$status.statusText)
  End if
+End if
 ```
 
 <!-- END REF -->
@@ -771,7 +771,7 @@ $status:=$transporter.expunge()
 | Paramètres | Type   |    | Description                              |
 | ---------- | ------ |:--:| ---------------------------------------- |
 | name       | Text   | -> | Nom de la boîte de réception             |
-| Résultat   | Object | <- | objet boxInfo|<!-- END REF -->
+| Résultat   | Object | <- | Objet boxInfo|<!-- END REF -->
 
 |
 
@@ -821,10 +821,10 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| Paramètres | Type       |    | Description                              |
-| ---------- | ---------- |:--:| ---------------------------------------- |
-| parameters | Object     | -> | Objet de paramètre                       |
-| Résultat   | Collection | <- | Objet boxInfo|<!-- END REF -->
+| Paramètres | Type       |    | Description                                            |
+| ---------- | ---------- |:--:| ------------------------------------------------------ |
+| parameters | Object     | -> | Objet de paramètre                                     |
+| Résultat   | Collection | <- | Collection d'objets mailbox|<!-- END REF -->
 
 |
 
@@ -951,7 +951,7 @@ Caractère de délimitation des noms de boites de réception.
 
 #### Description
 
-La fonction `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->La fonction `.getMail()`<!-- END REF -->. Cette fonction vous permet de gérer localement le contenu de l'email.
+La fonction `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->renvoie l'objet `Email` correspondant au *msgNumber* ou *msgID* dans la boîte aux lettres désignée par `IMAP_transporter`<!-- END REF -->. Cette fonction vous permet de gérer localement le contenu de l'email.
 
 Dans le premier paramètre, vous pouvez passer soit :
 
@@ -1026,7 +1026,7 @@ Vous souhaitez lire le message avec ID = 1 :
 
 #### Description
 
-La fonction `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMails().Summary -->renvoie un BLOB contenant le contenu MIME du message correspondant au *msgNumber* ou au *msgID* dans la mailbox désignée par le `IMAP_transporter`<!-- END REF -->.
+La fonction `.getMails()` <!-- REF #IMAPTransporterClass.getMails().Summary -->renvoie un objet contenant une collection d'objets `Email`<!-- END REF -->.
 
 **Première syntaxe :**
 
@@ -1126,7 +1126,7 @@ Vous souhaitez récupérer les 20 emails les plus récents sans modifier le stat
 
 #### Description
 
-La fonction `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->copie les messages définis par *msgsIDs* ou *allMsgs* dans la *destinationBox* sur le serveur IMAP<!-- END REF -->.
+La fonction `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->renvoie un BLOB contenant le contenu MIME du message correspondant au *msgNumber* ou au *msgID* dans la mailbox désignée par le `IMAP_transporter`<!-- END REF -->.
 
 Dans le premier paramètre, vous pouvez passer soit :
 
@@ -1138,8 +1138,8 @@ Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est ma
 * **Vrai** - pour marquer le message comme "seen" (indiquant que le message a été lu)
 * **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * La fonction retourne un BLOB vide si *msgNumber* ou msgID désigne un message inexistant,
-> * var $pw : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) // rename mailbox $status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success) ALERT("Mailbox renaming successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
-> * var $pw; $name : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp" $status:=$transporter.unsubscribe($name) If ($status.success) ALERT("Mailbox unsubscription successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
+> * Si aucune boite de réception n'est sélectionnée avec la fonction [`.selectBox()`](#selectbox), une erreur est générée,
+> * S'il n'y a pas de connexion ouverte,`.getMIMEAsBlob()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de `.selectBox()`.
 
 #### Résultat
 
@@ -1447,7 +1447,7 @@ End if
 | Paramètres  | Type   |    | Description                                                   |
 | ----------- | ------ |:--:| ------------------------------------------------------------- |
 | currentName | Text   | -> | Nom actuel de la boîte de réception                           |
-| nouveauNom  | Text   | -> | Nom de la nouvelle mailbox                                    |
+| nouveauNom  | Text   | -> | Nouveau nom de la boîte de réception                          |
 | Résultat    | Object | <- | Statut de l'opération de renommage|<!-- END REF -->
 
 |
@@ -1537,7 +1537,7 @@ End if
 
 > Cette fonction est basée sur la spécification du [protocole IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte de réception courante <!-- REF #IMAPTransporterClass.searchMails().Summary -->La fonction `.searchMails()`<!-- END REF -->. .
+La fonction `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->recherche les messages qui correspondent aux critères de recherche *searchCriteria* dans la boîte de réception courante<!-- END REF -->. .
 
 *searchCriteria* est un paramètre texte listant un ou plusieurs critères de recherche (voir [Mots-clés de recherche autorisés](#mots-cles-de-recherche-autorises) ci-dessous) associés ou non à des valeurs à rechercher. Un critère de recherche peut être composé d'un ou plusieurs éléments. Par exemple :
 
@@ -1667,13 +1667,13 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 | ---------- | ------- |:--:| ----------------------------------------- |
 | name       | Text    | -> | Nom de la boîte de réception              |
 | state      | Integer | -> | Statut de l'accès à la boite de réception |
-| Résultat   | Object  | <- | objet boxInfo|<!-- END REF -->
+| Résultat   | Object  | <- | Objet boxInfo|<!-- END REF -->
 
 |
 
 #### Description
 
-sélectionne la mailbox *name* comme boîte aux lettres courante <!-- REF #IMAPTransporterClass.selectBox().Summary -->La fonction `.selectBox()`<!-- END REF -->. Cette fonction vous permet de récupérer des informations sur la boite de réception.
+La fonction `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->sélectionne la mailbox *name* comme boîte aux lettres courante<!-- END REF -->. Cette fonction vous permet de récupérer des informations sur la boite de réception.
 > Pour lire les informations à partir d'une mailbox sans changer la mailbox courante, utilisez [`.getBoxInfo()`](#getboxinfo).
 
 Dans le paramètre optionnel *name* passez le nom de la boite de réception à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
@@ -1795,10 +1795,6 @@ $status:=$transporter.subscribe($name)
 
 If ($status.success)
    ALERT("Mailbox subscription successful!")
-   Else
-   ALERT("Error: "+$status.statusText)
-   End if
-End if
    Else
    ALERT("Error: "+$status.statusText)
    End if
