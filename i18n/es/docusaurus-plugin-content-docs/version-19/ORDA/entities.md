@@ -171,71 +171,71 @@ Puede asignar o modificar el valor de un atributo de entidad asociado "1" a part
 
 ## Crear una entity selection
 
-You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
+Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) de la siguiente manera:
 
-* Querying the entities [in a dataclass](API/DataClassClass.md#query) or in an [existing entity selection](API/EntitySelectionClass.md#query);
-* Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
-* Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-* Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
-* Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
-* Using a relation attribute of type "related entities" (see below).
+* Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
+* Utilice la función de dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
+* Utilice el comando `Create entity selection` o la función de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) para crear una selección de entidades vacía;
+* Utilice la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una selección de entidades existente;
+* Utilice una de las diversas funciones de [Entity selection class](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
+* Utilizando un atributo de relación de tipo "related entities" (ver abajo).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Tenga en cuenta que una selección de entidades sólo contiene referencias a entidades. Diferentes selecciones de entidades pueden contener las referencias a las mismas entidades.
+Puede crear y utilizar simultáneamente tantas selecciones de entidades diferentes como desee para una dataclass. Tenga en cuenta que una selección de entidades sólo contiene referencias a entidades. Diferentes selecciones de entidades pueden contener las referencias a las mismas entidades.
 
 ### Entity selections compartibles o modificables
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
+Una entity selection puede ser **compartible** (legible por múltiples procesos, pero no alterable después de la creación) o **modificable** (soporta la función [`.add()`](API/EntitySelectionClass.md#add), pero sólo utilizable por el proceso actual).
 
 #### Propiedades
 
-A **shareable** entity selection has the following characteristics:
+Una entity selection **compartible** tiene las siguientes características:
 
-* it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
-* it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
-* no permite la adición de nuevas entidades. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
+* puede almacenarse en un objeto compartido o en una colección compartida, y puede pasarse como parámetro entre varios procesos o trabajadores;
+* puede almacenarse en varios objetos o colecciones compartidos, o en un objeto o colección compartido que ya pertenezca a un grupo (no tiene un * identificador de bloqueo*);
+* no permite la adición de nuevas entidades. Al intentar añadir una entidad a una entity selection compartibles se producirá un error (1637 - Esta entity selection no puede modificarse). Para añadir una entidad a una entity selection compartible, primero debe transformarla en una entity selection no compartible mediante la función [`.copy()`](API/EntitySelectionClass.md#copy), antes de llamar a [`.add()`](API/EntitySelectionClass.md#add).
 
-> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+> La mayoría de las funciones entity selection (como [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) soportan selecciones de entidades compartibles, ya que no necesitan alterar la selección de entidades original (devuelven una nueva).
 
-An **alterable** entity selection has the following characteristics:
+Una entity selection **modificable** tiene las siguientes características:
 
-* it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
-* it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
+* no puede compartirse entre los procesos, ni almacenarse en un objeto o colección compartido. Si se intenta almacenar una entity selection no compartible en un objeto o colección compartido, se producirá un error (-10721 - Tipo de valor no soportado en un objeto o colección compartido);
+* acepta la adición de nuevas entidades, es decir, soporta la función [`.add()`](API/EntitySelectionClass.md#add).
 
 #### ¿Cómo se definen?
 
-The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g.
+La naturaleza **compartible** o **modificable** de una entity selection se define cuando se crea (no puede modificarse posteriormente). Puede conocer la naturaleza de una entity selection utilizando la función [.isAlterable()](API/EntitySelectionClass.md#isalterable) o el comando `OB Is shared`.
 
-A new entity selection is **shareable** in the following cases:
+Una nueva entity selection es **compartible** en los siguientes casos:
 
-* the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-* the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
-* the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
-
-Ejemplo:
-
-```4d
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
-```
-
-A new entity selection is **alterable** in the following cases:
-
-* the new entity selection created blank using the [dataClass.newSelection()](API/DataClassClass.md#newselection) function or `Create entity selection` command,
-* the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+* la nueva entity selection resulta de una función de clase ORDA aplicada a una dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
+* la nueva entity selection se basa en una relación [entidad.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado uno a muchos pero la entidad no pertenece a una entity selection.
+* la nueva entity selection se copia explícitamente como compartible con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, con la opción `ck shared`).
 
 Ejemplo:
 
 ```4d
-$toModify:=ds.Company.all().copy() //$toModify es alterable
+$myComp:=ds.Empresa.get(2) //$myComp no pertenece a una entity selection
+$employees:=$myComp.empleados //$employees es compartible
 ```
 
-A new entity selection **inherits** from the original entity selection nature in the following cases:
+Una nueva entity selection es **compartible** en los siguientes casos:
 
-* the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. .
-* la nueva selección de entidades se basa en una relación:
-  * [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
-  * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
-  * [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
+* la nueva entity selection creada en un espacio vacío utilizando la función [dataClass.newSelection()](API/DataClassClass.md#newselection) o el comando `Create entity selection`,
+* la nueva entity selection se copia explícitamente como modificable con [entitySelection.copy()](API/EntitySelectionClass.md#copy) o `OB Copy` (es decir, sin la opción `ck shared`).
+
+Ejemplo:
+
+```4d
+$toModify:=ds.Company.all().copy() //$toModify es modificable
+```
+
+Una nueva entity selection **hereda** de la naturaleza de la entity selection original en los siguientes casos:
+
+* la nueva entity selection resulta de una de las varias funciones de clase ORDA aplicadas a una entity selection existente ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+* la nueva entity selection se basa en una relación:
+  * [entity.*attributeName*](API/EntityClass.md#attributename) (por ejemplo, "company.employees") cuando *attributeName* es un atributo relacionado de uno a muchos y la entidad pertenece a una entity selection (de la misma naturaleza que [.getSelection()](API/EntityClass.md#getselection)),
+  * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (por ejemplo, "employees.employer") cuando *attributeName* es un atributo relacionado (de la misma naturaleza que la entity selection),
+  * [.extract()](API/EntitySelectionClass.md#extract) cuando la colección resultante contiene selecciones de entidades (de la misma naturaleza que la entity selection).
 
 Ejemplos:
 
@@ -251,16 +251,16 @@ $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 
 #### Compartir una selección de entidades entre procesos (ejemplo)
 
-You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
+Se trabaja con dos selecciones de entidades que se quieren pasar a un proceso worker para que envíe correos a las personas adecuadas:
 
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+//Obtenemos selecciones de entidades para facturas pagadas y no pagadas
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//We pass entity selection references as parameters to the worker
+//Pasamos referencias de selección de entidades como parámetros al worker
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
@@ -299,76 +299,76 @@ El método `sendMails`:
 
 ### Selecciones de entidades y atributos de almacenamiento
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Por ejemplo:
+Todos los atributos de almacenamiento (texto, número, booleano, fecha) están disponibles como propiedades de las selecciones de entidades, así como de las entidades. Cuando se utiliza junto con una selección de entidad, un atributo escalar devuelve una colección de valores escalares. Por ejemplo:
 
 ```4d
- $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- $localEmails:=$locals.emailAddress //collection of email addresses (strings)
+ $locals:=ds.Person.query("ciudad = :1"; "San José") //entity selection de personas
+ $localEmails:=$locals.emailAddress //colección de direcciones de correo electrónico (cadenas)
 ```
 
 Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
 
 ### Selecciones de entidades y atributos de relación
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Por ejemplo, consideremos la siguiente estructura:
+Además de la variedad de formas en que puede consultar, también puede utilizar los atributos de relación como propiedades de selecciones de entidades para devolver nuevas selecciones de entidades. Por ejemplo, consideremos la siguiente estructura:
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+ $myParts:=ds.Part.query("ID < 100") //Devuelve las piezas con ID inferior a 100
  $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  //Todas las facturas con al menos un elemento relacionado con una pieza en $myParts
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
+La última línea devolverá en $myInvoices una selección de entidades de todas las facturas que tengan al menos un elemento de factura relacionado con una pieza en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
 
 ## Bloqueo de una entidad
 
-You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
+A menudo es necesario gestionar los posibles conflictos que pueden surgir cuando varios usuarios o procesos cargan e intentan modificar las mismas entidades al mismo tiempo. El bloqueo de registros es una metodología utilizada en las bases de datos relacionales para evitar actualizaciones incoherentes de los datos. El concepto consiste en bloquear un registro al leerlo para que ningún otro proceso pueda actualizarlo o, alternativamente, comprobar al guardar un registro que ningún otro proceso lo ha modificado desde que se leyó. El primero se denomina **bloqueo de registro pesimista** y garantiza que un registro modificado pueda escribirse a expensas de bloquear los registros a otros usuarios. Este último se conoce como **bloqueo de registro optimista** y cambia la garantía de los privilegios de escritura en el registro por la flexibilidad de decidir privilegios de escritura sólo si el registro necesita ser actualizado. En el bloqueo de registros pesimista, el registro se bloquea aunque no haya necesidad de actualizarlo. En el bloqueo optimista de registros, la validez de la modificación de un registro se decide en el momento de la actualización.
 
 ORDA le ofrece dos modos de bloqueo de entidad:
 
 * un modo automático "optimista", adecuado para la mayoría de las aplicaciones,
-* a "pessimistic" mode allowing you to lock entities prior to their access.
+* un modo "pesimista" que permite bloquear las entidades antes de su acceso.
 
-### Bloqueo automático optimista
+### Bloqueo optimista automático
 
-This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
+Este mecanismo automático se basa en el concepto de "bloqueo optimista", especialmente adaptado a los problemas de las aplicaciones web. Este concepto se caracteriza por los siguientes principios de funcionamiento:
 
-* All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
-* Each entity has an internal locking stamp that is incremented each time it is saved.
-* When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
-  * When the values match, the entity is saved and the internal stamp value is incremented.
-  * When the values do not match, it means that another user has modified this entity in the meantime. No se guarda y se devuelve un error.
+* Todas las entidades pueden cargarse siempre en lectura-escritura; no existe el "bloqueo" *a priori* de las entidades.
+* Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
+* Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
+  * Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
+  * Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
 
 El siguiente diagrama ilustra el bloqueo optimista:
 
 1. Dos procesos cargan la misma entidad.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Como corresponden, la entidad se guarda y el valor de su marcador se incrementa.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. Se llama al método `entity.save( )`. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. El segundo proceso también modifica la entidad cargada y valida sus cambios. Se llama al método `entity.save( )`. Dado que el valor del marcador de la entidad modificada no coincide con el de la entidad almacenada en los datos, no se realiza el guardado y se devuelve un error.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 Esto también puede ilustrarse con el siguiente código:
 
 ```4d
- $person1:=ds.Person.get(1) //Reference to entity
- $person2:=ds.Person.get(1) //Other reference to same entity
+ $person1:=ds.Person.get(1) //Referencia a la entidad
+ $person2:=ds.Person.get(1) //Otra referencia a la misma entidad
  $person1.name:="Bill"
- $result:=$person1.save() //$result.success=true, change saved
+ $result:=$person1.save() //$result.success=true, cambio guardado
  $person2.name:="William"
- $result:=$person2.save() //$result.success=false, change not saved
+ $result:=$person2.save() //$result.success=false, cambio no guardado
 ```
 
-En este ejemplo, asignamos a $person1 una referencia a la entidad person con una llave de 1. Then, we assign another reference of the same entity to variable $person2. Con $person1, cambiamos el nombre de la persona y guardamos la entidad. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+En este ejemplo, asignamos a $person1 una referencia a la entidad person con una llave de 1. A continuación, asignamos otra referencia de la misma entidad a la variable $person2. Con $person1, cambiamos el nombre de la persona y guardamos la entidad. Cuando intentamos hacer lo mismo con $person2, 4D verifica que la entidad en el disco es la misma que cuando se asignó por primera vez la referencia en $person1. Como no es lo mismo, devuelve false en la propiedad success y no guarda la segunda modificación.
 
-When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
+Cuando se produce esta situación, puede, por ejemplo, volver a cargar la entidad desde el disco utilizando el método `entity.reload()` para poder intentar realizar de nuevo la modificación. El método `entity.save()` también propone una opción "automerge" para guardar la entidad en caso de que los procesos modificaran atributos que no fueran los mismos.
 
-> Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
+> Los mardadores de registro no se utilizan en las de **transacciones** porque en este contexto sólo existe una única copia de un registro. Sea cual sea el número de entidades que hacen referencia a un registro, se modifica la misma copia, por lo que las operaciones `entity.save()` nunca generarán errores de marcador.
 
 ### Bloqueo pesimista
 
-Puede bloquear y desbloquear las entidades bajo pedido cuando acceda a los datos. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+Puede bloquear y desbloquear las entidades bajo pedido cuando acceda a los datos. Cuando una entidad es bloqueada por un proceso, es cargada en lectura/escritura en este proceso pero es bloqueada para todos los otros procesos. La entidad sólo puede cargarse en modo de sólo lectura en estos procesos; sus valores no pueden editarse ni guardarse.
 
 Esta funcionalidad se basa en dos métodos de la clase `Entity`:
 
@@ -377,20 +377,20 @@ Esta funcionalidad se basa en dos métodos de la clase `Entity`:
 
 Para más información, consulte las descripciones de estas funciones.
 
-> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+> Los bloqueos pesimistas también pueden gestionarse a través de la [REST API](../REST/$lock.md).
 
 ### Utilización simultánea de los bloqueos clásicos 4D y de los bloqueos pesimistas ORDA
 
-Using both classic and ORDA commands to lock records is based upon the following principles:
+El uso de comandos clásicos y ORDA para bloquear registros se basa en los siguientes principios:
 
-* A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
-* A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
+* Un bloqueo definido con un comando 4D clásico en un registro impide a ORDA bloquear la entidad correspondiente al registro.
+* Un bloqueo definido con ORDA en una entidad impide que los comandos 4D clásicos bloqueen el registro que coincide a la entidad.
 
 Estos principios se muestran en el siguiente diagrama:
 
 ![](../assets/en/ORDA/concurrent1.png)
 
-**Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
+Los **bloqueos de transacciones** también se aplican tanto a los comandos clásicos como a los comandos ORDA. En una aplicación multiproceso o multiusuario, un bloqueo definido en una transacción en un registro por un comando clásico tendrá como resultado impedir que cualquier otro proceso bloquee las entidades relacionadas con este registro (o a la inversa), hasta que la transacción sea validada o cancelada.
 
 * Ejemplo con un bloqueo definido por un comando clásico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
 * Ejemplo con un bloqueo definido por un método ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)

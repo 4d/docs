@@ -11,13 +11,13 @@ title: HTTPRequest
 
 </details>
 
-The `HTTPRequest` class allows you to handle [`HTTPRequest objects`](#httprequest-object) that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.
+A classe `HTTPRequest` permite-lhe tratar [`objectos HTTPRequest`](#httprequest-object) que podem ser utilizados para configurar e enviar pedidos para um servidor HTTP, bem como para processar as respostas do servidor HTTP.
 
-The `HTTPRequest` class is available from the `4D` class store. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
+A classe `HTTPRequest` está disponível a partir da loja de classes `4D` . Você cria e envia pedidos HTTP usando a função [4D.HTTPRequest.new()](#4dhttprequestnew) , que retorna um objecto HTTPRequest [``](#httprequest-object).
 
 ### Exemplo
 
-Create a `MyHttpRequestOptions` class for the request options:
+Criar uma classe `MyHttpRequestOptions` para as opções de pedido:
 
 ```4d
 Class constructor($method : Text; $headers : Object; $body : Text)
@@ -26,13 +26,13 @@ This.headers:=$headers
 This.body:=$body
 
 Function onResponse($request : 4D.HTTPRequest; $event : Object)
-//My onResponse method, if you want to handle the request asynchronously
+//Método My onResponse, se quiser manejar a petição de forma assincronica
 
 Function onError($request : 4D.HTTPRequest; $event : Object)
-//My onError method, if you want to handle the request asynchronously
+//Método My onError, se quiser manejar a petição de forma assincrônica
 ```
 
-You can now create your request:
+Pode agora criar o seu pedido:
 
 ```4d
 var $headers : Object
@@ -48,11 +48,11 @@ $request.wait() //If you want to handle the request synchronously
 //Now pode usar $request.response para aceder ao resultado do pedido ou $request.error para verificar o erro que aconteceu.
 ```
 
-### HTTPRequest Object
+### Objeto HTTPRequest
 
-An HTTPRequest object is a non-sharable object.
+Um objecto HTTPRequest é um objecto não partilhável.
 
-HTTPRequest objects provide the following properties and functions:
+Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 |                                                                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -86,30 +86,30 @@ HTTPRequest objects provide the following properties and functions:
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parâmetros | Tipo           |    | Descrição                                         |
-| ---------- | -------------- |:--:| ------------------------------------------------- |
-| url        | Text           | -> | URL to which to send the request                  |
-| options    | Objeto         | -> | Request configuration properties                  |
-| Resultados | 4D.HTTPRequest | <- | New HTTPRequest object|<!-- END REF -->
+| Parâmetros | Tipo           |    | Descrição                                           |
+| ---------- | -------------- |:--:| --------------------------------------------------- |
+| url        | Text           | -> | URL para onde enviar o pedido                       |
+| options    | Objeto         | -> | Pedir propriedades de configuração                  |
+| Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->cria e envia um pedido HTTP para o servidor HTTP definido em *url* com as opções definidas **, e devolve um objecto `4D.HTTPRequest`<!-- END REF -->.
 
-The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
+O objeto devolvido `HTTPRequest` é utilizado para processar respostas do servidor HTTP e métodos de chamada.
 
-In *url*, pass the URL where you want to send the request. The syntax to use is:
+Em *url*, passe o URL para onde pretende enviar o pedido. A sintaxe a utilizar é:
 
 ```
 {http://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-If you omit the protocol part (`http://` or `https://`), a https request is sent.
+Se omitir a parte do protocolo (`http://` ou `https://`), é enviado um pedido https.
 
-For example, you can pass the following strings:
+Por exemplo, pode passar as seguintes cordas:
 
 ```
     http://www.myserver.com
@@ -124,11 +124,11 @@ For example, you can pass the following strings:
 
 #### parâmetro `options`
 
-In the *options* parameter, pass an object that can contain the following properties:
+No parâmetro *opções* , passe um objeto que possa conter as seguintes propriedades:
 
 | Propriedade          | Tipo                                            | Descrição                                                                                                                                                                                                                                                         | Predefinição |
 | -------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| body                 | Variant                                         | Body of the request (required in case of `post` or `put` requests). Can be a text, a blob, or an object. The content-type is determined from the type of this property unless it is set inside the headers                                                        | indefinido   |
+| body                 | Variant                                         | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                  | indefinido   |
 | certificatesFolder   | [Folder](FolderClass.md)                        | Sets the active client certificates folder                                                                                                                                                                                                                        | indefinido   |
 | dataType             | Text                                            | Type of the response body attribute. Values: "text", "blob", "object", or "auto". If "auto", the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise) | "auto"       |
 | decodeData           | Booleano                                        | If true, the data received in the `onData` callback is uncompressed                                                                                                                                                                                               | False        |

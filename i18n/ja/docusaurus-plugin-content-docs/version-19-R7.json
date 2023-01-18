@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "v19 R7 BETA",
+    "message": "v19 R7",
     "description": "The label for version 19-R7"
   },
   "sidebar.docs.category.Getting Started": {
@@ -173,7 +173,7 @@
   },
   "sidebar.docs.link.4D Language Reference": {
     "message": "ランゲージリファレンス (4D Doc Center)",
-    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Language-Reference.100-5910320.en.html"
+    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html"
   },
   "sidebar.docs.link.4D Write Pro": {
     "message": "4D Write Pro",

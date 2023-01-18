@@ -223,7 +223,8 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
 
-Le <!-- REF #WebServerClass.CORSSettings.Summary -->liste des hôtes et méthodes autorisés pour le service CORS<!-- END REF --> (voir propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
+Contient le <!-- REF #WebServerClass.CORSSettings.Summary -->liste des hôtes et méthodes autorisés pour le service CORS<!-- END REF --> (voir propriété [`CORSEnabled`](#corsenabled)). Chaque objet doit contenir une propriété **host** et, optionnellement, une propriété **methods** :
+
 
 - **host** (texte, obligatoire) : nom de domaine ou adresse IP à partir duquel les pages externes sont autorisées à envoyer des requêtes de données au serveur via CORS. Plusieurs attributs de domaine peuvent être ajoutés pour créer une liste blanche. Si *host* n'est pas présent ou vide, l'objet est ignoré. Plusieurs syntaxes sont supportées :
   - 192.168.5.17:8081
@@ -489,7 +490,7 @@ Par défaut = 80
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
 
 
-Le <!-- REF #WebServerClass.maxRequestSize.Summary -->taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur web est autorisé à traiter<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
+Contient le <!-- REF #WebServerClass.maxRequestSize.Summary -->taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur web est autorisé à traiter<!-- END REF -->. Passer la valeur maximale (2147483647) signifie qu'en pratique, aucune limite n'est définie. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
 
 Valeurs possibles : 500000 - 2147483647
 
@@ -503,7 +504,7 @@ Valeurs possibles : 500000 - 2147483647
 
 > Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
-Le <!-- REF #WebServerClass.maxSessions.Summary -->nombre maximum de sessions legacy simultanées<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Legacy Close Session` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions legacy simultanées ne peut pas dépasser le nombre total de process Web (propriété `maxConcurrentProcesses`, 100 par défaut)
+Contient le <!-- REF #WebServerClass.maxSessions.Summary -->nombre maximum de sessions legacy simultanées<!-- END REF -->. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Legacy Close Session` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions legacy simultanées ne peut pas dépasser le nombre total de process Web (propriété `maxConcurrentProcesses`, 100 par défaut)
 
 <!-- END REF -->
 

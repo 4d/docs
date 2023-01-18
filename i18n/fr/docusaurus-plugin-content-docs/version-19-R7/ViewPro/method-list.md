@@ -782,7 +782,7 @@ In *options*, you can pass an object with additional options for the table. Vale
 | showFooter            | Boolean    | Display a footer                                                                           | False                |
 | showHeader            | Boolean    | Display a header                                                                           | Vrai                 |
 | showResizeHandle      | Boolean    | For tables that don't have a *source*. Display the resize handle                           | False                |
-| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Indéfini             |
+| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Undefined            |
 | useFooterDropDownList | Boolean    | Use a dropdown list in footer cells that calculate the total value of a column             | False                |
 
 The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:

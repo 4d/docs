@@ -12,11 +12,11 @@ Dataclass names can be used directly in the REST requests to work with entities 
 |Syntax|Example|Description|
 |---|---|---|
 |[**{dataClass}**](#dataClass)|`/Employee`|Returns all the data (by default the first 100 entities) for the dataclass|
-|[**{dataClass}({key})**](#dataclasskey)|`/Employee(22)`|Returns the data for the specific entity defined by the dataclass's primary key|
+|[**{dataClass}[{key}]**](#dataclasskey)|`/Employee[22]`|Returns the data for the specific entity defined by the dataclass's primary key|
 |[**{dataClass}:{attribute}(value)**](#dataclassattributevalue)|`/Employee:firstName(John)`|Returns the data for one entity in which the attribute's value is defined|
 |[**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)|`/City/getCity`|Executes a dataclass class function |
 |[**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls)|`/City/getPopulation/?$filter="ID<3"`|Executes an entity selection class function|
-|[**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)|`City(2)/getPopulation`|Executes an entity class function|
+|[**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)|`City[2]/getPopulation`|Executes an entity class function|
 
 > Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
 
@@ -46,7 +46,7 @@ Each entity contains the following properties:
 |__TIMESTAMP|Date|Timestamp of the last modification of the entity|
 |__STAMP|Number|Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`.|
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). For example:
 
  `GET  /rest/Company/name,address`
 
@@ -58,7 +58,7 @@ Return all the data for a specific dataclass.
 
 **Result**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -133,35 +133,35 @@ Return all the data for a specific dataclass.
 .....//more entities here 
     ]
 }
-````
+```
 
-## {dataClass}({key})
+## {dataClass}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22] or Company[IT0911AB2200]`
 
 ### Description
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
-For more information about the data returned, refer to [{DataStoreClass}](#datastoreclass).
+For more information about the data returned, refer to [{DataClass}](#dataclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). For example:
 
- `GET  /rest/Company(1)/name,address`
+ `GET  /rest/Company[1]/name,address`
 
 If you want to expand a relation attribute using `$expand`, you do so by specifying it as shown below:
 
- `GET  /rest/Company(1)/name,address,staff?$expand=staff`
+ `GET  /rest/Company[1]/name,address,staff?$expand=staff`
 
 ### Example  
 
 The following request returns all the public data in the Company dataclass whose key is 1.
 
- `GET  /rest/Company(1)`
+ `GET  /rest/Company[1]`
 
 **Result**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -180,7 +180,7 @@ The following request returns all the public data in the Company dataclass whose
         }
     }
 }
-````
+```
 
 ## {dataClass}:{attribute}(value)
 
@@ -192,7 +192,7 @@ By passing the *dataClass* and an *attribute* along with a value, you can retrie
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). For example:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

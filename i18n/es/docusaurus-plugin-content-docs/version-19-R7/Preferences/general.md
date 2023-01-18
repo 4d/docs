@@ -94,57 +94,57 @@ Gracias a este principio, en macOS las carpetas de las bases aparecen como paque
 
 ### Incluir los tokens en los archivos fuente del proyecto
 
-When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+Cuando esta opción está marcada, los [archivos fuente de los métodos](../Project/architecture.md#sources) guardados en los nuevos proyectos 4D contendrán los **tokens** para los objetos clásicos del lenguaje y de la base (constantes, comandos, tablas y campos). Los tokens son caracteres adicionales tales como `:C10` o `:5` insertados en los archivos de código fuente, que permiten renombrar las tablas y los campos e identificar los elementos sea cual sea la versión 4D (ver [Utilización de tokens en las fórmulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
-If you intend to use VCS or external code editors with your new projects, you might want to uncheck this option for a better readability of the code with these tools.
+Si tiene intención de utilizar VCS o los editores de código externos con sus nuevos proyectos, es posible que desee desmarcar esta opción para una mejor legibilidad del código con estas herramientas.
 
-> This option can only be applied to projects (binary databases always include tokens).
+> Esta opción sólo puede aplicarse a proyectos (las bases de datos binarias siempre incluyen tokens).
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
+> Siempre puede obtener el código con tokens llamando a [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) con 1 en el parámetro *option*.
 
 #### Exclusión de los tokens en los proyectos existentes
 
-You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+Puede configurar sus proyectos existentes para guardar el código **sin tokens** insertando la siguiente llave en el archivo [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) utilizando un editor de texto:
 
 ```
 "tokenizedText": false
 ```
 
-> This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
+> Este parámetro sólo se tiene en cuenta cuando se guardan los métodos. Los métodos existentes en sus proyectos no se modifican, a menos que los vuelva a guardar.
 
 
 ### Crear el archivo `.gitignore`
 
-You might need or want git to ignore some files in your new projects.
+Puede que necesite o quiera que git ignore algunos archivos en sus nuevos proyectos.
 
-You can set this preference by checking the **Create .gitignore file**  option.
+Puede definir esta preferencia marcando la opción **Crear el archivo .gitignore**.
 
-When a project is created in 4D and that box is checked, 4D creates a `.gitignore` file at the same level as the `Project` folder (see [Architecture of a Project](Project/architecture.md#gitignore-file-optional)).
+Cuando se crea un proyecto en 4D y esa casilla está marcada, 4D crea un archivo `.gitignore` al mismo nivel que la carpeta `Project` (ver [Arquitectura de un proyecto](Project/architecture.md#gitignore-file-optional)).
 
-You can define the default contents of the `.gitignore` file by clicking the pencil icon. This will open the .gitignore configuration file in your text editor. The contents of this file will be used to generate the `.gitignore` files in your new projects.
+Puede definir el contenido por defecto del archivo `.gitignore` haciendo clic en el icono del lápiz. Esto abrirá el archivo de configuración .gitignore en su editor de texto. El contenido de este archivo se utilizará para generar los archivos `.gitignore` en sus nuevos proyectos.
 
-The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
+La [documentación oficial de git](https://git-scm.com/docs/gitignore) es un gran recurso para entender cómo funcionan los archivos `.gitignore`.
 
-### Lenguaje de comparación de texte
+### Lenguaje de comparación de texto
 
-This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
+Este parámetro permite definir el lenguaje utilizado por defecto utilizado para el procesamiento y la comparación de cadenas de caracteres en las nuevas bases. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto (configuración de fábrica), 4D utiliza el idioma actual del usuario definido en el sistema.
 
-A 4D database can thus operate in a language different from that of the system. When a database is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the database engine or the language, are done in the same language.
+Una base 4D puede funcionar en un lenguaje distinto al del sistema. Cuando se abre una base, el motor de 4D detecta el lenguaje utilizado por el fichero de datos y lo pasa al lenguaje (modo intérpretado o compilado). Las comparaciones de texto, independientemente de si las realiza el motor de la base de datos o el lenguaje, se hacen en el mismo lenguaje.
 
-When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](../settings/database.md#text-comparison)).
+Al crear un nuevo archivo de datos, 4D utiliza el idioma previamente configurado en este menú. Al abrir un archivo de datos que no está en el mismo idioma que la estructura, se utiliza el idioma del archivo de datos y el código del idioma se copia en la estructura.
+> Puede modificar este parámetro para la base abierta utilizando la Configuración de la base (ver [Comparación de textos](../settings/database.md#text-comparison)).
 
 ## Ubicación de la documentation
 
-This area configures access to the 4D HTML documentation displayed in your current browser:
+Esta área configura el acceso a la documentación HTML de 4D mostrada en su navegador actual:
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
-*   When you double-click on a 4D command in the **Commands Page** of the Explorer.
+*   Cuando pulsa la tecla **F1** mientras el cursor está insertado en una función de clase 4D o nombre de comando en el Editor de Código;
+*   Al hacer doble clic sobre un comando 4D en la **página de los comandos** del Explorador.
 
 
 ### Lenguaje de la documentación
 
-Lenguaje de la documentación HTML a mostrar. You can select a documentation in a different language from the application language.
+Lenguaje de la documentación HTML a mostrar. Puede seleccionar una documentación en un idioma distinto del idioma de la aplicación.
 
 ### Primero buscar en la carpeta local
 

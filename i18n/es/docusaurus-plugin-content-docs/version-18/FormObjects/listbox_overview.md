@@ -325,27 +325,27 @@ Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.
 * En el caso de los list box de tipo array, debe analizar la variable array booleana asociada al list box para determinar qué líneas están seleccionadas o no.
 * Para los list box de tipo selección, hay que comprobar si el registro actual (línea) pertenece al conjunto especificado en la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set) del list box.
 
-You can then define specific background colors, font colors and/or font styles by programming to customize the appearance of selected rows. This can be done using arrays or expressions, depending on the type of list box being displayed (see the following sections).
+A continuación, puede definir por programación los colores de fondo, los colores y/o estilos de fuentes específicas para personalizar la apariencia de las líneas seleccionadas. Esto puede hacerse utilizando arrays o expresiones, en función del tipo de list box mostrado (ver las siguientes secciones).
 
-> You can use the `lk inherited` constant to mimic the current appearance of the list box (e.g., font color, background color, font style, etc.).
+> Puede utilizar la constante `lk inherited` para aplicar la apariencia actual del list box (por ejemplo, el color de la fuente, el color de fondo, el estilo de la fuente, etc.).
 
 #### List box de tipo selección
 
-To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
+Para determinar qué líneas están seleccionadas, hay que comprobar si están incluidas en el conjunto indicado en la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set) del list box. A continuación, puede definir la apariencia de las líneas seleccionadas utilizando una o varias de las [propiedades de expresión de color o estilo](#using-arrays-and-expressions) relevantes.
 
 Tenga en cuenta que las expresiones se reevalúan automáticamente cada vez que:
 
 * la selección de list box cambia.
 * list box obtiene o pierde el foco.
-* form window containing the list box becomes, or ceases to be, the frontmost window.
+* la ventana formulario que contiene el list box se convierte, o deja de ser, la ventana del primer plano.
 
 #### List box de tipo array
 
-You have to parse the Boolean array [Variable or Expression](properties_Object.md#variable-or-expression) associated with the list box to determine whether rows are selected or not selected.
+Tiene que analizar el array booleano [Variable o expresión](properties_Object.md#variable-or-expression) asociado al list box para determinar si las líneas están seleccionadas o no.
 
-You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
+A continuación, puede definir la apariencia de las líneas seleccionadas utilizando una o varias de las [propiedades de array de color o de estilo](#using-arrays-and-expressions) relevantes.
 
-Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
+Tenga en cuenta que los arrays de list box utilizados para definir la apariencia de las líneas seleccionadas deben recalcularse en el evento formulario `On Selection Change`; sin embargo, también puede modificar estos arrays basándose en los siguientes eventos formulario adicionales:
 
 * `On Getting Focus` (propiedad list box)
 * `On Losing Focus` (propiedad list box)
@@ -354,11 +354,11 @@ Note that list box arrays used for defining the appearance of selected rows must
 
 ##### Ejemplo
 
-You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
+Ha elegido ocultar el resaltado sistema y desea mostrar las selecciones en el list box con un color de fondo verde, como se muestra aquí:
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:
+Para un list box de tipo array, es necesario actualizar el [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) por programación. En el formulario JSON, ha definido el Array colores de fondo de línea para el list box:
 
 ```
  "rowFillSource": "_ListboxBackground",
@@ -381,9 +381,9 @@ En el método objeto del list box, puede escribir:
  End case
 ```
 
-For a selection type list box, to produce the same effect you can use a method to update the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) based on the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property.
+Con un list box de tipo selección, para producir el mismo efecto puede utilizar un método para actualizar la propiedad [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) basado en el conjunto designado por la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set).
 
-For example, in the JSON form, you have defined the following Highlight Set and Background Color Expression for the list box:
+Por ejemplo, en el formulario JSON, ha definido el conjunto resaltado y la expresión de color de fondo siguientes para el list box:
 
 ```
  "highlightSet": "$SampleSet",
@@ -402,7 +402,7 @@ Puede escribir en el método *UI_SetColor*:
  $0:=$color
 ```
 
-> In hierarchical list boxes, break rows cannot be highlighted when the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is checked. Since it is not possible to have distinct colors for headers of the same level, there is no way to highlight a specific break row by programming.
+> En los list box jerárquicos, las líneas de ruptura no pueden resaltarse cuando la opción [Ocultar resaltado selección](properties_Appearance.md#hide-selection-highlight) está seleccionada. Como no es posible tener colores distintos para los encabezados del mismo nivel, no hay manera de destacar una línea de ruptura específica por programación.
 
 ## Gestión de ordenaciones
 
@@ -414,7 +414,7 @@ The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command a
 
 > The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the `LISTBOX SORT COLUMNS` command does not take this property into account.
 
-The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
+El valor de la [variable asociada al encabezado de una columna](properties_Object.md#variable-or-expression) permite gestionar una información adicional: la ordenación actual de la columna (lectura) y la visualización de la flecha de ordenación.
 
 * If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
   ![](../assets/en/FormObjects/sorticon0.png)
@@ -422,25 +422,25 @@ The value of the [column header variable](properties_Object.md#variable-or-expre
 * If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
   ![](../assets/en/FormObjects/sorticon1.png)
 
-* If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
+* Si la variable se establece en 2, la columna se clasifica en orden descendente y se muestra la flecha de clasificación.  
   ![](../assets/en/FormObjects/sorticon2.png)
 
-You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
 
 > The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 ## Gestión de los colores, estilos y visualización de las líneas
 
-There are several different ways to set background colors, font colors and font styles for list boxes:
+Hay varias formas de definir los colores de fondo, los colores de fuente y los estilos de fuente en los list box:
 
-* at the level of the [list box object properties](#list-box-objects),
+* al nivel de las [propiedades del objeto list box](#list-box-objects),
 * a nivel de las [propiedades de la columna](#list-box-columns),
-* using [arrays or expressions properties](#using-arrays-and-expressions) for the list box and/or for each column,
-* at the level of the text of each cell (if [multi-style text](properties_Text.md#multi-style)).
+* utilizando los [arrays o expresiones](#using-arrays-and-expressions) para el list box y/o para cada columna,
+* a nivel del texto de cada celda (si [texto multi-estilo](properties_Text.md#multi-style)).
 
 ### Prioridad & herencia
 
-Priority and inheritance principles are observed when the same property is set at more than one level.
+Los principios de prioridad y de herencia se observan cuando la misma propiedad se define en más de un nivel.
 
 | Nivel de prioridad | Ubicación del parámetro                                                                  |
 | ------------------ | ---------------------------------------------------------------------------------------- |

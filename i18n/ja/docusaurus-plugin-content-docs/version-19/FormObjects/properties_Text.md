@@ -3,6 +3,7 @@ id: propertiesText
 title: テキスト
 ---
 
+---
 
 ## ピッカーの使用を許可
 
@@ -276,45 +277,55 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 表示される行ごとに評価される式あるいは変数を指定します。 行テキスト属性全体を定義することができます。 **オブジェクト変数**、あるいは **オブジェクトを返す式** を指定する必要があります。 以下のオブジェクトプロパティがサポートされています:
 
-| プロパティ名                    | タイプ     | 説明                                                                                                                                                                                                                    |
-| ------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke                    | string  | フォントカラー。 任意の CSSカラー (例: "#FF00FF"), "automatic", "transparent"                                                                                                                                                        |
-| fill                      | string  | 背景色。 任意の CSSカラー (例: "#F00FFF"), "automatic", "transparent"                                                                                                                                                            |
-| fontStyle                 | string  | "normal","italic"                                                                                                                                                                                                     |
-| fontWeight                | string  | "normal","bold"                                                                                                                                                                                                       |
-| textDecoration            | string  | "normal","underline"                                                                                                                                                                                                  |
-| unselectable              | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。 このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。 チェックボックスやリストといったコントロール類は引き続き稼働します。 この設定はリストボックスの選択モードが "なし" の場合には無視されます。 デフォルト値: false。 |
-| disabled                  | boolean | 対応する行を無効化します。 このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。 テキストや、(チェックボックス、リストなどの) コントロール類は暗くなっているかグレーアウトされます。 デフォルト値: false。                                                                                                |
-| cell.`<columnName>` | object  | プロパティを単一のカラムに適用するときに使用します。 `<columnName>` には、リストボックスカラムのオブジェクト名を渡します。 **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。                                                  |
+| プロパティ名         | タイプ     | 説明                                                                                                                                                                                                                    |
+| -------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke         | string  | フォントカラー。 任意の CSSカラー (例: "#FF00FF"), "automatic", "transparent"                                                                                                                                                        |
+| fill           | string  | 背景色。 任意の CSSカラー (例: "#F00FFF"), "automatic", "transparent"                                                                                                                                                            |
+| fontStyle      | string  | "normal","italic"                                                                                                                                                                                                     |
+| fontWeight     | string  | "normal","bold"                                                                                                                                                                                                       |
+| textDecoration | string  | "normal","underline"                                                                                                                                                                                                  |
+| unselectable   | boolean | 対応する行が選択不可 (つまりハイライトすることができない状態) であることを指定します。 このオプションが有効化されている場合、入力可能エリアは入力可能ではなくなります (ただし "シングルクリック編集" オプションが有効化されている場合を除く)。 チェックボックスやリストといったコントロール類は引き続き稼働します。 この設定はリストボックスの選択モードが "なし" の場合には無視されます。 デフォルト値: false。 |
+| disabled       | boolean | 対応する行を無効化します。 このオプションが有効化されると、入力可能エリアは入力可能ではなくなります。 テキストや、(チェックボックス、リストなどの) コントロール類は暗くなっているかグレーアウトされます。 デフォルト値: false。                                                                                                |
+
+特別な "cell" プロパティを使用すると、特定の列にプロパティをまとめて適用することができます:
+
+| プロパティ名 |              |                | タイプ    | 説明                                                                                                                                                                       |
+| ------ | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| cell   |              |                | object | 特定の列に適用するプロパティ                                                                                                                                                           |
+|        | *columnName* |                | object | *columnName* はリストボックス列のオブジェクト名です。                                                                                                                                        |
+|        |              | *propertyName* | string | "stroke", "fill", "fontStyle", "fontWeight", または "textDecoration" プロパティ (前述参照)。 **注**: "unselectable" および "disabled" プロパティは行レベルでのみ定義可能です。 "セル" オブジェクトに指定した場合、これらは無視されます。 |
 
 > このプロパティで設定されたスタイルは、プロパティリスト内で他のスタイル設定が式により定義されている場合には無視されます ([スタイル式](#スタイル式)、[フォントカラー式](#フォントカラー式)、[背景色式](#背景色式))。
 
 **例題**
 
-*Color* プロジェクトメソッドには、以下のコードを書きます:
+*Color* プロジェクトメソッドに以下のコードを書きます:
 
 ```4d
 // Color メソッド
-// 特定の行に対してフォントカラーを、そして特定のカラムに対して背景色を設定します:
-C_OBJECT($0)
+// 特定の行に対してフォントカラーを、そしてカラム Col2 および Col3 に対して背景色を設定します:
 Form.meta:=New object
 If(This.ID>5) // ID はコレクションオブジェクト/エンティティの属性です
   Form.meta.stroke:="purple"
-  Form.meta.cell:=New object("Column2";New object("fill";"black"))
+  Form.meta.cell:=New object("Col2";New object("fill";"black");\
+    "Col3";New object("fill";"red"))
 Else
   Form.meta.stroke:="orange"
 End if
-$0:=Form.meta
 ```
 
-**ベストプラクティス:** このような場合には最適化のため、フォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
+**ベストプラクティス:** 最適化のため、このような場合にはフォームメソッド内で `meta.cell` オブジェクトを作成しておくことが推奨されます。
 
 ```4d
   // フォームメソッド
-Case of
-  :(Form event code=On Load)
-       Form.colStyle:=New object("Column2";New object("fill";"black"))
-End case
+ Case of
+    :(Form event code=On Load)
+       Form.colStyle:=New object("Col2";New object("fill";"black");\
+        "Col3";New object("fill";"red"))  
+ // 他のスタイルセットも定義できます  
+       Form.colStyle2:=New object("Col2";New object("fill";"green");\
+        "Col3";New object("fontWeight";"bold"))  
+ End case
 ```
 
 *Color* メソッドには、以下のコードを書きます:
@@ -325,9 +336,14 @@ End case
  If(This.ID>5)
     Form.meta.stroke:="purple"
     Form.meta.cell:=Form.colStyle // より良いパフォーマンスのため、同じオブジェクトを再利用します
+ Else
+    Form.meta.stroke:="orange"
+    Form.meta.cell:=Form.colStyle2
+ End if
  ...
 ```
-> [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドも参照してください。
+
+
 
 #### JSON 文法
 

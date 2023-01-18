@@ -33,7 +33,7 @@ Although they are usually equivalent, some data types available at the database 
 
 ## Default values
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned. 
+When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned. 
 
 The default value depends on the variable type:
 

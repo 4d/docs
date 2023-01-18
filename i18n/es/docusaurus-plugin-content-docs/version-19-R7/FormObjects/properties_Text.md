@@ -277,43 +277,54 @@ Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical
 
 Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. Se soportan las siguientes propiedades:
 
-| Nombre de propiedad         | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| --------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke                      | string  | Color de la fuente. Todo color CSS (por ejemplo: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                    |
-| fill                        | string  | Color de fondo. Todo color CSS (por ejemplo: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                        |
-| fontStyle                   | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| fontWeight                  | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| textDecoration              | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable                | boolean | Designa la línea correspondiente como no seleccionable (* es decir, *, no es posible el resaltado). Las áreas que se pueden introducir ya no se pueden introducir si esta opción está activada, a menos que la opción "Edición con un solo clic" también esté activada. Los controles como las casillas de selección y las listas siguen siendo funcionales. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valores por defecto: False. |
-| disabled                    | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. El texto y los controles (casillas de selección, listas, etc.) aparecen atenuados o en gris. Valores por defecto: False.                                                                                                                                                                                                                                        |
-| `cell.\<columnName>` | object  | Permite aplicar la propiedad a una sola columna. Pase en `\<columnName>` el nombre del objeto de la columna list box. **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda"                                                                                                                                                                                           |
+| Nombre de propiedad | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke              | string  | Color de la fuente. Todo color CSS (por ejemplo: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                    |
+| fill                | string  | Color de fondo. Todo color CSS (por ejemplo: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                        |
+| fontStyle           | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| fontWeight          | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| textDecoration      | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| unselectable        | boolean | Designa la línea correspondiente como no seleccionable (* es decir, *, no es posible el resaltado). Las áreas que se pueden introducir ya no se pueden introducir si esta opción está activada, a menos que la opción "Edición con un solo clic" también esté activada. Los controles como las casillas de selección y las listas siguen siendo funcionales. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valores por defecto: False. |
+| disabled            | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. El texto y los controles (casillas de selección, listas, etc.) aparecen atenuados o en gris. Valores por defecto: False.                                                                                                                                                                                                                                        |
+
+The special "cell" property allows you to apply a set of properties to a single column:
+
+| Nombre de propiedad |              |                | Tipo   | Descripción                                                                                                                                                                                                                                |
+| ------------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| cell                |              |                | object | Properties to apply to single column(s)                                                                                                                                                                                                    |
+|                     | *columnName* |                | object | *columnName* is the object name of the list box column                                                                                                                                                                                     |
+|                     |              | *propertyName* | string | "stroke", "fill", "fontStyle", "fontWeight", or "textDecoration" property (see above). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
 
 > Los parámetros de estilo definidos con esta propiedad se ignoran si ya se han definido otros parámetros de estilo mediante expresiones (*es decir, *, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-**Ejemplo**
+**Ejemplos**
 
-En el método proyecto *Color*, escribe el siguiente código:
+In a *Color* project method, write the following code:
 
 ```4d
-//Método Color
-//Define el color de la fuente para ciertas líneas y el color de fondo para una columna específica: C_OBJECT($0)
+//Color method
+//Sets font color for certain rows and background color for Col2 and Col3 columns
 Form.meta:=New object
-If(This.ID>5) //ID es un atributo de objetos/entidades de una colección
+If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
-  Form.meta.cell:=New object("Column2";New object("fill";"black"))
+  Form.meta.cell:=New object("Col2";New object("fill";"black");\
+    "Col3";New object("fill";"red"))
 Else
   Form.meta.stroke:="orange"
 End if
-$0:=Form.meta
 ```
 
-**Buenas prácticas:** por razones de optimización, se recomendaría en este caso crear el objeto `meta.cell` una vez en el método formulario:
+**Best Practice:** For optimization reasons, it is usually recommended to create the `meta.cell` object once in the form method:
 
 ```4d
-  //método formulario
+  //form method
  Case of
     :(Form event code=On Load)
-       Form.colStyle:=New object("Column2";New object("fill";"black"))
+       Form.colStyle:=New object("Col2";New object("fill";"black");\
+        "Col3";New object("fill";"red"))  
+ // you can also define other style sets  
+       Form.colStyle2:=New object("Col2";New object("fill";"green");\
+        "Col3";New object("fontWeight";"bold"))  
  End case
 ```
 
@@ -324,10 +335,15 @@ Entonces, el método *Color* contendría:
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reutilizar el mismo objeto para mejorar el rendimiento
+    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+ Else
+    Form.meta.stroke:="orange"
+    Form.meta.cell:=Form.colStyle2
+ End if
  ...
 ```
-> Ver también el comando [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+
+
 
 #### Gramática JSON
 
