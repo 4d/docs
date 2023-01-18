@@ -235,7 +235,7 @@ POST を使って、メソッドに引数を渡すことができます。
 
 `POST  /rest/Employee/addEmployee`
 
-POSTリクエストの本文にデータを含めます。 たとえば:
+POSTリクエストの本文にデータを含めます。たとえば:
 
 ["John","Smith"]
 
