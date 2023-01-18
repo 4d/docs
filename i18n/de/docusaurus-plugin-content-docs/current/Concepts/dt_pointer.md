@@ -30,7 +30,7 @@ Wir erläutern die Verwendung von Zeigern an einem Beispiel. Dieses Beispiel zei
 ```4d
 $MyVar:="Hello"
 ```
-Wie Sie sehen, verhält sich der Ausdruck $MyPointer-> wie die Variable $MyVar. Die beiden nachfolgenden Zeilen führen dieselbe Aktion aus—beide zeigen eine Warnung mit dem aktuellen Wert der Variablen $MyVar:
+$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar: Nun können wir einen Zeiger auf $MyVar erstellen:
 
 ```4d
 C_POINTER($MyPointer)  
@@ -198,7 +198,7 @@ Im folgenden werden die einzelnen Zeilen erläutert:
 - $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
 - $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Deshalb verweist ($PointerTwo->)-> auf den Inhalt von $MyVar. In diesem Beispiel ist also der Variablen $MyVar "Goodbye" zugewiesen.
-- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Deshalb verweist ($PointerTwo->)-> auf den Inhalt von $MyVar. Deshalb verweist ($PointerTwo->)-> auf den Inhalt von $MyVar.
+- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Deshalb verweist ($PointerTwo->)-> auf den Inhalt von $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
 
 Die folgende Zeile setzt "Hello" in $MyVar:
 ```4d
