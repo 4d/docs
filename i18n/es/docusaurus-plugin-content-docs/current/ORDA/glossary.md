@@ -11,7 +11,7 @@ title: Glosario
 
 ## Acción
 
-Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
 
 ## Atributo
 
@@ -164,7 +164,7 @@ The ability to run one or more [actions](#actions) on [resources](#resource). Se
 ## Propiedad
 
 Ver [Atributo](#attribute).
-> > Attributes and properties are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+> > *Attributes* and *properties* are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 
