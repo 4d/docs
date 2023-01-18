@@ -4,13 +4,13 @@ title: Seite Backup
 sidebar_label: Seite Backup
 ---
 
-Hier können Sie auch ein manuelles Backup starten:
+Die Seite Backup des MSC zeigt die Backup-Einstellungen für die Datenbank. Hier können Sie auch ein manuelles Backup starten:
 
 ![](../assets/en/MSC/msc_Backup.png)
 
 Diese Seite ist in drei Bereiche unterteilt:
 
-- **Backup Zielpfad**: Zeigt Informationen zum Speicherort der Backup-Datei der Anwendung an, sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte. sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte.
+- **Backup Zielpfad**: Zeigt Informationen zum Speicherort der Backup-Datei der Anwendung an, sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte.
 - **Letztes Backup**: Zeigt Datum und Uhrzeit des zuletzt für die Anwendung ausgeführten Backup (automatisch oder manuell).
 - **Inhalt der Backup-Datei**: Zeigt die in der Backup-Datei enthaltenen Dateien und Ordner an.
 
