@@ -4,7 +4,7 @@ title: Mode SDI bajo Windows
 ---
 
 
-Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal. On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús.
+On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
 
 |
 
