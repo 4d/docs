@@ -34,6 +34,5 @@ title: On Close Box
           CANCEL
        End if
   //...
- ")
  End case
 ```
