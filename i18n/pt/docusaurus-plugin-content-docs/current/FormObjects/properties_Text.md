@@ -302,12 +302,15 @@ In a *Color* project method, write the following code:
 
 ```4d
 //Color method
-//Sets font color for certain rows and background color for Col2 and Col3 columns Form.meta:=New object If(This.ID>5) //ID is an attribute of collection objects/entities
+//Sets font color for certain rows and background color for Col2 and Col3 columns
+Form.meta:=New object
+If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Col2";New object("fill";"black");\
     "Col3";New object("fill";"red"))
 Else
-  Form.meta.stroke:="orange" End if
+  Form.meta.stroke:="orange"
+End if
 ```
 
 **Best Practice:** For optimization reasons, it is usually recommended to create the `meta.cell` object once in the form method:
