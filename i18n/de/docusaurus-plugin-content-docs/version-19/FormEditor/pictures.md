@@ -49,7 +49,7 @@ Hochauflösende Bilder mit der @nx-Konvention lassen sich in folgenden Objekten 
 * [List box headers](FormObjects/listbox_overview.md#list-box-headers)
 * [Menu icons](Menus/properties.md#item-icon)
 
-4D priorisiert automatisch die Bilder mit der höchsten Auflösung. 4D priorisiert automatisch die Bilder mit der höchsten Auflösung. Selbst wenn ein Befehl oder eine Eigenschaft *circle.png* angibt, wird *circle@3x.png* verwendet (wenn es existiert).
+4D priorisiert automatisch die Bilder mit der höchsten Auflösung. 4D automatically prioritizes pictures with the highest resolution. Selbst wenn ein Befehl oder eine Eigenschaft *circle.png* angibt, wird *circle@3x.png* verwendet (wenn es existiert).
 > Beachten Sie, dass die Priorisierung der Auflösung nur für die Anzeige von Bildern auf dem Bildschirm erfolgt, beim Drucken wird keine automatische Priorisierung vorgenommen.
 
 ### DPI (macOS and Windows)
