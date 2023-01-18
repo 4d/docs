@@ -14,7 +14,7 @@ La page comporte quatre boutons d’action permettant un accès direct aux fonct
 - **Vérifier les enregistrements et les index :** lance la procédure de vérification globale des données.
 - **Vérifier uniquement les enregistrements :** lance la procédure de vérification des enregistrements uniquement (les index ne sont pas vérifiés).
 - **Vérifier uniquement les index :** lance la procédure de vérification des index uniquement (les enregistrements ne sont pas vérifiés).
-> > > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 ## Voir le compte rendu
 
