@@ -22,7 +22,7 @@ La barre de menus par défaut contient trois menus : Fichier, Edition et Mode.
 - **Fichier** : ce menu comporte uniquement la commande **Quitter**. L’action automatique *Quitter* est associée à la commande, ce qui a pour effet de provoquer la fermeture de l’application.
 - **Edition** : menu standard et entièrement modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode** : par défaut, ce menu contient la commande **Retour au mode Développement**, permettant de sortir du mode Application.
-> > > Menu items appear *in italics* because they consist of references and not hard-coded text. Pour plus d’informations sur ce point, reportez-vous à la section [Utiliser des références dans les titres de menus](properties.md#title).
+> > Menu items appear *in italics* because they consist of references and not hard-coded text. Pour plus d’informations sur ce point, reportez-vous à la section [Utiliser des références dans les titres de menus](properties.md#title).
 
 Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des barres de menus supplémentaires.
 
