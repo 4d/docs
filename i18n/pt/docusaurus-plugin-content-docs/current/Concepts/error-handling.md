@@ -65,7 +65,9 @@ Um método de tratamento de erros pode ser definido para diferentes contextos de
 Exemplos:
 
 ```4d
-ON ERR CALL("IO_Errors";ek local) //Instala um método local de tratamento de erros ON ERR CALL("globalHandler";ek global) //Instala um método global de tratamento de erros ON ERR CALL("componentHandler";ek erros de componentes) //Instala um método de tratamento de erros de componentes
+ON ERR CALL("IO_Errors";ek local) //Instala um método local de tratamento de erros
+ON ERR CALL("globalHandler";ek global) //Instala um método global de tratamento de erros
+ON ERR CALL("componentHandler";ek erros de componentes) //Instala um método de tratamento de erros de componentes
 ```
 
 Pode instalar um gerenciador de erros global que servirá como "fallback" e métodos de erros locais específicos para certos processos. Um manipulador de erros global é também útil no servidor para evitar diálogos de erro no servidor quando executado com interface.
