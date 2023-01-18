@@ -289,7 +289,6 @@ Vous souhaitez supprimer un fichier spécifique dans un sous-dossier :
     ALERT("User preference file deleted.")
  End if
  End if
- End if
 ```
 <!-- END REF -->
 
@@ -509,7 +508,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés de *info* comme contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant.
+Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
@@ -593,7 +592,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Description
 
-réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB *content* <!-- REF #FileClass.setContent().Summary -->La fonction `.setContent()`<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB *content*<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 #### Exemple
 
