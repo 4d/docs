@@ -18,7 +18,7 @@ Every user request sent within the session is evaluated against privileges defin
 
 If a user attempts to execute an action and does not have the appropriate access rights, a privilege error is generated or, in the case of missing Read permission on attributes, they are not sent.
 
-![schema](../assets/en/ORDA/privileges-schema.png)
+![esquema](../assets/en/ORDA/privileges-schema.png)
 
 
 
