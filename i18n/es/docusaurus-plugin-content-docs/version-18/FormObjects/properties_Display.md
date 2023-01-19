@@ -498,7 +498,7 @@ In the context of list forms, the Visibility property supports two specific valu
 * **Si registro seleccionado** (nombre JSON: "selectedRows")
 * **If record not selected** (JSON name: "unselectedRows")
 
-This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
+Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo de un formulario listado. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
 
 ![](../assets/en/FormObjects/select-row.png)
 

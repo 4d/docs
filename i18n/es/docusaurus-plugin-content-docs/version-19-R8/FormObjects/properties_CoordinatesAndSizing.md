@@ -5,12 +5,12 @@ title: Coordenadas y dimensiones
 
 ## Altura de línea automática
 
-This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
+Esta propiedad sólo está disponible para los list boxes con las siguientes [fuentes de datos](properties_Object.md#data-source):
 
 - collection o entity selection,
-- array (non-hierarchical).
+- array (no jerárquico).
 
-Esta propiedad no está seleccionada por defecto. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Tenga en cuenta que sólo se tendrán en cuenta las columnas con la opción seleccionada para calcular el alto de línea.
+Esta propiedad no está seleccionada por defecto. Cuando se utiliza para al menos una columna, la altura de cada línea de la columna será calculada automáticamente por 4D, y se tendrá en cuenta el contenido de la columna. Tenga en cuenta que sólo se tendrán en cuenta las columnas con la opción seleccionada para calcular el alto de línea.
 
 :::note
 
@@ -259,7 +259,7 @@ RowHeights{5}:=3
 
 Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea del list box tendrá una altura de tres líneas, mientras que todas las demás líneas mantendrán su altura por defecto.
 > * Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
-> * For array and collection/entity selection list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+> * Para los array y list boxes colecciones/selección de entidades, esta propiedad sólo está disponible si la opción [Alto de línea automático](#automatic-row-height) no está seleccionada.
 
 #### Gramática JSON
 

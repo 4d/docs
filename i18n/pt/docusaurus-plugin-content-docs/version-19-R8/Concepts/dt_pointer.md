@@ -198,7 +198,7 @@ Aqui está uma explicação de cada linha do exemplo:
 - $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
 - $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
-- ALERTA (($PointerTwo->)->) --> O mesmo: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar.
+- ALERTA (($PointerTwo->)->) --> O mesmo: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
 
 A seguinte linha coloca "Olá" em $MyVar:
 ```4d

@@ -5,7 +5,7 @@ title: Pointeurs
 
 Les variables ou expressions de type Pointeur sont des références à d'autres variables (y compris des tableaux et des éléments de tableaux), à des tables, des champs ou des objets. Il n'existe pas de champ de type Pointeur.
 
-Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Cependant, il est parfois utile de pouvoir appeler ou référencer ces éléments sans nécessairement connaître leur nom. C’est ce que permettent les pointeurs.
+Les pointeurs sont des outils de programmation avancée. Lorsque vous utilisez le langage de 4D, vous vous référez aux différents objets par l’intermédiaire de leur nom — en particulier les tables, champs, variables et tableaux. Pour appeler l’un d’entre eux, vous écrivez simplement son nom. Cependant, il est parfois utile de pouvoir appeler ou référencer ces éléments sans nécessairement connaître leur nom. C’est ce que permettent les pointeurs.
 
 Le concept de pointeur n’est pas tellement éloigné de la vie courante. Vous vous référez souvent à des choses sans connaître leur identité exacte. Par exemple, vous pourriez dire à un ami : "Allons faire un tour avec ta voiture" au lieu de "Allons faire un tour avec la voiture qui a la plaque d’immatriculation 123ABD". Dans ce cas, vous faites référence à la voiture avec la plaque d'immatriculation 123ABD en utilisant l'expression "ta voiture". For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
 
@@ -30,7 +30,7 @@ Il est plus facile d’expliquer l’utilisation des pointeurs au travers d’un
 ```4d
 $MyVar:="Hello"
 ```
-Vous pouvez également utiliser $MyPointer pour modifier la valeur de $MyVar. Par exemple, l’instruction suivante stocke la chaîne "Goodbye" dans la variable $MyVar :
+$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar: Nous pouvons alors créer un pointeur vers $MyVar :
 
 ```4d
 C_POINTER($MyPointer)  
@@ -50,7 +50,7 @@ Il est important de comprendre que vous pouvez utiliser un pointeur suivi du sym
 ALERT($MyPointer->)
 ```
 
-Si vous examinez les deux utilisations de l’expression $MyPointer-> ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MyVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MyVar :
+Vous pouvez également utiliser $MyPointer pour modifier la valeur de $MyVar. Par exemple, l’instruction suivante stocke la chaîne "Goodbye" dans la variable $MyVar :
 ```4d
 $MyPointer->:="Goodbye"
 ```
