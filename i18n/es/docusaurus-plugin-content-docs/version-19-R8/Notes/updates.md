@@ -151,7 +151,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 <details><summary>Click to see the table of libraries used in 4D</summary>
 
-| Library  | Versión actual | Updated in 4D | Comentario                                                                               |
+| Librería | Versión actual | Updated in 4D | Comentario                                                                               |
 | -------- | -------------- | ------------- | ---------------------------------------------------------------------------------------- |
 | SpreadJS | 15.2.5         | 19 R8         | 4D View Pro engine                                                                       |
 | CEF      | 106.0.27       | 19 R8         | Chromium 106.0.5249.103                                                                  |
