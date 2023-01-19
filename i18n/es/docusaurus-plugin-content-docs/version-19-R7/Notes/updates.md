@@ -125,7 +125,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 <details><summary>Click to see the table of libraries used in 4D</summary>
 
-| Library  | Versión actual | Updated in 4D | Comentario                                                                               |
+| Librería | Versión actual | Updated in 4D | Comentario                                                                               |
 | -------- | -------------- | ------------- | ---------------------------------------------------------------------------------------- |
 | SpreadJS | 15.2.0         | 19 R7         | 4D View Pro engine                                                                       |
 | CEF      | 4692.99        | 19 R5         | Chromium v97. CORS policies now also apply when accessing files on disk.                 |
