@@ -302,7 +302,7 @@ The **Select Enclosing Block** function is used to select the "enclosing block" 
 - Comillas
 - Paréntesis
 - A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
-- Braces
+- Paréntesis
 
 If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
 
