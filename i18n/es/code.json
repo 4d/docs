@@ -132,7 +132,7 @@
     "message": "Eventos formulario"
   },
   "Menus": {
-    "message": "Menus"
+    "message": "Menús"
   },
   "User Settings": {
     "message": "Propiedades usuario"
@@ -223,7 +223,7 @@
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Close",
+    "message": "Cerrar",
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.post.paginator.navAriaLabel": {
@@ -342,7 +342,7 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:",
+    "message": "Etiquetas:",
     "description": "The label alongside a tag list"
   },
   "theme.blog.sidebar.navAriaLabel": {
