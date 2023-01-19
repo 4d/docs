@@ -44,7 +44,7 @@ The **Bookmark All** command is enabled when a search has already been specified
 
 For more information about bookmarks, refer to [Using bookmarks](./write-class-method.md#using-bookmarks).
 
-## Replace
+## Reemplazar
 
 The **Replace** command displays the following dialog box:
 
