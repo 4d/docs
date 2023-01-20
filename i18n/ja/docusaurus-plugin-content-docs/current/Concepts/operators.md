@@ -45,7 +45,7 @@ $col:=New collection // $col を空のコレクションで初期化します
 - [**ピクチャー演算子**](dt_picture.md#ピクチャー演算子)
 - [**ポインター演算子**](dt_pointer.md#ポインター演算子)
 - [**文字列演算子**](dt_string.md#文字列演算子)
-- [**Null operators**](dt_null_undefined.md#null-operators)
+- [**Null 演算子**](dt_null_undefined.md#null-演算子)
 - [**Undefined operators**](dt_null_undefined.md#undefined-operators)
 
 
@@ -285,7 +285,7 @@ $name:=$person.maidenName || $person.name
 
 `条件 ? truthy時の式 : falsy時の式`
 
-> Since the [token syntax](https://doc.4d.com/4Dv19/4D/19.5/Using-tokens-in-formulas.300-6136716.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
+> [トークンシンタックス](https://doc.4d.com/4Dv19/4D/19.5/Using-tokens-in-formulas.300-6136716.ja.html) にはコロンが使われているため、競合を避けるには、コロン `:` の後にスペースを入れる、または、トークンは括弧でくくることが推奨されます。
 
 ### 例題
 
