@@ -51,7 +51,7 @@ The **Replace** command displays the following dialog box:
 ![find-dialog](../assets/en/code-editor/replace-dialog.png)
 
 - The **Find What:** area is used to define the character string or the expression to be searched for. As in the Find dialog box, this area is a combo-box that stores the last 15 character strings searched for. If you highlight text before choosing the **Replace** command, it will appear in this area.
-- The **Replace with:** area is used to define the character string that will replace the one defined above. This area is also a combo-box storing the last 15 character strings that have been searched for or replaced.
+- The **Replace with:** area is used to define the character string that will replace the one defined above. Esta área también es un combo-box que almacena las últimas 15 cadenas de caracteres que se han buscado o sustituido.
 - The **Whole Word** option is used to find/replace only character strings that correspond exactly to the string entered. In this case, for instance, a search for "client" will not find the strings "clients" or "myclient," etc.
 - The **Case Sensitive** option is used to find/replace only character strings having the same case as that of the entered string. Por ejemplo, una búsqueda de "MiVar" no encontrará "miVar"
 - As in the Find dialog box, the **Previous** and **Next** buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
