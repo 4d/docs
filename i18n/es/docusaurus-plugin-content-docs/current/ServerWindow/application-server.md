@@ -9,7 +9,7 @@ The Application Server page groups together information about the desktop applic
 ![](../assets/en/Admin/server-admin-application-page.png)
 
 
-The upper part of the page provides information about the current status of the 4D Server application server.
+La parte superior de la página ofrece información sobre el estado actual del servidor de aplicaciones de 4D Server.
 
 - **Estado**: Iniciado o Detenido.
 - **Starting time**: Date and time the application server was launched. Esta fecha corresponde a la apertura del proyecto por parte de 4D Server.
@@ -37,7 +37,7 @@ If you click on the **Reject new connections** button:
 
 - If you click on the **Accept new connections button**, the application server returns to its default state.
 
-This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) just after having started the server. If the administrator uses a remote connection, they can be certain to be the only one modifying the data. It is also possible to use this function in preparation of a maintenance operation which requires that there be no desktop client machine connected.
+This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) just after having started the server. Si el administrador utiliza una conexión remota, puede estar seguro de ser el único que modifica los datos. It is also possible to use this function in preparation of a maintenance operation which requires that there be no desktop client machine connected.
 
 ## Información
 
