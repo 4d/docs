@@ -617,8 +617,8 @@ Quelle que soit la manière dont les données sont affichées dans la list box (
 Ce principe est mis en oeuvre pour les tableaux internes permettant de gérer :
 
 * les couleurs
-* les couleurs de fond
-* les styles
+* background colors
+* styles
 * les lignes masquées
 * les sélections
 
