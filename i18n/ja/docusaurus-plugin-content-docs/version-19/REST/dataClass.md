@@ -137,7 +137,7 @@ If you want to specify which attributes you want to return, define them using th
 
 ## {dataClass}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22] or Company[IT0911AB2200]`
+データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company[22] または Company["IT0911AB2200"]` など)。
 
 ### 説明
 
