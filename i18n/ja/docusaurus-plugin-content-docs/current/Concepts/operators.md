@@ -46,7 +46,7 @@ $col:=New collection // $col を空のコレクションで初期化します
 - [**ポインター演算子**](dt_pointer.md#ポインター演算子)
 - [**文字列演算子**](dt_string.md#文字列演算子)
 - [**Null 演算子**](dt_null_undefined.md#null-演算子)
-- [**Undefined operators**](dt_null_undefined.md#undefined-operators)
+- [**未定義演算子**](dt_null_undefined.md#未定義演算子)
 
 
 ## 複合代入演算子
