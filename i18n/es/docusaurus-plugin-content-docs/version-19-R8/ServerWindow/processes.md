@@ -33,7 +33,7 @@ The lower area of the window is used to display the graphic representation of th
 
 > You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) for a non-adjacent selection.
 
-The activity of the process is the percentage of time that 4D Server has devoted to this process (ratio). La ventana ofrece la siguiente información para cada proceso:
+La actividad del proceso es el porcentaje de tiempo que 4D Server ha dedicado a este proceso (ratio). La ventana ofrece la siguiente información para cada proceso:
 
 - Tipo de proceso (ver abajo),
 - Sesión/Información:
@@ -86,13 +86,13 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 
 ![](../assets/en/Admin/server-process-actions.png)
 
-- **Abort Process**: can be used to abort the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation.
+- **Abort Process**: can be used to abort the selected process(es). Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación.
 
 > You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
 
 - **Pause Process**: can be used to pause the selected process(es).
 - **Activate Process**: can be used to reactivate the selected process(es). The processes must have been paused previously (using the button above or by programming); otherwise, this button has no effect.
-- **Debug Process**: can be used to open on the server machine one or more debugger windows for the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation. Note that the debugger window is only displayed when the 4D code is actually executed on the server machine (for example in a trigger or the execution of a method having the "Execute on Server" attribute).
+- **Debug Process**: can be used to open on the server machine one or more debugger windows for the selected process(es). Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación. Note that the debugger window is only displayed when the 4D code is actually executed on the server machine (for example in a trigger or the execution of a method having the "Execute on Server" attribute).
 
 > You can also debug a process directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button.
 

@@ -34,7 +34,7 @@ Para cada usuario conectado al servidor, la lista ofrece la siguiente informaci�
 
 ![](../assets/en/Admin/server-sleeping.png)
 
-Este estado libera recursos en el servidor. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
+Este estado libera recursos en el servidor. Además, la aplicación 4D remota se reconecta automáticamente a 4D Server después de despertar del modo de suspensión.
 
 The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. La máquina pasa al modo reposo. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
 

@@ -26,7 +26,7 @@ If a user attempts to execute an action and does not have the appropriate access
 You can assign specific permission actions to the following exposed resources in your project:
 
 - the datastore
-- a dataclass
+- una clase de datos
 - an attribute (including computed and alias)
 - a data model class function
 
@@ -71,7 +71,7 @@ A **privilege** is the technical ability to run **actions** on **resources**, wh
 
 A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. A privilege can include other privileges.
 
-- You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
+- Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
 
 - You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
 

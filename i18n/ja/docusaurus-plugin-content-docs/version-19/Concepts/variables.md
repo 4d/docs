@@ -147,7 +147,7 @@ MyNumber:=3
 
 は変数 _MyNumber_ を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> [データ型の宣言](#変数の作成) をせずに変数を作成することは通常推奨されません。
 
 もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに _MyNumber_ 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
