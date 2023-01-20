@@ -293,7 +293,7 @@ The following special characters allow the automatic addition or formatting of i
 | T        | Hora actual                       | printInfo.headerLeft:="Es &T."                                         | Es 16:30:36.                                         |
 | G        | Imagen                            | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S        | Strikethrough                     | printInfo.headerLeft:="&SEsto es texto."                               | ~~Esto es texto.~~                                   |
-| U        | Subrayado                         | printInfo.headerLeft:="&UEsto es texto."                               | Esto es texto. (Underlined)                          |
+| U        | Subrayado                         | printInfo.headerLeft:="&UEsto es texto."                               | Esto es texto. (Subrayado)                           |
 | B        | Negrita                           | printInfo.headerLeft:="&BEsto es texto."                               | **Esto es texto.**                                   |
 | I        | Itálica                           | printInfo.headerLeft:="&IEsto es texto."                               | *Esto es texto.*                                     |
 | "        | Prefijo fuente                    | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
