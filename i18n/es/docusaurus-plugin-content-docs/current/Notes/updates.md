@@ -1,6 +1,6 @@
 ---
 id: updates
-title: Release Notes
+title: Notas del lanzamiento
 ---
 
 ## 4D v20
@@ -50,7 +50,7 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - In Web areas using blink (CEF), dialogs displayed from external scripts are now blocking if not called from a `setTimeout()` JS function. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
-## Previous releases
+## Versiones anteriores
 
 <details><summary>Click to see the release notes for previous versions</summary>
 
@@ -148,7 +148,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](../FormEditor/propertiesForm#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
-- New default dark and light themes in [Code Editor preferences](../Preferences/methods#theme-list).
+- Nuevos temas oscuros y claros por defecto en [las preferencias del editor de código](../Preferences/methods#theme-list).
 - [Native compilation](../Project/compiler#compiler-methods-for) for Silicon processors.
 - [Variable calculation](../FormObjects/propertiesObject#variable-calculation) property is now supported by entity selection list box columns.
 - New, comprehensive [CLI](../Admin/cli) page.
@@ -168,19 +168,19 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 </details>
 
 
-## Library table
+## Tabla de las librerías
 
 <details><summary>Click to see the table of libraries used in 4D</summary>
 
-| Librería | Versión actual | Updated in 4D | Comentario                                                                               |
-| -------- | -------------- | ------------- | ---------------------------------------------------------------------------------------- |
-| SpreadJS | 15.2.5         | 19 R8         | 4D View Pro engine                                                                       |
-| CEF      | 106.0.27       | 19 R8         | Chromium 106.0.5249.103                                                                  |
-| OpenSSL  | 1.1.1s         | 19 R7         |                                                                                          |
-| libzip   | 1.7.3          | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
-| webKit   | WKWebView      | 19            |                                                                                          |
-| ICU      | 68.1           | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| PHP      | 7.3.27         | 18 R6         |                                                                                          |
-| libldap  | 2.4.48         | 18 R2         |                                                                                          |
+| Librería | Versión actual | Actualizado en 4D | Comentario                                                                               |
+| -------- | -------------- | ----------------- | ---------------------------------------------------------------------------------------- |
+| SpreadJS | 15.2.5         | 19 R8             | Motor 4D View Pro                                                                        |
+| CEF      | 106.0.27       | 19 R8             | Chromium 106.0.5249.103                                                                  |
+| OpenSSL  | 1.1.1s         | 19 R7             |                                                                                          |
+| libzip   | 1.7.3          | 19 R2             | Used by zip class, 4D Write Pro, svg and serverNet components                            |
+| webKit   | WKWebView      | 19                |                                                                                          |
+| ICU      | 68.1           | 18 R6             | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| PHP      | 7.3.27         | 18 R6             |                                                                                          |
+| libldap  | 2.4.48         | 18 R2             |                                                                                          |
 
 </details>
