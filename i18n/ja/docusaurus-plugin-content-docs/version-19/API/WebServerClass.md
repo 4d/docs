@@ -732,14 +732,14 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 |
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->。
+`.stop()` 関数は、 <!-- REF #WebServerClass.stop().Summary -->対象の Webサーバーを停止します<!-- END REF -->。
 
-If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
+Webサーバーが開始されている場合は、処理中のリクエストが完了次第、すべての Web接続と Webプロセスが閉じられます。 Webサーバーが開始されていなかった場合、関数はなにもしません。
 > この関数は、[`.start()`](#start) 関数の *settings* 引数を使用してセッションに対して定義したカスタマイズされた Web設定があった場合、それらをリセットします。
 
 #### 例題
 
-To stop the database Web server:
+データベースWebサーバーを停止します:
 
 ```4d
  var $webServer : 4D.WebServer
