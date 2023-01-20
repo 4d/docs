@@ -23,16 +23,16 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 ## Null 演算子
 
 
-| 演算  | シンタックス                  | 戻り値     | 式                              | 値     |
-| --- | ----------------------- | ------- | ------------------------------ | ----- |
-| 等しい | Null `=` Null           | Boolean | a.nullProp `=` b.nullProp      | true  |
-|     | Null `=` Undefined      | Boolean | a.nullProp `=` b.undefinedProp | true  |
-|     | Null `=` *scalar value* | Boolean | a.nullProp `=` 42              | false |
-| 異なる | Null `#` Null           | Boolean | a.nullProp `#` b.nullProp      | false |
-|     | Null `#` Undefined      | Boolean | a.nullProp `#` b.undefinedProp | false |
-|     | Null `#` *scalar value* | Boolean | a.nullProp `#` 42              | true  |
+| 演算  | シンタックス             | 戻り値     | 式                              | 値     |
+| --- | ------------------ | ------- | ------------------------------ | ----- |
+| 等しい | Null `=` Null      | Boolean | a.nullProp `=` b.nullProp      | true  |
+|     | Null `=` Undefined | Boolean | a.nullProp `=` b.undefinedProp | true  |
+|     | Null `=` *スカラー値*   | Boolean | a.nullProp `=` 42              | false |
+| 異なる | Null `#` Null      | Boolean | a.nullProp `#` b.nullProp      | false |
+|     | Null `#` Undefined | Boolean | a.nullProp `#` b.undefinedProp | false |
+|     | Null `#` *スカラー値*   | Boolean | a.nullProp `#` 42              | true  |
 
-*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ex:
+*スカラー値* は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ex:
 
 ```4d
 var $object : Object
@@ -48,7 +48,7 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 
 :::
 
-## Undefined operators
+## 未定義演算子
 
 
 | 演算  | シンタックス                                                | 戻り値     | 式                                   | 値     |
