@@ -106,14 +106,14 @@ title: フォームエディター
 
 #### ショートカット
 
-You can use the following shortcuts in the Property List:
+プロパティリストでは、以下のショートカットを使用できます:
 
 - **矢印キー** ↑ ↓: あるセルから別のセルへ移動します。
 - **矢印キー** ← →: テーマを展開/縮小するか、入力モードに入ります。
 - **PgUp** と **PgDn**: プロパティリスト内をスクロールします。
 - **Home** と **End**: プロパティリストの最初または最後のセルを表示するようスクロールします。
-- **Ctrl+click** (Windows) or **Command+click** (macOS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
-- **Ctrl+click** (Windows) or **Command+click** (macOS) on a theme label: Used to Collapse/Expand every theme in the list.
+- イベント上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : クリックしたイベントの最初の状態に応じて、リストの各イベントを選択/選択解除します。
+- テーマレベル上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : リストのすべてのテーマを展開/縮小します。
 - **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
 
 
