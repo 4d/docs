@@ -126,7 +126,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 ### Puntos decimales y otros caracteres de visualización
 
-Puede utilizar un punto decimal en un formato de visualización de números. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+Puede utilizar un punto decimal en un formato de visualización de números. Si desea que el decimal se muestre independientemente de si el usuario lo teclea o no, debe colocarlo entre ceros.
 
 Puede utilizar cualquier otro caracter en el formato. When used alone, or placed before or after placeholders, the characters always appear. Por ejemplo, si utiliza el siguiente formato:
 
@@ -188,7 +188,7 @@ The `&xml` format will make a number compliant with XML standard rules. In parti
 
 ### Mostrar un número como una hora
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
+You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. El dígito en el formato corresponde al orden en que aparece el formato de hora en el menú desplegable Formato.
 
 Por ejemplo, el formato:
 
@@ -200,7 +200,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
 ### Ejemplos
 
-The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
+The following table shows how different formats affect the display of numbers. Las tres columnas, Positiva, Negativa y Cero, muestran cada una cómo se mostrarían 1.234,50, -1.234,50 y 0.
 
 | Formato introducido                    | Positivo         | Negativo      | Cero                         |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
@@ -546,7 +546,7 @@ In list boxes, any text that is too long is truncated and displayed with an elli
 
 ![](../assets/en/FormObjects/property_wordwrap1.png)
 
-Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
+Note that regardless of the Wordwrap option’s value, the row height is not changed. Si el texto con saltos de línea no puede visualizarse por completo en la columna, se trunca (sin elipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 
