@@ -60,7 +60,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 ## Encabezado del formulario
 
-The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. El área de encabezado se define como el área por encima de la línea de control del encabezado.
+El área de encabezado del formulario se muestra en la parte superior de cada pantalla y se imprime en la parte superior de cada página de un informe. El área de encabezado se define como el área por encima de la línea de control del encabezado.
 
 Puede hacer el área Encabezado más pequeña o más grande. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
 
