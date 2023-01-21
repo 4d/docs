@@ -169,7 +169,7 @@ Si deselecciona esta opción, sólo se mostrará la flecha amarilla.
 
 ### Sugerencias
 
-This area lets you configure autocomplete mechanisms in the Method editor to adapt it to your own work habits.
+Esta área le permite configurar los mecanismos de autocompletar en el editor de métodos para adaptarlo a sus propios hábitos de trabajo.
 
 |                                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
