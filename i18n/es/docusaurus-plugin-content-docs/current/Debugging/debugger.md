@@ -352,7 +352,7 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
 2. Haga una de las siguientes cosas:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
-    * Right-click the selected text **>** **Copy to Expression Pane**
+    * Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
 
 ### Program Counter
 
