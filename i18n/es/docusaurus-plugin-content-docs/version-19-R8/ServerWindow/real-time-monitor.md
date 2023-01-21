@@ -43,7 +43,7 @@ Este es un ejemplo de la información que se muestra en el modo estándar:
 ![](../assets/en/Admin/server-admin-monitor-adv1.png)
 
 
-In advanced mode (**Shift+Click** on the operation), additional information is displayed:
+En el modo avanzado (**Mayús+Clic** en la operación), se muestra información adicional:
 
 ![](../assets/en/Admin/server-admin-monitor-adv2.png)
 
