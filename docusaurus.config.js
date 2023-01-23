@@ -22,8 +22,8 @@ module.exports = {
             // const version = info.version;
             // const permalink = info.permalink;
 
-            const title = `Comment on ${info.docPath}`;
-            const body = `- [${info.docPath}](${info.versionDocsDirPath})`;
+            const title = `Comment on ${info.docPath} (${info.version})`;
+            const body = `Please enter your comment:`;
             return `https://github.com/4d/docs/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
           },
 		  // Sidebars file relative to website dir.
