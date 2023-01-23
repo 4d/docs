@@ -306,7 +306,7 @@
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "Comment on this page",
+    "message": "このページへコメントする",
     "description": "The link label to comment the current page"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
