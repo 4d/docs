@@ -538,8 +538,8 @@ El soporte de ordenación estándar depende del tipo de list box:
 | Tipo de list box               | Soporte de ordenación estándar | Comentarios                                                                                                  |
 | ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | Colección de objetos           | Sí                             | <li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Colección de valores escalares | No                             | Utilice la ordenación personalizada con la función [`orderBy()`](..\API\CollectionClass.md#orderby)        |
-| Entity selection               | Sí                             | <li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Soportado: ordena las propiedades de atributos de objetos (por ejemplo, "This.data.city" cuando "data" es un atributo de objeto)</li><li>Soportado: ordena los atributos relacionados (por ejemplo, "This.company.name")</li><li>No soportado: ordenar en las propiedades de atributos de objetos a través de atributos relacionados (por ejemplo, "This.company.data.city"). Para ello, debe utilizar la ordenación personalizada con la función [`orderByFormula()`](..\I\EntitySelectionClass.md#orderbyformula) (ver el siguiente ejemplo)</li> |
+| Colección de valores escalares | No                             | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
+| Entity selection               | Sí                             | <li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Soportado: ordena las propiedades de atributos de objetos (por ejemplo, "This.data.city" cuando "data" es un atributo de objeto)</li><li>Soportado: ordena los atributos relacionados (por ejemplo, "This.company.name")</li><li>No soportado: ordenar en las propiedades de atributos de objetos a través de atributos relacionados (por ejemplo, "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Selección actual               | Sí                             | Sólo se pueden ordenar las expresiones simples (por ejemplo, `[Table_1]Campo_2`)                             |
 | Selección temporal             | No                             |                                                                                                              |
 | Arrays                         | Sí                             | Las columnas vinculadas a arrays de imágenes y punteros no se pueden ordenar                                 |
@@ -554,7 +554,7 @@ El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utili
 Los ordenamientos personalizados le permiten:
 
 - efectuar las ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
-- utilizar funciones tales como [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) o [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) para ordenar las columnas según criterios complejos.
+- use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Ejemplo
 
@@ -797,8 +797,9 @@ Independientemente de cómo se muestren los datos en el list box (de forma jerá
 Este principio se aplica a los arrays internos que se pueden utilizar para gestionar:
 
 - colores
-- colores de fondo
-- estilos
+- background colors
+
+- styles
 - líneas ocultas
 - selecciones
 

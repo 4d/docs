@@ -287,10 +287,10 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                        |
-| ------- | ------------------------------------ |
-| v19 R8  | Support of "roles" Settings property |
-| v18 R6  | Ajout                                |
+| Version | Modifications                                         |
+| ------- | ----------------------------------------------------- |
+| v19 R8  | Prise en charge de la propriété "roles" dans settings |
+| v18 R6  | Ajout                                                 |
 
 </details>
 
@@ -308,7 +308,7 @@ End if
 
 #### Description
 
-La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session<!-- END REF -->.
+La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associe à la session le(s) privilège(s) et/ou le(s) rôle(s) défini(s) dans le paramètre<!-- END REF -->.
 
 - Dans le paramètre *privilege*, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
 
@@ -319,18 +319,18 @@ La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary --
 | Propriété  | Type               | Description                                           |
 | ---------- | ------------------ | ----------------------------------------------------- |
 | privileges | Text ou Collection | <li>Chaîne contenant un nom de privilège, ou</li><li>Collection de chaînes contenant des noms de privilèges</li>    |
-| roles      | Text ou Collection | <li>String containing a role, or</li><li>Collection of strings containing roles</li>   |
+| roles      | Text ou Collection | <li>Chaîne contenant un nom de rôle, ou</li><li>Collection de chaînes contenant des noms de roles</li>   |
 | userName   | Text               | Nom d'utilisateur à associer à la session (optionnel) |
 
 :::info
 
-Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
+Les privilèges et les rôles sont définis dans le fichier [`roles.json`](../ORDA/privileges.md#rolesjson-file) du projet. Pour plus d'informations, veuillez vous reporter à la section [**Privileges**](../ORDA/privileges.md) .
 
 :::
 
-If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+Si la propriété `privileges` ou `roles` contient un nom qui n'est pas déclaré dans le fichier [`roles.json`](../ORDA/privileges.md#rolesjson-file) , elle est ignorée.
 
-By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
+Par défaut lorsqu'aucun privilège ou rôle n'est associé à la session, la session est une [session Guest](#isguest).
 
 La propriété [`userName`](#username) est accessible au niveau de l'objet session (lecture seulement).
 

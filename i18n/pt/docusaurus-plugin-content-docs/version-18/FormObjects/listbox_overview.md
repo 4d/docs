@@ -617,7 +617,7 @@ Este princípio é implementado para as matrizes internas que podem ser utilizad
 
 * cores
 * cores de fundo
-* estilos
+* styles
 * filas ocultas
 * seleções
 

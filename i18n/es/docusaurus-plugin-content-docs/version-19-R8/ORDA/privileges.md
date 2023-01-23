@@ -55,7 +55,7 @@ Available actions are related to target resource.
 **Notas:**
 
 - An alias can be read even if there is no permissions on the attributes upon which it is built.
-- A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
+- Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
 - Default values: in the current implementation, only *Null* is available as default value.
 
 Setting permissions requires to be consistent, in particular:

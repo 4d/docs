@@ -749,14 +749,14 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 |
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+La fonction `.stop()` <!-- REF #WebServerClass.stop().Summary -->arrête le serveur web sur lequel elle est appliquée<!-- END REF -->.
 
-If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
+Si le serveur Web était lancé, toutes les connexions Web et tous les process Web sont fermés une fois que les requêtes actuellement traitées sont terminées. Si le serveur Web n'était pas démarré, la fonction ne fait rien.
 > Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre *settings* de la fonction [`.start()`](#start), le cas échéant.
 
 #### Exemple
 
-To stop the database Web server:
+Pour arrêter le serveur Web de la base :
 
 ```4d
  var $webServer : 4D.WebServer

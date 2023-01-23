@@ -617,8 +617,8 @@ Independientemente de cómo se muestren los datos en el list box (de forma jerá
 Este principio se aplica a los arrays internos que se pueden utilizar para gestionar:
 
 * colores
-* colores de fondo
-* estilos
+* background colors
+* styles
 * líneas ocultas
 * selecciones
 

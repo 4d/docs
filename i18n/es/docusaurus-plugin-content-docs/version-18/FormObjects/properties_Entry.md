@@ -150,7 +150,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 ## Disposición del teclado
 
-This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
+This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. De este modo, durante la entrada de datos, la configuración del teclado cambia automáticamente cuando este campo tiene el foco.
 
 Por defecto, el objeto utiliza la disposición actual del teclado.
 

@@ -64,12 +64,12 @@ var $myVar // バリアント型変数
 | varType                | 内容                           |
 | ---------------------- | ---------------------------- |
 | `Text`                 | テキスト値                        |
-| `日付`                   | 日付値                          |
-| `時間`                   | 時間値                          |
+| `Date`                 | 日付値                          |
+| `Time`                 | 時間値                          |
 | `Boolean`              | ブール値                         |
 | `Integer`              | 倍長整数値                        |
 | `Real`                 | 実数値                          |
-| `ポインター`                | ポインター値                       |
+| `Pointer`              | ポインター値                       |
 | `Picture`              | ピクチャー値                       |
 | `Blob`                 | スカラーBLOB値                    |
 | `Collection`           | コレクション値                      |
@@ -144,7 +144,7 @@ MyNumber:=3
 
 は変数 _MyNumber_ を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
+> [データ型の宣言](#変数の宣言) をせずに変数を作成することは通常推奨されません。
 
 もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに _MyNumber_ 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
