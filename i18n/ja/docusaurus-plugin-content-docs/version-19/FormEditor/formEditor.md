@@ -114,7 +114,7 @@ title: フォームエディター
 - **Home** と **End**: プロパティリストの最初または最後のセルを表示するようスクロールします。
 - イベント上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : クリックしたイベントの最初の状態に応じて、リストの各イベントを選択/選択解除します。
 - テーマレベル上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : リストのすべてのテーマを展開/縮小します。
-- **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
+- **太字** で表示されているプロパティ値を **Ctrl+click** (Windows) または **Command+click** (macOS): プロパティをデフォルト値にリセットします。
 
 
 ## フォームオブジェクトの操作
