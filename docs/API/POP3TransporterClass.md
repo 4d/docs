@@ -242,17 +242,19 @@ The `boxInfo` object returned contains the following properties:
 
 |Version|Changes|
 |---|---|
+|v20|Support of *headerOnly* parameter|
 |v18 R2|Added|
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer { ; *headerOnly* : Boolean } ) : Object<!-- END REF -->
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msgNumber|Integer|->|Number of the message in the list |
+|headerOnly|Boolean|->|True to download only the email headers (default is False) |
 |Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 ##### Description
@@ -261,14 +263,24 @@ The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->re
 
 Pass in *msgNumber* the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) function.
 
+You can pass `true` in the *headerOnly* parameter to get only the [headers](EmailObjectClass.md#headers) of the `Email` object. 
+
+:::tip
+
+This option is useful when the server automatically deletes messages once they have been downloaded (Gmail). It allows you to evaluate messages before downloading them. 
+
+::: 
+
 The method returns Null if:
 
 * *msgNumber* designates a non-existing message,
-* the message was marked for deletion using `.delete( )`.
+* the message was marked for deletion using [`.delete()`](#delete).
 
 **Returned object**
 
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
+
+If the *headerOnly* parameter was passed with the true value, the returned `Email` object contains only the [headers](EmailObjectClass.md#headers) property. 
 
 ##### Example
 
@@ -288,6 +300,7 @@ You want to know the sender of the first mail of the mailbox:
  $transporter:=POP3 New transporter($server)
 
  $mailInfo:=$transporter.getMailInfoList()
+
  $sender:=$transporter.getMail($mailInfo[0].number).from
 ```
 
