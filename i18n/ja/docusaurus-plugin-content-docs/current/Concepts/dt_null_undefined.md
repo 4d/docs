@@ -32,7 +32,7 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 |     | Null `#` Undefined | Boolean | a.nullProp `#` b.undefinedProp | false |
 |     | Null `#` *スカラー値*   | Boolean | a.nullProp `#` 42              | true  |
 
-*スカラー値* は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ex:
+*スカラー値* は、文字列、日付、時間、ブール、数値、BLOB のいずれかの型の値です。 スカラー値が宣言されている場合、その [デフォルト値](data-types.md#デフォルト値) は未定義でも null でもありません。 それ以外のデータ型 (ポインター、ピクチャー、オブジェクト、コレクション) の場合、デフォルト値は未定義または null となります。 例:
 
 ```4d
 var $object : Object
@@ -44,7 +44,7 @@ var $text : Text
 
 :::info
 
-Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported with Null values and return an error.
+大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による比較は null値に対応しておらず、エラーが返されます。
 
 :::
 
@@ -55,21 +55,21 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | --- | ----------------------------------------------------- | ------- | ----------------------------------- | ----- |
 | 等しい | Undefined `=` Undefined                               | Boolean | a.undefinedProp `=` b.undefinedProp | true  |
 |     | Undefined `=` Null                                    | Boolean | a.undefinedProp `=` c.nullProp      | true  |
-|     | Undefined `=` *other values*                          | Boolean | a.undefinedProp `=` 42              | false |
+|     | Undefined `=` *その他の値*                                 | Boolean | a.undefinedProp `=` 42              | false |
 | 異なる | Undefined `#` Undefined                               | Boolean | a.undefinedProp `#` b.undefinedProp | false |
 |     | Undefined `#` Null                                    | Boolean | a.undefinedProp `#` b.nullProp      | false |
 |     | Undefined `#` Undefined                               | Boolean | a.undefinedProp `#` b.undefinedProp | false |
-|     | Undefined `#` *other values*                          | Boolean | a.undefinedProp `#` 42              | true  |
+|     | Undefined `#` *その他の値*                                 | Boolean | a.undefinedProp `#` 42              | true  |
 | 大きい | Undefined `>` string, Date, Time, Boolean, number  | Boolean | a.undefinedProp `>` "abc"        | false |
 | 小さい | Undefined `<` string, Date, Time, Boolean, number  | Boolean | a.undefinedProp `<` "abc"        | false |
 | 以上  | Undefined `>=` string, Date, Time, Boolean, number | Boolean | a.undefinedProp `>=` "abc"       | false |
 | 以下  | Undefined `<=` string, Date, Time, Boolean, number | Boolean | a.undefinedProp `<=` "abc"       | false |
 
-*other values* are expressions of any type with a value neither Undefined nor Null.
+*その他の値* は、未定義でも null でもない値を持つ任意の型の式です。
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+大なり (`>`)、小なり (`<`)、以上 (`>=`)、以下 (`<=`) 演算子による未定義値の比較は、ポインター、ピクチャー、BLOB、オブジェクト、コレクション、未定義値または null値に対応しておらず、エラーが返されます。
 
 :::
 
@@ -95,7 +95,7 @@ $result:=Undefined($vEmp.parent) //True
 $result:=($vEmp.parent=Null) //True
 ```
 
-Examples of comparison results with undefined and null values:
+未定義値および null値との比較結果の例:
 
 ```4d
 var $result : Boolean
