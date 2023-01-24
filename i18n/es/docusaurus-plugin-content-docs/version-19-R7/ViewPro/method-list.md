@@ -5757,7 +5757,7 @@ Con un salto de página:
 
 #### Descripción
 
-El comando `VP SET TABLE ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
+El comando `VP SET TABLE ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->aplica los *atributos* definidos para la *columna* en la tabla *tableName*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
