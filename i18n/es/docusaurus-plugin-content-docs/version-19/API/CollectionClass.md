@@ -1515,7 +1515,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 #### Descripción
 
-La función `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente, puede pasar parámetros a *methodName* utilizando el(los) parámetro(s) *param*. `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
+La función `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente, puede pasar parámetros a *methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original, excepto si se ha utilizado *$1.stop* (ver abajo).
 > Esta función no modifica la colección original.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
