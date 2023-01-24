@@ -289,10 +289,10 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                       |
-| ------- | ------------------------------------ |
-| v19 R8  | Support of "roles" Settings property |
-| v18 R6  | Añadidos                             |
+| Versión | Modificaciones                                      |
+| ------- | --------------------------------------------------- |
+| v19 R8  | Compatibilidad con la propiedad "roles" en Settings |
+| v18 R6  | Añadidos                                            |
 
 </details>
 
