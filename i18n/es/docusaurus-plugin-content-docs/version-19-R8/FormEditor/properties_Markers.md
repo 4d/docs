@@ -18,7 +18,7 @@ Form Break areas are displayed once at the end of the list of records and are pr
 
 The Break area is defined as the area between the Detail control line and the Break control line. There can be [several Break areas](#additional-areas) in your report.
 
-You can make Break areas smaller or larger. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. In a printed report, you can use a Break area for calculating and printing subtotals and other summary calculations.
+You can make Break areas smaller or larger. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. En un informe impreso, puede utilizar un área de Ruptura para calcular e imprimir subtotales y otros cálculos de resumen.
 
 #### Gramática JSON
 
