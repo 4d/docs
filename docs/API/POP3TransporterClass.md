@@ -261,13 +261,13 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. This function allows you to locally handle the email contents.
 
-Pass in *msgNumber* the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) function.
+Pass in *msgNumber* the number of the message to retrieve. This number is returned in the `number` property by the [`.getMailInfoList()`](#getmailinfolist) function.
 
-You can pass `true` in the *headerOnly* parameter to get only the [headers](EmailObjectClass.md#headers) of the `Email` object. 
+Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. This option allows you to optimize the downloading step when a lot of emails are on the server.   
 
-:::tip
+:::note
 
-This option is useful when the server automatically deletes messages once they have been downloaded (Gmail). It allows you to evaluate messages before downloading them. 
+The *headerOnly* option may not be supported by the server.
 
 ::: 
 
@@ -280,7 +280,6 @@ The method returns Null if:
 
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
 
-If the *headerOnly* parameter was passed with the true value, the returned `Email` object contains only the [headers](EmailObjectClass.md#headers) property. 
 
 ##### Example
 
