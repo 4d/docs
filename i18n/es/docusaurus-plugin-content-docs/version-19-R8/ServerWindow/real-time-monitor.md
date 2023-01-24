@@ -4,7 +4,7 @@ title: Página de seguimiento en tiempo real
 ---
 
 
-The Real Time Monitor page monitors the progress of "long" operations performed by the application in real time. These operations are, for example, sequential queries, execution of formulas, etc.
+La página Monitor en tiempo real supervisa el progreso de las operaciones "largas" realizadas por la aplicación en tiempo real. These operations are, for example, sequential queries, execution of formulas, etc.
 
 ![](../assets/en/Admin/server-admin-monitor-page.png)
 > Esta página está disponible en la ventana de administración de la máquina servidor y también desde una máquina 4D remota. En el caso de un equipo remoto, esta página muestra los datos de las operaciones realizadas en el equipo servidor.
