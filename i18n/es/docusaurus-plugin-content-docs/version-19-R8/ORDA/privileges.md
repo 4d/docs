@@ -165,7 +165,7 @@ End if
 
 ## Initializing privileges for deployment
 
-By default, if no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
+Por defecto, si no se definen parámetros específicos en el archivo `roles.json`, los accesos no están limitados. This configuration allows you to develop the application without having to worry about accesses.
 
 However, when the application is about to be deployed, a good practice is to lock all privileges and then, to configure the file to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder (it includes examples of methods):
 

@@ -70,7 +70,7 @@ ON ERR CALL("globalHandler";ek global) //Installs a global error-handling method
 ON ERR CALL("componentHandler";ek errors from components) //Installs an error-handling method for components
 ```
 
-You can install a global error handler that will serve as "fallback" and specific local error handlers for certain processes. A global error handler is also useful on the server to avoid error dialogs on the server when run with interface.
+You can install a global error handler that will serve as "fallback" and specific local error handlers for certain processes. Un gestor de errores global también es útil en el servidor para evitar diálogos de error en el servidor cuando se ejecuta con interfaz.
 
 Se puede definir un único método de captura de errores para toda la aplicación o diferentes métodos por módulo de aplicación. However, only one method can be installed per execution context.
 

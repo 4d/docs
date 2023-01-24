@@ -175,7 +175,7 @@
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "message": "Comuníquese con el dueño del sitio que lo vinculó a la URL original y hágale saber que su enlace está roto.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.blog.archive.title": {

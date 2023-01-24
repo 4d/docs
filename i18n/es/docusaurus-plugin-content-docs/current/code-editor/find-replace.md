@@ -30,7 +30,7 @@ When you click on **OK**, 4D begins searching from the current text insertion po
 
 ### Find Same
 
-The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
+El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idénticas a la seleccionada. This command is only active if you have selected at least one character in the Code Editor.
 
 The search carried out is of the "Find Next" type in the current code editor window.
 

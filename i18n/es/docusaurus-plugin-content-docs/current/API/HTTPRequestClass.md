@@ -267,9 +267,9 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                 |
-| ------- | -------------------------------------------------------------- |
-| v19 R8  | `.headers` returns lowercase names. New `.rawHeaders` property |
+| Versión | Modificaciones                                                               |
+| ------- | ---------------------------------------------------------------------------- |
+| v19 R8  | `.headers` devuelve los nombres en minúsculas. Nueva propiedad `.rawHeaders` |
 
 </details>
 
@@ -284,7 +284,7 @@ Un objeto `response` es un objeto no compartible. Ofrece las siguientes propieda
 | Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                          |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | .body       | Variant | Cuerpo de la respuesta. El tipo del mensaje se define según la propiedad [`dataType`](#datatype). Indefinido si el cuerpo no se ha recibido todavía                                                                                                                                                  |
-| .headers    | Object  | Encabezados de la respuesta. Header names are returned in lowercase. `<headername>.key` = valor (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún.                                                             |
+| .headers    | Object  | Encabezados de la respuesta. Los nombres de los encabezados se devuelven en minúsculas. `<headername>.key` = valor (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún.                                          |
 | .status     | Number  | Código de estado de la respuesta                                                                                                                                                                                                                                                                     |
 | .statusText | Text    | Mensaje explicando el código de estado                                                                                                                                                                                                                                                               |
 | .rawHeaders | Object  | Encabezados de la respuesta. Los nombres de los encabezadoss se devuelven intactos (con sus mayúsculas y minúsculas originales). `<headerName>.key` = valor (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún. |
