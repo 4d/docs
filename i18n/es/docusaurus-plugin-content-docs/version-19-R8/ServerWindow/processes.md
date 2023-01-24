@@ -15,7 +15,7 @@ You can change the order of the columns by simply dragging and dropping the colu
 
 Like the Users page, this page contains a dynamic [search/filtering area](users.md#searchfiltering-area) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The search/filtering is carried out in the Session and Process name columns.
 
-There are also three shortcut buttons that can be used to filter by the type of process displayed in the window:
+También hay tres botones de acceso directo que se pueden utilizar para filtrar por el tipo de proceso que se muestra en la ventana:
 
 ![](../assets/en/Admin/server-process-buttons.png)
 
