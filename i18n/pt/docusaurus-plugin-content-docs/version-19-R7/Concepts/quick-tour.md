@@ -325,6 +325,22 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+A 4D code line is limited to the maximum size of a line (32,000 characters).
+
+You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Comentários
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
@@ -336,7 +352,7 @@ There are two ways to create comments:
 
 Both styles of comments can be used simultaneously.
 
-#### Single line comments (//)
+#### Single line comments (`//comment`)
 
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
@@ -348,7 +364,7 @@ Insert `//` at the beginning of a line or after a statement to add a single line
  End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
