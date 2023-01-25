@@ -23,14 +23,14 @@ Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha 
 ## Null operators
 
 
-| Operación   | Sintaxis                | Devuelve | Expression                     | Valor |
-| ----------- | ----------------------- | -------- | ------------------------------ | ----- |
-| Igual       | Null `=` Null           | Boolean  | a.nullProp `=` b.nullProp      | True  |
-|             | Null `=` Undefined      | Boolean  | a.nullProp `=` b.undefinedProp | True  |
-|             | Null `=` *scalar value* | Boolean  | a.nullProp `=` 42              | False |
-| Desigualdad | Null `#` Null           | Boolean  | a.nullProp `#` b.nullProp      | False |
-|             | Null `#` Undefined      | Boolean  | a.nullProp `#` b.undefinedProp | False |
-|             | Null `#` *scalar value* | Boolean  | a.nullProp `#` 42              | True  |
+| Operación   | Sintaxis                 | Devuelve | Expression                     | Valor |
+| ----------- | ------------------------ | -------- | ------------------------------ | ----- |
+| Igual       | Null `=` Null            | Boolean  | a.nullProp `=` b.nullProp      | True  |
+|             | Null `=` Undefined       | Boolean  | a.nullProp `=` b.undefinedProp | True  |
+|             | Null `=` *valor escalar* | Boolean  | a.nullProp `=` 42              | False |
+| Desigualdad | Null `#` Null            | Boolean  | a.nullProp `#` b.nullProp      | False |
+|             | Null `#` Undefined       | Boolean  | a.nullProp `#` b.undefinedProp | False |
+|             | Null `#` *scalar value*  | Boolean  | a.nullProp `#` 42              | True  |
 
 *scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ej:
 
