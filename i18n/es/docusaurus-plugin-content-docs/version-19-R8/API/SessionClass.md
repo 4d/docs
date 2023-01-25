@@ -330,9 +330,9 @@ Los privilegios y los roles se definen en el archivo [`roles.json`](../ORDA/priv
 
 :::
 
-If the `privileges` or `roles` property contains a name that is not declared in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file, it is ignored.
+Si la propiedad `privileges` o `roles` contiene un nombre que no está declarado en el archivo [`roles.json`](../ORDA/privileges.md#rolesjson-file), se ignora.
 
-By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
+Por defecto, cuando no hay ningún privilegio o rol asociado a la sesión, la sesión es una [sesión invitado](#isguest).
 
 La propiedad [`userName`](#username) está disponible a nivel de objeto de sesión (sólo lectura).
 
