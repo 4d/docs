@@ -666,8 +666,8 @@ The last variable is never hierarchical even if several identical values exists 
 
 ![](../assets/en/FormObjects/property_hierarchicalListBox.png)
 
-This principle is not applied when only one variable is specified in the hierarchy: in this case, identical values may be grouped.
-> If you specify a hierarchy based on the first columns of an existing list box, you must then remove or hide these columns (except for the first), otherwise they will appear in duplicate in the list box. If you specify the hierarchy via the pop-up menu of the editor (see below), the unnecessary columns are automatically removed from the list box.
+Este principio no se aplica cuando sólo se especifica una variable en la jerarquía: en este caso, pueden agruparse valores idénticos.
+> Si especifica una jerarquía basada en las primeras columnas de un list box existente, deberá eliminar u ocultar estas columnas (excepto la primera), ya que de lo contrario aparecerán duplicadas en el list box. Si especifica la jerarquía mediante el menú emergente del editor (ver abajo), las columnas innecesarias se eliminan automáticamente del list box.
 
 #### Crear una jerarquía mediante el menú contextual
 
