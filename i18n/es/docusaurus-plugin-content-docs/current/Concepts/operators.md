@@ -56,7 +56,7 @@ Los resultados del operador dependen de los **tipos de datos** a los que se apli
 - [**Operadores en punteros**](dt_pointer.md#pointer-operators)
 - [**Operadores de cadenas**](dt_string.md#string-operators)
 - [**Null operators**](dt_null_undefined.md#null-operators)
-- [**Undefined operators**](dt_null_undefined.md#undefined-operators)
+- [**Operadores indefinidos**](dt_null_undefined.md#undefined-operators)
 
 
 ## Operadores de asignación compuestos
