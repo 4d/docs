@@ -341,6 +341,22 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+A 4D code line is limited to the maximum size of a line (32,000 characters).
+
+1つのステートメントを複数行に記述することができます。これをおこなうには、ステートメントの各行をバックスラッシュ `\` 文字 (日本語Windowsの場合半角円マーク) で終了します。 The 4D language will consider all the lines at once. たとえば、以下のステートメントは同等です:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## コメント
 
 コメントとは、コード内の実行されないテキストのことです。 これらのテキストは、コード実行時にインタープリターによって無視されます。
@@ -352,7 +368,7 @@ ALERT(MyPointer->)
 
 これらの書き方は同時に使用できます。
 
-#### シングルラインコメント (//)
+#### Single line comments (`//comment`)
 
 コードの後や行の最初に `//` を使うと、その後のテキストはすべてコメントとなります。 例:
 
@@ -365,7 +381,7 @@ For($vCounter;1;100) // ループを開始します
  End for
 ```
 
-#### インライン、およびマルチラインコメント (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 コメントを `/*` と `*/` で囲むと、そのあいだのテキストはコメントとなります。 この方法でインラインおよびマルチラインコメントが書けます:
 

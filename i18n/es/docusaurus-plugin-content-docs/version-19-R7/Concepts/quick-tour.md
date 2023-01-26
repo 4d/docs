@@ -341,6 +341,22 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+A 4D code line is limited to the maximum size of a line (32,000 characters).
+
+You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. The 4D language will consider all the lines at once. Por ejemplo, ambas sentencias son equivalentes:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Comentarios
 
 Los comentarios son líneas de instrucciones inactivas. Estas líneas no son interpretadas por el programa 4D y no se ejecutan cuando el código se llama.
@@ -352,7 +368,7 @@ Hay dos maneras de crear comentarios:
 
 Ambos estilos de comentarios pueden utilizarse simultáneamente.
 
-#### Línea de comentario (//)
+#### Single line comments (`//comment`)
 
 Inserte `//` al principio de una línea o después de una instrucción para añadir una línea de comentario. Ejemplo:
 
@@ -365,7 +381,7 @@ For($vCounter;1;100) //Inicio del bucle
  End for
 ```
 
-#### Comentarios en línea o multilínea (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Rodea el contenido con los caracteres `/*` ... `*/` para crear comentarios en línea o bloques de comentarios multilínea. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
