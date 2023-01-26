@@ -30,9 +30,9 @@ Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha 
 |             | Null `=` *valor escalar* | Boolean  | a.nullProp `=` 42              | False |
 | Desigualdad | Null `#` Null            | Boolean  | a.nullProp `#` b.nullProp      | False |
 |             | Null `#` Undefined       | Boolean  | a.nullProp `#` b.undefinedProp | False |
-|             | Null `#` *scalar value*  | Boolean  | a.nullProp `#` 42              | True  |
+|             | Null `#` *valor escalar* | Boolean  | a.nullProp `#` 42              | True  |
 
-*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ej:
+*valores escalares* son valores de tipo Cadena, Fecha, Hora, Booleano, Número o Blob. Cuando se declaran, su [valor por defecto](data-types.md#default-values) no es ni indefinido ni null. Otros tipos (Puntero, Imagen, Objeto, Colección) tienen un valor por defecto indefinido o null. Ej:
 
 ```4d
 var $object : Object
@@ -44,28 +44,28 @@ var $text : Text
 
 |
 
-Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported with Null values and return an error.
+Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no se admiten con valores Null y devuelven un error.
 
 :::
 
-## Undefined operators
+## Operadores indefinidos
 
 
 | Operación         | Sintaxis                                              | Devuelve | Expression                          | Valor |
 | ----------------- | ----------------------------------------------------- | -------- | ----------------------------------- | ----- |
-| Igual             | Undefined `=` Undefined                               | Boolean  | a.undefinedProp `=` b.undefinedProp | True  |
+| Igual             | Indefinido `=` Indefinido                             | Boolean  | a.undefinedProp `=` b.undefinedProp | True  |
 |                   | Undefined `=` Null                                    | Boolean  | a.undefinedProp `=` c.nullProp      | True  |
-|                   | Undefined `=` *other values*                          | Boolean  | a.undefinedProp `=` 42              | False |
+|                   | Undefined `=` *otros valores*                         | Boolean  | a.undefinedProp `=` 42              | False |
 | Desigualdad       | Undefined `#` Undefined                               | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
 |                   | Undefined `#` Null                                    | Boolean  | a.undefinedProp `#` b.nullProp      | False |
 |                   | Undefined `#` Undefined                               | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
-|                   | Undefined `#` *other values*                          | Boolean  | a.undefinedProp `#` 42              | True  |
+|                   | Undefined `#` *otros valores*                         | Boolean  | a.undefinedProp `#` 42              | True  |
 | Mayor que         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"        | False |
 | Menor que         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"        | False |
 | Mayor o igual que | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"       | False |
 | Menor o igual que | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"       | False |
 
-*other values* are expressions of any type with a value neither Undefined nor Null.
+*otros valores* son expresiones de todo tipo con un valor ni Undefined ni Null.
 
 |
 
@@ -95,7 +95,7 @@ $result:=Undefined($vEmp.parent) //True
 $result:=($vEmp.parent=Null) //True
 ```
 
-Examples of comparison results with undefined and null values:
+Ejemplos de resultados de comparación con valores indefinidos y null:
 
 ```4d
 var $result : Boolean
