@@ -12,7 +12,7 @@ Manejo de erros responde à duas necessidades principais:
 
 :::dica Boa prática
 
-É altamente recomendável instalar um método global de tratamento de erros no Servidor 4D, para todos os códigos em execução no servidor. Este método evitaria caixas de diálogo inesperadas a serem exibidas na máquina do servidor (se executado com interface), e poderia registar erros num arquivo dedicado para análises posteriores.
+É altamente recomendável instalar um método global de tratamento de erros no Servidor 4D, para todos os códigos em execução no servidor. When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis.
 
 :::
 
@@ -58,9 +58,9 @@ O comando  [`Método chamado por erro`](https://doc.4d.com/4dv19/help/command/en
 
 Um método de tratamento de erros pode ser definido para diferentes contextos de execução:
 
-- para o processo atual ****- um gerenciador de erros local só será chamado para erros que tenham ocorrido no processo actual,
-- para toda a aplicação ****- um gerenciador de erros global será chamado para todos os erros que ocorreram no contexto da execução da aplicação,
-- para os componentes ****- será chamada no anfitrião para todos os erros que ocorreram nos componentes.
+- for the **current process**- a local error handler will be only called for errors that occurred in the current process of the current project,
+- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context of the current project,
+- from the **components**- this error handler is defined in a host project and will be called for all errors that occurred in the components when they were not already caught by a component handler.
 
 Exemplos:
 
@@ -72,12 +72,11 @@ ON ERR CALL("componentHandler";ek erros de componentes) //Instala um método de 
 
 Pode instalar um gerenciador de erros global que servirá como "fallback" e métodos de erros locais específicos para certos processos. Um manipulador de erros global é também útil no servidor para evitar diálogos de erro no servidor quando executado com interface.
 
-Pode definir um único método de captura de erros para toda a aplicação ou diferentes métodos por módulo de aplicação. No entanto, apenas um método pode ser instalado por contexto de execução.
+Pode definir um único método de captura de erros para toda a aplicação ou diferentes métodos por módulo de aplicação. However, only one method can be installed per execution context and per project.
 
-Quando ocorre um erro, apenas um método é chamado, mesmo que sejam instalados vários manipuladores de erros "simultâneos":
+When an error occurs, only one method is called, as described in the following diagram:
 
-- se o erro ocorrer no processo actual, o manipulador local é chamado e NÃO o manipulador global;
-- se o erro ocorrer num componente e o componente tiver o seu próprio manipulador de erros, o manipulador de erros do componente é chamado e NÃO o manipulador de "erros de componentes" da aplicação anfitriã.
+![error management](../assets/en/Concepts/error-schema.png)
 
 
 ### Manejo de erros dentro do método
