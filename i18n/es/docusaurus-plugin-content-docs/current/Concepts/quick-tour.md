@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Este código mostrará una caja de diálogo de alerta estándar de la plataforma con el mensaje "Hello, World!", que contiene un botón de OK. Para ejecutar el código, basta con hacer clic en el botón de ejecución en el editor de código:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 O bien, podría adjuntar este código a un botón de formulario y ejecutarlo, en cuyo caso al hacer clic en el botón se mostraría la caja de diálogo de alerta. En todo caso, ¡acaba de ejecutar su primera línea de código 4D!
 
@@ -107,7 +107,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo d
 
 4D ofrece un gran número de métodos (o comandos) integrados, pero también le permite crear sus propios **métodos de proyecto**. Los métodos de proyecto son métodos definidos por el usuario que contienen comandos, operadores y otras partes del lenguaje. Los métodos proyecto son métodos genéricos, pero hay otros tipos de métodos: métodos objeto, métodos formulario, métodos tabla (Triggers) y métodos base.
 
-Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja.
+Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. A statement performs an action, and may be simple or complex.
 
 Por ejemplo, la siguiente línea es una sentencia que mostrará una caja de diálogo de confirmación:
 
