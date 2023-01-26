@@ -12,7 +12,7 @@ title: エラー処理
 
 :::tip グッドプラクティス
 
-サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 このメソッドによって、サーバーマシンにおいて予期せぬダイアログが表示されることを防ぎ (インターフェース付きでサーバーが実行されている場合)、エラーの調査に必要なログを専用ファイルにとることができます。
+サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis.
 
 :::
 
@@ -58,9 +58,9 @@ ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検�
 
 エラー処理メソッドは、実行コンテキストごとに設定することができます:
 
-- **カレントプロセス** - ローカルなエラーハンドラーはカレントプロセスで発生したエラーに対してのみ呼び出されます。
-- **アプリケーション全体** - グローバルなエラーハンドラーは、アプリケーションの実行コンテキストで発生したすべてのエラーに対して呼び出されます。
-- **コンポーネント** - コンポーネント内で発生したすべてのエラーに対して、ホスト内で呼び出されます。
+- for the **current process**- a local error handler will be only called for errors that occurred in the current process of the current project,
+- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context of the current project,
+- from the **components**- this error handler is defined in a host project and will be called for all errors that occurred in the components when they were not already caught by a component handler.
 
 例:
 
@@ -72,12 +72,11 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 "フォールバック" として機能するグローバルエラーハンドラーと、特定プロセス専用のローカルエラーハンドラーを同時にインストールすることができます。 グローバルなエラーハンドラーは、インターフェース付きでサーバーを実行している場合にエラーダイアログの表示を避けるためにも有効です。
 
-アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 ただし、一つの実行コンテキストにつき実装できるのは一つのメソッドのみです。
+アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 However, only one method can be installed per execution context and per project.
 
-複数のエラーハンドラーが同時にインストールされている場合でも、エラー発生時に呼び出されるのは 1つのみです:
+When an error occurs, only one method is called, as described in the following diagram:
 
-- カレントプロセスでエラーが発生した場合、ローカルハンドラーが呼ばれ、グローバルハンドラーは呼ばれません。
-- コンポーネントでエラーが発生し、かつ、そのコンポーネントにおいて独自のエラーハンドラーが実装されている場合、ホストアプリケーションのコンポーネント用ハンドラーではなく、コンポーネント自身のエラーハンドラーが呼び出されます。
+![error management](../assets/en/Concepts/error-schema.png)
 
 
 ### メソッド内でのエラー処理
