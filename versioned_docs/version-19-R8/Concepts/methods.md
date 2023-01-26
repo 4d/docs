@@ -4,7 +4,9 @@ title: Methods
 ---
 
 
-A method is basically a piece of code that executes one or several actions. A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
+A method is basically a piece of code that executes one or several action(s). A method is composed of statements. 
+
+A statement performs an action, and may be simple or complex. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)). 
 
 The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.  
 
@@ -17,10 +19,10 @@ In the 4D Language, there are several categories of methods. The category depend
 |**Project method**|On demand, when the project method name is called (see [Calling project methods](#calling-project-methods))|Yes|Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.|
 |**Object (widget) method**|Automatic, when an event involves the object to which the method is attached|No|Property of a form object (also called widget)|
 |**Form method**|Automatic, when an event involves the form to which the method is attached|No|Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes.|
-|**Trigger** (aka *Table method*)|Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)|No|Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.|
-|**Database method**|Automatic, when a working session event occurs|Yes (predefined)|There are 16 database methods in 4D. See Database methods section|
+|**Trigger** (aka *Table method*)|Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)|No|Property of a table. Triggers are methods that can prevent "illegal" operations with the records of your database.|
+|**Database method**|Automatic, when a working session event occurs|Yes (predefined)|There are 16 database methods in 4D. |
+|**Class**|[**Class functions**](classes.md#function) are called in the context of an object instance|yes|Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or created by the 4D developer. See [**Classes**](classes.md) |
 
-> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
 ## Calling Project Methods
 
@@ -87,7 +89,7 @@ You can encapsulate your project methods in **formula** objects and call them fr
 
 The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. For example:
+To execute a method stored in an object property, use the **()** operator after the property name. For example:
 
 ```4d
 //myAlert
@@ -97,7 +99,7 @@ ALERT("Hello world!")
 Then `myAlert` can be encapsulated in any object and called:
 
 ```4d
-C_OBJECT($o)
+var $o : Object
 $o:=New object("custom_Alert";Formula(myAlert))
 $o.custom_Alert() //displays "Hello world!"
 ```
@@ -119,11 +121,11 @@ $0:=$1+" "+$2
 You can encapsulate `fullName` in an object:
 
 ```4d
-C_OBJECT($o)
+var $o : Object
 $o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
-// equivalent to $result:=fullName("param1";"param2")
+//equivalent to $result:=fullName("param1";"param2")
 ```
 
 Combined with the `This`function, such object methods allow writing powerful generic code. For example:
@@ -137,7 +139,7 @@ $0:=This.firstName+" "+This.lastName
 Then the method acts like a new, calculated attribute that can be added to other attributes:
 
 ```4d
-C_OBJECT($o)
+var $o : Object
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=Formula(fullName2) //add the method  
 
@@ -145,7 +147,7 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
-Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
+Note that, even if it does not have parameters, an object method to be executed must be called with `()` parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
 
 ```4d
 $o:=$f.message //returns the formula object in $o
@@ -167,7 +169,7 @@ A **process method** is a project method that is called when a process is starte
 
 An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
 
-An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
+An **error catching method** is an interrupt-based project method. It is called each time an error or an exception occurs. For more information, see the [Error handling](error-handling.md) section.
 
 ### Manual Execution
 
