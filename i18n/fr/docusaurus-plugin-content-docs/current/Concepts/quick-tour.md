@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Ce code affichera une boîte de dialogue d'alerte standard contenant le message "Hello, World!" et un bouton OK. Pour exécuter le code, il suffit de cliquer sur le bouton d'exécution dans l'éditeur de code :
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Vous pouvez également associer ce code à un bouton de formulaire et exécuter le formulaire. Dans ce cas, en cliquant sur le bouton, vous afficherez la boîte de dialogue d'alerte. Dans tous les cas, vous venez d'exécuter votre première ligne de code 4D !
 
@@ -106,7 +106,7 @@ vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lectu
 
 4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
 
-Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.
+Une méthode est composée de plusieurs lignes d’instructions. A statement performs an action, and may be simple or complex.
 
 Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :
 
