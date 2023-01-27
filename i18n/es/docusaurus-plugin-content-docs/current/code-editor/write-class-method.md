@@ -26,7 +26,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Últimos valores del portapapeles** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Muestra los últimos valores almacenados en el portapapeles.                                                                                                                                                                                                                                                                                    |
 | **Portapapeles**                     | ![iconos del portapapeles](../assets/en/code-editor/clipboards.png)               | Nueve portapapeles disponibles en el editor de código. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                 |
-| **Despliegue de navegación**         | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Le permite navegar dentro de métodos y clases con contenido etiquetado automáticamente o marcadores declarados manualmente. See below                                                                                                                                                                                                          |
+| **Despliegue de navegación**         | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Le permite navegar dentro de métodos y clases con contenido etiquetado automáticamente o marcadores declarados manualmente. Ver abajo                                                                                                                                                                                                          |
 
 
 ## Área de edición
@@ -42,6 +42,19 @@ Puede personalizar la visualización del área de edición. Any customization is
 | **espacios**                                    | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espacios en blanco**                                                                                                                                                                                       |
 | **temas**                                       | Puedes seleccionar el tema Dark o Light, o definir uno personalizado                                                                                                                                        | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                  |
 | **ancho de indentaciones de código**            | Define el ancho de las sangrías de código                                                                                                                                                                   | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                  |
+
+### Change bars
+
+Colored bars instantly show you where lines of code were modified since the method was opened:
+
+![](../assets/en/code-editor/change-bars.png)
+
+The change bars change colors to indicate whether or not the modifications were saved:
+
+- yellow: Line was modified and method has not yet been saved.
+- green: Line was modified and method has been saved.
+
+
 
 ## Lists area
 
@@ -112,6 +125,8 @@ You can display or hide the line numbers in the break points area for each windo
 
 Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
 
+This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
+
 ## Barra de estado
 
 The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
@@ -135,25 +150,25 @@ Under Windows, the code editor includes an Input Code Editor (IME) to facilitate
 
 The Code Editor includes numerous [navigation shortcuts](#shortcuts).
 
-:::note
+#### Using the backslash
 
-For better readability, the 4D language supports [single statements written on several lines](../Concepts/quick-tour.md#code-on-several-lines) using the backslash `\` character.
+The backslash character (`\`) has a specific support in the 4D language:
+
+- inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
+- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
+
+
+:::caution
+
+The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. For instance,``C:\MyDocuments`will become`C:\\MyDocuments`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
 
+
 #### Drag-and-drop from the Explorer
 
-Desde el Explorador, puedes arrastrar y soltar:
-
-- Nombres de tablas, nombres de campos, nombres de formularios y métodos proyecto desde la página de inicio.
-- Nombres de tablas y nombres de campos de la página Tablas,
-- Nombres de tablas y formularios de la página Formularios,
-- Project methods and form names from the Methods page,
-- Constantes de la página de Constantes,
-- Comandos 4D de la página Comandos.
-
-When you drag and drop a component, 4D always uses the correct syntax for the component. For example, if you drag the field name "First Name" from the [People] table, it appears in the Code Editor as "[People]First Name." Similarly, if you drag the Form name "Input" from the People table, it appears in the Code Editor as "[People];"Input"."
+From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
 When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
 
@@ -211,23 +226,8 @@ Puede utilizar la opción [Preferencias](Preferences/methods.md#options-1) para 
 
 You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the combination **Alt/Option** + **Up Arrow** or **Down Arrow**.
 
-#### Change bars
-
-Colored bars instantly show you where lines of code were modified since the method was opened:
-
-![](../assets/en/code-editor/change-bars.png)
-
-The change bars change colors to indicate whether or not the modifications were saved:
-
-- yellow: Line was modified and method has not yet been saved.
-- green: Line was modified and method has been saved.
 
 
-
-
-
-
-Puede hacer doble clic para seleccionar "palabras" individuales. When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
 
 
 ## Uso de las funciones de autocompletar
@@ -324,6 +324,7 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 | [Ctrl]+[K] or [Alt]+double-click on a project method name   | Abrir el método proyecto en una nueva ventana                                                                                              |
 | \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 
+Puede hacer doble clic para seleccionar "palabras" individuales. When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
 
 ## Comprobación y corrección de errores de sintaxis
 
@@ -381,7 +382,7 @@ To display the documentation of a 4D "classic" language command, select the comm
 
 ## Comentar/Descomentar
 
-The [4D language supports comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. No hay límite en el número de líneas.
+The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. No hay límite en el número de líneas.
 
 There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
 
@@ -392,30 +393,6 @@ Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** 
 When the selection contains only active code, the **Comment** command is applied. When the selection includes both active code and commented lines, an additional pair of comment characters ( // ) is added to the latter; this way, they will retain their initial commented status if the line is subsequently "uncommented." Cuando la selección contiene sólo líneas comentadas, se aplica el comando **Descomentar**.
 
 > The **Comment/Uncomment** command only operates with full lines --- it cannot be used to comment only part of a line.
-
-## Usar secuencias de escape
-
-The Code Editor allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
-
-The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
-
-En 4D, se pueden utilizar las siguientes secuencias de escape:
-
-| Secuencias de escape              | Carácter reemplazado |
-| --------------------------------- | -------------------- |
-| `\n`                             | LF (Retorno línea)   |
-| `\t`                             | HT (Tabulación)      |
-| `\r`                             | CR (Retorno carro)   |
-| ``\\` |``&#96; (barra inversa) |                      |
-| `\"`                             | " (Comillas)         |
-
-> Es posible utilizar mayúsculas o minúsculas en las secuencias de escape.
-
-In the following example, the **Carriage return** character (escape sequence \r) is inserted in a statement in order to obtain the dialog box shown:
-
-`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-
-**Warning:** The `\` (backslash) character is used as a separator in pathnames under Windows. In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. Por ejemplo,``C:\Folder`se convertirá en`C:\Folder`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. En este caso, la segunda barra invertida se interpreta incorrectamente como`\N`(una secuencia de escape existente). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 
 ## Expandir / Contraer
@@ -522,12 +499,6 @@ The **Search Callers** command in the **Method** menu is only enabled for pr
 Selecting the **Find...** command displays the following dialog box:
 
 Este comando muestra sus resultados en una nueva ventana.
-
-## Goto Line
-
-This specific search command is located in the **Method** menu. It opens a dialog box where you can indicate the line number you want to find. When you click **OK**, the editor finds and highlights that line in the method. This type of search is useful when used in conjunction with the compiler, which flags runtime errors by the line number in which they occur.
-
-You can choose whether or not to display lines numbers in the Code Editor window. This option is described in the [Interface](./interface.md#break-points-area) section.
 
 ## Despliegue de navegación
 
