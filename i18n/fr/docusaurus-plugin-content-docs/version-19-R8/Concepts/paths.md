@@ -21,14 +21,14 @@ De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fou
 
 Les filesystem suivants sont pris en charge :
 
-| filesystem   | Désigne                                                       |
-| ------------ | ------------------------------------------------------------- |
-| "/DATA"      | Dossier data courant                                          |
-| "/LOGS"      | Dossier Logs                                                  |
-| "/PACKAGE"   | Dossier de la base de données (avec ou sans extension 4dbase) |
-| "/PROJECT"   | Dossier Project                                               |
-| "/RESOURCES" | Dossier des ressources de la base                             |
-| "/SOURCES"   | Dossier des ressources du projet                              |
+| filesystem   | Designates                                         |
+| ------------ | -------------------------------------------------- |
+| "/DATA"      | Current data folder                                |
+| "/LOGS"      | Dossier Logs                                       |
+| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
+| "/PROJECT"   | Dossier Project                                    |
+| "/RESOURCES" | Current database resources folder                  |
+| "/SOURCES"   | Current project resources folder                   |
 
 ## Syntaxe POSIX
 
@@ -46,6 +46,7 @@ Dans la syntaxe POSIX, vous utiliserez généralement les chemins `filesystem` a
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 ## Syntaxe spécifique à la plate-forme
@@ -67,23 +68,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Saisie de chemins Windows et séquences d'échappement
+#### Windows pathnames and escape sequences
 
-L'[éditeur de code 4D](../code-editor/write-class-method.md) permet l'utilisation de séquences d'échappement. Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”. La séquence débute par le caractère barre oblique inversée (antislash) `\`, suivi d’un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
+The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
 
-Le caractère `\` est également utilisé comme séparateur dans les noms de chemin sous Windows. En général, 4D interprète correctement les chemins Windows saisis dans l'éditeur de code en remplaçant les barres obliques simples `\` par des barres obliques doubles ``\\`. Par exemple,``C:\Folder`deviendra`C:\\Folder`.
-
-Toutefois, si vous écrivez `C:\MyDocuments\New`, 4D affichera `C:\\MyDocuments\New`. Dans ce cas, le deuxième `\` est interprété à tort comme `\N` (une séquence d'échappement existante). Vous devez donc saisir un double `\\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
-
-Les séquences d'échappement suivantes sont reconnues par 4D :
-
-| Séquence d’échappement       | Caractère remplacé  |
-| ---------------------------- | ------------------- |
-| `\n`                        | LF (Retour ligne)   |
-| `\t`                        | HT (Tabulation)     |
-| `\r`                        | CR (Retour chariot) |
-| ``\\`|``&#96; (Backslash) |                     |
-| `\"`                        | `"` (Guillemets)    |
+Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
 
 ### macOS
 
