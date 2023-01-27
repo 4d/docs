@@ -125,7 +125,7 @@ var $o : Object
 $o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
-//equivalent to $result:=fullName("param1";"param2")
+//equivalente a $result:=fullName("param1";"param2")
 ```
 
 Combinados con la función `This`, estos métodos objetos permiten escribir un código genérico muy poderoso. Por ejemplo:
@@ -147,7 +147,7 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
-Note that, even if it does not have parameters, an object method to be executed must be called with `()` parenthesis. Llamar sólo a la propiedad del objeto devolverá una nueva referencia a la fórmula (y no la ejecutará):
+Tenga en cuenta que, aunque no tenga parámetros, un método objeto que vaya a ejecutarse debe llamarse con paréntesis `()`. Llamar sólo a la propiedad del objeto devolverá una nueva referencia a la fórmula (y no la ejecutará):
 
 ```4d
 $o:=$f.message //devuelve el objeto fórmula en $o
@@ -169,7 +169,7 @@ Un **método proyecto** es un método proyecto que se llama cuando se inicia un 
 
 Un **método de gestión de eventos** es un método dedicado a la gestión de eventos, que se ejecuta en un proceso diferente del método de gestión de procesos. Generalmente, para la gestión de eventos, 4D se encarga de la mayor parte. Por ejemplo, durante la entrada de datos, 4D detecta las pulsaciones de las teclas y los clics, y luego llama a los métodos objeto y formulario correspondientes para que usted pueda responder adecuadamente a los eventos desde estos métodos. Para más información, consulte la descripción del comando `ON EVENT CALL`.
 
-Un **método de gestión de errores** es un método proyecto basado en interrupciones. It is called each time an error or an exception occurs. For more information, see the [Error handling](error-handling.md) section.
+Un **método de gestión de errores** es un método proyecto basado en interrupciones. Se llama cada vez que se produce un error o una excepción. Para más información, consulte la sección [Gestión de errores](error-handling.md).
 
 ### Execution mode
 
