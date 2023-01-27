@@ -43,6 +43,19 @@ title: コードエディター
 | **テーマ**                | Dark または Light テーマが選択できるほか、カスタムテーマも設定可能です                                                       | **環境設定** ＞ [**メソッド**](../Preferences/methods.md)                                                                                      |
 | **コードインデント幅**          | コードのインデント幅を設定します                                                                                | **環境設定** ＞ [**メソッド**](../Preferences/methods.md)                                                                                      |
 
+### 更新行の通知
+
+エディターで開いた後に更新されたコードの行には色つきのバーが表示されます:
+
+![](../assets/en/code-editor/change-bars.png)
+
+変更が保存されたかどうかは、バーの色で表されます:
+
+- 黄色: 行は変更されたが、保存されていない。
+- 緑色: 行は変更され、保存された。
+
+
+
 ## リストエリア
 
 リストエリアにはメソッドやクラスの記述に必要となるコード要素 (コマンド、定数、フォーム等) のリストを 1つ以上表示できます。 表示するリストの数や種類は変更することができます。
@@ -112,6 +125,8 @@ title: コードエディター
 
 行番号を表示すると、ウィンドウ内で特定の行を見つけやすくなります。 **メソッド** メニューの **行番号を指定して移動...** コマンドを利用する場合も、この行番号を使用します。
 
+This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
+
 ## ステータスバー
 
 エディターウィンドウの右下にはステータスバーがあり、カーソルの位置を表示します:
@@ -135,25 +150,23 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 コードエディターでは、複数の [ナビゲーションショートカット](#ショートカット) がサポートされています。
 
-:::note
+#### Using the backslash
 
-可読性向上のため、4Dランゲージではバックスラッシュ `\` 文字を使って、[1つのステートメントを複数行に分割して](../Concepts/quick-tour.md#行を分割する) 記述することができます。
+The backslash character (`\`) has a specific support in the 4D language:
 
-:::
+- inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
+- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
 
 
-#### Drag-and-drop from the Explorer
+:::caution
 
-エクスプローラーからは以下のものをドラッグ＆ドロップできます:
+The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). 通常、4D はコードエディターに入力された Windows のパス名のバックスラッシュを自動で `\` に置き換えることで、これを正しく解釈します。 For instance,</code>C:\MyDocuments`will become`C:\\MyDocuments`. しかし、<code>"C:\MyDocuments\New"` と入力した場合、4Dは `"C:\\MyDocuments\New"`と表示します。 In this case, the second backslash is interpreted incorrectly as</code>\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). このようなケースでは、開発者がバックスラッシュを 2つ入力するようにしなければなりません。</p>
 
-- ホームページからテーブル名、フィールド名、フォーム名、そしてプロジェクトメソッド。
-- テーブルページからテーブル名とフィールド名。
-- フォームページからテーブル名とフォーム名。
-- メソッドページからプロジェクトメソッドおよびフォーム名。
-- 定数ページから定数。
-- コマンドページから 4Dコマンド。
+<p spaces-before="0">:::</p>
 
-ドラッグ＆ドロップをおこなうと、4D は常に正しいシンタックスでオブジェクトを挿入します。 たとえば、[People]テーブルから "FirstName" フィールドをドロップすると、コードエディターには "[People]FirstName" が表示されます。 同様に、[People]テーブルから "Input" フォームをドロップすると、"[People];"Input"" と挿入されます。
+<h4 spaces-before="0">Drag-and-drop from the Explorer</h4>
+
+<p spaces-before="0">From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the <code>[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
 エクスプローラーの **コマンド** ページからコマンドをドラッグすると、コードエディターにはシンタックス (すべての引数が含まれる) も挿入されます。 この機能は、コマンドが期待する引数を確認するために存在します。 挿入されたシンタックスは、用途に合わせて編集できます。
 
@@ -211,23 +224,8 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 カーソルのある行を選択せずに、上下に移動することができます。これには、**メソッド** メニューの **行を上に移動** / **行を下に移動** コマンドを使用します。 また、**Alt/Option** + **上矢印** / **下矢印** の組み合わせでも同様に操作できます。
 
-#### 更新行の通知
-
-エディターで開いた後に更新されたコードの行には色つきのバーが表示されます:
-
-![](../assets/en/code-editor/change-bars.png)
-
-変更が保存されたかどうかは、バーの色で表されます:
-
-- 黄色: 行は変更されたが、保存されていない。
-- 緑色: 行は変更され、保存された。
 
 
-
-
-
-
-単語を選択するには、選択したい単語上でダブルクリックします。 参照される名前 (コマンド、定数、メソッド等) にスペースが含まれる場合には、**Alt/Option + ダブルクリック** でスペースを含む名前全体を選択できます。
 
 
 ## 自動補完機能
@@ -324,6 +322,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 | プロジェクトメソッド名上で [Ctrl]+[K] または [Alt]+ダブルクリック        | プロジェクトメソッドを新しいウィンドウで開きます。                                                     |
 | トークン上で \[Ctrl\] (Windows) または [Alt] を押しながらマウスオーバー | トークン (認識されたランゲージ要素) に下線を引きます。 下線が引かれたトークンをクリック = [**定義を開く**](#定義を開く) コマンドと同じ。 |
 
+単語を選択するには、選択したい単語上でダブルクリックします。 参照される名前 (コマンド、定数、メソッド等) にスペースが含まれる場合には、**Alt/Option + ダブルクリック** でスペースを含む名前全体を選択できます。
 
 ## シンタックスエラーのチェックと訂正
 
@@ -381,7 +380,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 ## コメント/アンコメント
 
-[4Dランゲージはコメントをサポートしています](../Concepts/quick-tour.md#コメント)。コメントとは、コード内の実行されない行のことです。 コードエディターは、コメントに特定のスタイルを適用しません。 コメントの長さは、各行につき最大32,000文字までです。 行数については制限はありません。
+The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. コードエディターは、コメントに特定のスタイルを適用しません。 コメントの長さは、各行につき最大32,000文字までです。 行数については制限はありません。
 
 コメントの書き方は 2通りあります: `//コメント` (単一行のコメント) と `/*コメント*/` (インラインコメントや複数行のコメントブロック)。
 
@@ -392,30 +391,6 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 選択行がアクティブなコードの場合、**コメント** コマンドが適用されます。 選択行にアクティブコードとコメントの両方が含まれる場合、すべての行に "//" が追加されます。この動作により、複数回コマンドを適用しても、その後のアンコメント時に初期のコメントが維持されます。 選択行がすべてコメントのみの場合、**アンコメント** コマンドが適用されます。
 
 > **コメント/アンコメント** コマンドは行全体に適用されます。行の一部のみをコメント化することはできません。
-
-## エスケープシーケンス
-
-コードエディターでエスケープシーケンス (エスケープ文字) を使用できます。 エスケープシーケンスとは、特別な文字の代わりに使用される一連の文字です。
-
-エスケープシーケンスは一文字目がバックスラッシュ `\` であり、そのあとに文字が続きます。 たとえば `\t` は **Tab** 文字のエスケープシーケンスです。 エスケープシーケンスを使用すると特別な文字の入力が容易になります。たとえば `\t` を Char(Tab) の代わりに使用できます。
-
-4D では以下のエスケープシーケンスを使用できます:
-
-| エスケープシーケンス                   | 意味する文字   |
-| ---------------------------- | -------- |
-| `\n`                        | LF (行送り) |
-| `\t`                        | HT (タブ)  |
-| `\r`                        | CR (改行)  |
-| ``\\` |``&#96; (バックスラッシュ) |          |
-| `\"`                        | " (引用符)  |
-
-> エスケープシーケンスでは文字の大小は区別されません。
-
-以下の例題では、**キャリッジリターン** 文字 (エスケープシーケンス `\r`) を使用して、警告ダイアログに表示されるメッセージに改行を挿入しています:
-
-`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-
-**警告**: `\` (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 通常、4D はコードエディターに入力された Windows のパス名のバックスラッシュを自動で `\` に置き換えることで、これを正しく解釈します。 たとえば、`C:\Folder` と入力すると `C:\\Folder` に変換されます。 しかし、`"C:\MyDocuments\New"` と入力した場合、4Dは `"C:\\MyDocuments\New"`と表示します。 この場合、二番目のバックスラッシュは `\N` (行送り) と解釈されてしまいます。 このようなケースでは、開発者がバックスラッシュを 2つ入力するようにしなければなりません。
 
 
 ## 展開 / 折りたたみ
@@ -522,12 +497,6 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 **注:** **呼出し元を検索...** コマンドは **エクスプローラー** の **メソッド** ページからも利用できます。
 
 このコマンドの結果は新規ウィンドウに表示されます。
-
-## 行番号を指定して移動
-
-この検索コマンドは **メソッド** メニューの中にあります。 このコマンドは、移動したい行番号を指定するためのダイアログボックスを開きます。 **OK** ボタンをクリックすると、コマンドはメソッド内で該当行を検索し、ハイライトします。 このような検索は、実行時エラーでコンパイラーが示すエラー行を表示するのに便利です。
-
-コードエディターウィンドウに行番号を表示するかしないかは、選択することができます。 このオプションについては [ブレークポイントエリア](./write-class-method.md#ブレークポイントエリア) を参照ください。
 
 ## ナビゲーションドロップダウン
 
