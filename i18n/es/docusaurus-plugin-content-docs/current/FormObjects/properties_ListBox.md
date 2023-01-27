@@ -103,7 +103,7 @@ This property is used to specify the set to be used to manage highlighted record
 Locked columns and static columns are two separate and independent functionalities in list boxes:
 
 *   Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
-*   Static columns cannot be moved by drag and drop within the list box.
+*   Las columnas estáticas no pueden moverse arrastrándolas y soltándolas dentro del list box.
 > > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
 
 Estas propiedades interactúan de la siguiente manera:
