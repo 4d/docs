@@ -41,7 +41,7 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 ### クラス定義
 
-A user class in 4D is defined by a specific [method](methods.md) file (.4dm), stored in the `/Project/Sources/Classes/` folder. ファイル名がクラス名になります。
+4D においてユーザークラスとは、`/Project/Sources/Classes/` フォルダーに保存された専用の [メソッド](methods.md) ファイル (.4dm) によって定義されます。 ファイル名がクラス名になります。
 
 クラスを命名する際には、次のルールに留意してください:
 
