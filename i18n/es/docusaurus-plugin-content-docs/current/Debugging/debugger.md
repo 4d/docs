@@ -165,9 +165,9 @@ Este tema se compone de los siguientes subtemas:
 | Parámetros   | Lista de parámetros recibidos por el método                              | Sí                                |
 | Self         | Puntero al objeto actual, cuando se rastrea un método Objeto             | No                                |
 
-Los arrays, al igual que otras variables, aparecen en los subtemas Interproceso, Proceso y Local, dependiendo de su alcance. El depurador muestra los primeros 100 elementos. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
+Los arrays, al igual que otras variables, aparecen en los subtemas Interproceso, Proceso y Local, dependiendo de su alcance. El depurador muestra los primeros 100 elementos. Dentro de la columna **Valor**, puede modificar los valores de los elementos del array, pero no el tamaño de los arrays.
 
-To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
+Para mostrar los tipos de variables y sus nombres internos, haga clic derecho y marque la opción **Mostrar tipos** del menú contextual:
 
 ![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
@@ -197,13 +197,13 @@ Este tema lista los procesos iniciados desde el comienzo de la sesión de trabaj
 
 #### Tablas y campos
 
-Este tema lista las tablas y los campos en la base 4D. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
+Este tema lista las tablas y los campos en la base 4D. Para cada elemento de la Tabla, la columna Valor muestra el tamaño de la selección actual para el proceso actual, así como el número de **registros bloqueados**.
 
 Para cada elemento Campo, la columna Valor muestra el valor del campo para el registro actual (excepto imagen y BLOB). Puede modificar los valores de los campos pero no la información de las tablas.
 
 #### Conjuntos
 
-Este tema lista los conjuntos definidos en el proceso actual (el que está rastreando en ese momento) y los conjuntos interprocesos. For each set, the Value column displays the number of records and the table name. Las expresiones de este tema no pueden ser modificadas.
+Este tema lista los conjuntos definidos en el proceso actual (el que está rastreando en ese momento) y los conjuntos interprocesos. Para cada conjunto, la columna Valor muestra el número de registros y el nombre de la tabla. Las expresiones de este tema no pueden ser modificadas.
 
 #### Selecciones temporales
 
@@ -215,7 +215,7 @@ This theme contains general information regarding database operation, such as th
 
 #### Web
 
-This theme displays information regarding the main Web server of the application (only available if the Web server is active):
+Este tema muestra información relativa al servidor Web principal de la aplicación (sólo disponible si el servidor Web está activo):
 
 * Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
 * Web Cache Usage: number of pages present in Web cache as well as its use percentage
