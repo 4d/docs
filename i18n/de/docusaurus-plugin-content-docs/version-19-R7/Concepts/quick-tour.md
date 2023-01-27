@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Dieser Code zeigt ein standardmäßiges Dialogfenster der Plattform mit der Meldung "Hello, World!" mit der Schaltfläche OK. To execute the code, you just need to click on the execution button in the Code Editor:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Sie können diesen Code auch einer Schaltfläche in einem Formular zuordnen und das Formular ausführen. Klicken Sie auf diese Schaltfläche, erscheint das Dialogfenster mit der Meldung. In jedem Fall haben Sie gerade Ihre erste Zeile mit 4D Code ausgeführt!
 
@@ -121,6 +121,7 @@ Folgendes Beispiel durchläuft alle Zeichen des Textes vtSomeText:
 ```4d
 For($vlChar;1;Length(vtSomeText))
     //Do something with the character if it is a TAB
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
@@ -344,9 +345,7 @@ ALERT(MyPointer->)
 
 ## Code on several lines
 
-A 4D code line is limited to the maximum size of a line (32,000 characters).
-
-You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
 
 ```4d
 $str:=String("hello world!")
@@ -409,3 +408,26 @@ comments
 End for
 End for
 ```
+
+## Escape Sequenzen
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+In 4D, the following escape sequences can be used:
+
+| Escape Sequenz                | Ersetzte Zeichen                      |
+| ----------------------------- | ------------------------------------- |
+| `\n`                         | LF (Line feed - Zeilenvorschub)       |
+| `\t`                         | HT (Tabulator)                        |
+| `\r`                         | CR (Carriage return -Zeilenschaltung) |
+| ``\\` |``&#96; (Backslash) |                                       |
+| `\"`                         | " (Anführungszeichen)                 |
+
+> It is possible to use either upper or lower case in escape sequences.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+
