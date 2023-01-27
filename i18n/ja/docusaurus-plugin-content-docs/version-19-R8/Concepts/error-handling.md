@@ -12,7 +12,7 @@ title: エラー処理
 
 :::tip グッドプラクティス
 
-サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis.
+サーバー上で実行されるコードのため、4D Server にはグローバルなエラー処理メソッドを実装しておくことが強く推奨されます。 4D Server が [ヘッドレス](../Admin/cli.md) で実行されていない場合 (つまり、[管理画面](../ServerWindow/overview.md) 付きで起動されている場合)、このメソッドによって、予期せぬダイアログがサーバーマシン上に表示されることを防ぎます。 ヘッドレスモードでは、エラーは解析のため [4DDebugLog ファイル](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) に記録されます。
 
 :::
 
@@ -58,9 +58,9 @@ ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検�
 
 エラー処理メソッドは、実行コンテキストごとに設定することができます:
 
-- for the **current process**- a local error handler will be only called for errors that occurred in the current process of the current project,
-- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context of the current project,
-- from the **components**- this error handler is defined in a host project and will be called for all errors that occurred in the components when they were not already caught by a component handler.
+- **カレントプロセス** - ローカルなエラーハンドラーはカレントプロジェクトのカレントプロセスで発生したエラーに対してのみ呼び出されます。
+- **アプリケーション全体** - グローバルなエラーハンドラーは、カレントプロジェクトのアプリケーションの実行コンテキストで発生したすべてのエラーに対して呼び出されます。
+- **コンポーネント** - このエラーハンドラーはホストプロジェクトにおいて定義され、コンポーネント内で発生したすべてのエラーに対して、(コンポーネント内のハンドラーで処理されない場合に) ホスト内で呼び出されます。
 
 例:
 
@@ -72,11 +72,11 @@ ON ERR CALL("componentHandler";ek errors from components) // コンポーネン�
 
 "フォールバック" として機能するグローバルエラーハンドラーと、特定プロセス専用のローカルエラーハンドラーを同時にインストールすることができます。 グローバルなエラーハンドラーは、インターフェース付きでサーバーを実行している場合にエラーダイアログの表示を避けるためにも有効です。
 
-アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 However, only one method can be installed per execution context and per project.
+アプリケーションにおいて一つのエラーキャッチメソッドを使うやり方もあれば、アプリケーションのモジュールごとに違うメソッドを定義する方法もあります。 ただし、一つのプロジェクトと一つの実行コンテキストにつき実装できるのは一つのメソッドのみです。
 
-When an error occurs, only one method is called, as described in the following diagram:
+エラーが発生した場合、以下の図のように 1つのメソッドのみが呼び出されます:
 
-![error management](../assets/en/Concepts/error-schema.png)
+![エラー管理](../assets/en/Concepts/error-schema.png)
 
 
 ### メソッド内でのエラー処理
