@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Este código mostrará una caja de diálogo de alerta estándar de la plataforma con el mensaje "Hello, World!", que contiene un botón de OK. Para ejecutar el código, basta con hacer clic en el botón de ejecución en el editor de código:
 
-![hello-world](../assets/en/Concepts/helloworld.png)
+![hello world](../assets/en/Concepts/helloworld.png)
 
 O bien, podría adjuntar este código a un botón de formulario y ejecutarlo, en cuyo caso al hacer clic en el botón se mostraría la caja de diálogo de alerta. En todo caso, ¡acaba de ejecutar su primera línea de código 4D!
 
@@ -101,7 +101,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo de sólo lectura
 ```
 
-> Las constantes predefinidas aparecen <u>subrayadas</u> por defecto en el editor de código 4D.
+> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
 
 ## Métodos
 
@@ -121,7 +121,8 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Hacer algo con el carácter si es un TAB
+    //Do something with the character if it is a TAB
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
@@ -343,9 +344,7 @@ ALERT(MyPointer->)
 
 ## Code on several lines
 
-A 4D code line is limited to the maximum size of a line (32,000 characters).
-
-You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. The 4D language will consider all the lines at once. Por ejemplo, ambas sentencias son equivalentes:
+You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. Por ejemplo, ambas sentencias son equivalentes:
 
 ```4d
 $str:=String("hello world!")
@@ -406,3 +405,26 @@ comentarios
 ...
 End for
 ```
+
+## Secuencias de escape
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+En 4D, se pueden utilizar las siguientes secuencias de escape:
+
+| Secuencias de escape              | Carácter reemplazado |
+| --------------------------------- | -------------------- |
+| `\n`                             | LF (Retorno línea)   |
+| `\t`                             | HT (Tabulación)      |
+| `\r`                             | CR (Retorno carro)   |
+| ``\\` |``&#96; (barra inversa) |                      |
+| `\"`                             | " (Comillas)         |
+
+> Es posible utilizar mayúsculas o minúsculas en las secuencias de escape.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+
