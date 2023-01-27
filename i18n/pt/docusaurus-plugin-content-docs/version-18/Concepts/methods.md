@@ -13,7 +13,7 @@ A method is basically a piece of code that executes one or several actions. Na l
 
     Os métodos integrados são detalhados non manual *Linguagem 4D* ou nos manuais dedicados aos plug-ins ou componentes.
 
-- Os **métodos projeto**, onde pode escrever seu próprio código para executar toda ação personalizada. Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). A statement performs an action, and may be simple or complex.
+- Os **métodos projeto**, onde pode escrever seu próprio código para executar toda ação personalizada. Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). A statement performs an action, and may be simple or complex.
 
 **Nota:** 4D também oferece métodos específicos que se executam automaticamente em função dos eventos do banco de dados ou dos eventos formulário. Ver [Métodos especializados](#specialized-methods).
 

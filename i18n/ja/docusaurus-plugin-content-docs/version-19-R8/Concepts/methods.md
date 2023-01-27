@@ -4,23 +4,25 @@ title: メソッド
 ---
 
 
-メソッドとは、1つ以上の動作を実行するコードのことです。 メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。 各ステートメントは常に 1行ですが最大 32,000文字まで使用することができます。
+メソッドとは、1つ以上の動作を実行するコードのことです。 A method is composed of statements.
 
-メソッドは最大 2GBのテキストまたは、32000行まで記述できます。
+A statement performs an action, and may be simple or complex. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)).
+
+The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
 ## メソッドタイプ
 
-4D ランゲージにおいて、数種類のメソッドが存在します。 その呼び出し方によって、メソッドは区別されます:
+In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
-| タイプ                      | 自動呼び出しのコンテキスト                                             | 引数の受け取り | 説明                                                                                               |
-| ------------------------ | --------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
-| **プロジェクトメソッド**           | 呼び出しに応じて ([プロジェクトメソッドの呼び出し](#calling-project-methods) 参照) | ◯       | 任意のアクションを実行するためのコードです。 作成されたプロジェクトメソッドは、そのプロジェクトのランゲージの一部となります。                                  |
-| **オブジェクト (ウィジェット) メソッド** | メソッドが設定されたフォームオブジェクトに関連したイベント発生時に                         | ×       | フォームオブジェクト (ウィジェットとも呼びます) のプロパティです。                                                              |
-| **フォームメソッド**             | メソッドが設定されたフォームに関連したイベント発生時に                               | ×       | フォームのプロパティです。 フォームメソッドを使用してデータとオブジェクトを管理することができます。ただし、これら目的には、オブジェクトメソッドを使用する方が通常は簡単であり、より効果的です。 |
-| **トリガー** (別名 *テーブルメソッド*) | テーブルのレコード操作 (追加・削除・修正) の度に                                | ×       | テーブルのプロパティです。 トリガーは、データベースのレコードに対して「不正な」操作がおこなわれることを防ぎます。                                        |
-| **データベースメソッド**           | 作業セッションのイベント発生時に                                          | ○ (既定)  | 4D には 16のデータベースメソッドがあります。 詳細はデータベースメソッドの項を参照ください。                                                |
+| タイプ                      | 自動呼び出しのコンテキスト                                                                              | 引数の受け取り | 説明                                                                                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **プロジェクトメソッド**           | 呼び出しに応じて ([プロジェクトメソッドの呼び出し](#calling-project-methods) 参照)                                  | ◯       | 任意のアクションを実行するためのコードです。 作成されたプロジェクトメソッドは、そのプロジェクトのランゲージの一部となります。                                                                                   |
+| **オブジェクト (ウィジェット) メソッド** | メソッドが設定されたフォームオブジェクトに関連したイベント発生時に                                                          | ×       | フォームオブジェクト (ウィジェットとも呼びます) のプロパティです。                                                                                                               |
+| **フォームメソッド**             | メソッドが設定されたフォームに関連したイベント発生時に                                                                | ×       | フォームのプロパティです。 フォームメソッドを使用してデータとオブジェクトを管理することができます。ただし、これら目的には、オブジェクトメソッドを使用する方が通常は簡単であり、より効果的です。                                                  |
+| **トリガー** (別名 *テーブルメソッド*) | テーブルのレコード操作 (追加・削除・修正) の度に                                                                 | ×       | テーブルのプロパティです。 Triggers are methods that can prevent "illegal" operations with the records of your database.                                       |
+| **データベースメソッド**           | 作業セッションのイベント発生時に                                                                           | ○ (既定)  | There are 16 database methods in 4D.                                                                                                              |
+| **Class**                | [**Class functions**](classes.md#function) are called in the context of an object instance | ◯       | Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or created by the 4D developer. See [**Classes**](classes.md) |
 
-> 4D ランゲージは **クラス関数** もサポートしています。クラス関数は、オブジェクトインスタンスのコンテキストにおいて呼び出されます。 クラス関数にはビルトインのものと (*例: * `collection.orderBy()` や `entity.save()`)、[開発者によって作成されるもの](classes.md#function)があります。
 
 ## プロジェクトメソッドの呼び出し
 
@@ -87,7 +89,7 @@ title: メソッド
 
 `Formula` または `Formula from string` コマンドを使用すると、オブジェクトプロパティに格納可能な、ネイティブなフォーミュラオブジェクトを作成することができます: つまり、カスタムなオブジェクトメソッドを実装することが可能です。
 
-オブジェクトプロパティに保存されているメソッドを実行するには、プロパティ名のあとに **( )** をつけます。 例:
+To execute a method stored in an object property, use the **()** operator after the property name. 例:
 
 ```4d
 // myAlert プロジェクトメソッド
@@ -97,9 +99,9 @@ ALERT("Hello world!")
 この `myAlert` プロジェクトメソッドを任意のオブジェクトに格納し、呼び出すことができます:
 
 ```4d
-C_OBJECT($o)
+var $o : Object
 $o:=New object("custom_Alert";Formula(myAlert))
-$o.custom_Alert() // "Hello world!" と表示します
+$o.custom_Alert() //displays "Hello world!"
 ```
 
 大カッコを使用したシンタックスもサポートされます:
@@ -119,11 +121,11 @@ $0:=$1+" "+$2
 `fullName` メソッドをオブジェクトに格納し、呼び出します:
 
 ```4d
-C_OBJECT($o)
+var $o : Object
 $o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
-// $result:=fullName("param1";"param2") と同義です
+//equivalent to $result:=fullName("param1";"param2")
 ```
 
 `This` 関数と組み合わせることで、オブジェクトメソッドを利用した汎用的なコードを書くことができます。 例:
@@ -137,15 +139,15 @@ $0:=This.firstName+" "+This.lastName
 このメソッドをオブジェクトに格納すると、オブジェクトの新しい計算属性のように使えます:
 
 ```4d
-C_OBJECT($o)
+var $o : Object
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) // メソッドをオブジェクトに追加します
+$o.fullName:=Formula(fullName2) //add the method  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"
 ```
 
-たとえ引数を受け取らなかったとしても、オブジェクトメソッドを実行するためにはカッコ () をつけて呼び出す必要があるという点に注意してください。 オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
+Note that, even if it does not have parameters, an object method to be executed must be called with `()` parenthesis. オブジェクトプロパティのみを呼び出した場合、フォーミュラへの新しい参照が返されます (そしてフォーミュラは実行はされません):
 
 ```4d
 $o:=$f.message // $o にはフォーミュラオブジェクトが返されます
@@ -167,7 +169,7 @@ $o:=$f.message // $o にはフォーミュラオブジェクトが返されま�
 
 **イベント処理メソッド** は、イベントを処理するプロセスメソッドとして、分離されたプロセス内で実行されます。 通常、開発者はイベント管理の大部分を 4Dに任せます。 たとえば、データ入力中にキーストロークやクリックを検出した 4Dは、正しいオブジェクトとフォームメソッドを呼び出します。このため開発者は、これらのメソッド内でイベントに対し適切に応答できるのです。 詳細については `ON EVENT CALL` コマンドの説明を参照してください。
 
-**エラー処理メソッド** は、割り込みを実行するプロジェクトメソッドです。 エラーや例外が起こる度に、エラー処理メソッドは自身がインストールされたプロセス内で実行されます。 詳細については `ON ERR CALL` コマンドの説明を参照してください。
+**エラー処理メソッド** は、割り込みを実行するプロジェクトメソッドです。 It is called each time an error or an exception occurs. For more information, see the [Error handling](error-handling.md) section.
 
 ### 手動での実行
 

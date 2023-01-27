@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Dieser Code zeigt ein standardmäßiges Dialogfenster der Plattform mit der Meldung "Hello, World!" mit der Schaltfläche OK. To execute the code, you just need to click on the execution button in the Code Editor:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Sie können diesen Code auch einer Schaltfläche in einem Formular zuordnen und das Formular ausführen. Klicken Sie auf diese Schaltfläche, erscheint das Dialogfenster mit der Meldung. In jedem Fall haben Sie gerade Ihre erste Zeile mit 4D Code ausgeführt!
 
@@ -106,7 +106,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene **Projektmethoden** erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
 
-Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. Eine Anweisung führt eine Aktion aus, die einfach oder komplex sein kann.
+Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. A statement performs an action, and may be simple or complex.
 
 Zum Beispiel ist die folgende Zeile eine Anweisung, die ein Dialogfenster zum Bestätigen anzeigt:
 
