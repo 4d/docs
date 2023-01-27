@@ -87,13 +87,13 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`fontStyle`](properties_Text.md#italic)|Sets the selected text to slant slightly to the right. |"normal", "italic"| 
 |[`fontTheme`](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"| 
 |[`fontWeight`](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
-|[`footerHeight`](properties_Footers.md#height)|Used to set the row height |pattern (\\d+)(p&#124;em)?$ (positive decimal + px/em )|
+|[`footerHeight`](properties_Footers.md#height)|Used to set the row height | positive decimal + px &#124; em |
 |[`frameDelay`](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0<a name="g"></a>|
 |**g**|||
 |[`graduationStep`](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a name="h"></a>|
 |**h**|||
 |[`header`](properties_Headers.md#headers)|Defines the header of a list box column|Object with properties "text", "name", "icon", "dataSource", "fontWeight", "fontStyle", "tooltip" |
-|[`headerHeight`](properties_Headers.md#height)|Used to set the row height |pattern ^(\\d+)(px&#124;em)?$ (positive decimal + px/em )|
+|[`headerHeight`](properties_Headers.md#height)|Used to set the row height |positive decimal + px &#124; em |
 |[`height`](properties_CoordinatesAndSizing.md#height)|Designates an object's vertical size|minimum: 0|
 |[`hideExtraBlankRows`](properties_BackgroundAndBorder.md#hide-extra-blank-rows)|Deactivates the visibility of extra, empty rows.	|true, false|
 |[`hideFocusRing`](properties_Appearance.md#hide-focus-rectangle)|Hides the selection rectangle when the object has the focus.|true, false|
@@ -147,7 +147,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`rowCount`](properties_Crop.md#rows)|Sets the number of rows.|minimum: 1|
 |[`rowFillSource`](properties_BackgroundAndBorder.md#row-background-color-array) (array list box)<br/>[`rowFillSource`](properties_BackgroundAndBorder.md#background-color-expression) (selection or collection list box)|The name of an array or expression to apply a custom background color to each row of a list box. |The name of an array or expression.|
 |[`rowHeight`](properties_CoordinatesAndSizing.md#row-height)|Sets the height of list box rows. |CSS value unit "em" or "px" (default)|
-|[rowHeightAuto](properties_CoordinatesAndSizing.md#automatic-row-height)|boolean |"true", "false"|
+|[`rowHeightAuto`](properties_CoordinatesAndSizing.md#automatic-row-height)|boolean |"true", "false"|
 |[`rowHeightAutoMax`](properties_CoordinatesAndSizing.md#maximum-width)|Designates the largest height allowed for list box rows. |CSS value unit "em" or "px" (default). minimum: 0|
 |[`rowHeightAutoMin`](properties_CoordinatesAndSizing.md#minimum-width)|Designates the smallest height allowed for list box rows. |CSS value unit "em" or "px" (default). minimum: 0|
 |[`rowHeightSource`](properties_CoordinatesAndSizing.md#row-height-array)|An array defining different heights for the rows in a list box. |Name of a 4D array variable.|
