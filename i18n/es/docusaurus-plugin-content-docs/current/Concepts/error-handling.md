@@ -12,7 +12,7 @@ La gestión de errores responde a dos necesidades principales:
 
 :::tip Buenas prácticas
 
-Es muy recomendable instalar un método global de gestión de errores en 4D Server, para todo el código que se ejecute en el servidor. When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis.
+Es muy recomendable instalar un método global de gestión de errores en 4D Server, para todo el código que se ejecute en el servidor. When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. En modo sin interfaz, los errores se registran en el archivo [4DDebugLog](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) para su posterior análisis.
 
 :::
 
@@ -26,11 +26,11 @@ Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de
 
 ## Instalación de un método de gestión de errores
 
-In 4D, all errors can be caught and handled by specific project methods, named **error-handling** (or **error-catching**) methods.
+En 4D, todos los errores pueden ser capturados y manejados por métodos proyecto específicos, llamados **error-handling** (o **error-catching**).
 
 Once installed, error handlers are automatically called in interpreted or compiled mode in case of error in the 4D application or one of its components. A different error handler can be called depending on the execution context (see below).
 
-To *install* an error-handling project method, you just need to call the [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) command with the project method name and (optionnally) scope as parameters. Por ejemplo:
+Para *instalar* un método proyecto de gestión de errores, basta con llamar al comando [`ON ERR CALL`](https://doc.4d.com/4dv19/help/command/en/page155.html) con el nombre del método proyecto y (opcionalmente) el álcance como parámetros. Por ejemplo:
 
 ```4d
 ON ERR CALL("IO_Errors";ek local) //Instala un método local de gestión de errores
