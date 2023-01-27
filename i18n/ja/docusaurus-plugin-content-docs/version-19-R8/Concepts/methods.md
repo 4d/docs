@@ -4,7 +4,7 @@ title: メソッド
 ---
 
 
-A method is basically a piece of code that executes one or several action(s). A method is composed of statements.
+メソッドとは、1つ以上の動作を実行するコードのことです。 A method is composed of statements.
 
 A statement performs an action, and may be simple or complex. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)).
 
