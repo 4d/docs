@@ -68,7 +68,7 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Windows pathnames and escape sequences
+#### Windows のパス名とエスケープシーケンス
 
 The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. たとえば、`\t` は、`Tab` 文字のエスケープシーケンスです。
 
