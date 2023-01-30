@@ -35,7 +35,8 @@ Conversion of units: When you switch from one unit to the other, 4D converts the
 
 Note that converting back and forth may lead to an end result that is different from the starting value due to the automatic calculations made by 4D. This is illustrated in the following sequences: This is illustrated in the following sequences:
 
-*(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
+- (font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels
+- (font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
 
 #### JSON Example
 
@@ -51,9 +52,9 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### JSON Grammar
 
-| Name         | Datentyp | Possible Values                 |
-| ------------ | -------- | ------------------------------- |
-| headerHeight | string   | positive decimal+px &#124; em ) |
+| Name         | Datentyp | Possible Values               |
+| ------------ | -------- | ----------------------------- |
+| headerHeight | string   | positive decimal+px &#124; em |
 
 #### Objects Supported
 

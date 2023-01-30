@@ -20,7 +20,7 @@ En el lenguaje 4D y para los atributos de los campos de los objetos, los valores
 Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Una función (un método proyecto que devuelve un resultado) puede devolver un valor indefinido si, dentro del método, se asigna al resultado de la función ($0) una expresión indefinida (una expresión calculada con al menos una variable indefinida). Un campo no puede ser indefinido (el comando `Undefined` siempre devuelve False para un campo). Una variable variant tiene **indefinido** como valor por defecto.
 
 
-## Null operators
+## Operadores Null
 
 
 | Operación   | Sintaxis                 | Devuelve | Expression                     | Valor |
@@ -69,7 +69,7 @@ Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Mayor o i
 
 |
 
-Comparisons of Undefined values with Pointer, Picture, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Las comparaciones de valores Undefined con valores Pointer, Picture, Blob, Object, Collection, Undefined o Null mediante los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no son compatibles y devuelven un error.
 
 :::
 
@@ -104,7 +104,7 @@ var $vVar : Variant
 
 $vObj:=New object
 $vObj.null:=Null
-//note that $vVar is not assigned 
+//note que $vVar no está asignado
 
 $result:=($vObj.undefined=42) //False
 $result:=($vObj.undefined=$vObj.null) //True

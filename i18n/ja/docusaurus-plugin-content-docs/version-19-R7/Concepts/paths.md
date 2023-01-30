@@ -21,14 +21,14 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 以下の filesystemパス名がサポートされています:
 
-| filesystem   | 指定先                               |
-| ------------ | --------------------------------- |
-| "/DATA"      | カレントデータフォルダー                      |
-| "/LOGS"      | Logs フォルダー                        |
-| "/PACKAGE"   | データベースフォルダー (拡張子 4dbase の有無に関わらず) |
-| "/PROJECT"   | Project フォルダー                     |
-| "/RESOURCES" | カレントデータベースの Resources フォルダー       |
-| "/SOURCES"   | カレントプロジェクトの Sources フォルダー         |
+| filesystem   | Designates                                         |
+| ------------ | -------------------------------------------------- |
+| "/DATA"      | Current data folder                                |
+| "/LOGS"      | Logs フォルダー                                         |
+| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
+| "/PROJECT"   | Project フォルダー                                      |
+| "/RESOURCES" | Current database resources folder                  |
+| "/SOURCES"   | Current project resources folder                   |
 
 ## POSIX シンタックス
 
@@ -46,6 +46,7 @@ POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) 
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 ## プラットフォーム特有のシンタックス
@@ -67,23 +68,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Windows のパス名の入力とエスケープシーケンス
+#### Windows のパス名とエスケープシーケンス
 
-4D の [コードエディター](../code-editor/write-class-method.md) ではエスケープシーケンスを使用できます。 エスケープシーケンスとは、"特殊" 文字を置き換えるために使用する文字のセットです。 シーケンスはバックスラッシュ (`\`: 日本語フォント環境では円マーク) で始まり、その後に文字が続きます。 たとえば、`\t` は、`Tab` 文字のエスケープシーケンスです。
+The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. たとえば、`\t` は、`Tab` 文字のエスケープシーケンスです。
 
-Windows では、`\` 文字をパスの区切り文字としても使用します。 ほとんどの場合において 4D は、シングルバックスラッシュ `\` をダブルバックスラッシュ `\` に置き換えることにより、コードエディターに入力された Windows のパス名を正確に判断します。 たとえば、`C:\Folder` は `C:\\Folder` となります。
-
-しかし、`C:\MyDocuments\New` と書いた場合、4D は `C:\\MyDocuments\New` と表示します。 この場合、二つ目の `\` は、誤って `\N` (存在するエスケープシーケンス) と認識されています。 従って、4D のエスケープシーケンスで使用される文字の前にバックスラッシュを挿入したいときは、`\` となるよう手入力しなければなりません。
-
-4D は次のエスケープシーケンスを認識します:
-
-| エスケープシーケンス                   | 意味する文字       |
-| ---------------------------- | ------------ |
-| `\n`                        | LF (ラインフィード) |
-| `\t`                        | HT (水平タブ)    |
-| `\r`                        | CR (改行)      |
-| ``\\` |``&#96; (バックスラッシュ) |              |
-| `\"`                        | `"` (二重引用符)  |
+Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
 
 ### macOS
 
