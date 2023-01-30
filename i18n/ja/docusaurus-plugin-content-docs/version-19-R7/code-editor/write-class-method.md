@@ -125,7 +125,7 @@ title: コードエディター
 
 行番号を表示すると、ウィンドウ内で特定の行を見つけやすくなります。 **メソッド** メニューの **行番号を指定して移動...** コマンドを利用する場合も、この行番号を使用します。
 
-This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
+このような検索は、実行時エラーで [コンパイラー](../Project/compiler.md) が示すエラー行を表示するのに便利です。
 
 ## ステータスバー
 
@@ -150,23 +150,25 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 コードエディターでは、複数の [ナビゲーションショートカット](#ショートカット) がサポートされています。
 
-#### Using the backslash
+#### バックスラッシュの使用
 
-The backslash character (`\`) has a specific support in the 4D language:
+バックスラッシュ文字 (`\`) は、4Dランゲージでは次の通りにサポートされています:
 
-- inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
-- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
+- 行末に挿入すると、一つのステートメントを [複数行](../Concepts/quick-tour.md#行を分割する) に分割して書くことができます。
+- [エスケープシーケンス](../Concepts/quick-tour.md#エスケープシーケンス) に使用します。
 
 
 :::caution
 
-The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). 通常、4D はコードエディターに入力された Windows のパス名のバックスラッシュを自動で `\` に置き換えることで、これを正しく解釈します。 For instance,</code>C:\MyDocuments`will become`C:\\MyDocuments`. しかし、<code>"C:\MyDocuments\New"` と入力した場合、4Dは `"C:\\MyDocuments\New"`と表示します。 In this case, the second backslash is interpreted incorrectly as</code>\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). このようなケースでは、開発者がバックスラッシュを 2つ入力するようにしなければなりません。</p>
+バックスラッシュ文字 (`\`) は、[Windows のパス名](../Concepts/paths.md#windows) において区切り文字として使用されます。 通常、4D はコードエディターに入力された Windows のパス名のバックスラッシュを自動で `\` に置き換えることで、これを正しく解釈します。 たとえば、`C:\MyDocuments` と入力すると `C:\\MyDocuments` に変換されます。 しかし、`"C:\MyDocuments\New"` と入力した場合、4Dは `"C:\\MyDocuments\New"`と表示します。 この場合、二番目のバックスラッシュは `\N` (\[行送り\](../Concepts/quick-tour.md#エスケープシーケンス)) と解釈されてしまいます。 このようなケースでは、開発者がバックスラッシュを 2つ入力するようにしなければなりません。
 
-<p spaces-before="0">:::  </p>
+:::
 
-<h4 spaces-before="0">Drag-and-drop from the Explorer</h4>
 
-<p spaces-before="0">From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the <code>[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
+
+#### エクスプローラーからのドラッグ＆ドロップ
+
+エクスプローラーから、テーブル、フィールド、フォーム、プロジェクトメソッド、定数、4Dコマンドをドラッグ＆ドロップすることができます。 ドラッグ＆ドロップをおこなうと、4D は常に正しいシンタックスでオブジェクトを挿入します。 たとえば、`[People]`テーブルから "FirstName" フィールドをドロップすると、コードエディターには `[People]FirstName` が表示されます。 同様に、`[People]`テーブルから "Input" フォームをドロップすると、`[People];"Input"` と挿入されます。
 
 エクスプローラーの **コマンド** ページからコマンドをドラッグすると、コードエディターにはシンタックス (すべての引数が含まれる) も挿入されます。 この機能は、コマンドが期待する引数を確認するために存在します。 挿入されたシンタックスは、用途に合わせて編集できます。
 
@@ -380,7 +382,7 @@ The backslash character (`\`) is used as a separator in [pathnames under Windows
 
 ## コメント/アンコメント
 
-The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. コードエディターは、コメントに特定のスタイルを適用しません。 コメントの長さは、各行につき最大32,000文字までです。 行数については制限はありません。
+4Dランゲージは [コメント](../Concepts/quick-tour.md#コメント) をサポートしています。コメントとは、コード内の実行されない行のことです。 コードエディターは、コメントに特定のスタイルを適用しません。 コメントの長さは、各行につき最大32,000文字までです。 行数については制限はありません。
 
 コメントの書き方は 2通りあります: `//コメント` (単一行のコメント) と `/*コメント*/` (インラインコメントや複数行のコメントブロック)。
 
