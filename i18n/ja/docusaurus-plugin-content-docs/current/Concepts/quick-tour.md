@@ -344,7 +344,7 @@ ALERT(MyPointer->)
 
 ## 行を分割する
 
-You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. このように複数行に分かれたコードを、4Dランゲージは一行と解釈します。 たとえば、以下のステートメントは同等です:
+1つのステートメントを複数行に記述することができます。 これをおこなうには、ステートメントの各行をバックスラッシュ `\` 文字 (日本語Windowsの場合半角円マーク) で終了します。 このように複数行に分かれたコードを、4Dランゲージは一行と解釈します。 たとえば、以下のステートメントは同等です:
 
 ```4d
 $str:=String("hello world!")
