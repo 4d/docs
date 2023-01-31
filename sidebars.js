@@ -130,11 +130,16 @@ module.exports =
 					items: [
 						"code-editor/overview",
 						"code-editor/write-class-method",
-						"code-editor/creating-using-macros",
-						"Tags/tags"
+						"code-editor/creating-using-macros"
 					]
 				},
 				{
+					type: "category",
+					label: "Tags",
+					items: [
+						"Tags/tags"
+					]
+				},				{
 					type: "category",
 					label: "Debugging",
 					items: [

@@ -56,6 +56,9 @@ const Sections = [
         <Link to="code-editor/overview" >
           <Translate>Handling code</Translate>
         </Link>
+        <Link to="Tags/tags" >
+          <Translate>Transformation tags</Translate>
+        </Link>
         <Link to="Debugging/basics" >
           <Translate>Debugging</Translate>
         </Link>
