@@ -130,7 +130,6 @@ module.exports =
 					items: [
 						"code-editor/overview",
 						"code-editor/write-class-method",
-						"code-editor/find-replace",
 						"code-editor/creating-using-macros",
 						"Tags/tags"
 					]
