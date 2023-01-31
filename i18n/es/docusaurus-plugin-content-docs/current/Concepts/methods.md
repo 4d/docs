@@ -101,7 +101,7 @@ Luego `myAlert` puede encapsularse en cualquier objeto y llamarse:
 ```4d
 var $o : Object
 $o:=New object("custom_Alert";Formula(myAlert))
-$o.custom_Alert() //displays "Hello world!"
+$o.custom_Alert() //muestra "Hello world!"
 ```
 
 También se admite la sintaxis con paréntesis:

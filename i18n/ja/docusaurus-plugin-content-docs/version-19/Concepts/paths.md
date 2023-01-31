@@ -21,14 +21,14 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 以下の filesystemパス名がサポートされています:
 
-| filesystem   | Designates                                         |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
-| "/LOGS"      | Logs フォルダー                                         |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Project フォルダー                                      |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | 指定先                               |
+| ------------ | --------------------------------- |
+| "/DATA"      | カレントデータフォルダー                      |
+| "/LOGS"      | Logs フォルダー                        |
+| "/PACKAGE"   | データベースフォルダー (拡張子 4dbase の有無に関わらず) |
+| "/PROJECT"   | Project フォルダー                     |
+| "/RESOURCES" | カレントデータベースの Resources フォルダー       |
+| "/SOURCES"   | カレントプロジェクトの Sources フォルダー         |
 
 ## POSIX シンタックス
 
