@@ -409,7 +409,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 #### Descripción
 
-The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
+La función `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
 
 |
 
@@ -746,7 +746,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 </details>
 
-<!-- REF #DataStoreClass.locked().Syntax -->**.locked()** : Boolean<!-- END REF -->
+<!-- REF #DataStoreClass.locked().Syntax -->**.locked()**: Boolean<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.locked().Params -->
@@ -760,7 +760,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 #### Descripción
 
-The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->.
+La función `.locked()` <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->.
 
 You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
 
