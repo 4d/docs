@@ -22,7 +22,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | Element | Icon | Description |
 |---|---|---|
 | **Method execution** | ![execute-method](../assets/en/code-editor/execute-method.png) | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
-| **Search** | ![search-icon](../assets/en/code-editor/search.png) | Allows performing a search in the current window. |
+| **Find in method** | ![search-icon](../assets/en/code-editor/search.png) | Displays the [*Search* area](#find-and-replace). |
 | **Macros** | ![macros-button](../assets/en/code-editor/macros.png) | Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md). |
 | **Expand all / Collapse all** | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png) | These buttons allow expanding or collapsing all the control flow structures of the code. |
 | **Method information** | ![method-information-icon](../assets/en/code-editor/method-information.png) | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only). |
@@ -429,7 +429,7 @@ A search and replace area can be displayed in the toolbar of any method window:
 
 ![search-area](../assets/en/code-editor/search-area.png)
 
-To display this area, select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar. 
+To display this area, click on the **Find in method** icon of the [toolbar](#toolbar) or select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar. 
 
 :::tip
 
@@ -440,7 +440,7 @@ The **Find in Design** feature in the 4D toolbar or in the **Edit** menu is not 
 
 ### Find
 
-Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cmd+F** (macOS) to display/enable the Search area. 
+Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cmd+F** (macOS) to display/enable the *Search* area. 
 
 The search defined in this area will be performed in the code located in the window.
 
@@ -460,9 +460,9 @@ Hit the **Enter** key to select closest occurrence to the cursor. You can also c
 
 ### Replace  
 
-Select **Find  >Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) to display/enable the Replace area. 
+Click on the **v** toggle button on the left side of the *Search* area to display/hide the *Replace* area. You can also select **Find > Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) . 
 
-The **replace** entry area is used to define the character string that will replace the one defined above. 
+The *Replace* entry area is used to define the character string that will replace the one defined above. 
 
 Click the **Replace** button to launch the search with all defined options and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
 
