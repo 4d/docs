@@ -10,6 +10,7 @@ title: リリースノート
 
 #### ハイライト
 
+- New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
 
 

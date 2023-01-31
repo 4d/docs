@@ -10,6 +10,7 @@ Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), 
 
 #### Points forts
 
+- New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
 - To simplify code, some comparison operators can now be used with [Undefined values](../Concepts/dt_null_undefined.md#undefined-operators) without generating errors.
 
 
