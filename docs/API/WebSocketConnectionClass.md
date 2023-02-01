@@ -7,57 +7,22 @@ title: WebSocketConnection
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
-The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class API](WebSocketServerClass.md). 
+The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md). 
 
+:::info
 
-### Example
-
-This example of a basic chat feature illustrates how to handle messages in a WebSocket connection. See the example for the [WebSocketServer class](WebSocketServerClass.md#example) to know how the `4D.WebSocketConnection` object is instantiated. 
-
-```4d
-// WSConnectionHandler Class
-
-Class constructor
-Function onOpen($ws : 4D.WebSocketConnection; $message : Object)
-	// Send a message to new connected users
-	$ws.send("Welcome on the chat!")	
-	// Send "New client connected" message to all other chat clients
-	This.broadcast($ws;"New client connected")
-
-Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
-	// Send "Client disconnected" message to all other chat clients
-	This.broadcast($ws;"Client disconnected")
-
-Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-	// Resend the message to all chat clients	
-	This.broadcast($ws;$message.data)
-
-Function broadcast($ws : 4D.WebSocketConnection; $message:text)
-	var $client:4D.WebSocketConnection
-	// Resend the message to all chat clients
-	For each ($client; $ws.wss.connections)
-		// Check that the id is not the current connection
-		If ($client.id#$ws.id)
-			$client.send($message)
-		End if 
-	End for each 
-
-```
-
-:::tip Client-Side JS
-
-See [this blog post]( https://blog.4d.com/websocket-server/) for an example of client-side Javascript code handling a WebSocket connection.
+For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
 
 :::
 
 
 ### WebSocketConnection object
 
-A `WebSocketConnection` object is automatically created when the `WSHandler.onConnection` callback function of the [WebSocketServer object](WebSocketServerClass.md#4dwebsocketservernew) returns a `connectionHandler` object.
+A `WebSocketConnection` object is automatically created when the [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) callback function of the [WebSocketServer object](WebSocketServerClass.md#4dwebsocketservernew) returns a [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object) object.
 
 WebSocketConnection objects provide the following properties and functions:
 
@@ -113,6 +78,14 @@ This property is read-only.
 #### Description
 
 The `.send()` function <!-- REF #WebSocketConnectionClass.send().Summary -->sends a *message* to the client<!-- END REF -->.
+
+The following contents are sent depending on the *message* type:
+
+|Type|Content|
+|---|---|
+|Text|Text in UTF-8|
+|Blob|Binary data|
+|Object|Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html))|
 
 <!-- END REF -->
 

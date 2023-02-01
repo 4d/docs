@@ -710,8 +710,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk stop dropping on first error`: stops method execution on first non-droppable entity|
-|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)
-|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF -->
 
 #### Description
 
@@ -1971,6 +1970,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 
 
 </details>
