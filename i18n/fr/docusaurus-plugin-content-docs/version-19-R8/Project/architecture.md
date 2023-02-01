@@ -6,7 +6,7 @@ title: Architecture d'un projet
 Un projet 4D est composé de plusieurs dossiers et fichiers, stockés dans un dossier racine de projet (dossier package). Par exemple :
 
 - MonProjet (*dossier racine du projet*)
-    - `Composants`
+    - `Components`
     - `Data`
         - `Logs`
         - `Settings`
@@ -217,7 +217,7 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 | CompilerIntermediateFiles  | Fichiers intermédiaires résultant de la compilation Apple Silicon     | Folder |
 
 
-## `Composants`
+## `Components`
 
 Ce dossier contient les composants qui seront disponibles dans le projet d'application. Il doit être stocké au même niveau que le dossier Project.
 
