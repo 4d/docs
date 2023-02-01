@@ -141,7 +141,7 @@ Luego el método actúa como un nuevo atributo calculado que se puede añadir a 
 ```4d
 var $o : Object
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //añade el método
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"

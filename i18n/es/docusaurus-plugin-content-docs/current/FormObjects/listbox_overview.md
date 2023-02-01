@@ -663,21 +663,21 @@ Depending of the list box type, you can use different properties to customize ro
 
 ## Imprimir list boxes
 
-Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
+Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Tenga en cuenta que la apariencia "Impresión" está disponible para los list boxes en el editor de formularios.
 
 ### Modo de vista previa
 
-Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. El list box se imprime tal como está en el formulario. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.
+La impresión de un list box en modo vista previa consiste en imprimir directamente el list box y el formulario que lo contiene utilizando los comandos de impresión estándar o el comando de menú **Imprimir**. El list box se imprime tal como está en el formulario. Este modo no permite controlar con precisión la impresión del objeto; en particular, no permite imprimir todas las líneas de un list box que contenga más líneas de las que puede mostrar.
 
 ### Modo avanzado
 
-In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). El comando `LISTBOX GET PRINT INFORMATION` se utiliza para controlar la impresión del objeto.
+En este modo, la impresión de los list box se realiza por programación, a través del comando `Print object` (se soportan los formularios proyecto y los formularios tabla). El comando `LISTBOX GET PRINT INFORMATION` se utiliza para controlar la impresión del objeto.
 
 En este modo:
 
-- The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-- El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
-- An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
+- La altura del objeto list box se reduce automáticamente cuando el número de líneas a imprimir es inferior a la altura original del objeto (no se imprimen líneas "vacías"). Por el contrario, la altura no aumenta automáticamente en función del contenido del objeto. El tamaño del objeto efectivamente impreso puede obtenerse vía el comando `LISTBOX GET PRINT INFORMATION`.
+- El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc. Estos parámetros también incluyen la primera línea a imprimir: si llama al comando `OBJECT SET SCROLL POSITION` antes de lanzar la impresión, la primera línea impresa en el list box será la designada por el comando.
+- Un mecanismo automático facilita la impresión de los list box que contienen más líneas de las que es posible mostrar: se pueden realizar llamadas sucesivas a `Print object` para imprimir cada vez un nuevo conjunto de líneas. El comando `LISTBOX GET PRINT INFORMATION` puede utilizarse para comprobar el estado de la impresión durante la operación.
 
 
 
@@ -698,12 +698,12 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 *   Configurar manualmente los elementos jerárquicos utilizando la lista de propiedades del editor de formularios (o editar el formulario JSON).
 *   Generar visualmente la jerarquía utilizando el menú emergente de gestión de list box, en el editor de formularios.
-*   Use the [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) and [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html) commands, described in the *4D Language Reference* manual.
+*   Utilice los comandos [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) y [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html), descritos en el manual *Lenguaje de 4D*.
 
 
 #### Propiedades del List Box jerárquico
 
-This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the column *dataSource* property value is an array](properties_Object.md#array-list-box), i.e. a collection.
+Esta propiedad especifica que el list box debe mostrarse en forma jerárquica. En el formulario JSON, esta funcionalidad se activa [cuando el valor de la propiedad *dataSource* de la columna es un array](properties_Object.md#array-list-box), es decir, una colección.
 
 Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each element of the *dataSource* array to use as break column. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.
 
@@ -913,23 +913,23 @@ When a list box column is associated with an object array, the way a cell is dis
 *   "color": para definir un color de fondo
 *   "event": para mostrar un botón con una etiqueta.
 
-4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
+4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). La siguiente tabla muestra la visualización por defecto, así como las alternativas para cada tipo de valor:
 
-| valueType | Widget por defecto                                  | Widget(s) alternativo(s)                                                                       |
-| --------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| text      | entrada de texto                                    | menú desplegable (lista obligatoria) o combo box (lista de selección)                          |
-| real      | entrada de texto controlada (números y separadores) | menú desplegable (lista obligatoria) o combo box (lista de selección)                          |
-| integer   | entrada de texto controlada (números únicamente)    | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| boolean   | casilla de selección                                | menú desplegable (lista requerida)                                                             |
-| color     | color de fondo                                      | text                                                                                           |
-| evento    | botón con etiqueta                                  |                                                                                                |
-|           |                                                     | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
+| valueType | Widget por defecto                                  | Widget(s) alternativo(s)                                                                                                |
+| --------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| text      | entrada de texto                                    | menú desplegable (lista obligatoria) o combo box (lista de selección)                                                   |
+| real      | entrada de texto controlada (números y separadores) | menú desplegable (lista obligatoria) o combo box (lista de selección)                                                   |
+| integer   | entrada de texto controlada (números únicamente)    | menú desplegable (lista obligatoria) o combo box (lista de opciones) o casilla de verificación de tres estados          |
+| boolean   | casilla de selección                                | menú desplegable (lista requerida)                                                                                      |
+| color     | color de fondo                                      | text                                                                                                                    |
+| evento    | botón con etiqueta                                  |                                                                                                                         |
+|           |                                                     | Todos los widgets pueden tener un botón adicional de alternancia de unidades o un botón de elipsis asociado a la celda. |
 
-You set the cell display and options using specific attributes in each object (see below).
+Usted define la visualización de la celda y las opciones utilizando atributos específicos en cada objeto (ver abajo).
 
 #### Formatos de visualización y filtros de entrada
 
-You cannot set display formats or entry filters for columns of object-type list boxes. Se definen automáticamente en función del tipo de valor. Estos están listados en la siguiente tabla:
+No se pueden definir formatos de visualización ni filtros de entrada para las columnas objeto de los list box. Se definen automáticamente en función del tipo de valor. Estos están listados en la siguiente tabla:
 
 | Tipo de valor | Formato por defecto                                                               | Control de entrada       |
 | ------------- | --------------------------------------------------------------------------------- | ------------------------ |
@@ -946,7 +946,7 @@ You cannot set display formats or entry filters for columns of object-type list 
 
 Cada elemento del array de objetos es un objeto que puede contener uno o más atributos que definirán el contenido de la celda y la visualización de los datos (ver el ejemplo anterior).
 
-The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). A continuación se detallan los formatos de visualización y se ofrecen ejemplos.
+El único atributo obligatorio es "valueType" y sus valores soportados son "text", "real", "integer", "boolean", "color" y "event". La siguiente tabla lista todos los atributos soportados en los arrays de objetos de los list box, en función del valor "valueType" (cualquier otro atributo se ignora). A continuación se detallan los formatos de visualización y se ofrecen ejemplos.
 
 |                       | valueType                                         | text | real | integer | boolean | color | evento |
 | --------------------- | ------------------------------------------------- | ---- | ---- | ------- | ------- | ----- | ------ |
@@ -957,7 +957,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | behavior              | Valor "tres Estados"                              |      |      | x       |         |       |        |
 | requiredList          | lista desplegable definida en objeto              | x    | x    | x       |         |       |        |
 | choiceList            | combo box definido en objeto                      | x    | x    | x       |         |       |        |
-| requiredListReference | 4D list ref, depends on "saveAs" value            | x    | x    | x       |         |       |        |
+| requiredListReference | RefList 4D, depende del valor de "saveAs"         | x    | x    | x       |         |       |        |
 | requiredListName      | Nombre de la lista 4D, depende del valor "saveAs" | x    | x    | x       |         |       |        |
 | saveAs                | "reference" o "value"                             | x    | x    | x       |         |       |        |
 | choiceListReference   | RefList 4D, muestra un combo box                  | x    | x    | x       |         |       |        |
