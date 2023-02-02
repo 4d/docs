@@ -11,7 +11,7 @@ title: Glosario
 
 ## Acción
 
-Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
+Todas las acciones que pueden realizarse en un [recurso](#resource). Las acciones disponibles son: crear, leer, actualizar, eliminar, ejecutar, promover y describir.
 
 ## Atributo
 
@@ -159,7 +159,7 @@ Un "bloqueo pesimista" significa que una entidad se bloquea antes de que se acce
 
 ## Privilegio
 
-The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+La capacidad de ejecutar una o varias [acciones](#actions) en [recursos](#resource). Se pueden reunir varios privilegios en un [rol](#role) según la lógica empresarial.
 
 ## Propiedad
 
@@ -202,12 +202,12 @@ Una base de datos 4D abierta en un servidor 4D o 4D Server (disponible a través
 
 ## Recurso
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+Un elemento ORDA sobre el que se puede permitir o no cualquier[acción](#action) en función de un [privilegio](#privilege). Los recursos disponibles son: el almacén de datos, una clase de datos, un atributo de clase de datos, una función del modelo de datos ORDA o un método proyecto.
 
 
-## Role
+## Rol
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+Un rol es un [privilegio](#privilege) publicado destinado a ser utilizado por un administrador. Puede contener uno o varios privilegios.
 
 
 ## Session
