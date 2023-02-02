@@ -52,7 +52,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### 参照
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -97,7 +97,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### 参照
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -1047,7 +1047,8 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format // ".xlsx"
+
+ $params.format:=vp MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
@@ -1818,7 +1819,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### 参照
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -1909,6 +1910,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
 戻り値のオブジェクトには、以下のようなものが格納されています:
+
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -2554,13 +2556,14 @@ $styles:=VP Get stylesheets("ViewProArea")
 
 このコマンドは、*column* のカレント属性を格納するオブジェクトを返します:
 
-| プロパティ               | タイプ     | 説明                                                 |
-| ------------------- | ------- | -------------------------------------------------- |
-| dataField           | text    | データコンテキストにおける、表の列のプロパティ名。 表組みが自動で表示されている場合は返されません。 |
-| name                | text    | 表の列の名前。                                            |
-| footerText          | text    | 列のフッター値                                            |
-| footerFormula       | text    | 列のフッターのフォーミュラ。                                     |
-| filterButtonVisible | boolean | 列のフィルターボタンが表示されている場合には true、そうでない場合は false。        |
+| プロパティ         | タイプ  | 説明                                                 |
+| ------------- | ---- | -------------------------------------------------- |
+| dataField     | text | データコンテキストにおける、表の列のプロパティ名。 表組みが自動で表示されている場合は返されません。 |
+| name          | text | 表の列の名前。                                            |
+| footerText    | text | 列のフッター値                                            |
+| footerFormula | text | 列のフッターのフォーミュラ。                                     |
+
+|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
 
 *tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは **null** を返します。
 
@@ -2691,6 +2694,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | ------ | -- |
 | v19 R7 | 追加 |
 </details>
+
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 **VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
