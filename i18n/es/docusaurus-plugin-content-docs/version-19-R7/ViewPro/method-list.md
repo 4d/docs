@@ -52,7 +52,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### Ver también
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -97,7 +97,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### Ver también
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -1046,6 +1046,7 @@ Desea exportar un documento 4D View Pro en formato ".xlsx" y llamar a un método
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
+
  $params.format:=vp MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
@@ -1817,7 +1818,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### Ver también
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -1908,6 +1909,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
 El objeto devuelto contiene, por ejemplo:
+
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -2553,13 +2555,14 @@ En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 El comando devuelve un objeto que describe los atributos actuales de la *columna*:
 
-| Propiedad           | Tipo    | Descripción                                                                                                                     |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nombre de la propiedad de la columna de la tabla en el contexto de datos. No se devuelve si la tabla se muestra automáticamente |
-| name                | text    | Nombre de la columna de la tabla.                                                                                               |
-| footerText          | text    | Valor del pie de columna.                                                                                                       |
-| footerFormula       | text    | Fórmula del pie de columna.                                                                                                     |
-| filterButtonVisible | boolean | True si se muestra el botón de filtro de la columna de la tabla, False en caso contrario.                                       |
+| Propiedad     | Tipo | Descripción                                                                                                                     |
+| ------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------- |
+| dataField     | text | Nombre de la propiedad de la columna de la tabla en el contexto de datos. No se devuelve si la tabla se muestra automáticamente |
+| name          | text | Nombre de la columna de la tabla.                                                                                               |
+| footerText    | text | Valor del pie de columna.                                                                                                       |
+| footerFormula | text | Fórmula del pie de columna.                                                                                                     |
+
+|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
 
 Si no se encuentra *tableName* o si el índice de *column* es mayor que el número de columnas, el comando devuelve **null**.
 
@@ -2690,6 +2693,7 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 | ------- | -------------- |
 | v19 R7  | Añadidos       |
 </details>
+
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 **VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->

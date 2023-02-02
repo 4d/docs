@@ -5,13 +5,13 @@ title: Documenter un projet
 
 
 
-In application projects, you can document your methods as well as your classes, forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+Dans les projets d'application, vous pouvez documenter vos méthodes ainsi que vos classes, formulaires, tables ou champs. La création d'une documentation est particulièrement appropriée pour les projets développés par plusieurs programmeurs et s'inscrit généralement dans les bonnes pratiques en matière de programmation. La documentation peut contenir la description d'un élément ainsi que toute information nécessaire pour comprendre comment l'élément fonctionne dans l'application.
 
-Les éléments de projet suivants acceptent la documentation :
+Les éléments de projet suivants peuvent être documentés :
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
+- Méthodes (méthodes base, méthodes composants, méthodes projet, méthodes formulaire, méthodes 4D Mobile et triggers)
 - Classes
-- Forms
+- Formulaires
 - Tables et champs
 
 Vos fichiers de documentation sont écrits dans la syntaxe Markdown (fichiers .md) à l'aide de n'importe quel éditeur prenant en charge le Markdown. Ils sont stockés en tant que fichiers indépendants dans votre dossier Project.
@@ -104,9 +104,9 @@ L'éditeur de code 4D affiche une partie de la documentation d'une méthode dans
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-If a file named `\&#060;MethodName&#062;.md` exists in the `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
+Si un fichier nommé `\&#060;MethodName&#062 ;.md` existe dans le dossier `\&#060;package&#062;/documentation` , l'éditeur de code affiche (par priorité) :
 
-- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Tout texte saisi dans une balise HTML `comment` (*\<!-- command documentation -->*) en haut du fichier markdown.
 
 - Ou, si aucune balise de `commentaire` html n'est utilisée, la première phrase après une balise `# Description` du fichier markdown.  
   Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par le parseur du code 4D.

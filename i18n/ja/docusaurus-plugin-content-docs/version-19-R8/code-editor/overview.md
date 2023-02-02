@@ -171,7 +171,7 @@ title: 4D コードについて
 
 ##### REST サーバー
 
-*このオプションは、従来のカレントレコードおよびカレントセレクションの概念に依存しており、廃止予定となっています。 RESTアクセスには、[ORDAデータモデルクラス関数](https://developer.4d.com/docs/en/REST/classFunctions.html) を使用することが推奨されます。** *
+*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
 #### 属性の一括設定
 

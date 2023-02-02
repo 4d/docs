@@ -287,25 +287,25 @@ Indica una expresión o una variable que se evaluará para cada línea mostrada.
 | unselectable        | boolean | Designa la línea correspondiente como no seleccionable (* es decir, *, no es posible el resaltado). Las áreas que se pueden introducir ya no se pueden introducir si esta opción está activada, a menos que la opción "Edición con un solo clic" también esté activada. Los controles como las casillas de selección y las listas siguen siendo funcionales. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valores por defecto: False. |
 | disabled            | boolean | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. El texto y los controles (casillas de selección, listas, etc.) aparecen atenuados o en gris. Valores por defecto: False.                                                                                                                                                                                                                                        |
 
-The special "cell" property allows you to apply a set of properties to a single column:
+La propiedad especial "cell" permite aplicar un conjunto de propiedades a una sola columna:
 
-| Nombre de propiedad |              |                | Tipo   | Descripción                                                                                                                                                                                                                                |
-| ------------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| cell                |              |                | object | Properties to apply to single column(s)                                                                                                                                                                                                    |
-|                     | *columnName* |                | object | *columnName* is the object name of the list box column                                                                                                                                                                                     |
-|                     |              | *propertyName* | string | "stroke", "fill", "fontStyle", "fontWeight", or "textDecoration" property (see above). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
+| Nombre de propiedad |              |                | Tipo   | Descripción                                                                                                                                                                                                                                      |
+| ------------------- | ------------ | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| cell                |              |                | object | Propiedades aplicables a una o varias columnas                                                                                                                                                                                                   |
+|                     | *columnName* |                | object | *columnName* es el nombre del objeto de la columna del list box                                                                                                                                                                                  |
+|                     |              | *propertyName* | string | las propiedades "stroke", "fill", "fontStyle", "fontWeight" o "textDecoration" (ver arriba). **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda" |
 
 > Los parámetros de estilo definidos con esta propiedad se ignoran si ya se han definido otros parámetros de estilo mediante expresiones (*es decir, *, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 **Ejemplos**
 
-In a *Color* project method, write the following code:
+En un método proyecto *Color*, escriba el siguiente código:
 
 ```4d
-//Color method
-//Sets font color for certain rows and background color for Col2 and Col3 columns
+//Método Color
+//Define el color de la fuente para ciertas líneas y el color de fondo para las columnas Col2 y Col3
 Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+If(This.ID>5) //ID es un atributo de los objetos/entidades de la colección
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Col2";New object("fill";"black");\
     "Col3";New object("fill";"red"))
@@ -317,12 +317,12 @@ End if
 **Best Practice:** For optimization reasons, it is usually recommended to create the `meta.cell` object once in the form method:
 
 ```4d
-  //form method
+  //método formulario
  Case of
     :(Form event code=On Load)
        Form.colStyle:=New object("Col2";New object("fill";"black");\
         "Col3";New object("fill";"red"))  
- // you can also define other style sets  
+        // también puede definir otros conjuntos de estilos  
        Form.colStyle2:=New object("Col2";New object("fill";"green");\
         "Col3";New object("fontWeight";"bold"))  
  End case
@@ -335,7 +335,7 @@ Entonces, el método *Color* contendría:
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
+    Form.meta.cell:=Form.colStyle //reutilizar el mismo objeto para un mejor rendimiento
  Else
     Form.meta.stroke:="orange"
     Form.meta.cell:=Form.colStyle2

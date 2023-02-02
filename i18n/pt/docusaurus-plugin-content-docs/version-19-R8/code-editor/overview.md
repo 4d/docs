@@ -171,7 +171,7 @@ For more information, refer to [4D SQL engine implementation](https://doc.4d.com
 
 ##### Servidor REST
 
-*This option is deprecated because it relies on legacy current record and current selection concepts. It is recommended to use** [ORDA data model class functions](https://developer.4d.com/docs/en/REST/classFunctions.html) for REST access. *
+*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
 #### Batch setting for method attributes
 

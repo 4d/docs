@@ -161,7 +161,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 ### Formatos fecha y hora
 
-4D View Pro provides the following constants for ISO 8601 date and time patterns:
+4D View Pro ofrece las siguientes constantes para los modelos de fecha y hora ISO 8601:
 
 | Constante                                 | Valor                                | Comentario                                                                                                                                                             |
 | ----------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -210,7 +210,7 @@ To create your own date and time patterns, in your current localization, you can
 |       | \[mm]                                                      | Tiempo transcurrido en minutos                                  | 843                   |
 |       | \[ss]                                                      | Tiempo transcurrido en segundos                                 | 50585                 |
 |       | AM/PM                                                       | Periodos del día. Se utiliza el fomato de 24 horas si se omite. | PM                    |
-> The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
+> The code 'm' is interpreted depending on its position in the pattern. Si está inmediatamente después de 'h' o 'hh' o inmediatamente antes de 's' o 'ss', se interpretará como minutos, de lo contrario se interpretará como meses.
 
 ### Símbolos adicionales
 
@@ -239,7 +239,7 @@ In addition to the special characters and codes described in the previous sectio
 
 ## Atributos de impresión
 
-4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. Estos atributos son manejados por los siguientes comandos:
+Los atributos de impresión de 4D View Pro le permiten controlar todos los aspectos de la impresión de las áreas de 4D View Pro. Estos atributos son manejados por los siguientes comandos:
 
 * [VP SET PRINT INFO](method-list.md#vp-set-print-info)
 * [VP Get print info](method-list.md#vp-get-print-info)
@@ -409,7 +409,7 @@ A **style sheet** groups together a combination of properties in a style object 
 
 Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) command and applied with the the [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) or [VP SET CELL STYLE](method-list.md#vp-set-cell-style) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet) command.
 
-The [VP Get stylesheet](method-list.md#vp-get-stylesheet) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](method-list.md#vp-get-stylesheets) command to retrieve a collection of style objects for multiple style sheets.
+El comando [VP Get stylesheet](method-list.md#vp-get-stylesheet) se puede utilizar para devolver el objeto de estilo de una única hoja de estilo o se puede utilizar el comando [VP Get stylesheets](method-list.md#vp-get-stylesheets) para recuperar una colección de objetos de estilo para múltiples hojas de estilo.
 
 ### Propiedades del objeto de estilo
 

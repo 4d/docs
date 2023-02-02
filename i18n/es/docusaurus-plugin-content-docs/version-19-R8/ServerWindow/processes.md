@@ -90,11 +90,11 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 
 > You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
 
-- **Pause Process**: can be used to pause the selected process(es).
-- **Activate Process**: can be used to reactivate the selected process(es). The processes must have been paused previously (using the button above or by programming); otherwise, this button has no effect.
-- **Debug Process**: can be used to open on the server machine one or more debugger windows for the selected process(es). Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación. Note that the debugger window is only displayed when the 4D code is actually executed on the server machine (for example in a trigger or the execution of a method having the "Execute on Server" attribute).
+- **Pausar proceso**: permite pausar los procesos seleccionados.
+- **Activar proceso**: permite reactivar los procesos seleccionados. Los procesos deben haberse pausado previamente (utilizando el botón anterior o por programación); de lo contrario, este botón no tiene ningún efecto.
+- **Depurar proceso**: permite abrir en el equipo servidor una o varias ventanas de depuración para el proceso o procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación. Tenga en cuenta que la ventana del depurador sólo se muestra cuando el código 4D se ejecuta efectivamente en la máquina servidor (por ejemplo, en un trigger o en la ejecución de un método que tenga el atributo "Ejecutar en servidor").
 
-> You can also debug a process directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button.
+> También puede depurar un proceso directamente sin mostrar la caja de diálogo de confirmación manteniendo presionada la tecla **Alt** mientras presiona este botón.
 
-- **Watch users**: used to display, on the [Users page](users.md), all the processes of the selected user(s). Este botón se activa cuando se selecciona al menos un proceso de usuario.
+- **Ver usuarios**: permite visualizar, en la [página Usuarios](users.md), todos los procesos del usuario o usuarios seleccionados. Este botón se activa cuando se selecciona al menos un proceso de usuario.
 
