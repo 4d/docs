@@ -1,6 +1,6 @@
 ---
 id: string
-title: String
+title: 文字列
 ---
 
 文字列とは、以下を示す総称です:
