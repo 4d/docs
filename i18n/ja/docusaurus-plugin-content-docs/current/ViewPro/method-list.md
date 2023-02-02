@@ -52,7 +52,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### 参照
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -97,7 +97,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### 参照
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -1802,7 +1802,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### 参照
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -3518,6 +3518,7 @@ $cellStyle.font:=VP Object to font($font)
 
 ## P
 
+
 ### VP PASTE FROM OBJECT
 
 <details><summary>履歴</summary>
@@ -4600,6 +4601,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 
 ### VP SET CELL STYLE
 
+
 <!-- REF #_method_.VP SET CELL STYLE.Syntax -->
 
 **VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object) <!-- END REF -->
@@ -5182,13 +5184,11 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| 引数            | タイプ    |    | 説明                                      |
-| ------------- | ------ | -- | --------------------------------------- |
-| rangeObj      | Object | -> | レンジオブジェクト                               |
-| formula       | Text   | -> | フォーミュラまたは 4Dメソッド                        |
-| formatPattern | Text   | -> | フィールドのフォーマット|<!-- END REF -->
+| 引数 | タイプ |  | 説明 |
+| -- | --- |  | -- |
+|    |     |  |    |
 
-|
+|rangeObj |Object|->|Range object| |formula |Text|->|Formula or 4D method| |formatPattern |Text|->|Format of field|<!-- END REF -->
 
 #### 説明
 
@@ -6173,6 +6173,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 ### VP SET VALUES
 
+
 <!-- REF #_method_.VP SET VALUES.Syntax -->
 **VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection ) <!-- END REF -->
 
@@ -6355,7 +6356,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 | `vk position bottom`  | セルあるいは行の下辺に対する垂直揃え。                                                                                        | ○           |             |
 | `vk position center`  | 中央揃え。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 - セルあるいは行</li><li>横方向の表示位置 - セルあるいはカラム</li>                        | ○           | ○           |
 | `vk position left`    | セルあるいはカラムの左辺に対する水平揃え。                                                                                      |             | ○           |
-| `vk position nearest` | 一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</li> | ○           | ○           |
+| `vk position nearest` | 一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</li> | ○           | X           |
 | `vk position right`   | セルあるいはカラムの右辺に対する水平揃え。                                                                                      |             | ○           |
 | `vk position top`     | セルあるいは行の上辺に対する垂直揃え。                                                                                        | ○           |             |
 > このコマンドは、表示位置の変更が可能な場合にのみ動作します。 たとえば、*rangeObj* が現在のシートの A1 セル (先頭カラムと先頭行) の場合、すでに縦および横方向の限界に接している (つまり、上にも左にもこれ以上スクロールできない) ため、表示位置を変更しても何も変わりません。 *rangeObj* が C3 セルの場合に、表示位置を中央または右下に変えても同じことが言えます。 表示は変更されません。
