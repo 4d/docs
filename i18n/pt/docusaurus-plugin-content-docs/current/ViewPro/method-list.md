@@ -50,7 +50,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### Veja também
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -93,7 +93,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### Veja também
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -1711,7 +1711,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### Veja também
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -3351,6 +3351,7 @@ $cellStyle.font:=VP Object to font($font)
 
 ## P
 
+
 ### VP PASTE FROM OBJECT
 
 <details><summary>Histórico</summary>
@@ -4927,11 +4928,11 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parâmetros    | Tipo   |    | Descrição                                  |
-| ------------- | ------ | -- | ------------------------------------------ |
-| rangeObj      | Objeto | -> | Range object                               |
-| formula       | Text   | -> | Formula or 4D method                       |
-| formatPattern | Text   | -> | Format of field|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição |
+| ---------- | ---- |  | --------- |
+|            |      |  |           |
+
+|rangeObj |Object|->|Range object| |formula |Text|->|Formula or 4D method| |formatPattern |Text|->|Format of field|<!-- END REF -->
 
 #### Descrição
 
@@ -5846,6 +5847,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 [Cell Format](configuring.md#cell-format)<br/>[VP Get values](#vp-get-value)<br/>[VP SET VALUE](#vp-set-value)<br/>[VP SET BOOLEAN VALUE](#vp-set-boolean-value)<br/>[VP SET DATE TIME VALUE](#vp-set-date-time-value)<br/>[VP SET FIELD](#vp-set-field)<br/>[VP SET FORMULA](#vp-set-formula)<br/>[VP SET NUM VALUE](#vp-set-num-value)<br/>[VP SET TEXT VALUE](#vp-set-text-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)
 
 ### VP SET VALUES
+
 
 
 <!-- REF #_method_.VP SET VALUES.Syntax --> **VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection ) <!-- END REF -->
