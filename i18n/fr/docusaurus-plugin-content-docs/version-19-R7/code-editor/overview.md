@@ -171,7 +171,7 @@ Pour plus d’informations, reportez-vous à la section [Implémentations du mot
 
 ##### Serveur REST
 
-Cette option est obsolète car elle repose sur d'anciens concepts d'enregistrement courant et de sélection courante. Il est recommandé d'utiliser** [les fonctions de classe du modèle de données ORDA](https://developer.4d.com/docs/en/REST/classFunctions.html) pour les accès REST. *
+*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
 #### Modifier attributs globalement
 
