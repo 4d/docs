@@ -104,16 +104,18 @@ Puede visualizar y modificar las propiedades de los objetos y formularios utiliz
 
 Para mostrar/ocultar la lista de propiedades, seleccione **Lista de propiedades** en el menú **Formulario** o en el menú contextual del editor de formularios. También puede mostrarlo haciendo doble clic en una área vacía del formulario.
 
-#### Accesos directos de navegación
+#### Atajos
 
-Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
+Puede utilizar los siguientes atajos en la Lista de propiedades:
 
 - **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
 - **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
 - **PgUp** y **PgDn**: selecciona la primera o la última celda visible de la lista mostrada.
 - **Inicio** y **Fin**: selecciona la primera o la última celda de la lista.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en la etiqueta de tema: contrae/despliega todos los temas de la lista.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un evento: utilizado para seleccionar/deseleccionar cada evento de la lista, según el estado inicial del evento sobre el que se ha hecho clic.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en la etiqueta de un tema: Permite contraer/expandir todos los temas de la lista.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un valor de propiedad mostrado en **negrita**: restablece la propiedad a su valor por defecto.
+
 
 ## Manipulación de objetos formulario
 
@@ -125,6 +127,7 @@ Puede añadir objetos en los formularios de varias maneras:
 - Arrastrando y soltando el objeto desde la barra de objetos
 - Mediante operaciones de arrastrar y soltar o copiar y pegar sobre un objeto seleccionado de la [librería de objetos](objectLibrary.md) preconfigurada,
 - Arrastrando y soltando un objeto desde otro formulario,
+
 
 - Arrastrando y soltando un objeto desde el Explorador (campos) o desde otros editores del modo Diseño (listas, imágenes, etc.)
 

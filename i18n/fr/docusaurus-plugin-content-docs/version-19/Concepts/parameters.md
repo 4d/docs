@@ -58,6 +58,9 @@ Function add($x : Integer)
     $0:=$x+$2
 ```
 
+### Initialisation
+
+When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
 
 
 
@@ -414,6 +417,7 @@ C'est un moyen puissant de définir des [paramètres optionnels](#optional-param
 Dans la méthode `ChangeAge` ci-dessus, les propriétés Age et Nom sont obligatoires et pourraient générer des erreurs si elles sont manquantes. Pour éviter cela, vous pouvez simplement écrire :
 
 ```4d
+
   //ChangeAge
  var $1; $para : Object
  $para:=$1  

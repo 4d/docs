@@ -506,8 +506,8 @@ La prise en charge du tri standard dépend du type de list box :
 | Type de list box                | Prise en charge du tri standard | Commentaires                                                                                                 |
 | ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Collection d'objets             | Oui                             | <li>Les colonnes "This.a" ou "This.a.b" sont triables.</li><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection de valeurs scalaires | Non                             | Utilisez un tri personnalisé avec la fonction [`orderBy()`](..\API\CollectionClass.md#orderby)             |
-| Entity selection                | Oui                             | <li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Pris en charge : tris sur les propriétés d'attributs d'objets (par exemple "This.data.city" lorsque "data" est un attribut d'objet)</li><li>Pris en charge : tris sur les attributs liés (par exemple "This.company.name")</li><li>Non pris en charge : tris sur les propriétés d'attributs d'objets par le biais d'attributs liés (par exemple, "This.company.data.city"). Pour cela, vous devez utiliser un tri personnalisé avec la fonction [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) (voir l'exemple ci-dessous)</li> |
+| Collection de valeurs scalaires | Non                             | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
+| Entity selection                | Oui                             | <li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Pris en charge : tris sur les propriétés d'attributs d'objets (par exemple "This.data.city" lorsque "data" est un attribut d'objet)</li><li>Pris en charge : tris sur les attributs liés (par exemple "This.company.name")</li><li>Non pris en charge : tris sur les propriétés d'attributs d'objets par le biais d'attributs liés (par exemple, "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Sélection courante              | Oui                             | Seules les expressions simples sont triables (par exemple `[Table_1]Champ_2`)                                |
 | Sélection temporaire            | Non                             |                                                                                                              |
 | Tableaux                        | Oui                             | Les colonnes liées à des tableaux d'images et de pointeurs ne sont pas triables                              |
@@ -519,7 +519,7 @@ Le développeur peut mettre en place des tris personnalisés à l'aide de la com
 Les tris personnalisés vous permettent de :
 
 * effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
-* utiliser des fonctions telles que [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) ou [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) pour trier les colonnes sur des critères complexes.
+* use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Exemple
 
@@ -748,8 +748,8 @@ Quelle que soit la manière dont les données sont affichées dans la list box (
 Ce principe est mis en oeuvre pour les tableaux internes permettant de gérer :
 
 * les couleurs
-* les couleurs de fond
-* les styles
+* background colors
+* styles
 * les lignes masquées
 * les sélections
 
@@ -958,6 +958,7 @@ L'attribut behavior propose des variations de la représentation standard des va
 
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
+
  OB SET($ob4;"valueType";"integer")
  OB SET($ob4;"value";-3)
  OB SET($ob4;"behavior";"threeStates")

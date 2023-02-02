@@ -131,7 +131,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 |---|---|---|----|
 |SpreadJS|15.2.0|19 R7|4D View Pro engine|
 |CEF|4692.99|19 R5|Chromium v97. CORS policies now also apply when accessing files on disk.|
-|OpenSSL|1.1.1n|19 R4||
+|OpenSSL|1.1.1s|19 R7||
 |libzip|1.7.3|19 R2|Used by zip class, 4D Write Pro, svg and serverNet components|
 |webKit|WKWebView|19||
 |ICU|68.1|18 R6|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|

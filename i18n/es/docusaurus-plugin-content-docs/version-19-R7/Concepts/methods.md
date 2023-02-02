@@ -4,13 +4,13 @@ title: Métodos
 ---
 
 
-Un método es básicamente un trozo de código que ejecuta una o varias acciones. Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja. Aunque una instrucción es siempre una línea, esa línea puede ser tan larga como sea necesario (hasta 32.000 caracteres, lo que probablemente sea suficiente para la mayoría de las tareas).
+Un método es básicamente un trozo de código que ejecuta una o varias acciones. Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. A statement performs an action, and may be simple or complex. Aunque una instrucción es siempre una línea, esa línea puede ser tan larga como sea necesario (hasta 32.000 caracteres, lo que probablemente sea suficiente para la mayoría de las tareas).
 
-El tamaño máximo de un método está limitado a 2 GB de texto o 32.000 líneas de código.
+The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
 ## Tipos de métodos
 
-En el lenguaje 4D, hay varias categorías de métodos. La categoría depende de cómo se les pueda llamar:
+In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
 | Tipo                           | Contexto de llamada                                                                                                      | Acepta los parámetros | Descripción                                                                                                                                                                               |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -18,7 +18,7 @@ En el lenguaje 4D, hay varias categorías de métodos. La categoría depende de 
 | **Método objeto (widget)**     | Automático, cuando un evento involucra al objeto al que se asocia el método                                              | No                    | Propiedad de un objeto formulario (también llamado widget)                                                                                                                                |
 | **Método formulario**          | Automático, cuando un evento involucra al formulario al que se asocia el método                                          | No                    | Propiedad de un formulario. Puede utilizar un método formulario para gestionar datos y objetos, pero generalmente es más sencillo y eficiente utilizar un método objeto para estos fines. |
 | **Trigger** (o *método tabla*) | Automático, cada vez que se manipulan los registros de una tabla (Añadir, Eliminar y Modificar)                          | No                    | Propiedad de una tabla. Los triggers son métodos que pueden evitar operaciones "ilegales" con los registros de su base.                                                                   |
-| **Método base**                | Automático, cuando se produce un evento de la sesión de trabajo                                                          | Sí (predefinido)      | Hay 16 métodos base en 4D. Véase la sección métodos base                                                                                                                                  |
+| **Método base**                | Automático, cuando se produce un evento de la sesión de trabajo                                                          | Sí (predefinido)      | There are 16 database methods in 4D. Véase la sección métodos base                                                                                                                        |
 
 > El Lenguaje 4D también soporta **Funciones de clase**, que pueden ser llamadas en el contexto de una instancia objeto. Las funciones de clase pueden estar integradas (*por ejemplo,* `collection.orderBy()` o `entity.save()`), o [creadas por el desarrollador 4D](classes.md#class-function).
 

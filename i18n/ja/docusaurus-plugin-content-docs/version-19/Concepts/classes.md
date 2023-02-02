@@ -309,7 +309,7 @@ Class extends <ParentClass>
 
 クラス継承は次のルールに沿っている必要があります:
 
-- ユーザークラスはビルトインクラスを継承できません (例外は 4D.Object で、すべてのユーザークラスにデフォルトで継承されます)
+- ユーザークラスはビルトインクラスを継承できません (例外は 4D.Object および [ORDAクラス](../ORDA/ordaClasses.md) で、すべてのユーザークラスにデフォルトで継承されます)。
 - ユーザークラスは、別のプロジェクトやコンポーネントのユーザークラスを継承できません。
 - ユーザークラスは、自身を継承することはできません。
 - 間接的にも、自身を継承することはできません (例: "a" extends "b" かつ "b" extends "a")。
@@ -328,6 +328,7 @@ Class extends <ParentClass>
 // パス: Classes/Square.4dm 
 
 Class extends Polygon
+
 
 Class constructor ($side : Integer)
 

@@ -506,8 +506,8 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 | リストボックスタイプ          | 標準ソートのサポート | コメント                                                                                                         |
 | ------------------- | ---------- | ------------------------------------------------------------------------------------------------------------ |
 | Object の Collection | ◯          | <li>"This.a" や "This.a.b" 列はソート可能です。</li><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li>                                                       |
-| スカラー値のコレクション        | ×          | [`orderBy()`](..\API\CollectionClass.md#orderby) 関数を使ったカスタムソートを使用します。                                      |
-| エンティティセレクション        | ◯          | <li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li><li>ソート可: オブジェクト属性プロパティのソート (例: "data" がオブジェクト属性の場合の "This.data.city")</li><li>ソート可: リレート属性のソート (例: "This.company.name")</li><li>ソート不可: リレート属性を介したオブジェクト属性プロパティのソート (例: "This.company.data.city")。 この場合には、[`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li> |
+| スカラー値のコレクション        | ×          | [`orderBy()`](../API/CollectionClass.md#orderby) 関数を使ったカスタムソートを使用します。                                        |
+| エンティティセレクション        | ◯          | <li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li><li>ソート可: オブジェクト属性プロパティのソート (例: "data" がオブジェクト属性の場合の "This.data.city")</li><li>ソート可: リレート属性のソート (例: "This.company.name")</li><li>ソート不可: リレート属性を介したオブジェクト属性プロパティのソート (例: "This.company.data.city")。 この場合には、[`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li> |
 | カレントセレクション          | ◯          | 単純な式のみソート可能です (例: `[Table_1]Field_2`)                                                                        |
 | 命名セレクション            | ×          |                                                                                                              |
 | 配列                  | ◯          | ピクチャー配列やポインター配列と紐づけられた列はソートできません                                                                             |
@@ -519,7 +519,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 カスタムソートを以下のことが可能です:
 
 * [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/ja/page916.html) コマンドを使って、複数カラムを対象に複数レベルのソートをおこなう
-* [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) や [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) などの関数を使って、複雑な条件のソートをおこなう
+* [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) や [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) などの関数を使って、複雑な条件のソートをおこなう
 
 #### 例題
 
@@ -965,8 +965,10 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 ```4d
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"integer")
+
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
+
  OB SET($ob4;"valueType";"integer")
  OB SET($ob4;"value";-3)
  OB SET($ob4;"behavior";"threeStates")

@@ -12,11 +12,11 @@ title: dataClass
 | シンタックス                                                                      | 例題                                       | 説明                                       |
 | --------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | [**{dataClass}**](#dataClass)                                               | `/Employee`                              | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
-| [**{dataClass}({key})**](#dataclasskey)                                     | `/Employee(22)`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
+| [**{dataClass}[{key}]**](#dataclasskey)                                     | `/Employee[22]`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
 | [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)              | `/Employee:firstName(John)`              | 指定した属性値を持つ 1件のエンティティのデータを返します            |
 | [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#関数の呼び出し)       | `/City/getCity`                          | DataClassクラス関数を実行します                     |
 | [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#関数の呼び出し) | `/City/getPopulation/?$filter="ID<3"` | EntitySelectionクラス関数を実行します               |
-| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#関数の呼び出し)   | `City(2)/getPopulation`                  | Entityクラス関数を実行します                        |
+| [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#関数の呼び出し)   | `City[2]/getPopulation`                  | Entityクラス関数を実行します                        |
 
 > 関数の呼び出しについての詳細は [ORDAクラス関数](ClassFunctions.md) を参照ください。
 
@@ -58,7 +58,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
 **結果**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -133,11 +133,11 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 .....//more entities here 
     ]
 }
-````
+```
 
-## {dataClass}({key})
+## {dataClass}\[{key}]
 
-データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company(22) または Company("IT0911AB2200")` など)。
+データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company[22] または Company["IT0911AB2200"]` など)。
 
 ### 説明
 
@@ -147,21 +147,21 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
 
 取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
- `GET  /rest/Company(1)/name,address`
+ `GET  /rest/Company[1]/name,address`
 
 `$expand` を使ってリレーション属性を展開するには、次のように指示します:
 
- `GET  /rest/Company(1)/name,address,staff?$expand=staff`
+ `GET  /rest/Company[1]/name,address,staff?$expand=staff`
 
 ### 例題
 
 次のリクエストは、Company データクラスで主キーが 1 であるエンティティの公開データをすべて返します。
 
- `GET  /rest/Company(1)`
+ `GET  /rest/Company[1]`
 
 **結果**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -180,7 +180,7 @@ RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limi
         }
     }
 }
-````
+```
 
 ## {dataClass}:{attribute}(value)
 

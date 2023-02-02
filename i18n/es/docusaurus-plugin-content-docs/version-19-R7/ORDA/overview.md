@@ -3,28 +3,28 @@ id: overview
 title: '¿Qué es ORDA?'
 ---
 
-ORDA significa **Object Relational Data Access**. It is an enhanced technology allowing to access both the model and the data of a database through objects.
+ORDA significa **Object Relational Data Access**. Se trata de una tecnología avanzada que permite acceder tanto al modelo como a los datos de una base a través de objetos.
 
-Relations are transparently included in the concept, in combination with [lazy loading](glossary.md#lazy-loading), to remove all the typical hassles of data selection or transfer from the developer.
+Las relaciones se incluyen de forma transparente en el concepto, en combinación con el principio del [lazy loading](glossary.md#lazy-loading), para eliminar todas las molestias típicas de la selección o la transferencia de datos del desarrollador.
 
-With ORDA, data is accessed through an abstraction layer, the [datastore](dsMapping.md#datastore). A datastore is an object that provides an interface to the database model and data through objects and classes. For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md##attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
+Con ORDA, se accede a los datos a través de una capa de abstracción, el [datastore](dsMapping.md#datastore). Un datastore es un objeto que ofrece una interfaz al modelo de base de datos y a los datos a través de objetos y de clases. Por ejemplo, una tabla corresponde a un objeto [dataclass](dsMapping.md#dataclass), un campo es un [atributo ](dsMapping.md##attribute) de una dataclass, y se accede a los registros a través de [entidades ](dsMapping.md#entity) y [selecciones de entidades](dsMapping.md#entity-selection).
 
 
 ## ¿Por qué utilizar ORDA?
 
-Instead of representing information as tables, records, and fields, ORDA uses an alternate approach that more accurately maps data to real-world concepts.
+En lugar de representar la información como tablas, registros y campos, ORDA utiliza un enfoque alternativo que asigna con mayor precisión los datos a conceptos concretos.
 
-Imagine the ability to denormalize a relational structure, yet not affect efficiency. Imagine describing everything about the business objects in your application in such a way that using the data becomes simple and straightforward and removes the need for a complete understanding of the relational structure.
+Imagine la posibilidad de desnormalizar una estructura relacional sin que afectar la eficacia. Imagine que describe todo lo relativo a los objetos de su aplicación de tal forma que el uso de los datos se convierte en algo sencillo y directo y elimina la necesidad de comprender por completo la estructura relacional.
 
-In the ORDA data model, a single dataclass can incorporate all of the elements that make up a traditional relational database table, but can also include values from related parent entities, and direct references to related entities and entity selections.
+En el modelo de datos ORDA, una única clase de datos puede incorporar todos los elementos que componen una tabla de base de datos relacional tradicional, pero también puede incluir valores de entidades padres relacionadas y las referencias directas a las entidades y a las selecciones de entidades relacionadas.
 
-A query returns a list of entities called an entity selection, which fulfills the role of a SQL query’s row set. The difference is that each entity "knows" where it belongs in the data model and "understands" its relationship to all other entities. This means that a developer does not need to explain in a query how to relate the various pieces of information, nor in an update how to write modified values back to the relational structure.
+Una petición devuelve una lista de entidades denominada selección de entidades, que cumple la función de un conjunto de líneas de una petición SQL. La diferencia es que cada entidad "sabe" cuál es su lugar en el modelo de datos y "comprende" su relación con las demás entidades. Esto significa que un desarrollador no necesita explicar en una petición cómo relacionar las distintas piezas de información, ni en una actualización cómo volver a escribir los valores modificados en la estructura relacional.
 
-In addition, ORDA objects such as entity selections or entities can be easily bound to UI objects such as list boxes or variables. Combined with powerful features such as the `This` and `Form` commands, they allow the building modern and modular interfaces based upon objects and collections.
+Además, los objetos ORDA, como las selecciones de entidades o las entidades, pueden vincularse fácilmente a los objetos de interfaz de usuario, como los list box o las variables. Combinadas con las funcionalidades poderosas tales como los comandos `This` y `Form`, permiten construir interfaces modernas y modulares basadas en objetos y colecciones.
 
 ## ¿Cómo utilizar ORDA?
 
-Fundamentalmente, ORDA gestiona objetos. In ORDA, all main concepts, including the datastore itself, are available through objects. In 4D, the datastore is automatically [mapped upon the 4D structure](dsMapping.md).
+Fundamentalmente, ORDA gestiona objetos. En ORDA, todos los conceptos principales, incluido el propio datastore, están disponibles a través de objetos. In 4D, the datastore is automatically [mapped upon the 4D structure](dsMapping.md).
 
 ORDA objects can be handled like 4D standard objects, but they automatically benefit from specific properties and methods.
 

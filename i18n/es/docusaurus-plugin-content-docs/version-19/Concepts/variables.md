@@ -31,6 +31,8 @@ Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de decla
  // and assigns the current date plus 30 days
 ```
 
+Cuando se declaran las variables, se inicializan con el [**valor por defecto correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no se les haya [asignado](#assigning-data).
+
 
 ### Utilizando la palabra clave `var`
 
@@ -145,7 +147,7 @@ MyNumber:=3
 
 crea la variable _MyNumber_ y pone en ella el número 3. Si MyNumber ya existe, entonces toma el valor 3.
 
-> Normalmente no se recomienda crear variables sin [declarar su tipo](#crear-variables).
+> It is usually not recommended to create variables without [declaring their type](#creating-variables).
 
 Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
 

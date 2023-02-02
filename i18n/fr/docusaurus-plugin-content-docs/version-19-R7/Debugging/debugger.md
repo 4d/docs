@@ -130,26 +130,26 @@ $c:=a+b
 
 1. A Debugger window opens with the program counter set to the line with `a:=1`. At this point the **Line Objects** theme displays:
 
-    | $a | Indéfini |
-    | -- | -------- |
-    |    |          |
+    | $a | Undefined |
+    | -- | --------- |
+    |    |           |
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
 
-    | $a | 1        |
-    | -- | -------- |
-    | $b | Indéfini |
+    | $a | 1         |
+    | -- | --------- |
+    | $b | Undefined |
 
     The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
 
-    | $c | Indéfini |
-    | -- | -------- |
-    | $a | 1        |
-    | $b | 2        |
+    | $c | Undefined |
+    | -- | --------- |
+    | $a | 1         |
+    | $b | 2         |
 
     The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 

@@ -18,7 +18,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Longint](Concepts/dt_number.md)             | Oui                           | Oui                           | Integer                                                 | `C_LONGINT`, `ARRAY LONGINT`                                     |
 | [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                                                       | -                                                                |
 | [Real](Concepts/dt_number.md)                | Oui                           | Oui                           | Real                                                    | `C_REAL`, `ARRAY REAL`                                           |
-| [Indéfini](Concepts/dt_null_undefined.md)    | -                             | Oui                           | -                                                       | -                                                                |
+| [Undefined](Concepts/dt_null_undefined.md)   | -                             | Oui                           | -                                                       | -                                                                |
 | [Null](Concepts/dt_null_undefined.md)        | -                             | Oui                           | -                                                       | -                                                                |
 | [Pointeurs](Concepts/dt_pointer.md)          | -                             | Oui                           | Pointeurs                                               | `C_POINTER`, `ARRAY POINTER`                                     |
 | [Images](Concepts/dt_picture.md)             | Oui                           | Oui                           | Images                                                  | `C_PICTURE`, `ARRAY PICTURE`                                     |
@@ -33,7 +33,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 
 ## Valeurs par défaut
 
-Au moment de leur typage via une directive de compilation, les variables reçoivent une valeur par défaut, qu'elles conserveront au cours de la session tant qu'elles n'auront pas été affectées.
+When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned.
 
 La valeur par défaut dépend du type de variable :
 

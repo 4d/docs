@@ -241,7 +241,7 @@ Los métodos proyecto 4D también pueden devolver valores en la fórmula de la c
 * [time](Concepts/dt_time.md) (convertida en tipo JS Date en 4D View Pro - date en date de base, es decir, 30/12/1899)
 * [boolean](Concepts/dt_boolean.md) (converted to bool in 4D View Pro)
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
-* [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
+* [](Concepts/dt_object.md) con las dos propiedades siguientes (que permiten pasar una fecha y una hora):
 
     | Propiedad | Tipo  | Descripción      |
     | --------- | ----- | ---------------- |

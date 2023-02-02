@@ -225,6 +225,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
  <!-- REF #WebServerClass.CORSSettings.Summary -->CORSサービスに許可されたホストとメソッドの一覧<!-- END REF --> ( [`CORSEnabled`](#corsenabled) プロパティ参照)。 各オブジェクトは必ず **host** プロパティを格納していなくてはなりません。 **methods** プロパティは任意です。
 
+
 - **host** (テキスト、必須): CORS を介したサーバーへのデータリクエスト送信が許可されている外部ページのドメイン名または IPアドレス。 複数のドメインを追加してホワイトリストを作成することができます。 *host* が存在しない、または空の場合、当該オブジェクトは無視されます。 複数のシンタックスがサポートされています:
   - 192.168.5.17:8081
   - 192.168.5.17
@@ -283,6 +284,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 <!-- REF WebServerClass.HSTSMaxAge.Desc -->
 
 ## .HSTSMaxAge
+
 
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
@@ -720,11 +722,10 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 | v18 R3 | 追加 |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | 引数 | タイプ |  | 説明                                           |
 | -- | --- |  | -------------------------------------------- |
 |    |     |  | このコマンドは引数を必要としません|<!-- END REF -->

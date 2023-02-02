@@ -283,22 +283,22 @@
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "次へ",
+    "message": "開発中",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.versionBadge.label": {
     "message": "バージョン: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "これはリリース前の{siteTitle} {versionLabel}のドキュメントです。",
+    "message": "これはリリース前の {siteTitle} {versionLabel} バージョンのドキュメントです。",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "これは{siteTitle} {versionLabel}のドキュメントで現在はアクティブにメンテナンスされていません。",
+    "message": "これは {siteTitle} {versionLabel} のドキュメントで現在はアクティブにメンテナンスされていません。",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "最新のドキュメントは {latestVersionLink} ({versionLabel}) を見てください。",
+    "message": "最新のドキュメントは {latestVersionLink} ({versionLabel}) を参照ください。",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
@@ -306,8 +306,8 @@
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "このページを編集",
-    "description": "The link label to edit the current page"
+    "message": "このページへコメントする",
+    "description": "The link label to comment the current page"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "タグ付 1 件|タグ付 {count} 件",
@@ -552,5 +552,8 @@
   "theme.tags.tagsPageTitle": {
     "message": "タグ",
     "description": "The title of the tag list page"
+  },
+  "Release Notes": {
+    "message": "リリースノート"
   }
 }

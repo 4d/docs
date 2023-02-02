@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Code Editor:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
 
@@ -122,6 +122,7 @@ The following example goes through all the characters of the text vtSomeText:
 ```4d
 For($vlChar;1;Length(vtSomeText))
 	//Do something with the character if it is a TAB
+
 	If(Character code(vtSomeText[[$vlChar]])=Tab)
 		//...
 	End if
@@ -343,6 +344,20 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Comments
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called. 
@@ -354,7 +369,7 @@ There are two ways to create comments:
 
 Both styles of comments can be used simultaneously. 
 
-#### Single line comments (//)
+#### Single line comments (`//comment`)
 
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Example: 
 
@@ -367,7 +382,7 @@ For($vCounter;1;100) //Starting loop
  End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
@@ -392,3 +407,26 @@ comments
 ...
 End for
 ```
+
+## Escape sequences  
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+In 4D, the following escape sequences can be used:
+
+|Escape sequence|Character replaced|
+|---|---|
+| `\n` | LF (Line feed) |
+| `\t` | HT (Tab) |
+| `\r` | CR (Carriage return) |
+| `\\` | `\` (Backslash) |
+| `\"` | " (Quotation marks) |
+
+> It is possible to use either upper or lower case in escape sequences.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+

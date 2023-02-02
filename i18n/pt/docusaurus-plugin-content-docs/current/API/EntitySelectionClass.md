@@ -1342,7 +1342,7 @@ A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclui d
 
 Como padrão, se omitir o parâmetro *keepOrder* , a seleção de entidade resultado não é ordenada. Se quiser manter a ordem da seleção de entidade original (por exemplo se quiser reutilizar a seleção de entidade em uma interface de usuário) passe a constante `dk keep ordered` em *keepOrder*. Neste caso, o resultado é uma seleção de entidade ordenada e a ordem da seleção de entidade inicial é mantida
 
-:::nota
+:::note
 
 Se passar `dk keep ordered` em *keepOrder* e removida *entitySelection* contém entidades duplicadas na seleção de entidade original, todas as ocorrências da duplicada são removidas.
 

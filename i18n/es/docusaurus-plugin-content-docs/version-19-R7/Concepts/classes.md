@@ -407,7 +407,7 @@ La palabra clave `Class extends` se utiliza en la declaración de clase para cre
 
 La extensión de clase debe respetar las siguientes reglas:
 
-- Una clase usuario no puede extender una clase integrada (excepto 4D.Object que se extiende por defecto para las clases usuario)
+- Una clase de usuario no puede extender una clase integrada (excepto las 4D.Object y [clases ORDA](../ORDA/ordaClasses.md) que se extienden por defecto para las clases de usuario).
 - Una clase usuario no puede extender una clase usuario de otro proyecto o componente.
 - Una clase usuario no puede extenderse a sí misma.
 - No es posible extender las clases de una manera circular (es decir, "a" extiende "b" que extiende "a").

@@ -33,7 +33,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 ## Valor padrão
 
-Quando as variáveis são introduzidas através de uma diretiva do compilador, recebem um valor padrão, que manterão durante a sessão enquanto não tenham sido atribuidas.
+When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned.
 
 The default value depends on the variable type:
 

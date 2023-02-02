@@ -3,7 +3,7 @@ id: dataExplorer
 title: Explorador de datos Web
 ---
 
-> **Vista previa**: El explorador de datos web se ofrece como una funcionalidad de visión general. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
+> **Vista previa**: El explorador de datos web se ofrece como una funcionalidad de visión general. No se recomienda utilizar esta función con fines de producción; la implementación final podría ser ligeramente diferente.
 
 El Explorador de datos ofrece una interfaz web para ver y consultar los datos del almacén de datos de su proyecto. Utilizando esta herramienta, puede navegar fácilmente entre todas sus entidades y buscar, ordenar o filtrar los valores de los atributos. It helps you to control data and quickly identify issues at any steps of the development process.
 

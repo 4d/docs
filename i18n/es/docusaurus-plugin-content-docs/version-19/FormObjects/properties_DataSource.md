@@ -115,9 +115,9 @@ Indica una variable o expresión a la que se le asignará un entero largo que in
 Define el tipo de datos para la expresión mostrada. Esta propiedad se utiliza con:
 
 - [List box columns](listbox_overview.md#list-box-columns) of the selection and collection types.
-- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
+- [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
 
-See also [**Expression Type**](properties_Object.md#expression-type) section.
+Ver también la sección [**Tipo de expresión**](properties_Object.md#expression-type).
 
 #### Gramática JSON
 
@@ -127,13 +127,13 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 #### Objetos soportados
 
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox_overview.md#list-box-columns)
+[Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
 ## Tipo de datos (lista)
 
-Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). Esta propiedad se utiliza con:
+Define el tipo de datos a guardar en el campo o variable asociado a la [lista desplegable](dropdownList_Overview.md). Esta propiedad se utiliza con:
 
 - Drop-down lists [associated to a choice list](dropdownList_Overview.md#using-a-choice-list).
 - Drop-down lists [associated to a hierarchical choice list](dropdownList_Overview.md#using-a-hierarchical-choice-list).
@@ -174,7 +174,7 @@ Debe introducir una lista de valores. In the Form editor, a specific dialog box 
 
 ![](../assets/en/FormObjects/defaultValues.png)
 
-> You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
+> También puede definir una [lista de selección](properties_DataSource.md#choice-list) con la columna list box. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
 
 #### Gramática JSON
 

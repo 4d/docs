@@ -11,7 +11,7 @@ Alpha formats control the way the alphanumeric fields and variables appear when 
 
 ![](../assets/en/FormObjects/property_alphaFormat.png)
 
-Puede elegir un formato de esta lista o utilizar cualquier formato personalizado. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. En este caso, el formato no se puede modificar en las propiedades del objeto. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
+Puede elegir un formato de esta lista o utilizar cualquier formato personalizado. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. En este caso, el formato no se puede modificar en las propiedades del objeto. Los formatos o filtros personalizados que haya creado estarán disponibles automáticamente, precedidos de una barra vertical (|).
 
 El signo número (#) es el marcador de posición para un formato de visualización alfanumérico. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
@@ -118,7 +118,7 @@ Supongamos que usa el formato ##0 para mostrar tres dígitos. Si el usuario no i
 
 ### Caracteres separadores
 
-The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
+Los formatos numéricos de visualización (excepto las notaciones científicas) se basan automáticamente en los parámetros regionales del sistema. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
 > On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located:
 > 
 > * in a Real type field, using this key will insert the decimal separator defined in the system,
@@ -126,7 +126,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 ### Puntos decimales y otros caracteres de visualización
 
-Puede utilizar un punto decimal en un formato de visualización de números. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+Puede utilizar un punto decimal en un formato de visualización de números. Si desea que el decimal se muestre independientemente de si el usuario lo teclea o no, debe colocarlo entre ceros.
 
 Puede utilizar cualquier otro caracter en el formato. When used alone, or placed before or after placeholders, the characters always appear. Por ejemplo, si utiliza el siguiente formato:
 
@@ -188,19 +188,19 @@ The `&xml` format will make a number compliant with XML standard rules. In parti
 
 ### Mostrar un número como una hora
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
+You can display a number as a time (with a time format) by using `&/` followed by a digit. La hora se determina calculando el número de segundos desde medianoche que representa el valor. El dígito en el formato corresponde al orden en que aparece el formato de hora en el menú desplegable Formato.
 
 Por ejemplo, el formato:
 
  &/5
 
-corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. Un campo numérico con este formato mostraría 25000 como:
+corresponde al 5º formato horario del menú desplegable, concretamente a la hora AM/PM. Un campo numérico con este formato mostraría 25000 como:
 
  6:56 AM
 
 ### Ejemplos
 
-The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
+La siguiente tabla muestra cómo afectan los distintos formatos a la visualización de los números. Las tres columnas, Positiva, Negativa y Cero, muestran cada una cómo se mostrarían 1.234,50, -1.234,50 y 0.
 
 | Formato introducido                    | Positivo         | Negativo      | Cero                         |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
@@ -246,7 +246,7 @@ The following table shows how different formats affect the display of numbers. T
 
 ## Formato imagen
 
-Los formatos Imagen controlan la apariencia de las imágenes cuando se muestran o se imprimen. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
+Los formatos Imagen controlan la apariencia de las imágenes cuando se muestran o se imprimen. Para la entrada de datos, el usuario siempre introduce las imágenes pegándolas desde el Portapapeles o arrastrándolas y soltándolas, independientemente del formato de visualización.
 
 Las opciones de truncamiento y escalado no afectan a la imagen en sí. El contenido de un campo Imagen siempre se guarda. El formato de visualización de la imagen sólo afecta a la visualización en el formulario en cuestión.
 
@@ -498,7 +498,7 @@ In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-ty
 * **Si registro seleccionado** (nombre JSON: "selectedRows")
 * **If record not selected** (JSON name: "unselectedRows")
 
-This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
+Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo de un formulario listado. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
 
 ![](../assets/en/FormObjects/select-row.png)
 
@@ -546,7 +546,7 @@ In list boxes, any text that is too long is truncated and displayed with an elli
 
 ![](../assets/en/FormObjects/property_wordwrap1.png)
 
-Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
+Note that regardless of the Wordwrap option’s value, the row height is not changed. Si el texto con saltos de línea no puede visualizarse por completo en la columna, se trunca (sin elipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 

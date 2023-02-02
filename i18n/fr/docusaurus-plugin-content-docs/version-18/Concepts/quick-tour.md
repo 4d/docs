@@ -96,7 +96,7 @@ vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lectu
 
 4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
 
-Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.
+Une méthode est composée de plusieurs lignes d’instructions. A statement performs an action, and may be simple or complex.
 
 Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :
 
@@ -245,7 +245,7 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 | JSON Parse (MonTabJSON) | Collection            | C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)                                                                                              |
 | Form.pageNumber         | Propriété objet       | Une propriété objet est une expression qui peut être de tout type                                                                                                                    |
 | Col[5]                  | Élément de collection | Un élément de collection est une expression qui peut être de tout type                                                                                                               |
-| $entitySel[0]           | Entité (entity)       | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas affectable**                                                            |
+| $entitySel[0]           | Entity                | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas affectable**                                                            |
 
 ### Expressions assignables et non-assignables
 

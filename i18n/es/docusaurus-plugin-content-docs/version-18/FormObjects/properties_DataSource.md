@@ -128,7 +128,7 @@ Debe introducir una lista de valores. In the Form editor, a specific dialog box 
 
 ![](../assets/en/FormObjects/defaultValues.png)
 
-> You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
+> También puede definir una [lista de selección](properties_DataSource.md#choice-list) con la columna list box. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
 
 #### Gramática JSON
 

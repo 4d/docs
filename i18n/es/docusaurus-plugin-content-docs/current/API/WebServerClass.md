@@ -231,7 +231,8 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts y métodos permitidos para el servicio CORS<!-- END REF --> (ver [`propiedad CORSEnabled`](#corsenabled)). Cada objeto debe contener una propiedad **host** y, opcionalmente, una propiedad **methods**:
+Contiene el <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts y métodos permitidos para el servicio CORS<!-- END REF --> (ver [`propiedad CORSEnabled`](#corsenabled)). Cada objeto debe contener una propiedad **host** y, opcionalmente, una propiedad **methods**:
+
 
 - **host** (texto, obligatorio): nombre de dominio o dirección IP desde donde las páginas externas pueden enviar solicitudes de datos al Servidor a través de CORS. Se pueden añadir múltiples atributos de dominio para crear una lista blanca. Si *host* no está presente o está vacío, el objeto se ignora. Se soportan varias sintaxis:
   - 192.168.5.17:8081
@@ -294,6 +295,7 @@ El <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado del HTTP Strict Transp
 <!-- REF WebServerClass.HSTSMaxAge.Desc -->
 
 ## .HSTSMaxAge
+
 
 
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
@@ -516,7 +518,7 @@ Valores posibles: 500000 - 2147483648
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.maxRequestSize.Summary -->tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar<!-- END REF -->. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Si una petición alcanza este límite, el servidor web la rechaza.
+Contiene el <!-- REF #WebServerClass.maxRequestSize.Summary -->tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar<!-- END REF -->. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Si una petición alcanza este límite, el servidor web la rechaza.
 
 Valores posibles: 500000 - 2147483647
 
@@ -531,7 +533,7 @@ Valores posibles: 500000 - 2147483647
 
 > Esta propiedad no se devuelve en [modo sesiones escalables](#scalablesession).
 
-El <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de sesiones legacy simultáneas<!-- END REF -->. Cuando se alcanza el límite, se cierra la sesión heredada más antigua (y se llama al método base `On Web Legacy Close Session`) si el servidor web necesita crear una nueva. El número de sesiones heredadas simultáneas no puede superar el número total de procesos web (propiedad `maxConcurrentProcesses`, 100 por defecto)
+Contiene el <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de sesiones legacy simultáneas<!-- END REF -->. Cuando se alcanza el límite, se cierra la sesión heredada más antigua (y se llama al método base `On Web Legacy Close Session`) si el servidor web necesita crear una nueva. El número de sesiones heredadas simultáneas no puede superar el número total de procesos web (propiedad `maxConcurrentProcesses`, 100 por defecto)
 
 <!-- END REF -->
 
@@ -778,10 +780,11 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 </details>
 
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
+
+
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF --> |
@@ -793,7 +796,7 @@ Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierra
 
 #### Ejemplo
 
-Para detener el servidor web de la base de datos:
+Para detener el servidor web de la base:
 
 ```4d
  var $webServer : 4D.WebServer

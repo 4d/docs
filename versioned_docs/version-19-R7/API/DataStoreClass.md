@@ -997,6 +997,7 @@ You want to log ORDA client requests in memory:
 |---|---|---|---|
 ||||Does not require any parameters|<!-- END REF -->
 
+
 #### Description
 
 The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled.

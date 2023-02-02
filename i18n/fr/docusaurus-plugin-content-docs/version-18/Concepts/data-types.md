@@ -18,7 +18,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Longint](Concepts/dt_number.md)             | Oui                           | Oui                           | `C_LONGINT`, `ARRAY LONGINT` |
 | [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                            |
 | [Real](Concepts/dt_number.md)                | Oui                           | Oui                           | `C_REAL`, `ARRAY REAL`       |
-| [Indéfini](Concepts/dt_null_undefined.md)    | -                             | Oui                           | -                            |
+| [Undefined](Concepts/dt_null_undefined.md)   | -                             | Oui                           | -                            |
 | [Null](Concepts/dt_null_undefined.md)        | -                             | Oui                           | -                            |
 | [Pointeurs](Concepts/dt_pointer.md)          | -                             | Oui                           | `C_POINTER`, `ARRAY POINTER` |
 | [Images](Concepts/dt_picture.md)             | Oui                           | Oui                           | `C_PICTURE`, `ARRAY PICTURE` |

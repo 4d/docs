@@ -26,21 +26,35 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Method information** | ![method-information-icon](../assets/en/code-editor/method-information.png) | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only). |
 | **Last clipboard values** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard. |
 | **Clipboards** | ![clipboard icons](../assets/en/code-editor/clipboards.png) | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them. |
-| **Code navigation** | ![code-navigation-icons](../assets/en/code-editor/tags.png) | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See [Navigation dropdown](./write-class-method.md#navigation-dropdown). |
+| **Navigation dropdown** | ![code-navigation-icons](../assets/en/code-editor/tags.png) | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See below |
+
 
 ## Editing area
 
-This is where you [write and edit](write-class-method.md) your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
+This is where you write and edit your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
 | Option | Description | Set in... |
-|--|--|--|
+|---|---|---|
 |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**
 |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md)|
 |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.). | **Method > View > White Spaces**
 |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md)
 |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
+
+### Change bars  
+
+Colored bars instantly show you where lines of code were modified since the method was opened:
+
+![](../assets/en/code-editor/change-bars.png)
+
+The change bars change colors to indicate whether or not the modifications were saved:
+
+- yellow: Line was modified and method has not yet been saved.
+- green: Line was modified and method has been saved.
+
+
 
 ## Lists area
 
@@ -110,7 +124,9 @@ You can display or hide the line numbers in the break points area for each windo
 - To enable or disable the display of line numbers by default,  choose **Preferences** > **Methods** > **Show line numbers**.
 - To modify this display separately for each window of the Code Editor, choose **Method** > **View** > **Line Numbers**.
 
-Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
+Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display. 
+
+This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
 
 ## Status bar
 
@@ -133,52 +149,38 @@ You can use the arrow keys to move from line to line quickly. Using the arrow ke
 
 Under Windows, the code editor includes an Input Code Editor (IME) to facilitate code editing on Japanese or Chinese systems.
 
-The Code Editor includes numerous [navigation shortcuts](#navigational-keyboard-shortcuts).
+The Code Editor includes numerous [navigation shortcuts](#shortcuts).
 
-### Adding items by drag-and-drop  
+#### Using the backslash
 
-When writing methods, you can drag and drop items:
+The backslash character (`\`) has a specific support in the 4D language:
 
-- from the Explorer
-- within the same method, class, function
-- between methods, classes, and functions
+- inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
+- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences). 
 
-#### From the Explorer
 
-From the Explorer, you can drag and drop:
+:::caution
 
-- Table names, field names, form names and project methods from the Home page.
-- Table names and field names from the Tables page,
-- Table names and form names from the Forms page,
-- Project methods and form names from the Methods page,
-- Constants from the Constants page,
-- 4D commands from the Commands page.
+The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash `\\`. For instance, `C:\MyDocuments` will become `C:\\MyDocuments`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash `\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
-When you drag and drop a component, 4D always uses the correct syntax for the component. For example, if you drag the field name "First Name" from the [People] table, it appears in the Code Editor as "[People]First Name." Similarly, if you drag the Form name "Input" from the People table, it appears in the Code Editor as "[People];"Input"."
+:::
+
+
+
+#### Drag-and-drop from the Explorer
+
+From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
 When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. You can then use a syntax that better suits your usage.
 
-#### Within a method, class, function or between two different ones
+#### Drag-and-drop within a method, class, function or between two different ones
 
 In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected.
 By default, the drag-and-drop mechanism moves the selected text. In order to copy it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
 
-### Entry on several lines  
-
-You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. 4D will consider all the lines at once. For example, both the following statements are equivalent:
-
-```4d
-$str:=String("hello world!")
-```
-
-```4d
-$str:=String("hello"+\
-" world"+\
-+"!")
-```
 
 
-### Changing case  
+#### Changing case  
 
 You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
@@ -187,7 +189,7 @@ You can automatically modify the case of selected characters using the commands 
 
 When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
 
-### Swap expression  
+#### Swap expression  
 
 The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. For instance,
 
@@ -199,7 +201,7 @@ becomes
 
 This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area. Within the selection, only the lines assigning a value will be modified.
 
-### Multiple copy-paste and numbering of clipboards  
+#### Multiple copy-paste and numbering of clipboards  
 
 In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
 
@@ -214,28 +216,21 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 ![](../assets/en/code-editor/clipboards-2.png)
 
 |Platform|Copy selected text to a clipboard|Paste contents of a clipboard at cursor location|
-    |--|--|--|
-    | **Windows** | Shift or Alt+click on clipboard icon | Ctrl+click on clipboard icon |
-    |  |  | Ctrl+clipboard number |
-    | **macOS** | Shift or Alt+click on clipboard icon | Cmd+click on clipboard icon |
-    |  | Cmd+Shift+clipboard number | Cmd+clipboard number |
+|---|---|---|
+| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+click on clipboard icon |
+|  |  | Ctrl+clipboard number |
+| **macOS** | Shift or Alt+click on clipboard icon | Cmd+click on clipboard icon |
+|  | Cmd+Shift+clipboard number | Cmd+clipboard number |
 
 You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.
 
-### Moving lines  
+#### Moving lines  
 
 You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the combination **Alt/Option** + **Up Arrow** or **Down Arrow**.
 
-### Change bars  
 
-Colored bars instantly show you where lines of code were modified since the method was opened:
 
-![](../assets/en/code-editor/change-bars.png)
 
-The change bars change colors to indicate whether or not the modifications were saved:
-
-- yellow: Row was modified and method has not yet been saved.
-- green: Row was modified and method has been saved.
 
 ## Using the autocomplete functions  
 
@@ -285,7 +280,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
-### Object properties  
+#### Object property names
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
@@ -306,31 +301,15 @@ When the database is restarted, the list is reinitialized.
 
 > You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
 
-## Selecting text  
 
-The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point. The enclosing block can be defined by:
-
-- Quotation marks
-- Parentheses
-- A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
-- Braces
-
-If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
-
-Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you to reverse this operation and deselect the last enclosing block selected.
-
-**Note:** If the insertion point is placed in an `If` or `Else` type structure, the enclosing block will be the one containing, respectively, the `If` or `Else` statement.
-
-You can double-click to select individual "words". When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
-
-### Shortcuts  
+## Shortcuts  
 
 Standard keyboard shortcuts to navigate the code are available in 4D's Code Editor.
 
 **Note:** Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
 
 | **Shortcut** | **Action** |
-|--|--|
+|---|---|
 | [Shift]+[right arrow] | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left |
 | [Shift]+[left arrow] | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left |
 | [Shift]+[down arrow] | Create and enlarge a selection, line by line, from the top to the bottom |
@@ -347,9 +326,10 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 | [Shift]+[End] | Select all the characters in the line that are to the right of the cursor |
 | [PgUp] | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point) |
 | [PgDn] | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point) |
-| [Ctrl]+[K] on a project method name| Open the project method in a new window|
-| [Alt]+double-click on a project method name| idem|
-| [Ctrl]+click on a project method name| idem|
+| [Ctrl]+[K] or [Alt]+double-click on a project method name| Open the project method in a new window|
+| [Ctrl] (Windows) or [Alt] (macOS)+hovering over a token|Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
+
+You can double-click to select individual "words". When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
 
 ## Checking and correcting syntax errors  
 
@@ -373,7 +353,7 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
-## Using help tips and status bar  
+## Using help tips  
 
 The Code Editor provides various contextual information using help tips. They appear when you mouse over an object and the status bar, at the bottom of a Code Editor window.
 
@@ -387,7 +367,7 @@ The Code Editor provides various contextual information using help tips. They ap
 - **Variable type and description**: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any.
     ![](../assets/en/code-editor/variable-type.png)
 
-- **Project methods**: When you mouse over a project method or class function, a help tip displays:
+- **Project methods or functions**: When you mouse over a project method or class function, a help tip displays:
 
   - either the comments specified in the Explorer.
   - or the first few lines of the method or class function if it includes comments (lines beginning with // or /*...*/ comment block). It is common practice to insert documentation for the method as well as its parameters in the form of comments at the beginning of the method. You can get this information directly in the help tip, just make sure to first remove any comments found in the Explorer.
@@ -398,46 +378,28 @@ The Code Editor provides various contextual information using help tips. They ap
 
 - You can also create a **dedicated documentation file** named `<MethodName>.md` in the `<package>/documentation` folder. See [Viewing documentation in the code editor](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
-## Display the complete documentation of a command  
 
-You can display the HTML documentation of a 4D "classic" language command at any time: to do so, select the complete command name or simply place the cursor in the name and press **F1**. The complete documentation of the command is displayed in a new window of your default browser.
+## Show documentation  
 
-4D looks for the on-line documentation of the command (on the *4D Doc Center* site) or searches locally depending on the settings made in the application Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
+The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. For example:
+
+- Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
+- Selecting a 4D command, function, or class name and choosing **Show documentation...** displays the online documentation.
+- If no element is selected, the command opens the documentation of the method currently opened in the Code Editor, [if any](../Project/documentation.md).
+
+:::tip
+
+To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. The documentation of the command is displayed in a new window of your default browser. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
+
+:::
 
 ## Comment/Uncomment  
 
-Comments are inactive lines of code. These lines are not interpreted by the program (4D does not apply any particular style within comments) and are not executed when the method or function is called.
+The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. There is no limit on the number of lines.
 
-There are two ways to create comments:
+There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks). 
 
-#### `//comment`
-
-Used to create a single line comment. Inserting // at the beginning of a line will create a single line comment. The length of single line comments is limited to the maximum size of a line (32,000 characters).
-
-```//This is a comment\
-
- For(vCounter;1;2)\
-  //comment\
-  //comment\
-  //comment\
- End for
-```
-
-#### `/*comment*/`
-
-Used to surround the content to create inline comments or multiline comment blocks.
-
-Both inline and multiline comment blocks begin with /*and end with*/.
-
-- *Inline comments* -  can be anywhere in the code.The length of inline comments is limited to the maximum size of a line (32,000 characters).
-![](../assets/en/code-editor/inline-comment.png)
-
-- *Multiline comment blocks* - can be collapsed or expanded. Multiline comment blocks can be nested and each block  is expandable/collapsable. The comments on the first line of an expandable/collapsable block will remain visible when the block is collapsed. The length of multiline comments is limited to the maximum size of 32,000 characters per line. There is no limit on the number of lines.
-![](../assets/en/code-editor/multiline-comment.png)
-
-> Multiline comments at the end of a line are not supported.-  
-
-The **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the **Comment/Uncomment** command:
+Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the **Comment/Uncomment** command:
 
 ![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
@@ -445,35 +407,8 @@ When the selection contains only active code, the **Comment** command is applied
 
 > The **Comment/Uncomment** command only operates with full lines --- it cannot be used to comment only part of a line.
 
-## Using escape sequences  
 
-The Code Editor allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
-
-The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
-
-In 4D, the following escape sequences can be used:
-
-|Escape sequence|Character replaced|
-|---|---|
-| `\n` | LF (Line feed) |
-| `\t` | HT (Tab) |
-| `\r` | CR (Carriage return) |
-| `\\` | `\` (Backslash) |
-| `\"` | " (Quotation marks) |
-
-> It is possible to use either upper or lower case in escape sequences.
-
-In the following example, the **Carriage return** character (escape sequence \r) is inserted in a statement in order to obtain the dialog box shown:
-
-`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-
-**Warning:** The `\` (backslash) character is used as a separator in pathnames under Windows. In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash `\\`. For instance, `C:\Folder` will become `C:\\Folder`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing escape sequence). You must therefore enter a double backslash `\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
-
-## Making code editing easier  
-
-Several functions in the Code Editor make code easier to read and facilitate browsing among the statements.
-
-### Expand / Collapse  
+## Expand / Collapse  
 
 4D code located inside loops and conditions can now be collapsed or expanded, in order to facilitate the reading of methods:
 
@@ -496,6 +431,27 @@ There are several ways to expand and collapse code:
   - **Collapse Current Level** / **Expand Current Level**: collapses or expands the code structure at the level where the cursor is located. These commands are also available in the **context menu** of the editor.
   - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. These commands are also available in the toolbar of the editor.
 
+
+## Handling blocks  
+
+Blocks can be defined by:
+
+- Quotation marks
+- Parentheses
+- A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
+- Braces
+
+### Select Enclosing Block
+
+The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point. 
+
+If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
+
+Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you to reverse this operation and deselect the last enclosing block selected.
+
+**Note:** If the insertion point is placed in an `If` or `Else` type structure, the enclosing block will be the one containing, respectively, the `If` or `Else` statement.
+
+
 ### Start of Block or End of Block  
 
 Two commands make it easier to move around within code structures (e.g. `If...Else...End if`):
@@ -508,7 +464,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.
 
-### Using bookmarks  
+## Using bookmarks  
 
 4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 
@@ -522,7 +478,42 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 - **Remove All**: Removes all bookmarks from the foreground window.
 - **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
 
-**Note:** You can use bookmarks as markers for lines that contain an item found by a search. In this case, 4D automatically adds the bookmarks. For more information, refer to [Find and replace in methods](./find-and-replace-in-methods).
+**Note:** You can use bookmarks as markers for lines that contain an item found by a search. In this case, 4D automatically adds the bookmarks. For more information, refer to [Find and replace in methods](find-replace.md).
+
+
+## Goto Definition  
+
+The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
+
+**Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
+
+The effect varies depending on the target element. For example:
+
+- Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
+- Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
+
+## Reveal in Explorer  
+
+The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
+
+
+## Search references  
+
+The **Search references...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
+
+The current item is either the one selected or the one where the cursor is located. It can be a field name, variable name, command, string, and so on. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+
+![find-dialog](../assets/en/code-editor/search-references.png)
+
+This command displays its results in a new window.
+
+## Search Callers  
+
+The **Search Callers** command in the **Method** menu is only enabled for project methods. It searches for all the objects (other methods or menus) that reference the project method.
+
+**Note:** The **Search Callers...** command is also available in **Explorer** > **Methods**
+
+This command displays its results in a new window.
 
 ## Navigation dropdown
 
@@ -532,11 +523,11 @@ The navigation dropdown helps you organize your code and navigate more easily in
 
 Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
 
-### Code navigation
+#### Code navigation
 
 Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
 
-### Automatic tagging
+#### Automatic tagging
 
 Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
 
@@ -551,7 +542,7 @@ The following items are added automatically:
 |![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png)|Computed attribute (get, set, orderBy and query)|
 |![function-icon](../assets/en/code-editor/function.png)|Class function name|
 
-### Manual tagging
+#### Manual tagging
 
 By adding markers in your code, you can add the following tags to the dropdown:
 
@@ -579,7 +570,7 @@ Results in this:
 
 All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
 
-### Display order
+#### Display order
 
 Tags are displayed in their appearing order inside the method/class.
 
