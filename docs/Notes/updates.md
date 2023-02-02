@@ -80,8 +80,8 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - The 4D internal build numbering has been modified as of 4D v19 R7:
 	- releases up to 4D v19 R6 (included) are numbered 282xxx,
 	- releases from 4D v19 R7 will be numbered 100xxx.   
-
 	Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
+- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead. 
 
 
 ### 4D v19 R6
@@ -148,7 +148,6 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - [IMAPTransporter Class](../API/IMAPTransporterClass): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
 - [File Class](../API/FileClass): new `setAppInfo()` and `getAppInfo()` functions.
 - New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
-
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](../FormEditor/propertiesForm#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods#theme-list).
