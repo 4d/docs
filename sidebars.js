@@ -119,6 +119,8 @@ module.exports =
 						"API/SMTPTransporterClass",
 						"API/SystemWorkerClass",
 						"API/WebServerClass",
+						"API/WebSocketConnectionClass",
+						"API/WebSocketServerClass",
 						"API/ZipArchiveClass",
 						"API/ZipFileClass",
 						"API/ZipFolderClass"
