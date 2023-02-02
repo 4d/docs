@@ -54,12 +54,11 @@ title: リリースノート
 #### 動作の変更
 
 - 標準的なインターフェース (OS のファイルエクスプローラなど) との一貫性を保つため、行の選択/ドラッグ＆ドロップに関するリストボックスのルールが変更されました。 連続または不連続の選択行をクリックして移動するだけで、ドラッグできるようになり、**Alt** キーは不要になりました (ひきつづき以前のように使用することはできます)。 **Shift** または **Ctrl/Command** キーが押されている場合、マウスのクリックは押されたとき (マウスダウン) に考慮されます。 リストボックスでのドラッグ＆ドロップの詳細については、[このブログ記事](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) を参照し、[このHDI 4Dプロジェクト](https://github.com/4D-JP/HDI/releases/download/19r7/HDI_LB_DragAndDrop.zip) をダウンロードしてください。
-- 4D v19 R7 から 4D の内部ビルド番号が変更されました:
+- The 4D internal build numbering has been modified as of 4D v19 R7:
     - 4D v19 R6 (含む) までのリリースは 282xxx の番号です。
-    - 4D v19 R7 からのリリースは 100xxx と番号付けされます。
-
-    特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。
-
+    - releases from 4D v19 R7 will be numbered 100xxx.  
+      Note that a specific 4D version is still uniquely identified by a branch name and a build number. ビルド番号は時系列に増加します。
+- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 ### 4D v19 R6
 
