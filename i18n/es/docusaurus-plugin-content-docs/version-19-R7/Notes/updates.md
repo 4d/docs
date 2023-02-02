@@ -63,59 +63,59 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - [Alias attributes](../ORDA/ordaClasses#alias-attributes-1) are available in ORDA classes.
 - Support for [break and continue](../Concepts/looping#break-and-continue) statements in loops.
 - Support for [return](../Concepts/control-flow#return-expression) statement and [return expression](../Concepts/parameters#return-expression) to return values.
-- Support for [compound assignment operators](../Concepts/operators#compound-assignment-operators), [short-circuit operators](../Concepts/operators#short-circuit-operators), and [ternary operator](../Concepts/operators#ternary-operator)
-- The [Code Editor](../code-editor/overview) now includes an dropdown tool and supports markers for better code navigation.
-- New Preferences: [**Include tokens in project source files**](../Preferences/general#include-tokens-in-project-source-files) and [**Show clipboards**](../Preferences/methods#show-clipboards) option on the Methods page.
-- New REST request to [lock/unlock](../REST/lock) entities.
-- [4D View Pro](../ViewPro/getting-started) chapter added with new commands: [VP Copy to object](../ViewPro/method-list#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list#vp-paste-from-object).
-- New [SystemWorker class](../API/SystemWorkerClass).
+- Soporte de los [operadores de asignación compuestos](../Concepts/operators#compound-assignment-operators), [los operadores de cortocircuito](../Concepts/operators#short-circuit-operators) y del [operador ternario](../Concepts/operators#ternary-operator)
+- El [editor de código](../code-editor/overview) ahora incluye una herramienta desplegable y soporta marcadores para una mejor navegación por el código.
+- Nuevas Preferencias: [**Incluir los tokens en los archivos fuente del proyecto**](../Preferences/general#include-tokens-in-project-source-files) y la opción [**Mostrar los portapapeles**](../Preferences/methods#show-clipboards) en la página Métodos.
+- Nueva petición REST para las entidades [lock/unlock](../REST/lock).
+- [4D View Pro](../ViewPro/getting-started) capítulo añadido con nuevos comandos: [VP Copy to object](../ViewPro/method-list#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list#vp-paste-from-object).
+- Nuevo [Clase SystemWorker](../API/SystemWorkerClass).
 
 
 ### 4D v19 R3
 
-- [Computed properties](../Concepts/classes#function-get-and-function-set) are available in classes.
-- [Computed attributes](../ORDA/ordaClasses#computed-attributes) are available in ORDA classes. They are similar to computed properties but also support [query](../ORDA/ordaClasses#function-query-attributename) and [orderBy](../ORDA/ordaClasses#function-orderby-attributename) functions.
-- New ORDA dataclass attributes: [`exposed`](../API/DataClassAttributeClass#exposed) and [`readOnly`](../API/DataClassAttributeClass#readonly).
-- [ZIP archives](../API/ZipArchiveClass#zip-create-archive) now supports *LZMA* and *xz* compression algorithms.
-- A [new build option](../Desktop/building#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
-- Extended [support of dark mode](../Preferences/general#appearance-macos-only) on macOS.
-- Support of **OAuth2 token object** in [`IMAP New transporter`](../API/IMAPTransporterClass#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass#pop3-new-transporter), and [`SMTP New transporter`](../API/SMTPTransporterClass#smtp-new-transporter).
-- Users can now load a [log configuration file](../Debugging/debugLogFiles#using-a-log-configuration-file) using a button in the [server administration window](../ServerWindow/maintenance#load-logs-configuration-file).
-- Handling [optional parameters](../Concepts/parameters#optional-parameters) is more flexible in the 4D language.
-- Debugging web server sessions [is easier on 4D Server](../WebServer/sessions#preemptive-mode).
-- The new [4D NetKit](https://github.com/4d/4D-NetKit) component allows you to connect to third-party APIs such as Microsoft Graph.
+- Las [propiedades calculadas](../Concepts/classes#function-get-and-function-set) están disponibles en las clases.
+- [Los atributos calculados](../ORDA/ordaClasses#computed-attributes) están disponibles en las clases ORDA. Son similares a las propiedades calculadas pero también soportan las funciones [query](../ORDA/ordaClasses#function-query-attributename) y [orderBy](../ORDA/ordaClasses#function-orderby-attributename).
+- Nuevos atributos de dataclass ORDA: [`exposed`](../API/DataClassAttributeClass#exposed) y [`readOnly`](../API/DataClassAttributeClass#readonly).
+- [Los archivos ZIP](../API/ZipArchiveClass#zip-create-archive) ahora soportan los algoritmos de compresión *LZMA* y *xz*.
+- Una [nueva opción de build](../Desktop/building#allow-connection-of-silicon-mac-clients) facilita la inclusión de los clientes Silicon Mac en las aplicaciones servidor en Windows.
+- [soporte del modo oscuro](../Preferences/general#appearance-macos-only) en macOS.
+- Soporte de **OAuth2 token object** en [`IMAP New transporter`](../API/IMAPTransporterClass#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass#pop3-new-transporter) y [`SMTP New transporter`](../API/SMTPTransporterClass#smtp-new-transporter).
+- Los usuarios pueden ahora cargar un [archivo de configuración de registro](../Debugging/debugLogFiles#using-a-log-configuration-file) utilizando un botón en la [ventana de administración del servidor](../ServerWindow/maintenance#load-logs-configuration-file).
+- La gestión de los [parámetros opcionales](../Concepts/parameters#optional-parameters) es más flexible en el lenguaje 4D.
+- La depuración de las sesiones de servidor web [es más fácil en 4D Server](../WebServer/sessions#preemptive-mode).
+- El nuevo componente [4D NetKit](https://github.com/4d/4D-NetKit) permite conectar con APIs de terceros como Microsoft Graph.
 
 
 ### 4D v19 R2
 
-- A [default .gitignore file](../Preferences/general#create-gitignore-file) can be created with new projects
-- New [Blob class API](../API/BlobClass) to handle new [`4D.Blob` objects](Concepts/dt_blob#blob-types)
-- `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass#settext)
+- Un [archivo .gitignore por defecto](../Preferences/general#create-gitignore-file) puede ser creado con nuevos proyectos
+- Nuevo [API Blob class](../API/BlobClass) para generar nuevos objetos [`4D.Blob`](Concepts/dt_blob#blob-types)
+- Soporte de `no-bom` y nuevos caracteres de fin de línea por defecto en [`.setText()`](../API/FileClass#settext)
 
 
 ### 4D v19
 
-- [IMAPTransporter Class](../API/IMAPTransporterClass): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](../API/FileClass): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- [IMAPTransporter Class](../API/IMAPTransporterClass): nuevas funciones `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` y `.unsubscribe()`.
+- [File Class](../API/FileClass): nuevas funciones `setAppInfo()` y `getAppInfo()`.
+- Nueva etiqueta de transformación [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
 
-- Web Server: new [SameSite session cookie](../WebServer/webServerConfig#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](../FormEditor/propertiesForm#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
+- Servidor web: nuevo parámetro [Cookie de sesión SameSite](../WebServer/webServerConfig#session-cookie-samesite).
+- Soporte de esquema de color oscuro y claro para los [formularios](../FormEditor/propertiesForm#color-scheme) y [hojas de estilo](../FormEditor/stylesheets#media-queries)
 - Nuevos temas oscuros y claros por defecto en [las preferencias del editor de código](../Preferences/methods#theme-list).
-- [Native compilation](../Project/compiler#compiler-methods-for) for Silicon processors.
-- [Variable calculation](../FormObjects/propertiesObject#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](../Admin/cli) page.
+- [Compilación nativa](../Project/compiler#compiler-methods-for) para procesadores Silicon.
+- La propiedad [cálculo de variables](../FormObjects/propertiesObject#variable-calculation) es ahora soportada por las columnas list box de la selección de entidades.
+- Nueva, página [CLI](../Admin/cli) completa.
 
 
 
 ### 4D v18 R6
 
-- [Entity Selection Class](../API/EntitySelectionClass): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
-- [IMAP Mail](../API/IMAPTransporterClass), [POP3 Mail](../API/POP3TransporterClass) and [SMTP Mail](../API/SMTPTransporterClass): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass): new `.expunge()` and `.append()` functions
-- New [WebAdmin](../Admin/webAdmin) web server component
-- New [DataExplorer](../Admin/dataExplorer) interface
-- New web [user sessions](../WebServer/sessions) and [their API](../API/SessionClass).
+- [Entity Selection Class](../API/EntitySelectionClass): las funciones `.average()`, `.max()` y `.min()` ahora devuelven *undefined* si la selección de entidades está vacía.
+- [IMAP Mail](../API/IMAPTransporterClass), [POP3 Mail](../API/POP3TransporterClass) y [SMTP Mail](../API/SMTPTransporterClass): la propiedad `authenticationMode` activa a OAuth 2.0
+- [IMAP Mail](../API/IMAPTransporterClass): nuevas funciones `.expunge()` y `.append()`
+- Nuevo componente [WebAdmin](../Admin/webAdmin) del servidor web
+- Nueva interfaz [DataExplorer](../Admin/dataExplorer)
+- Nuevas [sesiones de usuario](../WebServer/sessions) web y [su API](../API/SessionClass).
 
 
 </details>
@@ -123,17 +123,17 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 ## Tabla de las librerías
 
-<details><summary>Click to see the table of libraries used in 4D</summary>
+<details><summary>Haga clic para ver la tabla de las librerías utilizadas en 4D</summary>
 
-| Librería | Versión actual | Actualizado en 4D | Comentario                                                                               |
-| -------- | -------------- | ----------------- | ---------------------------------------------------------------------------------------- |
-| SpreadJS | 15.2.0         | 19 R7             | Motor 4D View Pro                                                                        |
-| CEF      | 4692.99        | 19 R5             | Chromium v97. CORS policies now also apply when accessing files on disk.                 |
-| OpenSSL  | 1.1.1s         | 19 R7             |                                                                                          |
-| libzip   | 1.7.3          | 19 R2             | Used by zip class, 4D Write Pro, svg and serverNet components                            |
-| webKit   | WKWebView      | 19                |                                                                                          |
-| ICU      | 68.1           | 18 R6             | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| PHP      | 7.3.27         | 18 R6             |                                                                                          |
-| libldap  | 2.4.48         | 18 R2             |                                                                                          |
+| Librería | Versión actual | Actualizado en 4D | Comentario                                                                                                    |
+| -------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
+| SpreadJS | 15.2.0         | 19 R7             | Motor 4D View Pro                                                                                             |
+| CEF      | 4692.99        | 19 R5             | Chromium v97. CORS policies now also apply when accessing files on disk.                                      |
+| OpenSSL  | 1.1.1s         | 19 R7             |                                                                                                               |
+| libzip   | 1.7.3          | 19 R2             | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
+| webKit   | WKWebView      | 19                |                                                                                                               |
+| ICU      | 68.1           | 18 R6             | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
+| PHP      | 7.3.27         | 18 R6             |                                                                                                               |
+| libldap  | 2.4.48         | 18 R2             |                                                                                                               |
 
 </details>
