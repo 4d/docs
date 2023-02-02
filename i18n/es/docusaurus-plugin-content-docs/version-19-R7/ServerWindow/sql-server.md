@@ -17,18 +17,18 @@ La parte superior de la página provee información sobre el estado actual del s
 
 ## Iniciar/detener el servidor SQL
 
-This button toggles and can be used to control the activation of the 4D Server SQL server.
+Este botón se alterna y puede utilizarse para controlar la activación del servidor SQL de 4D Server.
 
-- When the SQL server state is "Started," the button is titled **Stop SQL Server**. If you click on this button, the 4D Server SQL server is immediately stopped; it no longer replies to any external SQL requests received on the designated TCP port.
-- When the SQL server state is "Stopped," the button is titled **Start SQL Server**. If you click on this button, the 4D Server SQL server is immediately started; it replies to any external SQL queries received on the designated TCP port. Note that you will need a suitable license to be able to use the 4D SQL server.
+- Cuando el estado del servidor SQL es "Iniciado", el botón se etiqueta **Detener el servidor SQL**. Si presiona este botón, el servidor SQL de 4D Server se detiene inmediatamente; ya no responde a ninguna petición SQL externa recibida en el puerto TCP designado.
+- Cuando el estado del servidor SQL es "Detenido", el botón se etiqueta **Iniciar el servidor SQL**. Si presiona este botón, el servidor SQL de 4D Server se inicia inmediatamente; responde a las peticiones SQL externas recibida en el puerto TCP designado. Tenga en cuenta que necesitará una licencia adecuada para poder utilizar el servidor SQL de 4D.
 
-> The SQL server can also be launched automatically on application startup (option in the Settings) or by programming.
+> El servidor SQL también puede iniciarse automáticamente al iniciar la aplicación (opción de las Preferencias) o por programación.
 
 ## Información
 
 ### Configuración
 
-This area provides information about the SQL server configuration parameters: automatic launching on startup, listening IP address, TCP port (19812 by default) and enabling of SSL for SQL connections (does not concern 4D nor HTTP connections).
+Esta área ofrece información sobre los parámetros de configuración del servidor SQL: lanzamiento automático al inicio, dirección IP de escucha, puerto TCP (19812 por defecto) y habilitación de SSL para conexiones SQL (no afecta a las conexiones 4D ni HTTP).
 
 Estos parámetros pueden modificarse a través de las Preferencias de 4D.
 
