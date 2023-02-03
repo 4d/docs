@@ -409,14 +409,14 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 #### Description
 
-The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
+La fonction `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->vide le cache du datastore local et empêche les autres process d'effectuer des opérations d'écriture sur la base de données<!-- END REF -->. Le datastore est placé dans un état cohérent et figé. L'appel de cette fonction est nécessaire avant l'exécution d'un instantané d'application (snapshot), par exemple.
 
 :::info
 
-This function can only be called:
+Cette fonction ne peut être appelée que :
 
-- on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine.
+- sur le datastore local ([`ds`](#ds)).
+- dans un environnement client/serveur, sur la machine serveur.
 
 :::
 

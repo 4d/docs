@@ -11,20 +11,20 @@ title: WebSocketConnection
 
 </details>
 
-The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md).
+La API de la clase `WebSocketConnection` permite gestionar conexiones WebSocket, una vez definidas mediante la clase [`WebSocketServer`](WebSocketServerClass.md).
 
 |
 
-For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
+Para obtener una visión general y algunos ejemplos de la implementación del servidor WebSocket en 4D, consulte la clase [`WebSocketServer`](WebSocketServerClass.md).
 
 :::
 
 
-### WebSocketConnection object
+### Objeto WebSocketConnection
 
-A `WebSocketConnection` object is automatically created when the [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) callback function of the [WebSocketServer object](WebSocketServerClass.md#4dwebsocketservernew) returns a [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object) object.
+Un objeto `WebSocketConnection` se crea automáticamente cuando la función de retrollamada [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) del objeto [WebSocketServer](WebSocketServerClass.md#4dwebsocketservernew) devuelve un objeto [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object).
 
-WebSocketConnection objects provide the following properties and functions:
+Los objetos WebSocketConnection ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ WebSocketConnection objects provide the following properties and functions:
 
 #### Descripción
 
-The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->.
+La propiedad `.handler` contiene <!-- REF #WebSocketConnectionClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -54,13 +54,13 @@ The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summ
 <!-- REF #WebSocketConnectionClass.id.Desc -->
 ## .id
 
-<!-- REF #WebSocketConnectionClass.id.Syntax -->**id** : Integer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.id.Syntax -->**id**: Integer<!-- END REF -->
 
 #### Descripción
 
-The `.id` property contains <!-- REF #WebSocketConnectionClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+La propiedad `.id` contiene <!-- REF #WebSocketConnectionClass.id.Summary -->el identificador único de la conexión<!-- END REF -->.
 
-This property is read-only.
+Esta propiedad es de sólo lectura.
 <!-- END REF -->
 
 
@@ -81,7 +81,7 @@ This property is read-only.
 
 La función `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->sends a *message* to the client<!-- END REF -->.
 
-The following contents are sent depending on the *message* type:
+Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
 | Tipo   | Contenido                                                                                                            |
 | ------ | -------------------------------------------------------------------------------------------------------------------- |
@@ -103,7 +103,7 @@ The following contents are sent depending on the *message* type:
 
 The `.status` property contains <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->.
 
-This property is read-only.
+Esta propiedad es de sólo lectura.
 <!-- END REF -->
 
 
@@ -141,6 +141,6 @@ A *code* and *message* can be sent to the client during the closure to indicate 
 
 The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->the [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) parent object of the connection<!-- END REF -->.
 
-This property is read-only.
+Esta propiedad es de sólo lectura.
 <!-- END REF -->
 

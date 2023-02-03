@@ -246,7 +246,7 @@ Los atributos de impresión de 4D View Pro le permiten controlar todos los aspec
 
 ### Columnas / Líneas
 
-Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
+Los atributos de columna y línea se utilizan para especificar el inicio, el final y la repetición de columnas y líneas.
 
 | Propiedad         | Tipo         | Descripción                                                                                                                      |
 | ----------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -261,7 +261,7 @@ Column and row attributes are used to specify the beginning, end, and repetition
 
 ### Encabezados / Pies de página
 
-Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
+Los atributos de encabezado y pie de página se utilizan para especificar texto o imágenes en las secciones de encabezado/pie de página izquierda, derecha y central.
 
 | Propiedad         | Tipo                 | Descripción                                                                |
 | ----------------- | -------------------- | -------------------------------------------------------------------------- |
@@ -278,11 +278,11 @@ Header and footer attributes are used to specify text or images in the left, rig
 | headerRight       | text                 | El texto y el formato del encabezado derecho en las páginas impresas.      |
 | headerRightImage  | picture &#124; text* | La imagen de la sección derecha del encabezado.                            |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. En Windows, la extensión del archivo debe ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](method-list.md#vp-get-print-info).
 
 ### Caracteres especiales
 
-The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
+Los siguientes caracteres especiales permiten añadir o dar formato automáticamente a la información del encabezado y pie de página cuando se imprime el área de 4D View Pro.
 
 | Caracter | Descripción                       | Ejemplo                                                                | Result                                               |
 | -------- | --------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -303,7 +303,7 @@ The following special characters allow the automatic addition or formatting of i
 
 ### Márgenes
 
-Margin attributes are used to specify the 4D View Pro area margins for printing. Expresado en centésimas de pulgada.
+Los atributos margen se utilizan para especificar los márgenes del área 4D View Pro para la impresión. Expresado en centésimas de pulgada.
 
 | Propiedad |        | Tipo         | Descripción                                                     |
 | --------- | ------ | ------------ | --------------------------------------------------------------- |
@@ -395,7 +395,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 |               | \[ ].x        | entero largo         | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                         |
 |               | \[ ].y        | entero largo         | La coordenada vertical del punto superior izquierdo del texto/imagen de la marca de agua.                                                                                              |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. En Windows, la extensión del archivo debe ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](method-list.md#vp-get-print-info).
 
 ## Style Objects
 
@@ -407,7 +407,7 @@ Style objects contain the style settings. Se pueden utilizar en una hoja de esti
 
 A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
 
-Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) command and applied with the the [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) or [VP SET CELL STYLE](method-list.md#vp-set-cell-style) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet) command.
+Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) command and applied with the the [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) or [VP SET CELL STYLE](method-list.md#vp-set-cell-style) commands. Puede eliminar una hoja de estilo con el comando [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet).
 
 El comando [VP Get stylesheet](method-list.md#vp-get-stylesheet) se puede utilizar para devolver el objeto de estilo de una única hoja de estilo o se puede utilizar el comando [VP Get stylesheets](method-list.md#vp-get-stylesheets) para recuperar una colección de objetos de estilo para múltiples hojas de estilo.
 

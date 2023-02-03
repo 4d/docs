@@ -101,13 +101,13 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo de sólo lectura
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
+> Las constantes predefinidas aparecen <u>subrayadas</u> por defecto en el editor de código 4D.
 
 ## Métodos
 
 4D ofrece un gran número de métodos (o comandos) integrados, pero también le permite crear sus propios **métodos de proyecto**. Los métodos de proyecto son métodos definidos por el usuario que contienen comandos, operadores y otras partes del lenguaje. Los métodos proyecto son métodos genéricos, pero hay otros tipos de métodos: métodos objeto, métodos formulario, métodos tabla (Triggers) y métodos base.
 
-Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. A statement performs an action, and may be simple or complex.
+Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja.
 
 Por ejemplo, la siguiente línea es una sentencia que mostrará una caja de diálogo de confirmación:
 
@@ -342,9 +342,9 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
-## Code on several lines
+## Código en varias líneas
 
-You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. Por ejemplo, ambas sentencias son equivalentes:
+Puede escribir una única instrucción en varias líneas terminando cada línea de la instrucción con un caracter barra invertida final `\`. El lenguaje 4D considerará todas las líneas a la vez. Por ejemplo, ambas sentencias son equivalentes:
 
 ```4d
 $str:=String("hello world!")
@@ -367,7 +367,7 @@ Hay dos maneras de crear comentarios:
 
 Ambos estilos de comentarios pueden utilizarse simultáneamente.
 
-#### Single line comments (`//comment`)
+#### Comentarios de una línea (`//comentario`)
 
 Inserte `//` al principio de una línea o después de una instrucción para añadir una línea de comentario. Ejemplo:
 

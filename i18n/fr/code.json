@@ -9,16 +9,16 @@
     "message": "Travailler avec des projets"
   },
   "homepage.sections.core-development.title": {
-    "message": "Core Development"
+    "message": "Développement"
   },
   "Project Management": {
-    "message": "Project Management"
+    "message": "Gestion des projets"
   },
   "Language Concepts": {
-    "message": "Language Concepts"
+    "message": "Concepts du langage"
   },
   "Language Reference (4D Doc Center)": {
-    "message": "Language Reference (4D Doc Center)"
+    "message": "Référence du langage (4D Doc Center)"
   },
   "Object Relational Data Access (ORDA)": {
     "message": "Object Relational Data Access (ORDA)"
@@ -27,22 +27,22 @@
     "message": "Class API Reference"
   },
   "Handling code": {
-    "message": "Handling code"
+    "message": "Gestion du code"
   },
   "Debugging": {
-    "message": "Debugging"
+    "message": "Débogage"
   },
   "Settings": {
     "message": "Settings"
   },
   "Preferences": {
-    "message": "Preferences"
+    "message": "Préférences"
   },
   "homepage.administration.title": {
     "message": "Administration"
   },
   "4D Server Administration Window": {
-    "message": "4D Server Administration Window"
+    "message": "Fenêtre d'administration de 4D Server"
   },
   "Web Administration": {
     "message": "Administration Web"
@@ -51,19 +51,19 @@
     "message": "Interface de ligne de commande"
   },
   "TLS Protocol": {
-    "message": "TLS Protocol"
+    "message": "Protocole TLS"
   },
   "Licenses & Data Collection": {
-    "message": "Licenses & Data Collection"
+    "message": "Licences et collecte de données"
   },
   "Access Rights": {
-    "message": "Access Rights"
+    "message": "Droits d'accès"
   },
   "Maintenance and Security Center": {
-    "message": "Maintenance and Security Center"
+    "message": "Centre de Sécurité et de Maintenance"
   },
   "Backup and Restore": {
-    "message": "Backup and Restore"
+    "message": "Sauvegarde et restitution"
   },
   "homepage.sections.textensions.title": {
     "message": "Extensions"
@@ -96,25 +96,25 @@
     "message": "Composants de développement"
   },
   "Developing Plugins": {
-    "message": "Developing Plugins"
+    "message": "Développer des plugins"
   },
   "homepage.sections.web-applications.title": {
-    "message": "Web Applications"
+    "message": "Applications Web"
   },
   "Web Server": {
     "message": "Serveur Web"
   },
   "Web Development": {
-    "message": "Web Development"
+    "message": "Développement Web"
   },
   "REST Server": {
     "message": "Serveur REST"
   },
   "homepage.sections.desktop-applications.title": {
-    "message": "Desktop Applications"
+    "message": "Applications Desktop"
   },
   "Client/Server": {
-    "message": "Client/Server"
+    "message": "Client/Serveur"
   },
   "Forms": {
     "message": "Forms"
@@ -123,10 +123,10 @@
     "message": "Propriétés des formulaires"
   },
   "Form Objects": {
-    "message": "Form Objects"
+    "message": "Objets de formulaire"
   },
   "Form Object Properties": {
-    "message": "Form Object Properties"
+    "message": "Propriétés des objets de formulaire"
   },
   "Form Events": {
     "message": "Evénements formulaire"
@@ -141,16 +141,16 @@
     "message": "Générateur d'application"
   },
   "homepage.sections.mobile-applications.title": {
-    "message": "Mobile Applications"
+    "message": "Applications mobiles"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"
   },
   "4D for iOS (Archive)": {
-    "message": "4D for iOS (Archive)"
+    "message": "4D for iOS (archive)"
   },
   "4D banner logo": {
-    "message": "4D banner logo"
+    "message": "Logo de la bannière 4D"
   },
   "homepage.hero.title": {
     "message": "Documentation for 4D developers"
