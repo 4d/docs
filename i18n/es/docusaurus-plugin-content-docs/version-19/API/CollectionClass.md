@@ -423,7 +423,7 @@ Los parámetros *groupWithCol* o *groupWithObj* permiten designar una colección
 
 :::note
 
-Datastore, dataclass, and entity objects are not copiable. Si se llama a `.copy()` con ellos, se devuelven valores `null`.
+Los objetos Datastore, dataclass y entity no son copiables. Si se llama a `.copy()` con ellos, se devuelven valores `null`.
 
 :::
 
