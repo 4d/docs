@@ -409,56 +409,56 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 #### Descripción
 
-La función `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
+La función `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->vacía la caché del datastore local e impide que los otros procesos realicen operaciones de escritura en la base de datos<!-- END REF -->. El datastore se pone en un estado consistente y congelado. Es necesario llamar a esta función antes de ejecutar una instantánea de la aplicación, por ejemplo.
 
 |
 
-This function can only be called:
+Esta función sólo puede llamarse:
 
-- on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine.
+- en el datastore ([`ds`](#ds)).
+- en entorno cliente/servidor, en la máquina servidor.
 
 :::
 
-Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
+Una vez ejecutada esta función, las operaciones de escritura como `.save()` u otras llamadas a `.flushAndLock()` se congelan en todos los demás procesos hasta que se desbloquee el datastore.
 
-When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
+Cuando se han realizado varias llamadas a `.flushAndLock()` en el mismo proceso, se debe ejecutar el mismo número de llamadas a [`.unlock()`](#unlock) para desbloquear realmente el datastore.
 
-The datastore is unlocked when:
+El datastore se desbloquea cuando:
 
-- the [`.unlock()`](#unlock) function is called in the same process, or
-- the process that called the `.flushAndLock()` function is killed.
+- se llama a la función [`.unlock()`](#unlock) en el mismo proceso, o
+- el proceso que llamó a la función `.flushAndLock()` es eliminado.
 
 
-If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked.
+Si el datastore ya está bloqueado desde otro proceso, la llamada a `.flushAndLock()` se congela y se ejecutará cuando se desbloquee el datastore.
 
-An error is triggered if the `.flushAndLock()` function cannot be executed (e.g. it is run on a remote 4D), .
+Se produce un error si la función `.flushAndLock()` no puede ejecutarse (por ejemplo, se ejecuta en un 4D remoto), .
 
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction.
+Otras funcionalidades y servicios de 4D, como [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), y [MSC](../MSC/overview.md) también pueden bloquear el datastore. Antes de llamar a `.flushAndLock()`, asegúrese de que no se está utilizando ninguna otra acción de bloqueo, para evitar cualquier interacción inesperada.
 
 :::
 
 #### Ejemplo
 
-You want to create a copy of the data folder along with its current journal file:
+Desea crear una copia de la carpeta de datos junto con su archivo de historial actual:
 
 ```4d
 $destination:=Folder(fk documents folder).folder("Archive") 
 $destination.create()
 
-ds.flushAndLock() //Block write operations from other processes
+ds.flushAndLock() //Bloquear operaciones de escritura de otros procesos
 
 $dataFolder:=Folder(fk data folder) 
-$dataFolder.copyTo($destination) //Copy the data folder
+$dataFolder.copyTo($destination) //Copiar la carpeta de datos
 
-$oldJournalPath:=New log file //Close the journal and create a new one
+$oldJournalPath:=New log file //Cerrar el historial y crear uno nuevo
 $oldJournal:=File($oldJournalPath; fk platform path) 
-$oldJournal.moveTo($destination) //Save the old journal with data
+$oldJournal.moveTo($destination) //Guardar el antiguo historial con datos
 
-ds.unlock() //Our copy is over, we can now unlock the datastore
+ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 ```
 
 #### Ver también
@@ -760,13 +760,13 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 #### Descripción
 
-La función `.locked()` <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->.
+La función `.locked()` <!-- REF #DataStoreClass.locked().Summary -->devuelve True si el datastore local está bloqueado en ese momento<!-- END REF -->.
 
-You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
+Puede bloquear el datastore utilizando la función [.flushAndLock()](#flushandlock) antes de ejecutar una instantánea del archivo de datos, por ejemplo.
 
 :::caution
 
-The function will also return `True` if the datastore was locked by another administration feature such as backup or vss (see [.flushAndLock()](#flushandlock)).
+La función también devolverá `True` si el datastore fue bloqueado por otra función de administración como backup o vss (ver [.flushAndLock()](#flushandlock)).
 
 :::
 
@@ -1256,13 +1256,13 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 #### Descripción
 
-La función `.unlock()` <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function.
+La función `.unlock()` <!-- REF #DataStoreClass.unlock().Summary -->elimina el bloqueo actual de las operaciones de escritura en el datastore, si se ha definido en el mismo proceso<!-- END REF -->. Las operaciones de escritura pueden bloquearse en el almacén de datos local utilizando la función [`.flushAndLock()`](#flushandlock).
 
-If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore.
+Si el bloqueo actual era el único bloqueo en el datastore, las operaciones de escritura se activan inmediatamente. Si la función `.flushAndLock()` fue llamada varias veces en el proceso, el mismo número de `.unlock()` debe ser llamado para realmente desbloquear el datastore.
 
-The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
+La función `.unlock()` debe ser llamada desde el proceso que llamó a la correspondiente `.flushAndLock()`, de lo contrario la función no hace nada y el bloqueo no se elimina.
 
-If the `.unlock()` function is called in an unlocked datastore, it does nothing.
+Si se llama a la función `.unlock()` en un datastore desbloqueado, no hace nada.
 
 
 #### Ver también
