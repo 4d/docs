@@ -63,7 +63,7 @@ Las sintaxis [nombradas](#named-parameters) y [secuenciales](#sequential-paramet
 
 ### Inicialización
 
-When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
+Cuando se declaran los parámetros, se inicializan con el valor por defecto [**correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no hayan sido asignados.
 
 
 
