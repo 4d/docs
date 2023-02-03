@@ -143,51 +143,51 @@ _イタリック_
 ~~取り消し線~~
 ```
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- 4D コードハイライトが付くコードブロックタグ (\```4d ... ```):
 
  \``` 4d  
 C_TEXT($txt)  
 $txt:="Hello world!"  
 \` ``
 
-- The table tag is supported:
+- テーブルタグ:
 
 ```
-| Parameter | Type   | Description  |
+| 引数 | 型   | 説明  |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea    | 文字列 |Write pro エリア|
+| toolbar   | 文字列 |ツールバー名  |
 ```
 
-- The link tag is supported:
+- リンクタグ:
 
 ```
-// Case 1
-The [documentation](https://doc.4d.com) of the command ....
+// 例 1
+コマンドの [ドキュメンテーション](https://doc.4d.com) は ...
 
-// Case 2
-[4D blog][1]
+// 例 2
+[4D ブログ][1]
 
 [1]: https://blog.4d.com
 ```
 
-- The image tags are supported:
+- 画像タグ:
 
 ```
-![image info](pictures/image.png)
+![画像の説明](pictures/image.png)
 
-![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
+![4D ロゴ](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
 
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
 
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![4D ブログのロゴとリンク](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D ブログロゴ")](https://blog.4d.com)
 
 > 詳細については [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/) (英文) を参照ください。
 
 ## 例題
 
-In the `WP SwitchToolbar.md` file, you can write:
+`WP SwitchToolbar.md` ファイルに、次のように書くことができます:
 
 ```4d
 <!-- size 引数に応じて、異なるロゴを返します -->
@@ -205,7 +205,7 @@ GetLogo (size) -> logo
 ## Description
 
 このメソッドは、*size* 引数の値に応じて、特定サイズのロゴを返します。
-1 = smallest size, 5 = largest size.
+1 = 最小値, 5 = 最大値
 
 ## Example
 
