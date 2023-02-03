@@ -144,7 +144,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 | *         | Repite el siguiente caracter para llenar el ancho de la columna.                                                                                                                                                                                 | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
 | " "       | Muestra el texto entre comillas sin interpretarlo.                                                                                                                                                                                               | "8%" será mostrado como: 8%                                                                                                |
 | %         | Muestra los números como un porcentaje de 100.                                                                                                                                                                                                   | El 8% se mostrará como 0,08                                                                                                |
-| \#      | Marcador de posición de dígitos que no muestra ceros adicionales. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                                 | #.# mostrará 1.54 como 1.5                                                                                                 |
+| \#      | Marcador de posición de dígitos que no muestra ceros adicionales. Si un número tiene más dígitos a la derecha del decimal que marcadores de posición, el número se redondea.                                                                     | #.# mostrará 1.54 como 1.5                                                                                                 |
 | ?         | Digit placeholder that leaves space for extra zeros, but does not display them. Normalmente se utiliza para alinear números por punto decimal.                                                                                                   | $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                           |
 | \        | Muestra el caracter que lo sigue.                                                                                                                                                                                                                | #.00\? #.00\? will display 123 as 123.00?                                                                                |
 | /         | Cuando se utiliza con números, los muestra como fracciones. Cuando se utiliza con códigos de texto, fecha u hora, se muestra "tal cual".                                                                                                         | #/# mostrará .75 como 3/4                                                                                                  |
@@ -161,7 +161,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 ### Formatos fecha y hora
 
-4D View Pro provides the following constants for ISO 8601 date and time patterns:
+4D View Pro ofrece las siguientes constantes para los modelos de fecha y hora ISO 8601:
 
 | Constante                                 | Valor                                | Comentario                                                                                                                                                             |
 | ----------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -210,7 +210,7 @@ To create your own date and time patterns, in your current localization, you can
 |       | \[mm]                                                      | Tiempo transcurrido en minutos                                  | 843                   |
 |       | \[ss]                                                      | Tiempo transcurrido en segundos                                 | 50585                 |
 |       | AM/PM                                                       | Periodos del día. Se utiliza el fomato de 24 horas si se omite. | PM                    |
-> The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
+> The code 'm' is interpreted depending on its position in the pattern. Si está inmediatamente después de 'h' o 'hh' o inmediatamente antes de 's' o 'ss', se interpretará como minutos, de lo contrario se interpretará como meses.
 
 ### Símbolos adicionales
 
@@ -239,14 +239,14 @@ In addition to the special characters and codes described in the previous sectio
 
 ## Atributos de impresión
 
-4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. Estos atributos son manejados por los siguientes comandos:
+Los atributos de impresión de 4D View Pro le permiten controlar todos los aspectos de la impresión de las áreas de 4D View Pro. Estos atributos son manejados por los siguientes comandos:
 
 * [VP SET PRINT INFO](method-list.md#vp-set-print-info)
 * [VP Get print info](method-list.md#vp-get-print-info)
 
 ### Columnas / Líneas
 
-Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
+Los atributos de columna y línea se utilizan para especificar el inicio, el final y la repetición de columnas y líneas.
 
 | Propiedad         | Tipo         | Descripción                                                                                                                      |
 | ----------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -261,7 +261,7 @@ Column and row attributes are used to specify the beginning, end, and repetition
 
 ### Encabezados / Pies de página
 
-Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
+Los atributos de encabezado y pie de página se utilizan para especificar texto o imágenes en las secciones de encabezado/pie de página izquierda, derecha y central.
 
 | Propiedad         | Tipo                 | Descripción                                                                |
 | ----------------- | -------------------- | -------------------------------------------------------------------------- |
@@ -278,11 +278,11 @@ Header and footer attributes are used to specify text or images in the left, rig
 | headerRight       | text                 | El texto y el formato del encabezado derecho en las páginas impresas.      |
 | headerRightImage  | picture &#124; text* | La imagen de la sección derecha del encabezado.                            |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. En Windows, la extensión del archivo debe ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](method-list.md#vp-get-print-info).
 
 ### Caracteres especiales
 
-The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
+Los siguientes caracteres especiales permiten añadir o dar formato automáticamente a la información del encabezado y pie de página cuando se imprime el área de 4D View Pro.
 
 | Caracter | Descripción                       | Ejemplo                                                                | Result                                               |
 | -------- | --------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
@@ -293,7 +293,7 @@ The following special characters allow the automatic addition or formatting of i
 | T        | Hora actual                       | printInfo.headerLeft:="Es &T."                                         | Es 16:30:36.                                         |
 | G        | Imagen                            | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S        | Strikethrough                     | printInfo.headerLeft:="&SEsto es texto."                               | ~~Esto es texto.~~                                   |
-| U        | Subrayado                         | printInfo.headerLeft:="&UEsto es texto."                               | Esto es texto. (Underlined)                          |
+| U        | Subrayado                         | printInfo.headerLeft:="&UEsto es texto."                               | Esto es texto. (Subrayado)                           |
 | B        | Negrita                           | printInfo.headerLeft:="&BEsto es texto."                               | **Esto es texto.**                                   |
 | I        | Itálica                           | printInfo.headerLeft:="&IEsto es texto."                               | *Esto es texto.*                                     |
 | "        | Prefijo fuente                    | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
@@ -303,7 +303,7 @@ The following special characters allow the automatic addition or formatting of i
 
 ### Márgenes
 
-Margin attributes are used to specify the 4D View Pro area margins for printing. Expresado en centésimas de pulgada.
+Los atributos margen se utilizan para especificar los márgenes del área 4D View Pro para la impresión. Expresado en centésimas de pulgada.
 
 | Propiedad |        | Tipo         | Descripción                                                     |
 | --------- | ------ | ------------ | --------------------------------------------------------------- |
@@ -395,7 +395,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 |               | \[ ].x        | entero largo         | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                         |
 |               | \[ ].y        | entero largo         | La coordenada vertical del punto superior izquierdo del texto/imagen de la marca de agua.                                                                                              |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. En Windows, la extensión del archivo debe ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](method-list.md#vp-get-print-info).
 
 ## Style Objects
 
@@ -407,9 +407,9 @@ Style objects contain the style settings. Se pueden utilizar en una hoja de esti
 
 A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
 
-Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) command and applied with the the [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) or [VP SET CELL STYLE](method-list.md#vp-set-cell-style) commands. You can  remove a style sheet with the [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet) command.
+Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) command and applied with the the [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) or [VP SET CELL STYLE](method-list.md#vp-set-cell-style) commands. Puede eliminar una hoja de estilo con el comando [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet).
 
-The [VP Get stylesheet](method-list.md#vp-get-stylesheet) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](method-list.md#vp-get-stylesheets) command to retrieve a collection of style objects for multiple style sheets.
+El comando [VP Get stylesheet](method-list.md#vp-get-stylesheet) se puede utilizar para devolver el objeto de estilo de una única hoja de estilo o se puede utilizar el comando [VP Get stylesheets](method-list.md#vp-get-stylesheets) para recuperar una colección de objetos de estilo para múltiples hojas de estilo.
 
 ### Propiedades del objeto de estilo
 

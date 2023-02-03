@@ -995,7 +995,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 #### Descrição
 
-A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity selection<!-- END REF -->.
+A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retorna informação sobre o contexto de otimização usados pela seleção de entidade<!-- END REF -->.
 
 Se não houver [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) para a seleção de entidade, a função retorna um Texto vazio.
 
@@ -1862,7 +1862,7 @@ Uma list box exibe a seleção de entidade Form.students e vários clientes trab
 
 #### Descrição
 
-A função `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
+A função `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->retorna um objeto descrevendo a posição da *selectedEntities* na seleção de entidade original<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 Passe o parâmetro *selectedEntities* uma seleção de entidade contendo entidades para qual quiser saber a posição na seleção de entidade original. *selectedEntities* deve ser uma seleção de entidade pertencendo a mesma dataclass que a seleção de entidade original, senão acontece um erro 1587 - "The entity selection comes from an incompatible dataclass" .

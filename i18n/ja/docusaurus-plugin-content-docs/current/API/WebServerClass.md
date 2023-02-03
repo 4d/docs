@@ -285,6 +285,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 ## .HSTSMaxAge
 
+
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
@@ -721,11 +722,10 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 | v18 R3 | 追加 |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | 引数 | タイプ |  | 説明                                           |
 | -- | --- |  | -------------------------------------------- |
 |    |     |  | このコマンドは引数を必要としません|<!-- END REF -->

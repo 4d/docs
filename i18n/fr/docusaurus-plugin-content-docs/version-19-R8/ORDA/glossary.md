@@ -11,7 +11,7 @@ title: Glossaire
 
 ## Action
 
-Every action that can be done on a [resource](#resource). Available actions are: create, read, update, delete, execute, promote, and describe.
+Every action that can be done on a [resource](#resource). Available actions are: create, read, update, drop, execute, promote, and describe.
 
 ## Attribut
 
@@ -88,7 +88,7 @@ Une copie profonde (deep copy) duplique un objet et toutes les références qu'i
 
 `ds` est la commande de langage 4D qui retourne une référence d'objet [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
 
-## Entité (entity)
+## Entity
 
 Une entité est un objet qui correspond à un modèle de dataclass. Une entité contient les mêmes attributs que la dataclass.
 

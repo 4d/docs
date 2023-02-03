@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Este código mostrará una caja de diálogo de alerta estándar de la plataforma con el mensaje "Hello, World!", que contiene un botón de OK. Para ejecutar el código, basta con hacer clic en el botón de ejecución en el editor de código:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello world](../assets/en/Concepts/helloworld.png)
 
 O bien, podría adjuntar este código a un botón de formulario y ejecutarlo, en cuyo caso al hacer clic en el botón se mostraría la caja de diálogo de alerta. En todo caso, ¡acaba de ejecutar su primera línea de código 4D!
 
@@ -121,7 +121,8 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Hacer algo con el carácter si es un TAB
+    //Haga algo con el caracter si es un TAB
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
@@ -341,6 +342,20 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
+## Código en varias líneas
+
+Puede escribir una única instrucción en varias líneas terminando cada línea de la instrucción con un caracter barra invertida final `\`. El lenguaje 4D considerará todas las líneas a la vez. Por ejemplo, ambas sentencias son equivalentes:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Comentarios
 
 Los comentarios son líneas de instrucciones inactivas. Estas líneas no son interpretadas por el programa 4D y no se ejecutan cuando el código se llama.
@@ -352,7 +367,7 @@ Hay dos maneras de crear comentarios:
 
 Ambos estilos de comentarios pueden utilizarse simultáneamente.
 
-#### Línea de comentario (//)
+#### Comentarios de una línea (`//comentario`)
 
 Inserte `//` al principio de una línea o después de una instrucción para añadir una línea de comentario. Ejemplo:
 
@@ -365,7 +380,7 @@ For($vCounter;1;100) //Inicio del bucle
  End for
 ```
 
-#### Comentarios en línea o multilínea (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Rodea el contenido con los caracteres `/*` ... `*/` para crear comentarios en línea o bloques de comentarios multilínea. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
@@ -390,3 +405,26 @@ comentarios
 ...
 End for
 ```
+
+## Secuencias de escape
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+En 4D, se pueden utilizar las siguientes secuencias de escape:
+
+| Secuencias de escape              | Carácter reemplazado |
+| --------------------------------- | -------------------- |
+| `\n`                             | LF (Retorno línea)   |
+| `\t`                             | HT (Tabulación)      |
+| `\r`                             | CR (Retorno carro)   |
+| ``\\` |``&#96; (barra inversa) |                      |
+| `\"`                             | " (Comillas)         |
+
+> Es posible utilizar mayúsculas o minúsculas en las secuencias de escape.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+

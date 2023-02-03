@@ -538,8 +538,8 @@ Standard sort support depends on the list box type:
 | List box type               | Support of standard sort | Kommentare                                                                                                   |
 | --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | Collection of objects       | Ja                       | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection of scalar values | Nein                     | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
-| Entity-Selection            | Ja                       | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Collection of scalar values | Nein                     | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
+| Entity-Selection            | Ja                       | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Current selection           | Ja                       | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
 | Named selection             | Nein                     |                                                                                                              |
 | Arrays                      | Ja                       | Columns bound to picture and pointer arrays are not sortable                                                 |
@@ -554,7 +554,7 @@ The developer can set up custom sorts, for example using the [`LISTBOX SORT COLU
 Custom sorts allow you to:
 
 - carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
-- use functions such as [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Beispiel
 
@@ -798,6 +798,7 @@ This principle is implemented for internal arrays that can be used to manage:
 
 - colors
 - background colors
+
 - styles
 - hidden rows
 - selections

@@ -21,16 +21,16 @@ Selecting the **Find...** command displays the following dialog box:
 
 The search defined in this dialog box will be performed in the method located in the foreground.
 
-- The **Find What:** area enables you to enter the string of characters to be searched for. This area is a combo box that stores the last 15 character strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. Entonces puede utilizar este texto o reemplazarlo por otro.
-- The **Whole Word** option is used to limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc. Be careful, unlike the **Whole Object Name** option of the Find in Design dialog box, the **Whole Word** option does not take object names into account. For example, with this option, searching for the string "My" in a method will find the "My Variable" variable. This is not the case for an overall search using the **Whole Object Name** option, where the same result will not be found in the context of the above example since the whole object name (of the variable found previously) is "My Variable" and therefore does not correspond exactly to the string entered ("My").
+- El área **Buscar qué:** permite introducir la cadena de caracteres que se desea buscar. This area is a combo box that stores the last 15 character strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. Entonces puede utilizar este texto o reemplazarlo por otro.
+- The **Whole Word** option is used to limit the search to exact occurrences of the word being searched for. Cuando esta opción está marcada, por ejemplo, una búsqueda de "cliente" no encontrará ni "clientes" ni "micliente" By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc. Be careful, unlike the **Whole Object Name** option of the Find in Design dialog box, the **Whole Word** option does not take object names into account. Por ejemplo, con esta opción, la búsqueda de la cadena "Mi" en un método encontrará la variable "Mi variable". This is not the case for an overall search using the **Whole Object Name** option, where the same result will not be found in the context of the above example since the whole object name (of the variable found previously) is "My Variable" and therefore does not correspond exactly to the string entered ("My").
 - The **Case Sensitive** option is used to take the case of characters as they were entered in the "Find What:" area into account. Por ejemplo, una búsqueda de "MiVar" no encontrará "miVar"
 - The **Previous/Next** radio buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
 
 When you click on **OK**, 4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
 
-### Find Same
+### Buscar lo mismo
 
-The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
+El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idénticas a la seleccionada. This command is only active if you have selected at least one character in the Code Editor.
 
 The search carried out is of the "Find Next" type in the current code editor window.
 
@@ -44,14 +44,14 @@ The **Bookmark All** command is enabled when a search has already been specified
 
 For more information about bookmarks, refer to [Using bookmarks](./write-class-method.md#using-bookmarks).
 
-## Replace
+## Reemplazar
 
 The **Replace** command displays the following dialog box:
 
 ![find-dialog](../assets/en/code-editor/replace-dialog.png)
 
 - The **Find What:** area is used to define the character string or the expression to be searched for. As in the Find dialog box, this area is a combo-box that stores the last 15 character strings searched for. If you highlight text before choosing the **Replace** command, it will appear in this area.
-- The **Replace with:** area is used to define the character string that will replace the one defined above. This area is also a combo-box storing the last 15 character strings that have been searched for or replaced.
+- The **Replace with:** area is used to define the character string that will replace the one defined above. Esta área también es un combo-box que almacena las últimas 15 cadenas de caracteres que se han buscado o sustituido.
 - The **Whole Word** option is used to find/replace only character strings that correspond exactly to the string entered. In this case, for instance, a search for "client" will not find the strings "clients" or "myclient," etc.
 - The **Case Sensitive** option is used to find/replace only character strings having the same case as that of the entered string. Por ejemplo, una búsqueda de "MiVar" no encontrará "miVar"
 - As in the Find dialog box, the **Previous** and **Next** buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
@@ -60,51 +60,4 @@ The first item corresponding to the set criteria is thus selected in the Code Ed
 
 The **Everywhere** button is used to replace all the occurrences corresponding to the search criteria directly in the open method.
 
-## Goto Definition
-
-The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
-
-**Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
-
-El efecto varía en función del elemento objetivo. Por ejemplo:
-
-- Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
-- Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
-
-## Revelar en el Explorador
-
-The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
-
-## Mostrar la documentación
-
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. El efecto varía en función del elemento objetivo. Por ejemplo:
-
-- Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
-- Selecting a 4D command or a 4D class name and choosing **Show documentation...** displays the online documentation
-
-If no element is selected, the command opens the documentation of the method currently opened in the Code Editor.
-
-## Buscar referencias
-
-**Note:** The **Search Callers...** command is also available in **Explorer** > **Methods**
-
-The current item is either the one selected or the one where the cursor is located. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
-
-![find-dialog](../assets/en/code-editor/search-references.png)
-
-Este comando muestra sus resultados en una nueva ventana.
-
-## Search Callers
-
-The **Search Callers** command in the **Method** menu is only enabled for project methods. It searches for all the objects (other methods or menus) that reference the project method.
-
-Selecting the **Find...** command displays the following dialog box:
-
-Este comando muestra sus resultados en una nueva ventana.
-
-## Goto Line
-
-This specific search command is located in the **Method** menu. It opens a dialog box where you can indicate the line number you want to find. When you click **OK**, the editor finds and highlights that line in the method. This type of search is useful when used in conjunction with the compiler, which flags runtime errors by the line number in which they occur.
-
-You can choose whether or not to display lines numbers in the Code Editor window. This option is described in the [Interface](./interface.md#break-points-area) section.
 

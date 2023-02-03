@@ -12,7 +12,7 @@ Error handling meets two main needs:
 
 :::tip Good practice
 
-It is highly recommended to install a global error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine (if run with interface), and could log errors in a dedicated file for further analyses. 
+It is highly recommended to install a global error-handling method on 4D Server, for all code running on the server. When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis. 
 
 :::
 
@@ -58,9 +58,9 @@ The  [`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704
 
 An error-handling method can be set for different execution contexts:
 
-- for the **current process**- a local error handler will be only called for errors that occurred in the current process,
-- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context,
-- for the **components**- it will be called in the host for all errors that occurred in the components.
+- for the **current process**- a local error handler will be only called for errors that occurred in the current process of the current project,
+- for the **whole application**- a global error handler will be called for all errors that occurred in the application execution context of the current project,
+- from the **components**- this error handler is defined in a host project and will be called for all errors that occurred in the components when they were not already caught by a component handler.
 
 Examples:
 
@@ -72,12 +72,11 @@ ON ERR CALL("componentHandler";ek errors from components) //Installs an error-ha
 
 You can install a global error handler that will serve as "fallback" and specific local error handlers for certain processes. A global error handler is also useful on the server to avoid error dialogs on the server when run with interface.
 
-You can define a single error-catching method for the whole application or different methods per application module. However, only one method can be installed per execution context.
+You can define a single error-catching method for the whole application or different methods per application module. However, only one method can be installed per execution context and per project.
 
-When an error occurs, only one method is called, even if several "concurrent" error handlers are installed:
+When an error occurs, only one method is called, as described in the following diagram:
 
-- if the error occurs in the current process, the local handler is called and NOT the global handler;
-- if the error occurs in a component and the component has its own error handler, the error handler of the component is called and NOT the "errors from components" handler of the host application. 
+![error management](../assets/en/Concepts/error-schema.png)
 
 
 ### Handling errors within the method

@@ -26,7 +26,7 @@ If a user attempts to execute an action and does not have the appropriate access
 You can assign specific permission actions to the following exposed resources in your project:
 
 - the datastore
-- a dataclass
+- una clase de datos
 - an attribute (including computed and alias)
 - a data model class function
 
@@ -55,7 +55,7 @@ Available actions are related to target resource.
 **Notas:**
 
 - An alias can be read even if there is no permissions on the attributes upon which it is built.
-- A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
+- Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
 - Default values: in the current implementation, only *Null* is available as default value.
 
 Setting permissions requires to be consistent, in particular:
@@ -71,7 +71,7 @@ A **privilege** is the technical ability to run **actions** on **resources**, wh
 
 A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. A privilege can include other privileges.
 
-- You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
+- Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
 
 - You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
 
@@ -146,28 +146,28 @@ The `roles.json` file syntax is the following:
 
 :::
 
-### `Roles_Errors.json` file
+### Archivo `Roles_Errors.json`
 
-The `roles.json` file is parsed by 4D at startup. You need to restart the application if you want modifications in this file to be taken into account.
+El archivo `roles.json` es analizado por 4D al inicio. Debe reiniciar la aplicación si desea que se tengan en cuenta las modificaciones en este archivo.
 
-In case of error(s) when parsing the `roles.json` file, 4D loads the project but disables the global access protection - this allows the developer to access the files and to fix the error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). This file is automatically deleted when the `roles.json` file no longer contains error(s).
+En caso de error(es) al analizar el archivo `roles.json`, 4D carga el proyecto pero desactiva la protección de acceso global - esto permite al desarrollador acceder a los archivos y solucionar el error. Se genera un archivo de error llamado `Roles_Errors.json` en la carpeta [`Logs` del proyecto](../Project/architecture.md#logs) y describe la(s) línea(s) de error. Este archivo se elimina automáticamente cuando el archivo `roles.json` deja de contener errores.
 
-It is recommended to check at startup if a `Roles_Errors.json` file exists in the [Logs folder](../Project/architecture.md#logs), which means that there was a parsing error and that accesses will not limited. You can write for example:
+Se recomienda comprobar al inicio si existe un archivo `Roles_Errors.json` en la carpeta [Logs](../Project/architecture.md#logs), lo que significa que se ha producido un error de análisis y que los accesos no estarán limitados. Puede escribir, por ejemplo:
 
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 …
-Else // you can prevent the project to open
- ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
+Else // puede evitar que el proyecto se abra
+ ALERT("El archivo roles.json está malformado o contiene inconsistencias, la aplicación se cerrará.")
  QUIT 4D
 End if 
 ```
 
-## Initializing privileges for deployment
+## Inicialización de privilegios para el despliegue
 
-By default, if no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
+Por defecto, si no se definen parámetros específicos en el archivo `roles.json`, los accesos no están limitados. Esta configuración le permite desarrollar la aplicación sin tener que preocuparse por los accesos.
 
-However, when the application is about to be deployed, a good practice is to lock all privileges and then, to configure the file to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder (it includes examples of methods):
+Sin embargo, cuando la aplicación está a punto de desplegarse, una buena práctica es bloquear todos los privilegios y, a continuación, configurar el archivo para que sólo abra las partes controladas a las sesiones autorizadas. Para bloquear todos los privilegios en todos los recursos, coloque el siguiente archivo `roles.json` en la carpeta de su proyecto (incluye ejemplos de métodos):
 
 ```json title="/Project/Sources/roles.json"
 {

@@ -463,7 +463,7 @@ Entity selection optimization is automatically applied to entity selection-based
 
 A specific "page mode" context is also provided when loading the current entity through the **Current item** property expression of the list box (see [Collection or entity selection type list boxes](FormObjects/listbox_overview.md#list-box-types)). This feature allows you to not overload the list box initial context in this case, especially if the "page" requests additional attributes. Note that only the use of **Current item** expression will create/use the page context (access through `entitySelection\[index]` will alter the entity selection context).
 
-Subsequent requests to server sent by entity browsing methods will also support this optimization. The following methods automatically associate the optimization context of the source entity to the returned entity:
+Subsequent requests to server sent by entity browsing methods will also support this optimization. Los métodos siguientes asocian automáticamente el contexto de optimización de la entidad fuente a la entidad devuelta:
 
 * `entity.next( )`
 * `entity.first( )`

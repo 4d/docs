@@ -11,7 +11,7 @@ title: 用語集
 
 ## アクション
 
-[リソース上](#リソース) に対しておこなえるアクションを指します。 利用可能なアクションは、create (作成)、read (読み取り)、update (更新)、delete (削除)、execute (実行)、promote (昇格)、および describe (記述) です。
+[リソース上](#リソース) に対しておこなえるアクションを指します。 利用可能なアクションは、create (作成)、read (読み取り)、update (更新)、drop (削除)、execute (実行)、promote (昇格)、および describe (記述) です。
 
 ## 属性
 
@@ -202,7 +202,7 @@ ORDA オブジェクトとは関わりのないユーザークラス。
 
 ## リソース
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+[権限](#権限) における [アクション](#アクション) の許可・拒否の対象となる ORDA 要素。 利用可能なリソースは、データストア、データクラス、データクラス属性、ORDAデータモデル関数、プロジェクトメソッドのいずれかです。
 
 
 ## ロール

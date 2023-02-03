@@ -106,7 +106,7 @@ The **Watch pane** is displayed in the top left corner of the Debugger window, b
 
 The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
 
-The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Al hacer clic en cualquier valor de la parte derecha del panel, se puede modificar el valor del objeto, si está permitido para ese objeto.
+La columna **Expression** muestra los nombres de los objetos y expresiones. La columna **Valor** muestra sus valores correspondientes actuales. Al hacer clic en cualquier valor de la parte derecha del panel, se puede modificar el valor del objeto, si está permitido para ese objeto.
 
 At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
@@ -128,7 +128,7 @@ $b:=a+1
 $c:=a+b
 ```
 
-1. A Debugger window opens with the program counter set to the line with `a:=1`. En este punto aparece el tema **Objetos Línea**:
+1. Se abre una ventana Depurador con el contador del programa fijado en la línea con `a:=1`. En este punto aparece el tema **Objetos Línea**:
 
     | $a | Indefinido |
     | -- | ---------- |
@@ -165,9 +165,9 @@ Este tema se compone de los siguientes subtemas:
 | Parámetros   | Lista de parámetros recibidos por el método                              | Sí                                |
 | Self         | Puntero al objeto actual, cuando se rastrea un método Objeto             | No                                |
 
-Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. El depurador muestra los primeros 100 elementos. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
+Los arrays, al igual que otras variables, aparecen en los subtemas Interproceso, Proceso y Local, dependiendo de su alcance. El depurador muestra los primeros 100 elementos. Dentro de la columna **Valor**, puede modificar los valores de los elementos del array, pero no el tamaño de los arrays.
 
-To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
+Para mostrar los tipos de variables y sus nombres internos, haga clic derecho y marque la opción **Mostrar tipos** del menú contextual:
 
 ![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
@@ -177,11 +177,11 @@ Aquí está el resultado:
 
 #### Valores actuales del formulario
 
-This theme contains the name of each dynamic object included in the current form, as well as the value of its associated variable:
+Este tema contiene el nombre de cada objeto dinámico incluido en el formulario actual, así como el valor de su variable asociada:
 
 ![current-form-value](../assets/en/Debugging/current-form-values.png)
 
-Some objects, such as list box arrays, can be presented as two distinct objects, the variable of the object itself and its data source.
+Algunos objetos, como los arrays list box, pueden presentarse como dos objetos distintos, la variable del propio objeto y su fuente de datos.
 
 #### Constantes
 
@@ -189,21 +189,21 @@ Al igual que la página de Constantes de la ventana del Explorador, este tema mu
 
 #### Semáforos
 
-Este tema lista los semáforos locales que se están configurando actualmente. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.
+Este tema lista los semáforos locales que se están configurando actualmente. Para cada semáforo, la columna Valor proporciona el nombre del proceso que define el semáforo. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.
 
 #### Procesos
 
-This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). Las expresiones de este tema no pueden ser modificadas.
+Este tema lista los procesos iniciados desde el comienzo de la sesión de trabajo. La columna de valores muestra el tiempo utilizado y el estado actual de cada proceso (es decir, en ejecución, en pausa, etc.). Las expresiones de este tema no pueden ser modificadas.
 
 #### Tablas y campos
 
-Este tema lista las tablas y los campos en la base 4D. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
+Este tema lista las tablas y los campos en la base 4D. Para cada elemento de la Tabla, la columna Valor muestra el tamaño de la selección actual para el proceso actual, así como el número de **registros bloqueados**.
 
-For each Field item, the Value column displays the value of the field for the current record (except picture and BLOB). Puede modificar los valores de los campos pero no la información de las tablas.
+Para cada elemento Campo, la columna Valor muestra el valor del campo para el registro actual (excepto imagen y BLOB). Puede modificar los valores de los campos pero no la información de las tablas.
 
 #### Conjuntos
 
-This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. Las expresiones de este tema no pueden ser modificadas.
+Este tema lista los conjuntos definidos en el proceso actual (el que está rastreando en ese momento) y los conjuntos interprocesos. Para cada conjunto, la columna Valor muestra el número de registros y el nombre de la tabla. Las expresiones de este tema no pueden ser modificadas.
 
 #### Selecciones temporales
 
@@ -215,19 +215,19 @@ This theme contains general information regarding database operation, such as th
 
 #### Web
 
-This theme displays information regarding the main Web server of the application (only available if the Web server is active):
+Este tema muestra información relativa al servidor Web principal de la aplicación (sólo disponible si el servidor Web está activo):
 
 * Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
 * Web Cache Usage: number of pages present in Web cache as well as its use percentage
 * Web Server Elapsed Time: duration of Web server use in hours:minutes:seconds format
 * Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second
-* Number of active Web processes: number of active Web processes, all Web processes together
+* Número de procesos Web activos: número de procesos Web activos, todos los procesos Web juntos
 
 Las expresiones contenidas en este tema no pueden ser modificadas.
 
 ### Menú contextual de la ventana de expresión
 
-Additional options are available from the contextual menu of the Watch pane.
+Hay opciones adicionales disponibles en el menú contextual de la ventana de expresión.
 
 ![context-menu](../assets/en/Debugging/contextual-menu.png)
 
@@ -352,19 +352,19 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
 2. Haga una de las siguientes cosas:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
-    * Right-click the selected text **>** **Copy to Expression Pane**
+    * Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
 
 ### Program Counter
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. Marca la siguiente línea a ejecutar.
+La flecha amarilla en el margen izquierdo del panel del Código Fuente se llama el contador de programa. Marca la siguiente línea a ejecutar.
 
-By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
+Por defecto, la línea del contador de programa (también llamada línea de ejecución) aparece resaltada en el depurador. Puede personalizar el color de resaltado en la [página Métodos de las Preferencias](Preferences/methods.md).
 
 #### Mover el contador del programa
 
-For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). Para ello, haga clic y arrastre la flecha amarilla a otra línea.
+Para fines de depuración, puede mover el contador de programa del método en la parte superior de la cadena de llamada (el método que se está ejecutando actualmente). Para ello, haga clic y arrastre la flecha amarilla a otra línea.
 
-This only tells the debugger to pursue tracing or executing from a different point. No ejecuta líneas ni cancela su ejecución. Todos los ajustes, campos, variables, etc. actuales no se ven afectados.
+Esto sólo indica al depurador que continúe rastreando o ejecutando desde un punto diferente. No ejecuta líneas ni cancela su ejecución. Todos los ajustes, campos, variables, etc. actuales no se ven afectados.
 
 Por ejemplo:
 
@@ -432,7 +432,7 @@ Esta sección lista todos los atajos disponibles en la ventana del depurador.
 
 #### Todas las ventanas
 
-* **Ctrl** + **+/-** (Windows) o **Comando** + **+/-** (macOS) aumenta o disminuye el tamaño de la fuente para una mejor legibilidad. The modified font size is also applied to the Code Editor and is stored in the Preferences.
+* **Ctrl** + **+/-** (Windows) o **Comando** + **+/-** (macOS) aumenta o disminuye el tamaño de la fuente para una mejor legibilidad. El tamaño de fuente modificado también se aplica al Editor de código y se almacena en las Preferencias.
 * **Ctrl + \*** (Windows) o **Comando + \*** (macOS) fuerza la actualización del Panel de Control.
 * Si no hay ningún elemento seleccionado en las ventanas, presione **Intro** para avanzar.
 * Cuando se selecciona el valor de un elemento, utilice las teclas de flecha para navegar por la lista.

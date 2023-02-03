@@ -1020,10 +1020,12 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
+| ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 

@@ -52,7 +52,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### Voir également
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -97,7 +97,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### Voir également
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -1047,6 +1047,7 @@ Vous souhaitez exporter un document 4D View Pro au format ".xlsx" et appeler une
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
+
  $params.format:=vp MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
@@ -1818,7 +1819,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### Voir également
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -1909,6 +1910,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
 L'objet retourné contient, par exemple :
+
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -2553,13 +2555,14 @@ Dans *sheet*, passez le numéro de la page cible. If no index is specified or if
 
 The command returns an object describing the current attributes of the *column*:
 
-| Propriété           | Type    | Description                                                                                            |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| dataField           | text    | Table column's property name in the data context. Not returned if the table is displayed automatically |
-| name                | text    | Table column's name.                                                                                   |
-| footerText          | text    | Column footer value.                                                                                   |
-| footerFormula       | text    | Column footer formula.                                                                                 |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                |
+| Propriété     | Type | Description                                                                                            |
+| ------------- | ---- | ------------------------------------------------------------------------------------------------------ |
+| dataField     | text | Table column's property name in the data context. Not returned if the table is displayed automatically |
+| name          | text | Table column's name.                                                                                   |
+| footerText    | text | Column footer value.                                                                                   |
+| footerFormula | text | Column footer formula.                                                                                 |
+
+|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
 
 If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
 
@@ -2690,6 +2693,7 @@ If *tableName* is not found, the command returns **null**.
 | ------- | ------------- |
 | v19 R7  | Ajout         |
 </details>
+
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 **VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->

@@ -21,14 +21,14 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designa                                                  |
-| ------------ | -------------------------------------------------------- |
-| "/DATA"      | Carpeta de datos actual                                  |
-| "/LOGS"      | Carpeta Logs                                             |
-| "/PACKAGE"   | Carpeta de la base de datos (con o sin extensión 4dbase) |
-| "/PROJECT"   | Carpeta Project                                          |
-| "/RESOURCES" | Carpeta de recursos de la base actual                    |
-| "/SOURCES"   | Carpeta de recursos del proyecto                         |
+| filesystem   | Designates                                         |
+| ------------ | -------------------------------------------------- |
+| "/DATA"      | Current data folder                                |
+| "/LOGS"      | Carpeta Logs                                       |
+| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
+| "/PROJECT"   | Carpeta Project                                    |
+| "/RESOURCES" | Current database resources folder                  |
+| "/SOURCES"   | Current project resources folder                   |
 
 ## Sintaxis POSIX
 
@@ -46,6 +46,7 @@ En la sintaxis POSIX, generalmente se utilizará los nombres de rutas `filesyste
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 ## Sintaxis específica de la plataforma
@@ -67,23 +68,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entrada de rutas Windows y secuencias de escape
+#### Windows pathnames and escape sequences
 
-El [editor de código e 4D](../code-editor/write-class-method.md) permite el uso de secuencias de escape. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
+The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
-El caracter `\` también se utiliza como separador en los nombres de ruta Windows. En general, 4D interpretará correctamente los nombres de ruta Windows que se introduzcan en el editor de código sustituyendo las barras invertidas simples `\` por barras invertidas dobles ``\\`. Por ejemplo,``C:\Folder`se convertirá en `C:\\Folder`.
-
-Sin embargo, si escribe `C:\MyDocuments\New`, 4D mostrará `C:\\MyDocuments\New`. En este caso, la segunda `\` se interpreta incorrectamente como `\N` (una secuencia de escape existente). Por lo tanto, debe introducir un doble "-" cuando quiera insertar una barra invertida antes de un caracter que se utiliza en una de las secuencias de escape reconocidas por 4D.
-
-Las siguientes secuencias de escape son reconocidas por 4D:
-
-| Secuencias de escape         | Carácter reemplazado       |
-| ---------------------------- | -------------------------- |
-| `\n`                        | LF (Nueva línea)           |
-| `\t`                        | HT (Tabulación horizontal) |
-| `\r`                        | CR (Retorno carro)         |
-| ``\\`|``&#96; (Backslash) |                            |
-| `\"`                        | `"` (Comillas)             |
+Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
 
 ### macOS
 

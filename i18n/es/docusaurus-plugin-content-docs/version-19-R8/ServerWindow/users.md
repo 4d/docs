@@ -4,14 +4,14 @@ title: Página Usuarios
 ---
 
 
-The **Users** page lists the 4D users connected to the server.
+La página **Usuarios** lista los usuarios 4D conectados al servidor.
 
 
 ![](../assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). La página también contiene un área de búsqueda dinámica y botones de control. You can modify the order of the columns by dragging and dropping their header areas.
+El botón "Usuarios" indica, entre paréntesis, el número total de usuarios conectados al servidor (este número no tiene en cuenta los filtros de visualización aplicados a la ventana). La página también contiene un área de búsqueda dinámica y botones de control. Puede modificar el orden de las columnas arrastrando y soltando sus áreas de encabezados.
 
-También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado. Click several times to specify in turn an ascending/descending order.
+También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado. Haga clic varias veces para especificar a su vez un orden ascendente/descendente.
 
 ![](../assets/en/Admin/server-users-sort.png)
 
@@ -20,25 +20,25 @@ También puede ordenar la lista de los valores de las columnas haciendo clic en 
 Para cada usuario conectado al servidor, la lista ofrece la siguiente información:
 
 - Sistema de la máquina cliente (macOS o Windows) como un icono.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
+- **Usuario 4D**: nombre del usuario 4D, o alias si se ha definido con el comando [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) en la máquina del usuario. Si las contraseñas no están activadas y no se ha definido ningún alias, todos los usuarios se denominan "Diseñador".
 - **Nombre de máquina**: Nombre de la máquina remota.
-- **Session name**: Name of the session opened on the remote machine.
+- **Nombre de sesión**: nombre de la sesión abierta en la máquina remota.
 - **Dirección IP**: dirección IP de la máquina remota.
-- **Login date**: Date and time of the remote machine connection.
-- **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- **Fecha de conexión**: fecha y hora de la conexión de la máquina remota.
+- **Tiempos CPU**: tiempos procesador consumidos por este usuario desde la conexión.
+- **Actividad**: ratio de tiempo que 4D Server dedica a este usuario (visualización dinámica). "En reposo" si la máquina remota ha pasado al modo reposo (ver abajo).
 
 ### Gestión de usuarios dormidos
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server gestiona específicamente los casos en los que una máquina que ejecuta una aplicación remota 4D pasa al modo de reposo mientras su conexión con la máquina servidor sigue activa. En este caso, la aplicación remota 4D conectada notifica automáticamente a 4D Server su desconexión inminente. En el servidor, el usuario conectado pasa a un estado de actividad **Dormido**:
 
 ![](../assets/en/Admin/server-sleeping.png)
 
-Este estado libera recursos en el servidor. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
+Este estado libera recursos en el servidor. Además, la aplicación 4D remota se reconecta automáticamente a 4D Server después de despertar del modo de suspensión.
 
-The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. La máquina pasa al modo reposo. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
+Se soporta el siguiente escenario: un usuario remoto deja de trabajar durante un tiempo, por ejemplo durante una pausa para comer, pero mantiene abierta la conexión con el servidor. La máquina pasa al modo reposo. Cuando el usuario regresa, despierta la máquina y la aplicación 4D remota recupera automáticamente su conexión con el servidor, así como el contexto de la sesión.
 
-> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
+> Una sesión remota durmiente es abandonada automáticamente por el servidor tras 48 horas de inactividad. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
 
 
 ## Área de búsqueda/filtrado

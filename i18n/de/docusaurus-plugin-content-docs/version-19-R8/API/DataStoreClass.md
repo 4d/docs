@@ -1021,10 +1021,12 @@ You want to log ORDA client requests in memory:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Parameter | Typ |  | Beschreibung                                               |
-| --------- | --- |  | ---------------------------------------------------------- |
+| --------- | --- |::| ---------------------------------------------------------- |
 |           |     |  | Does not require any parameters|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 

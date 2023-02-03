@@ -1021,10 +1021,12 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
+| ---------- | ---- |::| ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
 
+
 |
+
 
 #### Description
 

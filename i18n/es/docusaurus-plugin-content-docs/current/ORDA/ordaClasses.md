@@ -64,11 +64,11 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                                                            |
-| ------- | --------------------------------------------------------------------------------------------------------- |
-| v19 R4  | Alias attributes in the Entity Class                                                                      |
-| v19 R3  | Atributos calculados en la Entity Class                                                                   |
-| v18 R5  | Data model class functions are not exposed to REST by default. Nuevas palabras clave `exposed` y `local`. |
+| Versión | Modificaciones                                                                                                              |
+| ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| v19 R4  | Alias attributes in the Entity Class                                                                                        |
+| v19 R3  | Atributos calculados en la Entity Class                                                                                     |
+| v18 R5  | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
 </details>
 
 

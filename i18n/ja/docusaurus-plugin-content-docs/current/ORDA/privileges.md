@@ -18,7 +18,8 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 
 権限外のアクションをユーザーが実行しようとすると、権限エラーが生成されるか、あるいは読み取り権限がない属性の場合にはそのデータは送信されません。
 
-![](../assets/en/ORDA/privileges-schema.png)
+![スキーマ](../assets/en/ORDA/privileges-schema.png)
+
 
 
 ## リソース
@@ -33,52 +34,52 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 あるレベルで定義された許諾アクションは基本的に下位レベルに継承されますが、複数のレベルで設定することもできます:
 
 - データストアレベルで定義された許諾アクションは、自動的にすべてのデータクラスに割り当てられます。
-- データクラスレベルで定義された許諾アクションは、データストアの設定をオーバーライドします (あれば)。 By default, all attributes of the dataclass inherit from the dataclass permission(s).
-- Unlike dataclass permissions, a permission action defined at the attribute level does not override the parent dataclass permission(s), but is added to. For example, if you assigned the "general" privilege to a dataclass and the "detail" privilege to an attribute of the dataclass, both "general" and "detail" privileges must be set to the session to access the attribute.
+- データクラスレベルで定義された許諾アクションは、データストアの設定をオーバーライドします (あれば)。 デフォルトでは、データクラスのすべての属性が、データクラスの設定を継承します。
+- データクラスとは異なり、属性レベルで定義された許諾アクションは、親のデータクラスの設定をオーバーライドするのではなく、それに追加されます。 たとえば、データクラスに "general" という名称の権限を、データクラスの属性に "detail" という名称の権限を割り当てた場合、その属性にアクセスするには、セッションに "general" と "detail" の両方の権限が設定されている必要があります。
 
 
-## Permission actions
+## 許諾アクション
 
 
-Available actions are related to target resource.
+利用可能なアクションは対象となるリソースによります。
 
-| アクション        | datastore                                                                            | dataclass                                                                                                                                       | attribute                                                                                                             | data model function                                                                                                                                                                                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **create**   | Create entity in any dataclass                                                       | Create entity in this dataclass                                                                                                                 | Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes). | n/a                                                                                                                                                                                                                                                                      |
-| **read**     | Read attributes in any dataclass                                                     | Read attributes in this dataclass                                                                                                               | Read this attribute content                                                                                           | n/a                                                                                                                                                                                                                                                                      |
-| **update**   | Update attributes in any dataclass.                                                  | Update attributes in this dataclass.                                                                                                            | Update this attribute content (ignored for alias attributes).                                                         | n/a                                                                                                                                                                                                                                                                      |
-| **drop**     | Delete data in any dataclass.                                                        | Delete data in this dataclass.                                                                                                                  | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                      |
-| **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                   | Execute this function                                                                                                                                                                                                                                                    |
-| **describe** | All the dataclasses are available in the /rest/$catalog API                          | This dataclass is available in the /rest/$catalog API                                                                                           | This attribute is available in the /rest/$catalog API.                                                                | This dataclass function is available in the /rest/$catalog API                                                                                                                                                                                                           |
-| **promote**  | n/a                                                                                  | n/a                                                                                                                                             | n/a                                                                                                                   | Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
+| アクション        | データストア                                              | データクラス                                                                | 属性                                                     | データモデル関数                                                                                                |
+| ------------ | --------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| **create**   | 任意のデータクラスにおいてエンティティを作成                              | 当該データクラスにおいてエンティティを作成                                                 | 当該属性に許可されたデフォルト値とは異なる値を持つエンティティを作成 (エイリアス属性の場合は無視されます) | n/a                                                                                                     |
+| **read**     | 任意のデータクラスにおいて属性を読み取り                                | 当該データクラスにおいて属性を読み取り                                                   | 当該属性を読み取り                                              | n/a                                                                                                     |
+| **update**   | 任意のデータクラスにおいて属性を更新                                  | 当該データクラスにおいて属性を更新                                                     | 当該属性を更新 (エイリアス属性の場合は無視されます)                            | n/a                                                                                                     |
+| **drop**     | 任意のデータクラスにおいてデータを削除                                 | 当該データクラスにおいてデータを削除                                                    | 当該属性の null でない値を削除 (エイリアス属性と計算属性を除く)                   | n/a                                                                                                     |
+| **execute**  | プロジェクトの任意の関数を実行 (データストア、データクラス、エンティティセレクション、エンティティ) | データクラスの任意の関数を実行。 データクラス関数、エンティティ関数、エンティティセレクション関数は、データクラスの関数として扱われます。 | n/a                                                    | 当該関数を実行                                                                                                 |
+| **describe** | /rest/$catalog API ですべてのデータクラスが利用可能                 | /rest/$catalog API で当該データクラスが利用可能                                     | /rest/$catalog API で当該属性が利用可能                          | /rest/$catalog API で当該関数が利用可能                                                                           |
+| **promote**  | n/a                                                 | n/a                                                                   | n/a                                                    | 関数の実行に指定の権限を関連付けます。 権限は一時的にセッションに追加され、関数の実行終了とともに削除されます。 セキュリティ上、セッション全体ではなく、当該関数を実行するプロセスのみに権限が追加されます。 |
 
 **注:**
 
-- An alias can be read even if there is no permissions on the attributes upon which it is built.
-- A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
-- Default values: in the current implementation, only *Null* is available as default value.
+- エイリアス属性は、その元となる属性に対する許諾がない場合でも読み取ることができます。
+- 計算属性は、その元となる属性に対する許諾がない場合でもアクセスすることができます。
+- デフォルト値: 現在の実装では、*Null* のみデフォルト値として利用可能です。
 
-Setting permissions requires to be consistent, in particular:
+許諾の設定は一貫している必要があります。とくに:
 
-- **update** and **drop** permissions also need **read** permission (but **create** does not need it)
-- **promote** permission also need **describe** permission.
+- **update** および **drop** アクションには **read** が必要です (**create** には不要です)
+- **promote** アクションには **describe** が必要です
 
 
 
-## Privileges and Roles
+## 権限とロール
 
-A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
+**権限** とは、**リソース** に対して **アクション** を実行する技術的な能力であり、**ロール** は、管理者が使用するために公開された権限のことです。 基本的にロールとは、ビジネスユーザーのプロフィールを定義するためにいくつかの権限を集めたものです。 たとえば、"manageInvoices" (請求書管理) は権限の例で、"secretary" (秘書) は ("manageInvoices" および他の権限を持つ) ロールの例です。
 
-A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. A privilege can include other privileges.
+権限やロールは、複数の "アクション + リソース" の組み合わせと関連付けることができます。 一つのアクションに、複数の権限を関連付けることができます。 権限は、他の権限を含むことができます。
 
-- You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
+- 権限やロールの **作成** は `roles.json` ファイル内にておこないます (後述参照)。 権限やロールの範囲を **設定** するには、リソースに適用される許諾アクションをそれらに割り当てます。
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- 各ユーザーセッションに権限やロールを **許可** するには、`Session` クラスの [`.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数を使用します。
 
 
 ### 例題
 
-To allow a role in a session:
+セッションにおいて特定のロールを許可します:
 
 ```4d
 
@@ -88,14 +89,14 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
     Session.clearPrivileges()
 
-    $result:="Your are authenticated as Guest"
+    $result:="ゲストとしてログインしています"
 
     $user:=ds.Users.query("identifier = :1"; $identifier).first()
 
     If ($user#Null)
         If (Verify password hash($password; $user.password))
             Session.setPrivileges(New object("roles"; $user.role))
-            $result:="Your are authenticated as "+$user.role
+            $result:=$user.role+"としてログインしています"
         End if
     End if
 
@@ -104,70 +105,70 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 
 
-## `roles.json` file
+## `roles.json` ファイル
 
 
-The `roles.json` file describes the whole security settings for the project.
+`roles.json` ファイルは、プロジェクトのセキュリティ設定の全体を記述します。
 
 :::note
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+*Qodly* (クラウド) 以外のコンテキストでは、このファイルを次の場所に作成する必要があります: `<project folder>/Project/Sources/`。 [アーキテクチャー](../Project/architecture.md#sources) を参照ください。
 
 :::
 
 
-The `roles.json` file syntax is the following:
+`roles.json` ファイルの構文は次のとおりです:
 
-| プロパティ名      |                 |               | タイプ                                | 必須 | 説明                                                                           |
-| ----------- | --------------- | ------------- | ---------------------------------- | -- | ---------------------------------------------------------------------------- |
-| privileges  |                 |               | Collection of `privilege` objects  | X  | List of defined privileges                                                   |
-|             | \[].privilege  |               | String                             |    | アクセス権の名称                                                                     |
-|             | \[].includes   |               | String の Collection                |    | List of included privilege names                                             |
-| roles       |                 |               | Collection of `role` objects       |    | List of defined roles                                                        |
-|             | \[].role       |               | String                             |    | Role name                                                                    |
-|             | \[].privileges |               | String の Collection                |    | List of included privilege names                                             |
-| permissions |                 |               | Object                             | X  | List of allowed actions                                                      |
-|             | allowed         |               | Collection of `permission` objects |    | List of allowed permissions                                                  |
-|             |                 | \[].applyTo  | String                             | X  | Targeted [resource](#resources) name                                         |
-|             |                 | \[].type     | String                             | X  | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
-|             |                 | \[].read     | String の Collection                |    | List of privileges                                                           |
-|             |                 | \[].create   | String の Collection                |    | List of privileges                                                           |
-|             |                 | \[].update   | String の Collection                |    | List of privileges                                                           |
-|             |                 | \[].drop     | String の Collection                |    | List of privileges                                                           |
-|             |                 | \[].describe | String の Collection                |    | List of privileges                                                           |
-|             |                 | \[].execute  | String の Collection                |    | List of privileges                                                           |
-|             |                 | \[].promote  | String の Collection                |    | List of privileges                                                           |
+| プロパティ名      |                 |               | タイプ                        | 必須 | 説明                                                                 |
+| ----------- | --------------- | ------------- | -------------------------- | -- | ------------------------------------------------------------------ |
+| privileges  |                 |               | `privilege` オブジェクトのコレクション  | ○  | 定義された権限のリスト                                                        |
+|             | \[].privilege  |               | String                     |    | アクセス権の名称                                                           |
+|             | \[].includes   |               | String の Collection        |    | 内包する権限名のリスト                                                        |
+| roles       |                 |               | `role` オブジェクトのコレクション       |    | 定義されたロールのリスト                                                       |
+|             | \[].role       |               | String                     |    | ロール名                                                               |
+|             | \[].privileges |               | String の Collection        |    | 内包する権限名のリスト                                                        |
+| permissions |                 |               | Object                     | ○  | 許諾されたアクションのリスト                                                     |
+|             | allowed         |               | `permission` オブジェクトのコレクション |    | 許諾内容のリスト                                                           |
+|             |                 | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                |
+|             |                 | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
+|             |                 | \[].read     | String の Collection        |    | 権限名のリスト                                                            |
+|             |                 | \[].create   | String の Collection        |    | 権限名のリスト                                                            |
+|             |                 | \[].update   | String の Collection        |    | 権限名のリスト                                                            |
+|             |                 | \[].drop     | String の Collection        |    | 権限名のリスト                                                            |
+|             |                 | \[].describe | String の Collection        |    | 権限名のリスト                                                            |
+|             |                 | \[].execute  | String の Collection        |    | 権限名のリスト                                                            |
+|             |                 | \[].promote  | String の Collection        |    | 権限名のリスト                                                            |
 
 
-:::caution Reminder
+:::caution 留意事項
 
-- The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
-- `privileges` and `roles` names are case insensitive.
+- "WebAdmin" 権限名は、アプリケーションによって予約されています。 この名前をカスタム権限に使用することは推奨されません。
+- `privileges` および `roles` の名称においては文字の大小が区別されます。
 
 :::
 
-### `Roles_Errors.json` file
+### `Roles_Errors.json` ファイル
 
-The `roles.json` file is parsed by 4D at startup. You need to restart the application if you want modifications in this file to be taken into account.
+`roles.json` ファイルは、4D 起動時に解析されます。 このファイルへの変更を反映させるには、アプリケーションを再起動する必要があります。
 
-In case of error(s) when parsing the `roles.json` file, 4D loads the project but disables the global access protection - this allows the developer to access the files and to fix the error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). This file is automatically deleted when the `roles.json` file no longer contains error(s).
+`roles.json` ファイルを解析する際にエラーが発生した場合、4D はプロジェクトを読み込みますが、グローバルアクセス保護は無効にします。これにより、開発者はエラー修正のためファイルにアクセスすることができます。 また、`Roles_Errors.json` という名前のエラーファイルが [プロジェクトの `Logs` フォルダー](../Project/architecture.md#logs) に生成され、エラー行が記述されています。 このファイルは、`roles.json` ファイルのエラーがすべて修正されると、自動的に削除されます。
 
-It is recommended to check at startup if a `Roles_Errors.json` file exists in the [Logs folder](../Project/architecture.md#logs), which means that there was a parsing error and that accesses will not limited. You can write for example:
+`Roles_Errors.json` ファイルが [Logs フォルダー](../Project/architecture.md#logs) に存在するかどうか、起動時に確認することをお勧めします。存在する場合、解析エラーが発生し、アクセスが制限されないことを意味します。 たとえば、次のように書くことができます:
 
 ```4d title="/Sources/DatabaseMethods/onStartup.4dm"
 If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 …
-Else // you can prevent the project to open
- ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
+Else // プロジェクトが開かれるのを防ぐことができます
+ ALERT("roles.json ファイルが不正なため、アプリケーションを終了します。")
  QUIT 4D
 End if 
 ```
 
-## Initializing privileges for deployment
+## 運用のための権限の初期化
 
-By default, if no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
+デフォルトでは、`roles.json` ファイルに特定のパラメーターが定義されていない場合、アクセスは制限されません。 これにより、アクセスを気にすることなくアプリケーションを開発することができます。
 
-However, when the application is about to be deployed, a good practice is to lock all privileges and then, to configure the file to only open controlled parts to authorized sessions. To lock all privileges on all resources, put the following `roles.json` file in your project folder (it includes examples of methods):
+しかし、実際にアプリケーションを運用する前には、まずすべての権限をロックしてから、許可されたセッションに必要な部分のみを公開するよう、ファイルを構成することが推奨されます。 すべてのリソースに対してすべての権限をロックするには、次の `roles.json` ファイルをプロジェクトフォルダーに置きます (メソッドの例が含まれています)。
 
 ```json title="/Project/Sources/roles.json"
 {

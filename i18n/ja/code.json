@@ -306,8 +306,8 @@
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "このページを編集",
-    "description": "The link label to edit the current page"
+    "message": "このページへコメントする",
+    "description": "The link label to comment the current page"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "タグ付 1 件|タグ付 {count} 件",

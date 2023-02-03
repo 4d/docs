@@ -7,57 +7,57 @@ Puede utilizar macrocomandos en sus métodos. El uso de macrocomandos permite ah
 
 ## ¿Qué es una macro?
 
-A macro-command is a section of 4D code that is permanently accessible and that can be inserted anywhere in your methods, whatever the type of database open. Macros can contain all types of 4D text, commands and constants, as well as special tags which are replaced at the time of macro insertion by values derived from the method context. For instance, a macro may contain the tag `<method_name/>;` at the time of macro insertion, this tag will be replaced by the name of the current project method.
+Un macro-comando es una parte de código 4D accesible permanentemente y que puede insertarse en cualquier parte de sus métodos, sea cual sea el tipo de la base abierta. Las macros pueden contener todo tipo de texto, comandos y constantes 4D, así como también etiquetas especiales, que se sustituyen en el momento de la inserción de la macro por valores derivados del contexto del método. Por ejemplo, una macro puede contener la etiqueta `<method_name/>;` en el momento de la inserción de la macro, esta etiqueta será sustituida por el nombre del método proyecto actual.
 
-Las macros se almacenan en uno o varios archivos en formato XML (texto). They can be placed in a Code Editor list; they can also be called using the context menu of the editor or using the autocomplete function.
+Las macros se almacenan en uno o varios archivos en formato XML (texto). Pueden colocarse en una lista del editor de código; también pueden llamarse utilizando el menú contextual del editor o utilizando la función de entrada predictiva.
 
 Las macros 4D están escritas en formato XML. Puede utilizar el archivo de macros por defecto de 4D tal como está o modificarlo.
 
 ## Ubicación de las macros
 
-4D carga las macros desde una carpeta llamada **Macros v2**. Macros must be in the form of one or more XML files that are placed in this folder.
+4D carga las macros desde una carpeta llamada **Macros v2**. Las macros deben estar en forma de uno o varios archivos XML ubicados en esta carpeta.
 
 La carpeta "Macros v2" puede ser ubicada:
 
 - En la carpeta 4D activa de la máquina. Las macros son compartidas para todas las bases. **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) command in the 4D *Language Reference* manual.
 - Junto al archivo de estructura de la base. Las macros sólo se cargan para esta estructura.
-- For components: in the **Components** folder of the database. Las macros sólo se cargan si el componente está instalado.
+- Para los componentes: en la carpeta **Components** de la base. Las macros sólo se cargan si el componente está instalado.
 
-These three locations can be used simultaneously: it is possible to install a "Macros v2" folder in each location. The macros will be loaded in the following order: 4D folder, structure file, component 1... component X.
+Estas tres ubicaciones pueden utilizarse simultáneamente: es posible instalar una carpeta "Macros v2" en cada una de ellas. Las macros se cargarán en el siguiente orden: carpeta 4D, archivo de estructura, componente 1... componente X.
 
 ## Macros por defecto
 
-4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
+4D ofrece un conjunto de macros por defecto que corresponden, en particular, a la lista de palabras clave de las versiones anteriores de 4D. Estas macros se incluyen en el archivo por defecto "*Macros.xml*", ubicado en la carpeta "Macros v2" que se crea en la carpeta 4D activa de la máquina durante el arranque inicial de 4D.
 
-You can modify this file or the contents of the folder subsequently as desired (see the following paragraph). In the event of problems with this folder, it can be deleted and 4D will re-create it on the next startup.
+Posteriormente, puede modificar este archivo o el contenido de la carpeta como desee (ver el párrafo siguiente). En caso de problemas con esta carpeta, se puede borrar y 4D la volverá a crear en el siguiente inicio.
 
-## Adding customized macros
+## Añadir macros personalizadas
 
-You can add customized macros in the "Macros.xml" file using a standard text editor or by programming. También puede añadir archivos XML de macros personalizados en esta carpeta.
+Puede añadir macros personalizadas en el archivo "Macros.xml" utilizando un editor de texto estándar o por programación. También puede añadir archivos XML de macros personalizados en esta carpeta.
 
-En modo local, el archivo de macros puede abrirse mientras se utiliza 4D. La lista de macros disponibles se actualiza en cada evento de activación de 4D. For instance, it is possible to bring the text editor to the foreground, modify the macro file, then return to the method: the new macro is then available in the Code Editor.
+En modo local, el archivo de macros puede abrirse mientras se utiliza 4D. La lista de macros disponibles se actualiza en cada evento de activación de 4D. Por ejemplo, es posible traer el editor de texto al primer plano, modificar el archivo de macros y, a continuación, volver al método: la nueva macro estará entonces disponible en el Editor de código.
 
 No se muestran macros vacías o erróneas.
 
 ### Comprobación de la sintaxis de las macros personalizadas
 
-The macro-command files of 4D must be in conformity with the XML standard. This means more particularly that XML declaration `<?xml version="1.0" ...?>` and document declaration `<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd">` statements are mandatory at the beginning of a macro file in order for it to be loaded. Se soportan los diferentes tipos de codificación XML. However, it is recommended to use encoding that is Mac/PC (UTF-8) compatible. 4D ofrece un DTD que puede utilizarse para validar los archivos de macros. Este archivo se encuentra en la siguiente ubicación:
+Los archivos de macrocomandos de 4D deben ser conformes al estándar XML. Esto significa, más concretamente, que las declaraciones XML `<?xml version="1.0" ...?>` y la declaración de documento `<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd">` son obligatorias al principio de un archivo de macros para que pueda cargarse. Se soportan los diferentes tipos de codificación XML. No obstante, se recomienda utilizar una codificación compatible con Mac/PC (UTF-8). 4D ofrece un DTD que puede utilizarse para validar los archivos de macros. Este archivo se encuentra en la siguiente ubicación:
 
 - Windows: \Resources\DTD\macros.dtd
 - Mac OS: :Contents:Resources:DTD:macros.dtd
 
-If a macros file does not contain the declaration statements or cannot be validated, it is not loaded.
+Si un archivo de macros no contiene las declaraciones o no puede validarse, no se carga.
 
 ## Síntaxis de macros 4D
 
 Las macros 4D se crean utilizando etiquetas XML personalizadas llamadas "elementos"
 
-Some tags indicate the start and end of the definition (double tags of the type `<tag> </tag>`), others are replaced by insertion context values (`<tag/>`).
+Algunas etiquetas indican el inicio y el final de la definición (etiquetas dobles del tipo `<tag> </tag>`), otras se sustituyen por valores de contexto de inserción (`<tag/>`).
 
-In conformity with XML specifications, some element tags can include attributes. Unless otherwise indicated, these attributes are optional and a default value is used when they are omitted. La sintaxis de los elementos con atributos es la siguiente:
+De conformidad con las especificaciones XML, algunas etiquetas de elementos pueden incluir atributos. A menos que se indique lo contrario, estos atributos son opcionales y se utiliza un valor por defecto cuando se omiten. La sintaxis de los elementos con atributos es la siguiente:
 
 - Etiquetas dobles: `<tag attribute="value"> </macro>`
-- Single tags: `<tag attribute="value"/>`
+- Etiquetas individuales: `<tag attribute="value"/>`
 
 If the element accepts several attributes, you can group them in the same line of command, separated by a space: `\&#060;tag attribute1="value" attribute2="value" attribute3="value"... &#062;`
 
@@ -68,14 +68,14 @@ Aquí está la lista de etiquetas y su modo de uso:
 | `<macros> </macros>` | Inicio y fin del archivo macro (etiqueta obligatoria).                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `<macro> </macro>`   | Inicio y fin de la definición de una macro y sus atributos.                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |                                  | *Atributos*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - name: Name**of macro as it appears in menus and Code Editor lists (mandatory attribute).                                                                                                                                                                                                                                                                                                                                                                                                               |
-|                                  | - type_ahead_text: Character string** to be entered to call the macro using the type-ahead (aka autocomplete) function*.                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - in_menu: Boolean indicating whether the macro can be called using the context menu*. Valores = "true" (por defecto) o "false"                                                                                                                                                                                                                                                                                                                                                                          |
+|                                  | - name: Nombre**de la macro tal y como aparece en los menús y en las listas del Editor de código (atributo obligatorio).                                                                                                                                                                                                                                                                                                                                                                                 |
+|                                  | - type_ahead_text: Cadena de caracteres** que debe introducirse para llamar a la macro utilizando la función type-ahead (también conocida como autocompletar)*.                                                                                                                                                                                                                                                                                                                                      |
+|                                  | - in_menu: booleano que indica si la macro se puede llamar utilizando el menú contextual*. Valores = "true" (por defecto) o "false"                                                                                                                                                                                                                                                                                                                                                                      |
 |                                  | - type_ahead: Boolean indicating whether the macro can be called using the type-ahead (aka autocomplete) function*. Valores = "true" (por defecto) o "false"                                                                                                                                                                                                                                                                                                                                             |
 |                                  | - method_event: Used to trigger the automatic calling of the macro depending on the current handling phase of each method (creation, closing, and so on). Values = "on_load": The macro is triggered on the opening of each method, "on_save": The macro is triggered when each method is saved (closing of a modified method or saving using the File>Save command, "on_create": The macro is triggered when each method is created, "on_close": The macro is triggered when each method is closed. |
 |                                  | "on_save" and "on_close" can be used jointly --- in other words, both of these events are generated when a modified method is closed. On the other hand, "on_create" and "on_load" are never generated in a consecutive manner. This attribute can be used, for example, to preformat methods when they are created (comments in header area) or to record information such as the date and time when they are closed.                                                                               |
 |                                  | - version: Used to activate the new mode of supporting text selections for the macro (see the "About the `<method>` Tag" section below). Para activar este nuevo modo, pase el valor "2". If you omit this attribute or pass version="1", the former mode is kept.                                                                                                                                                                                                                                 |
-|                                  | - in_toolbar: Boolean indicating if the macro must be present in the menu of the Macro button of the toolbar. Valores= "true" (por defecto) o "false".                                                                                                                                                                                                                                                                                                                                                   |
+|                                  | - in_toolbar: booleano que indica si la macro debe estar presente en el menú del botón Macro de la barra de herramientas. Valores= "true" (por defecto) o "false".                                                                                                                                                                                                                                                                                                                                       |
 | `<selection/>`             | Etiqueta reemplazada por el texto seleccionado cuando la macro se inserta. La selección puede estar vacía.                                                                                                                                                                                                                                                                                                                                                                                               |
 | `<text> </text>`     | Inicio y fin del código que debe insertarse en el método. Se añadirá un retorno de carro antes y después del código.                                                                                                                                                                                                                                                                                                                                                                                     |
 | `<method> </method>` | Start and end of the name of the project method and its (optional) parameter. El método se ejecuta cuando se llama a la macro. Puede pasar un parámetro de la forma ("param1;param2;..."). This parameter will be received in the method using the variables $1, $2, etc. For additional information about this tag, refer to the "About the `<method>` Tag" section below.                                                                                                                        |
@@ -137,7 +137,7 @@ By default, all macros can be called via the context menu of the Code Editor (us
 
 The *in_menu* attribute of the `<macro>` tag is used to set whether or not the macro appears in this menu.
 
-In the context menu, macros are displayed in the order of the "Macros.xml" file and any additional XML files. Por lo tanto, es posible cambiar el orden modificando estos archivos.
+En el menú contextual, las macros se muestran en el orden del archivo "Macros.xml" y de cualquier archivo XML adicional. Por lo tanto, es posible cambiar el orden modificando estos archivos.
 
 ### Autocompletar
 
@@ -167,4 +167,4 @@ Strict syntax rules must be observed in order for macros files to respect the XM
 
 - Comments of the "// my comment" type, allowed inside `<macro>` elements in previous versions of 4D, are not compatible with the XML syntax. The lines of comments must respect the standard `"<!-- my comment -->"` form.
 - The `<>` symbols used more particularly for interprocess object names must be encoded. For example, the `<>params` variable must be written `&lt;>params`.
-- The initial `<macros>` declaration tag could be omitted in previous versions of 4D. Ahora es obligatorio; de lo contrario, el archivo no se cargará.
+- La etiqueta de declaración inicial `<macros>` podía omitirse en versiones anteriores de 4D. Ahora es obligatorio; de lo contrario, el archivo no se cargará.

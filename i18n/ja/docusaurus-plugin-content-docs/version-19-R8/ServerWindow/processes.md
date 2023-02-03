@@ -50,33 +50,32 @@ title: プロセスページ
 
 プロセスタイプはアイコンで識別できます。 アイコンの色や形に対応するプロセスタイプは以下のとおりです:
 
-| icon                                       | type                                                                        |
-| ------------------------------------------ | --------------------------------------------------------------------------- |
-| ![](../assets/en/Admin/server-icon-1.png)  | アプリケーションサーバー                                                                |
-| ![](../assets/en/Admin/server-icon-2.png)  | SQL サーバー                                                                    |
-| ![](../assets/en/Admin/server-icon-3.png)  | DB4D サーバー (データベースエンジン)                                                      |
-| ![](../assets/en/Admin/server-icon-4.png)  | Web サーバー                                                                    |
-| ![](../assets/en/Admin/server-icon-5.png)  | SOAP サーバー                                                                   |
-| ![](../assets/en/Admin/server-icon-6.png)  | 保護された 4Dクライアントプロセス (接続された 4D の開発プロセス)                                       |
-| ![](../assets/en/Admin/server-icon-7.png)  | メイン4Dクライアントプロセス (接続された 4D のメインプロセス。 クライアントマシン上で作成されたプロセスに対応するサーバープロセス)      |
-| ![](../assets/en/Admin/server-icon-8.png)  | 4Dクライアント基本プロセス (4Dクライアントプロセスと並列なプロセス。 メイン4Dクライアントプロセスをコントロールするプリエンプティブプロセス) |
-| ![](../assets/en/Admin/server-icon-9.png)  | 予備プロセス (以前または後の "4Dクライアントデータベースプロセス")                                       |
-| ![](../assets/en/Admin/server-icon-10.png) | SQL サーバーワーカープロセス                                                            |
-| ![](../assets/en/Admin/server-icon-11.png) | HTTP サーバーワーカープロセス                                                           |
-| ![](../assets/en/Admin/server-icon-12.png) | 4Dクライアントプロセス (接続された 4D 上で実行中のプロセス)                                          |
-| ![](../assets/en/Admin/server-icon-13.png) | ストアドプロシージャー (接続された 4D により起動され、サーバー上で実行しているプロセス)                             |
-| ![](../assets/en/Admin/server-icon-14.png) | Web メソッド (4DACTION などにより起動)                                                 |
-| ![](../assets/en/Admin/server-icon-15.png) | Web メソッド (プリエンプティブ)                                                         |
-| ![](../assets/en/Admin/server-icon-16.png) | SOAP メソッド (Webサービスにより起動)                                                    |
-| ![](../assets/en/Admin/server-icon-17.png) | SOAP メソッド (プリエンプティブ)                                                        |
-| ![](../assets/en/Admin/server-icon-18.png) | ロガー                                                                         |
-| ![](../assets/en/Admin/server-icon-19.png) | TCP接続リスナー                                                                   |
-| ![](../assets/en/Admin/server-icon-20.png) | TCPセッションマネージャー                                                              |
-| ![](../assets/en/Admin/server-icon-21.png) | その他のプロセス                                                                    |
-| ![](../assets/en/Admin/server-icon-22.png) | ワーカープロセス (コオペラティブ)                                                          |
-| ![](../assets/en/Admin/server-icon-23.png) | 4Dクライアントプロセス (プリエンプティブ)                                                     |
-| ![](../assets/en/Admin/server-icon-24.png) | ストアドプロシージャー (プリエンプティブプロセス)                                                  |
-| ![](../assets/en/Admin/server-icon-25.png) | ワーカープロセス (プリエンプティブ)                                                         |
+| icon                                       | type                                                                                                    |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Admin/server-icon-1.png)  | アプリケーションサーバー                                                                                            |
+| ![](../assets/en/Admin/server-icon-2.png)  | SQL サーバー                                                                                                |
+| ![](../assets/en/Admin/server-icon-3.png)  | DB4D サーバー (データベースエンジン)                                                                                  |
+| ![](../assets/en/Admin/server-icon-4.png)  | Web サーバー                                                                                                |
+| ![](../assets/en/Admin/server-icon-5.png)  | SOAP サーバー                                                                                               |
+| ![](../assets/en/Admin/server-icon-6.png)  | 保護された 4Dクライアントプロセス (接続された 4D の開発プロセス)                                                                   |
+| ![](../assets/en/Admin/server-icon-7.png)  | 接続している 4Dクライアントのメインプロセス、または、接続中の4Dクライアント上で `New process` で作成されたプロセス (クライアントマシン上で作成されたプロセスに対応するサーバープロセス) |
+| ![](../assets/en/Admin/server-icon-8.png)  | 4Dクライアント基本プロセス (4Dクライアントプロセスと並列なプロセス。 メイン4Dクライアントプロセスをコントロールするプリエンプティブプロセス)                             |
+| ![](../assets/en/Admin/server-icon-9.png)  | 予備プロセス (以前または後の "4Dクライアントデータベースプロセス")                                                                   |
+| ![](../assets/en/Admin/server-icon-10.png) | SQL サーバーワーカープロセス                                                                                        |
+| ![](../assets/en/Admin/server-icon-11.png) | HTTP サーバーワーカープロセス                                                                                       |
+| ![](../assets/en/Admin/server-icon-13.png) | ストアドプロシージャー (接続された 4D により起動され、サーバー上で実行しているプロセス)                                                         |
+| ![](../assets/en/Admin/server-icon-14.png) | Web メソッド (4DACTION などにより起動)                                                                             |
+| ![](../assets/en/Admin/server-icon-15.png) | Web メソッド (プリエンプティブ)                                                                                     |
+| ![](../assets/en/Admin/server-icon-16.png) | SOAP メソッド (Webサービスにより起動)                                                                                |
+| ![](../assets/en/Admin/server-icon-17.png) | SOAP メソッド (プリエンプティブ)                                                                                    |
+| ![](../assets/en/Admin/server-icon-18.png) | ロガー                                                                                                     |
+| ![](../assets/en/Admin/server-icon-19.png) | TCP接続リスナー                                                                                               |
+| ![](../assets/en/Admin/server-icon-20.png) | TCPセッションマネージャー                                                                                          |
+| ![](../assets/en/Admin/server-icon-21.png) | その他のプロセス                                                                                                |
+| ![](../assets/en/Admin/server-icon-22.png) | ワーカープロセス (コオペラティブ)                                                                                      |
+| ![](../assets/en/Admin/server-icon-23.png) | 4Dクライアントプロセス (プリエンプティブ)                                                                                 |
+| ![](../assets/en/Admin/server-icon-24.png) | ストアドプロシージャー (プリエンプティブプロセス)                                                                              |
+| ![](../assets/en/Admin/server-icon-25.png) | ワーカープロセス (プリエンプティブ)                                                                                     |
 
 > **グループ毎にプロセスを表示** オプションがチェックされていると、それぞれの 4Dクライアントメインプロセスと、その対である 4Dクライアント基本プロセスは一緒にグループ化されて表示されます。
 

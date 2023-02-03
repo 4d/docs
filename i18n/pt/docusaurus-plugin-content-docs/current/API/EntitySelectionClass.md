@@ -707,11 +707,10 @@ $values:=ds. Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Parâmetros                 | Tipo                |    | Descrição                                                                                                               |
-| -------------------------- | ------------------- |:--:| ----------------------------------------------------------------------------------------------------------------------- |
-| mode                       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                        |
-| Resultados                 | 4D. EntitySelection | <- | Entidade de seleção vazia se for executada com êxito, se nenhuma entity selection contendo as entidades não elimináveis |
-| <!-- END REF --> |                     |    |                                                                                                                         |
+| Parâmetros | Tipo                |    | Descrição                                                                                                                   |
+| ---------- | ------------------- |:--:| --------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                            |
+| Resultados | 4D. EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF --> |
 
 #### Descrição
 
@@ -1972,6 +1971,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v17    | Adicionado |
+
 
 
 </details>

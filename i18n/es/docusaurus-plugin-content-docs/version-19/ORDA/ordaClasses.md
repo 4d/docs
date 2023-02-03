@@ -60,9 +60,9 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                                                            |
-| ------- | --------------------------------------------------------------------------------------------------------- |
-| v18 R5  | Data model class functions are not exposed to REST by default. Nuevas palabras clave `exposed` y `local`. |
+| Versión | Modificaciones                                                                                                              |
+| ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| v18 R5  | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
 </details>
 
 ### Clase DataStore
@@ -453,6 +453,6 @@ Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directa
 
 ### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
+En el editor de métodos de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)

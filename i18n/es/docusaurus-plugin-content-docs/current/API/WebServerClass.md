@@ -297,6 +297,7 @@ El <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado del HTTP Strict Transp
 ## .HSTSMaxAge
 
 
+
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
@@ -779,10 +780,11 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 </details>
 
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
+
+
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF --> |
@@ -794,7 +796,7 @@ Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierra
 
 #### Ejemplo
 
-Para detener el servidor web de la base de datos:
+Para detener el servidor web de la base:
 
 ```4d
  var $webServer : 4D.WebServer

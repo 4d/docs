@@ -45,7 +45,7 @@ The `.formatter` property <!-- REF #TableColumn.formatter.Summary -->contains th
 <!-- REF #TableColumn.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-La propiedad `.name` <!-- REF #TableColumn.name.Summary -->contains the table column's name<!-- END REF --> (mandatory).
+La propiedad `.name` <!-- REF #TableColumn.name.Summary -->contains the table column's name<!-- END REF --> (obligatorio).
 
 
 
@@ -117,7 +117,7 @@ The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary
 <!-- REF #TableOptions.tableColumns.Syntax -->
 **.tableColumns** : Collection<!-- END REF -->
 
-The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->.
+The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->es una colección de objetos [cs.ViewPro.TableColumn](#tablecolumn) utilizados para crear las columnas de la tabla<!-- END REF -->.
 
 
 
@@ -196,7 +196,7 @@ The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->l
 ### .borderBottom
 
 <!-- REF #TableStyle.borderBottom.Syntax -->
-**.borderBottom** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
+**.borderBottom**: [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
 The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->.
 

@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. To execute the code, you just need to click on the execution button in the Code Editor:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Ou poderia anexar esse código a um botão em um formulário e executar o formulário, nesse caso, clicar no botão exibira a caixa de diálogo de alerta. Em qualquer caso, acabou de executar sua primeira linha de código 4D!
 
@@ -105,7 +105,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apena
 
 4D oferece un grande número de métodos (ou comandos) integrados, mas também lhe permite criar seus próprios **métodos de projeto**. Os métodos de projeto são métodos definidos pelo usuário que contenham comandos, operadores e outras partes da linguaje. Los métodos projeto são métodos genéricos, mas há outros tipos de métodos: métodos objeto, métodos formulário, métodos tabela (Triggers) e métodos base.
 
-Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa.
+Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex.
 
 Por exemplo, a linha abaixo é uma declaração que mostará uma caixa de diálogo de confirmação:
 
@@ -118,14 +118,11 @@ Um método também contém testes e loops que controlam o fluxo da execução. 4
 O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
-For ($vCounter;1;100)
-/*
-comments  
-    /* 
-    other comments
-    */
-*/
-...
+For($vlChar;1;Length(vtSomeText))
+    //Do something with the character if it is a TAB
+
+    If(Character code(vtSomeText[[$vlChar]])=Tab)
+        //...
     End for
 ```
 
@@ -325,6 +322,20 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Comentários
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
@@ -336,7 +347,7 @@ There are two ways to create comments:
 
 Both styles of comments can be used simultaneously.
 
-#### Single line comments (//)
+#### Single line comments (`//comment`)
 
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
@@ -348,7 +359,7 @@ Insert `//` at the beginning of a line or after a statement to add a single line
  End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
@@ -373,3 +384,26 @@ comentarios
 ...
 End for
 ```
+
+## Escape sequences
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+In 4D, the following escape sequences can be used:
+
+| Escape sequence               | Character replaced   |
+| ----------------------------- | -------------------- |
+| `\n`                         | LF (Line feed)       |
+| `\t`                         | HT (Tab)             |
+| `\r`                         | CR (Carriage return) |
+| ``\\` |``&#96; (Backslash) |                      |
+| `\"`                         | " (Quotation marks)  |
+
+> It is possible to use either upper or lower case in escape sequences.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+
