@@ -5188,7 +5188,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 | -- | --- |  | -- |
 |    |     |  |    |
 
-|rangeObj |Object|->|Range object| |formula |Text|->|Formula or 4D method| |formatPattern |Text|->|Format of field|<!-- END REF -->
+|rangeObj |Object|->|レンジオブジェクト| |formula |Text|->|フォーミュラまたは 4Dメソッド| |formatPattern |Text|->|フィールドのフォーマット|<!-- END REF -->
 
 #### 説明
 
