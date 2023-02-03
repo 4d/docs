@@ -463,16 +463,16 @@ La fonction `.copy()` <!-- REF #collection.copy().Summary --> retourne une copie
 
 S'il est passé, le paramètre *option* peut contenir l'une des constantes suivantes (ou les deux) :
 
-| option                | Description                                                                                                                                                                                                                                                                                                                                       |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | Si la collection d'origine contient des valeurs de type pointeur, par défaut la copie contient également les pointeurs. However, you can resolve pointers when copying by passing the `ck resolve pointers` constant. Dans ce cas, chaque pointeur contenu dans la collection est évalué lors de la copie et sa valeur déréférencée est utilisée. |
-| `ck shared`           | By default, `copy()` returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the `ck shared` constant to create a shared collection. In this case, you can use the *groupWith* parameter to associate the shared collection with another collection or object (see below).                         |
+| option                | Description                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ck resolve pointers` | Si la collection d'origine contient des valeurs de type pointeur, par défaut la copie contient également les pointeurs. Cependant, vous pouvez résoudre les pointeurs lors de la copie en passant la constante `ck resolve pointers` . Dans ce cas, chaque pointeur contenu dans la collection est évalué lors de la copie et sa valeur déréférencée est utilisée. |
+| `ck shared`           | Par défaut, `copy()` retourne une collection standard (non partagée), même si la fonction s'applique à une collection partagée. Passez la constante `ck shared` pour créer une collection partagée. Dans ce cas, vous pouvez utiliser le paramètre *groupWith* pour associer la collection partagée à une autre collection ou à un autre objet (voir ci-dessous).  |
 
 Les paramètres *groupWithCol* ou *groupWithObj* vous permettent de désigner une collection ou un objet auquel/à laquelle la collection résultante sera associée.
 
 :::note
 
-Datastore, dataclass, and entity objects are not copiable. If `.copy()` is called with them, `Null` values are returned.
+Les objets Datastore, dataclass et entity ne sont pas copiables. Si `.copy()` est appelé avec eux, des valeurs `null` sont retournées.
 
 :::
 
