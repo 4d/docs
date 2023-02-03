@@ -2563,7 +2563,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 | footerText    | text | 列のフッター値                                            |
 | footerFormula | text | 列のフッターのフォーミュラ。                                     |
 
-|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
+|filterButtonVisible|boolean|列のフィルターボタンが表示されている場合には true、そうでない場合は false。 |
 
 *tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは **null** を返します。
 
