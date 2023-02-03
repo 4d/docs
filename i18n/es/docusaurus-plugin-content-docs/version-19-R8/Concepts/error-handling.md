@@ -65,25 +65,25 @@ Se puede definir un método de gestión de errores para diferentes contextos de 
 Ejemplos:
 
 ```4d
-ON ERR CALL("IO_Errors";ek local) //Installs a local error-handling method
-ON ERR CALL("globalHandler";ek global) //Installs a global error-handling method
-ON ERR CALL("componentHandler";ek errors from components) //Installs an error-handling method for components
+ON ERR CALL("IO_Errors";ek local) //Instala un método de gestión de errores local 
+ON ERR CALL("globalHandler";ek global) //Instala un método de gestión de errores global 
+ON ERR CALL("componentHandler";ek errors from components) //Instala un método de gestión de errores para los componentes
 ```
 
-You can install a global error handler that will serve as "fallback" and specific local error handlers for certain processes. Un gestor de errores global también es útil en el servidor para evitar diálogos de error en el servidor cuando se ejecuta con interfaz.
+Puede instalar un gestor de errores global que servirá como "fallback" y gestores de errores locales específicos para determinados procesos. Un gestor de errores global también es útil en el servidor para evitar diálogos de error en el servidor cuando se ejecuta con interfaz.
 
-Se puede definir un único método de captura de errores para toda la aplicación o diferentes métodos por módulo de aplicación. However, only one method can be installed per execution context and per project.
+Se puede definir un único método de captura de errores para toda la aplicación o diferentes métodos por módulo de aplicación. Sin embargo, sólo se puede instalar un método por contexto de ejecución y por proyecto.
 
-When an error occurs, only one method is called, as described in the following diagram:
+Cuando se produce un error, sólo se llama a un método, como se describe en el siguiente diagrama:
 
-![error management](../assets/en/Concepts/error-schema.png)
+![gestión de errores](../assets/en/Concepts/error-schema.png)
 
 
 ### Manejo de errores dentro del método
 
-Within a custom error method, you have access to several pieces of information that will help you identifying the error:
+Dentro de un método de gestión de errores personalizado, tiene acceso a varios datos que le ayudarán a identificar el error:
 
-- dedicated system variables:
+- las variables sistema dedicadas:
 
   - `Error` (entero largo): código de error
   - `Error method`(texto): nombre del método que ha provocado el error
@@ -92,11 +92,11 @@ Within a custom error method, you have access to several pieces of information t
 
 |
 
-4D automatically maintains a number of variables called **system variables**, meeting different needs. Consulte el *manual de referencia del lenguaje 4D*.
+4D mantiene automáticamente una serie de variables denominadas **variables sistema**, que responden a diferentes necesidades. Consulte el *manual de referencia del lenguaje 4D*.
 
 :::
 
-- the [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) command that returns a collection of the current stack of errors that occurred in the 4D application. You can also use the [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) command that returns the same information as arrays.
+- el comando [`Last errors`](https://doc.4d.com/4dv19/help/command/en/page1799.html) que devuelve una colección de la pila actual de errores ocurridos en la aplicación 4D. También puede utilizar el comando [`GET LAST ERROR STACK`](https://doc.4d.com/4dv19/help/command/en/page1015.html) que devuelve la misma información que los arrays.
 - el comando `Get call chain` que devuelve una colección de objetos que describen cada paso de la cadena de llamadas a métodos dentro del proceso actual.
 
 
