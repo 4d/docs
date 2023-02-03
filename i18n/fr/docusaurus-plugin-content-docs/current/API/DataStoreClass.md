@@ -420,45 +420,45 @@ Cette fonction ne peut être appelée que :
 
 :::
 
-Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
+Une fois cette fonction exécutée, les opérations d'écriture telles que `.save()` ou les autres appels `.flushAndLock()` sont figés dans tous les autres process jusqu'à ce que le datastore soit déverrouillé.
 
-When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
+Lorsque plusieurs appels à `.flushAndLock()` ont été effectués dans le même process, le même nombre d'appels à [`.unlock()`](#unlock) doit être exécuté pour déverrouiller réellement le datastore.
 
-The datastore is unlocked when:
+Le datastore est déverrouillé lorsque :
 
-- the [`.unlock()`](#unlock) function is called in the same process, or
-- the process that called the `.flushAndLock()` function is killed.
+- la fonction [`.unlock()`](#unlock) est appelée dans le même process, ou
+- le process qui a appelé la fonction `.flushAndLock()` est tué.
 
 
-If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked.
+Si le datastore est déjà verrouillé par un autre process, l'appel de `.flushAndLock()` est figé et sera exécuté lorsque le datastore sera déverrouillé.
 
-An error is triggered if the `.flushAndLock()` function cannot be executed (e.g. it is run on a remote 4D), .
+Une erreur est déclenchée si la fonction `.flushAndLock()` ne peut pas être exécutée (par exemple, elle est exécutée sur un 4D distant).
 
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction.
+D'autres fonctions et services 4D, notamment [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), et [MSC](../MSC/overview.md) peuvent également verrouiller le datastore. Avant d'appeler `.flushAndLock()`, assurez-vous qu'aucune autre action de verrouillage n'est en cours d'utilisation, afin d'éviter toute interaction inattendue.
 
 :::
 
 #### Exemple
 
-You want to create a copy of the data folder along with its current journal file:
+Vous voulez créer une copie du dossier de données avec son fichier journal courant :
 
 ```4d
 $destination:=Folder(fk documents folder).folder("Archive") 
 $destination.create()
 
-ds.flushAndLock() //Block write operations from other processes
+ds.flushAndLock() //Bloque les opérations d'écriture des autres process
 
 $dataFolder:=Folder(fk data folder) 
-$dataFolder.copyTo($destination) //Copy the data folder
+$dataFolder.copyTo($destination) //Copier le dossier de données
 
-$oldJournalPath:=New log file //Close the journal and create a new one
+$oldJournalPath:=New log file //Fermer le journal et en créer un nouveau
 $oldJournal:=File($oldJournalPath; fk platform path) 
-$oldJournal.moveTo($destination) //Save the old journal with data
+$oldJournal.moveTo($destination) //Sauvegarder l'ancien journal avec les données
 
-ds.unlock() //Our copy is over, we can now unlock the datastore
+ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller le datastore
 ```
 
 #### Voir également
@@ -750,9 +750,9 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 
 <!-- REF #DataStoreClass.locked().Params -->
-| Paramètres | Type    |    | Description                               |
-| ---------- | ------- | -- | ----------------------------------------- |
-| Résultat   | Boolean | <- | True if locked|<!-- END REF -->
+| Paramètres | Type    |    | Description                                   |
+| ---------- | ------- | -- | --------------------------------------------- |
+| Résultat   | Boolean | <- | Vrai si verrouillé|<!-- END REF -->
 
 
 |
@@ -760,13 +760,13 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 #### Description
 
-The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->.
+La fonction `.locked()` <!-- REF #DataStoreClass.locked().Summary -->renvoie True si le datastore local est verrouillé<!-- END REF -->.
 
-You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
+Vous pouvez verrouiller le datastore à l'aide de la fonction [.flushAndLock()](#flushandlock) avant d'exécuter un instantané du fichier de données, par exemple.
 
 :::caution
 
-The function will also return `True` if the datastore was locked by another administration feature such as backup or vss (see [.flushAndLock()](#flushandlock)).
+La fonction renvoie également `True` si le datastore a été verrouillé par une autre fonction d'administration telle que la sauvegarde ou le vss (voir [.flushAndLock()](#flushandlock)).
 
 :::
 
@@ -1257,13 +1257,13 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 
 #### Description
 
-La fonction `unlock()` <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function.
+La fonction `unlock()` <!-- REF #DataStoreClass.unlock().Summary -->supprime le verrou sur les opérations d'écriture dans le datastore, s'il a été posé dans le même process<!-- END REF -->. Les opérations d'écriture peuvent être verrouillées dans le datastore local à l'aide de la fonction [`.flushAndLock()`](#flushandlock).
 
-If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore.
+Si le verrou courant était le seul verrou sur le datastore, les opérations d'écriture sont immédiatement réactivées. Si la fonction `.flushAndLock()` a été appelée plusieurs fois dans le process, le même nombre de `.unlock()` doit être appelé pour déverrouiller réellement le datastore.
 
-The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
+La fonction `.unlock()` doit être appelée par le process qui a appelé la fonction `.flushAndLock()`correspondante, sinon la fonction ne fait rien et le verrou n'est pas supprimé.
 
-If the `.unlock()` function is called in an unlocked datastore, it does nothing.
+Si la fonction `.unlock()` est appelée dans un datastore déverrouillé, elle ne fait rien.
 
 
 #### Voir également
