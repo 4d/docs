@@ -171,7 +171,7 @@ title: 4D コードについて
 
 ##### REST サーバー
 
-*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
+*このオプションは廃止されます。 RESTコールによるコードの呼び出しは、[ORDAデータモデルクラス関数](../REST/ClassFunctions.md) でのみサポートされます。*
 
 #### 属性の一括設定
 
