@@ -143,14 +143,14 @@ _italic_
 ~~strikethrough~~
 ```
 
-- La balise du bloc de code (\```4d ... ```) est supportée avec le surlignage du code 4D :
+- The code block tag (\```4d ... ```) is supported with 4D code highlight:
 
  \``` 4d  
 C_TEXT($txt)  
 $txt:="Hello world!"  
 \` ``
 
-- La balise de tableau est prise en charge :
+- The table tag is supported:
 
 ```
 | Parameter | Type   | Description  |
@@ -159,7 +159,7 @@ $txt:="Hello world!"
 | toolbar   | String |Toolbar name  |
 ```
 
-- La balise de lien est prise en charge :
+- The link tag is supported:
 
 ```
 // Case 1
@@ -171,7 +171,7 @@ The [documentation](https://doc.4d.com) of the command ....
 [1]: https://blog.4d.com
 ```
 
-- Les balises d'image sont prises en charge :
+- The image tags are supported:
 
 ```
 ![image info](pictures/image.png)
@@ -181,13 +181,13 @@ The [documentation](https://doc.4d.com) of the command ....
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
 
-[![logo blog 4D avec lien](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
 > Pour plus d'informations, consultez le [guide Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
 
 ## Exemple
 
-Dans le fichier `WP SwitchToolbar.md`, vous pouvez entrer le code suivant :
+In the `WP SwitchToolbar.md` file, you can write:
 
 ```4d
 | Parameter | Type   | in/out | Description |
@@ -199,7 +199,7 @@ Dans le fichier `WP SwitchToolbar.md`, vous pouvez entrer le code suivant :
 ## Description
 
 Cette méthode retourne un logo de taille spécifique, selon la valeur du paramètre *size*.
-1 = plus petite taille, 5 = plus grande taille.
+1 = smallest size, 5 = largest size.
 
 ## Exemple
 
