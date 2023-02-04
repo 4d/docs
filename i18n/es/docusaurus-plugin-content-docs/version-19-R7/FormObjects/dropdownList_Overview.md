@@ -11,7 +11,7 @@ En macOS, las listas desplegables también se denominan a veces "menú emergente
 
 ## Tipos de listas desplegables
 
-You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
+Puede crear diferentes tipos de listas desplegables con distintas funcionalidades. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
 
 | Tipo                                        | Funcionalidades                                                | Tipo de expresión | Tipos de datos                       | Definición JSON                                                                                                                                             |
 | ------------------------------------------- | -------------------------------------------------------------- | ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,24 +33,24 @@ Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_col
 | Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                      |
 | -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>cadenas</li><li>numbers</li><li>dates</li><li>horas</li>Si está vacío o no está definido, la lista desplegable está vacía |
-| `index`        | number               | Index of the currently selected item (value between 0 and `collection.length-1`). Si se establece -1, `currentValue` se muestra como una cadena de marcador de posición                                                                                                          |
-| `currentValue` | igual que Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                                               |
+| `index`        | number               | Índice del elemento seleccionado actualmente (valor comprendido entre 0 y `collection.length-1`). Si se establece -1, `currentValue` se muestra como una cadena de marcador de posición                                                                                          |
+| `currentValue` | igual que Collection | Elemento seleccionado actualmente (se utiliza como valor de marcador de posición si se define por código)                                                                                                                                                                        |
 
 Si el objeto contiene otras propiedades, se ignoran.
 
 Para inicializar el objeto asociado a la lista desplegable, puede:
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. Los valores por defecto se cargan en un objeto automáticamente.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un objeto automáticamente.
 
-* Ejecutar código que crea el objeto y sus propiedades. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
+* Ejecutar código que crea el objeto y sus propiedades. Por ejemplo, si "myList" es la variable [](properties_Object.md#variable-or-expression) asociada a la lista desplegable, puede escribir en el evento de formulario [On Load](Events/onLoad.md):
 
 ```4d
-// Form.myDrop is the datasource of the form object
+// Form.myDrop es la fuente de datos del objeto formulario
 
-Form.myDrop:=New object
-Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
-Form.myDrop.index:=-1  //currentValue is a placeholder
-Form.myDrop.currentValue:="Select a fruit" 
+Form.myDrop:=Nuevo objeto
+Form.myDrop.values:=Nueva colección("manzanas"; "nueces"; "peras"; "naranjas"; "zanahorias")
+Form.myDrop.index:=-1 //currentValue es un marcador de posición
+Form.myDrop.currentValue:="Selecciona una fruta" 
 ```
 
 La lista desplegable se muestra con la cadena del marcador de posición:
@@ -73,7 +73,7 @@ Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se ha
 
 Para inicializar el array asociado a la lista desplegable, puede:
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
 * Antes de mostrar el objeto, ejecute el código que asigna valores a los elementos del array. Por ejemplo:
 
@@ -121,33 +121,33 @@ Debe seleccionar cada evento que pruebe en sus sentencia Case. Los arrays siempr
 
 ### Utilizar una lista de selección
 
-If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). Esto facilita la gestión de los campos/variables listados.
+Si desea utilizar una lista desplegable para gestionar los valores de un área de entrada (campo listado o variable), 4D le permite hacer referencia al campo o variable directamente como [fuente de datos](properties_Object.md#variable-or-expression) de la lista desplegable. Esto facilita la gestión de los campos/variables listados.
 
-For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
+Por ejemplo, en el caso de un campo "Color" que sólo puede contener los valores "Blanco", "Azul", "Verde" o "Rojo", es posible crear una lista que contenga estos valores y asociarla a una lista desplegable que haga referencia al campo "Color" 4D. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
 > Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. If you use a hierarchical list, only the first level is displayed and can be selected.
 
-To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
-> It is not possible to use this feature with an object or an array drop-down list. If you enter a field name in the "Variable or Expression" area, then you must use a choice list.
+Para asociar una lista desplegable a un campo o variable, introduzca directamente el nombre del campo o variable como campo [Variable o Expresión](properties_Object.md#variable-or-expression) de la lista desplegable en la Lista de propiedades.
+> No es posible utilizar esta funcionalidad con una lista desplegable de objetos o arrays. Si introduce un nombre de campo en el área "Variable o expresión", deberá utilizar una lista de selección.
 
-When the form is executed, 4D automatically manages the drop-down list during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the drop-down list when the form is displayed:
+Cuando se ejecuta el formulario, 4D gestiona automáticamente la lista desplegable durante la introducción o la visualización: cuando un usuario elige un valor, éste se guarda en el campo; este valor de campo se muestra en la lista desplegable cuando se visualiza el formulario:
 
 ![](../assets/en/FormObjects/popupDropdown_choiceList.png)
 
 #### Valor del elemento seleccionado o Referencia del elemento seleccionado
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. Esta opción permite optimizar el tamaño de los datos guardados.
+Cuando haya asociado una lista desplegable con una lista de opciones y con un campo o una variable, puede definir la propiedad [**Tipo de datos**](properties_DataSource.md#data-type) en **valor del elemento seleccionado** o **referencia del elemento seleccionado**. Esta opción permite optimizar el tamaño de los datos guardados.
 
 ### Uso de una lista de selección jerárquica
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Este es un ejemplo de lista desplegable jerárquica:
+Una lista desplegable jerárquica tiene una sublista asociada a cada elemento de la lista. Este es un ejemplo de lista desplegable jerárquica:
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
 > En los formularios, las listas desplegables jerárquicas están limitadas a dos niveles.
 
-You can assign the hierarchical choice list to the drop-down list object using the [Choice List](properties_DataSource.md#choice-list) field of the Property List.
+Puede asignar la lista de selección jerárquica al objeto de lista desplegable utilizando el campo [Lista de selección](properties_DataSource.md#choice-list) de la Lista de propiedades.
 
-You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
+Las listas jerárquicas desplegables se gestionan utilizando los comandos **Listas jerárquicas** del Lenguaje 4D. Todos los comandos que soportan la sintaxis `(*; "name")` pueden utilizarse con listas desplegables jerárquicas, por ejemplo [`Elemento de lista padre`](https://doc.4d.com/4dv19/help/command/en/page633.html).
 
 ### Utilizar una acción estándar
 

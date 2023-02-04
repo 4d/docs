@@ -43,7 +43,7 @@ Dados são coletados durante os eventos abaixo:
 | dataFileSize            | 419430400                                               | Tamanho do arquivo de dados em bytes                                                              |
 | indexesSize             | 419430400                                               | Tamanho do índice em bytes                                                                        |
 | cacheSize               | 419430400                                               | Tamanho da cache em bytes                                                                         |
-| usingLegacyNetworkLayer | fasle                                                   | Verdadeiro se a usar a camada de rede herdada para o servidor de aplicações                       |
+| usingLegacyNetworkLayer | False                                                   | Verdadeiro se a usar a camada de rede herdada para o servidor de aplicações                       |
 | isEncrypted             | true                                                    | True se o arquivo de dados estiver criptografado                                                  |
 | isCompiled              | true                                                    | Verdadeiro se a aplicação for compilada                                                           |
 | isEngined               | true                                                    | Verdadeiro se a aplicação for fundida com o Volume Desktop 4D                                     |

@@ -43,7 +43,7 @@ title: データ収集について
 | dataFileSize            | 419430400                                               | データファイルのサイズ (バイト単位)                           |
 | indexesSize             | 419430400                                               | インデックスのサイズ (バイト単位)                            |
 | cacheSize               | 419430400                                               | キャッシュのサイズ (バイト単位)                             |
-| usingLegacyNetworkLayer | fasle                                                   | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true     |
+| usingLegacyNetworkLayer | false                                                   | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true     |
 | isEncrypted             | true                                                    | データファイルが暗号化されていれば true                        |
 | isCompiled              | true                                                    | アプリケーションがコンパイル済みの場合は true                     |
 | isEngined               | true                                                    | アプリケーションに 4D Volume Desltop が組み込まれている場合は true |

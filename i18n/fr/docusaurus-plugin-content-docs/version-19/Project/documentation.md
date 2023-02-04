@@ -117,12 +117,12 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Ligne                                                  | Description                                                                                                                                                                                         |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "\<!-- Type your summary here -->"          | Commentaire HTML. Utilisé en priorité comme description de méthode dans les [astuces de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |
-| ## Description                                        | Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les astuces de l'éditeur de code si le commentaire HTML n'est pas utilisé |
-| ## Example                                            | Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code                                                                                                                 |
-| \``` 4D <br/>Insérez votre exemple ici \` `` | Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)                                                                                                                |
+| Ligne                                                  | Description                                                                                                                                                                                            |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "\<!-- Type your summary here -->"          | Commentaire HTML. Utilisé en priorité comme description de méthode dans les [infobulles de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |
+| ## Description                                        | Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les infobulles de l'éditeur de code si le commentaire HTML n'est pas utilisé |
+| ## Example                                            | Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code                                                                                                                    |
+| \``` 4D <br/>Insérez votre exemple ici \` `` | Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)                                                                                                                   |
 
 ### Prise en charge du markdown
 
@@ -143,14 +143,14 @@ _italic_
 ~~strikethrough~~
 ```
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- La balise de bloc de code (\```4d ... ```) est prise en charge avec le formatage du code 4D :
 
  \``` 4d  
 C_TEXT($txt)  
 $txt:="Hello world!"  
 \` ``
 
-- The table tag is supported:
+- La balise de tableau est prise en charge :
 
 ```
 | Parameter | Type   | Description  |
@@ -159,11 +159,11 @@ $txt:="Hello world!"
 | toolbar   | String |Toolbar name  |
 ```
 
-- The link tag is supported:
+- La balise de lien est prise en charge :
 
 ```
 // Case 1
-The [documentation](https://doc.4d.com) of the command ....
+La [documentation](https://doc.4d.com) de la commande ...
 
 // Case 2
 [4D blog][1]
@@ -171,7 +171,7 @@ The [documentation](https://doc.4d.com) of the command ....
 [1]: https://blog.4d.com
 ```
 
-- The image tags are supported:
+- Les balises d'image sont prises en charge :
 
 ```
 ![image info](pictures/image.png)
@@ -187,7 +187,7 @@ The [documentation](https://doc.4d.com) of the command ....
 
 ## Exemple
 
-In the `WP SwitchToolbar.md` file, you can write:
+Dans le fichier `WP SwitchToolbar.md`, vous pouvez écrire :
 
 ```4d
 | Parameter | Type   | in/out | Description |
