@@ -116,10 +116,10 @@ At any point, you can drag and drop themes, theme sublists (if any), and theme i
 
 Este tema le permite seguir los valores de los objetos o expresiones:
 
-* used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
+* utilizado en la línea de código a ejecutar (la marcada con el contador de programa-la flecha amarilla en el [Panel de Código Fuente](#source-code-pane)),
 * utilizado en la línea de código anterior
 
-Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Digamos que ejecuta el siguiente método:
+Como la línea de código anterior es la que se acaba de ejecutar antes, este tema muestra por tanto los objetos o expresiones de la línea actual antes y después de que se ejecutara la línea.  Digamos que ejecuta el siguiente método:
 
 ```4d
 TRACE
@@ -144,7 +144,7 @@ $c:=a+b
 
     El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con c:=a+b. At this point the Line Objects theme displays:
+3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con c:=a+b. En este punto aparece el tema Objetos Línea:
 
     | $c | Indefinido |
     | -- | ---------- |
@@ -219,8 +219,8 @@ Este tema muestra información relativa al servidor Web principal de la aplicaci
 
 * Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
 * Web Cache Usage: number of pages present in Web cache as well as its use percentage
-* Web Server Elapsed Time: duration of Web server use in hours:minutes:seconds format
-* Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second
+* Tiempo transcurrido del servidor web: duración del uso del servidor web en formato horas:minutos:segundos
+* Conteo de accesos a la Web: número total de peticiones HTTP recibidas desde la puesta en marcha del servidor Web, así como el número instantáneo de peticiones por segundo
 * Número de procesos Web activos: número de procesos Web activos, todos los procesos Web juntos
 
 Las expresiones contenidas en este tema no pueden ser modificadas.
@@ -354,7 +354,7 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
     * Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
     * Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
 
-### Program Counter
+### Contador del programa
 
 La flecha amarilla en el margen izquierdo del panel del Código Fuente se llama el contador de programa. Marca la siguiente línea a ejecutar.
 
