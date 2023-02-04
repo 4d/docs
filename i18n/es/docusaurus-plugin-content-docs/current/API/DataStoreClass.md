@@ -750,9 +750,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 
 <!-- REF #DataStoreClass.locked().Params -->
-| Parámetros | Tipo    |    | Descripción                               |
-| ---------- | ------- | -- | ----------------------------------------- |
-| Result     | Boolean | <- | True if locked|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| Result     | Boolean | <- | True si bloqueado|<!-- END REF -->
 
 
 |
