@@ -718,10 +718,10 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Paramètres | Type               |    | Description                                                                                                                 |
-| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------------------- |
-| mode       | Integer            | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable       |
-| Résultat   | 4D.EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF -->
+| Paramètres | Type               |    | Description                                                                                                                         |
+| ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer            | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable               |
+| Résultat   | 4D.EntitySelection | <- | Entity selection vide si succès, sinon entity selection contenant la ou les entité(s) non supprimable(s)|<!-- END REF -->
 
 |
 
