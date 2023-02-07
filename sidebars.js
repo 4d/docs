@@ -74,11 +74,6 @@ module.exports =
 					],
 				},
 				{
-						  type: 'link',
-						  label: '4D Language Reference', // The link label
-						  href: 'https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html', 
-				},
-				{
 					type: "category",
 					label: "ORDA",
 					items: [
@@ -96,6 +91,7 @@ module.exports =
 					label: "Class API Reference",
 					items: [
 						"API/overview",
+						"API/classic-commands",
 						"API/BlobClass",
 						"API/ClassClass",
 						"API/CollectionClass",
@@ -119,8 +115,6 @@ module.exports =
 						"API/SMTPTransporterClass",
 						"API/SystemWorkerClass",
 						"API/WebServerClass",
-						"API/WebSocketConnectionClass",
-						"API/WebSocketServerClass",
 						"API/ZipArchiveClass",
 						"API/ZipFileClass",
 						"API/ZipFolderClass"
