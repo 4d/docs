@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: Pointeurs
+title: Pointer
 ---
 
 Les variables ou expressions de type Pointeur sont des références à d'autres variables (y compris des tableaux et des éléments de tableaux), à des tables, des champs ou des objets. Il n'existe pas de champ de type Pointeur.
@@ -79,9 +79,9 @@ Avec :
 
 | Opération | Syntaxe             | Retourne | Expression    | Value |
 | --------- | ------------------- | -------- | ------------- | ----- |
-| Egalité   | Pointeur = Pointeur | Boolean  | vPtrA = vPtrB | Vrai  |
+| Egalité   | Pointeur = Pointeur | Boolean  | vPtrA = vPtrB | True  |
 |           |                     |          | vPtrA = vPtrB | False |
-| Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | Vrai  |
+| Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True  |
 |           |                     |          | vPtrA # vPtrB | False |
 
 ## Principales utilisations
