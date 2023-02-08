@@ -1790,7 +1790,7 @@ Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por
 Ordenar uma coleção de números em ordem ascendente e descendente:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2122,7 +2122,6 @@ Para obter informação detalhada sobre como construir uma consulta utilizando o
 
 
 #### Exemplo 2
-
 
 ```4d
  var $c : Collection

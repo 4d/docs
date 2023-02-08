@@ -1887,7 +1887,7 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2239,7 +2239,6 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
 
 #### Exemple 2
-
 
 ```4d
  var $c : Collection

@@ -58,7 +58,6 @@ Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Mayor o i
 |                   | Undefined `=` *otros valores*                         | Boolean  | a.undefinedProp `=` 42              | False |
 | Desigualdad       | Undefined `#` Undefined                               | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
 |                   | Undefined `#` Null                                    | Boolean  | a.undefinedProp `#` b.nullProp      | False |
-|                   | Undefined `#` Undefined                               | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
 |                   | Undefined `#` *otros valores*                         | Boolean  | a.undefinedProp `#` 42              | True  |
 | Mayor que         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"        | False |
 | Menor que         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"        | False |

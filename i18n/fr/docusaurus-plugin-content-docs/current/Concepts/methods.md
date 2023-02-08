@@ -4,24 +4,24 @@ title: Methods
 ---
 
 
-A method is basically a piece of code that executes one or several action(s). A method is composed of statements.
+Une méthode est essentiellement un morceau de code qui exécute une ou plusieurs action(s). Une méthode est composée d'instructions.
 
-A statement performs an action, and may be simple or complex. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)).
+Une instruction exécute une action, et peut être simple ou complexe. Chaque instruction tient généralement sur une ligne dans la méthode (si nécessaire, elle peut toutefois être scindée [à l'aide du caractère `\`](quick-tour.md#code-sur-plusieurs-lignes)).
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
+La taille maximale d'une méthode est limitée à 2 Go de texte ou à 32 000 lignes de code.
 
 ## Types de méthodes
 
-In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+Dans le langage 4D, il existe plusieurs catégories de méthodes. La catégorie dépend de la façon dont on peut les appeler :
 
-| Type                             | Contexte d'appel                                                                                                            | Accepte les paramètres | Description                                                                                                                                                                                                             |
+| Type                             | Contexte d'appel                                                                                                            | Accepte des paramètres | Description                                                                                                                                                                                                             |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Méthode**                      | À la demande, lorsque le nom de la méthode projet est appelé (voir [Appel de méthodes de projet](#calling-project-methods)) | Oui                    | Peut contenir du code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage du projet.                                                       |
 | **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                                            | Non                    | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                               |
 | **Méthode formulaire**           | Automatique, lorsqu'un événement implique le formulaire auquel la méthode est associée                                      | Non                    | Propriété d'un formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. |
-| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier)                  | Non                    | Propriété d'une table. Triggers are methods that can prevent "illegal" operations with the records of your database.                                                                                                    |
-| **Méthode base**                 | Automatique, lorsqu'un événement se produit sur la session de travail                                                       | Oui (prédéfini)        | There are 16 database methods in 4D.                                                                                                                                                                                    |
-| **Classe**                       | [**Class functions**](classes.md#function) are called in the context of an object instance                                  | oui                    | Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or created by the 4D developer. See [**Classes**](classes.md)                                                                       |
+| **Trigger** (ou *méthode table*) | Automatique, chaque fois que vous manipulez les enregistrements d'une table (Ajouter, Supprimer, Modifier)                  | Non                    | Propriété d'une table. Les triggers sont des méthodes qui permettent d'éviter les opérations "illégales" sur les enregistrements de votre base de données.                                                              |
+| **Méthode base**                 | Automatique, lorsqu'un événement se produit sur la session de travail                                                       | Oui (prédéfini)        | Il existe 16 méthodes base dans 4D.                                                                                                                                                                                     |
+| **Classe**                       | [**Les fonctions de classes**](classes.md#function) sont appelées dans le contexte d'une instance d'objet                   | oui                    | Les fonctions de classes peuvent être intégrées au langage 4D (par exemple `collection.orderBy()` ou `entity.save()`), ou créées par le développeur 4D. Voir [**Classes**](classes.md)                                  |
 
 
 ## Méthodes projet
@@ -89,7 +89,7 @@ Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les 
 
 Les commandes `Formula` ou `Formula from string` vous permettent de créer des objets formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi implémenter des méthodes d'objets personnalisées.
 
-To execute a method stored in an object property, use the **()** operator after the property name. Par exemple :
+Pour exécuter une méthode stockée dans une propriété d'objet, utilisez l'opérateur **()** après le nom de la propriété. Par exemple :
 
 ```4d
 //myAlert
@@ -101,7 +101,7 @@ ALERT("Hello world!")
 ```4d
 var $o : Object
 $o:=New object("custom_Alert";Formula(myAlert))
-$o.custom_Alert() //displays "Hello world!"
+$o.custom_Alert() //affiche "Hello world!"
 ```
 
 La syntaxe avec des crochets est également prise en charge :
@@ -125,7 +125,7 @@ var $o : Object
 $o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
-//equivalent to $result:=fullName("param1";"param2")
+//équivalent à $result:=fullName("param1";"param2")
 ```
 
 Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple :
@@ -141,13 +141,13 @@ La méthode agit ensuite comme un nouvel attribut calculé qui peut être ajout�
 ```4d
 var $o : Object
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //ajout de la méthode  
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"
 ```
 
-Note that, even if it does not have parameters, an object method to be executed must be called with `()` parenthesis. Appeler uniquement la propriété retournera une nouvelle référence à la formule (elle ne sera pas exécutée) :
+Notez que, même si elle n'a pas de paramètres, une méthode objet à exécuter doit être appelée avec les parenthèses `()`. Appeler uniquement la propriété retournera une nouvelle référence à la formule (elle ne sera pas exécutée) :
 
 ```4d
 $o:=$f.message //retourne l'objet formule en $o
@@ -169,7 +169,7 @@ Une **méthode projet** est une méthode projet appelée lorsqu’un process est
 
 Une **méthode de gestion d’événements** est une méthode dédiée à la gestion des événements, qui s'exécute dans un process différent de celui de la méthode de gestion des process. Généralement, pour la gestion des événements, vous pouvez laisser 4D faire le gros du travail. Par exemple, lors de la saisie de données, 4D détecte les clics souris et les touches enfoncées, puis appelle les méthodes objet et formulaire correspondantes, vous permettant ainsi de prévoir dans ces méthodes les traitements appropriés aux événements. Pour plus d'informations, reportez-vous à la description de la commande `APPELER SUR EVENEMENT`.
 
-Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. It is called each time an error or an exception occurs. For more information, see the [Error handling](error-handling.md) section.
+Une **méthode de gestion d’erreurs** est une méthode projet d'interruption. Elle est appelée à chaque fois qu'une erreur ou une exception se produit. Pour plus d'informations, consultez la section [Gestion des erreurs](error-handling.md).
 
 ### Execution mode
 
