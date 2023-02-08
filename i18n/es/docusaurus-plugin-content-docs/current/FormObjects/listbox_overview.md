@@ -538,8 +538,8 @@ El soporte de ordenación estándar depende del tipo de list box:
 | Tipo de list box               | Soporte de ordenación estándar | Comentarios                                                                                                  |
 | ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | Colección de objetos           | Sí                             | <li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Colección de valores escalares | No                             | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
-| Entity selection               | Sí                             | <li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Soportado: ordena las propiedades de atributos de objetos (por ejemplo, "This.data.city" cuando "data" es un atributo de objeto)</li><li>Soportado: ordena los atributos relacionados (por ejemplo, "This.company.name")</li><li>No soportado: ordenar en las propiedades de atributos de objetos a través de atributos relacionados (por ejemplo, "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Colección de valores escalares | No                             | Utilice la ordenación personalizada con la función [`orderBy()`](../API/CollectionClass.md#orderby)          |
+| Entity selection               | Sí                             | <li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Soportado: ordena las propiedades de atributos de objetos (por ejemplo, "This.data.city" cuando "data" es un atributo de objeto)</li><li>Soportado: ordena los atributos relacionados (por ejemplo, "This.company.name")</li><li>No soportado: ordenar en las propiedades de atributos de objetos a través de atributos relacionados (por ejemplo, "This.company.data.city"). Para ello, debe utilizar la ordenación personalizada con la función [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (ver el siguiente ejemplo)</li> |
 | Selección actual               | Sí                             | Sólo se pueden ordenar las expresiones simples (por ejemplo, `[Table_1]Campo_2`)                             |
 | Selección temporal             | No                             |                                                                                                              |
 | Arrays                         | Sí                             | Las columnas vinculadas a arrays de imágenes y punteros no se pueden ordenar                                 |
@@ -554,7 +554,7 @@ El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utili
 Los ordenamientos personalizados le permiten:
 
 - efectuar las ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
-- use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- utilizar funciones tales como [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) o [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) para ordenar las columnas según criterios complejos.
 
 #### Ejemplo
 
@@ -619,15 +619,15 @@ Los principios de prioridad y de herencia se observan cuando la misma propiedad 
 |                    | Propiedades de list box                                                                  |
 | baja prioridad     | Expresiones de metainformación (para colecciones o list boxes de selección de entidades) |
 
-For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
+Por ejemplo, si define un estilo de fuente en las propiedades del list box y otro mediante un array de estilos para la columna, se tendrá en cuenta este último.
 
-For each attribute (style, color and background color), an **inheritance** is implemented when the default value is used:
+Para cada atributo (estilo, color y color de fondo), se implementa una **herencia** cuando se utiliza el valor por defecto:
 
 - para los atributos de las celdas: valores de atributos de las líneas
 - para los atributos líneas: valores de atributos de columnas
 - para los atributos de la columna: valores de los atributos del list box
 
-This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. Por ejemplo, dado un list box array que contiene un estilo de letra estándar con colores alternos: ![](../assets/en/FormObjects/listbox_styles3.png)
+De esta forma, si desea que un objeto herede el valor de atributo de un nivel superior, puede utilizar pasar la constante `lk inherited` (valor por defecto) al comando de definición o directamente en el elemento del array de estilo/color correspondiente. Por ejemplo, dado un list box array que contiene un estilo de letra estándar con colores alternos: ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Realiza las siguientes modificaciones:
 
@@ -640,20 +640,20 @@ Realiza las siguientes modificaciones:
 
 Para restaurar la apariencia original de la caja del list box, puede:
 
-- pass the `lk inherited` constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.
-- pass the `lk inherited` constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.
-- pass the `lk inherited` constant in element 4 of the style array for the list box in order to remove the italics style.
-- pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
+- pasar la constante `lk inherited` en el elemento 2 de los arrays de color de fondo de las columnas 1 y 2: entonces heredan el color de fondo rojo de la línea.
+- pasar la constante `lk inherited` en los elementos 3 y 4 del array de estilo de la columna 5: entonces heredan el estilo estándar, excepto el elemento 4, que cambia a itálica según lo especificado en el array de estilo del list box.
+- pasar la constante `lk inherited` en el elemento 4 del array de estilos para el list box con el fin de eliminar el estilo itálica.
+- pasar la constante `lk inherited` en el elemento 2 del array de colores de fondo para el list box con el fin de restaurar el color alternativo original del list box.
 
 
 ### Uso de arrays y expresiones
 
-Depending of the list box type, you can use different properties to customize row colors, styles and display:
+Según el tipo de list box, puede utilizar diferentes propiedades para personalizar los colores, estilos y visualización de las líneas:
 
-| Propiedad       | List box array                                                                         | List box selección                                                                        | List box colección o entity selection                                                                                                                           |
-| --------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Color de fondo  | [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
-| Color de fuente | [Array colores de fuente](properties_Text.md#row-font-color-array)                     | [Expresión color fuente](properties_Text.md#font-color-expression)                        | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
+| Propiedad       | List box array                                                                         | List box selección                                                                        | List box colección o entity selection                                                                                                                      |
+| --------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Color de fondo  | [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) o [Meta info expresión](properties_Text.md#meta-info-expression) |
+| Color de fuente | [Array colores de fuente](properties_Text.md#row-font-color-array)                     | [Expresión color fuente](properties_Text.md#font-color-expression)                        | [Expresión color de fuente](properties_Text.md#font-color-expression) o [Meta info expression](properties_Text.md#meta-info-expression)                    |
 
 
 [Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
