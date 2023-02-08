@@ -1887,7 +1887,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 数値のコレクションを昇順および降順に並べ替えます:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2238,7 +2238,6 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 #### 例題 2
-
 
 ```4d
  var $c : Collection
