@@ -1887,7 +1887,7 @@ If the collection contains elements of different types, they are first grouped b
 Ordering a collection of numbers in ascending and descending order:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2239,7 +2239,6 @@ For detailed information on how to build a query using *queryString*, *value* an
 
 
 #### Beispiel 2
-
 
 ```4d
  var $c : Collection
