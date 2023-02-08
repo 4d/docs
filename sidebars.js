@@ -91,7 +91,6 @@ module.exports =
 					label: "Class API Reference",
 					items: [
 						"API/overview",
-						"API/classic-commands",
 						"API/BlobClass",
 						"API/ClassClass",
 						"API/CollectionClass",
