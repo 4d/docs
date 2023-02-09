@@ -69,7 +69,7 @@ Si se envía una solicitud al almacén de datos remoto después de haber cerrado
 
 El contexto de optimización se basa en las siguientes implementaciones:
 
-* Cuando un cliente solicita una selección de entidades al servidor, 4D "aprende" automáticamente qué atributos de la selección de entidades se utilizan realmente del lado del cliente durante la ejecución del código, y genera un "contexto de optimización" correspondiente. This context is attached to the entity selection and stores the used attributes. Se actualizará dinámicamente si se utilizan posteriormente otros atributos. Los siguientes métodos y funciones activan la fase de aprendizaje:
+* Cuando un cliente solicita una selección de entidades al servidor, 4D "aprende" automáticamente qué atributos de la selección de entidades se utilizan realmente del lado del cliente durante la ejecución del código, y genera un "contexto de optimización" correspondiente. Este contexto se adjunta a la selección de la entidad y almacena los atributos utilizados. Se actualizará dinámicamente si se utilizan posteriormente otros atributos. Los siguientes métodos y funciones activan la fase de aprendizaje:
   * [`Crear una entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
   * [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   * [`dataClass.all()`](../API/DataClassClass.md#all)
@@ -77,7 +77,7 @@ El contexto de optimización se basa en las siguientes implementaciones:
   * [`dataClass.query()`](../API/DataClassClass.md#query)
   * [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-* Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. la visualización de las siguientes líneas está optimizada. The following functions automatically associate the optimization context of the source entity selection to the returned entity selection:
+* Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. Por ejemplo, en un [list box de tipo entity selection](#entity-selection-based-list-box), la fase de aprendizaje tiene lugar durante la visualización de la primera línea. la visualización de las siguientes líneas está optimizada. Las siguientes funciones asocian automáticamente el contexto de optimización de la entity selection de origen a la entity selection devuelta:
     *   [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
     *   [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
     *   [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
@@ -85,9 +85,9 @@ El contexto de optimización se basa en las siguientes implementaciones:
     *   [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
     *   [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
-* An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#reusing-the-context-property) below).
+* Un contexto de optimización existente puede pasarse como propiedad a otra selección de entidad de la misma dataclass, evitando así la fase de aprendizaje y acelerando la aplicación (ver [Uso de la propiedad context](#reusing-the-context-property) abajo).
 
-* You can build optimization contexts manually using the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function (see [Preconfiguring contexts](#preconfiguring-contexts)).
+* Puede crear contextos de optimización manualmente utilizando la función [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (ver [Preconfiguración de contextos](#preconfiguring-contexts)).
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
@@ -104,15 +104,15 @@ Dado el siguiente código:
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* from the second iteration of the loop.
+Gracias a la optimización, esta petición sólo obtendrá los datos de los atributos utilizados (firstname, lastname, employer, employer.name) en *$sel* a partir de la segunda iteración del bucle.
 
 #### Reutilización de la propiedad context
 
-You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA functions that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
+Puede aumentar los beneficios de la optimización utilizando la propiedad **context**. Esta propiedad hace referencia a un contexto de optimización "aprendido" para una selección de entidades. Se puede pasar como parámetro a las funciones ORDA que devuelven nuevas selecciones de entidades, de forma que las selecciones de entidades soliciten directamente al servidor los atributos utilizados y sin pasar por la fase de aprendizaje.
 > También puede crear contextos utilizando la función [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). The same optimization context property can be passed to unlimited number of entity selections on the same dataclass. Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
-> A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
+All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). The same optimization context property can be passed to unlimited number of entity selections on the same dataclass. Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
+> Se implementa un mecanismo similar para las entidades que se cargan, de modo que sólo se solicitan los atributos utilizados (ver la función [`dataClass.get()`](../API/DataClassClass.md#get)).
 
 **Ejemplo con `dataClass.query()`:**
 
@@ -141,18 +141,18 @@ All ORDA functions that handle entity selections support the **context** propert
 
 #### List box basado en una selección de entidades
 
-Entity selection optimization is automatically applied to entity selection-based list boxes in client/server configurations, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
+La optimización de la selección de entidades se aplica automáticamente a los list boxes basados en la selección de entidades en configuraciones cliente/servidor, al mostrar y desplazar el contenido de un list box: sólo se solicitan al servidor los atributos mostrados en el list box.
 
-A specific "page mode" context is also provided when loading the current entity through the **Current item** property expression of the list box (see [Collection or entity selection type list boxes](FormObjects/listbox_overview.md#list-box-types)). This feature allows you to not overload the list box initial context in this case, especially if the "page" requests additional attributes. Note that only the use of **Current item** expression will create/use the page context (access through `entitySelection\[index]` will alter the entity selection context).
+También se ofrece un contexto específico "modo página" cuando se carga la entidad actual a través de la expresión propiedad **Elemento actual** del list box (ver [List box de tipo colección o entity selection](FormObjects/listbox_overview.md#list-box-types)). Esta funcionalidad le permite no sobrecargar el contexto inicial del list box en este caso, especialmente si la "página" solicita atributos adicionales. Tenga en cuenta que sólo el uso de la expresión **Elemento actual** permitirá crear/utilizar el contexto de la página (el acceso a través de `entitySelection[index]` alterará el contexto de la selección de entidad).
 
-Subsequent requests to server sent by entity browsing functions will also support this optimization. The following functions automatically associate the optimization context of the source entity to the returned entity:
+Las solicitudes posteriores al servidor enviadas por las funciones de navegación de la entidad también admitirán esta optimización. Las siguientes funciones asocian automáticamente el contexto de optimización de la entidad fuente a la entidad devuelta:
 
 *   [`entity.next()`](../API/EntityClass.md#next)
 *   [`entity.first()`](../API/EntityClass.md#first)
 *   [`entity.last()`](../API/EntityClass.md#last)
 *   [`entity.previous()`](../API/EntityClass.md#previous)
 
-For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
+Por ejemplo, el siguiente código carga la entidad seleccionada y permite navegar en la selección de entidades. Las entidades se cargan en un contexto separado y el contexto inicial del list box se deja intacto:
 
 ```4d
  $myEntity:=Form.currentElement //expresión del elemento actual
@@ -162,12 +162,12 @@ For example, the following code loads the selected entity and allows browsing in
 
 #### Preconfiguración de contextos
 
-An optimization context should be defined for every feature or algorithm of your application, in order to have the best performances. For example, a context can be used for queries on customers, another context for queries on products, etc.
+Debe definirse un contexto de optimización para cada funcionalidad o algoritmo de su aplicación, con el fin de obtener el mejor rendimiento. Por ejemplo, un contexto puede utilizarse para consultas sobre clientes, otro para consultas sobre productos, etc.
 
-If you want to deliver final applications with the highest level of optimization, you can preconfigure your contexts and thus save learning phases by following these steps:
+Si desea entregar aplicaciones finales con el máximo nivel de optimización, puede preconfigurar sus contextos y ahorrarse así fases de aprendizaje siguiendo estos pasos:
 
 1. Diseñe sus algoritmos.
-2. Run your application and let the automatic learning mechanism fill the optimization contexts.
+2. Ejecute su aplicación y deje que el mecanismo de aprendizaje automático complete los contextos de optimización.
 3. Llame la función [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) o [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) para recoger contextos. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
 4. In the final step, call the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function to build contexts at application startup and [use them](#reusing-the-context-property) in your algorithms.
 
