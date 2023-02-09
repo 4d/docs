@@ -2,6 +2,33 @@ import React from 'react';
 import Translate, { translate } from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 
+const localizedLinks = {
+  "homepage.sections.core-development.langage-ref-url" : translate({
+    message: 'https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html',
+    id: 'homepage.sections.core-development.langage-ref-url',
+  }),
+  "homepage.sections.textensions.4D-Write-Pro-Reference-url" : translate({
+    message: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html',
+    id: 'homepage.sections.textensions.4D-Write-Pro-Reference-url',
+  }),
+  "homepage.sections.textensions.4D-Progress-url" : translate({
+    message: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html',
+    id: 'homepage.sections.textensions.4D-Progress-url',
+  }),
+  "homepage.sections.textensions.4D-SVG-Component-url" : translate({
+    message: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html',
+    id: 'homepage.sections.textensions.4D-SVG-Component-url',
+  }),
+  "homepage.sections.textensions.4D-Widgets-url" : translate({
+    message: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html',
+    id: 'homepage.sections.textensions.4D-Widgets-url',
+  }),
+  "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
+    message: 'https://developer.4d.com/4d-for-ios/docs/en/overview.html',
+    id: 'homepage.sections.mobile-applications.4D-for-iOS-Archive-url',
+  })
+};
+
 const Sections = [
   {
     title: translate({
@@ -44,7 +71,7 @@ const Sections = [
         <Link to="Concepts/about">
           <Translate>Language Concepts</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html" >
+        <Link to={localizedLinks["homepage.sections.core-development.langage-ref-url"]} >
           <Translate>Language Reference (4D Doc Center)</Translate>
         </Link>
         <Link to="ORDA/overview" >
@@ -125,7 +152,7 @@ const Sections = [
         <Link to="ViewPro/getting-started">
           <Translate>4D View Pro</Translate>
         </Link>
-         <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html">
+         <Link to={localizedLinks["homepage.sections.textensions.4D-Write-Pro-Reference-url"]}>
           <Translate>4D Write Pro</Translate>
         </Link>
         <Link to="https://github.com/4d/4D-WritePro-Interface">
@@ -137,13 +164,13 @@ const Sections = [
         <Link to="https://github.com/4d/4D-NetKit">
           <Translate>4D NetKit</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html">
+        <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>
           <Translate>4D Progress</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html">
+        <Link to={localizedLinks["homepage.sections.textensions.4D-SVG-Component-url"]}>
           <Translate>4D SVG</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html">
+        <Link to={localizedLinks["homepage.sections.textensions.4D-Widgets-url"]}>
           <Translate>4D Widgets</Translate>
         </Link>
         <Link to="Extensions/develop-components">
@@ -236,7 +263,7 @@ const Sections = [
         <Link to="https://developer.4d.com/go-mobile">
           <Translate>Go Mobile with 4D</Translate>
         </Link>
-        <Link to="https://developer.4d.com/4d-for-ios/docs/en/overview.html">
+        <Link to={localizedLinks["homepage.sections.mobile-applications.4D-for-iOS-Archive-url"]}>
           <Translate>4D for iOS (Archive)</Translate>
         </Link>
       </div>

@@ -10,7 +10,7 @@
     "syntax": "doc_preprocess --settings_type='build_syntax' && doc_preprocess --settings_type='build_syntax_translated'",
     "build": "doc_preprocess && doc_preprocess --settings_type='build_versioned_docs' && doc_preprocess --settings_type='build_translate' && docusaurus build",
     "publish-gh-pages": "docusaurus-publish",
-    "write-translations": "docusaurus-write-translations",
+    "write-translations": "docusaurus write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
     "swizzle": "docusaurus swizzle",
