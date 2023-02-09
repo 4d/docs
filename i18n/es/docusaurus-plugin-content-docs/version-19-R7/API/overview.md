@@ -5,9 +5,9 @@ title: Generalidades - API de clases
 
 Esta sección describe la API de las clases 4D integradas, así como los comandos de constructor asociados. Las funciones y propiedades de clase 4D están disponibles a través de los objetos de instancia de clase.
 
-- las funciones deben llamarse en las instancias con el operador (). Por ejemplo, `collection.sort()`.
+- las funciones deben llamarse en las instancias con el operador (). For example, `collection.sort()`.
 
-- se accede a las propiedades sin paréntesis, por ejemplo `file.creationTime`. También puede utilizar la sintaxis \[], por ejemplo `file["creationTime"]`.
+- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
 
 ## Convenciones de escritura
 

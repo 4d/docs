@@ -5,7 +5,7 @@ title: Class API Overview
 
 This section describes the built-in 4D class API as well as the associated constructor commands. 4D class functions and properties are available through class instance objects.
 
-- functions must be called on instances with the () operator. Por exemplo, `collection.sort()`.
+- functions must be called on instances with the () operator. For example, `collection.sort()`.
 
 - properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
 

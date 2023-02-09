@@ -66,7 +66,7 @@ Además, las instancias de objeto de clases usuario de los modelos de datos ORDA
 
 | Versión | Modificaciones                                                                                                              |
 | ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| v19 R4  | Alias attributes in the Entity Class                                                                                        |
+| v19 R4  | Atributos alias en la Entity Class                                                                                          |
 | v19 R3  | Atributos calculados en la Entity Class                                                                                     |
 | v18 R5  | Las funciones de clase de modelo de datos no están expuestas a REST por defecto. Nuevas palabras clave `exposed` y `local`. |
 </details>
@@ -240,7 +240,7 @@ Entity classes allow you to define **alias attributes**, usually over related at
 
 `Alias` *attributeName* *targetPath*
 
-For information, please refer to the [Alias attributes](#alias-attributes-1) section.
+Para más información, consulte la sección [Atributos alias](#alias-attributes-1).
 
 
 #### Ejemplo
@@ -620,9 +620,9 @@ Function orderBy age($event : Object)-> $result : Text
 
 ### Generalidades
 
-An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. Puede definir tantos atributos de alias como desee en una clase de datos.
+Un atributo **alias** se crea sobre otro atributo del modelo de datos, denominado **atributo de destino**. El atributo de destino puede pertenecer a una clase de datos relacionada (disponible a través de todo número de niveles de relación) o a la misma clase de datos. Un atributo alias no almacena ningún dato, sino la ruta a su atributo de destino. Puede definir tantos atributos de alias como desee en una clase de datos.
 
-Los atributos del alias son particularmente útiles para manejar las relaciones N a N. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
+Los atributos del alias son particularmente útiles para manejar las relaciones N a N. Aportan más legibilidad y simplicidad en el código y en las consultas al permitir basarse en conceptos de negocio en lugar de en detalles de implementación.
 
 ### Cómo definir los atributos alias
 
@@ -638,20 +638,20 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-*attributeName* must comply with [standard rules for property names](../Concepts/identifiers.md#object-properties).
+*attributeName* debe cumplir las [reglas estándar para nombres de propiedades](../Concepts/identifiers.md#object-properties).
 
-*targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
+*targetPath* es una ruta atributo que contiene uno o más niveles, como "employee.company.name". Si el atributo de destino pertenece a la misma clase de datos, *targetPath* es el nombre del atributo.
 
 Un alias puede ser utilizado como parte de una ruta de otro alias.
 
-A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
+Un [atributo calculado](#computed-attributes-1) puede utilizarse en una ruta alias, pero sólo como último nivel de la ruta; de lo contrario, se devuelve un error. Por ejemplo, si "fullName" es un atributo calculado, un alias con ruta "employee.fullName" es válido.
 
-> Los atributos alias de ORDA por defecto son **no expuestos**. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+> Los atributos alias de ORDA por defecto son **no expuestos**. Debe añadir la palabra clave [`expuesto`](#exposed-vs-non-exposed-functions) antes de la palabra clave `Alias` si desea que el alias esté disponible para peticiones remotas.
 
 
 ### Uso de los atributos alias
 
-Alias attributes are read-only (except when based upon a scalar attribute of the same dataclass, see the last example below). They can be used instead of their target attribute path in class functions such as:
+Los atributos alias son de sólo lectura (excepto cuando se basan en un atributo escalar de la misma clase de datos, ver el último ejemplo a continuación). Pueden utilizarse en lugar de la ruta de su atributo de destino en funciones de clase como:
 
 | Function                                       |
 | ---------------------------------------------- |
@@ -670,11 +670,11 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 | `entity.diff()`                                |
 | `entity.touchedAttributes()`                   |
 
-> Tenga en cuenta que los atributos alias se calculan en el servidor. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
+> Tenga en cuenta que los atributos alias se calculan en el servidor. En las configuraciones remotas, la actualización de los atributos alias en las entidades requiere que éstas se vuelvan a cargar desde el servidor.
 
 ### Propiedades del alias
 
-Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".
+Atributo alias [`kind`](../API/DataClassAttributeClass.md#kind) es "alias".
 
 An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute:
 
