@@ -143,14 +143,14 @@ _italic_
 ~~strikethrough~~
 ```
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- La etiqueta de bloque de código (\``4d ... ``) es compatible con el resaltado del código 4D:
 
  \``` 4d  
 C_TEXT($txt)  
 $txt:="Hello world!"  
 \` ``
 
-- The table tag is supported:
+- La etiqueta de la tabla es soportada:
 
 ```
 | Parameter | Type   | Description  |
@@ -159,11 +159,11 @@ $txt:="Hello world!"
 | toolbar   | String |Toolbar name  |
 ```
 
-- The link tag is supported:
+- La etiqueta del enlace es soportada:
 
 ```
-// Case 1
-The [documentation](https://doc.4d.com) of the command ....
+// Caso 1
+La [documentation](https://doc.4d.com) del comando ....
 
 // Case 2
 [4D blog][1]
