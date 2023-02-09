@@ -30,8 +30,8 @@ Syntax:
 |Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Value|Description|
 |-------------|---|---|
 |`applicationPath`|Path of the 4D, 4D Server or merged application|Launches the application. Identical to double-clicking the 4D application. When called without structure file argument, the application is executed and the 'select database' dialog box appears.|
-|`--version`||Dispays application version and exits|
-|`--help`||Dispays help and exits. Alternate arguments: -?, -h|
+|`--version`||Displays application version and exits|
+|`--help`||Displays help and exits. Alternate arguments: -?, -h|
 |`--project`|projectPath &#124; packagePath &#124; 4dlinkPath|Project file to open with the current data file. No dialog box appears.|
 |`--data`|dataPath|Data file to open with the designated project file. If not specified, 4D uses the last opened data file.|
 |`--opening-mode`|interpreted &#124; compiled|Requests database to open in interpreted or compiled mode. No error is thrown if the requested mode is unavailable.|
@@ -70,7 +70,7 @@ open ~/Desktop/4D.app
 Launch application with a package file on macOS:
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
+open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
 
 Launch application with a project file:
@@ -79,7 +79,7 @@ Launch application with a project file:
 
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
+open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 ```
 
 
