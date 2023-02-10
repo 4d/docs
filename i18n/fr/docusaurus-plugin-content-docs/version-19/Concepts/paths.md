@@ -21,14 +21,14 @@ De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fou
 
 Les filesystem suivants sont pris en charge :
 
-| filesystem   | Designates                                         |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
-| "/LOGS"      | Dossier Logs                                       |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Dossier Project                                    |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | Désigne                                                         |
+| ------------ | --------------------------------------------------------------- |
+| "/DATA"      | Dossier data courant                                            |
+| "/LOGS"      | Dossier Logs                                                    |
+| "/PACKAGE"   | Dossier de la base de données (avec ou sans l'extension 4dbase) |
+| "/PROJECT"   | Dossier Project                                                 |
+| "/RESOURCES" | Dossier de ressources courant de la base de données             |
+| "/SOURCES"   | Dossier de ressources courant du projet                         |
 
 ## Syntaxe POSIX
 
@@ -54,7 +54,7 @@ La syntaxe spécifique à la plate-forme dépend du système d'exploitation sur 
 
 ### Windows
 
-Les modèles suivants sont pris en charge :
+Les règles suivantes sont pris en charge :
 
 - les séparateurs de dossiers sont "\"
 - le texte contient ':' et '\' comme deuxième et troisième caractère,
