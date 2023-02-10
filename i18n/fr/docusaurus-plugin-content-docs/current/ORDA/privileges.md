@@ -22,7 +22,7 @@ If a user attempts to execute an action and does not have the appropriate access
 
 
 
-## Ressources
+## Resources
 
 You can assign specific permission actions to the following exposed resources in your project:
 
