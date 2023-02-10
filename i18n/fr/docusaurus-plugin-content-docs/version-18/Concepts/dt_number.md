@@ -46,17 +46,17 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple 
 | Division entière    | Nombre \ Nombre | Number   | 5 \ 2     | 2     |
 | Modulo              | Nombre % Nombre  | Number   | 5 % 2      | 1     |
 | Exponentiation      | Nombre ^ Nombre  | Number   | 2 ^ 3      | 8     |
-| Egalité             | Nombre = Nombre  | Boolean  | 10 = 10    | Vrai  |
+| Egalité             | Nombre = Nombre  | Boolean  | 10 = 10    | True  |
 |                     |                  |          | 10 = 11    | False |
-| Inégalité           | Nombre # Nombre  | Boolean  | 10 #11     | Vrai  |
+| Inégalité           | Nombre # Nombre  | Boolean  | 10 #11     | True  |
 |                     |                  |          | 10 # 10    | False |
-| Supérieur à         | Nombre > Nombre  | Boolean  | 11 > 10    | Vrai  |
+| Supérieur à         | Nombre > Nombre  | Boolean  | 11 > 10    | True  |
 |                     |                  |          | 10 > 11    | False |
-| Inférieur à         | Nombre < Nombre  | Boolean  | 10 < 11    | Vrai  |
+| Inférieur à         | Nombre < Nombre  | Boolean  | 10 < 11    | True  |
 |                     |                  |          | 11 < 10    | False |
-| Supérieur ou égal à | Nombre >= Nombre | Boolean  | 11 >= 10   | Vrai  |
+| Supérieur ou égal à | Nombre >= Nombre | Boolean  | 11 >= 10   | True  |
 |                     |                  |          | 10 >= 11   | False |
-| Inférieur ou égal à | Nombre <= Nombre | Boolean  | 10 <= 11   | Vrai  |
+| Inférieur ou égal à | Nombre <= Nombre | Boolean  | 10 <= 11   | True  |
 |                     |                  |          | 11 <= 10   | False |
 
 L'opérateur modulo % divise le premier nombre par le second et retourne le reste de la division entière. Voici quelques exemples :
@@ -142,4 +142,4 @@ Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effe
 | Décaler bits à droite | 0x0000FFFF >> 8                 | 0x000000FF |
 | Mettre bit à 1        | 0x00000000 ?+ 16                | 0x00010000 |
 | Mettre bit à 0        | 0x00010000 ?- 16                | 0x00000000 |
-| Tester bit            | 0x00010000 ?? 16                | Vrai       |
+| Tester bit            | 0x00010000 ?? 16                | True       |
