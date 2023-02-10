@@ -372,8 +372,8 @@ A função envia um pedido para o servidor de correio e devolve um objecto descr
 | status      |                          | number     | (apenas SMTP) Código de estado devolvido pelo servidor de correio (0 no caso de um problema não relacionado com o processamento de correio) |
 | statusText  |                          | text       | Mensagem de estado devolvida pelo servidor de correio, ou último erro devolvido na pilha de erros 4D                                        |
 | errors      |                          | collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor de correio)                                                       |
-|             | \[ ].errCode            | number     | 4D error code                                                                                                                               |
-|             | \[ ].message            | text       | Description of the 4D error                                                                                                                 |
-|             | \[ ].componentSignature | text       | Signature of the internal component which returned the error                                                                                |
+|             | \[ ].errCode            | number     | Código de erro 4D                                                                                                                           |
+|             | \[ ].message            | text       | Descrição do erro 4D                                                                                                                        |
+|             | \[ ].componentSignature | text       | Assinatura da componente interna que devolveu o erro                                                                                        |
 
 <!-- END REF -->
