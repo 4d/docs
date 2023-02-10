@@ -67,7 +67,7 @@ Os objectos do IMAP Transporter são instanciados com o comando [IMAP New Transp
 
 #### Descrição
 
-O comando `IMAP Novo transportador` <!-- REF #_command_.IMAP New transporter.Summary -->configura uma nova ligação IMAP<!-- END REF --> de acordo com o parâmetro</em>  servidor *e devolve um novo objecto  *transporter*. O objeto transporter retornado vai geralmente ser usado para receber emails.</p>
+O comando `IMAP Novo transportador` <!-- REF #_command_.IMAP New transporter.Summary -->configura uma nova ligação IMAP<!-- END REF --> de acordo com o parâmetro *server* e devolve um novo objecto *transporter*. O objeto transporter retornado vai geralmente ser usado para receber emails.
 
 No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
