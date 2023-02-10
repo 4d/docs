@@ -199,8 +199,8 @@ A 4D expression to be associated with a column. You can enter:
   - String
   - Numeric
   - Date
-  - Heure
-  - Images
+  - Time
+  - Picture
   - Boolean  
     You can use fields from the Master Table or from other tables.
 
@@ -208,7 +208,7 @@ A 4D expression to be associated with a column. You can enter:
   - String
   - Numeric
   - Date
-  - Images
+  - Picture
   - Boolean
 
  For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
