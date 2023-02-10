@@ -706,9 +706,9 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 | ----------- | ----------------------- | ---------- | ----------------------------------------------------------------------------- |
 | success     |                         | Booleano   | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário |
 | errors      |                         | Collection | pilha de erros 4D (não devolvidos se o servidor web começou com sucesso)      |
-|             | \[].errCode            | Número     | 4D error code                                                                 |
-|             | \[].message            | Text       | Description of the 4D error                                                   |
-|             | \[].componentSignature | Text       | Signature of the internal component which returned the error                  |
+|             | \[].errCode            | Número     | Código de erro 4D                                                             |
+|             | \[].message            | Text       | Descrição do erro 4D                                                          |
+|             | \[].componentSignature | Text       | Assinatura da componente interna que devolveu o erro                          |
 > Se o servidor Web já tiver sido lançado, é devolvido um erro.
 
 #### Exemplo
