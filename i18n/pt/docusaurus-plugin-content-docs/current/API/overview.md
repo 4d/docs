@@ -93,7 +93,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`BLOB TO VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page533.html)                                   | 533    |
 | [`Bool`](https://doc.4d.com/4dv19R/help/command/en/page1537.html)                                              | 1537   |
 | [`BOOLEAN ARRAY FROM SET`](https://doc.4d.com/4dv19R/help/command/en/page646.html)                             | 646    |
-| [`BREAK LEVEL`](https://doc.4d.com/4dv19R/help/command/en/page302.html)                                        | 302    |
+| [`BREAK LEVEL`](https://doc.4d.com/4dv19R/help/command/en/page646.html)                                        | 302    |
 | [`BRING TO FRONT`](https://doc.4d.com/4dv19R/help/command/en/page326.html)                                     | 326    |
 | [`BUILD APPLICATION`](https://doc.4d.com/4dv19R/help/command/en/page871.html)                                  | 871    |
 | <a name="C">**C**</a>                                                                                      |        |
@@ -109,7 +109,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`C_TEXT`](https://doc.4d.com/4dv19R/help/command/en/page284.html)                                             | 284    |
 | [`C_TIME`](https://doc.4d.com/4dv19R/help/command/en/page306.html)                                             | 306    |
 | [`C_VARIANT`](https://doc.4d.com/4dv19R/help/command/en/page1683.html)                                         | 1683   |
-| [`Informação de Cache`](https://doc.4d.com/4dv19R/help/command/en/page1402.html)                               | 1402   |
+| [`Cache info`](https://doc.4d.com/4dv19R/help/command/en/page1402.html)                                        | 1402   |
 | [`CALL FORM`](https://doc.4d.com/4dv19R/help/command/en/page1391.html)                                         | 1391   |
 | [`CALL SUBFORM CONTAINER`](https://doc.4d.com/4dv19R/help/command/en/page1086.html)                            | 1086   |
 | [`CALL WORKER`](https://doc.4d.com/4dv19R/help/command/en/page1389.html)                                       | 1389   |
