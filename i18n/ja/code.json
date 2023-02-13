@@ -307,7 +307,7 @@
   },
   "theme.common.editThisPage": {
     "message": "このページへコメントする",
-    "description": "The link label to comment the current page"
+    "description": "The link label to edit the current page"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
     "message": "タグ付 1 件|タグ付 {count} 件",
@@ -555,5 +555,23 @@
   },
   "Release Notes": {
     "message": "リリースノート"
+  },
+  "homepage.sections.core-development.langage-ref-url": {
+    "message": "https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.ja.html"
+  },
+  "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
+    "message": "https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.ja.html"
+  },
+  "homepage.sections.textensions.4D-Progress-url": {
+    "message": "https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.ja.html"
+  },
+  "homepage.sections.textensions.4D-SVG-Component-url": {
+    "message": "https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.ja.html"
+  },
+  "homepage.sections.textensions.4D-Widgets-url": {
+    "message": "https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.ja.html"
+  },
+  "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
+    "message": "https://developer.4d.com/4d-for-ios/docs/ja/overview.html"
   }
 }

@@ -22,7 +22,7 @@ You can create [several types of methods](../Concepts/methods.md):
 
 ## Creating classes
 
-A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. The name of the file is the class name.
+A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. O nome do arquivo é o nome da classe.
 
 You can create a class file from the **File** menu or toolbar (**New/Class...**) or in the **Methods** page of the **Explorer** window.
 

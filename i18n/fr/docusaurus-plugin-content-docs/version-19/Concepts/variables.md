@@ -31,7 +31,7 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
  // et affecte la date courante + 30 jours
 ```
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+Lorsque les variables sont déclarées, elles sont initialisées à la [**valeur par défaut**](data-types.md#valeurs-par-defaut) correspondant à leur type, qu'elles conserveront pendant la session tant qu'on ne leur aura pas [affecté une valeur](#assigning-data).
 
 
 ### Utilisation du mot-clé `var`
@@ -67,12 +67,12 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 | ---------------------- | ------------------------------------------ |
 | `Text`                 | Valeur texte                               |
 | `Date`                 | Valeur date                                |
-| `Heure`                | Valeur Heure                               |
+| `Time`                 | Valeur Heure                               |
 | `Boolean`              | Valeur booléen                             |
 | `Integer`              | Valeur entier long                         |
 | `Real`                 | Valeur réel                                |
-| `Pointeurs`            | Valeur pointeur                            |
-| `Images`               | Valeur image                               |
+| `Pointer`              | Valeur pointeur                            |
+| `Picture`              | Valeur image                               |
 | `Blob`                 | Valeur BLOB                                |
 | `Collection`           | Valeur collection                          |
 | `Variant`              | Valeur variant                             |
@@ -112,7 +112,7 @@ var $entity : cs.EmployeeEntity
 
 ### Utilisation d'une directive C_
 
-> **Note de compatibilité :** cette fonctionnalité n'est pas recommandée pour déclarer des variables dans des méthodes. Il est recommandé d'utiliser le mot-clé [var](#using-the-var-keyword).
+> **Note de compatibilité :** Cette fonctionnalité n'est pas recommandée pour déclarer des variables dans des méthodes. Il est recommandé d'utiliser le mot-clé [var](#utilisation-du-mot-cle-var).
 
 Les directives du thème "Compilateur" vous permettent de déclarer des variables de types basiques.
 

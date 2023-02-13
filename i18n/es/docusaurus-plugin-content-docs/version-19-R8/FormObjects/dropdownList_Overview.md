@@ -151,13 +151,13 @@ Las listas jerárquicas desplegables se gestionan utilizando los comandos **List
 
 ### Utilizar una acción estándar
 
-You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
+Puede crear automáticamente una lista desplegable utilizando una acción estándar [](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
 
-* Uso de la acción estándar `gotoPage`. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
+* Uso de la acción estándar `gotoPage`. En este caso, 4D mostrará automáticamente la [página del formulario](FormEditor/forms.md#form-pages) que corresponda al número del elemento seleccionado. Por ejemplo, si el usuario selecciona el tercer elemento, 4D mostrará la tercera página del formulario actual (si existe). En tiempo de ejecución, la lista desplegable muestra por defecto los números de página (1, 2...).
 
-* Use of a standard action that displays a sublist of items, for example `backgroundColor`. Esta funcionalidad requiere que:
+* Uso de una acción estándar que muestra una sublista de elementos, por ejemplo `backgroundColor`. Esta funcionalidad requiere que:
   * a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
-  * the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list. At runtime the drop-down list will display an automatic list of values, e.g. background colors. You can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+  * the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list. En tiempo de ejecución, la lista desplegable mostrará una lista automática de valores, por ejemplo, colores de fondo. Puede reemplazar esta lista automática asignando además una lista de selección en la que cada elemento tenga asignada una acción estándar personalizada.
 
 > Esta funcionalidad no puede utilizarse con una lista desplegable jerárquica.
 

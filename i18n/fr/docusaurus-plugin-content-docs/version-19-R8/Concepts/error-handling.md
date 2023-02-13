@@ -76,7 +76,7 @@ Vous pouvez définir une seule méthode de gestion des erreurs pour l'ensemble d
 
 Lorsqu'une erreur se produit, une seule méthode est appelée, comme le montre le schéma suivant :
 
-![error management](../assets/en/Concepts/error-schema.png)
+![gestion des erreurs](../assets/en/Concepts/error-schema.png)
 
 
 ### Gérer les erreurs dans une méthode

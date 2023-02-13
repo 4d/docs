@@ -72,7 +72,7 @@ open ~/Desktop/4D.app
 macOS上でパッケージファイルを指定してアプリケーションを起動:
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
+open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
 
 プロジェクトファイルを指定してアプリケーションを起動:
@@ -81,7 +81,7 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
+open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 ```
 
 

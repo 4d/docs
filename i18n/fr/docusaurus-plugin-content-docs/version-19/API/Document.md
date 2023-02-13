@@ -490,7 +490,7 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 | Paramètres | Type    |    | Description                                    |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
-| Résultat   | Images  | <- | Icône|<!-- END REF -->
+| Résultat   | Picture | <- | Icône|<!-- END REF -->
 
 |
 

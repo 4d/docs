@@ -39,11 +39,11 @@ El formato **A escala para ajustarse** hace que 4D redimensione la imagen para a
 
 `Gramática JSON: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+Cuando se amplía el área que contiene una imagen con el formato **Replicada**, la imagen no se deforma sino que se replica tantas veces como sea necesario para llenar el área por completo.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
-If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
+Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen queda truncada (no centrada).
 
 ### Centrado / Truncado (no centrado)
 

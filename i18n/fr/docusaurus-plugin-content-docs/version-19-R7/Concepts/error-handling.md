@@ -48,7 +48,7 @@ La commande `Method called on error` vous permet de connaître le nom de la mét
 
 ### Portée et composants
 
-Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
+Vous pouvez définir une seule méthode de gestion des erreurs pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
 
 Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à l'application en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de l'application hôte n'est pas appelée, et inversement.
 
