@@ -26,6 +26,10 @@ const localizedLinks = {
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
     message: 'https://developer.4d.com/4d-for-ios/docs/en/overview.html',
     id: 'homepage.sections.mobile-applications.4D-for-iOS-Archive-url',
+  }),
+  "homepage.sections.mobile-applications.go-mobile-url" : translate({
+    message: 'https://developer.4d.com/go-mobile/',
+    id: 'homepage.sections.mobile-applications.go-mobile-url',
   })
 };
 
@@ -260,7 +264,7 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="https://developer.4d.com/go-mobile">
+        <Link to={localizedLinks["homepage.sections.mobile-applications.go-mobile-url"]}>
           <Translate>Go Mobile with 4D</Translate>
         </Link>
         <Link to={localizedLinks["homepage.sections.mobile-applications.4D-for-iOS-Archive-url"]}>
