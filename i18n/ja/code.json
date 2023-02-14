@@ -573,5 +573,8 @@
   },
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
     "message": "https://developer.4d.com/4d-for-ios/docs/ja/overview.html"
+  },
+  "homepage.sections.mobile-applications.go-mobile-url": {
+    "message": "https://developer.4d.com/go-mobile/"
   }
 }
