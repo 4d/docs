@@ -218,7 +218,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`DELETE INDEX`](https://doc.4d.com/4dv19R/help/command/en/page967.html)                                       | 967    |
 | [`DELETE MENU ITEM`](https://doc.4d.com/4dv19R/help/command/en/page413.html)                                   | 413    |
 | [`DELETE RECORD`](https://doc.4d.com/4dv19R/help/command/en/page58.html)                                       | 58     |
-| [`DELETE SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page66.html)                                    | 66     |
+| [`DELETE SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page58.html)                                    | 66     |
 | [`Delete string`](https://doc.4d.com/4dv19R/help/command/en/page232.html)                                      | 232    |
 | [`DELETE USER`](https://doc.4d.com/4dv19R/help/command/en/page615.html)                                        | 615    |
 | [`DESCRIBE QUERY EXECUTION`](https://doc.4d.com/4dv19R/help/command/en/page1044.html)                          | 1044   |
@@ -249,7 +249,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`DOM Find XML element`](https://doc.4d.com/4dv19R/help/command/en/page864.html)                               | 864    |
 | [`DOM Find XML element by ID`](https://doc.4d.com/4dv19R/help/command/en/page1010.html)                        | 1010   |
 | [`DOM Get first child XML element`](https://doc.4d.com/4dv19R/help/command/en/page723.html)                    | 723    |
-| [`DOM Get last child XML element`](https://doc.4d.com/4dv19R/help/command/en/page925.html)                     | 925    |
+| [`DOM Get last child XML element`](https://doc.4d.com/4dv19R/help/command/en/page723.html)                     | 925    |
 | [`DOM Get next sibling XML element`](https://doc.4d.com/4dv19R/help/command/en/page724.html)                   | 724    |
 | [`DOM Get parent XML element`](https://doc.4d.com/4dv19R/help/command/en/page923.html)                         | 923    |
 | [`DOM Get previous sibling XML element`](https://doc.4d.com/4dv19R/help/command/en/page924.html)               | 924    |
@@ -302,11 +302,11 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`EXPORT STRUCTURE`](https://doc.4d.com/4dv19R/help/command/en/page1311.html)                                  | 1311   |
 | [`Export structure file`](https://doc.4d.com/4dv19R/help/command/en/page1565.html)                             | 1565   |
 | [`EXPORT SYLK`](https://doc.4d.com/4dv19R/help/command/en/page85.html)                                         | 85     |
-| [`EXPORT TEXT`](https://doc.4d.com/4dv19R/help/command/en/page167.html)                                        | 167    |
+| [`EXPORT TEXT`](https://doc.4d.com/4dv19R/help/command/en/page85.html)                                         | 167    |
 | <a name="F">**F**</a>                                                                                      |        |
 | [`FAUX`](https://doc.4d.com/4dv19R/help/command/en/page215.html)                                               | 215    |
-| [`Campo`](https://doc.4d.com/4dv19R/help/command/en/page253.html)                                              | 253    |
-| [`Campo nome`](https://doc.4d.com/4dv19R/help/command/en/page257.html)                                         | 257    |
+| [`Field`](https://doc.4d.com/4dv19R/help/command/en/page253.html)                                              | 253    |
+| [`Field name`](https://doc.4d.com/4dv19R/help/command/en/page257.html)                                         | 257    |
 | [`File`](https://doc.4d.com/4dv19R/help/command/en/page1566.html)                                              | 1566   |
 | [`FILTER EVENT`](https://doc.4d.com/4dv19R/help/command/en/page321.html)                                       | 321    |
 | [`FILTER KEYSTROKE`](https://doc.4d.com/4dv19R/help/command/en/page389.html)                                   | 389    |
@@ -315,7 +315,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`Find in list`](https://doc.4d.com/4dv19R/help/command/en/page952.html)                                       | 952    |
 | [`Find in sorted array`](https://doc.4d.com/4dv19R/help/command/en/page1333.html)                              | 1333   |
 | [`Find window`](https://doc.4d.com/4dv19R/help/command/en/page449.html)                                        | 449    |
-| [`FIRST RECORD`](https://doc.4d.com/4dv19R/help/command/en/page50.html)                                        | 50     |
+| [`FIRST RECORD`](https://doc.4d.com/4dv19R/help/command/en/page449.html)                                       | 50     |
 | [`FLUSH CACHE`](https://doc.4d.com/4dv19R/help/command/en/page297.html)                                        | 297    |
 | [`Focus object`](https://doc.4d.com/4dv19R/help/command/en/page278.html)                                       | 278    |
 | [`Folder`](https://doc.4d.com/4dv19R/help/command/en/page1567.html)                                            | 1567   |
@@ -323,7 +323,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`Font file`](https://doc.4d.com/4dv19R/help/command/en/page1700.html)                                         | 1700   |
 | [`FONT LIST`](https://doc.4d.com/4dv19R/help/command/en/page460.html)                                          | 460    |
 | [`FONT STYLE LIST`](https://doc.4d.com/4dv19R/help/command/en/page1362.html)                                   | 1362   |
-| [`Formulário`](https://doc.4d.com/4dv19R/help/command/en/page1466.html)                                        | 1466   |
+| [`Form`](https://doc.4d.com/4dv19R/help/command/en/page1466.html)                                              | 1466   |
 | [`FORM Convert to dynamic`](https://doc.4d.com/4dv19R/help/command/en/page1570.html)                           | 1570   |
 | [`FORM EDIT`](https://doc.4d.com/4dv19R/help/command/en/page1749.html)                                         | 1749   |
 | [`FORM Event`](https://doc.4d.com/4dv19R/help/command/en/page1606.html)                                        | 1606   |
@@ -676,7 +676,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`MINIMIZE WINDOW`](https://doc.4d.com/4dv19R/help/command/en/page454.html)                                    | 454    |
 | [`MOBILE APP REFRESH SESSIONS`](https://doc.4d.com/4dv19R/help/command/en/page1596.html)                       | 1596   |
 | [`Mod`](https://doc.4d.com/4dv19R/help/command/en/page98.html)                                                 | 98     |
-| [`Modificado`](https://doc.4d.com/4dv19R/help/command/en/page32.html)                                          | 32     |
+| [`Modified`](https://doc.4d.com/4dv19R/help/command/en/page32.html)                                            | 32     |
 | [`Modified record`](https://doc.4d.com/4dv19R/help/command/en/page314.html)                                    | 314    |
 | [`MODIFY RECORD`](https://doc.4d.com/4dv19R/help/command/en/page57.html)                                       | 57     |
 | [`MODIFY SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page204.html)                                   | 204    |
@@ -684,7 +684,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`MOVE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page540.html)                                      | 540    |
 | [`MULTI SORT ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page718.html)                                   | 718    |
 | <a name="N">**N**</a>                                                                                     |        |
-| [`Nova colecção`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                                     | 1472   |
+| [`New collection`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                                    | 1472   |
 | [`New data key`](https://doc.4d.com/4dv19R/help/command/en/page1611.html)                                      | 1611   |
 | [`New list`](https://doc.4d.com/4dv19R/help/command/en/page375.html)                                           | 375    |
 | [`New log file`](https://doc.4d.com/4dv19R/help/command/en/page926.html)                                       | 926    |
@@ -698,7 +698,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`NO DEFAULT TABLE`](https://doc.4d.com/4dv19R/help/command/en/page993.html)                                   | 993    |
 | [`Not`](https://doc.4d.com/4dv19R/help/command/en/page34.html)                                                 | 34     |
 | [`NOTIFY RESOURCES FOLDER MODIFICATION`](https://doc.4d.com/4dv19R/help/command/en/page1052.html)              | 1052   |
-| [`Null`](https://doc.4d.com/4dv19R/help/command/en/page1517.html)                                              | 1517   |
+| [`Null`](https://doc.4d.com/4dv19R/help/command/en/page1517.html)                                              | 1052   |
 | [`Num`](https://doc.4d.com/4dv19R/help/command/en/page11.html)                                                 | 11     |
 | <a name="O">**O**</a>                                                                                     |        |
 | [`OB Class`](https://doc.4d.com/4dv19R/help/command/en/page1730.html)                                          | 1730   |
@@ -1376,7 +1376,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`XML DECODE`](https://doc.4d.com/4dv19R/help/command/en/page1091.html)                                        | 1091   |
 | [`XML GET ERROR`](https://doc.4d.com/4dv19R/help/command/en/page732.html)                                      | 732    |
 | [`XML GET OPTIONS`](https://doc.4d.com/4dv19R/help/command/en/page1096.html)                                   | 1096   |
-| [`XML SET OPTIONS`](https://doc.4d.com/4dv19R/help/command/en/page1090.html)                                   | 1090   |
+| [`XML SET OPTIONS`](https://doc.4d.com/4dv19R/help/command/en/page1096.html)                                   | 1090   |
 | <a name="Y">**Y**</a>                                                                                     |        |
 | [`Year of`](https://doc.4d.com/4dv19R/help/command/en/page25.html)                                             | 25     |
 | <a name="Z">**Z**</a>                                                                                     |        |
