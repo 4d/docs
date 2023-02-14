@@ -699,7 +699,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`NO DEFAULT TABLE`](https://doc.4d.com/4dv19/help/command/en/page993.html)                                   | 993    |
 | [`Not`](https://doc.4d.com/4dv19/help/command/en/page34.html)                                                 | 34     |
 | [`NOTIFY RESOURCES FOLDER MODIFICATION`](https://doc.4d.com/4dv19/help/command/en/page1052.html)              | 1052   |
-| [`Null`](https://doc.4d.com/4dv19/help/command/en/page1517.html)                                              | 1517   |
+| [`Null`](https://doc.4d.com/4dv19/help/command/en/page1517.html)                                              | 1052   |
 | [`Num`](https://doc.4d.com/4dv19/help/command/en/page11.html)                                                 | 11     |
 | <a name="O">**O**</a>                                                                                    |        |
 | [`OB Class`](https://doc.4d.com/4dv19/help/command/en/page1730.html)                                          | 1730   |
