@@ -1,13 +1,13 @@
 ---
 id: overview
-title: Class functions and commands
+title: クラス関数とコマンド
 ---
 
 この章では、ビルトインの 4D クラス API および関連するコンストラクターコマンドを説明します。 4Dクラス関数およびプロパティは、クラスインスタンス オブジェクトによって提供されます。
 
-- functions must be called on instances with the `()` operator. For example, `collection.sort()`.
-- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
-- commands can be called independantly, with or without parameters. For example `Folder(fk database folder)`.
+- 関数は、インスタンスに対し、`()` 演算子を使って呼び出します。 例: `collection.sort()`。
+- プロパティにアクセスする場合は、カッコを使いません。 例: `file.creationTime`。 また、\[] シンタックスも使用可能です。 例: `file["creationTime"]`。
+- コマンドは独立して、引数付きあるいは引数なしで呼び出すことができます。 例: `Folder(fk database folder)`。
 
 ## 表記規則
 
