@@ -9,7 +9,7 @@ title: はじめに
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 4D View Proは、4Dに統合された [SpreadJS スプレッドシートソリューション](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) に基づいて動作します。
+スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 4D View Proは、4Dに統合された [SpreadJS スプレッドシートソリューション](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) に基づいて動作します。<br /> (4D View Pro のツールバー等のインターフェースは SpreadJS 提供のものです。インターフェース上で "テーブル" という用語が使用されますが、4D でテーブルといえばデータベーステーブルを指すため、当マニュアルではこれを便宜上 "表組み" あるいは "表" と呼んで区別します）
 
 フォームに 4D View Pro エリアを埋め込むことで、4D View Pro コマンドを使ってスプレッドシートドキュメントを読み込んだり書き出したりすることができます。
 
