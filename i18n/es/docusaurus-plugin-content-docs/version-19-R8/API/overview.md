@@ -5,9 +5,9 @@ title: Class functions and commands
 
 Esta sección describe la API de las clases 4D integradas, así como los comandos de constructor asociados. Las funciones y propiedades de clase 4D están disponibles a través de los objetos de instancia de clase.
 
-- functions must be called on instances with the `()` operator. For example, `collection.sort()`.
-- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
-- commands can be called independantly, with or without parameters. For example `Folder(fk database folder)`.
+- functions must be called on instances with the `()` operator. Por ejemplo, `collection.sort()`.
+- se accede a las propiedades sin paréntesis, por ejemplo `file.creationTime`. También puede utilizar la sintaxis \[], por ejemplo `file["creationTime"]`.
+- pueden ejecutarse de forma independiente, con o sin parámetros. Por ejemplo `Folder(fk database folder)`.
 
 ## Convenciones de escritura
 
@@ -19,7 +19,7 @@ En la sintaxis de la función se utilizan las siguientes convenciones:
 
 ## Classic commands
 
-In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
+In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). A modo de referencia, se listan a continuación:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
