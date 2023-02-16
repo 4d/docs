@@ -1205,7 +1205,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`TRIGGER PROPERTIES`](https://doc.4d.com/4dv19R/help/command/en/page399.html)                      | 399    |
 | [`Trunc`](https://doc.4d.com/4dv19R/help/command/en/page95.html)                                    | 95     |
 | [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html)                         | 1051   |
-| [`Tipo`](https://doc.4d.com/4dv19R/help/command/en/page295.html)                                    | 295    |
+| [`Type`](https://doc.4d.com/4dv19R/help/command/en/page295.html)                                    | 295    |
 | <a name="U">**U**</a>                                                                          |        |
 | [`Indefinido`](https://doc.4d.com/4dv19R/help/command/en/page82.html)                               | 82     |
 | [`UNION`](https://doc.4d.com/4dv19R/help/command/en/page120.html)                                   | 120    |

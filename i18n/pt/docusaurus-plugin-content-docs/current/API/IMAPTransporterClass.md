@@ -539,7 +539,7 @@ Pode passar:
 * no parâmetro `msgsIDs` , uma colecção contendo as identificações únicas das mensagens específicas a apagar, ou
 * no parâmetro `allMsgs` , o `IMAP all` constante (inteiro) para apagar todas as mensagens na caixa de correio seleccionada.
 
-A execução desta função não remove realmente as mensagens. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
+A execução desta função não remove realmente as mensagens. As mensagens com a bandeira "apagar" ainda podem ser encontradas pela função [.searchMails()](#searchmails) . As mensagens assinaladas são eliminadas do servidor IMAP com a função [`.expunge()`](#expunge) ou seleccionando outra caixa de correio ou quando o objecto de transporte [](#imap-transporter-object) (criado com [IMAP Novo transportador](#imap-new-transporter)) é destruído.
 
 **Objeto devolvido**
 
@@ -556,7 +556,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 #### Exemplo 1
 
-To delete a selection of messages:
+Para apagar uma selecção de mensagens:
 
 ```4d
  var $server;$boxInfo;$status : Object
@@ -564,44 +564,44 @@ To delete a selection of messages:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obrigatório
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //selecionar mailbox
  $boxInfo:=$transporter.selectBox("Inbox")
 
-  //get collection of message unique IDs
+  //obter coleção das IDs únicas de mensagem
  $mailIds:=$transporter.searchMails("subject \"Reports\"")
 
-  // Delete selected messages
+  // Apagar mensagens selecionadas
  $status:=$transporter.delete($mailIds)
 ```
 
 #### Exemplo 2
 
-To delete all messages in the current mailbox:
+Para apagar todas as mensagens na caixa de correio actual:
 
 ```4d
- var $server;$boxInfo;$status : Object
+ var $server;$boxInfo;$status : Objecto
  var $transporter : 4D.IMAPTransporter
 
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server:=Novo objecto
+ $server.host:="imap.gmail.com" //Mandatório
  $server.port:=993
- $server.user:="4d@gmail.com"
+ $server.user:="$transporter"
  $server.password:="XXXXXXXX"
 
- $transporter:=IMAP New transporter($server)
+ $transporter:=IMAP Novo transportador($server)
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("Junk Email")
+  //seleccionar caixa de correio
+ $boxInfo:= .selectBox("Junk Email")
 
-  // delete all messages in the current mailbox
- $status:=$transporter.delete(IMAP all)
+  // apagar todas as mensagens na caixa de correio actual
+ $status:=$transporter.delete(IMAP todos)
 ```
 
 <!-- END REF -->
@@ -621,10 +621,10 @@ To delete all messages in the current mailbox:
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                           |
-| ---------- | ------ |:--:| ------------------------------------------------------------------- |
-| name       | Text   | -> | Name of the mailbox to delete                                       |
-| Resultados | Objeto | <- | Status of the mailbox deletion operation|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                       |
+| ---------- | ------ |:--:| ------------------------------------------------------------------------------- |
+| name       | Text   | -> | Nome da caixa de correio a apagar                                               |
+| Resultados | Objeto | <- | Estado da operação de eliminação da caixa de correio|<!-- END REF -->
 
 
 |
@@ -632,9 +632,9 @@ To delete all messages in the current mailbox:
 
 #### Descrição
 
-A função `.deleteBox()` <!-- REF #IMAPTransporterClass.deleteBox().Summary -->permanently removes the mailbox with the given `name` from the IMAP server<!-- END REF -->. Attempting to delete an INBOX or a mailbox that does not exist will generate an error.
+A função `.deleteBox()` <!-- REF #IMAPTransporterClass.deleteBox().Summary -->remove permanentemente a caixa de correio com o nome `dado` do servidor IMAP<!-- END REF -->. A tentativa de apagar uma INBOX ou uma caixa de correio que não existe, gerará um erro.
 
-In the `name` parameter, pass the name of the mailbox to delete.
+No parâmetro `name` , passar o nome da caixa de correio para eliminar.
 > * The function cannot delete a mailbox that has child mailboxes if the parent mailbox has the "\Noselect" attribute.
 > * All messages in the deleted mailbox will also be deleted.
 > * The ability to delete a mailbox depends on the mail server.

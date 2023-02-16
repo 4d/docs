@@ -5,9 +5,9 @@ title: クラス API の概要
 
 この章では、ビルトインの 4D クラス API および関連するコンストラクターコマンドを説明します。 4Dクラス関数およびプロパティは、クラスインスタンス オブジェクトによって提供されます。
 
-- 関数は、インスタンスに対し、() 演算子を使って呼び出します。 For example, `collection.sort()`.
+- 関数は、インスタンスに対し、() 演算子を使って呼び出します。 例: `collection.sort()`。
 
-- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
+- プロパティにアクセスする場合は、カッコを使いません。 例: `file.creationTime`。 また、\[] シンタックスも使用可能です。 例: `file["creationTime"]`。
 
 ## 表記規則
 
