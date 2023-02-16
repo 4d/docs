@@ -343,7 +343,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`FORM NEXT PAGE`](https://doc.4d.com/4dv19R/help/command/en/page248.html)                                     | 248    |
 | [`FORM PREVIOUS PAGE`](https://doc.4d.com/4dv19R/help/command/en/page249.html)                                 | 249    |
 | [`FORM SCREENSHOT`](https://doc.4d.com/4dv19R/help/command/en/page940.html)                                    | 940    |
-| [`FORM SET ENTRY ORDER`](https://doc.4d.com/4dv19R/help/command/en/page1468.html)                              | 1468   |
+| [`FORM SET ENTRY ORDER`](https://doc.4d.com/4dv19R/help/command/en/page940.html)                               | 1468   |
 | [`FORM SET HORIZONTAL RESIZING`](https://doc.4d.com/4dv19R/help/command/en/page892.html)                       | 892    |
 | [`FORM SET INPUT`](https://doc.4d.com/4dv19R/help/command/en/page55.html)                                      | 55     |
 | [`FORM SET OUTPUT`](https://doc.4d.com/4dv19R/help/command/en/page54.html)                                     | 54     |
@@ -462,7 +462,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`Get selected menu item parameter`](https://doc.4d.com/4dv19R/help/command/en/page1005.html)                  | 1005   |
 | [`GET SERIAL INFORMATION`](https://doc.4d.com/4dv19R/help/command/en/page696.html)                             | 696    |
 | [`GET SERIAL PORT MAPPING`](https://doc.4d.com/4dv19R/help/command/en/page909.html)                            | 909    |
-| [`Get string resource`](https://doc.4d.com/4dv19R/help/command/en/page506.html)                                | 506    |
+| [`Get string resource`](https://doc.4d.com/4dv19R/help/command/en/page909.html)                                | 506    |
 | [`GET STYLE SHEET INFO`](https://doc.4d.com/4dv19R/help/command/en/page1256.html)                              | 1256   |
 | [`Get subrecord key`](https://doc.4d.com/4dv19R/help/command/en/page1137.html)                                 | 1137   |
 | [`GET SYSTEM FORMAT`](https://doc.4d.com/4dv19R/help/command/en/page994.html)                                  | 994    |
@@ -1205,9 +1205,9 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`TRIGGER PROPERTIES`](https://doc.4d.com/4dv19R/help/command/en/page399.html)                                 | 399    |
 | [`Trunc`](https://doc.4d.com/4dv19R/help/command/en/page95.html)                                               | 95     |
 | [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html)                                    | 1051   |
-| [`Tipo`](https://doc.4d.com/4dv19R/help/command/en/page295.html)                                               | 295    |
+| [`Type`](https://doc.4d.com/4dv19R/help/command/en/page295.html)                                               | 295    |
 | <a name="U">**U**</a>                                                                                     |        |
-| [`Indefinido`](https://doc.4d.com/4dv19R/help/command/en/page82.html)                                          | 82     |
+| [`Undefined`](https://doc.4d.com/4dv19R/help/command/en/page82.html)                                           | 82     |
 | [`UNION`](https://doc.4d.com/4dv19R/help/command/en/page120.html)                                              | 120    |
 | [`UNLOAD RECORD`](https://doc.4d.com/4dv19R/help/command/en/page212.html)                                      | 212    |
 | [`UNREGISTER CLIENT`](https://doc.4d.com/4dv19R/help/command/en/page649.html)                                  | 649    |
