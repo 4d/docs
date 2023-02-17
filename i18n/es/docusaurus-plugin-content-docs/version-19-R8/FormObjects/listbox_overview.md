@@ -663,7 +663,7 @@ Según el tipo de list box, puede utilizar diferentes propiedades para personali
 
 ## Imprimir list boxes
 
-Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Tenga en cuenta que la apariencia "Impresión" está disponible para los list boxes en el editor de formularios.
+Hay dos modos de impresión disponibles: **modo vista previa** - que se puede utilizar para imprimir un list box como un objeto de formulario y el **modo avanzado**, que le permite controlar la impresión del propio objeto list box en el formulario. Tenga en cuenta que la apariencia "Impresión" está disponible para los list boxes en el editor de formularios.
 
 ### Modo de vista previa
 
@@ -705,11 +705,11 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 Esta propiedad especifica que el list box debe mostrarse en forma jerárquica. En el formulario JSON, esta funcionalidad se activa [cuando el valor de la propiedad *dataSource* de la columna es un array](properties_Object.md#array-list-box), es decir, una colección.
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each element of the *dataSource* array to use as break column. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.
+Las opciones adicionales (**Variable 1...10**) están disponibles cuando se selecciona la opción *List box jerárquico*, correspondiente a cada elemento del array *dataSource* a utilizar como columna de ruptura. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. Estas variables definen los niveles jerárquicos a mostrar en la primera columna.
 
-The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). Esta primera variable está siempre visible y se puede editar. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. Se puede especificar un máximo de diez niveles jerárquicos. Si se elimina un valor, toda la jerarquía sube de nivel.
+La primera variable corresponde siempre al nombre de la variable de la primera columna del list box (los dos valores se vinculan automáticamente). Esta primera variable está siempre visible y se puede editar. Por ejemplo: country. La segunda variable también es siempre visible y editable; define el segundo nivel jerárquico. Por ejemplo: regions. A partir del tercer campo, cada variable depende de la anterior. Por ejemplo: counties, cities, etc. Se puede especificar un máximo de diez niveles jerárquicos. Si se elimina un valor, toda la jerarquía sube de nivel.
 
-The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:
+La última variable nunca es jerárquica aunque existan varios valores idénticos en este nivel. Por ejemplo, refiriéndonos a la configuración ilustrada anteriormente, imagine que arr1 contiene los valores A A B B B, arr2 tiene los valores 1 1 1 2 2 2 y arr3 los valores X X Y Y Z. En este caso, A, B, 1 y 2 podrían aparecer de forma contraída, pero no X e Y:
 
 ![](../assets/en/FormObjects/property_hierarchicalListBox.png)
 
@@ -717,19 +717,19 @@ Este principio no se aplica cuando sólo se especifica una variable en la jerarq
 > Si especifica una jerarquía basada en las primeras columnas de un list box existente, deberá eliminar u ocultar estas columnas (excepto la primera), ya que de lo contrario aparecerán duplicadas en el list box. Si especifica la jerarquía mediante el menú emergente del editor (ver abajo), las columnas innecesarias se eliminan automáticamente del list box.
 
 
-#### Crear una jerarquía mediante el menú contextual
+#### Crear una jerarquía utilizando el menú contextual
 
-When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
+Cuando selecciona al menos una columna además de la primera en un objeto list box (de tipo array) en el editor de formularios, el comando **Crear jerarquía** está disponible en el menú contextual:
 
 ![](../assets/en/FormObjects/listbox_hierarchy1.png)
 
 Este comando es un acceso directo para definir una jerarquía. Cuando se selecciona, se llevan a cabo las siguientes acciones:
 
-*   The **Hierarchical list box** option is checked for the object in the Property List.
+*   La opción **List box jerárquico** está marcada para el objeto en la Lista de propiedades.
 *   Las variables de las columnas se utilizan para definir la jerarquía. Reemplazan las variables ya definidas.
 *   Las columnas seleccionadas ya no aparecen en el list box (excepto el título de la primera).
 
-Ejemplo: dado un list box cuyas primeras columnas contienen País, Región, Ciudad y Población. When Country, Region and City are selected, if you choose **Create hierarchy** in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
+Ejemplo: dado un list box cuyas primeras columnas contienen País, Región, Ciudad y Población. Cuando se seleccionan País, Región y Ciudad, si se elige **Crear jerarquía** en el menú contextual, se crea una jerarquía de tres niveles en la primera columna, se eliminan las columnas 2 y 3 y la columna Población pasa a ser la segunda:
 
 ![](../assets/en/FormObjects/listbox_hierarchy2.png)
 
@@ -904,16 +904,16 @@ ARRAY OBJECT(obColumn;0) //column array
 
 #### valueType y visualización de datos
 
-When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Los valores valueType soportados son:
+Cuando una columna de list box está asociada a un array de objetos, la forma en que se muestra, introduce o edita una celda se basa en el atributo valueType del elemento del array. Los valores valueType soportados son:
 
 *   "text": para un valor de texto
-*   "real": for a numeric value that can include separators like a `\&#060;space&#062;`, `&#060;.&#062;`, or `&#060;,&#062;`
+*   "real": para un valor numérico que puede incluir separadores como un `\&#060;espacio&#062;`, `&#060;.&#062;`, o `&#060;,&#062;`
 *   "integer": para un valor entero
 *   "boolean": para un valor True/False
 *   "color": para definir un color de fondo
 *   "event": para mostrar un botón con una etiqueta.
 
-4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). La siguiente tabla muestra la visualización por defecto, así como las alternativas para cada tipo de valor:
+4D utiliza widgets por defecto en función del valor "valueType" (es decir, un "text" se muestra como un widget de entrada de texto, un "boolean" como una casilla de selección), pero también están disponibles visualizaciones alternativas a través de opciones (*por ejemplo*, un real también se puede representar como un menú desplegable). La siguiente tabla muestra la visualización por defecto, así como las alternativas para cada tipo de valor:
 
 | valueType | Widget por defecto                                  | Widget(s) alternativo(s)                                                                                                |
 | --------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
