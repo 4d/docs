@@ -13,21 +13,21 @@ Un [datastore](dsMapping.md#datastore) expuesto en una aplicación 4D se puede a
 
 ## Apertura de las sesiones
 
-When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
+Cuando se trabaja con un datastore remoto referenciado a través de llamadas al comando `Open datastore`, la conexión entre los procesos que efectúan la petición y el datastore remoto se gestiona a través de sesiones.
 
-Se crea una sesión en el datastore remoto para gestionar la conexión. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. This session automatically manages access to data, entity selections, or entities.
+Se crea una sesión en el datastore remoto para gestionar la conexión. Esta sesión se identifica mediante un ID de sesión interno que se asocia al `localID` del lado de la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
 
-The `localID` is local to the machine that connects to the remote datastore, which means:
+El `localID` es local a la máquina que se conecta al datastore remoto, lo que significa:
 
-*   If other processes of the same application need to access the same remote datastore, they can use the same `localID` and thus, share the same session.
-*   If another process of the same application opens the same remote datastore but with another `localID`, it will create a new session on the remote datastore.
-*   If another machine connects to the same remote datastore with the same `localID`, it will create another session with another cookie.
+*   Si otros procesos de la misma aplicación necesitan acceder al mismo datastore remoto, pueden utilizar el mismo `localID` y, de este modo, compartir la misma sesión.
+*   Si otro proceso de la misma aplicación abre el mismo datastore remoto pero con otro `localID`, creará una nueva sesión en el datastore remoto.
+*   Si otra máquina se conecta al mismo datastore remoto con el mismo `localID`, creará otra sesión con otra cookie.
 
 Estos principios se ilustran en los gráficos siguientes:
 
 ![](../assets/en/ORDA/sessions.png)
 
-> For sessions opened by REST requests, please refer to [Users and sessions](REST/authUsers.md).
+> Para las sesiones abiertas por peticiones REST, consulte [Usuarios y sesiones](REST/authUsers.md).
 
 ### Visualización de las sesiones
 
@@ -43,10 +43,10 @@ En el siguiente ejemplo, se están ejecutando dos procesos para la misma sesión
 
 ### Bloqueo y transacciones
 
-ORDA features related to entity locking and transaction are managed at process level in remote datastores, just like in ORDA client/server mode:
+Las funcionalidades ORDA relacionadas con el bloqueo de entidades y transacciones se gestionan a nivel del proceso en los datastores remotos, igual que en el modo cliente/servidor ORDA:
 
-*   If a process locks an entity from a remote datastore, the entity is locked for all other processes, even when these processes share the same session (see [Entity locking](entities.md#entity-locking)). If several entities pointing to a same record have been locked in a process, they must be all unlocked in the process to remove the lock. If a lock has been put on an entity, the lock is removed when there is no more reference to this entity in memory.
-*   Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. No afectan a otros almacenes de datos.
+*   Si un proceso bloquea una entidad de un datastores remoto, la entidad se bloquea para todos los otros procesos, incluso cuando estos procesos comparten la misma sesión (ver [Bloqueo de entidades](entities.md#entity-locking)). Si varias entidades que apuntan a un mismo registro han sido bloqueadas en un proceso, todas deben ser desbloqueadas en el proceso para eliminar el bloqueo. Si se ha puesto un bloqueo en una entidad, el bloqueo se elimina cuando ya no hay ninguna referencia a esta entidad en la memoria.
+*   Las transacciones pueden iniciarse, validarse o cancelarse por separado en cada almacén de datos remoto mediante las funciones `dataStore.startTransaction()`, `dataStore.cancelTransaction()` y `dataStore.validateTransaction()`. No afectan a otros almacenes de datos.
 *   Los comandos clásicos del lenguaje 4D (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) sólo se aplican al datastore principal (devuelto por `ds`). Si una entidad de un datastore remoto es retenida por una transacción en un proceso, los otros procesos no pueden actualizarla, incluso si estos procesos comparten la misma sesión.
 *   Los bloqueos en las entidades son eliminados y las transacciones son anuladas:
     *   cuando el proceso es eliminado.
@@ -70,7 +70,7 @@ Si se envía una solicitud al almacén de datos remoto después de haber cerrado
 El contexto de optimización se basa en las siguientes implementaciones:
 
 * Cuando un cliente solicita una selección de entidades al servidor, 4D "aprende" automáticamente qué atributos de la selección de entidades se utilizan realmente del lado del cliente durante la ejecución del código, y genera un "contexto de optimización" correspondiente. Este contexto se adjunta a la selección de la entidad y almacena los atributos utilizados. Se actualizará dinámicamente si se utilizan posteriormente otros atributos. Los siguientes métodos y funciones activan la fase de aprendizaje:
-  * [`Crear una entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
+  * [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
   * [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   * [`dataClass.all()`](../API/DataClassClass.md#all)
   * [`dataClass.get()`](../API/DataClassClass.md#get)
