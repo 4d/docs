@@ -51,7 +51,7 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 
 > ユーザーのカレントフォルダーは、macOS では "~" コマンドを、Windows では "%HOMEPATH%" コマンドを使用することで取得することができます。
 
-Launch a 4D application stored on the desktop:
+デスクトップ上に置かれた 4Dアプリケーションの起動:
 
 *   macOS:
 
@@ -70,13 +70,13 @@ open "~/Desktop/4D Server.app"
 ```
 
 
-Open a package file on macOS:
+macOS上でパッケージファイルを開く:
 
 ```bash
 --args ~/Documents/myDB.4dbase
 ```
 
-Open a project file:
+プロジェクトファイルを開く:
 
 *   macOS:
 
@@ -95,7 +95,7 @@ Open a project file:
 
 
 
-Open a project file and a data file:
+データファイルを指定してプロジェクトファイルを開く:
 
 *   macOS:
 
@@ -109,11 +109,11 @@ Open a project file and a data file:
 
 ```bash
 --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
-or:
+または:
 /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-Open a .4DLink file:
+.4DLink ファイルを開く:
 
 *   macOS:
 
@@ -130,7 +130,7 @@ Open a .4DLink file:
 %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
-Open compiled mode and create a data file if not available:
+コンパイルモードで起動し、データファイルが利用できない場合には作成する:
 
 *   macOS:
 
@@ -146,7 +146,7 @@ Open compiled mode and create a data file if not available:
 %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-Open a project file and a data file and pass a string as a user parameter:
+データファイルを指定してプロジェクトファイルを開き、ユーザー引数として文字列を渡す:
 
 *   macOS:
 
@@ -162,7 +162,7 @@ Open a project file and a data file and pass a string as a user parameter:
 --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-Open without interface (headless mode):
+インターフェースなしで起動する (ヘッドレスモード):
 
 *   macOS:
 
