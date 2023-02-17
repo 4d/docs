@@ -185,7 +185,7 @@ La [documentation](https://doc.4d.com) del comando ....
 [1]: https://blog.4d.com
 ```
 
-- The image tags are supported:
+- Las etiquetas de imagen son soportadas:
 
 ```md
 ![image info](pictures/image.png)
@@ -194,7 +194,7 @@ La [documentation](https://doc.4d.com) del comando ....
 
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo blog 4D con enlace](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "Logo del blog 4D")](https://blog.4d.com)
 
 > Para más información, consulte la [guía Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
 
@@ -203,7 +203,7 @@ La [documentation](https://doc.4d.com) del comando ....
 
 ## Ejemplo
 
-In the `WP SwitchToolbar.md` file, you can write:
+En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ````md
 <!-- This method returns a different logo depending on the size parameter -->
@@ -220,8 +220,8 @@ GetLogo (size) -> logo
 
 ## Description
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter.
-1 = smallest size, 5 = largest size.
+Este método devuelve un logo de un tamaño específico, dependiendo del valor del parámetro *size*.
+1 = tamaño más pequeño, 5 = tamaño más grande.
 
 ## Example
 
@@ -229,15 +229,15 @@ This method returns a logo of a specific size, depending on the value of the *si
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Get the largest logo
+//Obtener el logotipo más grande
 $logo:=GetLogo(5)
 ```
 ````
 
-- Explorer view:
+- Vista del explorador:
 
 ![](../assets/en/Project/explorer_Doc.png)
 
-- Code editor view:
+- Vista del editor de código:
 
 ![](../assets/en/Project/comments-explo5.png)
