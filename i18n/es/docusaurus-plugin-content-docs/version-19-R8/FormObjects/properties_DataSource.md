@@ -204,7 +204,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean  
     Puede utilizar campos de la tabla maestra o de otras tablas.
 
-- A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
+- A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
   - String
   - Numeric
   - Fecha
@@ -212,7 +212,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean
 
  For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use `This.\&#060;propertyPath&#062;` where `\&#060;propertyPath&#062;` is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. En este caso, utilizará `This.value` como expresión.
+When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. Por ejemplo, puede utilizar `This.\&#060;propertyPath&#062;` donde `\&#060;propertyPath&#062;` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad. Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
 
  If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
 

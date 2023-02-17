@@ -30,7 +30,7 @@
     "message": "Gestión de código"
   },
   "Debugging": {
-    "message": "Debugging"
+    "message": "Depuración"
   },
   "Settings": {
     "message": "Settings"
@@ -163,7 +163,7 @@
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Try again",
+    "message": "Inténtelo de nuevo",
     "description": "The label of the button to try again when the page crashed"
   },
   "theme.NotFound.title": {
