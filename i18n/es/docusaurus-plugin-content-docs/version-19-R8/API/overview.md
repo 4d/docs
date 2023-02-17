@@ -1329,7 +1329,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`WP Get position`](https://doc.4d.com/4dv19R/help/command/en/page1577.html)                        | 1577   |
 | [`WP Get section`](https://doc.4d.com/4dv19R/help/command/en/page1581.html)                         | 1581   |
 | [`WP Get sections`](https://doc.4d.com/4dv19R/help/command/en/page1580.html)                        | 1580   |
-| [`WP Get style sheet`](https://doc.4d.com/4dv19R/help/command/en/page1656.html)                     | 1656   |
+| [`1580`](https://doc.4d.com/4dv19R/help/command/en/page1656.html)                                   | 1656   |
 | [`WP Get style sheets`](https://doc.4d.com/4dv19R/help/command/en/page1655.html)                    | 1655   |
 | [`WP Get subsection`](https://doc.4d.com/4dv19R/help/command/en/page1582.html)                      | 1582   |
 | [`WP Get text`](https://doc.4d.com/4dv19R/help/command/en/page1575.html)                            | 1575   |
