@@ -1365,7 +1365,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`WP DELETE FOOTER`](https://doc.4d.com/4dv19/help/command/en/page1589.html)                                  | 1589   |
 | [`WP DELETE HEADER`](https://doc.4d.com/4dv19/help/command/en/page1588.html)                                  | 1588   |
 | [`WP DELETE PICTURE`](https://doc.4d.com/4dv19/help/command/en/page1701.html)                                 | 1701   |
-| [`WP DELETE STYLE SHEET`](https://doc.4d.com/4dv19/help/command/en/page1652.html)                             | 1652   |
+| [`1701`](https://doc.4d.com/4dv19/help/command/en/page1652.html)                                              | 1652   |
 | [`WP DELETE SUBSECTION`](https://doc.4d.com/4dv19/help/command/en/page1584.html)                              | 1584   |
 | [`WP EXPORT DOCUMENT`](https://doc.4d.com/4dv19/help/command/en/page1337.html)                                | 1337   |
 | [`WP EXPORT VARIABLE`](https://doc.4d.com/4dv19/help/command/en/page1319.html)                                | 1319   |

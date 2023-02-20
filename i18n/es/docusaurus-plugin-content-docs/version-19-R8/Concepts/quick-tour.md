@@ -380,7 +380,7 @@ For($vCounter;1;100) //Inicio del bucle
  End for
 ```
 
-#### Inline or multiline comments (`/*comment*/`)
+#### Comentarios en línea o multilínea (`/*comment*/`)
 
 Rodea el contenido con los caracteres `/*` ... `*/` para crear comentarios en línea o bloques de comentarios multilínea. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
