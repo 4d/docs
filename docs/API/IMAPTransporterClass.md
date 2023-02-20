@@ -132,7 +132,9 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 |Version|Changes|
 |---|---|
+|v20|Supports custom keywords|
 |v18 R6|Added|
+
 
 </details>
 
@@ -169,6 +171,8 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 |$flagged |Boolean  |True to add the "flagged" flag to the message|
 |$answered |Boolean  |True to add the "answered" flag to the message|
 |$deleted |Boolean | True to add the "deleted" flag to the message|
+
+The `keywords` parameter also supports custom keywords. They must respect this rule: the keyword must be a case-insensitive string excluding control chars and space and can not include any of these characters: `( ) { ] % * " \`
 
 >* False values are ignored.
 >* The interpretation of keyword flags may vary per mail client.
@@ -741,8 +745,8 @@ $status:=$transporter.expunge()
 
 |Version|Changes|
 |---|---|
+|v20|*id* is returned|
 |v18 R5|*name* is optional|
-
 |v18 R4|Added|
 
 </details>
@@ -773,6 +777,7 @@ The `boxInfo` object returned contains the following properties:
 |name|text|Name of the mailbox
 |mailCount| number| Number of messages in the mailbox|
 |mailRecent| number| Number of messages with the "recent" flag (indicating new messages)|
+|id| text| Unique id of the mailbox|
 
 #### Example
 
@@ -1318,7 +1323,9 @@ The function returns a collection of strings (unique IDs).
 
 |Version|Changes|
 |---|---|
+|v20|Supports custom keywords|
 |v18 R6|Added|
+
 
 </details>
 
@@ -1356,7 +1363,9 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 |$answered |Boolean  |True to remove the "answered" flag from the message|
 |$deleted |Boolean | True to remove the "deleted" flag from the message|
 
-Note that False values are ignored.
+The `keywords` parameter also supports custom keywords. They must respect this rule: the keyword must be a case-insensitive string excluding control chars and space and can not include any of these characters: `( ) { ] % * " \`
+
+>* Note that False values are ignored.
 
 **Returned object**
 
@@ -1625,7 +1634,9 @@ Examples:
 
 |Version|Changes|
 |---|---|
+|v20|*id*, *flags*, *permanentFlags* are returned|
 |v18 R4|Added|
+
 
 </details>
 
@@ -1667,6 +1678,9 @@ The `boxInfo` object returned contains the following properties:
 |name| Text|Name of the mailbox|
 |mailCount|number|Number of messages in the mailbox|
 |mailRecent|number|Number of messages with the "recent" flag |
+|id|text|Unique id of the mailbox |
+|flags|text|List of flags currently used for the mailbox |
+|permanentFlags|text|List of flags that the client can change permanently (except for the \Recent flag, which is managed by the IMAP server) |
 
 #### Example
 
