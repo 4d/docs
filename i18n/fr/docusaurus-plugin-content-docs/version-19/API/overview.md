@@ -1,13 +1,13 @@
 ---
 id: overview
-title: Class functions and commands
+title: Fonctions de classe et commandes
 ---
 
 Cette section décrit l'API des classes 4D intégrées ainsi que les commandes de constructeur associées. Les propriétés et fonctions de classe 4D sont disponibles via les objets d'instance de classe.
 
-- functions must be called on instances with the `()` operator. For example, `collection.sort()`.
-- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
-- commands can be called independantly, with or without parameters. For example `Folder(fk database folder)`.
+- les fonctions doivent être appelées sur des instances avec l'opérateur `()`. Par exemple, `collection.sort()`.
+- les propriétés sont appelées sans parenthèses, par exemple `file.creationTime`. Vous pouvez également utiliser la syntaxe \[], par exemple `file["creationTime"]`.
+- les commandes peuvent être appelées indépendamment, avec ou sans paramètres. Par exemple `Folder(fk database folder)`.
 
 ## Conventions d'écriture
 
@@ -17,9 +17,9 @@ Les conventions suivantes sont utilisées dans la syntaxe de la fonction :
 - la notation `{ ; ...param }` indique un nombre illimité de paramètres. Par exemple, `.concat( value : any { ;...valueN } ) : Collection` signifie qu'un nombre illimité de valeurs de n'importe quel type peut être passé à la fonction.
 - le mot-clé `any` est utilisé pour désigner un paramètre de tout type qui peut être stocké dans des attributs (nombre, texte, booléen, date, heure, objet, collection...).
 
-## Classic commands
+## Commandes classiques
 
-In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
+En plus des fonctions de classe intégrées, le langage 4D contient des centaines de commandes "classiques". Ces commandes sont décrites dans le manuel *Langage 4D* sur [doc.4d.com](https://doc.4d.com). Pour référence, elles sont énumérées ci-dessous :
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 

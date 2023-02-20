@@ -30,8 +30,8 @@ Syntaxe :
 | Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Value                                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `applicationPath`                                                                                                                                                                            | Chemin de 4D, 4D Server ou de l'application fusionnée | Lance l'application. Identique au double-clic sur l'application 4D. Lorsqu'elle est appelée sans argument de fichier de structure, l'application est exécutée et la boîte de dialogue «sélectionner la base de données» apparaît.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `--version`                                                                                                                                                                                  |                                                       | Displays application version and exits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `--help`                                                                                                                                                                                     |                                                       | Displays help and exits. Autres arguments : -?, -h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `--version`                                                                                                                                                                                  |                                                       | Affiche la version de l'application et quitte                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `--help`                                                                                                                                                                                     |                                                       | Affiche le message d'aide et quitte. Autres arguments : -?, -h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `--project`                                                                                                                                                                                  | projectPath &#124; packagePath &#124; 4dlinkPath      | Fichier de projet à ouvrir avec le fichier de données courant. Aucune boîte de dialogue n'apparaît.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `--data`                                                                                                                                                                                     | dataPath                                              | Fichier de données à ouvrir avec le fichier de projet désigné. S'il n'est pas indoqué, 4D utilise le dernier fichier de données ouvert.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `--opening-mode`                                                                                                                                                                             | interpreted &#124; compiled                           | Base de données de requêtes à ouvrir en mode interprété ou compilé. Aucune erreur n'est générée si le mode demandé n'est pas disponible.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -51,7 +51,7 @@ Syntaxe :
 
 > Le dossier courant de l'utilisateur est atteint à l'aide de la commande "~" sous macOS et de la commande "%HOMEPATH%" sous Windows.
 
-Launch a 4D application stored on the desktop:
+Lancez une application 4D stockée sur le bureau :
 
 *   Sous macOS :
 
@@ -70,13 +70,13 @@ open "~/Desktop/4D Server.app"
 ```
 
 
-Open a package file on macOS:
+Ouvrez un paquet sur macOS :
 
 ```bash
 --args ~/Documents/myDB.4dbase
 ```
 
-Open a project file:
+Ouvrez un fichier de projet :
 
 *   Sous macOS :
 
@@ -95,7 +95,7 @@ Open a project file:
 
 
 
-Open a project file and a data file:
+Ouvrez un fichier de projet et un fichier de données :
 
 *   Sous macOS :
 
@@ -109,11 +109,11 @@ Open a project file and a data file:
 
 ```bash
 --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
-or:
+ou :
 /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-Open a .4DLink file:
+Ouvrez un fichier .4DLink :
 
 *   Sous macOS :
 
@@ -130,7 +130,7 @@ Open a .4DLink file:
 %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
-Open compiled mode and create a data file if not available:
+Lancez l'application en mode compilé et créer un fichier de données s'il n'est pas disponible :
 
 *   Sous macOS :
 
@@ -146,7 +146,7 @@ Open compiled mode and create a data file if not available:
 %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-Open a project file and a data file and pass a string as a user parameter:
+Lancez l'application avec un fichier projet et un fichier de données :
 
 *   Sous macOS :
 
@@ -162,7 +162,7 @@ Open a project file and a data file and pass a string as a user parameter:
 --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-Open without interface (headless mode):
+Ouverture sans interface (mode headless) :
 
 *   Sous macOS :
 

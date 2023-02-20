@@ -17,16 +17,16 @@ title: クラス関数とコマンド
 - `{ ; ...param }` という表記は、パラメーターの数に制限がないことを示します。 たとえば、`.concat( value : any { ;...valueN } ) : Collection` という表記の場合、データ型および数に制限なく関数に引数を渡すことができます。
 - `any` キーワードは、属性として保存可能な範囲 (数値、テキスト、ブール、日付、時間、オブジェクト、コレクション) でデータ型に制限のないパラメーターを示すのに使用されます。
 
-## Classic commands
+## クラシックコマンド
 
-In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
+ビルトインのクラス関数に加え、4Dランゲージには何百の "クラシック" コマンドが含まれています。 これらのコマンドは、[doc.4d.com](https://doc.4d.com) の *4D ランゲージリファレンス* で説明されています。 参照用に以下に一覧を示します:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
 
 | 名称                                                                                                  | Number |
 | --------------------------------------------------------------------------------------------------- | ------ |
-| [`4D`](https://doc.4d.com/4dv19R/help/command/en/page1709.html)                                     | 1709   |
+| [`4D`](https://doc.4d.com/4dv19R/help/command/ja/page1709.html)                                     | 1709   |
 | <a name="A">**A**</a>                                                                           |        |
 | [`ABORT`](https://doc.4d.com/4dv19R/help/command/en/page156.html)                                   | 156    |
 | [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19R/help/command/en/page1634.html)                    | 1634   |

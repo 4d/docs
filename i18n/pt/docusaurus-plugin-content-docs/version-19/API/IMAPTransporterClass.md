@@ -635,9 +635,9 @@ Para apagar todas as mensagens na caixa de correio actual:
 A função `.deleteBox()` <!-- REF #IMAPTransporterClass.deleteBox().Summary -->remove permanentemente a caixa de correio com o nome `dado` do servidor IMAP<!-- END REF -->. A tentativa de apagar uma INBOX ou uma caixa de correio que não existe, gerará um erro.
 
 No parâmetro `name` , passar o nome da caixa de correio para eliminar.
-> * The function cannot delete a mailbox that has child mailboxes if the parent mailbox has the "\Noselect" attribute.
-> * All messages in the deleted mailbox will also be deleted.
-> * The ability to delete a mailbox depends on the mail server.
+> * A função não pode apagar uma caixa de correio que tenha caixas de correio para crianças se a caixa de correio dos pais tiver o atributo "\Noselect".
+> * Todas as mensagens na caixa de correio eliminadas serão também eliminadas.
+> * A capacidade de apagar uma caixa de correio depende do servidor de correio.
 
 **Objeto devolvido**
 
@@ -654,7 +654,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 #### Exemplo
 
-To delete the "Nova Orion Industries" child mailbox from the "Bills" mailbox hierarchy:
+Para eliminar a caixa de correio filha "Nova Orion Industries" da hierarquia da caixa de correio "Bills":
 
 ```4d
 var $pw; $name : text
@@ -670,7 +670,7 @@ $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// delete mailbox
+// apagar mailbox
 $name:="Bills"+$transporter.getDelimiter()+"Nova Orion Industries"
 $status:=$transporter.deleteBox($name)
 
@@ -699,15 +699,15 @@ End if
 
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                   |
-| ---------- | ------ |:--:| ----------------------------------------------------------- |
-| Resultados | Objeto | <- | Status of the expunge operation |<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                 |
+| ---------- | ------ |:--:| --------------------------------------------------------- |
+| Resultados | Objeto | <- | Estado da operação de expurgo |<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
+A função `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->remove todas as mensagens com o marcador "apagada" do servidor de correio IMAP.<!-- END REF --> O marcador "apagada" pode ser definida com os métodos [`.delete()`](#delete) ou [`.addFlags()`](#addflags) .
 
 **Objeto devolvido**
 
@@ -734,17 +734,17 @@ $options.port:=993
 $options.user:="4d@gmail.com"
 $options.password:="xxxxx"
 
-// Create transporter
+// Criar transporter
 $transporter:=IMAP New transporter($options)
 
-// Select mailbox
+// Selecionar mailbox
 $boxInfo:=$transporter.selectBox("INBOX")
 
-// Find and delete all seen messages in INBOX
+// Encontrar e apagar todas as mensagens vistas no INBOX
 $ids:=$transporter.searchMails("SEEN")
 $status:=$transporter.delete($ids)
 
-// Purge all messages flagged as deleted
+// Expurga todas as mensagens marcadas como apagadas
 $status:=$transporter.expunge()
 ```
 
@@ -770,28 +770,28 @@ $status:=$transporter.expunge()
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
 | Parâmetros | Tipo   |    | Descrição                                 |
 | ---------- | ------ |:--:| ----------------------------------------- |
-| name       | Text   | -> | Name of the mailbox                       |
+| name       | Text   | -> | Nome da nova caixa de correio             |
 | Resultados | Objeto | <- | boxInfo object|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
+A função `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->devolve um objeto `boxInfo` correspondente à maibox actual, ou a caixa de correio *nome*<!-- END REF -->. Esta função devolve a mesma informação que [`.selectBox()`](#selectbox) sem alterar a caixa de correio actual.
 
-In the optional *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+No parâmetro opcional *nome* , passe o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
 
-If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
+Se a caixa de correio *nome* não for seleccionável ou não existir, a função gera um erro e devolve **null**.
 
 **Objeto devolvido**
 
 O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
-| Propriedade | Tipo   | Descrição                                                           |
-| ----------- | ------ | ------------------------------------------------------------------- |
-| name        | text   | Name of the mailbox                                                 |
-| mailCount   | number | Número de mensagens na caixa de email                               |
-| mailRecent  | number | Number of messages with the "recent" flag (indicating new messages) |
+| Propriedade | Tipo   | Descrição                                                                |
+| ----------- | ------ | ------------------------------------------------------------------------ |
+| name        | text   | Nome da nova caixa de correio                                            |
+| mailCount   | number | Número de mensagens na caixa de email                                    |
+| mailRecent  | number | Número de mensagens com o marcador "recente" (indicando novas mensagens) |
 
 #### Exemplo
 
@@ -821,30 +821,30 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------- |
-| parameters | Objeto     | -> | Parameter object                                         |
-| Resultados | Collection | <- | Collection of mailbox objects|<!-- END REF -->
+| Parâmetros | Tipo       |    | Descrição                                                         |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------- |
+| parameters | Objeto     | -> | Parâmetro objecto                                                 |
+| Resultados | Collection | <- | Coleção de objetos da caixa de correio|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getBoxList()` <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
+A função `.getBoxList()` <!-- REF #IMAPTransporterClass.getBoxList().Summary -->devolve uma colecção de caixas de correio descrevendo todas as caixas de correio disponíveis<!-- END REF -->. Esta função permite gerir localmente a lista de mensagens localizadas no servidor de correio IMAP.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Pode passar:
+No parâmetro opcional `` , passe um objeto contendo valores para filtrar as caixas de correio devolvidas. Pode passar:
 
 | Propriedade  | Tipo     | Descrição                                            |
 | ------------ | -------- | ---------------------------------------------------- |
-| isSubscribed | Booleano | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li> |
+| isSubscribed | Booleano | <li>**True*** para devolver apenas caixas de correio inscritas</li><li> **False*** para devolver todas as caixas de correio disponíveis</li> |
 
 #### Resultados
 
-Each object of the returned collection contains the following properties:
+Cada objecto da coleção devolvida contém as seguintes propriedades:
 
 | Propriedade      | Tipo    | Descrição                                                                                                            |
 | ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | text    | Name of the mailbox                                                                                                  |
+| \[].name        | text    | Nome da nova caixa de correio                                                                                        |
 | \[].selectable  | boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>               |
 | \[].inferior    | boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul> |
 | \[].interesting | boolean | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>                      |
@@ -1658,7 +1658,7 @@ Search-keys may request the value to search for:
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
 | Parâmetros | Tipo    |    | Descrição                                 |
 | ---------- | ------- |:--:| ----------------------------------------- |
-| name       | Text    | -> | Name of the mailbox                       |
+| name       | Text    | -> | Nome da nova caixa de correio             |
 | state      | Integer | -> | Mailbox access status                     |
 | Resultados | Objeto  | <- | boxInfo object|<!-- END REF -->
 
@@ -1669,7 +1669,7 @@ Search-keys may request the value to search for:
 A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
 
 The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
@@ -1687,7 +1687,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 | Propriedade | Tipo   | Descrição                                 |
 | ----------- | ------ | ----------------------------------------- |
-| name        | Text   | Name of the mailbox                       |
+| name        | Text   | Nome da nova caixa de correio             |
 | mailCount   | number | Número de mensagens na caixa de email     |
 | mailRecent  | number | Number of messages with the "recent" flag |
 
@@ -1724,7 +1724,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                    |
 | ---------- | ------ |:--:| ------------------------------------------------------------ |
-| name       | Text   | -> | Name of the mailbox                                          |
+| name       | Text   | -> | Nome da nova caixa de correio                                |
 | Resultados | Objeto | <- | Status of the subscribe operation|<!-- END REF -->
 
 |
@@ -1795,7 +1795,7 @@ End if
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                      |
 | ---------- | ------ |:--:| -------------------------------------------------------------- |
-| name       | Text   | -> | Name of the mailbox                                            |
+| name       | Text   | -> | Nome da nova caixa de correio                                  |
 | Resultados | Objeto | <- | Status of the unsubscribe operation|<!-- END REF -->
 
 |

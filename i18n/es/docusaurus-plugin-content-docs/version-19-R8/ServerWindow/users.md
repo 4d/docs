@@ -38,14 +38,14 @@ Este estado libera recursos en el servidor. Además, la aplicación 4D remota se
 
 Se soporta el siguiente escenario: un usuario remoto deja de trabajar durante un tiempo, por ejemplo durante una pausa para comer, pero mantiene abierta la conexión con el servidor. La máquina pasa al modo reposo. Cuando el usuario regresa, despierta la máquina y la aplicación 4D remota recupera automáticamente su conexión con el servidor, así como el contexto de la sesión.
 
-> Una sesión remota durmiente es abandonada automáticamente por el servidor tras 48 horas de inactividad. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
+> Una sesión remota durmiente es abandonada automáticamente por el servidor tras 48 horas de inactividad. Puede modificar este tiempo de espera por defecto utilizando el comando [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) con el selector `Remote connection sleep timeout`.
 
 
 ## Área de búsqueda/filtrado
 
-This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
+Esta función permite reducir el número de líneas que aparecen en la lista a las que corresponden al texto introducido en el área de búsqueda. El área indica las columnas en las que se realizará la búsqueda/filtrado. En la página Usuarios, serán las columnas Usuario 4D, Nombre de máquina y Nombre de sesión.
 
-La lista se actualiza en tiempo real a medida que se introduce texto en el área. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. En este caso se utiliza el operador de tipo `OR`. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+La lista se actualiza en tiempo real a medida que se introduce texto en el área. Es posible introducir más de un valor a buscar: separe los valores con punto y coma. En este caso se utiliza el operador de tipo `OR`. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
 
 
 ## Botones de administración
