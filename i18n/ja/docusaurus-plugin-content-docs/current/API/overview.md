@@ -26,7 +26,7 @@ title: クラス関数とコマンド
 
 | 名称                                                                                                  | 番号   |
 | --------------------------------------------------------------------------------------------------- | ---- |
-| [`4D`](https://doc.4d.com/4dv19R/help/command/en/page1709.html)                                     | 1709 |
+| [`4D`](https://doc.4d.com/4dv19R/help/command/ja/page1709.html)                                     | 1709 |
 | <a name="A">**A**</a>                                                                           |      |
 | [`ABORT`](https://doc.4d.com/4dv19R/help/command/en/page156.html)                                   | 156  |
 | [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19R/help/command/en/page1634.html)                    | 1634 |
