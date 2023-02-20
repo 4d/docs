@@ -162,19 +162,20 @@ In the `msgIDs` parameter, you can pass either:
  |---|---|---|
  |IMAP all |1 |Select all messages in the selected mailbox|
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to add to `msgIDs`. You can pass any of the following keywords:
+The `keywords` parameter lets you define the flags to add to `msgIDs`. You can use the following standard flags as well as custom flags (custom flags support depends on the server implementation):
 
-|Parameter|Type|Description|
+|Property|Type|Description|
 |---|---|---|
 |$draft |Boolean |True to add the "draft" flag to the message |
 |$seen |Boolean  |True to add the "seen" flag to the message|
 |$flagged |Boolean  |True to add the "flagged" flag to the message|
 |$answered |Boolean  |True to add the "answered" flag to the message|
 |$deleted |Boolean | True to add the "deleted" flag to the message|
+|`<custom flag>` |Boolean | True to add the custom flag to the message|
 
-The `keywords` parameter also supports custom keywords. They must respect this rule: the keyword must be a case-insensitive string excluding control chars and space and can not include any of these characters: `( ) { ] % * " \`
+The custom flags names must respect this rule: the keyword must be a case-insensitive string excluding control chars and space and can not include any of these characters: `( ) { ] % * " \`
 
->* False values are ignored.
+>* For a keyword to be taken into account it has to be true.
 >* The interpretation of keyword flags may vary per mail client.
 
 **Returned object**
@@ -1353,7 +1354,7 @@ In the `msgIDs` parameter, you can pass either:
  |---|---|---|
  |IMAP all |1 |Select all messages in the selected mailbox|
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. You can pass any of the following keywords:
+The `keywords` parameter lets you define the flags to remove from `msgIDs`. You can use the following standard flags as well as custom flags:
 
 |Parameter|Type|Description|
 |---|---|---|
@@ -1362,10 +1363,11 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 |$flagged |Boolean  |True to remove the "flagged" flag from the message|
 |$answered |Boolean  |True to remove the "answered" flag from the message|
 |$deleted |Boolean | True to remove the "deleted" flag from the message|
+|`<custom flag>` |Boolean | True to remove the custom flag from the message|
 
-The `keywords` parameter also supports custom keywords. They must respect this rule: the keyword must be a case-insensitive string excluding control chars and space and can not include any of these characters: `( ) { ] % * " \`
+Please refer to [.addFlags()](#addflags) for more information on custom flags.
 
->* Note that False values are ignored.
+>* For a keyword to be taken into account it has to be true.
 
 **Returned object**
 
@@ -1679,8 +1681,14 @@ The `boxInfo` object returned contains the following properties:
 |mailCount|number|Number of messages in the mailbox|
 |mailRecent|number|Number of messages with the "recent" flag |
 |id|text|Unique id of the mailbox |
-|flags|text|List of flags currently used for the mailbox |
-|permanentFlags|text|List of flags that the client can change permanently (except for the \Recent flag, which is managed by the IMAP server) |
+|flags|text|List of flags currently used for the mailbox, separated by spaces|
+|permanentFlags|text|List of flags that the client can change permanently (except for the \Recent flag, which is managed by the IMAP server), separated by spaces|
+
+:::info
+
+If `permanentFlags` string includes the special flag \*, it means that the server supports [custom flags](#addflags).
+
+:::
 
 #### Example
 
