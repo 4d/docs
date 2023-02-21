@@ -263,10 +263,10 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                                   |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número da mensagem que na lista                                             |
-| Resultados | Objeto  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF --> |
+| Parâmetros | Tipo    |    | Descrição                                                                    |
+| ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
+| msgNumber  | Integer | -> | Número da mensagem que na lista                                              |
+| Resultados | Objeto  | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF --> |
 
 ##### Descrição
 
