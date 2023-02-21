@@ -842,16 +842,16 @@ No parâmetro opcional `` , passe um objeto contendo valores para filtrar as cai
 
 Cada objecto da coleção devolvida contém as seguintes propriedades:
 
-| Propriedade      | Tipo    | Descrição                                                                                                            |
-| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | text    | Nome da nova caixa de correio                                                                                        |
-| \[].selectable  | boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>               |
-| \[].inferior    | boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul> |
-| \[].interesting | boolean | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>                      |
+| Propriedade      | Tipo    | Descrição                                                                                                                           |
+| ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| \[].name        | text    | Nome da nova caixa de correio                                                                                                       |
+| \[].selectable  | boolean | Indica se os direitos de acesso permitem ou não a selecção da caixa de correio: <ul><li>true - a caixa de correio pode ser seleccionada</li><li>falso - a caixa de correio não pode ser seleccionada</li></ul>                           |
+| \[].inferior    | boolean | Indica se os direitos de acesso permitem ou não a criação de uma hierarquia inferior na caixa de correio: <ul><li>true - pode ser criado um nível inferior</li><li>falso - um nível inferior não pode ser criado</li></ul> |
+| \[].interesting | boolean | Indica se a caixa de correio foi marcada como "interessante" pelo servidor: <ul><li>true - A caixa de correio foi marcada como "interessante" pelo servidor. Por exemplo, pode conter novas mensagens.</li><li>falso - A caixa de correio não foi marcada como "interessante" pelo servidor.</li></ul>                               |
 
-If the account does not contain any mailboxes, an empty collection is returned.
-> * If there is no open connection, `.getBoxList()` will open a connection.
-> * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the `.checkConnection( )` function is automatically called.
+Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecção vazia.
+> * Se não houver uma conexão aberta, `.getBoxList()` irá abrir uma conexão.
+> * Se a conexão não tiver sido utilizada desde o atraso da ligação determinado (ver `IMAP Novo transportador`), a função `.checkConnection( )` é automaticamente chamada.
 
 #### Exemplo
 
@@ -886,26 +886,26 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
-| Parâmetros | Tipo |    | Descrição                                                |
-| ---------- | ---- |:--:| -------------------------------------------------------- |
-| Resultados | Text | <- | Hierarchy delimiter character|<!-- END REF -->
+| Parâmetros | Tipo |    | Descrição                                                    |
+| ---------- | ---- |:--:| ------------------------------------------------------------ |
+| Resultados | Text | <- | Carácter delimitador da hierarquia<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
+A função `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->devolve o carácter utilizado para delimitar os níveis de hierarquia no nome da caixa de correio<!-- END REF -->.
 
-The delimiter is a character which can be used to:
+O delimitador é um caractere a que se pode usar para:
 
-* create lower level (inferior) mailboxes
-* search higher or lower within the mailbox hierarchy
+* criar caixas de correio de nível inferior
+* pesquisar hierarquias de nível mais alto ou mais baixo dentro das caixa de correio
 
 #### Resultados
 
-Mailbox name delimiter character.
-> * If there is no open connection, `.getDelimiter()` will open a connection.
-> * If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection()`](#checkconnection) function is automatically called.
+Carácter delimitador do nome da caixa de correio.
+> * Se não houver uma ligação aberta, `.getDelimiter()` irá abrir uma ligação.
+> * Se a ligação não tiver sido utilizada desde o atraso da ligação designada [](#checkconnectiondelay), a função [`.checkConnection()`](#checkconnection) é automaticamente chamada.
 
 #### Exemplo
 
@@ -940,12 +940,12 @@ Mailbox name delimiter character.
 
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                                   |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Sequence number of the message                                              |
-| msgID      | Text    | -> | ID única da mensagem                                                        |
-| options    | Objeto  | -> | Message handling instructions                                               |
-| Resultados | Objeto  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Parâmetros | Tipo    |    | Descrição                                                                    |
+| ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
+| msgNumber  | Integer | -> | Número sequencial da mensagem                                                |
+| msgID      | Text    | -> | ID única da mensagem                                                         |
+| options    | Objeto  | -> | Instruções de tratamento de mensagens                                        |
+| Resultados | Objeto  | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
@@ -1019,7 +1019,7 @@ You want to get the message with ID = 1:
 | ids        | Collection | -> | Collection of message ID                                                           |
 | startMsg   | Integer    | -> | Sequence number of the first message                                               |
 | endMsg     | Integer    | -> | Sequence number of the last message                                                |
-| options    | Objeto     | -> | Message handling instructions                                                      |
+| options    | Objeto     | -> | Instruções de tratamento de mensagens                                              |
 | Resultados | Objeto     | <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
 
@@ -1119,7 +1119,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                                                     |
 | ---------- | -------- |:--:| --------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer  | -> | Sequence number of the message                                                                |
+| msgNumber  | Integer  | -> | Número sequencial da mensagem                                                                 |
 | msgID      | Text     | -> | ID única da mensagem                                                                          |
 | updateSeen | Booleano | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
 | Resultados | BLOB     | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
