@@ -197,7 +197,7 @@ Especifique el tipo de list box.
 
 ## Tipo de plug-in
 
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
+Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Los nombres de las áreas externas del plug-in.se publican en el archivo manifest.json del plug-in.
 
 #### Gramática JSON
 
@@ -274,7 +274,7 @@ Hay varios tipos de cálculos disponibles. The following table shows which calcu
 
 (*) Sólo para list boxes de tipo array.
 
-When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. Si desea restringir un cálculo sólo a las líneas visibles, debe utilizar un cálculo personalizado.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 > Los cálculos automáticos no son soportados con:

@@ -45,31 +45,31 @@ Se soporta el siguiente escenario: un usuario remoto deja de trabajar durante un
 
 Esta función permite reducir el número de líneas que aparecen en la lista a las que corresponden al texto introducido en el área de búsqueda. El área indica las columnas en las que se realizará la búsqueda/filtrado. En la página Usuarios, serán las columnas Usuario 4D, Nombre de máquina y Nombre de sesión.
 
-La lista se actualiza en tiempo real a medida que se introduce texto en el área. Es posible introducir más de un valor a buscar: separe los valores con punto y coma. En este caso se utiliza el operador de tipo `OR`. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+La lista se actualiza en tiempo real a medida que se introduce texto en el área. Es posible introducir más de un valor a buscar: separe los valores con punto y coma. En este caso se utiliza el operador de tipo `OR`. Por ejemplo, si introduce "Juan;María;Pedro", sólo se conservarán las líneas con Juan O María O Pedro en las columnas objetivo.
 
 
 ## Botones de administración
 
-Esta página incluye tres botones de control. Estos botones están activos si se selecciona al menos una línea. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+Esta página incluye tres botones de control. Estos botones están activos si se selecciona al menos una línea. Puede seleccionar varias líneas manteniendo presionada la tecla **Mayús** para una selección adyacente o **Ctrl** (Windows) / **Comando** (macOS) llave para una selección no adyacente.
 
 ### Enviar mensaje
 
-This button can be used to send a message to the 4D users selected in the window. Si no se selecciona ningún usuario, el botón no está activo. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
+Este botón permite enviar un mensaje a los usuarios 4D seleccionados en la ventana. Si no se selecciona ningún usuario, el botón no está activo. Al hacer clic en este botón, aparece un diálogo que le permite introducir el mensaje. El diálogo indica el número de usuarios que recibirán este mensaje:
 
 ![](../assets/en/Admin/server-message.png)
 
 El mensaje se mostrará como una alerta en las máquinas remotas.
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
+> Puede realizar la misma acción para usuarios remotos con el comando [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html).
 
 
 ### Visualizar procesos
 
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. When you click on this button, 4D Server switches to the Processes page and enters the selected user names in the search/filtering area.
+Este botón permite mostrar directamente los procesos de los usuarios seleccionados en la página [**Procesos**](processes.md) de la ventana. Al hacer clic en este botón, 4D Server cambia a la página Procesos e introduce los nombres de usuario seleccionados en el área de búsqueda/filtrado.
 
 ### Desconectar
 
-Este botón puede utilizarse para forzar al usuario(s) seleccionado a desconectarse. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+Este botón puede utilizarse para forzar al usuario(s) seleccionado a desconectarse. Al hacer clic en este botón, aparece un diálogo de alerta para que pueda confirmar o cancelar esta operación (mantenga presionada la tecla **Alt** mientras hace clic en el botón **Desconectar** para desconectar directamente a los usuarios seleccionados sin que aparezca el diálogo de confirmación).
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> Puede efectuar la misma acción para los usuarios remotos con el comando [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).
 

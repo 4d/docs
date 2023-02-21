@@ -207,19 +207,19 @@ Placeholder text appears as watermark text in a field, supplying a help tip, ind
 
 ![](../assets/en/FormObjects/property_placeholder.png)
 
-The placeholder text is displayed again if the contents of the field is erased.
+El texto del marcador de posición vuelve a aparecer si se borra el contenido del campo.
 
 Se puede mostrar un marcador de posición para los siguientes tipos de datos:
 
 - cadena (text o alpha)
 - date and time when the **Blank if null** property is enabled.
 
-You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
+Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador de posición, por ejemplo:
 
  :xliff:PH_Lastname
 
-You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
-> You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
+> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) y [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html).
 
 #### Gramática JSON
 
@@ -257,7 +257,7 @@ Esta propiedad mantiene la selección visible dentro del objeto después de habe
 
 Esta propiedad permite definir teclas de significado especial (atajos de teclado) para los [botones](button_overview.md), los [botones radio](radio_overview.md) y las [casillas de selección](checkbox_overview.md). Permiten al usuario utilizar el control utilizando el teclado en lugar de tener que utilizar el ratón.
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+Puede configurar esta opción haciendo clic en el botón [...] de la propiedad Accesos directos de la Lista de propiedades.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 > También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. Para más información sobre cómo asociar accesos directos a los menús, consulte [Configuración de las propiedades de los menús](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).

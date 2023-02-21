@@ -223,7 +223,7 @@ Especifique el tipo de list box.
 
 ## Tipo de plug-in
 
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
+Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Los nombres de las áreas externas del plug-in.se publican en el archivo manifest.json del plug-in.
 
 #### Gramática JSON
 
@@ -300,21 +300,21 @@ Hay varios tipos de cálculos disponibles. The following table shows which calcu
 
 (*) Sólo para list boxes de tipo array.
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used to display footer calculations. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.value` are not supported.
+> Sólo las [variables](Concepts/variables.md) declaradas o dinámicas pueden utilizarse para mostrar los cálculos de pie de página. No se soportan otros tipos de [expresiones](Concepts/quick-tour.md#expressions) como `Form.value`.
 
-Los cálculos automáticos ignoran el estado mostrado/oculto de las líneas list box. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+Los cálculos automáticos ignoran el estado mostrado/oculto de las líneas list box. Si desea restringir un cálculo sólo a las líneas visibles, debe utilizar un cálculo personalizado.
 
 *Null* no se tienen en cuenta para ningún cálculo.
 
-If the column contains different types of values (collection-based column for example):
+Si la columna contiene distintos tipos de valores (columna basada en colecciones, por ejemplo):
 
-- Average and Sum only take numerical elements into account (other element types are ignored).
-- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/CollectionClass.md#sort) function.
+- Promedio y Suma sólo tienen en cuenta elementos numéricos (se ignoran otros tipos de elementos).
+- Mínimo y Máximo devuelven un resultado según el orden habitual de las listas de tipos, tal como se define en la función [collection.sort()](API/CollectionClass.md#sort).
 
-Using automatic calculations in footers of columns based upon expressions has the following limitations:
+El uso de cálculos automáticos en pies de columnas basados en expresiones tiene las siguientes limitaciones:
 
-- it is **supported** with all list box types when the expression is "simple" (such as `[table]field` or `this.attribute`),
-- it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
+- es **soportado** con todos los tipos de list boxes cuando la expresión es "simple" (como `[table]field` o `this.attribute`),
+- se **soporta pero no se recomienda** por razones de rendimiento con list boxes colección/selección de entidades cuando la expresión es "compleja" (distinta de `this.attribute`) y el list box contiene un gran número de líneas,
 - it is **not supported** with current selection/named selection list boxes when the expression is "complex". Es necesario utilizar cálculos personalizados.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.

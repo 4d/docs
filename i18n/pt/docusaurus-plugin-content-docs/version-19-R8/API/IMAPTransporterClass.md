@@ -896,16 +896,16 @@ Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecçã
 
 A função `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->devolve o carácter utilizado para delimitar os níveis de hierarquia no nome da caixa de correio<!-- END REF -->.
 
-The delimiter is a character which can be used to:
+O delimitador é um caractere a que se pode usar para:
 
-* create lower level (inferior) mailboxes
-* search higher or lower within the mailbox hierarchy
+* criar caixas de correio de nível inferior
+* pesquisar hierarquias de nível mais alto ou mais baixo dentro das caixa de correio
 
 #### Resultados
 
-Mailbox name delimiter character.
-> * If there is no open connection, `.getDelimiter()` will open a connection.
-> * If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection()`](#checkconnection) function is automatically called.
+Carácter delimitador do nome da caixa de correio.
+> * Se não houver uma ligação aberta, `.getDelimiter()` irá abrir uma ligação.
+> * Se a ligação não tiver sido utilizada desde o atraso da ligação designada [](#checkconnectiondelay), a função [`.checkConnection()`](#checkconnection) é automaticamente chamada.
 
 #### Exemplo
 
@@ -940,12 +940,12 @@ Mailbox name delimiter character.
 
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                                   |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Sequence number of the message                                              |
-| msgID      | Text    | -> | ID única da mensagem                                                        |
-| options    | Objeto  | -> | Message handling instructions                                               |
-| Resultados | Objeto  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Parâmetros | Tipo    |    | Descrição                                                                    |
+| ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
+| msgNumber  | Integer | -> | Número sequencial da mensagem                                                |
+| msgID      | Text    | -> | ID única da mensagem                                                         |
+| options    | Objeto  | -> | Instruções de tratamento de mensagens                                        |
+| Resultados | Objeto  | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
@@ -1019,7 +1019,7 @@ You want to get the message with ID = 1:
 | ids        | Collection | -> | Collection of message ID                                                           |
 | startMsg   | Integer    | -> | Sequence number of the first message                                               |
 | endMsg     | Integer    | -> | Sequence number of the last message                                                |
-| options    | Objeto     | -> | Message handling instructions                                                      |
+| options    | Objeto     | -> | Instruções de tratamento de mensagens                                              |
 | Resultados | Objeto     | <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
 |
@@ -1116,7 +1116,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                                                     |
 | ---------- | -------- |:--:| --------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer  | -> | Sequence number of the message                                                                |
+| msgNumber  | Integer  | -> | Número sequencial da mensagem                                                                 |
 | msgID      | Text     | -> | ID única da mensagem                                                                          |
 | updateSeen | Booleano | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
 | Resultados | BLOB     | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->

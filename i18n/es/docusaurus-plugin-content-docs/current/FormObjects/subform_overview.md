@@ -58,7 +58,7 @@ Binding the same variable or expression to your subform container and other obje
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-In the parent form, both objects (time variable and subform container) ***have the same value as ***Variable or Expression******. It can be a variable (e.g. `parisTime`), or an expression (e.g. `Form.parisTime`).
+In the parent form, both objects (time variable and subform container) ***have the same value as ***Variable or Expression******. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
 
 In the subform, the clock object is managed through the `Form.clockValue` property.
 
