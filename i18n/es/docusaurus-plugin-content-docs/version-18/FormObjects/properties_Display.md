@@ -7,13 +7,13 @@ title: Visualización
 
 ## Formato Alfa
 
-Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Aquí hay una lista de formatos suministrados para los campos alfanuméricos:
+Los formatos alfabéticos controlan la forma en que aparecen los campos alfanuméricos y las variables cuando se visualizan o imprimen. Aquí hay una lista de formatos suministrados para los campos alfanuméricos:
 
 ![](../assets/en/FormObjects/property_alphaFormat.png)
 
-Puede elegir un formato de esta lista o utilizar cualquier formato personalizado. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. En este caso, el formato no se puede modificar en las propiedades del objeto. Los formatos o filtros personalizados que haya creado estarán disponibles automáticamente, precedidos de una barra vertical (|).
+Puede elegir un formato de esta lista o utilizar cualquier formato personalizado. La lista por defecto contiene formatos para algunos de los campos alfa más comunes que requieren formatos: Números de teléfono de EE. UU. (locales y de larga distancia), números de la Seguridad Social y códigos postales. También puede introducir un nombre de formato personalizado definido en el editor Filtros y formatos de la caja de herramientas. En este caso, el formato no se puede modificar en las propiedades del objeto. Los formatos o filtros personalizados que haya creado estarán disponibles automáticamente, precedidos de una barra vertical (|).
 
-El signo número (#) es el marcador de posición para un formato de visualización alfanumérico. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. Utilice los signos de puntuación que desee y el signo número para cada caracter que desee mostrar.
+El signo número (#) es el marcador de posición para un formato de visualización alfanumérico. Puede incluir los guiones, rayas, espacios y cualquier otro signo de puntuación que desee mostrar. Utilice los signos de puntuación que desee y el signo número para cada caracter que desee mostrar.
 
 Por ejemplo, considere un número de parte con un formato como "RB-1762-1".
 
@@ -466,9 +466,9 @@ Esta opción está disponible para columnas con cualquier tipo de contenido, exc
 
 La opción Truncar con elipsis está activada por defecto y puede especificarse con list boxes de tipo Array, Selección o Colección.
 
-> When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
+> When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. Cuando se selecciona la propiedad Ajuste de palabras, el contenido adicional de las celdas se gestiona mediante las funciones de ajuste de palabras, por lo que la propiedad Truncar con elipsis no está disponible.
 
-The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
+La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; sin embargo, el resultado difiere en función del [formato de celda](#display-type):
 
 * En los formatos booleanos de tipo emergente, las etiquetas se truncan con una elipsis,
 * Para los formatos booleanos de tipo casilla de verificación, las etiquetas siempre se recortan.
@@ -528,7 +528,7 @@ Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
 When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
 
-* In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
+* En las columnas/áreas de una sola línea, sólo se muestra la última palabra que puede mostrarse entera. 4D inserta retornos de línea; es posible desplazarse por el contenido del área presionando la tecla de flecha abajo.
 
 * En las columnas/áreas multilínea, 4D realiza retornos de línea automáticos.
 
@@ -538,15 +538,15 @@ When this option is selected, text automatically wraps to the next line whenever
 
 `Gramática JSON: "none"`
 
-When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. En las áreas de tipo de texto, se soportan los retornos de carro:
+Cuando se selecciona esta opción, 4D no realiza ningún retorno de línea automático y la última palabra que se puede mostrar puede quedar truncada. En las áreas de tipo de texto, se soportan los retornos de carro:
 
 ![](../assets/en/FormObjects/wordwrap3.png)
 
-In list boxes, any text that is too long is truncated and displayed with an ellipse (...). In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
+En los list boxes, el texto demasiado largo se trunca y se muestra con una elipse (...). En el siguiente ejemplo, la opción Wordwrap está **marcada para la columna izquierda** y **desmarcada para la columna derecha**:
 
 ![](../assets/en/FormObjects/property_wordwrap1.png)
 
-Note that regardless of the Wordwrap option’s value, the row height is not changed. Si el texto con saltos de línea no puede visualizarse por completo en la columna, se trunca (sin elipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
+Note that regardless of the Wordwrap option’s value, the row height is not changed. Si el texto con saltos de línea no puede visualizarse por completo en la columna, se trunca (sin elipse). En el caso de los list boxes que muestran una sola línea, sólo se muestra la primera línea de texto:
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 
@@ -554,7 +554,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 `Gramática JSON: "automatic"`
 
-* In single-line areas, words located at the end of lines are truncated and there are no line returns.
+* En las áreas de una sola línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 * En áreas multilíneas, 4D realiza retornos de línea automáticos.
 
 ![](../assets/en/FormObjects/wordwrap1.png)
