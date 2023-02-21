@@ -133,9 +133,11 @@ A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Versão | Mudanças                 |
+| ------ | ------------------------ |
+| v20    | Supports custom keywords |
+| v18 R6 | Adicionado               |
+
 
 </details>
 
@@ -165,16 +167,19 @@ No parâmetro `msgIDs` , pode passar qualquer um dos dois:
  | --------- | ----- | -------------------------------------------------------------- |
  | IMAP all  | 1     | Seleccione todas as mensagens na caixa de correio seleccionada |
 
-O parâmetro `palavras-chave` permite-lhe passar um objecto com valores de palavras-chave para bandeiras específicas a acrescentar a `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
+The `keywords` parameter lets you define the flags to add to `msgIDs`. You can use the following standard flags as well as custom flags (custom flags support depends on the server implementation):
 
-| Parâmetros | Tipo     | Descrição                                             |
-| ---------- | -------- | ----------------------------------------------------- |
-| $draft     | Booleano | True para adicionar o marcador "draft" na mensagem    |
-| $seen      | Booleano | True para adicionar o marcador "seen" na mensagem     |
-| $flagged   | Booleano | True para adicionar o marcador "flagged" na mensagem  |
-| $answered  | Booleano | True para adicionar o marcador "answered" na mensagem |
-| $deleted   | Booleano | True para adicionar o marcador "deleted" na mensagem  |
-> * Os falsos valores são ignorados.
+| Propriedade           | Tipo     | Descrição                                             |
+| --------------------- | -------- | ----------------------------------------------------- |
+| $draft                | Booleano | True para adicionar o marcador "draft" na mensagem    |
+| $seen                 | Booleano | True para adicionar o marcador "seen" na mensagem     |
+| $flagged              | Booleano | True para adicionar o marcador "flagged" na mensagem  |
+| $answered             | Booleano | True para adicionar o marcador "answered" na mensagem |
+| $deleted              | Booleano | True para adicionar o marcador "deleted" na mensagem  |
+| `<custom flag>` | Booleano | True to add the custom flag to the message            |
+
+The custom flags names must respect this rule: the keyword must be a case-insensitive string excluding control chars and space and can not include any of these characters: `( ) { ] % * " \`
+> * For a keyword to be taken into account it has to be true.
 > * A interpretação dos marcadores de palavras-chave pode variar por cliente de correio.
 
 **Objeto devolvido**
@@ -758,9 +763,9 @@ $status:=$transporter.expunge()
 
 | Versão | Mudanças           |
 | ------ | ------------------ |
+| v20    | *id* is returned   |
 | v18 R5 | *name* is optional |
-
-|v18 R4|Added|
+| v18 R4 | Adicionado         |
 
 </details>
 
@@ -779,19 +784,20 @@ $status:=$transporter.expunge()
 
 A função `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->devolve um objeto `boxInfo` correspondente à maibox actual, ou a caixa de correio *nome*<!-- END REF -->. Esta função devolve a mesma informação que [`.selectBox()`](#selectbox) sem alterar a caixa de correio actual.
 
-No parâmetro opcional *nome* , passe o nome da caixa de correio para aceder. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+No parâmetro opcional *nome* , passe o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
 
-If the mailbox *name* is not selectable or does not exist, the function generates an error and returns **null**.
+Se a caixa de correio *nome* não for seleccionável ou não existir, a função gera um erro e devolve **null**.
 
 **Objeto devolvido**
 
 O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
-| Propriedade | Tipo   | Descrição                                                           |
-| ----------- | ------ | ------------------------------------------------------------------- |
-| name        | text   | Nome da nova caixa de correio                                       |
-| mailCount   | number | Número de mensagens na caixa de email                               |
-| mailRecent  | number | Number of messages with the "recent" flag (indicating new messages) |
+| Propriedade | Tipo   | Descrição                                                                |
+| ----------- | ------ | ------------------------------------------------------------------------ |
+| name        | text   | Nome da nova caixa de correio                                            |
+| mailCount   | number | Número de mensagens na caixa de email                                    |
+| mailRecent  | number | Número de mensagens com o marcador "recente" (indicando novas mensagens) |
+| id          | text   | Unique id of the mailbox                                                 |
 
 #### Exemplo
 
@@ -821,37 +827,37 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------- |
-| parameters | Objeto     | -> | Parameter object                                         |
-| Resultados | Collection | <- | Collection of mailbox objects|<!-- END REF -->
+| Parâmetros | Tipo       |    | Descrição                                                         |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------- |
+| parameters | Objeto     | -> | Parâmetro objecto                                                 |
+| Resultados | Collection | <- | Coleção de objetos da caixa de correio|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getBoxList()` <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. This function allows you to locally manage the list of messages located on the IMAP mail server.
+A função `.getBoxList()` <!-- REF #IMAPTransporterClass.getBoxList().Summary -->devolve uma colecção de caixas de correio descrevendo todas as caixas de correio disponíveis<!-- END REF -->. Esta função permite gerir localmente a lista de mensagens localizadas no servidor de correio IMAP.
 
-In the optional `parameters` parameter, pass an object containing values to filter the returned mailboxes. Pode passar:
+No parâmetro opcional `` , passe um objeto contendo valores para filtrar as caixas de correio devolvidas. Pode passar:
 
 | Propriedade  | Tipo     | Descrição                                            |
 | ------------ | -------- | ---------------------------------------------------- |
-| isSubscribed | Booleano | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li> |
+| isSubscribed | Booleano | <li>**True*** para devolver apenas caixas de correio inscritas</li><li> **False*** para devolver todas as caixas de correio disponíveis</li> |
 
 #### Resultados
 
-Each object of the returned collection contains the following properties:
+Cada objecto da coleção devolvida contém as seguintes propriedades:
 
-| Propriedade      | Tipo    | Descrição                                                                                                            |
-| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | text    | Nome da nova caixa de correio                                                                                        |
-| \[].selectable  | boolean | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>               |
-| \[].inferior    | boolean | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul> |
-| \[].interesting | boolean | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>                      |
+| Propriedade      | Tipo    | Descrição                                                                                                                           |
+| ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| \[].name        | text    | Nome da caixa de correio                                                                                                            |
+| \[].selectable  | boolean | Indica se os direitos de acesso permitem ou não a selecção da caixa de correio: <ul><li>true - a caixa de correio pode ser seleccionada</li><li>falso - a caixa de correio não pode ser seleccionada</li></ul>                           |
+| \[].inferior    | boolean | Indica se os direitos de acesso permitem ou não a criação de uma hierarquia inferior na caixa de correio: <ul><li>true - pode ser criado um nível inferior</li><li>falso - um nível inferior não pode ser criado</li></ul> |
+| \[].interesting | boolean | Indica se a caixa de correio foi marcada como "interessante" pelo servidor: <ul><li>true - A caixa de correio foi marcada como "interessante" pelo servidor. Por exemplo, pode conter novas mensagens.</li><li>falso - A caixa de correio não foi marcada como "interessante" pelo servidor.</li></ul>                               |
 
-If the account does not contain any mailboxes, an empty collection is returned.
-> * If there is no open connection, `.getBoxList()` will open a connection.
-> * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the `.checkConnection( )` function is automatically called.
+Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecção vazia.
+> * Se não houver uma conexão aberta, `.getBoxList()` irá abrir uma conexão.
+> * Se a conexão não tiver sido utilizada desde o atraso da ligação determinado (ver `IMAP Novo transportador`), a função `.checkConnection( )` é automaticamente chamada.
 
 #### Exemplo
 
@@ -886,26 +892,26 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
-| Parâmetros | Tipo |    | Descrição                                                |
-| ---------- | ---- |:--:| -------------------------------------------------------- |
-| Resultados | Text | <- | Hierarchy delimiter character|<!-- END REF -->
+| Parâmetros | Tipo |    | Descrição                                                    |
+| ---------- | ---- |:--:| ------------------------------------------------------------ |
+| Resultados | Text | <- | Carácter delimitador da hierarquia<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
+A função `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->devolve o carácter utilizado para delimitar os níveis de hierarquia no nome da caixa de correio<!-- END REF -->.
 
-The delimiter is a character which can be used to:
+O delimitador é um caractere a que se pode usar para:
 
-* create lower level (inferior) mailboxes
-* search higher or lower within the mailbox hierarchy
+* criar caixas de correio de nível inferior
+* pesquisar hierarquias de nível mais alto ou mais baixo dentro das caixa de correio
 
 #### Resultados
 
-Mailbox name delimiter character.
-> * If there is no open connection, `.getDelimiter()` will open a connection.
-> * If the connection has not been used since the [designated connection delay](#checkconnectiondelay), the [`.checkConnection()`](#checkconnection) function is automatically called.
+Carácter delimitador do nome da caixa de correio.
+> * Se não houver uma ligação aberta, `.getDelimiter()` irá abrir uma ligação.
+> * Se a ligação não tiver sido utilizada desde o atraso da ligação designada [](#checkconnectiondelay), a função [`.checkConnection()`](#checkconnection) é automaticamente chamada.
 
 #### Exemplo
 
@@ -940,12 +946,12 @@ Mailbox name delimiter character.
 
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                                   |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Sequence number of the message                                              |
-| msgID      | Text    | -> | ID única da mensagem                                                        |
-| options    | Objeto  | -> | Message handling instructions                                               |
-| Resultados | Objeto  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Parâmetros | Tipo    |    | Descrição                                                                    |
+| ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
+| msgNumber  | Integer | -> | Número sequencial da mensagem                                                |
+| msgID      | Text    | -> | ID única da mensagem                                                         |
+| options    | Objeto  | -> | Instruções de tratamento de mensagens                                        |
+| Resultados | Objeto  | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
@@ -1019,7 +1025,7 @@ You want to get the message with ID = 1:
 | ids        | Collection | -> | Collection of message ID                                                           |
 | startMsg   | Integer    | -> | Sequence number of the first message                                               |
 | endMsg     | Integer    | -> | Sequence number of the last message                                                |
-| options    | Objeto     | -> | Message handling instructions                                                      |
+| options    | Objeto     | -> | Instruções de tratamento de mensagens                                              |
 | Resultados | Objeto     | <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
 |
@@ -1116,7 +1122,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                                                     |
 | ---------- | -------- |:--:| --------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer  | -> | Sequence number of the message                                                                |
+| msgNumber  | Integer  | -> | Número sequencial da mensagem                                                                 |
 | msgID      | Text     | -> | ID única da mensagem                                                                          |
 | updateSeen | Booleano | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
 | Resultados | BLOB     | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
@@ -1343,9 +1349,11 @@ The function returns a collection of strings (unique IDs).
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Versão | Mudanças                 |
+| ------ | ------------------------ |
+| v20    | Supports custom keywords |
+| v18 R6 | Adicionado               |
+
 
 </details>
 
@@ -1375,17 +1383,19 @@ No parâmetro `msgIDs` , pode passar qualquer um dos dois:
  | --------- | ----- | -------------------------------------------------------------- |
  | IMAP all  | 1     | Seleccione todas as mensagens na caixa de correio seleccionada |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
+The `keywords` parameter lets you define the flags to remove from `msgIDs`. You can use the following standard flags as well as custom flags:
 
-| Parâmetros | Tipo     | Descrição                                           |
-| ---------- | -------- | --------------------------------------------------- |
-| $draft     | Booleano | True to remove the "draft" flag from the message    |
-| $seen      | Booleano | True to remove the "seen" flag from the message     |
-| $flagged   | Booleano | True to remove the "flagged" flag from the message  |
-| $answered  | Booleano | True to remove the "answered" flag from the message |
-| $deleted   | Booleano | True to remove the "deleted" flag from the message  |
+| Parâmetros            | Tipo     | Descrição                                           |
+| --------------------- | -------- | --------------------------------------------------- |
+| $draft                | Booleano | True to remove the "draft" flag from the message    |
+| $seen                 | Booleano | True to remove the "seen" flag from the message     |
+| $flagged              | Booleano | True to remove the "flagged" flag from the message  |
+| $answered             | Booleano | True to remove the "answered" flag from the message |
+| $deleted              | Booleano | True to remove the "deleted" flag from the message  |
+| `<custom flag>` | Booleano | True to remove the custom flag from the message     |
 
-Note that False values are ignored.
+Please refer to [.addFlags()](#addflags) for more information on custom flags.
+> * For a keyword to be taken into account it has to be true.
 
 **Objeto devolvido**
 
@@ -1643,9 +1653,11 @@ Search-keys may request the value to search for:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Versão | Mudanças                                     |
+| ------ | -------------------------------------------- |
+| v20    | *id*, *flags*, *permanentFlags* are returned |
+| v18 R4 | Adicionado                                   |
+
 
 </details>
 
@@ -1666,7 +1678,7 @@ Search-keys may request the value to search for:
 A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+In the *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
 
 The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
@@ -1682,11 +1694,20 @@ The optional *state* parameter defines the type of access to the mailbox. The po
 
 O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
-| Propriedade | Tipo   | Descrição                                 |
-| ----------- | ------ | ----------------------------------------- |
-| name        | Text   | Nome da nova caixa de correio             |
-| mailCount   | number | Número de mensagens na caixa de email     |
-| mailRecent  | number | Number of messages with the "recent" flag |
+| Propriedade    | Tipo   | Descrição                                                                                                                                     |
+| -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| name           | Text   | Nome da nova caixa de correio                                                                                                                 |
+| mailCount      | number | Número de mensagens na caixa de email                                                                                                         |
+| mailRecent     | number | Number of messages with the "recent" flag                                                                                                     |
+| id             | text   | Unique id of the mailbox                                                                                                                      |
+| flags          | text   | List of flags currently used for the mailbox, separated by spaces                                                                             |
+| permanentFlags | text   | List of flags that the client can change permanently (except for the \Recent flag, which is managed by the IMAP server), separated by spaces |
+
+:::info
+
+If `permanentFlags` string includes the special flag \*, it means that the server supports [custom flags](#addflags).
+
+:::
 
 #### Exemplo
 
