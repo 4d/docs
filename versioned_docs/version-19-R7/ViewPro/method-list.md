@@ -3992,7 +3992,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 |autoQuit | boolean | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.|
 |timeout | number | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60 |
 |result| mixed| Result of the processing (if any)|
-|`\<customProperty>` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
+|`<customProperty>` | mixed|  Any custom attribute to be available in the *onEvent* callback method. |
 
 
 The following property is automatically added by the command if necessary:
