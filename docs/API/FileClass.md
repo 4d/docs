@@ -705,7 +705,6 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 |Constant|Value|Comment|
 |--------|-----|-------|
 |`Document unchanged`|0|No processing|
-
 |`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows|
 |`Document with CRLF`|2|Line breaks are converted to CRLF (carriage return + line feed), the default Windows format|
 |`Document with CR`|3|Line breaks are converted to CR (carriage return), the default Classic Mac OS format|
