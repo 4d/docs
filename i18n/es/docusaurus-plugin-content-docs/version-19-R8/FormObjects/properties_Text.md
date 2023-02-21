@@ -314,7 +314,7 @@ Else
 End if
 ```
 
-**Best Practice:** For optimization reasons, it is usually recommended to create the `meta.cell` object once in the form method:
+**Buenas prácticas:** por razones de optimización, normalmente se recomienda crear el objeto `meta.cell` una vez en el método del formulario:
 
 ```4d
   //método formulario

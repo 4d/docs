@@ -143,14 +143,14 @@ _italic_
 ~~strikethrough~~
 ```
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- La etiqueta de bloque de código (\``4d ... ``) es compatible con el resaltado del código 4D:
 
  \``` 4d  
 C_TEXT($txt)  
 $txt:="Hello world!"  
 \` ``
 
-- The table tag is supported:
+- La etiqueta de la tabla es soportada:
 
 ```
 | Parameter | Type   | Description  |
@@ -159,11 +159,11 @@ $txt:="Hello world!"
 | toolbar   | String |Toolbar name  |
 ```
 
-- The link tag is supported:
+- La etiqueta del enlace es soportada:
 
 ```
-// Case 1
-The [documentation](https://doc.4d.com) of the command ....
+// Caso 1
+La [documentation](https://doc.4d.com) del comando ....
 
 // Case 2
 [4D blog][1]
@@ -171,7 +171,7 @@ The [documentation](https://doc.4d.com) of the command ....
 [1]: https://blog.4d.com
 ```
 
-- The image tags are supported:
+- Las etiquetas de imagen son soportadas:
 
 ```
 ![image info](pictures/image.png)
@@ -181,13 +181,13 @@ The [documentation](https://doc.4d.com) of the command ....
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
 
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo blog 4D con enlace](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "Logo del blog 4D")](https://blog.4d.com)
 
 > Para más información, consulte la [guía Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
 
 ## Ejemplo
 
-In the `WP SwitchToolbar.md` file, you can write:
+En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ```4d
 <!-- Este método devuelve un logotipo diferente en función del parámetro de tamaño -->
@@ -205,7 +205,7 @@ GetLogo (size) -> logo
 ## Description
 
 Este método devuelve un logotipo diferente en función del parámetro *size*.
-1 = smallest size, 5 = largest size.
+1 = tamaño más pequeño, 5 = tamaño más grande.
 
 ## Ejemplo
 

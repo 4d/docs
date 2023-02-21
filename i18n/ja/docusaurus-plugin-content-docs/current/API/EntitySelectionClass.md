@@ -720,10 +720,10 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| 引数   | タイプ                |    | 説明                                                                                                                          |
-| ---- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------------------- |
-| mode | Integer            | -> | `dk stop dropping on first error`: 最初のドロップ不可エンティティで実行を止めます                                                                  |
-| 戻り値  | 4D.EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF -->
+| 引数   | タイプ                |    | 説明                                                                                       |
+| ---- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
+| mode | Integer            | -> | `dk stop dropping on first error`: 最初のドロップ不可エンティティで実行を止めます                               |
+| 戻り値  | 4D.EntitySelection | <- | 成功した場合には空のエンティティセレクション、そうでない場合にはドロップ不可エンティティを格納したエンティティセレクション|<!-- END REF -->
 
 |
 

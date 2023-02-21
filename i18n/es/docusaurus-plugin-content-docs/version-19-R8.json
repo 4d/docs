@@ -40,7 +40,7 @@
     "description": "The label for category Handling Code in sidebar docs"
   },
   "sidebar.docs.category.Debugging": {
-    "message": "Debugging",
+    "message": "Depuración",
     "description": "The label for category Debugging in sidebar docs"
   },
   "sidebar.docs.category.Settings": {

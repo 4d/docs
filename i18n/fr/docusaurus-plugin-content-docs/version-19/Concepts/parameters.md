@@ -60,7 +60,7 @@ Function add($x : Integer)
 
 ### Initialisation
 
-When parameters are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been assigned.
+Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur par défaut correspondant à leur type**](data-types.md#valeurs-par-defaut), qu'ils conserveront pendant la session tant que l'on ne leur aura pas affecté une valeur.
 
 
 

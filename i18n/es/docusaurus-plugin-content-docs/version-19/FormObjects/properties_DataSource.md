@@ -205,7 +205,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean  
     Puede utilizar campos de la tabla maestra o de otras tablas.
 
-- A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
+- A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
   - String
   - Numeric
   - Fecha
@@ -213,7 +213,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean
 
  For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use `This.\&#060;propertyPath&#062;` where `\&#060;propertyPath&#062;` is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. En este caso, utilizará `This.value` como expresión.
+When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. Por ejemplo, puede utilizar `This.\&#060;propertyPath&#062;` donde `\&#060;propertyPath&#062;` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad. Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
 
  If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
 
@@ -235,9 +235,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 `Current selection list boxes`
 
-Especifica la tabla cuya selección actual se utilizará. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
+Especifica la tabla cuya selección actual se utilizará. Esta tabla y su selección actual constituirán la referencia de los campos asociados a las columnas del list box (referencias de campo o expresiones que contienen campos). Aunque algunas columnas contengan campos de otras tablas, el número de líneas mostradas será definido por la tabla maestra.
 
-All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
+Se pueden utilizar todas las tablas de la base de datos, independientemente de si el formulario está relacionado con una tabla (formulario tabla) o no (formulario proyecto).
 
 #### Gramática JSON
 
@@ -258,7 +258,7 @@ Esta propiedad está disponible en las siguientes condiciones:
 - una [lista de selección](#choice-list) está asociada al objeto
 - for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
 
-This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
+Esta propiedad especifica, en el contexto de un campo o variable asociado a una lista de valores, el tipo de contenido a guardar:
 
 - **Guardar como valor** (opción por defecto): el valor del elemento elegido en la lista por el usuario se guarda directamente. Por ejemplo, si el usuario elige el valor "Azul", este valor se guarda en el campo.
 - **Guardar como referencia**: la referencia del elemento de la lista de opciones se guarda en el objeto. Esta referencia es el valor numérico asociado a cada elemento, ya sea a través del parámetro *itemRef* de los comandos [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) o [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html), o en el editor de listas.
@@ -308,7 +308,7 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 `List boxes de tipo selección nombrada`
 
-Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. El contenido del list box se basará en esta selección. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
 
 > Las selecciones con nombre son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

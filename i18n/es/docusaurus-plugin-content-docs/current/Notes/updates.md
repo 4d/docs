@@ -9,46 +9,48 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 
 #### Puntos fuertes
 
-- New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
-- New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
+- [IMAP Transporter Class](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) support custom keywords.
+- Nuevas clases [WebSocketServer](../API/WebSocketServerClass.md) y [WebSocketConnection](../API/WebSocketConnectionClass.md) para crear y gestionar conexiones WebSocket desde 4D.
+- Nuevas funciones para bloquear/desbloquear el datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
 - Para simplificar el código, algunos operadores de comparación pueden utilizarse ahora con [Valores indefinidos](../Concepts/dt_null_undefined.md#undefined-operators) sin generar errores.
-- Support of *headerOnly* parameter in [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail).
+- Soporte del parámetro *headerOnly* en [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail).
 
 
 - 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20): list of all bugs that have been fixed in 4D v20.
+- 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) en doc.4d.com.
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20): lista de todos los bugs corregidos en 4D v20.
 
 
-#### Behavior changes
 
-- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) property.
+#### Cambios de comportamiento
+
+- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response).
 
 
 ## 4D v19 R8
 
-Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), the blog post that lists all new features and enhancements in 4D v19 R8.
+Lea las [**Novedades de 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), la entrada de blog que lista todas las nuevas funcionalidades y mejoras de 4D v19 R8.
 
 
 #### Puntos fuertes
 
-- Error management methods can be installed for [global and component execution contexts](../Concepts/error-handling.md#scope-and-components).
+- Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
 - Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
-- ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
-- Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
+- ORDA: soporte del archivo *roles.json* para definir [privilegios](../ORDA/privileges.md) asignados a la sesión con [`setPrivileges()`](../API/SessionClass.md#setprivileges).
+- Soporte del [modo SDI en el modo de aplicación de prueba](../Menus/sdi.md#sdi-mode-availability) en Windows.
 - 4D View Pro:
-    - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
-    - new [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) command
+    - soporte de temas en tablas: nuevos comandos [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) y [VP Get table theme](../ViewPro/method-list#vp-get-table-theme), soporte de opciones de tema en [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
+    - nuevo [comando VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows)
 - 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D v19 R8.
+- 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) en doc.4d.com.
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19_R8): lista de todos los errores que se han corregido en 4D v18.
 
 
-#### Behavior changes
+#### Cambios de comportamiento
 
-- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) property.
+- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response).
 - When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
-- In Web areas using blink (CEF), dialogs displayed from external scripts are now blocking if not called from a `setTimeout()` JS function. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
+- En las áreas Web que utilizan blink (CEF), los diálogos mostrados desde scripts externos ahora se bloquean si no se llaman desde una función `setTimeout()` JS. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
 ## Versiones anteriores
@@ -67,50 +69,50 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - [Entity selection Class](../API/EntitySelectionClass): [`.add()`](../API/EntitySelectionClass#add) supports an *entitySelection* parameter, [`.minus()`](../API/EntitySelectionClass#minus) supports a *keepOrder* parameter.
 - 4D View Pro: new table commands [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes).
 - Component namespaces are now [displayed in the Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
-- Text area and Input form objects now support the [corner radius property](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
+- Los objetos Área de texto y Formulario de entrada ahora soportan la [propiedad de radio de esquina](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) on doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R7): list of all bugs that have been fixed in 4D v19 R7.
+- 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) en doc.4d.com.
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19_R7): lista de todos los errores que se han corregido en 4D v19 R7.
 
 
-#### Behavior changes
+#### Cambios de comportamiento
 
-- For consistency with standard interfaces (e.g. OS file explorers), list box rules for row selection/drag and drop have been modified. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
-- The 4D internal build numbering has been modified as of 4D v19 R7:
-    - releases up to 4D v19 R6 (included) are numbered 282xxx,
-    - releases from 4D v19 R7 will be numbered 100xxx.   
-      Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
-- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
+- Para mantener la coherencia con las interfaces estándar (por ejemplo, los exploradores de archivos del sistema operativo), se han modificado las reglas del list box para la selección/arrastrar y soltar de líneas. Se puede arrastrar una selección continua o discontinua de líneas simplemente haciendo clic en una línea seleccionada y moviéndola; la tecla **Alt** ya no es necesaria (pero se puede seguir utilizando como en el caso anterior). Cuando se presiona la tecla **Mayús** o **Ctrl/Comando**, se tiene en cuenta el clic del ratón cuando éste está presionado. Para más información sobre arrastrar y soltar en list boxes, puede consultar [esta entrada del blog](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) y descargar [este proyecto 4D HDI](https://github.com/4d-depot/HDI_LB_DragAndDrop).
+- La numeración interna de 4D ha sido modificada a partir de 4D v19 R7:
+    - las versiones hasta 4D v19 R6 (incluida) llevan el número 282xxx,
+    - las versiones a partir de 4D v19 R7 se numerarán 100xxx.   
+      Tenga en cuenta que una versión 4D específica sigue estando identificada de forma única por un nombre de rama y un número de compilación. The build number increases chronologically.
+- Se ha eliminado la posibilidad de utilizar el protocolo Wakanda/4D Mobile REST para llamar a un método proyecto. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 
 ### 4D v19 R6
 
-- New [HTTPRequest](../API/HTTPRequestClass) class.
+- Nueva clase [HTTPRequest](../API/HTTPRequestClass).
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](../API/CollectionClass#every), [`.filter()`](../API/CollectionClass#filter), [`.find()`](../API/CollectionClass#find), [`.findIndex()`](../API/CollectionClass#findindex), [`.map()`](../API/CollectionClass#map), [`.orderByMethod()`](../API/CollectionClass#orderbymethod), [`.reduce()`](../API/CollectionClass#reduce), [`.some()`](../API/CollectionClass#some), [`.sort()`](../API/CollectionClass#sort)
-- Listbox cells support [horizontal](FormObjects/propertiesCoordinatesAndSizing#horizontal-padding) and [vertical](FormObjects/propertiesCoordinatesAndSizing#vertical-padding) padding.
-- 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list#vp-remove-table) commands to handle tables in sheets.
-- Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer#basics).
-- New page explaining [why and how 4D collects data](../Admin/data-collect).
+- Las celdas listbox soportan el espacio [horizontal](FormObjects/propertiesCoordinatesAndSizing#horizontal-padding) y [vertical ](FormObjects/propertiesCoordinatesAndSizing#vertical-padding).
+- 4D View Pro: nuevos comandos [VP CREATE TABLE](../ViewPro/method-list#vp-create-table) y [VP REMOVE TABLE](../ViewPro/method-list#vp-remove-table) para gestionar las tablas en las hojas.
+- Posibilidad de ver los atributos relacionados, calculados y alias en el [explorador de datos web](../Admin/dataExplorer#basics).
+- Nueva página que explica [por qué y cómo 4D recoge los datos](../Admin/data-collect).
 
 
 
 ### 4D v19 R5
 
 - Aplicaciones cliente/servidor generadas:
-    - The project [directory.json file](Users/editing#directoryjson-file) can now be [embedded in the server](../Desktop/building#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
-    - You can now [deselect useless modules](../Desktop/building#deselecting-modules) in your built applications.
-- [Client/Server optimization](../ORDA/datastores#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/datastores#preconfiguring-contexts) and [ORDA Cache](../ORDA/datastores#orda-cache) for more information. > These functions are intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarlos.
-- [DataClass class](../API/DataClassClass): The new [.getCount()](../API/DataClassClass#getcount) function returns the number of entities in a dataclass.
+    - El [archivo directory.json](Users/editing#directoryjson-file) del proyecto ahora puede ser [integrado al servidor](../Desktop/building#embed-the-project-users-and-groups-in-built-server-application) al momento de la generación, lo que le permite desplegar una aplicación cliente/servidor con una configuración básica de la seguridad de los usuarios y de los grupos.
+    - Ahora puede [deseleccionar los módulos inútiles](../Desktop/building#deselecting-modules) en sus aplicaciones generadas.
+- [Optimización cliente/servidor](../ORDA/datastores#clientserver-optimization): nuevas funciones de clase permiten manejar la caché ORDA y el contenido de un contexto de optimización. Para más información [Preconfiguración de contextos](../ORDA/datastores#preconfiguring-contexts) y [Caché ORDA](../ORDA/datastores#orda-cache). > Estas funciones están destinadas a los desarrolladores que necesitan personalizar las funciones por defecto de ORDA para las configuraciones específicas. En la mayoría de los casos, no será necesario utilizarlos.
+- [clase DataClass](../API/DataClassClass): la nueva función [.getCount()](../API/DataClassClass#getcount) devuelve el número de entidades de una dataclass.
 - 4D View Pro:
-    - The new [VP SET DATA CONTEXT](../ViewPro/method-list#vp-set-data-context), [VP Get data context](../ViewPro/method-list#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
-    - [VP EXPORT DOCUMENT](../ViewPro/method-list#vp-get-binding-path) and [VP Export to object](../ViewPro/method-list#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
+    - Los nuevos comandos [VP SET DATA CONTEXT](../ViewPro/method-list#vp-set-data-context), [VP Get data context](../ViewPro/method-list#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list#vp-get-binding-path) permiten crear contextos de datos y vincular su contenido a las celdas de la hoja.
+    - [VP EXPORT DOCUMENT](../ViewPro/method-list#vp-get-binding-path) y [VP Export to object](../ViewPro/method-list#vp-get-binding-path) aceptan ahora la nueva opción `includeBindingSource` que exporta el contenido de un contexto de datos como valores de celda.
 
 
 ### 4D v19 R4
 
-- [Alias attributes](../ORDA/ordaClasses#alias-attributes-1) are available in ORDA classes.
-- Support for [break and continue](../Concepts/looping#break-and-continue) statements in loops.
-- Support for [return](../Concepts/control-flow#return-expression) statement and [return expression](../Concepts/parameters#return-expression) to return values.
+- [Atributos Alias](../ORDA/ordaClasses#alias-attributes-1) están disponibles en las clases ORDA.
+- Soporte para las instrucciones [break y continue](../Concepts/looping#break-and-continue) en los bucles.
+- Soporte para la instrucción [return](../Concepts/control-flow#return-expression) y [la expresión return](../Concepts/parameters#return-expression) para devolver los valores.
 - Soporte de los [operadores de asignación compuestos](../Concepts/operators#compound-assignment-operators), [los operadores de cortocircuito](../Concepts/operators#short-circuit-operators) y del [operador ternario](../Concepts/operators#ternary-operator)
 - El [editor de código](../code-editor/overview) ahora incluye una herramienta desplegable y soporta marcadores para una mejor navegación por el código.
 - Nuevas Preferencias: [**Incluir los tokens en los archivos fuente del proyecto**](../Preferences/general#include-tokens-in-project-source-files) y la opción [**Mostrar los portapapeles**](../Preferences/methods#show-clipboards) en la página Métodos.

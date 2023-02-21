@@ -21,7 +21,7 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designates                                         |
+| filesystem   | Designa                                            |
 | ------------ | -------------------------------------------------- |
 | "/DATA"      | Current data folder                                |
 | "/LOGS"      | Carpeta Logs                                       |

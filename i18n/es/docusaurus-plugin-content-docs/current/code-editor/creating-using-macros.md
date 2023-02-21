@@ -27,7 +27,8 @@ Estas tres ubicaciones pueden utilizarse simultáneamente: es posible instalar u
 
 ## Macros por defecto
 
-4D ofrece un conjunto de macros por defecto que corresponden, en particular, a la lista de palabras clave de las versiones anteriores de 4D. Estas macros se incluyen en el archivo por defecto "*Macros.xml*", ubicado en la carpeta "Macros v2" que se crea en la carpeta 4D activa de la máquina durante el arranque inicial de 4D.
+
+4D offers a set of default macros containing, for example, control flow keywords. Estas macros se incluyen en el archivo por defecto "*Macros.xml*", ubicado en la carpeta "Macros v2" que se crea en la carpeta 4D activa de la máquina durante el arranque inicial de 4D.
 
 Posteriormente, puede modificar este archivo o el contenido de la carpeta como desee (ver el párrafo siguiente). En caso de problemas con esta carpeta, se puede borrar y 4D la volverá a crear en el siguiente inicio.
 

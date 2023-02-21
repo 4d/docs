@@ -380,7 +380,7 @@ For($vCounter;1;100) //Inicio del bucle
  End for
 ```
 
-#### Inline or multiline comments (`/*comment*/`)
+#### Comentarios en línea o multilínea (`/*comment*/`)
 
 Rodea el contenido con los caracteres `/*` ... `*/` para crear comentarios en línea o bloques de comentarios multilínea. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
@@ -408,9 +408,9 @@ End for
 
 ## Secuencias de escape
 
-The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+El lenguaje 4D permite utilizar secuencias de escape (también llamadas caracteres de escape). Una secuencia de escape es una secuencia de caracteres que puede utilizarse para sustituir a un caracter "especial".
 
-The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+La secuencia consiste en una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es una secuencia de escape para el caracter **Tab**. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
 
 En 4D, se pueden utilizar las siguientes secuencias de escape:
 
@@ -424,7 +424,7 @@ En 4D, se pueden utilizar las siguientes secuencias de escape:
 
 > Es posible utilizar mayúsculas o minúsculas en las secuencias de escape.
 
-In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `\r`) se inserta en una sentencia para obtener un diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
 

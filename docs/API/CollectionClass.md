@@ -1059,7 +1059,7 @@ You designate the callback to be executed to filter collection elements using ei
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for each element fulfilling the condition and thus, to push to the new collection. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional) and an object in first parameter (*$1*). The callback can perform any test, with or without the parameter(s) and must return **true** for each element fulfilling the condition and thus, to push to the new collection.  
 
 The callback receives the following parameters:
 
@@ -1069,9 +1069,14 @@ The callback receives the following parameters:
 
 It can set the following parameter(s):
 
-*	(mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
+*	*$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
 *	*$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
+:::note
+
+When using *methodName* as callback, and if the method does not return any value, `.filter()` will look at the property *$1.result* that you must set to **true** for each element fulfilling the condition.
+
+:::
 
 #### Example 1
 
@@ -1843,7 +1848,7 @@ If the collection contains elements of different types, they are first grouped b
 Ordering a collection of numbers in ascending and descending order:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2189,6 +2194,7 @@ For detailed information on how to build a query using *queryString*, *value* an
 
 
 #### Example 2
+
 
 
 ```4d

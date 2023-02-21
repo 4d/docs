@@ -31,7 +31,7 @@ Sintaxis:
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `applicationPath`                                                                                                                                                                             | Ruta de acceso a 4D, 4D Server o de la aplicación fusionada | Lance la aplicación. Es idéntico a hacer doble clic en la aplicación 4D. Cuando se llama sin argumento de archivo de estructura, la aplicación se ejecuta y aparece la caja de diálogo "seleccionar la base de datos".                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `--version`                                                                                                                                                                                   |                                                             | Muestra la versión de la aplicación y sale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `--help`                                                                                                                                                                                      |                                                             | Muestra el mensaje de ayuda y salir. Argumentos alternativos: -?, -h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `--help`                                                                                                                                                                                      |                                                             | Muestra el mensaje de ayuda y sale. Argumentos alternativos: -?, -h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--project`                                                                                                                                                                                   | projectPath &#124; packagePath &#124; 4dlinkPath            | Archivo de proyecto a abrir con el archivo de datos actual. No aparece ninguna caja de diálogo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `--data`                                                                                                                                                                                      | dataPath                                                    | Archivo de datos a abrir con el archivo de proyecto designado. Si no se especifica, 4D utiliza el último archivo de datos abierto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `--opening-mode`                                                                                                                                                                              | interpreted &#124; compiled                                 | Base de datos de peticiones a abrir en modo interpretado o compilado. No se lanza ningún error si el modo solicitado no está disponible.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -49,17 +49,16 @@ Sintaxis:
 
 ### Ejemplos
 
-Estos ejemplos suponen que su aplicación 4D está almacenada en el escritorio y que la base de datos a abrir se encuentra en la carpeta "Documentos".
-
 > La carpeta actual del usuario se alcanza utilizando el comando "~ " en macOS y el comando "%HOMEPATH%" en Windows.
 
-Estos ejemplos suponen que su aplicación 4D está almacenada en el escritorio y que la base de datos a abrir se encuentra en la carpeta "Documentos".
+Lance una aplicación 4D almacenada en el escritorio:
 
 *   macOS:
 
 
 ```bash
 open ~/Desktop/4D.app
+open "~/Desktop/4D Server.app"
 ```
 
 *   Windows:
@@ -67,21 +66,23 @@ open ~/Desktop/4D.app
 
 ```bash
 %HOMEPATH%\Desktop\4D\4D.exe
+%HOMEPATH%\Desktop\"4D Server.exe"
 ```
 
-Lance la aplicación:
+
+Abra un paquete en macOS:
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
+--args ~/Documents/myDB.4dbase
 ```
 
-Lanzar la aplicación con un archivo paquete en macOS:
+Abra un archivo de proyecto:
 
 *   macOS:
 
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
+--args ~/Documents/myProj/Project/myProj.4DProject
 ```
 
 
@@ -89,102 +90,93 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
+%HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 ```
 
 
 
-Lanzar la aplicación con un archivo proyecto:
+Abra un archivo de proyecto y un archivo de datos:
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD
+--args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
-or:
-%HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
+o:
+/project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-Lanzar la aplicación con un archivo proyecto y un archivo de datos:
+Abra un archivo .4DLink:
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app ~/Desktop/MyDatabase.4DLink
+~/Desktop/MyDatabase.4DLink
 ```
 
+
+*   Windows:
+
+
 ```bash
-open "~/Desktop/4D Server.app" ~/Desktop/MyDatabase.4DLink
+%HOMEPATH%\Desktop\MyDatabase.4DLink
+```
+
+Lance la aplicación en modo compilado y cree un archivo de datos si no está disponible:
+
+*   macOS:
+
+
+```bash
+~/Documents/myBase.4dbase --args --opening-mode compiled --create-data true
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D.exe %HOMEPATH%\Desktop\MyDatabase.4DLink
+%HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-```bash
-%HOMEPATH%\Desktop\4D Server.exe" %HOMEPATH%\Desktop\MyDatabase.4DLink
-```
-
-Lanzar la aplicación con un archivo .4DLink:
+Lance la aplicación con un archivo proyecto y un archivo de datos y pase una cadena como parámetro de usuario:
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled --create-data true
+--args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --user-param "Hello world"
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-Lanzar la aplicación en modo compilado y crear un archivo de datos si no está disponible:
+Apertura sin interfaz (modo headless):
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --user-param "Hello world"
+--args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --headless  
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --headless
 ```
 
-Lanzar la aplicación con un archivo proyecto y un archivo de datos y pasar una cadena como parámetro usuario:
-
-*   macOS:
 
 
-```bash
-open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --headless
-```
-
-```bash
-open ~/Desktop/MyBuiltRemoteApp −−headless
-```
-
-*   Windows:
-
-
-```bash
-%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --headless
-%HOMEPATH%\Desktop\4D\MyBuiltRemoteApp.exe --headless
-```

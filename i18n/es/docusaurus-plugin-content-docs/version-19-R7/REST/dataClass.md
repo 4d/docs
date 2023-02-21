@@ -46,7 +46,7 @@ Cada entidad contiene las siguientes propiedades:
 | __TIMESTAMP | Fecha  | Marca de tiempo de la última modificación de la entidad                                                            |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company/name,address`
 
@@ -140,15 +140,15 @@ Devuelve todos los datos de una clase de datos específica.
 
 ## {dataClass}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
+Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, *por ejemplo*, `Company[22]` o `Company[IT0911AB2200]`
 
 ### Descripción
 
 Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
 
-For more information about the data returned, refer to [{DataClass}](#dataclass).
+Para más información sobre los datos devueltos, consulte [{DataClass}](#dataclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company[1]/name,address`
 
@@ -197,7 +197,7 @@ Pasando la *clase de datos* y un *atributo* junto con un valor, se puede recuper
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

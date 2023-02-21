@@ -2919,7 +2919,7 @@ End if
 
  | プロパティ | タイプ  | 説明                     |
  | ----- | ---- | ---------------------- |
- | value | 日付   | セルの値 (時間部分を除く)         |
+ | value | Date | セルの値 (時間部分を除く)         |
  | time  | Real | 値が js 日付型の場合、時間値 (秒単位) |
 
 日付または時間は 日付時間 (datetime) として扱われ、以下のように補完されます:
@@ -5021,7 +5021,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 | 引数            | タイプ    |    | 説明                                  |
 | ------------- | ------ | -- | ----------------------------------- |
 | rangeObj      | Object | -> | レンジオブジェクト                           |
-| dateValue     | 日付     | -> | 設定する日付値                             |
+| dateValue     | Date   | -> | 設定する日付値                             |
 | timeValue     | 時間     | -> | 設定する時間値                             |
 | formatPattern | Text   | -> | 値のフォーマット|<!-- END REF -->
 
@@ -5188,7 +5188,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 | -- | --- |  | -- |
 |    |     |  |    |
 
-|rangeObj |Object|->|Range object| |formula |Text|->|Formula or 4D method| |formatPattern |Text|->|Format of field|<!-- END REF -->
+|rangeObj |Object|->|レンジオブジェクト| |formula |Text|->|フォーミュラまたは 4Dメソッド| |formatPattern |Text|->|フィールドのフォーマット|<!-- END REF -->
 
 #### 説明
 

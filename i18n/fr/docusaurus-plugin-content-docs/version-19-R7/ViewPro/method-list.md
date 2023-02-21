@@ -778,9 +778,9 @@ In *options*, you can pass an object with additional options for the table. Vale
 
 | Propriété             | Type       | Description                                                                                | La valeur par défaut |
 | --------------------- | ---------- | ------------------------------------------------------------------------------------------ | -------------------- |
-| allowAutoExpand       | Boolean    | True to expand columns or rows of the table when values are added in empty adjacent cells. | Vrai                 |
+| allowAutoExpand       | Boolean    | True to expand columns or rows of the table when values are added in empty adjacent cells. | True                 |
 | showFooter            | Boolean    | Display a footer                                                                           | False                |
-| showHeader            | Boolean    | Display a header                                                                           | Vrai                 |
+| showHeader            | Boolean    | Display a header                                                                           | True                 |
 | showResizeHandle      | Boolean    | For tables that don't have a *source*. Display the resize handle                           | False                |
 | tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Undefined            |
 | useFooterDropDownList | Boolean    | Use a dropdown list in footer cells that calculate the total value of a column             | False                |
@@ -4909,7 +4909,7 @@ Here's the result once the columns are generated:
 | ------------- | ------ | -- | ---------------------------------------------- |
 | rangeObj      | Object | -> | Objet plage                                    |
 | dateValue     | Date   | -> | Valeur date à fixer                            |
-| timeValue     | Heure  | -> | Valeur heure à fixer                           |
+| timeValue     | Time   | -> | Valeur heure à fixer                           |
 | formatPattern | Text   | -> | Format de la valeur|<!-- END REF -->
 
 |
@@ -5040,11 +5040,11 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| Paramètres    | Type      |    | Description                                    |
-| ------------- | --------- | -- | ---------------------------------------------- |
-| rangeObj      | Object    | -> | Objet plage                                    |
-| champ         | Pointeurs | -> | Référence au champ dans la structure virtuelle |
-| formatPattern | Text      | -> | Format du champ|<!-- END REF -->
+| Paramètres    | Type    |    | Description                                    |
+| ------------- | ------- | -- | ---------------------------------------------- |
+| rangeObj      | Object  | -> | Objet plage                                    |
+| champ         | Pointer | -> | Référence au champ dans la structure virtuelle |
+| formatPattern | Text    | -> | Format du champ|<!-- END REF -->
 
 |
 

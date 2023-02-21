@@ -247,10 +247,10 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                |
-| ------ | --------------------------------- |
-| v20    | Support of *headerOnly* parameter |
-| v18 R2 | 追加                                |
+| バージョン  | 内容                       |
+| ------ | ------------------------ |
+| v20    | *headerOnly* パラメーターをサポート |
+| v18 R2 | 追加                       |
 
 </details>
 
@@ -261,7 +261,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 | 引数         | タイプ     |    | 説明                                                                          |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------- |
 | msgNumber  | Integer | -> | リスト中のメッセージの番号                                                               |
-| headerOnly | Boolean | -> | True to download only the email headers (default is False)                  |
+| headerOnly | Boolean | -> | メールヘッダーのみをダウンロードする場合は true (デフォルトは false）                                   |
 | 戻り値        | Object  | <- | [Email オブジェクト](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
@@ -270,20 +270,20 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 `.getMail()` 関数は、 <!-- REF #POP3TransporterClass.getMail().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
-*msgNumber* には、取得するメッセージの番号を渡します。 This number is returned in the `number` property by the [`.getMailInfoList()`](#getmailinfolist) function.
+*msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって `number` プロパティに返されます。
 
-Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. This option allows you to optimize the downloading step when a lot of emails are on the server.
+任意で、*headerOnly* に `true` を渡すと、返される `Email` オブジェクトからボディ部を除外することができます。 その場合、ヘッダープロパティ ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) のみが返されます。 サーバーにメールが大量にある場合に、このオプションでダウンロードを最適化することができます。
 
 :::note
 
-The *headerOnly* option may not be supported by the server.
+*headerOnly* オプションは、サーバー側でサポートされていない可能性があります。
 
 :::
 
 この関数は、以下の場合には Null を返します:
 
 * *msgNumber* で指定したメッセージが存在しない場合
-* the message was marked for deletion using [`.delete()`](#delete).
+* 指定したメッセージが [`.delete()`](#delete) によって削除フラグが立てられていた場合
 
 **返されるオブジェクト**
 
@@ -300,7 +300,7 @@ The *headerOnly* option may not be supported by the server.
  var $sender : Variant
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" // 必須
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"

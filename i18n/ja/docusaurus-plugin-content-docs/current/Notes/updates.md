@@ -9,15 +9,17 @@ title: リリースノート
 
 #### ハイライト
 
+- [IMAP Transporter Class](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) support custom keywords.
 - New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
 - New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
-- Support of *headerOnly* parameter in [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail).
+- [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail) で *headerOnly* パラメーターをサポート 。
 
 
 - 4D クラシックランゲージ: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20): list of all bugs that have been fixed in 4D v20.
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20): 4D v20 で修正されたバグのリストです。
+
 
 
 #### 動作の変更
@@ -76,11 +78,11 @@ title: リリースノート
 #### 動作の変更
 
 - 標準的なインターフェース (OS のファイルエクスプローラなど) との一貫性を保つため、行の選択/ドラッグ＆ドロップに関するリストボックスのルールが変更されました。 連続または不連続の選択行をクリックして移動するだけで、ドラッグできるようになり、**Alt** キーは不要になりました (ひきつづき以前のように使用することはできます)。 **Shift** または **Ctrl/Command** キーが押されている場合、マウスのクリックは押されたとき (マウスダウン) に考慮されます。 リストボックスでのドラッグ＆ドロップの詳細については、[このブログ記事](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) を参照し、[このHDI 4Dプロジェクト](https://github.com/4D-JP/HDI/releases/download/19r7/HDI_LB_DragAndDrop.zip) をダウンロードしてください。
-- The 4D internal build numbering has been modified as of 4D v19 R7:
+- 4D v19 R7 から 4D の内部ビルド番号が変更されました:
     - 4D v19 R6 (含む) までのリリースは 282xxx の番号です。
-    - releases from 4D v19 R7 will be numbered 100xxx.   
-      Note that a specific 4D version is still uniquely identified by a branch name and a build number. ビルド番号は時系列に増加します。
-- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
+    - 4D v19 R7 以降のリリースは 100xxx という番号になります。   
+      なお、特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。
+- Wakanda/4D Mobile REST プロトコルを使用してプロジェクトメソッドを呼び出す機能が削除されました。 [ORDAデータモデルクラス関数](../REST/ClassFunctions.md) または [/4DACTION URL](../WebServer/httpRequests.md#4daction) を代わりに使用することができます。
 
 
 ### 4D v19 R6

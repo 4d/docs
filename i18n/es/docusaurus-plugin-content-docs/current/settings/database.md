@@ -106,4 +106,4 @@ You use the settings on this tab to configure the cache memory for the database.
 
     If there is a noticeable slowing down of the database each time the cache is flushed, you need to adjust the frequency. Esta lentitud significa que se está guardando una gran cantidad de registros. A shorter period between saves would therefore be more efficient since each save would involve fewer records and hence be faster.
 
-    Por defecto, 4D muestra una pequeña ventana cuando se vacía la caché. If you do not want this visual reminder, you can uncheck the **Flushing progress** option on the [Interface page](./interface.md).
+    Por defecto, 4D muestra una pequeña ventana cuando se vacía la caché. Si no desea este recordatorio visual, puede deseleccionar la opción **Escritura de caché** en la [página Interfaz](./interface.md).

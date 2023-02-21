@@ -55,7 +55,9 @@ In this basic example, our WebSocket server will return messages in uppercase.
 var $handler:cs.myServerHandler
 $handler:=cs.myServerHandler.new()
 
-CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
+CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))  
+    //assign a variable (wss) to the WebSocket allows you  
+    //to call wss.terminate() afterwards
 ```
 
 2. Define the `myServerHandler` user class containing callback function(s) used to handle connections to the server:
@@ -76,7 +78,7 @@ Function onConnection($wss : Object; $param : Object) : Object
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
     //resends the message in uppercase  
-    $ws.send(Uppercase($message.data)
+    $ws.send(Uppercase($message.data))
 
 ```
 
@@ -108,11 +110,11 @@ WebSocket server objects provide the following properties and functions:
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parâmetros | Tipo               |    | Descrição                                                         |
-| ---------- | ------------------ |:--:| ----------------------------------------------------------------- |
-| WSSHandler | Objeto             | -> | Object of the user class declaring the WebSocket Server callbacks |
-| options    | Objeto             | -> | WebSocket configuration parameters                                |
-| Resultados | 4D.WebSocketServer | <- | New WebSocketServer object|<!-- END REF -->
+| Parâmetros                          | Tipo               |    | Descrição                                                         |
+| ----------------------------------- | ------------------ |:--:| ----------------------------------------------------------------- |
+| [WSSHandler](#wsshandler-parameter) | Objeto             | -> | Object of the user class declaring the WebSocket Server callbacks |
+| [options](#options-parameter)       | Objeto             | -> | WebSocket configuration parameters                                |
+| Resultados                          | 4D.WebSocketServer | <- | New WebSocketServer object|<!-- END REF -->
 
 
 |

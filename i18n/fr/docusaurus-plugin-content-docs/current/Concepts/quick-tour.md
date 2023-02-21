@@ -100,13 +100,13 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
+> Les constantes prédéfinies apparaissent <u>soulignées</u> par défaut dans l'éditeur de code 4D.
 
 ## Methods
 
 4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
 
-Une méthode est composée de plusieurs lignes d’instructions. A statement performs an action, and may be simple or complex.
+Une méthode est composée de plusieurs lignes d’instructions. Une instruction exécute une action, et peut être simple ou complexe.
 
 Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :
 
@@ -120,7 +120,7 @@ L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Faire quelque chose avec le caractère si c'est un Tab
 
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
@@ -302,14 +302,14 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 | MonBouton               | Number                | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                                   |
 | !1997-01-25!            | Date                  | C'est une constante date pour la date 25/01/97 (25 janvier 1997).                                                                                                                    |
 | Current date+ 30        | Date                  | C'est une expression de type Date qui utilise la commande `Current date` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date. |
-| ?8:05:30?               | Heure                 | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
-| ?2:03:04? + ?1:02:03?   | Heure                 | Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.                                                                                                           |
-| Vrai                    | Boolean               | Cette commande retourne la valeur booléenne TRUE.                                                                                                                                    |
+| ?8:05:30?               | Time                  | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
+| ?2:03:04? + ?1:02:03?   | Time                  | Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.                                                                                                           |
+| True                    | Boolean               | Cette commande retourne la valeur booléenne TRUE.                                                                                                                                    |
 | 10 # 20                 | Boolean               | C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.                            |
 | “ABC” = “XYZ”           | Boolean               | C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.                                                                          |
-| MonImage + 50           | Images                | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
-| ->[Personnes]Nom        | Pointeurs             | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
-| Table(1)                | Pointeurs             | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
+| MonImage + 50           | Picture               | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
+| ->[Personnes]Nom        | Pointer               | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
+| Table(1)                | Pointer               | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
 | JSON Parse (MaChaine)   | Object                | C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)                                                                                                      |
 | JSON Parse (MonTabJSON) | Collection            | C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)                                                                                              |
 | Form.pageNumber         | Propriété objet       | Une propriété objet est une expression qui peut être de tout type                                                                                                                    |
@@ -343,12 +343,12 @@ MonPointeur->->MaVar
 ALERT(MonPointeur->)
 ```
 
-## Code on several lines
+## Code sur plusieurs lignes
 
-You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+Vous pouvez écrire une seule instruction sur plusieurs lignes en terminant chaque ligne de l'instruction par une barre oblique inverse `\`. Le langage 4D prendra en compte toutes les lignes à la fois. Par exemple, les deux déclarations suivantes sont équivalentes :
 
 ```4d
-$str:=String("hello world!")
+$str:=String("hello world !")
 ```
 
 ```4d
@@ -368,7 +368,7 @@ Voici deux manières de créer des commentaires :
 
 Les deux styles de commentaires peuvent être utilisés simultanément.
 
-#### Single line comments (`//comment`)
+#### Commentaires sur une seule ligne (`//commentaire`)
 
 Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Voici un exemple :
 
@@ -381,7 +381,7 @@ For($vCounter;1;100) //Début de la boucle
   End for
 ```
 
-#### Inline or multiline comments (`/*comment*/`)
+#### Commentaires en ligne ou multilignes (`/*comment*/`)
 
 Entourez le contenu avec des caractères `/*` ... `*/` pour créer des commentaires en ligne ou des blocs de commentaires multilignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
 

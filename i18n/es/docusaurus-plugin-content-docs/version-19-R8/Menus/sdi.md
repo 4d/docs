@@ -4,7 +4,7 @@ title: Mode SDI bajo Windows
 ---
 
 
-On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
+En Windows, los desarrolladores 4D pueden probar y configurar sus aplicaciones fusionadas 4D para que funcionen como aplicaciones SDI (Single-Document Interface). En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
 
 |
 
@@ -14,7 +14,7 @@ El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las
 
 ## Disponibilidad del modo SDI
 
-The SDI mode is available in the following execution environments only:
+El modo SDI sólo está disponible en los siguientes entornos de ejecución:
 
 - Windows
 - Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
@@ -22,16 +22,16 @@ The SDI mode is available in the following execution environments only:
 
 ## Activación del modo SDI
 
-To enable the SDI mode in your application, just check the **Use SDI mode on Windows** option in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows).
+Para activar el modo SDI en su aplicación, sólo tiene que marcar la opción **Utilizar el modo SDI en Windows** en la página ["Interfaz" de la caja de diálogo Configuración](../settings/interface.md#display-windows).
 
-Once enabled, to actually run your application in SDI mode, you can either:
+Una vez habilitado, para ejecutar realmente su aplicación en modo SDI, puede:
 
-- build a merged application (standalone and/or client application) and execute it on Windows, or
-- select **Test Application in SDI Mode** from the **Run** menu on Windows to test the development.
+- crear una aplicación combinada (independiente y/o cliente) y ejecutarla en Windows, o bien
+- seleccione **Aplicación de prueba en modo SDI** en el menú **Ejecutar** en Windows para probar el desarrollo.
 
 |
 
-Because the development environment is executed in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+Dado que el entorno de desarrollo se ejecuta en MDI, cambiar del modo de desarrollo al modo de ejecución utilizando el elemento de menú **Probar aplicación en modo SDI** equivale a reiniciar la aplicación.
 
 :::
 
@@ -68,8 +68,8 @@ Para manejar este caso, las aplicaciones 4D ejecutadas en modo SDI incluyen un m
 - el usuario no puede seguir interactuando con la aplicación
 - no hay procesos de usuario en curso
 - Los procesos 4D o workers están esperando un evento
-- the Web server is not started
-- the [WebAdmin server](../Admin/webAdmin.md) is not started.
+- el servidor web no se ha lanzado
+- el [servidor WebAdmin](../Admin/webAdmin.md) no está iniciado.
 
 :::note
 
@@ -94,6 +94,6 @@ Aunque es manejado de forma transparente por 4D, el modo SDI introduce pequeñas
 
 |
 
-You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+Puede utilizar el comando [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) para conocer el modo de ejecución actual en Windows.
 
 :::

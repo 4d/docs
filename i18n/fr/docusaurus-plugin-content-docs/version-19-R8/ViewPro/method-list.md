@@ -5020,7 +5020,7 @@ Here's the result once the columns are generated:
 | ------------- | ------ | -- | ---------------------------------------------- |
 | rangeObj      | Object | -> | Objet plage                                    |
 | dateValue     | Date   | -> | Valeur date à fixer                            |
-| timeValue     | Heure  | -> | Valeur heure à fixer                           |
+| timeValue     | Time   | -> | Valeur heure à fixer                           |
 | formatPattern | Text   | -> | Format de la valeur|<!-- END REF -->
 
 |
@@ -5147,11 +5147,11 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| Paramètres    | Type      |    | Description                                    |
-| ------------- | --------- | -- | ---------------------------------------------- |
-| rangeObj      | Object    | -> | Objet plage                                    |
-| champ         | Pointeurs | -> | Référence au champ dans la structure virtuelle |
-| formatPattern | Text      | -> | Format du champ|<!-- END REF -->
+| Paramètres    | Type    |    | Description                                    |
+| ------------- | ------- | -- | ---------------------------------------------- |
+| rangeObj      | Object  | -> | Objet plage                                    |
+| champ         | Pointer | -> | Référence au champ dans la structure virtuelle |
+| formatPattern | Text    | -> | Format du champ|<!-- END REF -->
 
 |
 

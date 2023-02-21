@@ -185,7 +185,7 @@ La carpeta Logs contiene todos los archivos de registro utilizados por el proyec
 - depuración de comandos,
 - Peticiones 4D Server (generadas en en los equipos cliente y en el servidor).
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html) command) for maintenance log files and in cases where data folder is read-only.
+> Una carpeta Logs adicional está disponible en la carpeta de preferencias del usuario del sistema (carpeta 4D activa, ver el comando [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html)) para los archivos de registro de mantenimiento y en los casos en que la carpeta de datos es de sólo lectura.
 
 ## `Settings`
 

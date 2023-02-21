@@ -3,23 +3,23 @@ id: configuring
 title: Configuración de las áreas de 4D View Pro
 ---
 
-The 4D View Pro area properties can be configured using the Property list. Las propiedades de las hojas de cálculo están disponibles a través del lenguaje.
+Las propiedades del área 4D View Pro pueden configurarse utilizando la lista de propiedades. Las propiedades de las hojas de cálculo están disponibles a través del lenguaje.
 
 ## Propiedades del área de formulario
 
-Using the area's property list, you can set [4D View Pro object properties](FormObjects/viewProArea_overview.md#supported-properties) such as **Object Name**, [**Variable or Expression**](#4d-view-pro-form-object-variable), **Appearance**, **Action**, and **Events**.
+Utilizando la lista de propiedades del área, puede configurar las [propiedades objeto 4D View Pro](FormObjects/viewProArea_overview.md#supported-properties) como **Nombre del objeto**, [**Variable o expresión**](#4d-view-pro-form-object-variable), **Apariencia**, **Acción**, y **Eventos**.
 
 ![](../assets/en/ViewPro/vpPropertyList.png)
 
 ### Selección de una interfaz usuario
 
-You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:
+Puede seleccionar la interfaz a utilizar con sus áreas de formulario 4D View Pro en la **Lista de propiedades**, en **Apariencia**:
 
 ![](../assets/en/ViewPro/vpUserInterface.PNG)
 
-> You can also use the [`userInterface`](FormObjects/properties_Appearance.md#user-interface) and [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(only with the "toolbar" interface) JSON properties.
+> También puede utilizar las propiedades JSON [`userInterface`](FormObjects/properties_Appearance.md#user-interface) y [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(sólo con la interfaz "toolbar").
 
-Las interfaces permiten realizar modificaciones básicas y manipular los datos. User-defined modifications are saved in the 4D View Pro object when the user saves the document.
+Las interfaces permiten realizar modificaciones básicas y manipular los datos. Las modificaciones definidas por el usuario se guardan en el objeto 4D View Pro cuando el usuario guarda el documento.
 
 #### Cinta
 
@@ -27,7 +27,7 @@ Las interfaces permiten realizar modificaciones básicas y manipular los datos. 
 
 #### Toolbar (Barra de herramientas)
 
-Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/properties_Appearance.md#show-formula-bar) option. Cuando se selecciona, la barra de fórmulas es visible debajo de la interfaz Barra de herramientas.
+Al activar la interfaz de la barra de herramientas aparece la opción [**Mostrar barra de fórmula**](FormObjects/properties_Appearance.md#show-formula-bar). Cuando se selecciona, la barra de fórmulas es visible debajo de la interfaz Barra de herramientas.
 
 Con barra de fórmula visible:
 
@@ -35,7 +35,7 @@ Con barra de fórmula visible:
 
 #### Funcionalidades
 
-Both the Ribbon and the Toolbar interfaces group related features into tabs:
+Tanto la interfaz de la cinta de opciones como la de la barra de herramientas agrupan funciones relacionadas en pestañas:
 
 | Pestaña  | Acciones                        | Interfaz Cinta | Interfaz Barra de herramientas |
 | -------- | ------------------------------- |:--------------:|:------------------------------:|
@@ -49,9 +49,9 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
 ## Eventos formulario
 
-The following form events are available in the Property List for 4D View Pro areas.
+Los siguientes eventos formulario están disponibles en la Lista de propiedades de las áreas 4D View Pro.
 
-Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
+Algunos de los eventos son eventos formulario estándar (disponibles para todos los objetos activos) y otros son eventos formulario específicos de 4D View Pro. Algunos eventos formulario estándar suministran información extendida en el objeto devuelto por el comando [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) cuando son generados para las áreas 4D View Pro. La siguiente tabla indica los eventos estándar y los eventos específicos o los que ofrecen información adicional a las áreas 4D View Pro:
 
 | Evento 4D estándar                              | Eventos 4D View Pro específicos y extendidos          |
 | ----------------------------------------------- | ----------------------------------------------------- |
@@ -67,7 +67,7 @@ Some of the events are standard form events (available to all active objects) an
 
 ## Opciones hoja
 
-The 4D View Pro sheet options object allows you to control various options of your 4D View Pro areas. Este objeto es manejado por los siguientes comandos:
+El objeto opciones hoja 4D View Pro le permite controlar varias opciones de sus áreas 4D View Pro. Este objeto es manejado por los siguientes comandos:
 
 * [VP SET SHEET OPTIONS](method-list.md#vp-set-sheet-options)
 * [VP Get sheet options](method-list.md#vp-get-sheet-options)
@@ -77,11 +77,11 @@ The 4D View Pro sheet options object allows you to control various options of yo
 | Propiedad            |                        | Tipo         | Descripción                                                                                                                                                                                                                                                                                                  |
 | -------------------- | ---------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | allowCellOverflow    |                        | boolean      | Especifica si los datos pueden desbordarse hacia las celdas vacías adyacentes.                                                                                                                                                                                                                               |
-| sheetTabColor        |                        | string       | A color string used to represent the sheet tab color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                       |
-| frozenlineColor      |                        | string       | A color string used to represent the frozen line color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                     |
+| sheetTabColor        |                        | string       | Una cadena color utilizada para representar el color de la pestaña de la hoja, como "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", etc.                                                                                                                                                                       |
+| frozenlineColor      |                        | string       | Una cadena color utilizada para representar el color de la línea congelada, como "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", "Acento 5", etc.                                                                                                                                                              |
 | clipBoardOptions     |                        | entero largo | La opción portapapeles. Valores disponibles: `vk clipboard paste options all`, `vk clipboard paste options formatting`, `vk clipboard paste options formulas`, `vk clipboard paste options formulas and formatting`, `vk clipboard paste options values`, `vk clipboard paste options values and formatting` |
 | rejilla              |                        | object       | Las opciones de la línea de rejilla.                                                                                                                                                                                                                                                                         |
-|                      | color                  | string       | A color string used to represent the grid line color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                       |
+|                      | color                  | string       | Una cadena color utilizada para representar el color de la línea de la cuadrícula, como "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", etc.                                                                                                                                                                   |
 |                      | showVerticalGridline   | boolean      | Especifica si se debe mostrar la línea de la cuadrícula vertical.                                                                                                                                                                                                                                            |
 |                      | showHorizontalGridline | boolean      | Especifica si mostrar o no la línea de rejilla horizontal.                                                                                                                                                                                                                                                   |
 | rowHeaderVisible     |                        | boolean      | Especifica si el encabezado de la línea es visible.                                                                                                                                                                                                                                                          |
@@ -97,25 +97,25 @@ The 4D View Pro sheet options object allows you to control various options of yo
 
 ### Protección de la hoja
 
-To lock the whole sheet, you only need to set the *isProtected* property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
+Para bloquear toda la hoja, basta con poner la propiedad *isProtected* en **true**. A continuación, puede desbloquear las celdas individualmente colocando la propiedad de estilo de celda [bloqueada](#layout).
 
-| Propiedad         |                          | Tipo    | Descripción                                                                                                                         |
-| ----------------- | ------------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                                |
-| protectionOptions |                          | object  | A value that indicates the elements that you want users to be able to change. Si null : el parámetro protectionOptions se reinicia. |
-|                   | allowSelectLockedCells   | boolean | Especifica si el usuario puede seleccionar celdas bloqueadas, opcional. True por defecto.                                           |
-|                   | allowSelectUnlockedCells | boolean | Indica si el usuario puede seleccionar las celdas no bloqueadas, opcional. True por defecto.                                        |
-|                   | allowSort                | boolean | Especifica si el usuario puede ordenar rangos, opcional. Falso por defecto.                                                         |
-|                   | allowFilter              | boolean | Especifica si el usuario puede filtrar rangos, opcional. Falso por defecto.                                                         |
-|                   | allowEditObjects         | boolean | Indica si el usuario puede editar los objetos flotantes, opcional. Falso por defecto.                                               |
-|                   | allowResizeRows          | boolean | Indica si el usuario puede redimensionar las líneas, opcional. Falso por defecto.                                                   |
-|                   | allowResizeColumns       | boolean | Indica si el usuario puede redimensionar las columnas, opcional. Falso por defecto.                                                 |
-|                   | allowDragInsertRows      | boolean | Specifies whether the user can perform the drag operation to insert rows, optional. Falso por defecto.                              |
-|                   | allowDragInsertColumns   | boolean | Specifies whether the user can perform the drag operation to insert columns, optional. Falso por defecto.                           |
-|                   | allowInsertRows          | boolean | Indica si el usuario puede insertar las líneas, opcional. Falso por defecto.                                                        |
-|                   | allowInsertColumns       | boolean | Indica si el usuario puede insertar las columnas, opcional. Falso por defecto.                                                      |
-|                   | allowDeleteRows          | boolean | Indica si el usuario puede eliminar las líneas, opcional. Falso por defecto.                                                        |
-|                   | allowDeleteColumns       | boolean | Indica si el usuario puede eliminar las columnas, opcional. Falso por defecto.                                                      |
+| Propiedad         |                          | Tipo    | Descripción                                                                                                                       |
+| ----------------- | ------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| isProtected       |                          | boolean | Especifica si las celdas de esta hoja que están marcadas como protegidas no se pueden editar.                                     |
+| protectionOptions |                          | object  | Valor que indica los elementos que desea que los usuarios puedan modificar. Si null : el parámetro protectionOptions se reinicia. |
+|                   | allowSelectLockedCells   | boolean | Especifica si el usuario puede seleccionar celdas bloqueadas, opcional. True por defecto.                                         |
+|                   | allowSelectUnlockedCells | boolean | Indica si el usuario puede seleccionar las celdas no bloqueadas, opcional. True por defecto.                                      |
+|                   | allowSort                | boolean | Especifica si el usuario puede ordenar rangos, opcional. Falso por defecto.                                                       |
+|                   | allowFilter              | boolean | Especifica si el usuario puede filtrar rangos, opcional. Falso por defecto.                                                       |
+|                   | allowEditObjects         | boolean | Indica si el usuario puede editar los objetos flotantes, opcional. Falso por defecto.                                             |
+|                   | allowResizeRows          | boolean | Indica si el usuario puede redimensionar las líneas, opcional. Falso por defecto.                                                 |
+|                   | allowResizeColumns       | boolean | Indica si el usuario puede redimensionar las columnas, opcional. Falso por defecto.                                               |
+|                   | allowDragInsertRows      | boolean | Especifica si el usuario puede realizar la operación de arrastre para insertar líneas, opcional. Falso por defecto.               |
+|                   | allowDragInsertColumns   | boolean | Especifica si el usuario puede realizar la operación de arrastre para insertar columnas, opcional. Falso por defecto.             |
+|                   | allowInsertRows          | boolean | Indica si el usuario puede insertar las líneas, opcional. Falso por defecto.                                                      |
+|                   | allowInsertColumns       | boolean | Indica si el usuario puede insertar las columnas, opcional. Falso por defecto.                                                    |
+|                   | allowDeleteRows          | boolean | Indica si el usuario puede eliminar las líneas, opcional. Falso por defecto.                                                      |
+|                   | allowDeleteColumns       | boolean | Indica si el usuario puede eliminar las columnas, opcional. Falso por defecto.                                                    |
 > Todas las propiedades son opcionales.
 
 ## Formato de las celdas

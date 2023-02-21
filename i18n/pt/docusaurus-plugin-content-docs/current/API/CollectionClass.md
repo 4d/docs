@@ -1031,7 +1031,7 @@ Pode determinar a chamada de retorno a ser executada para filtrar os elementos d
 - *fórmula* (sintaxe recomendada), um [Objecto de fórmula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos de projecto;
 - *methodName*, o nome de um método projeto (texto).
 
-A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **verdadeiro** para cada elemento que preencha a condição e, portanto, para empurrar para a nova colecção. Recebe um `objecto ` no primeiro parâmetro ($1).
+The callback is called with the parameter(s) passed in *param* (optional) and an object in first parameter (*$1*). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **verdadeiro** para cada elemento que preencha a condição e, portanto, para empurrar para a nova colecção.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1041,9 +1041,14 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-*   (obrigatório se tiver utilizado um método) *$1.resultado* (Booleano): **verdadeiro** se o valor do elemento corresponder à condição do filtro e tiver de ser mantido, **falso** caso contrário.
+*   *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
 *   *$1.stop* (Booleano, opcional): **true** para parar o método callback. O valor retornado é o último calculado.
 
+:::note
+
+When using *methodName* as callback, and if the method does not return any value, `.filter()` will look at the property *$1.result* that you must set to **true** for each element fulfilling the condition.
+
+:::
 
 #### Exemplo 1
 
@@ -1790,7 +1795,7 @@ Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por
 Ordenar uma coleção de números em ordem ascendente e descendente:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2122,7 +2127,6 @@ Para obter informação detalhada sobre como construir uma consulta utilizando o
 
 
 #### Exemplo 2
-
 
 ```4d
  var $c : Collection
