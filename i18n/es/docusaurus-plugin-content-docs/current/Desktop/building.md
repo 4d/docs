@@ -709,6 +709,6 @@ Este es el escenario para actualizar un servidor o una aplicación unipersonal f
 
 El procedimiento de instalación genera un archivo de registro en el que se detallan las operaciones de actualización de las aplicaciones fusionadas (cliente, servidor o monopuesto) en los equipos de destino. Este archivo es útil para analizar cualquier error que se produzca durante el proceso de instalación.
 
-The update log is named `YYYY-MM-DD_HH-MM-SS_log_X.txt`, for example, `2021-08-25_14-23-00_log_1.txt` for a file created on August 25, 2021 at 14:23.
+El historial de actualización se denomina `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por ejemplo, `2021-08-25_14-23-00_log_1.txt` para un archivo creado el 25 de agosto de 2021 a las 14:23.
 
 Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. Puede averiguar la ubicación de este archivo en cualquier momento utilizando el comando [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html).
