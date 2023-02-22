@@ -4235,11 +4235,12 @@ Ergebnis:
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Parameter  | Typ    |    | Beschreibung                                      |
-| ---------- | ------ | -- | ------------------------------------------------- |
-| parameters | Objekt | -> | Object containing the offscreen area's attributes |
+| Parameter  | Typ    |    | Beschreibung                                                                                               |
+| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
+| parameters | Objekt | -> | Object containing the offscreen area's attributes                                                          |
+| Ergebnis   | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
 
-|Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
+|
 
 #### Beschreibung
 
