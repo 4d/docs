@@ -4203,11 +4203,12 @@ Resultado:
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                                  |
-| ---------- | ------ | -- | ------------------------------------------------------------ |
-| parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla |
+| Parámetros | Tipo   |    | Descripción                                                                                              |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------- |
+| parameters | Object | -> | Object containing the offscreen area's attributes                                                        |
+| Result     | Mixed  | <- | Propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor|<!-- END REF -->
 
-|Result   |Mixed|<-|`.result` propiedad del objeto `.onEvent`, o Null si no devuelve un valor|<!-- END REF -->
+|
 
 #### Descripción
 
