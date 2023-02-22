@@ -757,13 +757,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 #### 説明
 
-The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->。
+`.locked()` 関数は、 <!-- REF #DataStoreClass.locked().Summary -->ローカルデータストアが現在ロックされている場合、true を返します<!-- END REF -->。
 
-You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
+データファイルのスナップショットを実行する前などに、[.flushAndLock()](#flushandlock) 関数を使用してデータストアをロックすることができます。
 
 :::caution
 
-The function will also return `True` if the datastore was locked by another administration feature such as backup or vss (see [.flushAndLock()](#flushandlock)).
+この関数は、データストアがバックアップや VSS などの他の管理機能によってロックされた場合にも、 `true` を返します ([.flushAndLock()](#flushandlock) 参照)。
 
 :::
 
@@ -1253,13 +1253,13 @@ ORDA クライアントリクエストをメモリに記録します:
 
 #### 説明
 
-`.unlock()` 関数は、 <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->。 Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function.
+`.unlock()` 関数は、 <!-- REF #DataStoreClass.unlock().Summary -->データストアにおける、書き込み操作に対する現在のロックが同じプロセスで設定されていた場合、そのロックを解除します<!-- END REF -->。 ローカルデータストアの書き込み操作は、[`.flushAndLock()`](#flushandlock) 関数を使用してロックすることができます。
 
-If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore.
+現在のロックがデータストアの唯一のロックであった場合、書き込み操作は直ちに可能になります。 `.flushAndLock()` 関数がプロセス内で複数回呼ばれている場合、データストアのロックを解除するには、同じ回数だけ `.unlock()` を呼び出す必要があります。
 
-The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
+`.unlock()` 関数は、対応する `.flushAndLock()` を呼び出したプロセス内で呼び出す必要があります。そうでない場合には、この関数は何もおこなわず、ロックも解除されません。
 
-If the `.unlock()` function is called in an unlocked datastore, it does nothing.
+ロックが解除されているデータストアで `.unlock()` 関数を呼び出した場合、何もおこりません。
 
 
 #### 参照
