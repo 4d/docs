@@ -4097,7 +4097,7 @@ Resultado:
 
 | Parámetros | Tipo   |    | Descripción                                                                                              |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------- |
-| parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla                                             |
+| parameters | Object | -> | Object containing the offscreen area's attributes                                                        |
 | Result     | Mixed  | <- | Propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor|<!-- END REF -->
 
 |
