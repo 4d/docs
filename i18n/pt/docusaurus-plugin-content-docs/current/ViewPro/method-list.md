@@ -4006,11 +4006,10 @@ Resultados:
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Parâmetros | Tipo   |    | Descrição                                         |
-| ---------- | ------ | -- | ------------------------------------------------- |
-| parameters | Objeto | -> | Object containing the offscreen area's attributes |
-
-|Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                                                  |
+| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
+| parameters | Objeto | -> | Object containing the offscreen area's attributes                                                          |
+| Resultados | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF --> |
 
 #### Descrição
 
