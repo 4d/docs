@@ -1094,7 +1094,7 @@ Se designa la retrollamada a ejecutar para filtrar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional) and an object in first parameter (*$1*). The callback is called with the parameter(s) passed in *param* (optional).
+Se llama a la retrollamada con los parámetros pasados en *param* (opcional) y un objeto en primer parámetro (*$1*). The callback is called with the parameter(s) passed in *param* (optional).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1104,12 +1104,12 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-*   *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
+*   *$1.result* (booleano): **true** si el valor del elemento coincide con la condición del filtro y debe conservarse, **false** en caso contrario.
 *   *$1.stop* (Boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 :::note
 
-When using *methodName* as callback, and if the method does not return any value, `.filter()` will look at the property *$1.result* that you must set to **true** for each element fulfilling the condition.
+Cuando se utiliza *methodName* como callback, y si el método no devuelve ningún valor, `.filter()` buscará la propiedad *$1.result* que debe definir como **true** para cada elemento que cumpla la condición.
 
 :::
 
