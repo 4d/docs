@@ -39,69 +39,69 @@ Puede personalizar la visualización del área de edición. Any customization is
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **fuente** y **tamaño de la fuente**            | Define la fuente y el tamaño de los caracteres que se utilizarán en el área de edición                                                                                                                      | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                       |
 | **estilo y color de los elementos de sintaxis** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Haga clic derecho en un elemento lingüístico (variable, palabra clave, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **espacios**                                    | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espacios en blanco**                                                                                                                                                                                       |
-| **temas**                                       | Puedes seleccionar el tema Dark o Light, o definir uno personalizado                                                                                                                                        | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                  |
-| **ancho de indentaciones de código**            | Define el ancho de las sangrías de código                                                                                                                                                                   | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                  |
+| **espacios**                                    | Puede mostrar los espacios entre palabras utilizando puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Ver > Espacios en blanco**                                                                                                                                                                                       |
+| **temas**                                       | Puedes seleccionar el tema Dark o Light, o definir uno personalizado                                                                                                                                        | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                 |
+| **ancho de indentaciones de código**            | Define el ancho de las sangrías de código                                                                                                                                                                   | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                 |
 
 ### Change bars
 
-Colored bars instantly show you where lines of code were modified since the method was opened:
+Las barras de colores muestran al instante dónde se han modificado las líneas de código desde que se abrió el método:
 
 ![](../assets/en/code-editor/change-bars.png)
 
-The change bars change colors to indicate whether or not the modifications were saved:
+Las barras de modificación cambian de color para indicar si las modificaciones se han guardado o no:
 
-- yellow: Line was modified and method has not yet been saved.
-- green: Line was modified and method has been saved.
+- amarillo: se ha modificado la línea y aún no se ha guardado el método.
+- verde: se ha modificado la línea y se ha guardado el método.
 
 
 
-## Lists area
+## Área listas
 
-The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). Puede elegir el número y el contenido de las listas que aparecen en la ventana.
+El área listas permite visualizar una o varias listas de elementos necesarios para escribir métodos y clases (comandos, constantes, formularios, etc.). Puede elegir el número y el contenido de las listas que aparecen en la ventana.
 
-Por defecto, el editor de código muestra cuatro listas. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
+Por defecto, el editor de código muestra cuatro listas. Puede ocultar o mostrar todas las listas haciendo clic en el icono situado en la parte inferior derecha de la ventana. ![](../assets/en/code-editor/show-hide-list.png)
 
-You can enlarge or reduce the relative width of each list area by dragging one of its partitions. It is also possible to adjust the size of the list area in relation to that of the editing area by dragging the dividing line between them.
+Puede ampliar o reducir el ancho relativo de cada área lista arrastrando una de sus particiones. También es posible ajustar el tamaño del área lista en relación con el del área de edición arrastrando la línea divisoria entre ambas.
 
-- Double-clicking on an item in a list causes it to be inserted into the editing area, at the location of the cursor.
-- To **modify the contents** of a list, click on the title area of the list concerned: a pop-up menu appears, enabling you to choose the type of item to be displayed.
+- Al hacer doble clic en un elemento de una lista, éste se inserta en el área de edición, en la posición del cursor.
+- Para **modificar el contenido** de una lista, haga clic en el área del título de la lista en cuestión: aparecerá un menú emergente que le permitirá elegir el tipo de elemento que desea visualizar.
 
 ![](../assets/en/code-editor/list-area.png)
 
-- To add or remove a list, click in the title area of one of the lists and choose the corresponding command in the pop-up menu. The **Remove this list** command is disabled when you click on the last list. If you want to hide all the lists, you must either click on the **show or hide lists**  button at the bottom right of the window or hide them by default in the **Preferences**.
+- Para añadir o eliminar una lista, haga clic en el área del título de una de las listas y elija el comando correspondiente en el menú emergente. El comando **Eliminar esta lista** se desactiva al hacer clic en la última lista. Si desea ocultar todas las listas, debe hacer clic en el botón **mostrar u ocultar listas** situado en la parte inferior derecha de la ventana u ocultarlas por defecto en las **Preferencias**.
 
 - Puede ocultar las listas en todas las ventanas de las siguientes maneras:
-  - Select the **View > Lists** option in the **Method** menu (a check mark indicates whether lists are displayed)
+  - Seleccione la opción **Ver > Listas** en el menú **Método** (una marca de verificación indica si se muestran las listas)
   - For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
-#### Available lists of items
+#### Listas de elementos disponibles
 
-You can display the following lists of items in the lists area of the Code Editor window:
+Puede mostrar las siguientes listas de elementos en el área de listas de la ventana del Editor de código:
 
-- **All tables and fields**: Database table and field names in the form of a hierarchical list. When you insert a field name into the method by double-clicking on its name, 4D inserts it while respecting the syntax and adds the name of the table or subtable as the case may be.
-- **Table** (submenu): Field names of the table selected using the submenu.
-- **Current table**: Field names of the current table (available in triggers, form methods and object methods).
-- **Project forms**: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
-- **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. Por ejemplo: [Table];"Form".
-- **Methods**: Database project method names.
-- **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Las carpetas pueden utilizarse para organizar los objetos de forma personalizada. Se gestionan desde la página de inicio del Explorador.
-- **Folders** (submenu): Contents of the folder selected using the submenu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](#creating-and-using-macros)).
-- **Commands**: 4D language commands in alphabetical order.
-- **Commands by themes**: 4D language commands classified by theme in the form of a hierarchical list.
-- **Menu bars**: Names and numbers of menu bars [created with the 4D Menu bar editor](../Menus/creating.md).
-- **Constants**: 4D constants and those of any plug-ins, classified by theme in the form of a hierarchical list.
+- **Todas las tablas y campos**: nombres de tablas y campos de la base de datos en forma de lista jerárquica. Cuando inserta un nombre de campo en el método haciendo doble clic sobre su nombre, 4D lo inserta respetando la sintaxis y añade el nombre de la tabla o subtabla según el caso.
+- **Tabla** (submenú): nombres de los campos de la tabla seleccionada utilizando el submenú.
+- **Tabla actual**: nombres de campo de la tabla actual (disponibles en triggers, métodos de formulario y métodos de objeto).
+- **Formularios proyecto**: nombres de formularios proyectos de bases de datos. Cuando hace doble clic en el nombre de un formulario de proyecto, 4D lo inserta respetando la sintaxis: el nombre del formulario se inserta entre comillas.
+- **Formularios tabla**: nombres de tablas y formularios de la base de datos en forma de lista jerárquica. Cuando inserta un nombre de formulario en un método haciendo doble clic en su nombre, 4D lo inserta respetando la sintaxis: el nombre del formulario se inserta entre comillas y va precedido del nombre de la tabla y de un punto y coma. Por ejemplo: [Table];"Form".
+- **Métodos**: nombres de los métodos proyecto de la base de datos.
+- **Todas las carpetas**: nombres de carpetas y subcarpetas de objetos definidos en la base de datos mostrados en forma de lista jerárquica. Las carpetas pueden utilizarse para organizar los objetos de forma personalizada. Se gestionan desde la página de inicio del Explorador.
+- **Carpetas** (submenú): contenido de la carpeta seleccionada utilizando el submenú.
+- **Macros**: nombres de macros definidos para la base de datos (ver [Creación y utilización de macros](#creating-and-using-macros)).
+- **Comandos**: vomandos del lenguaje 4D por orden alfabético.
+- **Comandos por temas**: comandos del lenguaje 4D clasificados por temas en forma de lista jerárquica.
+- **Barras de menú**: nombres y números de las barras de menú [creadas con el editor de barras de menú 4D](../Menus/creating.md).
+- **Constantes**: constantes 4D y de los posibles plug-ins, clasificadas por temas en forma de lista jerárquica.
 - **Listas**: nombres de listas.
-- **All plug-in commands**: Commands for all the plug-ins installed in the database (if any), classified by theme in the form of a hierarchical list.
-- **SQL Keywords**: set of keywords recognized by the 4D SQL syntax parser. This list includes commands (e.g. SELECT), clauses (e.g. WHERE) as well as functions (ABS).
+- **Todos los comandos de los plug-ins**: comandos para todos los plug-ins instalados en la base de datos (si los hay), clasificados por temas en forma de lista jerárquica.
+- **Palabras clave SQL**: conjunto de palabras clave reconocidas por el analizador sintáctico de 4D SQL. Esta lista incluye comandos (por ejemplo, SELECT), cláusulas (por ejemplo, WHERE) y funciones (ABS).
 - **Funciones SQL**: Funciones SQL 4D.
 
-**Note:** Except for the Macros element, all the lists are in alphabetical order.
+**Nota:** excepto para el elemento Macros, todas las listas están en orden alfabético.
 
 ### Guardar como plantilla
 
-You can save the lists set in the Code Editor window in the form of a template. Once the template is saved, the parameters set in it will be used for each new Code Editor window that is opened.
+Puede guardar las listas definidas en la ventana del Editor de código en forma de plantilla. Una vez guardada la plantilla, los parámetros establecidos en ella se utilizarán para cada nueva ventana del Editor de código que se abra.
 
 Los siguientes parámetros se almacenan en la plantilla:
 
@@ -110,15 +110,15 @@ Los siguientes parámetros se almacenan en la plantilla:
 - Ubicación y contenido de cada lista
 - Ancho relativo de cada lista
 
-To save a Code Editor window as a template, choose **Method** > **Save As Template**. La plantilla se guarda inmediatamente (no aparece ningún diálogo). It is stored in the **Preferences** of the 4D application. Si ya existe una plantilla anterior, se sustituye.
+Para guardar una ventana del Editor de código como plantilla, seleccione **Método** > **Guardar como plantilla**. La plantilla se guarda inmediatamente (no aparece ningún diálogo). Se guarda en la página **Preferencias** de la aplicación 4D. Si ya existe una plantilla anterior, se sustituye.
 
-## Break points area
+## Área de puntos de ruptura
 
-This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Los puntos de interrupción son útiles durante la fase de depuración de su programación. They stop the execution of your code at specific locations and display the debugger.
+Esta áreaa, situada a la izquierda del área de edición, le permite visualizar los números de línea e insertar puntos de interrupción directamente junto a instrucciones específicas. Los puntos de interrupción son útiles durante la fase de depuración de su programación. Detienen la ejecución de su código en lugares específicos y muestran el depurador.
 
-For more information on break points, see the [Debugging](../Debugging/breakpoints.md#breakpoints) section.
+Para obtener más información sobre los puntos de interrupción, consulte la sección [Depurador](../Debugging/breakpoints.md#breakpoints).
 
-You can display or hide the line numbers in the break points area for each window of the Code Editor.
+Puede mostrar u ocultar los números de línea en el área de puntos de interrupción para cada ventana del Editor de código.
 
 - To enable or disable the display of line numbers by default,  choose **Preferences** > **Methods** > **Show line numbers**.
 - To modify this display separately for each window of the Code Editor, choose **Method** > **View** > **Line Numbers**.
@@ -209,22 +209,22 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
     Se muestran las primeras palabras de los elementos copiados o cortados. Seleccione un elemento para insertarlo en la ubicación actual del cursor.
 
-- Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or using keyboard shortcuts:
+- Dispone de nueve portapapeles numerados adicionales que pueden emplearse directamente mediante los botones de la barra de herramientas del Editor de código o mediante atajos de teclado:
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
-| Plataforma  | Copy selected text to a clipboard    | Paste contents of a clipboard at cursor location |
-| ----------- | ------------------------------------ | ------------------------------------------------ |
-| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+click on clipboard icon                     |
-|             |                                      | Ctrl+clipboard number                            |
-| **macOS**   | Shift or Alt+click on clipboard icon | Cmd+click on clipboard icon                      |
-|             | Cmd+Shift+clipboard number           | Cmd+clipboard number                             |
+| Plataforma  | Copiar el texto seleccionado en el portapapeles    | Pegar el contenido de un portapapeles en la posición del cursor |
+| ----------- | -------------------------------------------------- | --------------------------------------------------------------- |
+| **Windows** | Mayúsculas o Alt+clic en el icono del portapapeles | Ctrl+clic en el icono del portapapeles                          |
+|             |                                                    | Ctrl+número de portapapeles                                     |
+| **macOS**   | Mayúsculas o Alt+clic en el icono del portapapeles | Cmd+clic en el icono del portapapeles                           |
+|             | Cmd+Mayús+número de portapapeles                   | Cmd+número de tablero                                           |
 
 Puede utilizar la opción [Preferencias](Preferences/methods.md#options-1) para ocultar los portapapeles numerados.
 
-#### Moving lines
+#### Líneas móviles
 
-You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the combination **Alt/Option** + **Up Arrow** or **Down Arrow**.
+Puede mover la línea donde está el cursor directamente sin seleccionarla primero utilizando los comandos **Mover líneas hacia arriba** y **Mover líneas hacia abajo** del menú **Método**. También puede hacerlo con la combinación **Alt/Opción** + **Flecha arriba** o **Flecha abajo**.
 
 
 
@@ -232,9 +232,9 @@ You can move the line where the cursor is directly without selecting it first us
 
 ## Uso de las funciones de autocompletar
 
-El editor de código ofrece funciones de autocompletado. 4D automatically displays suggestions based on the first few characters typed.
+El editor de código ofrece funciones de autocompletado. 4D muestra automáticamente sugerencias basadas en los primeros caracteres tecleados.
 
-In the example given below, typing the string "cop" causes the display of a blue triangle indicating that several suggestions are available:
+En el ejemplo siguiente, al teclear la cadena "poli" aparece un triángulo azul que indica que hay varias sugerencias disponibles:
 
 ![](../assets/en/code-editor/autocomplete-1.png)
 
@@ -244,25 +244,25 @@ When the characters you enter correspond to a single possibility, this suggested
 
 Autocompletion also works with code structures (e.g. If..End if, For each... End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:![](../assets/en/code-editor/autocomplete-code-structures.png)
 
-If there are several suggestions available, 4D displays them in a pop-up list when you hit the **Tab** key:
+Si hay varias sugerencias disponibles, 4D las muestra en una lista emergente al presionar la tecla **Tab**:
 
 ![](../assets/en/code-editor/autocomplete-popup.png)
 
-La lista está en orden alfabético. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
+La lista está en orden alfabético. Elija el valor haciendo doble clic en él o desplácese por la lista utilizando las teclas de flecha del teclado y, a continuación, presione **Intro**, **Retorno de carro** o **Tab** para insertar el valor seleccionado.
 
-By default, you can also insert a suggested value by hitting one of the following delimiter `( ; : = < [ {` keys after selecting a value: the value inserted is then followed by the delimiter, ready for data entry.
+Por defecto, también puede insertar un valor sugerido presionando uno de los siguientes delimitadores `( ; : = < [ {` teclas después de seleccionar un valor: el valor insertado va seguido del delimitador, listo para la entrada de datos.
 
 ![](../assets/en/code-editor/autocomplete-delimiter.png)  +  **(** key --> ![](../assets/en/code-editor/autocomplete-delimiter-2.png)
 
-> You can disable the use of delimiters for inserting suggested values in **Preferences** > **Methods** > **Options**.
+> Puede desactivar el uso de delimitadores para insertar valores sugeridos en **Preferencias** > **Métodos** > **Opciones**.
 
-You can press the **Esc** key to close the pop-up list or you can continue typing while it is open. The values suggested in the pop-up list are updated as additional characters are typed.
+Puede presionar la tecla **Esc** para cerrar la lista emergente o puede seguir escribiendo mientras está abierta. Los valores sugeridos en la lista emergente se actualizan a medida que se introducen los caracteres adicionales.
 
 Si los caracteres tecleados corresponden a distintos tipos de objetos, la lista los muestra en su estilo actual. Se pueden mostrar los siguientes tipos de objetos:
 
 - Comandos 4D
 - Comandos SQL
-- User methods
+- Métodos Usuario
 - Table names
 - Field names
 - Constantes
