@@ -303,26 +303,26 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 
 **Note:** Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
 
-| **Atajo**                                                   | **Acción**                                                                                                                                 |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Shift]+[flecha derecha]                                    | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
-| [Shift]+[flecha izquierda]                                  | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
-| [Shift]+[flecha abajo]                                      | Create and enlarge a selection, line by line, from the top to the bottom                                                                   |
-| [Shift]+[flecha arriba]                                     | Create and enlarge a selection, line by line, from the bottom to the top                                                                   |
-| [Ctrl]+[Shift]+[flecha derecha]                             | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                        |
-| [Ctrl]+[Shift]+[flecha izquierda]                           | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                      |
-| [Ctrl]+[flecha derecha]                                     | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                   |
-| [Ctrl]+[flecha izquierda]                                   | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                   |
-| [Home]                                                      | Colocar el punto de inserción al comienzo de la línea                                                                                      |
-| [End]                                                       | Coloca el punto de inserción al final de la línea                                                                                          |
-| [Ctrl]+[Home]                                               | Colocar el punto de inserción al comienzo del método                                                                                       |
-| [Ctrl]+[End]                                                | Coloca el punto de inserción al final del método                                                                                           |
-| [Shift]+[Home]                                              | Select all the characters in the line that are to the left of the cursor                                                                   |
-| [Shift]+[End]                                               | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                              |
-| [PgUp]                                                      | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                  |
-| [PgDn]                                                      | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                    |
-| [Ctrl]+[K] or [Alt]+double-click on a project method name   | Abrir el método proyecto en una nueva ventana                                                                                              |
-| \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
+| **Atajo**                                                             | **Acción**                                                                                                                                    |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Shift]+[flecha derecha]                                              | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left        |
+| [Shift]+[flecha izquierda]                                            | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left         |
+| [Shift]+[flecha abajo]                                                | Create and enlarge a selection, line by line, from the top to the bottom                                                                      |
+| [Shift]+[flecha arriba]                                               | Create and enlarge a selection, line by line, from the bottom to the top                                                                      |
+| [Ctrl]+[Shift]+[flecha derecha]                                       | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                           |
+| [Ctrl]+[Shift]+[flecha izquierda]                                     | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda          |
+| [Ctrl]+[flecha derecha]                                               | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                      |
+| [Ctrl]+[flecha izquierda]                                             | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                      |
+| [Home]                                                                | Colocar el punto de inserción al comienzo de la línea                                                                                         |
+| [End]                                                                 | Coloca el punto de inserción al final de la línea                                                                                             |
+| [Ctrl]+[Home]                                                         | Colocar el punto de inserción al comienzo del método                                                                                          |
+| [Ctrl]+[End]                                                          | Coloca el punto de inserción al final del método                                                                                              |
+| [Shift]+[Home]                                                        | Seleccionar todos los caracteres de la línea situados a la izquierda del cursor                                                               |
+| [Shift]+[End]                                                         | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                                 |
+| [PgUp]                                                                | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                     |
+| [PgDn]                                                                | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                       |
+| [Ctrl]+[K] o [Alt]+haga doble clic en el nombre de un método proyecto | Abrir el método proyecto en una nueva ventana                                                                                                 |
+| \[Ctrl\] (Windows) o \[Alt\] (macOS)+pasar sobre un token             | Subraye el token (elemento lingüístico identificado). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 
 Puede hacer doble clic para seleccionar "palabras" individuales. When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
 
@@ -332,7 +332,7 @@ Puede hacer doble clic para seleccionar "palabras" individuales. When the item n
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. You can also force validation by pressing the **Enter** key.
+When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
 
 When the method, class or function is validated, 4D checks for:
 
@@ -382,7 +382,7 @@ To display the documentation of a 4D "classic" language command, select the comm
 
 ## Comentar/Descomentar
 
-The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. No hay límite en el número de líneas.
+The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. El editor de código no aplica ningún estilo particular dentro de los comentarios. The length of comments is limited to the maximum size of 32,000 characters per line. No hay límite en el número de líneas.
 
 There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
 
