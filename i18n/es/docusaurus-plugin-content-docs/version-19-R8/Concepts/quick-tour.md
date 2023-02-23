@@ -410,7 +410,7 @@ End for
 
 El lenguaje 4D permite utilizar secuencias de escape (también llamadas caracteres de escape). Una secuencia de escape es una secuencia de caracteres que puede utilizarse para sustituir a un caracter "especial".
 
-La secuencia consiste en una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es una secuencia de escape para el caracter **Tab**. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+La secuencia consiste en una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es una secuencia de escape para el caracter **Tab**. Las secuencias de escape facilitan la introducción de caracteres especiales: el ejemplo anterior (`\t`) sustituye a la entrada "Caracter(Tab)".
 
 En 4D, se pueden utilizar las siguientes secuencias de escape:
 
