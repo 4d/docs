@@ -20,58 +20,58 @@ A menos que se marque esta opción, no es posible abrir una base cuando su archi
 
 #### Sobre el bloqueo de archivos
 
-Los archivos bloqueados pueden ser leídos pero su contenido no puede ser modificado. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
+Los archivos bloqueados pueden ser leídos pero su contenido no puede ser modificado. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D puede trabajar de forma transparente con archivos de datos bloqueados, lo que permite, en particular, la utilización de proyectos guardados en DVD. Sin embargo, con esta operación se corre el riesgo de utilizar inadvertidamente un fichero de datos bloqueado en el que no se guardarán las modificaciones. Esta es la razón por la que, por defecto, 4D no permite abrir bases de datos con un archivo de datos bloqueado.
 
 ### Ubicación de carpeta temporal
 
-This area lets you change the location of temporary files created while 4D is running. The temporary files folder is used by the application, when necessary, to temporarily save the data in memory to disk.
+Esta área le permite cambiar la ubicación de los archivos temporales creados mientras 4D está funcionando. La carpeta de archivos temporales es utilizada por la aplicación, cuando es necesario, para guardar temporalmente en disco los datos en memoria.
 
-The current location of this folder is displayed in the "Current:" area. Puede hacer clic en esta área para mostrar el nombre de la ruta en forma de lista desplegable:
+La ubicación actual de esta carpeta se muestra en el área "Actual:". Puede hacer clic en esta área para mostrar el nombre de la ruta en forma de lista desplegable:
 
 ![](../assets/en/settings/temporary-file-location.png)
 
 Se ofrecen tres opciones de ubicación:
 
--   **System**: When this option is selected, the 4D temporary files are created in a folder placed at the location specified by Windows and/or macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. The files are put into a subfolder whose name consists of the database name and a unique identifier.
--   **Data File Folder** (default option): When this option is selected, the 4D temporary files are created in a folder named "temporary files" located at the same level as the data file of the database.
--   **User Defined**: This option is used to set a custom location. If the location option is modified, it will be necessary to restart the database in order for the new option to be taken into account. 4D verifica si se puede acceder a la carpeta seleccionada mediante escritura. If this is not the case, the application tries other options until a valid folder is found.
+-   **Sistema**: cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta situada en la ubicación especificada por Windows y/o macOS. Puede averiguar la ubicación actual definida por su sistema utilizando el comando 4D [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html). Los archivos se colocan en una subcarpeta cuyo nombre está formado por el nombre de la base y un identificador único.
+-   **Carpeta de archivos de datos** (opción por defecto): cuando se selecciona esta opción, los archivos temporales 4D se crean en una carpeta llamada "archivos temporales" situada en el mismo nivel que el archivo de datos de la base de datos.
+-   **Definido por el usuario**: esta opción se utiliza para definir una ubicación personalizada. Si se modifica la opción de ubicación, será necesario reiniciar la base para que se tenga en cuenta la nueva opción. 4D verifica si se puede acceder a la carpeta seleccionada mediante escritura. Si no es así, la aplicación prueba otras opciones hasta encontrar una carpeta válida.
 
-> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
+> Esta opción se almacena en las propiedades adicionales ("extra properties") de la estructura, accesibles durante la exportación XML de la definición de estructura (ver [Exportar e importar las definiciones de estructura](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
 
 ### Comparación de texto
 
-> If you change one of these options, you have to quit and reopen the database to make the change effective. Once the database is reopened, all of the database's indexes are automatically re-indexed.
+> Si cambia una de estas opciones, tiene que salir y volver a abrir la base para que el cambio surta efecto. Una vez reabierta la base, se vuelven a indexar automáticamente todos sus índices.
 
--   **Consider @ as a wildcard only when at the beginning or end of text patterns**: Allows you to set how the at sign "@" will be interpreted when used in a query or a character string comparison, when it is located in a word. When this option is not checked (default value), the at sign is used as the wildcard character, in other words, it replaces any character (see [Wildcard character (@)](https://doc.4d.com/4Dv19/4D/19/Query-editor.300-5416813.en.html#463876)).
+-   **Considere @ como comodín sólo cuando se encuentre al principio o al final de patrones de texto**: permite definir como se interpretará la arroba "@" cuando se utilice en una búsqueda o en una comparación de cadenas de caracteres, cuando se encuentre en una palabra. Cuando esta opción no está marcada (valor por defecto), la arroba se utiliza como carácter comodín, es decir, sustituye a cualquier caracter (ver [Caracter comodín (@)](https://doc.4d.com/4Dv19/4D/19/Query-editor.300-5416813.en.html#463876)).
 
-    When the option is checked, the at sign is regarded as a simple character if it is located within a word. This setting is especially useful when searching for E-mail addresses, where the @ sign is used internally. This option has an influence on searches, sorts, string comparisons, as well as on data stored in tables and data found in memory, like arrays. Fields and variables of the alpha (indexed or not) and text type are concerned by how the @ character is interpreted in searches and sorts.
+    Cuando la opción está marcada, la arroba se considera un caracter simple si se encuentra dentro de una palabra. Esta posibilidad es especialmente útil cuando se buscan direcciones de correo electrónico, donde el signo @ se utiliza internamente. Esta opción influye en las búsquedas, ordenaciones, comparaciones de cadenas de caracteres, así como en los datos almacenados en las tablas y los que se encuentran en memoria, como los arrays. Los campos y variables de tipo alfa (indexados o no) y texto se ven afectados por como se interpreta el caracter @ en las búsquedas y ordenaciones.
 
      **Notas:**
-    -   For searches, if the search criteria begins or ends with @, the "@" character will be treated as a wildcard. Only if the "@" character is placed in the middle of a word (for example: bill@cgi.com) does 4D treat it differently.
-    -   This option can also have an influence on the behavior of the commands in the [Objects (Forms)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) theme that accept the wildcard character ("@") in the object parameter.
-    -   For security reasons, only the Administrator or Designer of the database can modify this parameter.
+    -   Para las búsquedas, si el criterio de búsqueda empieza o acaba por @, el caracter "@" se tratará como un comodín. Sólo si el carácter "@" se coloca en medio de una palabra (por ejemplo: bill@cgi.com) 4D lo trata de forma diferente.
+    -   Esta opción también puede influir en el comportamiento de los comandos del tema [Objetos (Formularios)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) que aceptan el caracter comodín ("@") en el parámetro objeto.
+    -   Por razones de seguridad, sólo el Administrador o Diseñador de la base de datos puede modificar este parámetro.
 
--   **Current data language:** Used to configure the language used for character string processing and comparison. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto, 4D utiliza el lenguaje del sistema.
+-   **Lenguaje del archivo de datos actual:** permite configurar el lenguaje utilizado para el procesamiento y la comparación de cadenas de caracteres. La elección de un idioma de comparación afecta a la ordenación y la búsqueda de textos, así como al cambio entre minúsculas y mayúsculas, pero no afecta a la traducción de etiquetas ni a los formatos de fecha, hora o moneda, que permanecen en el idioma del sistema. Por defecto, 4D utiliza el lenguaje del sistema.
 
-    A 4D project can thus operate in a language different from that of the system. When a project is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the project engine or the language, are done in the same language.
+    Así, un proyecto 4D puede funcionar en un lenguaje distinto del del sistema. Cuando se abre un proyecto, el motor de 4D detecta el lenguaje utilizado por el archivo de datos y lo pasa al lenguaje (modo intérpretado o compilado). Las comparaciones de texto, independientemente de si las efectúa el motor del proyecto o el lenguaje, se hacen en el mismo idioma.
 
-    > You can modify this setting in the application Preferences (see [General Page](../Preferences/general.md)). En este caso, la configuración se aplica a todas las nuevas bases creadas por 4D.
+    > Puede modificar esta configuración en las Preferencias de la aplicación (ver [Página general](../Preferences/general.md)). En este caso, la configuración se aplica a todas las nuevas bases creadas por 4D.
 
--   **Consider only non-alphanumeric chars for keywords**: Modifies the algorithm used by 4D to identify keyword separators and hence build their indexes. By default, when this option is not checked, 4D uses a sophisticated algorithm that takes linguistic characteristics into account.
+-   **Considerar sólo caracteres no alfanuméricos para las palabras claves**: modifica el algoritmo utilizado por 4D para identificar los separadores de palabras claves y crear así sus índices. Por defecto, cuando esta opción no está marcada, 4D utiliza un sofisticado algoritmo que tiene en cuenta las características lingüísticas.
 
-    This algorithm is similar to the one used by word-processing software to determine the boundaries when selecting a word that is double-clicked. For more information about this algorithm, refer to the following address: `http://userguide.icu-project.org/boundaryanalysis`.
+    Este algoritmo es similar al que utilizan los programas de tratamiento de textos para determinar los límites al seleccionar una palabra sobre la que se hace doble clic. Para más información sobre este algoritmo, consulte la siguiente dirección: `http://userguide.icu-project.org/boundaryanalysis`.
 
-    Cuando esta opción está marcada, 4D utiliza un algoritmo simplificado. In this configuration, any non-alphanumeric character (i.e., not a letter or a number) is considered as a keyword separator. This setting meets specific requirements associated with certain languages such as Japanese.
+    Cuando esta opción está marcada, 4D utiliza un algoritmo simplificado. En esta configuración, todo caracter no alfanumérico (es decir, que no sea una letra o un número) se considera un separador de palabras claves. Esta configuración cumple requisitos específicos asociados a determinados idiomas, como el japonés.
 
--   **Sorting order appropriate for searching**: This option is only displayed when the Japanese language is selected. Modifies the interpretation of characters such as the "Katakana-Hiragana Prolonged Sound Mark" or "長音記号" or the "Japanese Iteration Marks" such as "ゝ" or "ゞ". Typical Japanese speaker is likely to prefer the results when the setting is enabled.
+-   **Orden de clasificación apropiado para la búsqueda**: esta opción sólo aparece cuando se selecciona el idioma japonés. Modifica la interpretación de caracteres como la "Marca sonora prolongada Katakana-Hiragana" o "長音記号" o las "Marcas de iteración japonesa" como "ゝ" o "ゞ". Es probable que un hablante típico de japonés prefiera los resultados cuando el ajuste está activado.
 
 #### Soporte de Mecab (versión japonesa)
 
-On Japanese systems, 4D supports the *MeCab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
+En los sistemas japoneses, 4D soporta la librería *MeCab*, con un algoritmo de indexación de palabras claves especialmente adaptado al idioma japonés.
 
-Este algoritmo se utiliza por defecto en las versiones japonesas de 4D. If needed, you can disable the use of the *MeCab* algorithm and use the conventional *ICU* library.
+Este algoritmo se utiliza por defecto en las versiones japonesas de 4D. Si es necesario, puede desactivar el uso del algoritmo *MeCab* y utilizar la librería convencional *ICU*.
 
-To disable *MeCab*, just check the **Consider only non-alphanumeric chars for keywords** option:
+Para desactivar *MeCab*, sólo tiene que marcar la opción **Considerar solo caracteres no alfanuméricos para las palabras claves**:
 
 
 ![](../assets/en/settings/non-alphanumeric-chars.png)
@@ -79,11 +79,11 @@ To disable *MeCab*, just check the **Consider only non-alphanumeric chars for ke
 
 ## Página Memoria
 
-You use the settings on this tab to configure the cache memory for the database.
+Utilice los parámetros de esta pestaña para configurar la memoria caché de la base.
 
 ### Parámetros de la caché para la base
 
--   **Calculation of adaptive cache**: When this option is checked, management of the memory cache is done dynamically by the system --- respecting limits that you set. This allows configuration of a high performance memory cache adapted to most configurations. The size of the memory cache is then calculated dynamically depending on set parameters. The values offered by default correspond to standard 4D usage.
+-   **Cálculo de la caché adaptable**: cuando esta opción está marcada, la gestión de la memoria caché es realizada dinámicamente por el sistema, respetando los límites que defina. Esto permite configurar una memoria caché de alto rendimiento adaptada a la mayoría de las configuraciones. A continuación, el tamaño de la memoria caché se calcula dinámicamente en función de los parámetros definidos. Los valores ofrecidos por defecto corresponden al uso estándar de 4D.
 
     -   **Memory to be reserved for other applications and for the system**: Portion of the RAM memory to reserve for the System and other applications. This value is increased for optimization when other applications are running on the same machine as 4D.
     -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
