@@ -382,9 +382,9 @@ To display the documentation of a 4D "classic" language command, select the comm
 
 ## Comentar/Descomentar
 
-The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. El editor de código no aplica ningún estilo particular dentro de los comentarios. The length of comments is limited to the maximum size of 32,000 characters per line. No hay límite en el número de líneas.
+The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea. No hay límite en el número de líneas.
 
-There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
+Existen dos tipos de comentarios: `//comment` (comentario de una línea) y `/*comment*/`(comentarios en línea o bloques de comentarios multilínea).
 
 Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the **Comment/Uncomment** command:
 
@@ -463,7 +463,7 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 - **Remove All**: Removes all bookmarks from the foreground window.
 - **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
 
-**Note:** You can use bookmarks as markers for lines that contain an item found by a search. En este caso, 4D añade automáticamente los marcadores. For more information, refer to [Find and replace in methods](find-replace.md).
+**Note:** You can use bookmarks as markers for lines that contain an item found by a search. En este caso, 4D añade automáticamente los marcadores. Para más información, consulte [Buscar y reemplazar en los métodos](find-replace.md).
 
 
 ## Goto Definition
@@ -494,7 +494,7 @@ Este comando muestra sus resultados en una nueva ventana.
 
 ## Search Callers
 
-The **Search Callers** command in the **Method** menu is only enabled for project methods. It searches for all the objects (other methods or menus) that reference the project method.
+The **Search Callers** command in the **Method** menu is only enabled for project methods. Busca todos los objetos (otros métodos o menús) que hacen referencia al método proyecto.
 
 Selecting the **Find...** command displays the following dialog box:
 
