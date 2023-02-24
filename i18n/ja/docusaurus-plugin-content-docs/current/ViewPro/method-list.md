@@ -645,7 +645,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 * 非表示のカラム / 行 > 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
 > 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
 
-#### ファンクションの戻り値
+#### 戻り値
 
 コマンドは SVGフォーマットのピクチャーを返します。
 
@@ -1588,10 +1588,10 @@ $colCount:=VP Get column count("ViewProarea")
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
-| 引数          | タイプ     |    | 説明                                        |
-| ----------- | ------- | -- | ----------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                   |
-| ファンクションの戻り値 | Integer | <- | カレントシートのインデックス|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                        |
+| ---------- | ------- | -- | ----------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                   |
+| 戻り値        | Integer | <- | カレントシートのインデックス|<!-- END REF -->
 
 |
 
@@ -2160,10 +2160,10 @@ $currentSelection:=VP Get selection("myVPArea")
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
-| 引数          | タイプ     |    | 説明                               |
-| ----------- | ------- | -- | -------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名          |
-| ファンクションの戻り値 | Integer | <- | シートの数|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                               |
+| ---------- | ------- | -- | -------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名          |
+| 戻り値        | Integer | <- | シートの数|<!-- END REF -->
 
 |
 
@@ -2200,11 +2200,11 @@ $currentSelection:=VP Get selection("myVPArea")
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| 引数          | タイプ     |    | 説明                                    |
-| ----------- | ------- | -- | ------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名               |
-| name        | Text    | -> | シート名                                  |
-| ファンクションの戻り値 | Integer | <- | シートのインデックス|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                    |
+| ---------- | ------- | -- | ------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名               |
+| name       | Text    | -> | シート名                                  |
+| 戻り値        | Integer | <- | シートのインデックス|<!-- END REF -->
 
 |
 
@@ -2240,11 +2240,11 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返し�
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
-| 引数          | タイプ     |    | 説明                              |
-| ----------- | ------- | -- | ------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名         |
-| sheet       | Integer | -> | シートのインデックス                      |
-| ファンクションの戻り値 | Text    | <- | シート名|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                              |
+| ---------- | ------- | -- | ------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名         |
+| sheet      | Integer | -> | シートのインデックス                      |
+| 戻り値        | Text    | <- | シート名|<!-- END REF -->
 
 |
 
@@ -2322,11 +2322,11 @@ End if
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| 引数          | タイプ     |    | 説明                                                       |
-| ----------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                                  |
-| sheet       | Integer | <- | シートのインデックス                                               |
-| ファンクションの戻り値 | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                                       |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                  |
+| sheet      | Integer | <- | シートのインデックス                                               |
+| 戻り値        | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false|<!-- END REF -->
 
 |
 
