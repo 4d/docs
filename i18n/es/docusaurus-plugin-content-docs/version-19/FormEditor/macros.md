@@ -45,7 +45,7 @@ Function onInvoke($editor : Object)->$result : Object
 
  var $btnHello : Object
 
- // Create a "Hello" button
+ // Crear un botón "Hello"
  $btnHello:=New object("type"; "button"; \
  "text"; "Hello World!"; \
  "method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -55,14 +55,14 @@ Function onInvoke($editor : Object)->$result : Object
  "top"; 0; \
  "left"; 0) 
 
- // Add button in the current page
+ // Añadir botón en la página actual
  $editor.editor.currentPage.objects.btnHello:=$btnHello 
 
- // Select the new button in the form editor
+ // Seleccionar el nuevo botón en el editor de formularios
  $editor.editor.currentSelection.clear() //unselect elements
  $editor.editor.currentSelection.push("btnHello") 
 
- // Notify the modification to the 4D Form editor
+ // Notificar la modificación al editor de formularios 4D
  $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
   "currentPage"; $editor.editor.currentPage)
 ```
