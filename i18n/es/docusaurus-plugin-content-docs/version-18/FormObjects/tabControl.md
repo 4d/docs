@@ -34,8 +34,8 @@ En macOS, además de la posición estándar (arriba), los controles de las pesta
   "top": 160,  
   "width": 100, 
   "height": 20, 
-  "labelsPlacement": "bottom" //define the direction
- }
+  "labelsPlacement": "bottom" //define la dirección
+}
 ```
 
 ## Añadir etiquetas a un control de pestañas
