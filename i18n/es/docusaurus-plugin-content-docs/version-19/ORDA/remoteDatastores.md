@@ -13,7 +13,7 @@ Cuando se trabaja con un datastore remoto referenciado a través de llamadas al 
 
 ## Apertura de las sesiones
 
-When a 4D application (*i.e.* a process) opens an external datastore using the `Open datastore` command, a session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
+When a 4D application (*i.e.* a process) opens an external datastore using the `Open datastore` command, a session in created on the remote datastore to handle the connection. Esta sesión se identifica utilizando un ID de sesión interno que se asocia al `localID` en la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
 
 El `localID` es local a la máquina que se conecta al datastore remoto, lo que significa:
 
@@ -53,6 +53,6 @@ Las funcionalidades ORDA relacionadas con el bloqueo de entidades y transaccione
 
 ## Cierre de las sesiones
 
-4D cierra automáticamente una sesión cuando no hay actividad durante el tiempo de espera. The default timeout is 60 mn, but this value can be modified using the `connectionInfo` parameter of the `Open datastore` command.
+4D cierra automáticamente una sesión cuando no hay actividad durante el tiempo de espera. El tiempo de espera por defecto es de 60 mn, pero este valor puede modificarse utilizando el parámetro `connectionInfo` del comando `Open datastore`.
 
 Si se envía una solicitud al almacén de datos remoto después de haber cerrado la sesión, ésta se vuelve a crear automáticamente si es posible (licencia disponible, servidor no detenido...). Sin embargo, hay que tener en cuenta que se pierde el contexto de la sesión en cuanto a bloqueos y transacciones (ver arriba).
