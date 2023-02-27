@@ -1351,6 +1351,13 @@ Si se especifica un filtro para los atributos de las relatedEntities [kind](Data
 
 En el parámetro *options* se puede pasar el selector `ddk with primary key` y/o`dk with stamp` para añadir las llaves primarias de la entidad y/o los sellos en los objetos extraídos.
 
+:::caution Warning
+
+In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+
+:::
+
+
 #### Ejemplo 1
 
 En todos los ejemplos de esta sección se utilizará la siguiente estructura:
