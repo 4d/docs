@@ -1351,6 +1351,13 @@ filter 引数がリレートエンティティズ型の属性を指定する場�
 
 *options* に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
 
+:::caution Warning
+
+In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+
+:::
+
+
 #### 例題 1
 
 このセクションの例題では、以下のストラクチャーを使います:
