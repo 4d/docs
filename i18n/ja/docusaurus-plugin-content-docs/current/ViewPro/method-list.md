@@ -645,7 +645,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 * 非表示のカラム / 行 > 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
 > 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
 
-#### ファンクションの戻り値
+#### 戻り値
 
 コマンドは SVGフォーマットのピクチャーを返します。
 
@@ -1588,10 +1588,10 @@ $colCount:=VP Get column count("ViewProarea")
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
-| 引数          | タイプ     |    | 説明                                        |
-| ----------- | ------- | -- | ----------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                   |
-| ファンクションの戻り値 | Integer | <- | カレントシートのインデックス|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                        |
+| ---------- | ------- | -- | ----------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                   |
+| 戻り値        | Integer | <- | カレントシートのインデックス|<!-- END REF -->
 
 |
 
@@ -2160,10 +2160,10 @@ $currentSelection:=VP Get selection("myVPArea")
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
-| 引数          | タイプ     |    | 説明                               |
-| ----------- | ------- | -- | -------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名          |
-| ファンクションの戻り値 | Integer | <- | シートの数|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                               |
+| ---------- | ------- | -- | -------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名          |
+| 戻り値        | Integer | <- | シートの数|<!-- END REF -->
 
 |
 
@@ -2200,11 +2200,11 @@ $currentSelection:=VP Get selection("myVPArea")
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| 引数          | タイプ     |    | 説明                                    |
-| ----------- | ------- | -- | ------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名               |
-| name        | Text    | -> | シート名                                  |
-| ファンクションの戻り値 | Integer | <- | シートのインデックス|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                    |
+| ---------- | ------- | -- | ------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名               |
+| name       | Text    | -> | シート名                                  |
+| 戻り値        | Integer | <- | シートのインデックス|<!-- END REF -->
 
 |
 
@@ -2240,11 +2240,11 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返し�
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
-| 引数          | タイプ     |    | 説明                              |
-| ----------- | ------- | -- | ------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名         |
-| sheet       | Integer | -> | シートのインデックス                      |
-| ファンクションの戻り値 | Text    | <- | シート名|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                              |
+| ---------- | ------- | -- | ------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名         |
+| sheet      | Integer | -> | シートのインデックス                      |
+| 戻り値        | Text    | <- | シート名|<!-- END REF -->
 
 |
 
@@ -2322,11 +2322,11 @@ End if
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| 引数          | タイプ     |    | 説明                                                       |
-| ----------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                                  |
-| sheet       | Integer | <- | シートのインデックス                                               |
-| ファンクションの戻り値 | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                                       |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                  |
+| sheet      | Integer | <- | シートのインデックス                                               |
+| 戻り値        | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false|<!-- END REF -->
 
 |
 
@@ -2877,6 +2877,7 @@ $tables:=VP Get tables("ViewProArea")
 * 日付値 - 時間部分は HH:MM:SS フォーマットの、真夜中 (00:00:00) として補完されます。
 
 *rangeObj* のレンジが複数セルあるいは複数レンジを含んでいる場合、最初のセルの値が返されます。 セルが空の場合には、コマンドは null オブジェクトを返します。
+
 
 #### 例題
 
@@ -4203,11 +4204,12 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| 引数         | タイプ    |    | 説明                       |
-| ---------- | ------ | -- | ------------------------ |
-| parameters | Object | -> | オフスクリーンエリアの属性を格納するオブジェクト |
+| 引数         | タイプ    |    | 説明                                                                               |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| parameters | Object | -> | Object containing the offscreen area's attributes                                |
+| 戻り値        | Mixed  | <- | `.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
 
-|Result   |Mixed|<-|`.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
+|
 
 #### 説明
 
@@ -4215,11 +4217,14 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 *parameters* オブジェクトには、以下の任意のプロパティのいずれかを渡します。 これらのプロパティは `onEvent` コールバックメソッド内において `This` コマンドを介して利用可能であり、そのインスタンスを参照することができます:
 
-| プロパティ | タイプ  | 説明                                                                      |
-| ----- | ---- | ----------------------------------------------------------------------- |
-| area  | text | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。 |
-
-|onEvent | object (フォーミュラ)| オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。|autoQuit | boolean | True (デフォルト値) の場合、[`On End URL Loading`](Events/onEndUrlLoading.md) または [`On URL Loading Error`](Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。 | |timeout | number | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60 | |result| mixed| 処理の結果 (あれば)| |`\&#060;customProperty&#062;` | mixed|  *onEvent* コールバックメソッドで利用可能なカスタムの属性。 |
+| プロパティ                    | タイプ             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| area                     | text            | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| onEvent                  | object (フォーミュラ) | オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), または [`On Timer`](../Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。 |
+| autoQuit                 | boolean         | True (デフォルト値) の場合、[`On End URL Loading`](../Events/onEndUrlLoading.md) または [`On URL Loading Error`](../Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。 False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。                                                                                                                                                                                                                                                                                                                                   |
+| timeout                  | number          | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| result                   | mixed           | 処理の結果 (あれば)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `<customProperty>` | mixed           | *onEvent* コールバックメソッドで利用可能なカスタムの属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 
 以下のプロパティは、必要に応じてコマンドによって自動的に追加されます:
@@ -5629,13 +5634,12 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| 引数         | タイプ     |    | 説明                                          |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                     |
-| name       | Text    | -> | シートの新しい名称                                   |
-| sheet      | Integer | -> | 名称変更するシートのインデックス|<!-- END REF -->
+| 引数         | タイプ  |    | 説明                      |
+| ---------- | ---- | -- | ----------------------- |
+| vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 |
+| name       | Text | -> | シートの新しい名称               |
 
-|
+|sheet|Integer|->|名称変更するシートのインデックス|<!-- END REF -->
 
 #### 説明
 
@@ -6355,10 +6359,10 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 | --------------------- | ---------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
 | `vk position bottom`  | セルあるいは行の下辺に対する垂直揃え。                                                                                        | ○           |             |
 | `vk position center`  | 中央揃え。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 - セルあるいは行</li><li>横方向の表示位置 - セルあるいはカラム</li>                        | ○           | ○           |
-| `vk position left`    | セルあるいはカラムの左辺に対する水平揃え。                                                                                      |             | ○           |
-| `vk position nearest` | 一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</li> | ○           | X           |
-| `vk position right`   | セルあるいはカラムの右辺に対する水平揃え。                                                                                      |             | ○           |
-| `vk position top`     | セルあるいは行の上辺に対する垂直揃え。                                                                                        | ○           |             |
+| `vk position left`    | セルあるいはカラムの左辺に対する水平揃え。                                                                                      |             | X           |
+| `vk position nearest` | 一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</li> | X           | X           |
+| `vk position right`   | セルあるいはカラムの右辺に対する水平揃え。                                                                                      |             | X           |
+| `vk position top`     | セルあるいは行の上辺に対する垂直揃え。                                                                                        | X           |             |
 > このコマンドは、表示位置の変更が可能な場合にのみ動作します。 たとえば、*rangeObj* が現在のシートの A1 セル (先頭カラムと先頭行) の場合、すでに縦および横方向の限界に接している (つまり、上にも左にもこれ以上スクロールできない) ため、表示位置を変更しても何も変わりません。 *rangeObj* が C3 セルの場合に、表示位置を中央または右下に変えても同じことが言えます。 表示は変更されません。
 
 #### 例題

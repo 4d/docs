@@ -406,56 +406,56 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 #### 説明
 
-The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->。 The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
+`.flushAndLock()` 関数は、 <!-- REF #DataStoreClass.flushAndLock().Summary -->ローカルデータストアのキャッシュをフラッシュし、データベースに対して他のプロセスが書き込み操作をおこなうのを防ぎます<!-- END REF -->。 これにより、データストアは凍結状態におかれます。 この関数は、たとえばアプリケーションのスナップショットを実行する前に呼び出す必要があります。
 
 :::info
 
-This function can only be called:
+この関数は次の場合にのみ使えます:
 
-- on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine.
+- ローカルデータストア ([`ds`](#ds)) を対象に。
+- クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
 
-Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
+この関数が実行されると、他のすべてのプロセスで `.save()` などの書き込み操作や、追加の `.flushAndLock()` の呼び出しが凍結され、データストアのロックが解除されるまで続きます。
 
-When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
+同一プロセス内で `.flushAndLock()` を複数回呼び出した場合、データストアのロックを解除するには、同じ回数だけ [`.unlock()`](#unlock) を呼び出す必要があります。
 
-The datastore is unlocked when:
+データストアのロックが解除されるのは、以下の場合です:
 
-- the [`.unlock()`](#unlock) function is called in the same process, or
-- the process that called the `.flushAndLock()` function is killed.
+- 同プロセス内で [`.unlock()`](#unlock) 関数が呼び出された場合、または
+- `.flushAndLock()` 関数を呼び出したプロセスが終了した場合。
 
 
-If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked.
+データストアがすでに他のプロセスからロックされている場合、`.flushAndLock()` の呼び出しは凍結され、データストアのロックが解除されたときに実行されます。
 
-An error is triggered if the `.flushAndLock()` function cannot be executed (e.g. it is run on a remote 4D), .
+`.flushAndLock()` 関数が実行できない場合 (リモートの 4D で実行された場合など) には、エラーが発生します。
 
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction.
+[バックアップ](../Backup/backup.md) や [VSS](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.ja.html) 、[MSC](../MSC/overview.md) を含む他の 4D機能およびサービスもデータストアをロックすることがあります。 予期せぬ相互作用を避けるため、`.flushAndLock()` を呼び出す前に、データストアをロックするような他の操作がおこなわれていないことを確認してください。
 
 :::
 
 #### 例題
 
-You want to create a copy of the data folder along with its current journal file:
+データフォルダーとともにカレントジャーナルファイルのコピーを作成します:
 
 ```4d
 $destination:=Folder(fk documents folder).folder("Archive") 
 $destination.create()
 
-ds.flushAndLock() //Block write operations from other processes
+ds.flushAndLock() // 他のプロセスからの書き込み操作をブロックします
 
 $dataFolder:=Folder(fk data folder) 
-$dataFolder.copyTo($destination) //Copy the data folder
+$dataFolder.copyTo($destination) // データフォルダーをコピーします
 
-$oldJournalPath:=New log file //Close the journal and create a new one
+$oldJournalPath:=New log file // ジャーナルを閉じて、新しいものを作成します
 $oldJournal:=File($oldJournalPath; fk platform path) 
-$oldJournal.moveTo($destination) //Save the old journal with data
+$oldJournal.moveTo($destination) // 閉じたジャーナルを保存します
 
-ds.unlock() //Our copy is over, we can now unlock the datastore
+ds.unlock() // コピー操作をおこなったので、データストアのロックを解除します
 ```
 
 #### 参照
@@ -747,9 +747,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.locked().Params -->
-| 引数  | タイプ     |    | 説明                                        |
-| --- | ------- | -- | ----------------------------------------- |
-| 戻り値 | Boolean | <- | True if locked|<!-- END REF -->
+| 引数  | タイプ     |    | 説明                                          |
+| --- | ------- | -- | ------------------------------------------- |
+| 戻り値 | Boolean | <- | ロックされている場合は true|<!-- END REF -->
 
 
 |
@@ -757,13 +757,13 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 #### 説明
 
-The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->。
+`.locked()` 関数は、 <!-- REF #DataStoreClass.locked().Summary -->ローカルデータストアが現在ロックされている場合、true を返します<!-- END REF -->。
 
-You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
+データファイルのスナップショットを実行する前などに、[.flushAndLock()](#flushandlock) 関数を使用してデータストアをロックすることができます。
 
 :::caution
 
-The function will also return `True` if the datastore was locked by another administration feature such as backup or vss (see [.flushAndLock()](#flushandlock)).
+この関数は、データストアがバックアップや VSS などの他の管理機能によってロックされた場合にも、 `true` を返します ([.flushAndLock()](#flushandlock) 参照)。
 
 :::
 
@@ -1253,13 +1253,13 @@ ORDA クライアントリクエストをメモリに記録します:
 
 #### 説明
 
-`.unlock()` 関数は、 <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->。 Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function.
+`.unlock()` 関数は、 <!-- REF #DataStoreClass.unlock().Summary -->データストアにおける、書き込み操作に対する現在のロックが同じプロセスで設定されていた場合、そのロックを解除します<!-- END REF -->。 ローカルデータストアの書き込み操作は、[`.flushAndLock()`](#flushandlock) 関数を使用してロックすることができます。
 
-If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore.
+現在のロックがデータストアの唯一のロックであった場合、書き込み操作は直ちに可能になります。 `.flushAndLock()` 関数がプロセス内で複数回呼ばれている場合、データストアのロックを解除するには、同じ回数だけ `.unlock()` を呼び出す必要があります。
 
-The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
+`.unlock()` 関数は、対応する `.flushAndLock()` を呼び出したプロセス内で呼び出す必要があります。そうでない場合には、この関数は何もおこなわず、ロックも解除されません。
 
-If the `.unlock()` function is called in an unlocked datastore, it does nothing.
+ロックが解除されているデータストアで `.unlock()` 関数を呼び出した場合、何もおこりません。
 
 
 #### 参照

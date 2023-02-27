@@ -1035,7 +1035,7 @@ Ejemplos:
  APPEND TO ARRAY($ChoiceList;100)
  C_OBJECT($ob)
  OB SET($ob;"valueType";"integer")
- OB SET($ob;"value";10) //10 as default value
+ OB SET($ob;"value";10) //10 como valor por defecto
  OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
