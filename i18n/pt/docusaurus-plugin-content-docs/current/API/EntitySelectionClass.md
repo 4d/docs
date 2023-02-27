@@ -1974,6 +1974,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 
 
 
+
 </details>
 
 
@@ -2070,6 +2071,12 @@ Se for especificado um filtro para um atributo do tipo `relatedEntities` :
 
 
 No parâmetro *opções* , pode passar os seletores `dk com chave primária` e/ou `dk with stamp`  para adicionar as chaves primárias da entidade e/ou carimbos nos objectos extraídos.
+
+:::caution Warning
+
+In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+
+:::
 
 O parâmetro *start* permite indicar o índice inicial das entidades a extrair. Pode passar qualquer valor entre 0 e o comprimento-1 da selecção da entidade.
 
