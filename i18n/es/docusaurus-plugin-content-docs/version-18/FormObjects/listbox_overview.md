@@ -94,7 +94,7 @@ En el caso de un list box basado en la selección actual de una tabla, cualquier
 
 En este tipo de list box, cada columna debe estar asociada a una expresión. El contenido de cada línea se evalúa entonces por elemento de la colección o por entidad de la selección de entidades.
 
-Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). Puede utilizar los comandos `LISTBOX SET COLUMN FORMULA` y `LISTBOX INSERT COLUMN FORMULA` para modificar las columnas por programación.
+Cada elemento de la colección o cada entidad está disponible como un objeto al que se puede acceder a través de comando [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). Una expresión de columna puede ser un método proyecto, una variable o cualquier fórmula, accediendo a cada entidad u objeto elemento de colección a través de `This`, por ejemplo `This.<propertyPath>` (o `This.value` en el caso de una colección de valores escalares). Puede utilizar los comandos `LISTBOX SET COLUMN FORMULA` y `LISTBOX INSERT COLUMN FORMULA` para modificar las columnas por programación.
 
 Cuando la fuente de datos es una entity selection, cualquier modificación realizada del lado del list box se guarda automáticamente en la base de datos. Por otro lado, las modificaciones realizadas en la base de datos son visibles en el list box después de que se hayan recargado las entidades modificadas.
 
@@ -406,28 +406,28 @@ Puede escribir en el método *UI_SetColor*:
 
 ## Gestión de ordenaciones
 
-By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. Todas las columnas siempre se sincronizan automáticamente.
+Por defecto, un list box gestiona automáticamente ordenaciones de columnas estándar cuando se hace clic en el encabezado. Una ordenación estándar es una ordenación alfanumérica de los valores de las columnas, alternativamente ascendente/descendente con cada clic sucesivo. Todas las columnas siempre se sincronizan automáticamente.
 
-You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
+Puede evitar la ordenación estándar de usuario desmarcando la propiedad [Ordenable](properties_Action.md#sortable) del list box.
 
-The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the `FORM Event` command) and relevant 4D commands.
+El desarrollador puede configurar ordenaciones personalizadas utilizando el comando `LISTBOX SORT COLUMNS` y/o combinando los eventos de formulario `On Header Click` y `On After Sort` (ver el comando `FORM Event`) y los comandos 4D relevantes.
 
 > La propiedad [Ordenable](properties_Action.md#sortable) sólo afecta a las ordenaciones estándar de usuario; el comando `LISTBOX SORT COLUMNS` no tiene en cuenta esta propiedad.
 
 El valor de la [variable asociada al encabezado de una columna](properties_Object.md#variable-or-expression) permite gestionar una información adicional: la ordenación actual de la columna (lectura) y la visualización de la flecha de ordenación.
 
-* If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
+* Si la variable se pone en 0, la columna no se ordena y la flecha de ordenación no se muestra;  
   ![](../assets/en/FormObjects/sorticon0.png)
 
-* If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
+* Si la variable está en 1, la columna se ordena en orden ascendente y se muestra la flecha de ordenación;  
   ![](../assets/en/FormObjects/sorticon1.png)
 
 * Si la variable se establece en 2, la columna se clasifica en orden descendente y se muestra la flecha de clasificación.  
   ![](../assets/en/FormObjects/sorticon2.png)
 
-You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
+Puede definir el valor de la variable (por ejemplo, Header2:=2) para “forzar” la visualización de la flecha de ordenación. En este caso no se modifica la ordenación por columnas en sí, sino que es el desarrollador quien debe encargarse de ello.
 
-> The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+> El comando `OBJECT SET FORMAT` ofrece soporte específico para iconos en los encabezados de list box, lo que puede ser útil cuando se desea trabajar con un icono de ordenación personalizado.
 
 ## Gestión de los colores, estilos y visualización de las líneas
 
@@ -903,7 +903,7 @@ Ejemplos:
  APPEND TO ARRAY($ChoiceList;100)
  C_OBJECT($ob)
  OB SET($ob;"valueType";"integer")
- OB SET($ob;"value";10) //10 as default value
+ OB SET($ob;"value";10) //10 como valor por defecto
  OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 

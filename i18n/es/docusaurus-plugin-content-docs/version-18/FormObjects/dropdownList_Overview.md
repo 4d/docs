@@ -17,7 +17,7 @@ Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se ha
 
 Los objetos de lista desplegable se inicializan cargando una lista de valores en un array. Puede hacerlo de varias maneras:
 
-* Enter a list of default values in the object properties by selecting `"\&#060;Static List&#062;"` in the [Data Source](properties_DataSource.md) theme of the Property List. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `"\&#060;Lista Estática&#062;"` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
 * Antes de mostrar el objeto, ejecute el código que asigna valores a los elementos del array. Por ejemplo:
 

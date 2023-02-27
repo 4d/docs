@@ -4097,7 +4097,7 @@ Resultado:
 
 | Parámetros | Tipo   |    | Descripción                                                                                              |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------- |
-| parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla                                             |
+| parameters | Object | -> | Object containing the offscreen area's attributes                                                        |
 | Result     | Mixed  | <- | Propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor|<!-- END REF -->
 
 |
@@ -6220,18 +6220,18 @@ El comando `VP SUSPEND COMPUTING` <!-- REF #_method_.VP SUSPEND COMPUTING.Summar
 El comando pausa los cálculos en 4D View Pro. Formulas that have already been calculated remain unchanged, however any formulas added after `VP SUSPEND COMPUTING` command  is executed are not calculated.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
-> El servicio de cálculo de 4D View Pro mantiene un contador de acciones de suspensión/reanudación. Therefore, each execution of `VP SUSPEND COMPUTING` command  must be balanced by a corresponding execution of the `VP RESUME COMPUTING` command. Any formula impacted by modifications made while calculations are suspended will be recalculated when the command is executed.
+> El servicio de cálculo de 4D View Pro mantiene un contador de acciones de suspensión/reanudación. Por lo tanto, cada ejecución del comando `VP SUSPEND COMPUTING` debe equilibrarse con una ejecución correspondiente del comando `VP RESUME COMPUTING`. Toda fórmula afectada por las modificaciones realizadas mientras los cálculos están suspendidos será recalculada cuando se ejecute el comando.
 
 #### Ejemplo
 
-You've added two buttons to the form so that the user can suspend/resume calculations:
+Ha añadido dos botones al formulario para que el usuario pueda suspender/reanudar los cálculos:
 
 ![](../assets/en/ViewPro/cmd_vpStopCalculations.PNG)
 
 El código del botón Suspend Computing:
 
 ```4d
- //pause calculations while users enter information
+ //pausar los cálculos mientras los usuarios introducen la información
  If(FORM Event.code=On Clicked)
 
     VP SUSPEND COMPUTING("ViewProArea")

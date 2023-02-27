@@ -41,15 +41,15 @@ Por defecto, el estilo Clásico tiene un fondo gris claro con una etiqueta en el
 
 ```4d
  "myButton": {
-  "type": "button", //define the type of object
-  "style":"regular", //define the style of the button
-  "defaultButton":"true" //define button as the default choice
-  "text": "OK", //text to appear on the button
-  "action": "Cancel", //action to be be performed
-  "left": 60,  //left position on the form  
-  "top": 160, //top position on the form
-    "width": 100,  //width of the button
-  "height": 20 //height of the button
+  "type": "button", //definir el tipo de objeto
+  "style":"regular", //definir el estilo del botón
+  "defaultButton":"true" //definir el botón como la opción por defecto
+  "text": "OK", //texto que aparecerá en el botón
+  "action": "Cancel", //acción a realizar
+  "left": 60,  //posición izquierda en el formulario
+  "top": 160, //posición superior en el formulario
+    "width": 100,  //ancho del botón
+  "height": 20 //altura del botón
   }
 ```
 

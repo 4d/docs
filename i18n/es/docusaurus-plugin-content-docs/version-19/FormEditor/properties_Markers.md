@@ -86,7 +86,7 @@ El formulario puede contener [áreas de encabezado adicionales](#additional-area
 
 ## Áreas adicionales
 
-You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
+You can create additional Break areas and Header areas for a report. Estas áreas adicionales permiten imprimir subtotales y otros cálculos en un informe y mostrar otra información de forma eficaz.
 
 Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
 

@@ -1522,7 +1522,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 #### Descripción
 
-La función `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente, puede pasar parámetros a *methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original, excepto si se ha utilizado *$1.stop* (ver abajo).
+La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colección basada en el resultado de la llamada al método *methodName* en cada elemento de la colección original<!-- END REF -->. Opcionalmente, puede pasar parámetros a *methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original, excepto si se ha utilizado *$1.stop* (ver abajo).
 > Esta función no modifica la colección original.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
@@ -2012,7 +2012,7 @@ Quiere ordenar la colección resultante:
 
 #### Descripción
 
-La función `.query()` <!-- REF #collection.query().Summary -->devuelve todos los elementos de una colección de objetos que coinciden con las condiciones de búsqueda <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.query()` <!-- REF #collection.query().Summary -->devuelve todos los elementos de una colección de objetos que coinciden con las condiciones de búsqueda <!-- END REF -->definido por *queryString* y (opcionalmente) *value* o *querySettings*. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 El parámetro *queryString* utiliza la siguiente sintaxis:
@@ -2432,7 +2432,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 #### Descripción
 
-La propiedad `.length` <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
+La propiedad `.length` <!-- REF #collection.some().Summary -->devuelve true si al menos un elemento de la colección ha superado con éxito una prueba<!-- END REF --> implementado en el método *methodName* suminstrado.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
@@ -2506,7 +2506,7 @@ Con el siguiente método *NumberGreaterThan0*:
 
 #### Descripción
 
-La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original<!-- END REF --> and also returns the sorted collection.
+La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original<!-- END REF --> y también devuelve la colección ordenada.
 > Esta función modifica la colección original.
 
 Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
@@ -2521,7 +2521,7 @@ Si desea ordenar los elementos de la colección en otro orden o clasificar cualq
 
 *methodName* define el siguiente parámetro:
 
-* *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
+* *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** en caso contrario
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 

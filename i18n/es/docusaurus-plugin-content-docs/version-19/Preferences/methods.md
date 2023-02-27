@@ -3,11 +3,11 @@ id: methods
 title: Página Métodos
 ---
 
-This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. Se divide en dos secciones a las que se accede mediante las pestañas Tema y Opciones.
+Esta página contiene parámetros que definen la interfaz, la visualización por defecto y las opciones del editor de métodos. Se divide en dos secciones a las que se accede mediante las pestañas Tema y Opciones.
 
 ## Temas
 
-This page allows selecting, creating, or configuring Method editor themes. Un tema define la fuente, el tamaño de la fuente, los colores y los estilos de los elementos mostrados del editor de código.
+Esta página permite seleccionar, crear o configurar los temas del editor de métodos. Un tema define la fuente, el tamaño de la fuente, los colores y los estilos de los elementos mostrados del editor de código.
 
 ![](../assets/en/Preferences/themes.png)
 
@@ -20,7 +20,7 @@ En esta lista, se selecciona el tema que se aplicará al editor de código. Se m
 
 > Los temas por defecto no pueden ser modificados ni eliminados.
 
-A **myTheme** theme is automatically added if you already customized method editor styles in previous 4D releases.
+Un tema **myTheme** se añade automáticamente si ya ha personalizado los estilos del editor de métodos en versiones anteriores de 4D.
 
 ### Creación de temas personalizados
 
@@ -45,7 +45,7 @@ La combinación de colores y de estilos diferentes es especialmente útil para e
 
 ### Fuentes y tamaños de fuente
 
-The **font** and **font size** menus allows you to select the font name and size used in the Method editor entry area for all categories.
+Los menús **fuente** y **tamaño de fuente** le permiten seleccionar el nombre y el tamaño de la fuente utilizada en el área de entrada del editor de métodos para todas las categorías.
 
 ### Lenguaje 4D y lenguaje SQL
 
@@ -53,7 +53,7 @@ Puede definir diferentes estilos de fuente y colores de fuente (color de fuente 
 
 ### Otros estilos
 
-These options configure the various colors used in the Method editor and debugger interfaces.
+Estas opciones configuran los distintos colores utilizados en las interfaces del editor de métodos y del depurador.
 
 ![](../assets/en/Preferences/categories.png)
 
@@ -100,11 +100,11 @@ Modificar este valor por defecto puede ser útil si sus métodos contienen algor
 
 #### Mostrar los números de línea
 
-Lets you display the line numbers by default in each window of the Method editor. You can also show/hide line numbers for the current window directly from the Method editor.
+Permite mostrar los números de línea por defecto en cada ventana del editor de métodos. También puede mostrar/ocultar los números de línea de la ventana actual directamente desde el editor de métodos.
 
 #### Mostrar las listas
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. You can also show or hide each list directly from the Method editor.
+Le permite elegir si mostrar o no las listas de objetos (Comandos, Tablas y campos, etc.) por defecto cuando se abre la ventana del editor de métodos. También puede mostrar u ocultar cada lista directamente desde el editor de métodos.
 
 #### Resaltado de los bloques lógicos
 
@@ -174,4 +174,4 @@ Esta área le permite configurar los mecanismos de autocompletar en el editor de
 |                                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Apertura automática de la ventana | Activa la visualización automática de la ventana de sugerencias para: <ul><li>Constantes</li><li>Variables (locales e interproceso) y atributos de objetos</li><li>Tablas</li><li>Prototipos (es decir las funciones de clase)</li></ul>Por ejemplo, cuando la opción "Variables (locales o interproceso) y atributos de objetos" está seleccionada, aparece una lista de sugerencias al escribir el caracter $:![](../assets/en/Preferences/suggestionsAutoOpen.png) Puede desactivar este funcionamiento para determinados elementos del lenguaje desmarcando su opción correspondiente. |
-| Validación de una sugerencia      | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tabulación y delimitadores**<br/>Cuando se selecciona esta opción, puede validar la selección actual con la tecla Tab o con cualquier delimitador pertinente al contexto. Por ejemplo, si introduce "ALE" y luego "(", 4D escribe automáticamente "ALERT(" en el editor. Esta es la lista de delimitadores que se tienen en cuenta:<br/> ( ; : = < [ {</li><li>**Sólo tabulador**<br/>Cuando se selecciona esta opción, sólo se puede utilizar el tabulador para insertar la sugerencia actual. Esto puede utilizarse más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de elementos, como ${1}.**Note**: También puede hacer doble clic en la ventana o presionar la tecla Retorno de carro para validar una sugerencia.</li></ul>                                                                                                                                                                                                                                                                             |
+| Validación de una sugerencia      | Define el contexto de entrada que permite al editor de métodos validar automáticamente la sugerencia actual mostrada en la ventana de autocompletar.<ul><li>**Tabulación y delimitadores**<br/>Cuando se selecciona esta opción, puede validar la selección actual con la tecla Tab o con cualquier delimitador pertinente al contexto. Por ejemplo, si introduce "ALE" y luego "(", 4D escribe automáticamente "ALERT(" en el editor. Esta es la lista de delimitadores que se tienen en cuenta:<br/> ( ; : = < [ {</li><li>**Sólo tabulador**<br/>Cuando se selecciona esta opción, sólo se puede utilizar el tabulador para insertar la sugerencia actual. Esto puede utilizarse más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de elementos, como ${1}.**Note**: También puede hacer doble clic en la ventana o presionar la tecla Retorno de carro para validar una sugerencia.</li></ul>                                                                                                                                                                                                                                                                    |

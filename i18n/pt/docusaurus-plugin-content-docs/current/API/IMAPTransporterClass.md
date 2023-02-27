@@ -966,10 +966,10 @@ In the first parameter, you can pass either:
 
 The optional *options* parameter allows you pass an object defining additional instructions for handling the message. As seguintes propriedades estão disponíveis:
 
-| Propriedade | Tipo    | Descrição                                                                                                                   |
-| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen  | boolean | If True, the message is marked as "seen" in the mailbox. If False, the message is not marked as "seen". Default value: True |
-| withBody    | boolean | Pass True to return the body of the message. If False, only the message header is returned. Default value: True             |
+| Propriedade | Tipo    | Descrição                                                                                                                  |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen  | boolean | If True, the message is marked as "seen" in the mailbox. If False, the message is not marked as "seen". Valor padrão: True |
+| withBody    | boolean | Pass True to return the body of the message. If False, only the message header is returned. Valor padrão: True             |
 > * The function generates an error and returns **Null** if *msgID* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) function, an error is generated,
 > * If there is no open connection, `.getMail()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox)`.
@@ -1058,10 +1058,10 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 **Options**
 
-| Propriedade | Tipo     | Descrição                                                                                                                                 |
-| ----------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen  | Booleano | If True, the specified messages are marked as "seen" in the mailbox. If False, the messages are not marked as "seen". Default value: True |
-| withBody    | Booleano | Pass True to return the body of the specified messages. If False, only the message headers are returned. Default value: True              |
+| Propriedade | Tipo     | Descrição                                                                                                                                |
+| ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen  | Booleano | If True, the specified messages are marked as "seen" in the mailbox. If False, the messages are not marked as "seen". Valor padrão: True |
+| withBody    | Booleano | Pass True to return the body of the specified messages. If False, only the message headers are returned. Valor padrão: True              |
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated.
 > * If there is no open connection, `.getMails()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox).
 

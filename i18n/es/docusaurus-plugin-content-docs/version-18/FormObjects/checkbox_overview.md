@@ -362,7 +362,7 @@ Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#nu
   "icon": "/RESOURCES/smiley.jpg",
   "iconFrame": 4,
   "customBackgroundPicture": "/RESOURCES/paper.jpg",
-  "iconOffset": 5, //custom icon offset when clicked
+  "iconOffset": 5, //desplazamiento del icono personalizado al hacer clic
   "left": 60,
   "top": 160,
   "width": 100,  
