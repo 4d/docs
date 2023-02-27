@@ -1323,6 +1323,13 @@ If a filter is specified for attributes of the relatedEntities [kind](DataClassA
 
 In the *options* parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 
+:::caution Warning
+
+In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key). 
+
+:::
+
+
 #### Example 1  
 
 The following structure will be used throughout all examples of this section:
