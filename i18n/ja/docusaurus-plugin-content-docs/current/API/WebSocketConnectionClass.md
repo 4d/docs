@@ -11,20 +11,20 @@ title: WebSocketConnection
 
 </details>
 
-The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md).
+`WebSocketConnection` クラス API は、[`WebSocketServer` クラス](WebSocketServerClass.md) を使って確立された WebSocket 接続を管理するのに使用します。
 
 :::info
 
-For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
+4D における WebSocketサーバーの実装の概要といくつかの例題については、[`WebSocketServer` クラス](WebSocketServerClass.md) を参照ください。
 
 :::
 
 
-### WebSocketConnection object
+### WebSocketConnection オブジェクト
 
-A `WebSocketConnection` object is automatically created when the [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) callback function of the [WebSocketServer object](WebSocketServerClass.md#4dwebsocketservernew) returns a [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object) object.
+`WebSocketConnection` オブジェクトは、[WebSocketServer オブジェクト](WebSocketServerClass.md#4dwebsocketservernew) の [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-引数) コールバック関数が [`connectionHandler`](WebSocketServerClass.md#connectionhandler-オブジェクト) オブジェクトを返すと自動的に作成されます。
 
-WebSocketConnection objects provide the following properties and functions:
+WebSocketConnection オブジェクトは、次のプロパティと関数を提供します:
 
 |                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ WebSocketConnection objects provide the following properties and functions:
 
 #### 説明
 
-The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->。
+`.handler` プロパティは、 <!-- REF #WebSocketConnectionClass.handler.Summary -->接続を開始するのに使用された `connectionHandler` オブジェクトを取得するアクセサーを格納します<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -58,9 +58,9 @@ The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summ
 
 #### 説明
 
-The `.id` property contains <!-- REF #WebSocketConnectionClass.id.Summary -->the unique identifier of the connection<!-- END REF -->。
+`.id` プロパティは、 <!-- REF #WebSocketConnectionClass.id.Summary -->接続の一意な識別子を格納しあmす<!-- END REF -->。
 
-This property is read-only.
+このプロパティは 読み取り専用 です。
 <!-- END REF -->
 
 
@@ -71,23 +71,23 @@ This property is read-only.
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| 引数      | タイプ                  |    | 説明                                             |
-| ------- | -------------------- |:--:| ---------------------------------------------- |
-| message | Text / Blob / Object | -> | The message to send|<!-- END REF -->
+| 引数      | タイプ                  |    | 説明                                   |
+| ------- | -------------------- |:--:| ------------------------------------ |
+| message | Text / Blob / Object | -> | 送信するメッセージ|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.send()` 関数は、 <!-- REF #WebSocketConnectionClass.send().Summary -->sends a *message* to the client<!-- END REF -->。
+`.send()` 関数は、 <!-- REF #WebSocketConnectionClass.send().Summary -->クライアントに *メッセージ* を送信します<!-- END REF -->。
 
-The following contents are sent depending on the *message* type:
+*メッセージ* の型によって、以下の内容が送信されます:
 
-| タイプ    | 内容                                                                                                                   |
-| ------ | -------------------------------------------------------------------------------------------------------------------- |
-| Text   | Text in UTF-8                                                                                                        |
-| Blob   | Binary data                                                                                                          |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| タイプ    | 内容                                                                                                    |
+| ------ | ----------------------------------------------------------------------------------------------------- |
+| Text   | UTF-8 のテキスト                                                                                           |
+| Blob   | バイナリデータ                                                                                               |
+| Object | JSON UTF-8 のテキスト ([`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/ja/page1217.html) と同じ結果)。 |
 
 <!-- END REF -->
 
@@ -101,9 +101,9 @@ The following contents are sent depending on the *message* type:
 
 #### 説明
 
-The `.status` property contains <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->。
+`.status` プロパティは、 <!-- REF #WebSocketConnectionClass.status.Summary -->接続ステータスを格納します ("Closing"、"Closed"、"Connected" のいずれか)。<!-- END REF -->。
 
-This property is read-only.
+このプロパティは 読み取り専用 です。
 <!-- END REF -->
 
 
@@ -115,10 +115,10 @@ This property is read-only.
 
 
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
-| 引数      | タイプ     |    | 説明                                                                                |
-| ------- | ------- |:--:| --------------------------------------------------------------------------------- |
-| code    | Integer | -> | Error code sent to the client (must be > 3000, otherwise the message is not sent) |
-| message | Text    | -> | Error message sent to the client|<!-- END REF -->
+| 引数      | タイプ     |    | 説明                                                        |
+| ------- | ------- |:--:| --------------------------------------------------------- |
+| code    | Integer | -> | クライアントに送信されるエラーコード (> 3000 である必要があり、そうでない場合メッセージは送信されません) |
+| message | Text    | -> | クライアントに送信されるエラーメッセージ|<!-- END REF -->
 
 
 |
@@ -126,9 +126,9 @@ This property is read-only.
 
 #### 説明
 
-`.terminate()` 関数は、 <!-- REF #WebSocketConnectionClass.terminate().Summary -->forces the connection to close<!-- END REF -->。
+`.terminate()` 関数は、 <!-- REF #WebSocketConnectionClass.terminate().Summary -->接続を強制終了します<!-- END REF -->。
 
-A *code* and *message* can be sent to the client during the closure to indicate the reason of the termination.
+終了時に、*code* と *message* をクライアントに送信し、終了の理由を示すことができます。
 
 <!-- END REF -->
 
@@ -139,8 +139,8 @@ A *code* and *message* can be sent to the client during the closure to indicate 
 
 #### 説明
 
-The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->the [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) parent object of the connection<!-- END REF -->。
+`.wss` プロパティは、 <!-- REF #WebSocketConnectionClass.wss.Summary -->接続の [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) 親オブジェクトを格納します<!-- END REF -->。
 
-This property is read-only.
+このプロパティは 読み取り専用 です。
 <!-- END REF -->
 
