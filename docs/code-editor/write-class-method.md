@@ -214,7 +214,7 @@ To display the tags of a method or class in alphabetical order, do one of the fo
 
 ### Shortcuts  
 
-Multiple features of 4D's Code Editor are available through keyboard shortcuts.
+Multiple features of 4D's Code Editor are available through default keyboard shortcuts.
 
 :::info macOS
 
@@ -263,6 +263,11 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 |[Ctrl]+click on clipboard icon|Paste contents of a clipboard at cursor location|
 |[Ctrl]+number key|Paste contents of the number clipboard at cursor location|
 
+:::tip
+
+Most of these shortcuts can be customized in the [4D Preferences](../Preferences/shortcuts.md) dialog box.
+
+:::
 
 
 
@@ -444,7 +449,7 @@ Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cm
 
 The search defined in this area will be performed in the code located in the window.
 
-The **find** entry area enables you to enter the string of characters to be searched for. This area is a combo box that stores the last 15 character strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. You can then either use this text or replace it with another.
+The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. You can then either use this text or replace it with another.
 
 Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits. 
 
