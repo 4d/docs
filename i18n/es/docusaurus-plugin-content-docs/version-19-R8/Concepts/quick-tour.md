@@ -101,13 +101,13 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo de sólo lectura
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
+> Las constantes predefinidas aparecen <u>subrayadas</u> por defecto en el editor de código 4D.
 
 ## Métodos
 
 4D ofrece un gran número de métodos (o comandos) integrados, pero también le permite crear sus propios **métodos de proyecto**. Los métodos de proyecto son métodos definidos por el usuario que contienen comandos, operadores y otras partes del lenguaje. Los métodos proyecto son métodos genéricos, pero hay otros tipos de métodos: métodos objeto, métodos formulario, métodos tabla (Triggers) y métodos base.
 
-Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. A statement performs an action, and may be simple or complex.
+Un método se compone de varias líneas de instrucciones, cada una de las cuales consta de una línea en el método. Una línea de instrucción realiza una acción, y puede ser simple o compleja.
 
 Por ejemplo, la siguiente línea es una sentencia que mostrará una caja de diálogo de confirmación:
 
@@ -121,7 +121,7 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Haga algo con el caracter si es un TAB
 
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
@@ -342,9 +342,9 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
-## Code on several lines
+## Código en varias líneas
 
-You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. Por ejemplo, ambas sentencias son equivalentes:
+Puede escribir una única instrucción en varias líneas terminando cada línea de la instrucción con un caracter barra invertida final `\`. El lenguaje 4D considerará todas las líneas a la vez. Por ejemplo, ambas sentencias son equivalentes:
 
 ```4d
 $str:=String("hello world!")
@@ -367,7 +367,7 @@ Hay dos maneras de crear comentarios:
 
 Ambos estilos de comentarios pueden utilizarse simultáneamente.
 
-#### Single line comments (`//comment`)
+#### Comentarios de una línea (`//comentario`)
 
 Inserte `//` al principio de una línea o después de una instrucción para añadir una línea de comentario. Ejemplo:
 
@@ -380,7 +380,7 @@ For($vCounter;1;100) //Inicio del bucle
  End for
 ```
 
-#### Inline or multiline comments (`/*comment*/`)
+#### Comentarios en línea o multilínea (`/*comment*/`)
 
 Rodea el contenido con los caracteres `/*` ... `*/` para crear comentarios en línea o bloques de comentarios multilínea. Tanto los bloques de comentarios en línea como los multilínea comienzan con `/*` y terminan con `*/`.
 
@@ -408,9 +408,9 @@ End for
 
 ## Secuencias de escape
 
-The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+El lenguaje 4D permite utilizar secuencias de escape (también llamadas caracteres de escape). Una secuencia de escape es una secuencia de caracteres que puede utilizarse para sustituir a un caracter "especial".
 
-The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+La secuencia consiste en una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es una secuencia de escape para el caracter **Tab**. Las secuencias de escape facilitan la introducción de caracteres especiales: el ejemplo anterior (`\t`) sustituye a la entrada "Caracter(Tab)".
 
 En 4D, se pueden utilizar las siguientes secuencias de escape:
 
@@ -424,7 +424,7 @@ En 4D, se pueden utilizar las siguientes secuencias de escape:
 
 > Es posible utilizar mayúsculas o minúsculas en las secuencias de escape.
 
-In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `\r`) se inserta en una sentencia para obtener un diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
 

@@ -251,20 +251,22 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R2  | Added   |
+| Version | Changes                           |
+| ------- | --------------------------------- |
+| v20     | Support of *headerOnly* parameter |
+| v18 R2  | Added                             |
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer { ; *headerOnly* : Boolean } ) : Object<!-- END REF -->
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parameter | Typ      |    | Beschreibung                                                                |
-| --------- | -------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber | Ganzzahl | -> | Number of the message in the list                                           |
-| Ergebnis  | Objekt   | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Parameter  | Typ      |    | Beschreibung                                                                |
+| ---------- | -------- |:--:| --------------------------------------------------------------------------- |
+| msgNumber  | Ganzzahl | -> | Number of the message in the list                                           |
+| headerOnly | Boolean  | -> | True to download only the email headers (default is False)                  |
+| Ergebnis   | Objekt   | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
@@ -272,16 +274,25 @@ The `boxInfo` object returned contains the following properties:
 
 The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->The `.getMail()` function<!-- END REF -->. This function allows you to locally handle the email contents.
 
-Pass in *msgNumber* the number of the message to retrieve. This number is returned in the number property by the [`.getMailInfoList()`](#getmailinfolist) function.
+Pass in *msgNumber* the number of the message to retrieve. This number is returned in the `number` property by the [`.getMailInfoList()`](#getmailinfolist) function.
+
+Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. This option allows you to optimize the downloading step when a lot of emails are on the server.
+
+:::note
+
+The *headerOnly* option may not be supported by the server.
+
+:::
 
 The method returns Null if:
 
 * *msgNumber* designates a non-existing message,
-* the message was marked for deletion using `.delete( )`.
+* the message was marked for deletion using [`.delete()`](#delete).
 
 **Returned object**
 
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
+
 
 ##### Beispiel
 
@@ -301,6 +312,7 @@ You want to know the sender of the first mail of the mailbox:
  $transporter:=POP3 New transporter($server)
 
  $mailInfo:=$transporter.getMailInfoList()
+
  $sender:=$transporter.getMail($mailInfo[0].number).from
 ```
 

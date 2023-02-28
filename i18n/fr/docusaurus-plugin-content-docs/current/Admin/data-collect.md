@@ -43,7 +43,7 @@ Les données sont collectées lors des événements suivants :
 | dataFileSize            | 419430400                                               | Taille du fichier de données en octets                                                                            |
 | indexesSize             | 419430400                                               | Taille des index en octets                                                                                        |
 | cacheSize               | 419430400                                               | Taille du cache en octets                                                                                         |
-| usingLegacyNetworkLayer | false                                                   | True si l'ancienne couche réseau est utilisée pour le serveur d'application                                       |
+| usingLegacyNetworkLayer | False                                                   | True si l'ancienne couche réseau est utilisée pour le serveur d'application                                       |
 | isEncrypted             | vrai                                                    | Vrai si le fichier de données est chiffré                                                                         |
 | isCompiled              | vrai                                                    | True si l'application est compilée                                                                                |
 | isEngined               | vrai                                                    | True si l'application est fusionnée avec 4D Volume Desktop                                                        |

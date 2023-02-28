@@ -58,7 +58,6 @@ var $text : Text
 |     | Undefined `=` *その他の値*                                 | Boolean | a.undefinedProp `=` 42              | false |
 | 異なる | Undefined `#` Undefined                               | Boolean | a.undefinedProp `#` b.undefinedProp | false |
 |     | Undefined `#` Null                                    | Boolean | a.undefinedProp `#` b.nullProp      | false |
-|     | Undefined `#` Undefined                               | Boolean | a.undefinedProp `#` b.undefinedProp | false |
 |     | Undefined `#` *その他の値*                                 | Boolean | a.undefinedProp `#` 42              | true  |
 | 大きい | Undefined `>` string, Date, Time, Boolean, number  | Boolean | a.undefinedProp `>` "abc"        | false |
 | 小さい | Undefined `<` string, Date, Time, Boolean, number  | Boolean | a.undefinedProp `<` "abc"        | false |

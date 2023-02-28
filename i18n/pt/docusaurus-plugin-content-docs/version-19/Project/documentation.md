@@ -161,7 +161,8 @@ $txt:="Hello world!"
 - The link tag is supported:
 
 ```
-// Case 1 The [documentation](https://doc.4d.com) of the command ....
+// Case 1
+The [documentation](https://doc.4d.com) of the command ....
 
 // Case 2
 [4D blog][1]

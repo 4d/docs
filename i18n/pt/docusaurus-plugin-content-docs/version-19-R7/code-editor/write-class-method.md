@@ -531,11 +531,11 @@ The following items are added automatically:
 
 By adding markers in your code, you can add the following tags to the dropdown:
 
-| Ícone                                                   | Elemento   |
-| ------------------------------------------------------- | ---------- |
-| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: tag  |
-| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: tag  |
-| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: tag |
+| Ícone                                                   | Elemento       |
+| ------------------------------------------------------- | -------------- |
+| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: etiqueta |
+| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: etiqueta |
+| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: tag     |
 
 You declare them by adding comments such as:
 

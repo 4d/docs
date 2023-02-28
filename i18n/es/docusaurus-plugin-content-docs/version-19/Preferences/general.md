@@ -14,7 +14,7 @@ Esta opción permite configurar la visualización por defecto de 4D al inicio, c
 * **No hacer nada**: sólo aparece la ventana de la aplicación, vacía.
 * **Diálogo de apertura de proyecto local**: 4D muestra una caja de diálogo estándar de apertura de documentos, permitiéndole seleccionar un proyecto local.
 * **Abrir el último proyecto utilizado**: 4D abre directamente el último proyecto utilizado; no aparece ninguna caja de diálogo de apertura.
-> To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
+> Para forzar la visualización de la caja de diálogo de apertura cuando se selecciona esta opción, mantenga presionada la tecla **Alt** (Windows) u **Opción** (macOS) mientras lanza el proyecto.
 
 * **Diálogo de apertura del proyecto remoto**: 4D muestra el diálogo estándar de inicio de sesión de 4D Server, permitiéndole seleccionar un proyecto publicado en la red.
 * **Diálogo del Asistente de Bienvenida** (configuración de fábrica): 4D muestra la caja de diálogo del Asistente de Bienvenida.
@@ -48,7 +48,7 @@ En la caja de diálogo de Preferencias de 4D, la opción **Ventana con pestañas
 Hay tres opciones disponibles:
 
 * **Según las Preferencias sistema** (por defecto): las ventanas 4D se comportarán como se definen en las Preferencias Sistema de macOS (En pantalla completa, Siempre o Manualmente).
-* **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
+* **Nunca**: al abrir un nuevo documento en el editor de formularios o en el editor de métodos de 4D siempre se crea una nueva ventana (nunca se crean pestañas).
 * **Siempre**: al abrir un nuevo documento en el editor de formularios o en los editores de métodos de 4D, siempre se creará una nueva pestaña.
 
 ### Salir del modo Diseño al ir al modo Aplicación
@@ -85,30 +85,30 @@ Este parámetro permite definir el lenguaje utilizado por defecto utilizado para
 Una base 4D puede funcionar en un lenguaje distinto al del sistema. Cuando se abre una base, el motor de 4D detecta el lenguaje utilizado por el fichero de datos y lo pasa al lenguaje (modo intérpretado o compilado). Las comparaciones de texto, independientemente de si las realiza el motor de la base de datos o el lenguaje, se hacen en el mismo lenguaje.
 
 Al crear un nuevo archivo de datos, 4D utiliza el idioma previamente configurado en este menú. Al abrir un archivo de datos que no está en el mismo idioma que la estructura, se utiliza el idioma del archivo de datos y el código del idioma se copia en la estructura.
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
+> Puede modificar este parámetro para la base abierta utilizando las Propiedades de la base (ver [Comparación de textos](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
 ## Ubicación de la documentation
 
-This area configures access to the 4D HTML documentation displayed in the current browser:
+Esta área configura el acceso a la documentación HTML de 4D que se muestra en el navegador actual:
 
-* When the user double-clicks on a command on the **Commands Page** of the Explorer;
-* When the user clicks on a command name in the Method editor and hits the **F1** key.
+* Cuando el usuario hace doble clic en un comando en la **página Comandos** del Explorador;
+* Cuando el usuario hace clic en el nombre de un comando en el editor de métodos y presiona la tecla **F1**.
 
-You can choose to access the 4D online documentation site directly or to access a static version that is stored locally.
+Puede elegir entre acceder directamente al sitio de documentación en línea de 4D o acceder a una versión estática almacenada localmente.
 
 ### Carpeta local
 
 Indica la ubicación de la documentación HTML estática. Por defecto, se trata de la subcarpeta \Help\Command\language. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
 
-Puede modificar esta ubicación como desee, por ejemplo, si quiere mostrar la documentación en un idioma diferente al de la aplicación. La documentación HTML estática puede estar ubicada en otro volumen, en un servidor web, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
+Puede modificar esta ubicación como desee, por ejemplo, si quiere mostrar la documentación en un idioma diferente al de la aplicación. La documentación HTML estática puede estar ubicada en otro volumen, en un servidor web, etc. Para designar una ubicación diferente, haga clic en el botón [...] junto al área de entrada y elija una carpeta raíz de documentación (carpeta correspondiente al lenguaje: fr, en, es, de o ja).
 
 ### Sitio Web
 
-Acceso URL a la documentación en línea de la versión en el 4D Doc Center. 4D builds calls to the pages of the documentation based on this URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
+Acceso URL a la documentación en línea de la versión en el 4D Doc Center. 4D crea llamadas a las páginas de la documentación basándose en esta URL. Puede modificarla, por ejemplo, si desea mostrar la documentación en un idioma distinto al de la aplicación. El botón de prueba situado a la derecha del áreaa lanza el navegador por defecto para acceder a la URL especificada.
 
 ### Primero buscar en la carpeta local
 
-This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
+Esta opción (marcada por defecto) define donde 4D buscará la página de documentación llamada utilizando el Explorador o la tecla F1.
 
-* When it is checked, 4D first looks for the page in the local folder. Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
-* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Si no se encuentra, 4D muestra un mensaje de error en el navegador.
+* Cuando está marcada, 4D busca primero la página en la carpeta local. Si se encuentra, 4D muestra la página en el navegador actual. If it is found, 4D displays the page in the current browser. Esto permite acceder a la documentación incluso cuando se está desconectado.
+* Cuando no está marcada, 4D busca la página deseada directamente en la documentación en línea del sitio Web y la muestra en el navegador actual. Si no se encuentra, 4D muestra un mensaje de error en el navegador.

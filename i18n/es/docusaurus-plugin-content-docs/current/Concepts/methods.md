@@ -4,24 +4,24 @@ title: Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several action(s). A method is composed of statements.
+Un método es básicamente un trozo de código que ejecuta una o varias acciones. Un método se compone de instrucciones.
 
-A statement performs an action, and may be simple or complex. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)).
+Una línea de instrucción realiza una acción, y puede ser simple o compleja. Cada instrucción suele constar de una línea en el método (si es necesario, puede dividirse en [utilizando el caracter `\`](quick-tour.md#code-on-several-lines)).
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
+El tamaño máximo de un método está limitado a 2 GB de texto o 32.000 líneas de código.
 
 ## Tipos de métodos
 
-In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+En el lenguaje 4D, hay varias categorías de métodos. La categoría depende de cómo se les pueda llamar:
 
 | Tipo                           | Contexto de llamada                                                                                                      | Acepta los parámetros | Descripción                                                                                                                                                                               |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Métodos proyecto**           | Por demanda, cuando se llama al nombre del método proyecto (ver [Llamando a métodos proyecto](#calling-project-methods)) | Sí                    | Puede contener código para ejecutar acciones personalizadas. Una vez creado un método proyecto, pasa a formar parte del lenguaje del proyecto.                                            |
 | **Método objeto (widget)**     | Automático, cuando un evento involucra al objeto al que se asocia el método                                              | No                    | Propiedad de un objeto formulario (también llamado widget)                                                                                                                                |
 | **Método formulario**          | Automático, cuando un evento involucra al formulario al que se asocia el método                                          | No                    | Propiedad de un formulario. Puede utilizar un método formulario para gestionar datos y objetos, pero generalmente es más sencillo y eficiente utilizar un método objeto para estos fines. |
-| **Trigger** (o *método tabla*) | Automático, cada vez que se manipulan los registros de una tabla (Añadir, Eliminar y Modificar)                          | No                    | Propiedad de una tabla. Triggers are methods that can prevent "illegal" operations with the records of your database.                                                                     |
-| **Método base**                | Automático, cuando se produce un evento de la sesión de trabajo                                                          | Sí (predefinido)      | There are 16 database methods in 4D.                                                                                                                                                      |
-| **Class**                      | [**Class functions**](classes.md#function) are called in the context of an object instance                               | sí                    | Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or created by the 4D developer. See [**Classes**](classes.md)                                         |
+| **Trigger** (o *método tabla*) | Automático, cada vez que se manipulan los registros de una tabla (Añadir, Eliminar y Modificar)                          | No                    | Propiedad de una tabla. Los triggers son métodos que pueden evitar operaciones "ilegales" con los registros de su base.                                                                   |
+| **Método base**                | Automático, cuando se produce un evento de la sesión de trabajo                                                          | Sí (predefinido)      | Hay 16 métodos base en 4D.                                                                                                                                                                |
+| **Class**                      | [**Las funciones de clases**](classes.md#function) se llaman en el contexto de una instancia de objeto                   | sí                    | Las funciones de clases pueden estar integradas (*por ejemplo* `collection.orderBy()` o `entity.save()`), o creadas por el desarrollador 4D. Ver [**Clases**](classes.md)                 |
 
 
 ## Métodos proyecto
@@ -89,7 +89,7 @@ Puede encapsular los métodos de su proyecto en objetos **fórmula** y llamarlos
 
 Los comandos `Formula` o `Formula from string` permiten crear objetos de fórmula nativos que se pueden encapsular en las propiedades de los objetos. Permite implementar métodos objetos personalizados.
 
-To execute a method stored in an object property, use the **()** operator after the property name. Por ejemplo:
+Para ejecutar un método almacenado en una propiedad objeto, utilice el operador **()** después del nombre de la propiedad. Por ejemplo:
 
 ```4d
 //myAlert
@@ -101,7 +101,7 @@ Luego `myAlert` puede encapsularse en cualquier objeto y llamarse:
 ```4d
 var $o : Object
 $o:=New object("custom_Alert";Formula(myAlert))
-$o.custom_Alert() //displays "Hello world!"
+$o.custom_Alert() //muestra "Hello world!"
 ```
 
 También se admite la sintaxis con paréntesis:
@@ -141,7 +141,7 @@ Luego el método actúa como un nuevo atributo calculado que se puede añadir a 
 ```4d
 var $o : Object
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
-$o.fullName:=Formula(fullName2) //add the method  
+$o.fullName:=Formula(fullName2) //añade el método
 
 $result:=$o.fullName() 
 //$result = "Jim Wesson"

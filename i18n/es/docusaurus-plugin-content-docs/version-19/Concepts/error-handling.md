@@ -53,7 +53,7 @@ Se puede definir un único método de captura de errores para toda la aplicació
 Un método de gestión de errores instalado por el comando `ON ERR CALL` sólo se aplica únicamente a la aplicación en ejecución. En el caso de un error generado por un **componente**, no se llama al método `ON ERR CALL` de gestión de errores de la aplicación local, y viceversa.
 
 
-### Manejo de errores dentro del método
+### Manejo de errores e el método
 
 Dentro del método de error personalizado, tiene acceso a varias piezas de información que le ayudarán a identificar el error:
 

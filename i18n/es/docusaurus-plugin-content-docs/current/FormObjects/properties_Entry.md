@@ -207,19 +207,19 @@ Placeholder text appears as watermark text in a field, supplying a help tip, ind
 
 ![](../assets/en/FormObjects/property_placeholder.png)
 
-The placeholder text is displayed again if the contents of the field is erased.
+El texto del marcador de posición vuelve a aparecer si se borra el contenido del campo.
 
 Se puede mostrar un marcador de posición para los siguientes tipos de datos:
 
 - cadena (text o alpha)
 - date and time when the **Blank if null** property is enabled.
 
-You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
+Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador de posición, por ejemplo:
 
  :xliff:PH_Lastname
 
-You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
-> You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+Sólo se pasa la referencia en el campo "Marcador de posición"; no es posible combinar una referencia con texto estático.
+> También puede definir y obtener el texto del marcador de posición por programación utilizando los comandos [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) y [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html).
 
 #### Gramática JSON
 
@@ -239,7 +239,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 ## Selección siempre visible
 
-This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
+Esta propiedad mantiene la selección visible dentro del objeto después de haber perdido el foco. Esto facilita la implementación de interfaces que permiten modificar el estilo del texto (ver [Multi estilo](properties_Text.md#multi-style)).
 
 #### Gramática JSON
 
@@ -255,14 +255,14 @@ This property keeps the selection visible within the object after it has lost th
 
 ## Atajo
 
-This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
+Esta propiedad permite definir teclas de significado especial (atajos de teclado) para los [botones](button_overview.md), los [botones radio](radio_overview.md) y las [casillas de selección](checkbox_overview.md). Permiten al usuario utilizar el control utilizando el teclado en lugar de tener que utilizar el ratón.
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+Puede configurar esta opción haciendo clic en el botón [...] de la propiedad Accesos directos de la Lista de propiedades.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> También puede asignar un acceso directo a un comando de menú personalizado. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> También puede asignar un acceso directo a un comando de menú personalizado. Si hay un conflicto entre dos accesos directos, el objeto activo tiene prioridad. Para más información sobre cómo asociar accesos directos a los menús, consulte [Configuración de las propiedades de los menús](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
+Para ver una lista de todos los métodos abreviados utilizados en el entorno Diseño de 4D, consulte la página [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) en la caja de diálogo Preferencias.
 
 #### Gramática JSON
 
@@ -286,9 +286,9 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 Permite el paso directo al modo de edición en list boxes.
 
-When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Note that this option allows cells to be edited even when the list box [selection mode](properties_ListBox.md#selection-mode) is set to "None".
+Cuando esta opción está activada, las celdas del list box cambian al modo de edición tras un solo clic del usuario, independientemente de si esta área del list box estaba seleccionada de antemano o no. Tenga en cuenta que esta opción permite editar celdas incluso cuando el list box [modo selección](properties_ListBox.md#selection-mode) está en "Ninguno".
 
-When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
+Cuando esta opción no está activa, los usuarios deben seleccionar primero la línea de celdas y luego, hacer clic en una celda para editar su contenido.
 
 #### Gramática JSON
 

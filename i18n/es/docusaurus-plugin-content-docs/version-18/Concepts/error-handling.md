@@ -44,7 +44,7 @@ El comando `Method called on error` permite conocer el nombre del método instal
 
 ```
 
-### Manejo de errores dentro del método
+### Manejo de errores e el método
 
 Dentro del método de error personalizado, tiene acceso a varias informaciones que le ayudarán a identificar el error:
 

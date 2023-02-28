@@ -57,21 +57,21 @@ Comando `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summary 
 
 No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                 | Valor padrão (se omitido)                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                     | False                                                             |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>String de texto ou objeto token representando credenciais de autorização OAuth2. Só é usado com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado mas `authenticationMode` for omitido, o protocolo OAuth 2 é usado (se permitido pelo servidor). Text string or token object representing OAuth2 authorization credentials. | nenhum                                                            |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                       | o modo de autenticação mais seguro disponível no servidor é usado |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                          | 30                                                                |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                 | *obrigatório*                                                     |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                        | nenhum                                                            |
-| **.password** : Texto<br/>Palavra-passe de utilizador para autenticação no servidor. Text string or token object representing OAuth2 authorization credentials.                                                                                                                                                                                                                                                    | nenhum                                                            |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                 | 995                                                               |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                 | nenhum                                                            |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                           | Valor padrão (se omitido)                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                                                                                               | False                                                             |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>String de texto ou objeto token representando credenciais de autorização OAuth2. Usado apenas com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for utilizado mas `authenticationMode` for omitido, é utilizado o protocolo OAuth 2 (se permitido pelo servidor). Text string or token object representing OAuth2 authorization credentials. | nenhum                                                            |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                                                                                                 | o modo de autenticação mais seguro disponível no servidor é usado |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                                                                                                    | 30                                                                |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                                                                                           | *obrigatório*                                                     |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                                                                                                  | nenhum                                                            |
+| **.password** : Texto<br/>Palavra-passe de utilizador para autenticação no servidor. Text string or token object representing OAuth2 authorization credentials.                                                                                                                                                                                                                                                              | nenhum                                                            |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                                                                                           | 995                                                               |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                                                                                           | nenhum                                                            |
 
 #### Resultados
 
-A função retorna um objeto [**POP3 transporter**](#pop3-transporter-object). Todas as propriedades retornadas são**apenas leitura**.
+A função retorna um objeto [**POP3 transporter**](#pop3-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 > A conexão POP3 é fechada automaticamente quando o objeto transportador for destruído.
 
 #### Exemplo
@@ -251,37 +251,48 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Versão | Mudanças                          |
+| ------ | --------------------------------- |
+| v20    | Support of *headerOnly* parameter |
+| v18 R2 | Adicionado                        |
 
 </details>
 
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer { ; *headerOnly* : Boolean } ) : Object<!-- END REF -->
 
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                                    |
-| ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número da mensagem que na lista                                              |
-| Resultados | Objeto  | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF --> |
+| Parâmetros | Tipo     |    | Descrição                                                                    |
+| ---------- | -------- |:--:| ---------------------------------------------------------------------------- |
+| msgNumber  | Integer  | -> | Número da mensagem que na lista                                              |
+| headerOnly | Booleano | -> | True to download only the email headers (default is False)                   |
+| Resultados | Objeto   | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF --> |
 
 ##### Descrição
 
 A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devolve o `Email` objeto correspondente ao *msgNumber* na caixa de correio designada pelo transportador [`POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade número pela função [`.getMailInfoList()`](#getmailinfolist).
+Passe em *msgNumber* o número da mensagem a recuperar. This number is returned in the `number` property by the [`.getMailInfoList()`](#getmailinfolist) function.
+
+Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. This option allows you to optimize the downloading step when a lot of emails are on the server.
+
+:::note
+
+The *headerOnly* option may not be supported by the server.
+
+:::
 
 O método retorna Null se:
 
 * *msgNumber* determina uma mensagem não existente,
-* a mensagem foi marcada para apagar usando `.delete( )`.
+* the message was marked for deletion using [`.delete()`](#delete).
 
 **Objeto devolvido**
 
 `.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object).
+
 
 ##### Exemplo
 
@@ -293,7 +304,7 @@ Se quiser saber o emissário do primeiro email da mailbox:
  var $sender : Variant
 
  $server:=New object
- $server.host:="pop.gmail.com" //Obrigatório
+ $server.host:="pop.gmail.com" //Mandatory
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -301,6 +312,7 @@ Se quiser saber o emissário do primeiro email da mailbox:
  $transporter:=POP3 New transporter($server)
 
  $mailInfo:=$transporter.getMailInfoList()
+
  $sender:=$transporter.getMail($mailInfo[0].number).from
 ```
 

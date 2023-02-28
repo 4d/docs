@@ -171,7 +171,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 ##### Servidor REST
 
-*Esta opción es obsoleta porque se basa en conceptos heredados de registro actual y de selección actual. Se recomienda utilizar** [las funciones de clase del modelo de datos ORDA](https://developer.4d.com/docs/en/REST/classFunctions.html) para los accesos REST. *
+*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
 #### Modificar de atributos globalmente
 

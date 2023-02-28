@@ -89,11 +89,11 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 
 | Propriedade      | Tipo     | Predefinição | Descrição                                                                                                                                                                                                                                                                                                                       |
 | ---------------- | -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onResponse       | Formula  | indefinido   | Chamada de retorno para mensagens de worker do sistema. Esta chamada de retorno é chamada assim que a resposta completa é recebida. It receives two objects as parameters (see below)                                                                                                                                           |
-| onData           | Formula  | indefinido   | Chamada de retorno para os dados do worker do sistema. Esta chamada de retorno é chamada cada vez que o worker do sistema recebe dados. It receives two objects as parameters (see below)                                                                                                                                       |
-| onDataError      | Formula  | indefinido   | Chamada de retorno para os erros do processo externo (*stderr* do processo externo). It receives two objects as parameters (see below)                                                                                                                                                                                          |
-| onError          | Formula  | indefinido   | Chamada de retorno para erros de execução, devolvida pelo worker do sistema em caso de condições anormais de tempo de execução (erros de sistema). It receives two objects as parameters (see below)                                                                                                                            |
-| onTerminate      | Formula  | indefinido   | Chamada de retorno quando o processo externo é terminado. It receives two objects as parameters (see below)                                                                                                                                                                                                                     |
+| onResponse       | Formula  | indefinido   | Chamada de retorno para mensagens de worker do sistema. Esta chamada de retorno é chamada assim que a resposta completa é recebida. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                           |
+| onData           | Formula  | indefinido   | Chamada de retorno para os dados do worker do sistema. Esta chamada de retorno é chamada cada vez que o worker do sistema recebe dados. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                       |
+| onDataError      | Formula  | indefinido   | Chamada de retorno para os erros do processo externo (*stderr* do processo externo). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                          |
+| onError          | Formula  | indefinido   | Chamada de retorno para erros de execução, devolvida pelo worker do sistema em caso de condições anormais de tempo de execução (erros de sistema). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                            |
+| onTerminate      | Formula  | indefinido   | Chamada de retorno quando o processo externo é terminado. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                                     |
 | timeout          | Número   | indefinido   | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                                       |
 | dataType         | Text     | "text"       | Tipo de conteúdo do corpo de resposta. Possíveis valores: "texto" (por defeito), "bolha".                                                                                                                                                                                                                                       |
 | encoding         | Text     | "UTF-8"      | Apenas se `dataType="text"`. Codificação do conteúdo do corpo de resposta. Para a lista de valores disponíveis, ver a [`CONVERTA DO TEXTO`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) descrição do comando                                                                                                       |
@@ -109,7 +109,7 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos. O
 | $param2.type | Text         | "response"   | "data"          | "erro"        | "erro"       | "termination" |
 | $param2.data | Text ou Blob |              | dados recebidos | dados de erro |              |               |
 
-Here is the sequence of callback calls:
+Aqui está a sequência de chamadas de retorno:
 
 1. `onData` e `onDataError` são executados uma ou várias vezes
 2. se chamado, `onError` é executado uma vez (pára o processamento do trabalhador do sistema)
@@ -360,11 +360,11 @@ A propriedade `.erros` <!-- REF #SystemWorkerClass.errors.Summary -->contém uma
 
 Cada elemento da coleção é um objeto com as seguintes propriedades:
 
-| Propriedade             | Tipo   | Descrição                                                    |
-| ----------------------- | ------ | ------------------------------------------------------------ |
-| [].errorCode            | number | 4D error code                                                |
-| [].message              | text   | Description of the 4D error                                  |
-| [ ].ComponenteSignature | text   | Signature of the internal component which returned the error |
+| Propriedade             | Tipo   | Descrição                                            |
+| ----------------------- | ------ | ---------------------------------------------------- |
+| [].errorCode            | number | Código de erro 4D                                    |
+| [].message              | text   | Descrição do erro 4D                                 |
+| [ ].ComponenteSignature | text   | Assinatura da componente interna que devolveu o erro |
 
 Se não ocorreu qualquer erro, `.errors` contém uma coleção vazia.
 

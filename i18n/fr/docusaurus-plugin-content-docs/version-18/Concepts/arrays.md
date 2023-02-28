@@ -164,13 +164,13 @@ Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux co
 | Boolean         | (31+nombre d'éléments)/8                                                |
 | Date            | (1+nombre d'éléments) * 6                                               |
 | Integer         | (1+nombre d'éléments) * 2                                               |
-| Entier long     | (1+nombre d'éléments) * 4                                               |
+| Longint         | (1+nombre d'éléments) * 4                                               |
 | Object          | (1+nombre d'éléments) * 8 + somme de la taille de chaque objet          |
-| Images          | (1+nombre d'éléments) * 8 + somme de la taille de chaque image          |
-| Pointeurs       | (1+nombre d'éléments) * 8 + somme de la taille de chaque pointeur       |
+| Picture         | (1+nombre d'éléments) * 8 + somme de la taille de chaque image          |
+| Pointer         | (1+nombre d'éléments) * 8 + somme de la taille de chaque pointeur       |
 | Real            | (1+nombre d'éléments) * 8                                               |
 | Text            | (1+nombre d'éléments) * 20 + (somme de la taille de chaque texte) * 2 |
-| Heure           | (1+nombre d'éléments) * 4                                               |
+| Time            | (1+nombre d'éléments) * 4                                               |
 | Deux dimensions | (1+nombre d'éléments) * 16 + somme de la taille de chaque tableau       |
 
 **Notes :**

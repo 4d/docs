@@ -35,8 +35,8 @@ Conversión de unidades: cuando se pasa de una unidad a otra, 4D las convierte a
 
 Tenga en cuenta que la conversión de ida y vuelta puede conducir a un resultado final diferente del valor inicial debido a los cálculos automáticos realizados por 4D. Esto se ilustra en las siguientes secuencias:
 
-- (font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels
-- (font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
+- (fuente Arial 18)*: 52 píxeles -> 2 líneas -> 40 píxeles
+- (fuente Arial 12)*: 3 píxeles -> 0,4 línea redondeada a 1 línea -> 19 píxeles
 
 #### Ejemplo JSON
 

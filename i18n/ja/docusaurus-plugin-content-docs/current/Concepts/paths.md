@@ -21,14 +21,14 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 以下の filesystemパス名がサポートされています:
 
-| filesystem   | Designates                                         |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
-| "/LOGS"      | Logs フォルダー                                         |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Project フォルダー                                      |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | 指定先                               |
+| ------------ | --------------------------------- |
+| "/DATA"      | カレントデータフォルダー                      |
+| "/LOGS"      | Logs フォルダー                        |
+| "/PACKAGE"   | データベースフォルダー (拡張子 4dbase の有無に関わらず) |
+| "/PROJECT"   | Project フォルダー                     |
+| "/RESOURCES" | カレントデータベースの Resources フォルダー       |
+| "/SOURCES"   | カレントプロジェクトの Sources フォルダー         |
 
 ## POSIX シンタックス
 
@@ -70,9 +70,9 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Windows のパス名とエスケープシーケンス
 
-The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. たとえば、`\t` は、`Tab` 文字のエスケープシーケンスです。
+4Dランゲージでは [エスケープシーケンス](quick-tour.md#エスケープシーケンス) を使用できます。 エスケープシーケンスはバックスラッシュ (`\`: 日本語フォント環境では円マーク) で始まり、その後に文字が続きます。 たとえば、`\t` は、`Tab` 文字のエスケープシーケンスです。
 
-Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
+Windows では、`\` 文字をパスの区切り文字としても使用するため、Windows のパス名を入力するにはダブルバックスラッシュ `\` を使用します。
 
 ### macOS
 

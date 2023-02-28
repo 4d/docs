@@ -1292,7 +1292,7 @@ Updating an entity with `dk auto merge` option:
 |---------|--- |:---:|------|
 |filterString |Text |->|Attribute(s) to extract (comma-separated string)|
 |filterCol |Collection |->|Collection of attribute(s) to extract|
-|options|Integer|->|`dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
+|options|Integer|->|`dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
 |Result|Object|<-|Object built from the entity|<!-- END REF -->
 
 #### Description
@@ -1322,6 +1322,13 @@ If a filter is specified for attributes of the relatedEntities [kind](DataClassA
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted
 
 In the *options* parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
+
+:::caution Warning
+
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions. 
+
+:::
+
 
 #### Example 1  
 

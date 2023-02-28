@@ -5,9 +5,9 @@ title: Documenter un projet
 
 
 
-In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+In application projects, you can document your methods as well as your forms, tables, or fields. La création d'une documentation est particulièrement appropriée pour les projets développés par plusieurs programmeurs et s'inscrit généralement dans les bonnes pratiques en matière de programmation. La documentation peut contenir la description d'un élément ainsi que toute information nécessaire pour comprendre comment l'élément fonctionne dans l'application.
 
-Les éléments de projet suivants acceptent la documentation :
+Les éléments de projet suivants peuvent être documentés :
 
 - Méthodes (méthodes base, méthodes composant, méthodes projet, méthodes formulaire, méthodes 4D Mobile, triggers et classes)
 - Forms
@@ -100,7 +100,7 @@ L'éditeur de code 4D affiche une partie de la documentation d'une méthode dans
 
 If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
 
-- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Tout texte saisi dans une balise HTML `comment` (*\<!-- command documentation -->*) en haut du fichier markdown.
 
 - Ou, si aucune balise de `commentaire` html n'est utilisée, la première phrase après une balise `# Description` du fichier markdown.  
   Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par le parseur du code 4D.
@@ -117,12 +117,12 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Ligne                                                  | Description                                                                                                                                                                                         |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "\<!-- Type your summary here -->"          | Commentaire HTML. Utilisé en priorité comme description de méthode dans les [astuces de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |
-| ## Description                                        | Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les astuces de l'éditeur de code si le commentaire HTML n'est pas utilisé |
-| ## Example                                            | Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code                                                                                                                 |
-| \``` 4D <br/>Insérez votre exemple ici \` `` | Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)                                                                                                                |
+| Ligne                                                  | Description                                                                                                                                                                                            |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "\<!-- Type your summary here -->"          | Commentaire HTML. Utilisé en priorité comme description de méthode dans les [infobulles de l'éditeur de code](#viewing-documentation-in-the-code-editor)                                               |
+| ## Description                                        | Titre de niveau 2 en Markdown. La première phrase qui suit cette balise est utilisée comme description d'une méthode dans les infobulles de l'éditeur de code si le commentaire HTML n'est pas utilisé |
+| ## Example                                            | Titre de niveau 2, vous pouvez utiliser cette zone pour afficher un exemple de code                                                                                                                    |
+| \``` 4D <br/>Insérez votre exemple ici \` `` | Utilisé pour formater des exemples de code 4D (utilise la bibliothèque highlight.js)                                                                                                                   |
 
 ### Prise en charge du markdown
 
@@ -143,7 +143,7 @@ _italic_
 ~~strikethrough~~
 ```
 
-- La balise du bloc de code (\```4d ... ```) est supportée avec le surlignage du code 4D :
+- La balise de bloc de code (\```4d ... ```) est prise en charge avec le formatage du code 4D :
 
  \``` 4d  
 C_TEXT($txt)  
@@ -163,7 +163,7 @@ $txt:="Hello world!"
 
 ```
 // Case 1
-The [documentation](https://doc.4d.com) of the command ....
+La [documentation](https://doc.4d.com) de la commande ...
 
 // Case 2
 [4D blog][1]
@@ -181,13 +181,13 @@ The [documentation](https://doc.4d.com) of the command ....
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
 
-[![logo blog 4D avec lien](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
 > Pour plus d'informations, consultez le [guide Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
 
 ## Exemple
 
-Dans le fichier `WP SwitchToolbar.md`, vous pouvez entrer le code suivant :
+Dans le fichier `WP SwitchToolbar.md`, vous pouvez écrire :
 
 ```4d
 | Parameter | Type   | in/out | Description |
@@ -199,7 +199,7 @@ Dans le fichier `WP SwitchToolbar.md`, vous pouvez entrer le code suivant :
 ## Description
 
 Cette méthode retourne un logo de taille spécifique, selon la valeur du paramètre *size*.
-1 = plus petite taille, 5 = plus grande taille.
+1 = smallest size, 5 = largest size.
 
 ## Exemple
 

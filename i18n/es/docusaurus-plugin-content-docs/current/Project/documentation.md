@@ -106,13 +106,16 @@ El editor de código 4D muestra una parte de la documentación de un método en 
 
 Si existe un archivo llamado `\&#060;MethodName&#062;.md` en la carpeta `\&#060;package&#062;/documentation`, el editor de código muestra (por prioridad):
 
-- Todo texto introducido en una etiqueta HTML `comment` (*\<!-- command documentation -->*) en la parte superior del archivo markdown.
+- Todo texto introducido en una etiqueta de comentario HTML (`<!-- command documentation -->`) en la parte superior del archivo markdown.
 
-- O, si no se utiliza la etiqueta de `comentario` html, la primera frase después de una etiqueta `# Description` del archivo markdown.  
-  En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
+- O, si no se utiliza la etiqueta de comentario html, la primera frase después de una etiqueta `# Description` del archivo markdown.  
+  En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código 4D.
 
-    > En caso contrario, el editor de código muestra [el comentario del bloque en la parte superior del código del método](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
+:::note
 
+En caso contrario, el editor de código muestra [el comentario del bloque en la parte superior del código del método](../code-editor/write-class-method.md#using-help-tips).
+
+:::
 
 
 ## Definición del archivo de documentación
@@ -125,17 +128,18 @@ Los nuevos archivos de documentación se crean con el siguiente contenido por de
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Línea                                               | Descripción                                                                                                                                                                                 |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "\<!-- Type your summary here -->"       | Comentario HTML. Se utiliza prioritariamente como descripción del método en los [consejos del editor de código](#viewing-documentation-in-the-code-editor)                                  |
-| ## Description                                     | Título de nivel 2 en Markdown. La primera frase después de esta etiqueta se utiliza como descripción del método en las sugerencias del editor de código si no se utiliza el comentario HTML |
-| ## Ejemplo                                         | Título de nivel 2, puede utilizar esta área para mostrar un ejemplo de código                                                                                                               |
-| \``` 4D <br/>Digite su ejemplo aquí \` `` | Se utiliza para dar formato a los ejemplos de código 4D (utiliza la librería highlight.js)                                                                                                  |
+| Línea                                    | Descripción                                                                                                                                                                                 |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<!-- Escriba aquí su resumen -->` | Comentario HTML. Se utiliza prioritariamente como descripción del método en los [consejos del editor de código](#viewing-documentation-in-the-code-editor)                                  |
+| ## Description                          | Título de nivel 2 en Markdown. La primera frase después de esta etiqueta se utiliza como descripción del método en las sugerencias del editor de código si no se utiliza el comentario HTML |
+| ## Ejemplo                              | Título de nivel 2, puede utilizar esta área para mostrar un ejemplo de código                                                                                                               |
+| ` ```4d Escriba aquí su ejemplo`` `      | Se utiliza para dar formato a los ejemplos de código 4D (utiliza la librería highlight.js)                                                                                                  |
 
 
 ### Markdown soportado
 - La etiqueta del título es soportada:
-```
+
+```md
 # Title 1
 ## Title 2
 ### Title 3
@@ -143,7 +147,7 @@ Los nuevos archivos de documentación se crean con el siguiente contenido por de
 
 - Las etiquetas de estilo (cursiva, negrita, tachado) son compatibles:
 
-```
+```md
 _italic_
 **bold**
 **_bold/italic_**
@@ -153,15 +157,15 @@ _italic_
 
 - La etiqueta de bloque de código (\``4d ... ``) es compatible con el resaltado del código 4D:
 
-    \``` 4d  
-  C_TEXT($txt)  
-  $txt:="Hello world!"  
-  \` ``
-
-
+````md
+```4d
+    var $txt : Texto
+    $txt:="¡Hola mundo!"  
+```
+````
 - La etiqueta de la tabla es soportada:
 
-```
+```md
 | Parameter | Type   | Description  |
 | --------- | ------ | ------------ |
 | wpArea    | String |Write pro area|
@@ -171,9 +175,9 @@ _italic_
 
 - La etiqueta del enlace es soportada:
 
-```
-// Case 1
-The [documentation](https://doc.4d.com) of the command ....
+```md
+// Caso 1
+La [documentation](https://doc.4d.com) del comando ....
 
 // Case 2
 [4D blog][1]
@@ -183,14 +187,14 @@ The [documentation](https://doc.4d.com) of the command ....
 
 - Las etiquetas de imagen son soportadas:
 
-```
+```md
 ![image info](pictures/image.png)
 
 ![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
 
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
-[![logo blog 4D con enlace](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo blog 4D con enlace](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "Logo del blog 4D")](https://blog.4d.com)
 
 > Para más información, consulte la [guía Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
 
@@ -201,8 +205,8 @@ The [documentation](https://doc.4d.com) of the command ....
 
 En el archivo `WP SwitchToolbar.md`, puede escribir:
 
-```4d
-<!-- Este método devuelve un logotipo diferente en función del parámetro de tamaño -->
+````md
+<!-- This method returns a different logo depending on the size parameter -->
 
 
 GetLogo (size) -> logo
@@ -216,18 +220,24 @@ GetLogo (size) -> logo
 
 ## Description
 
-Este método devuelve un logotipo diferente en función del parámetro *size*.
+Este método devuelve un logo de un tamaño específico, dependiendo del valor del parámetro *size*.
 1 = tamaño más pequeño, 5 = tamaño más grande.
 
-## Ejemplo
+## Example
 
+```4d
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Obtener el logo más grande
+//Obtener el logotipo más grande
 $logo:=GetLogo(5)
 ```
+````
 
-- Explorer view: ![](../assets/en/Project/explorer_Doc.png)
+- Vista del explorador:
 
-- Code editor view: ![](../assets/en/Project/comments-explo5.png)
+![](../assets/en/Project/explorer_Doc.png)
+
+- Vista del editor de código:
+
+![](../assets/en/Project/comments-explo5.png)

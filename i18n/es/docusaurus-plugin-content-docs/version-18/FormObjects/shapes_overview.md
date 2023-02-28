@@ -23,12 +23,12 @@ El diseño de los rectángulos se controla a través de muchas propiedades (colo
 
 ```4d
  "myRectangle": {
-  "type": "rectangle", //define the type of object
-  "left": 60,    //left position on the form  
-  "top": 160,    //top position on the form 
-  "width": 100,   //width of the object
-  "height": 20,   //height of the object
-  "borderRadius": 20  //define the roundness of the corners
+  "type": "rectangle", //definir el tipo de objeto
+  "left": 60,    //posición izquierda en el formulario
+  "top": 160,    //posición superior en el formulario 
+  "width": 100,   //ancho del objeto
+  "height": 20,   //altura del objeto
+  "borderRadius": 20  //definir la redondez de las esquinas
                 }
 ```
 
@@ -57,9 +57,9 @@ La propiedad JSON `startPoint` define a partir de qué coordenada dibujar la lí
   "top": 40,
   "width": 100,
   "height": 80,
-  "startPoint": "topLeft", //first direction
-  "strokeDashArray": "6 2" //dashed
-  }
+  "startPoint": "topLeft", //primera dirección
+  "strokeDashArray": "6 2" //línea de guiones
+}
 ```
 
 Result: ![](../assets/en/FormObjects/shape_line1.png)
@@ -71,9 +71,9 @@ Result: ![](../assets/en/FormObjects/shape_line1.png)
   "top": 40,
   "width": 100,
   "height": 80,
-  "startPoint": "bottomLeft", //2nd direction
-  "strokeDashArray": "6 2" //dashed
-  }
+  "startPoint": "bottomLeft", //2ª dirección
+  "strokeDashArray": "6 2" //línea de guiones
+}
 ```
 
 Result: ![](../assets/en/FormObjects/shape_line2.png)
@@ -92,13 +92,13 @@ Un óvalo estático es un objeto decorativo para los formularios. Los objetos ov
 
 ```4d
  "myOval": {
-  "type": "oval",  //define the type of object
-  "left": 60,   //left position on the form  
-  "top": 160,   //top position on the form 
-  "width": 100,  //width of the object
-  "height": 20,  //height of the object
-  "fill": "blue"  //define the background color
-                }
+  "tipo": "oval", //definir el tipo de objeto
+  "left": 60, //posición izquierda en el formulario  
+  "top": 160, //posición superior en el formulario 
+  "width": 100, //ancho del objeto
+  "height": 20, //altura del objeto
+  "fill": "blue" //definir el color de fondo
+}
 ```
 
 #### Propiedades soportadas

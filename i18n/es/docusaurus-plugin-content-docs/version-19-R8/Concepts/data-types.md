@@ -33,7 +33,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 ## Valores por defecto
 
-When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned.
+Cuando las [variables](variables.md) o los [parámetros](parameters.md) se digitan mediante una [declaración explícita](variables.md#declaring-variables), reciben un valor por defecto, que conservarán durante la sesión mientras no hayan sido asignados.
 
 El valor por defecto depende del tipo de variable:
 

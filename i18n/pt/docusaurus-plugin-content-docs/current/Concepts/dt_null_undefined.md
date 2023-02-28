@@ -58,7 +58,6 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 |                      | Undefined `=` *other values*                          | Booleano | a.undefinedProp `=` 42              | False |
 | Desigualdade         | Undefined `#` Undefined                               | Booleano | a.undefinedProp `#` b.undefinedProp | False |
 |                      | Undefined `#` Null                                    | Booleano | a.undefinedProp `#` b.nullProp      | False |
-|                      | Undefined `#` Undefined                               | Booleano | a.undefinedProp `#` b.undefinedProp | False |
 |                      | Undefined `#` *other values*                          | Booleano | a.undefinedProp `#` 42              | True  |
 | Maior que            | Undefined `>` string, Date, Time, Boolean, number  | Booleano | a.undefinedProp `>` "abc"        | False |
 | Menor que            | Undefined `<` string, Date, Time, Boolean, number  | Booleano | a.undefinedProp `<` "abc"        | False |

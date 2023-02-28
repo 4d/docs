@@ -50,7 +50,7 @@ Si el proyecto publicado no aparece en la lista **Disponible**, seleccione **Per
 
 Una vez que esta página asigna un servidor, al hacer clic en el botón **Aceptar** podrá conectarse al servidor.
 
-> If the project is published with the encryption option enabled, you must add a circumflex accent (^) before the name, otherwise the connection will be refused. For more information, refer to the Encrypting Client/Server Connections section.
+> Si el proyecto se publica con la opción de cifrado activa, debe añadir un acento circunflejo (^) antes del nombre, de lo contrario se rechazará la conexión. Para más información, consulte la sección Cifrar conexiones cliente/servidor.
 
 Una vez establecida la conexión con el servidor, el proyecto remoto aparecerá en la pestaña **Recientes**.
 

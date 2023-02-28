@@ -27,7 +27,8 @@ These three locations can be used simultaneously: it is possible to install a "M
 
 ## Default macros
 
-4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. 4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
+
+4D offers a set of default macros containing, for example, control flow keywords. 4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
 
 You can modify this file or the contents of the folder subsequently as desired (see the following paragraph). In the event of problems with this folder, it can be deleted and 4D will re-create it on the next startup.
 

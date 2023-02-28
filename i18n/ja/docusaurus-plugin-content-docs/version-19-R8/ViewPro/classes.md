@@ -272,14 +272,14 @@ title: クラス
 <!-- REF #TableThemeOptions.firstColumnStripSize.Syntax -->
 **.firstColumnStripSize** : Integer<!-- END REF -->
 
-`.firstColumnStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->交互の列の奇数列のサイズを指定します<!-- END REF -->。 デフォルト = 1
+`.firstColumnStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->一つ目の交互の列スタイルを適用する列数を指定します<!-- END REF -->。 デフォルト = 1
 
 ### .firstColumnStripStyle
 
 <!-- REF #TableThemeOptions.firstColumnStripStyle.Syntax -->
 **.firstColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.firstColumnStripStyle` プロパティは、 <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->交互の列の奇数列のスタイルを指定します<!-- END REF -->。
+`.firstColumnStripStyle` プロパティは、 <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->一つ目の交互の列スタイルを指定します<!-- END REF -->。
 
 ### .firstFooterCellStyle
 
@@ -300,14 +300,14 @@ title: クラス
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-`.firstRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->交互の列の奇数列のサイズを指定します<!-- END REF -->。 デフォルト = 1。
+`.firstRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->一つ目の交互の行スタイルを適用する行数を指定します<!-- END REF -->。 デフォルト = 1。
 
 ### .firstRowStripStyle
 
 <!-- REF #TableThemeOptions.firstRowStripStyle.Syntax -->
 **.firstRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.firstRowStripStyle` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->交互の行の奇数行のスタイルを指定します<!-- END REF -->。
+`.firstRowStripStyle` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->一つ目の交互の行スタイルを指定します<!-- END REF -->。
 
 ### .footerRowStyle
 
@@ -363,28 +363,28 @@ title: クラス
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-`.secondColumnStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->交互の列の偶数列のサイズを指定します<!-- END REF -->。 デフォルト = 1
+`.secondColumnStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->二つ目の交互の列スタイルを適用する列数を指定します<!-- END REF -->。 デフォルト = 1
 
 ### .secondColumnStripStyle
 
 <!-- REF #TableThemeOptions.secondColumnStripStyle.Syntax -->
 **.secondColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.secondColumnStripStyle` プロパティは、 <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->交互の列の偶数列のスタイルを指定します<!-- END REF -->。
+`.secondColumnStripStyle` プロパティは、 <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->二つ目の交互の列スタイルを指定します<!-- END REF -->。
 
 ### .secondRowStripSize
 
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-`.secondRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->交互の列の偶数列のサイズを指定します<!-- END REF -->。 デフォルト = 1。
+`.secondRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->二つ目の交互の行スタイルを適用する行数を指定します<!-- END REF -->。 デフォルト = 1。
 
 ### .secondRowStripStyle
 
 <!-- REF #TableThemeOptions.secondRowStripStyle.Syntax -->
 **.secondRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-`.secondRowStripStyle` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->交互の行の偶数行のスタイルを指定します<!-- END REF -->。
+`.secondRowStripStyle` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->二つ目の交互の行スタイルを指定します<!-- END REF -->。
 
 ### .wholeTableStyle
 
