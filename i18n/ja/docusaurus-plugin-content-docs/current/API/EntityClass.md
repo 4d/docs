@@ -1351,9 +1351,9 @@ filter 引数がリレートエンティティズ型の属性を指定する場�
 
 *options* に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
 
-:::caution Warning
+:::caution 警告
 
-In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+リレーションを確立するために使用した属性が主キーでない場合 (データ完全性の理由から **強く不奨励** とされています)、リレーション属性の値は主キー ("__KEY" キー) として返されます。
 
 :::
 
