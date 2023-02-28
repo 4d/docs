@@ -9,7 +9,7 @@ title: クラス API の概要
 
 - プロパティにアクセスする場合は、カッコを使いません。 例: `file.creationTime`。 また、\[] シンタックスも使用可能です。 例: `file["creationTime"]`。
 
-## 表記規則
+## Writing conventions
 
 関数シンタックスでは、次の表記が使われています:
 
