@@ -111,8 +111,8 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
- //Do something with the character if it is a TAB
- If(Character code(vtSomeText[[$vlChar]])=Tab)
+ //Hacer algo con el carácter si es un TAB
+    If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
  End if
 End for
