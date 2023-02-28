@@ -1314,11 +1314,11 @@ Updating an entity with `dk auto merge` option:
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parameter    | Typ        |    | Beschreibung                                                                                             |
-| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Attribute(s) to extract (comma-separated string)                                                         |
-| filterCol    | Collection | -> | Collection of attribute(s) to extract                                                                    |
-| options      | Ganzzahl   | -> | `dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| Parameter    | Typ        |    | Beschreibung                                                                                                 |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | Attribute(s) to extract (comma-separated string)                                                             |
+| filterCol    | Collection | -> | Collection of attribute(s) to extract                                                                        |
+| options      | Ganzzahl   | -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
 | Ergebnis     | Objekt     | <- | Object built from the entity|<!-- END REF -->
 
 |
@@ -1353,7 +1353,7 @@ In the *options* parameter, you can pass the `dk with primary key` and/or`dk wit
 
 :::caution Warning
 
-In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions.
 
 :::
 
