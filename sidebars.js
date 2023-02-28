@@ -4,6 +4,13 @@ module.exports =
 		{
 			type: "category",
 			label: "Getting Started",
+			link: {
+				type: 'generated-index',
+				title: 'Getting Started',
+				slug: '/category/getting-started',
+				keywords: ['start'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				"GettingStarted/installation",
 				"GettingStarted/creating",
@@ -13,10 +20,22 @@ module.exports =
 		{
 			type: "category",
 			label: "Core Development",
+			link: {
+				type: 'generated-index',
+				title: 'Core Development',
+				slug: '/category/core-development',
+				keywords: ['core'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				{
 					type: "category",
 					label: "Project Management",
+					link: {
+						type: 'doc',
+						id: 'Project/overview',
+					},
+
 					items: [
 						"Project/overview",
 						"Project/architecture",
@@ -27,6 +46,13 @@ module.exports =
 				{
 					type: "category",
 					label: "4D Language Concepts",
+					link: {
+						type: 'generated-index',
+						title: '4D Language Concepts',
+						description: 'The main concepts of the 4D Language',
+						keywords: ['concepts'],
+						image: '/img/docusaurus.png',
+					},
 					items: [
 						"Concepts/about",
 						"Concepts/quick-tour",
@@ -118,6 +144,15 @@ module.exports =
 						"API/ZipFileClass",
 						"API/ZipFolderClass"
 					],
+					link: {
+						type: 'generated-index',
+						title: 'Class API Reference',
+						description: 'List of built-in 4D classes',
+						slug: '/category/class-API-reference',
+						keywords: ['class'],
+						image: '/img/docusaurus.png',
+					},
+
 				},
 				{
 					type: "category",
@@ -177,6 +212,13 @@ module.exports =
 		{
 			type: "category",
 			label: "Administration",
+			link: {
+				type: 'generated-index',
+				title: 'Administration',
+				description: 'How to monitor your 4D applications',
+				keywords: ['administration'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				{	
 					type: "category",
@@ -261,11 +303,22 @@ module.exports =
 		{
 			type: "category",
 			label: "Extensions",
+			link: {
+					type: 'doc',
+					id: 'Extensions/overview',
+				},
 			items: [
 						"Extensions/overview",
 						{
 							type: "category",
 							label: "4D View Pro",
+							link: {
+								type: 'generated-index',
+								title: '4D View Pro',
+								slug: '/category/4d-view-pro',
+								keywords: ['4D View Pro'],
+								image: '/img/docusaurus.png',
+								},
 							items: [				
 								"ViewPro/getting-started",
 								"ViewPro/configuring",
@@ -318,6 +371,13 @@ module.exports =
 		{
 			type: "category",
 			label: "Web Applications",
+			link: {
+				type: 'generated-index',
+				title: 'Web Applications',
+				description: 'Guides for developing Web applications with 4D',
+				keywords: ['web applications'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				{	
 					type: "category",
@@ -405,7 +465,15 @@ module.exports =
 				
 				{
 					type: "category",
-					label: "Desktop Applications",
+					label: "Desktop Applications",					
+					link: {
+						type: 'generated-index',
+						title: 'Desktop Applications',
+						description: 'Guides for developing Desktop applications with 4D',
+						keywords: ['desktop applications'],
+						image: '/img/docusaurus.png',
+						},
+
 					items: [
 						{	
 							type: "category",
