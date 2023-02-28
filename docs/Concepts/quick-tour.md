@@ -60,13 +60,13 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
+4D commands are built-in methods to perform an action. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example: 
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. For example: 
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -122,6 +122,7 @@ The following example goes through all the characters of the text vtSomeText:
 ```4d
 For($vlChar;1;Length(vtSomeText))
 	//Do something with the character if it is a TAB
+
 
 	If(Character code(vtSomeText[[$vlChar]])=Tab)
 		//...
@@ -206,16 +207,15 @@ To instantiate an object of the class in a method, call the user class from the 
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance. 
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance. 
 
 ```4d  
 //in the myClass.4dm file
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance. 
+To execute a class member function, just use the `()` operator on the member function of the object instance. 
 
 ```4d
 $o:=cs.myClass.new()
@@ -229,9 +229,9 @@ Optionally, use the `Class constructor` keyword to declare properties of the obj
 ```4d  
 //in the Rectangle.4dm file
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
@@ -242,11 +242,11 @@ A class can extend another class by using `Class extends <ClassName>`. Superclas
 Class extends rectangle
  
 Class constructor
-C_LONGINT($1)
+var $length : Integer
  
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height
-Super($1;$1)
+Super($length;$length)
 
 This.name:="Square"
 ```

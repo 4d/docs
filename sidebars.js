@@ -56,6 +56,7 @@ module.exports =
 						"Concepts/parameters",
 						"Concepts/shared",
 						"Concepts/classes",
+						"Concepts/commands",
 						{
 							type: "category",
 							label: "Control Flow",

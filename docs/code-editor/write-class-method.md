@@ -483,11 +483,10 @@ The search carried out is of the "Find Next" type in the current code editor win
 
 The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
 
-:::info
+
+### Bookmark All
 
 The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. This makes it easy to spot all the search results. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
-
-:::
 
 
 
@@ -631,7 +630,7 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 
 :::info
 
-You can use bookmarks as markers for lines that contain an [item found by a search](#find). In this case, 4D automatically adds the bookmarks. For more information, refer to [Find and replace in methods](find-replace.md).
+You can use bookmarks as markers for lines that contain an [item found by a search](#find). In this case, 4D automatically adds the bookmarks. For more information, refer to [Bookmark all](#bookmark-all).
 
 :::
 
