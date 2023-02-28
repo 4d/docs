@@ -944,7 +944,7 @@ Ejemplos:
  C_OBJECT($ob)
  OB SET($ob;"valueType";"integer")
  OB SET($ob;"saveAs";"reference")
- OB SET($ob;"value";2) //displays London by default
+ OB SET($ob;"value";2) //muestra London por defecto
  OB SET($ob;"requiredListReference";<>List)
 ```
 
