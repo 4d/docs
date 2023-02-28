@@ -1341,12 +1341,12 @@ Atualizar uma entidade com a opção `dk auto merge` :
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parâmetros   | Tipo       |    | Descrição                                                                                                          |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                                 |
-| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                                     |
-| options      | Integer    | -> | `dk with primary key`: adiciona a propriedade \_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
-| Resultados   | Objeto     | <- | Objeto criado a partir da entidade|<!-- END REF -->                                                      |
+| Parâmetros   | Tipo       |    | Descrição                                                                                                    |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                           |
+| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                               |
+| options      | Integer    | -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| Resultados   | Objeto     | <- | Objeto criado a partir da entidade|<!-- END REF -->                                                |
 
 #### Descrição
 
@@ -1378,7 +1378,7 @@ No parâmetro *options* pode passar o selector `ddk with primary key` ou`dk with
 
 :::caution Warning
 
-In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions.
 
 :::
 
