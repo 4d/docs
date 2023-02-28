@@ -231,7 +231,6 @@
           "type": "category",
           "label": "Access Rights",
           "items": [
-            "Admin/tls",
             "Users/overview",
             "Users/editing"
           ]

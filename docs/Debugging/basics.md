@@ -1,6 +1,6 @@
 ---
 id: basics
-title: Basics
+title: Debugging
 ---
 
 Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
