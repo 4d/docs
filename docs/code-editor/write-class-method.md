@@ -13,14 +13,16 @@ You can scroll through the contents of methods, classes and functions, which can
 
 The 4D Code Editor provides basic syntax error-checking. Additional error-checking is performed when the code executes. For more information on how to handle errors, see [Debugging](../Debugging/basics.md).
 
-## Toolbar
+## Interface
+
+### Toolbar
 
 Each Code Editor window has a toolbar that provides instant access to basic functions related to code execution and editing.
 
 | Element | Icon | Description |
-|--|--|--|
+|---|---|---|
 | **Method execution** | ![execute-method](../assets/en/code-editor/execute-method.png) | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
-| **Search** | ![search-icon](../assets/en/code-editor/search.png) | Allows performing a search in the current window. |
+| **Find in method** | ![search-icon](../assets/en/code-editor/search.png) | Displays the [*Search* area](#find-and-replace). |
 | **Macros** | ![macros-button](../assets/en/code-editor/macros.png) | Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md). |
 | **Expand all / Collapse all** | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png) | These buttons allow expanding or collapsing all the control flow structures of the code. |
 | **Method information** | ![method-information-icon](../assets/en/code-editor/method-information.png) | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only). |
@@ -29,7 +31,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Navigation dropdown** | ![code-navigation-icons](../assets/en/code-editor/tags.png) | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See below |
 
 
-## Editing area
+### Editing area
 
 This is where you write and edit your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
 
@@ -43,7 +45,7 @@ You can customize the display of the editing area. Any customization is automati
 |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md)
 |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
 
-### Change bars  
+#### Change bars  
 
 Colored bars instantly show you where lines of code were modified since the method was opened:
 
@@ -56,7 +58,7 @@ The change bars change colors to indicate whether or not the modifications were 
 
 
 
-## Lists area
+### Lists area
 
 The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
 
@@ -100,7 +102,7 @@ You can display the following lists of items in the lists area of the Code Edito
 
 **Note:** Except for the Macros element, all the lists are in alphabetical order.
 
-### Save as template
+#### Save as template
 
 You can save the lists set in the Code Editor window in the form of a template. Once the template is saved, the parameters set in it will be used for each new Code Editor window that is opened.
 
@@ -113,7 +115,7 @@ The following parameters are stored in the template:
 
 To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
 
-## Break points area
+### Break points area
 
 This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Break points are useful during the debugging phase of your programming. They stop the execution of your code at specific locations and display the debugger.
 
@@ -128,7 +130,7 @@ Displaying the line numbers makes it easier to find your way around in the windo
 
 This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
 
-## Status bar
+### Status bar
 
 The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
 
@@ -139,7 +141,137 @@ The status bar located at the bottom right part of the editor window displays th
 - **Ch**: Location of character in the line.
 - ![](../assets/en/code-editor/show-hide-list.png): Hide/display lists.
 
-## Typing and editing code  
+When you set the cursor in a command, function or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**:
+    ![](../assets/en/code-editor/status-bar-bold.png)
+
+### Navigation dropdown
+
+The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
+
+![dropdown-list](../assets/en/code-editor/dropdown-list.png)
+
+Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
+
+#### Code navigation
+
+Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
+
+#### Automatic tagging
+
+Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
+
+When there is no tag in the class/method, the tool displays "No tag".
+
+The following items are added automatically:
+
+|Icon|Item|
+|---|---|
+|![no-tag-icon](../assets/en/code-editor/no-tag.png)|No tag|
+|![constructor-icon](../assets/en/code-editor/constructor.png)|Class constructor or method declaration|
+|![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png)|Computed attribute (get, set, orderBy and query)|
+|![function-icon](../assets/en/code-editor/function.png)|Class function name|
+
+#### Manual tagging
+
+By adding markers in your code, you can add the following tags to the dropdown:
+
+|Icon|Item|
+|---|---|
+|![mark-tag-icon](../assets/en/code-editor/mark-tag.png)|MARK: tag|
+|![todo-tag-icon](../assets/en/code-editor/todo-tag.png)|TODO: tag|
+|![fixme-icon](../assets/en/code-editor/fixme-tag.png)|FIXME: tag|  
+
+You declare them by adding comments such as:
+
+```4d
+// FIXME: Fix following items
+```
+
+Declarations are not case-sensitive; writing `fixme:` has the same effect.
+
+Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. So writing this:
+
+![mark-hyphen-image](../assets/en/code-editor/mark-hyphen-editor.png)
+
+Results in this:
+
+![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
+
+All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
+
+#### Display order
+
+Tags are displayed in their appearing order inside the method/class.
+
+To display the tags of a method or class in alphabetical order, do one of the following:
+
+- **right-click** the dropdown tool
+- hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
+
+> Tags inside functions move with their parent items.
+
+
+
+### Shortcuts  
+
+Multiple features of 4D's Code Editor are available through default keyboard shortcuts.
+
+:::info macOS
+
+Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
+
+:::
+
+| **Shortcut** | **Action** |
+|---|---|
+|**Selection and navigation**||
+| Double-click | Select a language element name|
+| [Alt]+Double-click | Select a language element name contaning spaces (constant, method, etc.) |
+| [Shift]+[right arrow] | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left |
+| [Shift]+[left arrow] | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left |
+| [Shift]+[down arrow] | Create and enlarge a selection, line by line, from the top to the bottom |
+| [Shift]+[up arrow] | Create and enlarge a selection, line by line, from the bottom to the top |
+| [Ctrl]+[Shift]+[right arrow] | Create and enlarge the selection, word by word, from the right |
+| [Ctrl]+[Shift]+[left arrow] | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left |
+| [Ctrl]+[right arrow] | Move the insertion point, word by word, from left to right |
+| [Ctrl]+[left arrow] | Move the insertion point, word by word, from right to left |
+| [Alt]+[down arrow] | Move the line(s) where the cursor is to the bottom  |
+| [Alt]+[up arrow] | Move the line(s) where the cursor is to the top |
+| [Home] | Place the insertion point at the beginning of the line |
+| [End] | Place the insertion point at the end of the line |
+| [Ctrl]+[Home] | Place the insertion point at the beginning of the method |
+| [Ctrl]+[End] | Place the insertion point at the end of the method |
+| [Shift]+[Home] | Select all the characters in the line that are to the left of the cursor |
+| [Shift]+[End] | Select all the characters in the line that are to the right of the cursor |
+| [PgUp] | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point) |
+| [PgDn] | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point) |
+|[**Introspection**](#goto-definition)||
+| [Ctrl]+K or [Alt]+double-click | Same as [**Goto definition**](#goto-definition) command |
+| [Ctrl] (Windows) or [Alt] (macOS)+hovering over a token|Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
+|[**Find and replace**](#find-and-replace)||
+|[Ctrl]+F|Find|
+|[Ctrl]+G|Find Next|
+|[Ctrl]+[Shift]+G|Find Previous|
+|[Ctrl]+E|Find Same Next|
+|[Ctrl]+[Shift]+E|Find Same Previous|
+|[Ctrl]+[Alt]+F|Replace|
+|[Ctrl]+[Alt]+G|Replace Next|
+|[Ctrl]+[Alt]+[Shift]+G|Replace Previous|
+|[**Clipboards**](#clipboards)||
+|[Shift]+click or [Alt]+click on clipboard icon|Copy selected text to a clipboard|
+|[Ctrl]+[Shift]+number key|Copy selected text to the number clipboard|
+|[Ctrl]+click on clipboard icon|Paste contents of a clipboard at cursor location|
+|[Ctrl]+number key|Paste contents of the number clipboard at cursor location|
+
+:::tip
+
+Most of these shortcuts can be customized in the [4D Preferences](../Preferences/shortcuts.md) dialog box.
+
+:::
+
+
+
+## Editing Code
 
 4D uses standard text editing techniques for typing and editing in the Code Editor.
 
@@ -167,20 +299,19 @@ The backslash character (`\`) is used as a separator in [pathnames under Windows
 
 
 
-#### Drag-and-drop from the Explorer
+### Drag-and-drop
 
 From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
 When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. You can then use a syntax that better suits your usage.
 
-#### Drag-and-drop within a method, class, function or between two different ones
 
-In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected.
-By default, the drag-and-drop mechanism moves the selected text. In order to copy it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
-
+You can also drag-and-drop within a method, class, function or between two different ones. In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected.
+By default, the drag-and-drop mechanism **moves** the selected text. In order to **copy** it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
 
 
-#### Changing case  
+
+### Changing case  
 
 You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
@@ -189,7 +320,7 @@ You can automatically modify the case of selected characters using the commands 
 
 When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
 
-#### Swap expression  
+### Swap expression  
 
 The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. For instance,
 
@@ -201,7 +332,7 @@ becomes
 
 This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area. Within the selection, only the lines assigning a value will be modified.
 
-#### Multiple copy-paste and numbering of clipboards  
+### Clipboards  
 
 In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
 
@@ -211,28 +342,20 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
     The first few words of the copied or cut items are displayed. Select an item to insert it at the current location of the cursor.
 
-- Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or using keyboard shortcuts:
+- Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or [using keyboard shortcuts](#shortcuts):
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
-|Platform|Copy selected text to a clipboard|Paste contents of a clipboard at cursor location|
-|---|---|---|
-| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+click on clipboard icon |
-|  |  | Ctrl+clipboard number |
-| **macOS** | Shift or Alt+click on clipboard icon | Cmd+click on clipboard icon |
-|  | Cmd+Shift+clipboard number | Cmd+clipboard number |
 
-You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.
+### Moving lines  
 
-#### Moving lines  
-
-You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the combination **Alt/Option** + **Up Arrow** or **Down Arrow**.
+You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the **Alt/Option** + **Up Arrow** or **Down Arrow** [keyboard shorcut](#shortcuts).
 
 
 
 
 
-## Using the autocomplete functions  
+### Autocomplete functions  
 
 The Code Editor provides autocomplete functions. 4D automatically displays suggestions based on the first few characters typed.
 
@@ -302,36 +425,74 @@ When the database is restarted, the list is reinitialized.
 > You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
 
 
-## Shortcuts  
+## Find and replace
 
-Standard keyboard shortcuts to navigate the code are available in 4D's Code Editor.
 
-**Note:** Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
+The Code editor has powerful **find and replace** features that apply to the current window. 
 
-| **Shortcut** | **Action** |
-|---|---|
-| [Shift]+[right arrow] | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left |
-| [Shift]+[left arrow] | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left |
-| [Shift]+[down arrow] | Create and enlarge a selection, line by line, from the top to the bottom |
-| [Shift]+[up arrow] | Create and enlarge a selection, line by line, from the bottom to the top |
-| [Ctrl]+[Shift]+[right arrow] | Create and enlarge the selection, word by word, from the right |
-| [Ctrl]+[Shift]+[left arrow] | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left |
-| [Ctrl]+[right arrow] | Move the insertion point, word by word, from left to right |
-| [Ctrl]+[left arrow] | Move the insertion point, word by word, from right to left |
-| [Home] | Place the insertion point at the beginning of the line |
-| [End] | Place the insertion point at the end of the line |
-| [Ctrl]+[Home] | Place the insertion point at the beginning of the method |
-| [Ctrl]+[End] | Place the insertion point at the end of the method |
-| [Shift]+[Home] | Select all the characters in the line that are to the left of the cursor |
-| [Shift]+[End] | Select all the characters in the line that are to the right of the cursor |
-| [PgUp] | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point) |
-| [PgDn] | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point) |
-| [Ctrl]+[K] or [Alt]+double-click on a project method name| Open the project method in a new window|
-| [Ctrl] (Windows) or [Alt] (macOS)+hovering over a token|Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
+A search and replace area can be displayed in the toolbar of any method window:
 
-You can double-click to select individual "words". When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
+![search-area](../assets/en/code-editor/search-area.png)
 
-## Checking and correcting syntax errors  
+To display this area, click on the **Find in method** icon of the [toolbar](#toolbar) or select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar. 
+
+:::tip
+
+The **Find in Design** feature in the 4D toolbar or in the **Edit** menu is not specific to the Code editor but may be used to search for a value among all the methods and classes. 
+
+:::
+
+
+### Find
+
+Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cmd+F** (macOS) to display/enable the *Search* area. 
+
+The search defined in this area will be performed in the code located in the window.
+
+The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. You can then either use this text or replace it with another.
+
+Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits. 
+
+Hit the **Enter** key to select closest occurrence to the cursor. You can also click on the **Next / Previous** buttons ![find-next-previous](../assets/en/code-editor/find-next.png) to select all occurrences sequentially towards the beginning or end of the current method, starting from the initial location of the cursor, or use the **Find Next** and **Find Previous** commands of the [**Edit** menu](#shortcuts).
+
+
+#### Options
+
+- **Case Sensitive** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): Take the case of characters as they were entered in the find area into account. For instance, a search for "MyVar" will not find "myVar."
+- **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc.
+
+
+
+### Replace  
+
+Click on the **v** toggle button on the left side of the *Search* area to display/hide the *Replace* area. You can also select **Find > Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) . 
+
+The *Replace* entry area is used to define the character string that will replace the one defined above. 
+
+Click the **Replace** button to launch the search with all defined options and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
+
+Click the **Replace all** button to replace all the occurrences corresponding to the search criteria directly in the open method.
+
+
+
+### Find Same
+
+The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
+
+The search carried out is of the "Find Next" type in the current code editor window.
+
+The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
+
+:::info
+
+The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. This makes it easy to spot all the search results. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
+
+:::
+
+
+
+
+## Syntax errors  
 
 4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
 
@@ -353,15 +514,19 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
-## Using help tips  
+## Help tips
 
-The Code Editor provides various contextual information using help tips. They appear when you mouse over an object and the status bar, at the bottom of a Code Editor window.
+The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
 
-- **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Checking and correcting syntax errors](#checking-and-correcting-syntax-errors)).
+:::tip
 
-- **4D command documentation**: When you set the cursor in a command name or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**:
-    ![](../assets/en/code-editor/status-bar-bold.png)
-    When you move the mouse over a 4D command, a help tip provides the command syntax along with a brief description of how it works.
+The [status bar](#status-bar) also provides contextual information. 
+
+:::
+
+- **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Syntax errors](#syntax-errors)).
+
+- **4D command documentation**: When you move the mouse over a 4D command or function, a help tip provides its syntax along with a brief description of how it works.
     ![](../assets/en/code-editor/status-bar-description.png)
 
 - **Variable type and description**: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any.
@@ -379,21 +544,7 @@ The Code Editor provides various contextual information using help tips. They ap
 - You can also create a **dedicated documentation file** named `<MethodName>.md` in the `<package>/documentation` folder. See [Viewing documentation in the code editor](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
 
-## Show documentation  
-
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. For example:
-
-- Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
-- Selecting a 4D command, function, or class name and choosing **Show documentation...** displays the online documentation.
-- If no element is selected, the command opens the documentation of the method currently opened in the Code Editor, [if any](../Project/documentation.md).
-
-:::tip
-
-To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. The documentation of the command is displayed in a new window of your default browser. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
-
-:::
-
-## Comment/Uncomment  
+## Comment / Uncomment  
 
 The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. There is no limit on the number of lines.
 
@@ -432,7 +583,7 @@ There are several ways to expand and collapse code:
   - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. These commands are also available in the toolbar of the editor.
 
 
-## Handling blocks  
+## Blocks  
 
 Blocks can be defined by:
 
@@ -464,7 +615,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.
 
-## Using bookmarks  
+## Bookmarks  
 
 4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 
@@ -478,34 +629,16 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 - **Remove All**: Removes all bookmarks from the foreground window.
 - **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
 
-**Note:** You can use bookmarks as markers for lines that contain an item found by a search. In this case, 4D automatically adds the bookmarks. For more information, refer to [Find and replace in methods](find-replace.md).
+:::info
 
+You can use bookmarks as markers for lines that contain an [item found by a search](#find). In this case, 4D automatically adds the bookmarks. For more information, refer to [Find and replace in methods](find-replace.md).
 
-## Goto Definition  
-
-The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
-
-**Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
-
-The effect varies depending on the target element. For example:
-
-- Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
-- Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
+:::
 
 ## Reveal in Explorer  
 
 The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
 
-
-## Search references  
-
-The **Search references...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
-
-The current item is either the one selected or the one where the cursor is located. It can be a field name, variable name, command, string, and so on. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
-
-![find-dialog](../assets/en/code-editor/search-references.png)
-
-This command displays its results in a new window.
 
 ## Search Callers  
 
@@ -515,68 +648,45 @@ The **Search Callers** command in the **Method** menu is only enabled for projec
 
 This command displays its results in a new window.
 
-## Navigation dropdown
 
-The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
+## Goto Definition  
 
-![dropdown-list](../assets/en/code-editor/dropdown-list.png)
+The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
 
-Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
+:::tip
 
-#### Code navigation
+This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) / **Command+K** (macOS) or  **Alt+double-click**.
 
-Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
+:::
 
-#### Automatic tagging
+The effect of the **Goto Definition...** command varies depending on the target element:
 
-Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
+- with a project method, it displays the contents of the method in a new window of the Code Editor
+- with a class name or class function, it opens the class in the the Code Editor
+- with a built-in 4D command or function, it has the same effect as the [**Show documentation**](#show-documentation) command.
 
-When there is no tag in the class/method, the tool displays "No tag".
+## Show documentation  
 
-The following items are added automatically:
+The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. For example:
 
-|Icon|Item|
-|---|---|
-|![no-tag-icon](../assets/en/code-editor/no-tag.png)|No tag|
-|![constructor-icon](../assets/en/code-editor/constructor.png)|Class constructor or method declaration|
-|![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png)|Computed attribute (get, set, orderBy and query)|
-|![function-icon](../assets/en/code-editor/function.png)|Class function name|
+- Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
+- Selecting a 4D command, function, or class name and choosing **Show documentation...** displays the online documentation.
+- If no element is selected, the command opens the documentation of the method currently opened in the Code Editor, [if any](../Project/documentation.md).
 
-#### Manual tagging
+:::tip
 
-By adding markers in your code, you can add the following tags to the dropdown:
+To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. The documentation of the command is displayed in a new window of your default browser. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
 
-|Icon|Item|
-|---|---|
-|![mark-tag-icon](../assets/en/code-editor/mark-tag.png)|MARK: tag|
-|![todo-tag-icon](../assets/en/code-editor/todo-tag.png)|TODO: tag|
-|![fixme-icon](../assets/en/code-editor/fixme-tag.png)|FIXME: tag|  
+:::
 
-You declare them by adding comments such as:
 
-```4d
-// FIXME: Fix following items
-```
+## Search References  
 
-Declarations are not case-sensitive; writing `fixme:` has the same effect.
+The **Search References...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
 
-Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. So writing this:
+The current item is either the one selected or the one where the cursor is located. It can be a field name, variable name, command, string, and so on. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
 
-![mark-hyphen-image](../assets/en/code-editor/mark-hyphen-editor.png)
+![find-dialog](../assets/en/code-editor/search-references.png)
 
-Results in this:
+This command displays its results in a new window.
 
-![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
-
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
-
-#### Display order
-
-Tags are displayed in their appearing order inside the method/class.
-
-To display the tags of a method or class in alphabetical order, do one of the following:
-
-- **right-click** the dropdown tool
-- hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
-
-> Tags inside functions move with their parent items.
