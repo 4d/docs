@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Funções de classe e comandos
+title: Class functions and commands
 ---
 
 Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados. As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe.
@@ -9,7 +9,7 @@ Esta seção descreve a API da classe 4D incorporada, bem como os comandos de co
 - as propriedades são acessadas sem parênteses, por exemplo `file.creationTime`. Pode também utilizar a sintaxe \[], por exemplo `file["creationTime"]`.
 - comandos podem ser chamados de forma independente, com ou sem parâmetros. Por exemplo `Folder(fk database folder)`.
 
-## Convenções de escrita
+## Writing conventions
 
 As seguintes convenções são utilizadas na sintaxe da função:
 
@@ -17,9 +17,9 @@ As seguintes convenções são utilizadas na sintaxe da função:
 - o `{ ; ...param }` notação indica um número ilimitado de parâmetros. Por exemplo, `.concat( valor : qualquer { ;...valorN } ) : A colecção` significa que um número ilimitado de valores de qualquer tipo pode ser passado para a função.
 - a `any` é utilizada para parâmetros que podem ser de qualquer tipo e que podem ser armazenados dentro dos atributos (número, texto, booleano, data, hora, objecto, colecção...).
 
-## Comandos clássicos
+## Classic commands
 
-Para além das funções de classe integradas, a linguagem 4D contém centenas de comandos "clássicos". Estes comandos estão descritos em manual *4D Language* em [doc.4d.com](https://doc.4d.com). Para referência, estão listados abaixo:
+In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -699,7 +699,7 @@ Para além das funções de classe integradas, a linguagem 4D contém centenas d
 | [`NO DEFAULT TABLE`](https://doc.4d.com/4dv19/help/command/en/page993.html)                                   | 993    |
 | [`Not`](https://doc.4d.com/4dv19/help/command/en/page34.html)                                                 | 34     |
 | [`NOTIFY RESOURCES FOLDER MODIFICATION`](https://doc.4d.com/4dv19/help/command/en/page1052.html)              | 1052   |
-| [`Null`](https://doc.4d.com/4dv19/help/command/en/page1517.html)                                              | 1052   |
+| [`Null`](https://doc.4d.com/4dv19/help/command/en/page1517.html)                                              | 1517   |
 | [`Num`](https://doc.4d.com/4dv19/help/command/en/page11.html)                                                 | 11     |
 | <a name="O">**O**</a>                                                                                    |        |
 | [`OB Class`](https://doc.4d.com/4dv19/help/command/en/page1730.html)                                          | 1730   |
@@ -1365,7 +1365,7 @@ Para além das funções de classe integradas, a linguagem 4D contém centenas d
 | [`WP DELETE FOOTER`](https://doc.4d.com/4dv19/help/command/en/page1589.html)                                  | 1589   |
 | [`WP DELETE HEADER`](https://doc.4d.com/4dv19/help/command/en/page1588.html)                                  | 1588   |
 | [`WP DELETE PICTURE`](https://doc.4d.com/4dv19/help/command/en/page1701.html)                                 | 1701   |
-| [`1701`](https://doc.4d.com/4dv19/help/command/en/page1652.html)                                              | 1652   |
+| [`WP DELETE STYLE SHEET`](https://doc.4d.com/4dv19/help/command/en/page1652.html)                             | 1652   |
 | [`WP DELETE SUBSECTION`](https://doc.4d.com/4dv19/help/command/en/page1584.html)                              | 1584   |
 | [`WP EXPORT DOCUMENT`](https://doc.4d.com/4dv19/help/command/en/page1337.html)                                | 1337   |
 | [`WP EXPORT VARIABLE`](https://doc.4d.com/4dv19/help/command/en/page1319.html)                                | 1319   |
