@@ -46,7 +46,7 @@ Para más información sobre las reglas de denominación de los objetos de formu
 
 ## Variable o expresión
 
-> See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
+> Ver también **[Expression](properties_DataSource#expression)** para las columnas de list box de tipo selección y colección.
 
 Esta propiedad especifica la fuente de los datos. Cada objeto de formulario activo está asociado a un nombre de objeto y a un nombre de variable. El nombre de la variable puede ser diferente del nombre del objeto. En el mismo formulario, puede utilizar la misma variable varias veces, mientras que cada [nombre de objeto](#object-name) debe ser único.
 > El tamaño del nombre de la variable está limitado a 31 bytes. Consulte la sección [Identificadores](Concepts/identifiers.md) para obtener más información sobre las reglas de asignación de nombres.
@@ -57,7 +57,7 @@ Las variables o expresiones se pueden introducir o no y pueden recibir datos de 
 
 ### Expresiones
 
-Puede utilizar una expresión como fuente de datos para un objeto. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. La expresión se evalúa cuando se ejecuta el formulario y se reevalúa para cada evento del formulario. Tenga en cuenta que las expresiones pueden ser [asignables o no asignables](Concepts/quick-tour.md#expressions).
+Puede utilizar una expresión como fuente de datos para un objeto. Se permite toda expresión 4D válida: expresión simple, fórmula, función 4D, nombre de método proyecto o campo que utilice la sintaxis estándar `[Table]Field`. La expresión se evalúa cuando se ejecuta el formulario y se reevalúa para cada evento del formulario. Tenga en cuenta que las expresiones pueden ser [asignables o no asignables](Concepts/quick-tour.md#expressions).
 > Si el valor introducido corresponde a la vez a un nombre de variable y a un nombre de método, 4D considera que está indicando el método.
 
 ### Variables dinámicas
@@ -99,7 +99,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 | Nombre     | Tipos de datos            | Valores posibles          |
 | ---------- | ------------------------- | ------------------------- |
-| dataSource | cadena o array de cadenas | <ul><li>4D variable, field name, or arbitrary complex language expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
+| dataSource | cadena o array de cadenas | <ul><li>Variable 4D, nombre de campo o expresión arbitraria en lenguaje complejo.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
 
 #### Objetos soportados
 
@@ -155,10 +155,10 @@ Enter an expression that returns either a collection or an entity selection. Usu
 
 The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command:
 
-- if you used a collection of objects, you can call `This` in the datasource expression to access each property value, for example `This.\&#060;propertyPath&#062;`.
-- if you used an entity selection, you can call `This` in the datasource expression to access each attribute value, for example  `This.\&#060;attributePath&#062;`.
+- si ha utilizado una colección de objetos, puede llamar a `This` en la expresión datasource para acceder a cada valor de propiedad, por ejemplo `This.\&#060;propertyPath&#062;`.
+- si ha utilizado una selección de entidades, puede llamar a `This` en la expresión de la fuente de datos para acceder al valor de cada atributo, por ejemplo `This.\&#060;attributePath&#062;`.
 
-> If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling `This.value` in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
+> Si ha utilizado una colección de valores escalares (y no objetos), 4D le permite mostrar cada valor llamando a `This.value` en la expresión datasource. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
 #### Gramática JSON
 
@@ -274,13 +274,13 @@ Hay varios tipos de cálculos disponibles. The following table shows which calcu
 
 (*) Sólo para list boxes de tipo array.
 
-When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. Si desea restringir un cálculo sólo a las líneas visibles, debe utilizar un cálculo personalizado.
+Cuando se establece un cálculo automático, éste se aplica a todos los valores que se encuentran en la columna del list box. Tenga en cuenta que el cálculo no tiene en cuenta el estado mostrado/oculto de las líneas del list box. Si desea restringir un cálculo sólo a las líneas visibles, debe utilizar un cálculo personalizado.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 > Los cálculos automáticos no son soportados con:
 > 
-> - footers of columns based on formulas,
-> - footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. Es necesario utilizar cálculos personalizados.
+> - pies de columnas basados en fórmulas,
+> - [pies de página de los list boxes](listbox_overview.md#collection-or-entity-selection-list-boxes) de colecciones y de selección de entidades. Es necesario utilizar cálculos personalizados.
 
 #### Gramática JSON
 
