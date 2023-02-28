@@ -1350,6 +1350,13 @@ Si un filtre contient de attributs dont le [kind](DataClassAttributeClass.md#kin
 
 Dans le paramètre *options*, vous pouvez passer les sélecteurs `dk with primary key` et/ou `dk with stamp` afin d'ajouter les clés primaires et/ou les stamps dans les objets extraits.
 
+:::caution Warning
+
+In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+
+:::
+
+
 #### Exemple 1
 
 La structure suivante sera utilisée pour les exemples de cette section :

@@ -1979,6 +1979,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 
 
 
+
 </details>
 
 
@@ -2075,6 +2076,12 @@ Si se especifica un filtro para un atributo de tipo `relatedEntity`:
 
 
 Si se especifica un filtro para un atributo de tipo `relatedEntities`:
+
+:::caution Warning
+
+In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+
+:::
 
 El parámetro *begin* permite indicar el índice de inicio de las entidades a extraer. Puede pasar cualquier valor entre 0 y la longitud de la entity selection -1.
 

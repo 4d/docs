@@ -2011,6 +2011,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 
 
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2107,6 +2108,12 @@ If a filter is specified for an attribute of the `relatedEntities` kind:
 
 
 In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
+
+:::caution Warning
+
+In the case where the attribute used to establish the relationship is not the primary key (which is **strongly discouraged** for data integrity reasons), the value of the relational attribute will be returned as primary key ("__KEY" key).
+
+:::
 
 The *begin* parameter allows you to indicate the starting index of the entities to extract. You can pass any value between 0 and entity selection length-1.
 

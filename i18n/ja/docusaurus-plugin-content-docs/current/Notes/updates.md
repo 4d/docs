@@ -9,9 +9,9 @@ title: リリースノート
 
 #### ハイライト
 
-- [IMAP Transporter Class](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) support custom keywords.
-- New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
-- New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
+- [IMAP Transporter クラス](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) がカスタムキーワードをサポートするようになりました。
+- 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
+- データストアをロック/ロック解除する新しい関数が追加されました: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock)。
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
 - [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail) で *headerOnly* パラメーターをサポート 。
 
@@ -176,7 +176,7 @@ title: リリースノート
 
 | ライブラリ    | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
 | -------- | --------- | -------------- | ----------------------------------------------------- |
-| Hunspell | 1.7.2     | 20             | Used for spell checking in 4D forms and 4D Write Pro  |
+| Hunspell | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
 | SpreadJS | 15.2.5    | 19 R8          | 4D View Pro エンジン                                      |
 | CEF      | 106.0.27  | 19 R8          | Chromium 106.0.5249.103                               |
 | OpenSSL  | 1.1.1s    | 19 R7          |                                                       |
