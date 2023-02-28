@@ -2112,7 +2112,7 @@ filterString および filterCol 引数が省略されるか、空の文字列�
 
 :::caution 警告
 
-リレーションを確立するために使用した属性が主キーでない場合 (データ完全性の理由から **強く不奨励** とされています)、リレーション属性の値は主キー ("__KEY" キー) として返されます。
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
 
 :::
 
