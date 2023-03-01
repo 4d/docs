@@ -14,7 +14,7 @@ Se pueden crear nuevos proyectos de aplicaciones 4D desde **4D** o **4D Server**
 Para crear un nuevo proyecto:
 
 1. Lance 4D o 4D Server.
-2. Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)OR(4D only) Select **Project...** from the **New** toolbar button:![](../assets/en/getStart/projectCreate2.png)A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+2. Seleccione **Nuevo > Proyecto...** en el menú **Archivo**: ![](../assets/en/getStart/projectCreate1.png)O(sólo 4D) Seleccione **Proyecto...** en el botón **Nuevo** de la barra de herramientas:![](../assets/en/getStart/projectCreate2.png)Aparece un cuadro de diálogo estándar **Guardar** para que pueda elegir el nombre y la ubicación de la carpeta principal del proyecto 4D.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**. Este nombre se utilizará:
 
