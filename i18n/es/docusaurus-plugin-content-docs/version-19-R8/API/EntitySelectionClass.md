@@ -711,11 +711,10 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Parámetros                 | Tipo               |    | Descripción                                                                                                       |
-| -------------------------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| mode                       | Integer            | -> | `dk stop dropping on first error`: detiene la ejecución del método en la primera entidad no suprimible            |
-| Result                     | 4D.EntitySelection | <- | Entity selection vacía si se ejecuta con éxito, si no entity selection que contengan las entidades no eliminables |
-| <!-- END REF --> |                    |    |                                                                                                                   |
+| Parámetros | Tipo               |    | Descripción                                                                                                                                 |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer            | -> | `dk stop dropping on first error`: detiene la ejecución del método en la primera entidad no suprimible                                      |
+| Result     | 4D.EntitySelection | <- | Entity selection vacía si se ejecuta con éxito, si no entity selection que contengan las entidades no eliminables<!-- END REF --> |
 
 #### Descripción
 
@@ -1979,6 +1978,8 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 | v17     | Añadidos       |
 
 
+
+
 </details>
 
 
@@ -2075,6 +2076,12 @@ Si se especifica un filtro para un atributo de tipo `relatedEntity`:
 
 
 Si se especifica un filtro para un atributo de tipo `relatedEntities`:
+
+:::caution Warning
+
+Si utiliza otro atributo distinto de la llave primaria como atributo Uno en una relación, el valor de este atributo se escribirá en la propiedad "__KEY". Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
+
+:::
 
 El parámetro *begin* permite indicar el índice de inicio de las entidades a extraer. Puede pasar cualquier valor entre 0 y la longitud de la entity selection -1.
 
