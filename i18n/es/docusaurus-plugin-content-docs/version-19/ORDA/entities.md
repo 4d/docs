@@ -445,16 +445,16 @@ Una misma propiedad de contexto de optimización puede pasarse a un número ilim
  $querysettings2:=New object("context";"longList")
 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
+ $data:=extractData($sel1) // En el método extractData la optimización asociada al contexto "shortList" se aplica
 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
+ $data:=extractData($sel2) // En el método extractData una optimización se activa y asocia al contexto "shortList"
 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
+ $data:=extractDetailedData($sel3) // En el método extractDetailedData una optimización se activa y asocia al contexto "longList"
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
+ $data:=extractDetailedData($sel4) // En el método extractDetailedData la optimización asociada al contexto "longList" se aplica
 ```
 
 ### List box basado en una selección de entidades
@@ -463,7 +463,7 @@ La optimización de la selección de entidades se aplica automáticamente a los 
 
 También se ofrece un contexto específico "modo página" cuando se carga la entidad actual a través de la expresión propiedad **Elemento actual** del list box (ver [List box de tipo colección o entity selection](FormObjects/listbox_overview.md#list-box-types)). Esta funcionalidad le permite no sobrecargar el contexto inicial del list box en este caso, especialmente si la "página" solicita atributos adicionales. Tenga en cuenta que sólo el uso de la expresión **Elemento actual** permitirá crear/utilizar el contexto de la página (el acceso a través de `entitySelection[index]` alterará el contexto de la selección de entidad).
 
-Subsequent requests to server sent by entity browsing methods will also support this optimization. Los métodos siguientes asocian automáticamente el contexto de optimización de la entidad fuente a la entidad devuelta:
+Las peticiones posteriores al servidor enviadas por los métodos de navegación de las entidades también soportarán esta optimización. Los métodos siguientes asocian automáticamente el contexto de optimización de la entidad fuente a la entidad devuelta:
 
 * `entity.next( )`
 * `entity.first( )`
