@@ -259,7 +259,7 @@ module.exports =
 					link: {
 						type: 'generated-index',
 						title: 'Web Administration',
-						description: '4D web tools for administrating and developing your applications.',
+						description: '4D web tools for administrating and monitoring your applications.',
 						slug: '/category/web-administration',
 						keywords: ['web administration'],
 						image: '/img/docusaurus.png',
@@ -283,22 +283,6 @@ module.exports =
 					type: "doc",
 					label: "Managing 4D Licenses",
 					id: "Admin/licenses",
-				},
-				{
-					type: "category",
-					label: "Access Rights",
-					link: {
-						type: 'generated-index',
-						title: 'Access Rights',
-						description: 'Access control and user privileges for desktop applications.',
-						slug: '/category/access-rights',
-						keywords: ['access rights'],
-						image: '/img/docusaurus.png',
-					},
-					items: [
-						"Users/overview",
-						"Users/editing",
-					],
 				},
 				{
 					type: "category",
@@ -549,6 +533,23 @@ module.exports =
 							label: "Client/Server",
 							id: "Desktop/clientServer",
 						},
+				{
+					type: "category",
+					label: "Access Rights",
+					link: {
+						type: 'generated-index',
+						title: 'Access Rights',
+						description: 'Access control and user privileges for desktop applications.',
+						slug: '/category/access-rights',
+						keywords: ['access rights'],
+						image: '/img/docusaurus.png',
+					},
+					items: [
+						"Users/overview",
+						"Users/editing",
+					],
+				},
+
 						{
 							type: "category",
 							label: "Forms",
