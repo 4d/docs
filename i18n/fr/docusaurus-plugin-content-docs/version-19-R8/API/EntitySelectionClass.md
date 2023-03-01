@@ -718,13 +718,12 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Paramètres                 | Type               |    | Description                                                                                                           |
-| -------------------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------------- |
-| mode                       | Integer            | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable |
-| Résultat                   | 4D.EntitySelection | <- | Entity selection vide si exécutée avec succès, sinon entity selection contenant la ou les entité(s) non supprimée(s)  |
-|<!-- END REF -->
+| Paramètres | Type               |    | Description                                                                                                                         |
+| ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer            | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable               |
+| Résultat   | 4D.EntitySelection | <- | Entity selection vide si succès, sinon entity selection contenant la ou les entité(s) non supprimable(s)|<!-- END REF -->
 
-|                    |    |                                                                                                                       |
+|
 
 #### Description
 
@@ -2010,6 +2009,8 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 | v17     | Ajout         |
 
 
+
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2106,6 +2107,12 @@ Si un filtre est spécifié pour un attribut de type `relatedEntity` :
 
 
 Si un filtre est spécifié pour un attribut de type`relatedEntities` :
+
+:::caution Warning
+
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
+
+:::
 
 Le paramètre *begin* vous permet d'indiquer la position de départ des entités à extraire. Vous pouvez passer toute valeur comprise entre 0 et la longueur de l'entity selection -1.
 
