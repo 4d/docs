@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Visão Geral
+title: Preferências
 ---
 
 User preferences specify various settings affecting your working environment, e.g. default options, display themes, Code Editor features, shortcuts, etc. They are applied to all projects opened with your 4D or 4D Server application. They are applied to all projects opened with your 4D or 4D Server application.
