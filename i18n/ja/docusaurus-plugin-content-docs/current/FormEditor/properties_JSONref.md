@@ -1,6 +1,6 @@
 ---
 id: jsonReference
-title: JSON プロパティリスト
+title: Form JSON property list
 ---
 
 この一覧は、すべてのフォームプロパティを JSON名順に並べてまとめたものです。 プロパティ名をクリックすると、詳細説明に移動します。
