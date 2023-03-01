@@ -94,11 +94,11 @@ Los atributos de entidad almacenan los datos y mapean los campos correspondiente
 Por ejemplo, para definir un atributo de almacenamiento:
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
+ $entity:=ds.Employee.get(1) //obtener el atributo del empleado con ID 1
+ $name:=$entity.lastname //obtener el nombre del empleado, por ejemplo "Smith"
+ $entity.lastname:="Jones" /definir el nombre del empleado
 ```
-> Pictures attributes cannot be assigned directly with a given path in an entity.
+> Los atributos de imágenes no pueden asignarse directamente con una ruta determinada en una entidad.
 
 El acceso a un atributo relacionado depende del tipo de atributo. Por ejemplo, con la siguiente estructura:
 
@@ -274,7 +274,7 @@ El método `sendMails`:
 
  var $server; $transporter; $email; $status : Object
 
-  //Prepare emails
+  //Preparar emails
  $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
@@ -283,15 +283,15 @@ El método `sendMails`:
  $email:=New object()
  $email.from:="myName@company.com"
 
-  //Loops on entity selections
+  //Bucles en selecciones de entidades
  For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // email address of the customer
+    $email.to:=$invoice.customer.address // dirección de correo electrónico del cliente
     $email.subject:="Payment OK for invoice # "+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // email address of the customer
+    $email.to:=$invoice.customer.address // dirección de correo electrónico del cliente
     $email.subject:="Please pay invoice # "+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
@@ -397,17 +397,17 @@ Los **bloqueos de transacciones** también se aplican tanto a los comandos clás
 
 ## Optimización cliente/servidor
 
-4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
+4D optimiza automática las peticiones ORDA que utilizan selecciones de entidades o que cargan entidades en configuraciones cliente/servidor. Esta optimización acelera la ejecución de su aplicación 4D reduciendo drásticamente el volumen de información transmitida por la red.
 
 Se aplican los siguientes mecanismos de optimización:
 
 * Cuando un cliente solicita una selección de entidades al servidor, 4D "aprende" automáticamente qué atributos de la selección de entidades se utilizan realmente del lado del cliente durante la ejecución del código, y genera un "contexto de optimización" correspondiente. Este contexto se adjunta a la selección de la entidad y almacena los atributos utilizados. Se actualizará dinámicamente si se utilizan posteriormente otros atributos.
 
-* Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
+* Las solicitudes posteriores enviadas al servidor sobre la misma selección de entidades reutilizan automáticamente el contexto de optimización y sólo obtienen del servidor los atributos necesarios, lo que acelera el procesamiento. Por ejemplo, en un list box basado en una selección de entidades, la fase de aprendizaje tiene lugar durante la visualización de las primeras líneas y la visualización de las líneas siguientes está muy optimizada.
 
-* An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#using-the-context-property) below).
+* Un contexto de optimización existente puede pasarse como propiedad a otra selección de entidad de la misma dataclass, evitando así la fase de aprendizaje y acelerar la aplicación (ver [Uso de la propiedad context](#using-the-context-property) abajo).
 
-The following methods automatically associate the optimization context of the source entity selection to the returned entity selection:
+Los siguientes métodos asocian automáticamente el contexto de optimización de la selección de entidades de origen a la selección de entidades devuelta:
 
 * `entitySelection.and()`
 * `entitySelection.minus()`
@@ -427,14 +427,14 @@ Dado el siguiente código:
  End for each
 ```
 
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* after a learning phase.
+Gracias a la optimización, esta petición sólo obtendrá datos de los atributos utilizados (firstname, lastname, employer, employer.name) en *$sel* tras una fase de aprendizaje.
 
 ### Uso de la propiedad context
 
-Puede aumentar los beneficios de la optimización utilizando la propiedad **context**. Esta propiedad hace referencia a un contexto de optimización "aprendido" para una selección de entidades. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
+Puede aumentar los beneficios de la optimización utilizando la propiedad **context**. Esta propiedad hace referencia a un contexto de optimización "aprendido" para una selección de entidades. Se puede pasar como parámetro a los métodos ORDA que devuelven nuevas selecciones de entidades, de forma que las selecciones de entidades soliciten directamente al servidor los atributos utilizados y se salten la fase de aprendizaje.
 
-A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
-> A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
+Una misma propiedad de contexto de optimización puede pasarse a un número ilimitado de selecciones de entidades en la misma dataclass. Todos los métodos ORDA que manejan selecciones de entidades soportan la propiedad **context** (por ejemplo los métodos `dataClass.query( )` o `dataClass.all( )`). Tenga en cuenta, sin embargo, que un contexto se actualiza automáticamente cuando se utilizan nuevos atributos en otras partes del código. Reutilizar el mismo contexto en diferentes códigos podría sobrecargar el contexto y, por tanto, reducir su eficacia.
+> Se implementa un mecanismo similar para las entidades que se cargan, de modo que sólo se solicitan los atributos utilizados (ver el método `dataClass.get( )`).
 
 **Ejemplo con el método `dataClass.query( )`:**
 
@@ -445,16 +445,16 @@ A same optimization context property can be passed to unlimited number of entity
  $querysettings2:=New object("context";"longList")
 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
+ $data:=extractData($sel1) // En el método extractData la optimización asociada al contexto "shortList" se aplica
 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
+ $data:=extractData($sel2) // En el método extractData una optimización se activa y asocia al contexto "shortList"
 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
+ $data:=extractDetailedData($sel3) // En el método extractDetailedData una optimización se activa y asocia al contexto "longList"
 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
+ $data:=extractDetailedData($sel4) // En el método extractDetailedData la optimización asociada al contexto "longList" se aplica
 ```
 
 ### List box basado en una selección de entidades
@@ -463,7 +463,7 @@ La optimización de la selección de entidades se aplica automáticamente a los 
 
 También se ofrece un contexto específico "modo página" cuando se carga la entidad actual a través de la expresión propiedad **Elemento actual** del list box (ver [List box de tipo colección o entity selection](FormObjects/listbox_overview.md#list-box-types)). Esta funcionalidad le permite no sobrecargar el contexto inicial del list box en este caso, especialmente si la "página" solicita atributos adicionales. Tenga en cuenta que sólo el uso de la expresión **Elemento actual** permitirá crear/utilizar el contexto de la página (el acceso a través de `entitySelection[index]` alterará el contexto de la selección de entidad).
 
-Subsequent requests to server sent by entity browsing methods will also support this optimization. Los métodos siguientes asocian automáticamente el contexto de optimización de la entidad fuente a la entidad devuelta:
+Las peticiones posteriores al servidor enviadas por los métodos de navegación de las entidades también soportarán esta optimización. Los métodos siguientes asocian automáticamente el contexto de optimización de la entidad fuente a la entidad devuelta:
 
 * `entity.next( )`
 * `entity.first( )`

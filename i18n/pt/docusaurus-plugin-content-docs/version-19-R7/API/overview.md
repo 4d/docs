@@ -9,7 +9,7 @@ Esta seção descreve a API da classe 4D incorporada, bem como os comandos de co
 
 - as propriedades são acessadas sem parênteses, por exemplo `file.creationTime`. Pode também utilizar a sintaxe \[], por exemplo `file["creationTime"]`.
 
-## Convenções de escrita
+## Writing conventions
 
 As seguintes convenções são utilizadas na sintaxe da função:
 

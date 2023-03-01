@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Funciones de clase y comandos
+title: Class functions and commands
 ---
 
 Esta sección describe la API de las clases 4D integradas, así como los comandos de constructor asociados. Las funciones y propiedades de clase 4D están disponibles a través de los objetos de instancia de clase.
@@ -9,7 +9,7 @@ Esta sección describe la API de las clases 4D integradas, así como los comando
 - se accede a las propiedades sin paréntesis, por ejemplo `file.creationTime`. También puede utilizar la sintaxis \[], por ejemplo `file["creationTime"]`.
 - pueden ejecutarse de forma independiente, con o sin parámetros. Por ejemplo `Folder(fk database folder)`.
 
-## Convenciones de escritura
+## Writing conventions
 
 En la sintaxis de la función se utilizan las siguientes convenciones:
 
@@ -17,9 +17,9 @@ En la sintaxis de la función se utilizan las siguientes convenciones:
 - la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
 - la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo que se pueda almacenar dentro de los atributos (número, texto, booleano, fecha, hora, objeto, colección...).
 
-## Comandos clásicos
+## Classic commands
 
-Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de comandos "clásicos". Estos comandos se describen en el manual *Lenguaje 4D* en [doc.4d.com](https://doc.4d.com). A modo de referencia, se listan a continuación:
+In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -1388,7 +1388,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`WP Get position`](https://doc.4d.com/4dv19/help/command/en/page1577.html)                        | 1577   |
 | [`WP Get section`](https://doc.4d.com/4dv19/help/command/en/page1581.html)                         | 1581   |
 | [`WP Get sections`](https://doc.4d.com/4dv19/help/command/en/page1580.html)                        | 1580   |
-| [`1580`](https://doc.4d.com/4dv19/help/command/en/page1656.html)                                   | 1656   |
+| [`WP Get style sheet`](https://doc.4d.com/4dv19/help/command/en/page1656.html)                     | 1656   |
 | [`WP Get style sheets`](https://doc.4d.com/4dv19/help/command/en/page1655.html)                    | 1655   |
 | [`WP Get subsection`](https://doc.4d.com/4dv19/help/command/en/page1582.html)                      | 1582   |
 | [`WP Get text`](https://doc.4d.com/4dv19/help/command/en/page1575.html)                            | 1575   |

@@ -68,41 +68,49 @@ Pour afficher la boîte de dialogue **Propriétés de la méthode** pour une mé
 
 > Une fonction de paramétrage global vous permet de modifier une propriété pour tout ou partie des méthodes projet en une seule opération (voir [Modifier attributs globalement](#modifier-attributs-globalement)).
 
-#### Nom
+### Nom
 
 Vous pouvez changer le nom d'une méthode projet dans la zone **Nom** de la fenêtre **Propriétés de la méthode** ou dans l'Explorateur.
 
 Le nouveau nom doit respecter les règles de nommage 4D (voir [Identifiants](../Concepts/identifiers.md)). Si une méthode portant le même nom existe déjà, 4D affiche un message indiquant que ce nom de méthode est déjà utilisé. Si nécessaire, 4D trie à nouveau la liste des méthodes.
 
-**Attention :** Le changement du nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de la méthode et risque de perturber le fonctionnement de l'application. Vous pouvez renommer la méthode manuellement mais il est fortement recommandé d'utiliser la fonction de renommage des méthodes projet, décrite dans la section [Renommer](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
+:::caution
+
+Changing the name of a method already used in the database can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. Vous pouvez renommer la méthode manuellement mais il est fortement recommandé d'utiliser la fonction de renommage des méthodes projet, décrite dans la section [Renommer](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
 
 Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. Vous pouvez désigner un propriétaire de la méthode pour que seuls certains utilisateurs puissent changer son nom.
 
-> Les méthodes base ne peuvent pas être renommées. Il en va de même pour les triggers, les méthodes formulaire et les méthodes objet, qui sont liés à des objets et tirent leur nom de l'objet concerné.
+:::
 
-#### Attributs
+:::info
+
+Les méthodes base ne peuvent pas être renommées. Il en va de même pour les triggers, les méthodes formulaire et les méthodes objet, qui sont liés à des objets et tirent leur nom de l'objet concerné.
+
+:::
+
+### Attributs
 
 Vous pouvez contrôler comment les méthodes projet sont utilisées et/ou appelées dans différents contextes en utilisant des attributs. Notez que vous pouvez définir des attributs globalement pour une sélection de méthodes projet en utilisant l'Explorateur (voir la section suivante).
 
-##### Invisible
+#### Invisible
 
 Si vous ne voulez pas que les utilisateurs puissent exécuter une méthode projet à l'aide de la commande **Méthode...** du menu **Exécution**, vous pouvez la rendre invisible en cochant cette option. Une méthode invisible n'apparaît pas dans la boîte de dialogue d'exécution de méthode.
 
 Lorsque vous rendez une méthode projet invisible, elle est toujours disponible pour le développeur. Elle reste listée dans l'Explorateur et de l'éditeur de code.
 
-##### Partagée entre composants et projet hôte
+#### Partagée entre composants et projet hôte
 
 Cet attribut est utilisé dans le cadre des composants. Quand il est coché, il indique que la méthode sera disponible pour les composants lorsque l'application sera utilisée comme projet hôte. A l'inverse, lorsque l'application sera utilisée en tant que composant, la méthode sera disponible pour les projets hôtes.
 
 Pour plus d'informations sur les composants, reportez-vous au chapitre [Développer et installer des composants 4D](../Extensions/develop-components.md) .
 
-##### Exécuter sur serveur
+#### Exécuter sur serveur
 
 Cet attribut est pris en compte uniquement dans le cadre d’une application 4D en client/serveur. Lorsque cette option est cochée, la méthode du projet est toujours exécutée sur le serveur, quelle que soit la manière dont elle est appelée.
 
 Pour plus d'informations sur cette option, reportez-vous à [Attribut Exécuter sur serveur](https://doc.4d.com/4Dv19R6/4D/19-R6/Execute-on-Server-attribute.300-5941841.en.html).
 
-#### Mode d’exécution
+### Mode d’exécution
 
 Cette option vous permet de déclarer la méthode éligible à l'exécution en mode préemptif. Par défaut, 4D exécute toutes les méthodes projet de vos applications en mode coopératif.
 
@@ -130,11 +138,11 @@ A noter qu'avec cette option, quel que soit le résultat de l'évaluation de sa 
 
 ***Cas particulier* :** Si la méthode possède également la propriété [**Partagée entre composants et projet hôte**](partagee-entre-composants-et-projet-hote) , sélectionner l'option **Indifférent** marquera automatiquement la méthode comme thread-unsafe. Si vous souhaitez qu'une méthode de composant partagé soit thread-safe, vous devez explicitement lui attribuer l'option **Peut être exécutée dans un process préemptif**.
 
-#### Disponibilité
+### Disponibilité
 
 Les attributs de disponibilité précisent les services externes autorisés à appeler explicitement la méthode.
 
-##### Web Services
+#### Web Services
 
 Cet attribut vous permet de publier la méthode courante comme service Web accessible via des requêtes SOAP. Pour plus d’informations, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html). Lorsque cette option est cochée, l’option **Publié dans WSDL** est active.
 
@@ -142,13 +150,13 @@ Dans l'Explorateur, l'icône ![](https://doc.4d.com/4Dv19R5/picture/440512/pict4
 
 **Note :** Il n'est pas possible de publier en tant que Web service une méthode dont le nom comporte des caractères non conformes à la nomenclature XML (par exemple des espaces). Si le nom de la méthode n'est pas conforme, 4D refuse l'affectation de la propriété.
 
-##### Publié dans WSDL
+#### Publié dans WSDL
 
 Cet attribut est actif uniquement si l'attribut "Web service" est coché. Il permet d’inclure la méthode courante dans le fichier WSDL de l’application 4D. Pour plus d’informations sur ce point, reportez-vous au paragraphe [Génération du WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
 Dans l'Explorateur, les méthodes projet offertes comme Web Service et publiées dans le WSDL bénéficient d’une icône spécifique ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
-##### Balises HTML et URLs 4D (4DACTION...)
+#### Balises HTML et URLs 4D (4DACTION...)
 
 Cette option permet de renforcer la sécurité du serveur Web 4D : quand elle n'est pas cochée, la méthode projet ne peut pas être exécutée via une requête HTTP contenant l'URL spécial [4DACTION](../WebServer/httpRequests.md#4daction) utilisé pour appeler des méthodes 4D, ni les balises spéciales [4DSCRIPT, 4DTEXT et 4DHTML](../Tags/tags.md).
 
@@ -156,7 +164,7 @@ Dans l'Explorateur, l'icône ![](https://doc.4d.com/4Dv19R5/picture/440496/pict4
 
 Pour des raisons de sécurité, cette option est désélectionnée par défaut. Vous devez désigner individuellement chaque méthode pouvant être exécutée via les URLs et les balises spéciales.
 
-##### SQL
+#### SQL
 
 Lorsqu’elle est cochée, cette option autorise l’exécution de la méthode projet par le moteur SQL de 4D. Elle est désélectionnée par défaut, ce qui signifie que, sauf autorisation explicite, les méthodes projet de 4D sont protégées et ne peuvent pas être appelées par le moteur SQL de 4D.
 
@@ -169,7 +177,7 @@ Cette propriété s’applique à toutes les requêtes SQL internes et externes 
 
 Pour plus d’informations, reportez-vous à la section [Implémentations du moteur SQL de 4D](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) in dans le manuel SQL de 4D.
 
-##### Serveur REST
+#### Serveur REST
 
 *This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 

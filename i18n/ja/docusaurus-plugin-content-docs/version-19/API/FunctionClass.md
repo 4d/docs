@@ -1,13 +1,21 @@
 ---
 id: FunctionClass
-title: Formula
+title: Function
 ---
 
+### About Function objects
+
+`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D proposes three kinds of `Function` objects:
+
+- **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
+- **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
+- **formula functions**, i.e. functions that can execute any 4D formula.
 
 
-[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、ネイティブな [`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 ### Formula オブジェクト
+
+The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
 Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 
@@ -84,21 +92,19 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 引数はメソッド内において、呼び出し時に指定した順で受け取られます。
 
-### 4D.Function オブジェクトについて
 
-`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の Function オブジェクトが利用できます:
-
-- ネイティブ関数、つまり、`collection.sort()` や `file.copyTo()` などの 4Dクラスにビルトインされた関数。
-- ユーザー関数 (ユーザー[クラス](Concepts/classes.md) において [Function キーワード](Concepts/classes.md#function)を使って作成されたもの)。
-- フォーミュラ関数 (4Dフォーミュラを実行するもの)。
 
 ### 概要
+
 
 |                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.apply().Summary -->|
 | [<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.call().Summary --> |
 | [<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.source.Summary --> |
+
+
+
 
 ## Formula
 
@@ -120,7 +126,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | formulaExp | 式           | -> | オブジェクトとして返されるフォーミュラ                                            |
 | 戻り値        | 4D.Function | <- | フォーミュラを格納しているネイティブな Function オブジェクト|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -130,8 +138,8 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 返されたフォーミュラは以下の方法で呼び出すことが可能です:
 
-- [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
-- オブジェクト記法シンタックス ([Formula オブジェクト](#formula-オブジェクト) 参照)
+*   [`.call()`](#call) あるいは [`.apply()`](#apply) 関数
+*   オブジェクト記法シンタックス ([Formula オブジェクト](#formula-オブジェクト) 参照)
 
 ```4d
  var $f : 4D.Function
@@ -151,6 +159,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 *formulaExp* がローカル変数を使用する場合、返されるフォーミュラオブジェクトの作成時にその値がそこにコピーされ保存されます。 実行時、フォーミュラはそのローカル変数の現在値ではなく、コピーされた値を使用します。 ローカル変数として配列を使用することはサポートされていない点に注意してください。
 
 `Formula` によって作成されたオブジェクトは、たとえばデータベースのフィールドや Blob ドキュメントなどに保存可能です。
+
 
 #### 例題 1
 
@@ -180,6 +189,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $result:=$o.f() // 10 を返します
 ```
 
+
 #### 例題 3
 
 引数を用いたシンプルなフォーミュラの例:
@@ -189,6 +199,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $result:=$o.f(10;20) // 30 を返します
 ```
 
+
 #### 例題 4
 
 引数を用いたプロジェクトメソッドを使用する例:
@@ -197,6 +208,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $o:=New object("f";Formula(myMethod))
  $result:=$o.f("param1";"param2") // $result:=myMethod("param1";"param2") と同等です
 ```
+
 
 #### 例題 5
 
@@ -230,6 +242,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
 
+
+
+
 ## Formula from string
 
 <details><summary>履歴</summary>
@@ -250,7 +265,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | formulaString | Text        | -> | オブジェクトとして返されるフォーミュラ文字列                               |
 | 戻り値           | 4D.Function | <- | フォーミュラを格納しているネイティブなオブジェクト|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -258,6 +275,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 このコマンドは [`Formula`](#formula) に似ていますが、テキストに基づいたフォーミュラを扱う点が異なります。 多くの場合において、`Formula` コマンドの使用が推奨されます。 `Formula from string` コマンドは、元となるフォーミュラがテキストとして表現されている場合 (例: 外部の JSON ファイルに保存されていた場合など) にのみ使用されるべきです。 このコンテキストにおいては、トークンシンタックスの使用が強く推奨されます。
 > ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、*formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー(-10737) が生成されます。
+
 
 #### 例題
 
@@ -275,9 +293,16 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 ![](../assets/en/API/formulaDialog.png)
 
+
 そのフォーミュラを実行します:
 
+
 ![](../assets/en/API/formulaAlert.png)
+
+
+
+
+
 
 <!-- REF FunctionClass.apply().Desc -->
 ## .apply()
@@ -300,17 +325,21 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | formulaParams | Collection | -> | フォーミュラが実行される際に $1...$n として渡される値のコレクション |
 | 戻り値           | any        | <- | フォーミュラの実行結果|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
 `.apply()` 関数は、 <!-- REF #FunctionClass.apply().Summary -->対象の `Formula` オブジェクトを実行し、その結果の値を返します<!-- END REF -->。 `Formula` あるいは `Formula from string` コマンドで作成されたフォーミュラが使用可能です。
+
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
 任意の *formulaParams* 引数を渡すことで、フォーミュラ内で $1...$n の引数として使用されるコレクションを渡すこともできます。
 
 `.apply()` は [`.call()`](#call) と似ていますが、引数をコレクションとして渡す点が異なります。 これは計算された結果を渡すのに便利です。
+
 
 #### 例題 1
 
@@ -321,6 +350,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $c:=New collection(10;20;30)
  $result:=$f.apply(Null;$c) // 60 を返します
 ```
+
 
 #### 例題 2
 
@@ -337,6 +367,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 ```
 
 <!-- END REF -->
+
 
 <!-- REF FunctionClass.call().Desc -->
 ## .call()
@@ -359,7 +390,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | params  | any    | -> | フォーミュラが実行される際に $1...$n として渡される値        |
 | 戻り値     | any    | <- | フォーミュラの実行結果|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -389,6 +422,8 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 <!-- END REF -->
 
+
+
 <!-- REF FunctionClass.source.Desc -->
 ## .source
 
@@ -401,6 +436,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 </details>
 
 <!-- REF #FunctionClass.source.Syntax -->**.source** : Text <!-- END REF -->
+
 
 #### 説明
 
@@ -416,5 +452,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"
 ```
+
+
 
 <!-- END REF -->

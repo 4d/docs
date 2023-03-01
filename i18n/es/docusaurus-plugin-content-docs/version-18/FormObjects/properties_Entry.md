@@ -26,7 +26,7 @@ La propiedad de corrección ortográfica automática activa la corrección ortog
 
 Allows the user access to a standard context menu in the object when the form is executed.
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display#picture-format) using this menu is temporary; it is not saved with the record.
+For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. La modificación del formato de visualización [](properties_Display#picture-format) utilizando este menú es temporal; no se guarda con el registro.
 
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
@@ -64,7 +64,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Barra de progreso](progressIndicator.md) - [Regla](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -114,13 +114,13 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                         |
-| ----------- | -------------- | ------------------------------------------------------------------------ |
-| entryFilter | string         | Entry filter code or Entry filter name (filter names start with &#124; ) |
+| Nombre      | Tipos de datos | Valores posibles                                                                                      |
+| ----------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| entryFilter | string         | Código de filtro de entrada o Nombre de filtro de entrada (los nombres de filtro empiezan por &#124;) |
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [Columna de Combo Box](listbox_overview.md#list-box-columns)
 
 ---
 

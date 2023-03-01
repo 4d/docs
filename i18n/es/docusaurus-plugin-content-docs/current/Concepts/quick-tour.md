@@ -61,13 +61,13 @@ La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Es
 
 ## Comandos
 
-Los comandos 4D son métodos integrados para realizar una acción. Todos los comandos 4D, como `CREATE RECORD`, o `ALERT`, se describen en el manual _Lenguaje de 4D_, agrupados por temas. Los comandos se utilizan a menudo con parámetros, que se pasan entre corchetes () y separados por punto y coma (;). Ejemplo:
+Los comandos 4D son métodos integrados para realizar una acción. Los comandos se utilizan a menudo con parámetros, que se pasan entre corchetes () y separados por punto y coma (;). Ejemplo:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Algunos comandos se adjuntan a colecciones u objetos, en cuyo caso son métodos temporales que se utilizan con la notación de puntos. Por ejemplo:
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Por ejemplo:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -121,7 +121,8 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Haga algo con el caracter si es un TAB
+    //Do something with the character if it is a TAB
+
 
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
@@ -207,16 +208,15 @@ Para instanciar un objeto de la clase en un método, llame la clase usuario desd
 $o:=cs.myClass.new() 
 ```
 
-En el método de clase `myClass`, utilice la instrucción `Function <methodName>` para definir el método miembro de clase *methodName*. Un método miembro de clase puede recibir y devolver parámetros como cualquier método, y utilizar `This` como instancia del objeto.
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
-//en el archivo myClass.4dm
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+//in the myClass.4dm file
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-Para ejecutar un método miembro de clase, basta con utilizar el operador `()` en el método miembro de la instancia del objeto.
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $o:=cs.myClass.new()
@@ -228,26 +228,26 @@ $message:=$o.myClass.hello()
 Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d  
-//en el archivo Rectangle.4dm
+//in the Rectangle.4dm file
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
 Una clase puede extender otra clase utilizando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por ejemplo:
 
 ```4d  
-//en el archivo Square.4dm
+//in the Square.4dm file
 Class extends rectangle
 
 Class constructor
-C_LONGINT($1)
+var $length : Integer
 
-  //Llama al constructor de la clase padre con las dimensiones 
-  // suministradas para el ancho y el alto del Rectángulo
-Super($1;$1)
+  // It calls the parent class's constructor with lengths   
+  // provided for the Rectangle's width and height
+Super($length;$length)
 
 This.name:="Square"
 ```

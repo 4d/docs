@@ -1,14 +1,21 @@
 ---
 id: FunctionClass
-title: Formula
+title: Function
 ---
 
+### About Function objects
 
+Um objeto`4D. Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D proposes three kinds of `Function` objects:
 
-Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos nativos [`4D. Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
+- **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
+- **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
+- **formula functions**, i.e. functions that can execute any 4D formula.
+
 
 
 ### Objetos de formulários
+
+The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
 Objetos formulário podem ser encapsulados em propriedades objeto:
 
@@ -84,14 +91,6 @@ Para mais conveniência, quando a fórmula é feita de um único método de proj
 ```
 
 Parâmetros são recebidos dentro do método, na ordem que são especificados na chamada.
-
-### Sobre objetos 4D. Function
-
-Um objeto`4D. Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos Function:
-
-- funções nativas, ou seja, funções integradas, built-in, de várias classes 4D tais como `collection.sort()` ou `file.copyTo()`.
-- funções usuário, ciradas em [classes](Concepts/classes.md) usuário usanod a [palavra chave Function](Concepts/classes.md#function).
-- funções fórmula, ou seja funções que podem executar qualquer fórmula 4D.
 
 
 

@@ -370,9 +370,9 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. In this
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                       |
-| ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| controlType | string         | **number columns**: "automatic" (default) or "checkbox"<br/>**boolean columns**: "checkbox" (default) or "popup" |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                    |
+| ----------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | string         | **columnas numéricas**: "automatic" (por defecto) o "checkbox"<br/>**columnas booleanas**: "checkbox" (por defecto) o "popup" |
 
 #### Objetos soportados
 
@@ -489,11 +489,11 @@ La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; si
 
 Esta propiedad permite ocultar el objeto en el entorno Aplicación.
 
-Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formulario. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. En este contexto, a menudo es necesario ocultar objetos por programación durante el evento `On load` del formulario y luego mostrar determinados objetos. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
+Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formulario. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. En este contexto, a menudo es necesario ocultar objetos por programación durante el evento `On load` del formulario y luego mostrar determinados objetos. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. El desarrollador puede entonces programar su pantalla utilizando el comando [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) cuando lo necesite.
 
 #### Visibilidad automática en los formularios lista
 
-In the context of list forms, the Visibility property supports two specific values:
+En el contexto de los formularios de lista, la propiedad Visibilidad soporta dos valores específicos:
 
 * **Si registro seleccionado** (nombre JSON: "selectedRows")
 * **Si el registro no está seleccionado** (nombre JSON: "unselectedRows")
@@ -502,7 +502,7 @@ Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D no tiene en cuenta esta propiedad si el objeto se ocultó utilizando el comando [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html); en este caso, el objeto permanece invisible independientemente de si el registro está seleccionado o no.
 
 #### Gramática JSON
 
