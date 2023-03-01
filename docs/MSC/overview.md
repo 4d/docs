@@ -1,7 +1,7 @@
 ---
 id: overview
-title: Overview
-sidebar_label: Overview
+title: MSC
+sidebar_label: MSC
 ---
 
 The Maintenance and Security Center (MSC) window contains all the tools needed for verification, analysis, maintenance, backup, compacting, and encrypting of data files. The MSC window is available in all 4D applications: 4D single user, 4D Server or 4D Desktop.
