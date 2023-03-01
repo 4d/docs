@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Vue d’ensemble
+title: Extensions
 ---
 
 [L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez fournir des fonctionnalités supplémentaires à vos projets 4D en installant des [**composants**](Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Les composants sont constitués de code 4D, tandis que les plug-ins peuvent être créés à l'aide de n'importe quel langage.
