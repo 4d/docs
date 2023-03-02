@@ -7,8 +7,8 @@ The 4D language contains a large number of built-in commands, allowing the devel
 
 The 4D commands are divided in two categories:
 
-- class functions, which are APIs of 4D built-in classes. These functions are described in the [Class API Reference](../API/overview) section.
-- stand-alone commands, grouped by themes. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
+- **class functions**, which are APIs of 4D built-in classes. These functions are described in the [Class API Reference](../API/overview) section.
+- **stand-alone commands**, grouped by themes. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -435,7 +435,6 @@ The 4D commands are divided in two categories:
 |[`Get print marker`](https://doc.4d.com/4dv19R/help/command/en/page708.html)|708|
 |[`GET PRINT OPTION`](https://doc.4d.com/4dv19R/help/command/en/page734.html)|734|
 |[`Get print preview`](https://doc.4d.com/4dv19R/help/command/en/page1197.html)|1197|
-
 |[`GET PRINTABLE AREA`](https://doc.4d.com/4dv19R/help/command/en/page703.html)|703|
 |[`GET PRINTABLE MARGIN`](https://doc.4d.com/4dv19R/help/command/en/page711.html)|711|
 |[`Get printed height`](https://doc.4d.com/4dv19R/help/command/en/page702.html)|702|
@@ -1355,7 +1354,6 @@ The 4D commands are divided in two categories:
 |[`WP TABLE DELETE ROWS`](https://doc.4d.com/4dv19R/help/command/en/page1693.html)|1693|
 |[`WP Table get cells`](https://doc.4d.com/4dv19R/help/command/en/page1477.html)|1477|
 |[`WP Table get columns`](https://doc.4d.com/4dv19R/help/command/en/page1476.html)|1476|
-
 |[`WP Table get rows`](https://doc.4d.com/4dv19R/help/command/en/page1475.html)|1475|
 |[`WP Table insert columns`](https://doc.4d.com/4dv19R/help/command/en/page1692.html)|1692|
 |[`WP Table insert rows`](https://doc.4d.com/4dv19R/help/command/en/page1691.html)|1691|
