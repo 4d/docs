@@ -286,7 +286,7 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Date | Hora | Bool | Pict | footer var type     |
+| Cálculo               | Num | Text | Date | Hora | Bool | Pict | footer var type     |
 | --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
 | Mínimo                | X   | X    | X    | X    | X    |      | Same as column type |
 | Máximo                | X   | X    | X    | X    | X    |      | Same as column type |
