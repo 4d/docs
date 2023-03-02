@@ -133,10 +133,10 @@ A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                 |
-| ------ | ------------------------ |
-| v20    | Supports custom keywords |
-| v18 R6 | Adicionado               |
+| Versão | Mudanças                              |
+| ------ | ------------------------------------- |
+| v20    | Suporta palavras-chave personalizadas |
+| v18 R6 | Adicionado                            |
 
 
 </details>
@@ -167,7 +167,7 @@ No parâmetro `msgIDs` , pode passar qualquer um dos dois:
  | --------- | ----- | -------------------------------------------------------------- |
  | IMAP all  | 1     | Seleccione todas as mensagens na caixa de correio seleccionada |
 
-The `keywords` parameter lets you define the flags to add to `msgIDs`. You can use the following standard flags as well as custom flags (custom flags support depends on the server implementation):
+O parâmetro `palavras-chave` permite definir as bandeiras a acrescentar a `msgIDs`. You can use the following standard flags as well as custom flags (custom flags support depends on the server implementation):
 
 | Propriedade           | Tipo     | Descrição                                             |
 | --------------------- | -------- | ----------------------------------------------------- |
@@ -761,11 +761,11 @@ $status:=$transporter.expunge()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças           |
-| ------ | ------------------ |
-| v20    | *id* is returned   |
-| v18 R5 | *name* is optional |
-| v18 R4 | Adicionado         |
+| Versão | Mudanças          |
+| ------ | ----------------- |
+| v20    | *id* é devolvido  |
+| v18 R5 | *name* é opcional |
+| v18 R4 | Adicionado        |
 
 </details>
 
@@ -797,7 +797,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 | name        | text   | Nome da nova caixa de correio                                            |
 | mailCount   | number | Número de mensagens na caixa de email                                    |
 | mailRecent  | number | Número de mensagens com o marcador "recente" (indicando novas mensagens) |
-| id          | text   | Unique id of the mailbox                                                 |
+| id          | text   | Identificação única da caixa de correio                                  |
 
 #### Exemplo
 
@@ -816,10 +816,10 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v18 R4 | Adicionado                   |
-| v19    | Add `isSubscribed` parameter |
+| Versão | Mudanças                           |
+| ------ | ---------------------------------- |
+| v18 R4 | Adicionado                         |
+| v19    | Adicionar parâmetro `isSubscribed` |
 
 </details>
 
@@ -959,7 +959,7 @@ Carácter delimitador do nome da caixa de correio.
 
 A função `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-In the first parameter, you can pass either:
+No primeiro parâmetro, pode passar qualquer um dos dois:
 
 * *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 * *msgID*, a *text* value indicating the unique ID of the message to retrieve.
@@ -1133,7 +1133,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
 
-In the first parameter, you can pass either:
+No primeiro parâmetro, pode passar qualquer um dos dois:
 
 * *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 * *msgID*, a *text* value indicating the unique ID of the message to retrieve.
@@ -1349,10 +1349,10 @@ The function returns a collection of strings (unique IDs).
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                 |
-| ------ | ------------------------ |
-| v20    | Supports custom keywords |
-| v18 R6 | Adicionado               |
+| Versão | Mudanças                              |
+| ------ | ------------------------------------- |
+| v20    | Suporta palavras-chave personalizadas |
+| v18 R6 | Adicionado                            |
 
 
 </details>
@@ -1699,7 +1699,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 | name           | Text   | Nome da nova caixa de correio                                                                                                                 |
 | mailCount      | number | Número de mensagens na caixa de email                                                                                                         |
 | mailRecent     | number | Number of messages with the "recent" flag                                                                                                     |
-| id             | text   | Unique id of the mailbox                                                                                                                      |
+| id             | text   | Identificação única da caixa de correio                                                                                                       |
 | flags          | text   | List of flags currently used for the mailbox, separated by spaces                                                                             |
 | permanentFlags | text   | List of flags that the client can change permanently (except for the \Recent flag, which is managed by the IMAP server), separated by spaces |
 
