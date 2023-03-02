@@ -15,7 +15,7 @@ Since projects are in human-readable, plain text files (JSON, XML, etc.), they c
 In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](Project/architecture.md).
 
 
-## Development
+## Desenvolvimento
 
 4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project.
 
