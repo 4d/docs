@@ -47,7 +47,7 @@ This button can be used to immediately close and restart the project. When you c
 
 > If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
 
-## Last backup
+## Última cópia de segurança
 
 This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
 
