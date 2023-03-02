@@ -42,7 +42,7 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 ---
 
-## Form Footer
+## Rodapé do formulário
 
 The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
 
@@ -58,7 +58,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 ---
 
-## Form Header
+## Cabeçalho do formulário
 
 The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
 
@@ -98,11 +98,11 @@ Break at level 0 zero takes in all the records; it occurs after all the records 
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 
-| Etiqueta     | Descrição        | Prints after groups created by: |
-| ------------ | ---------------- | ------------------------------- |
-| Form Break 1 | Break at level 1 | First sorted field              |
-| Form Break 2 | Break at level 2 | Second sorted field             |
-| Form Break 3 | Break at level 3 | Third sorted field              |
+| Etiqueta | Descrição        | Prints after groups created by: |
+| -------- | ---------------- | ------------------------------- |
+| B1       | Break at level 1 | First sorted field              |
+| B2       | Break at level 2 | Second sorted field             |
+| B3       | Break at level 3 | Third sorted field              |
 
 Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
