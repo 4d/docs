@@ -613,7 +613,7 @@ Document contents are converted with respect to their viewing attributes, includ
 * Cell merge
 * Imagens
 * Row height
-* Column width
+* Largura da coluna
 * Hidden columns / rows.
 > > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
 
@@ -926,7 +926,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 | includeBindingSource       | Booleano | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                         |
 | sheet                      | number   | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | pdfOptions                 | object   | PDF only (optional) - Options for pdf export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>title of the document.</td></tr><tr><td>autor</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| csvOptions                 | object   | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| csvOptions                 | object   | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `\<customProperty>` | any      | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 **Notes about Excel format**:
@@ -1102,7 +1102,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 | Parâmetros      | Tipo   |    | Descrição                               |
 | --------------- | ------ | -- | --------------------------------------- |
 | rangeObj        | Objeto | -> | Range object                            |
-| searchValue     | Text   | -> | Search value                            |
+| searchValue     | Text   | -> | Valor da pesquisa                       |
 | searchCondition | Objeto | -> | Object containing search condition(s)   |
 | replaceValue    | Text   | -> | Replacement value                       |
 | Resultados      | Objeto | <- | Range object|<!-- END REF --> |
@@ -1167,10 +1167,10 @@ To find "Total" and replace it with "Grand Total":
 
 <!-- REF #_method_.VP Find table.Params -->
 
-| Parâmetros | Tipo   |    | Descrição                             |
-| ---------- | ------ | -- | ------------------------------------- |
-| rangeObj   | Objeto | -> | Cell range                            |
-| Resultados | Text   | <- | Table name|<!-- END REF --> |
+| Parâmetros | Tipo   |    | Descrição                                 |
+| ---------- | ------ | -- | ----------------------------------------- |
+| rangeObj   | Objeto | -> | Cell range                                |
+| Resultados | Text   | <- | Nome da tabela|<!-- END REF --> |
 
 #### Descrição
 
@@ -2883,7 +2883,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 | csvOptions |                 | object | options for csv import                                                                                                                                                                                                                                   |
 |            | range           | object | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                            |
 |            | rowDelimiter    | text   | Row delimiter. If not present, the delimiter is automatically determined by 4D.                                                                                                                                                                          |
-|            | columnDelimiter | text   | Column delimiter. Default: ","                                                                                                                                                                                                                           |
+|            | columnDelimiter | text   | Column delimiter. O padrão: ","                                                                                                                                                                                                                          |
 
 > For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
@@ -4861,7 +4861,7 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 | Parâmetros | Tipo    |    | Descrição                                                        |
 | ---------- | ------- | -- | ---------------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                |
-| styleObj   | Objeto  | -> | Style object                                                     |
+| styleObj   | Objeto  | -> | Objecto estilo                                                   |
 | sheet      | Integer | -> | Sheet index (default = current sheet)|<!-- END REF --> |
 
 #### Descrição

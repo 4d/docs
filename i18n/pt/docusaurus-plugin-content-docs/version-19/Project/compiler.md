@@ -51,7 +51,7 @@ If you modify your project in interpreted mode, you must recompile it in order t
 
 In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
 
-### Check Syntax
+### Verificar sintaxe
 
 The **Check Syntax** button starts the execution of the syntax-checking phase. At the end of the checking process, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method.
 

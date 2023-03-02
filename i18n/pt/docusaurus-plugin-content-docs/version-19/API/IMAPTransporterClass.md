@@ -756,9 +756,9 @@ $status:=$transporter.expunge()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças           |
-| ------ | ------------------ |
-| v18 R5 | *name* is optional |
+| Versão | Mudanças          |
+| ------ | ----------------- |
+| v18 R5 | *name* é opcional |
 
 |v18 R4|Added|
 
@@ -810,10 +810,10 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v18 R4 | Adicionado                   |
-| v19    | Add `isSubscribed` parameter |
+| Versão | Mudanças                           |
+| ------ | ---------------------------------- |
+| v18 R4 | Adicionado                         |
+| v19    | Adicionar parâmetro `isSubscribed` |
 
 </details>
 
@@ -953,7 +953,7 @@ Carácter delimitador do nome da caixa de correio.
 
 A função `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-In the first parameter, you can pass either:
+No primeiro parâmetro, pode passar qualquer um dos dois:
 
 * *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 * *msgID*, a *text* value indicating the unique ID of the message to retrieve.
@@ -1130,7 +1130,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
 
-In the first parameter, you can pass either:
+No primeiro parâmetro, pode passar qualquer um dos dois:
 
 * *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 * *msgID*, a *text* value indicating the unique ID of the message to retrieve.

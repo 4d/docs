@@ -15,7 +15,7 @@ Use `$directory/login` to open a session in your 4D application through REST and
 
 All parameters must be passed in **headers** of a POST method:
 
-| Header key         | Header value                                                                 |
+| Header key         | Valor do cabeçalho                                                           |
 | ------------------ | ---------------------------------------------------------------------------- |
 | username-4D        | User - Not mandatory                                                         |
 | password-4D        | Password - Not mandatory                                                     |

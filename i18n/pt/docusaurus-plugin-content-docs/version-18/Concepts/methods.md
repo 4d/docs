@@ -137,7 +137,7 @@ Note that, even if it does not have parameters, an object method to be executed 
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Menu Methods
+### Métodos do menu
 A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. Este processo é um dos principais aspectos da personalização de um banco de dados. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.

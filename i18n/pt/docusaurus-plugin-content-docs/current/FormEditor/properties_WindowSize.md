@@ -4,7 +4,7 @@ title: Tamanho da janela
 ---
 
 
-## Fixed Height
+## Altura fixa
 
 
 If you select this option, the window height will be locked and it will not be possible for the user to resize it.
@@ -21,7 +21,7 @@ If this option is not selected, the width of the form window can be modified. In
 
 ---
 
-## Fixed Width
+## Largura fixa
 
 
 If you select this option, the window width will be locked and it will not be possible for the user to resize it.

@@ -64,7 +64,7 @@ The toolbar contains the following elements:
 | ![](../assets/en/FormEditor/level.png)           | [Nível](#layering-objects)                           | This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                                             |
 | ![](../assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                             |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
-| ![](../assets/en/FormEditor/cssPreviewicon.png)  | [CSS Preview](#css-preview)                          | This button is used to select the CSS Mode to use.                                                                                                                                                                                                                                                                           |
+| ![](../assets/en/FormEditor/cssPreviewicon.png)  | [Pré-visualização CSS](#css-preview)                 | This button is used to select the CSS Mode to use.                                                                                                                                                                                                                                                                           |
 | ![](../assets/en/FormEditor/views.png)           | [Managing views](#views)                             | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                           |
 | ![](../assets/en/FormEditor/shields2.png)        | [Displaying shields](#shields)                       | Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                       |
 | ![](../assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)   | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                      |
@@ -393,7 +393,7 @@ By default, all objects that support the focusable property are included in the 
 
 3. **right-click** on the object and select **Remove from entry order** option from the context menu
 
-## CSS Preview
+## Pré-visualização CSS
 
 The Form editor allows you to view your forms with or without applied CSS values.
 
@@ -518,7 +518,7 @@ Here is a description of each type of shield:
 | ![](../assets/en/FormEditor/objectMethod.png)   | Método objecto                      | For objects with an associated object method                                                                                         |
 | ![](../assets/en/FormEditor/standardAction.png) | Standard Action                     | For objects with an associated standard action                                                                                       |
 | ![](../assets/en/FormEditor/resizing.png)       | Redimensionamento                   | For objects with at least one resizing property, indicates the combination of current properties                                     |
-| ![](../assets/en/FormEditor/entryOrder.png)     | Entry Order                         | For enterable objects, indicates the number of entry order                                                                           |
+| ![](../assets/en/FormEditor/entryOrder.png)     | Ordem de entrada                    | For enterable objects, indicates the number of entry order                                                                           |
 | ![](../assets/en/FormEditor/viewNumber.png)     | Current View                        | For all objects in the current view                                                                                                  |
 | ![](../assets/en/FormEditor/cssShield.png)      | [Folha de Estilo](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
 | ![](../assets/en/FormEditor/filter.png)         | Filtro                              | For enterable objects with an associated entry filter                                                                                |
@@ -627,7 +627,7 @@ To rename a view, you can use either:
  ![](../assets/en/FormEditor/deleteView2.png)
 > If a view is deleted, any objects in it are automatically moved to the Default view.
 
-### Using views
+### Usando vistas
 
 Once views are created, you can use the View palette to:
 

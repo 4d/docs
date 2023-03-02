@@ -196,7 +196,7 @@ To create your own date and time patterns, in your current localization, you can
 |      | ddd                                 | Day of week, short                             | Tue                |
 |      | dddd                                | Day of week, long                              | Tuesday            |
 |      | yy                                  | Year, short                                    | 19                 |
-|      | yyyy                                | Year, long                                     | 2019               |
+|      | yyyy                                | Ano, longo                                     | 2019               |
 | Hora |                                     |                                                | (2:03:05 PM)       |
 |      | h                                   | Hour without leading zero. 0-23                | 2                  |
 |      | hh                                  | Hour with leading zero. 00-23                  | 02                 |
@@ -220,7 +220,7 @@ In addition to the special characters and codes described in the previous sectio
 | ( )         | Left and right parenthesis                                         | (-###.##)            |
 | :           | Dois pontos                                                        | hh:mm:ss             |
 | ^           | Caret                                                              | #\^#                |
-| '           | Apostrophe                                                         | '######              |
+| '           | Apóstrofe                                                          | '######              |
 | { }         | Curly brackets                                                     | {###,###,###}        |
 | `< >` | Less-than and greater than signs                                   | ## >##              |
 | =           | Equal sign                                                         | #+#=##               |
@@ -285,13 +285,13 @@ The following special characters allow the automatic addition or formatting of i
 | Caracter | Descrição                        | Exemplo                                                                | Resultados                                           |
 | -------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
 | &        | Escape character                 | (see examples below)                                                   |                                                      |
-| P        | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
+| P        | Página actual                    | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
 | N        | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
 | D        | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
 | T        | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
 | G        | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S        | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
-| U        | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
+| U        | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Sublinhado)                           |
 | B        | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
 | I        | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
 | "        | Font prefix                      | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |

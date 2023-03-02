@@ -1,6 +1,6 @@
 ---
 id: general
-title: General Page
+title: Página Geral
 ---
 
 This page contains various options to configure the general operation of your 4D application.
@@ -82,7 +82,7 @@ These items allow you to create binary databases (see [Creating a new database](
 
 ## When creating a new project
 
-### Use Log File
+### Usar ficheiro de registo
 
 When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
 
@@ -155,7 +155,7 @@ Sets where 4D will look for documentation pages.
 *   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
 *   When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
 
-### Local folder
+### Pasta local
 
 > This option is only taken into account for command documentation access (excluding class functions).
 

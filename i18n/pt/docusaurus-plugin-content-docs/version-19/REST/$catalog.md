@@ -192,7 +192,7 @@ Calling `$catalog/{dataClass}` for a specific dataclass will return the followin
 The information you retrieve concerns the following:
 
 *   Dataclass
-*   Attribute(s)
+*   Atributo(s)
 *   Method(s) if any
 *   Primary key
 
@@ -210,7 +210,7 @@ The following properties are returned for an exposed dataclass:
 | dataURI        | String | A URI to the data in the dataclass                                                                        |
 
 
-### Attribute(s)
+### Atributo(s)
 
 Here are the properties for each exposed attribute that are returned:
 

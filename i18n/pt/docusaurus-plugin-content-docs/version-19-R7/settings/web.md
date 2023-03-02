@@ -74,7 +74,7 @@ At any moment, you can clear the cache of the pages and images that it contains 
 
 > You can also use the special URL [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
-### Web Process
+### Processo Web
 
 This area allows you to configure how the web server will handle user sessions and their associated processes.
 
@@ -85,7 +85,7 @@ This area allows you to configure how the web server will handle user sessions a
 When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
 
 
-#### No sessions
+#### Sem sessões
 
 When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
 
@@ -142,7 +142,7 @@ Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 Using **Custom** authentication is recommended. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
 
 
-## Options (II)
+## Opções (II)
 
 ### Text Conversion
 
@@ -160,7 +160,7 @@ See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections
 
 ### CORS Settings
 
-#### Enable CORS
+#### Ativar CORS
 
 Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
 
@@ -260,13 +260,13 @@ Configure the automatic backup parameters for the request log. Configure the aut
 
 > In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
 
-## Web Services
+## Serviços Web
 
 You use the options on this tab to activate and configure Web services for the 4D project, both for their publishing (server side) and their subscription (client side).
 
 For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html) chapter.
 
-### Server Side
+### Servidor
 
 This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
 
@@ -276,7 +276,7 @@ This area contains various options related to the use of 4D as a Web Services "s
 
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
 
-### Client Side
+### Cliente
 
 This area contains various options related to the use of 4D as a Web Services "client" i.e., subscribing to services published on the network.
 
