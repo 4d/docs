@@ -9,7 +9,7 @@ Esta sección describe la API de las clases 4D integradas, así como los comando
 
 - se accede a las propiedades sin paréntesis, por ejemplo `file.creationTime`. También puede utilizar la sintaxis \[], por ejemplo `file["creationTime"]`.
 
-## Writing conventions
+## Convenciones de escritura
 
 En la sintaxis de la función se utilizan las siguientes convenciones:
 
