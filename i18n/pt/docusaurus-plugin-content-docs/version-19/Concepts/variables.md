@@ -73,7 +73,7 @@ The following table lists all supported `varType` values:
 | `Real`                 | Valor real                               |
 | `Ponteiro`             | Pointer value                            |
 | `Imagem`               | Picture value                            |
-| `Blob`                 | BLOB value                               |
+| `Blob`                 | Valor BLOB                               |
 | `Collection`           | Collection value                         |
 | `Variant`              | Variant value                            |
 | `Objeto`               | Object with default class (`4D. Object`) |
