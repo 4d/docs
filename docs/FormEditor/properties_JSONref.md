@@ -15,6 +15,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[`bottomMargin`](properties_FormSize.md#vert-margin)|Vertical margin value (in pixels)|minimum: 0<a name="d"></a>|
 |<a name="c">**c**</a>|||
 |[`colorScheme`](properties_FormProperties.md#color-scheme)|Color scheme for the form|"dark", "light"|
+|[`css`](properties_FormProperties.md#css)|CSS file(s) used by the form|CSS file path(s) provided as a string, a collection of strings, or a collection of objects with "path" and "media" properties|
 |<a name="d">**d**</a>|||
 |[`destination`](properties_FormProperties.md#form-type)|Form type|"detailScreen", "listScreen", "detailPrinter", "listPrinter"|
 |<a name="e">**e**</a>|
