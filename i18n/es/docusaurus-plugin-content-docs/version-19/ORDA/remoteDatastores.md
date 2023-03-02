@@ -6,14 +6,14 @@ title: Utilizar un almacén de datos remoto
 Un [datastore](dsMapping.md#datastore) expuesto en una aplicación 4D se puede acceder simultáneamente a través de diferentes clientes:
 
 - Las aplicaciones 4D remotas que utilizan ORDA para acceder al almacén de datos principal con el comando `ds`. Tenga en cuenta que la aplicación 4D remota puede seguir accediendo a la base de datos en modo clásico. Estos accesos son gestionados por el **servidor de aplicaciones**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. Estos accesos son gestionados por el **servidor HTTP REST**.
+- Otras aplicaciones 4D (4D remote, 4D Server) abriendo una sesión en el datastore remoto a través del comando `Open datastore`. Estos accesos son gestionados por el **servidor HTTP REST**.
 - Las peticiones 4D for iOS para actualizar las aplicaciones iOS. Estos accesos son gestionados por el **servidor HTTP**.
 
 Cuando se trabaja con un datastore remoto referenciado a través de llamadas al comando `Open datastore`, la conexión entre los procesos que efectúan la petición y el datastore remoto se gestiona a través de sesiones.
 
 ## Apertura de las sesiones
 
-When a 4D application (*i.e.* a process) opens an external datastore using the `Open datastore` command, a session in created on the remote datastore to handle the connection. Esta sesión se identifica utilizando un ID de sesión interno que se asocia al `localID` en la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
+Cuando una aplicación 4D (*es decir* un proceso) abre un datastore externo mediante el comando `Open datastore`, se crea una sesión en el datastore remoto para gestionar la conexión. Esta sesión se identifica utilizando un ID de sesión interno que se asocia al `localID` en la aplicación 4D. Esta sesión gestiona automáticamente el acceso a los datos, a las selecciones de entidades o a las entidades.
 
 El `localID` es local a la máquina que se conecta al datastore remoto, lo que significa:
 

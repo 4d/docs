@@ -107,8 +107,8 @@ Cada tabla expuesta con ORDA ofrece una clase DataClass en el class store `cs`.
 
 Class extends DataClass
 
-// Returns companies whose revenue is over the average
-// Returns an entity selection related to the Company DataClass
+// Devuelve las empresas cuyos ingresos están por encima de la media
+// Devuelve una selección de entidades relacionadas con la clase de datos Company
 
 Function GetBestOnes()
  $sel:=This.query("revenues >= :1";This.all().average("revenues"));
@@ -131,7 +131,7 @@ El catálogo *City* siguiente está expuesto en un datastore remoto (vista parci
 La clase `City` ofrece una API:
 
 ```4d  
-// cs.City class
+// clase cs.City 
 
 Class extends DataClass
 
@@ -173,12 +173,12 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 #### Ejemplo
 
 ```4d
-// cs.EmployeeSelection class
+// Clase cs.EmployeeSelection 
 
 
-Class extends EntitySelection
+Clase extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+//Extrae de esta selección de entidades los empleados con un salario superior a la media 
 
 Function withSalaryGreaterThanAverage
  C_OBJECT($0)
@@ -213,7 +213,7 @@ Function getPopulation()
 
 Function isBigCity
 C_BOOLEAN($0)
-// The getPopulation() function is usable inside the class
+// La función getPopulation() es utilizable en la clase
 $0:=This.getPopulation()>50000
 ```
 
@@ -246,7 +246,7 @@ Al crear o editar clases de modelos de datos, debe prestar atención a las sigui
 
 ## Funciones expuestas y no expuestas
 
-For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
+Por razones de seguridad, todas las funciones de su clase de modelo de datos **no están expuestas** (es decir, son privadas) por defecto a peticiones remotas.
 
 Las peticiones remotas incluyen:
 
@@ -322,8 +322,8 @@ Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 Tenga en cuenta que la función funcionará incluso si eventualmente requiere acceder al servidor (por ejemplo si la caché ORDA está vencida). Sin embargo, es muy recomendable asegurarse de que la función local no accede a los datos del servidor, ya que de lo contrario la ejecución local no podría aportar ninguna ventaja en cuanto al rendimiento. Una función local que genera numerosas peticiones al servidor es menos eficiente que una función ejecutada en el servidor que sólo devolvería los valores resultantes. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
-// Get the youngest students  
-// Inappropriate use of local keyword
+// Obtener los estudiantes más jóvenes 
+// Utilización inapropiada de la palabra clave local
 local Function getYoungest
  var $0 : Object
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
@@ -443,7 +443,7 @@ Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
 
 ### Editar las clases
 
-To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
+Para abrir una clase ORDA definida en el editor de métodos 4D, seleccione o haga doble clic en el nombre de una clase ORDA y utilice **Editar...** en el menú contextual/menú de opciones de la ventana del Explorador:
 
 ![](../assets/en/ORDA/classORDA4.png)
 

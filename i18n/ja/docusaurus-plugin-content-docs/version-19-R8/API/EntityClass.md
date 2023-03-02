@@ -1314,11 +1314,11 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| 引数           | タイプ        |    | 説明                                                                                             |
-| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                                |
-| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                  |
-| options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_\_STAMP プロパティを追加 |
+| 引数           | タイプ        |    | 説明                                                                                                           |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                                              |
+| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                                |
+| options      | Integer    | -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
 | 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト|<!-- END REF -->
 
 |
@@ -1350,6 +1350,13 @@ filter 引数がリレートエンティティズ型の属性を指定する場�
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> 指定されたプロパティのみが取得されます
 
 *options* に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
+
+:::caution 警告
+
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions.
+
+:::
+
 
 #### 例題 1
 

@@ -310,7 +310,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`FILTER EVENT`](https://doc.4d.com/4dv19/help/command/en/page321.html)                            | 321    |
 | [`FILTER KEYSTROKE`](https://doc.4d.com/4dv19/help/command/en/page389.html)                        | 389    |
 | [`Find in array`](https://doc.4d.com/4dv19/help/command/en/page230.html)                           | 230    |
-| [`Find in field`](https://doc.4d.com/4dv19/help/command/en/page653.html)                           | 653    |
+| [`Find in field`](https://doc.4d.com/4dv19/help/command/en/page653.html)                           | 1773   |
 | [`Find in list`](https://doc.4d.com/4dv19/help/command/en/page952.html)                            | 952    |
 | [`Find in sorted array`](https://doc.4d.com/4dv19/help/command/en/page1333.html)                   | 1333   |
 | [`Find window`](https://doc.4d.com/4dv19/help/command/en/page449.html)                             | 449    |

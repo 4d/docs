@@ -381,7 +381,7 @@ O objecto devolvido por `.drop( )` contém as seguintes propriedades:
 | `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista.<br/>**Associated statusText**: "Já bloqueado"                                                                                                                      |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br/>**Associado statusText**: "Outro erro"                                                            |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><li>**Associated statusText***: "O carimbo mudou"</li> |
-| `dk status wrong permission`              | 1     | The current privileges do not allow the drop of the entity. **Associated statusText**: "Permission Error"                                                                                                                      |
+| `dk status wrong permission`              | 1     | Os privilégios actuais não permitem a queda da entidade. **Associated statusText**: "Permission Error"                                                                                                                         |
 
 #### Exemplo 1
 
@@ -1261,7 +1261,7 @@ Os valores abaixo podem ser retornado nas propriedades `status` e `statusText` d
 | `dk status locked`                        | 3     | A entidade está bloqueada por um bloqueio pessimista. **Associated statusText**: "Já bloqueado"                                                                                                                                                                   |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.****Texto status associado: "Outro erro"                                                                                                        |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br/><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br/>**Associated statusText**: "Stamp has changed" |
-| `dk status wrong permission`              | 1     | The current privileges do not allow the save of the entity. **Associated statusText**: "Permission Error"                                                                                                                                                         |
+| `dk status wrong permission`              | 1     | Os privilégios actuais não permitem a salvaguarda da entidade. **Associated statusText**: "Permission Error"                                                                                                                                                      |
 
 #### Exemplo 1
 
@@ -1341,12 +1341,12 @@ Atualizar uma entidade com a opção `dk auto merge` :
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parâmetros   | Tipo       |    | Descrição                                                                                                          |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                                 |
-| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                                     |
-| options      | Integer    | -> | `dk with primary key`: adiciona a propriedade \_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
-| Resultados   | Objeto     | <- | Objeto criado a partir da entidade|<!-- END REF -->                                                      |
+| Parâmetros   | Tipo       |    | Descrição                                                                                                              |
+| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                                     |
+| filterCol    | Collection | -> | Coleção de atributos a extrair                                                                                         |
+| options      | Integer    | -> | `dk with primary key`: adiciona a propriedade \_\_KEY;<br/>`dk with stamp`: adiciona a propriedade \_STAMP |
+| Resultados   | Objeto     | <- | Objeto criado a partir da entidade|<!-- END REF -->                                                          |
 
 #### Descrição
 
@@ -1375,6 +1375,13 @@ Se um filtro for especificado para atributos de relatedEntities [kind](DataClass
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> só se extraem essas propriedades
 
 No parâmetro *options* pode passar o selector `ddk with primary key` ou`dk with stamp` para adicionar as chaves primárias da entidade ou os selos nos objetos extraídos.
+
+:::caution Warning
+
+Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Tenha em mente que é recomendado usar a chave primária como um atributo nas suas relações, especialmente quando usa funções `.toObject()` e `.fromObject()`.
+
+:::
+
 
 #### Exemplo 1
 

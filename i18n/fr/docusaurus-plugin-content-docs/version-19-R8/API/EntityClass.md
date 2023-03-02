@@ -1313,11 +1313,11 @@ Mise à jour d'une entité avec option `dk auto merge` :
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Paramètres   | Type       |    | Description                                                                                                       |
-| ------------ | ---------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                        |
-| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                                               |
-| options      | Integer    | -> | `dk with primary key` : ajouter la propriété \_KEY ;<br/>`dk with stamp` : ajouter la propriété \_STAMP |
+| Paramètres   | Type       |    | Description                                                                                                  |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                   |
+| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                                          |
+| options      | Integer    | -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
 | Résultat     | Object     | <- | Objet généré à partir de l'entité|<!-- END REF -->
 
 |
@@ -1349,6 +1349,13 @@ Si un filtre contient de attributs dont le [kind](DataClassAttributeClass.md#kin
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> seules ces propriétés sont extraites
 
 Dans le paramètre *options*, vous pouvez passer les sélecteurs `dk with primary key` et/ou `dk with stamp` afin d'ajouter les clés primaires et/ou les stamps dans les objets extraits.
+
+:::caution Warning
+
+If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions.
+
+:::
+
 
 #### Exemple 1
 

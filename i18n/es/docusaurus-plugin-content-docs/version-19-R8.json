@@ -8,7 +8,7 @@
     "description": "The label for category Getting Started in sidebar docs"
   },
   "sidebar.docs.category.Core Development": {
-    "message": "Core Development",
+    "message": "Desarrollo",
     "description": "The label for category Core Development in sidebar docs"
   },
   "sidebar.docs.category.Project Management": {
@@ -96,7 +96,7 @@
     "description": "The label for category 4D View Pro in sidebar docs"
   },
   "sidebar.docs.category.Web Applications": {
-    "message": "Web Applications",
+    "message": "Aplicaciones web",
     "description": "The label for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
@@ -124,7 +124,7 @@
     "description": "The label for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications": {
-    "message": "Desktop Applications",
+    "message": "Aplicaciones de escritorio",
     "description": "The label for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Client/Server": {
@@ -148,7 +148,7 @@
     "description": "The label for category Form Objects in sidebar docs"
   },
   "sidebar.docs.category.Form Object Properties": {
-    "message": "Form Object Properties",
+    "message": "Propiedades de los objetos de formulario",
     "description": "The label for category Form Object Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Events": {

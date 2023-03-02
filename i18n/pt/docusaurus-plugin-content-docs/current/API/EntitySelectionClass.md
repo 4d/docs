@@ -707,10 +707,10 @@ $values:=ds. Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Parâmetros | Tipo                |    | Descrição                                                                                                                   |
-| ---------- | ------------------- |:--:| --------------------------------------------------------------------------------------------------------------------------- |
-| mode       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                            |
-| Resultados | 4D. EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF --> |
+| Parâmetros | Tipo                |    | Descrição                                                                                                                                          |
+| ---------- | ------------------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                                                   |
+| Resultados | 4D. EntitySelection | <- | Entidade de seleção vazia se for executada com êxito, se nenhuma entity selection contendo as entidades não elimináveis|<!-- END REF --> |
 
 #### Descrição
 
@@ -2074,7 +2074,7 @@ No parâmetro *opções* , pode passar os seletores `dk com chave primária` e/o
 
 :::caution Warning
 
-If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
+Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Tenha em mente que é recomendado usar a chave primária como um atributo nas suas relações, especialmente quando usa funções `.toCollection()` e `.fromCollection()`.
 
 :::
 

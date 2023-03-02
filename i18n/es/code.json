@@ -9,13 +9,13 @@
     "message": "Trabajar con un proyecto"
   },
   "homepage.sections.core-development.title": {
-    "message": "Core Development"
+    "message": "Desarrollo"
   },
   "Project Management": {
     "message": "Gestión del proyecto"
   },
   "Language Concepts": {
-    "message": "Language Concepts"
+    "message": "Conceptos del lenguaje"
   },
   "Language Reference (4D Doc Center)": {
     "message": "Lenguaje (4D Doc Center)"
@@ -99,7 +99,7 @@
     "message": "Plugins de desarrollo"
   },
   "homepage.sections.web-applications.title": {
-    "message": "Web Applications"
+    "message": "Aplicaciones web"
   },
   "Web Server": {
     "message": "Servidor Web"
@@ -111,7 +111,7 @@
     "message": "Servidor REST"
   },
   "homepage.sections.desktop-applications.title": {
-    "message": "Desktop Applications"
+    "message": "Aplicaciones de escritorio"
   },
   "Client/Server": {
     "message": "Cliente/Servidor"
@@ -126,7 +126,7 @@
     "message": "Objetos formularios"
   },
   "Form Object Properties": {
-    "message": "Form Object Properties"
+    "message": "Propiedades de los objetos de formulario"
   },
   "Form Events": {
     "message": "Eventos formulario"
@@ -150,7 +150,7 @@
     "message": "4D for iOS (Archive)"
   },
   "4D banner logo": {
-    "message": "4D banner logo"
+    "message": "Logotipo del banner 4D"
   },
   "homepage.hero.title": {
     "message": "Documentación para desarrolladores 4D"

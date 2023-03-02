@@ -147,7 +147,7 @@ MyNumber:=3
 
 crea la variable _MyNumber_ y pone en ella el número 3. Si MyNumber ya existe, entonces toma el valor 3.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> Normalmente no se recomienda crear variables sin [declarar su tipo](#creating-variables).
 
 Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
 

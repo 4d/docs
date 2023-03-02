@@ -9,11 +9,11 @@ Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de
 
 Hay diferentes maneras de configurar los parámetros del servidor web 4D, en función del alcance y del servidor que se quiera configurar:
 
-| Ubicación del parámetro                 | Alcance                                                  | Servidor web a utilizar                                               |
-| --------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------- |
-| [objeto webServer](webServerObject.md)  | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
-| `WEB SET OPTION` o comando `WEB XXX`    | Temporal (sesión actual)                                 | Servidor principal                                                    |
-| **Settings** dialog box (**Web** pages) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
+| Ubicación del parámetro                           | Alcance                                                  | Servidor web a utilizar                                               |
+| ------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------- |
+| [objeto webServer](webServerObject.md)            | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
+| `WEB SET OPTION` o comando `WEB XXX`              | Temporal (sesión actual)                                 | Servidor principal                                                    |
+| Caja de diálogo **Propiedades** (páginas **web**) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
 
 > Algunos parámetros no están disponibles desde todos los lugares.
 
@@ -117,7 +117,7 @@ Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vací
 | objeto webServer    | `debugLog`      | number      |
 | `WEB SET OPTION`    | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
+Estado del archivo de registro de peticiones HTTP del servidor web (HTTPDebugLog_nn.txt, almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
 
 | Valor | Constante   | Descripción                              |
 | ----- | ----------- | ---------------------------------------- |
@@ -319,8 +319,8 @@ Valores posibles: cadena de direcciones IP. Los formatos IPv6 (por ejemplo "2001
 - **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
- 2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
- 2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+ 2001:0DB8::85a3:0:ac1f:8001 // Dirección IPv6
+ 2001:0DB8::85a3:0:ac1f:8001:8081 // Dirección IPv6 con puerto 8081
 ```
 
 Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que se combine una dirección IPv6 con un número de puerto, por ejemplo:
@@ -331,13 +331,13 @@ Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que
 
 ## Sesiones Keep
 
-| Puede ajustarse con           | Nombre                                             | Comentarios |
-| ----------------------------- | -------------------------------------------------- | ----------- |
-| objeto webServer              | [`keepSession`](API/WebServerClass.md#keepsession) |             |
-| `WEB SET OPTION`              | `Web keep session`                                 |             |
-| Caja de diálogo de parámetros | Options (I) page/Automatic Session Management      |             |
+| Puede ajustarse con           | Nombre                                               | Comentarios |
+| ----------------------------- | ---------------------------------------------------- | ----------- |
+| objeto webServer              | [`keepSession`](API/WebServerClass.md#keepsession)   |             |
+| `WEB SET OPTION`              | `Web keep session`                                   |             |
+| Caja de diálogo de parámetros | Página Opciones (I) / Gestión automática de sesiones |             |
 
-Estado de la gestión de sesión para el servidor web 4D. Session mechanism is described in the [Session Management](sessions.md) section.
+Estado de la gestión de sesión para el servidor web 4D. El funcionamiento de las sesiones se describe en la sección [Gestión de las sesiones](sessions.md).
 
 True por defecto (activado).
 
@@ -363,7 +363,7 @@ Este parámetro permite seleccionar el formato de este archivo. Valores disponib
 | 3     | Registro en formato ELF     | Extended Log Format - A personalizar en la caja de diálogo de las Propiedades                                                                                                                                                             |
 | 4     | Registro en formato WLF     | WebStar Log Format - A personalizar en la caja de diálogo de las Propiedades                                                                                                                                                              |
 
-> Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. Si utiliza uno de estos formatos sin haber seleccionado ninguno de sus campos en esta página, el archivo de registro no se generará.
+> Los formatos 3 y 4 son formatos personalizados cuyo contenido debe definirse previamente en la caja de diálogo de Propiedades. Si utiliza uno de estos formatos sin haber seleccionado ninguno de sus campos en esta página, el archivo de registro no se generará.
 
 ## Procesos Web simultáneos maximos
 
@@ -373,7 +373,7 @@ Este parámetro permite seleccionar el formato de este archivo. Valores disponib
 | `WEB SET OPTION`              | `Web max concurrent processes`                                           |             |
 | Caja de diálogo de parámetros | Página Opciones (I)/Máximo de Procesos Web Concurrentes                  |             |
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server. Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
+Límite estrictamente alto de procesos web concurrentes que pueden estar abiertos simultáneamente en el servidor. Este parámetro permite evitar la saturación del servidor como resultado de un número masivo de peticiones. Cuando se alcanza el número máximo de procesos web concurrentes (menos uno), 4D deja de crear nuevos procesos y envía el estado HTTP `503 - Servicio no disponible` a todas las nuevas peticiones.
 
 Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
@@ -582,7 +582,7 @@ Permite optimizar el funcionamiento del Servidor Web 4D en modo remoto reutiliza
 Cuando la opción **Reutilizar los contextos temporales** está seleccionada, en modo remoto, 4D mantiene los procesos web específicos y los reutiliza para las siguientes peticiones. Al eliminar la etapa de creación del proceso, se mejora el rendimiento del servidor web.
 
 A cambio, debe asegurarse en este caso de inicializar sistemáticamente las variables utilizadas en los métodos 4D para evitar obtener resultados incorrectos. Del mismo modo, es necesario borrar las selecciones actuales o los registros definidos durante la petición anterior.
-> - This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
+> - Esta opción se marca (y bloquea) automáticamente cuando se marca la opción **Gestión automática de las sesiones**. En realidad, el mecanismo de gestión de sesiones se basa en el principio de reciclaje de procesos web: cada sesión utiliza el mismo proceso que se mantiene durante toda la vida de la sesión. Sin embargo, tenga en cuenta que los procesos de sesión no pueden "compartirse" entre diferentes sesiones: una vez finalizada la sesión, el proceso se mata automáticamente (y no se reutiliza). Por lo tanto, en este caso no es necesario reinicializar las selecciones o variables.
 > 
 > - Esta opción sólo tiene efecto con un servidor web 4D en modo remoto. Con un 4D en modo local, todos los procesos web (que no sean procesos de sesión) son eliminados después de su uso.
 
