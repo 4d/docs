@@ -800,7 +800,7 @@ This principle is implemented for internal arrays that can be used to manage:
 - background colors
 
 - styles
-- hidden rows
+- filas ocultas
 - seleções
 
 For example, if you want to select the row containing Rennes, you must pass:
@@ -991,7 +991,7 @@ OB SET($ob;"value";$entry)
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
 > Null values are supported and result in an empty cell.
 
-#### min and max
+#### mín. e máx
 
 When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
 
