@@ -129,15 +129,16 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号を振られたローカル変数 ($1, $2, ...$n) に格納されます。 メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:
+プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. メソッドを呼び出すには、メソッド名を書きます:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) // Do_Something メソッドを呼び出します
+$myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
 
-  // Do_Something メソッドのコードです
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -183,16 +184,16 @@ $vAge:=employee.children[2].age
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() // "Hello world!" を表示します
 ```
 
 コレクションの要素にアクセスするためには、大カッコでくくった要素番号を渡します:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
+myColl[3]  //access to 4th element of the collection
 ```
 
 ## クラス
@@ -372,12 +373,12 @@ $str:=String("hello"+\
 コードの後や行の最初に `//` を使うと、その後のテキストはすべてコメントとなります。 例:
 
 ```4d
-// これはコメントです
-For($vCounter;1;100) // ループを開始します
-  // コメント
-  // コメント
-  // コメント
- End for
+//This is a comment
+For($vCounter;1;100) //Starting loop
+  //comment
+  //comment
+  //comment
+End for
 ```
 
 #### インラインコメント、および複数行コメント (`/*コメント*/`)
