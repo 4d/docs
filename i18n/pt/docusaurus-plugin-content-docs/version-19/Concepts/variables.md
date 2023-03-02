@@ -70,7 +70,7 @@ The following table lists all supported `varType` values:
 | `Hora`                 | Valor Hora                               |
 | `Booleano`             | Boolean value                            |
 | `Integer`              | Long integer value                       |
-| `Real`                 | Real value                               |
+| `Real`                 | Valor real                               |
 | `Ponteiro`             | Pointer value                            |
 | `Imagem`               | Picture value                            |
 | `Blob`                 | BLOB value                               |
