@@ -256,13 +256,13 @@ The same symbols are often used for different operations, depending on the data 
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
 
-## Expressions
+## Expressões
 
 Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
 
 Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. It includes:
+Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Inclui:
 
 - Formula editor (apply formula, query with formula, order by formula)
 - The `EXECUTE FORMULA` command

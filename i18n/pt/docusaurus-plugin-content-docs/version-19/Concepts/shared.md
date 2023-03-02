@@ -20,7 +20,7 @@ A unique, global catalog returned by the `Storage` command is always available t
 
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
 
-### Modification
+### Modificação
 
 Modifications can be applied to shared objects and shared collections:
 
@@ -54,7 +54,7 @@ Reading properties or elements of a shared object/collection is allowed without 
 
 However, it is necessary to read a shared object/collection within `Use... End use` when several values are linked together and must be read at once, for consistency reasons.
 
-### Duplication
+### Duplicação
 
 Calling `OB Copy` with a shared object (or with an object containing shared object(s) as properties) is possible, but will return a standard (not shared) object including its contained objects (if any).
 

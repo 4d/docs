@@ -3,7 +3,7 @@ id: gettingStarted
 title: Começando
 ---
 
-This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
+This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Vamos começar!
 
 ## Hello World Example
 
@@ -91,7 +91,7 @@ http://localhost/friends.shtml
 
 ![](../assets/en/WebServer/hello3bis.png)
 
-### REST request
+### Pedido REST
 
 If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
 

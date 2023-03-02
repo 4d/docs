@@ -12,7 +12,7 @@ You can start or stop publication of the web application at any time. To do so, 
 
 Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
 
-## Ready-to-use
+## Pronto a usar
 
 The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
 

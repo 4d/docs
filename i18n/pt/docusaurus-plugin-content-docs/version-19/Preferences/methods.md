@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Methods Page
+title: Página Métodos
 ---
 
 This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
@@ -51,7 +51,7 @@ The **font** and **font size** menus allows you to select the font name and size
 
 You can set different font styles and colors (font color or background color) for each type of language element. You can select the element(s) to customize in the Category list.
 
-### Other Styles
+### Outros estilos
 
 These options configure the various colors used in the Method editor and debugger interfaces.
 

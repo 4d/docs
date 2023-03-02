@@ -157,13 +157,13 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtema      | Descrição                                                    | Can the values be modified? |
-| ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Sim                         |
-| Processo     | List of process variables used by the current process        | Sim                         |
-| Local        | List of local variables used by the method being traced      | Sim                         |
-| Parâmetros   | List of parameters received by the method                    | Sim                         |
-| Self         | Pointer to the current object, when tracing an Object Method | No                          |
+| Subtema       | Descrição                                                    | Can the values be modified? |
+| ------------- | ------------------------------------------------------------ | --------------------------- |
+| Interprocesso | List of interprocess variables being used at this point      | Sim                         |
+| Processo      | List of process variables used by the current process        | Sim                         |
+| Local         | List of local variables used by the method being traced      | Sim                         |
+| Parâmetros    | List of parameters received by the method                    | Sim                         |
+| Self          | Pointer to the current object, when tracing an Object Method | No                          |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
@@ -187,7 +187,7 @@ Some objects, such as list box arrays, can be presented as two distinct objects,
 
 Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
 
-#### Semaphores
+#### Semáforos
 
 This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 

@@ -142,7 +142,7 @@ Note that with this option, whatever the internal thread safety evaluation, the 
 
 Availability attributes specify the external services which are allowed to explicitly call the method.
 
-#### Web Services
+#### Serviços Web
 
 This attribute lets you publish the current method as a Web Service accessible via SOAP requests. For more information, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html) chapter. When this option is checked, the **Published in WSDL** option is enabled.
 

@@ -7,7 +7,7 @@ Errors are common. It would be unusual to write a substantial number of lines of
 
 The 4D development environment provides several debugging tools for all types of errors.
 
-## Error types
+## Tipos de erro
 
 ### Typing errors
 

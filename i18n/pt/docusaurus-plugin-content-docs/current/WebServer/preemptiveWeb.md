@@ -92,7 +92,7 @@ The following 4D Web Server URLs are thread-safe and can be used in preemptive m
 
 Both the Runtime Explorer and the 4D Server administration window display a specific icon for preemptive web processes:
 
-| Process type          | Ícone                                       |
+| Tipo de processo      | Ícone                                       |
 | --------------------- | ------------------------------------------- |
 | Preemptive web method | ![](../assets/en/WebServer/processIcon.png) |
 

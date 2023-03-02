@@ -220,7 +220,7 @@ The SMTP connection is automatically closed:
 | Parâmetros | Tipo   |    | Descrição                                         |
 | ---------- | ------ |:--:| ------------------------------------------------- |
 | mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Resultados | Objeto | <- | SMTP status|<!-- END REF -->            |
+| Resultados | Objeto | <- | Status SMTP|<!-- END REF -->            |
 
 #### Descrição
 
