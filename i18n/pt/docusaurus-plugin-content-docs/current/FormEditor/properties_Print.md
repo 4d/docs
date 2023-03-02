@@ -12,9 +12,9 @@ Allows defining specific print settings for the form. This feature is useful to 
 
 You can modify the following print settings:
 
-*   Paper format
+*   Formato de papel
 *   Paper orientation
-*   Page scaling
+*   Escala de página
 
 
 > Available options depend on the system configuration.
