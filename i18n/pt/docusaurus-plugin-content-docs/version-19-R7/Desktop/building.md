@@ -533,7 +533,7 @@ To obtain a developer certificate from Apple, Inc., you can use the commands of 
 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
 
-#### About Gatekeeper
+#### Sobre Gatekeeper
 
 Gatekeeper is a security feature of OS X that controls the execution of applications downloaded from the Internet. If a downloaded application does not come from the Apple Store or is not signed, it is rejected and cannot be launched.
 
