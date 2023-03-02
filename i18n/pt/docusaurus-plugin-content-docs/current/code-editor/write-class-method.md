@@ -31,7 +31,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Navigation dropdown**       | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See below                                                                                                                                                                                                                         |
 
 
-### Editing area
+### Área de edição
 
 This is where you write and edit your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
 
@@ -344,7 +344,7 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 ![](../assets/en/code-editor/clipboards-2.png)
 
 
-### Moving lines
+### Linhas em movimento
 
 You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the **Alt/Option** + **Up Arrow** or **Down Arrow** [keyboard shorcut](#shortcuts).
 
@@ -391,8 +391,8 @@ If the characters typed correspond to different types of objects, the list displ
 - Local, process or interprocess variable, declared in the method
 - Object property names
 - Plug-in commands
-- 4D keywords
-- SQL keywords
+- Palavras-chave 4D
+- Palavras-chave SQL
 - Macros (displayed between < >)
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
@@ -469,7 +469,7 @@ Click the **Replace all** button to replace all the occurrences corresponding to
 
 
 
-### Find Same
+### Encontrar o mesmo
 
 The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
 
@@ -573,7 +573,7 @@ There are several ways to expand and collapse code:
 Blocks can be defined by:
 
 - Quotation marks
-- Parentheses
+- Parênteses
 - A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Chaves
 
