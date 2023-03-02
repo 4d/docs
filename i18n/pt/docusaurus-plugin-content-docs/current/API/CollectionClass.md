@@ -1031,7 +1031,7 @@ Pode determinar a chamada de retorno a ser executada para filtrar os elementos d
 - *fórmula* (sintaxe recomendada), um [Objecto de fórmula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos de projecto;
 - *methodName*, o nome de um método projeto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional) and an object in first parameter (*$1*). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **verdadeiro** para cada elemento que preencha a condição e, portanto, para empurrar para a nova colecção.
+A chamada de retorno é chamada com o(s) parâmetro(s) passado(s) em *param* (opcional) e um objecto no primeiro parâmetro (*$1*). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **verdadeiro** para cada elemento que preencha a condição e, portanto, para empurrar para a nova colecção.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
