@@ -1,15 +1,15 @@
 ---
 id: overview
-title: Class functions
+title: Funciones Clase
 ---
 
-This section describes the built-in 4D class functions as well as the associated constructor commands. Las funciones y propiedades de clase 4D están disponibles a través de los objetos de instancia de clase.
+En este apartado se describen las funciones integradas en la clase 4D, así como los comandos constructores asociados. Las funciones y propiedades de clase 4D están disponibles a través de los objetos de instancia de clase.
 
 - las funciones deben llamarse en las instancias con el operador `()`. Por ejemplo, `collection.sort()`.
 - se accede a las propiedades sin paréntesis, por ejemplo `file.creationTime`. También puede utilizar la sintaxis \[], por ejemplo `file["creationTime"]`.
 - pueden ejecutarse de forma independiente, con o sin parámetros. Por ejemplo `Folder(fk database folder)`.
 
-## Writing conventions
+## Convenciones de escritura
 
 En la sintaxis de la función se utilizan las siguientes convenciones:
 
