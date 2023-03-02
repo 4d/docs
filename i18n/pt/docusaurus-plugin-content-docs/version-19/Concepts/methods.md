@@ -8,7 +8,7 @@ A method is basically a piece of code that executes one or several actions. Um m
 
 The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
-## Method Types
+## Tipos de métodos
 
 In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
@@ -151,7 +151,7 @@ Note that, even if it does not have parameters, an object method to be executed 
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Menu Methods
+### Métodos do menu
 A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
