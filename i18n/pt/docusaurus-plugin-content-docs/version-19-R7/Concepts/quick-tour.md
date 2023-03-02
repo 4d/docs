@@ -59,13 +59,13 @@ A linha de código lê “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Comandos
 
-Os comandos 4D são métodos integrados para realizar uma ação. Todos os comandos 4D, como `CREATE RECORD`, o `ALERT`, se descrevem no manual _Linguagem de 4D_, agrupados por temas. Comandos são frequentemente usados com parâmetros, que são passados em parênteses () e separados por ponto e vírgula (;). Exemplo:
+Os comandos 4D são métodos integrados para realizar uma ação. Comandos são frequentemente usados com parâmetros, que são passados em parênteses () e separados por ponto e vírgula (;). Exemplo:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Alguns comandos são anexados à coleções ou objetos, em cujo caso são métodos temporais que se utilizam com a notação de pontos. Por exemplo:
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Por exemplo:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -121,17 +121,22 @@ O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 For($vlChar;1;Length(vtSomeText))
     //Do something with the character if it is a TAB
 
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Quando chamar um método, apenas digite seu nome:
 
 ```4d
-$f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+ALERT($myText) //"HELLO"
+
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -176,17 +181,15 @@ $vAge:=employee.children[2].age
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
 ```
-$o:=cs.myClass.new()
-$o.who:="World"
-$message:=$o.myClass.hello()  
-//$message:
+$f:=New object
+$f.message:=Formula(ALERT("Hello world!"))
 "Hello World"
 ```
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
@@ -202,15 +205,15 @@ To instantiate an object of the class in a method, call the user class from the 
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
-//in the myClass.4dm file Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+//in the myClass.4dm file
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $f:=New object
@@ -221,17 +224,28 @@ $f.message() //displays "Hello world!"
 Optionally, use the `Class constructor` keyword to declare properties of the object.
 
 ```4d  
-//in the Rectangle.4dm file Class constructor C_LONGINT($1;$2)
-This.height:=$1 This.width:=$2 This.name:="Rectangle"
+//in the Rectangle.4dm file
+Class constructor
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
+This.name:="Rectangle"
 ```
 
 A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Por exemplo:
 
 ```4d  
-//in the Square.4dm file Class extends rectangle Class constructor C_LONGINT($1)
+//in the Square.4dm file
+Class extends rectangle
+
+Class constructor
+var $length : Integer
 
   // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height Super($1;$1) This.name:="Square"
+  // provided for the Rectangle's width and height
+Super($length;$length)
+
+This.name:="Square"
 ```
 
 
@@ -352,11 +366,12 @@ Both styles of comments can be used simultaneously.
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
 ```4d
-//This is a comment For($vCounter;1;100) //Starting loop
+//This is a comment
+For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
 #### Inline or multiline comments (`/*comment*/`)
