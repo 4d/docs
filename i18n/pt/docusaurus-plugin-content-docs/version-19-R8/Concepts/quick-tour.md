@@ -127,12 +127,16 @@ For($vlChar;1;Length(vtSomeText))
     End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Quando chamar um método, apenas digite seu nome:
 
 ```4d
-$f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+ALERT($myText) //"HELLO"
+
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -177,17 +181,15 @@ $vAge:=employee.children[2].age
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
 ```
-$o:=cs.myClass.new()
-$o.who:="World"
-$message:=$o.myClass.hello()  
-//$message:
+$f:=New object
+$f.message:=Formula(ALERT("Hello world!"))
 "Hello World"
 ```
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
@@ -364,11 +366,12 @@ Both styles of comments can be used simultaneously.
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
 ```4d
-//This is a comment For($vCounter;1;100) //Starting loop
+//This is a comment
+For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
 #### Inline or multiline comments (`/*comment*/`)
