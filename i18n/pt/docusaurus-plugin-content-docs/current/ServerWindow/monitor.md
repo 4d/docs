@@ -1,6 +1,6 @@
 ---
 id: monitor
-title: Monitor Page
+title: Página Monitor
 ---
 
 The **Monitor** page displays dynamic information concerning database use as well as information about the system and the 4D Server application.
@@ -9,7 +9,7 @@ The **Monitor** page displays dynamic information concerning database use as wel
 
 > On Windows, some of the system information displayed on this page are retrieved via the Windows "Performance Analyzer" tools. These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
 
-## Graphic area
+## Área gráfica
 
 The graphic area lets you see the evolution in real time of several parameters: the CPU usage, network traffic and memory. You select the parameter to be displayed via a menu found in the center of the window:
 
@@ -37,7 +37,7 @@ The "Overview" area provides various information concerning the system, applicat
 
 Usually, you will need to check the [**Licences Manager**](Admin/licenses.md).
 
-## Details Area
+## Área Detalhes
 
 The "Details" area repeats part of the information displayed in the graphic area and provides additional information as well.
 
