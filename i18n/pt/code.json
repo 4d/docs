@@ -66,7 +66,7 @@
     "message": "Backup and Restore"
   },
   "homepage.sections.textensions.title": {
-    "message": "Extensions"
+    "message": "Extensões"
   },
   "Overview": {
     "message": "Visão Geral"
@@ -259,7 +259,7 @@
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "light mode",
+    "message": "modo Claro",
     "description": "The name for the light color mode"
   },
   "theme.docs.breadcrumbs.home": {
