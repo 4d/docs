@@ -10,9 +10,9 @@ Using the 4D language, printing the traditional "Hello, world!" message on scree
 ALERT("Hello, World!")
 ```
 
-This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Method editor:
+This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Code Editor:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
 
@@ -60,13 +60,13 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
+4D commands are built-in methods to perform an action. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example: 
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. For example: 
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -100,7 +100,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Method editor. 
+> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor. 
 
 ## Methods
 
@@ -122,21 +122,24 @@ The following example goes through all the characters of the text vtSomeText:
 ```4d
 For($vlChar;1;Length(vtSomeText))
 	//Do something with the character if it is a TAB
+
+
 	If(Character code(vtSomeText[[$vlChar]])=Tab)
 		//...
 	End if
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. When you call a method, you just type its name:
 
 ```4d
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
  
-  //Here the code of the method Do_Something
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -182,14 +185,14 @@ Note that if the object property value is an object that encapsulates a method (
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 ```
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
@@ -205,16 +208,15 @@ To instantiate an object of the class in a method, call the user class from the 
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance. 
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance. 
 
 ```4d  
 //in the myClass.4dm file
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance. 
+To execute a class member function, just use the `()` operator on the member function of the object instance. 
 
 ```4d
 $o:=cs.myClass.new()
@@ -228,9 +230,9 @@ Optionally, use the `Class constructor` keyword to declare properties of the obj
 ```4d  
 //in the Rectangle.4dm file
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
@@ -241,11 +243,11 @@ A class can extend another class by using `Class extends <ClassName>`. Superclas
 Class extends rectangle
  
 Class constructor
-C_LONGINT($1)
+var $length : Integer
  
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height
-Super($1;$1)
+Super($length;$length)
 
 This.name:="Square"
 ```
@@ -343,6 +345,20 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Comments
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called. 
@@ -354,7 +370,7 @@ There are two ways to create comments:
 
 Both styles of comments can be used simultaneously. 
 
-#### Single line comments (//)
+#### Single line comments (`//comment`)
 
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Example: 
 
@@ -364,10 +380,10 @@ For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
@@ -392,3 +408,26 @@ comments
 ...
 End for
 ```
+
+## Escape sequences  
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+In 4D, the following escape sequences can be used:
+
+|Escape sequence|Character replaced|
+|---|---|
+| `\n` | LF (Line feed) |
+| `\t` | HT (Tab) |
+| `\r` | CR (Carriage return) |
+| `\\` | `\` (Backslash) |
+| `\"` | " (Quotation marks) |
+
+> It is possible to use either upper or lower case in escape sequences.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+

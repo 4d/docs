@@ -130,15 +130,16 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. When you call a method, you just type its name:
 
 ```4d
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
  
-  //Here the code of the method Do_Something
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -184,14 +185,14 @@ Note that if the object property value is an object that encapsulates a method (
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 ```
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
@@ -379,7 +380,7 @@ For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
 #### Inline or multiline comments (`/*comment*/`)
