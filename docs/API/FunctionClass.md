@@ -3,9 +3,8 @@ id: FunctionClass
 title: Function
 ---
 
-### About Function objects
 
-A `4D.Function` object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D proposes three kinds of `Function` objects:
+A **`4D.Function`** object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D proposes three kinds of `Function` objects:
 
 - **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
 - **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
@@ -13,7 +12,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 
 
-### Formula Objects
+### Formula objects
 
 The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
