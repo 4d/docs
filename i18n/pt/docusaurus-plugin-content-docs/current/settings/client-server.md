@@ -24,7 +24,7 @@ This option lets you change the publication name of a 4D Server database, *i.e.*
 
 > This parameter is not taken into account in custom client-server applications. In theory, the client application connects directly to the server application, without passing by the connection dialog box. However, in the event of an error, this dialog box can appear; in this case, the publication name of the server application is the name of the compiled project.
 
-#### Port Number
+#### Número do porto
 
 This option lets you change the TCP port number on which 4D Server publishes the database. This information is stored in the project and on each client machine. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
 
