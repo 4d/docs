@@ -46,7 +46,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
 - Running time (in seconds) of the process since its creation,
 - Percentage of time that 4D Server has devoted to this process (ratio).
 
-## Process Type
+## Tipo de processo
 
 Each process is identified by an icon as well as a type. The color and form of the icon indicates the type of process:
 
