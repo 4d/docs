@@ -1,15 +1,15 @@
 ---
 id: overview
-title: Class functions
+title: クラス関数
 ---
 
-This section describes the built-in 4D class functions as well as the associated constructor commands. 4Dクラス関数およびプロパティは、クラスインスタンス オブジェクトによって提供されます。
+この章では、ビルトインの 4D クラス関数および関連するコンストラクターコマンドを説明します。 4Dクラス関数およびプロパティは、クラスインスタンス オブジェクトによって提供されます。
 
 - 関数は、インスタンスに対し、`()` 演算子を使って呼び出します。 例: `collection.sort()`。
 - プロパティにアクセスする場合は、カッコを使いません。 例: `file.creationTime`。 また、\[] シンタックスも使用可能です。 例: `file["creationTime"]`。
 - コマンドは独立して、引数付きあるいは引数なしで呼び出すことができます。 例: `Folder(fk database folder)`。
 
-## Writing conventions
+## 表記規則
 
 関数シンタックスでは、次の表記が使われています:
 
