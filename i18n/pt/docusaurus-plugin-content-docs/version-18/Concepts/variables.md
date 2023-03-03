@@ -45,7 +45,7 @@ The following are some basic variable declarations:
  ARRAY LONGINT(alAnArray;10) //A variável do processo alAnArray se declara como um array Inteiro longo de 10 elementos
 ```
 
-## Assigning Data
+## Atribuição de dados
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 

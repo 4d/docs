@@ -88,7 +88,7 @@
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Extensions": {
-    "message": "Extensions",
+    "message": "Extensões",
     "description": "The label for category Extensions in sidebar docs"
   },
   "sidebar.docs.category.4D View Pro": {

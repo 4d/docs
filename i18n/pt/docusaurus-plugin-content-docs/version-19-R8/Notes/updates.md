@@ -150,15 +150,15 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 <details><summary>Click to see the table of libraries used in 4D</summary>
 
-| Library  | Current version | Updated in 4D | Comentário                                                                               |
-| -------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
-| SpreadJS | 15.2.5          | 19 R8         | 4D View Pro engine                                                                       |
-| CEF      | 106.0.27        | 19 R8         | Chromium 106.0.5249.103                                                                  |
-| OpenSSL  | 1.1.1s          | 19 R7         |                                                                                          |
-| libzip   | 1.7.3           | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
-| webKit   | WKWebView       | 19            |                                                                                          |
-| ICU      | 68.1            | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| PHP      | 7.3.27          | 18 R6         |                                                                                          |
-| libldap  | 2.4.48          | 18 R2         |                                                                                          |
+| Biblioteca | Current version | Updated in 4D | Comentário                                                                               |
+| ---------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
+| SpreadJS   | 15.2.5          | 19 R8         | 4D View Pro engine                                                                       |
+| CEF        | 106.0.27        | 19 R8         | Chromium 106.0.5249.103                                                                  |
+| OpenSSL    | 1.1.1s          | 19 R7         |                                                                                          |
+| libzip     | 1.7.3           | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
+| webKit     | WKWebView       | 19            |                                                                                          |
+| ICU        | 68.1            | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| PHP        | 7.3.27          | 18 R6         |                                                                                          |
+| libldap    | 2.4.48          | 18 R2         |                                                                                          |
 
 </details>

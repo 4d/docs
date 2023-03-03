@@ -517,7 +517,7 @@ This -> Object
 
 | Parâmetros | Tipo   |    | Descrição      |
 | ---------- | ------ | -- | -------------- |
-| Resultados | object | <- | Current object |
+| Resultados | object | <- | Objecto actual |
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
 
@@ -567,7 +567,7 @@ $val:=$o.f() //8
 
 In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
 
-## Class commands
+## Comandos de classe
 
 Several commands of the 4D language allows you to handle class features.
 

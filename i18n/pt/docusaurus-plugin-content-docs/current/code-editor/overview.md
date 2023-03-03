@@ -92,7 +92,7 @@ Database methods cannot be renamed. The same goes for triggers, form methods, an
 
 You can control how project methods are used and/or called in different contexts using attributes. Note that you can set attributes for an entire selection of project methods using the Explorer (see following section).
 
-#### Invisible
+#### Invisível
 
 If you do not want users to be able to run a project method using the **Method...** command of the **Run** menu, you can make it Invisible by checking this option. An invisible method does not appear in the method execution dialog box.
 

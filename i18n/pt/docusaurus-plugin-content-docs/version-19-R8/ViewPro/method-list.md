@@ -1,6 +1,6 @@
 ---
 id: method-list
-title: Method List
+title: Lista de métodos
 ---
 
 > **Warning**: The commands on this page are not thread-safe.
@@ -142,11 +142,11 @@ Resultados:
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
-| Parâmetros | Tipo    |    | Descrição                             |
-| ---------- | ------- | -- | ------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name     |
-| sheet      | Integer | -> | Index of the new sheet                |
-| name       | Text    | -> | Sheet name|<!-- END REF --> |
+| Parâmetros | Tipo    |    | Descrição                                |
+| ---------- | ------- | -- | ---------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name        |
+| sheet      | Integer | -> | Index of the new sheet                   |
+| name       | Text    | -> | Nome da folha|<!-- END REF --> |
 
 #### Descrição
 
@@ -1257,7 +1257,7 @@ The returned object contains defined font attributes as properties. For more inf
 
 #### Exemplo 1
 
-This code:
+Este código:
 
 ```4d
 $font:=VP Font to object("16pt arial")
@@ -1399,7 +1399,7 @@ To get the details about the style in the selected cell (B2):
 
 ![](../assets/en/ViewPro/cmd_vpGetCellStyle.PNG)
 
-This code:
+Este código:
 
 ```4d
 $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
@@ -1609,7 +1609,7 @@ To get the details about the default style for this document:
 
 ![](../assets/en/ViewPro/cmd_vpGetDefaultStyle.PNG)
 
-This code:
+Este código:
 
 ```4d
 $defaultStyle:=VP Get default style("myDoc")
@@ -1877,7 +1877,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet (cou
 
 #### Exemplo
 
-This code:
+Este código:
 
 ```4d
 $pinfo:=VP Get print info("ViewProArea")
@@ -2096,7 +2096,7 @@ Get the sheet count and set the current sheet to the last sheet:
 | Parâmetros      | Tipo    |    | Descrição                              |
 | --------------- | ------- | -- | -------------------------------------- |
 | vpAreaName      | Text    | -> | 4D View Pro area form object name      |
-| name            | Text    | -> | Sheet name                             |
+| name            | Text    | -> | Nome da folha                          |
 | Function result | Integer | <- | Sheet index|<!-- END REF --> |
 
 #### Descrição
@@ -2131,11 +2131,11 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
-| Parâmetros      | Tipo    |    | Descrição                             |
-| --------------- | ------- | -- | ------------------------------------- |
-| vpAreaName      | Text    | -> | 4D View Pro area form object name     |
-| sheet           | Integer | -> | Sheet index                           |
-| Function result | Text    | <- | Sheet name|<!-- END REF --> |
+| Parâmetros      | Tipo    |    | Descrição                                |
+| --------------- | ------- | -- | ---------------------------------------- |
+| vpAreaName      | Text    | -> | 4D View Pro area form object name        |
+| sheet           | Integer | -> | Sheet index                              |
+| Function result | Text    | <- | Nome da folha|<!-- END REF --> |
 
 #### Descrição
 
@@ -2400,7 +2400,7 @@ In this case, the current sheet uses two style objects:
 | Parâmetros | Tipo    |    | Descrição                                             |
 | ---------- | ------- | -- | ----------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                     |
-| tableName  | Text    | -> | Table name                                            |
+| tableName  | Text    | -> | Nome da tabela                                        |
 | column     | Integer | -> | Index of the column in the table                      |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)                |
 | Resultados | Objeto  | <- | Attributes of the *column*|<!-- END REF --> |
@@ -2459,7 +2459,7 @@ End if
 | Parâmetros | Tipo    |    | Descrição                                        |
 | ---------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                |
-| tableName  | Text    | -> | Table name                                       |
+| tableName  | Text    | -> | Nome da tabela                                   |
 | columnName | Text    | -> | Name of the table column                         |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)           |
 | Resultados | Integer | <- | Index of *columnName*|<!-- END REF --> |
@@ -2512,7 +2512,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | Parâmetros | Tipo       |    | Descrição                                                                                         |
 | ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | 4D View Pro area form object name                                                                 |
-| tableName  | Text       | -> | Table name                                                                                        |
+| tableName  | Text       | -> | Nome da tabela                                                                                    |
 | reset      | Booleano   | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True   |
 | sheet      | Integer    | -> | Sheet index (current sheet if omitted)                                                            |
 | Resultados | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF --> |
@@ -2576,7 +2576,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | Parâmetros | Tipo    |    | Descrição                                                |
 | ---------- | ------- | -- | -------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                        |
-| tableName  | Text    | -> | Table name                                               |
+| tableName  | Text    | -> | Nome da tabela                                           |
 | onlyData   | Integer | -> | `vk table full range` (padrão) ou `vk table data range`  |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)                   |
 | Resultados | Objeto  | <- | Range that contains the table|<!-- END REF --> |
@@ -2622,7 +2622,7 @@ If *tableName* is not found, the command returns **null**.
 | Parâmetros | Tipo                                           |    | Descrição                                                      |
 | ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
 | vpAreaName | Text                                           | -> | 4D View Pro area form object name                              |
-| tableName  | Text                                           | -> | Table name                                                     |
+| tableName  | Text                                           | -> | Nome da tabela                                                 |
 | Resultados | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF --> |
 
 
@@ -3049,7 +3049,7 @@ The results is:
 | Parâmetros  | Tipo    |    | Descrição                                                         |
 | ----------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                                 |
-| tableName   | Text    | -> | Table name                                                        |
+| tableName   | Text    | -> | Nome da tabela                                                    |
 | column      | Integer | -> | Index in the table of the starting column to insert               |
 | count       | Text    | -> | Number of columns to add (must be >0)                             |
 | insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*      |
@@ -3101,7 +3101,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | Parâmetros  | Tipo    |    | Descrição                                                         |
 | ----------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                                 |
-| tableName   | Text    | -> | Table name                                                        |
+| tableName   | Text    | -> | Nome da tabela                                                    |
 | row         | Integer | -> | Index in the table of the starting row to insert                  |
 | count       | Text    | -> | Number of rows to add (must be >0)                                |
 | insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*         |
@@ -3706,7 +3706,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | Parâmetros | Tipo    |    | Descrição                                                         |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| tableName  | Text    | -> | Table name                                                        |
+| tableName  | Text    | -> | Nome da tabela                                                    |
 | column     | Integer | -> | Index in the table of the starting column to remove               |
 | count      | Text    | -> | Number of columns to remove (must be >0)                          |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
@@ -3752,7 +3752,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 | Parâmetros | Tipo    |    | Descrição                                                         |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| tableName  | Text    | -> | Table name                                                        |
+| tableName  | Text    | -> | Nome da tabela                                                    |
 | row        | Integer | -> | Index in the table of the starting row to remove                  |
 | count      | Text    | -> | Number of rows to remove (must be >0)                             |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
@@ -5567,7 +5567,7 @@ With a page break:
 | Parâmetros | Tipo    |    | Descrição                                                         |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| tableName  | Text    | -> | Table name                                                        |
+| tableName  | Text    | -> | Nome da tabela                                                    |
 | column     | Integer | -> | Index of the column in the table                                  |
 | attributes | Objeto  | -> | Attribute(s) to apply to the *column*                             |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
@@ -5669,7 +5669,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 | Parâmetros | Tipo                                           |    | Descrição                                                   |
 | ---------- | ---------------------------------------------- | -- | ----------------------------------------------------------- |
 | vpAreaName | Text                                           | -> | 4D View Pro area form object name                           |
-| tableName  | Text                                           | -> | Table name                                                  |
+| tableName  | Text                                           | -> | Nome da tabela                                              |
 | options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | Table theme properties to modify|<!-- END REF --> |
 
 

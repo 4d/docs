@@ -28,7 +28,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Method information**        | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Last clipboard values**     | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
 | **Clipboards**                | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
-| **Navigation dropdown**       | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See below                                                                                                                                                                                                                         |
+| **Navigation dropdown**       | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. Ver abaixo                                                                                                                                                                                                                        |
 
 
 ### Área de edição
@@ -58,7 +58,7 @@ The change bars change colors to indicate whether or not the modifications were 
 
 
 
-### Lists area
+### Área listas
 
 The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
 
@@ -129,7 +129,7 @@ Displaying the line numbers makes it easier to find your way around in the windo
 
 This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
 
-### Status bar
+### Barra de estado
 
 The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
 
@@ -173,11 +173,11 @@ The following items are added automatically:
 
 By adding markers in your code, you can add the following tags to the dropdown:
 
-| Ícone                                                   | Elemento       |
-| ------------------------------------------------------- | -------------- |
-| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: etiqueta |
-| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: etiqueta |
-| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: tag     |
+| Ícone                                                   | Elemento        |
+| ------------------------------------------------------- | --------------- |
+| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: etiqueta  |
+| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: etiqueta  |
+| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: etiqueta |
 
 You declare them by adding comments such as:
 

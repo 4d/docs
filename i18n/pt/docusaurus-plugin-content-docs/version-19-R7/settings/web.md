@@ -22,7 +22,7 @@ Indicates whether or not the Web server will accept non-secure connections. See 
 
 Listening IP (TCP) port number for HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
 
-#### IP Address
+#### Endereço IP
 
 IP address on which the 4D web server will receive HTTP requests (4D local and 4D Server). See [IP Address to listen](../WebServer/webServerConfig.md#ip-address-to-listen).
 
@@ -170,7 +170,7 @@ List of allowed hosts and methods for the CORS service. See [CORS Settings](../W
 
 
 
-## Log (type)
+## Registo (tipo)
 
 
 ### Formato do histórico

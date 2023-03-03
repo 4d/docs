@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Class functions and commands
+title: Funções e comandos de classe
 ---
 
 Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados. As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe.
@@ -9,7 +9,7 @@ Esta seção descreve a API da classe 4D incorporada, bem como os comandos de co
 - as propriedades são acessadas sem parênteses, por exemplo `file.creationTime`. Pode também utilizar a sintaxe \[], por exemplo `file["creationTime"]`.
 - comandos podem ser chamados de forma independente, com ou sem parâmetros. Por exemplo `Folder(fk database folder)`.
 
-## Writing conventions
+## Convenções de escrita
 
 As seguintes convenções são utilizadas na sintaxe da função:
 
@@ -17,9 +17,9 @@ As seguintes convenções são utilizadas na sintaxe da função:
 - o `{ ; ...param }` notação indica um número ilimitado de parâmetros. Por exemplo, `.concat( valor : qualquer { ;...valorN } ) : A colecção` significa que um número ilimitado de valores de qualquer tipo pode ser passado para a função.
 - a `any` é utilizada para parâmetros que podem ser de qualquer tipo e que podem ser armazenados dentro dos atributos (número, texto, booleano, data, hora, objecto, colecção...).
 
-## Classic commands
+## Comandos clássicos
 
-In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
+Para além das funções de classe integradas, a linguagem 4D contém centenas de comandos "clássicos". Estes comandos estão descritos em manual *4D Language* em [doc.4d.com](https://doc.4d.com). Para referência, estão listados abaixo:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -1178,7 +1178,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`System folder`](https://doc.4d.com/4dv19/help/command/en/page487.html)                                      | 487    |
 | <a name="T">**T**</a>                                                                                    |        |
 | [`Tabela`](https://doc.4d.com/4dv19/help/command/en/page252.html)                                             | 252    |
-| [`Table name`](https://doc.4d.com/4dv19/help/command/en/page256.html)                                         | 256    |
+| [`Nome da tabela`](https://doc.4d.com/4dv19/help/command/en/page256.html)                                     | 256    |
 | [`Tan`](https://doc.4d.com/4dv19/help/command/en/page19.html)                                                 | 19     |
 | [`Temporary folder`](https://doc.4d.com/4dv19/help/command/en/page486.html)                                   | 486    |
 | [`Test path name`](https://doc.4d.com/4dv19/help/command/en/page476.html)                                     | 476    |

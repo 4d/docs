@@ -21,7 +21,7 @@ In addition, file and folder objects support `fileSystems`, which provide contex
 
 The following filesystem pathnames are supported:
 
-| filesystem   | Designates                                         |
+| filesystem   | Designa                                            |
 | ------------ | -------------------------------------------------- |
 | "/DATA"      | Current data folder                                |
 | "/LOGS"      | Pasta Logs                                         |

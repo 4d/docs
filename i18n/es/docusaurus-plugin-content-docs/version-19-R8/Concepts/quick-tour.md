@@ -130,15 +130,16 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). Los parámetros están disponibles dentro del método llamado como variables locales numeradas secuencialmente: $1, $2,..., $n. Un método puede devolver un único valor en el parámetro $0. Cuando se llama a un método, sólo hay que escribir su nombre:
+Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Cuando se llama a un método, sólo hay que escribir su nombre:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Llama al método Do_Something
+$myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
 
-  //Este es el código del método Do_Something
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -184,17 +185,16 @@ Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que enca
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 ```
 
 Para acceder a un elemento de la colección, debe pasar el número del elemento entre corchetes:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //acceso al 4º elemento de la colección
+myColl[3]  //access to 4th element of the collection
 ```
 
 ## Clases
@@ -372,12 +372,12 @@ Ambos estilos de comentarios pueden utilizarse simultáneamente.
 Inserte `//` al principio de una línea o después de una instrucción para añadir una línea de comentario. Ejemplo:
 
 ```4d
-//Este es un comentario
-For($vCounter;1;100) //Inicio del bucle
+//This is a comment
+For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
 #### Comentarios en línea o multilínea (`/*comment*/`)

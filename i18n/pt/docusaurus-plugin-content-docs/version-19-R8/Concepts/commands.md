@@ -8,7 +8,7 @@ The 4D language contains a large number of built-in commands, allowing the devel
 The 4D commands are divided in two categories:
 
 - **class functions**, which are APIs of 4D built-in classes. These functions are described in the [Class API Reference](../API/overview) section.
-- **stand-alone commands**, grouped by themes. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
+- **stand-alone commands**, grouped by themes. Estes comandos estão descritos em manual *4D Language* em [doc.4d.com](https://doc.4d.com). Para referência, estão listados abaixo:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -1171,7 +1171,7 @@ The 4D commands are divided in two categories:
 | [`System folder`](https://doc.4d.com/4dv19R/help/command/en/page487.html)                                      | 487    |
 | <a name="T">**T**</a>                                                                                     |        |
 | [`Tabela`](https://doc.4d.com/4dv19R/help/command/en/page252.html)                                             | 252    |
-| [`Table name`](https://doc.4d.com/4dv19R/help/command/en/page256.html)                                         | 256    |
+| [`Nome da tabela`](https://doc.4d.com/4dv19R/help/command/en/page256.html)                                     | 256    |
 | [`Tan`](https://doc.4d.com/4dv19R/help/command/en/page19.html)                                                 | 19     |
 | [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html)                                   | 486    |
 | [`Test path name`](https://doc.4d.com/4dv19R/help/command/en/page476.html)                                     | 476    |

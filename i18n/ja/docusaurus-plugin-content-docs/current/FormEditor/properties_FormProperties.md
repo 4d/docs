@@ -22,6 +22,22 @@ title: フォームプロパティ
 
 ---
 
+## CSS
+
+This property allows you to load specific CSS file(s) for the form.
+
+A CSS file defined at the form level will override default style sheet(s). For more information, please refer to [Style sheets](createStylesheet.md) page.
+
+
+#### JSON 文法
+
+| 名称  | データタイプ               | とりうる値                                                                                                    |
+| --- | -------------------- | -------------------------------------------------------------------------------------------------------- |
+| css | string or collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+
+---
+
+
 ## Pages
 
 各フォームは、少なくとも 2つのページで構成されています:
@@ -106,6 +122,7 @@ title: フォームプロパティ
 このプロパティは、現在のフォームに [継承するテーブルフォーム](forms.md#継承フォーム) が属するデータベーステーブルを指定します。
 
 プロジェクトフォームを継承する場合は、プロパティリストで `<なし>` を選択します (JSON では " ")。
+
 
 
 

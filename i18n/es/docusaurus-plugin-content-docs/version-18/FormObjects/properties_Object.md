@@ -151,9 +151,9 @@ Una lista de palabras separadas por espacios que se utilizan como selectores de 
 
 To use collection elements or entities to define the row contents of the list box.
 
-Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
+Introduzca una expresión que devuelva una colección o una selección de entidades. Normalmente, introducirá el nombre de una variable, un elemento de una colección o una propiedad que contenga una colección o una selección de entidades.
 
-The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command:
+La colección o la selección de entidades debe estar disponible para el formulario cuando se carga. Cada elemento de la colección o cada entidad de la selección de entidades se asociará a una línea del list box y estará disponible como objeto a través del comando [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html):
 
 - si ha utilizado una colección de objetos, puede llamar a `This` en la expresión datasource para acceder a cada valor de propiedad, por ejemplo `This.\&#060;propertyPath&#062;`.
 - si ha utilizado una selección de entidades, puede llamar a `This` en la expresión de la fuente de datos para acceder al valor de cada atributo, por ejemplo `This.\&#060;attributePath&#062;`.

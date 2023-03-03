@@ -168,7 +168,7 @@ By default, the object uses the current keyboard layout.
 
 ---
 
-## Multiline
+## Multilinha
 
 This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
 

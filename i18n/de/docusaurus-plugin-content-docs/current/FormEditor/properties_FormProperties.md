@@ -22,6 +22,22 @@ This property defines the color scheme for the form. This property defines the c
 
 ---
 
+## CSS
+
+This property allows you to load specific CSS file(s) for the form.
+
+A CSS file defined at the form level will override default style sheet(s). For more information, please refer to [Style sheets](createStylesheet.md) page.
+
+
+#### JSON Grammar
+
+| Name | Datentyp             | Possible Values                                                                                          |
+| ---- | -------------------- | -------------------------------------------------------------------------------------------------------- |
+| css  | string or collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+
+---
+
+
 ## Pages
 
 Each form has is made of at least two pages:
@@ -106,6 +122,7 @@ To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " i
 This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
 
 Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
+
 
 
 

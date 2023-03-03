@@ -1031,7 +1031,7 @@ You want to get the message with ID = 1:
 
 A função `.getMails()` <!-- REF #IMAPTransporterClass.getMails().Summary -->returns an object containing a collection of `Email` objects<!-- END REF -->.
 
-**First Syntax:**
+**Primeira sintaxe:**
 
 ***.getMails( ids { ; options } ) -> result***
 
@@ -1041,11 +1041,11 @@ In the *ids* parameter, pass a collection of IDs for the messages to return. You
 
 The optional *options* parameter allows you to define the parts of the messages to be returned. See the **Options** table below for a description of the available properties.
 
-**Second syntax:**
+**Segunda sintaxe:**
 
  ***.getMails( startMsg ; endMsg { ; options } ) -> result***
 
-The second syntax allows you to retrieve messages based on a sequential range. The values passed represent the position of the messages in the mailbox.
+A segunda sintaxe permite recuperar mensagens com base num intervalo sequencial. Os valores passados representam a posição das mensagens na caixa de correio.
 
 In the *startMsg* parameter, pass an *integer* value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
 
@@ -1059,7 +1059,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 | ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | updateSeen  | Booleano | If True, the specified messages are marked as "seen" in the mailbox. If False, the messages are not marked as "seen". Valor padrão: True |
 | withBody    | Booleano | Pass True to return the body of the specified messages. If False, only the message headers are returned. Valor padrão: True              |
-> * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated.
+> * Se nenhuma caixa de correio for seleccionada com o comando [`.selectBox()`](#selectbox), é gerado um erro.
 > * If there is no open connection, `.getMails()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox).
 
 #### Resultados
@@ -1150,21 +1150,21 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 #### Exemplo
 
 ```4d
- var $server : Object
- var $boxInfo : Variant
+ var $server : Objecto
+ var $boxInfo : Variante
  var $blob : Blob
  var $transporter : 4D.IMAPTransporter
 
- $server:=New object
+ $server:=Novo objecto
  $server.host:="imap.gmail.com"
  $server.port:=993
- $server.user:="4d@gmail.com"
+ $server.user:=" "
  $server.password:="XXXXXXXX"
 
-  //create transporter
- $transporter:=IMAP New transporter($server)
+  //criar transportador
+ $transporter:=IMAP Novo transportador($server)
 
-  //select mailbox
+  //seleccionar caixa de correio
  $boxInfo:=$transporter.selectBox("Inbox")
 
   //get BLOB

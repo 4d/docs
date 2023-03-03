@@ -10,9 +10,9 @@ Usando a linguagem 4D, imprimir a mensagem tradicional ""Hello, world!" na tela 
 ALERT("Hello, World!")
 ```
 
-Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. Para executar o código, precisa clicar no botão de execução do editor de Método:
+Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. To execute the code, you just need to click on the execution button in the Code Editor:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Ou poderia anexar esse código a um botão em um formulário e executar o formulário, nesse caso, clicar no botão exibira a caixa de diálogo de alerta. Em qualquer caso, acabou de executar sua primeira linha de código 4D!
 
@@ -59,13 +59,13 @@ A linha de código lê “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Comandos
 
-Os comandos 4D são métodos integrados para realizar uma ação. Todos os comandos 4D, como `CREATE RECORD`, o `ALERT`, se descrevem no manual _Linguagem de 4D_, agrupados por temas. Comandos são frequentemente usados com parâmetros, que são passados em parênteses () e separados por ponto e vírgula (;). Exemplo:
+Os comandos 4D são métodos integrados para realizar uma ação. Comandos são frequentemente usados com parâmetros, que são passados em parênteses () e separados por ponto e vírgula (;). Exemplo:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Alguns comandos são anexados à coleções ou objetos, em cujo caso são métodos temporais que se utilizam com a notação de pontos. Por exemplo:
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Por exemplo:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -99,7 +99,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apenas leitura
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
+> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
 
 ## Métodos
 
@@ -118,23 +118,25 @@ Um método também contém testes e loops que controlam o fluxo da execução. 4
 O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
-For ($vCounter;1;100)
-/*
-comments  
-    /* 
-    other comments
-    */
-*/
-...
+For($vlChar;1;Length(vtSomeText))
+    //Do something with the character if it is a TAB
+
+
+    If(Character code(vtSomeText[[$vlChar]])=Tab)
+        //...
     End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Quando chamar um método, apenas digite seu nome:
 
 ```4d
-$f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
+ALERT($myText) //"HELLO"
+
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -179,17 +181,15 @@ $vAge:=employee.children[2].age
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
 ```
-$o:=cs.myClass.new()
-$o.who:="World"
-$message:=$o.myClass.hello()  
-//$message:
+$f:=New object
+$f.message:=Formula(ALERT("Hello world!"))
 "Hello World"
 ```
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
@@ -205,15 +205,15 @@ To instantiate an object of the class in a method, call the user class from the 
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
-//in the myClass.4dm file Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+//in the myClass.4dm file
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $f:=New object
@@ -224,17 +224,28 @@ $f.message() //displays "Hello world!"
 Optionally, use the `Class constructor` keyword to declare properties of the object.
 
 ```4d  
-//in the Rectangle.4dm file Class constructor C_LONGINT($1;$2)
-This.height:=$1 This.width:=$2 This.name:="Rectangle"
+//in the Rectangle.4dm file
+Class constructor
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
+This.name:="Rectangle"
 ```
 
 A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Por exemplo:
 
 ```4d  
-//in the Square.4dm file Class extends rectangle Class constructor C_LONGINT($1)
+//in the Square.4dm file
+Class extends rectangle
+
+Class constructor
+var $length : Integer
 
   // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height Super($1;$1) This.name:="Square"
+  // provided for the Rectangle's width and height
+Super($length;$length)
+
+This.name:="Square"
 ```
 
 
@@ -325,6 +336,20 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Comentários
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
@@ -336,19 +361,20 @@ There are two ways to create comments:
 
 Both styles of comments can be used simultaneously.
 
-#### Single line comments (//)
+#### Single line comments (`//comment`)
 
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
 ```4d
-//This is a comment For($vCounter;1;100) //Starting loop
+//This is a comment
+For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
@@ -373,3 +399,26 @@ comentarios
 ...
 End for
 ```
+
+## Escape sequences
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+In 4D, the following escape sequences can be used:
+
+| Escape sequence               | Character replaced   |
+| ----------------------------- | -------------------- |
+| `\n`                         | LF (Line feed)       |
+| `\t`                         | HT (Tab)             |
+| `\r`                         | CR (Carriage return) |
+| ``\\` |``&#96; (Backslash) |                      |
+| `\"`                         | " (Quotation marks)  |
+
+> It is possible to use either upper or lower case in escape sequences.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+

@@ -10,9 +10,9 @@ sidebar_label: 概要
 ALERT("Hello, World!")
 ```
 
-このコードは、 "Hello, World!" メッセージが表示された、OK ボタンの付いたプラットフォームの標準的なアラートダイアログボックスを開きます。 コードを実行するには、メソッドエディターの左上にある実行ボタンをクリックします:
+このコードは、 "Hello, World!" メッセージが表示された、OK ボタンの付いたプラットフォームの標準的なアラートダイアログボックスを開きます。 コードを実行するには、コードエディターの左上にある実行ボタンをクリックします:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello world](../assets/en/Concepts/helloworld.png)
 
 あるいは、フォーム内のボタンにこのコードを付けた場合、フォームを実行した状態でボタンをクリックすると、その都度アラートメッセージが表示されます。 いずれの方法でも、前述の1行のコードを実行するだけで目的達成です！
 
@@ -60,13 +60,13 @@ MyOtherDate:=Current date+30
 
 ## コマンド
 
-4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば `CREATE RECORD` や `ALERT` などのコマンドはテーマ別に _4D ランゲージリファレンス_ に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:
+4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-コレクションやオブジェクトにコマンドが属している場合、それらは名前付きメソッドであり、ドット記法を用いて使用します。 例:
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. 例:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -100,7 +100,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // ドキュメントを読み取り専用モードで開きます
 ```
 
-> メソッドエディターにおいて、定義済定数はデフォルトで <u>下線付き</u> で表示されます。
+> コードエディターにおいて、定義済定数はデフォルトで <u>下線付き</u> で表示されます。
 
 ## メソッド
 
@@ -120,22 +120,25 @@ CONFIRM("このアカウントを本当に閉じますか？";"はい";"いい�
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    // 文字がタブであれば
+    //Do something with the character if it is a TAB
+
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
-        // なんらかの処理をします
+        //...
     End if
 End for
 ```
 
-プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号を振られたローカル変数 ($1, $2, ...$n) に格納されます。 メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:
+プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. メソッドを呼び出すには、メソッド名を書きます:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) // Do_Something メソッドを呼び出します
+$myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
 
-  // Do_Something メソッドのコードです
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -181,16 +184,16 @@ $vAge:=employee.children[2].age
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() // "Hello world!" を表示します
 ```
 
 コレクションの要素にアクセスするためには、大カッコでくくった要素番号を渡します:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
+myColl[3]  //access to 4th element of the collection
 ```
 
 ## クラス
@@ -204,16 +207,15 @@ myColl[3]  // コレクションの4番目の要素にアクセスします (0�
 $o:=cs.myClass.new() 
 ```
 
-`myClass` クラスメソッド内では、*methodName* クラスメンバーメソッドを宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバーメソッドは引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
-// myClass.4dm ファイル内
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+//in the myClass.4dm file
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-クラスメンバーメソッドを実行するには、オブジェクトインスタンスのメンバーメソッドに `()` 演算子を使います。
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $o:=cs.myClass.new()
@@ -225,26 +227,26 @@ $message:=$o.myClass.hello()
 `Class constructor` キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。
 
 ```4d  
-// Rectangle.4dm ファイル内
+//in the Rectangle.4dm file
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
 クラスはほかのクラスから継承することもできます: `Class extends <ClassName>`。 また、`Super` コマンドを使って、スーパークラスを呼び出すことができます。 例:
 
 ```4d  
-// Square.4dm ファイル内
-Class extends Rectangle
+//in the Square.4dm file
+Class extends rectangle
 
 Class constructor
-C_LONGINT($1)
+var $length : Integer
 
-  // 親クラスのコンストラクターを呼び出します
-  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
-Super($1;$1)
+  // It calls the parent class's constructor with lengths   
+  // provided for the Rectangle's width and height
+Super($length;$length)
 
 This.name:="Square"
 ```
@@ -341,6 +343,20 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
+## 行を分割する
+
+1つのステートメントを複数行に記述することができます。 これをおこなうには、ステートメントの各行をバックスラッシュ `\` 文字 (日本語Windowsの場合半角円マーク) で終了します。 このように複数行に分かれたコードを、4Dランゲージは一行と解釈します。 たとえば、以下のステートメントは同等です:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## コメント
 
 コメントとは、コード内の実行されないテキストのことです。 これらのテキストは、コード実行時にインタープリターによって無視されます。
@@ -352,20 +368,20 @@ ALERT(MyPointer->)
 
 これらの書き方は同時に使用できます。
 
-#### シングルラインコメント (//)
+#### 単一行のコメント (`//コメント`)
 
 コードの後や行の最初に `//` を使うと、その後のテキストはすべてコメントとなります。 例:
 
 ```4d
-// これはコメントです
-For($vCounter;1;100) // ループを開始します
-  // コメント
-  // コメント
-  // コメント
- End for
+//This is a comment
+For($vCounter;1;100) //Starting loop
+  //comment
+  //comment
+  //comment
+End for
 ```
 
-#### インライン、およびマルチラインコメント (/* */)
+#### インラインコメント、および複数行コメント (`/*コメント*/`)
 
 コメントを `/*` と `*/` で囲むと、そのあいだのテキストはコメントとなります。 この方法でインラインおよびマルチラインコメントが書けます:
 
@@ -390,3 +406,26 @@ For ($vCounter;1;100)
 ...
 End for
 ```
+
+## エスケープシーケンス
+
+4Dランゲージでは、エスケープシーケンス (エスケープ文字) を使用できます。 エスケープシーケンスとは、特別な文字の代わりに使用される一連の文字です。
+
+エスケープシーケンスは一文字目がバックスラッシュ `\` であり、そのあとに文字が続きます。 たとえば `\t` は **Tab** 文字のエスケープシーケンスです。 エスケープシーケンスを使用すると特別な文字の入力が容易になります。たとえば `\t` を Char(Tab) の代わりに使用できます。
+
+4D では以下のエスケープシーケンスを使用できます:
+
+| エスケープシーケンス                   | 意味する文字   |
+| ---------------------------- | -------- |
+| `\n`                        | LF (行送り) |
+| `\t`                        | HT (タブ)  |
+| `\r`                        | CR (改行)  |
+| ``\\` |``&#96; (バックスラッシュ) |          |
+| `\"`                        | " (引用符)  |
+
+> エスケープシーケンスでは文字の大小は区別されません。
+
+以下の例題では、**キャリッジリターン** 文字 (エスケープシーケンス `\r`) を使用して、警告ダイアログに表示されるメッセージに改行を挿入しています:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+

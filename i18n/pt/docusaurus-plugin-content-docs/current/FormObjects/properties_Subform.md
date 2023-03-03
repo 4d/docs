@@ -112,7 +112,7 @@ When a list subform has this property enabled, the user can modify record data d
 
 
 ---
-## List Form
+## Formulário lista
 
 You use this property to declare the list form to use in the subform. A list subform lets you enter, view, and modify data in other tables.
 
