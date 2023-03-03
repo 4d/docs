@@ -172,7 +172,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 - database conversion,
 - web server requests,
 - backup/restore activities journal (*Backup Journal\[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
-- command debugging,
+- depuração de comandos,
 - 4D Server requests (generated on client machines and on the server).
 
 > Uma pasta Logs adicional está disponível na pasta de preferências do usuário do sistema (pasta 4D ativa, ver [Obter pasta 4D](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) comando) para os arquivos de registro de manutenção e nos casos em que a pasta de dados for de apenas leitura.
