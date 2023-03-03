@@ -286,7 +286,7 @@ The following special characters allow the automatic addition or formatting of i
 | -------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
 | &        | Escape character                 | (see examples below)                                                   |                                                      |
 | P        | Página actual                    | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
-| N        | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
+| N        | Contagem de páginas              | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
 | D        | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
 | T        | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
 | G        | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
@@ -337,7 +337,7 @@ Page attributes are used to specify general document print settings.
 | useMax          | boolean       | Only columns and rows with data are printed.<p>Valor padrão = true</p>                                                                                                                                 |
 | zoomFactor      | real          | The amount to enlarge or reduce the printed page.<p>Valor padrão = 1</p>                                                                                                                            |
 
-### Paper Size
+### Tamanho de papel
 
 Paper size attributes are used to specify the dimensions or model of paper to use for printing. There are two ways to define paper size:
 
