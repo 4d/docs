@@ -3,19 +3,19 @@ id: FunctionClass
 title: Function
 ---
 
-### About Function objects
+### Function オブジェクトについて
 
-`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D proposes three kinds of `Function` objects:
+`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の `Function` オブジェクトが利用できます:
 
-- **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
-- **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
-- **formula functions**, i.e. functions that can execute any 4D formula.
+- **ネイティブ関数** (`collection.sort()` や `file.copyTo()` などの 4Dクラスにビルトインされた関数)。
+- **ユーザー関数** (ユーザー[クラス](Concepts/classes.md) において [Function キーワード](Concepts/classes.md#function)を使って作成されたもの)。
+- **フォーミュラ関数** (4Dフォーミュラを実行するもの)。
 
 
 
 ### Formula オブジェクト
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
+[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、[`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 

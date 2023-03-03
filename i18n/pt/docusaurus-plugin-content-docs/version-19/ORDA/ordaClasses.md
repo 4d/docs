@@ -222,7 +222,7 @@ For security reasons, all of your data model class functions are **not exposed**
 Remote requests include:
 
 - Requests sent by remote 4D applications connected through `Open datastore`
-- REST requests
+- Pedidos REST
 
 > Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture.
 
@@ -345,7 +345,7 @@ Case of
 End case
 ```
 
-Calling code:
+Código de chamada:
 
 ```4d
 var $status : Object

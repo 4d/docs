@@ -520,22 +520,22 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 次の項目が自動的に追加されます:
 
-| アイコン                                                                        | 項目                              |
-| --------------------------------------------------------------------------- | ------------------------------- |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | タグなし                            |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | クラスコンストラクターまたはメソッド宣言            |
-| ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | 計算属性 (get, set, orderBy, query) |
-| ![function-icon](../assets/en/code-editor/function.png)                     | クラス関数名                          |
+| アイコン                                                         | 項目                              |
+| ------------------------------------------------------------ | ------------------------------- |
+| ![タグなしアイコン](../assets/en/code-editor/no-tag.png)             | タグなし                            |
+| ![コンストラクターアイコン](../assets/en/code-editor/constructor.png)    | クラスコンストラクターまたはメソッド宣言            |
+| ![計算属性アイコン](../assets/en/code-editor/computed-attribute.png) | 計算属性 (get, set, orderBy, query) |
+| ![関数アイコン](../assets/en/code-editor/function.png)             | クラス関数名                          |
 
 #### 手動タグ
 
 コードにマーカーを追加して、以下のタグをドロップダウンに追加できます:
 
-| アイコン                                                    | 項目        |
-| ------------------------------------------------------- | --------- |
-| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: タグ  |
-| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: タグ  |
-| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: タグ |
+| アイコン                                                 | 項目        |
+| ---------------------------------------------------- | --------- |
+| ![markタグアイコン](../assets/en/code-editor/mark-tag.png) | MARK: タグ  |
+| ![todoタグアイコン](../assets/en/code-editor/todo-tag.png) | TODO: タグ  |
+| ![fixmeアイコン](../assets/en/code-editor/fixme-tag.png) | FIXME: タグ |
 
 タグは、次のようにコメントを付けて宣言します:
 

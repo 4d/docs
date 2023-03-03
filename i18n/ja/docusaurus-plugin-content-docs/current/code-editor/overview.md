@@ -76,7 +76,7 @@ title: コードの扱い方
 
 :::caution
 
-Changing the name of a method already used in the database can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. このため、この変更を手動ではなく、[名称変更](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.ja.html) で説明されているプロジェクトメソッド名の名称変更機能によりおこなうことが強く推奨されます。 この機能を使用すれば、デザイン環境における当該メソッドの呼び出し箇所がすべて自動的に更新されます (ただし EXECUTE METHOD など、文字列としてメソッド名が参照されている個所を除きます)。
+プロジェクトメソッドの名前を変更すると、そのメソッドを旧名称で呼び出している他のメソッドやフォーミュラなど、アプリケーションの機能が無効になるリスクがあります。 このため、この変更を手動ではなく、[名称変更](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.ja.html) で説明されているプロジェクトメソッド名の名称変更機能によりおこなうことが強く推奨されます。 この機能を使用すれば、デザイン環境における当該メソッドの呼び出し箇所がすべて自動的に更新されます (ただし EXECUTE METHOD など、文字列としてメソッド名が参照されている個所を除きます)。
 
 4D Server の場合、名称変更は変更終了後にサーバーに反映されます。 複数のユーザーが同時に名称を変更しようとすると、最後におこなわれた名称変更が適用されます。 メソッドのオーナーを指定すれば特定のユーザー以外はメソッド名を変更できないようにできます。
 

@@ -44,7 +44,7 @@ Design or logic errors also include such situations as:
 
 Sometimes the piece of code that displays the error may be different than the code that is actually the origin of the problem.
 
-### Runtime Errors
+### Erros de execução
 
 In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
 

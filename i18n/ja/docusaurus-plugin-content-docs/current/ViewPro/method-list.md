@@ -4206,7 +4206,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 | 引数         | タイプ    |    | 説明                                                                               |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| parameters | Object | -> | Object containing the offscreen area's attributes                                |
+| parameters | Object | -> | オフスクリーンエリアの属性を格納するオブジェクト                                                         |
 | 戻り値        | Mixed  | <- | `.onEvent` オブジェクトの `.result` プロパティ、または値を返さない場合には Null|<!-- END REF -->
 
 |

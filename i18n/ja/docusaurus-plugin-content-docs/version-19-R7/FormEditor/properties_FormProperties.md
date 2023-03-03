@@ -24,16 +24,16 @@ title: フォームプロパティ
 
 ## CSS
 
-This property allows you to load specific CSS file(s) for the form.
+このプロパティは、フォーム用に特定の CSSファイルを読み込むことを可能にします。
 
-A CSS file defined at the form level will override default style sheet(s). For more information, please refer to [Style sheets](createStylesheet.md) page.
+フォームレベルで定義された CSSファイルは、デフォルトのスタイルシートをオーバーライドします。 詳細については [スタイルシート](createStylesheet.md) を参照ください。
 
 
 #### JSON 文法
 
-| 名称  | データタイプ               | とりうる値                                                                                                    |
-| --- | -------------------- | -------------------------------------------------------------------------------------------------------- |
-| css | string or collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+| 名称  | データタイプ                | とりうる値                                                                                 |
+| --- | --------------------- | ------------------------------------------------------------------------------------- |
+| css | string または collection | CSSファイルパス:<li>文字列 (両方のプラットフォーム用に 1ファイル)</li><li>文字列のコレクション (両プラットフォーム用のファイルのリスト)</li><li>{"path":string;"media":"mac" &#124; "win"} オブジェクトのコレクション </li> |
 
 ---
 

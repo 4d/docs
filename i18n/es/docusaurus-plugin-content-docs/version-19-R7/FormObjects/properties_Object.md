@@ -182,8 +182,8 @@ Introduzca una expresión que devuelva una colección o una selección de entida
 
 La colección o la selección de entidades debe estar disponible para el formulario cuando se carga. Cada elemento de la colección o cada entidad de la selección de entidades se asociará a una línea del list box y estará disponible como objeto a través del comando [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html):
 
-- if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example `This.\&#060;propertyPath&#062;`.
-- if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example `This.\&#060;attributePath&#062;`.
+- si ha utilizado una colección de objetos, puede llamar a **This** en la expresión datasource para acceder a cada valor de propiedad, por ejemplo `This.\&#060;propertyPath&#062;`.
+- si ha utilizado una selección de entidades, puede llamar a **This** en la expresión de la fuente de datos para acceder al valor de cada atributo, por ejemplo `This.\&#060;attributePath&#062;`.
 > > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
 #### Gramática JSON

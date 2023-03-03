@@ -68,7 +68,7 @@
     "description": "The label for category Command Line Interface in sidebar docs"
   },
   "sidebar.docs.category.TLS Protocol": {
-    "message": "TLS Protocol",
+    "message": "Protocolo TLS",
     "description": "The label for category TLS Protocol in sidebar docs"
   },
   "sidebar.docs.category.Licenses & Data Collection": {

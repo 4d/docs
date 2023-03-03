@@ -234,7 +234,7 @@ $logo:=GetLogo(5)
 ```
 ````
 
-- Explorer view:
+- Vista do explorador:
 
 ![](../assets/en/Project/explorer_Doc.png)
 
