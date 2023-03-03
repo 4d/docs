@@ -82,7 +82,7 @@ The form can contains [additional header areas](#additional-areas) to be associa
 | ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
 
-## Additional areas
+## Áreas adicionais
 
 You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
 
