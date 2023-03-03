@@ -182,7 +182,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 - database conversion,
 - web server requests,
 - backup/restore activities journal (*Backup Journal\[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
-- command debugging,
+- depuração de comandos,
 - 4D Server requests (generated on client machines and on the server).
 
 > An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html) command) for maintenance log files and in cases where data folder is read-only.
