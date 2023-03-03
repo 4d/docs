@@ -191,7 +191,7 @@ Adding a hyphen after the `MARK:` tag draws a separating line in the code editor
 
 ![mark-hyphen-image](../assets/en/code-editor/mark-hyphen-editor.png)
 
-Results in this:
+Os resultados são os seguintes:
 
 ![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
 
@@ -390,7 +390,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Constantes
 - Local, process or interprocess variable, declared in the method
 - Object property names
-- Plug-in commands
+- Comandos Plug-in
 - Palavras-chave 4D
 - Palavras-chave SQL
 - Macros (displayed between < >)
