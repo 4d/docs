@@ -1314,11 +1314,11 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| 引数           | タイプ        |    | 説明                                                                                                           |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
-| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                                              |
-| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                                |
-| options      | Integer    | -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| 引数           | タイプ        |    | 説明                                                                                         |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                            |
+| filterCol    | Collection | -> | 取得する属性のコレクション                                                                              |
+| options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_STAMP プロパティを追加 |
 | 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト|<!-- END REF -->
 
 |
@@ -1353,7 +1353,7 @@ filter 引数がリレートエンティティズ型の属性を指定する場�
 
 :::caution 警告
 
-If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions.
+リレーションの 1側の属性に主キー以外の属性を使用した場合、その属性の値が "__KEY" プロパティに書き込まれます。 `.toObject()` と `.fromObject()` の関数を使用する場合はとくに、リレーションの 1側の属性に主キーを使用することが推奨されます。
 
 :::
 

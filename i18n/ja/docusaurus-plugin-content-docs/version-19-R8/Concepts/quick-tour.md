@@ -66,7 +66,7 @@ MyOtherDate:=Current date+30
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. 例:
+コレクションやオブジェクトにコマンドが属している場合、それらは名前付き関数であり、ドット記法を用いて使用します。 例:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -120,23 +120,21 @@ CONFIRM("このアカウントを本当に閉じますか？";"はい";"いい�
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
-
-
+    // 文字がタブであれば
     If(Character code(vtSomeText[[$vlChar]])=Tab)
-        //...
+        // なんらかの処理をします
     End if
 End for
 ```
 
-プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. メソッドを呼び出すには、メソッド名を書きます:
+プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数が宣言されていれば、これらは受け取り側のメソッドにて直接利用することができます。 メソッドの一つの値を戻り値とすることができ、この戻り値は宣言する必要があります。 メソッドを呼び出すには、メソッド名を書きます:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
-ALERT($myText) //"HELLO"
+$myText:=Do_Something($myText) // Do_Something メソッドを呼び出します
+ALERT($myText) // "HELLO"
 
-  //Here the code of the method Do_Something  
+  // Do_Something メソッドのコードです
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
 ```
@@ -193,7 +191,7 @@ $f.message() // "Hello world!" を表示します
 ```4d
 var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  // コレクションの 4番目の要素にアクセスします (0起点)
 ```
 
 ## クラス
@@ -207,15 +205,15 @@ myColl[3]  //access to 4th element of the collection
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
+`myClass` クラスメソッド内では、*methodName* クラスメンバー関数を宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバー関数は引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
 
 ```4d  
-//in the myClass.4dm file
+// myClass.4dm ファイル内
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
 
-To execute a class member function, just use the `()` operator on the member function of the object instance.
+クラスメンバー関数を実行するには、オブジェクトインスタンスのメンバー関数に `()` 演算子を使います。
 
 ```4d
 $o:=cs.myClass.new()
@@ -227,7 +225,7 @@ $message:=$o.myClass.hello()
 `Class constructor` キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。
 
 ```4d  
-//in the Rectangle.4dm file
+// Rectangle.4dm ファイル内
 Class constructor
 var $height; $width : Integer
 This.height:=$height
@@ -238,14 +236,14 @@ This.name:="Rectangle"
 クラスはほかのクラスから継承することもできます: `Class extends <ClassName>`。 また、`Super` コマンドを使って、スーパークラスを呼び出すことができます。 例:
 
 ```4d  
-//in the Square.4dm file
+// Square.4dm ファイル内
 Class extends rectangle
 
 Class constructor
 var $length : Integer
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // 親クラスのコンストラクターを呼び出します   
+  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
 Super($length;$length)
 
 This.name:="Square"
@@ -373,12 +371,12 @@ $str:=String("hello"+\
 コードの後や行の最初に `//` を使うと、その後のテキストはすべてコメントとなります。 例:
 
 ```4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
-  //comment
-  //comment
-  //comment
-End for
+// これはコメントです
+For($vCounter;1;100) // ループを開始します
+  // コメント
+  // コメント
+  // コメント
+ End for
 ```
 
 #### インラインコメント、および複数行コメント (`/*コメント*/`)

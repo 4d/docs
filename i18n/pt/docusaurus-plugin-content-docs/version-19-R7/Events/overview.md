@@ -80,32 +80,32 @@ The following table summarizes how object and form methods are called for each e
 | On Printing Footer       | Sim                                 | Sim               | Todos os objectos      |
 | On Close Box             | Nunca                               | Sim               | Nenhum                 |
 | On Display Detail        | Sim                                 | Sim               | Todos os objectos      |
-| On Open Detail           | Yes (List box)                      | Sim               | None except List boxes |
-| On Close Detail          | Yes (List box)                      | Sim               | None except List boxes |
+| On Open Detail           | Sim (List box)                      | Sim               | None except List boxes |
+| On Close Detail          | Sim (List box)                      | Sim               | None except List boxes |
 | On Resize                | Nunca                               | Sim               | Nenhum                 |
 | On Selection Change      | Sim                                 | Sim               | Involved object only   |
 | On Load Record           | Nunca                               | Sim               | Nenhum                 |
 | On Timer                 | Nunca                               | Sim               | Nenhum                 |
 | On Scroll                | Sim                                 | Nunca             | Involved object only   |
-| On Before Data Entry     | Yes (List box)                      | Nunca             | Involved object only   |
-| On Column Moved          | Yes (List box)                      | Nunca             | Involved object only   |
-| On Row Moved             | Yes (List box)                      | Nunca             | Involved object only   |
+| On Before Data Entry     | Sim (List box)                      | Nunca             | Involved object only   |
+| On Column Moved          | Sim (List box)                      | Nunca             | Involved object only   |
+| On Row Moved             | Sim (List box)                      | Nunca             | Involved object only   |
 | On Column Resize         | Yes (List box and 4D View Pro Area) | Nunca             | Involved object only   |
 | On Header Click          | Yes (List box and 4D View Pro Area) | Nunca             | Involved object only   |
-| On Footer Click          | Yes (List box)                      | Nunca             | Involved object only   |
-| On After Sort            | Yes (List box)                      | Nunca             | Involved object only   |
+| On Footer Click          | Sim (List box)                      | Nunca             | Involved object only   |
+| On After Sort            | Sim (List box)                      | Nunca             | Involved object only   |
 | On Long Click            | Yes (Button)                        | Sim               | Involved object only   |
 | On Alternative Click     | Yes (Button and List box)           | Nunca             | Involved object only   |
 | On Expand                | Sim (Hier. list and list box)       | Nunca             | Involved object only   |
 | On Collapse              | Sim (Hier. list and list box)       | Nunca             | Involved object only   |
 | On Delete Action         | Sim (Hier. list and list box)       | Nunca             | Involved object only   |
-| On URL Resource Loading  | Yes (Web Area)                      | Nunca             | Involved object only   |
-| On Begin URL Loading     | Yes (Web Area)                      | Nunca             | Involved object only   |
-| On URL Loading Error     | Yes (Web Area)                      | Nunca             | Involved object only   |
-| On URL Filtering         | Yes (Web Area)                      | Nunca             | Involved object only   |
-| On End URL Loading       | Yes (Web Area)                      | Nunca             | Involved object only   |
-| On Open External Link    | Yes (Web Area)                      | Nunca             | Involved object only   |
-| On Window Opening Denied | Yes (Web Area)                      | Nunca             | Involved object only   |
+| On URL Resource Loading  | Sim (Área Web)                      | Nunca             | Involved object only   |
+| On Begin URL Loading     | Sim (Área Web)                      | Nunca             | Involved object only   |
+| On URL Loading Error     | Sim (Área Web)                      | Nunca             | Involved object only   |
+| On URL Filtering         | Sim (Área Web)                      | Nunca             | Involved object only   |
+| On End URL Loading       | Sim (Área Web)                      | Nunca             | Involved object only   |
+| On Open External Link    | Sim (Área Web)                      | Nunca             | Involved object only   |
+| On Window Opening Denied | Sim (Área Web)                      | Nunca             | Involved object only   |
 | On VP Range Changed      | Yes (4D View Pro Area)              | Nunca             | Involved object only   |
 | On VP Ready              | Yes (4D View Pro Area)              | Nunca             | Involved object only   |
 | On Row Resize            | Yes (4D View Pro Area)              | Nunca             | Involved object only   |

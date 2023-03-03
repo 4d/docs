@@ -53,7 +53,7 @@ The following table lists the pages of settings found in the **User Settings** a
 | **Page of Structure Settings**                                                       | **Page of User Settings**             | **Page of User Settings for Data File** |
 | ------------------------------------------------------------------------------------ | ------------------------------------- | --------------------------------------- |
 | [General page](../settings/general.md)                                               | N/a                                   | N/a                                     |
-| [Interface page](../settings/interface.md)                                           | Identical to standard settings        | Identical to standard settings          |
+| [Página Interface](../settings/interface.md)                                         | Identical to standard settings        | Identical to standard settings          |
 | [Compiler page](../settings/compiler.md)                                             | N/a                                   | N/a                                     |
 | [Database/Data storage page](../settings/database.md#data-storage)                   | N/a                                   | N/a                                     |
 | [Database/Memory page](../settings/database.md#memory)                               | Identical to standard settings        | Identical to standard settings          |
