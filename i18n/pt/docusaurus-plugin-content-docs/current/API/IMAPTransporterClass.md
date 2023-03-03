@@ -1020,13 +1020,13 @@ You want to get the message with ID = 1:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                                          |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
-| ids        | Collection | -> | Collection of message ID                                                           |
-| startMsg   | Integer    | -> | Sequence number of the first message                                               |
-| endMsg     | Integer    | -> | Sequence number of the last message                                                |
-| options    | Objeto     | -> | Instruções de tratamento de mensagens                                              |
-| Resultados | Objeto     | <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
+| Parâmetros | Tipo       |    | Descrição                                                                         |
+| ---------- | ---------- |:--:| --------------------------------------------------------------------------------- |
+| ids        | Collection | -> | Collection of message ID                                                          |
+| startMsg   | Integer    | -> | Sequence number of the first message                                              |
+| endMsg     | Integer    | -> | Sequence number of the last message                                               |
+| options    | Objeto     | -> | Instruções de tratamento de mensagens                                             |
+| Resultados | Objeto     | <- | Objecto contendo:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
 |
 
