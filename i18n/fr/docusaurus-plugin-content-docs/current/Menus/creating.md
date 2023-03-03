@@ -15,12 +15,12 @@ Vous pouvez combiner les deux fonctionnalités et utiliser les menus créés dan
 
 Une application personnalisée doit contenir au moins une barre de menu avec un menu. La barre de menus par défaut (Barre n°1) comporte des menus standard et une commande de retour au mode Développement. La barre de menus par défaut (Barre n°1) comporte des menus standard et une commande de retour au mode Développement.
 
-This allows the user to access the Application environment as soon as the project is created. La barre de menus n°1 est automatiquement appelée lorsque la commande **Tester l’application** est sélectionnée dans le menu **Exécution**.
+Cela permet à l'utilisateur d'accéder au mode Application dès que le projet est créé. La barre de menus n°1 est automatiquement appelée lorsque la commande **Tester l’application** est sélectionnée dans le menu **Exécution**.
 
 La barre de menus par défaut contient trois menus : Fichier, Edition et Mode.
 
 - **Fichier** : ce menu comporte uniquement la commande **Quitter**. L’action automatique *Quitter* est associée à la commande, ce qui a pour effet de provoquer la fermeture de l’application.
-- **Edition** : menu standard et entièrement modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
+- **Edition** : menu standard et entièrement modifiable. Les fonctions d'édition telles que copier, coller, etc. sont définies à l'aide d'actions standard.
 - **Mode** : par défaut, ce menu contient la commande **Retour au mode Développement**, permettant de sortir du mode Application.
 > > Menu items appear *in italics* because they consist of references and not hard-coded text. Pour plus d’informations sur ce point, reportez-vous à la section [Utiliser des références dans les titres de menus](properties.md#title).
 
