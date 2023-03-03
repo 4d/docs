@@ -158,12 +158,12 @@ The short-circuit AND operator evaluates operands from left to right, returning 
 
 The following table summarizes the different cases for the **&&** operator:
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr2          |
-| truthy | falsy  | Expr2          |
-| falsy  | truthy | Expr1          |
-| falsy  | falsy  | Expr1          |
+| Expr1  | Expr2  | Valor devolvido |
+| ------ | ------ | --------------- |
+| truthy | truthy | Expr2           |
+| truthy | falsy  | Expr2           |
+| falsy  | truthy | Expr1           |
+| falsy  | falsy  | Expr1           |
 
 #### Exemplo 1
 
@@ -223,12 +223,12 @@ If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
 
 The following table summarizes the different cases and the value returned for the **||** operator:
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr1          |
-| truthy | falsy  | Expr1          |
-| falsy  | truthy | Expr2          |
-| falsy  | falsy  | Expr2          |
+| Expr1  | Expr2  | Valor devolvido |
+| ------ | ------ | --------------- |
+| truthy | truthy | Expr1           |
+| truthy | falsy  | Expr1           |
+| falsy  | truthy | Expr2           |
+| falsy  | falsy  | Expr2           |
 
 #### Exemplo 1
 
