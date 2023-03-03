@@ -59,8 +59,11 @@ module.exports =
 						{ 
 							type: "category",
 							label: "Data Types",
+							link: {
+									type: 'doc',
+									id: "Concepts/data-types",
+								},
 							items: [
-								"Concepts/data-types",
 								"Concepts/blob",
 								"Concepts/boolean",
 								"Concepts/collection",
@@ -82,15 +85,7 @@ module.exports =
 						"Concepts/shared",
 						"Concepts/classes",
 						"Concepts/commands",
-						{
-							type: "category",
-							label: "Control Flow",
-							items: [
-								"Concepts/control-flow",
-								"Concepts/branching",
-								"Concepts/looping",
-							],
-						},
+						"Concepts/control-flow",
 						"Concepts/error-handling",
 						"Concepts/interpreted-compiled",
 						"Concepts/components",
@@ -115,6 +110,11 @@ module.exports =
 						"ORDA/glossary"
 					],
 				},
+				{
+						type: 'link',
+						label: '4D Language Reference', // 
+						href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Language-Reference.100-6101683.en.html', 
+				},					
 				{
 					type: "category",
 					label: "Class API Reference",
@@ -359,7 +359,7 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Write Pro', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Write-Pro-Reference.100-6130471.en.html', 
 						},					
 						{
 						  type: 'link',
@@ -379,17 +379,17 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Progress.100-6205973.en.html', 
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-SVG-Component.100-6206845.en.html', 
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Widgets.100-6207497.en.html', 
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
