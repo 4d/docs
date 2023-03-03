@@ -20,9 +20,9 @@ Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determin
 
 |                                     | Blob | 4D.Blob |
 | ----------------------------------- |:----:|:-------:|
-| Editável                            | Sim  |   No    |
-| Partilhável em objectos e colecções |  No  |   Sim   |
-| Passado por referência\*          |  No  |   Sim   |
+| Editável                            | Sim  |   Não   |
+| Partilhável em objectos e colecções | Não  |   Sim   |
+| Passado por referência\*          | Não  |   Sim   |
 | Desempenho ao acessar aos bytes     |  +   |    -    |
 | Tamanho máximo                      | 2GB  | Memory  |
 
