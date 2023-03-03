@@ -104,7 +104,7 @@ This attribute is used within the framework of components. When it is checked, i
 
 For more information about components, refer to the [Developing and installing 4D components](../Extensions/develop-components.md) chapter.
 
-#### Execute on Server
+#### Executar no Servidor
 
 This attribute is only taken into account for a 4D application in client-server mode. When this option is checked, the project method is always executed on the server, regardless of how it is called.
 
@@ -138,7 +138,7 @@ Note that with this option, whatever the internal thread safety evaluation, the 
 
 ***Particular case*:** If the method has also the [**Shared by components and host database**](shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
 
-### Available through
+### Disponível através de
 
 Availability attributes specify the external services which are allowed to explicitly call the method.
 
@@ -150,7 +150,7 @@ In the Explorer, project methods that are offered as a Web Service are given a s
 
 **Note:** You cannot publish a method as a Web service if its name includes characters that do not comply with XML nomenclature (e.g. containing spaces). If the method name is not in keeping with this, 4D does not assign the property.
 
-#### Published in WSDL
+#### Publicado em WSDL
 
 This attribute is only available when the "Web Service" attribute is checked. It lets you include the current method in the WSDL of the 4D application. For more information about this, refer to [Generation of the WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
