@@ -1,6 +1,6 @@
 ---
 id: compatibility
-title: Compatibility page
+title: Página de compatibilidade
 ---
 
 The Compatibility page groups together parameters related to maintaining compatibility with previous versions of 4D.
