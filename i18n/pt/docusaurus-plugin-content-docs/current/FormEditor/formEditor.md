@@ -337,7 +337,7 @@ To move an object to another level, select it and choose:
 
 When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
 
-### Data entry order
+### Ordem de introdução de dados
 
 The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys.
 
@@ -563,7 +563,7 @@ The current view is indicated with a check mark (*e.g.*, "Work Address" in the i
 
 ![](../assets/en/FormEditor/formMenu.png)
 
-### Before you begin
+### Antes de começar
 
 Here are a few important things to know before you start working with views:
 
