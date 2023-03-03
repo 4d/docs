@@ -285,7 +285,7 @@ The following table compares the three types of `For each... End for each`:
 | Tipo Current_Item                         | Variável do mesmo tipo que os elementos da coleção | Entity                         | Variável texto                   |
 | Tipos de expressões                       | Coleção (com elementos do mesmo tipo)              | Seleção de entidades           | Objeto                           |
 | Número de loops (por padrão)              | Número de elementos da coleção                     | Número de entidades na seleção | Número de propriedades de objeto |
-| Compatibilidade de parâmetros begin / end | Sim                                                | Sim                            | No                               |
+| Compatibilidade de parâmetros begin / end | Sim                                                | Sim                            | Não                              |
 
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 - Por padrão, as  _instruções_ anexas são executadas para cada valor de *Expressão*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (`While`) ou ao final do loop (`Until`).
