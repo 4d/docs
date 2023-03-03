@@ -87,7 +87,7 @@ If you use this button to modify a method, the modifications are only effective 
 
 #### Save Settings
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+Saves the current configuration of the debugger window  and makes it the default configuration. Isto inclui:
 
 * the size and position of the window
 * the position of the division lines and the contents of the area that evaluates the expressions
