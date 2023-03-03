@@ -14,7 +14,7 @@ The `On Begin Drag Over` form event can be selected for any form objects that ca
 
 > Unlike the [`On Drag Over`](onDragOver.md) form event, `On Begin Drag Over` is called within the context of the **source object** of the drag action.
 
-The `On Begin Drag Over` event is useful for preparing of the drag action. It can be used to:
+The `On Begin Drag Over` event is useful for preparing of the drag action. Pode ser usado para:
 
 - Add data and signatures to the pasteboard (via the `APPEND DATA TO PASTEBOARD` command).
 - Use a custom icon during the drag action (via the `SET DRAG ICON` command).
