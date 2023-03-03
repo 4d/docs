@@ -96,7 +96,7 @@
     "description": "The label for category 4D View Pro in sidebar docs"
   },
   "sidebar.docs.category.Web Applications": {
-    "message": "Web Applications",
+    "message": "Aplicações Web",
     "description": "The label for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
