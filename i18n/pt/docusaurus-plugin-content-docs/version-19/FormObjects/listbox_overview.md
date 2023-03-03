@@ -506,10 +506,10 @@ Standard sort support depends on the list box type:
 | List box type               | Support of standard sort | Comentários                                                                                                  |
 | --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | Uma coleção de objetos      | Sim                      | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection of scalar values | No                       | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
+| Collection of scalar values | Não                      | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
 | Seleção de entidades        | Sim                      | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Current selection           | Sim                      | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
-| Named selection             | No                       |                                                                                                              |
+| Named selection             | Não                      |                                                                                                              |
 | Arrays                      | Sim                      | Columns bound to picture and pointer arrays are not sortable                                                 |
 
 ### Custom sort
