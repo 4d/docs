@@ -2112,7 +2112,7 @@ filterString および filterCol 引数が省略されるか、空の文字列�
 
 :::caution 警告
 
-If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
+リレーションの 1側の属性に主キー以外の属性を使用した場合、その属性の値が "__KEY" プロパティに書き込まれます。 `.toCollection()` と `.fromCollection()` の関数を使用する場合はとくに、リレーションの 1側の属性に主キーを使用することが推奨されます。
 
 :::
 
