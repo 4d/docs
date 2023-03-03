@@ -90,26 +90,26 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Filtro de entrada             | Descrição                                                                                                                                    |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                            | Allow any letters, but convert to uppercase.                                                                                                 |
-| &9                            | Allow only numbers.                                                                                                                          |
-| &A                            | Allow only capital letters.                                                                                                                  |
-| &a                            | Allow only letters (uppercase and lowercase).                                                                                                |
-| &@                            | Allow only alphanumeric characters. No special characters.                                                                                   |
-| ~a##                          | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
-| !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
-| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Allow any numbers. Limited to hours and minutes.                                           |
-| !0&9##:##                     | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
-| !0&9## Hrs ## Mins ## Secs    | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
-| !0&9Hrs: ## Mins: ## Secs: ## | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
-| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Allow any number. Three entries, hyphen, four entries.                         |
-| !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                         |
-| !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-####               | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
-| ~"A-Z;0-9; ;,;.;-"            | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                |
-| &"a-z;0-9; ;,;.;-"            | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                         |
-| &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
+| Filtro de entrada             | Descrição                                                                                                                                            |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                            | Allow any letters, but convert to uppercase.                                                                                                         |
+| &9                            | Allow only numbers.                                                                                                                                  |
+| &A                            | Allow only capital letters.                                                                                                                          |
+| &a                            | Allow only letters (uppercase and lowercase).                                                                                                        |
+| &@                            | Allow only alphanumeric characters. No special characters.                                                                                           |
+| ~a##                          | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                 |
+| !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                        |
+| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Allow any numbers. Limited to hours and minutes.                                                   |
+| !0&9##:##                     | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                        |
+| !0&9## Hrs ## Mins ## Secs    | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                            |
+| !0&9Hrs: ## Mins: ## Secs: ## | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                             |
+| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, four entries.                         |
+| !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |
+| !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries. |
+| !0&9###-##-####               | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                            |
+| ~"A-Z;0-9; ;,;.;-"            | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                        |
+| &"a-z;0-9; ;,;.;-"            | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                 |
+| &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                               |
 
 #### Gramática JSON
 
@@ -177,7 +177,7 @@ This property is available for [inputs objects](input_overview.md) containing ex
 - In multiline inputs, 4D carries out automatic line returns:  
   ![](../assets/en/FormObjects/multilineAuto.png)
 
-#### No
+#### Não
 
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
 - There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
