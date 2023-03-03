@@ -71,7 +71,7 @@ The following table lists all supported `varType` values:
 | `Real`                 | Valor real                             |
 | `Ponteiro`             | Pointer value                          |
 | `Imagem`               | Picture value                          |
-| `Blob`                 | Scalar Blob value                      |
+| `Blob`                 | Valor Blob Scalar                      |
 | `Collection`           | Collection value                       |
 | `Variant`              | Variant value                          |
 | `Objeto`               | Object with default class (4D. Object) |
@@ -191,7 +191,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 **Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
-### Process variables
+### Variáveis processo
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
