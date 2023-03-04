@@ -559,7 +559,7 @@ You want to combine cell, column, and row range objects in a new, distinct range
 
 | Parâmetros     | Tipo   |    | Descrição                                    |
 | -------------- | ------ | -- | -------------------------------------------- |
-| 4DViewDocument | Blob   | -> | 4D View document                             |
+| 4DViewDocument | Blob   | -> | Documento 4D View                            |
 | Resultados     | Objeto | <- | 4D View Pro object<!-- END REF --> |
 
 #### Descrição
@@ -650,11 +650,11 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda a área
 
 <!-- REF #_method_.VP Copy to object.Params -->
 
-| Parâmetros | Tipo   |    | Descrição                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------- |
-| rangeObj   | Objeto | -> | Range object                                                         |
-| options    | Objeto | -> | Additional options                                                   |
-| Resultados | Objeto | <- | Object returned. Contains the copied data|<!-- END REF --> |
+| Parâmetros | Tipo   |    | Descrição                                                              |
+| ---------- | ------ | -- | ---------------------------------------------------------------------- |
+| rangeObj   | Objeto | -> | Range object                                                           |
+| options    | Objeto | -> | Additional options                                                     |
+| Resultados | Objeto | <- | Objecto devolvido. Contains the copied data|<!-- END REF --> |
 
 
 #### Descrição
@@ -926,7 +926,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 | includeBindingSource       | Booleano | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                         |
 | sheet                      | number   | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | pdfOptions                 | object   | PDF only (optional) - Options for pdf export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>title of the document.</td></tr><tr><td>autor</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| csvOptions                 | object   | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| csvOptions                 | object   | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `\<customProperty>` | any      | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 **Notes about Excel format**:
@@ -1104,7 +1104,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 | rangeObj        | Objeto | -> | Range object                            |
 | searchValue     | Text   | -> | Valor da pesquisa                       |
 | searchCondition | Objeto | -> | Object containing search condition(s)   |
-| replaceValue    | Text   | -> | Replacement value                       |
+| replaceValue    | Text   | -> | Valor de substituição                   |
 | Resultados      | Objeto | <- | Range object|<!-- END REF --> |
 
 #### Descrição
@@ -2883,7 +2883,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 | csvOptions |                 | object | options for csv import                                                                                                                                                                                                                                   |
 |            | range           | object | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                            |
 |            | rowDelimiter    | text   | Row delimiter. If not present, the delimiter is automatically determined by 4D.                                                                                                                                                                          |
-|            | columnDelimiter | text   | Column delimiter. O padrão: ","                                                                                                                                                                                                                          |
+|            | columnDelimiter | text   | Delimitador de coluna. O padrão: ","                                                                                                                                                                                                                     |
 
 > For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
@@ -3324,9 +3324,9 @@ In *fontObj*, pass an object containing the font properties. As propriedades aba
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | family      | text | Specifies the font.                                                                                                 | any standard or generic font family. Ex. Ex. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                           | Sim         |
 | size        | text | Defines the size of the font. The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | a number with one of the following units: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>              | Sim         |
-| style       | text | The style of the font.                                                                                              | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | No          |
-| variant     | text | Specifies font in small capital letters.                                                                            | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | No          |
-| weight      | text | Defines the thickness of the font.                                                                                  | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | No          |
+| style       | text | The style of the font.                                                                                              | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | Não         |
+| variant     | text | Specifies font in small capital letters.                                                                            | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | Não         |
+| weight      | text | Defines the thickness of the font.                                                                                  | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Não         |
 
 This object can be created with the [VP Font to object](#vp-font-to-object) command.
 
@@ -4777,12 +4777,12 @@ Here's the result once the columns are generated:
 
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
-| Parâmetros    | Tipo   |    | Descrição                                  |
-| ------------- | ------ | -- | ------------------------------------------ |
-| rangeObj      | Objeto | -> | Range object                               |
-| dateValue     | Date   | -> | Date value to set                          |
-| timeValue     | Hora   | -> | Time value to set                          |
-| formatPattern | Text   | -> | Format of value|<!-- END REF --> |
+| Parâmetros    | Tipo   |    | Descrição                                   |
+| ------------- | ------ | -- | ------------------------------------------- |
+| rangeObj      | Objeto | -> | Range object                                |
+| dateValue     | Date   | -> | Date value to set                           |
+| timeValue     | Hora   | -> | Time value to set                           |
+| formatPattern | Text   | -> | Formato do valor|<!-- END REF --> |
 
 #### Descrição
 
@@ -4898,11 +4898,11 @@ $style.backColor:="#E6E6FA" //light purple color VP SET DEFAULT STYLE("myDoc";$s
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| Parâmetros    | Tipo     |    | Descrição                                  |
-| ------------- | -------- | -- | ------------------------------------------ |
-| rangeObj      | Objeto   | -> | Range object                               |
-| campo         | Ponteiro | -> | Reference to field in virtual structure    |
-| formatPattern | Text     | -> | Format of field|<!-- END REF --> |
+| Parâmetros    | Tipo     |    | Descrição                                   |
+| ------------- | -------- | -- | ------------------------------------------- |
+| rangeObj      | Objeto   | -> | Range object                                |
+| campo         | Ponteiro | -> | Reference to field in virtual structure     |
+| formatPattern | Text     | -> | Formato do campo|<!-- END REF --> |
 
 #### Descrição
 
@@ -5094,11 +5094,11 @@ $panes.rowCount:=1 VP SET FROZEN PANES("ViewProArea";$panes)
 
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 
-| Parâmetros    | Tipo   |    | Descrição                                  |
-| ------------- | ------ | -- | ------------------------------------------ |
-| rangeObj      | Objeto | -> | Range object                               |
-| numberValue   | Número | -> | Number value to set                        |
-| formatPattern | Text   | -> | Format of value|<!-- END REF --> |
+| Parâmetros    | Tipo   |    | Descrição                                   |
+| ------------- | ------ | -- | ------------------------------------------- |
+| rangeObj      | Objeto | -> | Range object                                |
+| numberValue   | Número | -> | Number value to set                         |
+| formatPattern | Text   | -> | Formato do valor|<!-- END REF --> |
 
 #### Descrição
 
@@ -5746,11 +5746,11 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 
-| Parâmetros    | Tipo   |    | Descrição                                  |
-| ------------- | ------ | -- | ------------------------------------------ |
-| rangeObj      | Objeto | -> | Range object                               |
-| textValue     | Text   | -> | Text value to set                          |
-| formatPattern | Text   | -> | Format of value|<!-- END REF --> |
+| Parâmetros    | Tipo   |    | Descrição                                   |
+| ------------- | ------ | -- | ------------------------------------------- |
+| rangeObj      | Objeto | -> | Range object                                |
+| textValue     | Text   | -> | Text value to set                           |
+| formatPattern | Text   | -> | Formato do valor|<!-- END REF --> |
 
 #### Descrição
 
@@ -5779,11 +5779,11 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
-| Parâmetros    | Tipo   |    | Descrição                                  |
-| ------------- | ------ | -- | ------------------------------------------ |
-| rangeObj      | Objeto | -> | Range object                               |
-| timeValue     | Text   | -> | Time value to set                          |
-| formatPattern | Text   | -> | Format of value|<!-- END REF --> |
+| Parâmetros    | Tipo   |    | Descrição                                   |
+| ------------- | ------ | -- | ------------------------------------------- |
+| rangeObj      | Objeto | -> | Range object                                |
+| timeValue     | Text   | -> | Time value to set                           |
+| formatPattern | Text   | -> | Formato do valor|<!-- END REF --> |
 
 #### Descrição
 

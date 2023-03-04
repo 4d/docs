@@ -84,7 +84,7 @@ The form can contains [additional header areas](#additional-areas) to be associa
 
 ---
 
-## Additional areas
+## Áreas adicionais
 
 You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
 

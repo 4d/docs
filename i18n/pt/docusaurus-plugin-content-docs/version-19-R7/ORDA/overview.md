@@ -22,7 +22,7 @@ A query returns a list of entities called an entity selection, which fulfills th
 
 In addition, ORDA objects such as entity selections or entities can be easily bound to UI objects such as list boxes or variables. Combined with powerful features such as the `This` and `Form` commands, they allow the building modern and modular interfaces based upon objects and collections.
 
-## How to use ORDA?
+## Como utilizar a ORDA?
 
 Basically, ORDA handles objects. In ORDA, all main concepts, including the datastore itself, are available through objects. In 4D, the datastore is automatically [mapped upon the 4D structure](dsMapping.md).
 

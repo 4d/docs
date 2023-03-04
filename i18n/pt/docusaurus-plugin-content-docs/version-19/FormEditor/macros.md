@@ -20,7 +20,7 @@ Macros can been defined for the host project or for components within the projec
 
 When called, a macro overrides any previously specified behaviors.
 
-## Hands-on example
+## Exemplo prático
 
 In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
 
@@ -109,8 +109,8 @@ Here is the description of the JSON file contents:
 | Atributo |                     |                          | Tipo   | Descrição                                              |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
 | macros   |                     |                          | object | list of defined macros                                 |
-|          | `<macroName>` |                          | object | macro definition                                       |
-|          |                     | class                    | string | macro class name                                       |
+|          | `<macroName>` |                          | object | definição macro                                        |
+|          |                     | class                    | string | nome da classe macro                                   |
 |          |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
@@ -205,7 +205,7 @@ Here are the properties returned in the *$editor* parameter:
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
 | $editor.editor.form              | Objeto     | The entire form                                                                   |
 | $editor.editor.file              | File       | File object of the form file                                                      |
-| $editor.editor.name              | String     | Name of the form                                                                  |
+| $editor.editor.name              | String     | Nome do formulário                                                                |
 | $editor.editor.table             | number     | Table number of the form, 0 for project form                                      |
 | $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
 | $editor.editor.currentPage       | Objeto     | The current page, containing all the form objects and the entry order of the page |
@@ -222,7 +222,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | formProperties    | Objeto     | formProperties if modified by the macro                     |
 | editor.groups     | Objeto     | group info, if groups are modified by the macro             |
 | editor.views      | Objeto     | view info, if views are modified by the macro               |
-| editor.activeView | String     | Active view name                                            |
+| editor.activeView | String     | Nome da vista activa                                        |
 
 For example, if objects of the current page and groups have been modified, you can write:
 

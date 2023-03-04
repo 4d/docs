@@ -130,7 +130,7 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 | Nome               | Tipo de dados    | Valores possíveis          |
 | ------------------ | ---------------- | -------------------------- |
-| inheritedFormTable | string or number | table name or table number |
+| inheritedFormTable | string ou number | table name or table number |
 
 
 ---

@@ -128,7 +128,7 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 > - .4DD file
 > - ficheiro .4DIndx
 > - .4DSyncData file
-> - .4DSyncHeader file
+> - ficheiro .4DSyncHeader
 > - External Data folder
 > 
 > Se quiser estabelecer os arquivos anexados ou os arquivos de projeto, deve realizar uma [restauração manual](restore.md#manually-restoring-a-backup-standard-dialog).

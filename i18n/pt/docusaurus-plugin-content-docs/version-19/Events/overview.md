@@ -30,7 +30,7 @@ Additional properties are returned when the event occurs on specific objects. Em
 - [4D View Pro areas](FormObjects/viewProArea_overview.md) return for example `sheetName` or `action` properties in the [On After Edit](onAfterEdit.md) event object.
 
 
-## Events and Methods
+## Eventos e métodos
 
 When a form event occurs, 4D performs the following actions:
 
@@ -96,9 +96,9 @@ The following table summarizes how object and form methods are called for each e
 | On After Sort            | Sim (List box)                      | Nunca             | Involved object only   |
 | On Long Click            | Yes (Button)                        | Sim               | Involved object only   |
 | On Alternative Click     | Yes (Button and List box)           | Nunca             | Involved object only   |
-| On Expand                | Sim (Hier. list and list box)       | Nunca             | Involved object only   |
-| On Collapse              | Sim (Hier. list and list box)       | Nunca             | Involved object only   |
-| On Delete Action         | Sim (Hier. list and list box)       | Nunca             | Involved object only   |
+| On Expand                | Sim (Hier. lista e list box)        | Nunca             | Involved object only   |
+| On Collapse              | Sim (Hier. lista e list box)        | Nunca             | Involved object only   |
+| On Delete Action         | Sim (Hier. lista e list box)        | Nunca             | Involved object only   |
 | On URL Resource Loading  | Sim (Área Web)                      | Nunca             | Involved object only   |
 | On Begin URL Loading     | Sim (Área Web)                      | Nunca             | Involved object only   |
 | On URL Loading Error     | Sim (Área Web)                      | Nunca             | Involved object only   |

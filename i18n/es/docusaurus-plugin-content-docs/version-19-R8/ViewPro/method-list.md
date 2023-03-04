@@ -5320,13 +5320,13 @@ El comando `VP SET FROZEN PANES` <!-- REF #_method_.VP SET FROZEN PANES.Summary 
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Setting the value of any of the column or row properties equal to zero resets (unfreezes) the property. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
+Puede pasar un objeto que defina las columnas y líneas a congelar en el parámetro *paneObj*. Al definir el valor de una propiedad de columna o de línea en cero, se restablece (descongela) la propiedad. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
 
 | Propiedad | Tipo | Descripción |
 | --------- | ---- | ----------- |
 |           |      |             |
 
-|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
+|columnCount | Integer | El número de columnas congeladas a la izquierda de la hoja| |trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja |rowCount | Integer | El número de filas congeladas en la parte superior de la hoja | |trailingRowCount | Integer | El número de filas congeladas en la parte inferior de la hoja|
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5334,7 +5334,7 @@ En el parámetro opcional *sheet*, puede designar una hoja específica donde se 
 
 #### Ejemplo
 
-You want to freeze the first three columns on the left, two columns on the right, and the first row:
+Quiere congelar las tres primeras columnas de la izquierda, dos columnas de la derecha y la primera línea:
 
 ```4d
 C_OBJECT($panes)
@@ -5374,17 +5374,17 @@ El comando `VP SET NUM VALUE` <!-- REF #_method_.VP SET NUM VALUE.Summary -->asi
 
 En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-The *numberValue* parameter specifies a numeric value to be assigned to the *rangeObj*.
+El parámetro *numberValue* especifica un valor numérico que se asignará al *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *numberValue* parameter.
+El parámetro opcional *formatPattern* define un [pattern](configuring.md#cell-format) para el parámetro *numberValue*.
 
 #### Ejemplo
 
 ```4d
-//Set the cell value to 2
+//Definir el valor de la celda en 2
 VP SET NUM VALUE(VP Cell("ViewProArea";3;2);2)
 
-//Set the cell value and format it in dollars
+/Definir el valor de la celda y formatear en dólares
 VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 ```
 
@@ -5411,9 +5411,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 El comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->define los atributos a utilizar cuando se imprime el *vpAreaName*<!-- END REF -->.
 
-Pass the name of the 4D View Pro area to print in *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
+Pase el nombre del área 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
-You can pass an object containing definitions for various printing attributes in the *printInfo* parameter. To view the full list of the available attributes, see [Print Attributes](configuring.md#print-attributes).
+Puede pasar un objeto que contenga las definiciones para varios atributos de impresión en el parámetro *printInfo*. Para ver la lista completa de los atributos disponibles, consulte [Atributos de impresión](configuring.md#print-attributes).
 
 En el parámetro opcional *sheet*, puede designar una hoja específica a imprimir (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5427,10 +5427,10 @@ El siguiente código imprimirá un área 4D View Pro en un documento PDF:
 ```4d
 var $printInfo : Object
 
-//declare print attributes object
+//declarar el objeto de atributos de impresión 
 $printInfo:=New object
 
-//define print attributes
+//definir los atributos de impresión
 $printInfo.headerCenter:="&BS.H.I.E.L.D. &A Sales Per Region"
 $printInfo.firstPageNumber:=1
 $printInfo.footerRight:="page &P of &N"
@@ -5485,9 +5485,9 @@ El PDF:
 
 El comando `VP SET ROW ATTRIBUTES` <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->aplica los atributos definidos en la propiedad *Obj* a las líneas en *rangeObj*<!-- END REF -->.
 
-In the *rangeObj*, pass an object containing a range. If the range contains both columns and rows, attributes are applied only to the rows.
+En *rangeObj*, pase un objeto que contenga un rango. Si el rango contiene tanto columnas como líneas, los atributos se aplican sólo a las líneas.
 
-The *propertyObj* parameter lets you specify the attributes to apply to the rows in the *rangeObj*. Estos atributos son:
+El parámetro *propertyObj* permite especificar los atributos que se aplicarán a las líneas del rango *Obj*. Estos atributos son:
 
 | Propiedad       | Tipo    | Descripción                                                                             |
 | --------------- | ------- | --------------------------------------------------------------------------------------- |
@@ -5537,9 +5537,9 @@ El comando `VP SET ROW COUNT` <!-- REF #_method_.VP SET ROW COUNT.Summary -->def
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pass the total number of rows in the *rowCount* parameter. *rowCount* debe ser mayor que 0.
+Pase el número total de líneas en el parámetro *rowCount*. *rowCount* debe ser mayor que 0.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the *rowCount* will be applied (counting begins at 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
+En el parámetro opcional *sheet*, puede designar una hoja de cálculo específica en la que se aplicará *rowCount* (el conteo comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
 * `vk current sheet`
 
@@ -5568,7 +5568,7 @@ VP SET ROW COUNT("ViewProArea";5)
 | ---------- | ---- |  | ----------- |
 |            |      |  |             |
 
-|rangeObj |Object|->|Range object of cells|<!-- END REF -->
+|rangeObj |Object|->|Rango objeto de celdas|<!-- END REF -->
 
 #### Descripción
 
@@ -5608,7 +5608,7 @@ VP SET SELECTION($currentSelection)
 El comando `VP SET SHEET COUNT` <!-- REF #_method_.VP SET SHEET COUNT.Summary -->define el número de hojas en *vpAreaName*<!-- END REF -->.
 
 En `number`, pase un número correspondiente a cuántas hojas contendrá el documento tras la ejecución del comando.
-> **Warning**: The command will delete sheets if the previous amount of sheets in your document is superior to the number passed. For example, if there are 5 sheets in your document and you set the sheet count to 3, the command will delete sheets number 4 and 5.
+> **Atención**: el comando borrará hojas si la cantidad anterior de hojas en su documento es superior al número pasado. Por ejemplo, si hay 5 hojas en su documento y define el conteo de hojas en 3, el comando borrará las hojas número 4 y 5.
 
 #### Ejemplo
 
@@ -5640,7 +5640,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 | vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
 | name       | Text | -> | Nuevo nombre para la hoja                    |
 
-|sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
+|sheet|Integer|->|Índice de la hoja a renombrar|<!-- END REF -->
 
 #### Descripción
 
@@ -5654,7 +5654,7 @@ En *sheet*, pase el índice de la hoja a renombrar.
 
 > La indexación comienza en 0.
 
-If no *index* is passed, the command renames the current sheet.
+Si no se pasa el *index*, el comando renombra la hoja actual.
 
 El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5696,7 +5696,7 @@ El comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summar
 
 Pase el nombre del área de 4D View Pro en *vpAreaName*. Si pasa un nombre que no existe, se devuelve un error.
 
-Pase un objeto que contenga las definiciones de las opciones a definir en el parámetro *sheetOptions*. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
+Pase un objeto que contenga las definiciones de las opciones a definir en el parámetro *sheetOptions*. Para ver la lista completa de las opciones disponibles, consulte el párrafo [Opciones hoja](configuring.md#sheet-options).
 
 En el parámetro opcional *sheet*, puede designar una hoja específica (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5707,46 +5707,46 @@ En el parámetro opcional *sheet*, puede designar una hoja específica (la numer
 Quiere proteger todas las celdas excepto el rango C5:D10:
 
 ```4d
-// Activate protection on the current sheet
+// Activar la protección en la hoja actual
 var $options : Object
 
 $options:=New object
 $options.isProtected:=True
 VP SET SHEET OPTIONS("ViewProArea";$options)
 
-// mark cells C5:D10 as 'unlocked'
+// marcar las celdas C5:D10 como "desbloqueadas"
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
 #### Ejemplo 2
 
-You need to protect your document while your users can resize rows and columns:
+Necesita proteger su documento mientras sus usuarios pueden redimensionar las líneas y columnas:
 
 ```4d
 var $options : Object
 
 $options:=New object
-// Activate protection
+// Activar la protección
 $options.isProtected:=True
 $options.protectionOptions:=New object
-// Allow user to resize rows
+// Permitir al usuario cambiar el tamaño de las líneas
 $options.protectionOptions.allowResizeRows=True;
-// Allow user to resize columns
+// Permitir al usuario cambiar el tamaño de las columnas
 $options.protectionOptions.allowResizeColumns=True;
 
-// Apply protection on the current sheet
+// Aplicar la protección en la hoja actual
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
 #### Ejemplo 3
 
-You want to customize the colors of your sheet tabs, frozen lines, grid lines, selection background and selection border:
+Desea personalizar los colores de sus pestañas, líneas congeladas, líneas de cuadrícula, fondo de selección y borde de selección:
 
 ```4d
 var $options : Object
 
 $options:=New object
-// Customize color of Sheet 1 tab
+// Personalizar el color de la pestaña de la hoja 1
 $options.sheetTabColor:="Black"
 $options.gridline:=New object("color";"Purple")
 $options.selectionBackColor:="rgb(255,128,0,0.4)"
@@ -5755,12 +5755,12 @@ $options.frozenlineColor:="Gold"
 
 VP SET SHEET OPTIONS("ViewProArea";$options;0)
 
-// Customize color of Sheet 2 tab
+// Personaliza el color de la pestaña de la joja 2
 $options.sheetTabColor:="red"
 
 VP SET SHEET OPTIONS("ViewProArea";$options;1)
 
-// Customize color of Sheet 3 tab
+// Personalizar el color de la pestaña de la hoja 3
 $options.sheetTabColor:="blue"
 
 VP SET SHEET OPTIONS("ViewProArea";$options;2)
@@ -5816,7 +5816,7 @@ El comando `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` se pasa por defecto.
+En *visible*, pase `True` para mostrar las líneas de impresión, y `False` para ocultarlas. `True` se pasa por defecto.
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 

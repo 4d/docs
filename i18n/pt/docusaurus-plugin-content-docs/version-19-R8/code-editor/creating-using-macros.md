@@ -110,7 +110,7 @@ Here is an example of a macro definition:
 | SAVE RECORD(`<Selection/>`)                    |                                                                                                                                                 |
 | NEXT RECORD(`<Selection/>`)                    |                                                                                                                                                 |
 | End for                                              |                                                                                                                                                 |
-| `</text>`                                      | End of macro code                                                                                                                               |
+| `</text>`                                      | Fim do código macro                                                                                                                             |
 | `</macro>`                                     | End of macro definition                                                                                                                         |
 | `</macros>`                                    | End of macros XML file                                                                                                                          |
 

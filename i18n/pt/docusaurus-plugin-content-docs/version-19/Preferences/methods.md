@@ -137,7 +137,7 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 ![](../assets/en/Preferences/optionsClosing.png)  
 ![](../assets/en/Preferences/optionsClosing2.png)
 
-#### Matching \[]\(){}
+#### Correspondência \[]\(){}
 
 Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. As opções abaixo estão disponíveis:
 

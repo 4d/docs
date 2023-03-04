@@ -18,7 +18,7 @@ This option lets you indicate whether or not the 4D Server database will appear 
 
 > If you modify this parameter, you must restart the server database in order for it to be taken into account.
 
-#### Publication name
+#### Nome da publicação
 
 This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). By default, 4D Server uses the name of the project file. You can enter any custom name you want.
 

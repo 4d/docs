@@ -437,7 +437,7 @@ The *$event* parameter contains the following properties:
 | dataClassName | Text    | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                  |
 | kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Variant | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                      |
-| operator      | Text    | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>% (contains keyword)</li> |
+| operator      | Text    | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (greater than or equal to)</li><li>IN (incluído em)</li><li>% (contains keyword)</li> |
 | result        | Variant | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                           |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
@@ -670,7 +670,7 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 
 > Keep in mind that alias attributes are calculated on the server. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
 
-### Alias properties
+### Propriedades alias
 
 Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".
 
