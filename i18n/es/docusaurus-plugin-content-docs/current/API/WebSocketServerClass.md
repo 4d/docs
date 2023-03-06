@@ -160,7 +160,7 @@ This callback is called when the handshake is complete. It must be called with a
 | param      |      | Object             | <- | Parámetros                      |
 |            | type | Text               |    | "open"                          |
 
-Event emitted when the websocket server is started.
+Evento emitido cuando se inicia el servidor websocket.
 
 
 **WSHandler.onTerminate**(*WSServer* : Object ; *param* : Object)
@@ -344,7 +344,7 @@ In the optional *options* parameter, pass an object that contains the following 
 
 | Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                   | Por defecto |
 | --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| path      | Text | Represents the path to access the WebSocket server. If no path is defined, the WebSocket server manages all the connections                                                                                                                                                                                                                   | indefinido  |
+| path      | Text | Representa la ruta de acceso al servidor WebSocket. If no path is defined, the WebSocket server manages all the connections                                                                                                                                                                                                                   | indefinido  |
 | dataType  | Text | Type of the data received through the `connectionHandler.onMessage` and the data send by [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) function. Valores: "text", "blob","object"). If "object": (send) transforms object into a json format and sends it; (reception): receives json format and transforms it into object | text        |
 
 
