@@ -135,7 +135,7 @@ A *code* and *message* can be sent to the client during the closure to indicate 
 <!-- REF #WebSocketConnectionClass.wss.Desc -->
 ## .wss
 
-<!-- REF #WebSocketConnectionClass.wss.Syntax -->**wss** : 4D.WebSocketServer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.wss.Syntax -->**wss**: 4D.WebSocketServer<!-- END REF -->
 
 #### Descripción
 
