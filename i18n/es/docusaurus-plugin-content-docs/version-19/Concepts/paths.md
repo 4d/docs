@@ -21,14 +21,14 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designa                                            |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
-| "/LOGS"      | Carpeta Logs                                       |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Carpeta Project                                    |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | Designa                                                     |
+| ------------ | ----------------------------------------------------------- |
+| "/DATA"      | Current data folder                                         |
+| "/LOGS"      | Carpeta Logs                                                |
+| "/PACKAGE"   | Carpeta de la base de datos (con o sin la extensión 4dbase) |
+| "/PROJECT"   | Carpeta Project                                             |
+| "/RESOURCES" | Current database resources folder                           |
+| "/SOURCES"   | Current project resources folder                            |
 
 ## Sintaxis POSIX
 
