@@ -951,30 +951,30 @@ Carácter delimitador do nome da caixa de correio.
 
 #### Descrição
 
-A função `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
+A função `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devolve o `Email` objecto correspondente ao *msgNumber* ou *msgID* na caixa de correio designada pelo `IMAP_transporter`<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
 No primeiro parâmetro, pode passar qualquer um dos dois:
 
-* *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
-* *msgID*, a *text* value indicating the unique ID of the message to retrieve.
+* *msgNumber*, um valor *inteiro* indicando o número de sequência da mensagem a recuperar ou
+* *msgID*, um texto *valor* indicando a identificação única da mensagem a recuperar.
 
-The optional *options* parameter allows you pass an object defining additional instructions for handling the message. As seguintes propriedades estão disponíveis:
+O parâmetro opcional *opções* permite-lhe passar um objecto definindo instruções adicionais para o tratamento da mensagem. As seguintes propriedades estão disponíveis:
 
-| Propriedade | Tipo    | Descrição                                                                                                                  |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen  | boolean | If True, the message is marked as "seen" in the mailbox. If False, the message is not marked as "seen". Valor padrão: True |
-| withBody    | boolean | Pass True to return the body of the message. If False, only the message header is returned. Valor padrão: True             |
-> * The function generates an error and returns **Null** if *msgID* designates a non-existing message,
-> * If no mailbox is selected with the [`.selectBox()`](#selectbox) function, an error is generated,
-> * If there is no open connection, `.getMail()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox)`.
+| Propriedade | Tipo    | Descrição                                                                                                                                 |
+| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen  | boolean | Se Verdadeiro, a mensagem é marcada como "visto" na caixa de correio. Se falso, a mensagem não é marcada como "visto". Valor padrão: True |
+| withBody    | boolean | Pass True para devolver o corpo da mensagem. Se falso, apenas o cabeçalho da mensagem é devolvido. Valor padrão: True                     |
+> * A função gera um erro e devolve **Null** se *msgID* designar uma mensagem inexistente,
+> * Se nenhuma caixa de correio for seleccionada com a função [`.selectBox()`](#selectbox) , é gerado um erro,
+> * Se não houver uma ligação aberta, `.getMail()` abrirá uma ligação a última caixa de correio especificada com [`.selectBox()`](#selectbox)`.
 
 #### Resultados
 
-`.getMail()` returns an [`Email` object](EmailObjectClass.md#email-object) with the following specific IMAP properties: *id*, *receivedAt*, and *size*.
+`.getMail()` devolve um [`Email` object](EmailObjectClass.md#email-object) com as seguintes propriedades IMAP específicas: *id*, *recebidoEm*, e *tamanho*.
 
 #### Exemplo
 
-You want to get the message with ID = 1:
+Se quiser receber uma mensagem com ID = 1:
 
 ```4d
  var $server : Object
@@ -1132,8 +1132,8 @@ A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Sum
 
 No primeiro parâmetro, pode passar qualquer um dos dois:
 
-* *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
-* *msgID*, a *text* value indicating the unique ID of the message to retrieve.
+* *msgNumber*, um valor *inteiro* indicando o número de sequência da mensagem a recuperar ou
+* *msgID*, um texto *valor* indicando a identificação única da mensagem a recuperar.
 
 The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
 
