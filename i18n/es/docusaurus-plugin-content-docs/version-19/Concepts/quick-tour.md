@@ -134,10 +134,10 @@ Un método proyecto puede llamar a otro método proyecto con o sin parámetros (
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Hacer_algo($myText) //Llamar al método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something  
+  //Aquí el código del método Do_Something
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
 ```
@@ -194,7 +194,7 @@ Para acceder a un elemento de la colección, debe pasar el número del elemento 
 ```4d
 var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  //acceso al 4º elemento de la colección
 ```
 
 ## Clases
@@ -372,11 +372,11 @@ Ambos estilos de comentarios pueden utilizarse simultáneamente.
 Inserte `//` al principio de una línea o después de una instrucción para añadir una línea de comentario. Ejemplo:
 
 ```4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
-  //comment
-  //comment
-  //comment
+//Este es un comentario
+For($vCounter;1;100) //Bucle inicial
+  //comentario
+  //comentario
+  //comentario
 End for
 ```
 
