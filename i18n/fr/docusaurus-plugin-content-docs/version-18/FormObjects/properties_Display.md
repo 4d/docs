@@ -7,7 +7,7 @@ title: Affichage
 
 ## Alpha Format
 
-Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
+Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Voici une liste des formats proposés pour les champs alphanumériques :
 
 ![](../assets/en/FormObjects/property_alphaFormat.png)
 
