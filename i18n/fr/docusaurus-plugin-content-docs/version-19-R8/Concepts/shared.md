@@ -5,7 +5,7 @@ title: Objets et collections partagés
 
 **Les objets partagés** et **les collections partagées** sont des [objets](Concepts/dt_object.md) et des [collections](Concepts/dt_collection.md) spécifiques dont le contenu est partagé entre les process. Comparés aux [Variables interprocess](Concepts/variables.md#interprocess-variables), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les **process 4D préemptifs** : il peuvent être passés en paramètres (par référence) aux commandes telles que `New process` ou `CALL WORKER`.
 
-Les objets partagés et les collections partagées peuvent être stockés dans des variables déclarées à l'aide des commandes standard `C_OBJECT` et `C_COLLECTION`, mais doivent être instanciées à l'aide de commandes spécifiques :
+Shared objects and shared collections can be stored in standard `Object` and `Collection` type variables, but must be instantiated using specific commands:
 
 - pour créer un objet partagé, utilisez la commande `New shared object`,
 - pour créer une collection partagée, utilisez la commande `New shared collection`.
@@ -78,11 +78,11 @@ La syntaxe de la structure `Use...End use` est la suivante :
 
 La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre *Shared_object_or_Shared_collection* sous la protection d'un sémaphore interne. *Shared_object_or_Shared_collection* peut être tout objet partagé ou collection partagée valide.
 
-Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les **process 4D préemptifs**. Ils peuvent être passés par référence en paramètre d'un process à un autre. Pour plus de détails sur les objets partagés et les collections partagées, reportez-vous à la page **Objets et collections partagés**. Encadrer les modifications d'objets partagés et de collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
+Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les **process 4D préemptifs**. Ils peuvent être passés par référence en paramètre d'un process à un autre. Encadrer les modifications d'objets partagés et de collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
 
 - Une fois que la ligne **Use** est exécutée avec succès, toutes les propriétés/éléments de _Shared_object_or_Shared_collection_ sont verrouillé(e)s en écriture pour tous les autres process jusqu'à ce que la ligne `End use` correspondante soit exécutée.
 - La séquence d'_instructions_ peut alors effectuer toute modification dans les propriétés/éléments de Shared_object_or_Shared_collection sans risque d'accès concurrent.
-- Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre _Shared_object_or_Shared_collection_, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf. **Utilisation des objets et collections partagés**).
+- If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group.
 - Si un autre process tente d'accéder à une propriété de _Shared_object_or_Shared_collection_ ou une propriété connectée alors qu'une séquence **Use...End use** est en cours d'exécution sur le même Shared_object_or_Shared_collection, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée.
 - La ligne **End use** déverrouille les propriétés de _Shared_object_or_Shared_collection_ et tous les objets du même groupe.
 - Plusieurs structures **Use...End use** peuvent être imbriquées dans le code 4D. Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**.
@@ -96,35 +96,31 @@ Vous souhaitez lancer plusieurs process qui vont effectuer des tâches d'inventa
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //remplir le tableau avec les éléments à compter
+ ... //fill the array with items to count
  $nbItems:=Size of array($_items)
- C_OBJECT($inventory)
+ var $inventory : Object
  $inventory:=New shared object
  Use($inventory)
     $inventory.nbItems:=$nbItems
  End use
 
-  //Créer un process
+  //Create processes
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
-  // objet $inventory envoyé par référence
+  //$inventory object sent by reference
  End for
 ```
 
 Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inventory est mis à jour dès que possible :
 
 ```4d
- C_TEXT($1)
- C_TEXT($what)
- C_OBJECT($2)
- C_OBJECT($inventory)
- $what:=$1 //pour une meilleure lisibilité
- $inventory:=$2
- 
- $count:=CountMethod($what) //méthode de comptage des produits
- Use($inventory) //Utiliser l'objet partagé
-    $inventory[$what]:=$count  //stockage des résultats pour cet article
-End use
+    //HowMany
+ #DECLARE ($what : Text ; $inventory : Object)
+
+ $count:=CountMethod($what) //method to count products
+ Use($inventory) //use shared object
+    $inventory[$what]:=$count  //save the results for this item
+ End use
 ```
 
 ## Exemple 2
