@@ -172,7 +172,7 @@ The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see 
 ### .textDecoration
 
 <!-- REF #TableStyle.textDecoration.Syntax -->
-**.textDecoration** : Integer<!-- END REF -->
+**.textDecoration**: Integer<!-- END REF -->
 
 The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md/#fonts-and-text))<!-- END REF -->.
 
@@ -209,7 +209,7 @@ The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary --
 
 **.borderHorizontal** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->.
+La propiedad `.borderHorizontal` es la <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->.
 
 
 ### .borderVertical
@@ -300,7 +300,7 @@ The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHea
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Por defecto=1.
+La propiedad `.firstRowStripSize` es el <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Por defecto=1.
 
 ### .firstRowStripStyle
 
@@ -391,7 +391,7 @@ The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRow
 <!-- REF #TableThemeOptions.wholeTableStyle.Syntax -->
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.wholeTableStyle` property is the <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo por defecto del área de datos<!-- END REF -->.
+La propiedad `.wholeTableStyle` es el <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo por defecto del área de datos<!-- END REF -->.
 
 
 

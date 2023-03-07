@@ -5,9 +5,9 @@ title: 制御フロー
 
 メソッドや関数が単純か複雑かに関係なく、開発者は3つのプログラミング構造のうち、1つ以上を常に使用します。 プログラミング構造は、メソッド内でステートメントが実行される順序を決定する実行フローをコントロールします。 3つのタイプの構造があります:
 
-- **Sequential**: a sequential structure is a simple, linear structure. A sequence is a series of statements that 4D executes one after the other, from first to last. A one-line routine, frequently used for object methods, is the simplest case of a sequential structure. For example: `[People]lastName:=Uppercase([People]lastName)`
-- **[分岐](Concepts/cf_branching.md)**: 分岐構造は、条件をテストし、その結果に基づいて異なる流れにメソッドを導きます。 The condition is a Boolean expression, an expression that evaluates TRUE or FALSE. `If...Else...End if` 構文は分岐構造の一例で、処理フローを二つに分岐します。 `Case of...Else...End case` 構文も分岐構造の一つで、処理フローをもっとたくさん分岐することができます。
-- **[ループ](Concepts/cf_looping.md)**: メソッドの作成にあたって、何度も同じ処理を繰り返すことがあります。 To deal with this need, the 4D language provides the following looping structures:
+- **シーケンシャル**: シーケンシャル構造は単純な線形構造です。 シーケンスとは、4Dが最初から最後まで次々に実行する一連のステートメントです。 オブジェクトメソッドで頻繁に使用される1行から成るルーチンはもっとも簡単なシーケンシャル構造の例です。 例: `[People]lastName:=Uppercase([People]lastName)`
+- **[分岐](Concepts/cf_branching.md)**: 分岐構造は、条件をテストし、その結果に基づいて異なる流れにメソッドを導きます。 条件は true または false に評価されるブール式です。 `If...Else...End if` 構文は分岐構造の一例で、処理フローを二つに分岐します。 `Case of...Else...End case` 構文も分岐構造の一つで、処理フローをもっとたくさん分岐することができます。
+- **[ループ](Concepts/cf_looping.md)**: メソッドの作成にあたって、何度も同じ処理を繰り返すことがあります。 これに実現するために、4D は以下のループ構造を備えています:
     - `While...End while`
     - `Repeat...Until`
     - `For...End for`

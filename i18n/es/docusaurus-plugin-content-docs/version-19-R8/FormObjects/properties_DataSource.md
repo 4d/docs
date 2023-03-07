@@ -113,7 +113,7 @@ Indica una variable o expresión a la que se le asignará un entero largo que in
 
 Define el tipo de datos para la expresión mostrada. Esta propiedad se utiliza con:
 
-- [List box columns](listbox_overview.md#list-box-columns) of the selection and collection types.
+- [Columnas del List box](listbox_overview.md#list-box-columns) de los tipos de selección y colección.
 - [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
 
 Ver también la sección [**Tipo de expresión**](properties_Object.md#expression-type).

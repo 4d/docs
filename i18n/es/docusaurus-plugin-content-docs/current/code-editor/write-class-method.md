@@ -233,7 +233,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[Shift]+[flecha izquierda]                         | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda          |
 | [Ctrl]+[flecha derecha]                                   | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                      |
 | [Ctrl]+[flecha izquierda]                                 | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                      |
-| [Alt]+[down arrow]                                        | Move the line(s) where the cursor is to the bottom                                                                                            |
+| [Alt]+[down arrow]                                        | Mover la(s) línea(s) donde está el cursor hacia abajo                                                                                         |
 | [Alt]+[up arrow]                                          | Move the line(s) where the cursor is to the top                                                                                               |
 | [Home]                                                    | Colocar el punto de inserción al comienzo de la línea                                                                                         |
 | [End]                                                     | Coloca el punto de inserción al final de la línea                                                                                             |

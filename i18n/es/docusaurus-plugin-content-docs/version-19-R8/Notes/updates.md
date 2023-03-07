@@ -31,7 +31,7 @@ Lea las [**Novedades de 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 ## Versiones anteriores
 
-<details><summary>Click to see the release notes for previous versions</summary>
+<details><summary>Haga clic para ver las notas de las versiones anteriores</summary>
 
 ### 4D v19 R7
 
