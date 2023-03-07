@@ -23,7 +23,7 @@ Se soportan los siguientes nombres de rutas de filesystem:
 
 | filesystem   | Designa                                                     |
 | ------------ | ----------------------------------------------------------- |
-| "/DATA"      | Current data folder                                         |
+| "/DATA"      | Carpeta de datos actual                                     |
 | "/LOGS"      | Carpeta Logs                                                |
 | "/PACKAGE"   | Carpeta de la base de datos (con o sin la extensión 4dbase) |
 | "/PROJECT"   | Carpeta Project                                             |
