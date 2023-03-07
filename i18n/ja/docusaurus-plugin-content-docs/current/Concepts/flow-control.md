@@ -1,20 +1,20 @@
 ---
 id: control-flow
-title: Control flow
+title: 制御フロー
 ---
 
 メソッドや関数が単純か複雑かに関係なく、開発者は3つのプログラミング構造のうち、1つ以上を常に使用します。 プログラミング構造は、メソッド内でステートメントが実行される順序を決定する実行フローをコントロールします。 3つのタイプの構造があります:
 
-- **Sequential**: a sequential structure is a simple, linear structure. A sequence is a series of statements that 4D executes one after the other, from first to last. A one-line routine, frequently used for object methods, is the simplest case of a sequential structure. For example: `[People]lastName:=Uppercase([People]lastName)`
-- **Branching**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. The condition is a Boolean expression, an expression that evaluates TRUE or FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
-- **Looping**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. To deal with this need, the 4D language provides the following looping structures:
+- **シーケンシャル**: シーケンシャル構造は単純な線形構造です。 シーケンスとは、4Dが最初から最後まで次々に実行する一連のステートメントです。 オブジェクトメソッドで頻繁に使用される1行から成るルーチンはもっとも簡単なシーケンシャル構造の例です。 例: `[People]lastName:=Uppercase([People]lastName)`
+- **分岐**: 分岐構造は、条件をテストし、その結果に基づいて異なる流れにメソッドを導きます。 条件は true または false に評価されるブール式です。 [`If...Else...End if`](#ifelseend-if) 構文は分岐構造の一例で、処理フローを二つに分岐します。 [`Case of...Else...End case`](#case-ofelseend-case) 構文も分岐構造の一つで、処理フローをもっとたくさん分岐することができます。
+- **ループ**: メソッドの作成にあたって、何度も同じ処理を繰り返すことがあります。 これに実現するために、4D は以下のループ構造を備えています:
 
     - [`While...End while`](#whileend-while)
     - [`Repeat...Until`](#repeatuntil)
     - [`For...End for`](#forend-for)
     - [`For each...End for each`](#for-eachend-for-each)
 
-The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. 各ループ構造はいずれの方法にも用いることができますが、`While` ループと `Repeat` ループは条件が満たされるまで繰り返す場合に、`For` ループは指定した回数だけループする場合の利用に適切です。  `For each...End for each` ループは両方を組み合わせることが可能で、オブジェクトやコレクション内でループするために設計されています。
+ループを制御する方法には、条件が満たされるまでループする方法と、指定した回数だけループする方法の2通りがあります。 各ループ構造はいずれの方法にも用いることができますが、`While` ループと `Repeat` ループは条件が満たされるまで繰り返す場合に、`For` ループは指定した回数だけループする場合の利用に適切です。  `For each...End for each` ループは両方を組み合わせることが可能で、オブジェクトやコレクション内でループするために設計されています。
 
 **注:** 4Dはプログラム構造 (If/While/For/Caes of/Repeat/For each) を512レベルまで入れ子で記述できます。
 
@@ -380,9 +380,9 @@ End for
 
 プロジェクトで作成する大部分の `For...End for` ループは、上記例題のいずれかの形式になるでしょう。
 
-### Counter variable
+### カウンター変数
 
-#### Decrementing counter variable
+#### カウンター変数の減少
 
 ループに際してカウンター変数を増加させるのではなく、減少させたい場合があります。 その場合、*Start_Expression* に *End_Expression* より大きい値を設定し、*Increment_Expression* に負の数を指定する必要があります。 次に挙げる例題は、前述の例と同じ処理を逆の順序でおこないます:
 
@@ -442,12 +442,12 @@ End for
 
 #### For...End for ループの最適化
 
-You can use Real and Integer variables as well as interprocess, process, and local variable counters. 数多く繰り返されるループの場合、とくにコンパイルモードでは、倍長整数タイプのローカル変数を使用してください。
+カウンター変数 (インタープロセス、プロセス、ローカル変数) には実数、または整数タイプを使用します。 数多く繰り返されるループの場合、とくにコンパイルモードでは、倍長整数タイプのローカル変数を使用してください。
 
 10. 次に例を示します:
 
 ```4d
- var $vlCounter : Integer //use local Integer variables
+ var $vlCounter : Integer // 整数型のローカル変数を使用します
  For($vlCounter;1;10000)
   //Do something
  End for
@@ -482,7 +482,7 @@ You can use Real and Integer variables as well as interprocess, process, and loc
 
 :::tip
 
-The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. したがって、可能な限り `For...End for` ループの使用が推奨されます。
+`For...End for` ループは、`While...End while` や `Repeat...Until` ループよりも高速です。これは 4D が内部的にカウンター変数のテストおよび増加をおこなうからです。 したがって、可能な限り `For...End for` ループの使用が推奨されます。
 
 :::
 
@@ -603,13 +603,13 @@ The `For...End for` loop is usually faster than the `While...End while` and `Rep
 
 ### エンティティセレクション内のループ
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+`For each...End for each` が *Entity selection* 型の *Expression* に対して使用された場合、*Current_Item* は現在処理中のエンティティです。
 
 ループの回数はエンティティセレクション内のエンティティの数に基づきます。 各ループの繰り返しにおいて、*Current_Item* には、処理の対象であるエンティティセレクション内のエンティティが自動的に代入されます。
 
 **注:** エンティティセレクション内のエンティティが、途中で他のプロセスによって削除された場合、そのエンティティはループにおいて自動的にスキップされます。
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save()`.
+カレントエンティティに対して適用された変更は、`entity.save()` で明示的に保存する必要があることに注意してください。
 
 #### 例題
 
@@ -717,7 +717,7 @@ Employees データクラスの中から、英国の従業員の給与を引き�
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## break and continue
+## break と continue
 
 上記のループ構造はすべて、`break`文および `continue`文をサポートしています。 これらの文は、ループを完全に終了させたり、現在の繰り返しだけを終了させたりすることで、ループをよりコントロールすることができます。
 
