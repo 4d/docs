@@ -982,18 +982,18 @@ Se quiser receber uma mensagem com ID = 1:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obrigatório
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //create transporter
+  //cria transporter
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleciona mailbox
  $boxInfo:=$transporter.selectBox("Inbox")
 
-  //get Email object with ID 1
+  //obtém objeto Email com ID 1
  $mail:=$transporter.getMail(1)
 ```
 
@@ -1016,27 +1016,27 @@ Se quiser receber uma mensagem com ID = 1:
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 | Parâmetros | Tipo       |    | Descrição                                                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------------- |
-| ids        | Collection | -> | Collection of message ID                                                          |
-| startMsg   | Integer    | -> | Sequence number of the first message                                              |
-| endMsg     | Integer    | -> | Sequence number of the last message                                               |
+| ids        | Collection | -> | Colecção de identificação da mensagem                                             |
+| startMsg   | Integer    | -> | Número sequencial da primeira mensagem                                            |
+| endMsg     | Integer    | -> | Número sequencial da última mensagem                                              |
 | options    | Objeto     | -> | Instruções de tratamento de mensagens                                             |
-| Resultados | Objeto     | <- | Objecto contendo:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
+| Resultados | Objeto     | <- | Objecto contendo:<br/><ul><li>uma colecção de [Email objects](EmailObjectClass.md#email-object) e</li><li>uma colecção de identificações ou números para mensagens em falta, se existirem</li></ul>|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getMails()` <!-- REF #IMAPTransporterClass.getMails().Summary -->returns an object containing a collection of `Email` objects<!-- END REF -->.
+A função `.getMails()` <!-- REF #IMAPTransporterClass.getMails().Summary -->devolve um objecto contendo uma coleção de `Email` objetos<!-- END REF -->.
 
 **Primeira sintaxe:**
 
 ***.getMails( ids { ; options } ) -> result***
 
-The first syntax allows you to retrieve messages based on their IDs.
+A primeira sintaxe permite recuperar mensagens com base nas suas identificações.
 
-In the *ids* parameter, pass a collection of IDs for the messages to return. You can get the IDs with [`.getMail()`](#getmail).
+No parâmetro *ids* , passe uma colecção de IDs para as mensagens a devolver. Pode obter as identificações com [`.getMail()`](#getmail).
 
-The optional *options* parameter allows you to define the parts of the messages to be returned. See the **Options** table below for a description of the available properties.
+O parâmetro opcional *opções* permite definir as partes das mensagens a serem devolvidas. Ver a tabela **Opções** abaixo para uma descrição das propriedades disponíveis.
 
 **Segunda sintaxe:**
 
@@ -1044,52 +1044,52 @@ The optional *options* parameter allows you to define the parts of the messages 
 
 A segunda sintaxe permite recuperar mensagens com base num intervalo sequencial. Os valores passados representam a posição das mensagens na caixa de correio.
 
-In the *startMsg* parameter, pass an *integer* value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+No parâmetro *startMsg* , passe um valor *inteiro* correspondente ao número da primeira mensagem num intervalo sequencial. Se passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será utilizada como o início da sequência.
 
-In the *endMsg* parameter, pass an *integer* value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (*endMsg* <= 0), the last message of the mailbox will be used as the end of the sequence.
+No parâmetro *endMsg* , passe um valor *inteiro* correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será utilizada como o fim da sequência.
 
-The optional *options* parameter allows you to define the parts of the messages to be returned.
+O parâmetro opcional *opções* permite definir as partes das mensagens a serem devolvidas.
 
 **Options**
 
-| Propriedade | Tipo     | Descrição                                                                                                                                |
-| ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen  | Booleano | If True, the specified messages are marked as "seen" in the mailbox. If False, the messages are not marked as "seen". Valor padrão: True |
-| withBody    | Booleano | Pass True to return the body of the specified messages. If False, only the message headers are returned. Valor padrão: True              |
+| Propriedade | Tipo     | Descrição                                                                                                                                                           |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen  | Booleano | Se Verdadeiro, as mensagens especificadas são marcadas como "vistas" na caixa de correio. Se falso, as mensagens não são marcadas como "vistas". Valor padrão: True |
+| withBody    | Booleano | Pass True para devolver o corpo das mensagens especificadas. Se falso, apenas os cabeçalhos das mensagens são devolvidos. Valor padrão: True                        |
 > * Se nenhuma caixa de correio for seleccionada com o comando [`.selectBox()`](#selectbox), é gerado um erro.
-> * If there is no open connection, `.getMails()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox).
+> * Se não houver uma ligação aberta, `.getMails()` abrirá uma ligação a última caixa de correio especificada com [`.selectBox()`](#selectbox).
 
 #### Resultados
 
-`.getMails()` returns an object containing the following collections:
+`.getMails()` devolve um objecto contendo as seguintes colecções:
 
-| Propriedade | Tipo       | Descrição                                                                                                                          |
-| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| lista       | Collection | Collection of [`Email` objects](EmailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
-| notFound    | Collection | Collection of:<br/><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                      |
+| Propriedade | Tipo       | Descrição                                                                                                                               |
+| ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| lista       | Collection | Coleção de [`Email` objetos](EmailObjectClass.md#email-object). Se não forem encontrados objetos e-mail, uma coleção vazia é devolvida. |
+| notFound    | Collection | Coleção:<br/><ul><li>primeira sintaxe - IDs de mensagens passadas anteriormente que não existem</li><li>segunda sintaxe - números de sequência de mensagens entre startMsg e endMsg que não existem</li></ul>Uma colecção vazia é devolvida se todas as mensagens forem encontradas.                    |
 
 #### Exemplo
 
-You want to retrieve the 20 most recent emails without changing their "seen" status:
+Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "visto":
 
 ```4d
  var $server,$boxInfo,$result : Object
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obrigatório
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //create transporter
+  //cria transporter
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleciona mailbox
  $boxInfo:=$transporter.selectBox("INBOX")
 
   If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
+  // recupera cabeçalhos das últimas 20 mensagens sem marcá-las como lidas
     $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
      New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
@@ -1293,8 +1293,8 @@ To move all messages in the current mailbox:
 <!-- REF #IMAPTransporterClass.numToID().Params -->
 | Parâmetros | Tipo       |    | Descrição                                           |
 | ---------- | ---------- |:--:| --------------------------------------------------- |
-| startMsg   | Integer    | -> | Sequence number of the first message                |
-| endMsg     | Integer    | -> | Sequence number of the last message                 |
+| startMsg   | Integer    | -> | Número sequencial da primeira mensagem              |
+| endMsg     | Integer    | -> | Número sequencial da última mensagem                |
 | Resultados | Collection | <- | Collection of unique IDs|<!-- END REF -->
 
 |
@@ -1303,9 +1303,9 @@ To move all messages in the current mailbox:
 
 A função `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by *startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
 
-In the *startMsg* parameter, pass an integer value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+In the *startMsg* parameter, pass an integer value corresponding to the number of the first message in a sequential range. Se passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será utilizada como o início da sequência.
 
-In the *endMsg* parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (*endMsg* <= 0), the last message of the mailbox will be used as the end of the sequence.
+In the *endMsg* parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. Se passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será utilizada como o fim da sequência.
 
 #### Resultados
 
