@@ -37,7 +37,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 
 ## Escribir código servidor web hilo seguro
 
-Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere que sus procesos web se ejecuten en modo apropiativo. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
+Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere que sus procesos web se ejecuten en modo apropiativo. Cuando la opción **Utilizar procesos apropiativos** está marcada en la caja de diálogo Parámetros, las siguientes partes de la aplicación serán evaluadas automáticamente por el compilador 4D:
 
 - Todos los métodos base relacionados con la web:
   - [`On Web Authentication`](authentication.md#on-web-authentication)
