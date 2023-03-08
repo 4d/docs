@@ -33,7 +33,7 @@ $col:=New collection //$col is initialized with an empty collection
 > Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
 
-## Basic operators
+## Operadores básicos
 
 Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:
 
@@ -109,7 +109,7 @@ $t+=" World" //$t="Hello World"
 $d:=!2000-11-10!
 $d+=10 //$d=!2000-11-20!
 
-// Subtraction
+// Subtracção
 $x1:=10
 $x1-=5 //$x1=5
 
@@ -150,7 +150,7 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 The rule is as follows:
 
-Given `Expr1 && Expr2`:
+Dado `Expr1 && Expr2`:
 
 The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
 
@@ -213,7 +213,7 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
-Given `Expr1 || Expr2`:
+Dado `Expr1 || Expr2`:
 
 If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
 
