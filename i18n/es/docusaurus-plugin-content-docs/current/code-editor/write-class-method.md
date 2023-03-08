@@ -471,9 +471,9 @@ Click the **Replace all** button to replace all the occurrences corresponding to
 
 ### Buscar lo mismo
 
-El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idénticas a la seleccionada. This command is only active if you have selected at least one character in the Code Editor.
+El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idénticas a la seleccionada. Este comando sólo está activo si ha seleccionado al menos un caracter en el Editor de código.
 
-The search carried out is of the "Find Next" type in the current code editor window.
+La búsqueda realizada es del tipo "Buscar siguiente" en la ventana actual del editor de código.
 
 The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
 
