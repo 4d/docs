@@ -751,7 +751,7 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
-If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
+If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. Se o servidor web não foi iniciado, o método não faz nada.
 > Esta função repõe as definições web personalizadas definidas para a sessão utilizando o parâmetro ** da função [`.start()`](#start) , se existir.
 
 #### Exemplo
