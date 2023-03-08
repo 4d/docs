@@ -287,7 +287,7 @@ Called when the `connectionHandler` object is created (after `WSS.onConnection` 
 | param      |        | Object                                                  | <- | Parámetros                                                                                                                                                                              |
 |            | type   | Text                                                    |    | "terminate"                                                                                                                                                                             |
 |            | code   | Number                                                  |    | Status code indicating why the connection has been closed. If the WebSocket does not return an error code, `code` is set to 1005 if no error occurred or to 1006 if there was an error. |
-|            | reason | Text                                                    |    | String explaining why the connection has been closed. If the websocket doesn't return an reason, code is undefined                                                                      |
+|            | reason | Text                                                    |    | String explaining why the connection has been closed. Si el websocket no devuelve una razón, el código es indefinido                                                                    |
 
 Function called when the WebSocket is closed.
 
