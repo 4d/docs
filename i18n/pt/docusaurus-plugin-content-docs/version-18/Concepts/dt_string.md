@@ -188,7 +188,7 @@ When you use the character reference symbols, you must address existing characte
 - Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
 
 ```
-//Very bad and nasty thing to do, boo!
+//Voisas muito más e desagradáveis a fazer, boo!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
