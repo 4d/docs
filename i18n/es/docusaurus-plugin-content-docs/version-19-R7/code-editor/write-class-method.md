@@ -354,7 +354,7 @@ The Code Editor provides various contextual information using help tips. They ap
 
 - **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Checking and correcting syntax errors](#checking-and-correcting-syntax-errors)).
 
-- **4D command documentation**: When you set the cursor in a command name or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**: ![](../assets/en/code-editor/status-bar-bold.png) When you move the mouse over a 4D command, a help tip provides the command syntax along with a brief description of how it works. ![](../assets/en/code-editor/status-bar-description.png)
+- **Documentación de comandos 4D**: al situar el cursor en un nombre de comando o parámetro(s), la barra de estado muestra la sintaxis del comando. If you write or select a parameter, the area shows the current parameter in **bold**: ![](../assets/en/code-editor/status-bar-bold.png) When you move the mouse over a 4D command, a help tip provides the command syntax along with a brief description of how it works. ![](../assets/en/code-editor/status-bar-description.png)
 
 - **Variable type and description**: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any. ![](../assets/en/code-editor/variable-type.png)
 
@@ -463,7 +463,7 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 - **Remove All**: Removes all bookmarks from the foreground window.
 - **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
 
-**Note:** You can use bookmarks as markers for lines that contain an item found by a search. En este caso, 4D añade automáticamente los marcadores. Para más información, consulte [Buscar y reemplazar en los métodos](find-replace.md).
+**Nota:** puede utilizar marcadores como marcadores de las líneas que contienen un elemento encontrado por una búsqueda. En este caso, 4D añade automáticamente los marcadores. Para más información, consulte [Buscar y reemplazar en los métodos](find-replace.md).
 
 
 ## Goto Definition
@@ -484,7 +484,7 @@ The **Reveal in Explorer...** command opens an Explorer window with the target e
 
 ## Buscar referencias
 
-The **Search references...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
+El comando **Buscar referencias...** que se encuentra en el menú **Método** o en el menú contextual del Editor de Código encuentra todos los objetos (métodos y formularios) del proyecto en los que el elemento actual del método está referenciado (utilizado).
 
 The current item is either the one selected or the one where the cursor is located. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
 
