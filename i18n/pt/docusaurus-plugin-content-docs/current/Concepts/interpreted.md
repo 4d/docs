@@ -6,13 +6,13 @@ title: Modos interpretado e compilado
 4D applications can work in **interpreted** or **compiled** mode:
 
 - in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
-- in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
+- in compiled mode, all methods are read and translated once, at the compilation step. Posteriormente, a aplicação contém apenas instruções de nível de montagem, já não é possível editar o código.
 
-The advantages of the compilation are:
+As vantagens da compilação são:
 
-- **Speed**: Your application can run from 3 to 1,000 times faster.
-- **Code checking**: Your application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
-- **Protection**: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
+- **Velocidade**: A sua aplicação pode correr de 3 a 1.000 vezes mais rápido.
+- **Verificação do código**: A sua aplicação é digitalizada para verificar a consistência do código. São detectados conflitos tanto lógicos como sintácticos.
+- **Protecção**: Uma vez compilada a sua aplicação, pode apagar o código interpretado. Então, a aplicação compilada é funcionalmente idêntico ao original, exceto que a estrutura e métodos não pode ser vista ou modificada, seja de forma deliberada ou por acidente.
 - **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
 - **Preemptive mode**: only compiled code can be executed in preemptive processes.
 
