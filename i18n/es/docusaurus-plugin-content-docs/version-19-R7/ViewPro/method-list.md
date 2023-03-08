@@ -1431,7 +1431,7 @@ $activeCell:=VP Get active cell("myVPArea")
 
 #### Descripción
 
-El comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->returns the name of the attribute bound to the cell specified in *rangeObj*<!-- END REF -->.
+El comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->devuelve el nombre del atributo ligado a la celda especificada en *rangeObj*<!-- END REF -->.
 
 En *rangeObj*, pase un objeto que es un rango de celdas o un rango combinado de celdas. Note que:
 
@@ -1477,7 +1477,7 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 
 #### Descripción
 
-El comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->returns a [style object](configuring.md#style-objects) for the first cell in the *rangeObj*<!-- END REF -->.
+El comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->devuelve un [objeto estilo](configuring.md#style-objects) para la primera celda de *rangeObj*<!-- END REF -->.
 
 En *rangeObj*, pase un rango que contenga el estilo a recuperar.
 
@@ -1535,7 +1535,7 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 
 #### Descripción
 
-El comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->returns a collection of properties for any column in the *rangeObj*<!-- END REF -->.
+El comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->devuelve una colección de propiedades para las columas de *rangeObj*<!-- END REF -->.
 
 En *rangeObj*, pase un objeto que contenga un rango de columnas cuyos atributos serán recuperados.
 
@@ -1578,7 +1578,7 @@ $attr:=VP Get column attributes($range)
 
 #### Descripción
 
-El comando `VP Get column count` <!-- REF #_method_.VP Get column count.Summary -->returns the total number of columns from the designated *sheet*<!-- END REF -->.
+El comando `VP Get column count` <!-- REF #_method_.VP Get column count.Summary -->devuelve el número total de columnas de la *sheet* designada<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre de la propiedad del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -2562,7 +2562,7 @@ El comando devuelve un objeto que describe los atributos actuales de la *columna
 | footerText    | text | Valor del pie de columna.                                                                                                       |
 | footerFormula | text | Fórmula del pie de columna.                                                                                                     |
 
-|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
+|filterButtonVisible|boolean| True si se muestra el botón de filtro de la columna de la tabla, False en caso contrario. |
 
 Si no se encuentra *tableName* o si el índice de *column* es mayor que el número de columnas, el comando devuelve **null**.
 
@@ -3527,7 +3527,7 @@ El código siguiente:
 
 #### Descripción
 
-El comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->evalúa inmediatamente todas las fórmulas en *vpAreaName*<!-- END REF -->. Por defecto, 4D calcula automáticamente las fórmulas cuando se insertan, importan o exportan. `VP RECOMPUTE FORMULAS` allows you to force the compute at any time (e.g, in case modifications are made to the formulas or if the formulas contain calls to the database). The command launches the execution of the [VP FLUSH COMMANDS](#vp-flush-commands) command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.
+El comando `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->evalúa inmediatamente todas las fórmulas en *vpAreaName*<!-- END REF -->. Por defecto, 4D calcula automáticamente las fórmulas cuando se insertan, importan o exportan. `VP RECOMPUTE FORMULAS` permite forzar el cálculo en cualquier momento (por ejemplo, en caso de que se realicen modificaciones en las fórmulas o si éstas contienen llamadas a la base). El comando lanza la ejecución del comando [VP FLUSH COMMANDS](#vp-flush-commands) para ejecutar los comandos almacenados y vaciar el buffer de comandos, luego calcula todas las fórmulas en el workbook.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 > Asegúrese de que el comando [VP SUSPEND COMPUTING](#vp-suspend-computing) no ha sido ejecutado previamente utilizando `VP RECOMPUTE FORMULAS`, de lo contrario el comando no hace nada.
@@ -4435,7 +4435,7 @@ VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 
 #### Descripción
 
-El comando `VP SET BORDER` <!-- REF #_method_.VP SET BORDER.Summary -->applies the border style(s) defined in *borderStyleObj* and *borderPosObj* to the range defined in the *rangeObj*<!-- END REF -->.
+El comando `VP SET BORDER` <!-- REF #_method_.VP SET BORDER.Summary -->aplica los estilos de borde definidos en *borderStyleObj* y *borderPosObj* al rango definido en *rangeObj*<!-- END REF -->.
 
 En *rangeObj*, pase un rango de celdas donde se aplicará el estilo de borde. Si el *rangeObj* contiene múltiples celdas, los bordes aplicados con `VP SET BORDER` se aplicarán al *rangeObj* como un todo (a diferencia del comando [`VP SET CELL STYLE`](#vp-set-cell-style) que aplica bordes a cada celda del *rangeObj*). Si ya se ha aplicado una hoja de estilo, `VP SET BORDER` anulará los parámetros de borde aplicados anteriormente a *rangeObj*.
 
@@ -4512,7 +4512,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 
 #### Descripción
 
-El comando `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->applies the style(s) defined in the *styleObj* to the cells defined in the *rangeObj*<!-- END REF -->.
+El comando `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->aplica los estilos definidos en *styleObj* a las celdas definidas en *rangeObj*<!-- END REF -->.
 
 En *rangeObj*, pase un rango de celdas donde se aplicará el estilo. Si el *rangeObj* contiene múltiples celdas, el estilo se aplica a cada celda.
 > Los bordes aplicados con `VP SET CELL STYLE` se aplicarán a cada celda del *rangeObj*, a diferencia del comando [VP SET BORDER](#vp-set-border) que aplica bordes al *rangeObj* en su conjunto.
@@ -4563,7 +4563,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 #### Descripción
 
-El comando `VP SET COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*<!-- END REF -->.
+El comando `VP SET COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> aplica los atributos definidos en la *propertyObj* a las columnas de *rangeObj*<!-- END REF -->.
 
 En *rangeObj*, pase un objeto que contenga un rango. Si el rango contiene tanto columnas como líneas, los atributos se aplican sólo a las columnas.
 
@@ -4614,7 +4614,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 #### Descripción
 
-El comando `VP SET COLUMN COUNT` <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->defines the total number of columns in *vpAreaName*<!-- END REF -->.
+El comando `VP SET COLUMN COUNT` <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->define el número total de columnas en *vpAreaName*<!-- END REF -->.
 
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
@@ -4789,7 +4789,7 @@ End case
 
 #### Descripción
 
-El comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define el contexto de datos de una hoja<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
+El comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define el contexto de datos de una hoja<!-- END REF -->. Un contexto de datos es un objeto o una colección vinculada a una hoja de cálculo, y cuyo contenido puede utilizarse para llenar automáticamente las celdas de la hoja, ya sea utilizando una opción de autogeneración o el método [VP SET BINDING PATH](#vp-set-binding-path). Por otro lado, el comando [VP Get data context](#vp-get-data-context) puede devolver un contexto que contenga modificaciones del usuario.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -6215,7 +6215,7 @@ Resultado:
 
 #### Descripción
 
-El comando `VP SUSPEND COMPUTING` <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->detiene el cálculo de todas las fórmulas en *vpAreaName*<!-- END REF -->. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.
+El comando `VP SUSPEND COMPUTING` <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->detiene el cálculo de todas las fórmulas en *vpAreaName*<!-- END REF -->. Este comando es útil cuando se desea suspender los cálculos en esta área 4D View Pro para poder realizar manualmente modificaciones en las fórmulas sin encontrar errores antes de terminar de hacer los cambios.
 
 El comando pausa los cálculos en 4D View Pro. Formulas that have already been calculated remain unchanged, however any formulas added after `VP SUSPEND COMPUTING` command  is executed are not calculated.
 
