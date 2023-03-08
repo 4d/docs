@@ -190,9 +190,9 @@ Function setFullname($firstname : Text; $lastname : Text)
 
 For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. As seguintes sintaxes são suportadas:
 
-- utilização do operador `()`. For example, `myObject.methodName("hello")`
+- utilização do operador `()`. Por exemplo, `myObject.methodName("hello")`
 - use of a "4D. Function" class member method:
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
@@ -366,8 +366,8 @@ var $text1; $text2 : Text Super($text1) //calls superclass constructor with a te
 2. Inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
 
 ```4d
-Super.doSomething(42) //calls "doSomething" function  
-//declared in superclasses
+Super.doSomething(42) //chamada a função "doSomething"  
+//declarada em superclasses
 ```
 
 #### Exemplo 1
@@ -467,7 +467,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Ver [este exemplo](#example-1).
 
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.
 
