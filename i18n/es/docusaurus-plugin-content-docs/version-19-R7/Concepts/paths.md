@@ -27,8 +27,8 @@ Se soportan los siguientes nombres de rutas de filesystem:
 | "/LOGS"      | Carpeta Logs                                                |
 | "/PACKAGE"   | Carpeta de la base de datos (con o sin la extensión 4dbase) |
 | "/PROJECT"   | Carpeta Project                                             |
-| "/RESOURCES" | Current database resources folder                           |
-| "/SOURCES"   | Current project resources folder                            |
+| "/RESOURCES" | Carpeta de recursos actual de la base de datos              |
+| "/SOURCES"   | Carpeta de recursos actual del proyecto                     |
 
 ## Sintaxis POSIX
 
@@ -68,11 +68,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Windows pathnames and escape sequences
+#### Rutas de acceso Windows y secuencias de escape
 
-The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
+El lenguaje 4D permite utilizar [secuencias de escape](quick-tour.md#escape-sequences). Las secuencias de escape comienzan con una barra invertida `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
-Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
+Dado que el caracter `\` también se utiliza como separador en los nombres de rutas en Windows, es necesario introducir un doble `\\` en los nombres de rutas.
 
 ### macOS
 
