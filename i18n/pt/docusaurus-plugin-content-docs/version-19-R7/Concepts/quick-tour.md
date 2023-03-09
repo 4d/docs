@@ -305,7 +305,7 @@ You refer to an expression by the data type it returns. There are several expres
 | 10 # 20                  | Booleano           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
 | “ABC” = “XYZ”            | Booleano           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
 | My Picture + 50          | Imagem             | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Ponteiro           | This expression returns a pointer to the field called [People]Name.                                                                                                             |
+| ->[People]Name           | Ponteiro           | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
 | Table(1)                 | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
 | JSON Parse (MyString)    | Objeto             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
 | JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
@@ -336,7 +336,7 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
-## Code on several lines
+## Código em várias linhas
 
 You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
 
