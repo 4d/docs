@@ -1865,13 +1865,13 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-// 文字コード順:
+//using the character code:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
-// 結果 : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-// アルファベット順:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// 結果 : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+//using the language:
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 ***sortCollection*** メソッドのコードは以下のとおりです:
@@ -1979,6 +1979,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ```
 
 <!-- END REF -->
+
 
 <!-- REF collection.query().Desc -->
 ## .query()
