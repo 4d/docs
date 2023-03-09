@@ -171,7 +171,7 @@ To display the variable types and their internal names, right click and check th
 
 ![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
-Here's the result:
+Aqui está o resultado:
 
 ![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
 
@@ -191,7 +191,7 @@ Like the Constants page of the Explorer window, this theme displays predefined c
 
 This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
-#### Processes
+#### Processos
 
 This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
 
