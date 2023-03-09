@@ -174,23 +174,23 @@ The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see 
 <!-- REF #TableStyle.textDecoration.Syntax -->
 **.textDecoration**: Integer<!-- END REF -->
 
-The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md/#fonts-and-text))<!-- END REF -->.
+The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->decoración del texto de la tabla (ver [**Fuentes y texto**](configuring.md/#fonts-and-text))<!-- END REF -->.
 
 
 ### .borderLeft
 
 <!-- REF #TableStyle.borderLeft.Syntax -->
-**.borderLeft** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
+**.borderLeft**: [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->left border line of the table <!-- END REF -->.
+La propiedad `.borderLeft` es la <!-- REF #TableStyle.borderLeft.Summary -->línea del borde izquierdo de la tabla <!-- END REF -->.
 
 
 ### .borderRight
 
 <!-- REF #TableStyle.borderRight.Syntax -->
-**.borderRight** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
+**.borderRight**: [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->línea del borde derecho de la tabla <!-- END REF -->.
+La propiedad `.borderRight` es la <!-- REF #TableStyle.borderRight.Summary -->línea del borde derecho de la tabla <!-- END REF -->.
 
 
 ### .borderBottom
