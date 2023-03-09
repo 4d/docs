@@ -300,7 +300,7 @@ La propiedad `.firstHeaderCellStyle` es la propiedad <!-- REF #TableThemeOptions
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize**: Integer<!-- END REF -->
 
-La propiedad `.firstRowStripSize` es el <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Por defecto=1.
+La propiedad `.firstRowStripSize` es el <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->tamaño de la primera columna alterna<!-- END REF -->. Por defecto=1.
 
 ### .firstRowStripStyle
 
