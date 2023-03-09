@@ -106,7 +106,7 @@ var $myBlobVar: Blob
 
 **Nota para  desenvolvedores de plugins:** um parâmetro BLOB se declara como "&O" (a letra "O", não o número "0").
 
-## Assigning a blob variable to another
+## Atribuição de uma variável blob a outra
 
 You can assign a Blob variable to another:
 

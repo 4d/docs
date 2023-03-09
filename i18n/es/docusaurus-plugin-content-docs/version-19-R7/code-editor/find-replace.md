@@ -11,7 +11,7 @@ Los comandos Buscar/Reemplazar para métodos, clases o funciones se encuentran e
 
 ![find-replace](../assets/en/code-editor/find-replace-1.png)
 
-> The find commands located above the **Find** submenu are not specific to the Code Editor but may be used to search for a value among all the methods, classes or functions, using the **Find in design** feature in the toolbar or in the **Edit** menu.
+> Los comandos de búsqueda situados sobre el submenú **Buscar** no son específicos del Editor de código, pero pueden utilizarse para buscar un valor entre todos los métodos, clases o funciones, utilizando la función **Buscar en diseño** de la barra de herramientas o en el menú **Editar**.
 
 ## Buscar
 
@@ -26,13 +26,13 @@ La búsqueda definida en este diálogo se realizará en el método situado en el
 - La opción **Sensible a mayúsculas y minúsculas** se utiliza para tener en cuenta las mayúsculas y minúsculas de los caracteres introducidos en el área "Buscar qué:". Por ejemplo, una búsqueda de "MiVar" no encontrará "miVar"
 - Los botones de opción **Anterior/Siguiente** permiten establecer la dirección de la búsqueda: hacia el principio o hacia el final del método actual, partiendo de la posición inicial del cursor.
 
-When you click on **OK**, 4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
+Al hacer clic en **OK**, 4D inicia la búsqueda a partir del punto de inserción del texto actual y continúa hasta el final del método. De este modo, en la ventana del Editor de código se selecciona el primer elemento correspondiente a los criterios establecidos. A continuación, es posible continuar la búsqueda utilizando los comandos **Buscar siguiente** y **Buscar anterior** del menú **Editar**.
 
 ### Buscar lo mismo
 
-El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idénticas a la seleccionada. This command is only active if you have selected at least one character in the Code Editor.
+El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idénticas a la seleccionada. Este comando sólo está activo si ha seleccionado al menos un caracter en el Editor de código.
 
-The search carried out is of the "Find Next" type in the current code editor window.
+La búsqueda realizada es del tipo "Buscar siguiente" en la ventana actual del editor de código.
 
 ### Find Same Next/Previous
 

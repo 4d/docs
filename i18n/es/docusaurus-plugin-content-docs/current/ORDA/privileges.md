@@ -61,7 +61,7 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 
 Setting permissions requires to be consistent, in particular:
 
-- **update** and **drop** permissions also need **read** permission (but **create** does not need it)
+- los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
 - **promote** permission also need **describe** permission.
 
 
@@ -105,28 +105,28 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 
 
-## `roles.json` file
+## archivo `roles.json`
 
 
-The `roles.json` file describes the whole security settings for the project.
+El archivo `roles.json` describe todos los parámetros de seguridad del proyecto.
 
 :::note
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+En un contexto que no sea *Qodly* (nube), debe crear este archivo en la siguiente ubicación: `<project folder>/Project/Sources/`. Ver la sección [Arquitectura](../Project/architecture.md#sources).
 
 :::
 
 
-The `roles.json` file syntax is the following:
+La sintaxis del archivo `roles.json` es la siguiente:
 
 | Nombre de propiedad |                 |               | Tipo                               | Obligatorio | Descripción                                                                  |
 | ------------------- | --------------- | ------------- | ---------------------------------- | ----------- | ---------------------------------------------------------------------------- |
-| privileges          |                 |               | Collection of `privilege` objects  | X           | List of defined privileges                                                   |
+| privileges          |                 |               | Colección de objetos `privilege`   | X           | Lista de privilegios definidos                                               |
 |                     | \[].privilege  |               | String                             |             | Nombre del privilegio                                                        |
-|                     | \[].includes   |               | Colección de cadenas               |             | List of included privilege names                                             |
-| roles               |                 |               | Collection of `role` objects       |             | List of defined roles                                                        |
+|                     | \[].includes   |               | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                    |
+| roles               |                 |               | Colección de objetos `role`        |             | List of defined roles                                                        |
 |                     | \[].role       |               | String                             |             | Role name                                                                    |
-|                     | \[].privileges |               | Colección de cadenas               |             | List of included privilege names                                             |
+|                     | \[].privileges |               | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                    |
 | permissions         |                 |               | Object                             | X           | List of allowed actions                                                      |
 |                     | allowed         |               | Collection of `permission` objects |             | List of allowed permissions                                                  |
 |                     |                 | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                         |
@@ -140,10 +140,10 @@ The `roles.json` file syntax is the following:
 |                     |                 | \[].promote  | Colección de cadenas               |             | List of privileges                                                           |
 
 
-:::caution Reminder
+:::caution Recordatorio
 
-- The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
-- `privileges` and `roles` names are case insensitive.
+- El nombre de privilegio "WebAdmin" está reservado a la aplicación. No se recomienda utilizar este nombre para los privilegios personalizados.
+- los nombres de `privileges` y `roles` son insensibles a mayúsculas y minúsculas.
 
 :::
 

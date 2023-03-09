@@ -12,7 +12,7 @@ The following project elements accept documentation:
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
 - Classes
 - Formulários
-- Tables and Fields
+- Tabelas e Campos
 
 Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 

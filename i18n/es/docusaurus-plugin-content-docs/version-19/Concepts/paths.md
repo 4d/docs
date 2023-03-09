@@ -27,8 +27,8 @@ Se soportan los siguientes nombres de rutas de filesystem:
 | "/LOGS"      | Carpeta Logs                                                |
 | "/PACKAGE"   | Carpeta de la base de datos (con o sin la extensión 4dbase) |
 | "/PROJECT"   | Carpeta Project                                             |
-| "/RESOURCES" | Current database resources folder                           |
-| "/SOURCES"   | Current project resources folder                            |
+| "/RESOURCES" | Carpeta de recursos actual de la base de datos              |
+| "/SOURCES"   | Carpeta de recursos actual del proyecto                     |
 
 ## Sintaxis POSIX
 

@@ -3,19 +3,19 @@ id: FunctionClass
 title: Function
 ---
 
-### About Function objects
+### Acerca de los objetos Function
 
-Un objeto `4D.Function` contiene un trozo de código que puede ser ejecutado desde un objeto, ya sea utilizando el operador `()`, o utilizando las funciones [`apply()`](#apply) y [`call()`](#call). 4D proposes three kinds of `Function` objects:
+Un objeto `4D.Function` contiene un trozo de código que puede ser ejecutado desde un objeto, ya sea utilizando el operador `()`, o utilizando las funciones [`apply()`](#apply) y [`call()`](#call). 4D propone tres tipos de objetos `Function`:
 
-- **native functions**, i.e. built-in functions from various 4D classes such as `collection.sort()` or `file.copyTo()`.
-- **user functions**, created in user [classes](Concepts/classes.md) using the [Function keyword](Concepts/classes.md#function).
-- **formula functions**, i.e. functions that can execute any 4D formula.
+- **funciones nativas**, es decir, funciones integradas de varias clases de 4D como `collection.sort()` o `file.copyTo()`.
+- **funciones usuario**, creadas en [clases](Concepts/classes.md) usuario utilizando la [palabra clave Function](Concepts/classes.md#function).
+- **funciones fórmula**, es decir, funciones que pueden ejecutar cualquier fórmula 4D.
 
 
 
 ### Objetos Formula
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
+Los comandos [Formula](#formula) y [Formula from string](#formula-from-string) permiten crear objetos [`4D.Function`](#about-4dfunction-objects) para ejecutar toda expresión 4D o código expresado como texto.
 
 Los objetos Formula pueden encapsularse en las propiedades de objeto:
 

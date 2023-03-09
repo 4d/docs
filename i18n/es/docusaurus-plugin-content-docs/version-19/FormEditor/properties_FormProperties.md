@@ -24,16 +24,16 @@ Esta propiedad define el esquema de colores para el formulario. This property de
 
 ## CSS
 
-This property allows you to load specific CSS file(s) for the form.
+Esta propiedad le permite cargar archivos CSS específicos para el formulario.
 
-A CSS file defined at the form level will override default style sheet(s). For more information, please refer to [Style sheets](createStylesheet.md) page.
+Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo predeterminada(s). Para más información, consulte la página [Hojas de estilo](createStylesheet.md).
 
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos       | Valores posibles                                                                                         |
-| ------ | -------------------- | -------------------------------------------------------------------------------------------------------- |
-| css    | string or collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+| Nombre | Tipos de datos     | Valores posibles                                                                                                     |
+| ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| css    | cadena o colección | Rutas del archivo CSS suministradas como:<li>una cadena (un archivo para ambas plataformas)</li><li>una colección de cadenas (una lista de archivos para ambas plataformas)</li><li>una colección de objetos {"path":string;"media":"mac" &#124; "win"} </li> |
 
 ---
 

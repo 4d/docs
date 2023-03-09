@@ -481,9 +481,9 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parámetros | Tipo   |    | Descripción                                                               |
-| ---------- | ------ | -- | ------------------------------------------------------------------------- |
-| Result     | Object | <- | Colección de objetos contextos de optimización|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                                               |
+| ---------- | ---------- | -- | ------------------------------------------------------------------------- |
+| Result     | Collection | <- | Colección de objetos contextos de optimización|<!-- END REF -->
 
 |
 

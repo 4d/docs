@@ -705,7 +705,7 @@ Este es el escenario para actualizar un servidor o una aplicación unipersonal f
 
 > Esta secuencia es compatible con las aplicaciones servidor de Windows que se ejecutan como servicio.
 
-### Update log
+### Historial de actualización
 
 El procedimiento de instalación genera un archivo de registro en el que se detallan las operaciones de actualización de las aplicaciones fusionadas (cliente, servidor o monopuesto) en los equipos de destino. Este archivo es útil para analizar cualquier error que se produzca durante el proceso de instalación.
 

@@ -71,11 +71,11 @@ You assign data to array elements by using curly braces ({...}):
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Variáveis locais, processo e inter-processo
 
 You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
 
-### Local variables
+### Variáveis locais
 
 A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
 

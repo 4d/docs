@@ -796,7 +796,7 @@ $options.tableColumns.push(cs.ViewPro.TableColumns.new("name"; "Email"; "dataFie
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
-Here's the result:
+Aqui está o resultado:
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
@@ -1028,7 +1028,7 @@ $params.rowDelimiter:="\n"
 $params.columnDelimiter:="|" VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv format;"csvOptions";$params))
 ```
 
-Here's the result:
+Aqui está o resultado:
 
 ![example-export-csv](../assets/en/ViewPro/vp-export-document-csv-result.png)
 

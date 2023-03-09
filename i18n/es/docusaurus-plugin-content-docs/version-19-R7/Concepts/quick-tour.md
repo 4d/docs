@@ -67,7 +67,7 @@ Los comandos 4D son métodos integrados para realizar una acción. Los comandos 
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Por ejemplo:
+Algunos comandos se adjuntan a colecciones u objetos, en cuyo caso son funciones temporales que se utilizan con la notación de puntos. Por ejemplo:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -121,7 +121,7 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Haga algo con el caracter si es un TAB
 
 
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -130,7 +130,7 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Cuando se llama a un método, sólo hay que escribir su nombre:
+Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). Los parámetros están disponibles directamente en el método llamado si se han declarado. Un método puede devolver un único valor en un parámetro, que debe ser declarado. Cuando se llama a un método, sólo hay que escribir su nombre:
 
 ```4d
 $myText:="hello"
@@ -208,10 +208,10 @@ Para instanciar un objeto de la clase en un método, llame la clase usuario desd
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
+En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase *methodName*. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
-//in the myClass.4dm file
+//en el archivo myClass.4dm
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
@@ -228,7 +228,7 @@ $message:=$o.myClass.hello()
 Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d  
-//in the Rectangle.4dm file
+//en el archivo Rectangle.4dm
 Class constructor
 var $height; $width : Integer
 This.height:=$height

@@ -187,12 +187,12 @@ myColl[3]  //access to 4th element of the collection
 
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
 
-| Operator | Operação      | Exemplo            |
-| -------- | ------------- | ------------------ |
-| +        | Adição        | 1 + 2 results in 3 |
-| –        | Subtração     | 3 – 2 results in 1 |
-| *        | Multiplicação | 2 * 3 results in 6 |
-| /        | Divisão       | 6 / 2 results in 3 |
+| Operator | Operação      | Exemplo   |
+| -------- | ------------- | --------- |
+| +        | Adição        | 1 +2 = 3  |
+| –        | Subtração     | 3 - 2 = 1 |
+| *        | Multiplicação | 2 * 3 = 6 |
+| /        | Divisão       | 6 / 2 = 3 |
 
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
@@ -213,9 +213,9 @@ Expressions are made up of almost all the other parts of the language: commands,
 Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Inclui:
 
 - Formula editor (apply formula, query with formula, order by formula)
-- The `EXECUTE FORMULA` command
-- The Property list, where an expression can be used as a data source for most of widgets
-- Debugger where the value of expressions can be checked
+- O comando `EXECUTE FORMULA`
+- A lista de propriedades, onde uma expressão pode ser usada como fonte de dados para a maioria dos widgets
+- Depurador onde o valor das expressões pode ser verificado
 - Quick Report editor as a formula for a column
 
 ### Tipos de expressões
@@ -227,9 +227,9 @@ You refer to an expression by the data type it returns. There are several expres
 | “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
 | “Sr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | Número             | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | Número             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
+| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. Retorna "SMITH".                                                     |
+| 4                        | Número             | Esta é uma constante numérica, 4.                                                                                                                                               |
+| 4 * 2                    | Número             | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
 | myButton                 | Número             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
 | !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
 | Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
@@ -239,7 +239,7 @@ You refer to an expression by the data type it returns. There are several expres
 | 10 # 20                  | Booleano           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
 | “ABC” = “XYZ”            | Booleano           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
 | My Picture + 50          | Imagem             | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Ponteiro           | This expression returns a pointer to the field called [People]Name.                                                                                                             |
+| ->[People]Name           | Ponteiro           | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
 | Table(1)                 | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
 | JSON Parse (MyString)    | Objeto             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
 | JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |

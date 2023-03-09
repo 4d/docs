@@ -67,7 +67,7 @@ To open the Break list page:
 
 ![break-list-runtime-explorer](../assets/en/Debugging/break-list.png)
 
-Using this window, you can:
+Usando esta janela, pode:
 
 * Set conditions for breakpoints in the **Conditions** column
 * Enable or disable breakpoints by clicking the bullets in the margin. Disabled breakpoints display transparent bullets
