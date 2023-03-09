@@ -211,7 +211,7 @@ This theme lists the named selections that are defined in the current process (t
 
 #### Información
 
-This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
+Este tema contiene información general sobre el funcionamiento de la base de datos, como la tabla por defecto actual (si existe), el espacio de memoria físico, virtual, libre y utilizado, el destino de las consultas, etc.
 
 #### Web
 
