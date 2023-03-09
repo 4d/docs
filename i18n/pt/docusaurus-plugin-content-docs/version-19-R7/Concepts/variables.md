@@ -52,7 +52,7 @@ var $myVar //a variant variable
 
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers. This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` can be:
+`varType` pode ser:
 
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
@@ -66,16 +66,16 @@ The following table lists all supported `varType` values:
 | `Text`                 | Valor texto                            |
 | `Date`                 | Valor data                             |
 | `Hora`                 | Valor Hora                             |
-| `Booleano`             | Boolean value                          |
-| `Integer`              | Long integer value                     |
+| `Booleano`             | Valor booleano                         |
+| `Integer`              | Valor inteiro longo                    |
 | `Real`                 | Valor real                             |
-| `Ponteiro`             | Pointer value                          |
-| `Imagem`               | Picture value                          |
+| `Ponteiro`             | Valor ponteiro                         |
+| `Imagem`               | Valor imagem                           |
 | `Blob`                 | Valor Blob Scalar                      |
-| `Collection`           | Collection value                       |
-| `Variant`              | Variant value                          |
+| `Collection`           | Valor colecção                         |
+| `Variant`              | Valor variant                          |
 | `Objeto`               | Object with default class (4D. Object) |
-| `4D.<className>` | Object of the 4D class name            |
+| `4D.<className>` | Objecto do nome da classe 4D           |
 | `cs.<className>` | Object of the user class name          |
 
 #### Exemplos
@@ -107,7 +107,7 @@ var $dataclass : cs. Employee
 var $entity : cs. EmployeeEntity
 ```
 
-### Using a C_ directive
+### Usando uma directiva C_
 
 > **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
@@ -160,11 +160,11 @@ You assign data to array elements by using curly braces ({...}):
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Variáveis locais, processo e inter-processo
 
 You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
 
-### Local variables
+### Variáveis locais
 
 A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
 
