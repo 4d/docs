@@ -1550,6 +1550,7 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 
 
+
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
@@ -2058,7 +2059,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //utilizando el lenguaje:
-$strings2:=$string1s.orderByMethod(Function(sortCollection);sk strict)
+$strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
