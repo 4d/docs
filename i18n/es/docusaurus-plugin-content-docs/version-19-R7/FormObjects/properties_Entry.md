@@ -125,15 +125,15 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 ## Focusable
 
-When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
+Cuando la propiedad **Enfocable** está activada para un objeto, el objeto puede tener el foco (y por lo tanto puede ser activado por el teclado por ejemplo). Cuando está seleccionado, aparece delimitado por una línea de puntos gris, excepto si también se ha seleccionado la opción [Ocultar rectángulo de enfoque](properties_Appearance.md#hide-focus-rectangle).
 
-> An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
+> Un [objeto de entrada](input_overview.md) es siempre enfocable si tiene la propiedad [Editable](#enterable).
 
 - ![](../assets/en/FormObjects/property_focusable1.png)<br/>Casilla de verificación muestra el foco cuando se selecciona
 
 - ![](../assets/en/FormObjects/property_focusable2.png)<br/>La casilla de verificación está seleccionada pero no se puede mostrar el foco|
 
-When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
+Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el usuario puede seleccionar, copiar o incluso arrastrar y soltar el contenido del área.
 
 #### Gramática JSON
 
@@ -143,17 +143,17 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Botón de radio](radio_overview.md) - [Subformulario](subform_overview.md)
 
 ---
 
 ## Disposición del teclado
 
-This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. De este modo, durante la entrada de datos, la configuración del teclado cambia automáticamente cuando este campo tiene el foco.
+Esta propiedad asocia una distribución de teclado específica a un [objeto de entrada](input_overview.md). Por ejemplo, en una aplicación internacional, si un formulario contiene un campo cuyo contenido debe introducirse en caracteres griegos, puede asociar a este campo la disposición de teclado "griego". De este modo, durante la entrada de datos, la configuración del teclado cambia automáticamente cuando este campo tiene el foco.
 
 Por defecto, el objeto utiliza la disposición actual del teclado.
 
-> You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
+> También puede configurar y obtener el teclado dinámicamente utilizando los comandos `OBJECT SET KEYBOARD LAYOUT` y `OBJECT Get keyboard layout`.
 
 #### Gramática JSON
 
@@ -203,7 +203,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 4D puede mostrar texto con marcador de posición en los campos de sus formularios.
 
-Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. Este texto desaparece tan pronto como el usuario ingrese un carácter en el área:
+El texto del marcador de posición aparece como texto de marca de agua en un campo, suministrando un mensaje de ayuda, una indicación o un ejemplo de los datos que deben introducirse. Este texto desaparece tan pronto como el usuario ingrese un caracter en el área:
 
 ![](../assets/en/FormObjects/property_placeholder.png)
 
@@ -212,7 +212,7 @@ El texto del marcador de posición vuelve a aparecer si se borra el contenido de
 Se puede mostrar un marcador de posición para los siguientes tipos de datos:
 
 - cadena (text o alpha)
-- date and time when the **Blank if null** property is enabled.
+- fecha y hora en que se activa la propiedad **Blank if null**.
 
 Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador de posición, por ejemplo:
 
