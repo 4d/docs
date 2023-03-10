@@ -1870,7 +1870,7 @@ $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //using the language:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
@@ -1979,6 +1979,7 @@ You want to sort the resutling collection:
 ```
 
 <!-- END REF -->
+
 
 <!-- REF collection.query().Desc -->
 ## .query()

@@ -1870,13 +1870,13 @@ Ordenar los elementos de la colección por código de caracteres o alfabéticame
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//utilizando el código de caracteres:
+//using the character code:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
-// resultado : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//utilizando el lenguaje:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+//using the language:
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 El método ***sortCollection***:
@@ -1984,6 +1984,7 @@ Quiere ordenar la colección resultante:
 ```
 
 <!-- END REF -->
+
 
 <!-- REF collection.query().Desc -->
 ## .query()

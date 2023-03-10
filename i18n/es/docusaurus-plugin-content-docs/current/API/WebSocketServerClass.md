@@ -14,13 +14,13 @@ title: WebSocketServer
 
 The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
 
-:::note About WebSocket Servers
+:::note Sobre los servidores WebSocket
 
 The WebSocket protocol provides full-duplex communication channel between a WebSocket Server and a client (e.g. a Web browser). For more information on WebSocket servers, read [this page on Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
 
 :::
 
-:::info See also
+:::info Ver también
 
 See also [this blog post](https://blog.4d.com/websocket-server/) about the 4D WebSocket server.
 
@@ -47,7 +47,7 @@ The [4D Web Server](WebServerClass.md) must started.
 
 In this basic example, our WebSocket server will return messages in uppercase.
 
-1. Create the WebSocket server using a worker (mandatory) and pass your server connection class as parameter:
+1. Crea el servidor WebSocket utilizando un worker (obligatorio) y pasa su clase de conexión al servidor como parámetro:
 
 ```4d
     //create an instance of the user class
@@ -113,7 +113,7 @@ WebSocket server objects provide the following properties and functions:
 | Parámetros                          | Tipo               |    | Descripción                                                       |
 | ----------------------------------- | ------------------ |:--:| ----------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             | -> | Object of the user class declaring the WebSocket Server callbacks |
-| [options](#options-parameter)       | Object             | -> | WebSocket configuration parameters                                |
+| [options](#options-parameter)       | Object             | -> | Parámetros de configuración de WebSocket                          |
 | Result                              | 4D.WebSocketServer | <- | New WebSocketServer object|<!-- END REF -->
 
 
@@ -182,10 +182,10 @@ Evento emitido cuando se cierra el servidor HTTP o el servidor WebSocket.
 | param      |            | Object             | <- | Parámetros                                                                                                                          |
 |            | type       | Text               |    | "error"                                                                                                                             |
 |            | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
-|            | errors     | Collection         |    | Collection of 4D errors stack in case of execution error<li>[ ].errCode (number) -  4D error code</li><li>[ ].message (text) - Description of the 4D error</li><li>[ ].componentSignature (text) - Signature of the internal component which returned the error</li> |
+|            | errors     | Collection         |    | Collection of 4D errors stack in case of execution error<li>[ ].errCode (número) - Código de error 4D</li><li>[ ].message (text) - Descripción del error 4D</li><li>[ ].componentSignature (text) - Firma del componente interno que ha devuelto el error</li> |
 
 
-Event emitted when an error occurs on the WebSocket server.
+Evento emitido cuando se produce un error en el servidor WebSocket.
 
 **WSHandler.onError**(*WSServer* : Object ; *param* : Object)
 
@@ -195,10 +195,10 @@ Event emitted when an error occurs on the WebSocket server.
 | param      |            | Object             | <- | Parámetros                                                                                                                          |
 |            | type       | Text               |    | "error"                                                                                                                             |
 |            | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
-|            | errors     | Collection         |    | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |
+|            | errors     | Collection         |    | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  Código de error 4D</li><li>\[].message (text) - Descripción del error 4D</li><li>\[].componentSignature (text) - Firma del componente interno que ha devuelto el error</li> |
 
 
-Event emitted when an error occurs on the WebSocket server.
+Evento emitido cuando se produce un error en el servidor WebSocket.
 
 ### Ejemplo de clase `WSSHandler`
 
@@ -236,12 +236,12 @@ LogFile("!!! Error del servidor: "+$param.statusText)
 
 Un objeto `request` contiene las siguientes propiedades:
 
-| Parámetros    | Tipo   | Descripción                                                                                                                                              |
-| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headers       | Object | The client HTTP GET request. `headers.key=value` (value can be a collection if the same key appears multiple times)                                      |
-| query         | Object | Objeto que contiene los parámetros de la URL. For example, if parameters are: `?key1=value1&key2=value2` -> `query.key1=value1`, `query.key2=value2` |
-| url           | Text   | contains only the URL that is present in the actual HTTP request. Ejemplo: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"                   |
-| remoteAddress | Text   | IP Address of the client                                                                                                                                 |
+| Parámetros    | Tipo   | Descripción                                                                                                                                                 |
+| ------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| headers       | Object | La petición HTTP GET del cliente. `headers.key=value` (el valor puede ser una colección si la misma llave aparece varias veces)                             |
+| query         | Object | Objeto que contiene los parámetros de la URL. Por ejemplo, si los parámetros son `?key1=valor1&key2=valor2` -> `query.key1=valor1`, `query.key2=valor2` |
+| url           | Text   | contiene sólo la URL que está presente en la petición HTTP real. Ejemplo: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"                       |
+| remoteAddress | Text   | Dirección IP del cliente                                                                                                                                    |
 
 
 ### Objeto `connectionHandler`
@@ -300,7 +300,7 @@ Función llamada cuando se cierra el WebSocket.
 |            | type   |           | Text                                                    |    | "terminate"                                                                                                                         |
 |            | status |           | Object                                                  |    |                                                                                                                                     |
 |            |        | HTTPError | Text                                                    |    | HTTP error or last error returned in the 4D error stack                                                                             |
-|            |        | errors    | Collection                                              |    | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |
+|            |        | errors    | Collection                                              |    | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  Código de error 4D</li><li>\[].message (text) - Descripción del error 4D</li><li>\[].componentSignature (text) - Firma del componente interno que ha devuelto el error</li> |
 
 Función llamada cuando se ha producido un error.
 

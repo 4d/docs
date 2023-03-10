@@ -1545,6 +1545,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 
 
+
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
@@ -2053,7 +2054,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // 結果 : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 // アルファベット順:
-$strings2:=$string1s.orderByMethod(Function(sortCollection);sk strict)
+$strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // 結果 : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 

@@ -598,7 +598,7 @@ Two commands make it easier to move around within code structures (e.g. `If...El
 Estos comandos se encuentran en el menú **Método**, así como en el menú contextual del editor. También puede utilizar los siguientes atajos:
 
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
-- macOS: **Command** + **up arrow** or **Command** +**down arrow**.
+- macOS: **Comando** + **flecha arriba** o **Comando** +**flecha abajo**.
 
 ## Bookmarks
 
@@ -622,7 +622,7 @@ You can use bookmarks as markers for lines that contain an [item found by a sear
 
 ## Revelar en el Explorador
 
-The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
+The **Reveal in Explorer...** command opens an Explorer window with the target element selected. Para ello, coloque el cursor dentro del nombre del elemento o selecciónelo y, a continuación, elija **Método** > **Revelar en el Explorador...**.
 
 
 ## Search Callers

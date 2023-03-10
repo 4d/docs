@@ -467,9 +467,9 @@ ALERT("Time is over") // 1つの引数
 次の例はテキストメッセージを表示し、2つの引数が渡されていればディスク上のドキュメントに、3つ以上の場合は 4D Write Pro エリアにそのテキストを書き出します。
 
 ```4d
-// APPEND TEXT Project Method
-// APPEND TEXT ( Text { ; Text { ; Object } } )
-// APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
+// APPEND TEXT プロジェクトメソッド
+// APPEND TEXT ( テキスト { ; テキスト { ; オブジェクト } } )
+// APPEND TEXT ( メッセージ { ; パス { ; 4DWPエリア } } )
 
  #DECLARE($message : Text; $path : Text; $wpArea : Object)
 

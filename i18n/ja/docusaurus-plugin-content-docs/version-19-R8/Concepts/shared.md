@@ -5,7 +5,7 @@ title: 共有オブジェクトと共有コレクション
 
 **共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](Concepts/dt_object.md) と [コレクション](Concepts/dt_collection.md) です。 [インタープロセス変数](Concepts/variables.md#インタープロセス変数) に比べると、共有オブジェクトと共有コレクションは **プリエンプティブ4Dプロセス** と互換性があるという点で利点があります。つまり、`New process` や `CALL WORKER` といったコマンドの引数として、参照の形で渡すことができるということです。
 
-Shared objects and shared collections can be stored in standard `Object` and `Collection` type variables, but must be instantiated using specific commands:
+共有オブジェクトと共有コレクションは、標準の `Object` および `Collection` 型の変数に保存することができますが、専用のコマンドを使用してインスタンス化されている必要があります:
 
 - 共有オブジェクトを作成するには、`New shared object` コマンドを使用します。
 - 共有コレクションを作成するには、`New shared collection` コマンドを使用します。
@@ -82,7 +82,7 @@ Shared objects and shared collections can be stored in standard `Object` and `Co
 
 - **Use** の実行が成功すると、対応する `End use` が実行されるまで、_Shared_object_or_Shared_collection_ のプすべてのロパティ/要素は他のあらゆるプロセスに対し書き込みアクセスがロックされます。
 - _statement(s)_ で実行されるステートメントは、*Shared_object_or_Shared_collection* のプロパティ/要素に対して、競合アクセスのリスクなしに変更も実行することができます。
-- If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group.
+- _Shared_object_or_Shared_collection_ に他の共有オブジェクトあるいはコレクションがプロパティとして追加された場合、それらも同じ共有グループとして連結されます。
 - **Use...End use ** 内ステートメントの実行中に、他のプロセスが _Shared_object_or_Shared_collection_ のプロパティやリンクされたプロパティにアクセスしようとした場合、そのアクセスは自動的に保留され、実行中の処理が終了するまで待機します。
 - **End use** は、_Shared_object_or_Shared_collection_ プロパティおよび、同じグループのすべてのオブジェクトのロックを解除します。
 - 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 グループの場合、**Use** を使用するごとにグループのロックカウンターが 1 増加し、 **End use** ごとに 1 減少します。最後の **End use** によってロックカウンターが 0 になった場合にのみ、すべてのプロパティ/要素のロックが解除されます。
@@ -96,7 +96,7 @@ Shared objects and shared collections can be stored in standard `Object` and `Co
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... // 在庫を確認する製品を配列に格納します
  $nbItems:=Size of array($_items)
  var $inventory : Object
  $inventory:=New shared object
@@ -104,22 +104,22 @@ Shared objects and shared collections can be stored in standard `Object` and `Co
     $inventory.nbItems:=$nbItems
  End use
 
-  //Create processes
+  // プロセスを起動します
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
-  //$inventory object sent by reference
+  // $inventory オブジェクトは参照で渡されます
  End for
 ```
 
 "HowMany" メソッド内では、在庫確認が終わるとすぐに $inventory 共有オブジェクトが更新されます:
 
 ```4d
-    //HowMany
+    // HowMany メソッド
  #DECLARE ($what : Text ; $inventory : Object)
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+ $count:=CountMethod($what) // 在庫確認用のメソッド
+ Use($inventory) // 共有オブジェクトを使用します
+    $inventory[$what]:=$count  // 当該製品の在庫を保存します
  End use
 ```
 

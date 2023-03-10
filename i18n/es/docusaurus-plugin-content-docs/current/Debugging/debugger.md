@@ -218,7 +218,7 @@ Este tema contiene información general sobre el funcionamiento de la base de da
 Este tema muestra información relativa al servidor Web principal de la aplicación (sólo disponible si el servidor Web está activo):
 
 * Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
-* Web Cache Usage: number of pages present in Web cache as well as its use percentage
+* Uso de la caché web: número de páginas presentes en la caché web, así como su porcentaje de uso
 * Tiempo transcurrido del servidor web: duración del uso del servidor web en formato horas:minutos:segundos
 * Conteo de accesos a la Web: número total de peticiones HTTP recibidas desde la puesta en marcha del servidor Web, así como el número instantáneo de peticiones por segundo
 * Número de procesos Web activos: número de procesos Web activos, todos los procesos Web juntos

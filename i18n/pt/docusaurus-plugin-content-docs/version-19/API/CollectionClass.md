@@ -1885,13 +1885,13 @@ Se quiser ordenar a coleção por código de caractere ou alfabeticamente:
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//usar o código de caractere:
+//using the character code:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//usar a linguagem:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// resultado: ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+//using the language:
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 Aqui está o método ***sortCollection***:

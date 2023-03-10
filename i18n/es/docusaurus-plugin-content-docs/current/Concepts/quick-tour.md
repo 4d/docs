@@ -208,7 +208,7 @@ Para instanciar un objeto de la clase en un método, llame la clase usuario desd
 $o:=cs.myClass.new() 
 ```
 
-En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase *methodName*. A class member function can receive and return parameters like any method, and use `This` as the object instance.
+En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase *methodName*. Una función miembro de clase puede recibir y devolver parámetros como todo método, y utilizar `This` como instancia del objeto.
 
 ```4d  
 //en el archivo myClass.4dm
@@ -216,7 +216,7 @@ Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
 
-To execute a class member function, just use the `()` operator on the member function of the object instance.
+Para ejecutar una función miembro de clase, basta con utilizar el operador `()` en la función miembro de la instancia del objeto.
 
 ```4d
 $o:=cs.myClass.new()
@@ -239,14 +239,14 @@ This.name:="Rectangle"
 Una clase puede extender otra clase utilizando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por ejemplo:
 
 ```4d  
-//in the Square.4dm file
+//en el archivo Square.4dm
 Class extends rectangle
 
 Class constructor
 var $length : Integer
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // Llama al constructor de la clase padre con las dimensiones    
+  // suministradas para el ancho y el alto del Rectángulo
 Super($length;$length)
 
 This.name:="Square"
