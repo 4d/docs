@@ -17,7 +17,7 @@ El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las
 El modo SDI sólo está disponible en los siguientes entornos de ejecución:
 
 - Windows
-- Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
+- Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
 - [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
 
 ## Activación del modo SDI
