@@ -2049,13 +2049,13 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+// 文字コード順:
 $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
-// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// 結果 : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+// アルファベット順:
 $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
-// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+// 結果 : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 ***sortCollection*** メソッドのコードは以下のとおりです:
