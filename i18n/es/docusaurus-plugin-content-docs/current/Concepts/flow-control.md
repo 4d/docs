@@ -1,20 +1,20 @@
 ---
 id: control-flow
-title: Control flow
+title: Flujo de control
 ---
 
 Independientemente de la simplicidad o la complejidad de un método o de una función, siempre utilizará uno o varios de los tres tipos de estructuras de programación. Las estructuras de programación determinan el flujo de ejecución, si se ejecutan y el orden de las líneas de instrucciones dentro de un método. Hay tres tipos de estructuras:
 
-- **Sequential**: a sequential structure is a simple, linear structure. A sequence is a series of statements that 4D executes one after the other, from first to last. A one-line routine, frequently used for object methods, is the simplest case of a sequential structure. For example: `[People]lastName:=Uppercase([People]lastName)`
-- **Branching**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. The condition is a Boolean expression, an expression that evaluates TRUE or FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
-- **Looping**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. To deal with this need, the 4D language provides the following looping structures:
+- **Secuencial**: una estructura secuencial es una estructura simple y lineal. Una secuencia es una serie de sentencias que 4D ejecuta una tras otra, de la primera a la última. Una instrucción de una línea, utilizada frecuentemente para los métodos de los objetos, es el caso más simple de una estructura secuencial. Por ejemplo: `[People]lastName:=Uppercase([People]lastName)`
+- **Ramificación**: una estructura de ramificación permite que los métodos prueben una condición y tomen caminos alternativos, dependiendo del resultado. La condición es una expresión booleana, una expresión que evalúa TRUE o FALSE. Una estructura de ramificación es la estructura [`If...Else...End if`](#ifelseend-if), que dirige el flujo del programa a lo largo de una de dos rutas. La otra estructura de ramificación es la estructura [`Case of...Else...End case`](#case-ofelseend-case), que dirige el flujo del programa a una de muchas rutas.
+- **Bucle**: cuando se escriben métodos, es muy común encontrarse con que se necesita que una secuencia de sentencias se repita un número de veces. Para hacer frente a esta necesidad, el lenguaje 4D ofrece las siguientes estructuras de bucle:
 
     - [`While...End while`](#whileend-while)
     - [`Repeat...Until`](#repeatuntil)
     - [`For...End for`](#forend-for)
     - [`For each... End for each`](#for-eachend-for-each)
 
-The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado de veces. `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
+Los bucles se controlan de dos maneras: o bien se repiten hasta que se cumple una condición, o bien se repiten un número determinado de veces. Cada estructura de bucle puede utilizarse de cualquier manera, pero los bucles `While` y los bucles `Repeat` son más apropiados para repetir hasta que se cumpla una condición, y los bucles `For` son más apropiados para hacer un bucle un número determinado de veces. `For each...End for each` permite la mezcla en ambos sentidos y está diseñado para realizar bucles dentro de objetos y colecciones.
 
 **Nota:** 4D permite anidar estructuras de programación hasta una "profundidad" de 512 niveles.
 
@@ -416,9 +416,9 @@ Las instrucciones `break` y `continue` se [describen a continuación](#break-and
 
 La mayoría de los bucles `For...End for` que escribirá en sus proyectos se parecerán a los que se presentan en estos ejemplos.
 
-### Counter variable
+### Variable contador
 
-#### Decrementing counter variable
+#### Variable contador decreciente
 
 En algunos casos, puede querer tener un bucle cuya variable de contador sea decreciente en lugar de creciente. Para ello, debe especificar *Start_Expression* mayor que *End_Expression* y *Increment_Expression* debe ser negativa. Los siguientes ejemplos hacen lo mismo que los anteriores, pero en orden inverso:
 
