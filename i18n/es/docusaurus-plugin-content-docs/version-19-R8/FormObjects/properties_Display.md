@@ -345,8 +345,8 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 ... puede seleccionar el texto que se mostrará para cada valor:
 
-* **Text when True** - the text to be displayed when the value is "true"
-* **Text when False** - the text to be displayed when the value is "false"
+* **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
+* **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
 
 #### Gramática JSON
 
@@ -366,7 +366,7 @@ Utilizado para asociar un formato de visualización con los datos de la columna.
 
 Las columnas booleanas y numéricas (números o enteros) pueden mostrarse como casillas de verificación. En este caso, se puede definir la propiedad [Título](#title).
 
-Las columnas booleanas también pueden mostrarse como menús emergentes. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+Las columnas booleanas también pueden mostrarse como menús emergentes. En este caso, deben definirse las propiedades [Text cuando False y Text cuando True](#text-when-false-text-when-true).
 
 #### Gramática JSON
 
@@ -466,7 +466,7 @@ Esta opción está disponible para columnas con cualquier tipo de contenido, exc
 
 La opción Truncar con elipsis está activada por defecto y puede especificarse con list boxes de tipo Array, Selección o Colección.
 
-> When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. Cuando se selecciona la propiedad Ajuste de palabras, el contenido adicional de las celdas se gestiona mediante las funciones de ajuste de palabras, por lo que la propiedad Truncar con elipsis no está disponible.
+> Cuando se aplica a columnas de tipo Texto, la opción Truncar con elipsis sólo está disponible si la opción [Ajustar texto](#wordwrap) no está seleccionada. Cuando se selecciona la propiedad Ajuste de palabras, el contenido adicional de las celdas se gestiona mediante las funciones de ajuste de palabras, por lo que la propiedad Truncar con elipsis no está disponible.
 
 La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; sin embargo, el resultado difiere en función del [formato de celda](#display-type):
 
@@ -493,7 +493,7 @@ Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formu
 
 #### Visibilidad automática en los formularios lista
 
-In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
+En el contexto de los [formularios "lista"](FormEditor/properties_FormProperties.md#form-type), la propiedad Visibilidad soporta dos valores específicos:
 
 * **Si registro seleccionado** (nombre JSON: "selectedRows")
 * **Si el registro no está seleccionado** (nombre JSON: "unselectedRows")
@@ -526,7 +526,7 @@ Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
 `Gramática JSON: "normal"`
 
-When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
+Cuando esta opción está seleccionada, el texto pasa automáticamente a la línea siguiente siempre que su ancho supere el de la columna/área, si la altura de la columna/área lo permite.
 
 * En las columnas/áreas de una sola línea, sólo se muestra la última palabra que puede mostrarse entera. 4D inserta retornos de línea; es posible desplazarse por el contenido del área presionando la tecla de flecha abajo.
 
@@ -546,7 +546,7 @@ En los list boxes, el texto demasiado largo se trunca y se muestra con una elips
 
 ![](../assets/en/FormObjects/property_wordwrap1.png)
 
-Note that regardless of the Wordwrap option’s value, the row height is not changed. Si el texto con saltos de línea no puede visualizarse por completo en la columna, se trunca (sin elipse). En el caso de los list boxes que muestran una sola línea, sólo se muestra la primera línea de texto:
+Tenga en cuenta que, independientemente del valor de la opción Ajuste de texto, la altura de la línea no se modifica. Si el texto con saltos de línea no puede visualizarse por completo en la columna, se trunca (sin elipse). En el caso de los list boxes que muestran una sola línea, sólo se muestra la primera línea de texto:
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 
