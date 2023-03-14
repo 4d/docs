@@ -20,7 +20,7 @@ The formal syntax of the `While... End while` control flow structure is:
 
 A `While... End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 It is common to initialize the value tested in the Boolean expression immediately before entering the `While... End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While... End while` executes the loop.
 
@@ -58,7 +58,7 @@ The other difference with a `Repeat... Until` loop is that the loop continues un
 
 Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 ### Exemplo
 
@@ -95,7 +95,7 @@ The `For... End for` loop is a loop controlled by a counter variable:
 - Se *Start_Expression* e *End_Expression* forem iguais, o loop se executará só uma vez.
 - Se *Start_Expression* for maior que *End_Expression*, o loop não vai executar a não ser que especifique uma *Increment_Expression* negativa. Ver os exemplos.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 ### Exemplos básicos
 
@@ -317,7 +317,7 @@ The following table compares the three types of `For each... End for each`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 ### Loop através da coleção
 
