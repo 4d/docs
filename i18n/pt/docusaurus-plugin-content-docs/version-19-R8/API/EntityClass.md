@@ -1376,7 +1376,7 @@ Se um filtro for especificado para atributos de relatedEntities [kind](DataClass
 
 No parâmetro *options* pode passar o selector `ddk with primary key` ou`dk with stamp` para adicionar as chaves primárias da entidade ou os selos nos objetos extraídos.
 
-:::caution Warning
+:::caution Alerta
 
 Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Tenha em mente que é recomendado usar a chave primária como um atributo nas suas relações, especialmente quando usa funções `.toObject()` e `.fromObject()`.
 

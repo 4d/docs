@@ -507,7 +507,7 @@ The `For...End for` loop is usually faster than the `While...End while` and `Rep
 
 ### Nested For... End for looping structures
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. This includes nesting `For... End for` loops. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
@@ -737,13 +737,13 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
 
 ## break and continue
 
-All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+Todas as estruturas de looping acima suportam tanto `quebrar` como `continuar` declarações. Estas declarações dão-lhe mais controle sobre os loops, permitindo-lhe sair do loop e contornar a iteração atual a qualquer momento.
 
 ### break
 
-The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+A declaração `quebra` termina o loop que a contém. O controle do programa flui para a declaração imediatamente após o corpo do loop.
 
-If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+Se a declaração `quebrar` estiver dentro de um loop aninhado [](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `quebrar` terminará o loop mais interno.
 
 
 #### Exemplo
@@ -757,12 +757,13 @@ For (vCounter;1;100)
 
 ### continue
 
-The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+A declaração `continua` encerra a execução das declarações na iteração actual do loop atual, e continua a execução do loop com a próxima iteração.
 
 ```4d
-var $text : Text For ($i; 0; 9)
+var $text : Text
+For ($i; 0; 9)
     If ($i=3)
-        continue //go directly to the next iteration
+        continue //passa diretamente para a próxima iteração
     End if
     $text:=$text+String($i)
 End for

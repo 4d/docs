@@ -264,19 +264,19 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                    |
-| ---------- | -------- |:--:| ---------------------------------------------------------------------------- |
-| msgNumber  | Integer  | -> | Número da mensagem que na lista                                              |
-| headerOnly | Booleano | -> | True to download only the email headers (default is False)                   |
-| Resultados | Objeto   | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF --> |
+| Parâmetros | Tipo     |    | Descrição                                                                               |
+| ---------- | -------- |:--:| --------------------------------------------------------------------------------------- |
+| msgNumber  | Integer  | -> | Número da mensagem que na lista                                                         |
+| headerOnly | Booleano | -> | True para descarregar apenas os cabeçalhos de correio electrónico (por defeito é False) |
+| Resultados | Objeto   | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF -->            |
 
 ##### Descrição
 
 A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devolve o `Email` objeto correspondente ao *msgNumber* na caixa de correio designada pelo transportador [`POP3`](#pop3-transporter-object)<!-- END REF -->. Essa função permite manejar localmente os conteúdos de email.
 
-Passe em *msgNumber* o número da mensagem a recuperar. This number is returned in the `number` property by the [`.getMailInfoList()`](#getmailinfolist) function.
+Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
 
-Optionally, you can pass `true` in the *headerOnly* parameter to exclude the body parts from the returned `Email` object. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. This option allows you to optimize the downloading step when a lot of emails are on the server.
+Opcionalmente, pode passar `true` no parâmetro *headerOnly* para excluir as partes do corpo do objecto devolvido `Email`. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. This option allows you to optimize the downloading step when a lot of emails are on the server.
 
 :::note
 

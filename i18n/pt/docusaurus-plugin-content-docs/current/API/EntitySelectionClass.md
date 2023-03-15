@@ -2072,7 +2072,7 @@ Se for especificado um filtro para um atributo do tipo `relatedEntities` :
 
 No parâmetro *opções* , pode passar os seletores `dk com chave primária` e/ou `dk with stamp`  para adicionar as chaves primárias da entidade e/ou carimbos nos objectos extraídos.
 
-:::caution Warning
+:::caution Alerta
 
 Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Tenha em mente que é recomendado usar a chave primária como um atributo nas suas relações, especialmente quando usa funções `.toCollection()` e `.fromCollection()`.
 

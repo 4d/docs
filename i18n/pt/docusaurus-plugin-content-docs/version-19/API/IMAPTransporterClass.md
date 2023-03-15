@@ -1117,18 +1117,18 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                                     |
-| ---------- | -------- |:--:| --------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer  | -> | Número sequencial da mensagem                                                                 |
-| msgID      | Text     | -> | ID única da mensagem                                                                          |
-| updateSeen | Booleano | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
-| Resultados | BLOB     | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
+| Parâmetros | Tipo     |    | Descrição                                                                                                |
+| ---------- | -------- |:--:| -------------------------------------------------------------------------------------------------------- |
+| msgNumber  | Integer  | -> | Número sequencial da mensagem                                                                            |
+| msgID      | Text     | -> | ID única da mensagem                                                                                     |
+| updateSeen | Booleano | -> | Se Verdadeiro, a mensagem é marcada "visto" na caixa de correio. If False the message is left untouched. |
+| Resultados | BLOB     | <- | Blob da string MIME retornado do servidor mail|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
+A função `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->devolve o BLOB contendo o conteúdo MIME para a mensagem correspondente a *msgNumber* ou *msgID* na caixa de correio designada pelo `IMAP_transporter`<!-- END REF -->.
 
 No primeiro parâmetro, pode passar qualquer um dos dois:
 
@@ -1141,7 +1141,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 * **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
-> * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
+> * Se não houver uma ligação aberta, `.getMIMEAsBlob()` abrirá uma ligação a última caixa de correio especificada com `.selectBox()`.
 
 #### Resultados
 
@@ -1237,21 +1237,21 @@ To move a selection of messages:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obrigatório
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("inbox")
+  //selecionar mailbox
+ $boxInfo:=$transporter.selectBox("Inbox")
 
-  //get collection of message unique IDs
+  //obter coleção das IDs únicas de mensagem
  $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
 
-  // Move found messages from the current mailbox to the "documents" mailbox
- $status:=$transporter.move($mailIds;"documents")
+  // mover mensagens encontradas da caixa de correio actual para a caixa de correio "documents"
+ $status:=$transporter.move($mailIds; "documentos")
 ```
 
 #### Exemplo 2
@@ -1306,9 +1306,9 @@ To move all messages in the current mailbox:
 
 A função `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by *startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
 
-In the *startMsg* parameter, pass an integer value corresponding to the number of the first message in a sequential range. Se passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será utilizada como o início da sequência.
+No parâmetro *startMsg*, passe um valor inteiro correspondente ao número da primeira mensagem num intervalo sequencial. Se passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será utilizada como o início da sequência.
 
-In the *endMsg* parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. Se passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será utilizada como o fim da sequência.
+No parâmetro *endMsg*, passe um valor inteiro correspondente ao número da última mensagem a ser incluída num intervalo sequencial. Se passar um número negativo (*endMsg* <= 0), a última mensagem da caixa de correio será utilizada como o fim da sequência.
 
 #### Resultados
 
@@ -1359,14 +1359,14 @@ The function returns a collection of strings (unique IDs).
 | Parâmetros | Tipo       |    | Descrição                                                                                                                                                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | Collection | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
-| keywords   | Objeto     | -> | Keyword flags to remove                                                                                                                                                           |
-| Resultados | Objeto     | <- | Status of the removeFlags operation|<!-- END REF -->
+| keywords   | Objeto     | -> | Flags de palavras-chave a remover                                                                                                                                                 |
+| Resultados | Objeto     | <- | Estado da operação removeFlags|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
+A função `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->remove flags do `msgIDs` para as `palavras-chave` especificadas<!-- END REF -->.
 
 No parâmetro `msgIDs` , pode passar qualquer um dos dois:
 
@@ -1380,13 +1380,13 @@ No parâmetro `msgIDs` , pode passar qualquer um dos dois:
 
 The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
 
-| Parâmetros | Tipo     | Descrição                                           |
-| ---------- | -------- | --------------------------------------------------- |
-| $draft     | Booleano | True to remove the "draft" flag from the message    |
-| $seen      | Booleano | True to remove the "seen" flag from the message     |
-| $flagged   | Booleano | True to remove the "flagged" flag from the message  |
-| $answered  | Booleano | True to remove the "answered" flag from the message |
-| $deleted   | Booleano | True to remove the "deleted" flag from the message  |
+| Parâmetros | Tipo     | Descrição                                       |
+| ---------- | -------- | ----------------------------------------------- |
+| $draft     | Booleano | True para remover o flag "draft" na mensagem    |
+| $seen      | Booleano | True para remover a flag "seen" na mensagem     |
+| $flagged   | Booleano | True para remover a flag "flagged" na mensagem  |
+| $answered  | Booleano | True para remover a flag "answered" na mensagem |
+| $deleted   | Booleano | True para remover a flag "deleted" na mensagem  |
 
 Note that False values are ignored.
 
@@ -1443,11 +1443,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
-| Parâmetros  | Tipo   |    | Descrição                                                   |
-| ----------- | ------ |:--:| ----------------------------------------------------------- |
-| currentName | Text   | -> | Name of the current mailbox                                 |
-| newName     | Text   | -> | New mailbox name                                            |
-| Resultados  | Objeto | <- | Status of the renaming operation|<!-- END REF -->
+| Parâmetros  | Tipo   |    | Descrição                                                     |
+| ----------- | ------ |:--:| ------------------------------------------------------------- |
+| currentName | Text   | -> | Nome da caixa de correio actual                               |
+| newName     | Text   | -> | Novo nome da caixa de correio                                 |
+| Resultados  | Objeto | <- | Estado da operação de renomeamento|<!-- END REF -->
 
 |
 
@@ -1455,9 +1455,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 A função `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Attempting to rename a mailbox from a mailbox name that does not exist or to a mailbox name that already exists will generate an error.
 
-In the `currentName` parameter, pass the name of the mailbox to be renamed.
+No parâmetro `currentName`, passar o nome da caixa de correio para renommer.
 
-Pass the new name for the mailbox in the `newName` parameter.
+Passar o novo nome para a caixa de correio no parâmetro `newName`.
 
 **Objeto devolvido**
 
@@ -1671,12 +1671,12 @@ A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->
 
 In the *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
 
-The optional *state* parameter defines the type of access to the mailbox. The possible values are:
+The optional *state* parameter defines the type of access to the mailbox. Os valores possíveis são:
 
-| Constante             | Value | Comentário                                                                                                                                                           |
-| --------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                |
-| IMAP read write state | 0     | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Valor padrão) |
+| Constante             | Value | Comentário                                                                                                                                                                          |
+| --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IMAP read only state  | 1     | A caixa de correio seleccionada é acedida com privilégios apenas de leitura. As mensagens com uma flag "recente" (indicando novas mensagens) permanecem inalteradas.                |
+| IMAP read write state | 0     | A caixa de correio seleccionada é acedida com privilégios de leitura e escrita. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Valor padrão) |
 > * The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
 > * If there is no open connection, `.selectBox()` will open a connection.
 > * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
@@ -1685,18 +1685,18 @@ The optional *state* parameter defines the type of access to the mailbox. The po
 
 O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
-| Propriedade | Tipo   | Descrição                                 |
-| ----------- | ------ | ----------------------------------------- |
-| name        | Text   | Nome da nova caixa de correio             |
-| mailCount   | number | Número de mensagens na caixa de email     |
-| mailRecent  | number | Number of messages with the "recent" flag |
+| Propriedade | Tipo   | Descrição                               |
+| ----------- | ------ | --------------------------------------- |
+| name        | Text   | Nome da nova caixa de correio           |
+| mailCount   | number | Número de mensagens na caixa de email   |
+| mailRecent  | number | Número de mensagens com a flag "recent" |
 
 #### Exemplo
 
 ```4d
  var $server; $boxinfo : Object
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obrigatório
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
@@ -1722,10 +1722,10 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                    |
-| ---------- | ------ |:--:| ------------------------------------------------------------ |
-| name       | Text   | -> | Nome da nova caixa de correio                                |
-| Resultados | Objeto | <- | Status of the subscribe operation|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                   |
+| ---------- | ------ |:--:| ----------------------------------------------------------- |
+| name       | Text   | -> | Nome da nova caixa de correio                               |
+| Resultados | Objeto | <- | Estado da operação de subscrição|<!-- END REF -->
 
 |
 
