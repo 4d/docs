@@ -22,7 +22,7 @@ Um loop `While... End while` executa a declaração dentro do loop enquanto a ex
 
 A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
-It is common to initialize the value tested in the Boolean expression immediately before entering the `While... End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While... End while` executes the loop.
+É comum inicializar o valor provado na expressão booleana imediatamente antes de entrar no loop `While... End while`. Inicializar o valor significa atribuir o valor para algo apropriado, geralmente para que a expressão booleana seja TRUE e `While... End while` execute o loop.
 
 O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O próximo loop continua para sempre porque _NeverStop_ sempre será TRUE:
 ```4d
@@ -54,7 +54,7 @@ Repeat
     {break}  
     {continue} Until(Boolean_Expression)
 ```
-The other difference with a `Repeat... Until` loop is that the loop continues until the Boolean expression is TRUE.
+The other difference with a `Repeat... Until` é que o loop continua até que a expressão seja TRUE.
 
 Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
 
@@ -62,7 +62,7 @@ A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-cont
 
 ### Exemplo
 
-Compare the following example with the example for the `While... End while` loop. Lembre que a expressão booleana não precisa ser iniciada - não há um comando `CONFIRM` para inicializar a variável `OK`.
+Compare o exemplo abaixo com o exemplo para o lopp `While... End while`. Lembre que a expressão booleana não precisa ser iniciada - não há um comando `CONFIRM` para inicializar a variável `OK`.
 
 ```4d
  Repeat
@@ -140,7 +140,7 @@ A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-cont
  End for
 ```
 
-Most of the `For... End for` loops you will write in your projects will look like the ones listed in these examples.
+A maioria dos loops `For... End for` que escreverá em seus projetos vão parecer com aqueles listados nesses exemplos.
 
 ### Diminuir a variável contador
 
@@ -203,14 +203,14 @@ Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo va
 
 ### Comparação de estruturas de loop
 
-Let's go back to the first `For... End for` example. O seguinte exemplo executa 100 iterações:
+Voltamos ao primeiro exemplo de `For... End for`. O seguinte exemplo executa 100 iterações:
 ```4d
  For(vCounter;1;100)
   //Faz algo
  End for
 ```
 
-Here is the equivalent `Repeat... Until` loop:
+É interessante ver como os loops `While...End while` e `Repeat repete...Until`  realizariam a mesma ação. Aquí está o loop equivalente `While... End while`:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -219,7 +219,7 @@ Here is the equivalent `Repeat... Until` loop:
  End while
 ```
 
-Here is the equivalent `While... End while` loop:
+Aquí está o loop equivalente `Repeat... Until`:
 ```4d
  $i:=1 //Initializa o contador
  Repeat
@@ -227,9 +227,9 @@ Here is the equivalent `While... End while` loop:
     $i:=$i+1 //Precisa incrementar o contador
  Until($i=100) //Loop 100 vezes
 ```
-**Tip:** The `For... End for` loop is usually faster than the `While... End while` and `Repeat... Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For... End for` loop whenever possible.
+**Dica:** o loop `For... End for` é geralmente mais rápido que os loops `While... End while` ou `Repeat... Until`, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Portanto, utilize o loop `For... End for` sempre que for possível.
 
-### Optimizing the execution of the For... End for loops
+### Otimizar a execução dos loops For... End for
 
 Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
 
@@ -242,9 +242,9 @@ Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, 
  End for
 ```
 
-### Nested For... End for looping structures
+### Estruturas For... End aninhadas
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. This includes nesting `For... End for` loops. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
@@ -301,7 +301,7 @@ A estrutura `For each... End for each` faz uma iteração sobre um *Elemento_atu
 - seleções de entidades: loop em cada entidade,
 - objetos: loop em cada propriedade do objeto.
 
-The following table compares the three types of `For each... End for each`:
+A tabela abaixo compara os três tipos de `For each... End for each`:
 
 |                                           | Loop através da coleção                            | Loop nas seleções de entidades | Loop nos objetos                 |
 | ----------------------------------------- | -------------------------------------------------- | ------------------------------ | -------------------------------- |
@@ -313,7 +313,7 @@ The following table compares the three types of `For each... End for each`:
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 - Por padrão, as  _instruções_ anexas são executadas para cada valor de *Expressão*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (`While`) ou ao final do loop (`Until`).
 - Os parâmetros opcionais *begin* e *end* podem ser usados com coleç~eos e seleções de entidades para definir os limites do loop.
-- The `For each... End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use... End use` keywords. Depending on your needs, you can call the `Use... End use` keywords:
+- O loop `For each... End for each` pode ser usado em uma **coleção compartida** ou um **objeto compartilhado**. Se seu código necessitar modificar um ou  mais elementos da coleção ou das propriedades de objeto, deve utilizar as palavras chave `Use... End use`. Dependendo de sus necessidades, pode chamar às palavras chave `Use... End use`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
