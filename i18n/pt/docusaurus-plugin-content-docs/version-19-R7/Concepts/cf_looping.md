@@ -447,7 +447,7 @@ Por exemplo:
 
 ### Condições Until e While
 
-You can control the `For each... End for each` execution by adding an `Until` or a `While` condition to the loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
+Pode controlar a execução de `For each... End for each` adicionando uma condição `Until` ou uma condição `While` ao loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
 
 Pode passar qualquer uma das duas palavras chave em função das suas necessidades:
 
@@ -472,15 +472,15 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## `break` and `continue`
+## `break` e `continue`
 
-All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+Todas as estruturas de looping acima suportam tanto `quebrar` como `continuar` declarações. Estas declarações dão-lhe mais controle sobre os loops, permitindo-lhe sair do loop e contornar a iteração atual a qualquer momento.
 
 ### break
 
-The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+A declaração `quebra` termina o loop que a contém. O controle do programa flui para a declaração imediatamente após o corpo do loop.
 
-If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+Se a declaração `quebrar` estiver dentro de um loop aninhado [](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `quebrar` terminará o loop mais interno.
 
 
 #### Exemplo
@@ -494,12 +494,13 @@ For (vCounter;1;100)
 
 ### continue
 
-The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+A declaração `continua` encerra a execução das declarações na iteração actual do loop atual, e continua a execução do loop com a próxima iteração.
 
 ```4d
-var $text : Text For ($i; 0; 9)
+var $text : Text
+For ($i; 0; 9)
     If ($i=3)
-        continue //go directly to the next iteration
+        continue //passa diretamente para a próxima iteração
     End if
     $text:=$text+String($i)
 End for
