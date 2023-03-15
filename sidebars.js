@@ -117,7 +117,7 @@ module.exports =
 				},					
 				{
 					type: "category",
-					label: "Class API Reference",
+					label: "Class Functions",
 					items: [
 						"API/overview",
 						"API/BlobClass",
@@ -149,7 +149,7 @@ module.exports =
 					],
 					link: {
 						type: 'generated-index',
-						title: 'Class API Reference',
+						title: 'Class Functions',
 						description: 'List of built-in 4D classes',
 						slug: '/category/class-API-reference',
 						keywords: ['class'],
