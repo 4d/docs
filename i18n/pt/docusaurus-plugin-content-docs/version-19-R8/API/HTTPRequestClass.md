@@ -76,9 +76,9 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                         |
-| ------ | -------------------------------- |
-| v19 R7 | Support of *decodeData* property |
+| Versão | Mudanças                            |
+| ------ | ----------------------------------- |
+| v19 R7 | Suporte de propriedade *decodeData* |
 
 </details>
 
