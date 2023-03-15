@@ -478,14 +478,14 @@ Si lo requiere, puede utilizar una *Increment_Expression* (positiva o negativa) 
 
 #### Optimizing the execution of the For... End for loops
 
-You can use Real and Integer variables as well as interprocess, process, and local variable counters. Para bucles repetitivos largos, especialmente en modo compilado, utilice variables locales de tipo Entero largo.
+Puede utilizar variables reales y enteras, así como contadores interproceso, proceso y variables locales. Para bucles repetitivos largos, especialmente en modo compilado, utilice variables locales de tipo Entero largo.
 
 10. Aquí un ejemplo:
 
 ```4d
- var $vlCounter : Integer //use local Integer variables
+ var $vlCounter : Integer //utilizar variables Integer locales 
  For($vlCounter;1;10000)
-  //Do something
+  //Hacer algo
  End for
 ```
 
@@ -518,7 +518,7 @@ Aquí está el bucle equivalente `Repeat...Until`:
 
 :::tip
 
-The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Por lo tanto, utilice el bucle `For...End for` siempre que sea posible.
+El bucle `For...End for` suele ser más rápido que los bucles `While...End while` y `Repeat...Until`, porque 4D comprueba la condición internamente en cada ciclo del bucle e incrementa el contador. Por lo tanto, utilice el bucle `For...End for` siempre que sea posible.
 
 :::
 
@@ -639,13 +639,13 @@ Usted quiere calcular algunas estadísticas para una colección de números:
 
 ### Bucle en las selecciones de entidades
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+Cuando `For each... End for each` se utiliza con una *Expression* del tipo *Collection*, el parámetro *Current_Item* es una variable del mismo tipo que los elementos de la colección.
 
 El número de bucles se basa en el número de entidades de la selección de entidades. En cada iteración del bucle, el parámetro *Current_Item* se llena automáticamente con la entidad de la selección de entidades que se procesa actualmente.
 
 **Nota:** si la selección de entidades contiene una entidad que fue eliminada mientras tanto por otro proceso, se salta automáticamente durante el bucle.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save()`.
+Tenga en cuenta que cualquier modificación aplicada en la entidad actual debe ser guardada explícitamente utilizando `entity.save()`.
 
 #### Ejemplo
 
@@ -753,7 +753,7 @@ Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## break and continue
+## break y continue
 
 Todas las estructuras de bucle anteriores soportan las instrucciones `break` y `continue`. Estas instrucciones le dan más control sobre los bucles al permitir salir del bucle y pasar por alto la iteración actual en cualquier momento.
 
