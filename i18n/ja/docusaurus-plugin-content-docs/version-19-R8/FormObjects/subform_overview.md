@@ -54,11 +54,22 @@ title: サブフォーム
 
 ### 親フォームとサブフォームの同期 (単一値)
 
-親フォームにおいて、他のオブジェクトとサブフォームコンテナーとに同じ "変数あるいは式" を設定することで、親フォームとサブフォームのコンテキストをリンクし、洗練されたインターフェースを作成することができます。 たとえば、入力可の時間型変数が置かれている親フォームに、アナログ時計を表示するサブフォームを置くとします:
+親フォームにおいて、他のオブジェクトとサブフォームコンテナーとに同じ "変数あるいは式" を設定することで、親フォームとサブフォームのコンテキストをリンクし、洗練されたインターフェースを作成することができます。 Imagine a subform that contains a clock displaying a static time, inserted into a parent form containing an [input area](input_overview.md):
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-親フォームにおいて、両オブジェクト (時間変数とサブフォームコンテナー) の ***変数あるいは式* プロパティは同じ設定にされています**。 変数 (例: `parisTime`)、あるいは式 (例: `Form.parisTime`) を設定することができます。
+In the parent form, both objects (input area and subform container) ***have the same value as ***Variable or Expression******. 変数 (例: `parisTime`)、あるいは式 (例: `Form.parisTime`) を設定することができます。
+
+:::info
+
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
+
+- If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
+- If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.
+
+The text value must be formatted "hh:mm:ss".
+
+:::
 
 サブフォームにおいては、時計オブジェクトの同プロパティとして `Form.clockValue` が設定されています。
 
@@ -67,7 +78,7 @@ title: サブフォーム
 
 ケース1: 親フォームの変数あるいは式の値が更新され、この更新をサブフォームに反映させる必要があります。
 
-この例では、親フォームにおいて `Form.parisTime` の値がユーザー入力、あるいは動的に (たとえば `Current time` コマンドで) 12:15:00 に変更されました。 これは、サブフォームのフォームメソッドで [On Bound Variable Change](../Events/onBoundVariableChange.md) イベントをトリガーします。
+`parisTime` or `Form.parisTime` changes to "12:15:00" in the parent form, either because the user entered it, or because it was updated dynamically (via the `String(Current time)` statement for example). これは、サブフォームのフォームメソッドで [On Bound Variable Change](../Events/onBoundVariableChange.md) イベントをトリガーします。
 
 以下のコードが実行されます:
 
@@ -102,7 +113,7 @@ End if
 
 ケース2: サブフォームの内容が更新され、その更新を親フォームに反映させる必要があります。
 
-サブフォーム内で、時計オブジェクトに紐づいた `Form.clockValue` 式 (時間型) の値がボタンによって変更されます。 これにより、時計オブジェクトの内部で [On Data Change](../Events/onDataChange.md) フォームイベント (当該イベントがオブジェクトに対して選択されている必要があります) がトリガーされ、親フォームの `Form.parisTime` 値を更新します。
+Inside the subform, the button changes the value of the `Form.clockValue` expression of type Text attached to the clock object. これにより、時計オブジェクトの内部で [On Data Change](../Events/onDataChange.md) フォームイベント (当該イベントがオブジェクトに対して選択されている必要があります) がトリガーされ、親フォームの `Form.parisTime` 値を更新します。
 
 以下のコードが実行されます:
 
@@ -117,7 +128,7 @@ End if
 
 ![](../assets/en/FormObjects/update-main-form.png)
 
-サブフォームの `Form.clockValue` の値が変化するたびに、サブフォームコンテナーの `Form.parisTime` も更新されます。
+Everytime the value of `Form.clockValue` changes in the subform, `parisTime` or `Form.parisTime` in the subform container is also updated.
 
 
 > 変数あるいは式の値が複数の場所で設定されている場合、4D は最後にロードされた値を使用します。 以下のロード順が適用されます:<br /> 1 - サブフォームのオブジェクトメソッド<br /> 2 - サブフォームのフォームメソッド<br /> 3 - 親フォームのオブジェクトメソッド<br /> 4 - 親フォームのフォームメソッド
