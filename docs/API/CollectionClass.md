@@ -231,7 +231,7 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
@@ -242,25 +242,27 @@ Unlike standard (not shared) collections, shared collections do not support pict
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |index|Integer|->|Index of element to return|
-|Result|Variant |<-|The element at that index|<!-- END REF -->
+|Result|any |<-|The element at that index|<!-- END REF -->
 
 
 #### Description
 
-The `.at()` function <!-- REF #collection.at().Summary -->returns the item at wanted index, allowing for positive and negative integers.<!-- END REF -->.
-
+The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->. 
 
 >This function does not modify the original collection.
 
 Negative integers count back from the last item in the collection.
+
+The function returns Undefined if *index* is beyond collection limits. 
 
 #### Example
 
 
 
 ```4d
+var $col : Collection 
 $col:=New collection(10; 20; 30; 40; 50)
-$element:=$col.at(0) // 10)
+$element:=$col.at(0) // 10
 $element:=$col.at(1) // 20
 $element:=$col.at(-1) // 50
 $element:=$col.at(-2) // 40
@@ -949,7 +951,6 @@ $b:=$c.every($f;Is real) //$b=false
 <details><summary>History</summary>
 
 |Version|Changes|
-
 |---|---|
 |v16 R6|Added|
 
@@ -1342,7 +1343,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
@@ -1357,18 +1358,19 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Description
 
-The `.first()` function <!-- REF #collection.first().Summary -->returns the first element from the collection. <!-- END REF -->.
+The `.first()` function <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->.
 
 
 >This function does not modify the original collection.
 
-
+The function returns Undefined if the collection is empty. 
 
 #### Example 1
 
 
 
 ```4d
+var $col : Collection
 $col:=New collection(10; 20; 30; 40; 50)
 $first:=$col.first() // 10
 
@@ -1377,6 +1379,7 @@ $first:=New collection().first() // undefined
 
 #### Example 2
 
+You define a custom `first()` function that can be applied to a collection or an entity selection:
 
 ```4d
 Function first($collectionOrSelection: Variant) -> Variant
@@ -1395,24 +1398,25 @@ Function first($collectionOrSelection: Variant) -> Variant
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
-<!-- REF #collection.flat().Syntax -->**.flat**( { **depth**: Integer } ) : Collection <!-- END REF -->
+<!-- REF #collection.flat().Syntax -->**.flat**( { *depth* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.flat().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|depth|Integer |->|The depth level specifying how deep a nested collection structure should be flattened. Defaults to 1.|
+|depth|Integer |->|How deep a nested collection structure should be flattened. Default=1|
 |Result|Collection |<-|Flattened collection|<!-- END REF -->
 
 
 #### Description
 
-The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified depth<!-- END REF -->.
+The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
 
+By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened. 
 
 >This function does not modify the original collection.
 
@@ -1449,7 +1453,7 @@ $col.flat(MAXINT)
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
@@ -1461,11 +1465,13 @@ $col.flat(MAXINT)
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection |<-|Collection of transformed values and flattened by a depth of 1.|<!-- END REF -->
+|Result|Collection |<-|Collection of transformed values and flattened by a depth of 1|<!-- END REF -->
 
 #### Description
 
-The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1.<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). It is identical to a map() followed by a flat() of depth 1.
+The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). 
+
+This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
 
 >This function does not modify the original collection.
 
@@ -1511,11 +1517,11 @@ $c2:=$c.flatMap(Formula(New collection($1.value;Round(($1.value/$2)*100; 2))); $
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
-<!-- REF #collection.includes().Syntax -->**.includes**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Boolean <!-- END REF -->
+<!-- REF #collection.includes().Syntax -->**.includes**( *toSearch* : expression { ; *startFrom* : Integer } ) : Boolean<!-- END REF -->
 
 
 <!-- REF #collection.includes().Params -->
@@ -1523,12 +1529,12 @@ $c2:=$c.flatMap(Formula(New collection($1.value;Round(($1.value/$2)*100; 2))); $
 |---------|--- |:---:|------|
 |toSearch|expression|->|Expression to search in the collection|
 |startFrom|Integer|->|Index to start the search at|
-|Result|Boolean |<-|True if toSearch is found in the collection|<!-- END REF -->
+|Result|Boolean |<-|True if *toSearch* is found in the collection|<!-- END REF -->
 
 
 #### Description
 
-The `.includes()` function <!-- REF #collection.includes().Summary -->return True if the *toSearch* expression is found among collection elements, otherwise False <!-- END REF -->.
+The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->.
 
 
 >This function does not modify the original collection.
@@ -1543,7 +1549,7 @@ In *toSearch*, pass the expression to find in the collection. You can pass:
 
 Optionally, you can pass the index of collection from which to start the search in *startFrom*.
 
-*	If *startFrom* >= the collection's length, False is returned, which means the collection is not searched.
+*	If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
 *	If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
 	**Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
 *	If *startFrom* = 0, the whole collection is searched (default).
@@ -1803,7 +1809,7 @@ By default, null or empty elements of the collection are returned in the resulti
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
@@ -1818,14 +1824,14 @@ By default, null or empty elements of the collection are returned in the resulti
 
 #### Description
 
-The `.last()` function <!-- REF #collection.last().Summary -->returns the last element from the collection. <!-- END REF -->.
+The `.last()` function <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
 
 
 >This function does not modify the original collection.
 
+The function returns Undefined if the collection is empty. 
 
 #### Example 1
-
 
 
 ```4d
@@ -1837,6 +1843,7 @@ $first:=New collection().last() // undefined
 
 #### Example 2
 
+You define a custom `last()` function that can be applied to a collection or an entity selection:
 
 ```4d
 Function last($collectionOrSelection: Variant) -> Variant
@@ -2684,7 +2691,7 @@ With the following ***Flatten*** method:
 
 |Version|Changes|
 |---|---|
-|v19 R8|Added|
+|v20|Added|
 
 </details>
 
@@ -2756,6 +2763,7 @@ This example allows reducing several collection elements to a single one:
 With the following ***Flatten*** method:
 
 ```4d
+	//Flatten project method
  If($1.accumulator=Null)
     $1.accumulator:=New collection
  End if
