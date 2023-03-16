@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Class functions
+title: About class functions
 ---
 
 This section describes the built-in 4D class functions as well as the associated constructor commands. Les propriétés et fonctions de classe 4D sont disponibles via les objets d'instance de classe.
