@@ -54,11 +54,22 @@ Por defecto, 4D crea una variable o expresión de [tipo objeto](properties_Objec
 
 ### Sincronizando formulario padre y subformulario (valor único)
 
-Binding the same variable or expression to your subform container and other objects of the parent form lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. Imagine a subform representing a clock, inserted into a parent form containing an enterable variable of the Time type:
+Binding the same variable or expression to your subform container and other objects of the parent form lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. Imagine a subform that contains a clock displaying a static time, inserted into a parent form containing an [input area](input_overview.md):
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-In the parent form, both objects (time variable and subform container) ***have the same value as ***Variable or Expression******. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
+In the parent form, both objects (input area and subform container) ***have the same value as ***Variable or Expression******. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
+
+|
+
+To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
+
+- If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
+- If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.
+
+The text value must be formatted "hh:mm:ss".
+
+:::
 
 In the subform, the clock object is managed through the `Form.clockValue` property.
 
@@ -67,7 +78,7 @@ In the subform, the clock object is managed through the `Form.clockValue` proper
 
 Case 1: The value of the parent form variable or expression is modified and this modification must be passed on to a subform.
 
-`Form.parisTime` changes to 12:15:00 in the parent form, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example). This triggers the [On Bound Variable Change](../Events/onBoundVariableChange.md) event in the subform's Form method.
+`parisTime` or `Form.parisTime` changes to "12:15:00" in the parent form, either because the user entered it, or because it was updated dynamically (via the `String(Current time)` statement for example). This triggers the [On Bound Variable Change](../Events/onBoundVariableChange.md) event in the subform's Form method.
 
 Se ejecuta el siguiente código:
 
@@ -100,7 +111,7 @@ La modificación de la variable o expresión asociada desencadena eventos de for
 
 Caso 2: se modifica el contenido del subformulario y esta modificación debe pasar al formulario padre.
 
-Dentro del subformulario, el botón cambia el valor de la expresión `Form.clockValue` de tipo Time asociada al objeto reloj. Esto activa el evento de formulario [On Data Change](../Events/onDataChange.md) dentro del objeto reloj (este evento debe estar seleccionado para el objeto), que actualiza el valor `Form.parisTime` en el formulario principal.
+Inside the subform, the button changes the value of the `Form.clockValue` expression of type Text attached to the clock object. Esto activa el evento de formulario [On Data Change](../Events/onDataChange.md) dentro del objeto reloj (este evento debe estar seleccionado para el objeto), que actualiza el valor `Form.parisTime` en el formulario principal.
 
 Se ejecuta el siguiente código:
 
@@ -113,7 +124,7 @@ End if
 
 ![](../assets/en/FormObjects/update-main-form.png)
 
-Cada vez que cambia el valor de `Form.clockValue` en el subformulario, también se actualiza `Form.parisTime` en el contenedor del subformulario.
+Everytime the value of `Form.clockValue` changes in the subform, `parisTime` or `Form.parisTime` in the subform container is also updated.
 
 
 > Si el valor de la variable o expresión se establece en varias ubicaciones, 4D utiliza el valor que se cargó en último lugar. Aplica el siguiente orden de carga: 1-Métodos objeto del subformulario, 2-Método formulario del subformulario, 3-Métodos objeto del formulario padre, 4-Método formulario del formulario padre
