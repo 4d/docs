@@ -4,58 +4,58 @@ title: Página Servidor de aplicación
 ---
 
 
-The Application Server page groups together information about the desktop application published by 4D Server and can be used to manage this publication.
+La página Servidor de aplicaciones agrupa información sobre la aplicación de escritorio publicada por 4D Server y puede utilizarse para gestionar esta publicación.
 
 ![](../assets/en/Admin/server-admin-application-page.png)
 
 
-The upper part of the page provides information about the current status of the 4D Server application server.
+La parte superior de la página ofrece información sobre el estado actual del servidor de aplicaciones de 4D Server.
 
 - **Estado**: Iniciado o Detenido.
-- **Starting time**: Date and time the application server was launched. Esta fecha corresponde a la apertura del proyecto por parte de 4D Server.
-- **Uptime**: Time elapsed since last opening of the project by the server.
+- **Hora de inicio**: fecha y hora de inicio del servidor de aplicaciones. Esta fecha corresponde a la apertura del proyecto por parte de 4D Server.
+- **Duración de funcionamiento**: tiempo transcurrido desde la última apertura del proyecto por el servidor.
 
 ## Aceptar/Rechazar nuevas conexiones
 
-This button toggles and can be used to manage the access of new desktop client machines to the application server.
+Este botón se activa y se puede utilizar para gestionar el acceso de nuevas máquinas cliente de escritorio al servidor de aplicaciones.
 
 Por defecto, cuando se publica el proyecto:
 - La etiqueta del botón es "Rechazar nuevas conexiones."
-- New desktop clients can connect freely (within the limit of the connections permitted by the license).
-- The project name is published in the remote connection dialog box (if the "At Startup Publish Database Name in the Connection Dialog" option is checked in the Preferences).
+- Los nuevos clientes de escritorio pueden conectarse libremente (dentro de los límites de las conexiones permitidas por la licencia).
+- El nombre del proyecto se publica en la caja de diálogo de conexión remota (si la opción "Publicar el nombre de la base al inicio en el diálogo de conexión" está marcada en las Preferencias).
 
-If you click on the **Reject new connections** button:
+Si presiona el botón **Rechazar nuevas conexiones**:
 - El título del botón cambia a "Aceptar nuevas conexiones."
 - Ningún nuevo cliente puede entonces conectarse. Los clientes que intenten conectarse recibirán el siguiente mensaje:
 
 ![](../assets/en/Admin/server-error.png)
 
 - El nombre del proyecto ya no aparece en el diálogo de conexión remota.
-- Desktop clients that are already connected are not disconnected and can continue to work normally.
+- Los clientes de escritorio que ya están conectados no se desconectan y pueden seguir trabajando con normalidad.
 
-> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html) command.
+> Puede realizar la misma acción con el comando [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html).
 
-- If you click on the **Accept new connections button**, the application server returns to its default state.
+- Si presiona el botón **Aceptar nuevas conexiones**, el servidor de aplicaciones vuelve a su estado por defecto.
 
-This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) just after having started the server. If the administrator uses a remote connection, they can be certain to be the only one modifying the data. It is also possible to use this function in preparation of a maintenance operation which requires that there be no desktop client machine connected.
+Esta función permite, por ejemplo, que un administrador realice diversas operaciones de mantenimiento (verificación, compactación, etc.) justo después de haber iniciado el servidor. Si el administrador utiliza una conexión remota, puede estar seguro de ser el único que modifica los datos. También es posible utilizar esta función para preparar una operación de mantenimiento que requiera que no haya ninguna máquina cliente conectada.
 
 ## Información
 
 ### Configuración
 
-This area provides information about the 4D project published by the server: name and location of data and structure files and name of database log file. You can click on the structure or data file name in order to view its complete pathname.
+Esta área ofrece información sobre el proyecto 4D publicado por el servidor: nombre y ubicación de los archivos de datos y de estructura y nombre del archivo de historial de la base. Puede hacer clic en el nombre del archivo de estructura o de datos para ver su ruta de acceso completa.
 
-The **Mode** field indicates the current execution mode of the application: compiled or interpreted.
+El campo **Mode** indica el modo de ejecución actual de la aplicación: compilada o interpretada.
 
-The lower part of the area indicates the server configuration parameters (launched as service, port and IP address) and the enabling of TLS for client-server connections (does not concern SQL nor HTTP connections).
+La parte inferior del área indica los parámetros de configuración del servidor (lanzados como servicio, puerto y dirección IP) y la activación del TLS para las conexiones cliente-servidor (no afecta a las conexiones SQL ni HTTP).
 
 ### Memoria
 
-This area indicates the **Total cache memory** (parameter set in the settings) and the **Used cache memory** (dynamic allocation by 4D Server according to its needs).
+Esta área indica la **memoria caché total** (parámetro definido en las preferencias de la base) y la **memoria caché utilizada** (asignación dinámica por 4D Server en función de sus necesidades).
 
 
 ### Conexiones aplicación servidor
 
-- **Maximum**: maximum number of simultaneous client connections allowed for the application server. Este valor depende de la licencia instalada en el equipo servidor.
-- **Used**: actual number of connections currently being used.
+- **Máximo**: número máximo de conexiones cliente simultáneas permitidas para el servidor de aplicaciones. Este valor depende de la licencia instalada en el equipo servidor.
+- **Utilizado**: número real de conexiones que se están utilizando actualmente.
 

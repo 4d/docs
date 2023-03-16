@@ -61,6 +61,9 @@ Las sintaxis [nombradas](#named-parameters) y [secuenciales](#sequential-paramet
     $0:=$x+$2
 ```
 
+### Inicialización
+
+Cuando se declaran los parámetros, se inicializan con el valor por defecto [**correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no hayan sido asignados.
 
 
 
@@ -417,6 +420,7 @@ Esto ofrece una poderosa manera de definir [parámetros opcionales](#optional-pa
 En el método `ChangeAge` anterior, las propiedades Age y Name son obligatorias y producirían errores si faltaran. Para evitar este caso, puede escribir simplemente:
 
 ```4d
+
   //ChangeAge
  var $1; $para : Object
  $para:=$1  
@@ -469,7 +473,7 @@ El siguiente ejemplo muestra un mensaje de texto y puede insertar el texto en un
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
 
- Method($message : Text; $path : Text; $wpArea : Object)
+ #DECLARE($message : Text; $path : Text; $wpArea : Object)
 
  ALERT($message)
  If(Count parameters>=3)

@@ -4,6 +4,13 @@ module.exports =
 		{
 			type: "category",
 			label: "Getting Started",
+			link: {
+				type: 'generated-index',
+				title: 'Getting Started',
+				slug: '/category/getting-started',
+				keywords: ['start'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				"GettingStarted/installation",
 				"GettingStarted/creating",
@@ -13,12 +20,23 @@ module.exports =
 		{
 			type: "category",
 			label: "Core Development",
+			link: {
+				type: 'generated-index',
+				title: 'Core Development',
+				slug: '/category/core-development',
+				keywords: ['core'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				{
 					type: "category",
 					label: "Project Management",
+					link: {
+						type: 'doc',
+						id: 'Project/overview',
+					},
+
 					items: [
-						"Project/overview",
 						"Project/architecture",
 						"Project/documentation",
 						"Project/compiler"
@@ -27,6 +45,13 @@ module.exports =
 				{
 					type: "category",
 					label: "4D Language Concepts",
+					link: {
+						type: 'generated-index',
+						title: '4D Language Concepts',
+						description: 'The main concepts of the 4D Language',
+						keywords: ['concepts'],
+						image: '/img/docusaurus.png',
+					},
 					items: [
 						"Concepts/about",
 						"Concepts/quick-tour",
@@ -34,8 +59,11 @@ module.exports =
 						{ 
 							type: "category",
 							label: "Data Types",
+							link: {
+									type: 'doc',
+									id: "Concepts/data-types",
+								},
 							items: [
-								"Concepts/data-types",
 								"Concepts/blob",
 								"Concepts/boolean",
 								"Concepts/collection",
@@ -56,15 +84,8 @@ module.exports =
 						"Concepts/parameters",
 						"Concepts/shared",
 						"Concepts/classes",
-						{
-							type: "category",
-							label: "Control Flow",
-							items: [
-								"Concepts/control-flow",
-								"Concepts/branching",
-								"Concepts/looping",
-							],
-						},
+						"Concepts/commands",
+						"Concepts/control-flow",
 						"Concepts/error-handling",
 						"Concepts/interpreted-compiled",
 						"Concepts/components",
@@ -74,25 +95,29 @@ module.exports =
 					],
 				},
 				{
-						  type: 'link',
-						  label: '4D Language Reference', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Language-Reference.100-5910320.en.html', 
-				},
-				{
 					type: "category",
 					label: "ORDA",
+					link: {
+						type: 'doc',
+						id: 'ORDA/overview',
+					},
 					items: [
-						"ORDA/overview",
 						"ORDA/dsmapping",
 						"ORDA/ordaClasses",
 						"ORDA/entities",
 						"ORDA/datastores",
+						"ORDA/privileges",
 						"ORDA/glossary"
 					],
 				},
 				{
+						type: 'link',
+						label: '4D Language Reference', // 
+						href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Language-Reference.100-6101683.en.html', 
+				},					
+				{
 					type: "category",
-					label: "Class API Reference",
+					label: "Class Functions",
 					items: [
 						"API/overview",
 						"API/BlobClass",
@@ -122,23 +147,42 @@ module.exports =
 						"API/ZipFileClass",
 						"API/ZipFolderClass"
 					],
+					link: {
+						type: 'generated-index',
+						title: 'Class Functions',
+						description: 'List of built-in 4D classes',
+						slug: '/category/class-API-reference',
+						keywords: ['class'],
+						image: '/img/docusaurus.png',
+					},
+
 				},
 				{
 					type: "category",
 					label: "Handling Code",
+					link: {
+						type: 'doc',
+						id: 'code-editor/overview',
+					},
 					items: [
-						"code-editor/overview",
 						"code-editor/write-class-method",
-						"code-editor/find-replace",
-						"code-editor/creating-using-macros",
-						"Tags/tags"
+						"code-editor/creating-using-macros"
 					]
 				},
 				{
 					type: "category",
-					label: "Debugging",
+					label: "Tags",
 					items: [
-						"Debugging/basics",
+						"Tags/tags"
+					]
+				},				{
+					type: "category",
+					label: "Debugging",
+					link: {
+						type: 'doc',
+						id: 'Debugging/basics',
+					},
+					items: [
 						"Debugging/debugger",
 						"Debugging/breakpoints",
 						"Debugging/debugging-remote",
@@ -148,8 +192,11 @@ module.exports =
 				{
 					type: "category",
 					label: "Settings",
+					link: {
+						type: 'doc',
+						id: 'settings/overview',
+					},					
 					items: [
-						"settings/overview",
 						"settings/general",
 						"settings/interface",
 						"settings/compiler",
@@ -166,8 +213,11 @@ module.exports =
 				{
 					type: "category",
 					label: "Preferences",
+					link: {
+						type: 'doc',
+						id: 'Preferences/overview',
+					},					
 					items: [
-						"Preferences/overview",
 						"Preferences/general",
 						"Preferences/structure",
 						"Preferences/forms",
@@ -181,12 +231,22 @@ module.exports =
 		{
 			type: "category",
 			label: "Administration",
+			link: {
+				type: 'generated-index',
+				title: 'Administration',
+				description: 'How to monitor your 4D applications',
+				keywords: ['administration'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				{	
 					type: "category",
 					label: "4D Server Administration Window",
+					link: {
+						type: 'doc',
+						id: 'ServerWindow/overview',
+					},					
 					items: [
-						"ServerWindow/overview",
 						"ServerWindow/monitor",
 						"ServerWindow/users",
 						"ServerWindow/processes",
@@ -195,48 +255,48 @@ module.exports =
 						"ServerWindow/sql-server",
 						"ServerWindow/http-server",
 						"ServerWindow/real-time-monitor",
+						"ServerWindow/remote-admin",
 					],
 				},
 				{
 					type: "category",
 					label: "Web Administration",
+					link: {
+						type: 'generated-index',
+						title: 'Web Administration',
+						description: '4D web tools for administrating and monitoring your applications.',
+						slug: '/category/web-administration',
+						keywords: ['web administration'],
+						image: '/img/docusaurus.png',
+					},
 					items: [
 						"Admin/webAdmin",
 						"Admin/dataExplorer",
 					],
 				},
 				{
-					type: "category",
+					type: "doc",
 					label: "Command Line Interface",
-					items: ["Admin/cli",]
+					id: "Admin/cli",
 				},
 				{
-					type: "category",
+					type: "doc",
 					label: "TLS Protocol",
-					items: ["Admin/tls"],
+					id: "Admin/tls",
 				},
 				{
-					type: "category",
-					label: "Licenses & Data Collection",
-					items: [
-						"Admin/licenses",
-						"Admin/data-collect",
-					],
-				},
-				{
-					type: "category",
-					label: "Access Rights",
-					items: [
-						"Admin/tls",
-						"Users/overview",
-						"Users/editing",
-					],
+					type: "doc",
+					label: "Managing 4D Licenses",
+					id: "Admin/licenses",
 				},
 				{
 					type: "category",
 					label: "MSC",
+					link: {
+						type: 'doc',
+						id: 'MSC/overview',
+					},					
 					items: [
-						"MSC/overview",
 						"MSC/information",
 						"MSC/analysis",
 						"MSC/verify",
@@ -251,24 +311,42 @@ module.exports =
 				{
 					type: "category",
 					label: "Backup and Restore",
+					link: {
+						type: 'doc',
+						id: 'Backup/overview',
+					},					
 					items: [
-						"Backup/overview",
 						"Backup/backup",
 						"Backup/settings",
 						"Backup/log",
 						"Backup/restore",
 					]
 				},
+				{
+					type: "doc",
+					label: "Data Collection",
+					id: "Admin/data-collect",
+				},
 			],	
 		},
 		{
 			type: "category",
 			label: "Extensions",
+			link: {
+					type: 'doc',
+					id: 'Extensions/overview',
+				},
 			items: [
-						"Extensions/overview",
 						{
 							type: "category",
 							label: "4D View Pro",
+							link: {
+								type: 'generated-index',
+								title: '4D View Pro',
+								slug: '/category/4d-view-pro',
+								keywords: ['4D View Pro'],
+								image: '/img/docusaurus.png',
+								},
 							items: [				
 								"ViewPro/getting-started",
 								"ViewPro/configuring",
@@ -281,7 +359,7 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Write Pro', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Write-Pro-Reference.100-6130471.en.html', 
 						},					
 						{
 						  type: 'link',
@@ -301,17 +379,17 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Progress.100-6205973.en.html', 
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-SVG-Component.100-6206845.en.html', 
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Widgets.100-6207497.en.html', 
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
@@ -321,12 +399,22 @@ module.exports =
 		{
 			type: "category",
 			label: "Web Applications",
+			link: {
+				type: 'generated-index',
+				title: 'Web Applications',
+				description: 'Guides for developing Web applications with 4D',
+				keywords: ['web applications'],
+				image: '/img/docusaurus.png',
+				},
 			items: [
 				{	
 					type: "category",
 					label: "Web Server",
+					link: {
+						type: 'doc',
+						id: 'WebServer/webServer',
+					},					
 					items: [
-						"WebServer/webServer",
 						"WebServer/webServerConfig",
 						"WebServer/webServerAdmin",
 						"WebServer/webServerObject",
@@ -335,8 +423,11 @@ module.exports =
 				{
 					type: "category",
 					label: "Web Development",
-					items: [
-						"WebServer/gettingStarted",
+					link: {
+						type: 'doc',
+						id: 'WebServer/gettingStarted',
+					},					
+				items: [
 						"WebServer/templates",
 						"WebServer/httpRequests",
 						"WebServer/allowProject",
@@ -349,12 +440,22 @@ module.exports =
 				{
 					type: "category",
 					label: "REST Server",
+					link: {
+						type: 'generated-index',
+						title: 'REST Server',
+						description: 'Configuring the 4D REST Server and using the REST API.',
+						keywords: ['REST server'],
+						image: '/img/docusaurus.png',
+					},					
 					items: [
 						{
 						type: "category",
 						label: "Guides",
+						link: {
+							type: 'doc',
+							id: 'REST/gettingStarted',
+						},					
 						items: [
-								"REST/gettingStarted",
 								"REST/configuration",
 								"REST/authUsers",
 								"REST/genInfo",
@@ -366,6 +467,13 @@ module.exports =
 						{
 							type: "category",
 							label: "API (general)",
+							link: {
+								type: 'generated-index',
+								title: 'API (general)',
+								description: 'REST API for global information',
+								keywords: ['REST API'],
+								image: '/img/docusaurus.png',
+							},
 							items: [
 								"REST/catalog",
 								"REST/directory",
@@ -376,6 +484,13 @@ module.exports =
 						{
 							type: "category",
 							label: "API (dataClass)",
+							link: {
+								type: 'generated-index',
+								title: 'API (dataClass)',
+								description: 'REST API for dataClass.',
+								keywords: ['REST API'],
+								image: '/img/docusaurus.png',
+							},
 							items: [
 								"REST/dataClass",
 								"REST/asArray",
@@ -408,33 +523,67 @@ module.exports =
 				
 				{
 					type: "category",
-					label: "Desktop Applications",
+					label: "Desktop Applications",					
+					link: {
+						type: 'generated-index',
+						title: 'Desktop Applications',
+						description: 'Guides for developing Desktop applications with 4D',
+						keywords: ['desktop applications'],
+						image: '/img/docusaurus.png',
+						},
+
 					items: [
 						{	
-							type: "category",
+							type: "doc",
 							label: "Client/Server",
-							items: ["Desktop/clientServer"],
+							id: "Desktop/clientServer",
 						},
+				{
+					type: "category",
+					label: "Access Rights",
+					link: {
+						type: 'generated-index',
+						title: 'Access Rights',
+						description: 'Access control and user privileges for desktop applications.',
+						slug: '/category/access-rights',
+						keywords: ['access rights'],
+						image: '/img/docusaurus.png',
+					},
+					items: [
+						"Users/overview",
+						"Users/editing",
+					],
+				},
+
 						{
 							type: "category",
 							label: "Forms",
-							items: [
-								"FormEditor/forms",
+						link: {
+							type: 'doc',
+							id: 'FormEditor/forms',
+						},					
+						items: [
 								"FormEditor/stylesheets",
 								"FormEditor/pictures",
 								{	
 									type: "category",
 									label: "Form Editor",
+									link: {
+										type: 'doc',
+										id: 'FormEditor/formEditor',
+									},				
 									items: [								
-										"FormEditor/formEditor",
 										"FormEditor/macros",
 										"FormEditor/objectLibrary"	]
 								},
 								{
 									type: "category",
 									label: "Form Properties",
+									link: {
+										type: 'doc',
+										id: 'FormEditor/jsonReference',
+									},				
 									items: [
-								"FormEditor/jsonReference",
 								"FormEditor/action",
 								"FormEditor/propertiesForm",
 								"FormEditor/formSize",
@@ -447,8 +596,11 @@ module.exports =
 								{
 									type: "category",
 									label: "Form Objects",
+									link: {
+										type: 'doc',
+										id: 'FormObjects/formObjectsOverview',
+									},	
 									items: [
-										"FormObjects/formObjectsOverview",
 										"FormObjects/buttonOverview",
 										"FormObjects/buttonGridOverview",
 										"FormObjects/checkboxOverview",
@@ -480,8 +632,11 @@ module.exports =
 								{
 									type: "category",
 									label: "Form Object Properties",
+									link: {
+										type: 'doc',
+										id: 'FormObjects/propertiesReference',
+									},	
 									items: [
-										"FormObjects/propertiesReference",
 										"FormObjects/propertiesAction",
 										"FormObjects/propertiesAnimation",
 										"FormObjects/propertiesAppearance",
@@ -513,8 +668,11 @@ module.exports =
 								{
 									type: "category",
 									label: "Form Events",
+									link: {
+										type: 'doc',
+										id: 'Events/overview',
+									},	
 									items: [
-										"Events/overview",
 										"Events/onActivate",
 										"Events/onAfterEdit",
 										"Events/onAfterKeystroke",
@@ -586,8 +744,11 @@ module.exports =
 						{
 							type: "category",
 							label: "Menus",
+							link: {
+								type: 'doc',
+								id: 'Menus/overview',
+							},	
 							items: [
-								"Menus/overview",
 								"Menus/creating",
 								"Menus/properties",
 								"Menus/bars",
@@ -595,14 +756,14 @@ module.exports =
 							],
 						},
 						{
-							type: "category",
+							type: "doc",
 							label: "User Settings",
-							items: ["Desktop/user-settings"],
+							id: "Desktop/user-settings",
 						},
 						{
-							type: "category",
+							type: "doc",
 							label: "Build Application",
-							items: ["Desktop/building"]
+							id: "Desktop/building"
 						}
 					]
 				},

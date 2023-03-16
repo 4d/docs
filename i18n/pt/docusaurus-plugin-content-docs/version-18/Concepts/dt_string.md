@@ -29,7 +29,7 @@ The following escape sequences can be used within strings:
 | \n             | LF (Line feed)       |
 | \t             | HT (Tab)             |
 | \r             | CR (Carriage return) |
-| \\\          | \ (Backslash)       |
+| \\\          | \ (Barra invertida) |
 | \\"           | " (Quotation marks)  |
 
 **Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
@@ -188,7 +188,7 @@ When you use the character reference symbols, you must address existing characte
 - Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
 
 ```
-//Very bad and nasty thing to do, boo!
+//Voisas muito más e desagradáveis a fazer, boo!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```

@@ -49,17 +49,16 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 
 ### 例題
 
-以下の例題では、4Dアプリケーションがデスクトップに保存されており、開こうとしているデータベースが "Documents" フォルダーにあるものとします。
-
 > ユーザーのカレントフォルダーは、macOS では "~" コマンドを、Windows では "%HOMEPATH%" コマンドを使用することで取得することができます。
 
-アプリケーションを起動:
+デスクトップ上に置かれた 4Dアプリケーションの起動:
 
 *   macOS:
 
 
 ```bash
 open ~/Desktop/4D.app
+open "~/Desktop/4D Server.app"
 ```
 
 *   Windows:
@@ -67,21 +66,23 @@ open ~/Desktop/4D.app
 
 ```bash
 %HOMEPATH%\Desktop\4D\4D.exe
+%HOMEPATH%\Desktop\"4D Server.exe"
 ```
 
-macOS上でパッケージファイルを指定してアプリケーションを起動:
+
+macOS上でパッケージファイルを開く:
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
+--args ~/Documents/myDB.4dbase
 ```
 
-プロジェクトファイルを指定してアプリケーションを起動:
+プロジェクトファイルを開く:
 
 *   macOS:
 
 
 ```bash
-yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
+--args ~/Documents/myProj/Project/myProj.4DProject
 ```
 
 
@@ -89,102 +90,90 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
+%HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 ```
 
 
 
-プロジェクトファイルとデータファイルを指定してアプリケーションを起動:
+データファイルを指定してプロジェクトファイルを開く:
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD
+--args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
-または
-%HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
+または:
+/project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-.4DLink ファイルを指定してアプリケーションを起動:
+.4DLink ファイルを開く:
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app ~/Desktop/MyDatabase.4DLink
+~/Desktop/MyDatabase.4DLink
 ```
 
+
+*   Windows:
+
+
 ```bash
-open "~/Desktop/4D Server.app" ~/Desktop/MyDatabase.4DLink
+%HOMEPATH%\Desktop\MyDatabase.4DLink
+```
+
+コンパイルモードで起動し、データファイルが利用できない場合には作成する:
+
+*   macOS:
+
+
+```bash
+~/Documents/myBase.4dbase --args --opening-mode compiled --create-data true
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D.exe %HOMEPATH%\Desktop\MyDatabase.4DLink
+%HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-```bash
-%HOMEPATH%\Desktop\4D Server.exe" %HOMEPATH%\Desktop\MyDatabase.4DLink
-```
-
-アプリケーションをコンパイルモードで起動し、データファイルが利用できない場合には作成する:
+データファイルを指定してプロジェクトファイルを開き、ユーザー引数として文字列を渡す:
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled --create-data true
+--args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --user-param "Hello world"
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-プロジェクトファイルとデータファイルを指定してアプリケーションを起動し、ユーザー引数として文字列を渡す:
+インターフェースなしで起動する (ヘッドレスモード):
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --user-param "Hello world"
+--args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --headless  
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
-```
-
-インターフェースなしのアプリケーションを起動する (ヘッドレスモード):
-
-*   macOS:
-
-
-```bash
-open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProject --data ~/Documents/data/myData.4DD --headless
-```
-
-```bash
-open ~/Desktop/MyBuiltRemoteApp −−headless
-```
-
-*   Windows:
-
-
-```bash
-%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --headless
-%HOMEPATH%\Desktop\4D\MyBuiltRemoteApp.exe --headless
+--project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --headless
 ```

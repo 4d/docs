@@ -30,6 +30,9 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
  // et affecte la date courante + 30 jours
 ```
 
+Lorsque les variables sont déclarées, elles sont initialisées à la [**valeur par défaut**](data-types.md#valeurs-par-defaut) correspondant à leur type, qu'elles conserveront pendant la session tant qu'on ne leur aura pas [affecté une valeur](#assigning-data).
+
+
 ### Utilisation du mot-clé `var`
 
 Il est recommandé de déclarer les variables à l'aide du mot-clé `var`, car cette syntaxe permet de lier les variables objet aux classes. L'utilisation de cette syntaxe améliore les suggestions de l'éditeur de code et les fonctionnalités type-ahead.
@@ -62,12 +65,12 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 | ---------------------- | ---------------------------------------- |
 | `Text`                 | Valeur texte                             |
 | `Date`                 | Valeur date                              |
-| `Heure`                | Valeur Heure                             |
+| `Time`                 | Valeur Heure                             |
 | `Boolean`              | Valeur booléen                           |
 | `Integer`              | Valeur entier long                       |
 | `Real`                 | Valeur réel                              |
-| `Pointeurs`            | Valeur pointeur                          |
-| `Images`               | Valeur image                             |
+| `Pointer`              | Valeur pointeur                          |
+| `Picture`              | Valeur image                             |
 | `Blob`                 | Valeur Blob scalaire                     |
 | `Collection`           | Valeur collection                        |
 | `Variant`              | Valeur variant                           |
@@ -106,7 +109,7 @@ var $entity : cs.EmployeeEntity
 
 ### Utilisation d'une directive C_
 
-> **Note de compatibilité :** cette fonctionnalité n'est pas recommandée pour déclarer des variables dans des méthodes. Il est recommandé d'utiliser le mot-clé [var](#using-the-var-keyword).
+> **Note de compatibilité :** Cette fonctionnalité n'est pas recommandée pour déclarer des variables dans des méthodes. Il est recommandé d'utiliser le mot-clé [var](#utilisation-du-mot-cle-var).
 
 Les directives du thème "Compilateur" vous permettent de déclarer des variables de types basiques.
 
@@ -127,6 +130,7 @@ Voici quelques déclarations de variables simples :
 
 **Note :** Les tableaux sont un type particulier de variables (un tableau est une série ordonnée de variables du même type). Les tableaux sont déclarés avec des commandes spécifiques, telles que `ARRAY LONGINT(alAnArray;10)`. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
+
 ## Assigner des valeurs
 
 Vous pouvez donner des valeurs aux variables ou aux tableaux et/ou récupérer leur valeur. Donner une valeur à une variable s’appelle **assigner une valeur (ou affecter une valeur)** et s’effectue à l’aide de l’opérateur d’assignation (:=). L’opérateur d’assignation est également utilisé pour assigner des valeurs aux champs.
@@ -139,7 +143,7 @@ MonNombre:=3
 
 crée la variable _MonNombre_ et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
-> Il n’est généralement pas recommandé de créer des variables sans [déclarer leur type](#creating-variables).
+> Il n'est généralement pas recommandé de créer des variables sans [déclarer leur type](#declaratio-des-variables).
 
 Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer _MonNombre_ à droite de l’opérateur d’assignation :
 

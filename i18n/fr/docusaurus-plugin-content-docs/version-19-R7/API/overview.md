@@ -9,7 +9,7 @@ Cette section décrit l'API des classes 4D intégrées ainsi que les commandes d
 
 - les propriétés sont appelées sans parenthèses, par exemple `file.creationTime`. Vous pouvez également utiliser la syntaxe \[], par exemple `file["creationTime"]`.
 
-## Conventions d'écriture
+## Writing conventions
 
 Les conventions suivantes sont utilisées dans la syntaxe de la fonction :
 

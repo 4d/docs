@@ -3,6 +3,31 @@ id: updates
 title: リリースノート
 ---
 
+## 4D v20
+
+[**4D v20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D v20 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+#### ハイライト
+
+- [IMAP Transporter クラス](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) がカスタムキーワードをサポートするようになりました。
+- 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
+- データストアをロック/ロック解除する新しい関数が追加されました: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock)。
+- コードエディター: 強化された [検索/置換機能](../code-editor/write-class-method.md#検索と置換)。
+- コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
+- [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail) で *headerOnly* パラメーターをサポート 。
+
+
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20): 4D v20 で修正されたバグのリストです。
+
+
+
+#### 動作の変更
+
+- HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) プロパティを使用します。
+
+
 ## 4D v19 R8
 
 [**4D v19 R8 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v19-r8/): 4D v19 R8 の新機能と拡張機能をすべてリストアップしたブログ記事です。
@@ -10,20 +35,23 @@ title: リリースノート
 
 #### ハイライト
 
-
-- コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
+- [グローバルおよびコンポーネントの実行コンテキスト](../Concepts/error-handling.md#スコープとコンポーネント) に対してエラー処理メソッドを実装することができます。
+- コレクションまたはエンティティセレクションをデータソースとするリストボックスの列で、[自動行高](../FormObjects/properties_CoordinatesAndSizing.md#自動行高) プロパティがサポートされるようになりました。
+- ORDA: [`setPrivileges()`](../API/SessionClass.md#setprivileges) を使ってセッションに割り当てる [権限](../ORDA/privileges.md) を定義するための *roles.json* ファイルをサポート。
+- Windows で [SDIモードでのアプリケーションのテスト](../Menus/sdi.md#sdiモード利用条件) をサポート。
 - 4D View Pro:
     - 表組みにおけるテーマのサポート: 新しい [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) および [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) コマンドの追加、[VP CREATE TABLE](../ViewPro/method-list#vp-create-table) コマンドにテーマオプションを追加
     - 新しい [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) コマンドの追加
-- 4D Language classic: [What's new page](XXX) on doc.4d.com.
-- 4D Write Pro: [What's new page](XXX) on doc.4d.com.
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。
 
 
 #### 動作の変更
 
+- HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) プロパティを使用します。
 - 標準アクションが適用されている [リンクされているポップアップメニューの付いたベベルボタン](../FormObjects/properties_TextAndPicture.md/#ポップアップメニューあり) で、ポップアップメニューのオプションが選択された場合、その標準アクションは実行されなくなりました。
-- In Web areas using blink (CEF), dialogs displayed from external scripts are now blocking if not called from a `setTimeout()` JS function. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
+- Blink (CEF) を使用する Webエリアにおいて、外部スクリプトによって表示されるダイアログは、 `setTimeout()` JS 関数から呼び出されていないとブロックされるようになりました。 これは、現在のCEFのアップデートにより、`alert()` や `print()` などの関数によって表示されるダイアログが、OS ではなく Web エリアで処理されるようになったためです。 [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/ja/page1029.html) と [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/ja/page1043.html) 参照。
 
 
 ## 過去のリリース
@@ -43,7 +71,7 @@ title: リリースノート
 - 4D View Pro に新しい表組みコマンドが追加されました: [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes)。
 - コンポーネント名前空間が [ エクスプローラーに表示](../Extensions/develop-components#コンポーネント名前空間の宣言) されるようになりました。
 - テキストエリアおよび入力フォームオブジェクトにおいて、[角の半径プロパティ](../FormObjects/properties_CoordinatesAndSizing#角の半径) をサポート。
-- 4D クラシックランゲージ: doc.4d.com の [新着](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.ja.html) ページ。
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) on doc.4d.com.
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.ja.html) ページ。
 - [**修正リスト**](https://4d-jp.github.io/283/release-note-version-19r7/): 4D v19 R7 で修正されたバグのリストです。
 
@@ -53,9 +81,9 @@ title: リリースノート
 - 標準的なインターフェース (OS のファイルエクスプローラなど) との一貫性を保つため、行の選択/ドラッグ＆ドロップに関するリストボックスのルールが変更されました。 連続または不連続の選択行をクリックして移動するだけで、ドラッグできるようになり、**Alt** キーは不要になりました (ひきつづき以前のように使用することはできます)。 **Shift** または **Ctrl/Command** キーが押されている場合、マウスのクリックは押されたとき (マウスダウン) に考慮されます。 リストボックスでのドラッグ＆ドロップの詳細については、[このブログ記事](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) を参照し、[このHDI 4Dプロジェクト](https://github.com/4D-JP/HDI/releases/download/19r7/HDI_LB_DragAndDrop.zip) をダウンロードしてください。
 - 4D v19 R7 から 4D の内部ビルド番号が変更されました:
     - 4D v19 R6 (含む) までのリリースは 282xxx の番号です。
-    - 4D v19 R7 からのリリースは 100xxx と番号付けされます。
-
-    特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。
+    - 4D v19 R7 以降のリリースは 100xxx という番号になります。   
+      なお、特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。
+- Wakanda/4D Mobile REST プロトコルを使用してプロジェクトメソッドを呼び出す機能が削除されました。 [ORDAデータモデルクラス関数](../REST/ClassFunctions.md) または [/4DACTION URL](../WebServer/httpRequests.md#4daction) を代わりに使用することができます。
 
 
 ### 4D v19 R6
@@ -121,7 +149,6 @@ title: リリースノート
 - [IMAPTransporter クラス](../API/IMAPTransporterClass): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
 - [File クラス](../API/FileClass): 新しい `setAppInfo()` および `getAppInfo()` 関数
 - 新しい [4DEACH](../Tags/tags#4deach-と-4dendeach) 変換タグ
-
 - Web サーバー: 新しい [SameSite セッションcookie](../WebServer/webServerConfig#session-cookie-samesite) 設定
 - [フォーム](../FormEditor/properties_FormProperties#カラースキーム) および [スタイルシート](../FormEditor/createStylesheet#メディアクエリ) 用のダークおよびライトカラースキームサポート
 - [コードエディター環境設定](../Preferences/methods#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
@@ -150,13 +177,14 @@ title: リリースノート
 
 | ライブラリ    | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
 | -------- | --------- | -------------- | ----------------------------------------------------- |
-| SpreadJS | 15.2.0    | 19 R7          | 4D View Pro エンジン                                      |
+| Hunspell | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
+| SpreadJS | 15.2.5    | 19 R8          | 4D View Pro エンジン                                      |
 | CEF      | 106.0.27  | 19 R8          | Chromium 106.0.5249.103                               |
-| OpenSSL  | 1.1.1n    | 19 R4          |                                                       |
+| OpenSSL  | 1.1.1s    | 19 R7          |                                                       |
 | libzip   | 1.7.3     | 19 R2          | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
 | webKit   | WKWebView | 19             |                                                       |
-| ICU      | 68.1      | 18 R6          |                                                       |
-| PHP      | 7.3.27    | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| ICU      | 68.1      | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| PHP      | 7.3.27    | 18 R6          |                                                       |
 | libldap  | 2.4.48    | 18 R2          |                                                       |
 
 </details>

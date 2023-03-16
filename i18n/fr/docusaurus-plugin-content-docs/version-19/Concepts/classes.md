@@ -42,7 +42,7 @@ Une classe utilisateur dans 4D est définie par un fichier de méthode spécifiq
 
 Lorsque vous nommez des classes, gardez à l'esprit les règles suivantes :
 
-- Un [nom de classe](identifiers.md#classes) doit être conforme aux [règles de nommage des propriétés](identifiers.md#object-properties).
+- Un [nom de classe](identifiers.md#classes) doit être conforme aux [règles de nommage des propriétés](identifiers.md#proprietes-des-objets).
 - Les noms de classe sont sensibles à la casse.
 - Il n'est pas recommandé de donner le même nom à une classe et à une table de base de données, afin d'éviter tout conflit.
 
@@ -310,7 +310,7 @@ Le mot-clé `Class extends` est utilisé dans une déclaration de classe pour cr
 
 L'extension de classe doit respecter les règles suivantes :
 
-- Une classe utilisateur ne peut pas étendre une classe 4D système (à l'exception de 4D.Object qui est étendue par défaut pour les classes utilisateurs)
+- Une classe utilisateur ne peut pas étendre une classe intégrée (sauf 4D.Object et les [classes ORDA](../ORDA/ordaClasses.md) qui sont étendues par défaut pour les classes utilisateur).
 - Une classe utilisateur ne peut pas étendre une classe utilisateur d'un autre projet ou composant.
 - Une classe utilisateur ne peut pas s'étendre elle-même.
 - Il n'est pas possible d'étendre des classes de manière circulaire (i.e. "a" étend "b" qui étend "a").
@@ -329,6 +329,7 @@ Cet exemple crée une classe nommée `Square` à partir d'une classe nommée `Po
 //path: Classes/Square.4dm 
 
 Class extends Polygon
+
 
 Class constructor ($side : Integer)
 

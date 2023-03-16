@@ -459,14 +459,14 @@ La página lista los elementos cargados por la aplicación 4D actual:
 
 Si desea integrar otros plug-ins o componentes en la aplicación ejecutable, sólo tiene que colocarlos en una carpeta **PlugIns** o **Components** junto a la aplicación 4D Volume Desktop o junto a la aplicación 4D Server. El mecanismo para copiar el contenido de la carpeta de la aplicación fuente (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) puede utilizarse para integrar todo tipo de archivo en la aplicación ejecutable.
 
-Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargada por 4D y la otra ubicada en la carpeta de la aplicación fuente), la prioridad la tiene el plug-in instalado en la carpeta de 4D Volume Desktop/4D Server. However, if there are two instances of the same component, the application will not open.
-> The use of plug-ins and/or components in a deployment version may require license numbers.
+Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargada por 4D y la otra ubicada en la carpeta de la aplicación fuente), la prioridad la tiene el plug-in instalado en la carpeta de 4D Volume Desktop/4D Server. Sin embargo, si hay dos instancias de un mismo componente, la aplicación no se abrirá.
+> El uso de plug-ins y/o componentes en una versión de despliegue puede requerir números de licencia.
 
 ### Desmarcar módulos
 
-A module is a built-in code library used by 4D to control specific features. If you know that your built application does not use any of the features covered by a module, you can deselect it in the list to reduce the size of your application files.
+Un módulo es una librería de código integrada que 4D utiliza para controlar funcionalidades específicas. Si sabe que su aplicación generada no utiliza ninguna de las funcionalidades cubiertas por un módulo, puede desmarcarlo en la lista para reducir el tamaño de los archivos de su aplicación.
 
-> **Warning:** Deselecting a module could prevent your built application from working as expected. Si no está 100% seguro de que un módulo nunca será llamado por su aplicación, se recomienda mantenerlo seleccionado.
+> **Atención:** deseleccionar un módulo podría impedir que su aplicación generada funcione como se espera. Si no está 100% seguro de que un módulo nunca será llamado por su aplicación, se recomienda mantenerlo seleccionado.
 
 Los siguientes módulos opcionales pueden ser deseleccionados:
 
@@ -479,9 +479,9 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 * **SpellChecker**: Se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
 * **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single-user-applications).
 
-## Página Licences & Certificado
+## Página licencias y certificados
 
-La página de Licencias & Certificados puede utilizarse para:
+La página de Licencias y certificados puede utilizarse para:
 
 * designe el número o los números de licencia que desea integrar en su aplicación ejecutable monopuesto
 * firmar la aplicación mediante un certificado en macOS.
@@ -693,22 +693,22 @@ Puede elegir si mostrar o no la caja de diálogo estándar de selección de serv
 
 En principio, la actualización de las aplicaciones servidor o de las aplicaciones monopuesto fusionadas requiere la intervención del usuario (o la programación de rutinas de sistema personalizadas): cada vez que esté disponible una nueva versión de la aplicación fusionada, hay que salir de la aplicación en producción y sustituir manualmente los archivos antiguos por los nuevos; a continuación, reiniciar la aplicación y seleccionar el archivo de datos actual.
 
-Este procedimiento puede automatizarse en gran medida mediante los siguientes comandos de lenguaje: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), and also [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) para el seguimiento de las operaciones. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. It can be a menu command or a process running in the background and checking at regular intervals for the presence of an archive on a server.
+Este procedimiento puede automatizarse en gran medida mediante los siguientes comandos de lenguaje: [`SET UPDATE FOLDER`](https://doc.4d.com/4dv19/help/command/en/page1291.html), [`RESTART 4D`](https://doc.4d.com/4dv19/help/command/en/page1292.html), and also [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) para el seguimiento de las operaciones. La idea es implementar una función en su aplicación 4D que active la secuencia de actualización automática descrita a continuación. Puede ser un comando de menú o un proceso que se ejecuta en segundo plano y comprueba a intervalos regulares la presencia de un archivo en un servidor.
 
-> You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> También dispone de llaves XML para elevar los privilegios de instalación y poder utilizar archivos protegidos en Windows (consulte el manual [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html)).
 
 Este es el escenario para actualizar un servidor o una aplicación unipersonal fusionada:
 
-1. You transfer, for example using an HTTP server, the new version of the server application or the merged single-user application onto the machine in production.
-2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).
-3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. La versión anterior ha sido renombrada.
+1. Se transfiere, por ejemplo utilizando un servidor HTTP, la nueva versión de la aplicación servidor o la aplicación monopuesto fusionada a la máquina en producción.
+2. En la aplicación en producción, se llama al comando `SET UPDATE FOLDER`: este comando designa la ubicación de la carpeta donde se encuentra la actualización "pendiente" de la aplicación actual. Opcionalmente, puede copiar en esta carpeta los elementos personalizados de la versión en producción (archivos usuario).
+3. En la aplicación en producción, llame al comando `RESTART 4D`: este comando desencadena automáticamente la ejecución de un programa utilitario llamado "updater" que sale de la aplicación actual, la reemplaza utilizando la actualización "pendiente" si se especifica una y reinicia la aplicación con el archivo de datos actual. La versión anterior ha sido renombrada.
 
-> This sequence is compatible with Windows server applications run as a Service.
+> Esta secuencia es compatible con las aplicaciones servidor de Windows que se ejecutan como servicio.
 
-### Update log
+### Historial de actualización
 
-The installation procedure produces a log file detailing the update operations of merged applications (client, server or single-user) on the target machines. This file is useful for analyzing any errors that occur during the installation process.
+El procedimiento de instalación genera un archivo de registro en el que se detallan las operaciones de actualización de las aplicaciones fusionadas (cliente, servidor o monopuesto) en los equipos de destino. Este archivo es útil para analizar cualquier error que se produzca durante el proceso de instalación.
 
-The update log is named `YYYY-MM-DD_HH-MM-SS_log_X.txt`, for example, `2021-08-25_14-23-00_log_1.txt` for a file created on August 25, 2021 at 14:23.
+El historial de actualización se denomina `YYYY-MM-DD_HH-MM-SS_log_X.txt`, por ejemplo, `2021-08-25_14-23-00_log_1.txt` para un archivo creado el 25 de agosto de 2021 a las 14:23.
 
-This file is created in the "Updater" application folder, within the system user folder. You can find out the location of this file at any time using the [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html) command.
+Este archivo se crea en la carpeta de la aplicación "Updater", dentro de la carpeta de usuario del sistema. Puede averiguar la ubicación de este archivo en cualquier momento utilizando el comando [`Get last update log path`](https://doc.4d.com/4dv19/help/command/en/page1301.html).

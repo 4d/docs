@@ -8,7 +8,7 @@ title: Release Notes
 Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), the blog post that lists all new features and enhancements in 4D v19 R7.
 
 
-#### Highlights
+#### Points forts
 
 - Related data and computed/alias attributes can be displayed in the [Data Explorer](../Admin/dataExplorer#basics).
 - New [FileHandle](../API/FileHandleClass) class and new [`.open()`](../API/FileClass#open) function in the `File` class.
@@ -26,12 +26,10 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - For consistency with standard interfaces (e.g. OS file explorers), list box rules for row selection/drag and drop have been modified. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
 - The 4D internal build numbering has been modified as of 4D v19 R7:
     - releases up to 4D v19 R6 (included) are numbered 282xxx,
-    - releases from 4D v19 R7 will be numbered 100xxx.
+    - releases from 4D v19 R7 will be numbered 100xxx. Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
+- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
-    Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
-
-
-## Previous releases
+## Versions précédentes
 
 <details><summary>Click to see the release notes for previous versions</summary>
 
@@ -121,19 +119,19 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 </details>
 
 
-## Library table
+## Tableau des bibliothèques
 
 <details><summary>Click to see the table of libraries used in 4D</summary>
 
-| Library  | Version courante | Updated in 4D | Commentaire                                                                              |
-| -------- | ---------------- | ------------- | ---------------------------------------------------------------------------------------- |
-| SpreadJS | 15.2.0           | 19 R7         | 4D View Pro engine                                                                       |
-| CEF      | 4692.99          | 19 R5         | Chromium v97. CORS policies now also apply when accessing files on disk.                 |
-| OpenSSL  | 1.1.1n           | 19 R4         |                                                                                          |
-| libzip   | 1.7.3            | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
-| webKit   | WKWebView        | 19            |                                                                                          |
-| ICU      | 68.1             | 18 R6         |                                                                                          |
-| PHP      | 7.3.27           | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| libldap  | 2.4.48           | 18 R2         |                                                                                          |
+| Bibliothèque | Version courante | Mise à jour dans 4D | Commentaire                                                                                                   |
+| ------------ | ---------------- | ------------------- | ------------------------------------------------------------------------------------------------------------- |
+| SpreadJS     | 15.2.0           | 19 R7               | Moteur 4D View Pro                                                                                            |
+| CEF          | 4692.99          | 19 R5               | Chromium v97. CORS policies now also apply when accessing files on disk.                                      |
+| OpenSSL      | 1.1.1s           | 19 R7               |                                                                                                               |
+| libzip       | 1.7.3            | 19 R2               | Used by zip class, 4D Write Pro, svg and serverNet components                                                 |
+| webKit       | WKWebView        | 19                  |                                                                                                               |
+| ICU          | 68.1             | 18 R6               | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets. |
+| PHP          | 7.3.27           | 18 R6               |                                                                                                               |
+| libldap      | 2.4.48           | 18 R2               |                                                                                                               |
 
 </details>

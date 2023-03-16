@@ -31,11 +31,11 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                     |
-| ------ | -------------------------------------------- |
-| v18    | New logFile property                         |
-| v17 R5 | New bodyCharset and headerCharset properties |
-| v17 R4 | Adicionado                                   |
+| Versão | Mudanças                                       |
+| ------ | ---------------------------------------------- |
+| v18    | Nova propriedade logFile                       |
+| v17 R5 | Novas propriedades bodyCharset e headerCharset |
+| v17 R4 | Adicionado                                     |
 
 </details>
 
@@ -45,43 +45,43 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| Parâmetros | Tipo               |    | Descrição                                                                      |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Objeto             | -> | Informação de servidor de correio                                              |
-| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF --> |
+| Parâmetros | Tipo               |    | Descrição                                                               |
+| ---------- | ------------------ |:--:| ----------------------------------------------------------------------- |
+| server     | Objeto             | -> | Informação de servidor de correio                                       |
+| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter](#smtp-transporter-object)|<!-- END REF --> |
 
 #### Descrição
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
+O comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configura uma nova ligação SMTP<!-- END REF --> de acordo com o parametro *server* e retorna um novo objeto*[SMTP transporter](#smtp-transporter-object)*. Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
 
-> This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.  
+> Este comando não abre qualquer ligação com o servidor SMTP. A ligação SMTP é efectivamente aberta quando a função [`.send()`](#send) é executada.  
 > 
-> The SMTP connection is automatically closed:
+> A coleção SMTP é automaticamente fechada:
 > 
 > * when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default),
 > * after each  [`.send( )`](#send) function execution if the [`keepAlive`](#keepalive) property is set to false.
 
 No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
 
-| *server*                                                                                                                                                                                                                                                                                                                                        | Valor padrão (se omitido)                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                            | False                                                             |
-| .**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Só é usado com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for usado mas `authenticationMode` for omitido, o protocolo OAuth 2 é usado (se permitido pelo servidor). Text string or token object representing OAuth2 authorization credentials. | nenhum                                                            |
-| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                              | o modo de autenticação mais seguro disponível no servidor é usado |
-| [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->                                                                                                                                                                                   | `mail mode UTF8` (US-ASCII_UTF8_QP)                             |
-| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                 | 30                                                                |
-| [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.headerCharset.Summary -->                                                                                                                                                                             | `mail mode UTF8` (US-ASCII_UTF8_QP)                             |
-| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                        | *obrigatório*                                                     |
-| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->                                                                                                                                                                       | True                                                              |
-| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                               | nenhum                                                            |
-| **password** : TextUser password for authentication on the server. Text string or token object representing OAuth2 authorization credentials.                                                                                                                                                                                                   | nenhum                                                            |
-| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                        | 587                                                               |
-| [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                   | 100                                                               |
-| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                        | nenhum                                                            |
+| *server*                                                                                                                                                                                                                                                                                                                                                  | Valor padrão (se omitido)                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->                                                                                                                                                      | False                                                             |
+| .**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Usado apenas com OAUTH2 `authenticationMode`. Se `accessTokenOAuth2` for utilizado mas `authenticationMode` for omitido, é utilizado o protocolo OAuth 2 (se permitido pelo servidor). Text string or token object representing OAuth2 authorization credentials. | nenhum                                                            |
+| [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->                                                                                                                                                                        | o modo de autenticação mais seguro disponível no servidor é usado |
+| [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->                                                                                                                                                                                             | `mail mode UTF8` (US-ASCII_UTF8_QP)                             |
+| [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->                                                                                                                                                                           | 30                                                                |
+| [<!-- INCLUDE #transporter.headerCharset.Syntax -->](#headercharset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.headerCharset.Summary -->                                                                                                                                                                                       | `mail mode UTF8` (US-ASCII_UTF8_QP)                             |
+| [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->                                                                                                                                                                                                                  | *obrigatório*                                                     |
+| [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->                                                                                                                                                                                 | True                                                              |
+| [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->                                                                                                                                                                                                         | nenhum                                                            |
+| **password** : TextUser password for authentication on the server. Text string or token object representing OAuth2 authorization credentials.                                                                                                                                                                                                             | nenhum                                                            |
+| [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->                                                                                                                                                                                                                  | 587                                                               |
+| [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->                                                                                                                                                                                             | 100                                                               |
+| [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->                                                                                                                                                                                                                  | nenhum                                                            |
 
 #### Resultados
 
-The function returns a [**SMTP transporter object**](#smtp-transporter-object). Todas as propriedades retornadas são**apenas leitura**.
+A função devolve um [**objecto SMTP transporter**](#smtp-transporter-object). Todas as propriedades retornadas são **apenas leitura**.
 
 #### Exemplo
 
@@ -122,10 +122,10 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| Parâmetros | Tipo               |    | Descrição                                                                      |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Objeto             | -> | Informação de servidor de correio                                              |
-| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF --> |
+| Parâmetros | Tipo               |    | Descrição                                                               |
+| ---------- | ------------------ |:--:| ----------------------------------------------------------------------- |
+| server     | Objeto             | -> | Informação de servidor de correio                                       |
+| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter](#smtp-transporter-object)|<!-- END REF --> |
 
 #### Descrição
 
@@ -189,9 +189,9 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 #### Descrição
 
-A propriedade `.keepAlive` contém <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
+A propriedade `.keepAlive` contém <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, e **False** caso contrário. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
 
-The SMTP connection is automatically closed:
+A coleção SMTP é automaticamente fechada:
 
 * when the `transporter` object is destroyed if the `.keepAlive` property is true,
 * after each `.send( )` function execution if the `.keepAlive` property is set to false.
@@ -220,7 +220,7 @@ The SMTP connection is automatically closed:
 | Parâmetros | Tipo   |    | Descrição                                         |
 | ---------- | ------ |:--:| ------------------------------------------------- |
 | mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Resultados | Objeto | <- | SMTP status|<!-- END REF -->            |
+| Resultados | Objeto | <- | Status SMTP|<!-- END REF -->            |
 
 #### Descrição
 

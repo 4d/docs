@@ -3,6 +3,31 @@ id: updates
 title: Release Notes
 ---
 
+## 4D v20
+
+Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D v20.
+
+#### Highlights
+
+- [IMAP Transporter Class](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) support custom keywords.
+- New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
+- New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
+- Code editor: enhanced [Find and replace features](../code-editor/write-class-method.md#find-and-replace).
+- To simplify code, some comparison operators can now be used with [Undefined values](../Concepts/dt_null_undefined.md#undefined-operators) without generating errors.
+- Support of *headerOnly* parameter in [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail).
+
+
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20): list of all bugs that have been fixed in 4D v20.
+
+
+
+#### Behavior changes
+
+- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) property.
+
+
 ## 4D v19 R8
 
 Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), the blog post that lists all new features and enhancements in 4D v19 R8.
@@ -10,18 +35,21 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 #### Highlights
 
-
-- Listboxes with collection or entity selection datasources now support [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) column property.
+- Error management methods can be installed for [global and component execution contexts](../Concepts/error-handling.md#scope-and-components).
+- Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
+- ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
+- Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
 - 4D View Pro:
     - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
     - new [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) command
-- 4D Language classic: [What's new page](XXX) on doc.4d.com.
-- 4D Write Pro: [What's new page](XXX) on doc.4d.com.
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D v19 R8.
 
 
 #### Behavior changes
 
+- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) property.
 - When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
 - In Web areas using blink (CEF), dialogs displayed from external scripts are now blocking if not called from a `setTimeout()` JS function. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
@@ -43,7 +71,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - 4D View Pro: new table commands [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes).
 - Component namespaces are now [displayed in the Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
 - Text area and Input form objects now support the [corner radius property](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
-- 4D Language classic: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) on doc.4d.com.
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R7): list of all bugs that have been fixed in 4D v19 R7.
 
@@ -53,9 +81,9 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - For consistency with standard interfaces (e.g. OS file explorers), list box rules for row selection/drag and drop have been modified. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
 - The 4D internal build numbering has been modified as of 4D v19 R7:
     - releases up to 4D v19 R6 (included) are numbered 282xxx,
-    - releases from 4D v19 R7 will be numbered 100xxx.
-
-    Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
+    - releases from 4D v19 R7 will be numbered 100xxx.   
+      Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
+- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 
 ### 4D v19 R6
@@ -121,7 +149,6 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - [IMAPTransporter Class](../API/IMAPTransporterClass): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
 - [File Class](../API/FileClass): new `setAppInfo()` and `getAppInfo()` functions.
 - New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
-
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](../FormEditor/propertiesForm#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods#theme-list).
@@ -148,15 +175,16 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 <details><summary>Click to see the table of libraries used in 4D</summary>
 
-| Library  | Current version | Updated in 4D | Comentário                                                                               |
-| -------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
-| SpreadJS | 15.2.0          | 19 R7         | 4D View Pro engine                                                                       |
-| CEF      | 106.0.27        | 19 R8         | Chromium 106.0.5249.103                                                                  |
-| OpenSSL  | 1.1.1n          | 19 R4         |                                                                                          |
-| libzip   | 1.7.3           | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
-| webKit   | WKWebView       | 19            |                                                                                          |
-| ICU      | 68.1            | 18 R6         |                                                                                          |
-| PHP      | 7.3.27          | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| libldap  | 2.4.48          | 18 R2         |                                                                                          |
+| Biblioteca | Current version | Updated in 4D | Comentário                                                                               |
+| ---------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
+| Hunspell   | 1.7.2           | 20            | Used for spell checking in 4D forms and 4D Write Pro                                     |
+| SpreadJS   | 15.2.5          | 19 R8         | 4D View Pro engine                                                                       |
+| CEF        | 106.0.27        | 19 R8         | Chromium 106.0.5249.103                                                                  |
+| OpenSSL    | 1.1.1s          | 19 R7         |                                                                                          |
+| libzip     | 1.7.3           | 19 R2         | Used by zip class, 4D Write Pro, svg and serverNet components                            |
+| webKit     | WKWebView       | 19            |                                                                                          |
+| ICU        | 68.1            | 18 R6         | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
+| PHP        | 7.3.27          | 18 R6         |                                                                                          |
+| libldap    | 2.4.48          | 18 R2         |                                                                                          |
 
 </details>

@@ -1,19 +1,20 @@
 ---
 id: jsonReference
-title: JSON property list
+title: Form JSON property list
 ---
 
 This page provides a comprehensive list of all form properties, sorted by their JSON name. Click on a property name to access its detailed description.
 > In the "Form Properties" chapter, properties are sorted according to their names and themes in the Property List.
 
-[a](#a) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [h](#h) - [i](#i) - [m](#m) - [p](#p) - [r](#r) - [s](#s) - [w](#w)
+[b](#b) - [c](#c) - [d](#d) - [e](#e) - [f](#f) - [h](#h) - [i](#i) - [m](#m) - [p](#p) - [r](#r) - [s](#s) - [w](#w)
 
 | Property                                                                  | Beschreibung                                                                                                            | Possible Values                                                                                                                      |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| <a name="a">**a**</a>                                                 |                                                                                                                         |                                                                                                                                      |
+| <a name="b">**b**</a>                                                 |                                                                                                                         |                                                                                                                                      |
 | [`bottomMargin`](properties_FormSize.md#vert-margin)                      | Vertical margin value (in pixels)                                                                                       | minimum: 0<a name="d"></a>                                                                                                  |
 | <a name="c">**c**</a>                                                 |                                                                                                                         |                                                                                                                                      |
 | [`colorScheme`](properties_FormProperties.md#color-scheme)                | Color scheme for the form                                                                                               | "dark", "light"                                                                                                                      |
+| [`css`](properties_FormProperties.md#css)                                 | CSS file(s) used by the form                                                                                            | CSS file path(s) provided as a string, a collection of strings, or a collection of objects with "path" and "media" properties        |
 | <a name="d">**d**</a>                                                 |                                                                                                                         |                                                                                                                                      |
 | [`destination`](properties_FormProperties.md#form-type)                   | Form type                                                                                                               | "detailScreen", "listScreen", "detailPrinter", "listPrinter"                                                                         |
 | <a name="e">**e**</a>                                                 |                                                                                                                         |                                                                                                                                      |

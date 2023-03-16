@@ -11,7 +11,7 @@ The following project elements accept documentation:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Formulários
-- Tables and Fields
+- Tabelas e Campos
 
 Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 
@@ -161,7 +161,8 @@ $txt:="Hello world!"
 - The link tag is supported:
 
 ```
-// Case 1 The [documentation](https://doc.4d.com) of the command ....
+// Case 1
+The [documentation](https://doc.4d.com) of the command ....
 
 // Case 2
 [4D blog][1]

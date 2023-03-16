@@ -538,10 +538,10 @@ Standard sort support depends on the list box type:
 | List box type               | Support of standard sort | Comentários                                                                                                  |
 | --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | Uma coleção de objetos      | Sim                      | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection of scalar values | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
-| Seleção de entidades        | Sim                      | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Collection of scalar values | Não                      | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
+| Seleção de entidades        | Sim                      | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Current selection           | Sim                      | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
-| Named selection             | No                       |                                                                                                              |
+| Named selection             | Não                      |                                                                                                              |
 | Arrays                      | Sim                      | Columns bound to picture and pointer arrays are not sortable                                                 |
 
 
@@ -554,7 +554,7 @@ The developer can set up custom sorts, for example using the [`LISTBOX SORT COLU
 Custom sorts allow you to:
 
 - carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
-- use functions such as [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Exemplo
 
@@ -798,8 +798,9 @@ This principle is implemented for internal arrays that can be used to manage:
 
 - cores
 - background colors
-- estilos
-- hidden rows
+
+- styles
+- filas ocultas
 - seleções
 
 For example, if you want to select the row containing Rennes, you must pass:
@@ -990,7 +991,7 @@ OB SET($ob;"value";$entry)
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
 > Null values are supported and result in an empty cell.
 
-#### min and max
+#### mín. e máx
 
 When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
 

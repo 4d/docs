@@ -52,7 +52,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### 参照
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -97,7 +97,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### 参照
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -645,7 +645,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 * 非表示のカラム / 行 > 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
 > 枠線の表示状態は [VP SET PRINT INFO](#vp-set-print-info) で定義されたドキュメント属性に依存します。
 
-#### ファンクションの戻り値
+#### 戻り値
 
 コマンドは SVGフォーマットのピクチャーを返します。
 
@@ -1047,7 +1047,8 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
- $params.format:=vp MS Excel format // ".xlsx"
+
+ $params.format:=vp MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
@@ -1604,10 +1605,10 @@ $colCount:=VP Get column count("ViewProarea")
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
-| 引数          | タイプ     |    | 説明                                        |
-| ----------- | ------- | -- | ----------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                   |
-| ファンクションの戻り値 | Integer | <- | カレントシートのインデックス|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                        |
+| ---------- | ------- | -- | ----------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                   |
+| 戻り値        | Integer | <- | カレントシートのインデックス|<!-- END REF -->
 
 |
 
@@ -1818,7 +1819,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### 参照
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -1909,6 +1910,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
 戻り値のオブジェクトには、以下のようなものが格納されています:
+
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -2176,10 +2178,10 @@ $currentSelection:=VP Get selection("myVPArea")
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
-| 引数          | タイプ     |    | 説明                               |
-| ----------- | ------- | -- | -------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名          |
-| ファンクションの戻り値 | Integer | <- | シートの数|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                               |
+| ---------- | ------- | -- | -------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名          |
+| 戻り値        | Integer | <- | シートの数|<!-- END REF -->
 
 |
 
@@ -2216,11 +2218,11 @@ $currentSelection:=VP Get selection("myVPArea")
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| 引数          | タイプ     |    | 説明                                    |
-| ----------- | ------- | -- | ------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名               |
-| name        | Text    | -> | シート名                                  |
-| ファンクションの戻り値 | Integer | <- | シートのインデックス|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                    |
+| ---------- | ------- | -- | ------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名               |
+| name       | Text    | -> | シート名                                  |
+| 戻り値        | Integer | <- | シートのインデックス|<!-- END REF -->
 
 |
 
@@ -2256,11 +2258,11 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返し�
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
-| 引数          | タイプ     |    | 説明                              |
-| ----------- | ------- | -- | ------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名         |
-| sheet       | Integer | -> | シートのインデックス                      |
-| ファンクションの戻り値 | Text    | <- | シート名|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                              |
+| ---------- | ------- | -- | ------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名         |
+| sheet      | Integer | -> | シートのインデックス                      |
+| 戻り値        | Text    | <- | シート名|<!-- END REF -->
 
 |
 
@@ -2336,11 +2338,11 @@ End if
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| 引数          | タイプ     |    | 説明                                                       |
-| ----------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                                  |
-| sheet       | Integer | <- | シートのインデックス                                               |
-| ファンクションの戻り値 | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                                       |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                  |
+| sheet      | Integer | <- | シートのインデックス                                               |
+| 戻り値        | Boolean | <- | 印刷線が表示状態であれば true、それ以外は false|<!-- END REF -->
 
 |
 
@@ -2554,13 +2556,14 @@ $styles:=VP Get stylesheets("ViewProArea")
 
 このコマンドは、*column* のカレント属性を格納するオブジェクトを返します:
 
-| プロパティ               | タイプ     | 説明                                                 |
-| ------------------- | ------- | -------------------------------------------------- |
-| dataField           | text    | データコンテキストにおける、表の列のプロパティ名。 表組みが自動で表示されている場合は返されません。 |
-| name                | text    | 表の列の名前。                                            |
-| footerText          | text    | 列のフッター値                                            |
-| footerFormula       | text    | 列のフッターのフォーミュラ。                                     |
-| filterButtonVisible | boolean | 列のフィルターボタンが表示されている場合には true、そうでない場合は false。        |
+| プロパティ         | タイプ  | 説明                                                 |
+| ------------- | ---- | -------------------------------------------------- |
+| dataField     | text | データコンテキストにおける、表の列のプロパティ名。 表組みが自動で表示されている場合は返されません。 |
+| name          | text | 表の列の名前。                                            |
+| footerText    | text | 列のフッター値                                            |
+| footerFormula | text | 列のフッターのフォーミュラ。                                     |
+
+|filterButtonVisible|boolean|列のフィルターボタンが表示されている場合には true、そうでない場合は false。 |
 
 *tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは **null** を返します。
 
@@ -2691,6 +2694,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | ------ | -- |
 | v19 R7 | 追加 |
 </details>
+
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 **VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
@@ -4062,6 +4066,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 #### 説明
 
+
 `VP ROW AUTOFIT` コマンドは、 <!-- REF #_method_.VP ROW AUTOFIT.Summary -->*rangeObj* 引数のレンジ内にある行を、そのコンテンツに応じて自動的にリサイズします<!-- END REF -->。
 
 *rangeObj* 引数として、サイズを自動調整したい行を格納しているレンジオブジェクトを渡します。
@@ -4104,14 +4109,15 @@ $row:=VP Row("ViewProArea";9) // 10行目
 
 *parameters* オブジェクトには、以下の任意のプロパティのいずれかを渡します。 これらのプロパティは `onEvent` コールバックメソッド内において `This` コマンドを介して利用可能であり、そのインスタンスを参照することができます:
 
-| プロパティ                      | タイプ             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area                       | text            | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| onEvent                    | object (フォーミュラ) | オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。 |
-| autoQuit                   | boolean         | True (デフォルト値) の場合、[`On End URL Loading`](Events/onEndUrlLoading.md) または [`On URL Loading Error`](Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。                                                                                                                                                                                                                                                                                                                     |
-| timeout                    | number          | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| result                     | mixed           | 処理の結果 (あれば)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `\<customProperty>` | mixed           | *onEvent* コールバックメソッドで利用可能なカスタムの属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| プロパティ                    | タイプ             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| area                     | text            | オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: "OffscreenArea1") が割り当てられます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| onEvent                  | object (フォーミュラ) | オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), または [`On Timer`](../Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。 |
+| autoQuit                 | boolean         | True (デフォルト値) の場合、[`On End URL Loading`](../Events/onEndUrlLoading.md) または [`On URL Loading Error`](../Events/onUrlLoadingError.md) イベントが起きた際にはコマンドがフォーミュラの実行を中止します。 False の場合、*onEvent* コールバックメソッド内で `CANCEL` あるいは `ACCEPT` コマンドを使用する必要があります。                                                                                                                                                                                                                                                                                                                                   |
+| timeout                  | number          | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| result                   | mixed           | 処理の結果 (あれば)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `<customProperty>` | mixed           | *onEvent* コールバックメソッドで利用可能なカスタムの属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+
 
 以下のプロパティは、必要に応じてコマンドによって自動的に追加されます:
 
@@ -4150,6 +4156,7 @@ Function onEvent()
 ```
 
 *OffscreenArea* コールバックメソッドの内容は以下の通りです:
+
 
 ```4d
 $o:=cs.OffscreenArea.new()

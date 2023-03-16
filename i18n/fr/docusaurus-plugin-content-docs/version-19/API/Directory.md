@@ -426,7 +426,7 @@ L'objet `Folder` copié.
 
 #### Exemple
 
-Vous souhaitez copier un dossier Images, à partir du dossier Document de l'utilisateur vers le dossier de la base :
+Vous souhaitez copier un *dossier* Pictures, à partir du dossier Document de l'utilisateur vers le dossier de la base :
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -653,7 +653,7 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 | Paramètres | Type    |    | Description                                    |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
-| Résultat   | Images  | <- | Icône|<!-- END REF -->
+| Résultat   | Picture | <- | Icône|<!-- END REF -->
 
 |
 

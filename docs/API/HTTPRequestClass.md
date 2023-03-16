@@ -3,6 +3,10 @@ id: HTTPRequestClass
 title: HTTPRequest
 ---
 
+The `HTTPRequest` class allows you to handle [`HTTPRequest objects`](#httprequest-object) that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.
+
+The `HTTPRequest` class is available from the `4D` class store. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
+
 <details><summary>History</summary>
 
 |Version|Changes|
@@ -11,9 +15,6 @@ title: HTTPRequest
 
 </details>
 
-The `HTTPRequest` class allows you to handle [`HTTPRequest objects`](#httprequest-object) that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.
-
-The `HTTPRequest` class is available from the `4D` class store. You create and send HTTP requests using the [4D.HTTPRequest.new()](#4dhttprequestnew) function, that returns a [`HTTPRequest object`](#httprequest-object).
 
 ### Example
 
@@ -258,10 +259,19 @@ The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the
 
 The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary -->the `protocol` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted or if "auto" was used, contains the version of the protocol used.
 
+
 <!-- END REF -->
 
 <!-- REF #HTTPRequestClass.response.Desc -->
 ## .response
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R8 |`.headers` returns lowercase names. New `.rawHeaders` property|
+
+</details>
 
 <!-- REF #HTTPRequestClass.response.Syntax -->**response** : Object<!-- END REF -->
 
@@ -274,9 +284,10 @@ A `response` object is a non-sharable object. It provides the following properti
 |Property|Type|Description|
 |---|---|---|
 |.body|Variant|Body of the response. The type of the message is defined according to the [`dataType`](#datatype) property. Undefined if the body has not been received yet|
-|.headers|Object|Headers of the response. `headers.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet.|
+|.headers|Object|Headers of the response. Header names are returned in lowercase. `<headername>.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet. |
 |.status|Number|Status code of the response|
 |.statusText|Text|Message explaining the status code|
+|.rawHeaders|Object|Headers of the response. Header names are returned untouched (with their original case). `<headerName>.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet.|
 
 <!-- END REF -->
 

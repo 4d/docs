@@ -48,7 +48,7 @@ The `startPoint` JSON property defines from which coordinate to draw the line (s
 
 > the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
 
-#### JSON Examples
+#### Exemplos JSON
 
 ```
  "myLine": {

@@ -55,7 +55,7 @@ The form object variables allow you to control and monitor the objects. For exam
 
 Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
 
-### Expressions
+### Expressões
 
 You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
@@ -207,7 +207,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 #### Objectos suportados
 
-[Plug-in Area](pluginArea_overview.md)
+[Área Plug-in](pluginArea_overview.md)
 
 ---
 
@@ -260,7 +260,7 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Calculation           | Num | Text | Date | Hora | Bool | Pict | footer var type     |
+| Cálculo               | Num | Text | Date | Hora | Bool | Pict | footer var type     |
 | --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
 | Mínimo                | X   |      | X    | X    | X    |      | Same as column type |
 | Máximo                | X   |      | X    | X    | X    |      | Same as column type |
@@ -268,7 +268,7 @@ There are several types of calculations available. The following table shows whi
 | Contagem              | X   | X    | X    | X    | X    | X    | Longint             |
 | Average               | X   |      |      | X    |      |      | Real                |
 | Standard deviation(*) | X   |      |      | X    |      |      | Real                |
-| Variance(*)           | X   |      |      | X    |      |      | Real                |
+| Variância(*)          | X   |      |      | X    |      |      | Real                |
 | Sum squares(*)        | X   |      |      | X    |      |      | Real                |
 | Custom ("none")       | X   | X    | X    | X    | X    | X    | Qualquer            |
 

@@ -298,11 +298,11 @@ En algunos casos, es posible que desee evitar que las aplicaciones cliente pueda
 
 Para forzar la actualización, basta con excluir el número de versión actual de las aplicaciones cliente (X-1 y anteriores) en el rango de número de versión compatible con la aplicación servidor. En este caso, el mecanismo de actualización no permitirá que las aplicaciones cliente no actualizadas se conecten. En este caso, el mecanismo de actualización no permitirá que las aplicaciones cliente no actualizadas se conecten.
 
-El [número de versión actual](#current_version) se define en la página Cliente/Servidor del generador de la aplicación. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
+El [número de versión actual](#current_version) se define en la página Cliente/Servidor del generador de la aplicación. Los intervalos de números autorizados se definen en el proyecto de aplicación vía las [llaves XML](#build-application-settings) específicas.
 
 #### En caso de error
 
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. La aplicación va a cerrar ahora.”
+Si 4D no puede efectuar la actualización de la aplicación cliente, la máquina cliente muestra el siguiente mensaje de error: "La actualización de la aplicación cliente falló. La aplicación va a cerrar ahora.”
 
 Hay muchas causas posibles para este error. Cuando reciba este mensaje, es aconsejable que compruebe primero los siguientes parámetros:
 
@@ -401,7 +401,7 @@ La personalización del nombre de la carpeta de caché del lado del servidor es 
 
 ## Página Plugins y componentes
 
-On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
+En esta pestaña, configure cada [plug-in ](Concepts/plug-ins.md) y cada [componente](Concepts/components.md) que vaya a utilizar en su aplicación autónoma o cliente/servidor.
 
 La página lista los elementos cargados por la aplicación 4D actual:
 
@@ -409,20 +409,20 @@ La página lista los elementos cargados por la aplicación 4D actual:
 
 * La columna **Activa** indica los elementos que se integrarán en la aplicación generada. Todos los elementos están marcados por defecto. Para excluir un plug-in o un componente, anule la selección de la casilla situada junto a él.
 
-* **Plugins and components** column - Displays the name of the plug-in/component.
+* columna **Plugins y componentes** - Muestra el nombre del plug-in/componente.
 
-* **ID** column - Displays the plug-in/component's identification number (if any).
+* Columna **ID** - Muestra el número de identificación del plug-in/componente (si existe).
 
-* **Type** column - Indicates the type of item: plug-in or component.
+* **Tipo** columna - Indica el tipo de elemento: plug-in o componente.
 
 Si desea integrar otros plug-ins o componentes en la aplicación ejecutable, sólo tiene que colocarlos en una carpeta **PlugIns** o **Components** junto a la aplicación 4D Volume Desktop o junto a la aplicación 4D Server. El mecanismo para copiar el contenido de la carpeta de la aplicación fuente (ver [Personalizar la carpeta 4D Volume Desktop](#customizing-4d-volume-desktop-folder)) puede utilizarse para integrar todo tipo de archivo en la aplicación ejecutable.
 
-Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargada por 4D y la otra ubicada en la carpeta de la aplicación fuente), la prioridad la tiene el plug-in instalado en la carpeta de 4D Volume Desktop/4D Server. However, if there are two instances of the same component, the application will not open.
-> The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
+Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargada por 4D y la otra ubicada en la carpeta de la aplicación fuente), la prioridad la tiene el plug-in instalado en la carpeta de 4D Volume Desktop/4D Server. Sin embargo, si hay dos instancias de un mismo componente, la aplicación no se abrirá.
+> El uso de plug-ins y/o componentes en una versión de despliegue requiere los números de licencia necesarios.
 
-## Página Licences & Certificado
+## Página licencias y certificados
 
-La página de Licencias & Certificados puede utilizarse para:
+La página de Licencias y certificados puede utilizarse para:
 
 * designe el número o los números de licencia que desea integrar en su aplicación ejecutable monopuesto
 * firmar la aplicación mediante un certificado en macOS.
@@ -455,7 +455,7 @@ Una vez generada la aplicación, se incluye automáticamente un nuevo archivo de
 
 ### Certificación de las aplicaciones en OS X
 
-The application builder can sign merged 4D applications under macOS (single-user applications, 4D Server and client parts under macOS). La firma de una aplicación autoriza su ejecución por la funcionalidad Gatekeeper de macOS cuando se selecciona la opción "Mac App Store y desarrolladores identificados" (ver "Acerca de Gatekeeper" más adelante).
+El generador de aplicaciones puede firmar aplicaciones 4D fusionadas bajo macOS (aplicaciones monopuesto, 4D Server y partes cliente bajo macOS). La firma de una aplicación autoriza su ejecución por la funcionalidad Gatekeeper de macOS cuando se selecciona la opción "Mac App Store y desarrolladores identificados" (ver "Acerca de Gatekeeper" más adelante).
 
 * Marque la opción **Firmar la aplicación** para incluir la certificación en los procesos de generación de aplicaciones para OS X. 4D comprobará la disponibilidad de los elementos necesarios para la certificación cuando se produzca la generación:
 
@@ -478,13 +478,13 @@ Para obtener un certificado de desarrollador de Apple, Inc., puede utilizar los 
 
 Gatekeeper es una función de seguridad de OS X que controla la ejecución de las aplicaciones descargadas de Internet. Si una aplicación descargada no procede del Apple Store o no está firmada, se rechaza y no se puede ser lanzada.
 
-The **Sign application** option of the 4D application builder lets you generate applications that are compatible with this option by default.
+La opción **Firmar la aplicación** del Generador de aplicaciones de 4D le permite generar aplicaciones compatibles con esta opción por defecto.
 
 #### Sobre la notarización
 
 La notarización de las aplicaciones es muy recomendada por Apple a partir de macOS 10.14.5 (Mojave) y 10.15 (Catalina), ya que las aplicaciones no notarizadas que se despliegan a través de internet se bloquean por defecto.
 
-In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode). La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode).
+En 4D v18, las [funcionalidades de firma integradas](#os-x-signing-certificate) han sido actualizadas para cumplir con todos los requisitos de Apple para permitir el uso del servicio de notarización de Apple. La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode). La notarización en sí debe ser realizada por el desarrollador y es independiente de 4D (tenga en cuenta también que requiere la instalación de Xcode).
 
 Para más información sobre el concepto de notarización, consulte [esta página en el sitio web para desarrolladores de Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
@@ -590,9 +590,9 @@ La gestión de las conexiones de las aplicaciones clientes abarca los mecanismos
 
 El procedimiento de conexión para las aplicaciones cliente fusionadas admite los casos en los que el servidor dedicado no está disponible. El escenario de inicio de una aplicación cliente 4D es el siguiente:
 
-* The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
-  OR  
-  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
+* La aplicación cliente intenta conectarse al servidor utilizando el servicio de localización (basado en el nombre del servidor, difundido en la misma subred).  
+  O  
+  Si la información de conexión válida está almacenada en el archivo "EnginedServer.4DLink" dentro de la aplicación cliente, la aplicación cliente intenta conectarse a la dirección del servidor especificada.
 * Si esto falla, la aplicación cliente intenta conectarse al servidor utilizando la información almacenada en la carpeta de preferencias del usuario de la aplicación (archivo "lastServer.xml", ver último paso).
 * Si esto falla, la aplicación cliente muestra una caja de diálogo de error de conexión.
   * Si el usuario hace clic en el botón **Seleccionar...** (cuando lo permite el desarrollador 4D al momento de la generación, ver más abajo), se muestra la caja de diálogo estándar "Conexión al servidor".

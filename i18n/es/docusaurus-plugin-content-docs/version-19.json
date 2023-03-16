@@ -64,7 +64,7 @@
     "description": "The label for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.Guides": {
-    "message": "Guides",
+    "message": "Guías",
     "description": "The label for category Guides in sidebar docs"
   },
   "sidebar.docs.category.API (general)": {
@@ -92,7 +92,7 @@
     "description": "The label for category Form Objects in sidebar docs"
   },
   "sidebar.docs.category.Form Object Properties": {
-    "message": "Form Object Properties",
+    "message": "Propiedades de los objetos de formulario",
     "description": "The label for category Form Object Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Events": {
@@ -100,7 +100,7 @@
     "description": "The label for category Form Events in sidebar docs"
   },
   "sidebar.docs.category.Menus": {
-    "message": "Menus",
+    "message": "Menús",
     "description": "The label for category Menus in sidebar docs"
   },
   "sidebar.docs.category.Build application": {
@@ -113,6 +113,6 @@
   },
   "sidebar.docs.link.4D Language Reference (4D Doc Center)": {
     "message": "Referencia del lenguaje 4D (4D Doc Center)",
-    "description": "The label for link 4D Language Reference (4D Doc Center) in sidebar docs, linking to https://doc.4d.com/4Dv19/4D/19.4/4D-Language-Reference.100-6022604.en.html"
+    "description": "The label for link 4D Language Reference (4D Doc Center) in sidebar docs, linking to https://doc.4d.com/4Dv19/4D/19.5/4D-Language-Reference.100-6136105.en.html"
   }
 }

@@ -105,16 +105,18 @@ Puede visualizar y modificar las propiedades de los objetos y formularios utiliz
 
 Para mostrar/ocultar la lista de propiedades, seleccione **Lista de propiedades** en el menú **Formulario** o en el menú contextual del editor de formularios. También puede mostrarlo haciendo doble clic en una área vacía del formulario.
 
-#### Accesos directos de navegación
+#### Atajos
 
-Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
+Puede utilizar los siguientes atajos en la Lista de propiedades:
 
 - **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
 - **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
 - **PgUp** y **PgDn**: selecciona la primera o la última celda visible de la lista mostrada.
 - **Inicio** y **Fin**: selecciona la primera o la última celda de la lista.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en la etiqueta de tema: contrae/despliega todos los temas de la lista.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un evento: utilizado para seleccionar/deseleccionar cada evento de la lista, según el estado inicial del evento sobre el que se ha hecho clic.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en la etiqueta de un tema: Permite contraer/expandir todos los temas de la lista.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un valor de propiedad mostrado en **negrita**: restablece la propiedad a su valor por defecto.
+
 
 ## Manipulación de objetos formulario
 
@@ -578,6 +580,7 @@ Aquí hay algunas cosas importantes que hay que saber antes de empezar a trabaja
 ### Gestión de vistas
 
 #### Crear vistas
+
 
 Todo objeto creado en un formulario se coloca en la primera vista ("Vista 1") del formulario. La primera vista es **siempre** la vista por defecto, indicada por (por defecto) después del nombre. El nombre de la vista puede cambiarse (ver [Renombrar vistas](#renaming-views)), sin embargo sigue siendo la vista por defecto.
 

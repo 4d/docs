@@ -16,16 +16,25 @@ module.exports = {
           // Docs folder path relative to website dir.
           path: 'docs',
           routeBasePath: '/',
-		  editUrl: 'https://github.com/4D/docs/edit/main/',
-          // Sidebars file relative to website dir.
+		  //editUrl: 'https://github.com/4D/docs/edit/main/',
+            editUrl: function edit(info) {
+            // const lang = info.locale;
+            // const version = info.version;
+            // const permalink = info.permalink;
+
+            const title = `Comment on ${info.docPath} (${info.version})`;
+            const body = `Please enter your comment:`;
+            return `https://github.com/4d/docs/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
+          },
+		  // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
-            '19-R7': {
-              label: 'v19 R7 BETA',
+            '19-R8': {
+              label: 'v19 R8 BETA',
               banner: 'none',
             },
-            '19-R6': {
-              label: 'v19 R6',
+            '19-R7': {
+              label: 'v19 R7',
               banner: 'none',
             },
             '19': {
@@ -183,7 +192,7 @@ module.exports = {
             },
             {
               label: 'Downloads',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://us.4d.com/product-download/Feature-Release',
             },
             {
               label: 'Resources',
@@ -217,7 +226,7 @@ module.exports = {
           ],
         },
       ],
-      "copyright": "© 2022 4D SAS - All rights reserved",
+      "copyright": "© 2023 4D SAS - All rights reserved",
     },
   }
 }

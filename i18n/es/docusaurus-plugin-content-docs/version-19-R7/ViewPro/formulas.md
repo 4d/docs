@@ -86,17 +86,17 @@ Lista de los operadores de la mas a menos importante:
 
 ## Referencias de celdas
 
-Las fórmulas a menudo se refieren a otras celdas por medio de direcciones de celdas. Puede copiar estas fórmulas a otras celdas. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
+Las fórmulas a menudo se refieren a otras celdas por medio de direcciones de celdas. Puede copiar estas fórmulas a otras celdas. Por ejemplo, la siguiente fórmula, introducida en la celda C8, suma los valores de las dos celdas superiores y muestra el resultado.
 
 ```
 = C6 + C7
 ```
 
-Esta fórmula se refiere a las celdas C6 y C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
+Esta fórmula se refiere a las celdas C6 y C7. Es decir, 4D View Pro tiene instrucciones de referirse a estas otras celdas para los valores a utilizar en la fórmula.
 
-When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
+Cuando copie o mueva estas fórmulas a nuevas ubicaciones, cada dirección de celda en esa fórmula cambiará o permanecerá igual, dependiendo de cómo se escriba.
 
-*   A reference that changes is called a **relative reference**, and refers to a cell by how far left/right and up/down it is from the cell with the formula.
+*   Una referencia que cambia se denomina **referencia relativa**, y se refiere a una celda según lo lejos que esté a la izquierda/derecha y arriba/abajo de la celda con la fórmula.
 *   Una referencia que siempre apunta a una celda particular se denomina **referencia absoluta**.
 *   También puede crear una referencia mixta que apunte siempre a una línea o columna fija.
 
@@ -106,17 +106,17 @@ When you copy or move these formulas to new locations, each cell address in that
 
 Si sólo utiliza coordenadas de celda, por ejemplo, `C5`, 4D View Pro interpreta la referencia como relativa. Puede hacer que la referencia sea absoluta poniendo un signo de dólar delante de la letra y el número, como en `$C$5`.
 
-You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
+Puede combinar las referencias absolutas y relativas insertando un signo de dólar delante de la letra o el número solo, por ejemplo, `$C5` o `C$5`. Una referencia mixta permite especificar la fila o la columna como absolutas, permitiendo al mismo tiempo que la otra parte de la dirección se refiera a ella de forma relativa.
 
-A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Una referencia a una celda nombrada es siempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
+Una forma cómoda, rápida y precisa de especificar una referencia absoluta es nombrar la celda y utilizar ese nombre en lugar de la dirección de la celda. Una referencia a una celda nombrada es siempre absoluta. Puede crear o modificar celdas con nombre o rangos de celdas con nombre utilizando el método [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name).
 
 La siguiente tabla muestra el efecto de las diferentes notaciones:
 
 | Ejemplo            | Tipo de referencia | Descripción                                                                                                                                                     |
 | ------------------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5                 | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                                    |
+| C5                 | Relativo           | La referencia es a la ubicación relativa de la celda C5, dependiendo de la ubicación de la celda en la que se utiliza la referencia por primera vez             |
 | $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                                     |
-| $C5                | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.                            |
+| $C5                | Mixed              | La referencia es siempre a la columna C, pero la referencia de línea es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez. |
 | C$5                | Mixed              | La referencia es siempre la línea 5, pero la referencia de la columna es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez |
 | Nombre de la celda | Absoluto           | La referencia es absoluta. Siempre se referirá a la [celda o rango nombrado](method-list.md#vp-add-range-name) sin importar donde se use la referencia.         |
 
@@ -239,9 +239,9 @@ Los métodos proyecto 4D también pueden devolver valores en la fórmula de la c
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (convertido a número en 4D View Pro)
 * [date](Concepts/dt_date.md) (convertido en tipo JS Date en 4D View Pro - hora, minuto, segundo = 0)
 * [time](Concepts/dt_time.md) (convertida en tipo JS Date en 4D View Pro - date en date de base, es decir, 30/12/1899)
-* [boolean](Concepts/dt_boolean.md) (converted to bool in 4D View Pro)
-* [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
-* [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
+* [boolean](Concepts/dt_boolean.md) (convertido a bool en 4D View Pro)
+* [imagen](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg otros tipos convertidos en png) crea un URI (data:image/png;base64,xxxx) y luego se utiliza como fondo en 4D View Pro en la celda donde se ejecuta la fórmula
+* [](Concepts/dt_object.md) con las dos propiedades siguientes (que permiten pasar una fecha y una hora):
 
     | Propiedad | Tipo  | Descripción      |
     | --------- | ----- | ---------------- |
@@ -253,7 +253,7 @@ Si el método 4D no devuelve nada, se devuelve automáticamente una cadena vací
 Se devuelve un error en la celda 4D View Pro si:
 
 *   el método 4D devuelve otro tipo distinto de los mencionados anteriormente,
-*   an error occurred during 4D method execution (when user clicks on "abort" button).
+*   se ha producido un error durante la ejecución del método 4D (cuando el usuario presiona el botón "abortar").
 
 #### Ejemplo
 
@@ -276,12 +276,12 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ## Compatibilidad
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
+Existen soluciones alternativas para declarar campos o métodos como funciones en sus áreas 4D View Pro. Estas soluciones se mantienen por razones de compatibilidad y pueden utilizarse en casos concretos. No obstante, se recomienda utilizar el método [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions).
 
 ### Referenciación de campos mediante la estructura virtual
 
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
+4D View Pro le permite hacer referencia a campos 4D utilizando la estructura virtual de la base de datos, es decir, declarada a través de los comandos [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) y/o [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) con el parámetro \*. Esta solución alternativa podría ser útil si su aplicación ya depende de una estructura virtual (de lo contrario, se recomienda [utilizando `VP SET CUSTOM FUNCTIONS`](#4d-functions)).
 
 > **ATENCIÓN:** No puede utilizar la estructura virtual y `VP SET CUSTOM FUNCTIONS` simultáneamente. En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, las funciones basadas en los comandos `SET TABLE TITLES` y `SET FIELD TITLES` se ignoran en el área 4D View Pro.
 

@@ -21,14 +21,14 @@ De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fou
 
 Les filesystem suivants sont pris en charge :
 
-| filesystem   | Désigne                                                       |
-| ------------ | ------------------------------------------------------------- |
-| "/DATA"      | Dossier data courant                                          |
-| "/LOGS"      | Dossier Logs                                                  |
-| "/PACKAGE"   | Dossier de la base de données (avec ou sans extension 4dbase) |
-| "/PROJECT"   | Dossier Project                                               |
-| "/RESOURCES" | Dossier des ressources de la base                             |
-| "/SOURCES"   | Dossier des ressources du projet                              |
+| filesystem   | Désigne                                                         |
+| ------------ | --------------------------------------------------------------- |
+| "/DATA"      | Dossier data courant                                            |
+| "/LOGS"      | Dossier Logs                                                    |
+| "/PACKAGE"   | Dossier de la base de données (avec ou sans l'extension 4dbase) |
+| "/PROJECT"   | Dossier Project                                                 |
+| "/RESOURCES" | Dossier de ressources courant de la base de données             |
+| "/SOURCES"   | Dossier de ressources courant du projet                         |
 
 ## Syntaxe POSIX
 
@@ -48,16 +48,17 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
 
+
 ## Syntaxe spécifique à la plate-forme
 
 La syntaxe spécifique à la plate-forme dépend du système d'exploitation sur lequel la commande est exécutée. Notez que lorsque vous créez un objet fichier ou dossier avec cette syntaxe, vous devez le déclarer en utilisant la constante `fk platform path` comme paramètre.
 
 ### Windows
 
-Les modèles suivants sont pris en charge :
+Les règles suivantes sont pris en charge :
 
 - les séparateurs de dossiers sont "\"
-- the text contains ":" and "\" as the second and third character,
+- le texte contient " :" et "\" comme deuxième et troisième caractère,
 - le texte commence par "\".
 
 Exemples avec [`Folder`](../API/FolderClass.md#folder) :
@@ -67,23 +68,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Saisie de chemins Windows et séquences d'échappement
+#### Chemins d'accès Windows et séquences d'échappement
 
-L'[éditeur de code 4D](../code-editor/write-class-method.md) permet l'utilisation de séquences d'échappement. Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”. La séquence débute par le caractère barre oblique inversée (antislash) `\`, suivi d’un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
+Le langage 4D permet l'utilisation de [séquences d'échappement](quick-tour.md#sequences-dechappement). Les séquences d'échappement commencent par une barre oblique inverse `\`, suivie d'un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
 
-Le caractère `\` est également utilisé comme séparateur dans les noms de chemin sous Windows. En général, 4D interprète correctement les chemins Windows saisis dans l'éditeur de code en remplaçant les barres obliques simples `\` par des barres obliques doubles ``\\`. Par exemple,``C:\Folder`deviendra`C:\\Folder`.
-
-Toutefois, si vous écrivez `C:\MyDocuments\New`, 4D affichera `C:\\MyDocuments\New`. Dans ce cas, le deuxième `\` est interprété à tort comme `\N` (une séquence d'échappement existante). Vous devez donc saisir un double `\\` lorsque vous souhaitez insérer une barre oblique inversée devant un caractère utilisé dans l'une des séquences d'échappement reconnues par 4D.
-
-Les séquences d'échappement suivantes sont reconnues par 4D :
-
-| Séquence d’échappement       | Caractère remplacé  |
-| ---------------------------- | ------------------- |
-| `\n`                        | LF (Retour ligne)   |
-| `\t`                        | HT (Tabulation)     |
-| `\r`                        | CR (Retour chariot) |
-| ``\\`|``&#96; (Backslash) |                     |
-| `\"`                        | `"` (Guillemets)    |
+Étant donné que le caractère `\` est également utilisé comme séparateur dans les noms de chemins sous Windows, vous devez saisir un double `\\` dans ces noms de chemins.
 
 ### macOS
 
@@ -117,7 +106,7 @@ $okFolder:=Folder("/PACKAGE/myFolder").create() //dossier créé au niveau de la
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //fichier créé dans le dossier data
 ```
 
-### `.file()` and `.folder()` folder functions
+### Fonctions de dossier `.file()` et `.folder()`
 
 Les fonctions des objets dossier telles que [`folder.file()`](../API/FolderClass.md#file) et [`folder.folder()`](../API/FolderClass.md#folder-1) attendent des noms de chemin POSIX relatifs. Par exemple :
 

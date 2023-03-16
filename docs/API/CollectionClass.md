@@ -506,11 +506,16 @@ If passed, the *option* parameter can contain one of the following constants (or
 
 |option	|Description|
 |---|---|
-|`ck resolve pointers`|	If the original collection contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing the ck resolve pointers. In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.|
-|`ck shared`|	By default, copy() returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the ck shared constant to create a shared collection. In this case, you can use the groupWith parameter to associate the shared collection with another collection or object (see below).|
+|`ck resolve pointers`|	If the original collection contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing the `ck resolve pointers` constant. In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.|
+|`ck shared`|	By default, `copy()` returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the `ck shared` constant to create a shared collection. In this case, you can use the *groupWith* parameter to associate the shared collection with another collection or object (see below).|
 
 The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
 
+:::note
+
+Datastore, dataclass, and entity objects are not copiable. If `.copy()` is called with them, `Null` values are returned. 
+
+:::
 
 #### Example 1
 
@@ -1108,7 +1113,7 @@ You designate the callback to be executed to filter collection elements using ei
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for each element fulfilling the condition and thus, to push to the new collection. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional) and an object in first parameter (*$1*). The callback can perform any test, with or without the parameter(s) and must return **true** for each element fulfilling the condition and thus, to push to the new collection.  
 
 The callback receives the following parameters:
 
@@ -1118,9 +1123,14 @@ The callback receives the following parameters:
 
 It can set the following parameter(s):
 
-*	(mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
+*	*$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
 *	*$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
+:::note
+
+When using *methodName* as callback, and if the method does not return any value, `.filter()` will look at the property *$1.result* that you must set to **true** for each element fulfilling the condition.
+
+:::
 
 #### Example 1
 
@@ -1961,7 +1971,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 #### Description
 
-The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
+The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
 
 >This function does not modify the original collection.
 
@@ -2175,7 +2185,7 @@ If the collection contains elements of different types, they are first grouped b
 Ordering a collection of numbers in ascending and descending order:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2261,6 +2271,7 @@ Ordering with a property path:
 <!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
 
 
+
 <!-- REF #collection.orderByMethod().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
@@ -2333,7 +2344,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //using the language:
-$strings2:=$string1s.orderByMethod(Function(sortCollection);sk strict)
+$strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
@@ -2520,6 +2531,7 @@ For detailed information on how to build a query using *queryString*, *value* an
 
 
 #### Example 2
+
 
 
 ```4d

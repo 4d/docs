@@ -40,19 +40,19 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 | ------------------- | ---------------- | -------- | ----------------------- | -------- |
 | Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"           | "abcdef" |
 | Répétition          | Chaîne * Nombre  | String   | "ab" * 3                | "ababab" |
-| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"           | Vrai     |
+| Egalité             | Chaîne = Chaîne  | Boolean  | "abc" = "abc"           | True     |
 |                     |                  |          | "abc" = "abd"           | False    |
-| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"           | Vrai     |
+| Inégalité           | Chaîne # Chaîne  | Boolean  | "abc" # "abd"           | True     |
 |                     |                  |          | "abc" # "abc"           | False    |
-| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"           | Vrai     |
+| Supérieur à         | Chaîne > Chaîne  | Boolean  | "abd" > "abc"           | True     |
 |                     |                  |          | "abc" > "abc"           | False    |
-| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"           | Vrai     |
+| Inférieur à         | Chaîne < Chaîne  | Boolean  | "abc" < "abd"           | True     |
 |                     |                  |          | "abc" < "abc"           | False    |
-| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"          | Vrai     |
+| Supérieur ou égal à | Chaîne >= Chaîne | Boolean  | "abd" >= "abc"          | True     |
 |                     |                  |          | "abc" >= "abd"          | False    |
-| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"          | Vrai     |
+| Inférieur ou égal à | Chaîne <= Chaîne | Boolean  | "abc" <= "abd"          | True     |
 |                     |                  |          | "abd" <= "abc"          | False    |
-| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | Vrai     |
+| Contient mot-clé    | Chaîne % Chaîne  | Boolean  | "Alpha Bravo" % "Bravo" | True     |
 |                     |                  |          | "Alpha Bravo" % "ravo"  | False    |
 |                     | Image % Chaîne   | Boolean  | Expr_image % "Mer"      | True (*) |
 

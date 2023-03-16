@@ -182,7 +182,7 @@ You can display a number in hexadecimal using the following display formats:
 * `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
 * `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
 
-### XML notation
+### Notação XML
 
 The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
 

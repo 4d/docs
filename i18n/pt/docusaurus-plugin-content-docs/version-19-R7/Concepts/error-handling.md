@@ -9,19 +9,19 @@ Manejo de erros responde à duas necessidades principais:
 
 - descobrir e consertar erros potenciais e bugs no código durante a fase de desenvolvimento,
 - detectar e recuperar de erros inesperados nas aplicações implementadas; em particular pode substituir diálogos de erros de sistemas (disco cheio, arquivo faltando, etc) com sua própria interface.
-> > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Esse método evitaria a aparição de caixas de diálogo inesperadas no servidor e poderia registrar os erros em um arquivo especifico para sua análise posterior.
+> > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Esse método evitaria a aparição de caixas de diálogo inesperadas no servidor e poderia registrar os erros em um arquivo especifico para sua análise posterior.
 
 
-## Error or status
+## Erro ou status
 
-Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
+Muitas funções de classe 4D, tais como `entity.save()` ou `transporter.send()`, devolvem um objecto com o estatuto **. Este objecto é utilizado para armazenar erros "previsíveis" no contexto do tempo de execução, por exemplo, palavra-passe inválida, entidade bloqueada, etc., que não interrompem a execução do programa. Esta categoria de erros pode ser tratada por código normal.
 
-Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method.
+Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede, ou em geral qualquer interrupção inesperada. Esta categoria de erros gera exceções e precisa ser tratada através de um método de tratamento de erros.
 
 
 ## Instalação de um método de gestão de erros
 
-In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
+Em 4D, todos os erros podem ser apanhados e tratados num método de projecto específico, o método **de tratamento de erros** (ou **de captura de erros**).
 
 Este método projeto se instala para o processo atual e será chamado automaticamente para qualquer erro que se produza no processo, em modo interpretado ou compilado. Para *instalar* este método projeto, basta com chamar ao comando `ON ERR CALL` com o nome do método projeto como parâmetro. Por exemplo:
 
@@ -34,7 +34,7 @@ Para deixar de detectar erros e devolver o controle a 4D, chame a `ON ERR CALL` 
 ON ERR CALL("") //devolve o controle a 4D
 ```
 
-The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. It is particularly useful in the context of generic code because it enables you to temporarily change and then restore the error-catching method:
+O comando  `Método chamado por erro` permite saber o nome do método instalado por `ON ERR CALL` para o processo atual. É particularmente útil no contexto do código genérico porque permite alterar temporariamente e depois restaurar o método de captura de erros:
 
 ```4d
  $methCurrent:=Method called on error

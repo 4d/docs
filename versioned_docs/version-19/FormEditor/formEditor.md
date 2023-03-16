@@ -105,16 +105,18 @@ You can display and modify form and object properties using the Property List. I
 
 To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
 
-#### Navigation shortcuts  
+#### Shortcuts  
 
-You can navigate in the Property List using the following shortcuts:
+You can use the following shortcuts in the Property List:
 
 - **Arrow key**s ↑ ↓: Used to go from one cell to another.
 - **Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
 - **PgUp** and **PgDn**: Used to scroll the Property List contents.
 - **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
-- **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
-- **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **Ctrl+click** (Windows) or **Command+click** (macOS) on a property value displayed in **bold**: Resets the property to its default.
+
 
 ## Manipulating Form Objects
 
@@ -126,6 +128,7 @@ You can add objects to forms in several ways:
 - By dragging and dropping the object from the object bar
 - By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
 - By dragging and dropping an object from another form,
+
 
 - By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
 

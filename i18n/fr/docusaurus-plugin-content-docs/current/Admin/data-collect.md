@@ -1,6 +1,6 @@
 ---
 id: data-collect
-title: A propos de la collecte de données
+title: Data Collection
 ---
 
 Pour nous aider à améliorer sans cesse nos produits, nous collectons automatiquement des données concernant les statistiques d'utilisation des applications 4D Server. Les données collectées sont totalement anonymes et leur transfert n'a aucun impact sur l'expérience utilisateur.
@@ -43,7 +43,7 @@ Les données sont collectées lors des événements suivants :
 | dataFileSize            | 419430400                                               | Taille du fichier de données en octets                                                                            |
 | indexesSize             | 419430400                                               | Taille des index en octets                                                                                        |
 | cacheSize               | 419430400                                               | Taille du cache en octets                                                                                         |
-| usingLegacyNetworkLayer | false                                                   | True si l'ancienne couche réseau est utilisée pour le serveur d'application                                       |
+| usingLegacyNetworkLayer | False                                                   | True si l'ancienne couche réseau est utilisée pour le serveur d'application                                       |
 | isEncrypted             | vrai                                                    | Vrai si le fichier de données est chiffré                                                                         |
 | isCompiled              | vrai                                                    | True si l'application est compilée                                                                                |
 | isEngined               | vrai                                                    | True si l'application est fusionnée avec 4D Volume Desktop                                                        |
@@ -66,7 +66,7 @@ Les données sont collectées lors des événements suivants :
 
 
 
-## Where is it stored and sent?
+## Où sont-elles stockées et envoyées ?
 
 Les données collectées sont écrites dans un fichier texte (format JSON) lorsque 4D Server quitte. Le fichier est stocké dans le [dossier 4D actif](https://doc.4d.com/4dv19/help/command/en/page485.html), c'est-à-dire :
 
@@ -79,7 +79,7 @@ Une fois par semaine, le fichier est automatiquement envoyé par le réseau à 4
 
 > Si le fichier n'a pas pu être envoyé pour une raison quelconque, il est néanmoins supprimé et aucun message d'erreur n'est affiché côté 4D Server.
 
-The file is sent to the following server address: `https://dcollector.4d.com` (ip: 195.68.52.83).
+Le fichier est envoyé au serveur à l'adresse suivante : `https://dcollector.4d.com` (ip : 195.68.52.83).
 
 
 ## Désactiver la collecte de données dans les applications client/serveur générées

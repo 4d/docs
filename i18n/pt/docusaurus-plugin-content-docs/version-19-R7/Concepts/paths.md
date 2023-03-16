@@ -21,7 +21,7 @@ In addition, file and folder objects support `fileSystems`, which provide contex
 
 The following filesystem pathnames are supported:
 
-| filesystem   | Designates                                         |
+| filesystem   | Designa                                            |
 | ------------ | -------------------------------------------------- |
 | "/DATA"      | Current data folder                                |
 | "/LOGS"      | Pasta Logs                                         |
@@ -30,7 +30,7 @@ The following filesystem pathnames are supported:
 | "/RESOURCES" | Current database resources folder                  |
 | "/SOURCES"   | Current project resources folder                   |
 
-## POSIX syntax
+## Sintaxe POSIX
 
 The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
 
@@ -46,6 +46,7 @@ In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 ## Platform-specific syntax
@@ -67,23 +68,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Windows pathnames and escape sequences
 
-The 4D [code editor](../code-editor/write-class-method.md) allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
+The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
 
-The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the code editor by replacing single backslashes `\` with double backslashes ``\\`. For example,``C:\Folder`will become`C:\\Folder`.
-
-However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New`. In this case, the second `\` is incorrectly interpreted as `\N` (an existing escape sequence). You must therefore enter a double `\\` when you want to insert a backslash before a character that is used in one of the escape sequences recognized by 4D.
-
-The following escape sequences are recognized by 4D:
-
-| Escape sequence              | Character replaced   |
-| ---------------------------- | -------------------- |
-| `\n`                        | LF (New line)        |
-| `\t`                        | HT (Horizontal tab)  |
-| `\r`                        | CR (Carriage return) |
-| ``\\`|``&#96; (Backslash) |                      |
-| `\"`                        | `"` (Quotes)         |
+Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
 
 ### macOS
 

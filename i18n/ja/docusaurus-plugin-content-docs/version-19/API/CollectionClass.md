@@ -417,9 +417,16 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | option                | 説明                                                                                                                                                                            |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ck resolve pointers` | オリジナルのコレクションがポインター型の値を格納している場合、デフォルトではコピー先のオブジェクトもポインターを格納します。 しかしながら、`ck resolve pointers` 定数を渡すことで、コピー時にポインターを解決することができます。 この場合、コレクション内の各ポインターはコピー時に解決され、解決済みの値が使用されます。     |
-| `ck shared`           | 共有コレクションに対して適用された場合でも、`copy()` はデフォルトで通常の (非共有の) コレクションを返します。 共有コレクションを作成するには、`ck shared` 定数を渡します。 この場合には、`groupWith` パラメーターに引数を渡して他の共有オブジェクトまたは共有コレクションに関連づけることもできます (以下参照)。 |
+| `ck shared`           | 共有コレクションに対して適用された場合でも、`copy()` はデフォルトで通常の (非共有の) コレクションを返します。 共有コレクションを作成するには、`ck shared` 定数を渡します。 この場合には、*groupWith* パラメーターに引数を渡して他の共有オブジェクトまたは共有コレクションに関連づけることもできます (以下参照)。 |
 
 *groupWithCol* または *groupWithObj* 引数を渡すと、結果のコレクションを関連づけるコレクションまたはオブジェクトを指定できます。
+
+:::note
+
+データストア、データクラス、およびエンティティオブジェクトはコピーできません。 これらを対象に `.copy()` を呼び出すと、`Null` 値が返されます。
+
+:::
+
 
 #### 例題 1
 
@@ -1510,7 +1517,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.map()` 関数は、 <!-- REF #collection.map().Summary -->元のコレクションの各要素に対して *methodName* メソッドを呼び出した結果に基づいた、新しいコレクションを作成します<!-- END REF -->。 オプションで、*param* パラメーターに、*methodName* に渡す引数を指定することができます。 `.map()` は常に、元のコレクションと同じサイズのコレクションを返します。
+`.map()` 関数は、 <!-- REF #collection.map().Summary -->元のコレクションの各要素に対して *methodName* メソッドを呼び出した結果に基づいた、新しいコレクションを作成します<!-- END REF -->。 オプションで、*param* パラメーターに、*methodName* に渡す引数を指定することができます。 `.map()` は常に、元のコレクションと同じサイズのコレクションを返します (*$1.stop* が使用された場合を除く (後述参照))。
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんな処理でも実行でき、引数はあってもなくても構いません。
@@ -1863,7 +1870,7 @@ $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
 // 結果 : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 // アルファベット順:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
 // 結果 : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
@@ -1972,6 +1979,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ```
 
 <!-- END REF -->
+
 
 <!-- REF collection.query().Desc -->
 ## .query()
@@ -2459,6 +2467,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 *NumberGreaterThan0* メソッドのコードは以下のとおりです:
 
 ```4d
+
  $1.result:=$1.value>0
 ```
 

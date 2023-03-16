@@ -1,6 +1,6 @@
 ---
 id: overview
-title: 概要
+title: 拡張機能
 ---
 
 4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。 [**コンポーネント**](../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。 コンポーネントは 4Dコードで構成されていますが、プラグインはどんな言語でも作成できます。

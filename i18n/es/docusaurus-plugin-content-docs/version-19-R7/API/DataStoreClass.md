@@ -395,9 +395,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parámetros | Tipo   |    | Descripción                                                               |
-| ---------- | ------ | -- | ------------------------------------------------------------------------- |
-| Result     | Object | <- | Colección de objetos contextos de optimización|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                                               |
+| ---------- | ---------- | -- | ------------------------------------------------------------------------- |
+| Result     | Collection | <- | Colección de objetos contextos de optimización|<!-- END REF -->
 
 |
 
@@ -1023,7 +1023,9 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 

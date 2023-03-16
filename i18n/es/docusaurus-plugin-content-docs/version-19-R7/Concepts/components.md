@@ -24,7 +24,7 @@ Cuando un componente instalado contiene métodos, clases y funciones, éstos apa
 
 ![alt-text](../assets/en/Concepts/components-explorer.png)
 
-:::nota
+:::note
 
 Si el componente está compilado, su [espacio de nombres](../Extensions/develop-components.md#declaring-the-component-namespace) se escribe entre paréntesis después de su nombre. Utilice este espacio de nombres para acceder a las funciones del componente.
 

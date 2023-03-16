@@ -707,11 +707,10 @@ $values:=ds. Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Parâmetros                 | Tipo                |    | Descrição                                                                                                               |
-| -------------------------- | ------------------- |:--:| ----------------------------------------------------------------------------------------------------------------------- |
-| mode                       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                        |
-| Resultados                 | 4D. EntitySelection | <- | Entidade de seleção vazia se for executada com êxito, se nenhuma entity selection contendo as entidades não elimináveis |
-| <!-- END REF --> |                     |    |                                                                                                                         |
+| Parâmetros | Tipo                |    | Descrição                                                                                                                                          |
+| ---------- | ------------------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                                                   |
+| Resultados | 4D. EntitySelection | <- | Entidade de seleção vazia se for executada com êxito, se nenhuma entity selection contendo as entidades não elimináveis|<!-- END REF --> |
 
 #### Descrição
 
@@ -1342,7 +1341,7 @@ A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclui d
 
 Como padrão, se omitir o parâmetro *keepOrder* , a seleção de entidade resultado não é ordenada. Se quiser manter a ordem da seleção de entidade original (por exemplo se quiser reutilizar a seleção de entidade em uma interface de usuário) passe a constante `dk keep ordered` em *keepOrder*. Neste caso, o resultado é uma seleção de entidade ordenada e a ordem da seleção de entidade inicial é mantida
 
-:::nota
+:::note
 
 Se passar `dk keep ordered` em *keepOrder* e removida *entitySelection* contém entidades duplicadas na seleção de entidade original, todas as ocorrências da duplicada são removidas.
 
@@ -1974,6 +1973,8 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 | v17    | Adicionado |
 
 
+
+
 </details>
 
 
@@ -2070,6 +2071,12 @@ Se for especificado um filtro para um atributo do tipo `relatedEntities` :
 
 
 No parâmetro *opções* , pode passar os seletores `dk com chave primária` e/ou `dk with stamp`  para adicionar as chaves primárias da entidade e/ou carimbos nos objectos extraídos.
+
+:::caution Alerta
+
+Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Tenha em mente que é recomendado usar a chave primária como um atributo nas suas relações, especialmente quando usa funções `.toCollection()` e `.fromCollection()`.
+
+:::
 
 O parâmetro *start* permite indicar o índice inicial das entidades a extrair. Pode passar qualquer valor entre 0 e o comprimento-1 da selecção da entidade.
 

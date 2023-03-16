@@ -33,29 +33,29 @@ monBooléen:=(monBouton=1)
 
 | Opération | Syntaxe           | Retourne | Expression                   | Value |
 | --------- | ----------------- | -------- | ---------------------------- | ----- |
-| AND       | Booléen & Booléen | Boolean  | ("A" = "A") & (15 # 3)       | Vrai  |
+| AND       | Booléen & Booléen | Boolean  | ("A" = "A") & (15 # 3)       | True  |
 |           |                   |          | ("A" = "B") & (15 # 3)       | False |
 |           |                   |          | ("A" = "B") & (15 = 3)       | False |
-| OU        | Booléen & Booléen | Boolean  | ("A" = "A") &#124; (15 # 3)  | Vrai  |
-|           |                   |          | ("A" = "B") &#124;  (15 # 3) | Vrai  |
+| OU        | Booléen & Booléen | Boolean  | ("A" = "A") &#124; (15 # 3)  | True  |
+|           |                   |          | ("A" = "B") &#124;  (15 # 3) | True  |
 |           |                   |          | ("A" = "B") &#124;  (15 = 3) | False |
 
 Voici la "table de vérité" pour l'opérateur logique "AND" :
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
 | ----- | ----- | ------------- |
-| Vrai  | Vrai  | Vrai          |
-| Vrai  | False | False         |
-| False | Vrai  | False         |
+| True  | True  | True          |
+| True  | False | False         |
+| False | True  | False         |
 | False | False | False         |
 
 Voici la "table de vérité" pour l'opérateur logique "OR" :
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
 | ----- | ----- | ------------------ |
-| Vrai  | Vrai  | Vrai               |
-| Vrai  | False | Vrai               |
-| False | Vrai  | Vrai               |
+| True  | True  | True               |
+| True  | False | True               |
+| False | True  | True               |
 | False | False | False              |
 
 **Astuce :** Si vous devez calculer une réunion exclusive (le "Ou" exclusif) entre Expr1 et Expr2, écrivez :

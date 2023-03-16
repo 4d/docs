@@ -1,13 +1,13 @@
 ---
 id: basics
-title: Básicos
+title: Depuração
 ---
 
-Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
+Os erros são comuns. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
 
 The 4D development environment provides several debugging tools for all types of errors.
 
-## Error types
+## Tipos de erro
 
 ### Typing errors
 
@@ -44,17 +44,17 @@ Design or logic errors also include such situations as:
 
 Sometimes the piece of code that displays the error may be different than the code that is actually the origin of the problem.
 
-### Runtime Errors
+### Erros de execução
 
-In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
+In Application mode, you might obtain errors that you don't see in interpreted mode. Aqui está um exemplo:
 
 ![runtime-error](../assets/en/Debugging/runtimeError.png)
 
 To quickly find the origin of the problem, reopen the interpreted version of the structure file, open the method and go to the corresponding line.
 
-## Syntax Error Window
+## Janela de erro sintáctico
 
-The Syntax error window automatically appears when the execution of a method is interrupted. This can happen when:
+The Syntax error window automatically appears when the execution of a method is interrupted. Isto pode acontecer quando:
 
 - an error prevents further code execution
 - the method produces a false assertion (see the `ASSERT` command)
@@ -65,7 +65,7 @@ The upper text area displays a message describing the error. The lower text area
 
 The syntax error window proposes several options:
 
-- **Edit**: Stops all method execution. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Use this option when you immediately recognize the mistake and can fix it without further investigation.
+- **Editar**: Pára toda a execução do método. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Use this option when you immediately recognize the mistake and can fix it without further investigation.
 
 - **Trace**: Enters Trace/Debugger mode. The [Debugger](debugger.md) window is displayed. If the current line has only executed partially, you may have to click the **Trace** button several times.
 

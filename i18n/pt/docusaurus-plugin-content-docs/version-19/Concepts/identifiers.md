@@ -86,7 +86,7 @@ Exemplos:
  //But this command expects a method name ON EVENT CALL("HANDLE EVENTS")
 ```
 
-## Tables and Fields
+## Tabelas e Campos
 
 You designate a table by placing its name between brackets: \[...]. You designate a field by first specifying the table to which it belongs (the field name immediately follows the table name).
 

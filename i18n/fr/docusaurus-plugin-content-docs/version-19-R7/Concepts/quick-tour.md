@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Ce code affichera une boîte de dialogue d'alerte standard contenant le message "Hello, World!" et un bouton OK. Pour exécuter le code, il suffit de cliquer sur le bouton d'exécution dans l'éditeur de code :
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Vous pouvez également associer ce code à un bouton de formulaire et exécuter le formulaire. Dans ce cas, en cliquant sur le bouton, vous afficherez la boîte de dialogue d'alerte. Dans tous les cas, vous venez d'exécuter votre première ligne de code 4D !
 
@@ -60,13 +60,13 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Commandes
 
-Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Toutes les commandes 4D, telles que `CREATE RECORD` ou `ALERT`, sont décrites dans le _Manuel Langage de 4D_, et sont regroupées par thème. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Voici un exemple :
+Les commandes 4D sont des méthodes intégrées qui permettent d'effectuer une action. Les commandes sont souvent utilisées avec des paramètres qui sont passés entre parenthèses () et séparés par des points-virgules (;). Voici un exemple :
 
 ```4d
 COPY DOCUMENT("dossier1\\nom1";"dossier2\\" ; "nouveau")
 ```
 
-Certaines commandes sont reliées à des collections ou à des objets, auquel cas ce sont des méthodes nommées qui sont utilisées à l'aide de la notation en point. Par exemple :
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Par exemple :
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -106,7 +106,7 @@ vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lectu
 
 4D propose un grand nombre de méthodes (ou de commandes) intégrées, mais vous permet également de créer vos propres **méthodes de projet**. Les méthodes de projet sont des méthodes définies par l'utilisateur qui contiennent des commandes, des opérateurs et d'autres parties du langage. Les méthodes projet sont des méthodes génériques, mais il existe d'autres types de méthodes : les méthodes objet, les méthodes formulaire, les méthodes table (Triggers) et les méthodes base.
 
-Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe.
+Une méthode est composée de plusieurs lignes d’instructions. Une instruction exécute une action, et peut être simple ou complexe.
 
 Par exemple, la ligne de code suivante est une instruction qui affichera une boîte de dialogue de confirmation :
 
@@ -120,22 +120,25 @@ L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Faire quelque chose avec le caractère s'il s'agit d'une tabulation
+    //Do something with the character if it is a TAB
+
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. Une méthode peut retourner une seule valeur dans le paramètre $0. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
+Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Appelle la méthode Do_Something
+$myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
 
-  //Voici le code de la méthode Do_Something
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -181,17 +184,16 @@ A noter que si la valeur de la propriété de l'objet est un objet qui encapsule
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() //affiche "Hello world!"
 ```
 
 Pour accéder à un élément de collection, vous devez passer le numéro de l'élément situé entre crochets :
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //accède au 4ème élément de la collection
+myColl[3]  //access to 4th element of the collection
 ```
 
 ## Classes
@@ -205,16 +207,15 @@ Pour instancier un objet de la classe dans une méthode, appelez la classe utili
 $o:=cs.myClass.new() 
 ```
 
-Dans la méthode de classe `myClass`, utilisez l'instruction `Function <methodName>` pour définir la méthode membre de classe *methodName*. Une méthode membre de classe peut recevoir et retourner des paramètres comme n'importe quelle méthode, et utiliser `This` comme instance d'objet.
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
-// dans le fichier myClass.4dm
-Fonction bonjour
-  C_TEXT (0 $)
-  $0: = "Hello" + This.who
+//in the myClass.4dm file
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-Pour exécuter une méthode membre de classe, utilisez simplement l'opérateur `()` sur la méthode membre de l'instance d'objet.
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $o:=cs.myClass.new()
@@ -226,26 +227,26 @@ $message:=$o.myClass.hello()
 Vous pouvez utiliser le mot-clé `Class constructor` pour déclarer les propriétés de l'objet.
 
 ```4d  
-//dans le fichier Rectangle.4dm 
+//in the Rectangle.4dm file
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
 Une classe peut étendre une autre classe en utilisant `Class extends<ClassName>`. Les superclasses peuvent être appelées à l'aide de la commande `Super`. Par exemple :
 
 ```4d  
-//dans le fichier Square.4dm
+//in the Square.4dm file
 Class extends rectangle
 
 Class constructor
-C_LONGINT($1)
+var $length : Integer
 
-  // il appelle le constructor de la classe mère avec les dimensions
-  // fournies pour la largeur et la hauteur du Rectangle
-Super($1;$1)
+  // It calls the parent class's constructor with lengths   
+  // provided for the Rectangle's width and height
+Super($length;$length)
 
 This.name:="Square"
 ```
@@ -301,19 +302,19 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 | MonBouton               | Number                | C'est le nom d'un bouton. Il retourne la valeur courante du bouton : 1 s'il y a eu un clic sur le bouton, 0 sinon.                                                                   |
 | !1997-01-25!            | Date                  | C'est une constante date pour la date 25/01/97 (25 janvier 1997).                                                                                                                    |
 | Current date+ 30        | Date                  | C'est une expression de type Date qui utilise la commande `Current date` pour récupérer la date courante. Elle ajoute 30 jours à la date d'aujourd'hui et retourne la nouvelle date. |
-| ?8:05:30?               | Heure                 | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
-| ?2:03:04? + ?1:02:03?   | Heure                 | Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.                                                                                                           |
-| Vrai                    | Boolean               | Cette commande retourne la valeur booléenne TRUE.                                                                                                                                    |
+| ?8:05:30?               | Time                  | C'est une constante heure qui représente 8 heures, 5 minutes, et 30 secondes.                                                                                                        |
+| ?2:03:04? + ?1:02:03?   | Time                  | Cette expression ajoute une heure à une autre et retourne l'heure 3:05:07.                                                                                                           |
+| True                    | Boolean               | Cette commande retourne la valeur booléenne TRUE.                                                                                                                                    |
 | 10 # 20                 | Boolean               | C'est une comparaison logique entre deux nombres. Le symbole (#) signifie “est différent de”. Comme 10 “est différent de” 20, l'expression retourne TRUE.                            |
 | “ABC” = “XYZ”           | Boolean               | C'est une comparaison logique entre deux chaînes. Elles sont différentes, donc l'expression retourne FALSE.                                                                          |
-| MonImage + 50           | Images                | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
-| ->[Personnes]Nom        | Pointeurs             | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
-| Table(1)                | Pointeurs             | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
+| MonImage + 50           | Picture               | Cette expression considère l'image placée dans MonImage, la déplace de 50 pixels vers la droite, et retourne l'image résultante.                                                     |
+| ->[Personnes]Nom        | Pointer               | Cette expression retourne un pointeur vers le champ [Amis]Nom.                                                                                                                       |
+| Table(1)                | Pointer               | C'est une commande qui retourne un pointeur vers la première table.                                                                                                                  |
 | JSON Parse (MaChaine)   | Object                | C'est une commande qui retourne MaChaine sous forme d'objet (si format adéquat)                                                                                                      |
 | JSON Parse (MonTabJSON) | Collection            | C'est une commande qui retourne MonTabJSON sous forme de collection (si format adéquat)                                                                                              |
 | Form.pageNumber         | Propriété objet       | Une propriété objet est une expression qui peut être de tout type                                                                                                                    |
 | Col[5]                  | Élément de collection | Un élément de collection est une expression qui peut être de tout type                                                                                                               |
-| $entitySel[0]           | Entité (entity)       | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas affectable**                                                            |
+| $entitySel[0]           | Entity                | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas affectable**                                                            |
 
 ### Expressions assignables et non-assignables
 
@@ -342,6 +343,20 @@ MonPointeur->->MaVar
 ALERT(MonPointeur->)
 ```
 
+## Code sur plusieurs lignes
+
+Vous pouvez écrire une seule instruction sur plusieurs lignes en terminant chaque ligne de l'instruction par une barre oblique inverse `\`. Le langage 4D prendra en compte toutes les lignes à la fois. Par exemple, les deux déclarations suivantes sont équivalentes :
+
+```4d
+$str:=String("hello world !")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Commentaires
 
 Les commentaires sont des lignes d’instructions inactives. Ces lignes ne sont pas interprétées par le programme (4D n’applique aucun style spécifique à l’intérieur de la ligne de commentaire) et ne sont pas exécutées lorsque la méthode est appelée.
@@ -353,20 +368,20 @@ Voici deux manières de créer des commentaires :
 
 Les deux styles de commentaires peuvent être utilisés simultanément.
 
-#### Ligne de commentaire (//)
+#### Commentaires sur une seule ligne (`//commentaire`)
 
 Insérez les caractères `//` au début de la ligne ou après une instruction pour ajouter une ligne de commentaire. Voici un exemple :
 
 ```4d
-//Ceci est un commentaire 
-For($vCounter;1;100) //Début de la boucle
-  //commentaire
-  //commentaire
-  //commentaire
-  End for
+//This is a comment
+For($vCounter;1;100) //Starting loop
+  //comment
+  //comment
+  //comment
+End for
 ```
 
-#### Commentaires en ligne ou multi-lignes (/* */)
+#### Commentaires en ligne ou multilignes (`/*comment*/`)
 
 Entourez le contenu avec des caractères `/*` ... `*/` pour créer des commentaires en ligne ou des blocs de commentaires multilignes. Les blocs de commentaire en ligne et multi-lignes commencent par `/*` et se terminent par `*/`.
 
@@ -391,3 +406,26 @@ commentaires
 ...
 End for
 ```
+
+## Séquences d’échappement
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+In 4D, the following escape sequences can be used:
+
+| Séquence d’échappement        | Caractère remplacé  |
+| ----------------------------- | ------------------- |
+| `\n`                         | LF (Retour ligne)   |
+| `\t`                         | HT (Tabulation)     |
+| `\r`                         | CR (Retour chariot) |
+| ``\\` |``&#96; (Backslash) |                     |
+| `\"`                         | " (Guillemets)      |
+
+> It is possible to use either upper or lower case in escape sequences.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+

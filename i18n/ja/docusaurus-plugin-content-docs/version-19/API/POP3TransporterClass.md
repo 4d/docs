@@ -138,8 +138,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
     $status:=$transporter.checkConnection()
     If($status.success)
-       ALERT("POP3接続チェックに成功しました。
-    ")
+       ALERT("POP3接続チェックに成功しました。")
     Else
        ALERT("Error: "+$status.statusText)
     End if

@@ -1,6 +1,6 @@
 ---
 id: pluginAreaOverview
-title: Plug-in Area
+title: Área Plug-in
 ---
 
 ## Visão Geral

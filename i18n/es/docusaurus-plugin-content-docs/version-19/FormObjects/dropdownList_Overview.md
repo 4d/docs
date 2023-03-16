@@ -11,16 +11,16 @@ En macOS, las listas desplegables también se denominan a veces "menú emergente
 
 ## Tipos de listas desplegables
 
-You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
+Puede crear diferentes tipos de listas desplegables con distintas funcionalidades. Para definir un tipo, seleccione los valores apropiados **Tipo de expresión** y **Tipo de datos** en la lista Propiedades o utilice su equivalente JSON.
 
-| Tipo                                        | Funcionalidades                                                | Tipo de expresión | Tipos de datos                       | Definición JSON                                                                                                                                             |
-| ------------------------------------------- | -------------------------------------------------------------- | ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object                                      | Built upon a collection                                        | Object            | Numeric, Text, Date o Time           | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` o `dateFormat: <format>` o `timeFormat: <format>` |
-| Array                                       | Basado en un array                                             | Array             | Numeric, Text, Date o Time           | `dataSourceTypeHint: arrayNumber` o `arrayText` o `arrayDate` o `arrayTime`                                                                                 |
-| Lista de selección guardada como valor      | Crear en una lista de selección (estándar)                     | Lista             | Valor del elemento seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                |
-| Lista de selección guardada como referencia | Built upon a choice list. La posición del elemento es guardada | Lista             | Referencia del elemento seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                         |
-| Lista de selección jerárquica               | Puede mostrar contenido jerárquico                             | Lista             | List reference                       | `dataSourceTypeHint: integer`                                                                                                                               |
-| Acción estándar                             | Creado automáticamente por la acción                           | *any*             | *toda referencia de lista excepto*   | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                        |
+| Tipo                                        | Funcionalidades                                                            | Tipo de expresión | Tipos de datos                       | Definición JSON                                                                                                                                             |
+| ------------------------------------------- | -------------------------------------------------------------------------- | ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object                                      | Creado sobre una colección                                                 | Object            | Numeric, Text, Date o Time           | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` o `dateFormat: <format>` o `timeFormat: <format>` |
+| Array                                       | Basado en un array                                                         | Array             | Numeric, Text, Date o Time           | `dataSourceTypeHint: arrayNumber` o `arrayText` o `arrayDate` o `arrayTime`                                                                                 |
+| Lista de selección guardada como valor      | Crear en una lista de selección (estándar)                                 | Lista             | Valor del elemento seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                |
+| Lista de selección guardada como referencia | Creadoo sobre una lista de selección. La posición del elemento es guardada | Lista             | Referencia del elemento seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                         |
+| Lista de selección jerárquica               | Puede mostrar contenido jerárquico                                         | Lista             | Referencia de la lista               | `dataSourceTypeHint: integer`                                                                                                                               |
+| Acción estándar                             | Creado automáticamente por la acción                                       | *any*             | *toda referencia de lista excepto*   | toda definición + `action: <action>` (+ `focusable: false` para acciones que se aplican a otras áreas)                                                |
 
 ## Gestión de listas desplegables
 
@@ -33,24 +33,24 @@ Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_col
 | Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                                      |
 | -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>cadenas</li><li>numbers</li><li>dates</li><li>horas</li>Si está vacío o no está definido, la lista desplegable está vacía |
-| `index`        | number               | Index of the currently selected item (value between 0 and `collection.length-1`). Si se establece -1, `currentValue` se muestra como una cadena de marcador de posición                                                                                                          |
-| `currentValue` | igual que Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                                               |
+| `index`        | number               | Índice del elemento seleccionado actualmente (valor comprendido entre 0 y `collection.length-1`). Si se establece -1, `currentValue` se muestra como una cadena de marcador de posición                                                                                          |
+| `currentValue` | igual que Collection | Elemento seleccionado actualmente (se utiliza como valor de marcador de posición si se define por código)                                                                                                                                                                        |
 
 Si el objeto contiene otras propiedades, se ignoran.
 
 Para inicializar el objeto asociado a la lista desplegable, puede:
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. Los valores por defecto se cargan en un objeto automáticamente.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un objeto automáticamente.
 
-* Ejecutar código que crea el objeto y sus propiedades. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
+* Ejecutar código que crea el objeto y sus propiedades. Por ejemplo, si "myList" es la variable [](properties_Object.md#variable-or-expression) asociada a la lista desplegable, puede escribir en el evento de formulario [On Load](Events/onLoad.md):
 
 ```4d
-// Form.myDrop is the datasource of the form object
+// Form.myDrop es la fuente de datos del objeto formulario
 
-Form.myDrop:=New object
-Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
-Form.myDrop.index:=-1  //currentValue is a placeholder
-Form.myDrop.currentValue:="Select a fruit" 
+Form.myDrop:=Nuevo objeto
+Form.myDrop.values:=Nueva colección("manzanas"; "nueces"; "peras"; "naranjas"; "zanahorias")
+Form.myDrop.index:=-1 //currentValue es un marcador de posición
+Form.myDrop.currentValue:="Selecciona una fruta" 
 ```
 
 La lista desplegable se muestra con la cadena del marcador de posición:
@@ -73,7 +73,7 @@ Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se ha
 
 Para inicializar el array asociado a la lista desplegable, puede:
 
-* Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando `\&#060;Lista Estática&#062;` en el tema [Fuente de Datos](properties_DataSource.md) de la Lista de Propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
 * Antes de mostrar el objeto, ejecute el código que asigna valores a los elementos del array. Por ejemplo:
 
@@ -121,46 +121,46 @@ Debe seleccionar cada evento que pruebe en sus sentencia Case. Los arrays siempr
 
 ### Utilizar una lista de selección
 
-If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). Esto facilita la gestión de los campos/variables listados.
+Si desea utilizar una lista desplegable para gestionar los valores de un área de entrada (campo listado o variable), 4D le permite hacer referencia al campo o variable directamente como [fuente de datos](properties_Object.md#variable-or-expression) de la lista desplegable. Esto facilita la gestión de los campos/variables listados.
 
-For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
+Por ejemplo, en el caso de un campo "Color" que sólo puede contener los valores "Blanco", "Azul", "Verde" o "Rojo", es posible crear una lista que contenga estos valores y asociarla a una lista desplegable que haga referencia al campo "Color" 4D. 4D se encarga entonces de gestionar automáticamente la entrada y la visualización del valor actual en el formulario.
 > Si utiliza una lista jerárquica, sólo se muestra el primer nivel y se puede seleccionar. If you use a hierarchical list, only the first level is displayed and can be selected.
 
-To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
-> It is not possible to use this feature with an object or an array drop-down list. If you enter a field name in the "Variable or Expression" area, then you must use a choice list.
+Para asociar una lista desplegable a un campo o variable, introduzca directamente el nombre del campo o variable como campo [Variable o Expresión](properties_Object.md#variable-or-expression) de la lista desplegable en la Lista de propiedades.
+> No es posible utilizar esta funcionalidad con una lista desplegable de objetos o arrays. Si introduce un nombre de campo en el área "Variable o expresión", deberá utilizar una lista de selección.
 
-When the form is executed, 4D automatically manages the drop-down list during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the drop-down list when the form is displayed:
+Cuando se ejecuta el formulario, 4D gestiona automáticamente la lista desplegable durante la introducción o la visualización: cuando un usuario elige un valor, éste se guarda en el campo; este valor de campo se muestra en la lista desplegable cuando se visualiza el formulario:
 
 ![](../assets/en/FormObjects/popupDropdown_choiceList.png)
 
 #### Valor del elemento seleccionado o Referencia del elemento seleccionado
 
-When you have associated a drop-down list with a choice list and with a field or a variable, you can set the [**Data Type**](properties_DataSource.md#data-type) property to **Selected item value** or **Selected item reference**. Esta opción permite optimizar el tamaño de los datos guardados.
+Cuando haya asociado una lista desplegable con una lista de opciones y con un campo o una variable, puede definir la propiedad [**Tipo de datos**](properties_DataSource.md#data-type) en **valor del elemento seleccionado** o **referencia del elemento seleccionado**. Esta opción permite optimizar el tamaño de los datos guardados.
 
 ### Uso de una lista de selección jerárquica
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Este es un ejemplo de lista desplegable jerárquica:
+Una lista desplegable jerárquica tiene una sublista asociada a cada elemento de la lista. Este es un ejemplo de lista desplegable jerárquica:
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
 > En los formularios, las listas desplegables jerárquicas están limitadas a dos niveles.
 
-You can assign the hierarchical choice list to the drop-down list object using the [Choice List](properties_DataSource.md#choice-list) field of the Property List.
+Puede asignar la lista de selección jerárquica al objeto de lista desplegable utilizando el campo [Lista de selección](properties_DataSource.md#choice-list) de la Lista de propiedades.
 
-You manage hierarchical drop-down lists using the **Hierarchical Lists** commands of the 4D Language. All commands that support the `(*; "name")` syntax can be used with hierarchical  drop-down lists, e.g. [`List item parent`](https://doc.4d.com/4dv19/help/command/en/page633.html).
+Las listas jerárquicas desplegables se gestionan utilizando los comandos **Listas jerárquicas** del Lenguaje 4D. Todos los comandos que soportan la sintaxis `(*; "name")` pueden utilizarse con listas desplegables jerárquicas, por ejemplo [`Elemento de lista padre`](https://doc.4d.com/4dv19/help/command/en/page633.html).
 
 ### Utilizar una acción estándar
 
-You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
+Puede crear automáticamente una lista desplegable utilizando una acción estándar [](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
 
-* Uso de la acción estándar `gotoPage`. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
+* Uso de la acción estándar `gotoPage`. En este caso, 4D mostrará automáticamente la [página del formulario](FormEditor/forms.md#form-pages) que corresponda al número del elemento seleccionado. Por ejemplo, si el usuario selecciona el tercer elemento, 4D mostrará la tercera página del formulario actual (si existe). En tiempo de ejecución, la lista desplegable muestra por defecto los números de página (1, 2...).
 
-* Use of a standard action that displays a sublist of items, for example `backgroundColor`. Esta funcionalidad requiere que:
+* Uso de una acción estándar que muestra una sublista de elementos, por ejemplo `backgroundColor`. Esta funcionalidad requiere que:
   * a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
-  * the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list. At runtime the drop-down list will display an automatic list of values, e.g. background colors. You can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+  * la propiedad [focusable](properties_Entry.md#focusable) no está definida en la lista desplegable. En tiempo de ejecución, la lista desplegable mostrará una lista automática de valores, por ejemplo, colores de fondo. Puede reemplazar esta lista automática asignando además una lista de selección en la que cada elemento tenga asignada una acción estándar personalizada.
 
 > Esta funcionalidad no puede utilizarse con una lista desplegable jerárquica.
 
 ## Propiedades soportadas
 
-[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (expression type)](properties_DataSource.md#data-type-expression-type) - [Data Type (list)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save value](properties_Object.md#save-value) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
+[Formato alfa](properties_Display.md#alpha-format) - [Negrita](properties_Text.md#bold) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Lista de opciones](properties_DataSource.md#choice-list) - [Clase](properties_Object.md#css-class) - [Tipo de datos (tipo de expresión)](properties_DataSource.md#data-type-expression-type) - [Tipo de datos (lista)](properties_DataSource.md#data-type-list) - [Formato de fecha](properties_Display.md#date-format) - [Tipo de expresión](properties_Object.md#expression-type) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño de fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálica](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [No renderizado](properties_Display.md#not-rendered) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Acción estándar](properties_Action.md#standard-action) - [Guardar valor](properties_Object.md#save-value) - [Hora Formato](properties_Display.md#time-format) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)  

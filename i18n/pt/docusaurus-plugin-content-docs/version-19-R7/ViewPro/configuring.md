@@ -195,8 +195,8 @@ To create your own date and time patterns, in your current localization, you can
 |      | dd                                  | Day number with leading zero                   | 01                 |
 |      | ddd                                 | Day of week, short                             | Tue                |
 |      | dddd                                | Day of week, long                              | Tuesday            |
-|      | yy                                  | Year, short                                    | 19                 |
-|      | yyyy                                | Year, long                                     | 2019               |
+|      | yy                                  | Ano, breve                                     | 19                 |
+|      | yyyy                                | Ano, longo                                     | 2019               |
 | Hora |                                     |                                                | (2:03:05 PM)       |
 |      | h                                   | Hour without leading zero. 0-23                | 2                  |
 |      | hh                                  | Hour with leading zero. 00-23                  | 02                 |
@@ -220,10 +220,10 @@ In addition to the special characters and codes described in the previous sectio
 | ( )         | Left and right parenthesis                                         | (-###.##)            |
 | :           | Dois pontos                                                        | hh:mm:ss             |
 | ^           | Caret                                                              | #\^#                |
-| '           | Apostrophe                                                         | '######              |
+| '           | Apóstrofe                                                          | '######              |
 | { }         | Curly brackets                                                     | {###,###,###}        |
 | `< >` | Less-than and greater than signs                                   | ## >##              |
-| =           | Equal sign                                                         | #+#=##               |
+| =           | Sinal igual                                                        | #+#=##               |
 | /           | Forward slash. When used with numbers, displays them as fractions. | mm/dd/yyyy           |
 | !           | Exclamation point                                                  | $###.00!             |
 | &           | Ampersand                                                          | "Hello" & "Welcome"  |
@@ -285,16 +285,16 @@ The following special characters allow the automatic addition or formatting of i
 | Caracter | Descrição                        | Exemplo                                                                | Resultados                                           |
 | -------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
 | &        | Escape character                 | (see examples below)                                                   |                                                      |
-| P        | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
-| N        | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
+| P        | Página actual                    | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
+| N        | Contagem de páginas              | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
 | D        | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
 | T        | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
 | G        | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S        | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
-| U        | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
+| U        | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Sublinhado)                           |
 | B        | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
 | I        | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
-| "        | Font prefix                      | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
+| "        | Prefixo do tipo de letra         | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K        | Text Color prefix                | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (in red).                               |
 | F        | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
 | A        | Spreadsheet name                 | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
@@ -337,7 +337,7 @@ Page attributes are used to specify general document print settings.
 | useMax          | boolean       | Only columns and rows with data are printed.<p>Valor padrão = true</p>                                                                                                                                 |
 | zoomFactor      | real          | The amount to enlarge or reduce the printed page.<p>Valor padrão = 1</p>                                                                                                                            |
 
-### Paper Size
+### Tamanho de papel
 
 Paper size attributes are used to specify the dimensions or model of paper to use for printing. There are two ways to define paper size:
 
@@ -368,7 +368,7 @@ Scale attributes are used to specify printing optimization and adjustments.
 | fitPagesTall   | inteiro longo | The number of vertical pages (portrait orientation) to check when optimizing printing. Valor padrão = -1    |
 | fitPagesWide   | inteiro longo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Valor padrão = -1 |
 
-### Show / Hide
+### Mostrar / Esconder
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
@@ -379,19 +379,19 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 | showGridLine     | boolean       | Prints the gridlines. Default value = "false"                                                                                                                                      |
 | showRowHeader    | inteiro longo | Row headers print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`   |
 
-### Watermark
+### Marca de água
 
 Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
 
-| Propriedade |                | Tipo                 | Descrição                                                                                                                                              |
-| ----------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| watermark   |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
-|             | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
-|             | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                            |
-|             | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
-|             | \[ ].width    | inteiro longo        | The width of the watermark text / image.                                                                                                               |
-|             | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
-|             | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                           |
+| Propriedade   |                | Tipo                 | Descrição                                                                                                                                              |
+| ------------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| marca de água |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
+|               | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
+|               | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                            |
+|               | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
+|               | \[ ].width    | inteiro longo        | The width of the watermark text / image.                                                                                                               |
+|               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
+|               | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                           |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
 
@@ -454,7 +454,7 @@ Exemplo:
 | textDecoration  |              | inteiro longo | Specifies the decoration added to text.                                                                                                                                                                                                                                                                                                                              | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                |
 | textIndent      |              | inteiro longo | Defines the unit of text indention. 1 = 8 píxeles                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                   |
 | textOrientation |              | inteiro longo | Defines the rotation angle of the text in a cell. Number between -90 and 90                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                   |
-| watermark       |              | text          | Defines the watermark (cell label) content                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                   |
+| marca de água   |              | text          | Defines the watermark (cell label) content                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                   |
 | wordWrap        |              | boolean       | Specifies if text should be wrapped.                                                                                                                                                                                                                                                                                                                                 | True = wrapped text, False = unwrapped text                                                                                                                                                                       |
 
 #### Layout
@@ -479,7 +479,7 @@ Exemplo:
 
 The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet contents. It is automatically handled by 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](method-list.md#vp-import-from-object) or [VP Export to object](method-list.md#vp-export-to-object) methods.
 
-It contains the following properties:
+Contém as seguintes propriedades:
 
 | Propriedade  | Tipo de valor | Descrição                                    |
 | ------------ | ------------- | -------------------------------------------- |
@@ -494,7 +494,7 @@ It contains the following properties:
 The 4D View Pro form object variable is the [object](Concepts/dt_object.md) variable associated to the 4D View Pro form area. It manages information used by the 4D View Pro object.
 > The 4D View Pro form object variable is for information purposes only (i.e., debugging). Under no circumstances should it be modified.
 
-It contains the following properties:
+Contém as seguintes propriedades:
 
 | Propriedade            | Tipo de valor | Descrição                                                                                                                                                                                                                                                                                                                    |
 | ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

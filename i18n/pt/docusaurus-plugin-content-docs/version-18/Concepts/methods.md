@@ -13,7 +13,7 @@ A method is basically a piece of code that executes one or several actions. Na l
 
     Os métodos integrados são detalhados non manual *Linguagem 4D* ou nos manuais dedicados aos plug-ins ou componentes.
 
-- Os **métodos projeto**, onde pode escrever seu próprio código para executar toda ação personalizada. Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). A statement performs an action, and may be simple or complex.
+- Os **métodos projeto**, onde pode escrever seu próprio código para executar toda ação personalizada. Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). A statement performs an action, and may be simple or complex.
 
 **Nota:** 4D também oferece métodos específicos que se executam automaticamente em função dos eventos do banco de dados ou dos eventos formulário. Ver [Métodos especializados](#specialized-methods).
 
@@ -137,7 +137,7 @@ Note that, even if it does not have parameters, an object method to be executed 
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Menu Methods
+### Métodos do menu
 A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. Este processo é um dos principais aspectos da personalização de um banco de dados. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
@@ -237,9 +237,9 @@ Some typical uses of recursion in 4D are:
 
 Além dos **métodos projeto**, 4D oferece vários tipos de métodos específicos, que são chamados automaticamente em função dos eventos:
 
-| Tipo                             | Calling context                                                                          | Accepts parameters | Descrição                                                                                                                                                            |
-| -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Método formulário**            | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
-| **Database method**              | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
+| Tipo                                               | Calling context                                                                          | Accepts parameters | Descrição                                                                                                                                                            |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Object (widget) method**                         | Automatic, when an event involves the object to which the method is attached             | Não                | Property of a form object (also called widget)                                                                                                                       |
+| **Método formulário**                              | Automatic, when an event involves the form to which the method is attached               | Não                | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (também conhecido por *método tabela*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | Não                | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
+| **Database method**                                | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |

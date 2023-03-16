@@ -30,7 +30,7 @@
     "message": "Handling code"
   },
   "Debugging": {
-    "message": "Debugging"
+    "message": "Depuração"
   },
   "Settings": {
     "message": "Settings"
@@ -51,7 +51,7 @@
     "message": "Interface de linha de comando"
   },
   "TLS Protocol": {
-    "message": "TLS Protocol"
+    "message": "Protocolo TLS"
   },
   "Licenses & Data Collection": {
     "message": "Licenses & Data Collection"
@@ -66,7 +66,7 @@
     "message": "Backup and Restore"
   },
   "homepage.sections.textensions.title": {
-    "message": "Extensions"
+    "message": "Extensões"
   },
   "Overview": {
     "message": "Visão Geral"
@@ -99,7 +99,7 @@
     "message": "Developing Plugins"
   },
   "homepage.sections.web-applications.title": {
-    "message": "Web Applications"
+    "message": "Aplicações Web"
   },
   "Web Server": {
     "message": "Servidor Web"
@@ -163,7 +163,7 @@
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Try again",
+    "message": "Tente novamente",
     "description": "The label of the button to try again when the page crashed"
   },
   "theme.NotFound.title": {
@@ -255,11 +255,11 @@
     "description": "The ARIA label for the navbar color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "dark mode",
+    "message": "modo escuro",
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "light mode",
+    "message": "modo Claro",
     "description": "The name for the light color mode"
   },
   "theme.docs.breadcrumbs.home": {
@@ -306,7 +306,7 @@
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "Edit this page",
+    "message": "Comment on this page",
     "description": "The link label to edit the current page"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
@@ -334,7 +334,7 @@
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versions",
+    "message": "Versões",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.common.skipToMainContent": {
@@ -382,7 +382,7 @@
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
-    "message": "Read More",
+    "message": "Leia mais",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
@@ -473,7 +473,7 @@
     "description": "The label for remove recent search button"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {
-    "message": "Favorite",
+    "message": "Favorito",
     "description": "The title for favorite searches"
   },
   "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
@@ -489,7 +489,7 @@
     "description": "The help text for error screen of search modal"
   },
   "theme.SearchModal.footer.selectText": {
-    "message": "to select",
+    "message": "para seleccionar",
     "description": "The explanatory text of the action for the enter key"
   },
   "theme.SearchModal.footer.selectKeyAriaLabel": {
@@ -509,7 +509,7 @@
     "description": "The ARIA label for the Arrow down key button that makes the navigation"
   },
   "theme.SearchModal.footer.closeText": {
-    "message": "to close",
+    "message": "para fechar",
     "description": "The explanatory text of the action for Escape key"
   },
   "theme.SearchModal.footer.closeKeyAriaLabel": {
@@ -552,5 +552,29 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "Release Notes": {
+    "message": "Release Notes"
+  },
+  "homepage.sections.core-development.langage-ref-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Language-Reference.100-6101683.en.html"
+  },
+  "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Write-Pro-Reference.100-6130471.en.html"
+  },
+  "homepage.sections.textensions.4D-Progress-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Progress.100-6205973.en.html"
+  },
+  "homepage.sections.textensions.4D-SVG-Component-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-SVG-Component.100-6206845.en.html"
+  },
+  "homepage.sections.textensions.4D-Widgets-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Widgets.100-6207497.en.html"
+  },
+  "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
+    "message": "https://developer.4d.com/4d-for-ios/docs/en/overview.html"
+  },
+  "homepage.sections.mobile-applications.go-mobile-url": {
+    "message": "https://developer.4d.com/go-mobile/"
   }
 }

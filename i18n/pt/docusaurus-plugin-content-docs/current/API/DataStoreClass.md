@@ -16,10 +16,12 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->    |
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary -->                                     |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary -->                      |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary -->                                  |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary -->          |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary -->                                                 |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary -->          |
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary -->                               |
+| [<!-- INCLUDE #DataStoreClass.locked().Syntax -->](#locked)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.locked().Summary -->                                                    |
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary -->                            |
 | [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary -->                |
@@ -27,6 +29,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary -->                         |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary -->                      |
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary -->                            |
+| [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.unlock().Summary -->                                                    |
 | [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.validateTransaction().Summary -->             |
 
 ## ds
@@ -383,6 +386,86 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
 <!-- END REF -->
 
+<!-- REF DataClassClass.flushAndLock().Desc -->
+## .flushAndLock()
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v20    | Adicionado |
+
+</details>
+
+
+<!-- REF #DataStoreClass.flushAndLock().Syntax -->**.flushAndLock()**<!-- END REF -->
+
+
+
+<!-- REF #DataStoreClass.flushAndLock().Params -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
+
+
+#### Descrição
+
+A função `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->descarrega o cache do datastore local e impede outros processos de realizar operações de escrita na base de dados<!-- END REF -->. O datastore é definido para um estado consistente e congelado. É necessário chamar esta função antes de executar um instantâneo da aplicação, por exemplo.
+
+:::info
+
+Esta função só pode ser chamada:
+
+- sobre a datastore local ([`ds`](#ds)).
+- no ambiente cliente/servidor, na máquina do servidor.
+
+:::
+
+Uma vez esta função executada, operações de escrita como `.save()` ou outro `.flushAndLock()` são congeladas chamadas em todos os outros processos até que a datastore seja desbloqueada.
+
+Quando múltiplas chamadas para `.flushAndLock()` foram feitas no mesmo processo, o mesmo número de [`.unlock()`](#unlock) chamadas devem ser executadas para realmente desbloquear o datastore.
+
+O datastore é desbloqueado quando:
+
+- a função [`.unlock()`](#unlock) é chamada no mesmo processo, ou
+- o processo que chamou a função `.flushAndLock()` é morto.
+
+
+Se a datastore já estiver bloqueada de outro processo, a `.flushAndLock()` chamada é congelada e será executada quando a datastore for desbloqueada.
+
+Um erro é accionado se a função `.flushAndLock()` não puder ser executada (por exemplo, é executada num 4D remoto), .
+
+
+:::caution
+
+Outras características e serviços 4D incluindo [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), e [MSC](../MSC/overview.md) podem também bloquear a datastore. Antes de ligar para `.flushAndLock()`, certifique-se de que nenhuma outra acção de bloqueio está a ser utilizada, a fim de evitar qualquer interacção inesperada.
+
+:::
+
+#### Exemplo
+
+Se quiser criar uma cópia da pasta de dados juntamente com o seu arquivo de diário actual:
+
+```4d
+$destination:=Folder(fk documents folder).folder("Archive") 
+$destination.create()
+
+ds.flushAndLock() //Bloqueia operações write de outros processos
+
+$dataFolder:=Folder(fk data folder) 
+$dataFolder.copyTo($destination) //Copia a pasta de dados
+
+$oldJournalPath:=New log file //Fecha o diário e cria um novo
+$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal.moveTo($destination) //Salva o diário antigo com dados
+
+ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
+```
+
+#### Veja também
+
+[.locked()](#locked)<br/>[.unlock()](#unlock)
+
 <!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
@@ -400,9 +483,9 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                  |
-| ---------- | ------ | -- | -------------------------------------------------------------------------- |
-| Resultados | Objeto | <- | Colecção de objectos de contexto de optimização|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                                                  |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------- |
+| Resultados | Collection | <- | Colecção de objectos de contexto de optimização|<!-- END REF --> |
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
@@ -484,7 +567,7 @@ A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devolve um
 
 | Propriedade | Tipo    | Descrição                                                                                                                                                               |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type        | string  | <li>"4D": armazém de dados principal, disponível através de ds </li><li>"4D Server": datastore remoto, aberto com Open datastore</li>                                                                                                                      |
+| type        | string  | <li>"4D": armazém de dados principal, disponível através de ds </li><li>"4D Server": datastore remoto, aberto com Open datastore</li>                                                                                                                     |
 | networked   | boolean | <li>True: a datastore se alcança através de uma conexão de rede.</li><li>False: não se alcança a datastore através de uma conexão de rede (base de dados local)</li>                                                                                                                    |
 | localID     | text    | ID do armazém de dados na máquina. Corresponde à string localId dada com o comando `Open datastore`. String vazia ("") para o datastore principal.                      |
 | connection  | object  | Objeto descrevendo a conexão remota da datastore (não retornado para datastore principal) Propriedades disponiveis: Propriedades disponiveis:<table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>hostname</td><td>text</td><td>Endereço IP ou nome da datastore remota + ":" + número porta</td></tr><tr><td>tls</td><td>boolean</td><td>True se conexão segura for usada com a datastore remota</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tempo de inatividade da sessão (em minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado no datastore remoto</td></tr></table> |
@@ -647,6 +730,45 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 [`.setAdminProtection()`](#setadminprotection)
 
 <!-- END REF -->
+
+<!-- REF DataClassClass.locked().Desc -->
+## .locked()
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v20    | Adicionado |
+
+</details>
+
+
+<!-- REF #DataStoreClass.locked().Syntax -->**.locked()** : Boolean<!-- END REF -->
+
+
+
+<!-- REF #DataStoreClass.locked().Params -->
+| Parâmetros | Tipo     |    | Descrição                                         |
+| ---------- | -------- | -- | ------------------------------------------------- |
+| Resultados | Booleano | <- | Verdadeiro se trancado|<!-- END REF --> |
+
+
+#### Descrição
+
+A função `.locked()` <!-- REF #DataStoreClass.locked().Summary -->retorna Verdadeiro se o datastore local estiver actualmente bloqueado<!-- END REF -->.
+
+Pode bloquear o datastore usando a função [.flushAndLock()](#flushandlock) antes de executar um instantâneo do ficheiro de dados, por exemplo.
+
+:::caution
+
+A função também retornará `True` se a datastore foi bloqueada por outra funcionalidade de administração como backup ou vss (ver [.flushAndLock()](#flushandlock)).
+
+:::
+
+
+#### Veja também
+
+[.flushAndLock()](#flushandlock)<br/>[.unlock()](#unlock)
 
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
@@ -1019,8 +1141,9 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Parâmetros | Tipo |  | Descrição                                             |
-| ---------- | ---- |  | ----------------------------------------------------- |
+| ---------- | ---- |::| ----------------------------------------------------- |
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
+
 
 #### Descrição
 
@@ -1097,6 +1220,43 @@ Esta função deve ser chamada em um 4D remoto, do contrário não faz nada. Foi
 Ver exemplos [`.startRequestLog()`](#startrequestlog).
 
 <!-- END REF -->
+
+<!-- REF DataClassClass.unlock().Desc -->
+## .unlock()
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v20    | Adicionado |
+
+</details>
+
+
+<!-- REF #DataStoreClass.unlock().Syntax -->**.unlock()**<!-- END REF -->
+
+
+
+<!-- REF #DataStoreClass.unlock().Params -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
+
+
+#### Descrição
+
+A função `.unlock()` <!-- REF #DataStoreClass.unlock().Summary -->remove o bloqueio actual das operações de escrita no datastore, se este tiver sido definido no mesmo processo<!-- END REF -->. As operações de escrita podem ser bloqueadas no datastore local usando a função [`.flushAndLock()`](#flushandlock) .
+
+Se a fechadura actual era a única fechadura no datastore, as operações de escrita são imediatamente activadas. Se a função `.flushAndLock()` foi chamada várias vezes no processo, o mesmo número de `.unlock()` deve ser chamado para realmente desbloquear o datastore.
+
+A função `.unlock()` deve ser chamada a partir do processo que chamou o correspondente `.flushAndLock()`, caso contrário a função nada faz e a fechadura não é removida.
+
+Se a função `.unlock()` for chamada numa datastore desbloqueada, não faz nada.
+
+
+#### Veja também
+
+[.flushAndLock()](#flushandlock)<br/>[.locked()](#locked)
 
 <!-- REF DataStoreClass.validateTransaction().Desc -->
 ## .validateTransaction()

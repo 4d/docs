@@ -617,7 +617,7 @@ Este princípio é implementado para as matrizes internas que podem ser utilizad
 
 * cores
 * cores de fundo
-* estilos
+* styles
 * filas ocultas
 * seleções
 
@@ -805,7 +805,7 @@ OB SET($ob;"value";$entry)
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
 > Null values are supported and result in an empty cell.
 
-#### min and max
+#### mín. e máx
 
 When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
 

@@ -395,9 +395,9 @@ You want to know the number of encrypted tables in the current data file:
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parameter | Typ    |    | Beschreibung                                                          |
-| --------- | ------ | -- | --------------------------------------------------------------------- |
-| Ergebnis  | Objekt | <- | Collection of optimization context objects|<!-- END REF -->
+| Parameter | Typ        |    | Beschreibung                                                          |
+| --------- | ---------- | -- | --------------------------------------------------------------------- |
+| Ergebnis  | Collection | <- | Collection of optimization context objects|<!-- END REF -->
 
 |
 
@@ -1024,7 +1024,9 @@ You want to log ORDA client requests in memory:
 | --------- | --- |  | ---------------------------------------------------------- |
 |           |     |  | Does not require any parameters|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 

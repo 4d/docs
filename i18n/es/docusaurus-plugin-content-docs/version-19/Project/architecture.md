@@ -3,7 +3,7 @@ id: architecture
 title: Arquitectura de un proyecto
 ---
 
-A 4D project is made of several folders and files, stored within a single project root folder (package folder). Por ejemplo:
+Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una única carpeta raíz del proyecto (carpeta paquete). Por ejemplo:
 
 - MyProject (*carpeta raíz del proyecto*)
   - Componentes
@@ -208,9 +208,9 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 
 Esta carpeta contiene los componentes que deben estar disponibles en el proyecto aplicación. Debe almacenarse en el mismo nivel que la carpeta Project.
 
-> An application project can be used itself as a component:
+> Un proyecto de aplicación puede utilizarse como componente:
 > 
-> - for development: put an alias of the .4dproject file in the Components folder of the host project.
+> - para el desarrollo: ponga un alias del archivo .4dproject en la carpeta Components del proyecto local.
 > - para el despliegue: [cree el componente](Desktop/building.md#build-component) y coloque el archivo .4dz resultante en una carpeta .4dbase en la carpeta Components de la aplicación local.
 
 ## Carpeta Plugins

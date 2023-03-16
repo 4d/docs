@@ -12,7 +12,7 @@ ALERT("Hello, World!")
 
 Dieser Code zeigt ein standardmäßiges Dialogfenster der Plattform mit der Meldung "Hello, World!" mit der Schaltfläche OK. To execute the code, you just need to click on the execution button in the Code Editor:
 
-![alt-text](../assets/en/Concepts/helloworld.png)
+![hello-world](../assets/en/Concepts/helloworld.png)
 
 Sie können diesen Code auch einer Schaltfläche in einem Formular zuordnen und das Formular ausführen. Klicken Sie auf diese Schaltfläche, erscheint das Dialogfenster mit der Meldung. In jedem Fall haben Sie gerade Ihre erste Zeile mit 4D Code ausgeführt!
 
@@ -60,13 +60,13 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Befehle
 
-4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. `CREATE RECORD` oder `ALERT` werden im Handbuch _4D Programmiersprache_ beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
+4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Einige Befehle sind an Collections oder Objekte gebunden. In diesem Fall werden sie Methoden genannt und mit der Objektnotation verwendet. Beispiel:
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Beispiel:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -106,7 +106,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 4D bietet eine große Anzahl integrierter Methoden (oder Befehle), lässt Sie aber auch eigene **Projektmethoden** erstellen. Projektmethoden sind vom Entwickler definierte Methoden, die Befehle, Operatoren und andere Teile der Programmiersprache enthalten. Projektmethoden sind generische Methoden. Es gibt auch andere Methodenarten: Objektmethoden, Formularmethoden, Tabellenmethoden (Trigger) und Datenbankmethoden.
 
-Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. Eine Anweisung führt eine Aktion aus, die einfach oder komplex sein kann.
+Eine Methode besteht aus Anweisungen; jede Anweisung ist eine Zeile in der Methode. A statement performs an action, and may be simple or complex.
 
 Zum Beispiel ist die folgende Zeile eine Anweisung, die ein Dialogfenster zum Bestätigen anzeigt:
 
@@ -121,21 +121,24 @@ Folgendes Beispiel durchläuft alle Zeichen des Textes vtSomeText:
 ```4d
 For($vlChar;1;Length(vtSomeText))
     //Do something with the character if it is a TAB
+
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-Eine Projektmethode kann eine andere Projektmethode mit oder ohne Parameter (Argumente) aufrufen. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. Eine Methode kann einen einzelnen Wert im Parameter $0 zurückgeben. Wenn Sie eine Methode aufrufen, geben Sie einfach ihren Namen ein:
+Eine Projektmethode kann eine andere Projektmethode mit oder ohne Parameter (Argumente) aufrufen. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Wenn Sie eine Methode aufrufen, geben Sie einfach ihren Namen ein:
 
 ```4d
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -181,15 +184,14 @@ Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mi
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 ```
 
 Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
@@ -205,16 +207,15 @@ Um eine Instanz auf ein Objekt der Klasse in einer Methode zu setzen, rufen Sie 
 $o:=cs.myClass.new() 
 ```
 
-In der Klassenmethode `myClass` definieren Sie mit der Anweisung `Function <methodName>` die Member Method *methodName* der Klasse. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
 //in the myClass.4dm file
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-Um eine Member Method der Klasse auszuführen, setzen Sie den Operator `()` für die Member Method der Instanz des Objekts.
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $o:=cs.myClass.new()
@@ -228,9 +229,9 @@ Optional können Sie das Schlüsselwort `Class constructor` zum Deklarieren von 
 ```4d  
 //in the Rectangle.4dm file
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
@@ -241,11 +242,11 @@ Eine Klasse kann über `Class extends <ClassName>` eine andere Klasse erweitern.
 Class extends rectangle
 
 Class constructor
-C_LONGINT($1)
+var $length : Integer
 
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height
-Super($1;$1)
+Super($length;$length)
 
 This.name:="Square"
 ```
@@ -342,6 +343,20 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
+## Code on several lines
+
+You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+
+```4d
+$str:=String("hello world!")
+```
+
+```4d
+$str:=String("hello"+\
+" world"+\
++"!")
+```
+
 ## Kommentare
 
 Kommentare sind inaktive Zeilen von Code. Diese Zeilen werden nicht von der 4D Programmiersprache interpretiert und nicht ausgeführt, wenn der Code aufgerufen wird.
@@ -353,7 +368,7 @@ Es gibt zwei Varianten zum Erstellen von Kommentaren:
 
 Beide Varianten lassen sich gleichzeitig verwenden.
 
-#### Einzeilige Kommentare (//)
+#### Single line comments (`//comment`)
 
 Fügen Sie `//` am Beginn einer Zeile oder nach einer Anweisung hinzu. Beispiel:
 
@@ -363,10 +378,10 @@ For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
-#### Eingebundene oder mehrzeilige Kommentare (/* */)
+#### Inline or multiline comments (`/*comment*/`)
 
 Umklammern Sie Inhalt mit den Zeichen `/*` ... `*/`, um eingebundene Kommentare oder mehrzeilige Kommentarblöcke zu erstellen. Beide Arten beginnen mit ` /*` und enden mit `*/`.
 
@@ -393,3 +408,26 @@ comments
 End for
 End for
 ```
+
+## Escape Sequenzen
+
+The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
+
+The sequence consists of a backslash `\`, followed by a character. For instance, `\t` is an escape sequence for the **Tab** character. Escape sequences facilitate the entry of special characters: the previous example (`\t`) replaces the entry "Character(Tab)".
+
+In 4D, the following escape sequences can be used:
+
+| Escape Sequenz                | Ersetzte Zeichen                      |
+| ----------------------------- | ------------------------------------- |
+| `\n`                         | LF (Line feed - Zeilenvorschub)       |
+| `\t`                         | HT (Tabulator)                        |
+| `\r`                         | CR (Carriage return -Zeilenschaltung) |
+| ``\\` |``&#96; (Backslash) |                                       |
+| `\"`                         | " (Anführungszeichen)                 |
+
+> It is possible to use either upper or lower case in escape sequences.
+
+In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+
+`ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+

@@ -419,12 +419,19 @@ A função `.copy()` <!-- REF #collection.copy().Summary --> devolve uma cópia 
 
 Se passado, o parâmetro *option* pode conter uma das constantes abaixo (ou ambas):
 
-| option                | Descrição                                                                                                                                                                                                                                                                                                                   |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | Se a collection original contém valores tipo ponteiro, por padrão a cópia também contém os ponteiros. Entretanto pode resolver ponteiros quando copiar por passando os ck resolve pointers. Nesse caso, cada ponteiro presenta na coleção é avaliada quando copiar e seu valor de dereferencia é usado.                     |
-| `ck shared`           | Como padrão, copy() retorna uma colleciton regular (não partilhado), mesmo se o comando for aplicado para a collection shared. Passe a constante ck shared para criar uma collection shared. Nesse caso, pode usar o parâmetro groupWith para associar a collection partilhada com outra collection ou objeto (ver abaixo). |
+| option                | Descrição                                                                                                                                                                                                                                                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck resolve pointers` | Se a collection original contém valores tipo ponteiro, por padrão a cópia também contém os ponteiros. Entretanto pode resolver ponteiros quando copiar por passando os `ck resolve pointers`. Nesse caso, cada ponteiro presenta na coleção é avaliada quando copiar e seu valor de dereferencia é usado.                         |
+| `ck shared`           | Como padrão, `copy()` retorna uma colleciton regular (não partilhado), mesmo se o comando for aplicado para a collection shared. Passe a constante `ck shared` para criar uma collection shared. Nesse caso, pode usar o parâmetro *groupWith* para associar a collection partilhada com outra collection ou objeto (ver abaixo). |
 
 Os parâmetros *groupWithCol* ou *groupWithObj* permite determinar uma collection ou um objeto com o qual a coleção resultante deveria ser associada.
+
+:::note
+
+Os objectos de datastore, dataclass, e entity não são copiáveis. Se `.copy()` for chamado com eles, `Null` valores são devolvidos.
+
+:::
+
 
 #### Exemplo 1
 
@@ -1526,7 +1533,7 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 
 #### Descrição
 
-A função `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente pode passar parâmetros a*methodName* usando os parâmetros *param*. `.map()` sempre retorna uma coleção com o mesmo tamanho que a coleção original.
+A função `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente pode passar parâmetros a*methodName* usando os parâmetros *param*. `.map()` devolve sempre uma colecção com o mesmo tamanho que a colecção original, excepto se *$1.stop* foi utilizado (ver abaixo).
 > Essa função não modifica a coleção original.
 
 Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
@@ -1878,13 +1885,13 @@ Se quiser ordenar a coleção por código de caractere ou alfabeticamente:
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//usar o código de caractere:
+//using the character code:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//usar a linguagem:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// resultado: ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+//using the language:
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 Aqui está o método ***sortCollection***:
@@ -2493,6 +2500,7 @@ Como padrão, `.some()` testa toda a colecção. Opcionalmente pode passar o ín
 With the following *NumberGreaterThan0* method:
 
 ```4d
+
  $1.result:=$1.value>0
 ```
 

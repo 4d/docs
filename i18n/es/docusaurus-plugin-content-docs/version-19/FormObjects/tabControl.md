@@ -34,8 +34,8 @@ En macOS, además de la posición estándar (arriba), los controles de las pesta
   "top": 160,  
   "width": 100, 
   "height": 20, 
-  "labelsPlacement": "bottom" //define the direction
- }
+  "labelsPlacement": "bottom" //define la dirección
+}
 ```
 
 ## Añadir etiquetas a un control de pestañas
@@ -48,7 +48,7 @@ Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
 ### Utilizar un objeto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. El objeto debe contener las siguientes propiedades:
+Puede asignar un [objeto](Concepts/dt_object.md) que encapsule una [colección](Concepts/dt_collection) como [fuente de datos](properties_Object.md#variable-or-expression) del control de pestañas. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo       | Descripción                                                                                                                                                  |
 | -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

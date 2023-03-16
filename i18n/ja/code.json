@@ -283,22 +283,22 @@
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "次へ",
+    "message": "開発中",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.versionBadge.label": {
     "message": "バージョン: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "これはリリース前の{siteTitle} {versionLabel}のドキュメントです。",
+    "message": "これはリリース前の {siteTitle} {versionLabel} バージョンのドキュメントです。",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "これは{siteTitle} {versionLabel}のドキュメントで現在はアクティブにメンテナンスされていません。",
+    "message": "これは {siteTitle} {versionLabel} のドキュメントで現在はアクティブにメンテナンスされていません。",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "最新のドキュメントは {latestVersionLink} ({versionLabel}) を見てください。",
+    "message": "最新のドキュメントは {latestVersionLink} ({versionLabel}) を参照ください。",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
@@ -306,7 +306,7 @@
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "このページを編集",
+    "message": "このページへコメントする",
     "description": "The link label to edit the current page"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
@@ -552,5 +552,29 @@
   "theme.tags.tagsPageTitle": {
     "message": "タグ",
     "description": "The title of the tag list page"
+  },
+  "Release Notes": {
+    "message": "リリースノート"
+  },
+  "homepage.sections.core-development.langage-ref-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Language-Reference.100-6101683.en.html"
+  },
+  "homepage.sections.textensions.4D-Write-Pro-Reference-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Write-Pro-Reference.100-6130471.en.html"
+  },
+  "homepage.sections.textensions.4D-Progress-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Progress.100-6205973.en.html"
+  },
+  "homepage.sections.textensions.4D-SVG-Component-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-SVG-Component.100-6206845.en.html"
+  },
+  "homepage.sections.textensions.4D-Widgets-url": {
+    "message": "https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Widgets.100-6207497.en.html"
+  },
+  "homepage.sections.mobile-applications.4D-for-iOS-Archive-url": {
+    "message": "https://developer.4d.com/4d-for-ios/docs/ja/overview.html"
+  },
+  "homepage.sections.mobile-applications.go-mobile-url": {
+    "message": "https://developer.4d.com/go-mobile/ja/"
   }
 }

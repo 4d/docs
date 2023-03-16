@@ -133,9 +133,11 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Versión | Modificaciones                         |
+| ------- | -------------------------------------- |
+| v20     | Soporta palabras claves personalizadas |
+| v18 R6  | Añadidos                               |
+
 
 </details>
 
@@ -165,16 +167,19 @@ En el parámetro `msgIDs`, puede pasar:
  | --------- | ----- | ----------------------------------------------------- |
  | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
-El parámetro `keywords` le permite pasar un objeto con valores de palabras clave para las banderas específicas que se añadirán a `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
+El parámetro `keywords` permite definir las banderas que se añadirán a `msgIDs`. Puede utilizar las siguientes banderas estándar, así como banderas personalizadas (la compatibilidad con banderas personalizadas depende de la implementación del servidor):
 
-| Parámetros | Tipo    | Descripción                                        |
-| ---------- | ------- | -------------------------------------------------- |
-| $draft     | Boolean | True para añadir el marcador "draft" al mensaje    |
-| $seen      | Boolean | True para añadir el marcador "seen" al mensaje     |
-| $flagged   | Boolean | True para añadir el marcador "flagged" al mensaje  |
-| $answered  | Boolean | True para añadir el marcador "answered" al mensaje |
-| $deleted   | Boolean | True para añadir el marcador "deleted" al mensaje  |
-> * Los valores falsos se ignoran.
+| Propiedad             | Tipo    | Descripción                                          |
+| --------------------- | ------- | ---------------------------------------------------- |
+| $draft                | Boolean | True para añadir el marcador "draft" al mensaje      |
+| $seen                 | Boolean | True para añadir el marcador "seen" al mensaje       |
+| $flagged              | Boolean | True para añadir el marcador "flagged" al mensaje    |
+| $answered             | Boolean | True para añadir el marcador "answered" al mensaje   |
+| $deleted              | Boolean | True para añadir el marcador "deleted" al mensaje    |
+| `<custom flag>` | Boolean | True para añadir la bandera personalizada al mensaje |
+
+Los nombres de las banderas personalizadas deben respetar esta regla: la palabra clave debe ser una cadena que no distinga entre mayúsculas y minúsculas, excluyendo los caracteres de control y el espacio, y no puede incluir ninguno de estos caracteres: `( ) { ] % * " \`
+> * Para que una palabra clave se tenga en cuenta tiene que ser true.
 > * La interpretación de los indicadores de palabras claves puede variar según el cliente de correo.
 
 **Objeto devuelto**
@@ -762,9 +767,9 @@ $status:=$transporter.expunge()
 
 | Versión | Modificaciones      |
 | ------- | ------------------- |
+| v20     | se devuelve el *id* |
 | v18 R5  | *name<* es opcional |
-
-|v18 R4|Añadido|
+| v18 R4  | Añadidos            |
 
 </details>
 
@@ -796,6 +801,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | name       | text   | Nombre del buzón                                                               |
 | mailCount  | number | Número de mensajes en el buzón                                                 |
 | mailRecent | number | Número de mensajes con el marcador "reciente" (que indica los mensajes nuevos) |
+| id         | text   | Id. único del buzón                                                            |
 
 #### Ejemplo
 
@@ -1348,9 +1354,11 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Versión | Modificaciones                         |
+| ------- | -------------------------------------- |
+| v20     | Soporta palabras claves personalizadas |
+| v18 R6  | Añadidos                               |
+
 
 </details>
 
@@ -1380,17 +1388,19 @@ En el parámetro `msgIDs`, puede pasar:
  | --------- | ----- | ----------------------------------------------------- |
  | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
-El parámetro `keywords` le permite pasar un objeto con valores de palabras clave para las banderas específicas a eliminar de los `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
+El parámetro `keywords` permite definir las banderas a eliminar de `msgIDs`. Puede utilizar las siguientes banderas estándar, así como banderas personalizadas:
 
-| Parámetros | Tipo    | Descripción                                           |
-| ---------- | ------- | ----------------------------------------------------- |
-| $draft     | Boolean | True para eliminar el marcador "draft" del mensaje    |
-| $seen      | Boolean | True para eliminar el marcador "seen" del mensaje     |
-| $flagged   | Boolean | True para eliminar el marcador "flagged" del mensaje  |
-| $answered  | Boolean | True para eliminar el marcador "answered" del mensaje |
-| $deleted   | Boolean | True para eliminar el marcador "deleted" del mensaje  |
+| Parámetros            | Tipo    | Descripción                                             |
+| --------------------- | ------- | ------------------------------------------------------- |
+| $draft                | Boolean | True para eliminar el marcador "draft" del mensaje      |
+| $seen                 | Boolean | True para eliminar el marcador "seen" del mensaje       |
+| $flagged              | Boolean | True para eliminar el marcador "flagged" del mensaje    |
+| $answered             | Boolean | True para eliminar el marcador "answered" del mensaje   |
+| $deleted              | Boolean | True para eliminar el marcador "deleted" del mensaje    |
+| `<custom flag>` | Boolean | True para eliminar la bandera personalizada del mensaje |
 
-Note que los valores falsos se ignoran.
+Consulte [.addFlags()](#addflags) para obtener más información sobre las banderas personalizados.
+> * Para que una palabra clave se tenga en cuenta tiene que ser true.
 
 **Objeto devuelto**
 
@@ -1654,9 +1664,11 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Versión | Modificaciones                               |
+| ------- | -------------------------------------------- |
+| v20     | *id*, *flags*, *permanentFlags* se devuelven |
+| v18 R4  | Añadidos                                     |
+
 
 </details>
 
@@ -1693,11 +1705,20 @@ El parámetro opcional *state* define el tipo de acceso al buzón. Los valores p
 
 El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
-| Propiedad  | Tipo   | Descripción                                |
-| ---------- | ------ | ------------------------------------------ |
-| name       | Text   | Nombre del buzón                           |
-| mailCount  | number | Número de mensajes en el buzón             |
-| mailRecent | number | Número de mensajes con la bandera "recent" |
+| Propiedad      | Tipo   | Descripción                                                                                                                                           |
+| -------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name           | Text   | Nombre del buzón                                                                                                                                      |
+| mailCount      | number | Número de mensajes en el buzón                                                                                                                        |
+| mailRecent     | number | Número de mensajes con la bandera "recent"                                                                                                            |
+| id             | text   | Id. único del buzón                                                                                                                                   |
+| flags          | text   | Lista de banderas utilizadas actualmente para el buzón, separadas por espacios                                                                        |
+| permanentFlags | text   | Lista de banderas que el cliente puede cambiar permanentemente (excepto el indicador \Recent, que gestiona el servidor IMAP), separados por espacios |
+
+|
+
+Si la cadena `permanentFlags` incluye la bandera especial \*, significa que el servidor soporta [banderas personalizadas](#addflags).
+
+:::
 
 #### Ejemplo
 

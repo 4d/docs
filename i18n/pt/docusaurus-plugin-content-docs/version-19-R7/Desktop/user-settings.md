@@ -53,7 +53,7 @@ The following table lists the pages of settings found in the **User Settings** a
 | **Page of Structure Settings**                                                       | **Page of User Settings**             | **Page of User Settings for Data File** |
 | ------------------------------------------------------------------------------------ | ------------------------------------- | --------------------------------------- |
 | [General page](../settings/general.md)                                               | N/a                                   | N/a                                     |
-| [Interface page](../settings/interface.md)                                           | Identical to standard settings        | Identical to standard settings          |
+| [Página Interface](../settings/interface.md)                                         | Identical to standard settings        | Identical to standard settings          |
 | [Compiler page](../settings/compiler.md)                                             | N/a                                   | N/a                                     |
 | [Database/Data storage page](../settings/database.md#data-storage)                   | N/a                                   | N/a                                     |
 | [Database/Memory page](../settings/database.md#memory)                               | Identical to standard settings        | Identical to standard settings          |
@@ -71,7 +71,7 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Página SQL](../settings/sql.md)                                                     | Identical to standard settings        | Identical to standard settings          |
 | [Página PHP](../settings/php.md)                                                     | Identical to standard settings        | Identical to standard settings          |
 | [Security page](../settings/security.md)                                             | N/a                                   | N/a                                     |
-| [Compatibility page](../settings/compatibility.md)                                   | N/a                                   | N/a                                     |
+| [Página de compatibilidade](../settings/compatibility.md)                            | N/a                                   | N/a                                     |
 
 When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
 
@@ -118,8 +118,8 @@ Settings can be stored at three levels. Each setting defined at one level overri
 
 | **Nível de prioridade** | **Nome**                                                                  | **Location**                                                                                                                                                  | **Comentários**                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| 3 (lowest)              | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.                        |
+| 3 (mais baixo)          | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.                        |
 | 2                       | User settings (all data files)                                            | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Overrides Structure settings. Stored within the application package.                                                 |
-| 1 (highest)             | User settings (current data file)                                         | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
+| 1 (mais alto)           | User settings (current data file)                                         | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
 
 Keep in mind that user settings files only contain a subset of relevant settings, while the structure file contains all custom settings, including core settings.

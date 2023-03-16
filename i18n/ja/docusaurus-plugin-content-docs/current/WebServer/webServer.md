@@ -1,7 +1,7 @@
 ---
 id: webServer
 slug: overview
-title: 概要
+title: Web サーバー
 ---
 
 4D のローカルモード、リモートモード、および 4D Server には Webサーバーエンジン (HTTPサーバー) があります。この Webサーバーエンジンを使用して、4Dデータベースを最大限に活用できる強力な Webアプリケーションを設計・公開することができます。

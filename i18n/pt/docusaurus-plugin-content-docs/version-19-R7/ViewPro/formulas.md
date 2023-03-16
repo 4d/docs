@@ -78,7 +78,7 @@ List of operators from most to least important:
 | ^                                             | Expoente                   |
 | * and /                                       | Multiply and divide        |
 | + and -                                       | Add and Subtract           |
-| &                                             | Concatenate                |
+| &                                             | Concatenar                 |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparar                   |
 
 

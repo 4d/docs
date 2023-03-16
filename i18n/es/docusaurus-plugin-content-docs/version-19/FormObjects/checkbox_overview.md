@@ -354,19 +354,19 @@ Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#nu
 
 ```
  "myCheckbox": {
-  "type": "checkbox",
-  "style":"custom",
-  "text": "OK", 
-  "icon": "/RESOURCES/smiley.jpg", 
-  "iconFrame": 4, 
-  "customBackgroundPicture": "/RESOURCES/paper.jpg", 
-  "iconOffset": 5, //custom icon offset when clicked
-  "left": 60, 
-  "top": 160, 
-  "width": 100,  
-  "height": 20,
-  "customBorderX": 20,
-  "customBorderY": 5
+        "type": "checkbox",
+        "style":"custom",
+        "text": "OK",
+        "icon": "/RESOURCES/smiley.jpg",
+        "iconFrame": 4,
+        "customBackgroundPicture": "/RESOURCES/paper.jpg",
+        "iconOffset": 5, //desplazamiento del icono personalizado al hacer clic
+        "left": 60,
+        "top": 160,
+        "width": 100,       
+        "height": 20,
+        "customBorderX": 20,
+        "customBorderY": 5
   }
 ```
 

@@ -21,7 +21,7 @@ In addition, file and folder objects support `fileSystems`, which provide contex
 
 The following filesystem pathnames are supported:
 
-| filesystem   | Designates                                         |
+| filesystem   | Designa                                            |
 | ------------ | -------------------------------------------------- |
 | "/DATA"      | Current data folder                                |
 | "/LOGS"      | Pasta Logs                                         |
@@ -30,7 +30,7 @@ The following filesystem pathnames are supported:
 | "/RESOURCES" | Current database resources folder                  |
 | "/SOURCES"   | Current project resources folder                   |
 
-## POSIX syntax
+## Sintaxe POSIX
 
 The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
 
@@ -79,7 +79,7 @@ The following escape sequences are recognized by 4D:
 
 | Escape sequence              | Character replaced   |
 | ---------------------------- | -------------------- |
-| `\n`                        | LF (New line)        |
+| `\n`                        | LF (Nova linha)      |
 | `\t`                        | HT (Horizontal tab)  |
 | `\r`                        | CR (Carriage return) |
 | ``\\`|``&#96; (Backslash) |                      |

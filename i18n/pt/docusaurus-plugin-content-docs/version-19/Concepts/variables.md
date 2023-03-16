@@ -31,6 +31,8 @@ You create variables by declaring them. The 4D language offers two ways to decla
  // and assigns the current date plus 30 days
 ```
 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
 
 ### Usando a palavra-chave `var`
 
@@ -52,7 +54,7 @@ var $myVar //a variant variable
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
 This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` can be:
+`varType` pode ser:
 
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
@@ -66,16 +68,16 @@ The following table lists all supported `varType` values:
 | `Text`                 | Valor texto                              |
 | `Date`                 | Valor data                               |
 | `Hora`                 | Valor Hora                               |
-| `Booleano`             | Boolean value                            |
-| `Integer`              | Long integer value                       |
-| `Real`                 | Real value                               |
-| `Ponteiro`             | Pointer value                            |
-| `Imagem`               | Picture value                            |
-| `Blob`                 | BLOB value                               |
-| `Collection`           | Collection value                         |
-| `Variant`              | Variant value                            |
+| `Booleano`             | Valor booleano                           |
+| `Integer`              | Valor inteiro longo                      |
+| `Real`                 | Valor real                               |
+| `Ponteiro`             | Valor ponteiro                           |
+| `Imagem`               | Valor imagem                             |
+| `Blob`                 | Valor BLOB                               |
+| `Collection`           | Valor colecção                           |
+| `Variant`              | Valor variant                            |
 | `Objeto`               | Object with default class (`4D. Object`) |
-| `4D.<className>` | Object of the 4D class name              |
+| `4D.<className>` | Objecto do nome da classe 4D             |
 | `cs.<className>` | Object of the user class name            |
 
 #### Exemplos
@@ -108,7 +110,7 @@ var $entity : cs. EmployeeEntity
 ```
 
 
-### Using a C_ directive
+### Usando uma directiva C_
 
 > **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
@@ -133,7 +135,7 @@ The following are some basic variable declarations:
 **Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
 
 
-## Assigning Data
+## Atribuição de dados
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
@@ -161,11 +163,11 @@ You assign data to array elements by using curly braces ({...}):
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Variáveis locais, processo e inter-processo
 
 You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
 
-### Local variables
+### Variáveis locais
 
 A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
 
@@ -192,7 +194,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 **Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
-### Process variables
+### Variáveis processo
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 

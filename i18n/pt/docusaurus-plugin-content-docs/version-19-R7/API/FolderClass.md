@@ -5,11 +5,11 @@ title: Folder
 
 
 
-`Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
+`Folder` os objectos são criados com o comando [`Folder`](#folder) . Contêm referências a pastas que podem ou não existir efectivamente no disco. Por exemplo, quando executa o comando `Folder` para criar uma nova pasta, é criado um objecto válido `Folder` mas nada é realmente armazenado no disco até chamar a função [`folder.create()`](#create) .
 
 ### Exemplo
 
-The following example creates a "JohnSmith" folder:
+O exemplo seguinte cria uma pasta "JohnSmith":
 
 ```code4d
 Form.curfolder:=Folder(fk database folder)
@@ -18,7 +18,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ### Pathnames
 
-`Folder` objects support several pathnames, including `filesystems` or `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
+Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems` ou `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
 
 
 
@@ -71,23 +71,23 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF #_command_.Folder.Params -->
-| Parâmetros     | Tipo       |    | Descrição                                           |
-| -------------- | ---------- |:--:| --------------------------------------------------- |
-| path           | Text       | -> | Folder path                                         |
-| folderConstant | Integer    | -> | 4D folder constant                                  |
-| pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path` |
-| *              |            | -> | * to return folder of host database                 |
-| Resultados     | 4D. Folder | <- | New folder object|<!-- END REF -->        |
+| Parâmetros     | Tipo       |    | Descrição                                             |
+| -------------- | ---------- |:--:| ----------------------------------------------------- |
+| path           | Text       | -> | Rota de pasta                                         |
+| folderConstant | Integer    | -> | Constante Pasta 4D                                    |
+| pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path`   |
+| *              |            | -> | * para devolver a pasta da base de dados do anfitrião |
+| Resultados     | 4D. Folder | <- | Novo Objeto Folder|<!-- END REF -->         |
 
 #### Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
+No parâmetro *path* , passe uma string de rotas de pasta. Pode utilizar uma string personalizada ou um sistema de arquivos (por exemplo, "/DATA").
 
-> Only absolute pathnames are supported with the `Folder` command.
+> Apenas são compatíveis com os nomes de caminho absolutos com o comando `Folder` .
 
 Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType* . Estão disponíveis as seguintes constantes:
 
@@ -98,27 +98,27 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar co
 
 **Folder ( folderConstant { ; \* } )**
 
-In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
+No parâmetro *folderConstant* , passe uma pasta 4D incorporada ou de sistema, utilizando uma das seguintes constantes:
 
-| Constante                  | Value | Comentário                                                                                          |
-| -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
-| fk applications folder     | 116   |                                                                                                     |
-| fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
-| fk database folder         | 4     | Associated filesystem: "/PACKAGE"                                                                   |
-| fk desktop folder          | 115   |                                                                                                     |
-| fk documents folder        | 117   | Document folder of the user                                                                         |
-| fk licenses folder         | 1     | Folder containing the machine's 4D license files                                                    |
-| fk logs folder             | 7     | Associated filesystem: "/LOGS"                                                                      |
-| fk mobileApps folder       | 10    |                                                                                                     |
-| fk remote database folder  | 3     | 4D database folder created on each 4D remote machine                                                |
-| fk resources folder        | 6     | Associated filesystem: "/RESOURCES"                                                                 |
-| fk system folder           | 100   |                                                                                                     |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the `\<userName>` directory.              |
-| fk web root folder         | 8     | Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path |
+| Constante                  | Value | Comentário                                                                                                                  |
+| -------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
+| fk applications folder     | 116   |                                                                                                                             |
+| fk data folder             | 9     | Sistema de ficheiros associado: "/DATA"                                                                                     |
+| fk database folder         | 4     | Sistema de arquivos associado: "/PACKAGE"                                                                                   |
+| fk desktop folder          | 115   |                                                                                                                             |
+| fk documents folder        | 117   | Pasta de documentos do utilizador                                                                                           |
+| fk licenses folder         | 1     | Pasta contendo os arquivos de licença 4D da máquina                                                                         |
+| fk logs folder             | 7     | Sistema de arquivos associado: "/LOGS"                                                                                      |
+| fk mobileApps folder       | 10    |                                                                                                                             |
+| fk remote database folder  | 3     | Pasta de base de dados 4D criada em cada máquina 4D remota                                                                  |
+| fk resources folder        | 6     | Sistema de arquivos associado: "/DATA"                                                                                      |
+| fk system folder           | 100   |                                                                                                                             |
+| fk user preferences folder | 0     | 4D folder that stores user preference files within the `\<userName>` directory.                                      |
+| fk web root folder         | 8     | Pasta raiz atual da Web da base de dados: se estiver dentro do pacote "/PACKAGE/percurso", caso contrário, caminho completo |
 
-If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
+Se o comando for chamado a partir de um componente, passe o parâmetro opcional *para obter o caminho da base de dados anfitriã. Caso contrário, se omitir o parâmetro* , um objeto nulo é sempre devolvido.
 
-> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
+> `No Windows, em clientes fusionados, a localização das pastas incorporadas é modificada se for utilizada a tecla ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) .
 
 ## 4D. Folder.new()
 
@@ -135,7 +135,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### Descrição
 
-A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D. Folder.new()`.
 
@@ -157,25 +157,25 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->creates and re
 
 
 <!--REF #FolderClass.create().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                               |
-| ---------- | -------- | -- | --------------------------------------------------------------------------------------- |
-| Resultados | Booleano | <- | True if the folder was created successfully, false otherwise|<!-- END REF --> |
+| Parâmetros | Tipo     |    | Descrição                                                                                    |
+| ---------- | -------- | -- | -------------------------------------------------------------------------------------------- |
+| Resultados | Booleano | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF --> |
 
 
 #### Descrição
 
-A função `.create()` <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+A função `.create()` <!-- REF #FolderClass.create().Summary -->cria uma pasta no disco de acordo com as propriedades do objecto `Folder`<!-- END REF -->.
 
-Se necessário, a função cria a pasta hierachy como descrito na [platformPath](#platformpath) ou [caminho](#path) propriedades. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+Se necessário, a função cria a pasta hierachy como descrito na [platformPath](#platformpath) ou [caminho](#path) propriedades. Se a pasta já existir no disco, a função não faz nada (não é atirado nenhum erro) e retorna falso.
 
 **Valor retornado**
 
-* **True** if the folder is created successfully;
-* **False** if a folder with the same name already exists or if an error occured.
+* **Verdadeiro** se a pasta for criada com sucesso;
+* **Falso** se já existir uma pasta com o mesmo nome ou se tiver ocorrido um erro.
 
 #### Exemplo 1
 
-Create an empty folder in the database folder:
+Criar uma pasta vazia na pasta da base de dados:
 
 ```4d
 var $created : Boolean
@@ -184,7 +184,7 @@ $created:=Folder("/PACKAGE/SpecialPrefs").create()
 
 #### Exemplo 2
 
-Creation of the "/Archives2019/January/" folder in the database folder:
+Criação da pasta "/Arquivos2019/Janeiro/" na pasta da base de dados:
 
 ```4d
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
@@ -214,16 +214,16 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parâmetros        | Tipo       |    | Descrição                                              |
-| ----------------- | ---------- | -- | ------------------------------------------------------ |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho           |
-| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                           |
-| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                          |
-| Resultados        | 4D. File   | <- | Alias or shortcut reference|<!-- END REF --> |
+| Parâmetros        | Tipo       |    | Descrição                                                |
+| ----------------- | ---------- | -- | -------------------------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho             |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                             |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                            |
+| Resultados        | 4D. File   | <- | Alias ou referência de atalho|<!-- END REF --> |
 
 #### Descrição
 
-A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um pseudónimo (macOS) ou um atalho (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+A função `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->cria um pseudónimo (macOS) ou um atalho (Windows)<!-- END REF --> para a pasta com o nome *aliasName especificado* nome na pasta designada pelo objecto *destinationFolder* .
 
 Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
@@ -242,7 +242,7 @@ A `4D. File` object with the `isAlias` property set to **true**.
 
 #### Exemplo
 
-You want to create an alias to an archive folder in your database folder:
+Deseja criar um pseudónimo para uma pasta de arquivo na sua pasta de base de dados:
 
 ```4d
 $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
@@ -272,31 +272,31 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parâmetros | Tipo    |    | Descrição                                         |
-| ---------- | ------- | -- | ------------------------------------------------- |
-| option     | Integer | -> | Folder deletion option|<!-- END REF --> |
+| Parâmetros | Tipo    |    | Descrição                                               |
+| ---------- | ------- | -- | ------------------------------------------------------- |
+| option     | Integer | -> | Opção de eliminação de pasta|<!-- END REF --> |
 
 #### Descrição
 
-A função `.delete()` <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+A função `.delete()` <!-- REF #FolderClass.delete().Summary -->apaga a pasta<!-- END REF -->.
 
-By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
+Por padrão, por razões de segurança, se omitir o parâmetro de opção, `.delete( )` só permite a eliminação de pastas vazias. Se quiser que o comando possa apagar pastas que não estejam vazias, deve utilizar o parâmetro de opção com uma das seguintes constantes:
 
-| Constante              | Value | Comentário                                       |
-| ---------------------- | ----- | ------------------------------------------------ |
-| `Delete only if empty` | 0     | Deletes folder only when it is empty             |
-| `Delete with contents` | 1     | Deletes folder along with everything it contains |
+| Constante              | Value | Comentário                                             |
+| ---------------------- | ----- | ------------------------------------------------------ |
+| `Delete only if empty` | 0     | Elimina a pasta apenas quando está vazia               |
+| `Delete with contents` | 1     | Apaga a pasta juntamente com tudo o que a mesma contém |
 
-When `Delete only if empty` is passed or if you omit the option parameter:
+Quando `Apagar apenas se for aprovado` vazio ou se omitir o parâmetro de opção:
 
-* The folder is only deleted if it is empty; otherwise, the command does nothing and an error -47 is generated.
-* If the folder does not exist, the error -120 is generated.
+* A pasta só é apagada se estiver vazia; caso contrário, o comando não faz nada e é gerado um erro -47.
+* Se a pasta não existir, o erro -120 é gerado.
 
-When `Delete with contents` is passed:
+Quando `Apagar com conteúdo` for aprovado:
 
-* The folder, along with all of its contents, is deleted. **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-* If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
-* If the folder does not exist, the command does nothing and no error is returned. (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+* A pasta, juntamente com todo o seu conteúdo, é apagada. **Aviso**: Mesmo quando esta pasta e/ou o seu conteúdo estiver bloqueado ou definido para apenas leitura, se o utilizador actual tiver direitos de acesso adequados, a pasta (e conteúdo) continua a ser eliminada.
+* Se esta pasta, ou qualquer dos arquivos que conter, não puder ser apagada, a eliminação é abortada assim que o primeiro elemento inacessível for detectado, e um erro(*) é devolvido. Neste caso, a pasta pode ser apenas parcialmente apagada. Quando a eliminação é abortada, pode utilizar o comando `GET LAST ERROR STACK` para recuperar o nome e o caminho do ficheiro ofensivo.
+* Se a pasta não existir, o comando não faz nada e nenhum erro é devolvido. (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
 
@@ -349,16 +349,16 @@ When `Delete with contents` is passed:
 | Parâmetros        | Tipo       |    | Descrição                               |
 | ----------------- | ---------- | -- | --------------------------------------- |
 | destinationFolder | 4D. Folder | -> | Pasta de destino                        |
-| newName           | Text       | -> | Full name for the moved folder          |
-| Resultados        | 4D. Folder | <- | Moved folder|<!-- END REF --> |
+| newName           | Text       | -> | Nome completo para a pasta movida       |
+| Resultados        | 4D. Folder | <- | Pasta movida|<!-- END REF --> |
 
 #### Descrição
 
-A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->move ou renomeia o objecto `Folder` (pasta de origem) para o objecto especificado *destinationFolder*<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Por padrão, a pasta mantém o seu nome quando movida. Se quiser renomear a pasta movida, passe o novo nome completo no parâmetro *newName* . O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
@@ -366,7 +366,7 @@ O objecto `Folder` movido.
 
 #### Exemplo
 
-You want to move and rename a folder:
+Quer mover-se e renomear uma pasta:
 
 ```4d
  var $tomove; $moved : Object
@@ -404,16 +404,16 @@ You want to move and rename a folder:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parâmetros | Tipo       |    | Descrição                                 |
-| ---------- | ---------- | -- | ----------------------------------------- |
-| newName    | Text       | -> | New full name for the folder              |
-| Resultados | 4D. Folder | <- | Renamed folder|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                    |
+| ---------- | ---------- | -- | -------------------------------------------- |
+| newName    | Text       | -> | Novo nome completo para a pasta              |
+| Resultados | 4D. Folder | <- | Renomeado arquivo|<!-- END REF --> |
 
 #### Descrição
 
-A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a pasta com o nome que passou em *newName* e devolve o objecto renomeado `Folder`<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um arquivo com o mesmo nome, é devolvido um erro.
 
 **Objeto devolvido**
 

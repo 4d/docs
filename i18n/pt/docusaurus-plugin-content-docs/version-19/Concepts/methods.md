@@ -4,21 +4,21 @@ title: Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
+A method is basically a piece of code that executes one or several actions. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
 
 The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
-## Method Types
+## Tipos de métodos
 
 In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
-| Tipo                             | Calling context                                                                                             | Accepts parameters | Descrição                                                                                                                                                            |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Método Projeto**               | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
-| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached                                | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Método formulário**            | Automatic, when an event involves the form to which the method is attached                                  | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
-| **Database method**              | Automatic, when a working session event occurs                                                              | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
+| Tipo                                               | Calling context                                                                                             | Accepts parameters | Descrição                                                                                                                                                            |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Método Projeto**                                 | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
+| **Object (widget) method**                         | Automatic, when an event involves the object to which the method is attached                                | Não                | Property of a form object (also called widget)                                                                                                                       |
+| **Método formulário**                              | Automatic, when an event involves the form to which the method is attached                                  | Não                | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (também conhecido por *método tabela*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | Não                | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
+| **Database method**                                | Automatic, when a working session event occurs                                                              | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
 
 
 > The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
@@ -151,7 +151,7 @@ Note that, even if it does not have parameters, an object method to be executed 
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Menu Methods
+### Métodos do menu
 A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.

@@ -10,11 +10,11 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 | Syntaxe                                                                            | Exemple                                  | Description                                                                            |
 | ---------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
-| [**{dataClass}({clé})**](#dataclasskey)                                            | `/Employee(22)`                          | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
+| [**{dataClass}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
 | [**{dataClass}:{attribut}(valeur)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
 | [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Exécute une fonction de classe d'une dataclass                                         |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Exécute une fonction de classe d'une sélection d'entité                                |
-| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Exécute une fonction de classe d'une entité                                            |
+| [**{dataClass}/{EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Exécute une fonction de classe d'une sélection d'entité                                |
+| [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Exécute une fonction de classe d'une entité                                            |
 
 > Les appels de fonction sont détailles dans la section [Appeler des fonctions de classe ORDA](ClassFunctions.md).
 
@@ -46,7 +46,7 @@ Chaque entité contient les propriétés suivantes :
 | __TIMESTAMP | Date   | Horodatage de la dernière modification de l'entité                                                                           |
 | __STAMP     | Number | Tampon interne qui est nécessaire lors de la modification des valeurs de l'entité lors de l'utilisation de `$method=update`. |
 
-Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company/name,address`
 
@@ -60,7 +60,7 @@ Retourne toutes les données d'une dataclass spécifique.
 
 **Résultat** :
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -135,36 +135,36 @@ Retourne toutes les données d'une dataclass spécifique.
 .....//plus d'entités ici 
     ]
 }
-````
+```
 
 
-## {dataClass}({clé})
+## {dataClass}\[{key}]
 
-Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass, par exemple, `Company (22) ou Company ("IT0911AB2200")`
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22]` or `Company[IT0911AB2200]`
 
 ### Description
 
 En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. En passant la dataclass et une clé, vous pouvez récupérer toutes les informations publiques de cette entité. Pour plus d'informations sur la définition d'une clé primaire, reportez-vous à la section **Modification de la clé primaire** dans **l'éditeur de modèle de données**.
 
-Pour plus d'informations sur les données retournées, reportez-vous à [{DataStoreClass}](#datastoreclass).
+For more information about the data returned, refer to [{DataClass}](#dataclass).
 
-Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
- `GET  /rest/Company(1)/name,address`
+ `GET  /rest/Company[1]/name,address`
 
 Si vous souhaitez développer un attribut relationnel à l'aide de `$expand`, vous devez l'indiquer comme suit :
 
- `GET  /rest/Company(1)/name,address,staff?$expand=staff`
+ `GET  /rest/Company[1]/name,address,staff?$expand=staff`
 
 ### Exemple
 
 La requête suivante retourne toutes les données publiques de la dataclass Company dont la clé est 1.
 
- `GET  /rest/Company(1)`
+ `GET  /rest/Company[1]`
 
 **Résultat** :
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -183,7 +183,7 @@ La requête suivante retourne toutes les données publiques de la dataclass Comp
         }
     }
 }
-````
+```
 
 
 
@@ -197,7 +197,7 @@ En passant la *dataClass* et un *attribut* avec une valeur, vous pouvez récupé
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-Si vous souhaitez indiquer les attributs à retourner, définissez-les à l'aide de la syntaxe suivante [{attribut1, attribut2, ...}](manData.md##selecting-attributes-to-get). Par exemple :
+If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Par exemple :
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

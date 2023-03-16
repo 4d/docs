@@ -10,9 +10,9 @@ Ruta de una imagen source estática para un [botón imagen](pictureButton_overvi
 
 Las siguientes ubicaciones pueden utilizarse para las imágenes estáticas:
 
-- en la carpeta **Resources** del proyecto. Apropiado cuando se desea compartir imágenes estáticas entre varios formularios en el proyecto. In this case, the Pathname is "/RESOURCES/<picture path\>".
-- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. En este caso, el nombre de la ruta es "<picture path\>" and is resolved from the root of the form folder.
-- en una variable imagen 4D. La imagen debe cargarse en la memoria cuando se ejecuta el formulario. In this case, the Pathname is "var:<variableName\>".
+- en la carpeta **Resources** del proyecto. Apropiado cuando se desea compartir imágenes estáticas entre varios formularios en el proyecto. En este caso, el nombre de la ruta es "/RESOURCES/<picture path\>".
+- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. En este caso, el nombre de la ruta es "<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
+- en una variable imagen 4D. La imagen debe cargarse en la memoria cuando se ejecuta el formulario. En este caso, el nombre de la ruta es "var:<variableName\>".
 
 #### Gramática JSON
 
@@ -40,11 +40,11 @@ El formato **A escala para ajustarse** hace que 4D redimensione la imagen para a
 
 `Gramática JSON: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+Cuando se amplía el área que contiene una imagen con el formato **Replicada**, la imagen no se deforma sino que se replica tantas veces como sea necesario para llenar el área por completo.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
-If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
+Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen queda truncada (no centrada).
 
 ### Centrado / Truncado (no centrado)
 

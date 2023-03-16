@@ -133,9 +133,11 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+| Version | Changes                  |
+| ------- | ------------------------ |
+| v20     | Supports custom keywords |
+| v18 R6  | Added                    |
+
 
 </details>
 
@@ -165,16 +167,19 @@ In the `msgIDs` parameter, you can pass either:
  | -------- | ---- | ------------------------------------------- |
  | IMAP all | 1    | Select all messages in the selected mailbox |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to add to `msgIDs`. You can pass any of the following keywords:
+The `keywords` parameter lets you define the flags to add to `msgIDs`. You can use the following standard flags as well as custom flags (custom flags support depends on the server implementation):
 
-| Parameter | Typ     | Beschreibung                                   |
-| --------- | ------- | ---------------------------------------------- |
-| $draft    | Boolean | True to add the "draft" flag to the message    |
-| $seen     | Boolean | True to add the "seen" flag to the message     |
-| $flagged  | Boolean | True to add the "flagged" flag to the message  |
-| $answered | Boolean | True to add the "answered" flag to the message |
-| $deleted  | Boolean | True to add the "deleted" flag to the message  |
-> * False values are ignored.
+| Property              | Typ     | Beschreibung                                   |
+| --------------------- | ------- | ---------------------------------------------- |
+| $draft                | Boolean | True to add the "draft" flag to the message    |
+| $seen                 | Boolean | True to add the "seen" flag to the message     |
+| $flagged              | Boolean | True to add the "flagged" flag to the message  |
+| $answered             | Boolean | True to add the "answered" flag to the message |
+| $deleted              | Boolean | True to add the "deleted" flag to the message  |
+| `<custom flag>` | Boolean | True to add the custom flag to the message     |
+
+The custom flags names must respect this rule: the keyword must be a case-insensitive string excluding control chars and space and can not include any of these characters: `( ) { ] % * " \`
+> * For a keyword to be taken into account it has to be true.
 > * The interpretation of keyword flags may vary per mail client.
 
 **Returned object**
@@ -764,9 +769,9 @@ $status:=$transporter.expunge()
 
 | Version | Changes            |
 | ------- | ------------------ |
+| v20     | *id* is returned   |
 | v18 R5  | *name* is optional |
-
-|v18 R4|Added|
+| v18 R4  | Added              |
 
 </details>
 
@@ -798,6 +803,7 @@ The `boxInfo` object returned contains the following properties:
 | name       | Text | Name of the mailbox                                                 |
 | mailCount  | Zahl | Number of messages in the mailbox                                   |
 | mailRecent | Zahl | Number of messages with the "recent" flag (indicating new messages) |
+| id         | Text | Unique id of the mailbox                                            |
 
 #### Beispiel
 
@@ -1352,9 +1358,11 @@ The function returns a collection of strings (unique IDs).
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+| Version | Changes                  |
+| ------- | ------------------------ |
+| v20     | Supports custom keywords |
+| v18 R6  | Added                    |
+
 
 </details>
 
@@ -1384,17 +1392,19 @@ In the `msgIDs` parameter, you can pass either:
  | -------- | ---- | ------------------------------------------- |
  | IMAP all | 1    | Select all messages in the selected mailbox |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. You can pass any of the following keywords:
+The `keywords` parameter lets you define the flags to remove from `msgIDs`. You can use the following standard flags as well as custom flags:
 
-| Parameter | Typ     | Beschreibung                                        |
-| --------- | ------- | --------------------------------------------------- |
-| $draft    | Boolean | True to remove the "draft" flag from the message    |
-| $seen     | Boolean | True to remove the "seen" flag from the message     |
-| $flagged  | Boolean | True to remove the "flagged" flag from the message  |
-| $answered | Boolean | True to remove the "answered" flag from the message |
-| $deleted  | Boolean | True to remove the "deleted" flag from the message  |
+| Parameter             | Typ     | Beschreibung                                        |
+| --------------------- | ------- | --------------------------------------------------- |
+| $draft                | Boolean | True to remove the "draft" flag from the message    |
+| $seen                 | Boolean | True to remove the "seen" flag from the message     |
+| $flagged              | Boolean | True to remove the "flagged" flag from the message  |
+| $answered             | Boolean | True to remove the "answered" flag from the message |
+| $deleted              | Boolean | True to remove the "deleted" flag from the message  |
+| `<custom flag>` | Boolean | True to remove the custom flag from the message     |
 
-Note that False values are ignored.
+Please refer to [.addFlags()](#addflags) for more information on custom flags.
+> * For a keyword to be taken into account it has to be true.
 
 **Returned object**
 
@@ -1658,9 +1668,11 @@ Search-keys may request the value to search for:
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R4  | Added   |
+| Version | Changes                                      |
+| ------- | -------------------------------------------- |
+| v20     | *id*, *flags*, *permanentFlags* are returned |
+| v18 R4  | Added                                        |
+
 
 </details>
 
@@ -1697,11 +1709,20 @@ The optional *state* parameter defines the type of access to the mailbox. The po
 
 The `boxInfo` object returned contains the following properties:
 
-| Property   | Typ  | Beschreibung                              |
-| ---------- | ---- | ----------------------------------------- |
-| name       | Text | Name of the mailbox                       |
-| mailCount  | Zahl | Number of messages in the mailbox         |
-| mailRecent | Zahl | Number of messages with the "recent" flag |
+| Property       | Typ  | Beschreibung                                                                                                                                  |
+| -------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| name           | Text | Name of the mailbox                                                                                                                           |
+| mailCount      | Zahl | Number of messages in the mailbox                                                                                                             |
+| mailRecent     | Zahl | Number of messages with the "recent" flag                                                                                                     |
+| id             | Text | Unique id of the mailbox                                                                                                                      |
+| flags          | Text | List of flags currently used for the mailbox, separated by spaces                                                                             |
+| permanentFlags | Text | List of flags that the client can change permanently (except for the \Recent flag, which is managed by the IMAP server), separated by spaces |
+
+:::info
+
+If `permanentFlags` string includes the special flag \*, it means that the server supports [custom flags](#addflags).
+
+:::
 
 #### Beispiel
 

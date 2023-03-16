@@ -1,13 +1,21 @@
 ---
 id: FunctionClass
-title: Formula
+title: Function
 ---
 
+### Sobre objetos Function
+
+Um objeto`4D. Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos `Function`:
+
+- **funções nativas**, ou seja, funções integradas, built-in, de várias classes 4D tais como `collection.sort()` ou `file.copyTo()`.
+- **funções usuário**, ciradas em [classes](Concepts/classes.md) usuário usanod a [palavra chave Function](Concepts/classes.md#function).
+- **funções fórmula**, ou seja funções que podem executar qualquer fórmula 4D.
 
 
-Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos nativos [`4D. Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
 
 ### Objetos de formulários
+
+Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos [`4D. Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
 
 Objetos formulário podem ser encapsulados em propriedades objeto:
 
@@ -84,21 +92,19 @@ Para mais conveniência, quando a fórmula é feita de um único método de proj
 
 Parâmetros são recebidos dentro do método, na ordem que são especificados na chamada.
 
-### Sobre objetos 4D. Function
 
-Um objeto`4D. Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos Function:
-
-- funções nativas, ou seja, funções integradas, built-in, de várias classes 4D tais como `collection.sort()` ou `file.copyTo()`.
-- funções usuário, ciradas em [classes](Concepts/classes.md) usuário usanod a [palavra chave Function](Concepts/classes.md#function).
-- funções fórmula, ou seja funções que podem executar qualquer fórmula 4D.
 
 ### Resumo
+
 
 |                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.apply().Summary -->|
 | [<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.call().Summary --> |
 | [<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.source.Summary --> |
+
+
+
 
 ## Formula
 
@@ -120,7 +126,9 @@ Um objeto`4D. Function` contém um pedaço de código que pode ser executado de 
 | formulaExp | Expression   | -> | Fórmula a ser retornada como objeto                             |
 | Resultados | 4D. Function | <- | Função nativa encapsulando a fórmula|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
@@ -130,8 +138,8 @@ Ter uma fórmula como se fosse um objeto permite que seja passada como um parâm
 
 A fórmula retornada pode ser chamada com:
 
-- métodos[`.call()`](#call) ou [`.apply()`](#apply), ou
-- sintaxe notação objeto (ver [formula object](#formula-object)).
+*   métodos[`.call()`](#call) ou [`.apply()`](#apply), ou
+*   sintaxe notação objeto (ver [formula object](#formula-object)).
 
 ```4d
  var $f : 4D. Function
@@ -151,6 +159,7 @@ Pode especificar o objeto no qual a fórmula é executada, como visto em [exempl
 Se *formulaExp* usar variáveis locais, seus valores são copiados e armazenados no objeto fórmula retornados quando forem criados. Quando executados, a fórmula usa esses valores copiados ao invés do valor atual da variável local. Note que usar arrays como variáveis locais não são compatíveis.
 
 Os objetos criados por `Formula` podem ser salvos, por exemplo, em um campo de database ou em um documento blob.
+
 
 #### Exemplo 1
 
@@ -180,6 +189,7 @@ Uma fórmula usando variáveis locais:
  $result:=$o.f() // retorna 10
 ```
 
+
 #### Exemplo 3
 
 Uma fórmula simples usando parâmetros:
@@ -189,6 +199,7 @@ Uma fórmula simples usando parâmetros:
  $result:=$o.f(10;20) //retorna 30
 ```
 
+
 #### Exemplo 4
 
 Uma fórmula usando um método projeto com parâmetros:
@@ -197,6 +208,7 @@ Uma fórmula usando um método projeto com parâmetros:
  $o:=New object("f";Formula(myMethod))
  $result:=$o.f("param1";"param2") // equivalent to $result:=myMethod("param1";"param2")
 ```
+
 
 #### Exemplo 5
 
@@ -230,6 +242,9 @@ Chamar uma fórmula usando notação de objeto:
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
 ```
 
+
+
+
 ## Formula from string
 
 <details><summary>Histórico</summary>
@@ -250,7 +265,9 @@ Chamar uma fórmula usando notação de objeto:
 | formulaString | Text         | -> | Fórmula texto a ser retornada como objeto                       |
 | Resultados    | 4D. Function | <- | Objeto nativo encapsulando a fórmula|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
@@ -258,6 +275,7 @@ O comando `Formula from string` <!-- REF #_command_.Formula from string.Summary 
 
 Esse comando é similar a [`Formula`](#formula), exceto que maneja uma fórmula baseada em texto. Na maioria dos casos, é recomendado usar o comando `Formula`. Só se deve usar`Formula from string` quando a fórmula original for expressa como texto (por exemplo armazenada externamente em um arquivo JSON). Nesse contexto, usar sintaxe com tokens é aconselhado.
 > Como conteúdos de variáveis locais não podem ser acessados por nome em modo compilado, não podem ser usados em *formulaString*. Tentar acessar uma variável local com `Formula from string` vai causar um erro (-10737).
+
 
 #### Exemplo
 
@@ -275,9 +293,16 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 ![](../assets/en/API/formulaDialog.png)
 
+
 ...e executa a fórmula:
 
+
 ![](../assets/en/API/formulaAlert.png)
+
+
+
+
+
 
 <!-- REF FunctionClass.apply().Desc -->
 ## .apply()
@@ -300,17 +325,21 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 | formulaParams | Collection | -> | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
 | Resultados    | any        | <- | Valores de execução de fórmula|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
 A função `.apply()` <!-- REF #FunctionClass.apply().Summary -->executa a `fórmula ` objecto a que é aplicado e devolve o valor resultante<!-- END REF -->. O objeto fórmula pode ser criado usando os comandos `Formula` or `Formula from string`.
+
 
 No parâmetro *thisObj* pode passar uma referência ao objeto a ser usada como `This` dentro da fórmula.
 
 Também pode passar uma coleção a ser usada como parâmetros $1...$n na fórmula usando o parâmetro opcional *formulaParams*.
 
 Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são passados como coleção. Isso pode ser útil para passar resultados calculados.
+
 
 #### Exemplo 1
 
@@ -321,6 +350,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
  $c:=New collection(10;20;30)
  $result:=$f.apply(Null;$c) // retorna 60
 ```
+
 
 #### Exemplo 2
 
@@ -337,6 +367,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 ```
 
 <!-- END REF -->
+
 
 <!-- REF FunctionClass.call().Desc -->
 ## .call()
@@ -359,7 +390,9 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 | params     | any    | -> | Valores a serem passados como $1...$n quando a fórmula for executada |
 | Resultados | any    | <- | Valores de execução de fórmula|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
@@ -389,6 +422,8 @@ Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são
 
 <!-- END REF -->
 
+
+
 <!-- REF FunctionClass.source.Desc -->
 ## .source
 
@@ -401,6 +436,7 @@ Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são
 </details>
 
 <!-- REF #FunctionClass.source.Syntax -->**.source** : Text <!-- END REF -->
+
 
 #### Descrição
 
@@ -416,5 +452,7 @@ Essa propriedade é **apenas leitura**.
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"
 ```
+
+
 
 <!-- END REF -->

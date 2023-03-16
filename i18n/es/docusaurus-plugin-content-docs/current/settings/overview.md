@@ -1,13 +1,13 @@
 ---
 id: overview
-title: Generalidades
+title: Settings
 ---
 
-Los parámetros configuran el funcionamiento del proyecto actual. Estos parámetros pueden ser diferentes para cada proyecto. They include the listening ports, backup configurations, security options, Web parameters, etc.
+Los parámetros configuran el funcionamiento del proyecto actual. Estos parámetros pueden ser diferentes para cada proyecto. Incluyen los puertos de escucha, las configuraciones de copia de seguridad, las opciones de seguridad, los parámetros Web, etc.
 
 ![](../assets/en/settings/main.png)
 
-> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
+> 4D ofrece otro conjunto de parámetros, llamados **Preferencias**, que se aplican a la aplicación 4D IDE. Para más información, consulte [Preferencias](../Preferences/general.md).
 
 
 ## Acceso a los parámetros
@@ -16,35 +16,35 @@ Puede acceder a la caja de diálogo Parámetros:
 
 -   utilizando la opción de menú **Diseño > Parámetros...**
 -   haciendo clic en **Parámetros** en la barra de herramientas 4D
--   on 4D Server, using the **Edit > Settings...** menu option
+-   en 4D Server, utilizando la opción de menú **Edición > Parámetros...**
 
-When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
+Cuando se activa el modo [**Parámetros usuario**](../Desktop/user-settings.md), **Parámetros...** pasa a llamarse **Parámetros de la estructura...** y se dispone de dos comandos de menú adicionales en cada ubicación:
 
--   **User Settings...** gives you access to settings that can be stored externally in a user file. Si se modifican, se utilizan en lugar de los parámetro de estructura.
--   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. If they are modified, they are used instead of user or structure settings.
+-   **Parámetros usuario...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario. Si se modifican, se utilizan en lugar de los parámetro de estructura.
+-   **Parámetros usuario para el archivo de datos...** le da acceso a los parámetros que pueden almacenarse externamente en un archivo usuario adjunto al archivo de datos actual. Si se modifican, se utilizan en lugar de los parámetros usuario de los parámetros de estructura.
 
 ### Información sobre el bloqueo
 
-Locking can occur in both Project and Client/server modes when:
+El bloqueo puede ocurrir tanto en los modos Proyecto y Cliente/servidor cuando:
 
--   The *settings.4DSettings* file is 'Read-only' (Projects only). Al modificar un parámetro se mostrará una alerta para desbloquearlo, si es posible.
+-   El archivo *settings.4DSettings* es de "sólo lectura" (sólo Proyectos). Al modificar un parámetro se mostrará una alerta para desbloquearlo, si es posible.
 -   Dos o más usuarios intentan modificar los mismos parámetros al tiempo. Los parámetros no pueden utilizarse hasta que el primer usuario los libere cerrando la ventana. (Cliente/servidor únicamente)
 
-In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
+En ambos casos, los parámetros pueden abrirse en "Sólo lectura", pero no pueden utilizarse hasta que se elimine el bloqueo.
 
 
 
 ## Personalización de los parámetros
 
-In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
+En las cajas de diálogo de las Propiedades, los parámetros cuyos valores se han modificado aparecen **en negrita**:
 
 ![](../assets/en/settings/customize-settings.png)
 
-Parameters indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted project.
+Los parámetros indicados como personalizados pueden haber sido modificados directamente en la caja de diálogo, o pueden haber sido modificados previamente en el caso de un proyecto convertido.
 
 Un parámetro sigue apareciendo en negrita aunque su valor se remplace manualmente por sus valores por defecto. De este modo, siempre es posible identificar visualmente los parámetros que se hayan personalizado.
 
-La mayoría de los parámetros se aplican inmediatamente. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
+La mayoría de los parámetros se aplican inmediatamente. Sin embargo, algunas de ellas (como la configuración del entorno de inicio) sólo surten efecto cuando se reinicia la base de datos. En este caso, aparece una caja de diálogo para informarle de que el cambio surtirá efecto en el próximo inicio.
 
 
 ## Reinicialización de los parámetros

@@ -200,7 +200,7 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 *   shared object(*)
 *   shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
 
-:::nota
+:::note
 
 Esta función modifica la colección original.
 
@@ -463,13 +463,18 @@ La función `.copy()` <!-- REF #collection.copy().Summary --> devuelve una copia
 
 Si se pasa, el parámetro *opción* puede contener una de las siguientes constantes (o ambas):
 
-| option                | Descripción                                                                                                                                                                                                                                                                                                                                   |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | Si la colección original contiene valores de tipo puntero, por defecto la copia también contiene los punteros. Sin embargo, puede resolver los punteros al copiar pasando ck resolve pointers. En este caso, cada puntero presente en la colección se evalúa al copiar y se utiliza su valor desreferenciado.                                 |
-| `ck shared`           | Por defecto, copy() devuelve una colección Clásica (no compartida), incluso si el comando se aplica a una colección compartida. Pasa la constante compartida ck para crear una colección compartida. En este caso, puede utilizar el parámetro groupWith para asociar la colección compartida con otra colección u objeto (ver más adelante). |
+| option                | Descripción                                                                                                                                                                                                                                                                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck resolve pointers` | Si la colección original contiene valores de tipo puntero, por defecto la copia también contiene los punteros. Sin embargo, puede resolver punteros al copiar pasando la constante `ck resolve pointers`. En este caso, cada puntero presente en la colección se evalúa al copiar y se utiliza su valor desreferenciado.              |
+| `ck shared`           | Por defecto, `copy()` devuelve una colección normal (no compartida), incluso si el comando se aplica a una colección compartida. Pase la constante `ck shared` para crear una colección compartida. En este caso, puede utilizar el parámetro *groupWith* para asociar la colección compartida a otra colección u objeto (ver abajo). |
 
 Los parámetros *groupWithCol* o *groupWithObj* permiten designar una colección o un objeto al que se debe asociar la colección resultante.
 
+:::note
+
+Los objetos Datastore, dataclass y entity no son copiables. Si se llama a `.copy()` con ellos, se devuelven valores `null`.
+
+:::
 
 #### Ejemplo 1
 
@@ -1089,7 +1094,7 @@ Se designa la retrollamada a ejecutar para filtrar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
+Se llama a la retrollamada con los parámetros pasados en *param* (opcional) y un objeto en primer parámetro (*$1*). The callback is called with the parameter(s) passed in *param* (optional).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1099,9 +1104,14 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-*   (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si el valor del elemento coincide con la condición del filtro y debe conservarse, en caso contrario **false**.
+*   *$1.result* (booleano): **true** si el valor del elemento coincide con la condición del filtro y debe conservarse, **false** en caso contrario.
 *   *$1.stop* (Boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
+:::note
+
+Cuando se utiliza *methodName* como callback, y si el método no devuelve ningún valor, `.filter()` buscará la propiedad *$1.result* que debe definir como **true** para cada elemento que cumpla la condición.
+
+:::
 
 #### Ejemplo 1
 
@@ -1540,6 +1550,7 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 
 
+
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
@@ -1668,7 +1679,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 #### Descripción
 
-La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colección basada en el resultado de la llamada a la fórmula ** 4D función o *methodName* método en cada elemento de la colección original<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original.
+La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colección basada en el resultado de la llamada a la fórmula ** 4D función o *methodName* método en cada elemento de la colección original<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original, excepto si se ha utilizado *$1.stop* (ver abajo).
 > Esta función no modifica la colección original.
 
 
@@ -1887,7 +1898,7 @@ Si la colección contiene elementos de diferentes tipos, se agrupan primero por 
 Ordenar una colección de números de forma ascendente y descendente:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -1973,6 +1984,7 @@ Ordenar con una ruta de propiedad:
 <!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
 
 
+
 <!-- REF #collection.orderByMethod().Params -->
 | Parámetros | Tipo        |    | Descripción                                                                   |
 | ---------- | ----------- |:--:| ----------------------------------------------------------------------------- |
@@ -2047,7 +2059,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //utilizando el lenguaje:
-$strings2:=$string1s.orderByMethod(Function(sortCollection);sk strict)
+$strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
@@ -2238,7 +2250,6 @@ Para obtener información detallada sobre cómo construir una consulta utilizand
 
 
 #### Ejemplo 2
-
 
 ```4d
  var $c : Collection

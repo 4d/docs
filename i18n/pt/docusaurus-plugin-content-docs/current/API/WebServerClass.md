@@ -223,7 +223,8 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 <!-- REF #WebServerClass.CORSSettings.Syntax -->**.CORSSettings** : Collection<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts permitidos e métodos para o serviço CORS<!-- END REF --> (ver propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **métodos**:
+Contém <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts permitidos e métodos para o serviço CORS<!-- END REF --> (ver propriedade [`CORSEnabled`](#corsenabled)). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **métodos**:
+
 
 - **host** (texto, obrigatório): Nome de domínio ou endereço IP onde as páginas externas são permitidas de enviar requisições de dados para o servidor através do CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Se *host* não estiver presente ou vazio, o objeto é ignorado. Várias sintaxes são suportadas:
   - 192.168.5.17:8081
@@ -283,6 +284,7 @@ O <!-- REF #WebServerClass.HSTSEnabled.Summary -->estado HTTP Strict Transport S
 <!-- REF WebServerClass.HSTSMaxAge.Desc -->
 
 ## .HSTSMaxAge
+
 
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
@@ -489,7 +491,7 @@ Normal = 100
 <!-- REF #WebServerClass.maxRequestSize.Syntax -->**.maxRequestSize** : Number<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.maxRequestSize.Summary -->tamanho máximo (em bytes) de petições HTTP entrando (POST) que o web server está autorizado a processar<!-- END REF -->. Passar o valor máximo (2147483647) significa na prática que não é estabelecido um limite. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Se um pedido atingir este limite, o servidor web rejeita-o.
+Contém <!-- REF #WebServerClass.maxRequestSize.Summary -->tamanho máximo (em bytes) de petições HTTP entrando (POST) que o web server está autorizado a processar<!-- END REF -->. Passar o valor máximo (2147483647) significa na prática que não é estabelecido um limite. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Se um pedido atingir este limite, o servidor web rejeita-o.
 
 Valores possíveis: 500000 - 2147483647
 
@@ -503,7 +505,7 @@ Valores possíveis: 500000 - 2147483647
 
 > Esta propriedade não é retornada em [scalable sessions mode](#scalablesession).
 
-O <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de sessões de legado simultâneas<!-- END REF -->. Quando se atinge o limite, a sessão de legado mais antiga é encerrada (e `On Web Legacy Close Session` método de base de dados é chamado) se o servidor web precisar de criar um novo. O número de sessões legadas em simultâneo não pode exceder o número total de processos web (`maxConcurrentProcesses` propriedade, 100 por padrão)
+Contém <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de sessões de legado simultâneas<!-- END REF -->. Quando se atinge o limite, a sessão de legado mais antiga é encerrada (e `On Web Legacy Close Session` método de base de dados é chamado) se o servidor web precisar de criar um novo. O número de sessões legadas em simultâneo não pode exceder o número total de processos web (`maxConcurrentProcesses` propriedade, 100 por padrão)
 
 <!-- END REF -->
 
@@ -737,25 +739,24 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 | v18 R3 | Adicionado |
 </details>
 
-<!-- REF #WebServerClass.stop().Syntax -->**.stop()** <!-- END REF -->
+<!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
 
 
 <!-- REF #WebServerClass.stop().Params -->
-
 | Parâmetros | Tipo |  | Descrição                                             |
 | ---------- | ---- |  | ----------------------------------------------------- |
 |            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
-A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->pára o servidor web em que é aplicado<!-- END REF -->.
+The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
-Se o servidor web foi iniciado, todas as ligações e processos web são fechados, uma vez terminados os pedidos actualmente tratados. Se o servidor web não foi iniciado, o método não faz nada.
+If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. Se o servidor web não foi iniciado, o método não faz nada.
 > Esta função repõe as definições web personalizadas definidas para a sessão utilizando o parâmetro ** da função [`.start()`](#start) , se existir.
 
 #### Exemplo
 
-Para parar o servidor Web da base de dados:
+To stop the database Web server:
 
 ```4d
  var $webServer : 4D. WebServer

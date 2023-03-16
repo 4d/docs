@@ -123,7 +123,7 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 El usuario no ve ninguna caja de diálogo; la operación es completamente automática. El objetivo es facilitar al máximo su uso. La operación se registra en el diario de copias de seguridad.
 
-> In the case of an automatic restore, only the following elements are restored:
+> En el caso de una restauración automática, sólo se restauran los siguientes elementos:
 > 
 > - archivo .4DD
 > - archivo .4DIndx

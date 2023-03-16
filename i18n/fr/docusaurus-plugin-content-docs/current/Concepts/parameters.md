@@ -58,6 +58,9 @@ Function add($x : Integer)
     $0:=$x+$2
 ```
 
+### Initialisation
+
+Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur par défaut correspondant à leur type**](data-types.md#valeurs-par-defaut), qu'ils conserveront pendant la session tant que l'on ne leur aura pas affecté une valeur.
 
 
 
@@ -521,7 +524,7 @@ L'exemple suivant affiche un message et peut insérer le texte dans un document 
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
 
- Method($message : Text; $path : Text; $wpArea : Object)
+ #DECLARE ($message : Text; $path : Text; $wpArea : Object)
 
  ALERT($message)
  If(Count parameters>=3)

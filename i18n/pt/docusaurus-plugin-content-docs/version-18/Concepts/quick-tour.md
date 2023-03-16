@@ -95,7 +95,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apena
 
 4D oferece un grande número de métodos (ou comandos) integrados, mas também lhe permite criar seus próprios **métodos de projeto**. Os métodos de projeto são métodos definidos pelo usuário que contenham comandos, operadores e outras partes da linguaje. Los métodos projeto são métodos genéricos, mas há outros tipos de métodos: métodos objeto, métodos formulário, métodos tabela (Triggers) e métodos base.
 
-Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa.
+Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex.
 
 Por exemplo, a linha abaixo é uma declaração que mostará uma caixa de diálogo de confirmação:
 
@@ -119,7 +119,7 @@ comments
  End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
 $f:=New object
@@ -187,12 +187,12 @@ myColl[3]  //access to 4th element of the collection
 
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
 
-| Operator | Operação      | Exemplo            |
-| -------- | ------------- | ------------------ |
-| +        | Adição        | 1 + 2 results in 3 |
-| –        | Subtração     | 3 – 2 results in 1 |
-| *        | Multiplicação | 2 * 3 results in 6 |
-| /        | Divisão       | 6 / 2 results in 3 |
+| Operator | Operação      | Exemplo   |
+| -------- | ------------- | --------- |
+| +        | Adição        | 1 +2 = 3  |
+| –        | Subtração     | 3 - 2 = 1 |
+| *        | Multiplicação | 2 * 3 = 6 |
+| /        | Divisão       | 6 / 2 = 3 |
 
 Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
@@ -204,18 +204,18 @@ The same symbols are often used for different operations, depending on the data 
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
-## Expressions
+## Expressões
 
 Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
 
 Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. It includes:
+Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Inclui:
 
 - Formula editor (apply formula, query with formula, order by formula)
-- The `EXECUTE FORMULA` command
-- The Property list, where an expression can be used as a data source for most of widgets
-- Debugger where the value of expressions can be checked
+- O comando `EXECUTE FORMULA`
+- A lista de propriedades, onde uma expressão pode ser usada como fonte de dados para a maioria dos widgets
+- Depurador onde o valor das expressões pode ser verificado
 - Quick Report editor as a formula for a column
 
 ### Tipos de expressões
@@ -227,9 +227,9 @@ You refer to an expression by the data type it returns. There are several expres
 | “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
 | “Sr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | Número             | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | Número             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
+| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. Retorna "SMITH".                                                     |
+| 4                        | Número             | Esta é uma constante numérica, 4.                                                                                                                                               |
+| 4 * 2                    | Número             | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
 | myButton                 | Número             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
 | !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
 | Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
@@ -239,7 +239,7 @@ You refer to an expression by the data type it returns. There are several expres
 | 10 # 20                  | Booleano           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
 | “ABC” = “XYZ”            | Booleano           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
 | My Picture + 50          | Imagem             | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Ponteiro           | This expression returns a pointer to the field called [People]Name.                                                                                                             |
+| ->[People]Name           | Ponteiro           | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
 | Table(1)                 | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
 | JSON Parse (MyString)    | Objeto             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
 | JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |

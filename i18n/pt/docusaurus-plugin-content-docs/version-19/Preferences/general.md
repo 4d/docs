@@ -1,6 +1,6 @@
 ---
 id: general
-title: General Page
+title: Página Geral
 ---
 
 This page contains various options to configure the general operation of your 4D application.
@@ -22,7 +22,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 ### Automatic form creation
 
-> This option is only used in binary databases; it is ignored in project architecture. See doc.4d.com.
+> This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
 #### Window tabbing (macOS only)
 
@@ -68,7 +68,7 @@ These items allow you to create binary databases (see [Creating a new database](
 
 ## When creating a new project
 
-### Use Log File
+### Usar ficheiro de registo
 
 When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
 
@@ -96,7 +96,7 @@ This area configures access to the 4D HTML documentation displayed in the curren
 
 You can choose to access the 4D online documentation site directly or to access a static version that is stored locally.
 
-### Local folder
+### Pasta local
 
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 

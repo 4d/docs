@@ -58,6 +58,9 @@ Function add($x : Integer)
     $0:=$x+$2
 ```
 
+### 初期化
+
+引数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が代入されない限り、セッション中はこの値が保持されます。
 
 
 
@@ -415,6 +418,7 @@ method1(42) // 型間違い。期待されるのはテキスト
 上述の `ChangeAge` メソッドの例では、Age およびName プロパティはどちらも必須であるため、引数オブジェクトに含まれていなければエラーが発生します。 これを避けるには、次のように記述することができます:
 
 ```4d
+
   // ChangeAge メソッド
  var $1; $para : Object
  $para:=$1  
@@ -467,7 +471,7 @@ ALERT("Time is over") // 1つの引数
 // APPEND TEXT ( テキスト { ; テキスト { ; オブジェクト } } )
 // APPEND TEXT ( メッセージ { ; パス { ; 4DWPエリア } } )
 
- Method($message : Text; $path : Text; $wpArea : Object)
+ #DECLARE($message : Text; $path : Text; $wpArea : Object)
 
  ALERT($message)
  If(Count parameters>=3)

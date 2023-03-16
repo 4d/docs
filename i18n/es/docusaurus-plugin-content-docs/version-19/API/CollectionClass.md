@@ -414,12 +414,19 @@ La función `.copy()` <!-- REF #collection.copy().Summary --> devuelve una copia
 
 Si se pasa, el parámetro *opción* puede contener una de las siguientes constantes (o ambas):
 
-| option                | Descripción                                                                                                                                                                                                                                                                                                                                   |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck resolve pointers` | Si la colección original contiene valores de tipo puntero, por defecto la copia también contiene los punteros. Sin embargo, puede resolver los punteros al copiar pasando ck resolve pointers. En este caso, cada puntero presente en la colección se evalúa al copiar y se utiliza su valor desreferenciado.                                 |
-| `ck shared`           | Por defecto, copy() devuelve una colección Clásica (no compartida), incluso si el comando se aplica a una colección compartida. Pasa la constante compartida ck para crear una colección compartida. En este caso, puede utilizar el parámetro groupWith para asociar la colección compartida con otra colección u objeto (ver más adelante). |
+| option                | Descripción                                                                                                                                                                                                                                                                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck resolve pointers` | Si la colección original contiene valores de tipo puntero, por defecto la copia también contiene los punteros. Sin embargo, puede resolver punteros al copiar pasando la constante `ck resolve pointers`. En este caso, cada puntero presente en la colección se evalúa al copiar y se utiliza su valor desreferenciado.              |
+| `ck shared`           | Por defecto, `copy()` devuelve una colección normal (no compartida), incluso si el comando se aplica a una colección compartida. Pase la constante `ck shared` para crear una colección compartida. En este caso, puede utilizar el parámetro *groupWith* para asociar la colección compartida a otra colección u objeto (ver abajo). |
 
 Los parámetros *groupWithCol* o *groupWithObj* permiten designar una colección o un objeto al que se debe asociar la colección resultante.
+
+:::note
+
+Los objetos Datastore, dataclass y entity no son copiables. Si se llama a `.copy()` con ellos, se devuelven valores `null`.
+
+:::
+
 
 #### Ejemplo 1
 
@@ -1515,7 +1522,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 #### Descripción
 
-La función `.map()` <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Opcionalmente, puede pasar parámetros a *methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original.
+La función `.map()` <!-- REF #collection.map().Summary -->crea una nueva colección basada en el resultado de la llamada al método *methodName* en cada elemento de la colección original<!-- END REF -->. Opcionalmente, puede pasar parámetros a *methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original, excepto si se ha utilizado *$1.stop* (ver abajo).
 > Esta función no modifica la colección original.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
@@ -1863,13 +1870,13 @@ Ordenar los elementos de la colección por código de caracteres o alfabéticame
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//utilizando el código de caracteres:
+//using the character code:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
-// resultado : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//utilizando el lenguaje:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+//using the language:
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
+// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 El método ***sortCollection***:
@@ -1978,6 +1985,7 @@ Quiere ordenar la colección resultante:
 
 <!-- END REF -->
 
+
 <!-- REF collection.query().Desc -->
 ## .query()
 
@@ -2005,7 +2013,7 @@ Quiere ordenar la colección resultante:
 
 #### Descripción
 
-La función `.query()` <!-- REF #collection.query().Summary -->devuelve todos los elementos de una colección de objetos que coinciden con las condiciones de búsqueda <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.query()` <!-- REF #collection.query().Summary -->devuelve todos los elementos de una colección de objetos que coinciden con las condiciones de búsqueda <!-- END REF -->definido por *queryString* y (opcionalmente) *value* o *querySettings*. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 El parámetro *queryString* utiliza la siguiente sintaxis:
@@ -2425,7 +2433,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 #### Descripción
 
-La propiedad `.length` <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
+La propiedad `.length` <!-- REF #collection.some().Summary -->devuelve true si al menos un elemento de la colección ha superado con éxito una prueba<!-- END REF --> implementado en el método *methodName* suminstrado.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
 
@@ -2468,6 +2476,7 @@ Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar 
 Con el siguiente método *NumberGreaterThan0*:
 
 ```4d
+
  $1.result:=$1.value>0
 ```
 
@@ -2498,7 +2507,7 @@ Con el siguiente método *NumberGreaterThan0*:
 
 #### Descripción
 
-La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original<!-- END REF --> and also returns the sorted collection.
+La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original<!-- END REF --> y también devuelve la colección ordenada.
 > Esta función modifica la colección original.
 
 Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
@@ -2513,7 +2522,7 @@ Si desea ordenar los elementos de la colección en otro orden o clasificar cualq
 
 *methodName* define el siguiente parámetro:
 
-* *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
+* *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** en caso contrario
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 

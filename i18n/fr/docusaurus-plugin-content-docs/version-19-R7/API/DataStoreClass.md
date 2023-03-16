@@ -395,9 +395,9 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Paramètres | Type   |    | Description                                                             |
-| ---------- | ------ | -- | ----------------------------------------------------------------------- |
-| Résultat   | Object | <- | Collection d'objets contextes d'optimisation|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                             |
+| ---------- | ---------- | -- | ----------------------------------------------------------------------- |
+| Résultat   | Collection | <- | Collection d'objets contextes d'optimisation|<!-- END REF -->
 
 |
 
@@ -1024,7 +1024,9 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
 | ---------- | ---- |  | ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
 
+
 |
+
 
 #### Description
 

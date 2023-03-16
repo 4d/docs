@@ -19,7 +19,7 @@ title: Classe Transporter
 
 #### Descrição
 
-A propriedade `.acceptUnsecureConnection` contém <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+A propriedade `.acceptUnsecureConnection` contém <!-- REF #transporter.acceptUnsecureConnection.Summary -->**Verdadeiro** se 4D for permitido estabelecer uma ligação não encriptada<!-- END REF --> quando a ligação encriptada não é possível.
 
 Contém **False** se conexões cifradas não forem permitidas, neste caso um erro é retornado quando a conexão criptografada não for possível.
 
@@ -152,7 +152,7 @@ Valores possíveis:
 
 #### Descrição
 
-A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
+A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -->  o charset e a codificação utilizados para a parte do corpo do e-mail<!-- END REF -->.
 
 **Valores possíveis:**
 
@@ -182,7 +182,7 @@ A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -
 
 #### Descrição
 
-A propriedade `.connectionTimeOut` contém <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
+A propriedade `.connectionTimeOut` contém <!-- REF #transporter.connectionTimeOut.Summary -->o tempo máximo de espera (em segundos) permitido para estabelecer uma conexão com o servidor<!-- END REF -->. Por padrão, se a propriedade não tiver sido definida no objecto servidor (utilizado para criar o objecto transportador com `SMTP Novo transportador`, `POP3 Novo transportador`, ou `IMAP Novo transportador`), o valor é 30.
 
 <!-- END REF -->
 
@@ -203,7 +203,7 @@ A propriedade `.connectionTimeOut` contém <!-- REF #transporter.connectionTimeO
 
 #### Descrição
 
-A propriedade `.headerCharset` contém <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email:
+A propriedade `.headerCharset` contém <!-- REF #transporter.headerCharset.Summary --> o charset e a codificação utilizados para o cabeçalho do correio eletrônico<!-- END REF -->. O cabeçalho inclui as seguintes partes do e-mail:
 
 - subject,
 - nome(s) de arquivo anexo,
@@ -237,7 +237,7 @@ A propriedade `.headerCharset` contém <!-- REF #transporter.headerCharset.Summa
 
 #### Descrição
 
-A propriedade `.host` contém <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
+A propriedade `.host` contém <!-- REF #transporter.host.Summary -->o nome ou o endereço IP do servidor anfitrião<!-- END REF -->. Utilizado para transacções postais (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 
@@ -258,9 +258,9 @@ A propriedade `.host` contém <!-- REF #transporter.host.Summary -->the name or 
 
 #### Descrição
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. It can be relative (to the current Logs folder) or absolute.
+A propriedade `.logFile` contém <!-- REF #transporter.logFile.Summary -->o caminho do arquivo de registo alargado definido (se existir) para a ligação de correio<!-- END REF -->. Pode ser relativo (à pasta atual de Logs) ou absoluto.
 
-Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:
+Ao contrário dos arquivos de registo regulares (ativados através do comando `SET DATABASE PARAMETER` ), os arquivos de registo armazenam o conteúdo MIME de todos os e-mails enviados e não têm qualquer limite de tamanho. Para mais informações sobre arquivos de registo estendidos, consultar:
 
 - **SMTP connections** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 - **POP3 connections** - [4DPOP3Log.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -285,7 +285,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 #### Descrição
 
-A propriedade `.port` contém <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
+A propriedade `.port` contém <!-- REF #transporter.port.Summary --> o número do porto utilizado para as transações postais<!-- END REF -->. Por padrão, se a propriedade não tiver sido definida no objeto servidor (utilizado para criar o objecto transportador com `SMTP Novo transportador`, `POP3 Novo transportador`, ou `IMAP Novo transportador`), o valor é 30:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -309,7 +309,7 @@ A propriedade `.port` contém <!-- REF #transporter.port.Summary --> the port nu
 
 #### Descrição
 
-A propriedade `.sendTimeOut` contém <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. .
+A propriedade `.sendTimeOut` contém <!-- REF #transporter.sendTimeOut.Summary --> o tempo máximo de espera (em segundos) de uma chamada para `.send( )` antes de ocorrer um timeout<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -330,7 +330,7 @@ A propriedade `.sendTimeOut` contém <!-- REF #transporter.sendTimeOut.Summary -
 
 #### Descrição
 
-A propriedade `.user` contém <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
+A propriedade `.user` contém <!-- REF #transporter.user.Summary --> o nome de usuário utilizado para autenticação no servidor de correio<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -351,28 +351,28 @@ A propriedade `.user` contém <!-- REF #transporter.user.Summary --> the user na
 
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                              |
-| ---------- | ------ |:--:| ---------------------------------------------------------------------- |
-| Resultados | Objeto | <- | Status of the transporter object connection|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                             |
+| ---------- | ------ |:--:| --------------------------------------------------------------------- |
+| Resultados | Objeto | <- | Estado da ligação do objecto transportador|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
+A função `.checkConnection()` <!-- REF #transporter.checkConnection().Summary --> verifica a ligação utilizando a informação armazenada no objeto de transporte<!-- END REF -->, recria a ligação, se necessário, e devolve o estado. Esta função permite verificar se os valores fornecidos pelo utilizador são válidos e consistentes.
 
 #### Objeto devolvido
 
-The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
+A função envia um pedido para o servidor de correio e devolve um objecto descrevendo o estado do correio. This object can contain the following properties:
 
-| Propriedade |                          | Tipo       | Descrição                                                                                                    |
-| ----------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| success     |                          | boolean    | True if the check is successful, False otherwise                                                             |
-| status      |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
-| statusText  |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
-| errors      |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |
-|             | \[ ].errCode            | number     | 4D error code                                                                                                |
-|             | \[ ].message            | text       | Description of the 4D error                                                                                  |
-|             | \[ ].componentSignature | text       | Signature of the internal component which returned the error                                                 |
+| Propriedade |                          | Tipo       | Descrição                                                                                                                                   |
+| ----------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| success     |                          | boolean    | Verdadeiro se a verificação for bem sucedida, Falso de outra forma                                                                          |
+| status      |                          | number     | (apenas SMTP) Código de estado devolvido pelo servidor de correio (0 no caso de um problema não relacionado com o processamento de correio) |
+| statusText  |                          | text       | Mensagem de estado devolvida pelo servidor de correio, ou último erro devolvido na pilha de erros 4D                                        |
+| errors      |                          | collection | pilha de erros 4D (não devolvida se for recebida uma resposta do servidor de correio)                                                       |
+|             | \[ ].errCode            | number     | Código de erro 4D                                                                                                                           |
+|             | \[ ].message            | text       | Descrição do erro 4D                                                                                                                        |
+|             | \[ ].componentSignature | text       | Assinatura da componente interna que devolveu o erro                                                                                        |
 
 <!-- END REF -->

@@ -16,10 +16,12 @@ title: DataStore
 | [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.locked().Syntax -->](#locked)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.locked().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
@@ -27,6 +29,7 @@ title: DataStore
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.unlock().Syntax -->](#unlock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.unlock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.validateTransaction().Summary --> |
 
 ## ds
@@ -377,6 +380,89 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <!-- END REF -->
 
+
+<!-- REF DataClassClass.flushAndLock().Desc -->
+## .flushAndLock()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #DataStoreClass.flushAndLock().Syntax -->**.flushAndLock()**<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.flushAndLock().Params -->
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |  | -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.flushAndLock()` 関数は、 <!-- REF #DataStoreClass.flushAndLock().Summary -->ローカルデータストアのキャッシュをフラッシュし、データベースに対して他のプロセスが書き込み操作をおこなうのを防ぎます<!-- END REF -->。 これにより、データストアは凍結状態におかれます。 この関数は、たとえばアプリケーションのスナップショットを実行する前に呼び出す必要があります。
+
+:::info
+
+この関数は次の場合にのみ使えます:
+
+- ローカルデータストア ([`ds`](#ds)) を対象に。
+- クライアント/サーバー環境では、サーバーマシン上にて。
+
+:::
+
+この関数が実行されると、他のすべてのプロセスで `.save()` などの書き込み操作や、追加の `.flushAndLock()` の呼び出しが凍結され、データストアのロックが解除されるまで続きます。
+
+同一プロセス内で `.flushAndLock()` を複数回呼び出した場合、データストアのロックを解除するには、同じ回数だけ [`.unlock()`](#unlock) を呼び出す必要があります。
+
+データストアのロックが解除されるのは、以下の場合です:
+
+- 同プロセス内で [`.unlock()`](#unlock) 関数が呼び出された場合、または
+- `.flushAndLock()` 関数を呼び出したプロセスが終了した場合。
+
+
+データストアがすでに他のプロセスからロックされている場合、`.flushAndLock()` の呼び出しは凍結され、データストアのロックが解除されたときに実行されます。
+
+`.flushAndLock()` 関数が実行できない場合 (リモートの 4D で実行された場合など) には、エラーが発生します。
+
+
+:::caution
+
+[バックアップ](../Backup/backup.md) や [VSS](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.ja.html) 、[MSC](../MSC/overview.md) を含む他の 4D機能およびサービスもデータストアをロックすることがあります。 予期せぬ相互作用を避けるため、`.flushAndLock()` を呼び出す前に、データストアをロックするような他の操作がおこなわれていないことを確認してください。
+
+:::
+
+#### 例題
+
+データフォルダーとともにカレントジャーナルファイルのコピーを作成します:
+
+```4d
+$destination:=Folder(fk documents folder).folder("Archive") 
+$destination.create()
+
+ds.flushAndLock() // 他のプロセスからの書き込み操作をブロックします
+
+$dataFolder:=Folder(fk data folder) 
+$dataFolder.copyTo($destination) // データフォルダーをコピーします
+
+$oldJournalPath:=New log file // ジャーナルを閉じて、新しいものを作成します
+$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal.moveTo($destination) // 閉じたジャーナルを保存します
+
+ds.unlock() // コピー操作をおこなったので、データストアのロックを解除します
+```
+
+#### 参照
+
+[.locked()](#locked)<br/>[.unlock()](#unlock)
+
+
 <!-- REF DataClassClass.getAllRemoteContexts().Desc -->
 ## .getAllRemoteContexts()
 
@@ -392,9 +478,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| 引数  | タイプ    |    | 説明                                                |
-| --- | ------ | -- | ------------------------------------------------- |
-| 戻り値 | Object | <- | 最適化コンテキストオブジェクトのコレクション|<!-- END REF -->
+| 引数  | タイプ        |    | 説明                                                |
+| --- | ---------- | -- | ------------------------------------------------- |
+| 戻り値 | Collection | <- | 最適化コンテキストオブジェクトのコレクション|<!-- END REF -->
 
 |
 
@@ -482,7 +568,7 @@ $info:=$ds.getAllRemoteContexts()
 
 | プロパティ      | タイプ     | 説明                                                                                        |
 | ---------- | ------- | ----------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                        |
+| type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                       |
 | networked  | boolean | <li>true: ネットワーク接続を介してアクセスされたデータストア</li><li>false: ネットワーク接続を介さずにアクセスしているデータストア (ローカルデータベース)</li>                                      |
 | localID    | text    | マシン上のデータストアID。 これは、`Open datastore` コマンドで返される localId 文字列です。 メインデータストアの場合は空の文字列 ("") です。  |
 | connection | object  | リモートデータストア接続の情報を格納したオブジェクト (メインデータストアの場合は返されません)。 次のプロパティを含みます:<table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>hostname</td><td>text</td><td>リモートデータストアの IPアドレスまたは名称 + ":" + ポート番号</td></tr><tr><td>tls</td><td>boolean</td><td>リモートデータストアとセキュア接続を利用している場合は true</td></tr><tr><td>idleTimeout</td><td>number</td><td>セッション非アクティブタイムアウト (分単位)。</td></tr><tr><td>user</td><td>text</td><td>リモートデータストアにて認証されたユーザー</td></tr></table> |
@@ -644,6 +730,48 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 [`.setAdminProtection()`](#setadminprotection)
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.locked().Desc -->
+## .locked()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #DataStoreClass.locked().Syntax -->**.locked()** : Boolean<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.locked().Params -->
+| 引数  | タイプ     |    | 説明                                          |
+| --- | ------- | -- | ------------------------------------------- |
+| 戻り値 | Boolean | <- | ロックされている場合は true|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.locked()` 関数は、 <!-- REF #DataStoreClass.locked().Summary -->ローカルデータストアが現在ロックされている場合、true を返します<!-- END REF -->。
+
+データファイルのスナップショットを実行する前などに、[.flushAndLock()](#flushandlock) 関数を使用してデータストアをロックすることができます。
+
+:::caution
+
+この関数は、データストアがバックアップや VSS などの他の管理機能によってロックされた場合にも、 `true` を返します ([.flushAndLock()](#flushandlock) 参照)。
+
+:::
+
+
+#### 参照
+
+[.flushAndLock()](#flushandlock)<br/>[.unlock()](#unlock)
+
 
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
@@ -1017,10 +1145,12 @@ ORDA クライアントリクエストをメモリに記録します:
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | 引数 | タイプ |  | 説明                                           |
-| -- | --- |  | -------------------------------------------- |
+| -- | --- |::| -------------------------------------------- |
 |    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -1096,6 +1226,46 @@ ORDA クライアントリクエストをメモリに記録します:
 [`.startRequestLog()`](#startrequestlog) の例題を参照ください。
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.unlock().Desc -->
+## .unlock()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #DataStoreClass.unlock().Syntax -->**.unlock()**<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.unlock().Params -->
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |  | -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.unlock()` 関数は、 <!-- REF #DataStoreClass.unlock().Summary -->データストアにおける、書き込み操作に対する現在のロックが同じプロセスで設定されていた場合、そのロックを解除します<!-- END REF -->。 ローカルデータストアの書き込み操作は、[`.flushAndLock()`](#flushandlock) 関数を使用してロックすることができます。
+
+現在のロックがデータストアの唯一のロックであった場合、書き込み操作は直ちに可能になります。 `.flushAndLock()` 関数がプロセス内で複数回呼ばれている場合、データストアのロックを解除するには、同じ回数だけ `.unlock()` を呼び出す必要があります。
+
+`.unlock()` 関数は、対応する `.flushAndLock()` を呼び出したプロセス内で呼び出す必要があります。そうでない場合には、この関数は何もおこなわず、ロックも解除されません。
+
+ロックが解除されているデータストアで `.unlock()` 関数を呼び出した場合、何もおこりません。
+
+
+#### 参照
+
+[.flushAndLock()](#flushandlock)<br/>[.locked()](#locked)
+
 
 <!-- REF DataStoreClass.validateTransaction().Desc -->
 ## .validateTransaction()

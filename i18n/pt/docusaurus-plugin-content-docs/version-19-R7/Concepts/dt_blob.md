@@ -3,32 +3,32 @@ id: blob
 title: BLOB
 ---
 
-A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually.
+Um campo, variável ou expressão BLOB (Binary Large OBject) é uma série contígua de bytes que podem ser tratados como um objeto inteiro, ou cujos bytes podem ser abordados individualmente.
 
-A blob is loaded into memory in its entirety. A blob variable is held and exists in memory only. A blob field is loaded into memory from the disk, like the rest of the record to which it belongs.
+Um BLOB é carregado totalmente na memória. Uma variável BLOB é mantida e existe apenas na memória. Um campo BLOB é carregado na memória desde o disco, como o resto do registro ao que pertence.
 
-Like other field types that can retain a large amount of data (such as the Picture field type), Blob fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a Blob field.
+Como os outros tipos de campo que podem reter uma grande quantidade de dados (tais como tipo de campo Imagem), os campos BLOB não são duplicados na memória quando um registro for modificado. Consequentemente o resultado devolvido pelos comandos `Old` e `Modified` não é significativo quando for aplicado a um campo BLOB.
 
 ## Tipos de Blob
 
-Using the 4D language, there are two ways to handle a blob:
+Usando a linguagem 4D, há duas maneiras de lidar com um blob:
 
-- **as a scalar value**: a blob can be stored in a Blob variable or field and altered.
-- **as an object (`4D.Blob`)**: a `4D.Blob` is a blob object. You can encapsulate a blob or part of it in a `4D.Blob` without altering the original blob. This method is called [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). For more info on how to instantiate a `4D.Blob`, see [Blob Class](../API/BlobClass.md).
+- **como um valor escalar**: um blob pode ser armazenado numa variável ou campo Blob e alterado.
+- **as an object (`4D. Blob`)**: a `4D. Blob` is a blob object. Pode encapsular um blob ou parte dele num `4D.Blob` sem alterar o blob original. Este método chama-se [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Para mais informações sobre como instanciar um `4D.Blob`, ver [Blob Class](../API/BlobClass.md).
 
-Each blob type has its advantages. Use the following table to determine which one suits your needs:
+Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determinar qual se adequa às suas necessidades:
 
-|                                      | Blob | 4D.Blob |
-| ------------------------------------ |:----:|:-------:|
-| Alterable                            | Sim  |   No    |
-| Shareable in objects and collections |  No  |   Sim   |
-| Passed by reference\*              |  No  |   Sim   |
-| Performance when accessing bytes     |  +   |    -    |
-| Maximum size                         | 2GB  | Memory  |
+|                                     | Blob | 4D.Blob |
+| ----------------------------------- |:----:|:-------:|
+| Editável                            | Sim  |   Não   |
+| Partilhável em objectos e colecções | Não  |   Sim   |
+| Passado por referência\*          | Não  |   Sim   |
+| Desempenho ao acessar aos bytes     |  +   |    -    |
+| Tamanho máximo                      | 2GB  | Memory  |
 
-\*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+\*Diferente dos comandos 4D concebidos para tomar uma bolha escalar como parâmetro, passar um blob escalar para um método duplica-o na memória. Ao trabalhar com métodos, a utilização de objectos blob (`4D.Blob`) é mais eficiente, uma vez que são passados por referência.
 
-> By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+> Como padrão, 4D estabelece o tamanho blob máximo para 2GB mas esse limite de tamanho pode ser menor dependendo de seu SO e de quanto espaço estiver disponível.
 
 You cannot use operators on blobs.
 
@@ -106,7 +106,7 @@ var $myBlobVar: Blob
 
 **Nota para  desenvolvedores de plugins:** um parâmetro BLOB se declara como "&O" (a letra "O", não o número "0").
 
-## Assigning a blob variable to another
+## Atribuição de uma variável blob a outra
 
 You can assign a Blob variable to another:
 

@@ -40,7 +40,7 @@
     "description": "The label for category Handling Code in sidebar docs"
   },
   "sidebar.docs.category.Debugging": {
-    "message": "Debugging",
+    "message": "Depuração",
     "description": "The label for category Debugging in sidebar docs"
   },
   "sidebar.docs.category.Settings": {
@@ -68,7 +68,7 @@
     "description": "The label for category Command Line Interface in sidebar docs"
   },
   "sidebar.docs.category.TLS Protocol": {
-    "message": "TLS Protocol",
+    "message": "Protocolo TLS",
     "description": "The label for category TLS Protocol in sidebar docs"
   },
   "sidebar.docs.category.Licenses & Data Collection": {
@@ -88,7 +88,7 @@
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Extensions": {
-    "message": "Extensions",
+    "message": "Extensões",
     "description": "The label for category Extensions in sidebar docs"
   },
   "sidebar.docs.category.4D View Pro": {
@@ -96,7 +96,7 @@
     "description": "The label for category 4D View Pro in sidebar docs"
   },
   "sidebar.docs.category.Web Applications": {
-    "message": "Web Applications",
+    "message": "Aplicações Web",
     "description": "The label for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
@@ -173,7 +173,7 @@
   },
   "sidebar.docs.link.4D Language Reference": {
     "message": "4D Language Reference",
-    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Language-Reference.100-5910320.en.html"
+    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html"
   },
   "sidebar.docs.link.4D Mobile App Server": {
     "message": "4D Mobile App Server",

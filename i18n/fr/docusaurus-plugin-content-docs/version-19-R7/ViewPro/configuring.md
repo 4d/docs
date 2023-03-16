@@ -186,30 +186,30 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
-|       | Code<br/>(non sensible à la casse) | Description                                                                         | Exemple                       |
-| ----- | ---------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------- |
-| Date  |                                          |                                                                                     | (January 1, 2019)             |
-|       | m                                        | Numéro du mois sans le premier zéro                                                 | 1                             |
-|       | mm                                       | Numéro du mois avec le zéro en préfixe                                              | 01                            |
-|       | mmm                                      | Nom du mois, court                                                                  | Jan                           |
-|       | mmmm                                     | Nom du mois, long                                                                   | January                       |
-|       | d                                        | Numéro du jour sans le zéro en préfixe                                              | 1                             |
-|       | dd                                       | Numéro du jour avec le zéro en préfixe                                              | 01                            |
-|       | ddd                                      | Jour de la semaine, court                                                           | Tue                           |
-|       | dddd                                     | Jour de la semaine, long                                                            | Tuesday                       |
-|       | yy                                       | Année, format court                                                                 | 19                            |
-|       | yyyy                                     | Année, long format                                                                  | 2019                          |
-| Heure |                                          |                                                                                     | (2:03:05 PM)                  |
-|       | h                                        | Heure sans le zéro en préfixe. 0-23                                                 | 2                             |
-|       | hh                                       | Heure avec le zéro en préfixe. 00-23                                                | 02                            |
-|       | m                                        | Minutes sans le zéro en préfixe. 0-59                                               | 3                             |
-|       | mm                                       | Minutes avec le zéro en préfixe. 00-59                                              | 03                            |
-|       | s                                        | Secondes sans le zéro en préfixe. 0-59                                              | 5                             |
-|       | ss                                       | Secondes avec le zéro en préfixe. 00-59                                             | 05                            |
-|       | \[h]                                    | Temps écoulé en heures                                                              | 14 (peut aller au delà de 24) |
-|       | \[mm]                                   | Temps écoulé en minutes                                                             | 843                           |
-|       | \[ss]                                   | Temps écoulé en secondes                                                            | 50585                         |
-|       | AM/PM                                    | Périodes de la journée. S'il est omis, c'est le fomat de 24 heures qui est utilisé. | PM                            |
+|      | Code<br/>(non sensible à la casse) | Description                                                                         | Exemple                       |
+| ---- | ---------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------- |
+| Date |                                          |                                                                                     | (January 1, 2019)             |
+|      | m                                        | Numéro du mois sans le premier zéro                                                 | 1                             |
+|      | mm                                       | Numéro du mois avec le zéro en préfixe                                              | 01                            |
+|      | mmm                                      | Nom du mois, court                                                                  | Jan                           |
+|      | mmmm                                     | Nom du mois, long                                                                   | January                       |
+|      | d                                        | Numéro du jour sans le zéro en préfixe                                              | 1                             |
+|      | dd                                       | Numéro du jour avec le zéro en préfixe                                              | 01                            |
+|      | ddd                                      | Jour de la semaine, court                                                           | Tue                           |
+|      | dddd                                     | Jour de la semaine, long                                                            | Tuesday                       |
+|      | yy                                       | Année, format court                                                                 | 19                            |
+|      | yyyy                                     | Année, long format                                                                  | 2019                          |
+| Time |                                          |                                                                                     | (2:03:05 PM)                  |
+|      | h                                        | Heure sans le zéro en préfixe. 0-23                                                 | 2                             |
+|      | hh                                       | Heure avec le zéro en préfixe. 00-23                                                | 02                            |
+|      | m                                        | Minutes sans le zéro en préfixe. 0-59                                               | 3                             |
+|      | mm                                       | Minutes avec le zéro en préfixe. 00-59                                              | 03                            |
+|      | s                                        | Secondes sans le zéro en préfixe. 0-59                                              | 5                             |
+|      | ss                                       | Secondes avec le zéro en préfixe. 00-59                                             | 05                            |
+|      | \[h]                                    | Temps écoulé en heures                                                              | 14 (peut aller au delà de 24) |
+|      | \[mm]                                   | Temps écoulé en minutes                                                             | 843                           |
+|      | \[ss]                                   | Temps écoulé en secondes                                                            | 50585                         |
+|      | AM/PM                                    | Périodes de la journée. S'il est omis, c'est le fomat de 24 heures qui est utilisé. | PM                            |
 > The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
 
 ### Symboles supplémentaires
@@ -481,7 +481,7 @@ Voici un exemple :
 
 The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet contents. It is automatically handled by 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](method-list.md#vp-import-from-object) or [VP Export to object](method-list.md#vp-export-to-object) methods.
 
-It contains the following properties:
+Il contient les propriétés suivantes :
 
 | Propriété    | Value type | Description                                  |
 | ------------ | ---------- | -------------------------------------------- |
@@ -496,7 +496,7 @@ It contains the following properties:
 The 4D View Pro form object variable is the [object](Concepts/dt_object.md) variable associated to the 4D View Pro form area. It manages information used by the 4D View Pro object.
 > The 4D View Pro form object variable is for information purposes only (i.e., debugging). Under no circumstances should it be modified.
 
-It contains the following properties:
+Il contient les propriétés suivantes :
 
 | Propriété              | Value type | Description                                                                                                                                                                                                                                                                                                                  |
 | ---------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

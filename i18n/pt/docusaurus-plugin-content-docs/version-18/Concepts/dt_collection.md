@@ -7,7 +7,7 @@ Coleções são listas ordenadas de valores de tipos diferentes ou não (texto, 
 
 Para gerenciar as variáveis de tipo Coleção se deve utilizar a notação de objetos (ver  [Syntax basics](Concepts/dt_object.md#syntax-basics)).
 
-Para acessar a um elemento da coleção, é preciso passar o número do elemento entre colchetes:
+Para acessar a um elemento de coleção, é necessário passar o número do elemento dentro de parênteses rectos:
 
 ```4d
 collectionRef[expression]

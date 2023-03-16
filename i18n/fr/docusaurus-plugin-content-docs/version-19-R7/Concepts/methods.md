@@ -4,15 +4,15 @@ title: Methods
 ---
 
 
-Une méthode est un morceau de code qui exécute une ou plusieurs actions. Une méthode est composée de plusieurs lignes d’instructions. Une ligne d’instructions effectue une action. Cette ligne d’instruction peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions).
+Une méthode est un morceau de code qui exécute une ou plusieurs actions. Une méthode est composée de plusieurs lignes d’instructions. Une instruction exécute une action, et peut être simple ou complexe. Cette ligne peut être aussi longue que vous voulez (elle peut comporter jusqu’à 32 000 caractères, ce qui est normalement suffisant pour la plupart des instructions).
 
-La taille maximale d’une méthode est limitée à 2 Go de texte ou 32 000 lignes de code.
+La taille maximale d'une méthode est limitée à 2 Go de texte ou à 32 000 lignes de code.
 
 ## Types de méthodes
 
-Dans le langage 4D, il existe plusieurs catégories de méthodes : La catégorie dépend de la façon dont elle a été appelée : La catégorie dépend de la façon dont elle a été appelée : La catégorie dépend de la façon dont elle a été appelée : La catégorie dépend de la façon dont elle a été appelée : La catégorie dépend de la façon dont elle a été appelée :
+Dans le langage 4D, il existe plusieurs catégories de méthodes. La catégorie dépend de la façon dont on peut les appeler :
 
-| Type                             | Contexte d'appel                                                                                                            | Accepte les paramètres | Description                                                                                                                                                                                                             |
+| Type                             | Contexte d'appel                                                                                                            | Accepte des paramètres | Description                                                                                                                                                                                                             |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Méthode**                      | À la demande, lorsque le nom de la méthode projet est appelé (voir [Appel de méthodes de projet](#calling-project-methods)) | Oui                    | Peut contenir du code pour exécuter des actions personnalisées. Une fois que votre méthode projet est créée, elle devient partie intégrante du langage du projet.                                                       |
 | **Méthode objet (widget)**       | Automatique, lorsqu'un événement implique l'objet auquel la méthode est associée                                            | Non                    | Propriété d'un objet formulaire (également appelé widget)                                                                                                                                                               |

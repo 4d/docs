@@ -87,7 +87,7 @@ If you use this button to modify a method, the modifications are only effective 
 
 #### Save Settings
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+Saves the current configuration of the debugger window  and makes it the default configuration. Isto inclui:
 
 * the size and position of the window
 * the position of the division lines and the contents of the area that evaluates the expressions
@@ -157,13 +157,13 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtema      | Descrição                                                    | Can the values be modified? |
-| ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Sim                         |
-| Processo     | List of process variables used by the current process        | Sim                         |
-| Local        | List of local variables used by the method being traced      | Sim                         |
-| Parâmetros   | List of parameters received by the method                    | Sim                         |
-| Self         | Pointer to the current object, when tracing an Object Method | No                          |
+| Subtema       | Descrição                                                    | Can the values be modified? |
+| ------------- | ------------------------------------------------------------ | --------------------------- |
+| Interprocesso | List of interprocess variables being used at this point      | Sim                         |
+| Processo      | List of process variables used by the current process        | Sim                         |
+| Local         | List of local variables used by the method being traced      | Sim                         |
+| Parâmetros    | List of parameters received by the method                    | Sim                         |
+| Self          | Pointer to the current object, when tracing an Object Method | Não                         |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
@@ -171,7 +171,7 @@ To display the variable types and their internal names, right click and check th
 
 ![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
-Here's the result:
+Aqui está o resultado:
 
 ![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
 
@@ -187,15 +187,15 @@ Some objects, such as list box arrays, can be presented as two distinct objects,
 
 Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
 
-#### Semaphores
+#### Semáforos
 
 This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
-#### Processes
+#### Processos
 
 This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
 
-#### Tables and Fields
+#### Tabelas e Campos
 
 This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
@@ -209,7 +209,7 @@ This theme lists the sets defined in the current process (the one you're current
 
 This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
 
-#### Information
+#### Informação
 
 This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
 
@@ -276,7 +276,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * campo
 * variável
 * pointer
-* calculation
+* cálculo
 * Comando 4D
 * method
 * and anything else that returns a value

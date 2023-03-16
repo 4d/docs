@@ -50,7 +50,7 @@ Este comando permite verificar que el servidor web, la visualización de la pág
 
 En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché).
 
-To do so, you just have to click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box. La caché se borra inmediatamente.
+Para ello, basta con hacer clic en el botón **Vaciar la caché** de la página Web/Opciones (I) de la caja de diálogo de Parámetros. La caché se borra inmediatamente.
 > También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
 
 ## Explorador de ejecución

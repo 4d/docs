@@ -8,11 +8,11 @@
     "description": "The label for category Getting Started in sidebar docs"
   },
   "sidebar.docs.category.Project Management": {
-    "message": "Project Management",
+    "message": "Gestion des projets",
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
-    "message": "4D Language Concepts",
+    "message": "Concepts du langage 4D",
     "description": "The label for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Data Types": {
@@ -20,7 +20,7 @@
     "description": "The label for category Data Types in sidebar docs"
   },
   "sidebar.docs.category.Control Flow": {
-    "message": "Control Flow",
+    "message": "Conditions et boucles",
     "description": "The label for category Control Flow in sidebar docs"
   },
   "sidebar.docs.category.ORDA": {
@@ -32,7 +32,7 @@
     "description": "The label for category Class API Reference in sidebar docs"
   },
   "sidebar.docs.category.Preferences": {
-    "message": "Preferences",
+    "message": "Préférences",
     "description": "The label for category Preferences in sidebar docs"
   },
   "sidebar.docs.category.Administration": {
@@ -40,15 +40,15 @@
     "description": "The label for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Access Rights": {
-    "message": "Access Rights",
+    "message": "Droits d'accès",
     "description": "The label for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.MSC": {
-    "message": "MSC",
+    "message": "CSM",
     "description": "The label for category MSC in sidebar docs"
   },
   "sidebar.docs.category.Backup and Restore": {
-    "message": "Backup and Restore",
+    "message": "Sauvegarde et restitution",
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
@@ -56,7 +56,7 @@
     "description": "The label for category Web Server in sidebar docs"
   },
   "sidebar.docs.category.Web Development": {
-    "message": "Web Development",
+    "message": "Développement Web",
     "description": "The label for category Web Development in sidebar docs"
   },
   "sidebar.docs.category.REST Server": {
@@ -68,7 +68,7 @@
     "description": "The label for category Guides in sidebar docs"
   },
   "sidebar.docs.category.API (general)": {
-    "message": "API (general)",
+    "message": "API (général)",
     "description": "The label for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass)": {
@@ -76,7 +76,7 @@
     "description": "The label for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Client/Server": {
-    "message": "Client/Server",
+    "message": "Client/Serveur",
     "description": "The label for category Client/Server in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
@@ -88,11 +88,11 @@
     "description": "The label for category Form Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Objects": {
-    "message": "Form Objects",
+    "message": "Objets de formulaire",
     "description": "The label for category Form Objects in sidebar docs"
   },
   "sidebar.docs.category.Form Object Properties": {
-    "message": "Form Object Properties",
+    "message": "Propriétés des objets de formulaire",
     "description": "The label for category Form Object Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Events": {
@@ -104,15 +104,15 @@
     "description": "The label for category Menus in sidebar docs"
   },
   "sidebar.docs.category.Build application": {
-    "message": "Build application",
+    "message": "Générateur d'application",
     "description": "The label for category Build application in sidebar docs"
   },
   "sidebar.docs.category.4D Language Reference": {
-    "message": "4D Language Reference",
+    "message": "Référence du langage 4D",
     "description": "The label for category 4D Language Reference in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference (4D Doc Center)": {
-    "message": "4D Language Reference (4D Doc Center)",
-    "description": "The label for link 4D Language Reference (4D Doc Center) in sidebar docs, linking to https://doc.4d.com/4Dv19/4D/19.4/4D-Language-Reference.100-6022604.en.html"
+    "message": "Référence du langage 4D (4D Doc Center)",
+    "description": "The label for link 4D Language Reference (4D Doc Center) in sidebar docs, linking to https://doc.4d.com/4Dv19/4D/19.5/4D-Language-Reference.100-6136105.en.html"
   }
 }

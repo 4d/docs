@@ -995,7 +995,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 #### Descrição
 
-A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity selection<!-- END REF -->.
+A função `.getRemoteContextAttributes()` <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->retorna informação sobre o contexto de otimização usados pela seleção de entidade<!-- END REF -->.
 
 Se não houver [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) para a seleção de entidade, a função retorna um Texto vazio.
 
@@ -1342,7 +1342,7 @@ A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->excludes
 
 Como padrão, se omitir o parâmetro *keepOrder* , a seleção de entidade resultado não é ordenada. Se quiser manter a ordem da seleção de entidade original (por exemplo se quiser reutilizar a seleção de entidade em uma interface de usuário) passe a constante `dk keep ordered` em *keepOrder*. Neste caso, o resultado é uma seleção de entidade ordenada e a ordem da seleção de entidade inicial é mantida
 
-:::nota
+:::note
 
 Se passar `dk keep ordered` em *keepOrder* e removida *entitySelection* contém entidades duplicadas na seleção de entidade original, todas as ocorrências da duplicada são removidas.
 
@@ -1862,7 +1862,7 @@ Uma list box exibe a seleção de entidade Form.students e vários clientes trab
 
 #### Descrição
 
-A função `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
+A função `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->retorna um objeto descrevendo a posição da *selectedEntities* na seleção de entidade original<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 Passe o parâmetro *selectedEntities* uma seleção de entidade contendo entidades para qual quiser saber a posição na seleção de entidade original. *selectedEntities* deve ser uma seleção de entidade pertencendo a mesma dataclass que a seleção de entidade original, senão acontece um erro 1587 - "The entity selection comes from an incompatible dataclass" .

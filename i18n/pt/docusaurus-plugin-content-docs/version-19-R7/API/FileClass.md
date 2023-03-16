@@ -67,7 +67,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -331,11 +331,11 @@ A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se 
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-**Returned object with a .exe or .dll file**
+**Objeto devolvido com um arquivo .exe ou .dll**
 
-> Reading a .exe or .dll is only possible on Windows.
+> A leitura de um .exe ou .dll só é possível no Windows.
 
-All property values are Text.
+Todos os valores de propriedade são Texto.
 
 | Propriedade      | Tipo |
 | ---------------- | ---- |
@@ -348,9 +348,9 @@ All property values are Text.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a .plist file**
+**Objecto devolvido com um arquivo .plist**
 
-The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
+O conteúdo do arquivo xml é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é devolvido como um objeto JSON e `.plist array` é devolvido como um JSON array.
 
 #### Exemplo
 
@@ -410,11 +410,11 @@ ALERT($info.
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Parâmetros        | Tipo       |    | Descrição                             |
-| ----------------- | ---------- | -- | ------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                      |
-| newName           | Text       | -> | Full name for the moved file          |
-| Resultados        | 4D. File   | <- | Moved file|<!-- END REF -->
+| Parâmetros        | Tipo       |    | Descrição                                 |
+| ----------------- | ---------- | -- | ----------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                          |
+| newName           | Text       | -> | Nome completo para o arquivo movido       |
+| Resultados        | 4D. File   | <- | Arquivo movido|<!-- END REF -->
 
 
 |
@@ -422,11 +422,11 @@ ALERT($info.
 
 #### Descrição
 
-A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o arquivo `` para o objeto especificado *destinationFolder*<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName* . O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
@@ -457,51 +457,51 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| Parâmetros | Tipo                             |    | Descrição                                         |
-| ---------- | -------------------------------- | -- | ------------------------------------------------- |
-| mode       | Text                             | -> | Opening mode: "read", "write", "append"           |
-| options    | Objeto                           | -> | Opening options                                   |
-| Resultados | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
+| Parâmetros | Tipo                             |    | Descrição                                                         |
+| ---------- | -------------------------------- | -- | ----------------------------------------------------------------- |
+| mode       | Text                             | -> | Modo de abertura: "ler", "escrever", "anexar".                    |
+| options    | Objeto                           | -> | Opções de abertura                                                |
+| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto de manipulação de arquivos|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.open()` <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
+A função `.open()` <!-- REF #FileClass.open().Summary -->cria e devolve um novo objeto [4D.FileHandle](FileHandleClass) no arquivo, no modo especificado ** ou com as opções especificadas **<!-- END REF -->. Pode utilizar funções e propriedades da classe [4D.FileHandle](FileHandleClass) para escrever, ler, ou anexar conteúdo ao arquivo.
 
-If you use the *mode* (text) parameter, pass the opening mode for the file handle:
+Se utilizar o parâmetro *modo* (texto), passe o modo de abertura para a manipulação do arquivo:
 
-| *mode*   | Descrição                                                                                                                                                                                                                        |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
-| "write"  | Creates a file handle to write values to the file (starting at the beginning of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "write" mode on the same File object. |
-| "append" | Creates a file handle to write values to the file (starting at the end of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "append" mode on the same File object.      |
+| *mode*   | Descrição                                                                                                                                                                                                                                        |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "read"   | (Predefinição) Cria um handle de arquivo para ler valores do arquivo. Se o arquivo não existir em disco, um erro é retornado. Pode abrir quantas handles de arquivo quiser em modo "ler" no mesmo objeto de arquivo.                             |
+| "write"  | Cria um handle de arquivo para escrever valores no arquivo (começando no início do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único handle de arquivo em modo "escrever" no mesmo objeto de arquivo. |
+| "append" | Cria um handle de arquivo para escrever valores no arquivo (começando no fim do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único handle de arquivo no modo "anexar" no mesmo objecto Arquivo.        |
 
-> The *mode* value is case sensitive.
+> O valor do modo ** é sensível a maiúsculas e minúsculas.
 
-If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
+Se utilizar o parâmetro *opções* (objecto), pode passar mais opções para o file handle através das seguintes propriedades (estas propriedades podem ser lidas posteriormente a partir do objeto aberto [file handle](FileHandleClass)):
 
-| *options*         | Tipo           | Descrição                                                                                                                     | Predefinição  |
-| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
-| `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text ou Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
-| `.breakModeWrite` | Text ou Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
+| *options*         | Tipo           | Descrição                                                                                                                       | Predefinição  |
+| ----------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `.mode`           | Text           | Modo de abertura (ver *modo* acima)                                                                                             | "read"        |
+| `.charset`        | Text           | Charset utilizado na leitura ou na escrita do arquivo. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text ou Number | Modo de processamento para quebras de linha utilizado na leitura do arquivo (ver abaixo)                                        | "nativo" ou 1 |
+| `.breakModeWrite` | Text ou Number | Modo de processamento para quebras de linha utilizado quando se escreve no arquivo (ver abaixo)                                 | "nativo" ou 1 |
 
-The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
+Os documentos `.breakModeRead` e `.breakModeWrite` indicam o processamento a aplicar aos caracteres de fim de linha no documento. Pode utilizar um dos seguintes valores (texto ou número):
 
-| Break mode as text | Break mode as number (constant)   | Descrição                                                                                                                                                      |
-| ------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "native"           | 1 (`Document with native format`) | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
-| "crlf"             | 2 (`Document with CRLF`)          | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
-| "cr"               | 3 (`Document with CR`)            | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
-| "lf"               | 4 (`Document with LF`)            | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
+| Modo de pausa como texto | Modo de pausa como número (constante) | Descrição                                                                                                                                                          |
+| ------------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "native"                 | 1 (`Documento com formato nativo`)    | (Default) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (line feed) sob macOS, CRLF (carriage return + line feed) sob Windows |
+| "crlf"                   | 2 (`Documento com CRLF`)              | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows                                                           |
+| "cr"                     | 3 (`Documento com CR`)                | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS                                                                  |
+| "lf"                     | 4 (`Documento com LF`)                | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                             |
 
-> The *break mode as text* value is case sensitive.
+> O modo de pausa *como texto* valor é sensível a maiúsculas e minúsculas.
 
 #### Exemplo
 
-You want to create a file handle for reading the "ReadMe.txt" file:
+Pretende criar um cabo de arquivo para a leitura do arquivo "ReadMe.txt":
 
 ```4d
 var $f : 4D.File
@@ -535,20 +535,20 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parâmetros | Tipo     |    | Descrição                               |
-| ---------- | -------- | -- | --------------------------------------- |
-| newName    | Text     | -> | New full name for the file              |
-| Resultados | 4D. File | <- | Renamed file|<!-- END REF -->
+| Parâmetros | Tipo     |    | Descrição                                    |
+| ---------- | -------- | -- | -------------------------------------------- |
+| newName    | Text     | -> | Novo nome completo para o arquivo            |
+| Resultados | 4D. File | <- | Renomeado arquivo|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.rename()` <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o arquivo com o nome que passou em *newName* e devolve o objecto renomeado `File`<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um arquivo com o mesmo nome, é devolvido um erro.
 
-Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+Note que a função modifica o nome completo do ficheiro, isto é, se não passar uma extensão em *newName*, o ficheiro terá um nome sem uma extensão.
 
 **Objeto devolvido**
 
@@ -556,7 +556,7 @@ O objecto `File` renomeado.
 
 #### Exemplo
 
-You want to rename "ReadMe.txt" in "ReadMe_new.txt":
+Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -578,25 +578,25 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                                   |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info       | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                                              |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------ |
+| info       | Objeto | -> | Propriedades para escrever no recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
 A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. The function must be used with an existing .exe, .dll or .plist file.
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-***info* parameter object with a .exe or .dll file**
+***info* objecto de parâmetro com um arquivo .exe ou .dll**
 
-> Writing a .exe or .dll file information is only possible on Windows.
+> A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
+Cada propriedade válida definida no parâmetro de objecto *info* está escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo |
 | ---------------- | ---- |
@@ -609,15 +609,15 @@ Each valid property set in the *info* object parameter is written in the version
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
+Se passar um texto nulo ou vazio como valor, uma string vazia é escrita na propriedade. Se passar um tipo de valor diferente do texto, este é transformado em string.
 
-***info* parameter object with a .plist file**
+***info* objeto de parâmetro com um arquivo  .plist**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
+Cada propriedade válida definida no parâmetro do objecto *info* está escrita no arquivo  .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
+Se um conjunto de chaves no parâmetro *info* já estiver definido no arquivo .plist, o seu valor é atualizado, mantendo o seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
 
-> To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
+> Para definir um valor de tipo de data, o formato a utilizar é uma string de carimbo temporal json formada em ISO UTC sem milissegundos ("2003-02-01T01:02:03Z") como no editor plist de Xcode.
 
 #### Exemplo
 
@@ -662,15 +662,15 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parâmetros | Tipo |    | Descrição                                            |
-| ---------- | ---- | -- | ---------------------------------------------------- |
-| content    | BLOB | -> | New contents for the file|<!-- END REF -->
+| Parâmetros | Tipo |    | Descrição                                                 |
+| ---------- | ---- | -- | --------------------------------------------------------- |
+| content    | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 
@@ -699,7 +699,7 @@ A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->rewrites 
 <!--REF #FileClass.setText().Params -->
 | Parâmetros  | Tipo    |    | Descrição                                                              |
 | ----------- | ------- | -- | ---------------------------------------------------------------------- |
-| text        | Text    | -> | Text to store in the file                                              |
+| text        | Text    | -> | Texto a armazenar no arquivo                                           |
 | charSetName | Text    | -> | Nome do conjunto de caracteres                                         |
 | charSetNum  | Integer | -> | Número de conjuntos de caracteres                                      |
 | breakMode   | Integer | -> | Modo de processamento para quebras de linha|<!-- END REF -->
@@ -710,34 +710,34 @@ A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->rewrites 
 
 #### Descrição
 
-A função `.setText()` <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve o texto ** como o novo conteúdo do arquivo<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
+Se o arquivo referenciado no arquivo `` não existir no disco, ele é criado pela função. Quando o arquivo já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
+No texto **, passe o texto para escrever para o arquivo. Pode ser um literal ("o meu texto"), ou um campo de texto 4D ou variável.
 
-Optionally, you can designate the character set to be used for writing the contents. Você pode passar também:
+Opcionalmente, pode designar o conjunto de caracteres a ser utilizado para a escrita do conteúdo. Você pode passar também:
 
 * em *charSetName*, uma string que contém o nome padrão definido (por exemplo "ISO-8859-1" ou "UTF-8"),
 * ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
 
 > Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
+Se existir uma Marca de Ordem de Byte (BOM) para o conjunto de caracteres, 4D insere-a no arquivo, a menos que o conjunto de caracteres utilizado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por padrão  4D utiliza o conjunto de caracteres "UTF-8" sem BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no arquivo. As constantes seguintes, encontradas no tema **System Documents** , estão disponíveis:
 
-| Constante                     | Value | Comentário                                                                                                                                               |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                           |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Documento com CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
-| `Documento com CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
-| `Documento com LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
+| Constante                     | Value | Comentário                                                                                                                                                      |
+| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                                  |
+| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (line feed) em macOS, CRLF (carriage return + line feed) em Windows |
+| `Documento com CRLF`          | 2     | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows                                                        |
+| `Documento com CR`            | 3     | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS                                                               |
+| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                          |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. Ver [página Compatibilidade](https://doc.4d.com/4dv19R/help/title/en/page3239.html) em doc.4d.com.
+> **Nota de Compatibilidade**: As opções de compatibilidade estão disponíveis para a gestão da EOL e da BOM. Ver [página Compatibilidade](https://doc.4d.com/4dv19R/help/title/en/page3239.html) em doc.4d.com.
 
 #### Exemplo
 

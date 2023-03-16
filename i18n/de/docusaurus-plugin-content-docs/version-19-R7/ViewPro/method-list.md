@@ -52,7 +52,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### See also
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -97,7 +97,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### See also
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -1047,6 +1047,7 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
+
  $params.format:=vp MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
@@ -1818,7 +1819,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### See also
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -1909,6 +1910,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
 The returned object contains, for example:
+
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -2585,13 +2587,14 @@ In *sheet*, pass the index of the target sheet. If no index is specified or if y
 
 The command returns an object describing the current attributes of the *column*:
 
-| Property            | Typ     | Beschreibung                                                                                           |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| dataField           | Text    | Table column's property name in the data context. Not returned if the table is displayed automatically |
-| name                | Text    | Table column's name.                                                                                   |
-| footerText          | Text    | Column footer value.                                                                                   |
-| footerFormula       | Text    | Column footer formula.                                                                                 |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                |
+| Property      | Typ  | Beschreibung                                                                                           |
+| ------------- | ---- | ------------------------------------------------------------------------------------------------------ |
+| dataField     | Text | Table column's property name in the data context. Not returned if the table is displayed automatically |
+| name          | Text | Table column's name.                                                                                   |
+| footerText    | Text | Column footer value.                                                                                   |
+| footerFormula | Text | Column footer formula.                                                                                 |
+
+|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
 
 If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
 
@@ -2722,6 +2725,7 @@ If *tableName* is not found, the command returns **null**.
 | ------- | ------- |
 | v19 R7  | Added   |
 </details>
+
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 **VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
@@ -4093,6 +4097,7 @@ $row:=VP Row("ViewProArea";9) // row 10
 
 #### Beschreibung
 
+
 The `VP ROW AUTOFIT` command <!-- REF #_method_.VP ROW AUTOFIT.Summary -->automatically sizes the row(s) in *rangeObj* according to their contents<!-- END REF -->.
 
 In *rangeObj*, pass a range object containing a range of the rows whose size will be automatically handled.
@@ -4135,14 +4140,15 @@ The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Sum
 
 In *parameters* object, pass any of the following optional properties. These properties will be available through the `This` command within the `onEvent` method and reference the instance:
 
-| Property                   | Typ              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area                       | Text             | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| onEvent                    | object (formula) | A callback method that will be launched when the offscreen area is ready. It can be either:<li>an `onEvent` function of a class, or</li><li>a `Formula` object</li>By default, the callback method is called on the [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
-| autoQuit                   | boolean          | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                      |
-| timeout                    | Zahl             | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ergebnis                   | mixed            | Result of the processing (if any)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `\<customProperty>` | mixed            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Property                 | Typ              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| area                     | Text             | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| onEvent                  | object (formula) | A callback method that will be launched when the offscreen area is ready. It can be either:<li>an `onEvent` function of a class, or</li><li>a `Formula` object</li>By default, the callback method is called on the [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), or [`On Timer`](../Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
+| autoQuit                 | boolean          | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                    |
+| timeout                  | Zahl             | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ergebnis                 | mixed            | Result of the processing (if any)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `<customProperty>` | mixed            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
 
 The following property is automatically added by the command if necessary:
 
@@ -4181,6 +4187,7 @@ Function onEvent()
 ```
 
 The *OffscreenArea* callback method:
+
 
 ```4d
 $o:=cs.OffscreenArea.new()

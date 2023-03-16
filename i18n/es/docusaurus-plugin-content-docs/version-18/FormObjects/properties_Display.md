@@ -7,13 +7,13 @@ title: Visualización
 
 ## Formato Alfa
 
-Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Aquí hay una lista de formatos suministrados para los campos alfanuméricos:
+Los formatos alfabéticos controlan la forma en que aparecen los campos alfanuméricos y las variables cuando se visualizan o imprimen. Aquí hay una lista de formatos suministrados para los campos alfanuméricos:
 
 ![](../assets/en/FormObjects/property_alphaFormat.png)
 
-Puede elegir un formato de esta lista o utilizar cualquier formato personalizado. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. En este caso, el formato no se puede modificar en las propiedades del objeto. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
+Puede elegir un formato de esta lista o utilizar cualquier formato personalizado. La lista por defecto contiene formatos para algunos de los campos alfa más comunes que requieren formatos: Números de teléfono de EE. UU. (locales y de larga distancia), números de la Seguridad Social y códigos postales. También puede introducir un nombre de formato personalizado definido en el editor Filtros y formatos de la caja de herramientas. En este caso, el formato no se puede modificar en las propiedades del objeto. Los formatos o filtros personalizados que haya creado estarán disponibles automáticamente, precedidos de una barra vertical (|).
 
-El signo número (#) es el marcador de posición para un formato de visualización alfanumérico. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
+El signo número (#) es el marcador de posición para un formato de visualización alfanumérico. Puede incluir los guiones, rayas, espacios y cualquier otro signo de puntuación que desee mostrar. Utilice los signos de puntuación que desee y el signo número para cada caracter que desee mostrar.
 
 Por ejemplo, considere un número de parte con un formato como "RB-1762-1".
 
@@ -27,7 +27,7 @@ Cuando el usuario introduce "RB17621," el campo muestra:
 
 El campo contiene realmente "RB17621".
 
-If the user enters more characters than the format allows, 4D displays the last characters. Por ejemplo, si el formato es:
+Si el usuario introduce más caracteres de los que permite el formato, 4D muestra los últimos caracteres. Por ejemplo, si el formato es:
 
  (#######)
 
@@ -35,7 +35,7 @@ y el usuario introduce "proporción", el campo muestra:
 
  (portion)
 
-El campo contiene realmente "proportion". 4D accepts and stores the entire entry no matter what the display format. No se pierde ninguna información.
+El campo contiene realmente "proportion". 4D acepta y almacena la entrada completa sin importar el formato de visualización. No se pierde ninguna información.
 
 #### Gramática JSON
 
@@ -45,14 +45,14 @@ El campo contiene realmente "proportion". 4D accepts and stores the entire entry
 
 #### Objetos soportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 ---
 
 ## Formato Fecha
 
-Los formatos de fecha controlan la forma en que aparecen las fechas cuando se muestran o imprimen. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
+Los formatos de fecha controlan la forma en que aparecen las fechas cuando se muestran o imprimen. Para la entrada de datos, las fechas se introducen en el formato MM/DD/AAAA, independientemente del formato de visualización que haya elegido.
+> A diferencia de los formatos [Alfa](#alpha-format) y [Número](#number-format), los formatos de visualización de fechas sólo deben seleccionarse entre los formatos integrados en 4D.
 
 La siguiente tabla muestra las opciones disponibles:
 
@@ -68,12 +68,12 @@ La siguiente tabla muestra las opciones disponibles:
 | Internal date short           | short           | 03/25/2020                     |
 | ISO Date Time *(3)*           | iso8601         | 2020-03-25T00:00:00            |
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Esta particularidad sólo se aplica a las versiones francesas de 4D.
+*(1)* Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidad sólo se aplica a las versiones francesas de 4D.
 
-*(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(2)* El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).
 
-*(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
-> Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). Esta es la configuración por defecto, pero puede ser modificada utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).
+*(3)* El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Está pensado principalmente para ser utilizado al importar/exportar datos en formato XML y en Servicios Web.
+> Independientemente del formato de visualización, si el año se introduce con dos dígitos, 4D asume que el siglo es el 21 si el año pertenece al intervalo (00;29) y el 20 si pertenece al intervalo (30;99). Esta es la configuración por defecto, pero puede ser modificada utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).
 
 #### Gramática JSON
 
@@ -88,15 +88,15 @@ La siguiente tabla muestra las opciones disponibles:
 ---
 
 ## Formato de número
-> Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
+> Los campos numéricos incluyen los tipos Integer, Long integer, Integer 64 bits, Real y Float.
 
-Los formatos numéricos controlan la forma en que aparecen los números cuando se muestran o imprimen. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
+Los formatos numéricos controlan la forma en que aparecen los números cuando se muestran o imprimen. Para la entrada de datos, sólo se introducen los números (incluido el punto decimal o el signo menos si es necesario), independientemente del formato de visualización que se haya elegido.
 
 4D ofrece varios formatos de números por defecto.
 
 ### Marcadores
 
-In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
+En cada uno de los formatos de visualización de números, el signo número (#), el cero (0), el signo de intercalación (^) y el asterisco (*) se utilizan como marcadores de posición. Puede crear sus propios formatos numéricos utilizando un marcador de posición para cada dígito que desee mostrar.
 
 | Marcador | Efecto para cero inicial o posterior |
 | -------- | ------------------------------------ |
@@ -105,36 +105,36 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 | ^        | Muestra un espacio (1)               |
 | *        | Muestra un asterisco                 |
 
-(1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
+(1) El signo de intercalación (^) genera un caracter de espacio que ocupa el mismo ancho que un dígito en la mayoría de los tipos de fuente.
 
-For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
+Por ejemplo, si desea mostrar números de tres digitos, puede utilizar el formato ###. Si el usuario introduce más dígitos de los que permite el formato, 4D muestra <<< en el campo para indicar que se han introducido más dígitos de los especificados en el formato de visualización.
 
-If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
-> No matter what the display format, 4D accepts and stores the number entered in the field. No se pierde ninguna información.
+Si el usuario introduce un número negativo, el caracter situado más a la izquierda se muestra como un signo menos (a menos que se haya especificado un formato de visualización negativo). Si ##0 es el formato, menos 26 se muestra como -26 y menos 260 se muestra como <<< porque el signo menos ocupa un marcador de posición y sólo hay tres marcadores de posición.
+> Sea cual sea el formato de visualización, 4D acepta y almacena el número introducido en el campo. No se pierde ninguna información.
 
-Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
+Cada caracter de marcador de posición tiene un efecto diferente en la visualización de ceros a la izquierda o a la derecha. Un cero inicial es un cero que comienza un número antes del punto decimal; un cero final es un cero que termina un número después del punto decimal.
 
 Supongamos que usa el formato ##0 para mostrar tres dígitos. Si el usuario no introduce nada en el campo, el campo muestra 0. Si el usuario introduce 26, el campo muestra 26.
 
 ### Caracteres separadores
 
-The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
-> On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located:
+Los formatos numéricos de visualización (excepto las notaciones científicas) se basan automáticamente en los parámetros regionales del sistema. 4D sustituye los caracteres "." y "," por, respectivamente, el separador decimal y el separador de miles definidos en el sistema operativo. Así, el punto y la coma se consideran caracteres comodín, siguiendo el ejemplo de 0 o #.
+> En Windows, cuando se utiliza la tecla separadora decimal del teclado numérico, 4D hace una distinción según el tipo de campo donde se encuentre el cursor:
 > 
-> * in a Real type field, using this key will insert the decimal separator defined in the system,
-> * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> * en un campo de tipo Real, al utilizar esta tecla se insertará el separador decimal definido en el sistema,
+> * en cualquier otro tipo de campo, esta llave inserta el carácter asociado a la clave, normalmente un punto (.) o una coma (,).
 
 ### Puntos decimales y otros caracteres de visualización
 
-Puede utilizar un punto decimal en un formato de visualización de números. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+Puede utilizar un punto decimal en un formato de visualización de números. Si desea que el decimal se muestre independientemente de si el usuario lo teclea o no, debe colocarlo entre ceros.
 
-Puede utilizar cualquier otro caracter en el formato. When used alone, or placed before or after placeholders, the characters always appear. Por ejemplo, si utiliza el siguiente formato:
+Puede utilizar cualquier otro caracter en el formato. Cuando se utilizan solos, o se colocan antes o después de marcadores de posición, los caracteres siempre aparecen. Por ejemplo, si utiliza el siguiente formato:
 
  $##0
 
 siempre aparece un signo de dólar porque se coloca antes de los marcadores de posición.
 
-If characters are placed between placeholders, they appear only if digits are displayed on both sides. Por ejemplo, si define el formato:
+Si se colocan caracteres entre los marcadores de posición, sólo aparecerán si se muestran dígitos a ambos lados. Por ejemplo, si define el formato:
 
  ###.##0
 
@@ -144,20 +144,20 @@ Los espacios se tratan como caracteres en los formatos de visualización de núm
 
 ### Formatos para positivo, negativo y cero
 
-A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
+Un formato de visualización de números puede tener hasta tres partes, lo que permite especificar formatos de visualización para valores positivos, negativos y cero. Especifique las tres partes separándolas con punto y coma, como se muestra a continuación:
 
  Positivo;Negativo;Cero
 
-No es necesario especificar las tres partes del formato. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
+No es necesario especificar las tres partes del formato. Si utiliza sólo una parte, 4D la utiliza para todos los números, colocando un signo menos delante de los números negativos.
 
-If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
-> The third part (zero) is not interpreted and does not accept replacement characters. Si introduce `###;###;#`, el valor cero se mostrará "#". In other words, what you actually enter is what will be displayed for the zero value.
+Si utiliza dos partes, 4D utiliza la primera parte para los números positivos y el cero y la segunda parte para los números negativos. Si utiliza tres partes, la primera es para los números positivos, la segunda para los negativos y la tercera para el cero.
+> La tercera parte (cero) no se interpreta y no acepta caracteres de sustitución. Si introduce `###;###;#`, el valor cero se mostrará "#". En otras palabras, lo que realmente introduzca es lo que se mostrará para el valor cero.
 
-Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
+A continuación se muestra un ejemplo de formato de visualización de números que muestra signos de dólar y comas, coloca los valores negativos entre paréntesis y no muestra ceros:
 
  ￥###,##0.00;(￥###,##0.00);
 
-Notice that the presence of the second semicolon instructs 4D to use nothing to display zero. The following format is similar except that the absence of the second semicolon instructs 4D to use the positive number format for zero:
+Observe que la presencia del segundo punto y coma indica a 4D que utilice nada para mostrar el cero. El siguiente formato es similar excepto que la ausencia del segundo punto y coma indica a 4D que utilice el formato de número positivo para el cero:
 
  ￥###,##0.00;(￥###,##0.00)
 
@@ -165,7 +165,7 @@ En este caso, la visualización del cero sería $0.00.
 
 ### Notación científica
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. Por ejemplo, el formato:
+Si desea mostrar números en notación científica, utilice el **ampersand** (&) seguido de un número para especificar el número de dígitos que desea mostrar. Por ejemplo, el formato:
 
  &3
 
@@ -173,34 +173,34 @@ mostrará 759.62 como:
 
  7.60e+2
 
-The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
+El formato de notación científica es el único que redondea automáticamente el número mostrado. Observe en el ejemplo anterior que el número se redondea a 7,60e+2 en lugar de truncarse en 7,59e+2.
 
 ### Formatos hexadecimales
 
-You can display a number in hexadecimal using the following display formats:
+Puede visualizar un número en hexadecimal utilizando los siguientes formatos de visualización:
 
 * `&x`: este formato muestra números hexadecimales utilizando el formato “0xFFFF”.
 * `&$`: este formato muestra números hexadecimales utilizando el formato "$FFFF".
 
 ### Notación XML
 
-The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
+El formato `&xml` hará que un número cumpla las normas estándar XML. En particular, el caracter separador decimal será un punto "." en todos los casos, independientemente de la configuración del sistema.
 
 ### Mostrar un número como una hora
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
+Puede visualizar un número como una hora (con un formato de hora) utilizando `&/` seguido de un dígito. La hora se determina calculando el número de segundos desde medianoche que representa el valor. El dígito en el formato corresponde al orden en que aparece el formato de hora en el menú desplegable Formato.
 
 Por ejemplo, el formato:
 
  &/5
 
-corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. Un campo numérico con este formato mostraría 25000 como:
+corresponde al 5º formato horario del menú desplegable, concretamente a la hora AM/PM. Un campo numérico con este formato mostraría 25000 como:
 
  6:56 AM
 
 ### Ejemplos
 
-The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
+La siguiente tabla muestra cómo afectan los distintos formatos a la visualización de los números. Las tres columnas, Positiva, Negativa y Cero, muestran cada una cómo se mostrarían 1.234,50, -1.234,50 y 0.
 
 | Formato introducido                    | Positivo         | Negativo      | Cero                         |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
@@ -246,7 +246,7 @@ The following table shows how different formats affect the display of numbers. T
 
 ## Formato imagen
 
-Los formatos Imagen controlan la apariencia de las imágenes cuando se muestran o se imprimen. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
+Los formatos Imagen controlan la apariencia de las imágenes cuando se muestran o se imprimen. Para la entrada de datos, el usuario siempre introduce las imágenes pegándolas desde el Portapapeles o arrastrándolas y soltándolas, independientemente del formato de visualización.
 
 Las opciones de truncamiento y escalado no afectan a la imagen en sí. El contenido de un campo Imagen siempre se guarda. El formato de visualización de la imagen sólo afecta a la visualización en el formulario en cuestión.
 
@@ -275,7 +275,7 @@ El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior iz
 
 When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
 
-If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Como se reduce proporcionalmente, la imagen no aparecerá distorsionada.
+Si la imagen es más pequeña que el área definida en el formulario, no se modificará. Si la imagen es mayor que el área definida en el formulario, se reduce proporcionalmente. Como se reduce proporcionalmente, la imagen no aparecerá distorsionada.
 
 If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
 
@@ -285,11 +285,11 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 `Gramática JSON: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+Cuando se amplía el área que contiene una imagen con el formato **Replicada**, la imagen no se deforma sino que se replica tantas veces como sea necesario para llenar el área por completo.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
-If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
+Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen queda truncada (no centrada).
 
 #### Gramática JSON
 
@@ -299,14 +299,14 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)
 
 ---
 
 ## Formato Hora
 
 Los formatos de hora controlan la forma en que aparecen las horas cuando se muestran o imprimen. For data entry, you enter times in the 24-hour HH: MM:SS format or the 12-hour HH: MM:SS AM/PM format, regardless of the display format you have chosen.
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
+> A diferencia de los formatos [Alfa](#alpha-format) y [Número](#number-format), los formatos de visualización de las horas sólo deben seleccionarse entre los formatos integrados en 4D.
 
 La siguiente tabla muestra los formatos de visualización de los campos de hora y da ejemplos:
 
@@ -345,8 +345,8 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 ... puede seleccionar el texto que se mostrará para cada valor:
 
-* **Text when True** - the text to be displayed when the value is "true"
-* **Text when False** - the text to be displayed when the value is "false"
+* **Text cuando True** - el texto que se mostrará cuando el valor sea "true"
+* **Text cuando False** - el texto que se mostrará cuando el valor sea "false"
 
 #### Gramática JSON
 
@@ -362,17 +362,17 @@ Cuando una [expresión booleana](properties_Object.md#expression-type) se muestr
 
 ## Tipo de visualización
 
-Utilizado para asociar un formato de visualización con los datos de la columna. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
+Utilizado para asociar un formato de visualización con los datos de la columna. Los formatos suministrados dependen del tipo de variable (list box de tipo array) o del tipo dato/campo (list boxes de tipo selección y colección).
 
-Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
+Las columnas booleanas y numéricas (números o enteros) pueden mostrarse como casillas de verificación. En este caso, se puede definir la propiedad [Título](#title).
 
-Las columnas booleanas también pueden mostrarse como menús emergentes. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+Las columnas booleanas también pueden mostrarse como menús emergentes. En este caso, deben definirse las propiedades [Text cuando False y Text cuando True](#text-when-false-text-when-true).
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                       |
-| ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| controlType | string         | **number columns**: "automatic" (default) or "checkbox"<br/>**boolean columns**: "checkbox" (default) or "popup" |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                    |
+| ----------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | string         | **columnas numéricas**: "automatic" (por defecto) o "checkbox"<br/>**columnas booleanas**: "checkbox" (por defecto) o "popup" |
 
 #### Objetos soportados
 
@@ -382,9 +382,9 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. In this
 
 ## No renderizado
 
-When this property is enabled, the object is not drawn on the form, however it can still be activated.
+Cuando esta propiedad está activada, el objeto no se dibuja en el formulario, sin embargo aún puede activarse.
 
-En particular, esta propiedad permite implementar botones "invisibles".  Los botones no renderizados pueden colocarse sobre los objetos gráficos. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
+En particular, esta propiedad permite implementar botones "invisibles".  Los botones no renderizados pueden colocarse sobre los objetos gráficos. Permanecen invisibles y no se resaltan al hacer clic sobre ellos, pero su acción se activa a al pulsarlos.
 
 #### Gramática JSON
 
@@ -394,7 +394,7 @@ En particular, esta propiedad permite implementar botones "invisibles".  Los bot
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
+[Botón](button_overview.md) - [Lista desplegable](dropdownList_Overview.md)
 
 ---
 
@@ -404,7 +404,7 @@ Permite que un objeto casilla de selección acepte un tercer estado. La variable
 
 #### Casillas de verificación de tres estados en columnas list box
 
-List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. Si se elige, se muestran los siguientes valores:
+Las columnas de list box con un [tipo de datos](properties_Object.md#expression-type) numérico pueden mostrarse como casillas de verificación de tres estados. Si se elige, se muestran los siguientes valores:
 
 * 0 = casilla no seleccionada,
 * 1 = casilla seleccionada,
@@ -414,7 +414,7 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 * -3 = casilla marcada, no editable,
 * -4 = casilla semi-marcada, no editable
 
-In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
+También en este caso, la propiedad [Título](#title) está disponible para que se pueda introducir el título de la casilla de verificación.
 
 #### Gramática JSON
 
@@ -432,10 +432,10 @@ In this case as well, the [Title](#title) property is also available so that the
 
 Esta propiedad está disponible para una columna de list box si:
 
-* the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
-* the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
+* el [tipo de columna](properties_Object.md#expression-type) es **boolean** y su [tipo de visualización](properties_Display.md#display-type) es "Casilla de selección"
+* el [tipo de columna](properties_Object.md#expression-type) es **número** (numérico o entero) y su [tipo de visualización](properties_Display.md#display-type) es "Casilla de verificación de tres estados".
 
-In that cases, the title of the check box can be entered using this property.
+En ese caso, el título de la casilla de verificación puede introducirse utilizando esta propiedad.
 
 #### Gramática JSON
 
@@ -453,22 +453,22 @@ In that cases, the title of the check box can be entered using this property.
 
 Controla la visualización de los valores cuando las columnas del list box son demasiado estrechas para mostrar todo su contenido.
 
-This option is available for columns with any type of contents, except pictures and objects.
+Esta opción está disponible para columnas con cualquier tipo de contenido, excepto imágenes y objetos.
 
-* When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
+* Cuando la propiedad está activada (por defecto), si el contenido de una celda del list box excede el ancho de la columna, se trunca y se muestra una elipsis:
 
  ![](../assets/en/FormObjects/property_truncate1.png)
 > La posición de la elipsis depende del sistema operativo. En el ejemplo anterior (Windows), se añade a la derecha del texto. En macOS, la elipsis se añade en medio del texto.
 
-* When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
+* Cuando la propiedad está desactivada, si el contenido de una celda excede el ancho de la columna, simplemente se recorta sin añadir elipsis:
 
  ![](../assets/en/FormObjects/property_truncate2.png)
 
-The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
+La opción Truncar con elipsis está activada por defecto y puede especificarse con list boxes de tipo Array, Selección o Colección.
 
-> When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
+> Cuando se aplica a columnas de tipo Texto, la opción Truncar con elipsis sólo está disponible si la opción [Ajustar texto](#wordwrap) no está seleccionada. Cuando se selecciona la propiedad Ajuste de palabras, el contenido adicional de las celdas se gestiona mediante las funciones de ajuste de palabras, por lo que la propiedad Truncar con elipsis no está disponible.
 
-The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
+La propiedad Truncar con elipsis puede aplicarse a columnas de tipo booleano; sin embargo, el resultado difiere en función del [formato de celda](#display-type):
 
 * En los formatos booleanos de tipo emergente, las etiquetas se truncan con una elipsis,
 * Para los formatos booleanos de tipo casilla de verificación, las etiquetas siempre se recortan.
@@ -489,20 +489,20 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 Esta propiedad permite ocultar el objeto en el entorno Aplicación.
 
-Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formulario. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
+Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formulario. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. En este contexto, a menudo es necesario ocultar objetos por programación durante el evento `On load` del formulario y luego mostrar determinados objetos. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. El desarrollador puede entonces programar su pantalla utilizando el comando [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) cuando lo necesite.
 
 #### Visibilidad automática en los formularios lista
 
-In the context of list forms, the Visibility property supports two specific values:
+En el contexto de los formularios de lista, la propiedad Visibilidad soporta dos valores específicos:
 
 * **Si registro seleccionado** (nombre JSON: "selectedRows")
-* **If record not selected** (JSON name: "unselectedRows")
+* **Si el registro no está seleccionado** (nombre JSON: "unselectedRows")
 
-This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
+Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo de un formulario listado. Indica a 4D si debe o no dibujar el objeto dependiendo de si el registro que se está procesando está seleccionado/no seleccionado. Permite representar una selección de registros utilizando atributos visuales distintos de los colores de resaltado:
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D no tiene en cuenta esta propiedad si el objeto se ocultó utilizando el comando [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html); en este caso, el objeto permanece invisible independientemente de si el registro está seleccionado o no.
 
 #### Gramática JSON
 
@@ -526,9 +526,9 @@ Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
 `Gramática JSON: "normal"`
 
-When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
+Cuando esta opción está seleccionada, el texto pasa automáticamente a la línea siguiente siempre que su ancho supere el de la columna/área, si la altura de la columna/área lo permite.
 
-* In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
+* En las columnas/áreas de una sola línea, sólo se muestra la última palabra que puede mostrarse entera. 4D inserta retornos de línea; es posible desplazarse por el contenido del área presionando la tecla de flecha abajo.
 
 * En las columnas/áreas multilínea, 4D realiza retornos de línea automáticos.
 
@@ -538,15 +538,15 @@ When this option is selected, text automatically wraps to the next line whenever
 
 `Gramática JSON: "none"`
 
-When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. En las áreas de tipo de texto, se soportan los retornos de carro:
+Cuando se selecciona esta opción, 4D no realiza ningún retorno de línea automático y la última palabra que se puede mostrar puede quedar truncada. En las áreas de tipo de texto, se soportan los retornos de carro:
 
 ![](../assets/en/FormObjects/wordwrap3.png)
 
-In list boxes, any text that is too long is truncated and displayed with an ellipse (...). In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
+En los list boxes, el texto demasiado largo se trunca y se muestra con una elipse (...). En el siguiente ejemplo, la opción Wordwrap está **marcada para la columna izquierda** y **desmarcada para la columna derecha**:
 
 ![](../assets/en/FormObjects/property_wordwrap1.png)
 
-Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
+Tenga en cuenta que, independientemente del valor de la opción Ajuste de texto, la altura de la línea no se modifica. Si el texto con saltos de línea no puede visualizarse por completo en la columna, se trunca (sin elipse). En el caso de los list boxes que muestran una sola línea, sólo se muestra la primera línea de texto:
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 
@@ -554,7 +554,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 `Gramática JSON: "automatic"`
 
-* In single-line areas, words located at the end of lines are truncated and there are no line returns.
+* En las áreas de una sola línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
 * En áreas multilíneas, 4D realiza retornos de línea automáticos.
 
 ![](../assets/en/FormObjects/wordwrap1.png)
@@ -567,4 +567,4 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[Entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie List Box](listbox_overview.md#list-box-footers)

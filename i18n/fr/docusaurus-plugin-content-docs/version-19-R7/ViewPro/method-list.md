@@ -52,7 +52,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### Voir également
 
-[Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
+[Cell references](formulas.md#cell-references)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP ADD RANGE NAME
 
@@ -97,7 +97,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### Voir également
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
+[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
 ### VP ADD SELECTION
 
@@ -778,11 +778,11 @@ In *options*, you can pass an object with additional options for the table. Vale
 
 | Propriété             | Type       | Description                                                                                | La valeur par défaut |
 | --------------------- | ---------- | ------------------------------------------------------------------------------------------ | -------------------- |
-| allowAutoExpand       | Boolean    | True to expand columns or rows of the table when values are added in empty adjacent cells. | Vrai                 |
+| allowAutoExpand       | Boolean    | True to expand columns or rows of the table when values are added in empty adjacent cells. | True                 |
 | showFooter            | Boolean    | Display a footer                                                                           | False                |
-| showHeader            | Boolean    | Display a header                                                                           | Vrai                 |
+| showHeader            | Boolean    | Display a header                                                                           | True                 |
 | showResizeHandle      | Boolean    | For tables that don't have a *source*. Display the resize handle                           | False                |
-| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Indéfini             |
+| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)                       | Undefined            |
 | useFooterDropDownList | Boolean    | Use a dropdown list in footer cells that calculate the total value of a column             | False                |
 
 The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
@@ -1047,6 +1047,7 @@ Vous souhaitez exporter un document 4D View Pro au format ".xlsx" et appeler une
 ```4d
  $params:=New object
  $params.formula:=Formula(AfterExport)
+
  $params.format:=vp MS Excel format //".xlsx"
  $params.valuesOnly:=True
 
@@ -1818,7 +1819,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### Voir également
 
-[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
+[VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get names](#vp-get-names)
 
 ### VP Get formulas
 
@@ -1909,6 +1910,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
 L'objet retourné contient, par exemple :
+
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -2553,13 +2555,14 @@ Dans *sheet*, passez le numéro de la page cible. If no index is specified or if
 
 The command returns an object describing the current attributes of the *column*:
 
-| Propriété           | Type    | Description                                                                                            |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| dataField           | text    | Table column's property name in the data context. Not returned if the table is displayed automatically |
-| name                | text    | Table column's name.                                                                                   |
-| footerText          | text    | Column footer value.                                                                                   |
-| footerFormula       | text    | Column footer formula.                                                                                 |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                |
+| Propriété     | Type | Description                                                                                            |
+| ------------- | ---- | ------------------------------------------------------------------------------------------------------ |
+| dataField     | text | Table column's property name in the data context. Not returned if the table is displayed automatically |
+| name          | text | Table column's name.                                                                                   |
+| footerText    | text | Column footer value.                                                                                   |
+| footerFormula | text | Column footer formula.                                                                                 |
+
+|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
 
 If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
 
@@ -2690,6 +2693,7 @@ If *tableName* is not found, the command returns **null**.
 | ------- | ------------- |
 | v19 R7  | Ajout         |
 </details>
+
 
 <!-- REF #_method_.VP Get tables.Syntax -->
 **VP Get tables** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
@@ -4060,6 +4064,7 @@ $row:=VP Row("ViewProArea";9) // row 10
 
 #### Description
 
+
 The `VP ROW AUTOFIT` command <!-- REF #_method_.VP ROW AUTOFIT.Summary -->automatically sizes the row(s) in *rangeObj* according to their contents<!-- END REF -->.
 
 Dans *rangeObj*, passez un objet plage contenant une plage de lignes dont la taille est gérée automatiquement.
@@ -4091,7 +4096,7 @@ Résultat:
 
 | Paramètres | Type   |    | Description                                                                                                  |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------ |
-| parameters | Object | -> | Objet contenant les attributs de la zone hors écran                                                          |
+| parameters | Object | -> | Object containing the offscreen area's attributes                                                            |
 | Résultat   | Mixed  | <- | Propriété `.result` de l'objet `.onEvent`, ou Null s'il ne retourne pas de valeur|<!-- END REF -->
 
 |
@@ -4102,14 +4107,15 @@ The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Sum
 
 Dans l'objet *parameters*, passez l'une des propriétés optionnelles suivantes. Ces propriétés seront disponibles grâce à la commande `This` dans la méthode `onEvent` et référencent l'instance :
 
-| Propriété                  | Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| -------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| area                       | text            | Le nom de la zone hors écran. S'il est omis ou null, un nom générique est assigné (ex : OffscreenArea1).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| onEvent                    | objet (formula) | Une méthode callback qui sera lancée lorsque la zone hors écran sera prête. Elle peut être soit :<li>une fonction `onEvent` d'une classe, soit</li><li>un objet `Formula`</li>Par défaut, la méthode callback est appelée sur les événements [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md). La méthode callback peut être utilisée pour accéder à [l'objet 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
-| autoQuit                   | boolean         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                              |
-| timeout                    | number          | Durée maximale (exprimée en secondes) avant la fermeture de la zone si aucun événement n'est généré. Si elle est fixée à 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| result                     | mixte           | Résultat du traitement (le cas échéant)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `\<customProperty>` | mixte           | Tout attribut personnalisé qui sera disponible dans la méthode callback *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Propriété                | Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| area                     | text            | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| onEvent                  | objet (formula) | Une méthode callback qui sera lancée lorsque la zone hors écran sera prête. Elle peut être soit :<li>une fonction `onEvent` d'une classe, soit</li><li>un objet `Formula`</li>By default, the callback method is called on the [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), or [`On Timer`](../Events/onTimer.md) events. La méthode callback peut être utilisée pour accéder à [l'objet 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
+| autoQuit                 | boolean         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                     |
+| timeout                  | number          | Durée maximale (exprimée en secondes) avant la fermeture de la zone si aucun événement n'est généré. Si elle est fixée à 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| result                   | mixte           | Résultat du traitement (le cas échéant)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `<customProperty>` | mixte           | Tout attribut personnalisé qui sera disponible dans la méthode callback *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+
 
 La propriété suivante est automatiquement ajoutée par la commande, si nécessaire :
 
@@ -4148,6 +4154,7 @@ Function onEvent()
 ```
 
 La méthode callback (de rétro-appel) *OffscreenArea* :
+
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -4905,7 +4912,7 @@ Here's the result once the columns are generated:
 | ------------- | ------ | -- | ---------------------------------------------- |
 | rangeObj      | Object | -> | Objet plage                                    |
 | dateValue     | Date   | -> | Valeur date à fixer                            |
-| timeValue     | Heure  | -> | Valeur heure à fixer                           |
+| timeValue     | Time   | -> | Valeur heure à fixer                           |
 | formatPattern | Text   | -> | Format de la valeur|<!-- END REF -->
 
 |
@@ -5036,11 +5043,11 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| Paramètres    | Type      |    | Description                                    |
-| ------------- | --------- | -- | ---------------------------------------------- |
-| rangeObj      | Object    | -> | Objet plage                                    |
-| champ         | Pointeurs | -> | Référence au champ dans la structure virtuelle |
-| formatPattern | Text      | -> | Format du champ|<!-- END REF -->
+| Paramètres    | Type    |    | Description                                    |
+| ------------- | ------- | -- | ---------------------------------------------- |
+| rangeObj      | Object  | -> | Objet plage                                    |
+| champ         | Pointer | -> | Référence au champ dans la structure virtuelle |
+| formatPattern | Text    | -> | Format du champ|<!-- END REF -->
 
 |
 

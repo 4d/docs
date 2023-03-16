@@ -45,6 +45,8 @@ Les résultats des opérateurs dépendent des **types de données** auxquels ils
 - [**Opérateurs sur les images**](dt_picture.md#picture-operators)
 - [**Opérateurs sur les pointeurs**](dt_pointer.md#pointer-operators)
 - [**Opérateurs sur les chaînes**](dt_string.md#string-operators)
+- [**Opérateurs sur les Null**](dt_null_undefined.md#null-operators)
+- [**Opérateurs sur les Undefined**](dt_null_undefined.md#undefined-operators)
 
 
 ## Opérateurs d'affectation composés
@@ -71,25 +73,25 @@ Les opérateurs d'affectation composés suivants sont pris en charge :
 | Addition       | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                               |
 |                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                              |
 |                | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                              |
-|                | Time += Time       | Heure   | `$t1+=$t2 //$t1:=$t1+$t2`                                                       |
+|                | Time += Time       | Time    | `$t1+=$t2 //$t1:=$t1+$t2`                                                       |
 |                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                                           |
-|                | Picture += Picture | Images  | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                         |
-|                | Picture += Number  | Images  | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`             |
+|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                         |
+|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`             |
 | Soustraction   | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                              |
 |                | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                              |
-|                | Time -= Time       | Heure   | `$t1-=$t2 //$t1:=$t1-$t2`                                                       |
+|                | Time -= Time       | Time    | `$t1-=$t2 //$t1:=$t1-$t2`                                                       |
 |                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                                           |
-|                | Picture -= Number  | Images  | `$p1-=5 //$p1:=$p1-5 (déplacer horizontalement $p1 de 5 pixels vers la gauche)` |
+|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (déplacer horizontalement $p1 de 5 pixels vers la gauche)` |
 | Division       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                              |
-|                | Time /= Time       | Heure   | `$t1/=$t2 //$t1:=$t1/$t2`                                                       |
+|                | Time /= Time       | Time    | `$t1/=$t2 //$t1:=$t1/$t2`                                                       |
 |                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                                           |
-|                | Picture /= Picture | Images  | `$p1/=$p2 //$p1:=$p1/$p2 (ajouter $p2 vers le bas de $p1)`                      |
-|                | Picture /= Number  | Images  | `$p1/=5 //$p1:=$p1/5 (déplacer verticalement $p1 de 5 pixels)`                  |
+|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (ajouter $p2 vers le bas de $p1)`                      |
+|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (déplacer verticalement $p1 de 5 pixels)`                  |
 | Multiplication | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                     |
 |                | Number *= Number   | Number  | `$n*=5 //$n:=$n*5`                                                              |
-|                | Time *= Time       | Heure   | `$t1*=$t2 //$t1:=$t1*$t2`                                                       |
+|                | Time *= Time       | Time    | `$t1*=$t2 //$t1:=$t1*$t2`                                                       |
 |                | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                                           |
-|                | Picture *= Number  | Images  | `$p1*=5 //$p1:=$p1*5 (redimensionner $p1 de 5)`                                 |
+|                | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionner $p1 de 5)`                                 |
 
 Ces opérateurs s'appliquent à toutes les [expressions assignables](quick-tour.md#assignable-vs-non-assignable-expressions) (à l'exception des images en tant que propriétés d'objet ou éléments de collection).
 
@@ -137,7 +139,7 @@ $t2*=2 // $t2="HelloHello"
 
 Les opérateurs **&&** et **||** sont des **opérateurs en court-circuit**. Un opérateur en court-circuit est un opérateur qui n'évalue pas nécessairement toutes ses opérandes.
 
-La différence avec les opérateurs booléens simples [**&** et **||**](dt_boolean.md#logical-operators) est que les opérateurs en court-circuit **&&** et **||** ne renvoient pas de valeur booléenne. Ils évaluent les expressions comme étant [truthy ou falsy](#truthy-and-falsy), puis retournent l'une des expressions.
+La différence avec les opérateurs booléens simples [**&** et **|**](dt_boolean.md#logical-operators) est que les opérateurs en court-circuit **&&** et **||** ne renvoient pas de valeur booléenne. Ils évaluent les expressions comme étant [truthy ou falsy](#truthy-and-falsy), puis retournent l'une des expressions.
 
 ### Opérateur en court-circuit AND (&&)
 
@@ -283,7 +285,7 @@ La syntaxe est la suivante :
 
 `condition ? exprIfTruthy : exprIfFalsy`
 
-> Étant donné que la [syntaxe avec tokens](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) utilise des deux-points, nous recommandons d'insérer un espace après les deux-points `:` ou d'entourer les tokens à l'aide de parenthèses pour éviter tout conflit.
+> Étant donné que la [syntaxe avec tokens](https://doc.4d.com/4Dv19/4D/19.5/Using-tokens-in-formulas.300-6136716.en.html) utilise des deux-points, nous recommandons d'insérer un espace après les deux-points `:` ou d'entourer les tokens à l'aide de parenthèses pour éviter tout conflit.
 
 ### Exemples
 

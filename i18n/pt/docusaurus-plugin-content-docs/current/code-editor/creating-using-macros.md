@@ -27,7 +27,8 @@ These three locations can be used simultaneously: it is possible to install a "M
 
 ## Default macros
 
-4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
+
+4D offers a set of default macros containing, for example, control flow keywords. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
 
 You can modify this file or the contents of the folder subsequently as desired (see the following paragraph). In the event of problems with this folder, it can be deleted and 4D will re-create it on the next startup.
 
@@ -63,7 +64,7 @@ If the element accepts several attributes, you can group them in the same line o
 
 Here is the list of tags and their mode of use:
 
-| **Element tags**                 | **Descrição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Etiquetas dos elementos**      | **Descrição**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<macros> </macros>` | Start and end of macro file (mandatory tag).                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `<macro> </macro>`   | Start and end of the definition of a macro and its attributes.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -110,7 +111,7 @@ Here is an example of a macro definition:
 | SAVE RECORD(`<Selection/>`)                    |                                                                                                                                                 |
 | NEXT RECORD(`<Selection/>`)                    |                                                                                                                                                 |
 | End for                                              |                                                                                                                                                 |
-| `</text>`                                      | End of macro code                                                                                                                               |
+| `</text>`                                      | Fim do código macro                                                                                                                             |
 | `</macro>`                                     | End of macro definition                                                                                                                         |
 | `</macros>`                                    | End of macros XML file                                                                                                                          |
 
@@ -138,7 +139,7 @@ The *in_menu* attribute of the `<macro>` tag is used to set whether or not the m
 
 In the context menu, macros are displayed in the order of the "Macros.xml" file and any additional XML files. It is thus possible to change the order by modifying these files.
 
-### Autocomplete
+### Autocompletar
 
 By default, all macros are accessible using the autocomplete (aka type-ahead) function (see [Writing a method](./write-class-method.md)). The *type_ahead* attribute of the `<macro>` tag can be used to exclude a macro from this type of operation.
 

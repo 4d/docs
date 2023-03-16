@@ -1,6 +1,6 @@
 ---
 id: picture
-title: Images
+title: Picture
 ---
 
 Un champ, une variable ou expression de type image peut constituer une image Windows ou Macintosh. En règle générale, n'importe quelle image peut être mise sur le conteneur de données ou lue à partir du disque, à l'aide des commandes 4D telles que `READ PICTURE FILE`.
@@ -29,17 +29,17 @@ La plupart des [commandes 4D de gestion d'images](https://doc.4d.com/4Dv18/4D/18
 
 ## Opérateurs sur les images
 
-| Opération                 | Syntaxe         | Retourne | Action                                                                                                                                                                              |
-| ------------------------- | --------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Concaténation horizontale | Image1 + Image2 | Images   | Place Image2 à la droite d'Image1                                                                                                                                                   |
-| Concaténation verticale   | Image1 / Image2 | Images   | Place Image2 au-dessous d'Image1                                                                                                                                                    |
-| Superposition exclusive   | Image1 & Image2 | Images   | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                              |
-| Superposition inclusive   | Image1          | Images   | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Déplacement horizontal    | Image + Nombre  | Images   | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                                 |
-| Déplacement vertical      | Image / Nombre  | Images   | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                                   |
-| Redimensionnement         | Image * Nombre  | Images   | Redimensionne l'image au pourcentage Nombre                                                                                                                                         |
-| Extension horizontale     | Image *+ Nombre | Images   | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                         |
-| Extension verticale       | Image *         | Images   | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
+| Opération                 | Syntaxe              | Retourne | Action                                                                                                                                                                              |
+| ------------------------- | -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Concaténation horizontale | Image1 + Image2      | Picture  | Place Image2 à la droite d'Image1                                                                                                                                                   |
+| Concaténation verticale   | Image1 / Image2      | Picture  | Place Image2 au-dessous d'Image1                                                                                                                                                    |
+| Superposition exclusive   | Image1 & Image2      | Picture  | Superpose Image2 à Image1 (Image2 est au premier plan). Donne le même résultat que `COMBINE PICTURES(pict3;pict1;Superposition;pict2)`                                              |
+| Superposition inclusive   | Image1               | Picture  | Image    | Superpose Image2 à Image1 et retourne le masque résultant si les deux images sont de même taille. Donne le même résultat que `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
+| Déplacement horizontal    | Image + Nombre       | Picture  | Déplace l'image horizontalement d'un nombre de pixels égal à Nombre                                                                                                                 |
+| Déplacement vertical      | Image / Nombre       | Picture  | Déplace l'image verticalement d'un nombre de pixels égal à Nombre                                                                                                                   |
+| Redimensionnement         | Image * Nombre       | Picture  | Redimensionne l'image au pourcentage Nombre                                                                                                                                         |
+| Extension horizontale     | Image *+ Nombre      | Picture  | Redimensionne l'image horizontalement au pourcentage Nombre                                                                                                                         |
+| Extension verticale       | Image *&#124; Nombre | Picture  | Image    | Redimensionne l'image verticalement au pourcentage Nombre                                                                                                                |
 
 **Notes :**
 
@@ -112,8 +112,8 @@ cercle*+3 // Multiplie par 3 la largeur du cercle
 Extension verticale
 
 ```4d
-cercle*/2 // Double la hauteur du cercle
- cercle*/0.25 // La hauteur du cercle est réduite à un quart de sa taille originale
+cercle*|2 // Double la hauteur du cercle
+ cercle*|0.25 // La hauteur du cercle est réduite à un quart de sa taille originale
 ```
 
 ![](../assets/en/Concepts/vertscaling.en.png)![](../assets/en/Concepts/veticalscaling2.en.png)

@@ -12,11 +12,11 @@ Los nombres de dataclass pueden utilizarse directamente en las peticiones REST p
 | Sintaxis                                                                           | Ejemplo                                  | Descripción                                                                                     |
 | ---------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos          |
-| [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos |
+| [**{dataClass}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos |
 | [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Devuelve los datos de una entidad en la que está definido el valor del atributo                 |
 | [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Ejecuta una función de clase de una dataclass                                                   |
 | [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Ejecuta una función de clase de una selección de entidades                                      |
-| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Ejecuta una función de clase de una entidad                                                     |
+| [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Ejecuta una función de clase de una entidad                                                     |
 
 > Las llamadas a las funciones se detallan en la sección [Llamar las funciones de la clase ORDA](ClassFunctions.md).
 
@@ -46,7 +46,7 @@ Cada entidad contiene las siguientes propiedades:
 | __TIMESTAMP | Fecha  | Marca de tiempo de la última modificación de la entidad                                                            |
 | __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
-Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company/name,address`
 
@@ -58,7 +58,7 @@ Devuelve todos los datos de una clase de datos específica.
 
 **Resultado**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__GlobalStamp": 51,
@@ -133,35 +133,35 @@ Devuelve todos los datos de una clase de datos específica.
 .....//more entities here 
     ]
 }
-````
+```
 
-## {dataClass}({key})
+## {dataClass}\[{key}]
 
-Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, *p. ej.*, `Company(22) o Company("IT0911AB2200")`
+Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22] or Company[IT0911AB2200]`
 
 ### Descripción
 
 Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
 
-Para más información sobre los datos devueltos, consulte [{DataStoreClass}](#datastoreclass).
+Para más información sobre los datos devueltos, consulte [{DataClass}](#dataclass).
 
-Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
 
- `GET  /rest/Company(1)/name,address`
+ `GET  /rest/Company[1]/name,address`
 
 Si desea expandir un atributo de relación utilizando `$expand`, lo hará especificándolo como se muestra a continuación:
 
- `GET  /rest/Company(1)/name,address,staff?$expand=staff`
+ `GET  /rest/Company[1]/name,address,staff?$expand=staff`
 
 ### Ejemplo
 
 La siguiente petición devuelve todos los datos públicos de la clase de datos Company cuya llave es 1.
 
- `GET  /rest/Company(1)`
+ `GET  /rest/Company[1]`
 
 **Resultado**:
 
-````
+```json
 {
     "__entityModel": "Company",
     "__KEY": "1",
@@ -180,7 +180,7 @@ La siguiente petición devuelve todos los datos públicos de la clase de datos C
         }
     }
 }
-````
+```
 
 ## {dataClass}:{attribute}(value)
 
@@ -192,7 +192,7 @@ Pasando la *clase de datos* y un *atributo* junto con un valor, se puede recuper
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

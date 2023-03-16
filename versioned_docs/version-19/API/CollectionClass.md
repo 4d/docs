@@ -410,10 +410,17 @@ If passed, the *option* parameter can contain one of the following constants (or
 
 |option |Description|
 |---|---|
-|`ck resolve pointers`| If the original collection contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing the ck resolve pointers. In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.|
-|`ck shared`| By default, copy() returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the ck shared constant to create a shared collection. In this case, you can use the groupWith parameter to associate the shared collection with another collection or object (see below).|
+|`ck resolve pointers`| If the original collection contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing the `ck resolve pointers` constant. In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.|
+|`ck shared`| By default, `copy()` returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the `ck shared` constant to create a shared collection. In this case, you can use the *groupWith* parameter to associate the shared collection with another collection or object (see below).|
 
 The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
+
+:::note
+
+Datastore, dataclass, and entity objects are not copiable. If `.copy()` is called with them, `Null` values are returned. 
+
+:::
+
 
 #### Example 1
 
@@ -1490,7 +1497,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 #### Description
 
-The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
+The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection, except if *$1.stop* was used (see below).
 
 >This function does not modify the original collection.
 
@@ -1840,7 +1847,7 @@ $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //using the language:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
@@ -1947,6 +1954,7 @@ You want to sort the resutling collection:
 ```
 
 <!-- END REF -->
+
 
 <!-- REF collection.query().Desc -->
 ## .query()
@@ -2426,6 +2434,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 With the following *NumberGreaterThan0* method:
 
 ```4d
+
  $1.result:=$1.value>0
 ```
 

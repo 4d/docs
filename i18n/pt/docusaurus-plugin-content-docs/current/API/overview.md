@@ -1,27 +1,20 @@
 ---
 id: overview
-title: Class API Overview
+title: About class functions
 ---
 
-This section describes the built-in 4D class API as well as the associated constructor commands. 4D class functions and properties are available through class instance objects.
+Esta secção descreve as funções da classe 4D incorporada, bem como os comandos de construção associados. As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe.
 
-- functions must be called on instances with the () operator. Por exemplo, `collection.sort()`.
+- devem ser chamadas em instâncias com o operador `()`. Por exemplo, `collection.sort()`.
+- as propriedades são acessadas sem parênteses, por exemplo `file.creationTime`. Pode também utilizar a sintaxe \[], por exemplo `file["creationTime"]`.
+- comandos podem ser chamados de forma independente, com ou sem parâmetros. Por exemplo `Folder(fk database folder)`.
 
-- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
+## Convenções de escrita
 
-## Writing conventions
+As seguintes convenções são utilizadas na sintaxe da função:
 
-The following conventions are used in the function syntax:
-
-- the `{ }` characters (braces) indicate optional parameters. For example, `.delete( { option : Integer } )` means that the *option* parameter may be omitted when calling the function.
-- the `{ ; ...param }` notation indicates an unlimited number of parameters. For example, `.concat( value : any { ;...valueN } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- the `any` keyword is used for parameters that can be of any type that can be stored within attributes (number, text, boolean, date, time, object, collection...).
-
-## Other resources
-
-For an overall presentation of the 4D Language basics and concepts, please go to the [4D Language Concepts](Concepts/about.md) section.
-
-For a description of the 4D "classic" language, please go to the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). 
-
+- os caracteres `{ }` (chaves) indicam parâmetros opcionais. Por exemplo, `.delete( { option : Integer } )` significa que o parâmetro *opção* pode ser omitido ao chamar a função.
+- o `{ ; ...param }` notação indica um número ilimitado de parâmetros. Por exemplo, `.concat( valor : qualquer { ;...valorN } ) : A colecção` significa que um número ilimitado de valores de qualquer tipo pode ser passado para a função.
+- a `any` é utilizada para parâmetros que podem ser de qualquer tipo e que podem ser armazenados dentro dos atributos (número, texto, booleano, data, hora, objecto, colecção...). 
 
 

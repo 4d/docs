@@ -55,7 +55,7 @@ La barra de herramientas contiene los siguientes elementos:
 | Icono                                            | Nombre                                                      | Descripción                                                                                                                                                                                                                                                                                                                                                               |
 | ------------------------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | Ejecutar el formulario                                      | Se utiliza para probar la ejecución del formulario. Al presionar este botón, 4D abre una nueva ventana y muestra el formulario en su contexto (lista de registros para un formulario lista y página de registro actual para un formulario detallado). El formulario se ejecuta en el proceso principal.                                                                   |
-| ![](../assets/en/FormEditor/selection.png)       | [Herramienta de selección](#selecting-objects)              | Allows selecting, moving and resizing form objects.**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                                                                                        |
+| ![](../assets/en/FormEditor/selection.png)       | [Herramienta de selección](#selecting-objects)              | Permite seleccionar, mover y cambiar el tamaño de los objetos del formulario.**Nota**: cuando se selecciona un objeto de tipo Texto o Área de Grupo, al presionar la tecla **Intro** se pasa al modo de edición.                                                                                                                                                          |
 | ![](../assets/en/FormEditor/zOrder.png)          | [Orden de entrada](#data-entry-order)                       | Pasa al modo "Orden de entrada", donde es posible ver y cambiar el orden de entrada actual del formulario. Tenga en cuenta que las marcas permiten ver el orden de entrada actual, sin dejar de trabajar en el formulario.                                                                                                                                                |
 | ![](../assets/en/FormEditor/moving.png)          | [Desplazamiento](#moving-objects)                           | Pasa al modo " Desplazamiento ", en el que es posible llegar rápidamente a cualquier parte del formulario utilizando la función de arrastrar y soltar en la ventana. El cursor toma la forma de una mano. Este modo de navegación es especialmente útil cuando se hace zoom en el formulario.                                                                             |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                               | Permite modificar la escala de visualización del formulario (100% por defecto). Puede pasar al modo "Zoom" haciendo clic en la lupa o pulsando directamente en la barra correspondiente a la escala deseada. Esta función se detalla en la sección anterior.                                                                                                              |
@@ -104,16 +104,18 @@ Puede visualizar y modificar las propiedades de los objetos y formularios utiliz
 
 Para mostrar/ocultar la lista de propiedades, seleccione **Lista de propiedades** en el menú **Formulario** o en el menú contextual del editor de formularios. También puede mostrarlo haciendo doble clic en una área vacía del formulario.
 
-#### Accesos directos de navegación
+#### Atajos
 
-Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
+Puede utilizar los siguientes atajos en la Lista de propiedades:
 
 - **Tecla de flecha**s ↑ ↓: se utiliza para pasar de una celda a otra.
 - **Teclas flechas** ← →: se utiliza para expandir/contraer los temas o entrar en el modo de edición.
 - **PgUp** y **PgDn**: selecciona la primera o la última celda visible de la lista mostrada.
 - **Inicio** y **Fin**: selecciona la primera o la última celda de la lista.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en un evento: selecciona/deselecciona todos los eventos de la lista, en función del estado inicial del evento sobre el que se ha hecho clic.
-- **Ctrl+clic** (Windows) o **Comando+clic** (Mac OS) en la etiqueta de tema: contrae/despliega todos los temas de la lista.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un evento: utilizado para seleccionar/deseleccionar cada evento de la lista, según el estado inicial del evento sobre el que se ha hecho clic.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en la etiqueta de un tema: Permite contraer/expandir todos los temas de la lista.
+- **Ctrl+clic** (Windows) o **Comando+clic** (macOS) sobre un valor de propiedad mostrado en **negrita**: restablece la propiedad a su valor por defecto.
+
 
 ## Manipulación de objetos formulario
 
@@ -125,6 +127,7 @@ Puede añadir objetos en los formularios de varias maneras:
 - Arrastrando y soltando el objeto desde la barra de objetos
 - Mediante operaciones de arrastrar y soltar o copiar y pegar sobre un objeto seleccionado de la [librería de objetos](objectLibrary.md) preconfigurada,
 - Arrastrando y soltando un objeto desde otro formulario,
+
 
 - Arrastrando y soltando un objeto desde el Explorador (campos) o desde otros editores del modo Diseño (listas, imágenes, etc.)
 
@@ -188,7 +191,7 @@ La caja de diálogo "Duplicar muchos" aparece cuando se selecciona uno o más ob
 
 - In the upper area, enter the number of columns and lines (rows) of objects you want to get. For example, if you want three columns and two lines of objects, enter 3 in the Column(s) area and 2 in the Line(s) area. Si desea tres nuevas copias horizontales de un objeto, introduzca 4 en el área Columna(s) y deje el valor por defecto, 1, en el área Línea(s).
 
-- For lines and columns, define the offset that you wish to leave between each copy.The value must be expressed in points. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
+- Para líneas y columnas, defina el desfase que desea dejar entre cada copia.El valor debe expresarse en puntos. It will be applied to each copy, or copies, in relation to the original object. For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
 - Si desea crear una matriz de variables, seleccione la opción **Numerar las variables** y seleccione la dirección en la que se van a numerar las variables, ya sea por línea(s) o por columna(s). Esta opción sólo se activa cuando el objeto seleccionado es una variable. Para más información sobre esta opción, consulte **Duplicar en una matriz** en el *Manual de diseño*.
 
@@ -260,9 +263,9 @@ El Asistente de Alineación permite realizar cualquier tipo de alineación y/o d
 
 Para mostrar esta caja de diálogo, seleccione los objetos que desee alinear y, a continuación, elija el comando **Alineación** del submenú **Alinear** del menú **Objeto** o del menú contextual del editor.
 
-- In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.The example area displays the results of your selection.
+- En las áreas "Alineación izquierda/derecha" y/o "Alineación superior/inferior", haga clic en el icono que corresponda a la alineación que desee realizar. El área de ejemplo muestra los resultados de su selección.
 
-- To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**.In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. OR:To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. En este caso, la posición del objeto de referencia no se alterará.
+- Para realizar una alineación que utilice el esquema de anclaje estándar, haga clic en **Vista previa** o **Aplicar**. En este caso 4D utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. OR:To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. En este caso, la posición del objeto de referencia no se alterará.
 
 Puede previsualizar los resultados de la alineación haciendo clic en el botón **Previsualización**. Los objetos se alinean entonces en el editor de formularios, pero como la caja de diálogo permanece en el primer plano, aún puede cancelar o aplicar la alineación.
 > Esta caja de diálogo le permite alinear y distribuir objetos en una sola operación. Para más información sobre cómo distribuir objetos, consulte [Repartir objetos](#distribuir-objetos).
@@ -296,15 +299,15 @@ Para repartir los objetos con igual espacio:
 
 1. Seleccione tres o más objetos y haga clic en la herramienta Distribuir correspondiente.
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.![](../assets/en/FormEditor/distributionTool.png)ORSelect a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.4D distributes the objects accordingly. Los objetos se distribuyen utilizando la distancia a sus centros y se utiliza como referencia la mayor distancia entre dos objetos consecutivos.
+2. En la barra de herramientas, haga clic en la herramienta de distribución correspondiente a la distribución que desea aplicar.![](../assets/en/FormEditor/distributionTool.png)OSeleccione un comando de menú de distribución en el submenú **Alinear** del menú **Objeto** o en el menú contextual del editor. 4D distribuye los objetos en consecuencia. Los objetos se distribuyen utilizando la distancia a sus centros y se utiliza como referencia la mayor distancia entre dos objetos consecutivos.
 
 Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
 1. Seleccione los objetos que desea distribuir.
 
-2. Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.The following dialog box appears:![](../assets/en/FormEditor/alignmentAssistant.png)
+2. Seleccione el comando **Alineación** en el submenú **Alinear** del menú **Objeto** o en el menú contextual del editor. Aparecerá el siguiente diálogo:![](../assets/en/FormEditor/alignmentAssistant.png)
 
-3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png)(Standard horizontal distribution icon)The example area displays the results of your selection.
+3. En las áreas Alineación izquierda/derecha y/o Alineación superior/inferior, haga clic en el icono de distribución estándar: ![](../assets/en/FormEditor/horizontalDistribution.png)(Icono de distribución horizontal estándar) El área de ejemplo muestra los resultados de su selección.
 
 4. To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them. OR:To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). Esta opción actúa como un interruptor. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:
 
@@ -361,11 +364,11 @@ Para ver o cambiar el orden de entrada:
 
 1. Choose **Entry Order** from the **Form** menu or click on the Entry Order button in the toolbar of the window:![](../assets/en/FormEditor/zOrder.png)The pointer turns into an entry order pointer and 4D draws a line in the form showing the order in which it selects objects during data entry. Viewing and changing the data entry order are the only actions you can perform until you click any tool in the Tools palette.
 
-2. To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.![](../assets/en/FormEditor/entryOrder3.png)4D will adjust the entry order accordingly.
+2. Para cambiar el orden de entrada de datos, ubique el puntero sobre un objeto del formulario y mientras mantiene presionado el botón del ratón, arrastre el puntero hasta el objeto que desee a continuación en el orden de entrada de datos.![](../assets/en/FormEditor/entryOrder3.png)4D ajustará el orden de entrada en consecuencia.
 
 3. Repita el paso 2 tantas veces como sea necesario para establecer el orden de entrada de datos que desee.
 
-4. When you are satisfied with the data entry order, click any unselected tool in the toolbar or choose **Entry Order** from the **Form** menu.4D returns to normal operation of the Form editor.
+4. Cuando esté satisfecho con el orden de entrada de datos, haga clic en cualquier herramienta no seleccionada de la barra de herramientas o elija **Orden de entrada** en el menú **Formulario**. 4D vuelve al funcionamiento normal del editor de formularios.
 
 > Sólo se muestra el orden de entrada de la página actual del formulario. Si el formulario contiene objetos editables en la página 0 o procedentes de un formulario heredado, el orden de entrada por defecto es el siguiente: objetos de la página 0 del formulario heredado > objetos de la página 1 del formulario heredado > objetos de la página 0 del formulario abierto > objetos de la página actual del formulario abierto.
 

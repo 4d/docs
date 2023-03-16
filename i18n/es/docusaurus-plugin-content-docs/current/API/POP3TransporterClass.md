@@ -251,19 +251,21 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Versión | Modificaciones                     |
+| ------- | ---------------------------------- |
+| v20     | Soporte del parámetro *headerOnly* |
+| v18 R2  | Añadidos                           |
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer { ; *headerOnly* : Boolean } ) : Object<!-- END REF -->
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                 |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número del mensaje en la lista                                              |
+| Parámetros | Tipo    |    | Descripción                                                                          |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
+| msgNumber  | Integer | -> | Número del mensaje en la lista                                                       |
+| headerOnly | Boolean | -> | True para descargar sólo los encabezados del correo electrónico (por defecto, False) |
 | Result     | Object  | <- | [Objeto Email](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
@@ -272,16 +274,25 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 La función `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* en el buzón designado por el [`transportador POP3`](#pop3-transporter-object)<!-- END REF -->. Esta función permite recuperar la información sobre el email.
 
-Pase en *msgNumber* el número del mensaje a recuperar. Este número es devuelto en la propiedad number por la función [`.getMailInfoList()`](#getmailinfolist).
+Pase en *msgNumber* el número del mensaje a recuperar. Este número es devuelto en la propiedad `number` por la función [`.getMailInfoList()`](#getmailinfolist).
+
+Opcionalmente, puede pasar `true` en el parámetro *headerOnly* para excluir las partes del cuerpo del objeto `Email` devuelto. Sólo se devuelven las propiedades de encabezados ([`headers`](EmailObjectClass.md#headers), [`a`](EmailObjectClass.md#to), [`de`](EmailObjectClass.md#from)...). Esta opción permite optimizar el paso de descarga cuando hay muchos correos electrónicos en el servidor.
+
+:::note
+
+Es posible que el servidor no soporte la opción *headerOnly*.
+
+:::
 
 El método devuelve Null si:
 
 * *msgNumber* designa un mensaje inexistente,
-* el mensaje se marcó para su eliminación utilizando `.delete( )`.
+* el mensaje se ha marcado para su eliminación utilizando [`.delete()`](#delete).
 
 **Objeto devuelto**
 
 `.getMail()` devuelve un objeto [`Email`](EmailObjectClass.md#email-object).
+
 
 ##### Ejemplo
 
@@ -301,6 +312,7 @@ Quiere saber el remitente del primer correo del buzón:
  $transporter:=POP3 New transporter($server)
 
  $mailInfo:=$transporter.getMailInfoList()
+
  $sender:=$transporter.getMail($mailInfo[0].number).from
 ```
 
