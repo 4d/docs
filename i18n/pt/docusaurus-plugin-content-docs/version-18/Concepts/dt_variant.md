@@ -3,7 +3,7 @@ id: variant
 title: Variant
 ---
 
-Variant is a variable type which allows encapsulating data of any valid regular type in a variable. Typically, this variable type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.
+Variante é um tipo de variável que permite encapsular dados de qualquer tipo regular válido numa variável. Typically, this variable type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.
 
 A variant type variable can contain a value of the following data types:
 
@@ -42,13 +42,13 @@ You can use variant variables wherever variables are expected, you only need to 
 ```4d
 C_VARIANT($v)
 $v:="hello world"
-$v2:=$v //assign variable to another variable
+$v2:=$v //atribuir variável a outra variável
 
 $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-Variant can be used to declare method parameters ($0, $1,...) that can be of various types. In this case, you can build your code by testing the parameter value type, for example:
+A variante pode ser usada para declarar parâmetros de métodos ($0, $1,...) que podem ser de vários tipos. Neste caso, pode construir o seu código testando, por exemplo, o tipo de valor do parâmetro:
 
 ```4d
 C_VARIANT($1)

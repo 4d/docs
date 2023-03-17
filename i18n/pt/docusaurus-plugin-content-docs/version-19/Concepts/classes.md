@@ -419,7 +419,7 @@ You also created the `Square` class with a function calling the superclass funct
  $0:=Super.nbSides()+" which are all equal"
 ```
 
-Then you can write in a project method:
+Depois pode escrever num método projecto:
 
 ```4d
 var $square : Object
@@ -476,7 +476,7 @@ In any cases, `This` refers to the object the method was called on, as if the me
  $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+Depois pode escrever num método projecto:
 
 ```4d
 $o:=cs.ob.new()

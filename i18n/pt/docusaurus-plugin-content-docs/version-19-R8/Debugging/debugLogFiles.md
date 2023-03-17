@@ -228,13 +228,13 @@ The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR
 
 You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
 
-| Message level | Descrição                                                                                     | When selected, includes         |
-| ------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR         | A part of the application does not work                                                       | ERROR                           |
-| WARN          | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
-| INFO          | *Default level* - Important application event                                                 | ERROR, WARN, INFO               |
-| DEBUG         | Detail of application flow (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG        |
-| TRACE         | Other internal information (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG, TRACE |
+| Nível da mensagem | Descrição                                                                                     | When selected, includes         |
+| ----------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
+| ERROR             | A part of the application does not work                                                       | ERROR                           |
+| WARN              | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
+| INFO              | *Default level* - Important application event                                                 | ERROR, WARN, INFO               |
+| DEBUG             | Detail of application flow (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG        |
+| TRACE             | Other internal information (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG, TRACE |
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, e 4DIMAPLog.txt
 
@@ -352,7 +352,7 @@ There are several ways to enable the log configuration file:
 > * Windows: `Users\[userName]\AppData\Roaming\4D or \4D Server`
 > * macOS: `/Users/[userName]/Library/ApplicationSupport/4D or /4D Server`
 
-### JSON file description
+### Descrição do ficheiro JSON
 
 The log configuration file is a `.json` file that can contain the following properties:
 
@@ -491,7 +491,7 @@ The log configuration file is a `.json` file that can contain the following prop
 
 ### Exemplo
 
-Here is an example of log configuration file:
+Aqui está um exemplo de ficheiro de configuração de log:
 
 ```json
 {

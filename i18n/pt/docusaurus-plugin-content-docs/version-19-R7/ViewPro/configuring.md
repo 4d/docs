@@ -1,17 +1,17 @@
 ---
 id: configuring
-title: Configuring 4D View Pro Areas
+title: Configuração das áreas 4D View Pro
 ---
 
-The 4D View Pro area properties can be configured using the Property list. Spreadsheet properties are available through the language.
+As propriedades da área 4D View Pro podem ser configuradas utilizando a lista de propriedades. Spreadsheet properties are available through the language.
 
-## Form area properties
+## Propriedades da área do formulário
 
 Using the area's property list, you can set [4D View Pro object properties](FormObjects/viewProArea_overview.md#supported-properties) such as **Object Name**, [**Variable or Expression**](#4d-view-pro-form-object-variable), **Appearance**, **Action**, and **Events**.
 
 ![](../assets/en/ViewPro/vpPropertyList.png)
 
-### Selecting a user interface
+### Selecção de uma interface utilizador
 
 You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:
 
@@ -53,7 +53,7 @@ The following form events are available in the Property List for 4D View Pro are
 
 Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
 
-| Standard 4D events                              | Specific and extended 4D View Pro events              |
+| Eventos 4D ‘standard’                           | Specific and extended 4D View Pro events              |
 | ----------------------------------------------- | ----------------------------------------------------- |
 | [On Load](../Events/onLoad.md)                  | [On VP Ready](../Events/onVpReady.md)                 |
 | [On Getting Focus](../Events/onGettingFocus.md) | [On Clicked](../Events/onClicked.md)                  |
@@ -65,14 +65,14 @@ Some of the events are standard form events (available to all active objects) an
 |                                                 | [On Row Resize](../Events/onRowResize.md)             |
 |                                                 | [On VP Range Changed](../Events/onVpRangeChanged.md)  |
 
-## Sheet Options
+## Opções folha
 
 The 4D View Pro sheet options object allows you to control various options of your 4D View Pro areas. This object is handled by the following commands:
 
 * [VP SET SHEET OPTIONS](method-list.md#vp-set-sheet-options)
 * [VP Get sheet options](method-list.md#vp-get-sheet-options)
 
-### Sheet appearance
+### Aspecto da folha
 
 | Propriedade          |                        | Tipo          | Descrição                                                                                                                                                                                                                                                                                                  |
 | -------------------- | ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -93,9 +93,9 @@ The 4D View Pro sheet options object allows you to control various options of yo
 | sheetAreaOffset      |                        | object        | The sheetAreaOffset's options.                                                                                                                                                                                                                                                                             |
 |                      | left                   | inteiro longo | The offset left of sheet from host.                                                                                                                                                                                                                                                                        |
 |                      | top                    | inteiro longo | The offset top of sheet from host.                                                                                                                                                                                                                                                                         |
-> All properties are optional.
+> Todas as propriedades são opcionais.
 
-### Sheet protection
+### Protecção da folha
 
 To lock the whole sheet, you only need to set the *isProtected* property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
 
@@ -116,7 +116,7 @@ To lock the whole sheet, you only need to set the *isProtected* property to **tr
 |                   | allowInsertColumns       | boolean | Specifies whether the user can insert columns, optional. Padrão é falso.                                                          |
 |                   | allowDeleteRows          | boolean | Specifies whether the user can delete rows, optional. Padrão é falso.                                                             |
 |                   | allowDeleteColumns       | boolean | Specifies whether the user can delete columns, optional. Padrão é falso.                                                          |
-> All properties are optional.
+> Todas as propriedades são opcionais.
 
 ## Cell Format
 
@@ -130,15 +130,15 @@ For example, when using the [VP SET VALUE](method-list.md#vp-set-value) or [VP S
 
 Note that when creating your own format patterns, only the display of the data is modified. The value of the data remains unchanged.
 
-### Number and text formats
+### Formatos número e texto
 
 Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 | Caracter  | Descrição                                                                                                                                                                                                                  | Exemplo                                                                                                                    |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 0         | Placeholder that displays zeros.                                                                                                                                                                                           | #.00 will display 1.1 as 1.10                                                                                              |
-| .         | Displays a decimal point                                                                                                                                                                                                   | 0.00 will display 1999 as 1999.00                                                                                          |
-| ,         | Displays the thousands separator in a number. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 will display 12200000 as 12,200,000                                                                                    |
+| 0         | Placeholder that displays zeros.                                                                                                                                                                                           | #.00 mostrará 1.1 como 1.10                                                                                                |
+| .         | Displays a decimal point                                                                                                                                                                                                   | 0.00 mostrará 1999 como 1999.00                                                                                            |
+| ,         | Displays the thousands separator in a number. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 mostrará 12200000 como 12,200,000                                                                                      |
 | \_      | Skips the width of the next character.                                                                                                                                                                                     | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                     |
 | @         | Formatter for text. Applies the format to all text in the cell                                                                                                                                                             | "\[Red]@" applies the red font color for text values.                                                                     |
 | *         | Repeats the next character to fill the column width.                                                                                                                                                                       | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
@@ -184,40 +184,40 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
-|      | Code<br/>(not case-sensitive) | Descrição                                      | Exemplo            |
-| ---- | ----------------------------------- | ---------------------------------------------- | ------------------ |
-| Date |                                     |                                                | (January 1, 2019)  |
-|      | m                                   | Month number without leading zero              | 1                  |
-|      | mm                                  | Month number with leading zero                 | 01                 |
-|      | mmm                                 | Month name, short                              | Jan                |
-|      | mmmm                                | Month name, long                               | January            |
-|      | d                                   | Day number without leading zero                | 1                  |
-|      | dd                                  | Day number with leading zero                   | 01                 |
-|      | ddd                                 | Day of week, short                             | Tue                |
-|      | dddd                                | Day of week, long                              | Tuesday            |
-|      | yy                                  | Ano, breve                                     | 19                 |
-|      | yyyy                                | Ano, longo                                     | 2019               |
-| Hora |                                     |                                                | (2:03:05 PM)       |
-|      | h                                   | Hour without leading zero. 0-23                | 2                  |
-|      | hh                                  | Hour with leading zero. 00-23                  | 02                 |
-|      | m                                   | Minutes without leading zero. 0-59             | 3                  |
-|      | mm                                  | Minutes with leading zero. 00-59               | 03                 |
-|      | s                                   | Seconds without leading zero. 0-59             | 5                  |
-|      | ss                                  | Seconds with leading zero. 00-59               | 05                 |
-|      | \[h]                               | Elapsed time in hours                          | 14 (can exceed 24) |
-|      | \[mm]                              | Elapsed time in minutes                        | 843                |
-|      | \[ss]                              | Elapsed time in seconds                        | 50585              |
-|      | AM/PM                               | Periods of day. 24 hour fomat used if omitted. | PM                 |
+|      | Código<br/>(não sensível a maiúsculas e minúsculas) | Descrição                                      | Exemplo            |
+| ---- | --------------------------------------------------------- | ---------------------------------------------- | ------------------ |
+| Date |                                                           |                                                | (January 1, 2019)  |
+|      | m                                                         | Month number without leading zero              | 1                  |
+|      | mm                                                        | Month number with leading zero                 | 01                 |
+|      | mmm                                                       | Month name, short                              | Jan                |
+|      | mmmm                                                      | Month name, long                               | January            |
+|      | d                                                         | Day number without leading zero                | 1                  |
+|      | dd                                                        | Day number with leading zero                   | 01                 |
+|      | ddd                                                       | Day of week, short                             | Tue                |
+|      | dddd                                                      | Day of week, long                              | Tuesday            |
+|      | yy                                                        | Ano, breve                                     | 19                 |
+|      | yyyy                                                      | Ano, longo                                     | 2019               |
+| Hora |                                                           |                                                | (2:03:05 PM)       |
+|      | h                                                         | Hour without leading zero. 0-23                | 2                  |
+|      | hh                                                        | Hour with leading zero. 00-23                  | 02                 |
+|      | m                                                         | Minutes without leading zero. 0-59             | 3                  |
+|      | mm                                                        | Minutes with leading zero. 00-59               | 03                 |
+|      | s                                                         | Seconds without leading zero. 0-59             | 5                  |
+|      | ss                                                        | Seconds with leading zero. 00-59               | 05                 |
+|      | \[h]                                                     | Elapsed time in hours                          | 14 (can exceed 24) |
+|      | \[mm]                                                    | Elapsed time in minutes                        | 843                |
+|      | \[ss]                                                    | Elapsed time in seconds                        | 50585              |
+|      | AM/PM                                                     | Periods of day. 24 hour fomat used if omitted. | PM                 |
 > The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
 
-### Additional symbols
+### Símbolos adicionais
 
 In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or "" and do not impact the interpretation of the format pattern. They appear "as-is" within the pattern.
 
 | Caracter    | Descrição                                                          | Exemplo              |
 | ----------- | ------------------------------------------------------------------ | -------------------- |
-| + and -     | Plus and minus signs                                               | ### + ### = ###,### |
-| ( )         | Left and right parenthesis                                         | (-###.##)            |
+| + and -     | Sinais mais e menos                                                | ### + ### = ###,### |
+| ( )         | Parênteses esquerdo e direito                                      | (-###.##)            |
 | :           | Dois pontos                                                        | hh:mm:ss             |
 | ^           | Caret                                                              | #\^#                |
 | '           | Apóstrofe                                                          | '######              |
@@ -235,7 +235,7 @@ In addition to the special characters and codes described in the previous sectio
 | $           | Sinal de dólar                                                     | $###.00              |
 | ¢           | Cent sign                                                          | .00¢                 |
 
-## Print Attributes
+## Atributos de impressão
 
 4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. These attributes are handled by the following commands:
 
@@ -257,7 +257,7 @@ Column and row attributes are used to specify the beginning, end, and repetition
 | rowEnd            | inteiro longo | The last row to print in a cell range. Default value = -1 (all rows)                                       |
 | rowStart          | inteiro longo | The first row to print in a cell range. Default value = -1 (all rows)                                      |
 
-### Headers / Footers
+### Cabeçalhos / Rodapés
 
 Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
 
@@ -315,20 +315,20 @@ Margin attributes are used to specify the 4D View Pro area margins for printing.
 
 ### Orientation
 
-Orientation attributes are used to specify the direction the printed page layout.
+Os atributos de orientação são utilizados para especificar a direcção da disposição da página impressa.
 > This attribute defines rendering information only.
 
-| Propriedade | Tipo          | Descrição                                                                                                                   |
-| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| orientation | inteiro longo | Page orientation. Valores disponíveis: `vk print page orientation landscape`, `vk print page orientation portrait` (padrão) |
+| Propriedade | Tipo          | Descrição                                                                                                                       |
+| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| orientation | inteiro longo | Orientação da página. Valores disponíveis: `vk print page orientation landscape`, `vk print page orientation portrait` (padrão) |
 
 ### Página
 
-Page attributes are used to specify general document print settings.
+Os atributos de página são utilizados para especificar as definições gerais de impressão de documentos.
 
 | Propriedade     | Tipo          | Descrição                                                                                                                                                                                             |
 | --------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean       | Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                   |
+| blackAndWhite   | boolean       | Impressão apenas em preto e branco. <p>Valor padrão = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                 |
 | centering       | inteiro longo | How the contents are centered on the printed page. Valores disponíveis: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (padrão), `vk print centering vertical` |
 | firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                         |
 | pageOrder       | inteiro longo | The order pages are printed. Valores disponíveis: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                   |
@@ -439,7 +439,7 @@ Exemplo:
 |                                                                            | color | text          | Defines the color of the border. Default = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
 |                                                                            | style | inteiro longo | Defines the style of the border. Default = empty. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
-#### Fonts and text
+#### Fontes e texto
 
 | Propriedade     |              | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                            | Valores possíveis                                                                                                                                                                                                 |
 | --------------- | ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -475,7 +475,7 @@ Exemplo:
 | name        | text | Defines the name of the style                                                                                                                                                                                                                                                    |
 | parentName  | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet. |
 
-## 4D View Pro Object
+## Objeto 4D View Pro
 
 The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet contents. It is automatically handled by 4D View Pro. You can set or get this object using the [VP IMPORT FROM OBJECT](method-list.md#vp-import-from-object) or [VP Export to object](method-list.md#vp-export-to-object) methods.
 

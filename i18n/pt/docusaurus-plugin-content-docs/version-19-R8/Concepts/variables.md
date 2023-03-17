@@ -15,7 +15,7 @@ Após a criação pode usar a variável onde quiser na sua aplicação. Por exem
 
 As variáveis são objetos da linguagem; pode criar e utilizar variables que nunca aparecerão na tela. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
-## Declaring Variables
+## Declaração de Variáveis
 
 You create variables by declaring them. The 4D language offers two ways to declare variables:
 
@@ -181,7 +181,7 @@ When you are working in an application project with many methods and variables, 
 Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. This is a typical way to use a local variable. Aqui um exemplo simples:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("Por favor insira o seu ID:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
@@ -207,9 +207,9 @@ A process can “peek and poke” process variables from another process using t
 
 For more information, see the chapter **Processes** and the description of these commands.
 
-### Interprocess variables
+### Variáveis interprocesso
 
-Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes.
+Variáveis interprocessos estão disponíveis pelo projecto e são partilhados entre os processos cooperativos. They are primarily used to share information between processes.
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
 

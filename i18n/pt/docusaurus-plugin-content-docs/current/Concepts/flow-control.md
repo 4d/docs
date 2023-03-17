@@ -3,20 +3,20 @@ id: control-flow
 title: Control flow
 ---
 
-Regardless of the simplicity or complexity of a method or function, you will always use one or more of three types of programming structures. Programming structures control the flow of execution, whether and in what order statements are executed within a method. There are three types of structures:
+Regardless of the simplicity or complexity of a method or function, you will always use one or more of three types of programming structures. Programming structures control the flow of execution, whether and in what order statements are executed within a method. Há três tipos de estruturas:
 
-- **Sequential**: a sequential structure is a simple, linear structure. A sequence is a series of statements that 4D executes one after the other, from first to last. A one-line routine, frequently used for object methods, is the simplest case of a sequential structure. For example: `[People]lastName:=Uppercase([People]lastName)`
-- **Branching**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. The condition is a Boolean expression, an expression that evaluates TRUE or FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
-- **Looping**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. To deal with this need, the 4D language provides the following looping structures:
+- **Sequencial**: uma estrutura sequencial é uma estrutura simples e linear. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. Por exemplo: `[People]lastName:=Uppercase([People]lastName)`
+- **Branching**: uma estrutura de bifurcação permite que os métodos provem uma condição e tomem caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional e a estrutura [`If...Else...End if`](#ifelseend-if), que dirige o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura condicional é a estrutura [`Case of... End case`](#case-ofelseend-case) que direciona fluxo de programa para um de muitas caminhos.
+- **Bucle**: quando se escrevem métodos, é muito comum descobrir que se necessita que uma sequência de sentenças se repita um número de vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
 
     - [`While... End while`](#whileend-while)
     - [`Repeat... Until`](#repeatuntil)
     - [`For... End for`](#forend-for)
     - [`For each... End for each`](#for-eachend-for-each)
 
-The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Each looping structure can be used in either way, but `While` loops and `Repeat` loops are more appropriate for repeating until a condition is met, and `For` loops are more appropriate for looping a specified number of times. `For each...End for each` allows mixing both ways and is designed to loop within objects and collections.
+The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Cada estrutura de looping pode ser usada de qualquer forma, mas loops`While` e `Repeat` são mais apropriados para repetir até que uma condição seja satisfeita, e loops `For` são mais apropriados para looping um número especificado de vezes. `For each... End for each` permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
 
-**Note:** 4D allows you to embed programming structures up to a "depth" of 512 levels.
+**Nota:** 4D permite incorporar estruturas de programação até uma "profundidade" de 512 níveis.
 
 
 
@@ -398,9 +398,9 @@ A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-cont
 
 Most of the `For... End for` loops you will write in your projects will look like the ones listed in these examples.
 
-### Counter variable
+### Variável contador
 
-#### Decrementing counter variable
+#### Variável contador decrescente
 
 Em alguns casos, pode querer ter um loop cuja variável de contador seja decrescente ao invés de crescente. Para fazer isso, deve especificar *Start_Expression* maior que *End_Expression* e *Increment_Expression* deve ser negativa. Os exemplos abaixo fazem a mesma coisa que nos exemplos acima, mas na ordem inversa:
 
@@ -460,14 +460,14 @@ Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo va
 
 #### Optimizing the execution of the For... End for loops
 
-You can use Real and Integer variables as well as interprocess, process, and local variable counters. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
+Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
 
 10. Aqui um exemplo simples:
 
 ```4d
- var $vlCounter : Integer //use local Integer variables
+ var $vlCounter : Integer //usa variáveis Integer locais 
  For($vlCounter;1;10000)
-  //Do something
+  //Faz algo
  End for
 ```
 
@@ -500,7 +500,7 @@ Here is the equivalent `While... End while` loop:
 
 :::tip
 
-The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For... End for` loop whenever possible.
+O loop `For... End for` é geralmente mais rápido que os loops `While... End while` ou `Repeat... Until`, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Therefore, use the `For... End for` loop whenever possible.
 
 :::
 
@@ -627,7 +627,7 @@ O número de loops é baseado no número de entidades da seleção de entidades.
 
 **Nota:** se a seleção de entidades conter uma entidade que tenha sido eliminada, enquanto isso, por outro processo, ela é pulada durante o loop.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save()`.
+Lembre que qualquer modificação aplicada na entidade atual deve ser guardada explicitamente utilizando `entity.save()`.
 
 #### Exemplo
 
@@ -735,7 +735,7 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## break and continue
+## break e continue
 
 Todas as estruturas de looping acima suportam tanto `quebrar` como `continuar` declarações. Estas declarações dão-lhe mais controle sobre os loops, permitindo-lhe sair do loop e contornar a iteração atual a qualquer momento.
 

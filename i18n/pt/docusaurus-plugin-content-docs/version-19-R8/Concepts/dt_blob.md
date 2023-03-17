@@ -143,7 +143,7 @@ $type:= Value type($myBlob) // Blob
 
 > When converting a `4D. Blob` to a scalar blob, if the size of the `4D. Blob` exceeds the maximum size for scalar blobs, the resulting scalar blob is empty. For example, when the maximum size for scalar blobs is 2GB, if you convert a `4D. Blob` of 2.5GB to a scalar blob, you obtain an empty blob.
 
-## Modifying a scalar blob
+## Modificação de um blob escalar
 
 Unlike blob objects, scalar blobs can be altered. Por exemplo:
 

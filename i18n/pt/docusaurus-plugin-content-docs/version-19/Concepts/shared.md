@@ -117,10 +117,10 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
     //HowMany
  #DECLARE ($what : Text ; $inventory : Object)
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
- End use
+ $count:=CountMethod($what) //método para contar produtos
+ Use($inventory) //utilização de objecto partilhado
+     $inventory[$what]:=$count  //guardar os resultados para este artigo
+  End use
 ```
 
 ## Exemplo 2

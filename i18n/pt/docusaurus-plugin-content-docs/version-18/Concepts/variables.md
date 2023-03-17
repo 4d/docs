@@ -92,7 +92,7 @@ Quando trabalhar em um banco de dados com muitos métodos e variáveis, geralmen
 Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. This is a typical way to use a local variable. Aqui um exemplo simples:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("Por favor insira o seu ID:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
@@ -118,7 +118,7 @@ A process can “peek and poke” process variables from another process using t
 
 For more information, see the chapter **Processes** and the description of these commands.
 
-### Interprocess variables
+### Variáveis interprocesso
 
 Variáveis interprocessos estão disponíveis pelo banco de dados e são partilhados entre os processos cooperativos. They are primarily used to share information between processes.
 

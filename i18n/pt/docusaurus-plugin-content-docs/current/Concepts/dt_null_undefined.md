@@ -64,7 +64,7 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Booleano | a.undefinedProp `>=` "abc"       | False |
 | Menor que ou igual a | Undefined `<=` string, Date, Time, Boolean, number | Booleano | a.undefinedProp `<=` "abc"       | False |
 
-*other values* are expressions of any type with a value neither Undefined nor Null.
+*outros valores* são expressões de qualquer tipo com um valor nem Indefinido nem Null.
 
 :::info
 
