@@ -11,7 +11,7 @@ The 4D development environment provides several debugging tools for all types of
 
 ### Typing errors
 
-Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Here's a typing error:
+Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Aqui está um erro de dactilografia:
 
 ![break-point](../assets/en/Debugging/typing-error.png)
 
@@ -84,7 +84,7 @@ The syntax error window proposes several options:
 
 ## Depurador
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Do not do that! You will save plenty of time and energy by always using the **Debugger**.
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Não faça isso! You will save plenty of time and energy by always using the **Debugger**.
 
 The Debugger allows you to step through methods slowly. It displays all the information you need in order to understand why an error occurred. Once you have this information, you know how to fix the error.
 
