@@ -1117,11 +1117,11 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                                                |
-| ---------- | -------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| msgNumber  | Integer  | -> | Número sequencial da mensagem                                                                            |
-| msgID      | Text     | -> | ID única da mensagem                                                                                     |
-| updateSeen | Booleano | -> | Se Verdadeiro, a mensagem é marcada "visto" na caixa de correio. If False the message is left untouched. |
+| Parâmetros | Tipo     |    | Descrição                                                                                                 |
+| ---------- | -------- |:--:| --------------------------------------------------------------------------------------------------------- |
+| msgNumber  | Integer  | -> | Número sequencial da mensagem                                                                             |
+| msgID      | Text     | -> | ID única da mensagem                                                                                      |
+| updateSeen | Booleano | -> | Se Verdadeiro, a mensagem é marcada "visto" na caixa de correio. Se Falso, a mensagem é deixada intocada. |
 | Resultados | BLOB     | <- | Blob da string MIME retornado do servidor mail|<!-- END REF -->
 
 |
@@ -1135,12 +1135,12 @@ No primeiro parâmetro, pode passar qualquer um dos dois:
 * *msgNumber*, um valor *inteiro* indicando o número de sequência da mensagem a recuperar ou
 * *msgID*, um texto *valor* indicando a identificação única da mensagem a recuperar.
 
-The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
+O parâmetro opcional *updateSeen* permite-lhe especificar se a mensagem está marcada como "vista" na caixa de correio. Pode passar:
 
-* **True** - to mark the message as "seen" (indicating the message has been read)
+* **Verdadeiro** - para marcar a mensagem como "vista" (indicando que a mensagem foi lida)
 * **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
-> * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
-> * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
+> * A função devolve um BLOB vazio se *msgNumber* ou msgID* designar uma mensagem inexistente,
+> * Se nenhuma caixa de correio for seleccionada com o comando [`.selectBox()`](#selectbox), é gerado um erro,
 > * Se não houver uma ligação aberta, `.getMIMEAsBlob()` abrirá uma ligação a última caixa de correio especificada com `.selectBox()`.
 
 #### Resultados
@@ -1196,8 +1196,8 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 | -------------- | ---------- |:--:| --------------------------------------------------------------- |
 | msgsIDs        | Collection | -> | Coleção de identificadores únicos de mensagens (strings)        |
 | allMsgs        | Integer    | -> | `IMAP all`: Todas as mensagens na caixa de correio seleccionada |
-| destinationBox | Text       | -> | Mailbox to receive moved messages                               |
-| Resultados     | Objeto     | <- | Status of the move operation|<!-- END REF -->
+| destinationBox | Text       | -> | Caixa de correio para receber mensagens movimentadas            |
+| Resultados     | Objeto     | <- | Estado da operação de mudança|<!-- END REF -->
 
 |
 
@@ -1263,17 +1263,17 @@ To move all messages in the current mailbox:
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Mandatório
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleccionar caixa de correio
  $boxInfo:=$transporter.selectBox("inbox")
 
-  // move all messages in the current mailbox to the "documents" mailbox
+  // mover todas as mensagens da caixa de correio actual para a caixa de correio "documents"
  $status:=$transporter.move(IMAP all;"documents")
 ```
 
@@ -1294,17 +1294,17 @@ To move all messages in the current mailbox:
 
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
-| Parâmetros | Tipo       |    | Descrição                                           |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| startMsg   | Integer    | -> | Número sequencial da primeira mensagem              |
-| endMsg     | Integer    | -> | Número sequencial da última mensagem                |
-| Resultados | Collection | <- | Collection of unique IDs|<!-- END REF -->
+| Parâmetros | Tipo       |    | Descrição                                                    |
+| ---------- | ---------- |:--:| ------------------------------------------------------------ |
+| startMsg   | Integer    | -> | Número sequencial da primeira mensagem                       |
+| endMsg     | Integer    | -> | Número sequencial da última mensagem                         |
+| Resultados | Collection | <- | Colecção de identificações únicas|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by *startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
+A função `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->converte os números sequenciais para IDs únicos IMAP para as mensagens no intervalo sequencial designado por *startMsg* e *endMsg*<!-- END REF --> na caixa de correio actualmente seleccionada.
 
 No parâmetro *startMsg*, passe um valor inteiro correspondente ao número da primeira mensagem num intervalo sequencial. Se passar um número negativo (*startMsg* <= 0), a primeira mensagem da caixa de correio será utilizada como o início da sequência.
 
@@ -1322,7 +1322,7 @@ The function returns a collection of strings (unique IDs).
  var $mailIds : Collection
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Mandatório
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
@@ -1332,10 +1332,10 @@ The function returns a collection of strings (unique IDs).
   //select mailbox
  $boxInfo:=$transporter.selectBox("inbox")
 
-  //get IDs for 5 last messages received
+  //obter IDs para 5 últimas mensagens recebidas
  $mailIds:=$transporter.numToID(($boxInfo.mailCount-5);$boxInfo.mailCount)
 
-  //delete the messages from the current mailbox
+  //excluir as mensagens da caixa de correio actual
  $status:=$transporter.delete($mailIds)
 ```
 
@@ -1474,7 +1474,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 #### Exemplo
 
-To to rename your “Invoices” mailbox to “Bills”:
+Para renomear a sua caixa de correio "Invoices" para "Bills":
 
 ```4d
 var $pw : text
@@ -1532,7 +1532,7 @@ End if
 
 > This function is based upon the specification for the [IMAP protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. *searchCriteria* consists of one or more search keys.
+A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. *searchCriteria* consiste em uma ou mais chaves de pesquisa.
 
 *searchCriteria* is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. A search key may be a single or multiple items. Por exemplo:
 
@@ -1540,7 +1540,7 @@ A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary
 SearchKey1 = FLAGGED SearchKey2 = NOT FLAGGED SearchKey3 = FLAGGED DRAFT
 ```
 
-> Matching is usually not case-sensitive
+> A correspondência não é normalmente sensível a maiúsculas e minúsculas
 
 * If the *searchCriteria* is a null string, the search will be equivalent to a “select all”.
 * If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
@@ -1601,7 +1601,7 @@ Search-keys may request the value to search for:
 
 * **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
 
-#### Authorized search-keys
+#### Chaves de pesquisa autorizadas
 
 **ALL**: All messages in the mailbox.  
 **ANSWERED**: Messages with the \Answered flag set.  
@@ -1659,27 +1659,27 @@ Search-keys may request the value to search for:
 | Parâmetros | Tipo    |    | Descrição                                 |
 | ---------- | ------- |:--:| ----------------------------------------- |
 | name       | Text    | -> | Nome da nova caixa de correio             |
-| state      | Integer | -> | Mailbox access status                     |
+| state      | Integer | -> | Estado de acesso à caixa de correio       |
 | Resultados | Objeto  | <- | boxInfo object|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
-> To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
+A função `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selecciona a caixa de correio *name* como a caixa de correio actual<!-- END REF -->. Essa função permite que recupere informação sobre o mailbox.
+> Para obter as informações de uma caixa de correio sem alterar a caixa de correio actual, utilize [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
+No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome representa uma hierarquia inequívoca da esquerda para a direita com níveis separados por um carácter delimitador específico. O delimitador pode ser encontrado com a função [`.getDelimiter()`](#getdelimiter) .
 
-The optional *state* parameter defines the type of access to the mailbox. Os valores possíveis são:
+O parâmetro opcional *state* define o tipo de acesso à caixa de correio. Os valores possíveis são:
 
 | Constante             | Value | Comentário                                                                                                                                                                          |
 | --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1     | A caixa de correio seleccionada é acedida com privilégios apenas de leitura. As mensagens com uma flag "recente" (indicando novas mensagens) permanecem inalteradas.                |
 | IMAP read write state | 0     | A caixa de correio seleccionada é acedida com privilégios de leitura e escrita. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Valor padrão) |
-> * The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
-> * If there is no open connection, `.selectBox()` will open a connection.
-> * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
+> * A função gera um erro e devolve **Null** se *name* designar uma caixa de correio inexistente.
+> * Se não houver uma conexão aberta, `.selectBox()` irá abrir uma conexão.
+> * Se a conexão não tiver sido utilizada desde o atraso da ligação determinado (ver `IMAP New transpor ter`), a função [`.checkConnection()`](#checkconnection) é automaticamente chamada.
 
 **Objeto devolvido**
 
