@@ -292,7 +292,7 @@ Los siguientes caracteres especiales permiten añadir o dar formato automáticam
 | D        | Fecha actual (formato yyyy/mm/dd) | printInfo.headerLeft:="Es &D."                                         | Es 2015/6/19.                                        |
 | T        | Hora actual                       | printInfo.headerLeft:="Es &T."                                         | Es 16:30:36.                                         |
 | G        | Imagen                            | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
-| S        | Strikethrough                     | printInfo.headerLeft:="&SEsto es texto."                               | ~~Esto es texto.~~                                   |
+| S        | Tachado                           | printInfo.headerLeft:="&SEsto es texto."                               | ~~Esto es texto.~~                                   |
 | U        | Subrayado                         | printInfo.headerLeft:="&UEsto es texto."                               | Esto es texto. (Subrayado)                           |
 | B        | Negrita                           | printInfo.headerLeft:="&BEsto es texto."                               | **Esto es texto.**                                   |
 | I        | Itálica                           | printInfo.headerLeft:="&IEsto es texto."                               | *Esto es texto.*                                     |
@@ -305,15 +305,15 @@ Los siguientes caracteres especiales permiten añadir o dar formato automáticam
 
 Los atributos margen se utilizan para especificar los márgenes del área 4D View Pro para la impresión. Expresado en centésimas de pulgada.
 
-| Propiedad |        | Tipo         | Descripción                                                     |
-| --------- | ------ | ------------ | --------------------------------------------------------------- |
-| margin    |        | object       | Los márgenes de impresión                                       |
-|           | top    | entero largo | Margen superior, en centésimas de pulgada. Por defecto = 75     |
-|           | bottom | entero largo | El margen inferior, en centésimas del pulgada. Por defecto = 75 |
-|           | left   | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70      |
-|           | right  | entero largo | Margen izquierdo, en centésimas de pulgada. Por defecto = 70    |
-|           | header | entero largo | Header offset, in hundredths of an inch. Por defecto = 30       |
-|           | footer | entero largo | Footer offset, in hundredths of an inch. Por defecto = 30       |
+| Propiedad |        | Tipo         | Descripción                                                                  |
+| --------- | ------ | ------------ | ---------------------------------------------------------------------------- |
+| margin    |        | object       | Los márgenes de impresión                                                    |
+|           | top    | entero largo | Margen superior, en centésimas de pulgada. Por defecto = 75                  |
+|           | bottom | entero largo | El margen inferior, en centésimas del pulgada. Por defecto = 75              |
+|           | left   | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70                   |
+|           | right  | entero largo | Margen izquierdo, en centésimas de pulgada. Por defecto = 70                 |
+|           | header | entero largo | Desplazamiento del encabezado, en centésimas de pulgada. Por defecto = 30    |
+|           | footer | entero largo | Desplazamiento del pie de página, en centésimas de pulgada. Por defecto = 30 |
 
 ### Orientación
 
@@ -403,11 +403,11 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 ### Objetos de estilo & Hojas de estilo
 
-Style objects contain the style settings. Se pueden utilizar en una hoja de estilo o por su cuenta. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](method-list.md#vp-set-table-theme) or [VP CREATE TABLE](method-list.md#vp-create-table) commands.
+Style objects contain the style settings. Se pueden utilizar en una hoja de estilo o por su cuenta. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands. También puede utilizar objetos de estilo al definir temas de tabla personalizados mediante los comandos [VP SET TABLE THEME](method-list.md#vp-set-table-theme) o [VP CREATE TABLE](method-list.md#vp-create-table).
 
-A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
+Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Las hojas de estilo guardadas con el documento pueden utilizarse para definir las propiedades de una sola hoja, de varias hojas o de todo un libro de trabajo. Cuando se crea, una hoja de estilo 4D View Pro recibe un nombre que se guarda dentro de la hoja de estilo en la propiedad "name". Esto permite utilizar fácilmente una hoja de estilo y si se selecciona cuidadosamente, puede facilitar su identificación y finalidad (por ejemplo, Membrete_interno, Membrete_externo).
 
-Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) command and applied with the the [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) or [VP SET CELL STYLE](method-list.md#vp-set-cell-style) commands. Puede eliminar una hoja de estilo con el comando [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet).
+Las hojas de estilo se crean con el comando [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) y se aplican con los comandos [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) o [VP SET CELL STYLE](method-list.md#vp-set-cell-style). Puede eliminar una hoja de estilo con el comando [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet).
 
 El comando [VP Get stylesheet](method-list.md#vp-get-stylesheet) se puede utilizar para devolver el objeto de estilo de una única hoja de estilo o se puede utilizar el comando [VP Get stylesheets](method-list.md#vp-get-stylesheets) para recuperar una colección de objetos de estilo para múltiples hojas de estilo.
 
@@ -426,12 +426,12 @@ Ejemplo:
 
 #### Background & Foreground
 
-| Propiedad             | Tipo          | Descripción                               | Valores posibles                                                                                                                                                                                                                                                                                                                                                                    |
-| --------------------- | ------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| backColor             | text          | Define el color del fondo.                | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                                  |
-| backgroundImage       | picture, text | Especifica una imagen de fondo.           | Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. Esto podría afectar al tamaño de un documento si la imagen es grande. Nota para Windows: la extensión del archivo incluirse. |
-| backgroundImageLayout | entero largo  | Define el diseño para la imagen de fondo. | `vk image layout center`, `vk image layout none`, `vk image layout stretch`, `vk image layout zoom`                                                                                                                                                                                                                                                                                 |
-| foreColor             | text          | Define el color del primer plano.         | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                                  |
+| Propiedad             | Tipo          | Descripción                               | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------- | ------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| backColor             | text          | Define el color del fondo.                | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                                                                                                     |
+| backgroundImage       | picture, text | Especifica una imagen de fondo.           | Puede especificarse directamente o a través de la ruta de la imagen (sólo ruta completa o nombre de archivo). Si sólo se utiliza el nombre del archivo, éste debe estar situado junto al archivo de estructura de la base. Independientemente de la configuración (imagen o texto), la imagen se guarda con el documento. Esto podría afectar al tamaño de un documento si la imagen es grande. Nota para Windows: la extensión del archivo incluirse. |
+| backgroundImageLayout | entero largo  | Define el diseño para la imagen de fondo. | `vk image layout center`, `vk image layout none`, `vk image layout stretch`, `vk image layout zoom`                                                                                                                                                                                                                                                                                                                                                    |
+| foreColor             | text          | Define el color del primer plano.         | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                                                                                                     |
 
 #### Bordes
 
