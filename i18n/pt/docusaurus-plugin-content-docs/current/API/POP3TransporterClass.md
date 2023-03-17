@@ -276,18 +276,18 @@ A função `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->devo
 
 Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade `number` pela função [`.getMailInfoList()`](#getmailinfolist).
 
-Opcionalmente, pode passar `true` no parâmetro *headerOnly* para excluir as partes do corpo do objecto devolvido `Email`. Only headers properties ([`headers`](EmailObjectClass.md#headers), [`to`](EmailObjectClass.md#to), [`from`](EmailObjectClass.md#from)...) are then returned. This option allows you to optimize the downloading step when a lot of emails are on the server.
+Opcionalmente, pode passar `true` no parâmetro *headerOnly* para excluir as partes do corpo do objecto devolvido `Email`. Apenas as propriedades dos cabeçalhos ([`cabeçalhos`](EmailObjectClass.md#headers), [`a`](EmailObjectClass.md#to), [`de`](EmailObjectClass.md#from)...) são então devolvidas. Esta opção permite-lhe optimizar a etapa de descarregamento quando muitos e-mails estão no servidor.
 
 :::note
 
-The *headerOnly* option may not be supported by the server.
+A opção *headerOnly* pode não ser suportada pelo servidor.
 
 :::
 
 O método retorna Null se:
 
 * *msgNumber* determina uma mensagem não existente,
-* the message was marked for deletion using [`.delete()`](#delete).
+* a mensagem foi marcada para eliminação utilizando [`.delete()`](#delete).
 
 **Objeto devolvido**
 
@@ -304,7 +304,7 @@ Se quiser saber o emissário do primeiro email da mailbox:
  var $sender : Variant
 
  $server:=New object
- $server.host:="pop.gmail.com" //Mandatory
+ $server.host:="pop.gmail.com" //Obrigatório
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
