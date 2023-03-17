@@ -1,9 +1,9 @@
 ---
 id: formulas
-title: Formulas and Functions
+title: Fórmulas e funções
 ---
    
-## Using formulas
+## Usando fórmulas
 
 A spreadsheet formula is an expression that calculates the value of a cell.
 
@@ -27,7 +27,7 @@ When writing a formula, you can use different shortcuts:
 
 You can also create named formulas that can be called via their name. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
 
-### Operators and Operands
+### Operadores e Operandos
 
 All formulas have operands and operators:
 
@@ -38,7 +38,7 @@ All formulas have operands and operators:
     *   [standard spreadsheet functions](#using-functions)
     *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
 
-## Values and operators
+## Valores e operadores
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
@@ -58,28 +58,28 @@ The following operators can be used with two operands of the same type:
 | Operator   | Comparação           |
 | ---------- | -------------------- |
 | =          | igual a              |
-| `<>` | different than       |
+| `<>` | diferente de         |
 | >          | maior que            |
 | <          | menor que            |
 | >=         | maior ou igual a     |
 | <=         | menor que ou igual a |
 
 
-### Operator precedence
+### Precedência do operador
 
 List of operators from most to least important:
 
-| Operator                                      | Descrição                  |
-| --------------------------------------------- | -------------------------- |
-| ()                                            | Parenthesis (for grouping) |
-| -                                             | Negate                     |
-| +                                             | Mais                       |
-| %                                             | Porcentagem                |
-| ^                                             | Expoente                   |
-| * and /                                       | Multiply and divide        |
-| + and -                                       | Add and Subtract           |
-| &                                             | Concatenar                 |
-| `=`  `>` `<` `>=` `<=` `<>` | Comparar                   |
+| Operator                                      | Descrição                     |
+| --------------------------------------------- | ----------------------------- |
+| ()                                            | Parênteses (para agrupamento) |
+| -                                             | Negate                        |
+| +                                             | Mais                          |
+| %                                             | Porcentagem                   |
+| ^                                             | Expoente                      |
+| * and /                                       | Multiply and divide           |
+| + and -                                       | Add and Subtract              |
+| &                                             | Concatenar                    |
+| `=`  `>` `<` `>=` `<=` `<>` | Comparar                      |
 
 
 
@@ -112,17 +112,17 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Exemplo   | Type of reference | Descrição                                                                                                                                      |
-| --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5        | Relativo          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5      | Absoluto          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
-| $C5       | Mixed             | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
-| C$5       | Mixed             | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Cell name | Absoluto          | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Exemplo   | Tipo de referência | Descrição                                                                                                                                      |
+| --------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5        | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
+| $C$5      | Absoluto           | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
+| $C5       | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
+| C$5       | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
+| Cell name | Absoluto           | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 
 
-## Built-in functions
+## Funções incorporadas
 
 Spreadsheet functions are preset formulas used to calculate cell values. When you type the first letter of the function to enter, a pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
 
@@ -174,7 +174,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 > **See also** [4D View Pro: Use 4D formulas in your spreadsheet (blog post)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/)
 
 
-### Hello World example
+### Exemplo Hello World
 
 We want to print "Hello World" in a 4D View Pro area cell using a 4D project method:
 
