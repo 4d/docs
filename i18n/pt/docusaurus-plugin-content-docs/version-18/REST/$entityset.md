@@ -69,7 +69,7 @@ Below is a representation of the logical operators based on two entity sets. The
 
 ![](../assets/en/REST/except.png)
 
-The syntax is as follows:
+A sintaxe é a seguinte:
 
  `GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
 
