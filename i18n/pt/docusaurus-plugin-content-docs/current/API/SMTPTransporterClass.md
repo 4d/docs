@@ -206,7 +206,7 @@ A coleção SMTP é automaticamente fechada:
 
 | Versão | Mudanças                 |
 | ------ | ------------------------ |
-| v17 R5 | Support of mime contents |
+| v17 R5 | Suporte de conteúdo Mime |
 | v17 R4 | Adicionado               |
 
 </details>
@@ -217,10 +217,10 @@ A coleção SMTP é automaticamente fechada:
 
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Parâmetros | Tipo   |    | Descrição                                         |
-| ---------- | ------ |:--:| ------------------------------------------------- |
-| mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Resultados | Objeto | <- | Status SMTP|<!-- END REF -->            |
+| Parâmetros | Tipo   |    | Descrição                                             |
+| ---------- | ------ |:--:| ----------------------------------------------------- |
+| mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) para enviar |
+| Resultados | Objeto | <- | Status SMTP|<!-- END REF -->                |
 
 #### Descrição
 
