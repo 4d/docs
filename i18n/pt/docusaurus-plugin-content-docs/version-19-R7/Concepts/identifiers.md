@@ -33,7 +33,7 @@ Object properties can reference scalar values, ORDA elements, class functions, o
 
 - A property name must begin with a letter, an underscore, or a dollar "$".
 - Thereafter, the name can include any letter, digit, the underscore character ("_"), or the dollar character ("$").
-- Property names are case sensitive.
+- Os nomes de propriedades são sensíveis a maiúsculas e minúsculas.
 
 Exemplos:
 
@@ -44,11 +44,11 @@ $value:=$clientObj.data.address.city
 
 > If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`).
 
-See also [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+Ver também [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
 
 ## Parâmetros
 
-Parameter names must start with a `$` character and follow the same rules as [variable names](#variables).
+Os nomes dos parâmetros devem começar com um caracter `$` e seguir as mesmas regras que os nomes das variáveis [](#variables).
 
 Exemplos:
 
@@ -60,12 +60,12 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 
 ## Métodos projeto
 
-The name of a project method name contain up to 31 characters.
+O nome de um método projecto contém até 31 caracteres.
 
-- A project method name must begin with a letter, a digit, or an underscore
+- Um nome de método projecto deve começar com uma letra, um dígito, ou um sublinhado
 - Thereafter, the name can include any letter or digit, the underscore character ("_"), or the space character.
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
-- Project method names are case insensitive.
+- Os nomes dos métodos projecto são insensíveis a maiúsculas e minúsculas.
 
 Exemplos:
 
