@@ -62,30 +62,30 @@ In the parent form, both objects (input area and subform container) ***have the 
 
 |
 
-To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
+Para mostrar una hora estática, debe utilizar el [tipo de datos](properties_DataSource.md#data-type-expression-type) apropiado para la [variable o la expresión](properties_Object.md#variable-or-expression):
 
-- If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
-- If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.
+- Si utiliza una variable (por ejemplo, `parisTime`), debe ser del tipo `texto` o `tiempo`.
+- Si utiliza una expresión (por ejemplo, `Form.myValue`), debe contener un valor `texto`.
 
-The text value must be formatted "hh:mm:ss".
+El valor del texto debe tener el formato "hh:mm:ss".
 
 :::
 
-In the subform, the clock object is managed through the `Form.clockValue` property.
+En el subformulario, el objeto reloj se gestiona a través de la propiedad `Form.clockValue`.
 
 
 #### Actualizando el contenido de un subformulario
 
-Case 1: The value of the parent form variable or expression is modified and this modification must be passed on to a subform.
+Caso 1: se modifica el valor de la variable o expresión del formulario padre y esta modificación debe pasarse al subformulario.
 
-`parisTime` or `Form.parisTime` changes to "12:15:00" in the parent form, either because the user entered it, or because it was updated dynamically (via the `String(Current time)` statement for example). This triggers the [On Bound Variable Change](../Events/onBoundVariableChange.md) event in the subform's Form method.
+`parisTime` o `Form.parisTime` cambia a "12:15:00" en el formulario padre, bien porque el usuario lo ha introducido, bien porque se ha actualizado dinámicamente (a través de la sentencia `String(Current time)` por ejemplo). Esto activa el evento [On Bound Variable Change](../Events/onBoundVariableChange.md) en el método formulario del subformulario.
 
 Se ejecuta el siguiente código:
 
 ```4d  
-// Subform form method
-If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
-    Form.clockValue:=OBJECT Get subform container value //synchonize the local value
+// Método de formulario del subformulario
+If (Form event code=On Bound Variable Change) //la variable o expresión vinculada se modificó en el formulario padre
+    Form.clockValue:=OBJECT Get subform container value //sincroniza el valor local
 End if
 ```
 
@@ -111,7 +111,7 @@ La modificación de la variable o expresión asociada desencadena eventos de for
 
 Caso 2: se modifica el contenido del subformulario y esta modificación debe pasar al formulario padre.
 
-Inside the subform, the button changes the value of the `Form.clockValue` expression of type Text attached to the clock object. Esto activa el evento de formulario [On Data Change](../Events/onDataChange.md) dentro del objeto reloj (este evento debe estar seleccionado para el objeto), que actualiza el valor `Form.parisTime` en el formulario principal.
+Dentro del subformulario, el botón cambia el valor de la expresión `Form.clockValue` de tipo Text asociada al objeto reloj. Esto activa el evento de formulario [On Data Change](../Events/onDataChange.md) dentro del objeto reloj (este evento debe estar seleccionado para el objeto), que actualiza el valor `Form.parisTime` en el formulario principal.
 
 Se ejecuta el siguiente código:
 
@@ -124,7 +124,7 @@ End if
 
 ![](../assets/en/FormObjects/update-main-form.png)
 
-Everytime the value of `Form.clockValue` changes in the subform, `parisTime` or `Form.parisTime` in the subform container is also updated.
+Cada vez que cambia el valor de `Form.clockValue` en el subformulario, también se actualiza `parisTime` o `Form.parisTime` en el contenedor del subformulario.
 
 
 > Si el valor de la variable o expresión se establece en varias ubicaciones, 4D utiliza el valor que se cargó en último lugar. Aplica el siguiente orden de carga: 1-Métodos objeto del subformulario, 2-Método formulario del subformulario, 3-Métodos objeto del formulario padre, 4-Método formulario del formulario padre
