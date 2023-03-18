@@ -3,7 +3,7 @@ id: onScroll
 title: On Scroll
 ---
 
-| Code | Can be called by                                                                                                                                    | Definição                                                                                  |
+| Code | Pode ser chamado por                                                                                                                                | Definição                                                                                  |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | 59   | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) - [List Box](FormObjects/listbox_overview.md) | The user scrolls the contents of a picture object or list box using the mouse or keyboard. |
 
@@ -17,7 +17,7 @@ This event is triggered after any other user event related to the scrolling acti
 The event is triggered when the scroll is the result of a user action: using the scroll bars and/or cursors, using the mouse wheel or [the keyboard](FormObjects/properties_Appearance.md#vertical-scroll-bar). It is not generated when the object is scrolled due to the execution of the `OBJECT SET SCROLL POSITION` command.
 
 
-### Picture input
+### Entrada de imagem
 
 The event is generated as soon as a user scrolls a picture within the picture input (field or variable) that contains it. You can scroll the contents of a picture area when the size of the area is smaller than its contents and the [display format](FormObjects/properties_Display.md#picture-format) is "Truncated (non Centered)".
 
