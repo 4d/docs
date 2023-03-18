@@ -14,7 +14,7 @@ New 4D application projects can be created from **4D** or **4D Server**. In any 
 To create a new project:
 
 1. Launch 4D or 4D Server.
-2. Do one of the following:
+2. Faça uma das seguintes opções:
     * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
     * (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
@@ -33,7 +33,7 @@ You can then start developing your project.
 
 To open an existing project from 4D:
 
-1. Do one of the following:
+1. Faça uma das seguintes opções:
     * Select **Open a local application project** in the Welcome Wizard dialog
     * Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. The standard Open dialog appears.
 
