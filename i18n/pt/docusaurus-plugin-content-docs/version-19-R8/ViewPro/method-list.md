@@ -5133,7 +5133,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 
 | Parâmetros | Tipo    |    | Descrição                                                         |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area name                                             |
+| vpAreaName | Text    | -> | Nome da área 4D View Pro                                          |
 | printInfo  | Objeto  | -> | Object containing printing attributes                             |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
 
@@ -5404,7 +5404,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 | Parâmetros   | Tipo   |    | Descrição                                                         |
 | ------------ | ------ | -- | ----------------------------------------------------------------- |
-| vpAreaName   | Objeto | -> | 4D View Pro area name                                             |
+| vpAreaName   | Objeto | -> | Nome da área 4D View Pro                                          |
 | sheetOptions | Objeto | -> | Sheet option(s) to set                                            |
 | sheet        | Objeto | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
 
