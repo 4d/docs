@@ -3,9 +3,9 @@ id: onMenuSelected
 title: On Menu Selected
 ---
 
-| Code | Can be called by | Definição                                              |
-| ---- | ---------------- | ------------------------------------------------------ |
-| 18   | Formulário       | A menu item has been chosen in the associated menu bar |
+| Code | Pode ser chamado por | Definição                                              |
+| ---- | -------------------- | ------------------------------------------------------ |
+| 18   | Formulário           | A menu item has been chosen in the associated menu bar |
 
 
 ## Descrição
