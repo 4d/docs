@@ -253,7 +253,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 | Versão | Mudanças                          |
 | ------ | --------------------------------- |
-| v20    | Support of *headerOnly* parameter |
+| v20    | Suporte de parâmetro *headerOnly* |
 | v18 R2 | Adicionado                        |
 
 </details>
