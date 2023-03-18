@@ -3,7 +3,7 @@ id: onEndUrlLoading
 title: On End URL Loading
 ---
 
-| Code | Can be called by                            | Definição                                     |
+| Code | Pode ser chamado por                        | Definição                                     |
 | ---- | ------------------------------------------- | --------------------------------------------- |
 | 49   | [Área Web](FormObjects/webArea_overview.md) | All the resources of the URL have been loaded |
 
