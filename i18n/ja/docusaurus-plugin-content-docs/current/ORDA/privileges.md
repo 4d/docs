@@ -55,7 +55,7 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 
 **注:**
 
-- エイリアス属性は、その元となる属性に対するパーミッションがない場合でも読み取ることができます。
+- An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - 計算属性は、その元となる属性に対するパーミッションがない場合でもアクセスすることができます。
 - デフォルト値: 現在の実装では、*Null* のみデフォルト値として利用可能です。
 

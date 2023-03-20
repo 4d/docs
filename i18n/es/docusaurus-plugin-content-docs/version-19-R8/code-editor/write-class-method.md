@@ -140,19 +140,19 @@ The status bar located at the bottom right part of the editor window displays th
 
 ## Escribir y editar código
 
-4D uses standard text editing techniques for typing and editing in the Code Editor.
+4D utiliza técnicas estándar de edición de texto para digitar y editar en el Editor de código.
 
-The Code Editor uses display conventions (style, color) for the syntax elements. You can [customize these conventions](#customizing-the-editing-area). As you type, when you validate your entry, 4D evaluates the text of the line and applies the appropriate display format. 4D also indents each line to its proper level in relation to the preceding line when you use programming structures (If, End if...).
+El editor de código utiliza convenciones de visualización (estilo, color) para los elementos de sintaxis. Puede [personalizar estas convenciones](#customizing-the-editing-area). A medida que digita, cuando valida su entrada, 4D evalúa el texto de la línea y aplica el formato de visualización adecuado. 4D también indenta cada línea a su nivel adecuado en relación con la línea precedente cuando utiliza estructuras de programación (If, End if...).
 
-Puede utilizar las teclas de flecha para moverse rápidamente de línea a línea. Using the arrow keys to move across several lines is quicker than clicking because the editor delays evaluating the line for errors.
+Puede utilizar las teclas de flecha para moverse rápidamente de línea a línea. Utilizar las teclas de flecha para desplazarse por varias líneas es más rápido que hacer clic porque el editor tarda en evaluar la línea en busca de errores.
 
-Under Windows, the code editor includes an Input Code Editor (IME) to facilitate code editing on Japanese or Chinese systems.
+En Windows, el editor de código incluye un editor de código de entrada (IME) para facilitar la edición de código en sistemas japoneses o chinos.
 
-The Code Editor includes numerous [navigation shortcuts](#shortcuts).
+El Editor de código incluye numerosos [atajos de navegación](#shortcuts).
 
-#### Using the backslash
+#### Uso de la barra invertida
 
-The backslash character (`\`) has a specific support in the 4D language:
+El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4D:
 
 - inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
 - it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
@@ -182,10 +182,10 @@ In the Code Editor, the drag-and-drop mechanism is activated as soon as a portio
 
 You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
-- **Uppercase** / **Lowercase**: Switch the selected characters to uppercase or lowercase.
-- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. Este tipo de notación se utiliza a menudo para las nomenclaturas variables. hireDate and PurchaseDate are examples of two variants of camel case notation.
+- **Mayúsculas** / **Minúsculas**: cambia los caracteres seleccionados a mayúsculas o minúsculas.
+- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". Consiste en cambiar cada primera letra de un grupo de palabras adjuntas a mayúsculas. Este tipo de notación se utiliza a menudo para las nomenclaturas variables. hireDate y PurchaseDate son ejemplos de dos variantes de la notación cameyúsculas.
 
-When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
+Cuando aplica uno de estos comandos a una selección de texto, se eliminan los espacios y los caracteres "_" y la primera letra de cada palabra pasa a ser mayúscula.
 
 #### Swap expression
 
@@ -197,13 +197,13 @@ se convierte en
 
 `variable2:=variable1`
 
-This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. Within the selection, only the lines assigning a value will be modified. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area.
+Esta función es extremadamente útil para invertir un conjunto de asignaciones utilizadas para obtener o definir propiedades, o para corregir errores de entrada. Within the selection, only the lines assigning a value will be modified. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area.
 
 #### Multiple copy-paste and numbering of clipboards
 
-In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
+Además de la operación estándar de copiar y pegar, 4D ofrece dos funciones adicionales que le permiten trabajar con el contenido de diferentes portapapeles:
 
-- The program stores the last 10 "copy" or "cut" actions that were performed in the Code Editor in memory during the current session. Cada uno de los diferentes contenidos guardados de esta manera puede ser reutilizado en cualquier momento. To do this, use the **Clipboard History** command of the Code Editor context menu or the "Last Clipboard values" button of the toolbar:
+- El programa almacena en memoria las 10 últimas acciones de "copiar" o "cortar" realizadas en el Editor de código durante la sesión actual. Cada uno de los diferentes contenidos guardados de esta manera puede ser reutilizado en cualquier momento. Para ello, utilice el comando **Historial del Portapapeles** del menú contextual del Editor de Código o el botón "Últimos valores del Portapapeles" de la barra de herramientas:
 
     ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
@@ -263,8 +263,8 @@ Si los caracteres tecleados corresponden a distintos tipos de objetos, la lista 
 - Comandos 4D
 - Comandos SQL
 - Métodos Usuario
-- Table names
-- Field names
+- Nombres de las tablas
+- Nombres de los campos
 - Constantes
 - Variable local, proceso o interproceso, declarada en el método
 - Nombres de propiedad objeto
@@ -273,28 +273,28 @@ Si los caracteres tecleados corresponden a distintos tipos de objetos, la lista 
 - Palabras clave SQL
 - Macros (mostradas entre < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
+> Por razones prácticas, puede desactivar la visualización automática de la lista de sugerencias para las **constantes**, las **variables (locales o interprocesos) y los atributos de objeto** y/o las **tablas**. Estas opciones se encuentran en **Preferencias** > **Métodos** > **Opciones**
 
 #### Nombres de propiedad objeto
 
-4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
+4D muestra automáticamente sugerencias que distinguen mayúsculas y minúsculas de todos los nombres de propiedades de objetos válidos en el código 4D cuando:
 
 - escribe un punto "." después de un objeto o
 - utilizar la tecla Tab después de un puntero objeto desreferenciado "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
 
-> The `length` property is always included for use with collections.
+> La propiedad `length` se incluye siempre para su uso con colecciones.
 
-Once created, property names are stored in an internal global list and are available anytime a method/class/function is opened, closed or changes focus.
+Una vez creados, los nombres de las propiedades se almacenan en una lista global interna y están disponibles cada vez que un método/clase/función se abre, se cierra o cambia de foco.
 
 ![](../assets/en/code-editor/autocomplete-object-attributes-2.png)
 
-La lista de sugerencias se actualiza dinámicamente mientras se edita el código. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
+La lista de sugerencias se actualiza dinámicamente mientras se edita el código. Al cambiar de una ventana a otra, los nombres de las propiedades nuevas/editadas se añaden siempre a la lista global. La lista también se actualiza cuando se previsualiza un método, clase o función en el Explorador.
 
 Cuando se reinicia la base de datos, la lista se reinicia.
 
-> You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
+> Puede desactivar la visualización automática de las propiedades de los objetos en **Preferencias** > **Métodos** > **sugerencias**.
 
 
 ## Atajos

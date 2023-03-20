@@ -30,11 +30,11 @@ Exceto pelos [Comandos não utilizáveis](#unusable-commands), um componente nã
 
 When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
+Os comandos `SET DATABASE PARAMETER` e `Get database parameter` são uma exceção: seu alcance é global a aplicação. Quando esses comandos forem chamados de um componente, são aplicados ao projecto de aplicação local.
 
 Além disso, medidas especificas foram criadas para os comandos `Structure file` e `Get 4D folder` quando utilizados no marco dos componentes.
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host project.
+O comando `COMPONENT LIST` pode ser utilizado para obter a lista de componentes que carrega o projecto local.
 
 ### Comandos não utilizáveis
 

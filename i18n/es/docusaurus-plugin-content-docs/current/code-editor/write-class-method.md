@@ -248,22 +248,22 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | \[Ctrl\] (Windows) o \[Alt\] (macOS)+pasar sobre un token | Subraye el token (elemento lingüístico identificado). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 | [**Buscar y reemplazar**](#find-and-replace)              |                                                                                                                                               |
 | [Ctrl]+F                                                  | Buscar                                                                                                                                        |
-| [Ctrl]+G                                                  | Find Next                                                                                                                                     |
-| [Ctrl]+[Shift]+G                                          | Find Previous                                                                                                                                 |
+| [Ctrl]+G                                                  | Buscar siguiente                                                                                                                              |
+| [Ctrl]+[Shift]+G                                          | Buscar anterior                                                                                                                               |
 | [Ctrl]+E                                                  | Find Same Next                                                                                                                                |
 | [Ctrl]+[Shift]+E                                          | Find Same Previous                                                                                                                            |
 | [Ctrl]+[Alt]+F                                            | Reemplazar                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                            | Replace Next                                                                                                                                  |
-| [Ctrl]+[Alt]+[Shift]+G                                    | Replace Previous                                                                                                                              |
+| [Ctrl]+[Alt]+G                                            | Reemplazar siguiente                                                                                                                          |
+| [Ctrl]+[Alt]+[Shift]+G                                    | Reemplazar anterior                                                                                                                           |
 | [**Portapapeles**](#clipboards)                           |                                                                                                                                               |
 | [Shift]+clic o [Alt]+clic en el icono del portapapeles    | Copiar el texto seleccionado en el portapapeles                                                                                               |
-| [Ctrl]+[Shift]+tecla numérica                             | Copy selected text to the number clipboard                                                                                                    |
+| [Ctrl]+[Shift]+tecla numérica                             | Copiar el texto seleccionado en el portapapeles numérico                                                                                      |
 | [Ctrl]+clic en el icono del portapapeles                  | Pegar el contenido de un portapapeles en la posición del cursor                                                                               |
-| [Ctrl]+tecla numérica                                     | Paste contents of the number clipboard at cursor location                                                                                     |
+| [Ctrl]+tecla numérica                                     | Pegar el contenido del portapapeles numérico en la posición del cursor                                                                        |
 
 :::tip
 
-Most of these shortcuts can be customized in the [4D Preferences](../Preferences/shortcuts.md) dialog box.
+La mayoría de estos atajos pueden personalizarse en la caja de diálogo [Preferencias 4D](../Preferences/shortcuts.md).
 
 :::
 
@@ -271,19 +271,19 @@ Most of these shortcuts can be customized in the [4D Preferences](../Preferences
 
 ## Editing Code
 
-4D uses standard text editing techniques for typing and editing in the Code Editor.
+4D utiliza técnicas estándar de edición de texto para digitar y editar en el Editor de código.
 
-The Code Editor uses display conventions (style, color) for the syntax elements. You can [customize these conventions](#customizing-the-editing-area). As you type, when you validate your entry, 4D evaluates the text of the line and applies the appropriate display format. 4D also indents each line to its proper level in relation to the preceding line when you use programming structures (If, End if...).
+El editor de código utiliza convenciones de visualización (estilo, color) para los elementos de sintaxis. Puede [personalizar estas convenciones](#customizing-the-editing-area). A medida que digita, cuando valida su entrada, 4D evalúa el texto de la línea y aplica el formato de visualización adecuado. 4D también indenta cada línea a su nivel adecuado en relación con la línea precedente cuando utiliza estructuras de programación (If, End if...).
 
-Puede utilizar las teclas de flecha para moverse rápidamente de línea a línea. Using the arrow keys to move across several lines is quicker than clicking because the editor delays evaluating the line for errors.
+Puede utilizar las teclas de flecha para moverse rápidamente de línea a línea. Utilizar las teclas de flecha para desplazarse por varias líneas es más rápido que hacer clic porque el editor tarda en evaluar la línea en busca de errores.
 
-Under Windows, the code editor includes an Input Code Editor (IME) to facilitate code editing on Japanese or Chinese systems.
+En Windows, el editor de código incluye un editor de código de entrada (IME) para facilitar la edición de código en sistemas japoneses o chinos.
 
-The Code Editor includes numerous [navigation shortcuts](#shortcuts).
+El Editor de código incluye numerosos [atajos de navegación](#shortcuts).
 
-#### Using the backslash
+#### Uso de la barra invertida
 
-The backslash character (`\`) has a specific support in the 4D language:
+El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4D:
 
 - inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
 - it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
@@ -304,7 +304,7 @@ From the Explorer, you can drag and drop tables, fields, forms, project methods,
 When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
 
 
-You can also drag-and-drop within a method, class, function or between two different ones. In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. By default, the drag-and-drop mechanism **moves** the selected text. In order to **copy** it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
+You can also drag-and-drop within a method, class, function or between two different ones. In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. By default, the drag-and-drop mechanism **moves** the selected text. Para **copiarlo**, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Opción** (macOS) durante la operación.
 
 
 
@@ -312,10 +312,10 @@ You can also drag-and-drop within a method, class, function or between two diffe
 
 You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
-- **Uppercase** / **Lowercase**: Switch the selected characters to uppercase or lowercase.
-- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. Este tipo de notación se utiliza a menudo para las nomenclaturas variables. hireDate and PurchaseDate are examples of two variants of camel case notation.
+- **Mayúsculas** / **Minúsculas**: cambia los caracteres seleccionados a mayúsculas o minúsculas.
+- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". Consiste en cambiar cada primera letra de un grupo de palabras adjuntas a mayúsculas. Este tipo de notación se utiliza a menudo para las nomenclaturas variables. hireDate y PurchaseDate son ejemplos de dos variantes de la notación cameyúsculas.
 
-When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
+Cuando aplica uno de estos comandos a una selección de texto, se eliminan los espacios y los caracteres "_" y la primera letra de cada palabra pasa a ser mayúscula.
 
 ### Swap expression
 
@@ -327,26 +327,26 @@ se convierte en
 
 `variable2:=variable1`
 
-This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. Within the selection, only the lines assigning a value will be modified. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area.
+Esta función es extremadamente útil para invertir un conjunto de asignaciones utilizadas para obtener o definir propiedades, o para corregir errores de entrada. Within the selection, only the lines assigning a value will be modified. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area.
 
 ### Portapapeles
 
-In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
+Además de la operación estándar de copiar y pegar, 4D ofrece dos funciones adicionales que le permiten trabajar con el contenido de diferentes portapapeles:
 
-- The program stores the last 10 "copy" or "cut" actions that were performed in the Code Editor in memory during the current session. Cada uno de los diferentes contenidos guardados de esta manera puede ser reutilizado en cualquier momento. To do this, use the **Clipboard History** command of the Code Editor context menu or the "Last Clipboard values" button of the toolbar:
+- El programa almacena en memoria las 10 últimas acciones de "copiar" o "cortar" realizadas en el Editor de código durante la sesión actual. Cada uno de los diferentes contenidos guardados de esta manera puede ser reutilizado en cualquier momento. Para ello, utilice el comando **Historial del Portapapeles** del menú contextual del Editor de Código o el botón "Últimos valores del Portapapeles" de la barra de herramientas:
 
     ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
     Se muestran las primeras palabras de los elementos copiados o cortados. Seleccione un elemento para insertarlo en la ubicación actual del cursor.
 
-- Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or [using keyboard shortcuts](#shortcuts):
+- Dispone de nueve portapapeles numerados adicionales que pueden emplearse directamente mediante los botones de la barra de herramientas del Editor de código o [utilizando atajos de teclado](#shortcuts):
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
 
 ### Líneas móviles
 
-Puede mover la línea donde está el cursor directamente sin seleccionarla primero utilizando los comandos **Mover líneas hacia arriba** y **Mover líneas hacia abajo** del menú **Método**. You can also do this using the **Alt/Option** + **Up Arrow** or **Down Arrow** [keyboard shorcut](#shortcuts).
+Puede mover la línea donde está el cursor directamente sin seleccionarla primero utilizando los comandos **Mover líneas hacia arriba** y **Mover líneas hacia abajo** del menú **Método**. También puede hacerlo utilizando el atajo de teclado **Alt/Opción** + **Flecha arriba** o **Flecha abajo** [](#shortcuts).
 
 
 
@@ -385,8 +385,8 @@ Si los caracteres tecleados corresponden a distintos tipos de objetos, la lista 
 - Comandos 4D
 - Comandos SQL
 - Métodos Usuario
-- Table names
-- Field names
+- Nombres de las tablas
+- Nombres de los campos
 - Constantes
 - Variable local, proceso o interproceso, declarada en el método
 - Nombres de propiedad objeto
@@ -395,64 +395,64 @@ Si los caracteres tecleados corresponden a distintos tipos de objetos, la lista 
 - Palabras clave SQL
 - Macros (mostradas entre < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
+> Por razones prácticas, puede desactivar la visualización automática de la lista de sugerencias para las **constantes**, las **variables (locales o interprocesos) y los atributos de objeto** y/o las **tablas**. Estas opciones se encuentran en **Preferencias** > **Métodos** > **Opciones**
 
 #### Nombres de propiedad objeto
 
-4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
+4D muestra automáticamente sugerencias que distinguen mayúsculas y minúsculas de todos los nombres de propiedades de objetos válidos en el código 4D cuando:
 
 - escribe un punto "." después de un objeto o
 - utilizar la tecla Tab después de un puntero objeto desreferenciado "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
 
-> The `length` property is always included for use with collections.
+> La propiedad `length` se incluye siempre para su uso con colecciones.
 
-Once created, property names are stored in an internal global list and are available anytime a method/class/function is opened, closed or changes focus.
+Una vez creados, los nombres de las propiedades se almacenan en una lista global interna y están disponibles cada vez que un método/clase/función se abre, se cierra o cambia de foco.
 
 ![](../assets/en/code-editor/autocomplete-object-attributes-2.png)
 
-La lista de sugerencias se actualiza dinámicamente mientras se edita el código. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
+La lista de sugerencias se actualiza dinámicamente mientras se edita el código. Al cambiar de una ventana a otra, los nombres de las propiedades nuevas/editadas se añaden siempre a la lista global. La lista también se actualiza cuando se previsualiza un método, clase o función en el Explorador.
 
 Cuando se reinicia la base de datos, la lista se reinicia.
 
-> You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
+> Puede desactivar la visualización automática de las propiedades de los objetos en **Preferencias** > **Métodos** > **sugerencias**.
 
 
 ## Buscar y reemplazar
 
 
-The Code editor has powerful **find and replace** features that apply to the current window.
+El editor de código dispone de poderosas funcionalidades de **buscar y reemplazar** que se aplican a la ventana actual.
 
-A search and replace area can be displayed in the toolbar of any method window:
+En la barra de herramientas de toda ventana de método se puede mostrar un área de buscar y reemplazar:
 
 ![search-area](../assets/en/code-editor/search-area.png)
 
-To display this area, click on the **Find in method** icon of the [toolbar](#toolbar) or select a find or replace function either through a [**shortcut**](#shortcuts) or a command from the **Edit > Find** submenu. You can close this area at any moment by clicking on the **x** button at the rightmost side of the toolbar.
+Para mostrar esta área, haga clic en el icono **Buscar en el método** de la [barra de herramientas](#toolbar) o seleccione una función de buscar o reemplazar a través de un [**acceso directo**](#shortcuts) o un comando del submenú **Editar > Buscar**. Puede cerrar esta áreaa en cualquier momento presionando el botón **x** situado en el extremo derecho de la barra de herramientas.
 
 :::tip
 
-The **Find in Design** feature in the 4D toolbar or in the **Edit** menu is not specific to the Code editor but may be used to search for a value among all the methods and classes.
+La función **Buscar en diseño** de la barra de herramientas de 4D o del menú **Editar** no es específico del editor de código, pero puede utilizarse para buscar un valor entre todos los métodos y clases.
 
 :::
 
 
 ### Buscar
 
-Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cmd+F** (macOS) to display/enable the *Search* area.
+Seleccione **Buscar > Buscar...** en el menú **Editar** o escriba **Ctrl+F** (Windows)/**Cmd+F** (macOS) para mostrar/activar el área *Buscar*.
 
-The search defined in this area will be performed in the code located in the window.
+La búsqueda definida en esta área se realizará en el código situado en la ventana.
 
-The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. Si resalta el texto antes de elegir el comando **Buscar...**, aparecerá en esta área. Entonces puede utilizar este texto o reemplazarlo por otro.
+El área de entrada **buscar** permite introducir la cadena a buscar. Esta área es un combo box que almacena las últimas 10 cadenas que se han buscado o reemplazado durante la sesión. Si resalta el texto antes de elegir el comando **Buscar...**, aparecerá en esta área. Entonces puede utilizar este texto o reemplazarlo por otro.
 
-Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits.
+Una vez introducida o seleccionada una cadena, se resaltan todas las ocurrencias encontradas en la ventana abierta y en la parte derecha del área se muestra el número total de aciertos encontrados. También indica la posición actual del cursor entre todos los aciertos.
 
-Hit the **Enter** key to select closest occurrence to the cursor. You can also click on the **Next / Previous** buttons ![find-next-previous](../assets/en/code-editor/find-next.png) to select all occurrences sequentially towards the beginning or end of the current method, starting from the initial location of the cursor, or use the **Find Next** and **Find Previous** commands of the [**Edit** menu](#shortcuts).
+Presione la tecla **Intror** para seleccionar la ocurrencia más cercana al cursor. También puede hacer clic en los botones **Siguiente / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para seleccionar todas las ocurrencias secuencialmente hacia el principio o el final del método actual, a partir de la posición inicial del cursor, o utilizar los comandos **Buscar siguiente** y **Buscar anterior** del menú [**Editar**](#shortcuts).
 
 
 #### Opciones
 
-- **Case Sensitive** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): Take the case of characters as they were entered in the find area into account. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
+- **Sensible a mayúsculas y minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tiene en cuenta las mayúsculas y minúsculas de los caracteres tal y como se han introducido en el área de búsqueda. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
 - **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. Cuando esta opción está marcada, por ejemplo, una búsqueda de "cliente" no encontrará ni "clientes" ni "micliente" By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc.
 
 

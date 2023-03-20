@@ -14,13 +14,13 @@ title: WebSocketServer
 
 The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
 
-:::note About WebSocket Servers
+:::note Sobre os Servidores WebSocket
 
 The WebSocket protocol provides full-duplex communication channel between a WebSocket Server and a client (e.g. a Web browser). For more information on WebSocket servers, read [this page on Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
 
 :::
 
-:::info See also
+:::info Ver também
 
 See also [this blog post](https://blog.4d.com/websocket-server/) about the 4D WebSocket server.
 

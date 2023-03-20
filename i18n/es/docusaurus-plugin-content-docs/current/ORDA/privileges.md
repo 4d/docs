@@ -55,7 +55,7 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 
 **Notas:**
 
-- An alias can be read even if there is no permissions on the attributes upon which it is built.
+- An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
 - Default values: in the current implementation, only *Null* is available as default value.
 

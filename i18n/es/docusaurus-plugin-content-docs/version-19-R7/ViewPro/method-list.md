@@ -4097,7 +4097,7 @@ Resultado:
 
 | Parámetros | Tipo   |    | Descripción                                                                                              |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------- |
-| parameters | Object | -> | Object containing the offscreen area's attributes                                                        |
+| parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla                                             |
 | Result     | Mixed  | <- | Propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor|<!-- END REF -->
 
 |
@@ -5209,7 +5209,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Asignar a celdas
 El comando `VP SET FROZEN PANES` <!-- REF #_method_.VP SET FROZEN PANES.Summary -->define el estado congelado de las columnas y líneas en el *paneObj* para que siempre se muestren en el *vpAreaName*<!-- END REF -->. . Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen.
 
 * **Columnas a la izquierda o a la derecha**: para las columnas a la izquierda de la hoja, la línea se muestra a la derecha de la última columna congelada. Para las columnas situadas a la derecha de la hoja, la línea se muestra a la izquierda de la primera columna congelada.
-* **Líneas en la parte superior o inferior**: para las líneas en la parte superior de la hoja, la línea se muestra debajo de la última línea congelada. For rows at the bottom of the sheet, the line is displayed above the first frozen row.
+* **Líneas en la parte superior o inferior**: para las líneas en la parte superior de la hoja, la línea se muestra debajo de la última línea congelada. Para las líneas situadas en la parte inferior de la hoja, la línea se muestra sobre la primera línea congelada.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -5768,21 +5768,21 @@ El comando `VP SET TABLE ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTR
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-In the *attributes* parameter, pass an object that contains the properties to set:
+En el parámetro *attributes*, pase un objeto que contenga las propiedades a definir:
 
-| Propiedad           | Tipo    | Descripción                                                                                                                                                                   |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Nombre de la propiedad de la columna de la tabla en el contexto de datos.                                                                                                     |
-| name                | text    | Nombre de la columna de la tabla. Debe ser único en la tabla. If this name already used by another column, it is not applied and a default name is automaticaly used.         |
-| formula             | text    | Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) |
-| footerText          | text    | Valor del pie de columna.                                                                                                                                                     |
-| footerFormula       | text    | Fórmula del pie de columna.                                                                                                                                                   |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                     |
+| Propiedad           | Tipo    | Descripción                                                                                                                                                                               |
+| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | text    | Nombre de la propiedad de la columna de la tabla en el contexto de datos.                                                                                                                 |
+| name                | text    | Nombre de la columna de la tabla. Debe ser único en la tabla. Si este nombre ya es utilizado por otra columna, no se aplica y se utiliza automáticamente un nombre por defecto.           |
+| formula             | text    | Define la fórmula para cada celda de la columna. Ver [Structured Reference Formulas en la documentación de SpreadJS](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) |
+| footerText          | text    | Valor del pie de columna.                                                                                                                                                                 |
+| footerFormula       | text    | Fórmula del pie de columna.                                                                                                                                                               |
+| filterButtonVisible | boolean | Define si se muestra el botón de filtro de la columna de la tabla (por defecto es `True` cuando se crea la tabla).                                                                        |
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
 
-If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
+Si no se encuentra *tableName* o si *column* es mayor que el número de columnas, el comando no hace nada.
 
 
 #### Ejemplo
@@ -5865,9 +5865,9 @@ El comando `VP SET TEXT VALUE` <!-- REF #_method_.VP SET TEXT VALUE.Summary -->a
 
 En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-The *textValue* parameter specifies a text value to be assigned to the *rangeObj*.
+El parámetro *textValue* indica un valor texto que se asignará a *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *textValue* parameter.
+El parámetro opcional *formatPattern* define un [pattern](configuring.md#cell-format) para el parámetro *textValue*.
 
 #### Ejemplo
 
@@ -5900,9 +5900,9 @@ El comando `VP SET TIME VALUE` <!-- REF #_method_.VP SET TIME VALUE.Summary -->a
 
 En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
+El parámetro *timeValue* indica una hora expresada en segundos que se asignará al *rangeObj*.
 
-The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
+El parámetro opcional *formatPattern* define un [pattern](configuring.md#cell-format) para el parámetro *timeValue*.
 
 #### Ejemplo
 
@@ -5936,31 +5936,31 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 El comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->asigna un valor especificado a un rango de celdas designado<!-- END REF -->.
 
-The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
+El comando permite utilizar un código genérico para definir y formatear los tipos de valores en *rangeObj*, mientras que otros comandos, como [`VP SET TEXT VALUE`](#vp-set-text-value) y [`VP SET NUM VALUE`](#vp-set-num-value), reducen los valores a tipos específicos.
 
 En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP Cell`](#vp-cell) o [`VP Column`](#vp-column)) cuyo valor desea especificar. Si *rangeObj* incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. Puede contener las siguientes propiedades:
+El parámetro *valueObj* es un objeto que incluye propiedades para el valor y el formato [](configuring.md#cell-format) para asignar a *rangeObj*. Puede contener las siguientes propiedades:
 
-| Propiedad | Tipo                                     | Descripción                                                                                                                                                       |
-| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Valor a asignar a *rangeObj* (excepto- hora). Pase null para borrar el contenido de la celda.                                                                     |
-| time      | Real                                     | Valor hora (en segundos) a asignar a *rangeObj*                                                                                                                   |
-| format    | Text                                     | Patrón de propiedad valor/tiempo. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
+| Propiedad | Tipo                                     | Descripción                                                                                                                                                             |
+| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valor a asignar a *rangeObj* (excepto- hora). Pase null para borrar el contenido de la celda.                                                                           |
+| time      | Real                                     | Valor hora (en segundos) a asignar a *rangeObj*                                                                                                                         |
+| format    | Text                                     | Patrón de propiedad valor/tiempo. Para obtener información los modelos y los caracteres de formato, consulte el párrafo [Formato de celda](configuring.md#cell-format). |
 
 #### Ejemplo
 
 ```4d
-//Set the cell value as False
+//Define el valor de la celda como False
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 
-//Set the cell value as 2
+//Define el valor de la celda como 2
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";2))
 
-//Set the cell value as $125,571.35
-VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)"))
+//Define el valor de la celda como $125,571.35
+VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35; "format";"_($* #,##0.00_)"))
 
-//Set the cell value as Hello World!
+//Define el valor de la celda como ¡Hello World!
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
 
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
@@ -6000,9 +6000,9 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 El comando `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->asigna una colección de valores a partir del rango de celdas especificado<!-- END REF -->.
 
-In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) whose value you want to specify. The cell defined in the *rangeObj* is used to determine the starting point.
-> * If *rangeObj* is not a cell range, only the first cell of the range is used.
-> * If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
+En *rangeObj*, pase un rango de celda (creada con [`VP Cell`](#vp-cell)) cuyo valor desea especificar. La celda definida en *rangeObj* se utiliza para determinar el punto de partida.
+> * Si *rangeObj* no es un rango de celdas, sólo se utilizará la primera celda del rango.
+> * Si *rangeObj* incluye varios rangos, sólo se utilizará la primera celda del primer rango.
 
 El parámetro *valuesCol* es bidimensional:
 
@@ -6018,11 +6018,11 @@ El parámetro *valuesCol* es bidimensional:
 
 ```4d
 $param:=New collection
-$param.push(New collection(1;2;3;False)) //first row, 4 values
-$param.push(New collection) //second row, untouched
-$param.push(New collection(4;5;Null;"hello";"world")) // third row, 5 values
-$param.push(New collection(6;7;8;9)) // fourth row, 4 values
-$param.push(New collection(Null;New object("value";Current date;"time";42))) //fifth row, 1 value
+$param.push(New collection(1;2;3;False)) //primera línea, 4 valores
+$param.push(New collection) //segunda línea, sin tocar
+$param.push(New collection(4;5;Null;"hello";"world")) // tercera línea, 5 valores
+$param.push(New collection(6;7;8;9)) //cuarta línea, 4 valores
+$param.push(New collection(Null;New object("value";Current date;"time";42))) //quinta línea, 1 valor
 
 VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 ```
@@ -6053,7 +6053,7 @@ define las opciones del libro de trabajo en *vpAreaName*<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
-In *optionObj*, pass the workbook options to apply to *vpAreaName*.
+En *optionObj*, pase las opciones del libro de trabajo a aplicar a *vpAreaName*.
 
 Si *optionObj* está vacío, el comando no hace nada.
 
@@ -6063,12 +6063,12 @@ En la siguiente tabla se listan las opciones de libros de trabajo disponibles:
 
 | Propiedad                             | Tipo                    | Descripción                                                                                                                                                                                                                                            |
 | ------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| allowUserDragMerge                    | boolean                 | The drag merge operation is allowed (select cells and drag the selection to merge cells)                                                                                                                                                               |
+| allowUserDragMerge                    | boolean                 | Se permite la operación de fusión por arrastre (seleccionar celdas y arrastrar la selección para fusionar celdas)                                                                                                                                      |
 | allowAutoCreateHyperlink              | boolean                 | Permite la creación automática de hipervínculos en la hoja de cálculo.                                                                                                                                                                                 |
 | allowContextMenu                      | boolean                 | Se puede abrir el menú contextual integrado.                                                                                                                                                                                                           |
 | allowCopyPasteExcelStyle              | boolean                 | Los estilos de una hoja de cálculo pueden copiarse y pegarse en Excel, y viceversa.                                                                                                                                                                    |
 | allowDynamicArray                     | boolean                 | Permite arrays dinámicos en hojas de cálculo                                                                                                                                                                                                           |
-| allowExtendPasteRange                 | boolean                 | Extends the pasted range if the pasted range is not enough for the pasted data                                                                                                                                                                         |
+| allowExtendPasteRange                 | boolean                 | Amplía el rango pegado si éste no es suficiente para los datos pegados                                                                                                                                                                                 |
 | allowSheetReorder                     | boolean                 | Se permite reordenar la hoja                                                                                                                                                                                                                           |
 | allowUndo                             | boolean                 | Deshacer ediciones está permitido.                                                                                                                                                                                                                     |
 | allowUserDeselect                     | boolean                 | Se permite desmarcar celdas específicas de una selección.                                                                                                                                                                                              |
@@ -6156,7 +6156,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 El comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->reposiciona vertical y horizontalmente la vista del *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range of cells as an object to designate the cells to be viewed. The view of the *rangeObj* will be positioned vertically or horizontally (i.e., where *rangeObj* appears) based on the *vPos* and *hPos* parameters. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
+En *rangeObj*, pase un rango de celdas como objeto para designar las celdas a visualizar. La vista del *rangeObj* se posicionará vertical u horizontalmente (es decir, donde aparezca *rangeObj*) en función de los parámetros *vPos* y *hPos*. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
 
 Los siguientes selectores están disponibles:
 

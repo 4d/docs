@@ -105,7 +105,7 @@ You can display and modify form and object properties using the Property List. I
 
 To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
 
-#### Shortcuts
+#### Atalhos
 
 You can use the following shortcuts in the Property List:
 

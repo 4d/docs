@@ -3,9 +3,9 @@ id: onBoundVariableChange
 title: On Bound Variable Change
 ---
 
-| Code | Can be called by | Definição                                   |
-| ---- | ---------------- | ------------------------------------------- |
-| 54   | Formulário       | The variable bound to a subform is modified |
+| Code | Pode ser chamado por | Definição                                   |
+| ---- | -------------------- | ------------------------------------------- |
+| 54   | Formulário           | The variable bound to a subform is modified |
 
 
 ## Descrição

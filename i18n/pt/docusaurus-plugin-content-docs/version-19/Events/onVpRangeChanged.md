@@ -3,7 +3,7 @@ id: onVpRangeChanged
 title: On VP Range Changed
 ---
 
-| Code | Can be called by                                        | Definição                                                                                             |
+| Code | Pode ser chamado por                                    | Definição                                                                                             |
 | ---- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 61   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | The 4D View Pro cell range has changed (e.g., a formula calculation, value removed from a cell, etc.) |
 
@@ -15,7 +15,7 @@ The object returned by the FORM Event command contains:
 
 | Propriedade  | Tipo          | Descrição                                                                                                                                                                                                                  |
 | ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text          | 4D View Pro area name                                                                                                                                                                                                      |
+| objectName   | text          | Nome da área 4D View Pro                                                                                                                                                                                                   |
 | code         | inteiro longo | On VP Range Changed                                                                                                                                                                                                        |
 | description  | text          | "On VP Range Changed"                                                                                                                                                                                                      |
 | sheetName    | text          | Name of the sheet of the event                                                                                                                                                                                             |

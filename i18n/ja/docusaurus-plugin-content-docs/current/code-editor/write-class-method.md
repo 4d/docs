@@ -452,7 +452,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 #### オプション
 
-- **大文字小文字を区別** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): 検索エリアに入力された文字の大小を区別して検索します。 This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
+- **大文字小文字を区別** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): 検索エリアに入力された文字の大小を区別して検索します。 このオプションでは、アクセントも区別されます。 たとえば、"MyVar" を検索した場合 "myVar" は検出されませんし、"dej" を検索した場合 "déjà" は見つかりません。
 - **単語全体** ![full-word](../assets/en/code-editor/full-word.png): 検索文字列を単語として一致するものを検索します。 たとえば、"client" を検索する場合、"clients" や "myclient" は検出されません。 デフォルトでは、このオプションは無効です。したがって、"var" を検索すると、"Myvar"、"variation" などが検出されます。
 
 

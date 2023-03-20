@@ -3,9 +3,9 @@ id: onDeleteAction
 title: On Delete Action
 ---
 
-| Code | Can be called by                                                                                | Definição                           |
+| Code | Pode ser chamado por                                                                            | Definição                           |
 | ---- | ----------------------------------------------------------------------------------------------- | ----------------------------------- |
-| 58   | [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | The user attempts to delete an item |
+| 58   | [Lista hierárquica](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | The user attempts to delete an item |
 
 
 ## Descrição

@@ -1203,16 +1203,16 @@ O parâmetro opcional *updateSeen* permite-lhe especificar se a mensagem está m
 
 #### Descrição
 
-A função `.move()` <!-- REF #IMAPTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+A função `.move()` <!-- REF #IMAPTransporterClass.move().Summary -->move as mensagens definidas por *msgsIDs* ou *allMsgs* para a *destinationBox* no servidor IMAP<!-- END REF -->.
 
 Pode passar:
 
-* in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
-* in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
+* no parâmetro *msgsIDs*, uma colecção contendo as identificações únicas das mensagens específicas a mover, ou
+* no parâmetro *allMsgs*, o `IMAP all` constante (inteiro) para mover todas as mensagens na caixa de correio seleccionada.
 
-The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.
+O parâmetro *destinationBox* permite-lhe passar um valor de texto com o nome da caixa de correio onde as mensagens serão movimentadas.
 
-> This function is only supported by IMAP servers compliant with RFC [8474](https://tools.ietf.org/html/rfc8474).
+> Esta função só é suportada por servidores IMAP em conformidade com o RFC [8474](https://tools.ietf.org/html/rfc8474).
 
 **Objeto devolvido**
 
@@ -1229,7 +1229,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 #### Exemplo 1
 
-To move a selection of messages:
+Para mover uma selecção de mensagens:
 
 ```4d
  var $server;$boxInfo;$status : Object
@@ -1312,7 +1312,7 @@ No parâmetro *endMsg*, passe um valor inteiro correspondente ao número da últ
 
 #### Resultados
 
-The function returns a collection of strings (unique IDs).
+A função devolve uma colecção de cordas (identificações únicas).
 
 #### Exemplo
 
@@ -1521,16 +1521,16 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
-| Parâmetros     | Tipo       |    | Descrição                                                |
-| -------------- | ---------- |:--:| -------------------------------------------------------- |
-| searchCriteria | Text       | -> | Critérios de pesquisa                                    |
-| Resultados     | Collection | <- | Collection of message numbers|<!-- END REF -->
+| Parâmetros     | Tipo       |    | Descrição                                                  |
+| -------------- | ---------- |:--:| ---------------------------------------------------------- |
+| searchCriteria | Text       | -> | Critérios de pesquisa                                      |
+| Resultados     | Collection | <- | Coleção de números de mensagens|<!-- END REF -->
 
 |
 
 #### Descrição
 
-> This function is based upon the specification for the [IMAP protocol](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
+> Esta função é baseada na especificação do [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
 A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. *searchCriteria* consiste em uma ou mais chaves de pesquisa.
 
@@ -1599,7 +1599,7 @@ Search-keys may request the value to search for:
 
 * **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
 
-* **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Examples: `2,4:7,9,12:*` is `2,4,5,6,7,9,12,13,14,15` for a mailbox with 15 messages. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+* **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Exemplos: `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa de correio com 15 mensagens. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
 
 #### Chaves de pesquisa autorizadas
 
@@ -1793,10 +1793,10 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                      |
-| ---------- | ------ |:--:| -------------------------------------------------------------- |
-| name       | Text   | -> | Nome da nova caixa de correio                                  |
-| Resultados | Objeto | <- | Status of the unsubscribe operation|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                 |
+| ---------- | ------ |:--:| --------------------------------------------------------- |
+| name       | Text   | -> | Nome da nova caixa de correio                             |
+| Resultados | Objeto | <- | Estado da operação unsubscribe|<!-- END REF -->
 
 |
 

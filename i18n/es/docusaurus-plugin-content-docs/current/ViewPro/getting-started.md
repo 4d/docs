@@ -91,7 +91,7 @@ Las áreas 4D View Pro se benefician de un menú contextual automático que ofre
 
 ## Utilización de los métodos 4D View Pro
 
-4D View Pro methods can be used in the 4D Code Editor, just like 4D language commands.
+Los métodos 4D View Pro pueden usarse en el editor de código 4D, igual que los comandos del lenguaje 4D.
 
 Como 4D View Pro es un componente 4D intregado, puede acceder a su lista de métodos desde el Explorador, en la sección **Métodos componentes**:
 

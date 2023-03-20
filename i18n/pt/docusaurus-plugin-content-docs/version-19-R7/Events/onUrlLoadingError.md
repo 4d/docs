@@ -3,7 +3,7 @@ id: onUrlLoadingError
 title: On URL Loading Error
 ---
 
-| Code | Can be called by                            | Definição                                  |
+| Code | Pode ser chamado por                        | Definição                                  |
 | ---- | ------------------------------------------- | ------------------------------------------ |
 | 50   | [Área Web](FormObjects/webArea_overview.md) | An error occurred when the URL was loading |
 
