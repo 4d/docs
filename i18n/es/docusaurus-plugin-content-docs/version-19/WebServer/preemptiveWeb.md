@@ -4,7 +4,7 @@ title: Uso de procesos web apropiativos
 ---
 
 
-The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
+El servidor web de 4D le permite aprovechar al máximo los ordenadores multinúcleo utilizando procesos web apropiativos en sus aplicaciones compiladas. Puede configurar su código relacionado con la web, incluidas las etiquetas 4D y los métodos de base de datos web, para que se ejecute simultáneamente en tantos núcleos como sea posible.
 
 Para obtener información detallada sobre los procesos apropiativos en 4D, consulte la sección *Procesos 4D apropiativos* del [*manual de lenguaje*](https://doc.4d.com).
 
@@ -12,12 +12,12 @@ Para obtener información detallada sobre los procesos apropiativos en 4D, consu
 
 La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, dependiendo del contexto de ejecución:
 
-| 4D Server             | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpretado, proyecto (sin cliente conectado localmente) o binario | Compilado       |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------- |
-| Servidor REST         | cooperativo                                                                                                              | apropiativo                                                         | apropiativo     |
-| Servidor Web          | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
-| Servidor Web Services | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
-| Legado REST           | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
+| 4D Server             | Interpretado, proyecto ([cliente conectado localmente](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpretado, proyecto (sin cliente conectado localmente) o binario | Compilado       |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------- |
+| Servidor REST         | cooperativo                                                                                                                    | apropiativo                                                         | apropiativo     |
+| Servidor Web          | cooperativo                                                                                                                    | *parámetro web*                                                     | *parámetro web* |
+| Servidor Web Services | cooperativo                                                                                                                    | *parámetro web*                                                     | *parámetro web* |
+| Legado REST           | cooperativo                                                                                                                    | *parámetro web*                                                     | *parámetro web* |
 
 | 4D remoto/monopuesto  | Interpretado | Compilado       |
 | --------------------- | ------------ | --------------- |
@@ -29,7 +29,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 - Servidor REST: gestiona las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md)
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)
 - Servidor de servicios web: gestiona las peticiones SOAP
-- Legacy REST: direct requests to 4D methods (`/rest/{table}/{methodName}`)
+- REST heredado: peticiones directas a métodos 4D (`/rest/{table}/{methodName}`)
 - ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
   - cuando la opción [**sesiones escalables**](sessions.md#enabling-sessions) está seleccionada, el [modo apropiativo se utiliza automáticamente](sessions.md#preemptive-mode) para los procesos web.
   - de lo contrario, la opción [**Utilizar procesos apropiativos**](webServerConfig.md#use-preemptive-processes) se tiene en cuenta.
@@ -37,7 +37,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 
 ## Escribir código servidor web hilo seguro
 
-Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere que sus procesos web se ejecuten en modo apropiativo. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
+Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere que sus procesos web se ejecuten en modo apropiativo. Cuando la opción **Utilizar procesos apropiativos** está marcada en la caja de diálogo Parámetros, las siguientes partes de la aplicación serán evaluadas automáticamente por el compilador 4D:
 
 - Todos los métodos base relacionados con la web:
   - [`On Web Authentication`](authentication.md#on-web-authentication)
@@ -47,7 +47,7 @@ Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere 
 
 - El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
 
-- Basically any code processed by the `PROCESS 4D TAGS` command in the web context, for example through .shtml pages.
+- Básicamente todo código procesado por el comando `PROCESS 4D TAGS` en el contexto web, por ejemplo a través de páginas .shtml.
 
 - Todo método proyecto con el atributo "Disponible a través de etiquetas 4D y URLs (`4DACTION`, etc.)
 
@@ -70,7 +70,7 @@ Todos los comandos 4D relativos a la web son hilo seguro, *es decir*:
 - todos los comandos del tema *Servidor Web*,
 - todos los comandos del tema *Cliente HTTP*.
 
-The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
+Los métodos base relacionados con la web son hilo seguro y pueden utilizarse en modo apropiativo (ver abajo): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
 Por supuesto, el código ejecutado por estos métodos también debe ser hilo seguro.
 

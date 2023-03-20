@@ -342,10 +342,10 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 任意の *options* 引数には、以下のプロパティを持つオブジェクトを渡します:
 
-| プロパティ    | タイプ  | 説明                                                                                                                                                                                                                                                                                                                                           | デフォルト     |
-| -------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| path     | Text | Represents the path to access the WebSocket server. If no path is defined, the WebSocket server manages all the connections                                                                                                                                                                                                                  | undefined |
-| dataType | Text | Type of the data received through the `connectionHandler.onMessage` and the data send by [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) function. Values: "text", "blob","object"). If "object": (send) transforms object into a json format and sends it; (reception): receives json format and transforms it into object | text      |
+| プロパティ    | タイプ  | 説明                                                                                                                                                                                                                                  | デフォルト     |
+| -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| path     | Text | WebSocketサーバーにアクセスするためのパス。 パスが定義されていない場合、WebSocketサーバーはすべての接続を管理します                                                                                                                                                                 | undefined |
+| dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
 
 
 <!-- REF #WebSocketServerClass.connections.Desc -->
@@ -355,9 +355,9 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 #### 説明
 
-The `.connections` property contains <!-- REF #WebSocketServerClass.connections.Summary -->all current connections handled by the WebSocket server<!-- END REF -->。 Each element of the collection is a [`WebSocketConnection` object](WebSocketConnectionClass.md).
+`.connections` プロパティは、 <!-- REF #WebSocketServerClass.connections.Summary -->WebSocketサーバーが処理しているカレントの接続をすべて格納します<!-- END REF -->。 コレクションの各要素が [`WebSocketConnection` オブジェクト](WebSocketConnectionClass.md) です。
 
-When a connection is terminated, its [`status`](WebSocketConnectionClass.md#status) changes to "Closed" and it is removed from this collection.
+接続が終了すると、このオブジェクトの [`status`](WebSocketConnectionClass.md#status) は "Closed" に変わり、コレクションから削除されます。
 
 <!-- END REF -->
 
@@ -370,9 +370,9 @@ When a connection is terminated, its [`status`](WebSocketConnectionClass.md#stat
 
 #### 説明
 
-`.dataType` プロパティは、 <!-- REF #WebSocketServerClass.dataType.Summary -->the type of the data received or sent<!-- END REF -->。
+`.dataType` プロパティは、 <!-- REF #WebSocketServerClass.dataType.Summary -->受信または送信されるデータの型<!-- END REF -->。
 
-This property is read-only.
+このプロパティは 読み取り専用 です。
 <!-- END REF -->
 
 
@@ -383,7 +383,7 @@ This property is read-only.
 
 #### 説明
 
-The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->。
+`.handler` プロパティは、 <!-- REF #WebSocketServerClass.handler.Summary -->WebSocketサーバーの開始に使用された `WSSHandler` オブジェクトを取得するアクセサーです<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -395,9 +395,9 @@ The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary 
 
 #### 説明
 
-`.path` プロパティは、 <!-- REF #WebSocketServerClass.path.Summary -->the pattern of the path to access the WebSocket server<!-- END REF -->。 If no path was defined, the WebSocket server manages all connections.
+`.path` プロパティは、 <!-- REF #WebSocketServerClass.path.Summary -->WebSocketサーバーにアクセスするためのパスのパターンです<!-- END REF -->。 パスが定義されなかった場合、WebSocketサーバーはすべての接続を管理します。
 
-This property is read-only.
+このプロパティは 読み取り専用 です。
 <!-- END REF -->
 
 
@@ -418,7 +418,7 @@ This property is read-only.
 
 #### 説明
 
-`.terminate()` 関数は、 <!-- REF #WebSocketServerClass.terminate().Summary -->closes the WebSocket server<!-- END REF -->。 
+`.terminate()` 関数は、 <!-- REF #WebSocketServerClass.terminate().Summary -->WebSocketサーバーを終了します<!-- END REF -->。 
 
 <!-- END REF -->
 
@@ -429,8 +429,8 @@ This property is read-only.
 
 #### 説明
 
-`.terminated` プロパティは、 <!-- REF #WebSocketServerClass.terminated.Summary -->True if the WebSocket server is closed<!-- END REF -->。
+`.terminated` プロパティは、 <!-- REF #WebSocketServerClass.terminated.Summary -->WebSocketサーバーが終了している場合には true です<!-- END REF -->。
 
-This property is read-only.
+このプロパティは 読み取り専用 です。
 <!-- END REF -->
 

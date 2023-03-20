@@ -1314,11 +1314,11 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| 引数           | タイプ        |    | 説明                                                                                             |
-| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                                |
-| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                  |
-| options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_\_STAMP プロパティを追加 |
+| 引数           | タイプ        |    | 説明                                                                                         |
+| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------ |
+| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                            |
+| filterCol    | Collection | -> | 取得する属性のコレクション                                                                              |
+| options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_STAMP プロパティを追加 |
 | 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト|<!-- END REF -->
 
 |
@@ -1350,6 +1350,13 @@ filter 引数がリレートエンティティズ型の属性を指定する場�
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> 指定されたプロパティのみが取得されます
 
 *options* に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
+
+:::caution 警告
+
+リレーションの 1側の属性に主キー以外の属性を使用した場合、その属性の値が "__KEY" プロパティに書き込まれます。 `.toObject()` と `.fromObject()` の関数を使用する場合はとくに、リレーションの 1側の属性に主キーを使用することが推奨されます。
+
+:::
+
 
 #### 例題 1
 

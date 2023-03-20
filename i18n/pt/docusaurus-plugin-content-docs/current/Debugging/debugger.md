@@ -87,7 +87,7 @@ If you use this button to modify a method, the modifications are only effective 
 
 #### Save Settings
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+Saves the current configuration of the debugger window  and makes it the default configuration. Isto inclui:
 
 * the size and position of the window
 * the position of the division lines and the contents of the area that evaluates the expressions
@@ -157,13 +157,13 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtema      | Descrição                                                    | Can the values be modified? |
-| ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Sim                         |
-| Processo     | List of process variables used by the current process        | Sim                         |
-| Local        | List of local variables used by the method being traced      | Sim                         |
-| Parâmetros   | List of parameters received by the method                    | Sim                         |
-| Self         | Pointer to the current object, when tracing an Object Method | No                          |
+| Subtema       | Descrição                                                    | Can the values be modified? |
+| ------------- | ------------------------------------------------------------ | --------------------------- |
+| Interprocesso | List of interprocess variables being used at this point      | Sim                         |
+| Processo      | List of process variables used by the current process        | Sim                         |
+| Local         | List of local variables used by the method being traced      | Sim                         |
+| Parâmetros    | List of parameters received by the method                    | Sim                         |
+| Self          | Pointer to the current object, when tracing an Object Method | Não                         |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
@@ -171,7 +171,7 @@ To display the variable types and their internal names, right click and check th
 
 ![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
-Here's the result:
+Aqui está o resultado:
 
 ![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
 
@@ -187,15 +187,15 @@ Some objects, such as list box arrays, can be presented as two distinct objects,
 
 Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
 
-#### Semaphores
+#### Semáforos
 
 This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
-#### Processes
+#### Processos
 
 This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
 
-#### Tables and Fields
+#### Tabelas e Campos
 
 This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
@@ -209,7 +209,7 @@ This theme lists the sets defined in the current process (the one you're current
 
 This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
 
-#### Information
+#### Informação
 
 This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
 
@@ -248,9 +248,9 @@ A method may call other methods or class functions, which may call other methods
 
 Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
 
-In the image above:
+Na imagem acima:
 
-* `thirdMethod` has not received any parameter
+* `thirdMethod` não recebeu nenhum parâmetro
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
   * $1 é um ponteiro para a tabela `[Employee]`
@@ -276,7 +276,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * campo
 * variável
 * pointer
-* calculation
+* cálculo
 * Comando 4D
 * method
 * and anything else that returns a value
@@ -323,7 +323,7 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 * **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
 * **Show Icons**: Displays an icon denoting the type of each item.
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
-* **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
+* **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. Para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
 
 ## Source Code Pane
 
@@ -349,18 +349,18 @@ This also works with selections:
 You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
 
 1. In the Source code pane, select the expression to evaluate
-2. Do one of the following:
+2. Faça uma das seguintes opções:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
     * Right-click the selected text **>** **Copy to Expression Pane**
 
-### Program Counter
+### Contador do programa
 
 The yellow arrow in the left margin of the Source Code pane is called the program counter. It marks the next line to be executed.
 
 By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
 
-#### Moving the program counter
+#### Movendo o contador do programa
 
 For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). To do so, click and drag the yellow arrow to another line.
 
@@ -380,13 +380,13 @@ Por exemplo:
 
 Say the program counter is set to the line `If (This condition)`. When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
 
-### Contextual menu
+### Menu contextual
 
 The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Goto Definition**: Goes to where the selected object is defined. This command is available for:
+* **Goto Definition**: Goes to where the selected object is defined. Este comando está disponível para:
   * *Project methods:* displays method contents in a new window of the Code Editor
   * *Fields:* Displays field properties in the inspector of the Structure window
   * *Tables:* Displays table properties in the inspector of the Structure window
@@ -409,9 +409,9 @@ Specific shortcuts allow you to find strings identical to the one selected:
 
 The search is carried out only if you select at least one character in the Source code pane.
 
-## Shortcuts
+## Atalhos
 
-This section lists all the shortcuts available in the debugger window.
+Esta secção lista todos os atalhos disponíveis na janela do depurador.
 
 > The tool bar also has [shortcuts](#tool-bar-buttons).
 

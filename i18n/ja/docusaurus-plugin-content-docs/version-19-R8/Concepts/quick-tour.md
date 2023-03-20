@@ -60,13 +60,13 @@ MyOtherDate:=Current date+30
 
 ## コマンド
 
-4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば `CREATE RECORD` や `ALERT` などのコマンドはテーマ別に _4D ランゲージリファレンス_ に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:
+4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-コレクションやオブジェクトにコマンドが属している場合、それらは名前付きメソッドであり、ドット記法を用いて使用します。 例:
+コレクションやオブジェクトにコマンドが属している場合、それらは名前付き関数であり、ドット記法を用いて使用します。 例:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -127,15 +127,16 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号を振られたローカル変数 ($1, $2, ...$n) に格納されます。 メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:
+プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数が宣言されていれば、これらは受け取り側のメソッドにて直接利用することができます。 メソッドの一つの値を戻り値とすることができ、この戻り値は宣言する必要があります。 メソッドを呼び出すには、メソッド名を書きます:
 
 ```4d
 $myText:="hello"
 $myText:=Do_Something($myText) // Do_Something メソッドを呼び出します
-ALERT($myText) //"HELLO"
+ALERT($myText) // "HELLO"
 
   // Do_Something メソッドのコードです
-$0:=Uppercase($1)
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -181,16 +182,16 @@ $vAge:=employee.children[2].age
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() // "Hello world!" を表示します
 ```
 
 コレクションの要素にアクセスするためには、大カッコでくくった要素番号を渡します:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
+myColl[3]  // コレクションの 4番目の要素にアクセスします (0起点)
 ```
 
 ## クラス
@@ -204,16 +205,15 @@ myColl[3]  // コレクションの4番目の要素にアクセスします (0�
 $o:=cs.myClass.new() 
 ```
 
-`myClass` クラスメソッド内では、*methodName* クラスメンバーメソッドを宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバーメソッドは引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
+`myClass` クラスメソッド内では、*methodName* クラスメンバー関数を宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバー関数は引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
 
 ```4d  
 // myClass.4dm ファイル内
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-クラスメンバーメソッドを実行するには、オブジェクトインスタンスのメンバーメソッドに `()` 演算子を使います。
+クラスメンバー関数を実行するには、オブジェクトインスタンスのメンバー関数に `()` 演算子を使います。
 
 ```4d
 $o:=cs.myClass.new()
@@ -227,9 +227,9 @@ $message:=$o.myClass.hello()
 ```4d  
 // Rectangle.4dm ファイル内
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
@@ -237,14 +237,14 @@ This.name:="Rectangle"
 
 ```4d  
 // Square.4dm ファイル内
-Class extends Rectangle
+Class extends rectangle
 
 Class constructor
-C_LONGINT($1)
+var $length : Integer
 
-  // 親クラスのコンストラクターを呼び出します
+  // 親クラスのコンストラクターを呼び出します   
   // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
-Super($1;$1)
+Super($length;$length)
 
 This.name:="Square"
 ```

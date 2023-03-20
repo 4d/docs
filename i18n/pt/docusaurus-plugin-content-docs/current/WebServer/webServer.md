@@ -1,7 +1,7 @@
 ---
 id: webServer
 slug: overview
-title: Visão Geral
+title: Servidor Web
 ---
 
 4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
@@ -12,7 +12,7 @@ You can start or stop publication of the web application at any time. To do so, 
 
 Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
 
-## Ready-to-use
+## Pronto a usar
 
 The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
 

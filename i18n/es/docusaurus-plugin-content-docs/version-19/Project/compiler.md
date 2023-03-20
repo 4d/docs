@@ -31,7 +31,7 @@ Si se detectan errores, se detiene el proceso y se muestra el mensaje "Compilaci
 
 ![](../assets/en/Project/compilerWin2.png)
 
-Double-click on each error detected to open the method or class concerned directly in the 4D method editor. La línea que contiene el error se resalta y el tipo de error se muestra en el área de sintaxis de la ventana.
+Haga doble clic en cada error detectado para abrir el método o la clase en cuestión directamente en el editor de métodos 4D. La línea que contiene el error se resalta y el tipo de error se muestra en el área de sintaxis de la ventana.
 
 Utilice los comandos **Error anterior** / **Error siguiente** del menú **Método** para navegar de un error a otro.
 
@@ -67,7 +67,7 @@ El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nomb
 
 Sólo se generan los métodos de compilación necesarios (es decir, aquellos para los que ya existen elementos en el proyecto).
 
-El área de información indica todo error encontrado durante la creación o actualización del método. Double-clicking on an error line causes the method and line concerned to be displayed in the Method editor.
+El área de información indica todo error encontrado durante la creación o actualización del método. Al hacer doble clic en una línea de error, el método y la línea en cuestión aparecen en el editor de métodos.
 
 ### Eliminar el código de compilación
 
@@ -244,13 +244,13 @@ Si su proyecto no tiene errores generales, el archivo no tendrá una sección *E
 
 Un archivo de error puede contener tres tipos de mensajes:
 
-- **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. El compilador informa de este tipo de error cuando encuentra una expresión en la que ve una incoherencia relacionada con el tipo de datos o la sintaxis. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
+- **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. El compilador informa de este tipo de error cuando encuentra una expresión en la que ve una incoherencia relacionada con el tipo de datos o la sintaxis. En la ventana de compilación, haga doble clic en cada error detectado para abrir el método en cuestión directamente en el editor de métodos 4D, con la línea que contiene el error resaltada.
 
 - **Errores generales**: son errores que imposibilitan la compilación del proyecto. Hay dos casos en los que el compilador informa de un error general:
   - No se ha podido determinar el tipo de datos de una variable proceso.
   - Dos tipos diferentes de objetos tienen el mismo nombre. Los errores generales se denominan así porque no pueden vincularse a ningún método específico. En el primer caso, el compilador no pudo realizar una tipificación específica en ninguna parte del proyecto. En el segundo, no pudo decidir si asociar un nombre determinado con un objeto y no con otro.
 
-- **Avisos**: los avisos no son errores. No impiden la compilación del proyecto, sino que simplemente señalan posibles errores de código. En la ventana del compilador, las advertencias aparecen en itálica. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Avisos**: los avisos no son errores. No impiden la compilación del proyecto, sino que simplemente señalan posibles errores de código. En la ventana del compilador, las advertencias aparecen en itálica. Haga doble clic en cada advertencia para abrir el método en cuestión directamente en el editor de métodos 4D, con la línea que contiene la advertencia resaltada.
 
 ### Control de ejecución
 

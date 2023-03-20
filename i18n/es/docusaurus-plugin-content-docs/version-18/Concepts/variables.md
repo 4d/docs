@@ -124,6 +124,6 @@ Las variables interproceso están disponibles en toda la base y son compartidas 
 
 > No se recomienda el uso de variables interproceso, ya que no están disponibles para los procesos apropiativos y tienden a hacer que el código sea menos mantenible.
 
-The name of an interprocess variable always begins with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+El nombre de una variable interproceso siempre comienza con los símbolos (`<>`) — un signo "menor que" seguido de un signo "mayor que"- seguido de 31 caracteres.
 
 En modo cliente/servidor, cada máquina (cliente y servidor) comparten la misma definición de las variables interproceso, pero cada máquina tiene una instancia diferente para cada variable.

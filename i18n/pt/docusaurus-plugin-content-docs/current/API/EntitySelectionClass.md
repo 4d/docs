@@ -262,7 +262,7 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 | Versão | Mudanças                                              |
 | ------ | ----------------------------------------------------- |
-| v19 R7 | Support of *entitySelection* parameter                |
+| v19 R7 | Suporte do parâmetro *entitySelection*                |
 | v18 R5 | Compatível apenas com seleções de entidade alteráveis |
 | v17    | Adicionado                                            |
 
@@ -707,10 +707,10 @@ $values:=ds. Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Parâmetros | Tipo                |    | Descrição                                                                                                                   |
-| ---------- | ------------------- |:--:| --------------------------------------------------------------------------------------------------------------------------- |
-| mode       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                            |
-| Resultados | 4D. EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF --> |
+| Parâmetros | Tipo                |    | Descrição                                                                                                                                          |
+| ---------- | ------------------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer             | -> | `dk stop dropping on first error`: para a execução do método na primeira entidade não eliminável                                                   |
+| Resultados | 4D. EntitySelection | <- | Entidade de seleção vazia se for executada com êxito, se nenhuma entity selection contendo as entidades não elimináveis|<!-- END REF --> |
 
 #### Descrição
 
@@ -1314,7 +1314,7 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 | Versão | Mudanças                         |
 | ------ | -------------------------------- |
-| v19 R7 | Support of *keepOrder* parameter |
+| v19 R7 | Suporte do parâmetro *keepOrder* |
 | v17    | Adicionado                       |
 
 </details>
@@ -1974,6 +1974,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 
 
 
+
 </details>
 
 
@@ -2070,6 +2071,12 @@ Se for especificado um filtro para um atributo do tipo `relatedEntities` :
 
 
 No parâmetro *opções* , pode passar os seletores `dk com chave primária` e/ou `dk with stamp`  para adicionar as chaves primárias da entidade e/ou carimbos nos objectos extraídos.
+
+:::caution Alerta
+
+Se utilizar outro atributo que não a chave primária como o atributo Um numa relação, o valor deste atributo será escrito na propriedade "__KEY". Tenha em mente que é recomendado usar a chave primária como um atributo nas suas relações, especialmente quando usa funções `.toCollection()` e `.fromCollection()`.
+
+:::
 
 O parâmetro *start* permite indicar o índice inicial das entidades a extrair. Pode passar qualquer valor entre 0 e o comprimento-1 da selecção da entidade.
 

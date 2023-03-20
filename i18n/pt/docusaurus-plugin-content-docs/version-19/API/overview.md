@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Funções de classe e comandos
+title: Funções e comandos de classe
 ---
 
 Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados. As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe.
@@ -699,7 +699,7 @@ Para além das funções de classe integradas, a linguagem 4D contém centenas d
 | [`NO DEFAULT TABLE`](https://doc.4d.com/4dv19/help/command/en/page993.html)                                   | 993    |
 | [`Not`](https://doc.4d.com/4dv19/help/command/en/page34.html)                                                 | 34     |
 | [`NOTIFY RESOURCES FOLDER MODIFICATION`](https://doc.4d.com/4dv19/help/command/en/page1052.html)              | 1052   |
-| [`Null`](https://doc.4d.com/4dv19/help/command/en/page1517.html)                                              | 1052   |
+| [`Null`](https://doc.4d.com/4dv19/help/command/en/page1517.html)                                              | 1517   |
 | [`Num`](https://doc.4d.com/4dv19/help/command/en/page11.html)                                                 | 11     |
 | <a name="O">**O**</a>                                                                                    |        |
 | [`OB Class`](https://doc.4d.com/4dv19/help/command/en/page1730.html)                                          | 1730   |
@@ -1178,7 +1178,7 @@ Para além das funções de classe integradas, a linguagem 4D contém centenas d
 | [`System folder`](https://doc.4d.com/4dv19/help/command/en/page487.html)                                      | 487    |
 | <a name="T">**T**</a>                                                                                    |        |
 | [`Tabela`](https://doc.4d.com/4dv19/help/command/en/page252.html)                                             | 252    |
-| [`Table name`](https://doc.4d.com/4dv19/help/command/en/page256.html)                                         | 256    |
+| [`Nome da tabela`](https://doc.4d.com/4dv19/help/command/en/page256.html)                                     | 256    |
 | [`Tan`](https://doc.4d.com/4dv19/help/command/en/page19.html)                                                 | 19     |
 | [`Temporary folder`](https://doc.4d.com/4dv19/help/command/en/page486.html)                                   | 486    |
 | [`Test path name`](https://doc.4d.com/4dv19/help/command/en/page476.html)                                     | 476    |
@@ -1365,7 +1365,7 @@ Para além das funções de classe integradas, a linguagem 4D contém centenas d
 | [`WP DELETE FOOTER`](https://doc.4d.com/4dv19/help/command/en/page1589.html)                                  | 1589   |
 | [`WP DELETE HEADER`](https://doc.4d.com/4dv19/help/command/en/page1588.html)                                  | 1588   |
 | [`WP DELETE PICTURE`](https://doc.4d.com/4dv19/help/command/en/page1701.html)                                 | 1701   |
-| [`1701`](https://doc.4d.com/4dv19/help/command/en/page1652.html)                                              | 1652   |
+| [`WP DELETE STYLE SHEET`](https://doc.4d.com/4dv19/help/command/en/page1652.html)                             | 1652   |
 | [`WP DELETE SUBSECTION`](https://doc.4d.com/4dv19/help/command/en/page1584.html)                              | 1584   |
 | [`WP EXPORT DOCUMENT`](https://doc.4d.com/4dv19/help/command/en/page1337.html)                                | 1337   |
 | [`WP EXPORT VARIABLE`](https://doc.4d.com/4dv19/help/command/en/page1319.html)                                | 1319   |

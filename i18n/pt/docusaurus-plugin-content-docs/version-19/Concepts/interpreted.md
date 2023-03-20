@@ -6,13 +6,13 @@ title: Modos interpretado e compilado
 4D applications can work in **interpreted** or **compiled** mode:
 
 - in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
-- in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
+- in compiled mode, all methods are read and translated once, at the compilation step. Posteriormente, a aplicação contém apenas instruções de nível de montagem, já não é possível editar o código.
 
-The advantages of the compilation are:
+As vantagens da compilação são:
 
-- **Speed**: Your application can run from 3 to 1,000 times faster.
-- **Code checking**: Your application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
-- **Protection**: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
+- **Velocidade**: A sua aplicação pode correr de 3 a 1.000 vezes mais rápido.
+- **Verificação do código**: A sua aplicação é digitalizada para verificar a consistência do código. São detectados conflitos tanto lógicos como sintácticos.
+- **Protecção**: Uma vez compilada a sua aplicação, pode apagar o código interpretado. Então, a aplicação compilada é funcionalmente idêntico ao original, exceto que a estrutura e métodos não pode ser vista ou modificada, seja de forma deliberada ou por acidente.
 - **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
 - **Preemptive mode**: only compiled code can be executed in preemptive processes.
 
@@ -26,17 +26,17 @@ Although application will work the same way in interpreted and compiled modes, t
 | You cannot change the data type of any variable or array.                                                                                                                              | Changing the data type of a variable or an array is possible (not recommended) |
 | You cannot change a one-dimensional array to a two-dimensional array, or change a two-dimensional array to a one-dimensional array.                                                    | Possível                                                                       |
 | Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form. |                                                                                |
-| The `Undefined` function always returns False for variables. Variables are always defined.                                                                                             |                                                                                |
+| A função `Undefined` retorna sempre False para variáveis. As variáveis são sempre definidas.                                                                                           |                                                                                |
 | If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.                | Preemptive process properties are ignored                                      |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                           | It is always possible to interrupt 4D                                          |
+| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                           | É sempre possível interromper 4D                                               |
 
-## Using Compiler Directives with the Interpreter
+## Utilização de directivas de compilação com o Intérprete
 
-Compiler directives are not required for uncompiled applications. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
+As directivas de compilação não são necessárias para aplicações não compiladas. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
 
 Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes.
 
-For example, if you write:
+Por exemplo, se escrever:
 
 ```4d
 C_LONGINT(MyInt)
@@ -56,7 +56,7 @@ The order in which the two statements appear is irrelevant to the compiler, beca
 
 ## Using pointers to avoid retyping
 
-A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Uma variável não pode ser redigida de novo. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
 
 ```4d
 C_POINTER($p)

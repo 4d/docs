@@ -22,6 +22,22 @@ Esta propiedad define el esquema de colores para el formulario. This property de
 
 ---
 
+## CSS
+
+Esta propiedad le permite cargar archivos CSS específicos para el formulario.
+
+Un archivo CSS definido a nivel de formulario anulará la(s) hoja(s) de estilo predeterminada(s). Para más información, consulte la página [Hojas de estilo](createStylesheet.md).
+
+
+#### Gramática JSON
+
+| Nombre | Tipos de datos     | Valores posibles                                                                                                     |
+| ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| css    | cadena o colección | Rutas del archivo CSS suministradas como:<li>una cadena (un archivo para ambas plataformas)</li><li>una colección de cadenas (una lista de archivos para ambas plataformas)</li><li>una colección de objetos {"path":string;"media":"mac" &#124; "win"} </li> |
+
+---
+
+
 ## Pages
 
 Cada formulario consta de al menos dos páginas:
@@ -106,6 +122,7 @@ Para eliminar la herencia, seleccione `\&#060;None&#062;` en la lista de propied
 Esta propiedad especifica la tabla de la base de datos de la que [hereda un formulario](forms.md#inherited-forms) en el formulario actual.
 
 Define `\&#060;None&#062;` en la lista de propiedades (o " " en JSON) para heredar un formulario proyecto.
+
 
 
 

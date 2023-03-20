@@ -82,10 +82,13 @@ const Sections = [
           <Translate>Object Relational Data Access (ORDA)</Translate>
         </Link>
         <Link to="API/overview" >
-          <Translate>Class API Reference</Translate>
+          <Translate>Class Functions</Translate>
         </Link>
         <Link to="code-editor/overview" >
-          <Translate>Handling code</Translate>
+          <Translate>Handling Code</Translate>
+        </Link>
+        <Link to="Tags/tags" >
+          <Translate>Transformation Tags</Translate>
         </Link>
         <Link to="Debugging/basics" >
           <Translate>Debugging</Translate>

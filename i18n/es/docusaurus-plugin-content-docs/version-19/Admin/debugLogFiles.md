@@ -63,7 +63,7 @@ Para cada petición, se registran los siguientes campos:
 | time                                       | Fecha y hora utilizando el formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                             |
 | systemid                                   | ID del sistema                                                                                                                                                                                                     |
 | component                                  | Firma del componente (por ejemplo, "4SQLS" o "dbmg")                                                                                                                                                               |
-| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                           |
+| process\_info_                           | corresponde al campo "index" en el archivo de historial 4DRequestsLog_ProcessInfo.txt, y permite vincular una petición a un proceso.                                                                               |
 | request                                    | ID de petición en modo remoto cadena de mensajes para las peticiones SQL o mensajes `LOG EVENT`                                                                                                                    |
 | bytes_in                                   | Número de bytes recibidos                                                                                                                                                                                          |
 | bytes_out                                  | Número de bytes enviados                                                                                                                                                                                           |
@@ -244,9 +244,9 @@ Los archivos de historial pueden producirse en dos versiones:
  Para iniciar este historial:
 
  ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log 
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log 
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+ SET DATABASE PARAMETER(SMTP Log;1) //iniciar log SMTP
+ SET DATABASE PARAMETER(POP3 Log;1) //iniciar log POP3 
+ SET DATABASE PARAMETER(IMAP Log;1) //iniciar log IMAP
  ```
 
  4D Server: clic en el botón **Iniciar los historiales de peticiones y de depuración** en la página [Mantenimiento](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) ode la ventana de administración de 4D Server.

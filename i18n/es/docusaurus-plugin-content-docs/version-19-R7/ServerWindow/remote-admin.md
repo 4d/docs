@@ -1,26 +1,26 @@
 ---
 id: remote-admin
-title: Administration from Remote Machines
+title: Administración desde máquinas remotas
 ---
 
-You can administer the 4D Server application from a remote 4D (client machine) by opening the 4D Server administration window on the client machine.
+Puede administrar la aplicación 4D Server desde un 4D remoto (máquina cliente) abriendo la ventana de administración de 4D Server en la máquina cliente.
 
-## Opening the administration window on a remote 4D machine
+## Abrir la ventana de administración en una máquina 4D remota
 
-To open a server administration window from a client machine, you must be connected to the remote database as a Designer or Administrator. Otherwise, when you attempt to open the administration window, a privilege error (-9991) is generated.
+Para abrir una ventana de administración del servidor desde un equipo cliente, debe estar conectado a la base de datos remota como Diseñador o Administrador. De lo contrario, cuando intente abrir la ventana de administración, se generará un error de privilegio (-9991).
 
-This window can be accessed in one of two manners:
+Se puede acceder a esta ventana de dos maneras:
 
-- Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
-- Execute the `OPEN ADMINISTRATION WINDOW` command.
+- Seleccione el comando **Ventana de administración** del menú **Ayuda** o haga clic en el botón correspondiente de la barra de herramientas de 4D.
+- Ejecute el comando `OPEN ADMINISTRATION WINDOW`.
 
-A [server administration window](monitor.md) then appears on the client machine.
+A continuación, aparecerá una [ventana de administración del servidor](monitor.md) en el equipo cliente.
 
 
-## Specificities of administration via a remote 4D machine
+## Especificidades de la administración a través de una máquina 4D remota
 
-A client machine displaying the server administration window has access to all the available information and can act upon the processes and the starting/stopping of servers. When the server administration window is displayed on a remote machine, there are nevertheless certain restrictions and specific features concerning its operation:
+Una máquina cliente que muestre la ventana de administración del servidor tiene acceso a toda la información disponible y puede actuar sobre los procesos y el arranque/detención de los servidores. Cuando la ventana de administración del servidor se muestra en una máquina remota, existen no obstante ciertas restricciones y características específicas relativas a su funcionamiento:
 
-- On the [Process page](processes.md), it is not possible to debug a user process (since the debug window appears on the server machine).
-- On the [Maintenance Page](maintenance.md), it is possible to execute actions that cause all the clients to be disconnected and the server to be restarted (compacting and restarting operations). In this case, the client machine requesting the operation is automatically reconnected on restarting.
+- En la página [Proceso](processes.md), no es posible depurar un proceso de usuario (ya que la ventana de depuración aparece en la máquina del servidor).
+- En la página de mantenimiento [](maintenance.md), es posible ejecutar acciones que provocan la desconexión de todos los clientes y el reinicio del servidor (operaciones de compactación y reinicio). In this case, the client machine requesting the operation is automatically reconnected on restarting.
 - On the [Maintenance Page](maintenance.md), the **View Report** buttons are renamed **Download Report** after the execution of a maintenance operation. These files are downloaded into the local database folder on the client machine before being displayed.

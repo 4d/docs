@@ -76,9 +76,9 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                         |
-| ------ | -------------------------------- |
-| v19 R7 | Support of *decodeData* property |
+| Versão | Mudanças                            |
+| ------ | ----------------------------------- |
+| v19 R7 | Suporte de propriedade *decodeData* |
 
 </details>
 
@@ -267,9 +267,9 @@ A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                       |
-| ------ | -------------------------------------------------------------- |
-| v19 R8 | `.headers` returns lowercase names. New `.rawHeaders` property |
+| Versão | Mudanças                                                               |
+| ------ | ---------------------------------------------------------------------- |
+| v19 R8 | `.headers` devolve nomes em minúsculas. Novo propriedade `.rawHeaders` |
 
 </details>
 

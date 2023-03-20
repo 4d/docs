@@ -109,11 +109,11 @@ Indica una variable o expresión a la que se le asignará un entero largo que in
 
 ---
 
-## Data Type (expression type)
+## Tipo de datos (tipo de expresión)
 
 Define el tipo de datos para la expresión mostrada. Esta propiedad se utiliza con:
 
-- [List box columns](listbox_overview.md#list-box-columns) of the selection and collection types.
+- [Columnas del List box](listbox_overview.md#list-box-columns) de los tipos de selección y colección.
 - [Listas desplegables](dropdownList_Overview.md) asociadas a objetos o arrays.
 
 Ver también la sección [**Tipo de expresión**](properties_Object.md#expression-type).
@@ -155,7 +155,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 | ------ | -------------- | -------------------- |
 | saveAs | string         | "value", "reference" |
 
-> Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
+> Definir sólo `"dataSourceTypeHint" : "integer"` con un `"type": "dropdown"` objeto de formulario declarará una lista desplegable jerárquica.
 
 #### Objetos soportados
 
@@ -167,7 +167,7 @@ La utilización de la opción **Referencia del elemento seleccionado** requiere 
 
 Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Utilizando el lenguaje, se puede gestionar el objeto haciendo referencia a este array.
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
+> No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
 
 Debe introducir una lista de valores. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
@@ -204,7 +204,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean  
     Puede utilizar campos de la tabla maestra o de otras tablas.
 
-- A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
+- Una **expresión 4D** (expresión simple, fórmula o método 4D). La expresión debe devolver un valor. El valor se evaluará en los eventos `On Display Detail` y `On Data Change`. El resultado de la expresión se mostrará automáticamente cuando cambie al modo Aplicación. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
   - String
   - Numeric
   - Fecha
@@ -214,9 +214,9 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
  For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. Por ejemplo, puede utilizar `This.\&#060;propertyPath&#062;` donde `\&#060;propertyPath&#062;` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad. Si utiliza una colección de valores escalares, 4D creará un objeto para cada elemento de la colección con una única propiedad (llamada "valor"), llenada con el valor del elemento. En este caso, utilizará `This.value` como expresión.
 
- If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
+ Si se utiliza una expresión no asignable [](Concepts/quick-tour.md#expressions) (por ejemplo, `[Person]FirstName+" "+[Person]LastName`), la columna nunca se podrá introducir aunque la propiedad [Editable](properties_Entry.md#enterable) esté activada.
 
-If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property.
+Si se utiliza un campo, una variable o una expresión asignable (*por ejemplo Person.lastName*), la columna puede ser editable o no dependiendo de la propiedad [Editable](properties_Entry.md#enterable).
 
 #### Gramática JSON
 
@@ -309,7 +309,7 @@ Especifica una variable o expresión a la que se asignarán los elementos o enti
 
 Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. El contenido del list box se basará en esta selección. La selección elegida debe existir y ser válida en el momento en que se muestre el list box; de lo contrario, el list box se mostrará en blanco.
 
-> Las selecciones con nombre son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
+> Las selecciones con nombre son listas ordenadas de registros. Se utilizan para mantener en memoria el orden y el registro actual de una selección. Para más información, consulte la sección **Selecciones temporales** del manual *Lenguaje 4D*.
 
 #### Gramática JSON
 

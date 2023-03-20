@@ -105,7 +105,7 @@ You can also add the **Shift** key as well as the **Alt** key (Windows) or **Opt
     - Ctrl+Shift+Alt+character
 
 - Under macOS:
-    - Command+character
+    - Comando+caractere
     - Command+Shift+character
     - Command+Option+character
     - Command+Shift+Option+character

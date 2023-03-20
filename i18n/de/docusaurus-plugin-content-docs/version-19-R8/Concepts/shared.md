@@ -5,7 +5,7 @@ title: Shared Objects und Shared Collections
 
 **Shared objects** und **shared collections** sind spezifische [Objekte](Concepts/dt_object.md) und [Collections](Concepts/dt_collection.md), deren Inhalt zwischen Prozessen geteilt wird. Im Gegensatz zu [Interprozessvariablen](Concepts/variables.md#interprocess-variables) haben shared objects und shared collections den Vorteil, dass sie mit **Preemptive 4D Prozessen** kompatibel sind: Sie können per Referenz als Parameter an Befehle wie `New process` oder `CALL WORKER` übergeben werden.
 
-"Shared objects/collections" lassen sich in Variablen speichern, die mit Standardbefehlen `C_OBJECT` und `C_COLLECTION` deklariert wurden, müssen aber über spezifische Befehle eine Instanz erhalten:
+Shared objects and shared collections can be stored in standard `Object` and `Collection` type variables, but must be instantiated using specific commands:
 
 - Ein "shared object" erstellen Sie mit dem Befehl `New shared object`
 - Eine "shared collection" erstellen Sie mit dem Befehl `New shared collection`
@@ -78,11 +78,11 @@ Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 Die Struktur `Use...End use` definiert eine Folge von Anweisungen, die unter dem Schutz einer internen Semaphore Aufgaben für den Parameter *Shared_object_or_Shared_collection* ausführen. *Shared_object_or_Shared_collection* kann jedes gültige shared object bzw. shared collection sein.
 
-Shared objects und shared collections wurden zur Kommunikation zwischen Prozessen eingerichtet, insbesondere **preemptive 4D Prozesse**. Sie lassen sich per Referenz als Parameter von einem Prozess zu einem anderen übergeben. Weitere Informationen dazu finden Sie auf der Seite **Shared Objects und Shared Collections**. Änderungen in shared objects/collections müssen zwingend in die Struktur `Use...End use` eingebettet werden, um konkurrierenden Zugriff zwischen Prozessen zu verhindern.
+Shared objects und shared collections wurden zur Kommunikation zwischen Prozessen eingerichtet, insbesondere **preemptive 4D Prozesse**. Sie lassen sich per Referenz als Parameter von einem Prozess zu einem anderen übergeben. Änderungen in shared objects/collections müssen zwingend in die Struktur `Use...End use` eingebettet werden, um konkurrierenden Zugriff zwischen Prozessen zu verhindern.
 
 - Bei erfolgreicher Ausführung der Zeile **Use** werden alle _Shared_object_or_Shared_collection_ Eigenschaften/Elemente für alle anderen Prozesse im Schreibmodus gesperrt, bis die dazugehörige Zeile `End use` ausgeführt ist.
 - Der dazwischenliegende Teil _statement(s)_ kann Änderungen in den Eigenschaften/Elementen von Shared_object_or_Shared_collection ohne das Risiko konkurrierender Zugriffe ausführen.
-- Werden ein anderes Objekt oder eine Collection als Eigenschaft des Parameters _Shared_object_or_Shared_collection_ hinzugefügt, werden sie mit derselben gemeinsam genutzten Gruppe verbunden (siehe **Shared Objects oder Collections verwenden**).
+- If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group.
 - Versucht ein anderer Prozess, auf eine der Eigenschaften bzw. der verbundenen Eigenschaften von _Shared_object_or_Shared_collection_ zuzugreifen, während eine Sequenz **Use...End use** ausgeführt wird, wird er automatisch angehalten und wartet, bis die aktuelle Sequenz abgeschlossen ist.
 - Die Zeile **End use** entsperrt die Eigenschaften von _Shared_object_or_Shared_collection_ und alle Objekte in derselben Gruppe.
 - Im 4D Code können auch mehrere Strukturen **Use...End use** eingebunden sein. Bei einer Gruppe erhöht jedes **Use** den Sperrschlüssel der Gruppe und jedes **End use** verringert ihn; alle Eigenschaften/Elemente werden erst freigegeben, wenn der letzte Aufruf von **End use** den Sperrschlüssel auf 0 setzt.
@@ -98,7 +98,7 @@ Sie wollen mehrere Prozesse starten, die eine Inventur von verschiedenen Produkt
  ARRAY TEXT($_items;0)
  ... //fill the array with items to count
  $nbItems:=Size of array($_items)
- C_OBJECT($inventory)
+ var $inventory : Object
  $inventory:=New shared object
  Use($inventory)
     $inventory.nbItems:=$nbItems
@@ -114,12 +114,8 @@ Sie wollen mehrere Prozesse starten, die eine Inventur von verschiedenen Produkt
 In der Methode "HowMany" ist "inventory" ausgeführt und das shared object $inventory wird sobald wie möglich aktualisiert:
 
 ```4d
- C_TEXT($1)
- C_TEXT($what)
- C_OBJECT($2)
- C_OBJECT($inventory)
- $what:=$1 //for better readability
- $inventory:=$2
+    //HowMany
+ #DECLARE ($what : Text ; $inventory : Object)
 
  $count:=CountMethod($what) //method to count products
  Use($inventory) //use shared object

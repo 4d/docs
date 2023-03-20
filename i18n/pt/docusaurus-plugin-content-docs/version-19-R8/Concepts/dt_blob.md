@@ -20,9 +20,9 @@ Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determin
 
 |                                     | Blob | 4D.Blob |
 | ----------------------------------- |:----:|:-------:|
-| Editável                            | Sim  |   No    |
-| Partilhável em objectos e colecções |  No  |   Sim   |
-| Passado por referência\*          |  No  |   Sim   |
+| Editável                            | Sim  |   Não   |
+| Partilhável em objectos e colecções | Não  |   Sim   |
+| Passado por referência\*          | Não  |   Sim   |
 | Desempenho ao acessar aos bytes     |  +   |    -    |
 | Tamanho máximo                      | 2GB  | Memory  |
 
@@ -106,7 +106,7 @@ var $myBlobVar: Blob
 
 **Nota para  desenvolvedores de plugins:** um parâmetro BLOB se declara como "&O" (a letra "O", não o número "0").
 
-## Assigning a blob variable to another
+## Atribuição de uma variável blob a outra
 
 You can assign a Blob variable to another:
 
@@ -143,7 +143,7 @@ $type:= Value type($myBlob) // Blob
 
 > When converting a `4D. Blob` to a scalar blob, if the size of the `4D. Blob` exceeds the maximum size for scalar blobs, the resulting scalar blob is empty. For example, when the maximum size for scalar blobs is 2GB, if you convert a `4D. Blob` of 2.5GB to a scalar blob, you obtain an empty blob.
 
-## Modifying a scalar blob
+## Modificação de um blob escalar
 
 Unlike blob objects, scalar blobs can be altered. Por exemplo:
 

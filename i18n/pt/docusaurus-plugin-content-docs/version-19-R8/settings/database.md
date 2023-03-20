@@ -1,6 +1,6 @@
 ---
 id: database
-title: Database page
+title: Página Base de dados
 ---
 
 ## Data storage page
@@ -77,7 +77,7 @@ To disable *MeCab*, just check the **Consider only non-alphanumeric chars for ke
 ![](../assets/en/settings/non-alphanumeric-chars.png)
 
 
-## Memory page
+## Página Memória
 
 You use the settings on this tab to configure the cache memory for the database.
 

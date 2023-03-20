@@ -3,14 +3,14 @@ id: onCloseBox
 title: On Close Box
 ---
 
-| Code | Can be called by | Definição                               |
-| ---- | ---------------- | --------------------------------------- |
-| 22   | Formulário       | The window’s close box has been clicked |
+| Code | Pode ser chamado por | Definição                              |
+| ---- | -------------------- | -------------------------------------- |
+| 22   | Formulário           | A caixa de fecho da janela foi clicada |
 
 
 ## Descrição
 
-The `On Close Box` event is generated when the user clicks on the clos box of the window.
+O evento `On Close Box` é gerado quando o utilizador clica na caixa de fecho da janela.
 
 ### Exemplo
 

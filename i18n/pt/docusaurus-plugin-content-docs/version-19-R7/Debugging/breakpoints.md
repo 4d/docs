@@ -67,7 +67,7 @@ To open the Break list page:
 
 ![break-list-runtime-explorer](../assets/en/Debugging/break-list.png)
 
-Using this window, you can:
+Usando esta janela, pode:
 
 * Set conditions for breakpoints in the **Conditions** column
 * Enable or disable breakpoints by clicking the bullets in the margin. Disabled breakpoints display transparent bullets
@@ -109,7 +109,7 @@ To enable or disable a caught command, click on the bullet (•) in front of the
 
 To delete a caught command:
 
-1. Select a command in the list.
+1. Seleccione um comando na lista.
 2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
 
 ### Setting a Condition for catching a command

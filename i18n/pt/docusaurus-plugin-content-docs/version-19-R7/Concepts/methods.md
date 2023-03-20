@@ -8,17 +8,17 @@ A method is basically a piece of code that executes one or several actions. Um m
 
 The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
-## Method Types
+## Tipos de métodos
 
 In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
-| Tipo                             | Calling context                                                                                             | Accepts parameters | Descrição                                                                                                                                                            |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Método Projeto**               | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
-| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached                                | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Método formulário**            | Automatic, when an event involves the form to which the method is attached                                  | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
-| **Database method**              | Automatic, when a working session event occurs                                                              | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
+| Tipo                                               | Calling context                                                                                             | Accepts parameters | Descrição                                                                                                                                                            |
+| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Método Projeto**                                 | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
+| **Método objecto (widget)**                        | Automatic, when an event involves the object to which the method is attached                                | Não                | Property of a form object (also called widget)                                                                                                                       |
+| **Método formulário**                              | Automatic, when an event involves the form to which the method is attached                                  | Não                | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (também conhecido por *método tabela*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | Não                | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
+| **Database method**                                | Automatic, when a working session event occurs                                                              | Yes (predefined)   | Existem 16 métodos base em 4D. See Database methods section                                                                                                          |
 
 > The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
@@ -74,12 +74,12 @@ If you need to change your method of finding customers in this example project, 
 Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account project:
 
 ```4d
- FIND_CLEARED_CHECKS //Find the cleared checks
- RECONCILE_ACCOUNT //Reconcile the account
- PRINT_CHECK_BOOK_REPORT //Print a checkbook report
+ FIND_CLEARED_CHECKS //Buscar os cheques emitidos
+ RECONCILE_ACCOUNT //Reconciliar a conta
+ PRINT_CHECK_BOOK_REPORT //Imprimir um relatório da conta
 ```
 
-Even for someone who doesn’t know the project, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
+Mesmo para alguém que não conheça o projecto, é claro o que o código faz. Não é necessário examinar cada sub-rotina. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
 
 ### Object formulas
 
@@ -148,15 +148,15 @@ Note that, even if it does not have parameters, an object method to be executed 
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Menu Methods
+### Métodos do menu
 
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
+Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the application.
 
-### Process Methods
+### Métodos Processo
 
 A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
 
@@ -200,9 +200,9 @@ To execute a project method, simply select its name in the list and click on **E
 
 If you check the **New Process** check box, the method you selected executes in another process. If the method is performing a time-consuming task such as printing a large set of records, you can continue to work with your database, adding records to a table, creating a graph to display data, and so on. For more information about processes, refer to [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) the 4D *Language Reference* manual.
 
-**4D Server Notes**:
+**Notas Servidor 4D**:
 
-- If you want the method to be executed on the server machine rather than on the client machine, select the **On 4D Server** option in the To be executed menu. In this case, a new process, call a *stored procedure*, is created on the server machine in order to execute the method. This option can be used to reduce network traffic and optimize the functioning of 4D Server, in particular for methods that call data stored on the disk. All types of methods can be executed on the server machine or on another client machine, except for those that modify the user interface. In this case, stored procedures are ineffective.
+- If you want the method to be executed on the server machine rather than on the client machine, select the **On 4D Server** option in the To be executed menu. In this case, a new process, call a *stored procedure*, is created on the server machine in order to execute the method. This option can be used to reduce network traffic and optimize the functioning of 4D Server, in particular for methods that call data stored on the disk. All types of methods can be executed on the server machine or on another client machine, except for those that modify the user interface. Neste caso, os procedimentos armazenados são ineficazes.
 - You can also choose to run the method on another client workstation. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
 
 By default, the **locally** option is selected. With the 4D single-user version, this is the only option available.
@@ -279,7 +279,7 @@ The first way is an **iterative algorithm**. The second way is a **recursive alg
 
 When implementing code for cases like the previous example, it is important to note that you can always write methods using iteration or recursion. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
 
-Some typical uses of recursion in 4D are:
+Alguns usos típicos da recursividade em 4D são:
 
 - Treating records within tables that relate to each other in the same way as in the example.
 - Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.

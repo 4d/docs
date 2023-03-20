@@ -72,7 +72,7 @@ Using subroutines, you make your code modular. This simply means dividing your c
  PRINT CHECK BOOK REPORT ` Imprimir um relatório da conta
 ```
 
-Mesmo para alguém que não conheça o banco de dados, é claro o que o código faz. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
+Mesmo para alguém que não conheça o banco de dados, é claro o que o código faz. Não é necessário examinar cada sub-rotina. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
 
 ### Métodos associados aos objetos
 
@@ -137,15 +137,15 @@ Note that, even if it does not have parameters, an object method to be executed 
 $o:=$f.message //devolve o objeto fórmula em $o
 ```
 
-### Menu Methods
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. Este processo é um dos principais aspectos da personalização de um banco de dados. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
+### Métodos do menu
+Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. Este processo é um dos principais aspectos da personalização de um banco de dados. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the programming language. Usando menus personalizados, pode automatizar sequências de tarefa e fornecer mais orientação aos usuários do banco de dados.
 
 
-### Process Methods
+### Métodos Processo
 
 A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
 
@@ -225,7 +225,7 @@ The first way is an **iterative algorithm**. The second way is a **recursive alg
 
 When implementing code for cases like the previous example, it is important to note that you can always write methods using iteration or recursion. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
 
-Some typical uses of recursion in 4D are:
+Alguns usos típicos da recursividade em 4D são:
 
 - Treating records within tables that relate to each other in the same way as in the example.
 - Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.
@@ -237,9 +237,9 @@ Some typical uses of recursion in 4D are:
 
 Além dos **métodos projeto**, 4D oferece vários tipos de métodos específicos, que são chamados automaticamente em função dos eventos:
 
-| Tipo                             | Calling context                                                                          | Accepts parameters | Descrição                                                                                                                                                            |
-| -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Método formulário**            | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
-| **Database method**              | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
+| Tipo                                               | Calling context                                                                          | Accepts parameters | Descrição                                                                                                                                                            |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Método objecto (widget)**                        | Automatic, when an event involves the object to which the method is attached             | Não                | Property of a form object (also called widget)                                                                                                                       |
+| **Método formulário**                              | Automatic, when an event involves the form to which the method is attached               | Não                | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Trigger** (também conhecido por *método tabela*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | Não                | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
+| **Database method**                                | Automatic, when a working session event occurs                                           | Yes (predefined)   | Existem 16 métodos base em 4D. See Database methods section                                                                                                          |

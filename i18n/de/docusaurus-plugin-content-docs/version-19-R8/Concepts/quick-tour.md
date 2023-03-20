@@ -60,13 +60,13 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 
 ## Befehle
 
-4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Alle 4D Befehle, wie z. B. `CREATE RECORD` oder `ALERT` werden im Handbuch _4D Programmiersprache_ beschrieben und sind nach Themen gruppiert. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
+4D Befehle sind integrierte Methoden zum Ausführen einer Aktion. Befehle werden oft mit Parametern verwendet, die in Klammern () und durch Strichpunkt (;) voneinander getrennt übergeben werden. Beispiel:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Einige Befehle sind an Collections oder Objekte gebunden. In diesem Fall werden sie Methoden genannt und mit der Objektnotation verwendet. Beispiel:
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Beispiel:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -122,21 +122,23 @@ Folgendes Beispiel durchläuft alle Zeichen des Textes vtSomeText:
 For($vlChar;1;Length(vtSomeText))
     //Do something with the character if it is a TAB
 
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-Eine Projektmethode kann eine andere Projektmethode mit oder ohne Parameter (Argumente) aufrufen. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. Eine Methode kann einen einzelnen Wert im Parameter $0 zurückgeben. Wenn Sie eine Methode aufrufen, geben Sie einfach ihren Namen ein:
+Eine Projektmethode kann eine andere Projektmethode mit oder ohne Parameter (Argumente) aufrufen. Parameter stehen in Klammern nach dem Methodennamen. Sie sind durch Strichpunkt (;) voneinander getrennt. The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Wenn Sie eine Methode aufrufen, geben Sie einfach ihren Namen ein:
 
 ```4d
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something
-$0:=Uppercase($1)
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -182,15 +184,14 @@ Sie müssen folgendes beachten: Ist der Wert der Objekteigenschaft ein Objekt mi
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 ```
 
 Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
@@ -206,16 +207,15 @@ Um eine Instanz auf ein Objekt der Klasse in einer Methode zu setzen, rufen Sie 
 $o:=cs.myClass.new() 
 ```
 
-In der Klassenmethode `myClass` definieren Sie mit der Anweisung `Function <methodName>` die Member Method *methodName* der Klasse. Sie kann wie jede andere Methode Parameter empfangen und zurückgeben, und `This` als Instanz des Objekts verwenden.
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
 //in the myClass.4dm file
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-Um eine Member Method der Klasse auszuführen, setzen Sie den Operator `()` für die Member Method der Instanz des Objekts.
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $o:=cs.myClass.new()
@@ -229,9 +229,9 @@ Optional können Sie das Schlüsselwort `Class constructor` zum Deklarieren von 
 ```4d  
 //in the Rectangle.4dm file
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
@@ -242,11 +242,11 @@ Eine Klasse kann über `Class extends <ClassName>` eine andere Klasse erweitern.
 Class extends rectangle
 
 Class constructor
-C_LONGINT($1)
+var $length : Integer
 
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height
-Super($1;$1)
+Super($length;$length)
 
 This.name:="Square"
 ```
@@ -378,7 +378,7 @@ For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
- End for
+End for
 ```
 
 #### Inline or multiline comments (`/*comment*/`)

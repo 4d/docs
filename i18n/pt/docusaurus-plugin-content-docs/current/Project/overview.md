@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Visão Geral
+title: Project Management
 ---
 
 A 4D project contains all of the source code of a 4D application, whatever its deployment type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files.
@@ -15,7 +15,7 @@ Since projects are in human-readable, plain text files (JSON, XML, etc.), they c
 In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](Project/architecture.md).
 
 
-## Development
+## Desenvolvimento
 
 4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project.
 

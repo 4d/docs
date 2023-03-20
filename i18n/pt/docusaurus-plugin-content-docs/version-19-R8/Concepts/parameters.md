@@ -514,7 +514,7 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
 // APPEND TEXT ( Text { ; Text { ; Object } } )
 // APPEND TEXT ( Message { ; Path { ; 4DWPArea } } )
 
- Method($message : Text; $path : Text; $wpArea : Object)
+ #DECLARE($message : Text; $path : Text; $wpArea : Object)
 
  ALERT($message)
  If(Count parameters>=3)

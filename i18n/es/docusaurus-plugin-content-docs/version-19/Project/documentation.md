@@ -98,7 +98,7 @@ El editor de código 4D muestra una parte de la documentación de un método en 
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
+Si existe un archivo llamado `\&#060;MethodName&#062;.md` en la carpeta `\&#060;package&#062;/documentation`, el editor de código muestra (por prioridad):
 
 - Todo texto introducido en una etiqueta HTML `comment` (*\<!-- command documentation -->*) en la parte superior del archivo markdown.
 

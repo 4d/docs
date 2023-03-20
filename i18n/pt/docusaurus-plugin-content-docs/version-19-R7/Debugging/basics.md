@@ -3,15 +3,15 @@ id: basics
 title: Básicos
 ---
 
-Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
+Os erros são comuns. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
 
 The 4D development environment provides several debugging tools for all types of errors.
 
-## Error types
+## Tipos de erro
 
 ### Typing errors
 
-Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Here's a typing error:
+Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Aqui está um erro de dactilografia:
 
 ![break-point](../assets/en/Debugging/typing-error.png)
 
@@ -44,17 +44,17 @@ Design or logic errors also include such situations as:
 
 Sometimes the piece of code that displays the error may be different than the code that is actually the origin of the problem.
 
-### Runtime Errors
+### Erros de execução
 
-In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
+In Application mode, you might obtain errors that you don't see in interpreted mode. Aqui está um exemplo:
 
 ![runtime-error](../assets/en/Debugging/runtimeError.png)
 
 To quickly find the origin of the problem, reopen the interpreted version of the structure file, open the method and go to the corresponding line.
 
-## Syntax Error Window
+## Janela de erro sintáctico
 
-The Syntax error window automatically appears when the execution of a method is interrupted. This can happen when:
+The Syntax error window automatically appears when the execution of a method is interrupted. Isto pode acontecer quando:
 
 - an error prevents further code execution
 - the method produces a false assertion (see the `ASSERT` command)
@@ -65,7 +65,7 @@ The upper text area displays a message describing the error. The lower text area
 
 The syntax error window proposes several options:
 
-- **Edit**: Stops all method execution. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Use this option when you immediately recognize the mistake and can fix it without further investigation.
+- **Editar**: Pára toda a execução do método. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Use this option when you immediately recognize the mistake and can fix it without further investigation.
 
 - **Trace**: Enters Trace/Debugger mode. The [Debugger](debugger.md) window is displayed. If the current line has only executed partially, you may have to click the **Trace** button several times.
 
@@ -84,7 +84,7 @@ The syntax error window proposes several options:
 
 ## Depurador
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Do not do that! You will save plenty of time and energy by always using the **Debugger**.
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Não faça isso! You will save plenty of time and energy by always using the **Debugger**.
 
 The Debugger allows you to step through methods slowly. It displays all the information you need in order to understand why an error occurred. Once you have this information, you know how to fix the error.
 

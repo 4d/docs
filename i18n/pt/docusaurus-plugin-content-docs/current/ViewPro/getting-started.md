@@ -149,7 +149,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 |             | \[ ].row         | number     | Row index (counting begins at 0)                                    | cell, cells, row, rows                             |
 |             | \[ ].rowCount    | number     | Row count                                                           | cells, rows                                        |
 |             | \[ ].column      | number     | Column index (counting begins at 0)                                 | cell, cells, column, columns                       |
-|             | \[ ].columnCount | number     | Column count                                                        | cells, columns                                     |
+|             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                     |
 
 
 

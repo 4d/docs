@@ -28,7 +28,7 @@ The search defined in this dialog box will be performed in the method located in
 
 4D begins searching from the current text insertion point and continues to the end of the method. The **Replace** button is used to launch the search and replace the first occurrence found. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the **Edit** menu.
 
-### Find Same
+### Encontrar o mesmo
 
 The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
 

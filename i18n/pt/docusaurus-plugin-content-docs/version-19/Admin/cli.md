@@ -82,7 +82,7 @@ Open a project file:
 
 
 ```bash
---args ~/Documents/myProj/Project/myProj.4DProject
+--args ~/Documentos/myProj/Projecto/myProj.4DProject
 ```
 
 
@@ -109,11 +109,11 @@ Open a project file and a data file:
 
 ```bash
 --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
-or:
+ou:
 /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-Open a .4DLink file:
+Abrir um ficheiro .4DLink:
 
 *   macOS:
 

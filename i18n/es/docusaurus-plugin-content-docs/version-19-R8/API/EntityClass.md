@@ -1314,11 +1314,11 @@ Actualización de una entidad con la opción `dk auto merge`:
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parámetros   | Tipo       |    | Descripción                                                                                                |
-| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Atributo(s) a extraer (cadena separada por comas)                                                          |
-| filterCol    | Collection | -> | Colección de atributos a extraer                                                                           |
-| options      | Integer    | -> | `dk with primary key`: añade la propiedad \_KEY;<br/>`dk with stamp`: añade la propiedad \_STAMP |
+| Parámetros   | Tipo       |    | Descripción                                                                                                    |
+| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | Atributo(s) a extraer (cadena separada por comas)                                                              |
+| filterCol    | Collection | -> | Colección de atributos a extraer                                                                               |
+| options      | Integer    | -> | `dk with primary key`: añade la propiedad \_\_KEY;<br/>`dk with stamp`: añade la propiedad \_STAMP |
 | Result       | Object     | <- | Objeto creado a partir de la entidad|<!-- END REF -->
 
 |
@@ -1350,6 +1350,13 @@ Si se especifica un filtro para los atributos de las relatedEntities [kind](Data
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> sólo se extraen esas propiedades
 
 En el parámetro *options* se puede pasar el selector `ddk with primary key` y/o`dk with stamp` para añadir las llaves primarias de la entidad y/o los sellos en los objetos extraídos.
+
+:::caution Advertencia
+
+Si utiliza otro atributo distinto de la llave primaria como atributo Uno en una relación, el valor de este atributo se escribirá en la propiedad "__KEY". Tenga en cuenta que se recomienda utilizar la llave primaria como atributo Uno en sus relaciones, especialmente cuando utilice las funciones `.toObject()` y `.fromObject()`.
+
+:::
+
 
 #### Ejemplo 1
 

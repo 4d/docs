@@ -7,7 +7,7 @@ Un botón imagen es similar a un [botón estándar](button_overview.md). Sin emb
 
 Los botones imagen pueden utilizarse de dos maneras:
 
-* Como botones de comando en un formulario. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over. For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+* Como botones de comando en un formulario. En este caso, el botón de imagen suele incluir cuatro estados diferentes: activado, desactivado, presionado y al pasar por encima. Por ejemplo, una tabla de miniaturas que tiene una línea de cuatro columnas, cada miniatura corresponde a los estados Por defecto, Presionado, Pasar el ratón y Desactivado.
 
   | Propiedad                  | Nombre JSON            | Valor |
   | -------------------------- | ---------------------- | ----- |

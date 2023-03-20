@@ -41,7 +41,7 @@ A permission action defined at a given level is inherited by default at lower le
 ## Permission actions
 
 
-Available actions are related to target resource.
+Las acciones disponibles están relacionadas con el recurso de destino.
 
 | Acciones     | datastore                                                                            | dataclass                                                                                                                                       | attribute                                                                                                             | data model function                                                                                                                                                                                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -50,18 +50,18 @@ Available actions are related to target resource.
 | **update**   | Update attributes in any dataclass.                                                  | Update attributes in this dataclass.                                                                                                            | Update this attribute content (ignored for alias attributes).                                                         | n/a                                                                                                                                                                                                                                                                      |
 | **drop**     | Delete data in any dataclass.                                                        | Delete data in this dataclass.                                                                                                                  | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                      |
 | **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                   | Execute this function                                                                                                                                                                                                                                                    |
-| **describe** | All the dataclasses are available in the /rest/$catalog API                          | This dataclass is available in the /rest/$catalog API                                                                                           | This attribute is available in the /rest/$catalog API.                                                                | This dataclass function is available in the /rest/$catalog API                                                                                                                                                                                                           |
+| **describe** | All the dataclasses are available in the /rest/$catalog API                          | This dataclass is available in the /rest/$catalog API                                                                                           | Este atributo está disponible en la API /rest/$catalog.                                                               | This dataclass function is available in the /rest/$catalog API                                                                                                                                                                                                           |
 | **promote**  | n/a                                                                                  | n/a                                                                                                                                             | n/a                                                                                                                   | Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
 
 **Notas:**
 
-- An alias can be read even if there is no permissions on the attributes upon which it is built.
+- An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
 - Default values: in the current implementation, only *Null* is available as default value.
 
 Setting permissions requires to be consistent, in particular:
 
-- **update** and **drop** permissions also need **read** permission (but **create** does not need it)
+- los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
 - **promote** permission also need **describe** permission.
 
 
@@ -70,7 +70,7 @@ Setting permissions requires to be consistent, in particular:
 
 A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
 
-A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. A privilege can include other privileges.
+A privilege or a role can be associated to several "action + resource" combinations. Se pueden asociar varios privilegios a una acción. A privilege can include other privileges.
 
 - Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
 
@@ -105,28 +105,28 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 
 
-## `roles.json` file
+## archivo `roles.json`
 
 
-The `roles.json` file describes the whole security settings for the project.
+El archivo `roles.json` describe todos los parámetros de seguridad del proyecto.
 
 :::note
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+En un contexto que no sea *Qodly* (nube), debe crear este archivo en la siguiente ubicación: `<project folder>/Project/Sources/`. Ver la sección [Arquitectura](../Project/architecture.md#sources).
 
 :::
 
 
-The `roles.json` file syntax is the following:
+La sintaxis del archivo `roles.json` es la siguiente:
 
 | Nombre de propiedad |                 |               | Tipo                               | Obligatorio | Descripción                                                                  |
 | ------------------- | --------------- | ------------- | ---------------------------------- | ----------- | ---------------------------------------------------------------------------- |
-| privileges          |                 |               | Collection of `privilege` objects  | X           | List of defined privileges                                                   |
+| privileges          |                 |               | Colección de objetos `privilege`   | X           | Lista de privilegios definidos                                               |
 |                     | \[].privilege  |               | String                             |             | Nombre del privilegio                                                        |
-|                     | \[].includes   |               | Colección de cadenas               |             | List of included privilege names                                             |
-| roles               |                 |               | Collection of `role` objects       |             | List of defined roles                                                        |
+|                     | \[].includes   |               | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                    |
+| roles               |                 |               | Colección de objetos `role`        |             | List of defined roles                                                        |
 |                     | \[].role       |               | String                             |             | Role name                                                                    |
-|                     | \[].privileges |               | Colección de cadenas               |             | List of included privilege names                                             |
+|                     | \[].privileges |               | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                    |
 | permissions         |                 |               | Object                             | X           | List of allowed actions                                                      |
 |                     | allowed         |               | Collection of `permission` objects |             | List of allowed permissions                                                  |
 |                     |                 | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                         |
@@ -140,10 +140,10 @@ The `roles.json` file syntax is the following:
 |                     |                 | \[].promote  | Colección de cadenas               |             | List of privileges                                                           |
 
 
-:::caution Reminder
+:::caution Recordatorio
 
-- The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
-- `privileges` and `roles` names are case insensitive.
+- El nombre de privilegio "WebAdmin" está reservado a la aplicación. No se recomienda utilizar este nombre para los privilegios personalizados.
+- los nombres de `privileges` y `roles` son insensibles a mayúsculas y minúsculas.
 
 :::
 

@@ -483,9 +483,9 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                  |
-| ---------- | ------ | -- | -------------------------------------------------------------------------- |
-| Resultados | Objeto | <- | Colecção de objectos de contexto de optimização|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                                                  |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------- |
+| Resultados | Collection | <- | Colecção de objectos de contexto de optimização|<!-- END REF --> |
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 

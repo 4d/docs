@@ -18,7 +18,7 @@ A 4D component is a set of 4D methods and forms representing one or more functio
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basicamente, os componentes são geridos como [plug-ins](Concepts/plug-ins.md) de acordo com os seguintes princípios:
 
 - A component consists of a regular 4D project file.
-- To install a component, you simply need to copy it into the [`Components` folder of the project](Project/architecture.md). You can use aliases or shortcuts.
+- To install a component, you simply need to copy it into the [`Components` folder of the project](Project/architecture.md). Pode usar pseudónimos ou atalhos.
 - A project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. Entretanto um componente não pode usar por si mesmo "subcomponentes".
 - A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, and so on. Não pode chamar métodos de bancos de dados e triggers.
 - Não pode usar tabelas padrão ou arquivos de dados em componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
@@ -30,11 +30,11 @@ Exceto pelos [Comandos não utilizáveis](#unusable-commands), um componente nã
 
 When commands are called from a component, they are executed in the context of the component, except for the `EXECUTE METHOD` or `EXECUTE FORMULA` command that use the context of the method specified by the command. Also note that the read commands of the “Users and Groups” theme can be used from a component but will read the users and groups of the host project (a component does not have its own users and groups).
 
-The `SET DATABASE PARAMETER` and `Get database parameter` commands are an exception: their scope is global to the application. When these commands are called from a component, they are applied to the host application project.
+Os comandos `SET DATABASE PARAMETER` e `Get database parameter` são uma exceção: seu alcance é global a aplicação. Quando esses comandos forem chamados de um componente, são aplicados ao projecto de aplicação local.
 
 Além disso, medidas especificas foram criadas para os comandos `Structure file` e `Get 4D folder` quando utilizados no marco dos componentes.
 
-The `COMPONENT LIST` command can be used to obtain the list of components that are loaded by the host project.
+O comando `COMPONENT LIST` pode ser utilizado para obter a lista de componentes que carrega o projecto local.
 
 ### Comandos não utilizáveis
 

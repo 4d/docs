@@ -15,7 +15,7 @@ Após a criação pode usar a variável onde quiser na sua aplicação. Por exem
 
 As variáveis são objetos da linguagem; pode criar e utilizar variables que nunca aparecerão na tela. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
-## Declaring Variables
+## Declaração de Variáveis
 
 You create variables by declaring them. The 4D language offers two ways to declare variables:
 
@@ -52,7 +52,7 @@ var $myVar //a variant variable
 
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers. This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` can be:
+`varType` pode ser:
 
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
@@ -66,16 +66,16 @@ The following table lists all supported `varType` values:
 | `Text`                 | Valor texto                            |
 | `Date`                 | Valor data                             |
 | `Hora`                 | Valor Hora                             |
-| `Booleano`             | Boolean value                          |
-| `Integer`              | Long integer value                     |
-| `Real`                 | Real value                             |
-| `Ponteiro`             | Pointer value                          |
-| `Imagem`               | Picture value                          |
-| `Blob`                 | Scalar Blob value                      |
-| `Collection`           | Collection value                       |
-| `Variant`              | Variant value                          |
+| `Booleano`             | Valor booleano                         |
+| `Integer`              | Valor inteiro longo                    |
+| `Real`                 | Valor real                             |
+| `Ponteiro`             | Valor ponteiro                         |
+| `Imagem`               | Valor imagem                           |
+| `Blob`                 | Valor Blob Scalar                      |
+| `Collection`           | Valor colecção                         |
+| `Variant`              | Valor variant                          |
 | `Objeto`               | Object with default class (4D. Object) |
-| `4D.<className>` | Object of the 4D class name            |
+| `4D.<className>` | Objecto do nome da classe 4D           |
 | `cs.<className>` | Object of the user class name          |
 
 #### Exemplos
@@ -107,7 +107,7 @@ var $dataclass : cs. Employee
 var $entity : cs. EmployeeEntity
 ```
 
-### Using a C_ directive
+### Usando uma directiva C_
 
 > **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
@@ -132,7 +132,7 @@ The following are some basic variable declarations:
 **Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
 
 
-## Assigning Data
+## Atribuição de dados
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
@@ -160,11 +160,11 @@ You assign data to array elements by using curly braces ({...}):
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Variáveis locais, processo e inter-processo
 
 You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
 
-### Local variables
+### Variáveis locais
 
 A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
 
@@ -181,7 +181,7 @@ When you are working in an application project with many methods and variables, 
 Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. This is a typical way to use a local variable. Aqui um exemplo simples:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("Por favor insira o seu ID:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
@@ -191,7 +191,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 **Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
-### Process variables
+### Variáveis processo
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
@@ -207,9 +207,9 @@ A process can “peek and poke” process variables from another process using t
 
 For more information, see the chapter **Processes** and the description of these commands.
 
-### Interprocess variables
+### Variáveis interprocesso
 
-Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes.
+Variáveis interprocessos estão disponíveis pelo projecto e são partilhados entre os processos cooperativos. They are primarily used to share information between processes.
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
 

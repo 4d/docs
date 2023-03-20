@@ -20,7 +20,7 @@ A menos que se marque esta opción, no es posible abrir una base cuando su archi
 
 #### Sobre el bloqueo de archivos
 
-Los archivos bloqueados pueden ser leídos pero su contenido no puede ser modificado. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D puede trabajar de forma transparente con archivos de datos bloqueados, lo que permite, en particular, la utilización de proyectos guardados en DVD. Sin embargo, con esta operación se corre el riesgo de utilizar inadvertidamente un fichero de datos bloqueado en el que no se guardarán las modificaciones. Esta es la razón por la que, por defecto, 4D no permite abrir bases de datos con un archivo de datos bloqueado.
+Los archivos bloqueados pueden ser leídos pero su contenido no puede ser modificado. Por ejemplo, los archivos se bloquean cuando se almacenan en un soporte no regrabable (tipo DVD) o cuando se copian desde este tipo de soporte. 4D puede trabajar de forma transparente con archivos de datos bloqueados, lo que permite, en particular, la utilización de proyectos guardados en DVD. Sin embargo, con esta operación se corre el riesgo de utilizar inadvertidamente un fichero de datos bloqueado en el que no se guardarán las modificaciones. Esta es la razón por la que, por defecto, 4D no permite abrir bases de datos con un archivo de datos bloqueado.
 
 ### Ubicación de carpeta temporal
 
@@ -85,25 +85,25 @@ Utilice los parámetros de esta pestaña para configurar la memoria caché de la
 
 -   **Cálculo de la caché adaptable**: cuando esta opción está marcada, la gestión de la memoria caché es realizada dinámicamente por el sistema, respetando los límites que defina. Esto permite configurar una memoria caché de alto rendimiento adaptada a la mayoría de las configuraciones. A continuación, el tamaño de la memoria caché se calcula dinámicamente en función de los parámetros definidos. Los valores ofrecidos por defecto corresponden al uso estándar de 4D.
 
-    -   **Memory to be reserved for other applications and for the system**: Portion of the RAM memory to reserve for the System and other applications. This value is increased for optimization when other applications are running on the same machine as 4D.
-    -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
-      To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. In the adaptive mode, the size of the memory cache varies dynamically depending on the needs of the application and the system. Puede definir los límites utilizando las siguientes dos opciones:
-    -   **Minimum Size**: Minimum amount of memory that must be reserved for the cache. Este valor no puede ser inferior a 100 MB.
-    -   **Maximum Size**: Maximum amount of memory that can be used by the cache. This value is virtually unlimited.\  
-      Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. In this case, the limits set let you guarantee a minimum performance in all cases. El siguiente diagrama ilustra este comportamiento:
+    -   **Memoria a reservar para el sistema y las otras aplicaciones**: parte de la memoria RAM a reservar para el Sistema y las otras aplicaciones. Este valor aumenta para la optimización cuando otras aplicaciones se ejecutan en la misma máquina que 4D.
+    -   **Porcentaje de memoria disponible utilizada para la caché**: porcentaje de la memoria restante asignada por defecto a la caché.\
+      Para obtener el tamaño asignado por defecto a la caché, basta con realizar el siguiente cálculo: (Memoria física -- Memoria física a reservar) X Porcentaje de la memoria utilizada para la caché. En el modo adaptativo, el tamaño de la memoria caché varía dinámicamente en función de las necesidades de la aplicación y del sistema. Puede definir los límites utilizando las siguientes dos opciones:
+    -   **Tamaño mínimo**: cantidad mínima de memoria que debe reservarse para la caché. Este valor no puede ser inferior a 100 MB.
+    -   **Tamaño máximo**: cantidad máxima de memoria que puede utilizar la caché. Este valor es prácticamente ilimitado.\  
+      Definir límites es especialmente útil para bases distribuidas en máquinas de las que no se conoce a priori la configuración de memoria. En este caso, los límites definidos permiten garantizar un rendimiento mínimo en todos los casos. El siguiente diagrama ilustra este comportamiento:
 
     Example for calculating cache memory: *Physical memory to reserve = 256 MB Percentage of the available memory used for the cache = 50% Maximum size = 1 GB Minimum size = 128 MB*
 
     ![](../assets/en/settings/memory-maximum-size.png)
 
--   **Calculation of adaptive cache not checked**:  this mode, you set the size of the memory cache for the database yourself. 4D then displays an entry area that allows setting the memory cache to use as well as information related to the physical memory (RAM available on the machine), the current cache and cache after restart (taking your changes into account).
+-   **Cálculo de caché adaptativa no marcado**: en este modo, usted mismo define el tamaño de la memoria caché para la base. 4D muestra entonces un área de entrada que permite configurar la memoria caché a utilizar, así como información relacionada con la memoria física (RAM disponible en la máquina), la caché actual y la caché tras el reinicio (teniendo en cuenta sus cambios).
 
-    The size of the memory cache that you enter will be reserved for the 4D database, regardless of the state of machine resources. This setting can be used in certain specific configurations, or when the database is designed to be used on dissimilar systems in terms of memory. En la mayoría de los casos, la caché adaptativa ofrece un mejor rendimiento.
+    El tamaño de la memoria caché que introduzca se reservará para la base 4D, independientemente del estado de los recursos de la máquina. Esta configuración puede utilizarse en determinadas configuraciones específicas, o cuando la base está diseñada para utilizarse en sistemas disímiles en cuanto a memoria. En la mayoría de los casos, la caché adaptativa ofrece un mejor rendimiento.
 
--   **Escritura caché cada... Segundos/Minutos**: especifica el periodo de tiempo entre cada guardado automático de la caché de datos, es decir, su escritura en el disco. 4D guarda los datos colocados en la caché a intervalos regulares. Puede especificar todo intervalo de tiempo entre 1 segundo y 500 minutos. Por defecto, 4D guarda sus datos cada 20 segundos. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.
+-   **Escritura caché cada... Segundos/Minutos**: especifica el periodo de tiempo entre cada guardado automático de la caché de datos, es decir, su escritura en el disco. 4D guarda los datos colocados en la caché a intervalos regulares. Puede especificar todo intervalo de tiempo entre 1 segundo y 500 minutos. Por defecto, 4D guarda sus datos cada 20 segundos. La aplicación también guarda sus datos en el disco cada vez que cambia a otro entorno o sale de la aplicación. También puede llamar al comando [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) para activar el vaciado en cualquier momento.
 
-    When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).
+    Cuando prevea una entrada de muchos datos, considere la posibilidad de establecer un intervalo de tiempo breve entre guardados. En caso de corte del suministro eléctrico, sólo perderá los datos introducidos desde el último almacenamiento (si la base de datos funciona sin archivo de historial).
 
-    If there is a noticeable slowing down of the database each time the cache is flushed, you need to adjust the frequency. Esta lentitud significa que se está guardando una gran cantidad de registros. A shorter period between saves would therefore be more efficient since each save would involve fewer records and hence be faster.
+    Si la base de datos se ralentiza notablemente cada vez que se vacía la caché, deberá ajustar la frecuencia. Esta lentitud significa que se está guardando una gran cantidad de registros. Por lo tanto, un periodo más corto entre guardados sería más eficaz, ya que cada guardado implicaría menos registros y, por lo tanto, sería más rápido.
 
     Por defecto, 4D muestra una pequeña ventana cuando se vacía la caché. Si no desea este recordatorio visual, puede deseleccionar la opción **Escritura de caché** en la [página Interfaz](./interface.md).

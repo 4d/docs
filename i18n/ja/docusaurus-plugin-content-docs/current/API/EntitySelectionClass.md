@@ -2012,6 +2012,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 
 
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2108,6 +2109,12 @@ filterString および filterCol 引数が省略されるか、空の文字列�
 
 
 *options* に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
+
+:::caution 警告
+
+リレーションの 1側の属性に主キー以外の属性を使用した場合、その属性の値が "__KEY" プロパティに書き込まれます。 `.toCollection()` と `.fromCollection()` の関数を使用する場合はとくに、リレーションの 1側の属性に主キーを使用することが推奨されます。
+
+:::
 
 *begin* 引数を渡すことで、抽出するエンティティの開始インデックスを指定することができます。 0 からエンティティセレクションの長さ - 1 の範囲で値を渡すことができます。
 

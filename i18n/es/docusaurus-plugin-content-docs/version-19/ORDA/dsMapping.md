@@ -7,7 +7,7 @@ La tecnología ORDA se basa en un mapeo automático de una estructura 4D subyace
 
 ## Mapeo de la estructura
 
-When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+Cuando se llama a un datastore utilizando el comando `ds` u `Open datastore`, 4D referencia automáticamente las tablas y los campos de la estructura 4D correspondiente como propiedades del objeto [datastore](#datastore) devuelto:
 
 * Las tablas correspondientes a las dataclasses.
 * Los campos corresponden a los atributos de almacenamiento.
@@ -28,7 +28,7 @@ Se aplican las siguientes reglas para todas las conversiones:
 > ORDA mapping does not take into account:  
 > 
 > * la opción "Invisible" para las tablas o los campos,
-> * the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
+> * la estructura virtual definida mediante `SET TABLE TITLES` o `SET FIELD TITLES`,
 > * la propiedad "Manual" o "Automática" de las relaciones.
 
 ### Normas de control de acceso remoto
@@ -123,7 +123,7 @@ Las propiedades de la dataclass son sin embargo enumerables:
 ```code4d
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
-//$prop contains the names of all the dataclasse attributes
+//$prop contiene los nombres de todos los atributos de la dataclass
 ```
 
 ### Atributo
@@ -141,7 +141,7 @@ Todos los campos elegibles de una tabla están disponibles como atributos de su 
 
 #### Atributos de almacenamiento y relacionales
 
-Los atributos de la Dataclass son de varios tipos: almacenamiento, relatedEntity y relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support the standard 4D data type (integer, text, object, etc.).
+Los atributos de la Dataclass son de varios tipos: almacenamiento, relatedEntity y relatedEntities. Los atributos escalares (*es decir,*, ofrecen un único valor) soportan los tipos de datos estándar de 4D (entero, texto, objeto, etc.).
 
 * Un **atributo de almacenamiento** equivale a un campo en la base de datos 4D y puede indexarse. Los valores asignados a un atributo de almacenamiento se almacenan como parte de la entidad cuando se guarda. Cuando se accede a un atributo de almacenamiento, su valor procede directamente del datastore. Los atributos de almacenamiento son el bloque de construcción más básico de una entidad y se definen por nombre y tipo de datos.
 * Un **atributo relacional** ofrece acceso a otras entidades. Los atributos relacionales pueden dar como resultado una entidad única (o ninguna entidad), o una selección de entidades (de 0 a N entidades). Los atributos relacionales se basan en las relaciones "clásicas" en la estructura relacional para ofrecer acceso directo a una entidad o a entidades relacionadas. Los atributos relacionales están disponibles directamente en ORDA utilizando sus nombres.

@@ -1,14 +1,21 @@
 ---
 id: FunctionClass
-title: Formula
+title: Function
 ---
 
+### Function オブジェクトについて
 
+`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の `Function` オブジェクトが利用できます:
 
-[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、ネイティブな [`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
+- **ネイティブ関数** (`collection.sort()` や `file.copyTo()` などの 4Dクラスにビルトインされた関数)。
+- **ユーザー関数** (ユーザー[クラス](Concepts/classes.md) において [Function キーワード](Concepts/classes.md#function)を使って作成されたもの)。
+- **フォーミュラ関数** (4Dフォーミュラを実行するもの)。
+
 
 
 ### Formula オブジェクト
+
+[Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、[`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 
 Formulaオブジェクトは、オブジェクトプロパティに格納することができます。
 
@@ -84,14 +91,6 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 ```
 
 引数はメソッド内において、呼び出し時に指定した順で受け取られます。
-
-### 4D.Function オブジェクトについて
-
-`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の Function オブジェクトが利用できます:
-
-- ネイティブ関数、つまり、`collection.sort()` や `file.copyTo()` などの 4Dクラスにビルトインされた関数。
-- ユーザー関数 (ユーザー[クラス](Concepts/classes.md) において [Function キーワード](Concepts/classes.md#function)を使って作成されたもの)。
-- フォーミュラ関数 (4Dフォーミュラを実行するもの)。
 
 
 

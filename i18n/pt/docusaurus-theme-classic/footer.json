@@ -1,6 +1,6 @@
 {
   "link.title.Community": {
-    "message": "Community",
+    "message": "Comunidade",
     "description": "The title of the footer links column with title=Community in the footer"
   },
   "link.title.Support": {
@@ -60,7 +60,7 @@
     "description": "The label of footer link with label=Get Support linking to https://us.4d.com/4d-technical-support"
   },
   "link.item.label.About 4D": {
-    "message": "About 4D",
+    "message": "Sobre 4D",
     "description": "The label of footer link with label=About 4D linking to https://us.4d.com/about-us"
   },
   "link.item.label.Contact us": {
@@ -76,7 +76,7 @@
     "description": "The label of footer link with label=Careers linking to https://us.4d.com/Careers"
   },
   "copyright": {
-    "message": "© 2022 4D SAS - All rights reserved",
+    "message": "© 2023 4D SAS - All rights reserved",
     "description": "The footer copyright"
   }
 }

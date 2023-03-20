@@ -20,7 +20,7 @@ The formal syntax of the `While... End while` control flow structure is:
 
 A `While... End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 It is common to initialize the value tested in the Boolean expression immediately before entering the `While... End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While... End while` executes the loop.
 
@@ -58,7 +58,7 @@ The other difference with a `Repeat... Until` loop is that the loop continues un
 
 Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 ### Exemplo
 
@@ -95,7 +95,7 @@ The `For... End for` loop is a loop controlled by a counter variable:
 - Se *Start_Expression* e *End_Expression* forem iguais, o loop se executará só uma vez.
 - Se *Start_Expression* for maior que *End_Expression*, o loop não vai executar a não ser que especifique uma *Increment_Expression* negativa. Ver os exemplos.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 ### Exemplos básicos
 
@@ -244,7 +244,7 @@ Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, 
 
 ### Nested For... End for looping structures
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. This includes nesting `For... End for` loops. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
@@ -308,7 +308,7 @@ The following table compares the three types of `For each... End for each`:
 | Tipo Current_Item                         | Variável do mesmo tipo que os elementos da coleção | Entity                         | Variável texto                   |
 | Tipos de expressões                       | Coleção (com elementos do mesmo tipo)              | Seleção de entidades           | Objeto                           |
 | Número de loops (por padrão)              | Número de elementos da coleção                     | Número de entidades na seleção | Número de propriedades de objeto |
-| Compatibilidade de parâmetros begin / end | Sim                                                | Sim                            | No                               |
+| Compatibilidade de parâmetros begin / end | Sim                                                | Sim                            | Não                              |
 
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 - Por padrão, as  _instruções_ anexas são executadas para cada valor de *Expressão*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (`While`) ou ao final do loop (`Until`).
@@ -317,7 +317,7 @@ The following table compares the three types of `For each... End for each`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
 
 ### Loop através da coleção
 
@@ -472,15 +472,15 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## `break` and `continue`
+## `break` e `continue`
 
-All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+Todas as estruturas de looping acima suportam tanto `quebrar` como `continuar` declarações. Estas declarações dão-lhe mais controle sobre os loops, permitindo-lhe sair do loop e contornar a iteração atual a qualquer momento.
 
 ### break
 
-The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+A declaração `quebra` termina o loop que a contém. O controle do programa flui para a declaração imediatamente após o corpo do loop.
 
-If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+Se a declaração `quebrar` estiver dentro de um loop aninhado [](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `quebrar` terminará o loop mais interno.
 
 
 #### Exemplo
@@ -494,12 +494,13 @@ For (vCounter;1;100)
 
 ### continue
 
-The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+A declaração `continua` encerra a execução das declarações na iteração actual do loop atual, e continua a execução do loop com a próxima iteração.
 
 ```4d
-var $text : Text For ($i; 0; 9)
+var $text : Text
+For ($i; 0; 9)
     If ($i=3)
-        continue //go directly to the next iteration
+        continue //passa diretamente para a próxima iteração
     End if
     $text:=$text+String($i)
 End for

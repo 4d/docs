@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Vue d’ensemble
+title: Menus
 ---
 
 4D vous permet de créer des barres de menus et des menus pour vos applications 4D. Etant donné que les menus sont une fonctionnalité standard de toute application, leur présence dans votre base facilite son utilisation.

@@ -471,7 +471,7 @@ ALERT("Time is over") // 1つの引数
 // APPEND TEXT ( テキスト { ; テキスト { ; オブジェクト } } )
 // APPEND TEXT ( メッセージ { ; パス { ; 4DWPエリア } } )
 
- Method($message : Text; $path : Text; $wpArea : Object)
+ #DECLARE($message : Text; $path : Text; $wpArea : Object)
 
  ALERT($message)
  If(Count parameters>=3)

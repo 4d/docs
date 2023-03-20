@@ -1,14 +1,21 @@
 ---
 id: FunctionClass
-title: Formula
+title: Function
 ---
 
+### Acerca de los objetos Function
 
+Un objeto `4D.Function` contiene un trozo de código que puede ser ejecutado desde un objeto, ya sea utilizando el operador `()`, o utilizando las funciones [`apply()`](#apply) y [`call()`](#call). 4D propone tres tipos de objetos `Function`:
 
-Los comandos [Formula](#formula) y [Formula from string](#formula-from-string) le permiten crear los [objetos `4D.Function`](#about-4dfunction-objects) para ejecutar toda expresión o código 4D expresado como texto.
+- **funciones nativas**, es decir, funciones integradas de varias clases de 4D como `collection.sort()` o `file.copyTo()`.
+- **funciones usuario**, creadas en [clases](Concepts/classes.md) usuario utilizando la [palabra clave Function](Concepts/classes.md#function).
+- **funciones fórmula**, es decir, funciones que pueden ejecutar cualquier fórmula 4D.
+
 
 
 ### Objetos Formula
+
+Los comandos [Formula](#formula) y [Formula from string](#formula-from-string) permiten crear objetos [`4D.Function`](#about-4dfunction-objects) para ejecutar toda expresión 4D o código expresado como texto.
 
 Los objetos Formula pueden encapsularse en las propiedades de objeto:
 
@@ -92,14 +99,6 @@ Para mayor comodidad, cuando la fórmula se compone de un único método proyect
 ```
 
 Los parámetros se reciben en el método, en el orden en que se especifican en la llamada.
-
-### Sobre los objetos 4D.Function
-
-Un objeto `4D.Function` contiene un trozo de código que puede ser ejecutado desde un objeto, ya sea utilizando el operador `()`, o utilizando las funciones [`apply()`](#apply) y [`call()`](#call). 4D propone tres tipos de objetos Function:
-
-- las funciones nativas, es decir, las funciones integradas de varias clases 4D tales como `collection.sort()` o `file.copyTo()`.
-- las funciones usuario, creadas en las [clases](Concepts/classes.md) usuario utilizando la [palabra clave Function](Concepts/classes.md#function).
-- las funciones de fórmula, es decir, las funciones que pueden ejecutar cualquier fórmula 4D.
 
 
 

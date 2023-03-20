@@ -61,7 +61,7 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 
 | Versão | Mudanças                    |
 | ------ | --------------------------- |
-| v19 R8 | Support of `fk home folder` |
+| v19 R8 | Suporte de `fk home folder` |
 | v17 R5 | Adicionado                  |
 
 </details>

@@ -133,10 +133,10 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones           |
-| ------- | ------------------------ |
-| v20     | Supports custom keywords |
-| v18 R6  | Añadidos                 |
+| Versión | Modificaciones                         |
+| ------- | -------------------------------------- |
+| v20     | Soporta palabras claves personalizadas |
+| v18 R6  | Añadidos                               |
 
 
 </details>
@@ -1354,10 +1354,10 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones           |
-| ------- | ------------------------ |
-| v20     | Supports custom keywords |
-| v18 R6  | Añadidos                 |
+| Versión | Modificaciones                         |
+| ------- | -------------------------------------- |
+| v20     | Soporta palabras claves personalizadas |
+| v18 R6  | Añadidos                               |
 
 
 </details>

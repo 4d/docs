@@ -2053,7 +2053,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //utilizando el lenguaje:
-$strings2:=$string1s.orderByMethod(Function(sortCollection);sk strict)
+$strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
@@ -2244,7 +2244,6 @@ Para obtener información detallada sobre cómo construir una consulta utilizand
 
 
 #### Ejemplo 2
-
 
 ```4d
  var $c : Collection

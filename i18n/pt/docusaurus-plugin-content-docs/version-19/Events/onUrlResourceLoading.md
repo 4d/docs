@@ -3,9 +3,9 @@ id: onUrlResourceLoading
 title: On URL Resource Loading
 ---
 
-| Code | Can be called by                            | Definição                                |
-| ---- | ------------------------------------------- | ---------------------------------------- |
-| 48   | [Área Web](FormObjects/webArea_overview.md) | A new resource is loaded in the Web area |
+| Code | Pode ser chamado por                        | Definição                               |
+| ---- | ------------------------------------------- | --------------------------------------- |
+| 48   | [Área Web](FormObjects/webArea_overview.md) | Um novo recurso é carregado na área Web |
 
 
 ## Descrição

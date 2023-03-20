@@ -1,6 +1,6 @@
 ---
 id: overview
-title: About 4D Code
+title: Handling Code
 ---
 
 
@@ -68,41 +68,49 @@ To display the **Method Properties** dialog box for a project method, you can ei
 
 > A batch setting function allows you to modify a property for all or part of the database project methods in a single operation (see [Batch setting for method attributes](#batch-setting-for-method-attributes)).
 
-#### Nome
+### Nome
 
 You can change the name of a project method in the **Name** area of the **Method Properties** window or in the Explorer.
 
 The new name must comply with 4D naming rules (see [Identifiers](../Concepts/identifiers.md)). If a method with the same name already exists, 4D displays a message saying that the method name has already been used. If necessary, 4D sorts the list of methods again.
 
-**Warning:** Changing the name of a method already used in the database can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. You can rename the method manually but it is strongly recommended to use the renaming function for project methods, described in [Renaming](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). With this function, you can automatically update the name wherever the method is called throughout the Design environment.
+:::caution
+
+Changing the name of a method already used in the database can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. You can rename the method manually but it is strongly recommended to use the renaming function for project methods, described in [Renaming](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). With this function, you can automatically update the name wherever the method is called throughout the Design environment.
 
 With 4D Server, the method name is changed on the server when you finish editing it. If more than one user is modifying the method name at the same time, the final method name will be the name specified by the last user to finish editing it. You may want to specify a method owner so that only certain users can change the method's name
 
-> Database methods cannot be renamed. The same goes for triggers, form methods, and object methods, which are bound to objects and take their names from the object concerned.
+:::
 
-#### Attributes
+:::info
+
+Database methods cannot be renamed. The same goes for triggers, form methods, and object methods, which are bound to objects and take their names from the object concerned.
+
+:::
+
+### Attributes
 
 You can control how project methods are used and/or called in different contexts using attributes. Note that you can set attributes for an entire selection of project methods using the Explorer (see following section).
 
-##### Invisible
+#### Invisível
 
 If you do not want users to be able to run a project method using the **Method...** command of the **Run** menu, you can make it Invisible by checking this option. An invisible method does not appear in the method execution dialog box.
 
 When you make a project method invisible, it is still available to database programmers. It remains listed on the method list of the Explorer and of the Code Editor.
 
-##### Shared by components and host database
+#### Shared by components and host database
 
 This attribute is used within the framework of components. When it is checked, it indicates that the method will be available to components when the application is used as the host database. On the other hand, when the application is used as a component, the method will be available to the host databases.
 
 For more information about components, refer to the [Developing and installing 4D components](../Extensions/develop-components.md) chapter.
 
-##### Execute on Server
+#### Executar no Servidor
 
 This attribute is only taken into account for a 4D application in client-server mode. When this option is checked, the project method is always executed on the server, regardless of how it is called.
 
 For more information on this option, refer to [Execute on Server attribute](https://doc.4d.com/4Dv19R6/4D/19-R6/Execute-on-Server-attribute.300-5941841.en.html).
 
-#### Execution mode
+### Execution mode
 
 This option allows you to declare the method eligible for execution in preemptive mode. By default, 4D executes all the project methods of your applications in cooperative mode.
 
@@ -130,11 +138,11 @@ Note that with this option, whatever the internal thread safety evaluation, the 
 
 ***Particular case*:** If the method has also the [**Shared by components and host database**](shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
 
-#### Available through
+### Disponível através de
 
 Availability attributes specify the external services which are allowed to explicitly call the method.
 
-##### Web Services
+#### Serviços Web
 
 This attribute lets you publish the current method as a Web Service accessible via SOAP requests. For more information, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html) chapter. When this option is checked, the **Published in WSDL** option is enabled.
 
@@ -142,13 +150,13 @@ In the Explorer, project methods that are offered as a Web Service are given a s
 
 **Note:** You cannot publish a method as a Web service if its name includes characters that do not comply with XML nomenclature (e.g. containing spaces). If the method name is not in keeping with this, 4D does not assign the property.
 
-##### Published in WSDL
+#### Publicado em WSDL
 
 This attribute is only available when the "Web Service" attribute is checked. It lets you include the current method in the WSDL of the 4D application. For more information about this, refer to [Generation of the WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
 In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
-##### 4D tags and URLs (4DACTION...)
+#### 4D tags and URLs (4DACTION...)
 
 This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/tags.md).
 
@@ -156,7 +164,7 @@ In the Explorer, project methods with this attribute are given a specific icon !
 
 For security reasons, this option is unchecked by default. Each method that can be executed using the special Web URL or tags must be indicated individually.
 
-##### SQL
+#### SQL
 
 When it is checked, this option allows the project method to be executed by the SQL engine of 4D. By default, it is not selected, which means that, unless explicitly authorized, 4D project methods are protected and cannot be called by the SQL engine of 4D.
 
@@ -169,7 +177,7 @@ This property applies to all internal and external SQL queries --- executed via 
 
 For more information, refer to [4D SQL engine implementation](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) in the 4D SQL manual.
 
-##### Servidor REST
+#### Servidor REST
 
 *This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 

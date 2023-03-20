@@ -45,7 +45,7 @@ The following are some basic variable declarations:
  ARRAY LONGINT(alAnArray;10) //A variável do processo alAnArray se declara como um array Inteiro longo de 10 elementos
 ```
 
-## Assigning Data
+## Atribuição de dados
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
@@ -71,11 +71,11 @@ You assign data to array elements by using curly braces ({...}):
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## Variáveis locais, processo e inter-processo
 
 You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
 
-### Local variables
+### Variáveis locais
 
 A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
 
@@ -92,7 +92,7 @@ Quando trabalhar em um banco de dados com muitos métodos e variáveis, geralmen
 Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. This is a typical way to use a local variable. Aqui um exemplo simples:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("Por favor insira o seu ID:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
@@ -102,7 +102,7 @@ This method simply asks the user to enter an ID. It puts the response into a loc
 
 **Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
-### Process variables
+### Variáveis processo
 
 A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
 
@@ -118,7 +118,7 @@ A process can “peek and poke” process variables from another process using t
 
 For more information, see the chapter **Processes** and the description of these commands.
 
-### Interprocess variables
+### Variáveis interprocesso
 
 Variáveis interprocessos estão disponíveis pelo banco de dados e são partilhados entre os processos cooperativos. They are primarily used to share information between processes.
 

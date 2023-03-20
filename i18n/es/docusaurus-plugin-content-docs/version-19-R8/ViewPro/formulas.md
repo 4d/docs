@@ -96,7 +96,7 @@ Esta fórmula se refiere a las celdas C6 y C7. Es decir, 4D View Pro tiene instr
 
 Cuando copie o mueva estas fórmulas a nuevas ubicaciones, cada dirección de celda en esa fórmula cambiará o permanecerá igual, dependiendo de cómo se escriba.
 
-*   A reference that changes is called a **relative reference**, and refers to a cell by how far left/right and up/down it is from the cell with the formula.
+*   Una referencia que cambia se denomina **referencia relativa**, y se refiere a una celda según lo lejos que esté a la izquierda/derecha y arriba/abajo de la celda con la fórmula.
 *   Una referencia que siempre apunta a una celda particular se denomina **referencia absoluta**.
 *   También puede crear una referencia mixta que apunte siempre a una línea o columna fija.
 
@@ -106,7 +106,7 @@ Cuando copie o mueva estas fórmulas a nuevas ubicaciones, cada dirección de ce
 
 Si sólo utiliza coordenadas de celda, por ejemplo, `C5`, 4D View Pro interpreta la referencia como relativa. Puede hacer que la referencia sea absoluta poniendo un signo de dólar delante de la letra y el número, como en `$C$5`.
 
-You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
+Puede combinar las referencias absolutas y relativas insertando un signo de dólar delante de la letra o el número solo, por ejemplo, `$C5` o `C$5`. Una referencia mixta permite especificar la fila o la columna como absolutas, permitiendo al mismo tiempo que la otra parte de la dirección se refiera a ella de forma relativa.
 
 Una forma cómoda, rápida y precisa de especificar una referencia absoluta es nombrar la celda y utilizar ese nombre en lugar de la dirección de la celda. Una referencia a una celda nombrada es siempre absoluta. Puede crear o modificar celdas con nombre o rangos de celdas con nombre utilizando el método [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name).
 

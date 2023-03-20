@@ -61,13 +61,13 @@ La línea de código dice "MyOtherDate obtiene la fecha actual más 30 días" Es
 
 ## Comandos
 
-Los comandos 4D son métodos integrados para realizar una acción. Todos los comandos 4D, como `CREATE RECORD`, o `ALERT`, se describen en el manual _Lenguaje de 4D_, agrupados por temas. Los comandos se utilizan a menudo con parámetros, que se pasan entre corchetes () y separados por punto y coma (;). Ejemplo:
+Los comandos 4D son métodos integrados para realizar una acción. Los comandos se utilizan a menudo con parámetros, que se pasan entre corchetes () y separados por punto y coma (;). Ejemplo:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Algunos comandos se adjuntan a colecciones u objetos, en cuyo caso son métodos temporales que se utilizan con la notación de puntos. Por ejemplo:
+Algunos comandos se adjuntan a colecciones u objetos, en cuyo caso son funciones temporales que se utilizan con la notación de puntos. Por ejemplo:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -123,21 +123,23 @@ El siguiente ejemplo recorre todos los caracteres del texto vtSomeText:
 For($vlChar;1;Length(vtSomeText))
     //Haga algo con el caracter si es un TAB
 
+
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). Los parámetros están disponibles dentro del método llamado como variables locales numeradas secuencialmente: $1, $2,..., $n. Un método puede devolver un único valor en el parámetro $0. Cuando se llama a un método, sólo hay que escribir su nombre:
+Un método proyecto puede llamar a otro método proyecto con o sin parámetros (argumentos). Los parámetros se pasan al método entre paréntesis, a continuación del nombre del método. Cada parámetro está separado del siguiente por un punto y coma (;). Los parámetros están disponibles directamente en el método llamado si se han declarado. Un método puede devolver un único valor en un parámetro, que debe ser declarado. Cuando se llama a un método, sólo hay que escribir su nombre:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Llama al método Do_Something
+$myText:=Hacer_algo($myText) //Llamar al método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Este es el código del método Do_Something
-$0:=Uppercase($1)
+  //Aquí el código del método Do_Something
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
 ```
 
 
@@ -183,15 +185,14 @@ Tenga en cuenta que si el valor de la propiedad del objeto es un objeto que enca
 
 ```
 $f:=New object
-$f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message:=Formula(ALERT("Hello world!"))
 $f.message() //displays "Hello world!"
 ```
 
 Para acceder a un elemento de la colección, debe pasar el número del elemento entre corchetes:
 
 ```4d
-C_COLLECTION(myColl)
+var myColl : Collection
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //acceso al 4º elemento de la colección
 ```
@@ -207,16 +208,15 @@ Para instanciar un objeto de la clase en un método, llame la clase usuario desd
 $o:=cs.myClass.new() 
 ```
 
-En el método de clase `myClass`, utilice la instrucción `Function <methodName>` para definir el método miembro de clase *methodName*. Un método miembro de clase puede recibir y devolver parámetros como cualquier método, y utilizar `This` como instancia del objeto.
+En el método clase `myClass`, utilice la instrucción `Function<methodName>` para definir la función miembro clase *methodName*. Una función miembro de clase puede recibir y devolver parámetros como todo método, y utilizar `This` como instancia del objeto.
 
 ```4d  
 //en el archivo myClass.4dm
-Function hello
-  C_TEXT($0)
-  $0:="Hello "+This.who
+Function hello -> $welcome : Text
+  $welcome:="Hello "+This.who
 ```
 
-Para ejecutar un método miembro de clase, basta con utilizar el operador `()` en el método miembro de la instancia del objeto.
+Para ejecutar una función miembro de clase, basta con utilizar el operador `()` en la función miembro de la instancia del objeto.
 
 ```4d
 $o:=cs.myClass.new()
@@ -230,9 +230,9 @@ Opcionalmente, utilice la palabra clave `Class constructor` para declarar las pr
 ```4d  
 //en el archivo Rectangle.4dm
 Class constructor
-C_LONGINT($1;$2)
-This.height:=$1
-This.width:=$2  
+var $height; $width : Integer
+This.height:=$height
+This.width:=$width 
 This.name:="Rectangle"
 ```
 
@@ -243,11 +243,11 @@ Una clase puede extender otra clase utilizando `Class extends <ClassName>`. Las 
 Class extends rectangle
 
 Class constructor
-C_LONGINT($1)
+var $length : Integer
 
-  //Llama al constructor de la clase padre con las dimensiones 
+  // Llama al constructor de la clase padre con las dimensiones    
   // suministradas para el ancho y el alto del Rectángulo
-Super($1;$1)
+Super($length;$length)
 
 This.name:="Square"
 ```
@@ -373,11 +373,11 @@ Inserte `//` al principio de una línea o después de una instrucción para aña
 
 ```4d
 //Este es un comentario
-For($vCounter;1;100) //Inicio del bucle
-  //comment
-  //comment
-  //comment
- End for
+For($vCounter;1;100) //Bucle inicial
+  //comentario
+  //comentario
+  //comentario
+End for
 ```
 
 #### Comentarios en línea o multilínea (`/*comment*/`)

@@ -55,7 +55,7 @@ Available actions are related to target resource.
 
 **Hinweise:**
 
-- An alias can be read even if there is no permissions on the attributes upon which it is built.
+- An alias can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
 - Default values: in the current implementation, only *Null* is available as default value.
 

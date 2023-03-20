@@ -15,7 +15,7 @@ The 4D language supports **binary** and **ternary** operators:
 - binary operators operate on two targets (such as `2 + 3`) and appear in between their two targets.
 - ternary operators operate on three targets. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
 
-The values that operators affect are operands. In the expression `1 + 2`, the + symbol is a binary operator and its two operands are the values 1 and 2.
+The values that operators affect are operands. Na expressão `1 + 2`, o símbolo + é um operador binário e os seus dois operandos são os valores 1 e 2.
 
 
 
@@ -33,7 +33,7 @@ $col:=New collection //$col is initialized with an empty collection
 > Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
 
-## Basic operators
+## Operadores básicos
 
 Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:
 
@@ -45,8 +45,8 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 - [**Operadores Bitwise**](dt_picture.md#picture-operators)
 - [**Operadores de Ponteiros**](dt_pointer.md#pointer-operators)
 - [**String operators**](dt_string.md#string-operators)
-- [**Null operators**](dt_null_undefined.md#null-operators)
-- [**Undefined operators**](dt_null_undefined.md#undefined-operators)
+- [**Operadores Null**](dt_null_undefined.md#null-operators)
+- [**Operadores indefinidos**](dt_null_undefined.md#undefined-operators)
 
 
 ## Compound assignment operators
@@ -68,30 +68,30 @@ $a+=2 // $a=3
 
 The following compound assignment operators are supported:
 
-| Operator      | Sintaxe            | Assigns | Exemplo                                                             |
-| ------------- | ------------------ | ------- | ------------------------------------------------------------------- |
-| Adição        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                   |
-|               | Number += Number   | Número  | `$n+=5 //$n:=$n+5`                                                  |
-|               | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                  |
-|               | Time += Time       | Hora    | `$t1+=$t2 //$t1:=$t1+$t2`                                           |
-|               | Time += Number     | Número  | `$t1+=5 //$t1:=$t1+5`                                               |
-|               | Picture += Picture | Imagem  | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`             |
-|               | Picture += Number  | Imagem  | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)` |
-| Subtração     | Number -= Number   | Número  | `$n-=5 //$n:=$n-5`                                                  |
-|               | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                  |
-|               | Time -= Time       | Hora    | `$t1-=$t2 //$t1:=$t1-$t2`                                           |
-|               | Time -= Number     | Número  | `$t1-=5 //$t1:=$t1-5`                                               |
-|               | Picture -= Number  | Imagem  | `$p1-=5 //$p1:=$p1-5 (move $p1 horizontally 5 pixels to the left)`  |
-| Divisão       | Number /= Number   | Número  | `$n/=5 //$n:=$n/5`                                                  |
-|               | Time /= Time       | Hora    | `$t1/=$t2 //$t1:=$t1/$t2`                                           |
-|               | Time /= Number     | Número  | `$t1/=5 //$t1:=$t1/5`                                               |
-|               | Picture /= Picture | Imagem  | `$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)`            |
-|               | Picture /= Number  | Imagem  | `$p1/=5 //$p1:=$p1/5 (move $p1 vertically 5 pixels)`                |
-| Multiplicação | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                         |
-|               | Number *= Number   | Número  | `$n*=5 //$n:=$n*5`                                                  |
-|               | Time *= Time       | Hora    | `$t1*=$t2 //$t1:=$t1*$t2`                                           |
-|               | Time *= Number     | Número  | `$t1*=5 //$t1:=$t1*5`                                               |
-|               | Picture *= Number  | Imagem  | `$p1*=5 //$p1:=$p1*5 (resize $p1 by 5)`                             |
+| Operator      | Sintaxe            | Assigns | Exemplo                                                                    |
+| ------------- | ------------------ | ------- | -------------------------------------------------------------------------- |
+| Adição        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                          |
+|               | Number += Number   | Número  | `$n+=5 //$n:=$n+5`                                                         |
+|               | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                         |
+|               | Time += Time       | Hora    | `$t1+=$t2 //$t1:=$t1+$t2`                                                  |
+|               | Time += Number     | Número  | `$t1+=5 //$t1:=$t1+5`                                                      |
+|               | Picture += Picture | Imagem  | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                    |
+|               | Picture += Number  | Imagem  | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`        |
+| Subtração     | Number -= Number   | Número  | `$n-=5 //$n:=$n-5`                                                         |
+|               | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                         |
+|               | Time -= Time       | Hora    | `$t1-=$t2 //$t1:=$t1-$t2`                                                  |
+|               | Time -= Number     | Número  | `$t1-=5 //$t1:=$t1-5`                                                      |
+|               | Picture -= Number  | Imagem  | `$p1-=5 //$p1:=$p1-5 (mover horizontalmente $p1 5 pixels para a esquerda)` |
+| Divisão       | Number /= Number   | Número  | `$n/=5 //$n:=$n/5`                                                         |
+|               | Time /= Time       | Hora    | `$t1/=$t2 //$t1:=$t1/$t2`                                                  |
+|               | Time /= Number     | Número  | `$t1/=5 //$t1:=$t1/5`                                                      |
+|               | Picture /= Picture | Imagem  | `$p1/=$p2 //$p1:=$p1/$p2 (adicione $p2 ao fundo de $p1)`                   |
+|               | Picture /= Number  | Imagem  | `$p1/=5 //$p1:=$p1/5 (mover $p1 verticalmente 5 pixels)`                   |
+| Multiplicação | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                |
+|               | Number *= Number   | Número  | `$n*=5 //$n:=$n*5`                                                         |
+|               | Time *= Time       | Hora    | `$t1*=$t2 //$t1:=$t1*$t2`                                                  |
+|               | Time *= Number     | Número  | `$t1*=5 //$t1:=$t1*5`                                                      |
+|               | Picture *= Number  | Imagem  | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 por 5)`                            |
 
 These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
 
@@ -111,19 +111,19 @@ $t+=" World" //$t="Hello World"
 $d:=!2000-11-10!
 $d+=10 //$d=!2000-11-20!
 
-// Subtraction
+// Subtracção
 $x1:=10
 $x1-=5 //$x1=5
 
 $d1:=!2000-11-10!
 $d1-=10 // $d1=!2000-10-31!
 
-// Division
+// Divisão
 $x3:=10
 $x3/=2 // $x3=5
 
 
-// Multiplication
+// Multiplicação
 $x2:=10
 $x2*=5 // $x2=10
 
@@ -135,7 +135,7 @@ $t2*=2 // $t2="HelloHello"
 
 
 
-## Short-circuit operators
+## Operadores curto-circuito
 
 The **&&** and **||** operators are **short circuit operators**. A short circuit operator is one that doesn't necessarily evaluate all of its operands.
 
@@ -150,20 +150,20 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 | v19 R4 | Adicionado |
 </details>
 
-The rule is as follows:
+A regra é a seguinte:
 
-Given `Expr1 && Expr2`:
+Dado `Expr1 && Expr2`:
 
 The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
 
 The following table summarizes the different cases for the **&&** operator:
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr2          |
-| truthy | falsy  | Expr2          |
-| falsy  | truthy | Expr1          |
-| falsy  | falsy  | Expr1          |
+| Expr1  | Expr2  | Valor devolvido |
+| ------ | ------ | --------------- |
+| truthy | truthy | Expr2           |
+| truthy | falsy  | Expr2           |
+| falsy  | truthy | Expr1           |
+| falsy  | falsy  | Expr1           |
 
 #### Exemplo 1
 
@@ -183,7 +183,7 @@ Say you have an online store, and some products have a tax rate applied, and oth
 
 To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
 
-So you can write this:
+Portanto, pode escrever isto:
 
 ```4d
 var $tax : Variant
@@ -215,7 +215,7 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
-Given `Expr1 || Expr2`:
+Dado `Expr1 || Expr2`:
 
 If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
 
@@ -223,12 +223,12 @@ If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
 
 The following table summarizes the different cases and the value returned for the **||** operator:
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr1          |
-| truthy | falsy  | Expr1          |
-| falsy  | truthy | Expr2          |
-| falsy  | falsy  | Expr2          |
+| Expr1  | Expr2  | Valor devolvido |
+| ------ | ------ | --------------- |
+| truthy | truthy | Expr1           |
+| truthy | falsy  | Expr1           |
+| falsy  | truthy | Expr2           |
+| falsy  | falsy  | Expr2           |
 
 #### Exemplo 1
 
@@ -261,7 +261,7 @@ The `&&` and `||` operators have the same precedence as the logical operators `&
 This means that `a || b && c` is evaluated as `(a || b) && c`.
 
 
-## Ternary operator
+## Operador ternário
 
 <details><summary>Histórico</summary>
 
@@ -274,13 +274,13 @@ The ternary conditional operator allows you to write one-line conditional expres
 
 It takes three operands in the following order:
 
-* a condition followed by a question mark (?)
+* uma condição seguida de um ponto de interrogação (?)
 * an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
 * an expression to execute if the condition is [falsy](#truthy-and-falsy)
 
 ### Sintaxe
 
-The syntax is as follows:
+A sintaxe é a seguinte:
 
 `condition ? exprIfTruthy : exprIfFalsy`
 
@@ -288,7 +288,7 @@ The syntax is as follows:
 
 ### Exemplos
 
-#### A simple example
+#### Um exemplo simple
 
 ```4d
 var $age : Integer

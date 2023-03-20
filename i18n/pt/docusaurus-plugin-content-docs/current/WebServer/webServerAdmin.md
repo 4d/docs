@@ -124,7 +124,7 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| HTTP Field | Descrição                            | Exemplo                                                                                                                         |
+| Campo HTTP | Descrição                            | Exemplo                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Date       | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
 | Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
@@ -229,7 +229,7 @@ When the web log file backup is triggered, the log file is archived in a folder 
 
 The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: “D2020_09_04_T15_50_07.txt.”
 
-#### Backup Parameters
+#### Parâmetros de backup
 
 The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
 

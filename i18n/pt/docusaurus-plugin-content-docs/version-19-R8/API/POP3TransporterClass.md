@@ -446,10 +446,10 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                                        |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número da mensagem que na lista                                                  |
-| Resultados | Blob    | <- | Blob of the MIME string returned from the mail server|<!-- END REF --> |
+| Parâmetros | Tipo    |    | Descrição                                                                 |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------- |
+| msgNumber  | Integer | -> | Número da mensagem que na lista                                           |
+| Resultados | Blob    | <- | Blob da string MIME retornado do servidor mail|<!-- END REF --> |
 
 ##### Descrição
 

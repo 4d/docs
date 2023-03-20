@@ -40,7 +40,7 @@ Los objetos WebSocketConnection ofrecen las siguientes propiedades y funciones:
 <!-- REF #WebSocketConnectionClass.handler.Desc -->
 ## .handler
 
-<!-- REF #WebSocketConnectionClass.handler.Syntax -->**handler** : Object<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.handler.Syntax -->**handler**: Object<!-- END REF -->
 
 #### Descripción
 
@@ -73,21 +73,21 @@ Esta propiedad es de sólo lectura.
 <!-- REF #WebSocketConnectionClass.send().Params -->
 | Parámetros | Tipo                 |    | Descripción                                    |
 | ---------- | -------------------- |:--:| ---------------------------------------------- |
-| message    | Text / Blob / Object | -> | The message to send|<!-- END REF -->
+| message    | Text / Blob / Object | -> | El mensaje a enviar|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->sends a *message* to the client<!-- END REF -->.
+La función `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envía un *mensaje * al cliente<!-- END REF -->.
 
 Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
-| Tipo   | Contenido                                                                                                            |
-| ------ | -------------------------------------------------------------------------------------------------------------------- |
-| Text   | Text in UTF-8                                                                                                        |
-| Blob   | Binary data                                                                                                          |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Tipo   | Contenido                                                                                                                 |
+| ------ | ------------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texto en UTF-8                                                                                                            |
+| Blob   | Datos binarios                                                                                                            |
+| Object | Texto en JSON UTF-8 (mismo resultado que con [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
 
 <!-- END REF -->
 
@@ -97,11 +97,11 @@ Los siguientes contenidos se envían en función del tipo de *mensaje*:
 <!-- REF #WebSocketConnectionClass.status.Desc -->
 ## .status
 
-<!-- REF #WebSocketConnectionClass.status.Syntax -->**status** : Text<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.status.Syntax -->**status**: Text<!-- END REF -->
 
 #### Descripción
 
-The `.status` property contains <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->.
+La propiedad `.status` contiene <!-- REF #WebSocketConnectionClass.status.Summary -->el estado de la conexión (puede ser "Closing", "Closed" o  "Connected")<!-- END REF -->.
 
 Esta propiedad es de sólo lectura.
 <!-- END REF -->
@@ -115,10 +115,10 @@ Esta propiedad es de sólo lectura.
 
 
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                       |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------------- |
-| code       | Integer | -> | Error code sent to the client (must be > 3000, otherwise the message is not sent) |
-| message    | Text    | -> | Error message sent to the client|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                                                  |
+| ---------- | ------- |:--:| -------------------------------------------------------------------------------------------- |
+| code       | Integer | -> | Código de error enviado al cliente (debe ser > 3000, de lo contrario el mensaje no se envía) |
+| message    | Text    | -> | Mensaje de error enviado al cliente|<!-- END REF -->
 
 
 |
@@ -126,20 +126,20 @@ Esta propiedad es de sólo lectura.
 
 #### Descripción
 
-La función `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->forces the connection to close<!-- END REF -->.
+La función `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->fuerza el cierre de la conexión<!-- END REF -->.
 
-A *code* and *message* can be sent to the client during the closure to indicate the reason of the termination.
+Un *code* y un *message* pueden ser enviados al cliente durante el cierre para indicar la razón de la terminación.
 
 <!-- END REF -->
 
 <!-- REF #WebSocketConnectionClass.wss.Desc -->
 ## .wss
 
-<!-- REF #WebSocketConnectionClass.wss.Syntax -->**wss** : 4D.WebSocketServer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.wss.Syntax -->**wss**: 4D.WebSocketServer<!-- END REF -->
 
 #### Descripción
 
-The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->the [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) parent object of the connection<!-- END REF -->.
+La propiedad `.wss` contiene <!-- REF #WebSocketConnectionClass.wss.Summary -->el objeto padre de la conexión [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew)<!-- END REF -->.
 
 Esta propiedad es de sólo lectura.
 <!-- END REF -->

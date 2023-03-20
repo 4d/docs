@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Sobre el código 4D
+title: Gestión del código
 ---
 
 
@@ -68,41 +68,49 @@ Para mostrar la caja de diálogo **Propiedades del método** para un método pro
 
 > Una función de parámetrización global permite modificar una propiedad para todos o parte de los métodos proyecto de la base en una sola operación (ver [Modificar atributos de los métodos globalmente](#batch-setting-for-method-attributes)).
 
-#### Nombre
+### Nombre
 
 Puede cambiar el nombre de un método proyecto en el área **Nombre** de la ventana **Propiedades del método** o en el Explorador.
 
 El nuevo nombre debe cumplir con las reglas de denominación de 4D (ver [Identificadores](../Concepts/identifiers.md)). Si ya existe un método con el mismo nombre, 4D muestra un mensaje diciendo que el nombre del método ya ha sido utilizado. Si es necesario, 4D ordena de nuevo la lista de métodos.
 
-**Atención:** el cambio del nombre de un método ya utilizado en la base de datos puede invalidar todos los métodos o fórmulas que utilice el antiguo nombre del método y corre el riesgo de interrumpir el funcionamiento de la aplicación. Puede cambiar el nombre del método manualmente, pero se recomienda utilizar la función de cambio de nombre de los métodos proyecto, descrita en [Renombrar](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Con esta función, puede actualizar automáticamente el nombre siempre que se llame al método en todo el entorno Diseño.
+:::caution
+
+Cambiar el nombre de un método ya utilizado en la base de datos puede invalidar cualquier método o fórmula que utilice el antiguo nombre de método y corre el riesgo de interrumpir el funcionamiento de la aplicación. Puede cambiar el nombre del método manualmente, pero se recomienda utilizar la función de cambio de nombre de los métodos proyecto, descrita en [Renombrar](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Con esta función, puede actualizar automáticamente el nombre siempre que se llame al método en todo el entorno Diseño.
 
 Con 4D Server, el nombre del método se cambia en el servidor cuando se termina de editar. Si más de un usuario está modificando el nombre del método al mismo tiempo, el nombre final del método será el especificado por el último usuario en terminar de editarlo. Es posible que desee designar un propietario del método para que sólo ciertos usuarios puedan cambiar su nombre
 
-> Los métodos base no pueden ser renombrados. Lo mismo ocurre con los triggers, los métodos formulario y los métodos objeto, que están vinculados a los objetos y toman sus nombre del objeto en cuestión.
+:::
 
-#### Atributos
+|
+
+Los métodos base no pueden ser renombrados. Lo mismo ocurre con los triggers, los métodos formulario y los métodos objeto, que están vinculados a los objetos y toman sus nombre del objeto en cuestión.
+
+:::
+
+### Atributos
 
 Puede controlar cómo se utilizan y/o llaman los métodos proyecto en diferentes contextos utilizando atributos. Tenga en cuenta que puede definir los atributos globalmente para una selección de métodos proyecto utilizando el Explorador (ver la sección siguiente).
 
-##### Invisible
+#### Invisible
 
 Si no quiere que los usuarios puedan ejecutar un método proyecto utilizando el comando **Método...** del menú **Ejecución**, puede hacerlo Invisible marcando esta opción. Un método invisible no aparece en la caja de diálogo de ejecución del método.
 
 Cuando se hace invisible un método proyecto, sigue estando disponible para los desarrolladores de la base. Permanece en la lista de métodos del Explorador y del Editor de código.
 
-##### Compartido por los componentes y la base local
+#### Compartido por los componentes y la base local
 
 Este atributo se utiliza en el marco de los componentes. Cuando está marcada, indica que el método estará disponible para los componentes cuando la aplicación se utilice como base local. Por otro lado, cuando la aplicación se utiliza como un componente, el método estará disponible para las bases locales.
 
 Para más información sobre los componentes, consulte el capítulo [Desarrollo e instalación de componentes 4D](../Extensions/develop-components.md).
 
-##### Ejecutar en el servidor
+#### Ejecutar en el servidor
 
 Este atributo sólo se tiene en cuenta para una aplicación 4D en modo cliente-servidor. Cuando esta opción está marcada, el método del proyecto se ejecuta siempre en el servidor, independientemente de cómo se llame.
 
 Para más información sobre esta opción, consulte [Atributo Ejecutar en el servidor](https://doc.4d.com/4Dv19R6/4D/19-R6/Execute-on-Server-attribute.300-5941841.en.html).
 
-#### Modo Ejecución
+### Modo Ejecución
 
 Esta opción permite declarar el método elegible para la ejecución en modo apropiativo. Por defecto, 4D ejecuta todos los métodos proyecto de sus aplicaciones en modo cooperativo.
 
@@ -130,11 +138,11 @@ Tenga en cuenta que con esta opción, sea cual sea la evaluación de su compatib
 
 ***Caso particular*:** si el método tiene también la propiedad [**Compartido entre componentes y base local**](shared-by-components-and-host-database), al seleccionar la opción **Indiferente** se etiquetará automáticamente el método como thread-unsafe. Si quiere que un método de componente compartido sea hilo seguro, debe configurarlo explícitamente como **Puede ejecutarse en procesos apropiativos**.
 
-#### Disponibilidad
+### Disponibilidad
 
 Los atributos de disponibilidad especifican los servicios externos que pueden llamar explícitamente al método.
 
-##### Web Services
+#### Web Services
 
 Este atributo le permite publicar el método actual como servicio web accesible a través de peticiones SOAP. Para más información, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html). Cuando esta opción está marcada, se activa la opción **Publicado en WSDL**.
 
@@ -142,13 +150,13 @@ En el Explorador, los métodos proyecto que se ofrecen como Servicio Web reciben
 
 **Nota:** no es posible publicar un método como servicio web si su nombre incluye caracteres que no cumplen con la nomenclatura XML (por ejemplo espacios). Si el nombre del método no cumple con esto, 4D no asigna la propiedad.
 
-##### Publicado en WSDL
+#### Publicado en WSDL
 
 Este atributo sólo está disponible si el atributo "Servicio Web" está marcado. Permite incluir el método actual en el WSDL de la aplicación 4D. Para obtener más información al respecto, consulte [Generación del WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
 En el Explorador, los métodos proyecto que se ofrecen como Servicio Web y se publican en el WSDL reciben un icono específico ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
-##### Etiquetas 4D y URLs (4DACTION...)
+#### Etiquetas 4D y URLs (4DACTION...)
 
 Esta opción se utiliza para reforzar la seguridad del servidor web 4D: cuando no está marcada, el método proyecto no puede ejecutarse a través de una petición HTTP que contenga la URL especial [4DACTION](../WebServer/httpRequests.md#4daction) utilizada para llamar a los métodos 4D, ni las etiquetas especiales [4DSCRIPT, 4DTEXT y 4DHTML](../Tags/tags.md).
 
@@ -156,7 +164,7 @@ En el Explorador, los métodos proyecto con este atributo reciben un icono espec
 
 Por razones de seguridad, esta opción está desmarcada por defecto. Cada método que pueda ejecutarse utilizando las URLs y las etiquetas especiales debe indicarse individualmente.
 
-##### SQL
+#### SQL
 
 Cuando está marcada, esta opción permite que el método proyecto sea ejecutado por el motor SQL de 4D. Por defecto, no está seleccionado, lo que significa que, a menos que se autorice explícitamente, los métodos proyecto de 4D están protegidos y no pueden ser llamados por el motor SQL de 4D.
 
@@ -169,9 +177,9 @@ Esta propiedad se aplica a todas las peticiones SQL internas y externas --- ejec
 
 Para más información, consulte [Implementación del motor SQL de 4D](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) en el manual SQL de 4D.
 
-##### Servidor REST
+#### Servidor REST
 
-*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
+*Esta opción está obsoleta. La llamada a código a través de llamadas REST sólo es compatible con [Funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md).*
 
 #### Modificar de atributos globalmente
 

@@ -192,7 +192,7 @@ module.exports = {
             },
             {
               label: 'Downloads',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://us.4d.com/product-download/Feature-Release',
             },
             {
               label: 'Resources',
@@ -226,7 +226,7 @@ module.exports = {
           ],
         },
       ],
-      "copyright": "© 2022 4D SAS - All rights reserved",
+      "copyright": "© 2023 4D SAS - All rights reserved",
     },
   }
 }

@@ -310,7 +310,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`FILTER EVENT`](https://doc.4d.com/4dv19/help/command/en/page321.html)                            | 321    |
 | [`FILTER KEYSTROKE`](https://doc.4d.com/4dv19/help/command/en/page389.html)                        | 389    |
 | [`Find in array`](https://doc.4d.com/4dv19/help/command/en/page230.html)                           | 230    |
-| [`Find in field`](https://doc.4d.com/4dv19/help/command/en/page653.html)                           | 653    |
+| [`Find in field`](https://doc.4d.com/4dv19/help/command/en/page653.html)                           | 1773   |
 | [`Find in list`](https://doc.4d.com/4dv19/help/command/en/page952.html)                            | 952    |
 | [`Find in sorted array`](https://doc.4d.com/4dv19/help/command/en/page1333.html)                   | 1333   |
 | [`Find window`](https://doc.4d.com/4dv19/help/command/en/page449.html)                             | 449    |
@@ -1388,7 +1388,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`WP Get position`](https://doc.4d.com/4dv19/help/command/en/page1577.html)                        | 1577   |
 | [`WP Get section`](https://doc.4d.com/4dv19/help/command/en/page1581.html)                         | 1581   |
 | [`WP Get sections`](https://doc.4d.com/4dv19/help/command/en/page1580.html)                        | 1580   |
-| [`1580`](https://doc.4d.com/4dv19/help/command/en/page1656.html)                                   | 1656   |
+| [`WP Get style sheet`](https://doc.4d.com/4dv19/help/command/en/page1656.html)                     | 1656   |
 | [`WP Get style sheets`](https://doc.4d.com/4dv19/help/command/en/page1655.html)                    | 1655   |
 | [`WP Get subsection`](https://doc.4d.com/4dv19/help/command/en/page1582.html)                      | 1582   |
 | [`WP Get text`](https://doc.4d.com/4dv19/help/command/en/page1575.html)                            | 1575   |

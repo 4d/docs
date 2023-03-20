@@ -55,6 +55,7 @@
             "Concepts/parameters",
             "Concepts/shared",
             "Concepts/classes",
+            "Concepts/commands",
             {
               "type": "category",
               "label": "Control Flow",
@@ -231,7 +232,6 @@
           "type": "category",
           "label": "Access Rights",
           "items": [
-            "Admin/tls",
             "Users/overview",
             "Users/editing"
           ]

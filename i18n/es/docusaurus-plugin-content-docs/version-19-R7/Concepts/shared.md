@@ -5,7 +5,7 @@ title: Objetos y colecciones compartidos
 
 **Los objetos compartidos** y **las colecciones compartidas** son [objetos](Concepts/dt_object.md) y [colecciones](Concepts/dt_collection.md) específicas cuyo contenido se comparte entre procesos. A diferencia de las [variables interproceso](Concepts/variables.md#interprocess-variables), los objetos compartidos y las colecciones compartidas tienen la ventaja de ser compatibles con los **procesos 4D apropiativos**: pueden pasarse por referencia como parámetros a comandos como `New process` o `CALL WORKER`.
 
-Los objetos compartidos y las colecciones compartidas pueden almacenarse en variables declaradas con los comandos estándar `C_OBJECT` y `C_COLLECTION`, pero deben instanciarse utilizando comandos específicos:
+Los objetos compartidos y las colecciones compartidas pueden almacenarse en variables de tipo estándar `Object` y `Collection`, pero deben instanciarse utilizando comandos específicos:
 
 - para crear un objeto compartido, utilice el comando `New shared object`,
 - para crear una colección compartida, utilice el comando `New shared collection`.
@@ -78,11 +78,11 @@ La sintaxis de la estructura `Use...End use` es:
 
 La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno. *Shared_object_or_Shared_collection* puede ser cualquier objeto o colección compartido válido.
 
-Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Se pueden pasar por referencia como parámetros de un proceso a otro. Para obtener información detallada sobre los objetos compartidos o las colecciones compartidas, consulte la página **Objetos y colecciones compartidos**. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
+Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Se pueden pasar por referencia como parámetros de un proceso a otro. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
 
 - Una vez que se ejecuta con éxito la línea **Use**, todas las propiedades/elementos de _Shared_object_or_Shared_collection_ se bloquean para el resto de procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
 - La secuencia _de instrucciones_ puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.
-- Si se añade otro objeto o colección compartida como propiedad del parámetro _Shared_object_or_Shared_collection_, se conectan dentro del mismo grupo compartido (ver **Uso de objetos o colecciones compartidos**).
+- Si se añade otro objeto o colección compartida como propiedad del parámetro _Shared_object_or_Shared_collection_, se conectan dentro del mismo grupo compartido.
 - Si otro proceso intenta acceder a una de las propiedades _Objeto_compartido_o_Colección_compartida_ o una propiedad conectad mientras se está ejecutando una secuencia **Use... End use**, se pone automáticamente en espera y espera hasta que la secuencia actual finalice.
 - La línea **End use** desbloquea las propiedades _Shared_object_or_Shared_collection_ y todos los objetos del mismo grupo.
 - En el código 4D se pueden anidar varias estructuras **Use...End use**. Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**.
@@ -98,7 +98,7 @@ Se desea lanzar varios procesos que realicen una tarea de inventario en diferent
  ARRAY TEXT($_items;0)
  ... //llenar el array con los elementos a contar
  $nbItems:=Size of array($_items)
- C_OBJECT($inventory)
+ var $inventory : Object
  $inventory:=New shared object
  Use($inventory)
     $inventory.nbItems:=$nbItems
@@ -114,16 +114,12 @@ Se desea lanzar varios procesos que realicen una tarea de inventario en diferent
 En el método "HowMany", el inventario se realiza y el objeto compartido $inventory se actualiza lo antes posible:
 
 ```4d
- C_TEXT($1)
- C_TEXT($what)
- C_OBJECT($2)
- C_OBJECT($inventory)
- $what:=$1 //para una mejor legibilidad
- $inventory:=$2
+    //HowMany
+ #DECLARE ($what : Text ; $inventory : Object)
 
  $count:=CountMethod($what) //método para contar productos
  Use($inventory) //utilizar el objeto compartido
-    $inventory[$what]:=$count  //guardar los resultados de este artículo
+    $inventory[$what]:=$count  //guardar los resultados de este elemento
  End use
 ```
 

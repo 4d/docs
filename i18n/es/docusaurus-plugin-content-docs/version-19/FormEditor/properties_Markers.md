@@ -94,7 +94,7 @@ Additional areas are defined when you use a collection of positions in the [Form
 
 A form always starts with a Header, Detail, Break level 0, and Footer areas.
 
-Break at level 0 zero takes in all the records; it occurs after all the records are printed. Additional Break areas can be added, i.e. a Break level 1, Break level 2, etc.
+Break at level 0 zero takes in all the records; it occurs after all the records are printed. Se pueden añadir áreas de ruptura adicionales, es decir, un nivel de ruptura 1, un nivel de ruptura 2, etc.
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 

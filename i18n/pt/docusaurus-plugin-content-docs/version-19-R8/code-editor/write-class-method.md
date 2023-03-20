@@ -26,10 +26,10 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Method information**        | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Last clipboard values**     | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
 | **Clipboards**                | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
-| **Navigation dropdown**       | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See below                                                                                                                                                                                                                         |
+| **Navigation dropdown**       | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. Ver abaixo                                                                                                                                                                                                                        |
 
 
-## Editing area
+## Área de edição
 
 This is where you write and edit your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
 
@@ -56,7 +56,7 @@ The change bars change colors to indicate whether or not the modifications were 
 
 
 
-## Lists area
+## Área listas
 
 The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
 
@@ -127,7 +127,7 @@ Displaying the line numbers makes it easier to find your way around in the windo
 
 This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
 
-## Status bar
+## Barra de estado
 
 The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
 
@@ -222,7 +222,7 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
 You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.
 
-#### Moving lines
+#### Linhas em movimento
 
 You can move the line where the cursor is directly without selecting it first using the **Move Lines Up** and **Move Lines Down** commands in the **Method** menu. You can also do this using the combination **Alt/Option** + **Up Arrow** or **Down Arrow**.
 
@@ -268,9 +268,9 @@ If the characters typed correspond to different types of objects, the list displ
 - Constantes
 - Local, process or interprocess variable, declared in the method
 - Object property names
-- Plug-in commands
-- 4D keywords
-- SQL keywords
+- Comandos Plug-in
+- Palavras-chave 4D
+- Palavras-chave SQL
 - Macros (displayed between < >)
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
@@ -297,7 +297,7 @@ When the database is restarted, the list is reinitialized.
 > You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
 
 
-## Shortcuts
+## Atalhos
 
 Standard keyboard shortcuts to navigate the code are available in 4D's Code Editor.
 
@@ -422,7 +422,7 @@ There are several ways to expand and collapse code:
 Blocks can be defined by:
 
 - Quotation marks
-- Parentheses
+- Parênteses
 - A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Chaves
 
@@ -531,11 +531,11 @@ The following items are added automatically:
 
 By adding markers in your code, you can add the following tags to the dropdown:
 
-| Ícone                                                   | Elemento       |
-| ------------------------------------------------------- | -------------- |
-| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: etiqueta |
-| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: etiqueta |
-| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: tag     |
+| Ícone                                                   | Elemento        |
+| ------------------------------------------------------- | --------------- |
+| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: etiqueta  |
+| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: etiqueta  |
+| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: etiqueta |
 
 You declare them by adding comments such as:
 
@@ -549,7 +549,7 @@ Adding a hyphen after the `MARK:` tag draws a separating line in the code editor
 
 ![mark-hyphen-image](../assets/en/code-editor/mark-hyphen-editor.png)
 
-Results in this:
+Os resultados são os seguintes:
 
 ![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
 

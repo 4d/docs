@@ -29,7 +29,7 @@ Otras opciones permiten configurar la visualización de varias ventanas del modo
 
 -   **Progreso de la impresión**: permite, durante la impresión, activar o desactivar la visualización de la caja de diálogo de progreso de la impresión.
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the SDI mode (Single-Document Interface) in your merged application if executed in a supported context.
+-   **Usar modo SDI en Windows**: cuando esta opción está marcada, 4D habilita automáticamente el modo SDI (Single-Document Interface) en su aplicación fusionada si se ejecuta en un contexto soportado.
 
     > Esta opción puede seleccionarse en macOS, pero se ignorará cuando la aplicación se ejecute en esta plataforma.
 

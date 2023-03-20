@@ -14,6 +14,7 @@ title: JSON プロパティリスト
 | [`bottomMargin`](properties_FormSize.md#垂直-マージン)                   | 垂直マージン値 (ピクセル単位)                                          | 最小値: 0<a name="d"></a>                                                       |
 | <a name="c">**c**</a>                                          |                                                           |                                                                                       |
 | [`colorScheme`](properties_FormProperties.md#カラースキーム)              | フォームのカラースキーム                                              | "dark", "light"                                                                       |
+| [`css`](properties_FormProperties.md#css)                          | フォームが使用する CSSファイル                                         | 文字列、文字列のコレクション、または "path" と "media" プロパティを持つオブジェクトのコレクションとして提供される CSSファイルパス。          |
 | <a name="d">**d**</a>                                          |                                                           |                                                                                       |
 | [`destination`](properties_FormProperties.md#フォームタイプ)              | フォームタイプ                                                   | "detailScreen", "listScreen", "detailPrinter", "listPrinter"                          |
 | <a name="e">**e**</a>                                          |                                                           |                                                                                       |

@@ -3,7 +3,7 @@ id: onCollapse
 title: On Collapse
 ---
 
-| Code | Can be called by                                                                                         | Definição                                                                                                    |
+| Code | Pode ser chamado por                                                                                     | Definição                                                                                                    |
 | ---- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | 44   | [Hierarchical List](FormObjects/list_overview.md#overview) - [List Box](FormObjects/listbox_overview.md) | An element of the hierarchical list or hierarchical list box has been collapsed using a click or a keystroke |
 

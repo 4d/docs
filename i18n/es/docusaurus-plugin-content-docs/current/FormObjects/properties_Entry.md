@@ -5,9 +5,9 @@ title: Entrada
 
 ## Corrección ortográfica automática
 
-4D incluye funcionalidades de corrección ortográfica integradas y personalizables. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D incluye funcionalidades de corrección ortográfica integradas y personalizables. Se pueden verificar las [entradas](input_overview.md) de tipo texto, así como también los documentos [4D Write Pro](writeProArea_overview.md).
 
-La propiedad de corrección ortográfica automática activa la corrección ortográfica de cada objeto. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+La propiedad de corrección ortográfica automática activa la corrección ortográfica de cada objeto. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. También puede ejecutar el comando de lenguaje 4D `SPELL CHECKING` para cada objeto a verificar.
 
 #### Gramática JSON
 
@@ -23,11 +23,11 @@ La propiedad de corrección ortográfica automática activa la corrección ortog
 
 ## Menú contextual
 
-Allows the user access to a standard context menu in the object when the form is executed.
+Permite al usuario acceder a un menú contextual estándar en el objeto cuando se ejecuta el formulario.
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display.md#picture-format) using this menu is temporary; it is not saved with the record.
+Para una imagen de tipo [entrada](input_overview.md), además de los comandos de edición estándar (Cortar, Copiar, Pegar y Borrar), el menú contiene el comando **Importar...**, que puede utilizarse para importar una imagen almacenada en un archivo, así como el comando **Guardar como...**, que puede utilizarse para guardar la imagen en el disco. El menú también permite modificar el formato de visualización de la imagen: se ofrecen las opciones **Truncado no centrado**, **Escalado para ajustar** y **Escalado para ajustar centrado prop.**. La modificación del [formato de visualización](properties_Display.md#picture-format) utilizando este menú es temporal; no se guarda con el registro.
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
+Para un tipo de texto [multiestilo](properties_Text.md#multi-style) [input](input_overview.md), además de los comandos de edición estándar, el menú contextual ofrece los siguientes comandos:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. La lista puede almacenar hasta 10 fuentes (más allá, la última fuente utilizada sustituye a la más antigua). Por defecto, esta lista está vacía y la opción no se muestra. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
@@ -43,17 +43,17 @@ Para un [Área Web](webArea_overview.md), el contenido del menú depende del mot
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[Entrada](input_overview.md) - [Área Web](webArea_overview.md) - [Áreas 4D Write Pro](writeProArea_overview.md)
 
 ---
 
 ## Editable
 
-The Enterable attribute indicates whether users can enter values into the object.
+El atributo Editable indica si los usuarios pueden introducir valores en el objeto.
 
-Los objetos son editables por defecto. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Un objeto no editable sólo muestra datos. Los datos se controlan mediante métodos que utilizan el nombre del campo o de la variable. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+Los objetos son editables por defecto. Si desea hacer que un campo o un objeto no se pueda introducir en ese formulario, puede desactivar la propiedad Editable del objeto. Un objeto no editable sólo muestra datos. Los datos se controlan mediante métodos que utilizan el nombre del campo o de la variable. Puede seguir utilizando los eventos de formulario `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` y `On Losing Focus` con objetos no editables. Esto facilita la gestión de menús contextuales personalizados y permite diseñar interfaces en las que es posible arrastrar y soltar y seleccionar variables no introducibles.
 
-When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
+Cuando esta propiedad está desactivada, se desactiva todo menú emergente asociado a una columna list box a través de una lista.
 
 #### Gramática JSON
 
@@ -63,19 +63,19 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [Columna de List Box](listbox_overview.md#list-box-columns) - [Barra de progreso](progressIndicator.md) - [Regla](ruler.md) - [Stepper](stepper.md)
 
 ---
 
 ## Filtro de entrada
 
-Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. Incluso puede controlar las letras y números en particular.
+Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. A diferencia de las [listas obligatorias ](properties_RangeOfValues.md#required-list), por ejemplo, los filtros de entrada funcionan caracter por caracter. Por ejemplo, si un número de componente siempre tiene dos letras seguidas de tres dígitos, puede utilizar un filtro de entrada para restringir al usuario a respetar ese patrón. Incluso puede controlar las letras y números en particular.
 
 Un filtro de entrada sólo funciona durante la entrada de datos. No tiene efecto en la visualización de los datos después de que el usuario deseleccione el objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). El filtro restringe la entrada de datos y el formato asegura la correcta visualización del valor tras la entrada de datos.
 
 Durante la entrada de datos, un filtro de entrada evalúa cada caracter a medida que se escribe. Si el usuario intenta escribir un caracter no válido (un número en lugar de una letra, por ejemplo), 4D simplemente no lo acepta. El caracter null permanece sin cambios hasta que el usuario escribe un caracter válido.
 
-Los filtros de entrada también pueden utilizarse para mostrar los caracteres de formato necesarios para que el usuario no tenga que introducirlos. Por ejemplo, un número de teléfono estadounidense consta de un código de área de tres dígitos, seguido de un número de siete dígitos que se divide en dos grupos de tres y cuatro dígitos, respectivamente. Se puede utilizar un formato de visualización para encerrar el código de área entre paréntesis y para mostrar un guión después del tercer dígito del número de teléfono. Cuando se utiliza este formato, el usuario no necesita introducir los paréntesis ni los guiones.
+Los filtros de entrada también pueden utilizarse para mostrar los caracteres de formato necesarios para que el usuario no tenga que introducirlos. Por ejemplo, un número de teléfono estadounidense tiene un código de área de tres dígitos, seguido de un número de siete dígitos que se divide en dos grupos de tres y cuatro dígitos, respectivamente. Se puede utilizar un formato de visualización para encerrar el código de área entre paréntesis y para mostrar un guión después del tercer dígito del número de teléfono. Cuando se utiliza este formato, el usuario no necesita introducir los paréntesis ni los guiones.
 
 ### Definir un filtro de entrada
 
@@ -84,7 +84,7 @@ La mayoría de las veces, puede utilizar uno de los [filtros integrados](#defaul
 - puede introducir directamente una cadena de definición de filtro
 - o puede introducir el nombre de un filtro de entrada creado en el editor de filtros de la caja de herramientas. Los nombres de los filtros personalizados que se crean comienzan con una barra vertical (|).
 
-For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
+Para obtener información sobre la creación de filtros de entrada, consulte [Códigos de filtro y formato](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
 ### Filtros de entrada por defecto
 
@@ -125,15 +125,15 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 ## Focusable
 
-When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
+Cuando la propiedad **Enfocable** está activada para un objeto, el objeto puede tener el foco (y por lo tanto puede ser activado por el teclado por ejemplo). Cuando está seleccionado, aparece delimitado por una línea de puntos gris, excepto si también se ha seleccionado la opción [Ocultar rectángulo de enfoque](properties_Appearance.md#hide-focus-rectangle).
 
-> An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
+> Un [objeto de entrada](input_overview.md) es siempre enfocable si tiene la propiedad [Editable](#enterable).
 
 - ![](../assets/en/FormObjects/property_focusable1.png)<br/>Casilla de verificación muestra el foco cuando se selecciona
 
 - ![](../assets/en/FormObjects/property_focusable2.png)<br/>La casilla de verificación está seleccionada pero no se puede mostrar el foco|
 
-When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
+Cuando se selecciona la propiedad **Enfocable** para un objeto no editable, el usuario puede seleccionar, copiar o incluso arrastrar y soltar el contenido del área.
 
 #### Gramática JSON
 
@@ -143,17 +143,17 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Casilla de selección](checkbox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Área Plug-in](pluginArea_overview.md) - [Botón de radio](radio_overview.md) - [Subformulario](subform_overview.md)
 
 ---
 
 ## Disposición del teclado
 
-This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. De este modo, durante la entrada de datos, la configuración del teclado cambia automáticamente cuando este campo tiene el foco.
+Esta propiedad asocia una distribución de teclado específica a un [objeto de entrada](input_overview.md). Por ejemplo, en una aplicación internacional, si un formulario contiene un campo cuyo contenido debe introducirse en caracteres griegos, puede asociar a este campo la disposición de teclado "griego". De este modo, durante la entrada de datos, la configuración del teclado cambia automáticamente cuando este campo tiene el foco.
 
 Por defecto, el objeto utiliza la disposición actual del teclado.
 
-> You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
+> También puede configurar y obtener el teclado dinámicamente utilizando los comandos `OBJECT SET KEYBOARD LAYOUT` y `OBJECT Get keyboard layout`.
 
 #### Gramática JSON
 
@@ -203,7 +203,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 4D puede mostrar texto con marcador de posición en los campos de sus formularios.
 
-Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. Este texto desaparece tan pronto como el usuario ingrese un carácter en el área:
+El texto del marcador de posición aparece como texto de marca de agua en un campo, suministrando un mensaje de ayuda, una indicación o un ejemplo de los datos que deben introducirse. Este texto desaparece tan pronto como el usuario ingrese un caracter en el área:
 
 ![](../assets/en/FormObjects/property_placeholder.png)
 
@@ -212,7 +212,7 @@ El texto del marcador de posición vuelve a aparecer si se borra el contenido de
 Se puede mostrar un marcador de posición para los siguientes tipos de datos:
 
 - cadena (text o alpha)
-- date and time when the **Blank if null** property is enabled.
+- fecha y hora en que se activa la propiedad **Blank if null**.
 
 Puede utilizar una referencia XLIFF en la forma ":xliff:resname" como marcador de posición, por ejemplo:
 

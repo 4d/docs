@@ -98,17 +98,17 @@ Esta acción no está disponible en el modo de depuración remota (ver [Depuraci
 
 ## Ventana de expresión
 
-The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Aquí un ejemplo:
+El **panel de expresión** se muestra en la esquina superior izquierda de la ventana del depurador, debajo de la barra de herramientas de control de ejecución. Aquí un ejemplo:
 
 ![watch-pane](../assets/en/Debugging/watchPane.png)
 
 > Este panel no está disponible en el modo de depuración remota.
 
-The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
+El **panel de expresión** muestra información general útil sobre el sistema, el entorno 4D y el entorno de ejecución.
 
 La columna **Expression** muestra los nombres de los objetos y expresiones. La columna **Valor** muestra sus valores correspondientes actuales. Al hacer clic en cualquier valor de la parte derecha del panel, se puede modificar el valor del objeto, si está permitido para ese objeto.
 
-At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
+En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las hay) y elementos de temas en el panel de expresión personalizado [](#custom-watch-pane).
 
 ### Lista de expresiones
 
@@ -207,18 +207,18 @@ Este tema lista los conjuntos definidos en el proceso actual (el que está rastr
 
 #### Selecciones temporales
 
-This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. Las expresiones de este tema no pueden ser modificadas.
+This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. Para cada selección temporal, la columna Valor muestra el número de registros y el nombre de la tabla. Las expresiones de este tema no pueden ser modificadas.
 
 #### Información
 
-This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
+Este tema contiene información general sobre el funcionamiento de la base de datos, como la tabla por defecto actual (si existe), el espacio de memoria físico, virtual, libre y utilizado, el destino de las consultas, etc.
 
 #### Web
 
 Este tema muestra información relativa al servidor Web principal de la aplicación (sólo disponible si el servidor Web está activo):
 
 * Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
-* Web Cache Usage: number of pages present in Web cache as well as its use percentage
+* Uso de la caché web: número de páginas presentes en la caché web, así como su porcentaje de uso
 * Tiempo transcurrido del servidor web: duración del uso del servidor web en formato horas:minutos:segundos
 * Conteo de accesos a la Web: número total de peticiones HTTP recibidas desde la puesta en marcha del servidor Web, así como el número instantáneo de peticiones por segundo
 * Número de procesos Web activos: número de procesos Web activos, todos los procesos Web juntos
@@ -350,7 +350,7 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
 
 1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:
-    * Drag and drop the selected text to the Expression area of the Custom Watch Pane
+    * Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
     * Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
     * Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
 

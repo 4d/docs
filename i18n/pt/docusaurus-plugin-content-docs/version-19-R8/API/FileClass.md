@@ -685,10 +685,10 @@ A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->reescreve
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v19 R3 | Default for new projects: no BOM and (macOS) LF for EOL |
-| v17 R5 | Adicionado                                              |
+| Versão | Mudanças                                                   |
+| ------ | ---------------------------------------------------------- |
+| v19 R3 | Padrão para novos projectos: sem BOM e (macOS) LF para EOL |
+| v17 R5 | Adicionado                                                 |
 
 </details>
 

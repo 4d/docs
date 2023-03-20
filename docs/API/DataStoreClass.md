@@ -469,7 +469,7 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Collection of optimization context objects|<!-- END REF -->
+|Result|Collection|<-|Collection of optimization context objects|<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 

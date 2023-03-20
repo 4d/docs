@@ -3,7 +3,7 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Can be called by                                                                                                                                                            | Definição                         |
+| Code | Pode ser chamado por                                                                                                                                                        | Definição                         |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
 
@@ -29,7 +29,7 @@ This event is generated when the user clicks on a column or row header in a 4D V
 | ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | code        | inteiro longo | 42                                                                                                                                   |
 | description | text          | "On Header Click"                                                                                                                    |
-| objectName  | text          | 4D View Pro area name                                                                                                                |
+| objectName  | text          | Nome da área 4D View Pro                                                                                                             |
 | sheetName   | text          | Name of the sheet of the event                                                                                                       |
 | range       | object        | Cell range                                                                                                                           |
 | sheetArea   | inteiro longo | The sheet location where the event took place:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |

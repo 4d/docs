@@ -36,7 +36,7 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 |                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
 | [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
+> `/rest/{dataClass}/Función` puede utilizarse para llamar a una clase de datos o a una función de selección de entidades (`/rest/{dataClass}` devuelve todas las entidades de la DataClass como una selección de entidades). The function is searched in the entity selection class first. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
 > Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
 
@@ -49,7 +49,7 @@ Se aplican las siguientes reglas:
 - Los parámetros deben pasarse en el **cuerpo de la petición POST**
 - Los parámetros deben estar incluidos en una colección (formato JSON)
 - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
-- La selección de entidades y la entidad se pueden pasar como parámetros. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
+- La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
 
 Ver [este ejemplo](#request-receiving-an-entity-as-parameter) y [este ejemplo](#request-receiving-an-entity-selection-as-parameter).
 
@@ -75,7 +75,7 @@ Las entidades pasadas en los parámetros son referenciadas en el servidor a trav
 | __KEY                   | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
 - Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
-- If __KEY is provided, the entity corresponding to__KEY is loaded on the server with the given attributes
+- Si se suministra __KEY, la entidad correspondiente a__KEY se carga en el servidor con los atributos dados
 
 Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
 
@@ -135,7 +135,7 @@ A continuación, puede ejecutar esta petición:
 La clase de Dataclass `City` ofrece una PI que devuelve una entidad de ciudad a partir del nombre pasado en parámetro:
 
 ```
-// City class
+// Clase City 
 
 Class extends DataClass
 
@@ -235,7 +235,7 @@ A continuación, puede ejecutar esta petición:
 La clase `StudentsSelection` tine una función `getAgeAverage`:
 
 ```  
-// StudentsSelection Class
+// Clase StudentsSelection 
 
 Class extends EntitySelection
 
@@ -267,7 +267,7 @@ Una vez que haya creado un conjunto de entidades, puede ejecutar esta petición:
 La clase `StudentsSelection` tiene una función `getLastSummary`:
 
 ```  
-// StudentsSelection Class
+// Clase StudentsSelection 
 
 
 Class extends EntitySelection
@@ -297,7 +297,7 @@ A continuación, puede ejecutar esta petición:
 La clase de Dataclass `Students` tiene la función `pushData()` que recibe una entidad que contiene los datos del cliente. El método `checkData()` efectúa algunos controles. Si son válidos, la entidad se guarda y se devuelve.
 
 ```
-// Students Class
+// Clase Students 
 
 Class extends DataClass
 
@@ -306,7 +306,7 @@ exposed Function pushData
 
  $entity:=$1
 
- $status:=checkData($entity) // $status is an object with a success boolean property
+ $status:=checkData($entity) // $status es un objeto con una propiedad booleana success
 
  $0:=$status
 

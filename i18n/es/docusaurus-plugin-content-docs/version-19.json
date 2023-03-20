@@ -92,7 +92,7 @@
     "description": "The label for category Form Objects in sidebar docs"
   },
   "sidebar.docs.category.Form Object Properties": {
-    "message": "Form Object Properties",
+    "message": "Propiedades de los objetos de formulario",
     "description": "The label for category Form Object Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Events": {

@@ -20,17 +20,17 @@ Na linguagem 4D e para os atributos dos campos dos objetos, os valores nulos sã
 Indefinido não é realmente um tipo de dados. Denota uma variável que ainda não foi definida. Uma função (um método projeto que devolve um resultado) pode devolver um valor indefinido se, dentro do método, se atribuir ao resultado da função ($0) uma expressão indefinida (uma expressão calculada com ao menos uma variável indefinida). Um campo não pode ser indefinido (o comando `Undefined` sempre devolve False para um campo). Uma variável variant tem **indefinido** como valor por definição.
 
 
-## Null operators
+## Operadores Null
 
 
-| Operação     | Sintaxe                 | Retorna  | Expression                     | Value |
-| ------------ | ----------------------- | -------- | ------------------------------ | ----- |
-| Igual        | Null `=` Null           | Booleano | a.nullProp `=` b.nullProp      | True  |
-|              | Null `=` Undefined      | Booleano | a.nullProp `=` b.undefinedProp | True  |
-|              | Null `=` *scalar value* | Booleano | a.nullProp `=` 42              | False |
-| Desigualdade | Null `#` Null           | Booleano | a.nullProp `#` b.nullProp      | False |
-|              | Null `#` Undefined      | Booleano | a.nullProp `#` b.undefinedProp | False |
-|              | Null `#` *scalar value* | Booleano | a.nullProp `#` 42              | True  |
+| Operação     | Sintaxe                  | Retorna  | Expression                     | Value |
+| ------------ | ------------------------ | -------- | ------------------------------ | ----- |
+| Igual        | Null `=` Null            | Booleano | a.nullProp `=` b.nullProp      | True  |
+|              | Null `=` Undefined       | Booleano | a.nullProp `=` b.undefinedProp | True  |
+|              | Null `=` *valor escalar* | Booleano | a.nullProp `=` 42              | False |
+| Desigualdade | Null `#` Null            | Booleano | a.nullProp `#` b.nullProp      | False |
+|              | Null `#` Undefined       | Booleano | a.nullProp `#` b.undefinedProp | False |
+|              | Null `#` *valor escalar* | Booleano | a.nullProp `#` 42              | True  |
 
 *scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ex:
 
@@ -48,23 +48,23 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 
 :::
 
-## Undefined operators
+## Operadores indefinidos
 
 
 | Operação             | Sintaxe                                               | Retorna  | Expression                          | Value |
 | -------------------- | ----------------------------------------------------- | -------- | ----------------------------------- | ----- |
 | Igual                | Undefined `=` Undefined                               | Booleano | a.undefinedProp `=` b.undefinedProp | True  |
 |                      | Undefined `=` Null                                    | Booleano | a.undefinedProp `=` c.nullProp      | True  |
-|                      | Undefined `=` *other values*                          | Booleano | a.undefinedProp `=` 42              | False |
+|                      | Undefined `=` *outros valores*                        | Booleano | a.undefinedProp `=` 42              | False |
 | Desigualdade         | Undefined `#` Undefined                               | Booleano | a.undefinedProp `#` b.undefinedProp | False |
 |                      | Undefined `#` Null                                    | Booleano | a.undefinedProp `#` b.nullProp      | False |
-|                      | Undefined `#` *other values*                          | Booleano | a.undefinedProp `#` 42              | True  |
+|                      | Undefined `#` *outros valores*                        | Booleano | a.undefinedProp `#` 42              | True  |
 | Maior que            | Undefined `>` string, Date, Time, Boolean, number  | Booleano | a.undefinedProp `>` "abc"        | False |
 | Menor que            | Undefined `<` string, Date, Time, Boolean, number  | Booleano | a.undefinedProp `<` "abc"        | False |
 | Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Booleano | a.undefinedProp `>=` "abc"       | False |
 | Menor que ou igual a | Undefined `<=` string, Date, Time, Boolean, number | Booleano | a.undefinedProp `<=` "abc"       | False |
 
-*other values* are expressions of any type with a value neither Undefined nor Null.
+*outros valores* são expressões de qualquer tipo com um valor nem Indefinido nem Null.
 
 :::info
 

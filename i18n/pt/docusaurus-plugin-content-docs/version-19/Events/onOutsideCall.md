@@ -3,9 +3,9 @@ id: onOutsideCall
 title: On Outside Call
 ---
 
-| Code | Can be called by | Definição                                            |
-| ---- | ---------------- | ---------------------------------------------------- |
-| 10   | Formulário       | O formulário recebeu uma chamada `POST OUTSIDE CALL` |
+| Code | Pode ser chamado por | Definição                                            |
+| ---- | -------------------- | ---------------------------------------------------- |
+| 10   | Formulário           | O formulário recebeu uma chamada `POST OUTSIDE CALL` |
 
 
 ## Descrição

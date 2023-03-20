@@ -1,6 +1,6 @@
 ---
 id: jsonReference
-title: Liste de propriétés JSON
+title: Form JSON property list
 ---
 
 Cette page fournit une liste complète de toutes les propriétés du formulaire, triées par leur nom JSON. Cliquez sur un nom de propriété pour accéder à sa description détaillée.
@@ -14,6 +14,7 @@ Cette page fournit une liste complète de toutes les propriétés du formulaire,
 | [`bottomMargin`](properties_FormSize.md#vert-margin)                      | Valeur de la marge verticale (en pixels)                                                                                                                 | minimum : 0<a name="d"></a>                                                                                                                             |
 | <a name="c">**c**</a>                                                 |                                                                                                                                                          |                                                                                                                                                                  |
 | [`colorScheme`](properties_FormProperties.md#color-scheme)                | Mode de couleurs du formulaire                                                                                                                           | "dark", "light"                                                                                                                                                  |
+| [`css`](properties_FormProperties.md#css)                                 | CSS file(s) used by the form                                                                                                                             | CSS file path(s) provided as a string, a collection of strings, or a collection of objects with "path" and "media" properties                                    |
 | <a name="d">**d**</a>                                                 |                                                                                                                                                          |                                                                                                                                                                  |
 | [`destination`](properties_FormProperties.md#form-type)                   | Type de formulaire                                                                                                                                       | "detailScreen", "listScreen", "detailPrinter", "listPrinter"                                                                                                     |
 | <a name="e">**e**</a>                                                 |                                                                                                                                                          |                                                                                                                                                                  |

@@ -1870,7 +1870,7 @@ $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
 // 結果 : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 // アルファベット順:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+$strings2:=$strings1.orderByMethod("sortCollection";sk strict)
 // 結果 : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
@@ -1979,6 +1979,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ```
 
 <!-- END REF -->
+
 
 <!-- REF collection.query().Desc -->
 ## .query()

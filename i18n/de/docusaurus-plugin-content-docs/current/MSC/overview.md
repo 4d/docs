@@ -1,7 +1,7 @@
 ---
 id: overview
-title: Überblick
-sidebar_label: Überblick
+title: MSC
+sidebar_label: MSC
 ---
 
 Das Fenster Maintenance und Security Center (MSC) enthält alle Tools zum Prüfen, Analysieren, Warten, Sichern, Komprimieren und Verschlüsseln von Datendateien. Das MSC ist in allen 4D Programmen verfügbar, also 4D Developer, 4D Server oder 4D Desktop.
