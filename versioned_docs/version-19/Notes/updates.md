@@ -29,7 +29,7 @@ Read [**What’s new in 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 ## Previous releases
 
 
-- See the [**previous Release notes (19 to 19.4)**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
+- See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
 
 
 ## Library table
