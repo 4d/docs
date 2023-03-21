@@ -173,13 +173,13 @@ Lea [**Novedades de 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/)
 
 ## Tabla de las librerías
 
-<details><summary>Haga clic para ver la tabla de las librerías utilizadas en 4D</summary>
+
 
 | Librería | Versión actual | Actualizado en 4D | Comentario                                                                                                    |
 | -------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
+| CEF      | 109            | 20                | Chromium 5414                                                                                                 |
 | Hunspell | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
 | SpreadJS | 15.2.5         | 19 R8             | Motor 4D View Pro                                                                                             |
-| CEF      | 106.0.27       | 19 R8             | Chromium 106.0.5249.103                                                                                       |
 | OpenSSL  | 1.1.1s         | 19 R7             |                                                                                                               |
 | libzip   | 1.7.3          | 19 R2             | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
 | webKit   | WKWebView      | 19                |                                                                                                               |
@@ -187,4 +187,3 @@ Lea [**Novedades de 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/)
 | PHP      | 7.3.27         | 18 R6             |                                                                                                               |
 | libldap  | 2.4.48         | 18 R2             |                                                                                                               |
 
-</details>
