@@ -3,6 +3,19 @@ id: updates
 title: Release Notes
 ---
 
+:::tip
+
+Lisez [**Les nouveautés de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), l'article de blog qui répertorie toutes les nouvelles fonctionnalités et améliorations de 4D v19 LTS.
+
+:::
+
+## 4D v19.6
+
+#### Points forts
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D v19.6.
+
+
 ## 4D v19.5
 
 #### Points forts
@@ -15,27 +28,20 @@ title: Release Notes
 
 ## Versions précédentes
 
-:::tip
 
-Lisez [**Les nouveautés de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), l'article de blog qui répertorie toutes les nouvelles fonctionnalités et améliorations de 4D v19 LTS.
-
-:::
-
-- Voir les [précédentes Release notes (19 à 19.4)****](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.fe.html) sur doc.4d.com.
+- See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
 
 
 ## Tableau des bibliothèques
 
-<details><summary>Cliquez pour voir le tableau de versions des bibliothèques utilisées dans 4D v19.x</summary>
 
 | Bibliothèque | Version courante | Mise à jour dans 4D | Commentaire                                                                                                   |
 | ------------ | ---------------- | ------------------- | ------------------------------------------------------------------------------------------------------------- |
-| SpreadJS     | 14.1.6           | **19.5**            | Moteur 4D View Pro                                                                                            |
+| OpenSSL      | 1.1.1s           | 19.6                |                                                                                                               |
+| SpreadJS     | 14.1.6           | 19.5                | Moteur 4D View Pro                                                                                            |
 | CEF          | 4324             | 19                  | Chromium v88. Permet la compilation native sur les plates-formes Apple Silicon.                               |
-| OpenSSL      | 1.1.1n           | 19.3                |                                                                                                               |
 | webKit       | WKWebView        | 19                  |                                                                                                               |
 | ICU          | 68.1             | 18 R6               | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets. |
 | PHP          | 7.3.27           | 18 R6               |                                                                                                               |
 | libldap      | 2.4.48           | 18 R2               |                                                                                                               |
 
-</details>
