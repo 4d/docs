@@ -413,8 +413,8 @@ Hay varias formas de expandir y contraer código:
 - Use the commands of the **Method > Collapse/Expand** submenu:
 
   - **Collapse Selection** / **Expand Selection**: collapses or expands all the code structures found in the text selection.
-  - **Collapse Current Level** / **Expand Current Level**: collapses or expands the code structure at the level where the cursor is located. These commands are also available in the **context menu** of the editor.
-  - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. Estos comandos también están disponibles en la barra de herramientas del editor.
+  - **Contraer nivel actual** / **Expandir nivel actual**: contrae o expande la estructura del código en el nivel en el que se encuentra el cursor. Estos comandos también están disponibles en el **menú contextual** del editor.
+  - **Contraer todo** / **Expandir todo**: contrae o expande todos los bucles y condiciones de un método. Estos comandos también están disponibles en la barra de herramientas del editor.
 
 
 ## Handling blocks
@@ -423,45 +423,45 @@ Blocks can be defined by:
 
 - Comillas
 - Paréntesis
-- A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
+- Una estructura lógica (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Paréntesis
 
 ### Select Enclosing Block
 
 The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point.
 
-If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
+Si ya se ha seleccionado un bloque de texto, la función selecciona el bloque adyacente del nivel inmediatamente superior, y así sucesivamente, hasta seleccionar todo el método.
 
-Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you to reverse this operation and deselect the last enclosing block selected.
+Si presiona **Ctrl+Mayús+B** (Windows) o **Comando+Mayús+B** (macOS), podrá invertir esta operación y anular la selección del último bloque delimitador seleccionado.
 
-**Note:** If the insertion point is placed in an `If` or `Else` type structure, the enclosing block will be the one containing, respectively, the `If` or `Else` statement.
+**Nota:** si el punto de inserción se sitúa en una estructura de tipo `If` o `Else`, el bloque que lo encierra será el que contenga, respectivamente, la sentencia `If` o `Else`.
 
 
 ### Inicio del bloque o fin del bloque
 
-Two commands make it easier to move around within code structures (e.g. `If...Else...End if`):
+Dos comandos facilitan el desplazamiento dentro de estructuras de código (por ejemplo, `If...Else...End if`):
 
 - **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
 - **End Of Block**: places the cursor at the end of the current structure, just after the final keyword.
 
 Estos comandos se encuentran en el menú **Método**, así como en el menú contextual del editor. También puede utilizar los siguientes atajos:
 
-- Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
+- Windows: **Ctrl + flecha arriba** o **Ctrl** + **flecha abajo**'
 - macOS: **Comando** + **flecha arriba** o **Comando** +**flecha abajo**.
 
 ## Utilizando marcadores
 
-4D le permite asociar marcadores con ciertas líneas en sus métodos. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
+4D le permite asociar marcadores con ciertas líneas en sus métodos. A continuación, puede navegar rápidamente por el código pasando de un marcador a otro utilizando comandos específicos.
 
 ![](../assets/en/code-editor/bookm.png)
 
-A bookmark moves along with its original row if additional rows are inserted in the method. Los marcadores se guardan con los métodos.
+Un marcador se desplaza junto con su línea original si se insertan líneas adicionales en el método. Los marcadores se guardan con los métodos.
 
-Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
+Los marcadores se gestionan utilizando el submenú **Marcadores** del menú **Método**:
 
-- **Toggle**: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. This function is also available using the **Toggle Bookmark** command of the editor's context menu or using the **Ctrl+F3** (Windows) or **Command+F3** (macOS) keyboard shortcut.
-- **Remove All**: Removes all bookmarks from the foreground window.
-- **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
+- **Toggle**: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. Esta función también está disponible utilizando el comando **Alternar marcador** del menú contextual del editor o utilizando el atajo de teclado **Ctrl+F3** (Windows) o **Comando+F3** (macOS).
+- **Eliminar todo**: elimina todos los marcadores de la ventana en primer plano.
+- **Ir al siguiente** / **Ir al anterior**: permite navegar entre los marcadores de la ventana. Al seleccionar uno de estos comandos, el cursor se sitúa en el primer caracter de la línea asociada al marcador en cuestión. También puede utilizar los atajos de teclado **F3** (ir a la siguiente) o **Mayús+F3** (ir a la anterior).
 
 **Nota:** puede utilizar marcadores como marcadores de las líneas que contienen un elemento encontrado por una búsqueda. En este caso, 4D añade automáticamente los marcadores. Para más información, consulte [Buscar y reemplazar en los métodos](find-replace.md).
 
