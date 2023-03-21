@@ -649,7 +649,7 @@ Then this entity selection is updated with products and you want to share the pr
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath|Text|->|Path of attribute whose distinct values you want to get|
-|option|Integer|->|`dk diacritical`: diacritical evaluation ("A" # "a" for example)|
+|option|Integer|->|`dk diacritical`, `dk count values`|
 |Result|Collection|<-|Collection with only distinct values|<!-- END REF -->
 
 #### Description
@@ -667,7 +667,7 @@ In the *attributePath* parameter, pass the entity attribute whose distinct value
 
 You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+In the *option* parameter, you can pass one or a combination of the following constants:
 
 |Constant|Value|Comment|
 |---|---|---|

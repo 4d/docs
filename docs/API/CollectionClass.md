@@ -687,18 +687,19 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 |Version|Changes|
 |---|---|
+|v20|Support of `ck count values`|
 |v16 R6|Added|
 
 </details>
 
-<!-- REF #collection.distinct().Syntax -->**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #collection.distinct().Syntax -->**.distinct**( {*options* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.distinct().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|option|Integer|->|`ck diacritical`: diacritical evaluation ("A" # "a" for example)|
 |propertyPath|Text|->|Path of attribute whose distinct values you want to get|
+|options|Integer|->|`ck diacritical`, `ck count values`|
 |Result|Collection|<-|New collection with only distinct values|<!-- END REF -->
 
 
@@ -710,13 +711,17 @@ The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a 
 
 The returned collection is automatically sorted. **Null** values are not returned.
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the *option* parameter.
-
 If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
+In the *options* parameter, you can pass one or a combination of the following constants:
+
+|Constant|Value|Comment|
+|---|---|---|
+|`ck diacritical`|8|Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed|
+|`ck count values`|32|Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*,"count":*count*}` attributes.|
 
 
-#### Example
+#### Examples
 
 ```4d
  var $c; $c2 : Collection
@@ -729,6 +734,15 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
  $c2:=$c.distinct(ck diacritical) //$c2=["a","A","b","B","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct("size") //$c2=[1,3]
 ```
+
+```4d
+ var $c; $c2 : Collection
+ $c:=New collection
+ $c.push("a";"b";"c";"A";"B";"c";"b";"b")
+ $c2:=$c.distinct(ck count values) //$c2=[{value:a,count:2},{value:b,count:4},{value:c,count:2}]
+
+```
+
 
 <!-- END REF -->
 
@@ -1506,6 +1520,7 @@ By default, null or empty elements of the collection are returned in the resulti
 ```
 
 <!-- END REF -->
+
 
 
 
