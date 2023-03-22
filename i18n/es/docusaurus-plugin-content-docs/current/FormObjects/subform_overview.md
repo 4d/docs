@@ -58,7 +58,7 @@ Binding the same variable or expression to your subform container and other obje
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-In the parent form, both objects (input area and subform container) ***have the same value as ***Variable or Expression******. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
+En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) ***tienen el mismo valor que ***Variable o Expresión******. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
 
 |
 
