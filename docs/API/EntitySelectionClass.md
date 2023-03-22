@@ -672,8 +672,13 @@ In the *options* parameter, you can pass one or a combination of the following c
 |Constant|Value|Comment|
 |---|---|---|
 |`dk diacritical`|8|Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed|
-|`dk count values`|32|Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*,"count":*count*}` attributes.|
+|`dk count values`|32|Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*, "count":*count*}` properties.|
 
+:::note
+
+The `dk count values` is only available with storage attributes of type boolean, string, number, and date. 
+
+:::
 
 An error is returned if:
 
@@ -689,27 +694,27 @@ var $countries : Collection
 $countries:=ds.Employee.all().distinct("address.country")
 //$countries[0]={"Argentina"}
 //$countries[1]={"Australia"}
-//$countries[3]={"Belgium"}
+//$countries[2]={"Belgium"}
 ///...
 ```
-
-You want to get the number of employees per country:
-
-```4d
-var $countries : Collection
-$countries:=ds.Employee.all().distinct("address.country";dk count values)  
-//$countries[0]={"value":"Argentina";"count":17}
-//$countries[1]={"value":"Australia";"count":20}
-//$countries[2]={"value":"Belgium";"count":2}
-//...
-```
-
 
 `nicknames` is a collection and `extra` is an object attribute:
 
 ```4d
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
+
+You want to get the number of different job names in the company:
+
+```4d
+var $jobs : Collection
+$jobs:=ds.Employee.all().distinct("jobName";dk count values)  
+//$jobs[0]={"value":"Developer";"count":17}
+//$jobs[1]={"value":"Office manager";"count":5}
+//$jobs[2]={"value":"Accountant";"count":2}
+//...
+```
+
 
 
 <!-- END REF -->
@@ -1483,6 +1488,7 @@ If the original entity selection and the parameter are not related to the same d
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 |Parameter|Type||Description|
+
 |---------|--- |:---:|------|
 |pathString |Text	|->|Attribute path(s) and sorting instruction(s) for the entity selection|
 |pathObjects |Collection	|->|Collection of criteria objects|
