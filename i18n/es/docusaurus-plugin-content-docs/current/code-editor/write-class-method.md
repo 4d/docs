@@ -636,40 +636,40 @@ Este comando muestra sus resultados en una nueva ventana.
 
 ## Goto Definition
 
-The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
+The **Goto Definition** command opens the definition of an element referenced in the Code Editor. Para ello, coloque el cursor dentro del nombre del objeto o selecciónelo, y elija **Método** > **Ir a Definición...** o utilice el menú contextual del editor.
 
 :::tip
 
-This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) / **Command+K** (macOS) or  **Alt+double-click**.
+Esta funcionalidad también está disponible a través del atajo de teclado **Ctrl+K** (Windows) / **Command+K** (macOS) o  **Alt+doble clic**.
 
 :::
 
 The effect of the **Goto Definition...** command varies depending on the target element:
 
-- with a project method, it displays the contents of the method in a new window of the Code Editor
-- with a class name or class function, it opens the class in the the Code Editor
-- with a built-in 4D command or function, it has the same effect as the [**Show documentation**](#show-documentation) command.
+- con un método proyecto, muestra el contenido del método en una nueva ventana del Editor de código
+- con un nombre clase o una función clase, abre la clase en el Editor de código
+- con un comando o función 4D integrado, tiene el mismo efecto que el comando [**Mostrar documentación**](#show-documentation).
 
 ## Mostrar la documentación
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. El efecto varía en función del elemento objetivo. Por ejemplo:
+El comando **Mostrar documentación...** abre la documentación del elemento de destino. Para ello, coloque el cursor dentro del nombre del elemento o selecciónelo y, a continuación, elija **Método** > **Mostrar documentación...** o utilice el menú contextual. El efecto varía en función del elemento objetivo. Por ejemplo:
 
 - Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
-- Selecting a 4D command, function, or class name and choosing **Show documentation...** displays the online documentation.
-- If no element is selected, the command opens the documentation of the method currently opened in the Code Editor, [if any](../Project/documentation.md).
+- Al seleccionar un comando, función o nombre de clase 4D y elegir **Mostrar documentación...** se muestra la documentación en línea.
+- Si no se selecciona ningún elemento, el comando abre la documentación del método actualmente abierto en el Editor de Código, [si existe](../Project/documentation.md).
 
 :::tip
 
-To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. The documentation of the command is displayed in a new window of your default browser. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
+Para mostrar la documentación de un comando del lenguaje "clásico" 4D, seleccione el nombre del comando o simplemente sitúe el cursor en el nombre y presione **F1**. La documentación del comando se muestra en una nueva ventana de su navegador predeterminado. 4D busca la documentación en función de los ajustes realizados en las Preferencias (ver [Ubicación de la documentación](../Preferences/general.md#documentation-location)).
 
 :::
 
 
-## Search References
+## Buscar referencias
 
-The **Search References...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
+El comando **Buscar Referencias...** que se encuentra en el menú **Método** o en el menú contextual del Editor de Código encuentra todos los objetos (métodos y formularios) del proyecto en los que el elemento actual del método está referenciado (utilizado).
 
-The current item is either the one selected or the one where the cursor is located. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 

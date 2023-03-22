@@ -27,7 +27,7 @@ Esta página contiene opciones relacionadas con la protección del acceso y de l
 
     -   **Ordenar la lista de los usuarios en orden alfabético** (sólo disponible si está marcada la opción anterior): cuando esta opción está seleccionada, la lista de los usuarios de la caja de diálogo de introducción de contraseña se ordena por orden alfabético.
 
--   **Users can change their password**: When this option is checked, a **Change** button is displayed in the User Identification dialog box. This button lets the user access a dialog box that can be used to change their password (for more information about this dialog box, refer to the "Modification of password by user" in [Ensuring system maintenance](https://doc.4d.com/4Dv19/4D/19/Access-system-overview.300-5416896.en.html)). If desired, you can hide the **Change** button so that users cannot modify their passwords. Para ello, desmarque esta opción.
+-   **Los usuarios pueden cambiar su contraseña**: cuando esta opción está marcada, aparece un botón **Cambiar** en la caja de diálogo Identificación del usuario. Este botón permite al usuario acceder a la caja de diálogo que puede utilizar para modificar su contraseña (para más información sobre esta caja de diálogo, consulte "Modificación de la contraseña por parte del usuario" en [Garantizar el mantenimiento del sistema](https://doc.4d.com/4Dv19/4D/19/Access-system-overview.300-5416896.en.html)). Si lo desea, puede ocultar el botón **Cambiar** para que los usuarios no puedan modificar sus contraseñas. Para ello, desmarque esta opción.
 
 ## Opciones
 
