@@ -724,7 +724,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 #### Examples
 
 ```4d
- var $c; $c2 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  $c.push("a";"b";"c";"A";"B";"c";"b";"b")
  $c.push(New object("size";1))
@@ -733,16 +733,9 @@ In the *options* parameter, you can pass one or a combination of the following c
  $c2:=$c.distinct() //$c2=["a","b","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct(ck diacritical) //$c2=["a","A","b","B","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct("size") //$c2=[1,3]
-```
-
-```4d
- var $c; $c2 : Collection
- $c:=New collection
- $c.push("a";"b";"c";"A";"B";"c";"b";"b")
- $c2:=$c.distinct(ck count values) //$c2=[{value:a,count:2},{value:b,count:4},{value:c,count:2}]
+ $c3:=$c.distinct("size";ck count values) //$c3=[{value:1,count:2},{value:3,count:1}]
 
 ```
-
 
 <!-- END REF -->
 
@@ -1312,6 +1305,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 
 <!-- REF #collection.indexOf().Params -->
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |toSearch|expression|->|Expression to search in the collection|
@@ -1837,6 +1831,7 @@ You can also pass a criteria parameter to define how the collection elements mus
 {
     "propertyPath": string,
     "descending": boolean
+
 }
 ```
 
@@ -1972,6 +1967,7 @@ This function returns a *shallow copy*, which means that objects or collections 
 You designate the callback to be executed to evaluate collection elements using either:
 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+
 - or *methodName*, the name of a project method (text).
 
 In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. You can provide *extraParam* parameters to the callback if necessary.
