@@ -13,7 +13,7 @@ Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 
 #### Lo más destacado
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D v19.6.
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.6): lista de todos los errores que se han corregido en 4D v19.6.
 
 
 ## 4D v19.5
@@ -29,7 +29,7 @@ Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 ## Lanzamientos anteriores
 
 
-- See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
+- Consulte las [**notas de la versión anterior**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) en doc.4d.com.
 
 
 ## Tabla de la librería
