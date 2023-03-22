@@ -13,7 +13,7 @@ title: リリースノート
 
 #### ハイライト
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D v19.6.
+- [**修正リスト**](https://4d-jp.github.io//2023/41/release-note-version-19/): 4D v19.6 で修正されたバグのリストです。
 
 
 ## 4D v19.5
@@ -23,13 +23,13 @@ title: リリースノート
 - 4D v19.5 は Windows 11 22H2 対応です。
 - 4D v19.5 は macOS Ventura (macOS 13) 対応です。
 - SpreadJS のバージョンが更新されました (14.1.6)。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19.5): 4D v19.5 で修正されたバグのリストです。
+- [**修正リスト**](https://4d-jp.github.io/293/release-note-version-19/): 4D v19.5 で修正されたバグのリストです。
 
 
 ## 過去のリリース
 
 
-- See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
+- doc.4d.com の [**過去のリリースノート**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.ja.html) を参照ください。
 
 
 ## ライブラリの一覧
