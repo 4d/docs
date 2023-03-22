@@ -2362,7 +2362,7 @@ $r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //renvoie 86
 
 #### Exemple 2
 
-Avec la méthode ***Flatten*** suivante :
+Cet exemple permet de réduire plusieurs éléments de collection à un seul :
 
 ```4d
  var $c;$r : Collection
@@ -2374,7 +2374,7 @@ Avec la méthode ***Flatten*** suivante :
  $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
-Avec la méthode *NumberGreaterThan0* suivante :
+Avec la méthode ***Flatten*** suivante :
 
 ```4d
  If($1.accumulator=Null)
