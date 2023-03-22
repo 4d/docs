@@ -25,9 +25,9 @@ If a user attempts to execute an action and does not have the appropriate access
 
 You can assign specific permission actions to the following exposed resources in your project:
 
-- the datastore
+- el almacén de datos
 - una clase de datos
-- an attribute (including computed and alias)
+- un atributo (incluidos los calculados y los alias)
 - a data model class function
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
@@ -42,7 +42,7 @@ A permission action defined at a given level is inherited by default at lower le
 
 Las acciones disponibles están relacionadas con el recurso de destino.
 
-| Acciones     | datastore                                                                            | dataclass                                                                                                                                       | attribute                                                                                                             | data model function                                                                                                                                                                                                                                                      |
+| Acciones     | datastore                                                                            | dataclass                                                                                                                                       | atributo                                                                                                              | data model function                                                                                                                                                                                                                                                      |
 | ------------ | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **create**   | Create entity in any dataclass                                                       | Create entity in this dataclass                                                                                                                 | Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes). | n/a                                                                                                                                                                                                                                                                      |
 | **read**     | Read attributes in any dataclass                                                     | Read attributes in this dataclass                                                                                                               | Read this attribute content                                                                                           | n/a                                                                                                                                                                                                                                                                      |
@@ -88,14 +88,14 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
     Session.clearPrivileges()
 
-    $result:="Your are authenticated as Guest"
+    $result:="Está autentificado como Invitado"
 
     $user:=ds.Users.query("identifier = :1"; $identifier).first()
 
     If ($user#Null)
         If (Verify password hash($password; $user.password))
             Session.setPrivileges(New object("roles"; $user.role))
-            $result:="Your are authenticated as "+$user.role
+            $result:="Está autentificado como "+$user.role
         End if
     End if
 
@@ -118,25 +118,25 @@ En un contexto que no sea *Qodly* (nube), debe crear este archivo en la siguient
 
 La sintaxis del archivo `roles.json` es la siguiente:
 
-| Nombre de propiedad |                 |               | Tipo                               | Obligatorio | Descripción                                                                  |
-| ------------------- | --------------- | ------------- | ---------------------------------- | ----------- | ---------------------------------------------------------------------------- |
-| privileges          |                 |               | Colección de objetos `privilege`   | X           | Lista de privilegios definidos                                               |
-|                     | \[].privilege  |               | String                             |             | Nombre del privilegio                                                        |
-|                     | \[].includes   |               | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                    |
-| roles               |                 |               | Colección de objetos `role`        |             | List of defined roles                                                        |
-|                     | \[].role       |               | String                             |             | Role name                                                                    |
-|                     | \[].privileges |               | Colección de cadenas               |             | Lista de nombres de privilegios incluidos                                    |
-| permissions         |                 |               | Object                             | X           | List of allowed actions                                                      |
-|                     | allowed         |               | Collection of `permission` objects |             | List of allowed permissions                                                  |
-|                     |                 | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                         |
-|                     |                 | \[].type     | String                             | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
-|                     |                 | \[].read     | Colección de cadenas               |             | List of privileges                                                           |
-|                     |                 | \[].create   | Colección de cadenas               |             | List of privileges                                                           |
-|                     |                 | \[].update   | Colección de cadenas               |             | List of privileges                                                           |
-|                     |                 | \[].drop     | Colección de cadenas               |             | List of privileges                                                           |
-|                     |                 | \[].describe | Colección de cadenas               |             | List of privileges                                                           |
-|                     |                 | \[].execute  | Colección de cadenas               |             | List of privileges                                                           |
-|                     |                 | \[].promote  | Colección de cadenas               |             | List of privileges                                                           |
+| Nombre de propiedad |                 |               | Tipo                              | Obligatorio | Descripción                                                                  |
+| ------------------- | --------------- | ------------- | --------------------------------- | ----------- | ---------------------------------------------------------------------------- |
+| privileges          |                 |               | Colección de objetos `privilege`  | X           | Lista de privilegios definidos                                               |
+|                     | \[].privilege  |               | String                            |             | Nombre del privilegio                                                        |
+|                     | \[].includes   |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                    |
+| roles               |                 |               | Colección de objetos `role`       |             | Lista de roles definidos                                                     |
+|                     | \[].role       |               | String                            |             | Nombre del rol                                                               |
+|                     | \[].privileges |               | Colección de cadenas              |             | Lista de nombres de privilegios incluidos                                    |
+| permissions         |                 |               | Object                            | X           | Lista de acciones permitidas                                                 |
+|                     | allowed         |               | Colección de objetos `permission` |             | Lista de permisos permitidos                                                 |
+|                     |                 | \[].applyTo  | String                            | X           | Targeted [resource](#resources) name                                         |
+|                     |                 | \[].type     | String                            | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
+|                     |                 | \[].read     | Colección de cadenas              |             | Lista de privilegios                                                         |
+|                     |                 | \[].create   | Colección de cadenas              |             | Lista de privilegios                                                         |
+|                     |                 | \[].update   | Colección de cadenas              |             | Lista de privilegios                                                         |
+|                     |                 | \[].drop     | Colección de cadenas              |             | Lista de privilegios                                                         |
+|                     |                 | \[].describe | Colección de cadenas              |             | Lista de privilegios                                                         |
+|                     |                 | \[].execute  | Colección de cadenas              |             | Lista de privilegios                                                         |
+|                     |                 | \[].promote  | Colección de cadenas              |             | Lista de privilegios                                                         |
 
 
 :::caution Recordatorio
