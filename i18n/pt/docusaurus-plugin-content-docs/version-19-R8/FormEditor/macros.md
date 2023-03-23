@@ -24,7 +24,7 @@ When called, a macro overrides any previously specified behaviors.
 
 In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
 
-1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
+1. Num ficheiro `formMacros.json` dentro da pasta `Sources` do seu projecto, escreve:
 
 ```js
 {
@@ -82,7 +82,7 @@ This menu can be called in an empty area or a selection in the form. Selected ob
 
 A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
 
-## Location of macro file
+## Localização do ficheiro macro
 
 All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
 
@@ -215,11 +215,11 @@ Here are the properties returned in the *$editor* parameter:
 
 | Propriedade                      | Tipo       | Descrição                                                                         |
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Objeto     | The entire form                                                                   |
-| $editor.editor.file              | File       | File object of the form file                                                      |
+| $editor.editor.form              | Objeto     | O formulário completo                                                             |
+| $editor.editor.file              | File       | Objeto File do ficheiro do formulário                                             |
 | $editor.editor.name              | String     | Nome do formulário                                                                |
-| $editor.editor.table             | number     | Table number of the form, 0 for project form                                      |
-| $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
+| $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                        |
+| $editor.editor.currentPageNumber | number     | O número da página actual                                                         |
 | $editor.editor.currentPage       | Objeto     | The current page, containing all the form objects and the entry order of the page |
 | $editor.editor.currentSelection  | Collection | Collection of names of selected objects                                           |
 | $editor.editor.formProperties    | Objeto     | Properties of the current form                                                    |
@@ -227,17 +227,17 @@ Here are the properties returned in the *$editor* parameter:
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Propriedade       | Tipo       | Descrição                                                   |
-| ----------------- | ---------- | ----------------------------------------------------------- |
-| currentPage       | Objeto     | currentPage including objects modified by the macro, if any |
-| currentSelection  | Collection | currentSelection if modified by the macro                   |
-| formProperties    | Objeto     | formProperties if modified by the macro                     |
-| editor.groups     | Objeto     | group info, if groups are modified by the macro             |
-| editor.views      | Objeto     | view info, if views are modified by the macro               |
-| editor.activeView | String     | Nome da vista activa                                        |
+| Propriedade       | Tipo       | Descrição                                                      |
+| ----------------- | ---------- | -------------------------------------------------------------- |
+| currentPage       | Objeto     | currentPage including objects modified by the macro, if any    |
+| currentSelection  | Collection | currentSelection se modificada pela macro                      |
+| formProperties    | Objeto     | formProperties se modificada pela macro                        |
+| editor.groups     | Objeto     | informação do grupo, se os grupos forem modificados pela macro |
+| editor.views      | Objeto     | view info, se as vistas forem modificadas pela macro           |
+| editor.activeView | String     | Nome da vista activa                                           |
 
 
-For example, if objects of the current page and groups have been modified, you can write:
+Por exemplo, se objectos da página actual e grupos tiverem sido modificados, pode escrever:
 
 ```4d
     $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
@@ -261,11 +261,11 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
 
-#### `$4dId` property in `currentPage.objects`
+#### Propriedade `$4dId` em `currentPage.objects`
 
-The `$4dId` property defines a unique ID for each object in the current page. This key is used by the macro processor to control changes in `$result.currentPage`:
+A propriedade `$4dId` define um ID único para cada objecto na página actual. Esta chave é utilizada pelo macro processador para controlar as alterações em `$result.currentPage`:
 
-- if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
+- se a chave `$4dId` estiver em falta tanto na forma como num objecto em `$result`, o objecto é criado.
 - if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
 - if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
 
@@ -303,16 +303,16 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parâmetros   |                       | Tipo       | Descrição                                |
-| ------------ | --------------------- | ---------- | ---------------------------------------- |
-| $editor      |                       | Objeto     | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                       | Objeto     | Object returned by [onInvoke](#oninvoke) |
-| $error       |                       | Collection | Pilha de erros                           |
-|              | [].errCode            | Número     | Error code                               |
-|              | [].message            | Text       | Description of the error                 |
-|              | [].componentSignature | Text       | Internal component signature             |
+| Parâmetros   |                       | Tipo       | Descrição                                   |
+| ------------ | --------------------- | ---------- | ------------------------------------------- |
+| $editor      |                       | Objeto     | Objeto enviado para [emInvoke](#oninvoke)   |
+| $resultMacro |                       | Objeto     | Objecto devolvido por [onInvoke](#oninvoke) |
+| $error       |                       | Collection | Pilha de erros                              |
+|              | [].errCode            | Número     | Error code                                  |
+|              | [].message            | Text       | Descrição do erro                           |
+|              | [].componentSignature | Text       | Assinatura da componente interna            |
 
-The `onError` function is executed when the macros processor encounters an error.
+A função `onError` é executada quando o processador de macros encontra um erro.
 
 When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. It is the case for example if executing a macro would result in:
 
