@@ -283,7 +283,7 @@
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "開発中",
+    "message": "次へ",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.versionBadge.label": {
