@@ -172,9 +172,9 @@ Quiere comprobar si el privilegio "WebAdmin" está asociado a la sesión:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing
+ //El acceso está concedido, no hacer nada
 Else
- //Display an authentication page
+ //Mostrar una página de autenticación
 
 End if
 ```
@@ -210,10 +210,10 @@ Esta propiedad es **de sólo escritura**.
 
 ```4d
 If (Session.isGuest())
-  // A Guest session will close after 60 minutes of inactivity
+  // Una sesión de invitado se cerrará tras 60 minutos de inactividad
  Session.idleTimeout:=60
 Else
-  // Other sessions will close after 120 minutes of inactivity
+  // Las demás sesiones se cerrarán tras 120 minutos de inactividad
  Session.idleTimeout:=120
 End if
 

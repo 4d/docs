@@ -204,7 +204,7 @@ Esta carpeta contiene los componentes que deben estar disponibles únicamente en
 
 > Una base proyecto puede utilizarse como un componente:
 > 
-> - for development: put an alias of the .4dproject file in the Components folder of the host database.
+> - para el desarrollo: ponga un alias del archivo .4dproject en la carpeta Components de la base local.
 > - para el despliegue: cree el componente (ver [Crear un paquete proyecto](building.md)) y ponga el archivo .4dz resultante en una carpeta .4dbase en la carpeta Componentes de la base local.
 
 ## Carpeta Plugins

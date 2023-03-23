@@ -346,7 +346,7 @@ Mecanismos automáticos são operacionais: os arquivos XLIFF encontrados na past
 In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
 
 
-## Executing initialization code
+## Execução de código de inicialização
 
 A component can execute 4D code automatically when opening or closing the host database, for example in order to load and/or save the preferences or user states related to the operation of the host database.
 
@@ -369,6 +369,6 @@ To protect the code of a component effectively, simply [compile and build](Deskt
 - The other project methods of the matrix project will never appear.
 
 
-## Sharing components
+## Partilha de componentes
 
 We encourage you to support the 4D developer community by sharing your components, preferably on the [GitHub platform](https://github.com/topics/4d-component). We recommend that you use the **`4d-component`** topic to be correctly referenced.  
