@@ -746,7 +746,7 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->.
 
-If *attribute* is not an indexed object attribute, 4D throws an error.
+If *attribute* is not an indexed object attribute, an error is generated.
 
 After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
 
