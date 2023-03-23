@@ -3,11 +3,11 @@ id: SMTPTransporterClass
 title: SMTPTransporter
 ---
 
-The `SMTPTransporter` class allows you to configure SMTP connections and send emails through *SMTP transporter* objects.
+A classe `SMTPTransporter` permite-lhe configurar ligações SMTP e enviar correios eletrónicos através de *SMTP transpor ter* objetos.
 
 ### Objecto SMTP Transporter
 
-SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-new-transporter) command. Eles oferecem as propriedades abaixo e funções:
+Os objectos do SMTP Transporter são instanciados com o comando [SMTP New Transportter](#smtp-new-transporter). Eles oferecem as propriedades abaixo e funções:
 
 |                                                                                                                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ O comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summar
 > 
 > A coleção SMTP é automaticamente fechada:
 > 
-> * when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default),
+> * quando o objecto transportador é destruído se a propriedade [`keepAlive`](#keepalive) for true (por defeito),
 > * after each  [`.send( )`](#send) function execution if the [`keepAlive`](#keepalive) property is set to false.
 
 No parâmetro *server*, passe um objeto contendo as propriedades abaixo:
@@ -129,7 +129,7 @@ A função devolve um [**objecto SMTP transporter**](#smtp-transporter-object). 
 
 #### Descrição
 
-A função `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+A função `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->cria e devolve um novo objecto do tipo `4D.SMTPTransporter`<!-- END REF -->. É idêntico ao comando [`SMTP New transporter`](#smtp-new-transporter) (atalho).
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -139,7 +139,7 @@ A função `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+Para informações sobre códigos de estado SMTP, consulte por favor [esta página](https://www.usps.org/info/smtp_status.html).
 
 #### Exemplo
 
@@ -193,7 +193,7 @@ A propriedade `.keepAlive` contém <!-- REF #SMTPTransporterClass.keepAlive.Summ
 
 A coleção SMTP é automaticamente fechada:
 
-* when the `transporter` object is destroyed if the `.keepAlive` property is true,
+* quando o objecto `transporter` for destruído se a propriedade `.keepAlive` for true,
 * after each `.send( )` function execution if the `.keepAlive` property is set to false.
 
 <!-- INCLUDE transporter.logFile.Desc -->
@@ -235,15 +235,15 @@ In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to se
 
 The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
 
-| Propriedade | Tipo    | Descrição                                                                                        |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------ |
-| success     | boolean | True if the send is successful, False otherwise                                                  |
-| status      | number  | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
-| statusText  | text    | Status message returned by the SMTP server                                                       |
+| Propriedade | Tipo    | Descrição                                                                                                               |
+| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| success     | boolean | Verdadeiro se o envio for bem sucedido, False caso contrário                                                            |
+| status      | number  | Código de estado devolvido pelo servidor SMTP (0 no caso de um problema não relacionado com o processamento de correio) |
+| statusText  | text    | Mensagem de estado devolvida pelo servidor SMTP                                                                         |
 
 In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `GET LAST ERROR STACK` command for information about the error.
 
-In this case, the resulting status object contains the following values:
+Neste caso, o objecto de estatuto resultante contém os seguintes valores:
 
 | Propriedade | Value                  |
 | ----------- | ---------------------- |
