@@ -162,7 +162,7 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 El comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crea una nueva colección vacía o precargada compartida<!-- END REF --> y devuelve su referencia.
 
-La adición de un elemento a esta colección debe estar rodeada por la estructura de uso [`Use...End`](Concepts/shared.md#useend-use), de lo contrario se genera un error. Sin embargo, es posible leer un elemento sin estructura.
+Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
 > Para más información sobre las colecciones compartidas, consulte la página [Objetos y colecciones compartidos](Concepts/shared.md).
 
 Si no se pasa ningún parámetro, `New shared collection` crea una colección compartida vacía y devuelve su referencia.
@@ -1986,6 +1986,7 @@ Quiere ordenar la colección resultante:
 <!-- END REF -->
 
 
+
 <!-- REF collection.query().Desc -->
 ## .query()
 
@@ -2608,6 +2609,7 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 ```4d
  var $col : Collection
+
  var $vSum : Real
  $col:=New collection(10;20;"Monday";True;2)
  $vSum:=$col.sum() //32
