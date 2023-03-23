@@ -7,10 +7,14 @@ title: 共有オブジェクトと共有コレクション
 
 共有オブジェクトと共有コレクションは、標準の `Object` および `Collection` 型の変数に保存することができますが、専用のコマンドを使用してインスタンス化されている必要があります:
 
-- 共有オブジェクトを作成するには、`New shared object` コマンドを使用します。
-- 共有コレクションを作成するには、`New shared collection` コマンドを使用します。
+- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
 
-**注:** 共有オブジェクトと共有コレクションは標準の (非共有の) オブジェクトおよびコレクションのプロパティとして設定することができます。
+:::note
+
+Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+
+:::
 
 共有オブジェクト/コレクションを編集するには、**Use...End use** 構文を使う必要があります。 共有オブジェクト/コレクションの値を読むにあたっては、**Use...End use** は必要ありません。
 
@@ -18,7 +22,7 @@ title: 共有オブジェクトと共有コレクション
 
 ## 共有オブジェクト/共有コレクションの使用
 
-`New shared object` あるいは `New shared collection` コマンドでインスタンス化されると、その共有オブジェクト/コレクションの属性と要素はどのプロセスからでも編集/読み出しができるようになります。
+Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application, under certain conditions.
 
 ### 編集
 
@@ -27,13 +31,30 @@ title: 共有オブジェクトと共有コレクション
 - オブジェクトプロパティの追加・削除
 - 値の追加・編集 (共有オブジェクトがサポートしている範囲内で)。これには、他の共有オブジェクトやコレクションの追加・編集も含まれます (この場合、共有グループを作成します。後述参照)
 
-ただし、共有オブジェクトあるいは共有コレクションを編集するコードは、必ず `Use...End use` 構文に組み込まれている必要があり、そうでない場合にはエラーが返されます。
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
  Use($s_obj)
     $s_obj.prop1:="omega"
  End Use
+```
+
+For conveniency, all [collection functions](../API/CollectionClass.md) that modify the shared object or collection insert an internal `Use...End use` block so you do not have to code it yourself. 例:
+
+```4d
+$col:=New shared collection()
+$col.push("alpha") //.push() internally triggers Use/End use, so no need to do it yourselves
+```
+
+If you need to execute several modifications on the same collection, you can protect all modifications with a single `Use...End use` so that modifications are performed atomically.
+
+```4d
+$col:=Storage.mySharedCollection
+Use($col)
+    $col[0]:="omega" //modifying an element requires to be performed inside Use/End use
+    $col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
+End Use
 ```
 
 一度に 1プロセスのみ、共有オブジェクト/コレクションを編集することができます。 `Use` は共有オブジェクト/コレクションを他のスレッドからアクセスできないようにロックする一方、`End use` はこのロックを解除します (ロックカウンターが 0 の場合; 後述参照)。 。 `Use...End use` を使わずに共有オブジェクト/コレクションを編集しようとすると、エラーが生成されます。 すでに他のプロセスによって使用されている共有オブジェクト/コレクションに対して、別のプロセスが `Use...End use` を呼び出した場合、先着プロセスが `End use` でロックを解除するまで、その呼び出しは待機状態になります (エラーは生成されません)。 したがって、`Use...End use` 構文内の処理は迅速に実行され、ロックは可及的速やかに解除される必要があります。 そのため、共有オブジェクト/コレクションをインターフェース(ダイアログボックスなど) から直接編集することは避けることが強く推奨されます。
@@ -46,7 +67,7 @@ title: 共有オブジェクトと共有コレクション
 
 共有グループのルールについての詳細は、例題2を参照してください。
 
-**注:** 共有グループは、*ロック識別子* と呼ばれる内部プロパティによって管理されています。 この値についての詳細は、[ランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/Shared-objects-and-shared-collections.300-4505654.ja.html#3648963) を参照ください。
+**注:** 共有グループは、*ロック識別子* と呼ばれる内部プロパティによって管理されています。 For detailed information on this value, please refer to the 4D Language Reference.
 
 ### 読み出し
 
@@ -60,7 +81,7 @@ title: 共有オブジェクトと共有コレクション
 
 ### ストレージ
 
-**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 この共有オブジェクトは `Storage` コマンドから返されます。 このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
+**ストレージ** は固有の共有オブジェクトで、各アプリケーションおよびマシン上で利用可能です。 This shared object is returned by the [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html) command. このオブジェクトは、他のプリエンティブあるいは標準プロセスからでも利用出来るように、セッション中に定義されたすべての共有オブジェクト/コレクションを参照するためのものです。
 
 `ストレージ` オブジェクトは標準の共有オブジェクトとは異なり、共有オブジェクト/コレクションがプロパティとして追加されたときでも共有グループを作成しないという点に注意してください。 この例外的な振る舞いにより、**ストレージ** オブジェクトを使用するたびに、リンクされている共有オブジェクト/コレクションをすべてロックせずに済みます。
 
@@ -87,8 +108,11 @@ title: 共有オブジェクトと共有コレクション
 - **End use** は、_Shared_object_or_Shared_collection_ プロパティおよび、同じグループのすべてのオブジェクトのロックを解除します。
 - 4D コード内では、複数の **Use...End use** 構文を入れ子にすることができます。 グループの場合、**Use** を使用するごとにグループのロックカウンターが 1 増加し、 **End use** ごとに 1 減少します。最後の **End use** によってロックカウンターが 0 になった場合にのみ、すべてのプロパティ/要素のロックが解除されます。
 
-**注:** コレクションのメンバーメソッドが共有コレクションを変更する場合、そのメソッド実行中は、対象の共有コレクションに対して **Use** が内部的に自動で呼ばれます。
+:::note
 
+Keep in mind that [collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed.
+
+:::
 
 ## 例題 1
 
