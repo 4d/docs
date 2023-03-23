@@ -31,7 +31,7 @@ Modifications can be applied to shared objects and shared collections:
 - adding or removing object properties,
 - adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
 
-However, all modification instructions in a shared object or collection must be surrounded by the [`Use...End use`](#use-end-use) keywords, otherwise an error is generated. 
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated. 
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -40,11 +40,23 @@ However, all modification instructions in a shared object or collection must be 
  End Use
 ```
 
-:::note
+For conveniency, all [collection functions](../API/CollectionClass.md) that modify the shared object or collection insert an internal `Use...End use` block so you do not have to code it yourself. For example:
 
-When a [collection function](../API/CollectionClass.md) modifies a shared collection, an internal **Use** is automatically triggered for this shared collection while the function is executed, thus no error is generated if it is called outside a formal [`Use...End use`](#use-end-use) structure. 
+```4d
+$col:=New shared collection()
+$col.push("alpha") //.push() internally triggers Use/End use, so no need to do it yourselves
+```
 
-:::
+If you need to execute several modifications on the same collection, you can protect all modifications with a single `Use...End use` so that modifications are performed atomically.
+
+```4d
+$col:=Storage.mySharedCollection
+Use($col)
+	$col[0]:="omega" //modifying an element requires to be performed inside Use/End use
+	$col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
+End Use
+```
+
 
 A shared object/collection can only be modified by one process at a time. `Use` locks the shared object/collection from other threads, while `End use` unlocks the shared object/collection (if the locking counter is at 0, see below). . Trying to modify a shared object/collection without at least one `Use...End use` generates an error. When a process calls `Use...End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use...End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
 
