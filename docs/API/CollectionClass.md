@@ -235,7 +235,7 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 </details>
 
-<!-- REF #collection.at().Syntax -->**.at**(  *index* : Integer ) : any <!-- END REF -->
+<!-- REF #collection.at().Syntax -->**.at**( *index* : Integer ) : any <!-- END REF -->
 
 
 <!-- REF #collection.at().Params -->
@@ -2150,6 +2150,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
 
 This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+
 
 >This function does not modify the original collection.
 
