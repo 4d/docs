@@ -162,7 +162,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou pré-remplie<!-- END REF --> et retourne sa référence.
 
-L'ajout et la modification d'éléments dans une collection partagée doivent être encadrés par une structure [`Use...End`](Concepts/shared.md#useend-use), sinon une erreur est générée. La lecture d'un élement hors [`Use...End`](Concepts/shared.md#useend-use) est toutefois possible.
+Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
 > Pour plus d'informations sur les collections partagées, reportez-vous à la page [Objets et collections partagés](Concepts/shared.md).
 
 Si vous ne passez aucun paramètre, `New shared collection` crée une collection vide et retourne sa référence.
@@ -2640,6 +2640,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 ```4d
  var $col : Collection
+
  var $vSum : Real
  $col:=New collection(10;20;"Monday";True;2)
  $vSum:=$col.sum() //32

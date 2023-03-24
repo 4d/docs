@@ -162,7 +162,7 @@ You create a new collection and then add a new element:
 
 The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
-Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
+Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
 > For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
 
 If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
@@ -1981,6 +1981,7 @@ You want to sort the resutling collection:
 <!-- END REF -->
 
 
+
 <!-- REF collection.query().Desc -->
 ## .query()
 
@@ -2603,6 +2604,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 ```4d
  var $col : Collection
+
  var $vSum : Real
  $col:=New collection(10;20;"Monday";True;2)
  $vSum:=$col.sum() //32

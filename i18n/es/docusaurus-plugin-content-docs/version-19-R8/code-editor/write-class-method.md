@@ -306,7 +306,7 @@ Los atajos de teclado estándar para navegar por el código están disponibles e
 | **Atajo**                                                             | **Acción**                                                                                                                                    |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Shift]+[flecha derecha]                                              | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left        |
-| [Shift]+[flecha izquierda]                                            | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left         |
+| [Shift]+[flecha izquierda]                                            | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda       |
 | [Shift]+[flecha abajo]                                                | Create and enlarge a selection, line by line, from the top to the bottom                                                                      |
 | [Shift]+[flecha arriba]                                               | Create and enlarge a selection, line by line, from the bottom to the top                                                                      |
 | [Ctrl]+[Shift]+[flecha derecha]                                       | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                           |
@@ -328,7 +328,7 @@ Puede hacer doble clic para seleccionar "palabras" individuales. Cuando el nombr
 
 ## Comprobación y corrección de errores de sintaxis
 
-4D comprueba automáticamente la sintaxis del método para ver si es correcta. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+4D comprueba automáticamente la sintaxis del método para ver si es correcta. Si introduce texto o selecciona un componente que no es sintácticamente correcto, 4D muestra un símbolo para indicar la expresión incorrecta ![](../assets/en/code-editor/incorrect-expression-icon.png). Al pasar el ratón por encima del símbolo, un mensaje de ayuda muestra la causa del error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
@@ -350,7 +350,7 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 ## Using help tips
 
-The Code Editor provides various contextual information using help tips. They appear when you mouse over an object and the status bar, at the bottom of a Code Editor window.
+El Editor de código ofrece diversa información contextual utilizando consejos de ayuda. They appear when you mouse over an object and the status bar, at the bottom of a Code Editor window.
 
 - **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Checking and correcting syntax errors](#checking-and-correcting-syntax-errors)).
 
@@ -382,7 +382,7 @@ Para mostrar la documentación de un comando del lenguaje "clásico" 4D, selecci
 
 ## Comentar/Descomentar
 
-The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea. No hay límite en el número de líneas.
+El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), que son líneas de código inactivas. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea. No hay límite en el número de líneas.
 
 Existen dos tipos de comentarios: `//comment` (comentario de una línea) y `/*comment*/`(comentarios en línea o bloques de comentarios multilínea).
 

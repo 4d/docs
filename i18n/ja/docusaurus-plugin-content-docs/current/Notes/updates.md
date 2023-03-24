@@ -7,6 +7,11 @@ title: リリースノート
 
 [**4D v20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D v20 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
+
+#### Index rebuild warning
+
+4D v20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
+
 #### ハイライト
 
 - [IMAP Transporter クラス](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) がカスタムキーワードをサポートするようになりました。
@@ -15,6 +20,7 @@ title: リリースノート
 - コードエディター: 強化された [検索/置換機能](../code-editor/write-class-method.md#検索と置換)。
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
 - [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail) で *headerOnly* パラメーターをサポート 。
+- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
 
 
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) ページ。
@@ -177,13 +183,13 @@ title: リリースノート
 
 | ライブラリ    | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
 | -------- | --------- | -------------- | ----------------------------------------------------- |
-| CEF      | 109       | 20             | Chromium 5414                                         |
-| Hunspell | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
+| ICU      | 72.1      | **20**         | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| CEF      | 109       | **20**         | Chromium 5414                                         |
+| Hunspell | 1.7.2     | **20**         | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
 | SpreadJS | 15.2.5    | 19 R8          | 4D View Pro エンジン                                      |
 | OpenSSL  | 1.1.1s    | 19 R7          |                                                       |
 | libzip   | 1.7.3     | 19 R2          | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
 | webKit   | WKWebView | 19             |                                                       |
-| ICU      | 68.1      | 18 R6          | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
 | PHP      | 7.3.27    | 18 R6          |                                                       |
 | libldap  | 2.4.48    | 18 R2          |                                                       |
 

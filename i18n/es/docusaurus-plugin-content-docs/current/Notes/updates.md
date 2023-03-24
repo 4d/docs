@@ -7,6 +7,11 @@ title: Notas del lanzamiento
 
 Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la entrada del blog que enumera todas las nuevas funcionalidades y mejoras de 4D v20.
 
+
+#### Index rebuild warning
+
+4D v20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
+
 #### Puntos fuertes
 
 - [IMAP Transporter Class](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) soportan palabras clave personalizadas.
@@ -15,6 +20,7 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 - Editor de código: mejorado [Funciones de búsqueda y sustitución](../code-editor/write-class-method.md#find-and-replace).
 - Para simplificar el código, algunos operadores de comparación pueden utilizarse ahora con [Valores indefinidos](../Concepts/dt_null_undefined.md#undefined-operators) sin generar errores.
 - Soporte del parámetro *headerOnly* en [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail).
+- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
 
 
 - Comandos lenguaje 4D: [Página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) en doc.4d.com.
@@ -177,13 +183,13 @@ Lea [**Novedades de 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/)
 
 | Librería | Versión actual | Actualizado en 4D | Comentario                                                                                                    |
 | -------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
-| CEF      | 109            | 20                | Chromium 5414                                                                                                 |
-| Hunspell | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
+| ICU      | 72.1           | **20**            | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
+| CEF      | 109            | **20**            | Chromium 5414                                                                                                 |
+| Hunspell | 1.7.2          | **20**            | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
 | SpreadJS | 15.2.5         | 19 R8             | Motor 4D View Pro                                                                                             |
 | OpenSSL  | 1.1.1s         | 19 R7             |                                                                                                               |
 | libzip   | 1.7.3          | 19 R2             | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
 | webKit   | WKWebView      | 19                |                                                                                                               |
-| ICU      | 68.1           | 18 R6             | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
 | PHP      | 7.3.27         | 18 R6             |                                                                                                               |
 | libldap  | 2.4.48         | 18 R2             |                                                                                                               |
 

@@ -177,13 +177,19 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 El comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crea una nueva colección vacía o precargada compartida<!-- END REF --> y devuelve su referencia.
 
-La adición de un elemento a esta colección debe estar rodeada por la estructura de uso [`Use...End`](Concepts/shared.md#useend-use), de lo contrario se genera un error. Sin embargo, es posible leer un elemento sin estructura.
-> Para más información sobre las colecciones compartidas, consulte la página [Objetos y colecciones compartidos](Concepts/shared.md).
+Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
+
+|
+
+Para más información sobre las colecciones compartidas, consulte la página [Objetos y colecciones compartidos](Concepts/shared.md).
+
+:::
 
 Si no se pasa ningún parámetro, `New shared collection` crea una colección compartida vacía y devuelve su referencia.
 
 Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
-> Tenga en cuenta que las instrucciones `var : Collection` or `C_COLLECTION` declaran una variable de tipo `Collection` pero no crea ninguna colección.
+
+> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
 Opcionalmente, puede prellenar la nueva colección compartida pasando uno o varios *valores* como parámetro(s). De lo contrario, puede añadir o modificar elementos posteriormente por asignación notación objeto (ver ejemplo).
 
@@ -1094,7 +1100,7 @@ Se designa la retrollamada a ejecutar para filtrar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
+Se llama a la retrollamada con los parámetros pasados en *param* (opcional) y un objeto en primer parámetro (*$1*). The callback is called with the parameter(s) passed in *param* (optional).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1104,9 +1110,14 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-*   (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si el valor del elemento coincide con la condición del filtro y debe conservarse, en caso contrario **false**.
+*   *$1.result* (booleano): **true** si el valor del elemento coincide con la condición del filtro y debe conservarse, **false** en caso contrario.
 *   *$1.stop* (Boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
+:::note
+
+Cuando se utiliza *methodName* como callback, y si el método no devuelve ningún valor, `.filter()` buscará la propiedad *$1.result* que debe definir como **true** para cada elemento que cumpla la condición.
+
+:::
 
 #### Ejemplo 1
 
@@ -1545,6 +1556,8 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 
 
+
+
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
@@ -1892,7 +1905,7 @@ Si la colección contiene elementos de diferentes tipos, se agrupan primero por 
 Ordenar una colección de números de forma ascendente y descendente:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)

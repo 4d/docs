@@ -1421,13 +1421,13 @@ $options.port:=993
 $options.user:="4d@gmail.com"
 $options.password:="xxxxx"
 
-// Create transporter
+// Criar transporter
 $transporter:=IMAP New transporter($options)
 
-// Select mailbox
+// Selecionar mailbox
 $boxInfo:=$transporter.selectBox("INBOX")
 
-// Mark all messages from INBOX as unseen
+// Marcar todas as mensagens de INBOX como invisíveis
 $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
@@ -1498,7 +1498,7 @@ $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// rename mailbox
+// renomear caixa de correio
 $status:=$transporter.renameBox("Invoices"; "Bills")
 
 If ($status.success)
