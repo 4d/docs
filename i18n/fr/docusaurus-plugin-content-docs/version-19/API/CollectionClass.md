@@ -162,7 +162,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou pré-remplie<!-- END REF --> et retourne sa référence.
 
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
+L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](Concepts/shared.md#useend-use) , sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](#push) ou [`map()`](#map) , car elles déclenchent automatiquement une structure interne *Use...End use*). La lecture d'un élément sans structure *Use...End use* est toutefois possible.
 > Pour plus d'informations sur les collections partagées, reportez-vous à la page [Objets et collections partagés](Concepts/shared.md).
 
 Si vous ne passez aucun paramètre, `New shared collection` crée une collection vide et retourne sa référence.
