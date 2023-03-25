@@ -5,9 +5,9 @@ title: HTTPRequest
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças    |
-| ------ | ----------- |
-| v19 R6 | Class added |
+| Versão | Mudanças          |
+| ------ | ----------------- |
+| v19 R6 | Classe adicionada |
 
 </details>
 
