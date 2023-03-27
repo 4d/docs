@@ -118,8 +118,9 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 - **Restaurar la última copia de seguridad si la base está dañada**: cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la aplicación, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la aplicación. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 
-- **Integrar el último archivo de historial si la base está incompleta**: cuando se marca esta opción, el programa integra automáticamente el archivo de historial al abrir o restaurar la aplicación.
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the log files when opening or restoring the application.
     - Durante la apertura de una aplicación, el archivo de historial actual se integra automáticamente si 4D detecta que hay operaciones almacenadas en el archivo de historial que no están presentes en los datos. Esta situación se produce, por ejemplo, si se produce un corte de energía cuando hay operaciones en la caché de datos que aún no se han escrito en el disco.
+    - If there is a valid sequence of .journal files in the same repository as the current journal file (i.e. you used the [new log file](log.md#stopping-a-log-file) command), 4D Server integrates all the .journal files needed before integrating the current journal.
     - Al restaurar la aplicación, si el archivo de historial actual o un archivo de copia de seguridad del historial que tiene el mismo número que el archivo de copia de seguridad se almacena en la misma carpeta, 4D examina su contenido. Si contiene operaciones que no se encuentran en el archivo de datos, el programa las integra automáticamente.
 
 El usuario no ve ninguna caja de diálogo; la operación es completamente automática. El objetivo es facilitar al máximo su uso. La operación se registra en el diario de copias de seguridad.
