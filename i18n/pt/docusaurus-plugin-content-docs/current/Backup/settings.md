@@ -118,8 +118,9 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 - **Restaura o último backup se o banco de dados é danificado**: Quando essa opção for marcada, o programa automaticamente inicia a restauração dos arquivos de dados do último backup válido da aplicação, se uma anomalia for detectada (arquivo corrupto, por exemplo) durante o lançamento da aplicação. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-- **Integrar o último arquivo de histórico se o banco de dados estiver incompleto**: Quando essa opção for marcada, o programa integra automaticamente o arquivo de histórico quando abrir ou restaurar a aplicação.
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the log files when opening or restoring the application.
     - Quando abrir uma aplicação, o arquivo de histórico atual é integrado automaticamente se 4D detectar que há operações armazenadas no arquivo de log que não estejam presentes nos dados. Esta situação se produz, por exemplo, se acontecer uma falta de energia quando acontecerem operações no cache de dados que ainda não foram escritos no disco.
+    - If there is a valid sequence of .journal files in the same repository as the current journal file (i.e. you used the [new log file](log.md#stopping-a-log-file) command), 4D Server integrates all the .journal files needed before integrating the current journal.
     - Quando restaurar uma aplicação, se o arquivo atual de histórico, ou se um arquivo de backup de histórico tiverem o mesmo número que um arquivo de backup e estiverem armazenados na mesma pasta, 4D vai examinar seu conteúdo. Se conter operações não encontradas no arquivo de dados, o programa automaticamente as integra.
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
