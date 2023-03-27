@@ -178,3 +178,69 @@ Open without interface (headless mode):
 
 
 
+## tool4d
+
+
+`tool4d` is a free, stand-alone application allowing you to open a 4D project and execute some 4D code using a CLI in headless mode. `tool4d` is available on Windows and macOS, and is always associated to a 4D release (same version and build number). 
+
+`tool4d` is a perfect tool if you want to:
+
+- implement a CI/CD chain for your 4D application,
+- use a light 4D executable to run 4D scripts, for example to execute unit tests.
+
+
+### Using tool4d
+
+You can download `tool4d` from the 4D web site. 
+
+You use `tool4d` by executing a [command line](#launch-a-4d-application) with a standard 4D project. The following sequence is launched:
+
+1. `tool4d`executes the `On Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` parameter is passed.
+2. `tool4d` executes the method designated by the `--startup-method`, if any.
+3. `tool4d` executes the `On Exit` database method, except if the `--skip-onstartup` parameter is passed.
+4. `tool4d` quits.
+
+On Windows, `tool4d` is a console application so that the `stdout` stream is displayed in the terminal (cmd, powershell...).
+
+
+:::note Notes
+
+- `tool4d` is always executed headless (the `headless` command line option is useless).
+- The [`Application type`](https://doc.4d.com/4dv19R/help/command/en/page494.html) command returns the value 6 ("tool4d") when called from a `tool4d` application.
+- the [diagnostic log file](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) is prefixed with "4DDiagnosticLogTool".
+
+:::
+
+
+### Disabled 4D features
+
+Keep in mind that `tool4d` is designed to execute 4D code only in headless mode(see `--headless` in [this table](#launch-a-4d-application)), and does neither give access to the 4D IDE nor any of its servers. In particular, the following features are disabled and cannot be called:
+
+- other localizations than English
+- application server, Web server, SQL server,
+- backup scheduler,
+- data collection,
+- ODBC and SQL pass-through,
+- 4D internal components,
+- hunspell spell checker,
+- mecab library,
+- WebAdmin,
+- CEF, 
+- PHP, 
+- remote debugger (local debugger, TRACE commands and breakpoints are ignored in headless applications).
+
+
+### Using 4D Server in utility mode
+
+You can launch a 4D Server instance in a utility mode by using the `--utility` CLI option in headless. In this case, the following workflow is triggered:
+
+1. 4D Server executes the `On Server Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` parameter is passed.
+2. 4D Server executes the method designated by the `--startup-method`, if any.
+3. 4D Server executes the `On Server Shutdown` database method, except if the `--skip-onstartup` parameter is passed.
+4. 4D Server quits.
+
+:::info
+
+Unlike `tool4d`, 4D Server in utility mode is fully funnctional and does not have disabled features. 
+
+:::
