@@ -66,9 +66,9 @@ You can make the Header area smaller or larger. You can use the Header area for 
 
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. The following active objects can be inserted:
 
-- Buttons, picture buttons,
+- Botões, botões imagem,
 - Combo boxes, drop-down lists,  picture pop-up menus,
-- hierarchical lists, list boxes
+- listas hierárquicas, list boxes
 - Radio buttons, check boxes, 3D check boxes,
 - Progress indicators, rulers, steppers, spinners.
 
