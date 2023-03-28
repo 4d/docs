@@ -13,9 +13,9 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 Você cria as variáveis declarando-as mediante um dos comandos dos temas "Compilador" ou "Arrays".
 
-**Nota:**os arrays são um tipo particular de variáveis. Um array é uma série ordenada de variáveis do mesmo tipo. For more information, please refer to [Arrays](Concepts/arrays.md).
+**Nota:**os arrays são um tipo particular de variáveis. Um array é uma série ordenada de variáveis do mesmo tipo. Para mais informações, consulte por favor [Arrays](Concepts/arrays.md).
 
-For example, if you want to define a text variable, you write:
+Por exemplo, se quiser definir uma variável texto, escreva:
 
 ```4d
  C_TEXT(myText)
@@ -33,7 +33,7 @@ Após a criação pode usar a variável onde quiser no seu banco de dados. Por e
  [MyTable]MyField:=MyText
 ```
 
-The following are some basic variable declarations:
+Seguem-se algumas declarações de variáveis básicas:
 
 ```4d
 
@@ -47,9 +47,9 @@ The following are some basic variable declarations:
 
 ## Atribuição de dados
 
-Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
+Os dados podem ser colocados e copiados de variáveis e arrays. Colocar dados em uma variável é chamado **atribuiindo os dados a uma variável** e é feito com o operador de atribuição (:=). O operador de atribuição também é usado para atribuir dados para elementos campos.
 
-O operador de atribuição é a maneira mais importante de criar uma variável e jogar dados nela. You write the name of the variable that you want to create on the left side of the assignment operator. Por exemplo:
+O operador de atribuição é a maneira mais importante de criar uma variável e jogar dados nela. Escreve-se o nome da variável que se pretende criar no lado esquerdo do operador de atribuição. Por exemplo:
 
 ```4d
 MyNumber:=3
