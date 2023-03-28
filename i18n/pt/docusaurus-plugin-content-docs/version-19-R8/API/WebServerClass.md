@@ -700,7 +700,7 @@ As definições personalizadas da sessão serão reiniciadas quando a função [
 
 #### Objeto devolvido
 
-A função devolve um objecto que descreve o estado de lançamento do servidor Web. This object can contain the following properties:
+A função devolve um objecto que descreve o estado de lançamento do servidor Web. Este objeto pode conter as seguintes propriedades:
 
 | Propriedade |                         | Tipo       | Descrição                                                                     |
 | ----------- | ----------------------- | ---------- | ----------------------------------------------------------------------------- |
