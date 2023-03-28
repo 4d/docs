@@ -30,11 +30,11 @@ Cada tipo de blob tem as suas vantagens. Utilize a tabela seguinte para determin
 
 > Como padrão, 4D estabelece o tamanho blob máximo para 2GB mas esse limite de tamanho pode ser menor dependendo de seu SO e de quanto espaço estiver disponível.
 
-You cannot use operators on blobs.
+Não se pode utilizar operadores em blobs.
 
-## Checking if a variable holds a scalar blob or a `4D. Blob`
+## Verificar se uma variável contém um blob escalar ou um `4D.Blob`
 
-Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or Object. To check that an object is a blob object (`4D. Blob`), use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
+Utilizar o comando [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) para determinar se um valor é do tipo Blob ou Objeto. To check that an object is a blob object (`4D. Blob`), use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
 
 ```4d
 var $myBlob: Blob
@@ -45,11 +45,11 @@ $type:= Value type($myblobObject) // 38 (object)
 $is4DBlob:= OB Instance of($myblobObject; 4D. Blob)  //True
 ```
 
-## Passing blobs as parameters
+## Passagem de blobs como parâmetros
 
-Scalar blobs and blob objects can be passed as parameters to 4D commands or plug-in routines that expect blob parameters.
+Blobs escalares e objetos blob podem ser passados como parâmetros para comandos 4D ou rotinas de plug-in que esperam parâmetros de blob.
 
-### Passing blobs and blob objects to 4D commands
+### Passagem de blobs e objectos blob para comandos 4D
 
 You can pass a scalar blob or a `4D. Blob` to any 4D command that takes a blob as a parameter:
 
@@ -72,58 +72,59 @@ Some 4D commands alter the original blob, and thus do not support the `4D. Blob`
 - [SOAP DECLARATION](https://doc.4d.com/4dv19/help/command/en/page782.html)
 - [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19/help/command/en/page777.html)
 
-### Passing blobs and blob objects to methods
+### Passagem de blobs e objectos blob para métodos
 
-You can pass blobs and blob objects (`4D. Blob`) to methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.
+You can pass blobs and blob objects (`4D. Blob`) to methods. Tenha em mente que, ao contrário dos objectos blob, que são passados por referência, as blobs escalares são duplicadas na memória quando são passadas para métodos.
 
-### Passing a scalar blob by reference using a pointer
+### Passar um blob escalar por referência usando um ponteiro
 
-To pass a scalar blob to your own methods without duplicating it in memory, define a pointer to the variable that stores it and pass the pointer as a parameter.
+Para passar um blob escalar aos seus próprios métodos sem  duplicar na memória, defina um ponteiro para a variável que o armazena e passe o ponteiro como um parâmetro.
 
 **Exemplos:**
 
 ```4d
-// Declare a variable of type Blob
+// Declare uma variável do tipo Blob
 var $myBlobVar: Blob
-// Pass the blob as parameter to a 4D command
+// Passe o blob como parâmetro para um comando 4D
  SET BLOB SIZE($myBlobVar;1024*1024)
 ```
 
 ```4d
-// Pass the blob as parameter to an external routine
- $errCode:=Do Something With This blob($myBlobVar)
+// Passar o blob como parâmetro para uma rotina externa
+ $errCode:=Fazer algo com este blob($myBlobVar)
 ```
 
 ```4d
-// Pass the blob as a parameter to a method that returns a blob
+// Passe o blob como parâmetro para um método que devolve um blob
  var $retrieveBlob: Blob
  retrieveBlob:=Fill_Blob($myBlobVar)
 ```
 
 ```4d
-// Pass a pointer to the blob as a parameter to your own method, COMPUTE BLOB(->$myBlobVar)
+// Passe um ponteiro para o blob como parâmetro do seu próprio método,
+COMPUTE BLOB(->$myBlobVar)
 ```
 
 **Nota para  desenvolvedores de plugins:** um parâmetro BLOB se declara como "&O" (a letra "O", não o número "0").
 
 ## Atribuição de uma variável blob a outra
 
-You can assign a Blob variable to another:
+É possível atribuir uma variável Blob a outra:
 
 **Exemplo:**
 
 ```4d
-// Declare two variables of type Blob
+// Declare duas variáveis do tipo Blob
  var $vBlobA; $vBlobB : Blob
-// Set the size of the first blob to 10K
+// Defina o tamanho do primeiro blob para 10K
  SET BLOB SIZE($vBlobA;10*1024)
-// Assign the first blob to the second one
+// Atribua o primeiro blob ao segundo
  $vBlobB:=$vBlobA
 ```
 
-## Automatic conversion of blob type
+## Conversão automática do tipo blob
 
-4D automatically converts scalar blobs to blob objects, and vice versa, when they're assigned to each other. Por exemplo:
+4D converte automaticamente as bolhas escalares em objectos de bolhas, e vice-versa, quando são atribuídas umas às outras. Por exemplo:
 
 ```4d
 // Create a variable of type Blob and an object variable
@@ -145,34 +146,34 @@ $type:= Value type($myBlob) // Blob
 
 ## Modificação de um blob escalar
 
-Unlike blob objects, scalar blobs can be altered. Por exemplo:
+Ao contrário dos objectos com blobs, as blobs escalares podem ser alteradas. Por exemplo:
 
 ```4d
 var $myBlob : Blob SET BLOB SIZE ($myBlob ; 16*1024)
 ```
 
-## Individually accessing bytes in a blob
+## Acesso individual a bytes num blob
 
-#### Accessing a scalar blob's bytes
+#### Acesso aos bytes de um blob escalar
 
-You can access individual bytes of a scalar blob using curly brackets `{}`. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
+Pode acessar a bytes individuais de um blob escalar usando chaves `{}`. Dentro de um blob, os bytes são numerados de 0 a N-1, onde N é o tamanho do BLOB:
 
 ```4d
-  // Declare a variable of type Blob
+  // Declare uma variável do tipo Blob
  var $vBlob : Blob
-  // Set the size of the blob to 256 bytes
+  // Defina o tamanho do blob para 256 bytes
  SET BLOB SIZE($vBlob;256)
-  // The following code loops through the blob to set each byte to zero
+  // O seguinte código faz o loops através do blob para definir cada byte a zero
  For(vByte;0;BLOB size($vBlob)-1)
     $vBlob{vByte}:=0
- End for
+ Fim para
 ```
 
-Since you can address all the bytes of a blob individually, you can store whatever you want in a Blob variable or field.
+Uma vez que pode abordar todos os bytes de um Blob individualmente, pode armazenar o que quiser numa variável ou campo do Blob.
 
-#### Accessing a `4D. Blob`'s bytes
+#### Acesso a um `4D.Blob`'s bytes
 
-Use square brackets `[]` to directly access a specific byte in a `4D. Blob`
+Utilizar parênteses rectos `[]` para aceder directamente a um byte específico num `4D.Blob`
 
 ```4d
 var $myBlob: 4D. Blob CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
@@ -180,4 +181,4 @@ $myText:= BLOB to text ( $myBlob ; UTF8 text without length )
 $byte:=$myBlob[5]
 ```
 
-Since a `4D. Blob` cannot be altered, you can read the bytes of a `4D. Blob` using this syntax, but not modify them.
+Uma vez que um `4D.Blob` não pode ser alterado, pode-se ler os bytes de um `4D.Blob` usando esta sintaxe, mas não modificá-los.
