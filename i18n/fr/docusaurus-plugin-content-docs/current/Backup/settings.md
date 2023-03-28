@@ -118,8 +118,9 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
 
 - **Restituer la dernière sauvegarde si la base est endommagée** : lorsque cette option est cochée, le programme déclenche automatiquement la restitution du fichier de données de la dernière sauvegarde valide de l'application s’il détecte une anomalie (fichier corrompu par exemple) lors du lancement de l'application. Aucune intervention de l’utilisateur n’est requise ; l’opération est cependant consignée dans le Journal des sauvegardes.
 
-- **Intégrer le dernier historique si la base est incomplète** : lorsque cette option est cochée, le programme intègre automatiquement l’historique lors de l’ouverture ou de la restitution de l'application.
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the log files when opening or restoring the application.
     - Lors de l’ouverture d'une application, l’historique courant est automatiquement intégré si 4D détecte que des opérations stockées dans l’historique ne sont pas présentes dans les données. Cette situation se produit par exemple lorsqu’une panne de courant a lieu alors que des opérations non encore écrites sur le disque se trouvaient dans le cache de données.
+    - If there is a valid sequence of .journal files in the same repository as the current journal file (i.e. you used the [new log file](log.md#stopping-a-log-file) command), 4D Server integrates all the .journal files needed before integrating the current journal.
     - Lors de la restitution de l'application, si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme l’intègre automatiquement.
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.

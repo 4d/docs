@@ -177,7 +177,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 `New shared collection` コマンドは、 <!-- REF #_command_.New shared collection.Summary --> 空の、あるいは値の入った新規の共有コレクションを作成し、その参照を返します<!-- END REF --> 。
 
-Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
+このコレクションに要素を追加する場合には [`Use...End use`](Concepts/shared.md#useend-use) 構造でくくる必要があり、そうしない場合にはエラーが返されます。ただし、[`push()`](#push) や [`map()`](#map) などの関数を使用して要素を追加する場合は、自動で内部的に *Use...End use* が使用されるため、必要ありません。 ただし、属性の読み取りは [`Use...End use`](Concepts/shared#useend-use) 構造の外側でも可能です。
 
 :::info
 
@@ -189,7 +189,7 @@ Adding an element to this collection using the assignment operator must be surro
 
 返された参照は、コレクション型の 4D変数に代入する必要があります。
 
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
+> `var : Collection` や `C_COLLECTION` ステートメントはコレクション型の変数を宣言しますが、コレクション自体は作成しないという点に注意してください。
 
 任意で、一つ以上の *value* 引数を渡すことで、あらかじめ値の入った新しい共有コレクションを作成することができます。 または、あとからオブジェクト記法による代入で要素を一つずつ追加・編集していくことができます (例題参照)。
 

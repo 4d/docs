@@ -7,12 +7,12 @@ title: Objetos y colecciones compartidos
 
 Los objetos compartidos y las colecciones compartidas pueden almacenarse en variables de tipo estándar `Object` y `Collection`, pero deben instanciarse utilizando comandos específicos:
 
-- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
-- to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
+- para crear un objeto compartido, utilice el comando [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html),
+- para crear una colección compartida, utilice el comando [`New shared collection`](../API/CollectionClass.md#new-shared-collection).
 
 :::note
 
-Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+Los objetos y colecciones compartidos pueden definirse como propiedades de objetos o colecciones estándar (no compartidos).
 
 :::
 
@@ -22,7 +22,7 @@ Un catálogo único y global devuelto por el comando `Storage` está siempre dis
 
 ## Utilización de objetos o colecciones compartidos
 
-Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application, under certain conditions.
+Una vez instanciado con los comandos `Nuevo objeto compartido` o `Nueva colección compartida`, las propiedades y elementos del objeto compartido/colección pueden ser modificados o leídos desde cualquier proceso de la aplicación, bajo ciertas condiciones.
 
 ### Modificación
 
@@ -31,7 +31,7 @@ Las siguientes modificaciones pueden efectuarse en objetos y colecciones compart
 - añadir o eliminar propiedades de los objetos,
 - añadir o editar valores (siempre que se soporten en objetos compartidos), incluyendo otros objetos compartidos o colecciones (lo que crea un grupo compartido, ver abajo).
 
-All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
+Todas las instrucciones de modificación de un objeto compartido o colección deben estar protegidas dentro de un bloque [`Use...End use`](#use-end-use), de lo contrario se genera un error.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -40,20 +40,20 @@ All modification instructions in a shared object or collection require to be pro
  End Use
 ```
 
-For conveniency, all [collection functions](../API/CollectionClass.md) that modify the shared object or collection insert an internal `Use...End use` block so you do not have to code it yourself. Por ejemplo:
+Por comodidad, todas las [funciones colección](../API/CollectionClass.md) que modifican el objeto compartido o la colección insertan un bloque interno `Use...End use` para que no tenga que codificarlo usted mismo. Por ejemplo:
 
 ```4d
-$col:=New shared collection()
-$col.push("alpha") //.push() internally triggers Use/End use, so no need to do it yourselves
+$col:=Nueva colección compartida()
+$col.push("alpha") //.push() desencadena internamente el uso de Use/End, por lo que no es necesario que lo hagan ustedes mismos
 ```
 
-If you need to execute several modifications on the same collection, you can protect all modifications with a single `Use...End use` so that modifications are performed atomically.
+Si necesita ejecutar varias modificaciones en la misma colección, puede proteger todas las modificaciones con un único `Use...End use` para que las modificaciones se realicen de forma atómica.
 
 ```4d
 $col:=Storage.mySharedCollection
 Use($col)
-    $col[0]:="omega" //modifying an element requires to be performed inside Use/End use
-    $col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
+    $col[0]:="omega" //modificar un elemento requiere realizarse dentro de Use/End use
+    $col.push("alpha") //.push() desencadena internamente Use/End use, pero queremos realizar ambas modificaciones atómicamente
 End Use
 ```
 
@@ -68,7 +68,7 @@ La asignación de objetos/colecciones compartidos a propiedades o elementos de o
 
 Consulte el ejemplo 2 para ver una ilustración de las reglas de los grupos compartidos.
 
-**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada *locking identifier*. For detailed information on this value, please refer to the 4D Language Reference.
+**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada *locking identifier*. Para obtener información detallada sobre este valor, consulte la Referencia del Lenguaje 4D.
 
 ### Lectura
 
@@ -82,7 +82,7 @@ Llamar a `OB Copy` con un objeto compartido (o con un objeto cuyas propiedades s
 
 ### Storage
 
-**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html) command. Puede utilizar este objeto para hacer referencia a todos los objetos/colecciones compartidos definidos durante la sesión que desee que estén disponibles desde cualquier proceso preventivo o estándar.
+**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. Este objeto compartido es devuelto por el comando [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html). Puede utilizar este objeto para hacer referencia a todos los objetos/colecciones compartidos definidos durante la sesión que desee que estén disponibles desde cualquier proceso preventivo o estándar.
 
 Tenga en cuenta que, a diferencia de los objetos compartidos estándar, el objeto `Storage` no crea un grupo compartido cuando se añaden objetos/colecciones compartidos como sus propiedades. Esta excepción permite utilizar el objeto **Storage** sin bloquear todos los objetos o colecciones compartidos conectados.
 

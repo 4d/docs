@@ -95,7 +95,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apena
 
 4D oferece un grande número de métodos (ou comandos) integrados, mas também lhe permite criar seus próprios **métodos de projeto**. Os métodos de projeto são métodos definidos pelo usuário que contenham comandos, operadores e outras partes da linguaje. Los métodos projeto são métodos genéricos, mas há outros tipos de métodos: métodos objeto, métodos formulário, métodos tabela (Triggers) e métodos base.
 
-Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex.
+Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa.
 
 Por exemplo, a linha abaixo é uma declaração que mostará uma caixa de diálogo de confirmação:
 
@@ -180,7 +180,7 @@ To access a collection element, you have to pass the element number embedded in 
 ```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  //acesso ao 4º elemento da colecção
 ```
 
 ## Operadores
@@ -200,7 +200,7 @@ The same symbols are often used for different operations, depending on the data 
 
 | Tipo de dados | Operação      | Exemplo                                                                                              |
 | ------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Número        | Adição        | 1 + 2 adds the numbers and results in 3                                                              |
+| Número        | Adição        | 1 + 2 adiciona os números e resultados em 3                                                          |
 | String        | Concatenação  | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Data e Número | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
@@ -277,7 +277,7 @@ Comments are inactive lines of code. These lines are not interpreted by the 4D l
 There are two ways to create comments:
 
 - `//` para comentários de linha única
-- `/*...*/` for inline or multiline commnents.
+- `/*...*/` para comentarios em linha ou multilinha.
 
 Both styles of comments can be used simultaneously.
 
@@ -310,10 +310,10 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
- /*
- other comments
- */
+comentarios  
+    /*
+    outros comentarios
+    */
 */
 ...
 End for

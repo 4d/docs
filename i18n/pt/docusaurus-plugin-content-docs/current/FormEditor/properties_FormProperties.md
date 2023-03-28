@@ -42,10 +42,10 @@ A CSS file defined at the form level will override default style sheet(s). For m
 
 Each form has is made of at least two pages:
 
-- a page 0 (background page)
-- a page 1 (main page)
+- uma página 0 (página de fundo)
+- uma página 1 (página principal)
 
-For more information, please refer to [Form pages](forms.md#form-pages).
+Para mais informações, consulte por favor [Páginas formulário](forms.md#form-pages).
 
 
 #### Gramática JSON
@@ -76,7 +76,7 @@ Each table in a database generally has at least two table forms. One for listing
 
 - Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. ![](../assets/en/FormObjects/formOutput.png)
 
-- Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
+- Formulário de entrada - utilizado para entrada de dados. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
 
 
 Supported types depend on the form category:
@@ -99,9 +99,9 @@ Supported types depend on the form category:
 
 ---
 
-## Inherited Form Name
+## Nome do formulário herdado
 
-This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
+Esta propriedade designa o formulário [para herdar](forms.md#inherited-forms) no formulário atual.
 
 To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
 
@@ -117,9 +117,9 @@ To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " i
 ---
 
 
-## Inherited Form Table
+## Tabelas de formulário herdadas
 
-This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
+Esta propriedade específica a tabela da base de dados da qual para [herda um formulário](forms.md#inherited-forms) no formulário atual.
 
 Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
 
@@ -128,9 +128,9 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 #### Gramática JSON
 
-| Nome               | Tipo de dados    | Valores possíveis          |
-| ------------------ | ---------------- | -------------------------- |
-| inheritedFormTable | string ou number | table name or table number |
+| Nome               | Tipo de dados    | Valores possíveis        |
+| ------------------ | ---------------- | ------------------------ |
+| inheritedFormTable | string ou number | nome ou número da tabela |
 
 
 ---
@@ -156,8 +156,8 @@ Only project forms can be specified as published subforms.
 
 When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
 
-*   the current page,
-*   the position, size and visibility of each form object (including the size and visibility of list box columns).
+*   a página atual,
+*   a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
 > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
 
 When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.

@@ -290,9 +290,9 @@ Desde o ponto de vista do escopo, há dois tipos de conjuntos:
 
 ### Conjuntos interprocesso
 
-A set is an interprocess set if the name of the set is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Um conjunto é um conjunto interprocesso quando o nome do conjunto está precedido pelos símbolos (`<>`) — um sinal "menor que" seguido de um sinal "maior que".
 
-An interprocess set name can contain up to 255 characters, not including the `<>` symbols.
+O nome de um conjunto interprocesso pode ter até 255 caracteres, não incluindo os símbolos `<>`.
 
 ### Conjuntos processo
 

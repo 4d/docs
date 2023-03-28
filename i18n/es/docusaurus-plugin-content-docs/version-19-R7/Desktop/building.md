@@ -238,7 +238,7 @@ Se utiliza para indicar el número de versión actual de la aplicación generada
 
 Cuando se marca esta opción, el archivo del directorio del proyecto se copia en el archivo del directorio de la aplicación en el momento de la generación.
 
-Cuando ejecute una aplicación de servidor 4D generada:
+Cuando ejecute una aplicación 4D Server generada:
 
 * Si el servidor tiene un archivo de directorio de datos, se carga.
 * Si el servidor no tiene un archivo de directorio de datos, se carga el archivo de directorio de la aplicación.
