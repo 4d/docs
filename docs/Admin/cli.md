@@ -3,7 +3,7 @@ id: cli
 title: Command Line Interface
 ---
 
-You can use the macOS Terminal or the Windows console to drive your 4D applications (4D and 4D Server) using command lines. More particularly, this functionality allows you to:
+You can use the macOS Terminal or the Windows console to drive your 4D applications (4D, 4D Server, merged application, and [tool4d](#tool4d)) using command lines. More particularly, this functionality allows you to:
 
 - launch a database remotely, which can be especially useful for administering Web servers.
 - run automatic tests for your applications.
@@ -19,30 +19,36 @@ You can execute command lines for 4D applications using the macOS Terminal or th
 
 ## Launch a 4D application
 
-Here is a description of command lines and the arguments supported to launch 4D applications.
+Here is a description of command lines and arguments supported to launch 4D applications.
 
 Syntax: 
+
 ```
 <applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] 
-[--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]
-[--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]
+[--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]  
+[--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]  
+[--utility] [--skip-onstartup] [--startup-method <methodName string>] 
 ```
+
 |Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Value|Description|
-|-------------|---|---|
-|`applicationPath`|Path of the 4D, 4D Server or merged application|Launches the application. Identical to double-clicking the 4D application. When called without structure file argument, the application is executed and the 'select database' dialog box appears.|
+|:-------------|---|---|
+|`applicationPath`|Path of 4D, 4D Server, merged application, or tool4d|Launches the application.<br/>If not headless: identical to double-clicking the application; when called without structure file argument, the application is executed and the 'select database' dialog box appears.|
 |`--version`||Displays application version and exits|
 |`--help`||Displays help and exits. Alternate arguments: -?, -h|
 |`--project`|projectPath &#124; packagePath &#124; 4dlinkPath|Project file to open with the current data file. No dialog box appears.|
-|`--data`|dataPath|Data file to open with the designated project file. If not specified, 4D uses the last opened data file.|
+|`--data`|dataPath|Data file to open with the designated project file. If not specified, the last opened data file is used.|
 |`--opening-mode`|interpreted &#124; compiled|Requests database to open in interpreted or compiled mode. No error is thrown if the requested mode is unavailable.|
 |`--create-data`||Automatically creates a new data file if no valid data file is found. No dialog box appears. 4D uses the file name passed in the "--data" argument if any (generates an error if a file with the same name already exists).|
-|`--user-param`|Custom user string|A string that will be available within the 4D application through the Get database parameter command (the string must not start with a "-" character, which is reserved). |
+|`--user-param`|Custom user string|A string that will be available within the application through the [`Get database parameter`](https://doc.4d.com/4dv19R/help/command/en/page643.html) command (the string must not start with a "-" character, which is reserved). |
 |`--headless`||Launches the 4D, 4D Server or merged application without interface (headless mode). In this mode:<li> The Design mode is not available, database starts in Application mode</li><li> No toolbar, menu bar, MDI window or splash screen is displayed</li><li>No icon is displayed in the dock or task bar</li><li>The opened database is not registered in the "Recent databases" menu</li><li>The diagnostic log is automatically started (see [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html), selector 79)</li><li>Every call to a dialog box is intercepted and an automatic response it provided (e.g. OK for the [ALERT](https://doc.4d.com/4dv19/help/command/en/page41.html) command, Abort for an error dialog...). All intercepted commands(*) are logged in the diagnostic log.</li><br/>For maintenance needs, you can send any text to standard output streams using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command. Note that headless 4D applications can only be closed by a call to [QUIT 4D](https://doc.4d.com/4dv19/help/command/en/page291.html) or using the OS task manager.|
-|`--dataless`||Launches 4D, 4D Server or merged application in dataless mode. Dataless mode is useful when 4D runs tasks with no need for data (project compilation for example). In this mode: <li>No file containing data is opened, even if specified in the command line or the `.4DLink` file, or when using the `CREATE DATA FILE` and `OPEN DATA FILE` commands.</li><li>Commands that manipulate data will throw an error. For example, `CREATE RECORD` throws “no table to apply the command to”.</li><br/>**Note**:<li>If passed in the command line, dataless mode applies to all databases opened in 4D, as long as the application is not closed.</li><li>If passed using the `.4DLink` file, dataless mode only applies to the database specified in the `.4DLink` file. For more information on `.4DLink` files, see [Project opening shortcuts](../GettingStarted/creating.md#project-opening-shortcuts).</li>|
-|`--webadmin-settings-file`|File path|Path of the custom WebAdmin `.4DSettings` file for the [WebAdmin web server](webAdmin.md)|
-|`--webadmin-access-key`|String|Access key for the [WebAdmin web server](webAdmin.md)|
-|`--webadmin-auto-start`|Boolean|Status of the automatic startup for the [WebAdmin web server](webAdmin.md)|
-|`--webadmin-store-settings`||Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary|
+|`--dataless`||Launches 4D, 4D Server, merged application or tool4d in dataless mode. Dataless mode is useful when 4D runs tasks with no need for data (project compilation for example). In this mode: <li>No file containing data is opened, even if specified in the command line or the `.4DLink` file, or when using the `CREATE DATA FILE` and `OPEN DATA FILE` commands.</li><li>Commands that manipulate data will throw an error. For example, `CREATE RECORD` throws “no table to apply the command to”.</li><br/>**Note**:<li>If passed in the command line, dataless mode applies to all databases opened in 4D, as long as the application is not closed.</li><li>If passed using the `.4DLink` file, dataless mode only applies to the database specified in the `.4DLink` file. For more information on `.4DLink` files, see [Project opening shortcuts](../GettingStarted/creating.md#project-opening-shortcuts).</li>|
+|`--webadmin-settings-file`|File path|Path of the custom WebAdmin `.4DSettings` file for the [WebAdmin web server](webAdmin.md). Not available with [tool4d](#tool4d).|
+|`--webadmin-access-key`|String|Access key for the [WebAdmin web server](webAdmin.md). Not available with [tool4d](#tool4d).|
+|`--webadmin-auto-start`|Boolean|Status of the automatic startup for the [WebAdmin web server](webAdmin.md). Not available with [tool4d](#tool4d).|
+|`--webadmin-store-settings`||Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary. Not available with [tool4d](#tool4d).|
+|`--utility`||Only available with 4D Server. Launches [4D Server in utility mode](#4d-server-in-utility-mode).|
+|`--skip-onstartup`||Only available with [tool4d](#tool4d) and [4D Server in utility mode](#4d-server-in-utility-mode). Launches the project without excuting any "automatic" methods, including the `On Startup` and `On Exit` database methods (with tool4d), or the `On Server Startup` and `On Server Shutdown` database methods (with 4D Server)|
+|`--startup-method`|Project method name (string)|Only available with [tool4d](#tool4d) and [4D Server in utility mode](#4d-server-in-utility-mode). Project method to execute automatically between the `On Startup`/`On Server Startup` and `On Exit`/`On Server Shutdown` database methods (if not skipped with `--skip-onstartup`).|
 (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 
 ### Examples 
@@ -181,32 +187,33 @@ Open without interface (headless mode):
 ## tool4d
 
 
-`tool4d` is a free, stand-alone application allowing you to open a 4D project and execute some 4D code using a CLI in headless mode. `tool4d` is available on Windows and macOS, and is always associated to a 4D release (same version and build number). 
+**tool4d** is a free, lightweight, stand-alone application allowing you to open a 4D project in headless mode and execute some 4D code using the CLI. tool4d is available on Windows and macOS, and is always associated to a 4D release (same version and build number). 
 
-`tool4d` is a perfect tool if you want to:
+tool4d is a perfect tool if you want to:
 
 - implement a CI/CD chain for your 4D application,
-- use a light 4D executable to run 4D scripts, for example to execute unit tests.
+- use a light 4D executable to run 4D scripts, for example to execute automatic unit tests.
+
 
 
 ### Using tool4d
 
-You can download `tool4d` from the 4D web site. 
+You can get tool4d from the [download page of the 4D web site](https://us.4d.com/product-download/Feature-Release). 
 
-You use `tool4d` by executing a [command line](#launch-a-4d-application) with a standard 4D project. The following sequence is launched:
+You use tool4d by executing a [command line](#launch-a-4d-application) with a standard 4D project. You can use all arguments described in the table, except --`webadmin` since this component is [disabled in tool4d](#disabled-4d-features). With tool4d, the following specific sequence is launched:
 
-1. `tool4d`executes the `On Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` parameter is passed.
-2. `tool4d` executes the method designated by the `--startup-method`, if any.
-3. `tool4d` executes the `On Exit` database method, except if the `--skip-onstartup` parameter is passed.
-4. `tool4d` quits.
+1. tool4d executes the `On Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` argument is passed.
+2. tool4d executes the method designated by the `--startup-method` argument, if any.
+3. tool4d executes the `On Exit` database method, except if the `--skip-onstartup` argument is passed.
+4. tool4d quits.
 
-On Windows, `tool4d` is a console application so that the `stdout` stream is displayed in the terminal (cmd, powershell...).
+On Windows, tool4d is a console application so that the `stdout` stream is displayed in the terminal (cmd, powershell...).
 
 
 :::note Notes
 
-- `tool4d` is always executed headless (the `headless` command line option is useless).
-- The [`Application type`](https://doc.4d.com/4dv19R/help/command/en/page494.html) command returns the value 6 ("tool4d") when called from a `tool4d` application.
+- tool4d is always executed headless (the `headless` command line option is useless).
+- The [`Application type`](https://doc.4d.com/4dv19R/help/command/en/page494.html) command returns the value 6 ("tool4d") when called from the tool4d application.
 - the [diagnostic log file](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) is prefixed with "4DDiagnosticLogTool".
 
 :::
@@ -214,7 +221,7 @@ On Windows, `tool4d` is a console application so that the `stdout` stream is dis
 
 ### Disabled 4D features
 
-Keep in mind that `tool4d` is designed to execute 4D code only in headless mode(see `--headless` in [this table](#launch-a-4d-application)), and does neither give access to the 4D IDE nor any of its servers. In particular, the following features are disabled and cannot be called:
+Keep in mind that `tool4d` runs automatically in **headless mode** (see `--headless` in [this table](#launch-a-4d-application)), and does neither give access to the 4D IDE nor any of its servers. In particular, the following features are disabled and cannot be called:
 
 - other localizations than English
 - application server, Web server, SQL server,
@@ -227,12 +234,12 @@ Keep in mind that `tool4d` is designed to execute 4D code only in headless mode(
 - WebAdmin,
 - CEF, 
 - PHP, 
-- remote debugger (local debugger, TRACE commands and breakpoints are ignored in headless applications).
+- remote debugger (local debugger, `TRACE` command and breakpoints are ignored in headless applications).
 
 
-### Using 4D Server in utility mode
+## 4D Server in utility mode
 
-You can launch a 4D Server instance in a utility mode by using the `--utility` CLI option in headless. In this case, the following workflow is triggered:
+You can launch a 4D Server instance in a utility mode (headless) by using the `--utility` CLI option. In this case, the following workflow is triggered:
 
 1. 4D Server executes the `On Server Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` parameter is passed.
 2. 4D Server executes the method designated by the `--startup-method`, if any.
@@ -241,6 +248,6 @@ You can launch a 4D Server instance in a utility mode by using the `--utility` C
 
 :::info
 
-Unlike `tool4d`, 4D Server in utility mode is fully funnctional and does not have disabled features. 
+Unlike tool4d, 4D Server in utility mode has all its features enabled. 
 
 :::
