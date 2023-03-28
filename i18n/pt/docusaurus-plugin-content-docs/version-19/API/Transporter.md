@@ -363,7 +363,7 @@ A função `.checkConnection()` <!-- REF #transporter.checkConnection().Summary 
 
 #### Objeto devolvido
 
-A função envia um pedido para o servidor de correio e devolve um objecto descrevendo o estado do correio. This object can contain the following properties:
+A função envia um pedido para o servidor de correio e devolve um objecto descrevendo o estado do correio. Este objeto pode conter as seguintes propriedades:
 
 | Propriedade |                          | Tipo       | Descrição                                                                                                                                   |
 | ----------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
