@@ -3,7 +3,7 @@ id: settings
 title: Parâmetros da cópia de segurança
 ---
 
-Backup settings are defined through three pages in the [Settings dialog box](../settings/overview.md). Pode estabelecer:
+As definições de backup são definidas através de três páginas [na caixa de diálogo](../settings/overview.md). Pode estabelecer:
 
 - a periodicidade das cópias de segurança automáticas
 - os arquivos a incluir em cada backup
@@ -51,7 +51,7 @@ Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copi
 - **Data**: arquivo de dados da Aplicação. Quando essa opção estiver marcada, os elementos abaixo fazem backup automaticamente ao mesmo tempo que os dados:
     - o arquivo de histórico atual da aplicação (se houver),
     - a pasta `Settings` situada [ao lado do arquivo de dados](Project/architecture.md#settings-folder) (se existir), ou seja *os parâmetros usuário para os dados*.
-- **Arquivo de estrutura**: pastas e arquivos da aplicação. No caso de projetos compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa `Settings` situada [no mesmo nível que a pasta Project ](Project/architecture.md#settings-folder-1), ou seja, os *parâmetros usuário*.
+- **Arquivo de estrutura**: pastas e arquivos da aplicação. No caso de projetos compilados, essa opção permite fazer o backup do arquivo .4dz. Quando esta opção estiver marcada, uma cópia de segurança é feita automaticamente da pasta completa `Settings` situada [no mesmo nível que a pasta Project](Project/architecture.md#settings-folder-1), ou seja, os *parâmetros usuário*.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Arquivos anexos**: esta área permite especificar um conjunto de arquivos ou pastas que sofrerão o backup no mesmo momento que a aplicação. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".
     - **Eliminar**: retira o arquivo selecionado da lista de arquivos anexos.
@@ -118,13 +118,13 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 - **Restaura o último backup se o banco de dados é danificado**: Quando essa opção for marcada, o programa automaticamente inicia a restauração dos arquivos de dados do último backup válido da aplicação, se uma anomalia for detectada (arquivo corrupto, por exemplo) durante o lançamento da aplicação. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the log files when opening or restoring the application.
+- **Integrar os últimos registos se a base de dados estiver incompleta**: Quando esta opção for verificada, o programa integra automaticamente os arquivos de registo ao abrir ou restaurar a aplicação.
     - Quando abrir uma aplicação, o arquivo de histórico atual é integrado automaticamente se 4D detectar que há operações armazenadas no arquivo de log que não estejam presentes nos dados. Esta situação se produz, por exemplo, se acontecer uma falta de energia quando acontecerem operações no cache de dados que ainda não foram escritos no disco.
-    - If there is a valid sequence of .journal files in the same repository as the current journal file (i.e. you used the [new log file](log.md#stopping-a-log-file) command), 4D Server integrates all the .journal files needed before integrating the current journal.
+    - Se houver uma sequência válida de arquivos .journal no mesmo repositório que o arquivo do histórico atual (ou seja, utilizou o comando [new log file](log.md#stopping-a-log-file)), 4D Server integra todos os arquivos .journal necessários antes de integrar o histórico atual.
     - Quando restaurar uma aplicação, se o arquivo atual de histórico, ou se um arquivo de backup de histórico tiverem o mesmo número que um arquivo de backup e estiverem armazenados na mesma pasta, 4D vai examinar seu conteúdo. Se conter operações não encontradas no arquivo de dados, o programa automaticamente as integra.
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
 
-> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> No caso de uma restauração automática, apenas os seguintes elementos são restaurados: - ficheiro .4DD - ficheiro .4DIndx - ficheiro .4DSyncData - ficheiro .4DSyncHeader - pasta de dados externos
 > 
 > Se quiser estabelecer os arquivos anexados ou os arquivos de projeto, deve realizar uma [restauração manual](restore.md#manually-restoring-a-backup-standard-dialog).
