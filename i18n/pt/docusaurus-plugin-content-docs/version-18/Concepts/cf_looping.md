@@ -224,7 +224,7 @@ Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, 
 
 ### Nested For... End for looping structures
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. This includes nesting `For... End for` loops. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
