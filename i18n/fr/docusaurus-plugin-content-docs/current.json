@@ -173,7 +173,7 @@
   },
   "sidebar.docs.link.4D Language Reference": {
     "message": "Référence du langage 4D",
-    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html"
+    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Language-Reference.100-6101683.en.html"
   },
   "sidebar.docs.link.4D Mobile App Server": {
     "message": "4D Mobile App Server",
@@ -185,15 +185,15 @@
   },
   "sidebar.docs.link.4D Progress": {
     "message": "4D Progress",
-    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html"
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Progress.100-6205973.en.html"
   },
   "sidebar.docs.link.4D SVG": {
     "message": "4D SVG",
-    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html"
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-SVG-Component.100-6206845.en.html"
   },
   "sidebar.docs.link.4D Widgets": {
     "message": "4D Widgets",
-    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html"
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Widgets.100-6207497.en.html"
   },
   "sidebar.docs.link.4D Write Pro Interface": {
     "message": "4D Write Pro Interface",
@@ -209,6 +209,134 @@
   },
   "sidebar.docs.link.4D Write Pro": {
     "message": "4D Write Pro",
-    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html"
+    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Write-Pro-Reference.100-6130471.en.html"
+  },
+  "sidebar.docs.category.Getting Started.link.generated-index.title": {
+    "message": "Prise en main",
+    "description": "The generated-index page title for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development.link.generated-index.title": {
+    "message": "Développement",
+    "description": "The generated-index page title for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language Concepts.link.generated-index.title": {
+    "message": "Concepts du langage 4D",
+    "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
+    "message": "The main concepts of the 4D Language",
+    "description": "The generated-index page description for category 4D Language Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Class Functions": {
+    "message": "Class Functions",
+    "description": "The label for category Class Functions in sidebar docs"
+  },
+  "sidebar.docs.category.Class Functions.link.generated-index.title": {
+    "message": "Class Functions",
+    "description": "The generated-index page title for category Class Functions in sidebar docs"
+  },
+  "sidebar.docs.category.Class Functions.link.generated-index.description": {
+    "message": "List of built-in 4D classes",
+    "description": "The generated-index page description for category Class Functions in sidebar docs"
+  },
+  "sidebar.docs.category.Tags": {
+    "message": "Tags",
+    "description": "The label for category Tags in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.title": {
+    "message": "Administration",
+    "description": "The generated-index page title for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.description": {
+    "message": "How to monitor your 4D applications",
+    "description": "The generated-index page description for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.title": {
+    "message": "Administration Web",
+    "description": "The generated-index page title for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.description": {
+    "message": "4D web tools for administrating and monitoring your applications.",
+    "description": "The generated-index page description for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro.link.generated-index.title": {
+    "message": "4D View Pro",
+    "description": "The generated-index page title for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.title": {
+    "message": "Applications Web",
+    "description": "The generated-index page title for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.description": {
+    "message": "Guides for developing Web applications with 4D",
+    "description": "The generated-index page description for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.REST Server.link.generated-index.title": {
+    "message": "Serveur REST",
+    "description": "The generated-index page title for category REST Server in sidebar docs"
+  },
+  "sidebar.docs.category.REST Server.link.generated-index.description": {
+    "message": "Configuring the 4D REST Server and using the REST API.",
+    "description": "The generated-index page description for category REST Server in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.title": {
+    "message": "API (général)",
+    "description": "The generated-index page title for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.description": {
+    "message": "REST API for global information",
+    "description": "The generated-index page description for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.title": {
+    "message": "API (dataClass)",
+    "description": "The generated-index page title for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.description": {
+    "message": "REST API for dataClass.",
+    "description": "The generated-index page description for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.title": {
+    "message": "Applications Desktop",
+    "description": "The generated-index page title for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
+    "message": "Guides for developing Desktop applications with 4D",
+    "description": "The generated-index page description for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.title": {
+    "message": "Droits d'accès",
+    "description": "The generated-index page title for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.description": {
+    "message": "Access control and user privileges for desktop applications.",
+    "description": "The generated-index page description for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.doc.Command Line Interface": {
+    "message": "Interface de ligne de commande",
+    "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
+  },
+  "sidebar.docs.doc.TLS Protocol": {
+    "message": "Protocole TLS",
+    "description": "The label for the doc item TLS Protocol in sidebar docs, linking to the doc Admin/tls"
+  },
+  "sidebar.docs.doc.Managing 4D Licenses": {
+    "message": "Gestion des licences 4D",
+    "description": "The label for the doc item Managing 4D Licenses in sidebar docs, linking to the doc Admin/licenses"
+  },
+  "sidebar.docs.doc.Data Collection": {
+    "message": "Collecte des données",
+    "description": "The label for the doc item Data Collection in sidebar docs, linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.doc.Client/Server": {
+    "message": "Client/Serveur",
+    "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
+  },
+  "sidebar.docs.doc.User Settings": {
+    "message": "Propriétés utilisateur",
+    "description": "The label for the doc item User Settings in sidebar docs, linking to the doc Desktop/user-settings"
+  },
+  "sidebar.docs.doc.Build Application": {
+    "message": "Générateur d'application",
+    "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
   }
 }
