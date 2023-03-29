@@ -80,7 +80,7 @@ Avec :
 | Opération | Syntaxe             | Retourne | Expression    | Value |
 | --------- | ------------------- | -------- | ------------- | ----- |
 | Egalité   | Pointeur = Pointeur | Boolean  | vPtrA = vPtrB | True  |
-|           |                     |          | vPtrA = vPtrB | False |
+|           |                     |          | vPtrA = vPtrC | False |
 | Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True  |
 |           |                     |          | vPtrA # vPtrB | False |
 

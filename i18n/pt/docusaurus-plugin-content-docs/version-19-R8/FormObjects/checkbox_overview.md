@@ -130,7 +130,7 @@ The Flat check box button style is a minimalist appearance. A natureza gráfica 
 
 
 
-### Toolbar Button
+### Botão barra de ferramentas
 
 The Toolbar Button check box button style is primarily intended for integration in a toolbar.
 
@@ -259,7 +259,7 @@ By default, the OS X Textured button style appears as:
 
   ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button. Sua altura está predefinida: não é possível ampliar ou reduzir.
+ - *macOS* - um botão de sistema ‘standard’. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
   ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -315,9 +315,9 @@ The colors (highlight and background) of a check box with the Office XP button s
 
 ### Contrair/expandir
 
-This check box button style can be used to add a standard collapse/expand icon. These icons are used natively in hierarchical lists.
+This check box button style can be used to add a standard collapse/expand icon. Estes ícones são utilizados nativamente em listas hierárquicas.
 
- - *Windows* - the icon looks like a [+] or a [-]
+ - *Windows* - o ícone parece-se com um [+] ou um [-]
 
   ![](../assets/en/FormObjects/checkbox_collapse.png)
 
@@ -344,7 +344,7 @@ This check box button style can be used to add a standard collapse/expand icon. 
 
 ### Botão disclosure
 
-In macOS and Windows, a check box with the "Disclosure" button style appears as a standard disclosure button, usually used to show/hide additional information. Quando usar um botão radio, o símbolo botão aponta para baixo com o valor 0 e para cima com o valor 1.
+Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação" aparece como um botão de informação padrão, normalmente utilizado para mostrar/ocultar informação adicional. Quando usar um botão radio, o símbolo botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
  - *Windows*
 
