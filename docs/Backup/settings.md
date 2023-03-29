@@ -131,7 +131,7 @@ By default, 4D compresses backups to help save disk space. However, the file com
 
 	:::note 
 	
-	this feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless files are stored in the folder.
+	This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
 	
 	:::
 
