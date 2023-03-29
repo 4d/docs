@@ -1365,27 +1365,19 @@ The `.first()` function <!-- REF #collection.first().Summary -->returns the firs
 
 The function returns Undefined if the collection is empty. 
 
-#### Example 1
-
+#### Example
 
 
 ```4d
-var $col : Collection
-$col:=New collection(10; 20; 30; 40; 50)
+var $col; $emptyCol : Collection
+var $first : Variant
+$col:=New collection(10; 20; 30; "hello"; 50)
 $first:=$col.first() // 10
 
-$first:=New collection().first() // undefined
+$emptyCol:=New collection() //empty
+// $first:=$emptyCol[0] //would return error
+$first:=$emptyCol.first() // returns Undefined
 ```
-
-#### Example 2
-
-You define a custom `first()` function that can be applied to a collection or an entity selection:
-
-```4d
-Function first($collectionOrSelection: Variant) -> Variant
-	return $collectionOrSelection.first()
-```
-
 <!-- END REF -->
 
 
@@ -1438,7 +1430,7 @@ $col.flat(2)
 // [1, 2, 3, 4, 5, 6]
 
 $col:=New collection(1; 2; New collection(3; 4; 5; 6; New collection(7; 8; New collection(9; 10))))
-$col.flat(MAXINT)
+$col.flat(MAXLONG)
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
@@ -1495,13 +1487,42 @@ It can set the following parameter(s):
 *	*$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
 
-#### Example
+#### Example 1
 
+```4d
+var $col ; $result : Collection
+$col:=New collection(1; 2; 3; 4)
+
+$result:=$col.map(Formula(New collection($1.value*2))
+ // [[2],[4],[6],[8]]
+
+$result:=$col.flatMap(Formula(New collection($1.value*2))
+// [2,4,6,8]
+```
+
+#### Example 2
+
+```
+var $col; $result : Collection
+$col:=New collection("Hello how"; ""; "are you ?")
+
+$result:=$col.map(Formula(Split string($1.value; " ")))
+// [["Hello", "how"], [], ["are", "you", "?"]]
+
+$result:=$col.flatMap(Formula(Split string($1.value; " ")))
+// ["Hello", "how", "are", "you", "?"]
+```
+
+#### Example 3
+
+You want to compute the percentage of each value in the collection to the total:
 
 ```4d
 var $c; $c2 : Collection
+var $f : 4D.Function
 $c:=New collection(1; 4; 9; 10; 20)
-$c2:=$c.flatMap(Formula(New collection($1.value;Round(($1.value/$2)*100; 2))); $c.sum())
+$f:=Formula(New collection($1.value;Round(($1.value/$2)*100; 2)))
+$c2:=$c.flatMap($f; $c.sum())
   //$c2=[1, 2.27, 4, 9.09,9, 20.45,10, 22.73, 20, 45.45]
 ```
 
@@ -1550,8 +1571,7 @@ In *toSearch*, pass the expression to find in the collection. You can pass:
 Optionally, you can pass the index of collection from which to start the search in *startFrom*.
 
 *	If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
-*	If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
-	**Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
+*	If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
 *	If *startFrom* = 0, the whole collection is searched (default).
 
 #### Example
@@ -1561,11 +1581,15 @@ Optionally, you can pass the index of collection from which to start the search 
 ```4d
  var $col : Collection
  var $in : Boolean
+ var $obj : Object
+ $obj:=New object("value"; 10)
  $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5)
  $in:=$col.includes(3) //True
- $in:=$col.includes(5;5) //True
+ $in:=$col.includes(5;6) //True
  $in:=$col.includes("al@") //True
  $in:=$col.includes("Hello") //False
+ $in:=$col.includes($obj)  //True
+ $in:=$col.includes(New object("value"; 10)) //False
 ```
 
 <!-- END REF -->
@@ -1621,14 +1645,6 @@ Optionally, you can pass the index of collection from which to start the search 
 
 #### Example
 
-
-
-
-
-
-
-
-
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1640,8 +1656,6 @@ Optionally, you can pass the index of collection from which to start the search 
 ```
 
 <!-- END REF -->
-
-
 
 
 
@@ -1831,23 +1845,19 @@ The `.last()` function <!-- REF #collection.last().Summary -->returns the last e
 
 The function returns Undefined if the collection is empty. 
 
-#### Example 1
+#### Example
 
 
 ```4d
-$col:=New collection(10; 20; 30; 40; 50)
-$first:=$col.last() // 50
+var $col; $emptyCol : Collection
+var $last : Variant
+$col:=New collection(10; 20; 30; "hello"; 50)
+$last:=$col.last() // 50
 
-$first:=New collection().last() // undefined
-```
+$emptyCol:=New collection() //empty
+// $last:=$emptyCol[$emptyCol.length-1] //returns an error
+$last:=$emptyCol.last() // returns Undefined
 
-#### Example 2
-
-You define a custom `last()` function that can be applied to a collection or an entity selection:
-
-```4d
-Function last($collectionOrSelection: Variant) -> Variant
-	return $collectionOrSelection.last()
 ```
 
 <!-- END REF -->
@@ -2652,7 +2662,7 @@ The callback sets the following parameter(s):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
 
 
@@ -2743,7 +2753,7 @@ The callback sets the following parameter(s):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
 
 
