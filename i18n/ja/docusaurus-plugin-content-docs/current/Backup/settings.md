@@ -114,14 +114,20 @@ title: バックアップ設定
     - **冗長率**: 冗長は同じ情報を複数回繰り返すことで、ファイル中のデータを保護するものです。 冗長率を高くするとよりファイルが保護されます。しかし書き込みは遅くなり、ファイルサイズも増大します。
 
 
-### 自動復元
+### Automatic Restore and log integration
 
 - **データベースが壊れていたら、最新のバックアップから復元する**: このオプションが選択されていると、ファイル破損などの異常が検知された場合、4D は起動時にアプリケーションの有効な最新のバックアップからのデータの復旧を自動で開始します。 ユーザーによる介入は必要ありませんが、処理はバックアップジャーナルに記録されます。
 
-- **データベースが完全でない場合、最新のログを統合する**: このオプションがチェックされると、プログラムはアプリケーションを開く際または復旧時に、自動でログファイルを統合します。
-    - アプリケーションを開く際に、データファイルに保存されていない処理がログファイル中に見つかった場合、4D は自動でカレントログファイルを統合します。 このようなケースは、ディスクに書き込まれていないデータがまだキャッシュ中に存在する状態で、電力の切断が起きた場合に発生します。
-    - カレントジャーナルファイルと同じリポジトリに連続した有効な .journal ファイルがある場合 (つまり、[new log file](log.md#ログファイルを中止する) コマンドを使用した場合)、4D Serverは、カレントジャーナルを統合する前に必要な .journal ファイルをすべて統合します。
-    - アプリケーションの復元時、カレントログファイルや、バックアップファイルと同じ番号を持つログバックアップファイルが同じフォルダーに存在する場合、4D はその内容を検証します。 そしてデータファイルに書き込まれていない処理が見つかれば、自動で統合処理がおこなわれます。
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. With 4D Server, if there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
+
+    This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk, or after an anomaly was detected when opening the data file and a restore has occurred.
+
+    :::note
+
+    This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
+
+    :::
+
 
 ユーザーにダイアログボックスが提示されることはありません。 処理は完全に自動です。 処理はバックアップジャーナルに記録されます。
 
