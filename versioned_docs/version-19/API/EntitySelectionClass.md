@@ -276,6 +276,7 @@ Calls to the function can be chained:
 
 <details><summary>History</summary>
 
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1287,6 +1288,9 @@ By default, attributes are sorted in ascending order ("descending" is false).
 You can add as many objects in the criteria collection as necessary.
 
 >Null values are evaluated as less than other values.
+
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection. 
+
 
 #### Example
 

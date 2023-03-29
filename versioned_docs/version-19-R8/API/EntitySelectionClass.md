@@ -1496,6 +1496,9 @@ You can add as many objects in the criteria collection as necessary.
 
 >Null values are evaluated as less than other values.
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection. 
+
+
 #### Example
 
 
@@ -1974,6 +1977,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 
 
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2213,6 +2217,7 @@ Example with slicing and filtering on properties:
 ```4d
 var $employeesCollection; $filter : Collection
 var $employees : cs.EmployeeSelection
+
 
 $employeesCollection:=New collection
 $filter:=New collection
