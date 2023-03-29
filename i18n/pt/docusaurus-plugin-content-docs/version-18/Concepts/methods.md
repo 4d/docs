@@ -25,7 +25,7 @@ A project method can have one of the following roles, depending on how it is exe
 - Subrotina e função
 - Método associado a um objeto
 - Método do menu
-- Process method
+- Método de gerenciamento de processos
 - Event or Error catching method
 
 ### Subrotinas e funções
