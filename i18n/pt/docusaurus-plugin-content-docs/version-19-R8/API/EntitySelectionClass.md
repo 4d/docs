@@ -262,7 +262,7 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 | Versão | Mudanças                                              |
 | ------ | ----------------------------------------------------- |
-| v19 R7 | Support of *entitySelection* parameter                |
+| v19 R7 | Suporte do parâmetro *entitySelection*                |
 | v18 R5 | Compatível apenas com seleções de entidade alteráveis |
 | v17    | Adicionado                                            |
 
@@ -1314,7 +1314,7 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 | Versão | Mudanças                         |
 | ------ | -------------------------------- |
-| v19 R7 | Support of *keepOrder* parameter |
+| v19 R7 | Suporte do parâmetro *keepOrder* |
 | v17    | Adicionado                       |
 
 </details>

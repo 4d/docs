@@ -32,7 +32,7 @@ Indefinido não é realmente um tipo de dados. Denota uma variável que ainda n�
 |              | Null `#` Undefined       | Booleano | a.nullProp `#` b.undefinedProp | False |
 |              | Null `#` *valor escalar* | Booleano | a.nullProp `#` 42              | True  |
 
-*scalar values* are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Other types (Pointer, Picture, Object, Collection) have undefined or null default value. Ex:
+Os *valores escalares* são valores do tipo string, Date, Time, Boolean, number, ou Blob. Quando declarado, o seu  [valor por padrão](data-types.md#default-values) não é indefinido nem nulo. Outros tipos (Ponteiro, Imagem, Objecto, Colecção) têm valor por defeito indefinido ou nulo. Ex:
 
 ```4d
 var $object : Object
@@ -44,7 +44,7 @@ var $text : Text
 
 :::info
 
-Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported with Null values and return an error.
+Comparações com os operadores Maior que (`>`), Menor que (`<`), Maior ou igual a (`>=`), e Menor ou igual a (`<=`) não são suportados com valores Nulos e devolvem um erro.
 
 :::
 
@@ -64,11 +64,11 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Booleano | a.undefinedProp `>=` "abc"       | False |
 | Menor que ou igual a | Undefined `<=` string, Date, Time, Boolean, number | Booleano | a.undefinedProp `<=` "abc"       | False |
 
-*other values* are expressions of any type with a value neither Undefined nor Null.
+*outros valores* são expressões de qualquer tipo com um valor nem Indefinido nem Null.
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Comparações de valores Indefinidos com Pontos, Imagem, Blob, Objecto, Colecção, Valores Indefinidos ou Nulos utilizando valores Maiores que (`>`), Menos que (`<`), Maiores ou iguais a (`>=`), e Menos ou iguais a (`<=`) os operadores não são suportados e devolvem um erro.
 
 :::
 
@@ -94,29 +94,29 @@ $result:=Undefined($vEmp.parent) //True
 $result:=($vEmp.parent=Null) //True
 ```
 
-Examples of comparison results with undefined and null values:
+Exemplos de resultados de comparação com valores indefinidos e nulos:
 
 ```4d
-var $result : Boolean
-var $vObj : Object
-var $vVar : Variant
+var $result : Booleano
+var $vObj : Objecto
+var $vVar : Variante
 
-$vObj:=New object
-$vObj.null:=Null
-//note that $vVar is not assigned 
+$vObj:=Novo objecto
+$vObj.null:=Nulo
+// nota que $vVar não está atribuído 
 
 $result:=($vObj.undefined=42) //False
 $result:=($vObj.undefined=$vObj.null) //True
-$result:=($vObj.undefined=$vVar)  //True
+$result:=($vObj.undefined=$vVar) //True
 
-$result:=($vObj.undefined#$vObj.null) //False
+$result:=($vObj.indefinido#$vObj.null) //False
 $result:=($vObj.undefined#42) //True
 $result:=($vObj.undefined#$vVar) //False
 
-$result:=($vObj.undefined>"hello") //False
-$result:=($vObj.undefined>$vVar)  //Error
-$result:=($vObj.undefined>$vObj.null)  //Error
-$result:=($vVar < 42) //False
+$result:=($vObj.indefinido>"olá") //Falso
+$result:=($vObj.indefinido>$vVar) //Error
+$result:=($vObj.indefinido>$vObj.nulo) //Error
+$result:=($vVar < 42) //Falso
 
 ```
 

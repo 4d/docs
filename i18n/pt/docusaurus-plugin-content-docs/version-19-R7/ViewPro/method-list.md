@@ -1791,7 +1791,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 
 ##### Objeto devolvido
 
-The command returns an object describing the frozen columns and rows. This object can contain the following properties:
+The command returns an object describing the frozen columns and rows. Este objeto pode conter as seguintes propriedades:
 
 | Propriedade         | Tipo    | Descrição                                              |
 | ------------------- | ------- | ------------------------------------------------------ |
@@ -4259,12 +4259,12 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 This code demonstrates the difference between `VP SET BORDER` and setting borders with the [`VP SET CELL STYLE`](#vp-set-cell-style) command:
 
 ```4d
-// Set borders using VP SET BORDER
+// Definir margens usando VP SET BORDER
 $border:=New object("color";"red";"style";vk line style thick)
 $option:=New object("outline";True)
 VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
-// // Set borders using VP SET CELL STYLE
+// // Definir margens usando VP SET CELL STYLE
 $cellStyle:=New object
 $cellStyle.borderBottom:=New object("color";"blue";"style";vk line style thick)
 $cellStyle.borderRight:=New object("color";"blue";"style";vk line style thick)
@@ -5027,7 +5027,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 
 | Parâmetros | Tipo    |    | Descrição                                                         |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area name                                             |
+| vpAreaName | Text    | -> | Nome da área 4D View Pro                                          |
 | printInfo  | Objeto  | -> | Object containing printing attributes                             |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
 
@@ -5297,7 +5297,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 | Parâmetros   | Tipo   |    | Descrição                                                         |
 | ------------ | ------ | -- | ----------------------------------------------------------------- |
-| vpAreaName   | Objeto | -> | 4D View Pro area name                                             |
+| vpAreaName   | Objeto | -> | Nome da área 4D View Pro                                          |
 | sheetOptions | Objeto | -> | Sheet option(s) to set                                            |
 | sheet        | Objeto | -> | Sheet index (current sheet if omitted)|<!-- END REF --> |
 

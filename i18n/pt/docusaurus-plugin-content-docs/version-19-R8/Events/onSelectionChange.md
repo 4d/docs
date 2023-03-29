@@ -3,7 +3,7 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                      | Definição                               |
+| Code | Pode ser chamado por                                                                                                                                                                                                                                                  | Definição                               |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
 | 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
 
@@ -20,7 +20,7 @@ The current selection of rows or columns is modified. In this context, the [even
 | ------------- | ------------- | ------------------------------ |
 | code          | inteiro longo | 31                             |
 | description   | text          | "On Selection Change"          |
-| objectName    | text          | 4D View Pro area name          |
+| objectName    | text          | Nome da área 4D View Pro       |
 | sheetName     | text          | Name of the sheet of the event |
 | oldSelections | object        | Cell range before change       |
 | newSelections | object        | Cell range after change        |
@@ -39,12 +39,12 @@ The current selection of rows or columns is modified. In this context, the [even
 The current record or the current selection of rows is modified in a list form.
 
 
-### Hierarchical list
+### Lista hierárquica
 
 This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
 
 
-### Input & 4D Write Pro
+### Entrada & 4D Write Pro
 
 The text selection or the position of the cursor in the area is modified following a click or a keystroke.
 

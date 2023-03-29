@@ -700,7 +700,7 @@ As definições personalizadas da sessão serão reiniciadas quando a função [
 
 #### Objeto devolvido
 
-A função devolve um objecto que descreve o estado de lançamento do servidor Web. This object can contain the following properties:
+A função devolve um objecto que descreve o estado de lançamento do servidor Web. Este objeto pode conter as seguintes propriedades:
 
 | Propriedade |                         | Tipo       | Descrição                                                                     |
 | ----------- | ----------------------- | ---------- | ----------------------------------------------------------------------------- |
@@ -749,14 +749,14 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 |
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->pára o servidor web em que é aplicado<!-- END REF -->.
 
-If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. Se o servidor web não foi iniciado, o método não faz nada.
+Se o servidor web foi iniciado, todas as ligações e processos web são fechados, uma vez terminados os pedidos actualmente tratados. Se o servidor web não foi iniciado, o método não faz nada.
 > Esta função repõe as definições web personalizadas definidas para a sessão utilizando o parâmetro ** da função [`.start()`](#start) , se existir.
 
 #### Exemplo
 
-To stop the database Web server:
+Para parar o servidor Web da base de dados:
 
 ```4d
  var $webServer : 4D. WebServer

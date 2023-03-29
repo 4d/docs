@@ -673,7 +673,7 @@ The 4D commands are divided in two categories:
 | [`MOVE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page540.html)                                      | 540    |
 | [`MULTI SORT ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page718.html)                                   | 718    |
 | <a name="N">**N**</a>                                                                                     |        |
-| [`Nova colecção`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                                     | 1472   |
+| [`Nova coleção`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                                      | 1472   |
 | [`New data key`](https://doc.4d.com/4dv19R/help/command/en/page1611.html)                                      | 1611   |
 | [`New list`](https://doc.4d.com/4dv19R/help/command/en/page375.html)                                           | 375    |
 | [`New log file`](https://doc.4d.com/4dv19R/help/command/en/page926.html)                                       | 926    |

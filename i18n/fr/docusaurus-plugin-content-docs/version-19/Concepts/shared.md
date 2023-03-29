@@ -7,10 +7,14 @@ title: Objets et collections partagés
 
 Shared objects and shared collections can be stored in standard `Object` and `Collection` type variables, but must be instantiated using specific commands:
 
-- pour créer un objet partagé, utilisez la commande `New shared object`,
-- pour créer une collection partagée, utilisez la commande `New shared collection`.
+- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
 
-**Note :** Des objets partagés et des collections partagées peuvent être définis comme propriétés d'objets/éléments de collections standard (non partagés).
+:::note
+
+Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+
+:::
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
@@ -18,7 +22,7 @@ Un catalogue unique et global, retourné par la commande `Storage`, est disponib
 
 ## Utilisation des objets et collections partagés
 
-Une fois instanciés à l'aide des commandes `New shared object` ou `New shared collection`, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process.
+Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application, under certain conditions.
 
 ### Modification
 
@@ -27,12 +31,29 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 - ajout ou suppression de propriétés d'objets,
 - ajout ou modification de valeurs (prises en charge par les objets/collections partagé(e) s), y compris d'autres objets et collections partagé(s) (ce qui crée un groupe partagé, cf. ci-dessous).
 
-Toute instruction de modification d'objet ou de collection partagé(e) doit être encadrée par les mots-clés `Use...End use`, sinon une erreur est générée.
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
  Use($s_obj)
     $s_obj.prop1:="omega"
+End Use
+```
+
+For conveniency, all [collection functions](../API/CollectionClass.md) that modify the shared object or collection insert an internal `Use...End use` block so you do not have to code it yourself. Par exemple :
+
+```4d
+$col:=New shared collection()
+$col.push("alpha") //.push() internally triggers Use/End use, so no need to do it yourselves
+```
+
+If you need to execute several modifications on the same collection, you can protect all modifications with a single `Use...End use` so that modifications are performed atomically.
+
+```4d
+$col:=Storage.mySharedCollection
+Use($col)
+    $col[0]:="omega" //modifying an element requires to be performed inside Use/End use
+    $col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
 End Use
 ```
 
@@ -46,7 +67,7 @@ L'assignation d'objets/collections partagé(e) s à des propriétés ou élémen
 
 Reportez-vous à l'exemple 2 pour l'illustration des règles des groupes partagés.
 
-**Note :** Les groupes partagés sont gérés via une propriété interne nommée *locking identifier*. Si vous avez besoin de plus d'informations sur les mécanismes utilisés, reportez-vous au Guide du développeur de 4D.
+**Note :** Les groupes partagés sont gérés via une propriété interne nommée *locking identifier*. For detailed information on this value, please refer to the 4D Language Reference.
 
 ### Lecture
 
@@ -60,7 +81,7 @@ Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés
 
 ### Storage
 
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est retourné par la commande `Storage`. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
+**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html) command. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 
@@ -87,8 +108,11 @@ Les objets partagés et les collections partagées permettent d'établir des com
 - La ligne **End use** déverrouille les propriétés de _Shared_object_or_Shared_collection_ et tous les objets du même groupe.
 - Plusieurs structures **Use...End use** peuvent être imbriquées dans le code 4D. Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**.
 
-**Note :** Si une fonction membre d'une collection modifie une collection partagée, un **Use** interne est automatiquement mis en place pour cette collection partagée durant l'exécution de la fonction.
+:::note
 
+Keep in mind that [collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed.
+
+:::
 
 ## Exemple 1
 

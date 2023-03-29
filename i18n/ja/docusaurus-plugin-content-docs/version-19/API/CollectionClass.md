@@ -162,7 +162,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 `New shared collection` コマンドは、 <!-- REF #_command_.New shared collection.Summary --> 空の、あるいは値の入った新規の共有コレクションを作成し、その参照を返します<!-- END REF --> 。
 
-このコレクションに要素を追加する場合には [`Use...End use`](Concepts/shared.md#useend-use) 構造でくくる必要があり、そうしない場合にはエラーが返されます。 ただし、属性の読み取りは [`Use...End use`](Concepts/shared.md#useend-use) 構造の外側でも可能です。
+このコレクションに要素を追加する場合には [`Use...End use`](Concepts/shared.md#useend-use) 構造でくくる必要があり、そうしない場合にはエラーが返されます。ただし、[`push()`](#push) や [`map()`](#map) などの関数を使用して要素を追加する場合は、自動で内部的に *Use...End use* が使用されるため、必要ありません。 ただし、属性の読み取りは [`Use...End use`](Concepts/shared#useend-use) 構造の外側でも可能です。
 > 共有コレクションについての詳細は、[共有オブジェクトと共有コレクション](Concepts/shared.md) のページを参照してください。
 
 引数を渡さない場合、`New shared collection` は空のコレクションを作成し、その参照を返します。
@@ -1981,6 +1981,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 <!-- END REF -->
 
 
+
 <!-- REF collection.query().Desc -->
 ## .query()
 
@@ -2599,6 +2600,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 ```4d
  var $col : Collection
+
  var $vSum : Real
  $col:=New collection(10;20;"Monday";True;2)
  $vSum:=$col.sum() //32

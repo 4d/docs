@@ -29,7 +29,7 @@ When this option is checked, 4D displays the standard Open file dialog box after
 
 ## Restauração de um banco de dados criptografado
 
-Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current application. Matching encryption keys must always be provided.
+Lembre que a chave de criptografia de dados (frase secreta) pode ter mudado entre as várias versões dos arquivos de backup (.4BK), arquivos .journal (.4BL) e a aplicação actual. Matching encryption keys must always be provided.
 
 When restoring a backup and integrating the current log file in a encrypted database:
 

@@ -3,7 +3,7 @@ id: onMouseUp
 title: On Mouse Up
 ---
 
-| Code | Can be called by                                                                                      | Definição                                                            |
+| Code | Pode ser chamado por                                                                                  | Definição                                                            |
 | ---- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 2    | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) | The user has just released the left mouse button in a Picture object |
 

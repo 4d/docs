@@ -297,7 +297,7 @@ When the database is restarted, the list is reinitialized.
 > You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
 
 
-## Shortcuts
+## Atalhos
 
 Standard keyboard shortcuts to navigate the code are available in 4D's Code Editor.
 

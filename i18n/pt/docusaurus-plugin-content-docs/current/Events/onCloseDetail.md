@@ -3,7 +3,7 @@ id: onCloseDetail
 title: On Close Detail
 ---
 
-| Code | Can be called by                                   | Definição                                                      |
+| Code | Pode ser chamado por                               | Definição                                                      |
 | ---- | -------------------------------------------------- | -------------------------------------------------------------- |
 | 26   | Form - [List Box](FormObjects/listbox_overview.md) | You left the detail form and are going back to the output form |
 

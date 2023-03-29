@@ -644,7 +644,7 @@ Opcionalmente, puede designar el conjunto de caracteres que se utilizará para l
 
 Si existe un BOM (Byte Order Mark) para el conjunto de caracteres, 4D la inserta en el archivo. Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres "UTF-8" y un BOM.
 
-En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. The following constants, found in the **System Documents** theme are available:
+En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema** están disponibles:
 
 | Constante                     | Valor | Comentario                                                                                                                                                                 |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

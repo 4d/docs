@@ -522,7 +522,7 @@ Essa propriedade é **apenas leitura**.
 | ------ | -------- |
 |        |          |
 
-|v19 R4|Added|
+|v19 R4|Adicionado|
 
 </details>
 

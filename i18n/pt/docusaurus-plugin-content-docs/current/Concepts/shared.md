@@ -7,10 +7,14 @@ title: Objetos e coleções compartilhados
 
 Shared objects and shared collections can be stored in standard `Object` and `Collection` type variables, but must be instantiated using specific commands:
 
-- to create a shared object, use the `New shared object` command,
-- to create a shared collection, use the `New shared collection` command.
+- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
 
-**Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+:::note
+
+Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+
+:::
 
 In order to modify a shared object/collection, the **Use... End use** structure must be called. Reading a shared object/collection value does not require **Use... End use**.
 
@@ -18,7 +22,7 @@ A unique, global catalog returned by the `Storage` command is always available t
 
 ## Utilização de objetos ou coleções compartidos
 
-Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
+Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application, under certain conditions.
 
 ### Modificação
 
@@ -27,7 +31,7 @@ Modifications can be applied to shared objects and shared collections:
 - adding or removing object properties,
 - adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
 
-However, all modification instructions in a shared object or collection must be surrounded by the `Use... End use` keywords, otherwise an error is generated.
+All modification instructions in a shared object or collection require to be protected inside a [`Use...End use`](#use-end-use) block, otherwise an error is generated.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -35,6 +39,24 @@ However, all modification instructions in a shared object or collection must be 
     $s_obj.prop1:="omega"
  End Use
 ```
+
+For conveniency, all [collection functions](../API/CollectionClass.md) that modify the shared object or collection insert an internal `Use...End use` block so you do not have to code it yourself. Por exemplo:
+
+```4d
+$col:=New shared collection()
+$col.push("alpha") //.push() internally triggers Use/End use, so no need to do it yourselves
+```
+
+If you need to execute several modifications on the same collection, you can protect all modifications with a single `Use...End use` so that modifications are performed atomically.
+
+```4d
+$col:=Storage.mySharedCollection
+Use($col)
+    $col[0]:="omega" //modifying an element requires to be performed inside Use/End use
+    $col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically
+End Use
+```
+
 
 A shared object/collection can only be modified by one process at a time. `Use` locks the shared object/collection from other threads, while `End use` unlocks the shared object/collection (if the locking counter is at 0, see below). . Trying to modify a shared object/collection without at least one `Use... End use` generates an error. When a process calls `Use... End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use... End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
 
@@ -46,7 +68,7 @@ Assigning shared objects/collections to properties or elements of other shared o
 
 Please refer to example 2 for an illustration of shared group rules.
 
-**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
+**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Language Reference.
 
 ### Leitura
 
@@ -60,7 +82,7 @@ Calling `OB Copy` with a shared object (or with an object containing shared obje
 
 ### Storage
 
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the `Storage` command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
+**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html) command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
 
 Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
 
@@ -87,8 +109,11 @@ Shared objects and shared collections are designed to allow communication betwee
 - The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects of the same group.
 - Several **Use... End use** structures can be nested in the 4D code. In the case of a group, each **Use** increments the locking counter of the group and each **End use** decrements it; all properties/elements will be released only when the last **End use** call sets the locking counter to 0.
 
-**Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
+:::note
 
+Keep in mind that [collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed.
+
+:::
 
 ## Exemplo 1
 
@@ -117,10 +142,10 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
     //HowMany
  #DECLARE ($what : Text ; $inventory : Object)
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
- End use
+ $count:=CountMethod($what) //método para contar produtos
+ Use($inventory) //utilização de objecto partilhado
+     $inventory[$what]:=$count  //guardar os resultados para este artigo
+  End use
 ```
 
 ## Exemplo 2

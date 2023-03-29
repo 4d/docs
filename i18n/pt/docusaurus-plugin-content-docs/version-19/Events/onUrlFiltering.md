@@ -3,9 +3,9 @@ id: onUrlFiltering
 title: On URL Filtering
 ---
 
-| Code | Can be called by                            | Definição                         |
-| ---- | ------------------------------------------- | --------------------------------- |
-| 51   | [Área Web](FormObjects/webArea_overview.md) | A URL was blocked by the Web area |
+| Code | Pode ser chamado por                        | Definição                          |
+| ---- | ------------------------------------------- | ---------------------------------- |
+| 51   | [Área Web](FormObjects/webArea_overview.md) | Um URL foi bloqueado pela área Web |
 
 
 ## Descrição

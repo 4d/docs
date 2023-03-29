@@ -210,7 +210,7 @@ To display the tags of a method or class in alphabetical order, do one of the fo
 
 
 
-### Shortcuts
+### Atalhos
 
 Multiple features of 4D's Code Editor are available through default keyboard shortcuts.
 

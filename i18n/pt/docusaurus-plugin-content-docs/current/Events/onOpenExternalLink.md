@@ -3,7 +3,7 @@ id: onOpenExternalLink
 title: On Open External Link
 ---
 
-| Code | Can be called by                            | Definição                                      |
+| Code | Pode ser chamado por                        | Definição                                      |
 | ---- | ------------------------------------------- | ---------------------------------------------- |
 | 52   | [Área Web](FormObjects/webArea_overview.md) | An external URL has been opened in the browser |
 

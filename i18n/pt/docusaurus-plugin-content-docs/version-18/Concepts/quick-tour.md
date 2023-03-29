@@ -95,7 +95,7 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apena
 
 4D oferece un grande número de métodos (ou comandos) integrados, mas também lhe permite criar seus próprios **métodos de projeto**. Os métodos de projeto são métodos definidos pelo usuário que contenham comandos, operadores e outras partes da linguaje. Los métodos projeto são métodos genéricos, mas há outros tipos de métodos: métodos objeto, métodos formulário, métodos tabela (Triggers) e métodos base.
 
-Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex.
+Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa.
 
 Por exemplo, a linha abaixo é uma declaração que mostará uma caixa de diálogo de confirmação:
 
@@ -135,7 +135,7 @@ Lembre que os dados de tipo string e numérico podem ser associados a mais de um
 
 Entretanto, quando usar a linguagem é importante que não misture diferentes tipos de dados. Da mesma forma que não tem sentido armazenar "ABC" em um campo de data, tampouco tem sentido por "ABC" em uma variável utilizada para datas. Na maioria dos casos, 4D é muito tolerante e tentará dar sentido ao que está fazendo. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.
 
-There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:
+There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. Neste caso, poderá escrever:
 
 ```4d
 [Products]Part Number:=String(Number)+"abc"
@@ -145,7 +145,7 @@ If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
 
 The data types are fully defined in the section [Data Types](Concepts/data-types.md).
 
-## Objects and collections
+## Objectos e colecções
 
 You can handle 4D language objects and collections using the object notation to get or to set their values. Por exemplo:
 
@@ -180,7 +180,7 @@ To access a collection element, you have to pass the element number embedded in 
 ```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  //acesso ao 4º elemento da colecção
 ```
 
 ## Operadores
@@ -198,11 +198,11 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Tipo de dados   | Operação      | Exemplo                                                                                              |
-| --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Número          | Adição        | 1 + 2 adds the numbers and results in 3                                                              |
-| String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
-| Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
+| Tipo de dados | Operação      | Exemplo                                                                                              |
+| ------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
+| Número        | Adição        | 1 + 2 adiciona os números e resultados em 3                                                          |
+| String        | Concatenação  | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
+| Data e Número | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
 ## Expressões
 
@@ -222,30 +222,30 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression               | Tipo               | Descrição                                                                                                                                                                       |
-| ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Sr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. Retorna "SMITH".                                                     |
-| 4                        | Número             | Esta é uma constante numérica, 4.                                                                                                                                               |
-| 4 * 2                    | Número             | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
-| myButton                 | Número             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
-| !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
-| Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
-| ?8:05:30?                | Hora               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
-| ?2:03:04? + ?1:02:03?    | Hora               | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
-| True                     | Booleano           | This command returns the Boolean value TRUE.                                                                                                                                    |
-| 10 # 20                  | Booleano           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
-| “ABC” = “XYZ”            | Booleano           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
-| My Picture + 50          | Imagem             | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Ponteiro           | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
-| Table(1)                 | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Objeto             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
-| JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
-| Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
-| Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
-| $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
+| Expression               | Tipo                | Descrição                                                                                                                                                                       |
+| ------------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                  | String              | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
+| “Hello ” + “there”       | String              | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
+| “Sr. ” + [People]Name    | String              | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
+| Uppercase("smith")       | String              | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. Retorna "SMITH".                                                     |
+| 4                        | Número              | Esta é uma constante numérica, 4.                                                                                                                                               |
+| 4 * 2                    | Número              | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
+| myButton                 | Número              | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
+| !1997-01-25!             | Date                | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
+| Current date+ 30         | Date                | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
+| ?8:05:30?                | Hora                | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
+| ?2:03:04? + ?1:02:03?    | Hora                | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
+| True                     | Booleano            | Este comando devolve o valor Booleano TRUE.                                                                                                                                     |
+| 10 # 20                  | Booleano            | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
+| “ABC” = “XYZ”            | Booleano            | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
+| My Picture + 50          | Imagem              | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
+| ->[People]Name           | Ponteiro            | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
+| Table(1)                 | Ponteiro            | This is a command that returns a pointer to the first table.                                                                                                                    |
+| JSON Parse (MyString)    | Objeto              | This is a command that returns MyString as an object (if proper format)                                                                                                         |
+| JSON Parse (MyJSONArray) | Collection          | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
+| Form.pageNumber          | Propriedade objecto | An object property is an expression that can be of any supported type                                                                                                           |
+| Col[5]                   | Collection element  | A collection element is an expression that can be of any supported type                                                                                                         |
+| $entitySel[0]            | Entity              | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
 
 ### Assignable vs non-assignable expressions
 
@@ -276,8 +276,8 @@ Comments are inactive lines of code. These lines are not interpreted by the 4D l
 
 There are two ways to create comments:
 
-- `//` for single line comments
-- `/*...*/` for inline or multiline commnents.
+- `//` para comentários de linha única
+- `/*...*/` para comentarios em linha ou multilinha.
 
 Both styles of comments can be used simultaneously.
 
@@ -310,10 +310,10 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
- /*
- other comments
- */
+comentarios  
+    /*
+    outros comentarios
+    */
 */
 ...
 End for

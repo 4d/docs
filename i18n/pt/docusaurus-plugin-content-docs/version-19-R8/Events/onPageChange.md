@@ -3,9 +3,9 @@ id: onPageChange
 title: On Page Change
 ---
 
-| Code | Can be called by | Definição                               |
-| ---- | ---------------- | --------------------------------------- |
-| 56   | Formulário       | The current page of the form is changed |
+| Code | Pode ser chamado por | Definição                               |
+| ---- | -------------------- | --------------------------------------- |
+| 56   | Formulário           | The current page of the form is changed |
 
 
 ## Descrição

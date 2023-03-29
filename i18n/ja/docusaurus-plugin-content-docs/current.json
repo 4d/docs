@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "開発中",
+    "message": "次へ",
     "description": "The label for version current"
   },
   "sidebar.docs.category.Getting Started": {
@@ -173,7 +173,7 @@
   },
   "sidebar.docs.link.4D Language Reference": {
     "message": "ランゲージリファレンス (4D Doc Center)",
-    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R7/4D/19-R7/4D-Language-Reference.100-5944528.en.html"
+    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Language-Reference.100-6101683.en.html"
   },
   "sidebar.docs.link.4D Mobile App Server": {
     "message": "4D Mobile App Server",
@@ -185,15 +185,15 @@
   },
   "sidebar.docs.link.4D Progress": {
     "message": "4D Progress",
-    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html"
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Progress.100-6205973.en.html"
   },
   "sidebar.docs.link.4D SVG": {
     "message": "4D SVG",
-    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html"
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-SVG-Component.100-6206845.en.html"
   },
   "sidebar.docs.link.4D Widgets": {
     "message": "4D Widgets",
-    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html"
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Widgets.100-6207497.en.html"
   },
   "sidebar.docs.link.4D Write Pro Interface": {
     "message": "4D WritePro インターフェース",
@@ -209,6 +209,134 @@
   },
   "sidebar.docs.link.4D Write Pro": {
     "message": "4D Write Pro",
-    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html"
+    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Write-Pro-Reference.100-6130471.en.html"
+  },
+  "sidebar.docs.category.Getting Started.link.generated-index.title": {
+    "message": "はじめに",
+    "description": "The generated-index page title for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development.link.generated-index.title": {
+    "message": "コア開発",
+    "description": "The generated-index page title for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language Concepts.link.generated-index.title": {
+    "message": "ランゲージのコンセプト",
+    "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
+    "message": "4Dランゲージの基本コンセプト",
+    "description": "The generated-index page description for category 4D Language Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Class Functions": {
+    "message": "クラス関数",
+    "description": "The label for category Class Functions in sidebar docs"
+  },
+  "sidebar.docs.category.Class Functions.link.generated-index.title": {
+    "message": "クラス関数",
+    "description": "The generated-index page title for category Class Functions in sidebar docs"
+  },
+  "sidebar.docs.category.Class Functions.link.generated-index.description": {
+    "message": "ビルトイン 4Dクラスの一覧",
+    "description": "The generated-index page description for category Class Functions in sidebar docs"
+  },
+  "sidebar.docs.category.Tags": {
+    "message": "タグ",
+    "description": "The label for category Tags in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.title": {
+    "message": "管理",
+    "description": "The generated-index page title for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.description": {
+    "message": "4Dアプリケーションの管理",
+    "description": "The generated-index page description for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.title": {
+    "message": "Web 管理",
+    "description": "The generated-index page title for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.description": {
+    "message": "アプリケーション管理・監視用の 4D Web ツール",
+    "description": "The generated-index page description for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro.link.generated-index.title": {
+    "message": "4D View Pro",
+    "description": "The generated-index page title for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.title": {
+    "message": "Web アプリ",
+    "description": "The generated-index page title for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.description": {
+    "message": "4D での Webアプリケーション開発ガイド",
+    "description": "The generated-index page description for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.REST Server.link.generated-index.title": {
+    "message": "REST サーバー",
+    "description": "The generated-index page title for category REST Server in sidebar docs"
+  },
+  "sidebar.docs.category.REST Server.link.generated-index.description": {
+    "message": "4D RESTサーバーの設定と REST API の使い方",
+    "description": "The generated-index page description for category REST Server in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.title": {
+    "message": "API (一般)",
+    "description": "The generated-index page title for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.description": {
+    "message": "グローバル情報用の REST API",
+    "description": "The generated-index page description for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.title": {
+    "message": "API (dataClass)",
+    "description": "The generated-index page title for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.description": {
+    "message": "データクラス用の REST API",
+    "description": "The generated-index page description for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.title": {
+    "message": "デスクトップアプリ",
+    "description": "The generated-index page title for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
+    "message": "4D でのデスクトップアプリケーション開発ガイド",
+    "description": "The generated-index page description for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.title": {
+    "message": "アクセス権限",
+    "description": "The generated-index page title for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.description": {
+    "message": "デスクトップアプリケーションのアクセス管理とユーザー権限",
+    "description": "The generated-index page description for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.doc.Command Line Interface": {
+    "message": "コマンドライン・インターフェース",
+    "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
+  },
+  "sidebar.docs.doc.TLS Protocol": {
+    "message": "TLSプロトコル",
+    "description": "The label for the doc item TLS Protocol in sidebar docs, linking to the doc Admin/tls"
+  },
+  "sidebar.docs.doc.Managing 4D Licenses": {
+    "message": "4D ライセンスの管理",
+    "description": "The label for the doc item Managing 4D Licenses in sidebar docs, linking to the doc Admin/licenses"
+  },
+  "sidebar.docs.doc.Data Collection": {
+    "message": "データ収集",
+    "description": "The label for the doc item Data Collection in sidebar docs, linking to the doc Admin/data-collect"
+  },
+  "sidebar.docs.doc.Client/Server": {
+    "message": "クライアント/サーバー",
+    "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
+  },
+  "sidebar.docs.doc.User Settings": {
+    "message": "ユーザー設定",
+    "description": "The label for the doc item User Settings in sidebar docs, linking to the doc Desktop/user-settings"
+  },
+  "sidebar.docs.doc.Build Application": {
+    "message": "アプリケーションビルド",
+    "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
   }
 }

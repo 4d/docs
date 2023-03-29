@@ -481,9 +481,9 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Paramètres | Type   |    | Description                                                             |
-| ---------- | ------ | -- | ----------------------------------------------------------------------- |
-| Résultat   | Object | <- | Collection d'objets contextes d'optimisation|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                             |
+| ---------- | ---------- | -- | ----------------------------------------------------------------------- |
+| Résultat   | Collection | <- | Collection d'objets contextes d'optimisation|<!-- END REF -->
 
 |
 

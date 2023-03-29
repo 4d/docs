@@ -285,14 +285,14 @@ Function set <name>($parameterName : type)
 // código
 ```
 
-`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+`As funções obter` e `conjunto de funções` são acessores que definem **propriedades computadas** na classe. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
 
 - when the property is read, the `Function get` is executed,
 - when the property is written, the `Function set` is executed.
 
 If the property is not accessed, the code never executes.
 
-Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
+Computed properties are designed to handle data that do not necessary need to be kept in memory. São geralmente baseados em propriedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
 
 In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
@@ -498,7 +498,7 @@ You also created the `Square` class with a function calling the superclass funct
  $0:=Super.nbSides()+" which are all equal"
 ```
 
-Then you can write in a project method:
+Depois pode escrever num método projecto:
 
 ```4d
 var $square : Object
@@ -555,7 +555,7 @@ In any cases, `This` refers to the object the method was called on, as if the me
  $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+Depois pode escrever num método projecto:
 
 ```4d
 $o:=cs.ob.new()

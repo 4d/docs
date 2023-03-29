@@ -30,7 +30,7 @@ The following escape sequences can be used within strings:
 | \t             | HT (Tab)             |
 | \r             | CR (Carriage return) |
 | \\\          | \ (Barra invertida) |
-| \\"           | " (Quotation marks)  |
+| \\"           | " (aspas)            |
 
 **Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
 
@@ -38,7 +38,7 @@ The following escape sequences can be used within strings:
 
 | Operação             | Sintaxe          | Retorna  | Expression              | Value    |
 | -------------------- | ---------------- | -------- | ----------------------- | -------- |
-| Concatenation        | String + String  | String   | "abc" + "def"           | "abcdef" |
+| Concatenação         | String + String  | String   | "abc" + "def"           | "abcdef" |
 | Repetição            | String * Number  | String   | "ab" * 3                | "ababab" |
 | Igual                | String = String  | Booleano | "abc" = "abc"           | True     |
 |                      |                  |          | "abc" = "abd"           | False    |
@@ -92,7 +92,7 @@ The wildcard character must be used within the second operand (the string on the
     "abc@"="abcdefghij"
 ```
 
-The wildcard means "one or more characters or nothing". As seguintes expressões são `TRUE`:
+O wildcard significa "um ou mais caracteres ou nada". As seguintes expressões são `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -134,11 +134,11 @@ The following expression will be evaluated correctly:
 Unlike other string comparisons, searching by keywords looks for "words" in "texts": words are considered both individually and as a whole. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.
 
 ```4d
-     "Alpha Bravo Charlie"%"Bravo" // Returns True
-     "Alpha Bravo Charlie"%"vo" // Returns False
-     "Alpha Bravo Charlie"%"Alpha Bravo" // Returns False
-     "Alpha,Bravo,Charlie"%"Alpha" // Returns True
-     "Software and Computers"%"comput@" // Returns True
+     "Alpha Bravo Charlie"%"Bravo"// Retorna True
+     "Alpha Bravo Charlie"%"vo" // Retorna False
+     "Alpha Bravo Charlie"%"Alpha Bravo"// Retorna False
+     "Alpha,Bravo,Charlie"%"Alpha" // Retorna True
+     "Software e Computadores"%"comput@" // Retorna True
 ```
 > **Notas:**
 > 
@@ -216,12 +216,12 @@ The following project method capitalizes the first character of each word of the
  End if
 ```
 
-For example, the line:
+Por exemplo, a linha:
 
 ```4d
 ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
 ```
 
-displays the alert shown here:
+mostra o alerta aqui mostrado:
 
 ![alt-text](../assets/en/Concepts/Jane_doe.en.png)

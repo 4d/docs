@@ -12,7 +12,7 @@ Las aplicaciones 4D Desktop pueden utilizarse en una configuración Cliente/Serv
 
 ![](../assets/en/getStart/localremote.png)
 
-> Connecting to a remote projet from the **same machine as 4D Server** allows modifying the project files. Esta [funcionalidad específica](#using-4d-and-4d-server-on-the-same-machine) permite desarrollar una aplicación cliente/servidor en el mismo contexto del despliegue.
+> La conexión a un proyecto remoto desde **la misma máquina que 4D Server** permite modificar los archivos del proyecto. Esta [funcionalidad específica](#using-4d-and-4d-server-on-the-same-machine) permite desarrollar una aplicación cliente/servidor en el mismo contexto del despliegue.
 
 ## Abrir una aplicación cliente/servidor fusionada
 
