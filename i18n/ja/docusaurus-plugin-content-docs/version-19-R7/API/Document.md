@@ -122,7 +122,7 @@ title: Document クラス
 
 `.hidden` プロパティは、 <!-- REF #document.hidden.Summary -->ファイルがシステムレベルで "非表示" に設定されていれば true を返します<!-- END REF -->(それ以外の場合は false)。
 
-このプロパティは **読み取り専用** です。
+**読み書き可能** プロパティです。
 
 <!-- END REF -->
 
