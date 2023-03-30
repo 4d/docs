@@ -372,7 +372,7 @@ Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação"
 
 ### Personalizado
 
-The Custom button style accepts a personalized background picture and allows managing specific properties:
+O estilo de botão Personalizado aceita uma imagem de fundo personalizada e permite gerir propriedades específicas:
 
 - [Rota de acesso ao Fundo](properties_TextAndPicture.md#backgroundPathname)
 - [Offset do ícone](properties_TextAndPicture.md#icon-offset)
