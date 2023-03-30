@@ -125,7 +125,7 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.hidden` devuelve <!-- REF #document.hidden.Summary -->true si el archivo está definido como "oculto" a nivel del sistema<!-- END REF -->, y false en caso contrario.
 
-Esta propiedad es **de sólo lectura**.
+Esta propiedad es **lectura/escritura**.
 
 <!-- END REF -->
 
