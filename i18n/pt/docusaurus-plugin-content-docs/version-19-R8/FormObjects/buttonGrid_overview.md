@@ -3,7 +3,7 @@ id: buttonGridOverview
 title: Grade de botões
 ---
 
-Uma grelha de botões é um objecto transparente colocado em cima de um gráfico. The graphic should depict a row-by-column array. When one of the graphics is clicked on, it will have a sunken or pressed appearance:
+Uma grelha de botões é um objecto transparente colocado em cima de um gráfico. O gráfico deve representar um array linha por coluna. Quando um dos gráficos é clicado, terá uma aparência afundada ou prensada:
 
 ![](../assets/en/FormObjects/buttonGrid_smileys.png)
 
@@ -20,7 +20,7 @@ In 4D, a button grid is used as a color palette:
 
 ## Usar grades de botões
 
-The buttons on the grid are numbered from top left to bottom right. In the above example, the grid is 16 columns across by 16 rows down. The button in the top-left position returns 1 when clicked. If the red button at the far right of the second row is selected, the button grid returns 32. Se nenhum elemento for seleccionado, o valor é 0
+The buttons on the grid are numbered from top left to bottom right. In the above example, the grid is 16 columns across by 16 rows down. O botão na posição superior-esquerda retorna 1 quando clicado. If the red button at the far right of the second row is selected, the button grid returns 32. Se nenhum elemento for seleccionado, o valor é 0
 
 
 ### Ir para página
