@@ -27,6 +27,7 @@ A collection is initialized with:
 
 ||
 |---|
+|[<!-- INCLUDE #collection.at().Syntax -->](#at)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.at().Summary -->|
 |[<!-- INCLUDE #collection.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.average().Summary -->|
 |[<!-- INCLUDE #collection.clear().Syntax -->](#clear)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.clear().Summary --> |
 |[<!-- INCLUDE #collection.combine().Syntax -->](#combine)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.combine().Summary --> |
@@ -42,10 +43,15 @@ A collection is initialized with:
 |[<!-- INCLUDE #collection.filter().Syntax -->](#filter)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.filter().Summary -->|
 |[<!-- INCLUDE #collection.find().Syntax -->](#find)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.find().Summary -->|
 |[<!-- INCLUDE #collection.findIndex().Syntax -->](#find)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.findIndex().Summary -->|
+|[<!-- INCLUDE #collection.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.first().Summary -->|
+|[<!-- INCLUDE #collection.flat().Syntax -->](#flat)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.flat().Summary -->|
+|[<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.flatMap().Summary -->|
+|[<!-- INCLUDE #collection.includes().Syntax -->](#includes)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.includes().Summary -->|
 |[<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indexOf().Summary -->|
 |[<!-- INCLUDE #collection.indices().Syntax -->](#indices)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indices().Summary -->|
 |[<!-- INCLUDE #collection.insert().Syntax -->](#insert)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.insert().Summary -->|
 |[<!-- INCLUDE #collection.join().Syntax -->](#join)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.join().Summary -->|
+|[<!-- INCLUDE #collection.last().Syntax -->](#last)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.last().Summary -->|
 |[<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->|
 |[<!-- INCLUDE #collection.length.Syntax -->](#length)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.length.Summary -->|
 |[<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
@@ -57,6 +63,7 @@ A collection is initialized with:
 |[<!-- INCLUDE #collection.push().Syntax -->](#push)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.push().Summary -->|
 |[<!-- INCLUDE #collection.query().Syntax -->](#query)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.query().Summary -->|
 |[<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduce().Summary -->|
+|[<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduceRight().Summary -->|
 |[<!-- INCLUDE #collection.remove().Syntax -->](#remove)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.remove().Summary -->|
 |[<!-- INCLUDE #collection.resize().Syntax -->](#resize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.resize().Summary -->|
 |[<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reverse().Summary -->|
@@ -218,6 +225,55 @@ Unlike standard (not shared) collections, shared collections do not support pict
  End use
 ```
 
+
+
+
+<!-- REF collection.at().Desc -->
+## .at()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20|Added|
+
+</details>
+
+<!-- REF #collection.at().Syntax -->**.at**( *index* : Integer ) : any <!-- END REF -->
+
+
+<!-- REF #collection.at().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|index|Integer|->|Index of element to return|
+|Result|any |<-|The element at that index|<!-- END REF -->
+
+
+#### Description
+
+The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->. 
+
+>This function does not modify the original collection.
+
+Negative integers count back from the last item in the collection.
+
+The function returns Undefined if *index* is beyond collection limits. 
+
+#### Example
+
+
+
+```4d
+var $col : Collection 
+$col:=New collection(10; 20; 30; 40; 50)
+$element:=$col.at(0) // 10
+$element:=$col.at(1) // 20
+$element:=$col.at(-1) // 50
+$element:=$col.at(-2) // 40
+$element:=$col.at(10) // undefined
+```
+
+<!-- END REF -->
 
 
 <!-- REF collection.average().Desc -->
@@ -899,7 +955,6 @@ $b:=$c.every($f;Is real) //$b=false
 <details><summary>History</summary>
 
 |Version|Changes|
-
 |---|---|
 |v16 R6|Added|
 
@@ -1285,6 +1340,267 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 
 
+<!-- REF collection.first().Desc -->
+## .first()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20|Added|
+
+</details>
+
+<!-- REF #collection.first().Syntax -->**.first**() : any <!-- END REF -->
+
+
+<!-- REF #collection.first().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|any|<-|First element of collection|<!-- END REF -->
+
+
+#### Description
+
+The `.first()` function <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+The function returns Undefined if the collection is empty. 
+
+#### Example
+
+
+```4d
+var $col; $emptyCol : Collection
+var $first : Variant
+$col:=New collection(10; 20; 30; "hello"; 50)
+$first:=$col.first() // 10
+
+$emptyCol:=New collection() //empty
+// $first:=$emptyCol[0] //would return error
+$first:=$emptyCol.first() // returns Undefined
+```
+<!-- END REF -->
+
+
+
+
+<!-- REF collection.flat().Desc -->
+## .flat()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20|Added|
+
+</details>
+
+<!-- REF #collection.flat().Syntax -->**.flat**( { *depth* : Integer } ) : Collection<!-- END REF -->
+
+
+<!-- REF #collection.flat().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|depth|Integer |->|How deep a nested collection structure should be flattened. Default=1|
+|Result|Collection |<-|Flattened collection|<!-- END REF -->
+
+
+#### Description
+
+The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
+
+By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened. 
+
+>This function does not modify the original collection.
+
+
+#### Example
+
+
+```4d
+$col:=New collection(1; 2; New collection(3; 4))
+$col.flat()
+// [1, 2, 3, 4]
+
+$col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
+$col.flat()
+// [1, 2, 3, 4, [5, 6]]
+
+$col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
+$col.flat(2)
+// [1, 2, 3, 4, 5, 6]
+
+$col:=New collection(1; 2; New collection(3; 4; 5; 6; New collection(7; 8; New collection(9; 10))))
+$col.flat(MAXLONG)
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+<!-- END REF -->
+
+
+
+<!-- REF collection.flatMap().Desc -->
+## .flatMap()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20|Added|
+
+</details>
+
+<!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.flatMap().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formula|4D.Function|->|Formula object|
+|methodName|Text|->|Name of a method|
+|param|any|->|Parameter(s) to pass to *formula* or *methodName*|
+|Result|Collection |<-|Collection of transformed values and flattened by a depth of 1|<!-- END REF -->
+
+#### Description
+
+The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). 
+
+This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+
+>This function does not modify the original collection.
+
+
+You designate the callback to be executed to evaluate collection elements using either:
+
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any operation, with or without the parameter(s) and must return new transformed value to add to the resulting collection. It receives an `Object` in first parameter ($1).
+
+The callback receives the following parameters:
+
+*	in *$1.value*: element value to be evaluated
+*	in *$2*: param
+*	in *$N...*: paramN...
+
+It can set the following parameter(s):
+
+*	(mandatory if you used a method) *$1.result* (any type): new transformed value to add to the resulting collection
+*	*$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+
+
+#### Example 1
+
+```4d
+var $col ; $result : Collection
+$col:=New collection(1; 2; 3; 4)
+
+$result:=$col.map(Formula(New collection($1.value*2))
+ // [[2],[4],[6],[8]]
+
+$result:=$col.flatMap(Formula(New collection($1.value*2))
+// [2,4,6,8]
+```
+
+#### Example 2
+
+```
+var $col; $result : Collection
+$col:=New collection("Hello how"; ""; "are you ?")
+
+$result:=$col.map(Formula(Split string($1.value; " ")))
+// [["Hello", "how"], [], ["are", "you", "?"]]
+
+$result:=$col.flatMap(Formula(Split string($1.value; " ")))
+// ["Hello", "how", "are", "you", "?"]
+```
+
+#### Example 3
+
+You want to compute the percentage of each value in the collection to the total:
+
+```4d
+var $c; $c2 : Collection
+var $f : 4D.Function
+$c:=New collection(1; 4; 9; 10; 20)
+$f:=Formula(New collection($1.value;Round(($1.value/$2)*100; 2)))
+$c2:=$c.flatMap($f; $c.sum())
+  //$c2=[1, 2.27, 4, 9.09,9, 20.45,10, 22.73, 20, 45.45]
+```
+
+<!-- END REF -->
+
+
+
+
+<!-- REF collection.includes().Desc -->
+## .includes()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20|Added|
+
+</details>
+
+<!-- REF #collection.includes().Syntax -->**.includes**( *toSearch* : expression { ; *startFrom* : Integer } ) : Boolean<!-- END REF -->
+
+
+<!-- REF #collection.includes().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|toSearch|expression|->|Expression to search in the collection|
+|startFrom|Integer|->|Index to start the search at|
+|Result|Boolean |<-|True if *toSearch* is found in the collection|<!-- END REF -->
+
+
+#### Description
+
+The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+In *toSearch*, pass the expression to find in the collection. You can pass:
+
+*	a scalar value (text, number, boolean, date),
+*	the null value,
+*	an object or a collection reference.
+
+*toSearch* must match exactly the element to find (the same rules as for the equality operator of the data type are applied).
+
+Optionally, you can pass the index of collection from which to start the search in *startFrom*.
+
+*	If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
+*	If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
+*	If *startFrom* = 0, the whole collection is searched (default).
+
+#### Example
+
+
+
+```4d
+ var $col : Collection
+ var $in : Boolean
+ var $obj : Object
+ $obj:=New object("value"; 10)
+ $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5)
+ $in:=$col.includes(3) //True
+ $in:=$col.includes(5;6) //True
+ $in:=$col.includes("al@") //True
+ $in:=$col.includes("Hello") //False
+ $in:=$col.includes($obj)  //True
+ $in:=$col.includes(New object("value"; 10)) //False
+```
+
+<!-- END REF -->
+
+
+
+
 
 
 <!-- REF collection.indexOf().Desc -->
@@ -1333,14 +1649,6 @@ Optionally, you can pass the index of collection from which to start the search 
 
 #### Example
 
-
-
-
-
-
-
-
-
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1352,8 +1660,6 @@ Optionally, you can pass the index of collection from which to start the search 
 ```
 
 <!-- END REF -->
-
-
 
 
 
@@ -1512,6 +1818,53 @@ By default, null or empty elements of the collection are returned in the resulti
 <!-- END REF -->
 
 
+
+
+<!-- REF collection.last().Desc -->
+## .last()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20|Added|
+
+</details>
+
+<!-- REF #collection.last().Syntax -->**.last**() : any <!-- END REF -->
+
+
+<!-- REF #collection.last().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|Result|any |<-|Last element of collection|<!-- END REF -->
+
+
+#### Description
+
+The `.last()` function <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
+
+
+>This function does not modify the original collection.
+
+The function returns Undefined if the collection is empty. 
+
+#### Example
+
+
+```4d
+var $col; $emptyCol : Collection
+var $last : Variant
+$col:=New collection(10; 20; 30; "hello"; 50)
+$last:=$col.last() // 50
+
+$emptyCol:=New collection() //empty
+// $last:=$emptyCol[$emptyCol.length-1] //returns an error
+$last:=$emptyCol.last() // returns Undefined
+
+```
+
+<!-- END REF -->
 
 
 
@@ -1812,6 +2165,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
 
 This function returns a *shallow copy*, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
+
 
 >This function does not modify the original collection.
 
@@ -2313,7 +2667,7 @@ The callback sets the following parameter(s):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
 
 
@@ -2342,6 +2696,97 @@ With the following ***Flatten*** method:
 
 <!-- END REF -->
 
+
+
+
+
+<!-- REF collection.reduceRight().Desc -->
+## .reduceRight()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20|Added|
+
+</details>
+
+<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+
+
+<!-- REF #collection.reduceRight().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formula|4D.Function|->|Formula object|
+|methodName|Text|->|Name of a method|
+|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
+|param |expression|->|Parameter(s) to pass|
+|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|<!-- END REF -->
+
+
+#### Description
+
+
+The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+
+>This function does not modify the original collection.
+
+You designate the callback to be executed to evaluate collection elements using either:
+
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
+
+You can pass the value to initialize the accumulator in *initValue*. If omitted, *$1.accumulator* starts with *Undefined*.
+
+The callback receives the following parameters:
+
+*	in *$1.value*: element value to be processed
+*	in *$2: param*
+*	in *$N...*: *paramN...*
+
+The callback sets the following parameter(s):
+
+*	*$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
+*	*$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+
+
+#### Example 1
+
+
+```4d
+var $c : Collection
+$c:=New collection(5;3;5;1;3;4;4;6;2;2)
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+```
+
+
+#### Example 2
+
+This example allows reducing several collection elements to a single one:
+
+```4d
+ var $c;$r : Collection
+ $c:=New collection
+ $c.push(New collection(0;1))
+ $c.push(New collection(2;3))
+ $c.push(New collection(4;5))
+ $c.push(New collection(6;7))
+ $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
+```
+
+With the following ***Flatten*** method:
+
+```4d
+	//Flatten project method
+ If($1.accumulator=Null)
+    $1.accumulator:=New collection
+ End if
+ $1.accumulator.combine($1.value)
+```
+
+<!-- END REF -->
 
 
 
