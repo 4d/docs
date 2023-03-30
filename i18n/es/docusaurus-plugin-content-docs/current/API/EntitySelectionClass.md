@@ -13,6 +13,7 @@ Las selecciones de entidades pueden crearse a partir de selecciones existentes u
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->                                                         |
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->                                                       |
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
@@ -173,6 +174,51 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
  var $employee : cs.EmployeeEntity
  $employees:=ds.Employee.query("lastName = :1";"H@")
  $employee:=$employees[2]  // La tercera entidad de la selección de entidades $employees se recarga de la base de datos
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v20     | Añadidos       |
+
+</details>
+
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| Parámetros | Tipo      |    | Descripción                                         |
+| ---------- | --------- |:--:| --------------------------------------------------- |
+| index      | Integer   | -> | Index of entity to return                           |
+| Result     | 4D.Entity | <- | The entity at that index|<!-- END REF --> |
+
+
+#### Descripción
+
+The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
+
+If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+
+The function returns Null if *index* is beyond entity selection limits.
+
+#### Ejemplo
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
+$emp2:=$employees.at(-3) //starting from the end, 3rd entity
+    //of the $employees entity selection
 ```
 
 
