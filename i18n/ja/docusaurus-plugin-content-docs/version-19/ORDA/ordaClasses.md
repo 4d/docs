@@ -10,7 +10,7 @@ ORDA を使用して、データモデル上に高レベルクラス関数を作
 たとえば、選択中の社員より給与の高い社員一覧を返す `getNextWithHigherSalary()` 関数を `EmployeeEntity` クラスに作成したとします。 この関数は簡単に呼び出すことができます:
 
 ```4d
-$nextHigh:=ds.Employee(1).getNextWithHigherSalary()
+$nextHigh:=ds.Employee.get(1).getNextWithHigherSalary()
 ```
 
 これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます:
@@ -37,6 +37,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ORDA では、**`4D`** [クラスストア](Concepts/classes.md#クラスストア) を介して公開される **汎用クラス** と、**`cs`** [クラスストア](Concepts/classes.md#クラスストア) で公開される **ユーザークラス** が提供されています:
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
+
 
 ORDA データモデルクラスはすべて **`cs`** クラスストアのプロパティとして公開されます。 次の ORDA クラスが提供されています:
 

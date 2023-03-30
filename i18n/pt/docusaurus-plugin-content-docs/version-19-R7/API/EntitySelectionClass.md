@@ -1506,6 +1506,8 @@ Como padrão, atributos são ordenados em ordem ascendente ("descendente" é fal
 Pode adicionar quantos objetos quiser nos critérios da coleção.
 > Valores null são avaliados como menor que outros valores.
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
 #### Exemplo
 
 
@@ -1972,6 +1974,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v17    | Adicionado |
+
 
 
 </details>

@@ -1314,6 +1314,9 @@ Form.products.add(Form.product)
 pathObjects コレクションには必要な数だけオブジェクトを追加することができます。
 > Null は他の値より小さいと評価されます。
 
+*pathString* または *pathObject* に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
+
+
 #### 例題
 
 ```4d

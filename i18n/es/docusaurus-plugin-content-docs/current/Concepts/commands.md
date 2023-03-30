@@ -7,8 +7,8 @@ El lenguaje 4D contiene un gran número de comandos integrados, que permiten al 
 
 Los comandos 4D se dividen en dos categorías:
 
-- **class functions**, which are APIs of 4D built-in classes. These functions are described in the [Class API Reference](../API/overview) section.
-- **stand-alone commands**, grouped by themes. Estos comandos se describen en el manual *Lenguaje 4D* en [doc.4d.com](https://doc.4d.com). A modo de referencia, se listan a continuación:
+- **funciones de clase**, que son APIs de clases integradas 4D. Estas funciones se describen en la sección [Class API Reference](../API/overview).
+- **comandos autónomos**, agrupados por temas. Estos comandos se describen en el manual *Lenguaje 4D* en [doc.4d.com](https://doc.4d.com). A modo de referencia, se listan a continuación:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -293,7 +293,7 @@ Los comandos 4D se dividen en dos categorías:
 | [`EXPORT SYLK`](https://doc.4d.com/4dv19R/help/command/en/page85.html)                              | 85     |
 | [`EXPORT TEXT`](https://doc.4d.com/4dv19R/help/command/en/page167.html)                             | 167    |
 | <a name="F">**F**</a>                                                                           |        |
-| [`FAUX`](https://doc.4d.com/4dv19R/help/command/en/page215.html)                                    | 215    |
+| [`False`](https://doc.4d.com/4dv19R/help/command/en/page215.html)                                   | 215    |
 | [`Campo`](https://doc.4d.com/4dv19R/help/command/en/page253.html)                                   | 253    |
 | [`Nombre del campo`](https://doc.4d.com/4dv19R/help/command/en/page257.html)                        | 257    |
 | [`File`](https://doc.4d.com/4dv19R/help/command/en/page1566.html)                                   | 1566   |
@@ -673,7 +673,7 @@ Los comandos 4D se dividen en dos categorías:
 | [`MOVE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page540.html)                           | 540    |
 | [`MULTI SORT ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page718.html)                        | 718    |
 | <a name="N">**N**</a>                                                                          |        |
-| [`Nueva colección`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                        | 1472   |
+| [`New collection`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                         | 1472   |
 | [`New data key`](https://doc.4d.com/4dv19R/help/command/en/page1611.html)                           | 1611   |
 | [`New list`](https://doc.4d.com/4dv19R/help/command/en/page375.html)                                | 375    |
 | [`New log file`](https://doc.4d.com/4dv19R/help/command/en/page926.html)                            | 926    |
@@ -1015,12 +1015,12 @@ Los comandos 4D se dividen en dos categorías:
 | [`SELECTION TO ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page260.html)                      | 260    |
 | [`Selection to JSON`](https://doc.4d.com/4dv19R/help/command/en/page1234.html)                      | 1234   |
 | [`Self`](https://doc.4d.com/4dv19R/help/command/en/page308.html)                                    | 308    |
-| [`Semáforo`](https://doc.4d.com/4dv19R/help/command/en/page143.html)                                | 143    |
+| [`Semaphore`](https://doc.4d.com/4dv19R/help/command/en/page143.html)                               | 143    |
 | [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19R/help/command/en/page1632.html)            | 1632   |
 | [`SEND PACKET`](https://doc.4d.com/4dv19R/help/command/en/page103.html)                             | 103    |
 | [`SEND RECORD`](https://doc.4d.com/4dv19R/help/command/en/page78.html)                              | 78     |
 | [`SEND VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page80.html)                            | 80     |
-| [`Número de secuencia`](https://doc.4d.com/4dv19R/help/command/en/page244.html)                     | 244    |
+| [`Sequence number`](https://doc.4d.com/4dv19R/help/command/en/page244.html)                         | 244    |
 | [`Session`](https://doc.4d.com/4dv19R/help/command/en/page1714.html)                                | 1714   |
 | [`SET ABOUT`](https://doc.4d.com/4dv19R/help/command/en/page316.html)                               | 316    |
 | [`SET ALLOWED METHODS`](https://doc.4d.com/4dv19R/help/command/en/page805.html)                     | 805    |
@@ -1220,7 +1220,7 @@ Los comandos 4D se dividen en dos categorías:
 | [`Version type`](https://doc.4d.com/4dv19R/help/command/en/page495.html)                            | 495    |
 | [`VOLUME ATTRIBUTES`](https://doc.4d.com/4dv19R/help/command/en/page472.html)                       | 472    |
 | [`VOLUME LIST`](https://doc.4d.com/4dv19R/help/command/en/page471.html)                             | 471    |
-| [`VRAI`](https://doc.4d.com/4dv19R/help/command/en/page214.html)                                    | 214    |
+| [`True`](https://doc.4d.com/4dv19R/help/command/en/page214.html)                                    | 214    |
 | <a name="W">**W**</a>                                                                          |        |
 | [`WA Back URL available`](https://doc.4d.com/4dv19R/help/command/en/page1026.html)                  | 1026   |
 | [`WA Create URL history menu`](https://doc.4d.com/4dv19R/help/command/en/page1049.html)             | 1049   |

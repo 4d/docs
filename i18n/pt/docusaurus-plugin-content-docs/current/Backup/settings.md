@@ -114,14 +114,20 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
     - **Taxa de redundância**: Redundância permite a segurança de dados  em arquivos repetindo a mesma informação várias vezes. Quanto maior a taxa de redundância, melhor a segurança, mas o armazenamento é mais lento e o tamanho dos arquivos aumenta.
 
 
-### Restauração automática
+### Automatic Restore and log integration
 
 - **Restaura o último backup se o banco de dados é danificado**: Quando essa opção for marcada, o programa automaticamente inicia a restauração dos arquivos de dados do último backup válido da aplicação, se uma anomalia for detectada (arquivo corrupto, por exemplo) durante o lançamento da aplicação. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-- **Integrar os últimos registos se a base de dados estiver incompleta**: Quando esta opção for verificada, o programa integra automaticamente os arquivos de registo ao abrir ou restaurar a aplicação.
-    - Quando abrir uma aplicação, o arquivo de histórico atual é integrado automaticamente se 4D detectar que há operações armazenadas no arquivo de log que não estejam presentes nos dados. Esta situação se produz, por exemplo, se acontecer uma falta de energia quando acontecerem operações no cache de dados que ainda não foram escritos no disco.
-    - Se houver uma sequência válida de arquivos .journal no mesmo repositório que o arquivo do histórico atual (ou seja, utilizou o comando [new log file](log.md#stopping-a-log-file)), 4D Server integra todos os arquivos .journal necessários antes de integrar o histórico atual.
-    - Quando restaurar uma aplicação, se o arquivo atual de histórico, ou se um arquivo de backup de histórico tiverem o mesmo número que um arquivo de backup e estiverem armazenados na mesma pasta, 4D vai examinar seu conteúdo. Se conter operações não encontradas no arquivo de dados, o programa automaticamente as integra.
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. With 4D Server, if there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
+
+    This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk, or after an anomaly was detected when opening the data file and a restore has occurred.
+
+    :::note
+
+    This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
+
+    :::
+
 
 O usuário não vê uma caixa de diálogo, a operação é automática. O objetivo é fazer com que seja tão fácil quanto possível. A operação é registrada no diário de cópias de backup.
 

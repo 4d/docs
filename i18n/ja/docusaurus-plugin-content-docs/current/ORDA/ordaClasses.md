@@ -10,7 +10,7 @@ ORDA を使用して、データモデル上に高レベルクラス関数を作
 たとえば、選択中の社員より給与の高い社員一覧を返す `getNextWithHigherSalary()` 関数を `EmployeeEntity` クラスに作成したとします。 この関数は簡単に呼び出すことができます:
 
 ```4d
-$nextHigh:=ds.Employee(1).getNextWithHigherSalary()
+$nextHigh:=ds.Employee.get(1).getNextWithHigherSalary()
 ```
 
 これらの関数はローカルデータストアだけでなく、クライアント/サーバーやリモートアーキテクチャーでも使用することができます:
@@ -728,6 +728,7 @@ Alias students courses.student //relatedEntities
 ```
 
 Student データクラスには、生徒の教師をすべて返すエイリアス属性を定義します:
+
 
 ```4d
 // cs.StudentEntity クラス
