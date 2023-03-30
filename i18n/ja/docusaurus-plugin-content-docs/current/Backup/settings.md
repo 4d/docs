@@ -114,17 +114,17 @@ title: バックアップ設定
     - **冗長率**: 冗長は同じ情報を複数回繰り返すことで、ファイル中のデータを保護するものです。 冗長率を高くするとよりファイルが保護されます。しかし書き込みは遅くなり、ファイルサイズも増大します。
 
 
-### Automatic Restore and log integration
+### 自動復元とログの統合
 
 - **データベースが壊れていたら、最新のバックアップから復元する**: このオプションが選択されていると、ファイル破損などの異常が検知された場合、4D は起動時にアプリケーションの有効な最新のバックアップからのデータの復旧を自動で開始します。 ユーザーによる介入は必要ありませんが、処理はバックアップジャーナルに記録されます。
 
-- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. With 4D Server, if there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
+- **データベースが完全でない場合、最新のログを統合する**: このオプションがチェックされていると、データファイルに存在しない操作がカレントログファイルに含まれている場合、プログラムは自動的にそれを統合します。 4D Server においては、同じリポジトリに連続した有効な .journal ファイルがある場合、プログラムは必要な .journal ファイルを古いものから最新のものまで、あらかじめ統合しておきます。
 
-    This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk, or after an anomaly was detected when opening the data file and a restore has occurred.
+    このようなケースは、ディスクに書き込まれていないデータがまだキャッシュ中に存在する状態で、電力の切断が起きた場合や、データファイルを開いた時に異常が検知されて復元処理がおこなわれた場合に発生します。
 
     :::note
 
-    This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
+    この機能は、カレントログファイルフォルダーにある全ログファイルがプログラムにより起動時に解析されることを意味します。 したがって、パフォーマンス上の理由から、不要なログファイルがフォルダーに保存されたままにしておかないことが推奨されます。
 
     :::
 
