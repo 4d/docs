@@ -1530,6 +1530,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 pathObjects コレクションには必要な数だけオブジェクトを追加することができます。
 > Null は他の値より小さいと評価されます。
 
+*pathString* または *pathObject* に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
+
+
 #### 例題
 
 
@@ -2013,6 +2016,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 
 
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2256,6 +2260,7 @@ $employeesCollection:=$employees.toCollection("";dk with primary key+dk with sta
 ```4d
 var $employeesCollection; $filter : Collection
 var $employees : cs.EmployeeSelection
+
 
 $employeesCollection:=New collection
 $filter:=New collection
