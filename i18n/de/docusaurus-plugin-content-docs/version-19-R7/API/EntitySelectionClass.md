@@ -1530,6 +1530,8 @@ By default, attributes are sorted in ascending order ("descending" is false).
 You can add as many objects in the criteria collection as necessary.
 > Null values are evaluated as less than other values.
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
 #### Beispiel
 
 
@@ -2009,6 +2011,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 | Version | Changes |
 | ------- | ------- |
 | v17     | Added   |
+
 
 
 </details>
