@@ -1529,6 +1529,8 @@ Par défaut, les attributs sont triés par ordre croissant ("descending" est fal
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
 #### Exemple
 
 
@@ -2008,6 +2010,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 | Version | Modifications |
 | ------- | ------------- |
 | v17     | Ajout         |
+
 
 
 </details>
