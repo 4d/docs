@@ -63,15 +63,15 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
 2. Define the `myServerHandler` user class containing callback function(s) used to handle connections to the server:
 
 ```4d
-//myServerHandler class
+//clase myServerHandler
 
 Function onConnection($wss : Object; $param : Object) : Object
-    //returns an instance of the user class
-    //that will handle the messages
+    //devuelve una instancia de la clase de usuario
+    //que gestionará los mensajes
     return cs.myConnectionHandler.new() 
 ```
 
-3. Define the `myConnectionHandler` user class containing callback function(s) used to handle messages:
+3. Defina la clase usuario `myConnectionHandler` que contiene la(s) función(es) de retrollamada utilizada(s) para manejar los mensajes:
 
 ```4d
 // myConnectionHandler class
