@@ -7,7 +7,7 @@ Os dados em 4D são armazenados de duas formas fundamentalmente diferentes. **Os
 
 Quando cria a sua base de dados 4D, especifica os nomes e tipos de campos que pretende utilizar. Com as variáveis é mais ou menos a mesma coisa, também se lhes dá nomes e tipos diferentes (ver [Tipos de dados](Concepts/data-types.md)).
 
-As variáveis são objetos da linguagem; pode criar e utilizar variables que nunca aparecerão na tela. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
+As variáveis são objetos da linguagem; pode criar e utilizar variables que nunca aparecerão na tela. Nos seus formulários, pode exibir variáveis (exceto Pointer e BLOB) na tela, introduzir dados neles, e imprimi-los em relatórios. Desta forma, variáveis de área editáveis ou não editáveis atuam tal como os campos, e os mesmos controles incorporados estão disponíveis ao serem criados. Variáveis formulário podem controlar botões, list boxes, aréas de rolagem, botões de imagem, e assim por diante, ou exibir resultados de cálculos que não precisam ser salvos.
 
 ## Criação de variáveis
 
@@ -55,17 +55,17 @@ O operador de atribuição é a maneira mais importante de criar uma variável e
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+cria a variável _MyNumber_ e coloca o número 3 na mesma. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obter dados delas. Mais uma vez, utiliza-se o operador de atribuição. Se precisar  colocar o valor do MyNumber num campo chamado [Products]Size, escreva _MyNumber_ no lado direito do operador de atribuição:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+Neste caso, _[Products]Tamanho_ seria igual a 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
 
-You assign data to array elements by using curly braces ({...}):
+Atribui-se dados a elementos de matriz utilizando chaves ({...}):
 
 ```4d
 atNames{1}:="Richard"
@@ -73,23 +73,23 @@ atNames{1}:="Richard"
 
 ## Variáveis locais, processo e inter-processo
 
-You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
+Pode criar três tipos de variáveis: **local**, **processo**, e **interprocesso**. A diferença entre os três tipos de elementos é o seu alcance, ou os objectos para os quais estão disponíveis.
 
 ### Variáveis locais
 
-A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+Uma variável local é, como o seu nome indica, local para um método - apenas acessível dentro do método em que foi criada e não acessível fora desse método. Ser local a um método é formalmente referido como sendo "de âmbito local". As variáveis locais são utilizadas para restringir uma variável de modo a que esta funcione apenas dentro do método.
 
-You may want to use a local variable to:
+Poderá querer utilizar uma variável local para:
 
-- Avoid conflicts with the names of other variables
-- Use data temporarily
-- Reduce the number of process variables
+- Evitar conflitos com os nomes de outras variáveis
+- Utilizar dados temporariamente
+- Reduzir o número de variáveis do processo
 
-The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
+O nome de uma variável local começa sempre com um sinal de dólar ($) e pode conter até 31 caracteres adicionais. Se introduzir um nome mais longo, 4D trunca o nome com o comprimento apropriado.
 
-Quando trabalhar em um banco de dados com muitos métodos e variáveis, geralmente só precisa usar uma variável dentro do método no qual trabalha. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+Quando trabalhar em um banco de dados com muitos métodos e variáveis, geralmente só precisa usar uma variável dentro do método no qual trabalha. Pode criar e utilizar uma variável local no método sem se preocupar se utilizou o mesmo nome de variável noutro lugar.
 
-Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. This is a typical way to use a local variable. Aqui um exemplo simples:
+Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. O comando `Request` pode obter esta informação. Apresenta uma caixa de diálogo com uma mensagem que solicita ao utilizador uma resposta. Quando o utilizador introduz a resposta, o comando devolve a informação que o utilizador introduziu. Normalmente não precisa de manter esta informação nos seus métodos durante muito tempo. Esta é uma forma típica de utilizar uma variável local. Aqui um exemplo simples:
 
 ```4d
  $vsID:=Request("Por favor insira o seu ID:")
@@ -98,32 +98,32 @@ Frequentemente, em um banco de dados, pequenas pedaços de informação são nec
  End if
 ```
 
-This method simply asks the user to enter an ID. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.
+Este método pede simplesmente ao utilizador que introduza uma identificação. Coloca a resposta numa variável local, $vsID, e depois procura o ID que o utilizador introduziu. Quando este método termina, a variável local $vsID é apagada da memória. Isto é ótimo, porque a variável é necessária apenas uma vez e apenas neste método.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** Os parâmetros $1, $2... passados aos métodos são variáveis locais. Para mais informações, consulte por favor [Parâmetros](Concepts/parameters.md).
 
 ### Variáveis processo
 
-A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
+Uma variável de processo só está disponível dentro de um processo. É acessível ao método do processo e a qualquer outro método chamado de dentro do processo.
 
-A process variable does not have a prefix before its name. A process variable name can contain up to 31 characters.
+Uma variável de processo não tem um prefixo antes do seu nome. Um nome de variável de processo pode conter até 31 caracteres.
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
+No modo interpretado, as variáveis são mantidas dinamicamente; são criadas e apagadas da memória "on the fly". No modo compilado, todos os processos que cria (processos de usuário) partilham a mesma definição de variáveis de processo, mas cada processo tem um exemplo diferente para cada variável. Por exemplo, a variável myVar é uma variável no processo P_1 e outra no processo P_2.
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. It is good programming practice to restrict the use of these commands to the situation for which they were added to 4D:
+Um processo pode "espiar e cutucar" variáveis de processo de outro processo usando os comandos `GET PROCESS VARIABLE` e `SET PROCESS VARIABLE`. É boa prática de programação restringir a utilização destes comandos à situação para a qual foram adicionados à 4D:
 
-- Interprocess communication at specific places or your code
-- Handling of interprocess drag and drop
-- In Client/Server, communication between processes on client machines and the stored procedures running on the server machines
+- Comunicação interprocessada em locais específicos ou o seu código
+- Gestão de arrastar e soltar entre processos
+- Em Cliente/Servidor, comunicação entre os processos nas máquinas do cliente e os procedimentos armazenados a correr nas máquinas do servidor
 
-For more information, see the chapter **Processes** and the description of these commands.
+Para mais informações, ver o capítulo **Processos** e a descrição destes comandos.
 
 ### Variáveis interprocesso
 
-Variáveis interprocessos estão disponíveis pelo banco de dados e são partilhados entre os processos cooperativos. They are primarily used to share information between processes.
+As variáveis interprocessadas estão disponíveis em toda a base de dados e são partilhadas em todos os processos cooperativos. São utilizados principalmente para partilhar informação entre processos.
 
-> Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
+> O uso de variáveis interprocessadas não é recomendado, uma vez que não estão disponíveis a partir de processos preventivos e tendem a tornar o código mais difícil para manutenção.
 
-The name of an interprocess variable always begins with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+O nome de uma variável interprocessada começa sempre com os símbolos (`<>`) - um sinal "menor que" seguido de um sinal "maior do que" - seguido de 31 caracteres.
 
-In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
+Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) partilham a mesma definição de variáveis interprocessadas, mas cada máquina tem um exemplo diferente para cada variável.

@@ -27,6 +27,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 |                                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #collection.at().Syntax -->](#at)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.at().Summary -->|
 | [<!-- INCLUDE #collection.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.average().Summary -->|
 | [<!-- INCLUDE #collection.clear().Syntax -->](#clear)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.clear().Summary --> |
 | [<!-- INCLUDE #collection.combine().Syntax -->](#combine)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.combine().Summary --> |
@@ -42,10 +43,15 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.filter().Syntax -->](#filter)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.filter().Summary -->|
 | [<!-- INCLUDE #collection.find().Syntax -->](#find)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.find().Summary -->|
 | [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.findIndex().Summary -->|
+| [<!-- INCLUDE #collection.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.first().Summary -->|
+| [<!-- INCLUDE #collection.flat().Syntax -->](#flat)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.flat().Summary -->|
+| [<!-- INCLUDE #collection.flatMap().Syntax -->](#flatMap)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.flatMap().Summary -->|
+| [<!-- INCLUDE #collection.includes().Syntax -->](#includes)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.includes().Summary -->|
 | [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indexOf().Summary -->|
 | [<!-- INCLUDE #collection.indices().Syntax -->](#indices)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indices().Summary -->|
 | [<!-- INCLUDE #collection.insert().Syntax -->](#insert)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.insert().Summary -->|
 | [<!-- INCLUDE #collection.join().Syntax -->](#join)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.join().Summary -->|
+| [<!-- INCLUDE #collection.last().Syntax -->](#last)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.last().Summary -->|
 | [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->|
 | [<!-- INCLUDE #collection.length.Syntax -->](#length)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.length.Summary -->|
 | [<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
@@ -57,6 +63,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.push().Syntax -->](#push)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.push().Summary -->|
 | [<!-- INCLUDE #collection.query().Syntax -->](#query)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.query().Summary -->|
 | [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduce().Summary -->|
+| [<!-- INCLUDE #collection.reduceRight().Syntax -->](#reduceRight)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduceRight().Summary -->|
 | [<!-- INCLUDE #collection.remove().Syntax -->](#remove)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.remove().Summary -->|
 | [<!-- INCLUDE #collection.resize().Syntax -->](#resize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.resize().Summary -->|
 | [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reverse().Summary -->|
@@ -223,6 +230,55 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
  End use
 ```
 
+
+
+
+<!-- REF collection.at().Desc -->
+## .at()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #collection.at().Syntax -->**.at**( *index* : Integer ) : any <!-- END REF -->
+
+
+<!-- REF #collection.at().Params -->
+| 引数    | タイプ     |    | 説明                                                   |
+| ----- | ------- |:--:| ---------------------------------------------------- |
+| index | Integer | -> | Index of element to return                           |
+| 戻り値   | any     | <- | The element at that index|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->。
+> このコマンドは、元のコレクションを変更しません。
+
+Negative integers count back from the last item in the collection.
+
+The function returns Undefined if *index* is beyond collection limits.
+
+#### 例題
+
+```4d
+var $col : Collection 
+$col:=New collection(10; 20; 30; 40; 50)
+$element:=$col.at(0) // 10
+$element:=$col.at(1) // 20
+$element:=$col.at(-1) // 50
+$element:=$col.at(-2) // 40
+$element:=$col.at(10) // undefined
+```
+
+<!-- END REF -->
 
 
 <!-- REF collection.average().Desc -->
@@ -925,9 +981,9 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>履歴</summary>
 
-|バージョン|内容|
-
-|---|---| |v16 R6|Added|
+| バージョン  | 内容 |
+| ------ | -- |
+| v16 R6 | 追加 |
 
 </details>
 
@@ -1319,6 +1375,270 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 
 
+<!-- REF collection.first().Desc -->
+## .first()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #collection.first().Syntax -->**.first**() : any <!-- END REF -->
+
+
+<!-- REF #collection.first().Params -->
+| 引数  | タイプ |    | 説明                                     |
+| --- | --- |:--:| -------------------------------------- |
+| 戻り値 | any | <- | コレクションの先頭要素|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.first()` 関数は、 <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->。
+> このコマンドは、元のコレクションを変更しません。
+
+The function returns Undefined if the collection is empty.
+
+#### 例題
+
+
+```4d
+var $col; $emptyCol : Collection
+var $first : Variant
+$col:=New collection(10; 20; 30; "hello"; 50)
+$first:=$col.first() // 10
+
+$emptyCol:=New collection() //empty
+// $first:=$emptyCol[0] //would return error
+$first:=$emptyCol.first() // returns Undefined
+```
+<!-- END REF -->
+
+
+
+
+<!-- REF collection.flat().Desc -->
+## .flat()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #collection.flat().Syntax -->**.flat**( { *depth* : Integer } ) : Collection<!-- END REF -->
+
+
+<!-- REF #collection.flat().Params -->
+| 引数    | タイプ        |    | 説明                                                                    |
+| ----- | ---------- |:--:| --------------------------------------------------------------------- |
+| depth | Integer    | -> | How deep a nested collection structure should be flattened. デフォルト = 1 |
+| 戻り値   | Collection | <- | Flattened collection|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->。
+
+By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
+> このコマンドは、元のコレクションを変更しません。
+
+
+#### 例題
+
+
+```4d
+$col:=New collection(1; 2; New collection(3; 4))
+$col.flat()
+// [1, 2, 3, 4]
+
+$col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
+$col.flat()
+// [1, 2, 3, 4, [5, 6]]
+
+$col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
+$col.flat(2)
+// [1, 2, 3, 4, 5, 6]
+
+$col:=New collection(1; 2; New collection(3; 4; 5; 6; New collection(7; 8; New collection(9; 10))))
+$col.flat(MAXLONG)
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+<!-- END REF -->
+
+
+
+<!-- REF collection.flatMap().Desc -->
+## .flatMap()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.flatMap().Params -->
+| 引数         | タイプ         |    | 説明                                                                                        |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                                              |
+| methodName | Text        | -> | メソッド名                                                                                     |
+| param      | any         | -> | *formula* または *methodName* に渡す引数                                                          |
+| 戻り値        | Collection  | <- | Collection of transformed values and flattened by a depth of 1|<!-- END REF -->
+
+|
+
+#### 説明
+
+The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->。 オプションで、*param* パラメーターに、*formula* または *methodName* に渡す引数を指定することができます。
+
+This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+> このコマンドは、元のコレクションを変更しません。
+
+
+次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:
+
+- *formula* (推奨シンタックス)、関数やプロジェクトメソッドを含むあらゆる実行可能な式を格納できる [Formula オブジェクト](FunctionClass.md)。
+- または *methodName*、プロジェクトメソッドの名前 (テキスト)。
+
+コールバックには、*param* (任意) に指定した引数が渡されます。 引数の有無にかかわらず、コールバックは任意の処理を実行でき、結果のコレクションに追加する変換後の新しい値を返さなくてはなりません。 コールバックは最初のパラメータ ($1) に `Object` を受け取ります。
+
+コールバックは以下の引数を受け取ります:
+
+*   *$1.value*: 評価する要素の値
+*   *$2*: param
+*   *$N...*: paramN...
+
+また、コールバックは以下のパラメーターを設定できます:
+
+*   (メソッドを使用した場合は必須) *$1.result* (任意の型): 結果のコレクションに追加する、変換された値
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
+
+
+#### 例題 1
+
+```4d
+var $col ; $result : Collection
+$col:=New collection(1; 2; 3; 4)
+
+$result:=$col.map(Formula(New collection($1.value*2))
+ // [[2],[4],[6],[8]]
+
+$result:=$col.flatMap(Formula(New collection($1.value*2))
+// [2,4,6,8]
+```
+
+#### 例題 2
+
+```
+var $col; $result : Collection
+$col:=New collection("Hello how"; ""; "are you ?")
+
+$result:=$col.map(Formula(Split string($1.value; " ")))
+// [["Hello", "how"], [], ["are", "you", "?"]]
+
+$result:=$col.flatMap(Formula(Split string($1.value; " ")))
+// ["Hello", "how", "are", "you", "?"]
+```
+
+#### 例題 3
+
+You want to compute the percentage of each value in the collection to the total:
+
+```4d
+var $c; $c2 : Collection
+var $f : 4D.Function
+$c:=New collection(1; 4; 9; 10; 20)
+$f:=Formula(New collection($1.value;Round(($1.value/$2)*100; 2)))
+$c2:=$c.flatMap($f; $c.sum())
+  //$c2=[1, 2.27, 4, 9.09,9, 20.45,10, 22.73, 20, 45.45]
+```
+
+<!-- END REF -->
+
+
+
+
+<!-- REF collection.includes().Desc -->
+## .includes()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #collection.includes().Syntax -->**.includes**( *toSearch* : expression { ; *startFrom* : Integer } ) : Boolean<!-- END REF -->
+
+
+<!-- REF #collection.includes().Params -->
+| 引数        | タイプ     |    | 説明                                                                       |
+| --------- | ------- |:--:| ------------------------------------------------------------------------ |
+| toSearch  | 式       | -> | コレクション内を検索する式                                                            |
+| startFrom | Integer | -> | 検索を開始するインデックス                                                            |
+| 戻り値       | Boolean | <- | True if *toSearch* is found in the collection|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->。
+> このコマンドは、元のコレクションを変更しません。
+
+*toSearch* パラメーターには、コレクション内で検索する式を渡します。 以下のものを渡すことができます:
+
+*   スカラー値 (テキスト、数値、ブール、日付)
+*   null 値
+*   オブジェクトあるいはコレクションの参照
+
+*toSearch* 引数は検出すべき要素と完全に一致している必要があります (等号演算子と同じルールが適用されます)。
+
+オプションとして、*startFrom* 引数を渡すことで、検索を開始するコレクション要素のインデックスを指定することができます。
+
+*   If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
+*   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。 Note that even if *startFrom* is negative, the collection is still searched from left to right.
+*   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
+
+#### 例題
+
+```4d
+ var $col : Collection
+ var $in : Boolean
+ var $obj : Object
+ $obj:=New object("value"; 10)
+ $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5)
+ $in:=$col.includes(3) //True
+ $in:=$col.includes(5;6) //True
+ $in:=$col.includes("al@") //True
+ $in:=$col.includes("Hello") //False
+ $in:=$col.includes($obj)  //True
+ $in:=$col.includes(New object("value"; 10)) //False
+```
+
+<!-- END REF -->
+
+
+
+
 
 
 <!-- REF collection.indexOf().Desc -->
@@ -1367,12 +1687,6 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### 例題
 
-
-
-
-
-
-
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1384,8 +1698,6 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 ```
 
 <!-- END REF -->
-
-
 
 
 
@@ -1549,6 +1861,54 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 <!-- END REF -->
 
 
+
+
+<!-- REF collection.last().Desc -->
+## .last()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #collection.last().Syntax -->**.last**() : any <!-- END REF -->
+
+
+<!-- REF #collection.last().Params -->
+| 引数  | タイプ |    | 説明                                      |
+| --- | --- |:--:| --------------------------------------- |
+| 戻り値 | any | <- | コレクションの最後の要素|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.last()` 関数は、 <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->。
+> このコマンドは、元のコレクションを変更しません。
+
+The function returns Undefined if the collection is empty.
+
+#### 例題
+
+
+```4d
+var $col; $emptyCol : Collection
+var $last : Variant
+$col:=New collection(10; 20; 30; "hello"; 50)
+$last:=$col.last() // 50
+
+$emptyCol:=New collection() //empty
+// $last:=$emptyCol[$emptyCol.length-1] //returns an error
+$last:=$emptyCol.last() // returns Undefined
+
+```
+
+<!-- END REF -->
 
 
 
@@ -2364,7 +2724,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  // 戻り値は 86400 です
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
 
 
@@ -2393,6 +2753,99 @@ $r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  // 戻り値
 
 <!-- END REF -->
 
+
+
+
+
+<!-- REF collection.reduceRight().Desc -->
+## .reduceRight()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #collection.reduceRight().Syntax -->**.reduceRight**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduceRight**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+
+
+<!-- REF #collection.reduceRight().Params -->
+| 引数         | タイプ                                             |    | 説明                                                |
+| ---------- | ----------------------------------------------- |:--:| ------------------------------------------------- |
+| formula    | 4D.Function                                     | -> | フォーミュラオブジェクト                                      |
+| methodName | Text                                            | -> | メソッド名                                             |
+| initValue  | Text, Number, Object, Collection, Date, Boolean | -> | *formula* または *methodName* の最初の呼び出しに最初の引数として使用する値 |
+| param      | 式                                               | -> | 渡す引数                                              |
+| 戻り値        | Text, Number, Object, Collection, Date, Boolean | <- | アキュムレーター値の結果|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+
+The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->。
+> このコマンドは、元のコレクションを変更しません。
+
+次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:
+
+- *formula* (推奨シンタックス)、関数やプロジェクトメソッドを含むあらゆる実行可能な式を格納できる [Formula オブジェクト](FunctionClass.md)。
+- または *methodName*、プロジェクトメソッドの名前 (テキスト)。
+
+コールバックはコレクションの各要素を受け取り、任意の処理を実行して、結果を *$1.accumulator* に蓄積します。この値は最終的に *$1.value* に返されます。
+
+*initValue* に引数を渡すことで、アキュムレーターを初期化することができます。 省略された場合は、*$1.accumulator* は *Undefined* から開始されます。
+
+コールバックは以下の引数を受け取ります:
+
+*   *$1.value*: 処理する要素の値
+*   in *$2: param*
+*   in *$N...*: *paramN...*
+
+コールバックは以下のパラメーターを設定します:
+
+*   *$1.accumulator*: メソッドで変更する値。*initValue* によって初期化します。
+*   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
+
+
+#### 例題 1
+
+
+```4d
+var $c : Collection
+$c:=New collection(5;3;5;1;3;4;4;6;2;2)
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+```
+
+
+#### 例題 2
+
+複数のコレクション要素を単一の値にまとめます:
+
+```4d
+ var $c;$r : Collection
+ $c:=New collection
+ $c.push(New collection(0;1))
+ $c.push(New collection(2;3))
+ $c.push(New collection(4;5))
+ $c.push(New collection(6;7))
+ $r:=$c.reduceRight(Formula(Flatten)) //$r=[6,7,4,5,2,3,0,1]
+```
+
+***Flatten*** メソッドのコードは以下のとおりです:
+
+```4d
+    //Flatten project method
+ If($1.accumulator=Null)
+    $1.accumulator:=New collection
+ End if
+ $1.accumulator.combine($1.value)
+```
+
+<!-- END REF -->
 
 
 

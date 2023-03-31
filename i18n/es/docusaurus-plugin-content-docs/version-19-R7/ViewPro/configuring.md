@@ -356,7 +356,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 * If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./method-list.md#vp-get-print-info) returns a paper size with `custom` as value for `kind`.
 
 * If you set the paper size using the `kind` property, you can use either:
-  * one of the formats in the [SpreadJS format list](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
+  * uno de los formatos de la [lista de formatos SpreadJS](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
   * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. En ese caso, [`VP Get print info`](./method-list.md#vp-get-print-info) devuelve el formato correspondiente con el alto y el ancho.
 
 ### Escala

@@ -3,6 +3,10 @@ id: HTTPRequestClass
 title: HTTPRequest
 ---
 
+La clase `HTTPRequest` permite manejar objetos [`HTTPRequest`](#httprequest-object) que pueden ser utilizados para configurar y enviar peticiones a un servidor HTTP, así como para procesar las respuestas del servidor HTTP.
+
+La clase `HTTPRequest` está disponible en el almacén de clases `4D`. Para crear y enviar peticiones HTTP se utiliza la función [4D.HTTPRequest.new()](#4dhttprequestnew), que devuelve un objeto [`HTTPRequest`](#httprequest-object).
+
 <details><summary>Histórico</summary>
 
 | Versión | Modificaciones |
@@ -11,9 +15,6 @@ title: HTTPRequest
 
 </details>
 
-La clase `HTTPRequest` permite manejar objetos [`HTTPRequest`](#httprequest-object) que pueden ser utilizados para configurar y enviar peticiones a un servidor HTTP, así como para procesar las respuestas del servidor HTTP.
-
-La clase `HTTPRequest` está disponible en el almacén de clases `4D`. Para crear y enviar peticiones HTTP se utiliza la función [4D.HTTPRequest.new()](#4dhttprequestnew), que devuelve un objeto [`HTTPRequest`](#httprequest-object).
 
 ### Ejemplo
 
@@ -259,6 +260,7 @@ La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.method.Summary -->el 
 #### Descripción
 
 La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary -->el `protocol` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se ha omitido o si se ha utilizado "auto", contiene la versión del protocolo utilizada.
+
 
 <!-- END REF -->
 

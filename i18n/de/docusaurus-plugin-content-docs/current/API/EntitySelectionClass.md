@@ -13,6 +13,7 @@ Entity selections can be created from existing selections using various function
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
@@ -177,6 +178,52 @@ Note that the corresponding entity is reloaded from the datastore.
 
 <!-- END REF -->
 
+
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>History</summary>
+
+| Version | Changes |
+| ------- | ------- |
+| v20     | Added   |
+
+</details>
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| Parameter | Typ       |    | Beschreibung                                        |
+| --------- | --------- |:--:| --------------------------------------------------- |
+| index     | Ganzzahl  | -> | Index of entity to return                           |
+| Ergebnis  | 4D.Entity | <- | The entity at that index|<!-- END REF -->
+
+
+|
+
+
+#### Beschreibung
+
+The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
+
+If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+
+The function returns Null if *index* is beyond entity selection limits.
+
+#### Beispiel
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
+$emp2:=$employees.at(-3) //starting from the end, 3rd entity
+    //of the $employees entity selection
+```
+
+<!-- END REF -->
 
 
 

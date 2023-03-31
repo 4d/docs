@@ -3,9 +3,8 @@ id: FunctionClass
 title: Function
 ---
 
-### Function オブジェクトについて
 
-`4D.Function` オブジェクトにはコードが格納されています。このコードは `()` 演算子を使用して、または [`apply()`](#apply) や [`call()`](#call) 関数を使用して呼び出すことができます。 4D では 3種類の `Function` オブジェクトが利用できます:
+A **`4D.Function`** object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D では 3種類の `Function` オブジェクトが利用できます:
 
 - **ネイティブ関数** (`collection.sort()` や `file.copyTo()` などの 4Dクラスにビルトインされた関数)。
 - **ユーザー関数** (ユーザー[クラス](Concepts/classes.md) において [Function キーワード](Concepts/classes.md#function)を使って作成されたもの)。
@@ -13,7 +12,7 @@ title: Function
 
 
 
-### Formula オブジェクト
+### Formula objects
 
 [Formula](#formula) あるいは [Formula from string](#formula-from-string) コマンドを使用すると、[`4D.Function`オブジェクト](#4dfunction-オブジェクトについて) を作成することができ、それによってあらゆる 4D式やテキストとして表されたコードを実行することが可能です。
 

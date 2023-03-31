@@ -122,7 +122,7 @@ Essa propriedade é **apenas leitura**.
 
 A propriedade `.size` devolve <!-- REF #document.hidden.Summary -->true se o arquivo for definido como "escondido" ao nível do sistema<!-- END REF -->e false de outra forma.
 
-Essa propriedade é **apenas leitura**.
+Esta propriedade é **read/write**.
 
 <!-- END REF -->
 
