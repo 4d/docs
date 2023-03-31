@@ -275,7 +275,7 @@ $element:=$col.at(0) // 10
 $element:=$col.at(1) // 20
 $element:=$col.at(-1) // 50
 $element:=$col.at(-2) // 40
-$element:=$col.at(10) // undefined
+$element:=$col.at(10) // indefinido
 ```
 
 <!-- END REF -->
@@ -1405,23 +1405,23 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Descripción
 
-La función `.first()` <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->.
+La función `.first()` <!-- REF #collection.first().Summary -->devuelve el primer elemento de la colección<!-- END REF -->.
 > Esta función no modifica la colección original.
 
-The function returns Undefined if the collection is empty.
+La función devuelve Undefined si la colección está vacía.
 
 #### Ejemplo
 
 
 ```4d
 var $col; $emptyCol : Collection
-var $first : Variant
+var $first : Variante
 $col:=New collection(10; 20; 30; "hello"; 50)
 $first:=$col.first() // 10
 
-$emptyCol:=New collection() //empty
-// $first:=$emptyCol[0] //would return error
-$first:=$emptyCol.first() // returns Undefined
+$emptyCol:=New collection() //vacío
+// $first:=$emptyCol[0] //daría error
+$first:=$emptyCol.first() // devuelve Undefined
 ```
 <!-- END REF -->
 
@@ -1454,7 +1454,7 @@ $first:=$emptyCol.first() // returns Undefined
 
 #### Descripción
 
-The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
+La función `.flat()` <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
 
 By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
 > Esta función no modifica la colección original.
@@ -1510,7 +1510,7 @@ $col.flat(MAXLONG)
 
 #### Descripción
 
-The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
+La función `.flatMap()` <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
 
 This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
 > Esta función no modifica la colección original.
@@ -1606,7 +1606,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 #### Descripción
 
-The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->.
+La función `.includes()` <!-- REF #collection.includes().Summary -->devuelve True si la expresión *toSearch* se encuentra entre los elementos de la colección; en caso contrario, False<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
@@ -1893,10 +1893,10 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 #### Descripción
 
-La función `.last()` <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
+La función `.last()` <!-- REF #collection.last().Summary -->devuelve el último elemento de la colección<!-- END REF -->.
 > Esta función no modifica la colección original.
 
-The function returns Undefined if the collection is empty.
+La función devuelve Undefined si la colección está vacía.
 
 #### Ejemplo
 
@@ -1908,8 +1908,8 @@ $col:=New collection(10; 20; 30; "hello"; 50)
 $last:=$col.last() // 50
 
 $emptyCol:=New collection() //empty
-// $last:=$emptyCol[$emptyCol.length-1] //returns an error
-$last:=$emptyCol.last() // returns Undefined
+// $last:=$emptyCol[$emptyCol.length-1] //devuelve un error
+$last:=$emptyCol.last() // devuelve Indefinido
 
 ```
 
@@ -2734,7 +2734,7 @@ La retrollamada define los siguientes parámetros:
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //devuelve 86400
 ```
 
 
@@ -2797,7 +2797,7 @@ Con el siguiente método ***Flatten***:
 #### Descripción
 
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
