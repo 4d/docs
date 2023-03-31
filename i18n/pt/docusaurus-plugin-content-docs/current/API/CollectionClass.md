@@ -254,7 +254,7 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 #### Descrição
 
-The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->.
+A função `.at()` <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Negative integers count back from the last item in the collection.
@@ -270,7 +270,7 @@ $element:=$col.at(0) // 10
 $element:=$col.at(1) // 20
 $element:=$col.at(-1) // 50
 $element:=$col.at(-2) // 40
-$element:=$col.at(10) // undefined
+$element:=$col.at(10) // indefinido
 ```
 
 
@@ -1331,10 +1331,10 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Descrição
 
-A função `.first()` <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->.
+A função `.first()` <!-- REF #collection.first().Summary -->devolve o primeiro elemento da colecção<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
-The function returns Undefined if the collection is empty.
+A função retorna Undefined se a coleção estiver vazia.
 
 #### Exemplo
 
@@ -1345,9 +1345,9 @@ var $first : Variant
 $col:=New collection(10; 20; 30; "hello"; 50)
 $first:=$col.first() // 10
 
-$emptyCol:=New collection() //empty
-// $first:=$emptyCol[0] //would return error
-$first:=$emptyCol.first() // returns Undefined
+$emptyCol:=New collection() //vazio
+// $first:=$emptyCol[0] // devolveria erro
+$first:=$emptyCol.first() // devolve Indefinido
 ```
 
 
@@ -1378,7 +1378,7 @@ $first:=$emptyCol.first() // returns Undefined
 
 #### Descrição
 
-The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
+A função `.flat()` <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
 
 By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
 > Essa função não modifica a coleção original.
@@ -1433,7 +1433,7 @@ $col.flat(MAXLONG)
 
 #### Descrição
 
-The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Opcionalmente, pode passar parâmetros para *fórmula* ou *methodName* usando o(s) parâmetro(s) *param* .
+A função `.flatMap()` <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Opcionalmente, pode passar parâmetros para *fórmula* ou *methodName* usando o(s) parâmetro(s) *param* .
 
 This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
 > Essa função não modifica a coleção original.
@@ -1526,7 +1526,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 #### Descrição
 
-The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->.
+A função `.includes()` <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
@@ -1799,7 +1799,7 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 A função `.last()` <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
-The function returns Undefined if the collection is empty.
+A função retorna Undefined se a coleção estiver vazia.
 
 #### Exemplo
 
@@ -1810,9 +1810,9 @@ var $last : Variant
 $col:=New collection(10; 20; 30; "hello"; 50)
 $last:=$col.last() // 50
 
-$emptyCol:=New collection() //empty
-// $last:=$emptyCol[$emptyCol.length-1] //returns an error
-$last:=$emptyCol.last() // returns Undefined
+$emptyCol:=New collection() //vazia
+// $last:=$emptyCol[$emptyCol.length-1] //devolve um erro
+$last:=$emptyCol.last() // devolve Undefined
 
 ```
 
@@ -2650,7 +2650,7 @@ Com o método ***Flatten***:
 #### Descrição
 
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+A função `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Designa-se a chamada de retorno a ser executada para avaliar os elementos da colecção utilizando qualquer um dos dois:
