@@ -47,8 +47,9 @@ Syntax:
 |`--webadmin-auto-start`|Boolean|Status of the automatic startup for the [WebAdmin web server](webAdmin.md). Not available with [tool4d](#tool4d).|
 |`--webadmin-store-settings`||Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary. Not available with [tool4d](#tool4d).|
 |`--utility`||Only available with 4D Server. Launches [4D Server in utility mode](#4d-server-in-utility-mode).|
-|`--skip-onstartup`||Only available with [tool4d](#tool4d) and [4D Server in utility mode](#4d-server-in-utility-mode). Launches the project without excuting any "automatic" methods, including the `On Startup` and `On Exit` database methods (with tool4d), or the `On Server Startup` and `On Server Shutdown` database methods (with 4D Server)|
-|`--startup-method`|Project method name (string)|Only available with [tool4d](#tool4d) and [4D Server in utility mode](#4d-server-in-utility-mode). Project method to execute automatically between the `On Startup`/`On Server Startup` and `On Exit`/`On Server Shutdown` database methods (if not skipped with `--skip-onstartup`).|
+|`--skip-onstartup`||Launches the project without executing any "automatic" methods, including the `On Startup` and `On Exit` database methods|
+|`--startup-method`|Project method name (string)|Project method to execute immediately after the `On Startup` database method (if not skipped with `--skip-onstartup`).|
+
 (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 
 ### Examples 
@@ -187,7 +188,9 @@ Open without interface (headless mode):
 ## tool4d
 
 
-**tool4d** is a free, lightweight, stand-alone application allowing you to open a 4D project in headless mode and execute some 4D code using the CLI. tool4d is available on Windows and macOS, and is always associated to a 4D release (same version and build number). 
+**tool4d** is a free, lightweight, stand-alone application allowing you to open a 4D project in headless mode and execute some 4D code using the CLI. 
+
+tool4d is available on Windows and macOS and is always associated to a 4D release (same version and build number). It is only provided in English localization. 
 
 tool4d is a perfect tool if you want to:
 
@@ -198,9 +201,9 @@ tool4d is a perfect tool if you want to:
 
 ### Using tool4d
 
-You can get tool4d from the [download page of the 4D web site](https://us.4d.com/product-download/Feature-Release). 
+You can get tool4d from the 4D [Product download page](https://product-download.4d.com/). 
 
-You use tool4d by executing a [command line](#launch-a-4d-application) with a standard 4D project. You can use all arguments described in the table, except --`webadmin` since this component is [disabled in tool4d](#disabled-4d-features). With tool4d, the following specific sequence is launched:
+You use tool4d by executing a [command line](#launch-a-4d-application) with a standard 4D project. You can use all arguments described in the above table, except --`webadmin` since this component is [disabled in tool4d](#disabled-4d-features). With tool4d, the following specific sequence is launched:
 
 1. tool4d executes the `On Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` argument is passed.
 2. tool4d executes the method designated by the `--startup-method` argument, if any.
@@ -221,33 +224,39 @@ On Windows, tool4d is a console application so that the `stdout` stream is displ
 
 ### Disabled 4D features
 
-Keep in mind that `tool4d` runs automatically in **headless mode** (see `--headless` in [this table](#launch-a-4d-application)), and does neither give access to the 4D IDE nor any of its servers. In particular, the following features are disabled and cannot be called:
+Keep in mind that tool4d runs automatically in **headless mode** (see `--headless` in [this table](#launch-a-4d-application)), and does neither give access to the 4D IDE nor any of its servers. In particular, the following features are disabled:
 
-- other localizations than English
 - application server, Web server, SQL server,
 - backup scheduler,
-- data collection,
 - ODBC and SQL pass-through,
-- 4D internal components,
+- all components such as 4D View Pro, 4D SVG, 4D NetKit...,
 - hunspell spell checker,
-- mecab library,
+- japanese spellchecker (*mecab* library),
 - WebAdmin,
 - CEF, 
 - PHP, 
 - remote debugger (local debugger, `TRACE` command and breakpoints are ignored in headless applications).
 
 
+
 ## 4D Server in utility mode
 
 You can launch a 4D Server instance in a utility mode (headless) by using the `--utility` CLI option. In this case, the following workflow is triggered:
 
-1. 4D Server executes the `On Server Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` parameter is passed.
+1. 4D Server executes the `On Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` parameter is passed.
 2. 4D Server executes the method designated by the `--startup-method`, if any.
-3. 4D Server executes the `On Server Shutdown` database method, except if the `--skip-onstartup` parameter is passed.
+3. 4D Server executes the `On Exit` database method, except if the `--skip-onstartup` parameter is passed.
 4. 4D Server quits.
 
 :::info
 
-Unlike tool4d, 4D Server in utility mode has all its features enabled. 
+Unlike tool4d, 4D Server in utility mode has all its features enabled. However, the application server and all other servers are not started. 
+
+:::
+
+
+:::tip See also
+
+See [this blog post](https://blog.4d.com/a-tool-for-4d-code-execution-in-cli/) for examples of how to use tool4d and 4D Server in utility mode.  
 
 :::
