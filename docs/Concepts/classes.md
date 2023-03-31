@@ -8,7 +8,7 @@ title: Classes
 
 The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions.
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
+Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#property) and [computed](#function-get-and-function-set)).
 
 > The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
 
@@ -17,6 +17,7 @@ For example, you could create a `Person` class with the following definition:
 ```4d  
 //Class: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
+ property firstName; firstName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -162,6 +163,7 @@ When 4D does not find a function or a property in a class, it searches it in its
 Specific 4D keywords can be used in class definitions:
 
 - `Function <Name>` to define class functions of the objects.
+- `property` to define static properties of the objects with a type.
 - `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
 - `Class constructor` to define static properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
@@ -254,6 +256,8 @@ Function add($x : Variant; $y : Integer): Integer
 ```4d
 // Class: Rectangle
 Class constructor($width : Integer; $height : Integer)
+ property name : Text
+ property height; width : Integer
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
@@ -285,6 +289,53 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
   return 0
  End if
 ```
+
+### `property`
+
+#### Syntax
+
+`property <propertyName>{; propertyName2>;...}{ : <propertyType>}`
+
+The `property` keyword can be used to define a **static** property inside a user class. Declaring class properties enhances code editor suggestions and type-ahead features.
+
+A class property has a name and a type:
+
+- the property name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties),
+- the property type can be one of the following supported types:
+
+|propertyType|Contents|
+|---|---|
+|`Text`|Text value|
+|`Date`|Date value|
+|`Time`|Time value|
+|`Boolean`|Boolean value|
+|`Integer`|Long integer value|
+|`Real`|Real value|
+|`Pointer`|Pointer value|
+|`Picture`|Picture value|
+|`Blob`|Scalar Blob value|
+|`Collection`|Collection value|
+|`Variant`|Variant value|
+|`Object`|Object with default class (4D.Object)|
+|`4D.<className>`|Object of the 4D class name|
+|`cs.<className>`|Object of the user class name|
+
+:::info
+
+The `property` keyword can only be used in class methods and outside any `Function` block.
+
+:::
+
+#### Example
+
+```4d
+property lastname; firstname : Text
+
+function doSomething($lastname : Text; $firstname : Text)
+	This.lastname:=$lastname
+	This.firstname:=$firstname
+```
+
 
 ### `Function get` and `Function set`
 
@@ -325,6 +376,7 @@ The type of the computed property is defined by the `$return` type declaration o
 //Class: Person.4dm
 
 Class constructor($firstname : Text; $lastname : Text)
+ property firstName; lastName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -439,6 +491,8 @@ Class constructor ($side : Integer)
   C_LONGINT($0)
   $0:=This.height*This.width
 ```
+
+
 
 ### `Super`
 
