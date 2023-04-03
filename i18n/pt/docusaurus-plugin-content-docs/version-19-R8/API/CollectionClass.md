@@ -69,7 +69,7 @@ Uma coleção se inicializa com:
 
 
 
-## `Nova colecção`
+## `Nova coleção`
 
 
 
@@ -175,13 +175,19 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova colecção partilhada vazia ou pré-carregada<!-- END REF --> e devolve a sua referência.
 
-A adição de um elemento a esta colecção deve ser rodeada pela estrutura de utilização [`Use...End`](Concepts/shared.md#useend-use) , caso contrário é gerado um erro. Ler um elemento sem a estrutura é entretanto possível.
-> Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
+A adição de um elemento a esta coleção utilizando o operador de atribuição deve ser rodeada pela estrutura [`Use...End use`](Concepts/shared.md#useend-use) , caso contrário é gerado um erro (isto não é necessário ao adicionar elementos utilizando funções como [`push()`](#push) ou [`map()`](#map) porque estes ativam automaticamente uma estrutura interna *Use...End use*). A leitura de um elemento sem um *Use...End use* estrutura é, no entanto, possível.
+
+:::info
+
+Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
+
+:::
 
 Se não quiser passar parâmetros, `New shared collection` cria uma coleção vazia partilhada e retorna sua referência.
 
 Precisa atribuir a referência devolvida à uma variável 4D de tipo Collection.
-> Lembre que declarações`var : Collection` ou `C_COLLECTION` declaram uma variável do tipo `Collection` mas não cria qualquer coleção.
+
+> Tenha em mente que `var : Colecção` ou `C_COLLECTION` declarações declaram uma variável do tipo `Colecção` mas não criam qualquer colecção.
 
 Opcionalmente pode preencher automaticamente a nova coleção partilhada passando um ou vários *valores*como parâmetros. Também pode adicionar ou modificar elementos através de atribuição de notação de objetos (ver exemplo).
 
@@ -1031,7 +1037,7 @@ Pode determinar a chamada de retorno a ser executada para filtrar os elementos d
 - *fórmula* (sintaxe recomendada), um [Objecto de fórmula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos de projecto;
 - *methodName*, o nome de um método projeto (texto).
 
-A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **verdadeiro** para cada elemento que preencha a condição e, portanto, para empurrar para a nova colecção. Recebe um `objecto ` no primeiro parâmetro ($1).
+A chamada de retorno é chamada com o(s) parâmetro(s) passado(s) em *param* (opcional) e um objecto no primeiro parâmetro (*$1*). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **verdadeiro** para cada elemento que preencha a condição e, portanto, para empurrar para a nova colecção.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1041,9 +1047,14 @@ A chamada de retorno recebe os seguintes parâmetros:
 
 Pode definir o(s) seguinte(s) parâmetro(s):
 
-*   (obrigatório se tiver utilizado um método) *$1.resultado* (Booleano): **verdadeiro** se o valor do elemento corresponder à condição do filtro e tiver de ser mantido, **falso** caso contrário.
+*   *$1.resultado* (Booleano): **verdadeiro** se o valor do elemento corresponder à condição do filtro e tiver de ser mantido, **falso** caso contrário.
 *   *$1.stop* (Booleano, opcional): **true** para parar o método callback. O valor retornado é o último calculado.
 
+:::note
+
+Ao utilizar *methodName* como callback, e se o método não devolver qualquer valor, `.filter()` irá olhar para a propriedade *$1.result* que deverá definir para **true** para cada elemento que preencha a condição.
+
+:::
 
 #### Exemplo 1
 
@@ -1790,7 +1801,7 @@ Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por
 Ordenar uma coleção de números em ordem ascendente e descendente:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)

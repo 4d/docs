@@ -177,13 +177,19 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou pré-remplie<!-- END REF --> et retourne sa référence.
 
-L'ajout et la modification d'éléments dans une collection partagée doivent être encadrés par une structure [`Use...End`](Concepts/shared.md#useend-use), sinon une erreur est générée. La lecture d'un élement hors [`Use...End`](Concepts/shared.md#useend-use) est toutefois possible.
-> Pour plus d'informations sur les collections partagées, reportez-vous à la page [Objets et collections partagés](Concepts/shared.md).
+L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](Concepts/shared.md#useend-use) , sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](#push) ou [`map()`](#map) , car elles déclenchent automatiquement une structure interne *Use...End use*). La lecture d'un élément sans structure *Use...End use* est toutefois possible.
+
+:::info
+
+Pour plus d'informations sur les collections partagées, reportez-vous à la page [Objets et collections partagés](Concepts/shared.md).
+
+:::
 
 Si vous ne passez aucun paramètre, `New shared collection` crée une collection vide et retourne sa référence.
 
 Vous devez affecter la référence retournée à une variable 4D de type Collection.
-> Gardez à l'esprit que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable de type `Collection` mais ne créent aucune collection.
+
+> N'oubliez pas que les instructions `var : Collection` ou `C_COLLECTION` déclarent une variable du type `Collection` mais ne créent pas de collection.
 
 En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
@@ -1089,7 +1095,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour filtrer les �
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant la condition et donc, devant être ajouté à la nouvelle collection. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif) et un objet en premier paramètre (*$1*). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant la condition et donc, devant être ajouté à la nouvelle collection.
 
 La callback reçoit les paramètres suivants :
 
@@ -1099,9 +1105,14 @@ La callback reçoit les paramètres suivants :
 
 Elle peut définir le(s) paramètre(s) suivant(s) :
 
-*   (obligatoire si vous avez utilisé une méthode) *$1.result* (booléen) : **true** si l'élément doit être conservé car sa la valeur correspond à la condition du filtre, **false** sinon.
+*   *$1.result* (booléen) : **true** si l'élément doit être conservé car sa la valeur correspond à la condition du filtre, **false** sinon.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
+:::note
+
+Lorsque vous utilisez *methodName* comme callback, et si la méthode ne renvoie aucune valeur, `.filter()` recherchera la propriété *$1.result* que vous devez définir à **true** pour chaque élément remplissant la condition.
+
+:::
 
 #### Exemple 1
 
@@ -1540,6 +1551,8 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 
 
 
+
+
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
@@ -1887,7 +1900,7 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2043,11 +2056,11 @@ Vous souhaitez trier une collection par code de caractère ou par langage :
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+//utilisation du code de caractère:
 $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+//utilisation du langage:
 $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
@@ -2362,7 +2375,7 @@ $r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //renvoie 86
 
 #### Exemple 2
 
-Avec la méthode ***Flatten*** suivante :
+Cet exemple permet de réduire plusieurs éléments de collection à un seul :
 
 ```4d
  var $c;$r : Collection
@@ -2374,7 +2387,7 @@ Avec la méthode ***Flatten*** suivante :
  $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
-Avec la méthode *NumberGreaterThan0* suivante :
+Avec la méthode ***Flatten*** suivante :
 
 ```4d
  If($1.accumulator=Null)

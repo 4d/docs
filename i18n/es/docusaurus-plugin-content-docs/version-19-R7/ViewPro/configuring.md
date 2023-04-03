@@ -356,8 +356,8 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 * If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./method-list.md#vp-get-print-info) returns a paper size with `custom` as value for `kind`.
 
 * If you set the paper size using the `kind` property, you can use either:
-  * one of the formats in the [SpreadJS format list](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
-  * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
+  * uno de los formatos de la [lista de formatos SpreadJS](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
+  * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. En ese caso, [`VP Get print info`](./method-list.md#vp-get-print-info) devuelve el formato correspondiente con el alto y el ancho.
 
 ### Escala
 
@@ -367,7 +367,7 @@ El atributo de escala se utiliza para la optimización y el ajuste de la impresi
 | -------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | bestFitColumns | boolean      | El ancho de la columna se ajusta para adaptarse al ancho del texto más grande para la impresión. Valor por defecto: "false" |
 | bestFitRows    | boolean      | La altura de la línea se ajusta a la altura del texto más alto para la impresión. Valor por defecto: "false"                |
-| fitPagesTall   | entero largo | The number of vertical pages (portrait orientation) to check when optimizing printing. Por defecto = -1                     |
+| fitPagesTall   | entero largo | El número de páginas verticales (orientación vertical) que hay que comprobar al optimizar la impresión. Por defecto = -1    |
 | fitPagesWide   | entero largo | El número de páginas horizontales (orientación horizontal) a comprobar cuando se optimiza la impresión. Por defecto = -1    |
 
 ### Mostrar / Ocultar
@@ -383,7 +383,7 @@ Los atributos Mostrar / Ocultar se utilizan para especificar la visibilidad (imp
 
 ### Marca de agua
 
-Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
+Los atributos de marca de agua se utilizan para superponer texto o una imagen en el área de 4D View Pro.
 
 | Propiedad     |                | Tipo                 | Descripción                                                                                                                                                                            |
 | ------------- | -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -392,7 +392,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 |               | \[ ].imageSrc | picture &#124; text* | El texto/imagen de la marca de agua.                                                                                                                                                   |
 |               | \[ ].page     | text                 | La(s) página(s) donde se imprime la marca de agua. Para todas las páginas: "all". Para páginas específicas: números de página o rangos de páginas separados por comas. Ej.: "1,3,5-12" |
 |               | \[ ].width    | entero largo         | El ancho del texto/imagen marca de agua.                                                                                                                                               |
-|               | \[ ].x        | entero largo         | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                         |
+|               | \[ ].x        | entero largo         | La coordenada horizontal del punto superior izquierdo del texto / imagen de la marca de agua.                                                                                          |
 |               | \[ ].y        | entero largo         | La coordenada vertical del punto superior izquierdo del texto/imagen de la marca de agua.                                                                                              |
 
 \* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](method-list.md#vp-get-print-info).

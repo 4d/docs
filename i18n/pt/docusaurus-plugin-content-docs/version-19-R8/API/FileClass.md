@@ -85,7 +85,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. O comando aceita duas sintaxes:
 
-**File ( path { ; pathType } { ; \* })**
+**File ( path { ; pathType } { ; * })**
 
 No parâmetro *path* , passe um file path string. Pode utilizar uma string personalizada ou um sistema de ficheiros (por exemplo, "/DATA/myfile.txt").
 
@@ -98,7 +98,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar co
 | fk platform path | 1     | Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma) |
 | fk posix path    | 0     | Caminho expresso com a sintaxe POSIX (por padrão)                                                        |
 
-**File ( fileConstant { ; \* } )**
+**File ( fileConstant { ; * } )**
 
 No parâmetro *fileConstant* , passe um ficheiro 4D incorporado ou de sistema, utilizando uma das constantes seguintes:
 

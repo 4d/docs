@@ -66,7 +66,7 @@ Dados são coletados durante os eventos abaixo:
 
 
 
-## Where is it stored and sent?
+## Onde é armazenado e enviado?
 
 Os dados recolhidos são escritos num ficheiro de texto (formato JSON) quando o Servidor 4D abandona o servidor. O ficheiro é armazenado dentro da pasta 4D ativa [](https://doc.4d.com/4dv19/help/command/en/page485.html), ou seja,
 
@@ -79,7 +79,7 @@ Uma vez por semana, o ficheiro é automaticamente enviado através da rede para 
 
 > Se o arquivo não pôde ser enviado por algum motivo, é, no entanto, apagado e não é exibida nenhuma mensagem de erro no lado do Servidor 4D.
 
-The file is sent to the following server address: `https://dcollector.4d.com` (ip: 195.68.52.83).
+O ficheiro é enviado para o seguinte endereço de servidor: `https://dcollector.4d.com` (ip: 195.68.52.83).
 
 
 ## como desativar a coleção de dados automática em aplicações cliente/servidor

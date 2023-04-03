@@ -3,12 +3,12 @@ id: commands
 title: Comandos
 ---
 
-The 4D language contains a large number of built-in commands, allowing the developer to perform a wide range of actions.
+A linguagem 4D contém um grande número de comandos incorporados, permitindo ao programador realizar uma vasta gama de acções.
 
-The 4D commands are divided in two categories:
+Os comandos 4D estão divididos em duas categorias:
 
-- **class functions**, which are APIs of 4D built-in classes. These functions are described in the [Class API Reference](../API/overview) section.
-- **stand-alone commands**, grouped by themes. Estes comandos estão descritos em manual *4D Language* em [doc.4d.com](https://doc.4d.com). Para referência, estão listados abaixo:
+- **funções de classe**, que são APIs de classes incorporadas 4D. Estas funções estão descritas na secção [Class API Reference](../API/overview).
+- **comandos autónomos**, agrupados por temas. Estes comandos estão descritos em manual *4D Language* em [doc.4d.com](https://doc.4d.com). Para referência, estão listados abaixo:
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -90,7 +90,7 @@ The 4D commands are divided in two categories:
 | [`C_BOOLEAN`](https://doc.4d.com/4dv19R/help/command/en/page305.html)                                          | 305    |
 | [`C_COLLECTION`](https://doc.4d.com/4dv19R/help/command/en/page1488.html)                                      | 1488   |
 | [`C_DATE`](https://doc.4d.com/4dv19R/help/command/en/page307.html)                                             | 307    |
-| [`C_LONGINT`](https://doc.4d.com/4dv19R/help/command/en/page283.html)                                          | 283    |
+| [`C_LONGINT`](https://doc.4d.com/4dv19R/help/command/en/page307.html)                                          | 283    |
 | [`C_OBJECT`](https://doc.4d.com/4dv19R/help/command/en/page1216.html)                                          | 1216   |
 | [`C_PICTURE`](https://doc.4d.com/4dv19R/help/command/en/page286.html)                                          | 286    |
 | [`C_POINTER`](https://doc.4d.com/4dv19R/help/command/en/page301.html)                                          | 301    |
@@ -115,12 +115,12 @@ The 4D commands are divided in two categories:
 | [`Choose`](https://doc.4d.com/4dv19R/help/command/en/page955.html)                                             | 955    |
 | [`CLEAR LIST`](https://doc.4d.com/4dv19R/help/command/en/page377.html)                                         | 377    |
 | [`CLEAR NAMED SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page333.html)                              | 333    |
-| [`CLEAR PASTEBOARD`](https://doc.4d.com/4dv19R/help/command/en/page402.html)                                   | 402    |
+| [`CLEAR PASTEBOARD`](https://doc.4d.com/4dv19R/help/command/en/page333.html)                                   | 402    |
 | [`CLEAR SEMAPHORE`](https://doc.4d.com/4dv19R/help/command/en/page144.html)                                    | 144    |
 | [`CLEAR SET`](https://doc.4d.com/4dv19R/help/command/en/page117.html)                                          | 117    |
 | [`CLEAR VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page89.html)                                      | 89     |
 | [`Clickcount`](https://doc.4d.com/4dv19R/help/command/en/page1332.html)                                        | 1332   |
-| [`CLOSE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page267.html)                                     | 267    |
+| [`CLOSE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page1332.html)                                    | 267    |
 | [`CLOSE PRINTING JOB`](https://doc.4d.com/4dv19R/help/command/en/page996.html)                                 | 996    |
 | [`CLOSE RESOURCE FILE`](https://doc.4d.com/4dv19R/help/command/en/page498.html)                                | 498    |
 | [`CLOSE WINDOW`](https://doc.4d.com/4dv19R/help/command/en/page154.html)                                       | 154    |
@@ -136,7 +136,7 @@ The 4D commands are divided in two categories:
 | [`Contextual click`](https://doc.4d.com/4dv19R/help/command/en/page713.html)                                   | 713    |
 | [`CONVERT COORDINATES`](https://doc.4d.com/4dv19R/help/command/en/page1365.html)                               | 1365   |
 | [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html)                                 | 1011   |
-| [`Convert path POSIX to system`](https://doc.4d.com/4dv19R/help/command/en/page1107.html)                      | 1107   |
+| [`Convert path POSIX to system`](https://doc.4d.com/4dv19R/help/command/en/page1011.html)                      | 1107   |
 | [`Convert path system to POSIX`](https://doc.4d.com/4dv19R/help/command/en/page1106.html)                      | 1106   |
 | [`CONVERT PICTURE`](https://doc.4d.com/4dv19R/help/command/en/page1002.html)                                   | 1002   |
 | [`Convert to text`](https://doc.4d.com/4dv19R/help/command/en/page1012.html)                                   | 1012   |
@@ -189,13 +189,13 @@ The 4D commands are divided in two categories:
 | [`CUT NAMED SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page334.html)                                | 334    |
 | <a name="D">**D**</a>                                                                                      |        |
 | [`Data file`](https://doc.4d.com/4dv19R/help/command/en/page490.html)                                          | 490    |
-| [`Data file encryption status`](https://doc.4d.com/4dv19R/help/command/en/page1609.html)                       | 1609   |
+| [`Data file encryption status`](https://doc.4d.com/4dv19R/help/command/en/page490.html)                        | 1609   |
 | [`Date`](https://doc.4d.com/4dv19R/help/command/en/page102.html)                                               | 102    |
 | [`Day number`](https://doc.4d.com/4dv19R/help/command/en/page114.html)                                         | 114    |
 | [`Day of`](https://doc.4d.com/4dv19R/help/command/en/page23.html)                                              | 23     |
 | [`Deactivated`](https://doc.4d.com/4dv19R/help/command/en/page347.html)                                        | 347    |
 | [`Dec`](https://doc.4d.com/4dv19R/help/command/en/page9.html)                                                  | 9      |
-| [`DECRYPT BLOB`](https://doc.4d.com/4dv19R/help/command/en/page690.html)                                       | 690    |
+| [`DECRYPT BLOB`](https://doc.4d.com/4dv19R/help/command/en/page9.html)                                         | 690    |
 | [`Decrypt data BLOB`](https://doc.4d.com/4dv19R/help/command/en/page1774.html)                                 | 1774   |
 | [`DEFAULT TABLE`](https://doc.4d.com/4dv19R/help/command/en/page46.html)                                       | 46     |
 | [`DELAY PROCESS`](https://doc.4d.com/4dv19R/help/command/en/page323.html)                                      | 323    |
@@ -222,7 +222,7 @@ The 4D commands are divided in two categories:
 | [`DISTINCT ATTRIBUTE PATHS`](https://doc.4d.com/4dv19R/help/command/en/page1395.html)                          | 1395   |
 | [`DISTINCT ATTRIBUTE VALUES`](https://doc.4d.com/4dv19R/help/command/en/page1397.html)                         | 1397   |
 | [`DISTINCT VALUES`](https://doc.4d.com/4dv19R/help/command/en/page339.html)                                    | 339    |
-| [`DOCUMENT LIST`](https://doc.4d.com/4dv19R/help/command/en/page474.html)                                      | 474    |
+| [`DOCUMENT LIST`](https://doc.4d.com/4dv19R/help/command/en/page339.html)                                      | 474    |
 | [`DOCUMENT TO BLOB`](https://doc.4d.com/4dv19R/help/command/en/page525.html)                                   | 525    |
 | [`Document to text`](https://doc.4d.com/4dv19R/help/command/en/page1236.html)                                  | 1236   |
 | [`DOM Append XML child node`](https://doc.4d.com/4dv19R/help/command/en/page1080.html)                         | 1080   |
@@ -293,7 +293,7 @@ The 4D commands are divided in two categories:
 | [`EXPORT SYLK`](https://doc.4d.com/4dv19R/help/command/en/page85.html)                                         | 85     |
 | [`EXPORT TEXT`](https://doc.4d.com/4dv19R/help/command/en/page167.html)                                        | 167    |
 | <a name="F">**F**</a>                                                                                      |        |
-| [`FAUX`](https://doc.4d.com/4dv19R/help/command/en/page215.html)                                               | 215    |
+| [`False`](https://doc.4d.com/4dv19R/help/command/en/page215.html)                                              | 215    |
 | [`Campo`](https://doc.4d.com/4dv19R/help/command/en/page253.html)                                              | 253    |
 | [`Campo nome`](https://doc.4d.com/4dv19R/help/command/en/page257.html)                                         | 257    |
 | [`File`](https://doc.4d.com/4dv19R/help/command/en/page1566.html)                                              | 1566   |
@@ -673,7 +673,7 @@ The 4D commands are divided in two categories:
 | [`MOVE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page540.html)                                      | 540    |
 | [`MULTI SORT ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page718.html)                                   | 718    |
 | <a name="N">**N**</a>                                                                                     |        |
-| [`Nova colecção`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                                     | 1472   |
+| [`Nova coleção`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                                      | 1472   |
 | [`New data key`](https://doc.4d.com/4dv19R/help/command/en/page1611.html)                                      | 1611   |
 | [`New list`](https://doc.4d.com/4dv19R/help/command/en/page375.html)                                           | 375    |
 | [`New log file`](https://doc.4d.com/4dv19R/help/command/en/page926.html)                                       | 926    |
@@ -1220,7 +1220,7 @@ The 4D commands are divided in two categories:
 | [`Version type`](https://doc.4d.com/4dv19R/help/command/en/page495.html)                                       | 495    |
 | [`VOLUME ATTRIBUTES`](https://doc.4d.com/4dv19R/help/command/en/page472.html)                                  | 472    |
 | [`VOLUME LIST`](https://doc.4d.com/4dv19R/help/command/en/page471.html)                                        | 471    |
-| [`VRAI`](https://doc.4d.com/4dv19R/help/command/en/page214.html)                                               | 214    |
+| [`True`](https://doc.4d.com/4dv19R/help/command/en/page214.html)                                               | 214    |
 | <a name="W">**W**</a>                                                                                     |        |
 | [`WA Back URL available`](https://doc.4d.com/4dv19R/help/command/en/page1026.html)                             | 1026   |
 | [`WA Create URL history menu`](https://doc.4d.com/4dv19R/help/command/en/page1049.html)                        | 1049   |

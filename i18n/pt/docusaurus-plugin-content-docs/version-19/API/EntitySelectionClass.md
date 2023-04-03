@@ -1329,6 +1329,9 @@ Como padrão, atributos são ordenados em ordem ascendente ("descendente" é fal
 Pode adicionar quantos objetos quiser nos critérios da coleção.
 > Valores null são avaliados como menor que outros valores.
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
+
 #### Exemplo
 
 ```4d

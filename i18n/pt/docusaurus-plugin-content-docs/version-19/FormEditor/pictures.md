@@ -3,17 +3,17 @@ id: pictures
 title: Imagens
 ---
 
-4D includes specific support for pictures used in your forms.
+4D inclui suporte específico para imagens utilizadas nos seus formulários.
 
-## Native Formats Supported
+## Formatos Nativos Suportados
 
 4D integra a gestão nativa dos formatos de imagem. Isso significa que imagens serão mostradas e armazenadas em seu formato original, sem qualquer interpretação em 4D. As funcionalidades específicas dos formatos diferentes (sombreado, áreas transparentes, etc) serão retidas quando forem copiadas e coladas, e serão exibidas sem alteração. Essa compatibilidade nativa é válida para todas as imagens armazenadas nos formulários de 4D: [imagens estáticas](FormObjects/staticPicture.md) coladas no modo Desenho, imagens coladas em [objetos de entrada](FormObjects/input_overview.md) em execução, etc.
 
 The most common picture formats are supported of both platforms: .jpeg, .gif, .png, .tiff, .bmp, etc. On macOS, the .pdf format is also available for encoding and decoding. Em macOS, o formato pdf também está disponível para codificar e decodificar.
 
-> The full list of supported formats varies according to the operating system and the custom codecs that are installed on the machines. To find out which codecs are available, you must use the `PICTURE CODEC LIST` command (see also the [picture data type](Concepts/dt_picture.md) description).
+> A lista completa dos formatos suportados varia de acordo com o sistema operativo e os codecs personalizados que são instalados nas máquinas. Para descobrir quais os codecs disponíveis, deve utilizar o comando `PICTURE CODEC LIST` (ver também a descrição do [tipo de dados imagem](Concepts/dt_picture.md)).
 
-### Unavailable picture format
+### Formato de imagem não disponível
 
 Um ícone específico é exibido para imagens salvas em um formato que não esteja disponível no mecanismo. A extensão do formato faltante é mostrado na parte inferior do ícone:
 
@@ -25,25 +25,25 @@ O ícone é usado automaticamente onde a imagem precisar ser exibida:
 
 O ícone indica que a imagem não pode ser exibida ou manipulada localmente - mas pode ser salva sem alteração para que possa ser exibida em outros dispositivos. Por exemplo esse é o caso para imagens PDF em Windows ou para imagens no formato PICT.
 
-## High Resolution Pictures
+## Imagens em alta resolução
 
-4D supports high resolution pictures on both macOS and Windows platforms. High resolution pictures can be defined by either scale factor or dpi.
+4D suporta imagens de alta resolução tanto em plataformas MacOS como Windows. As imagens de alta resolução podem ser definidas quer por factor de escala quer por dpi.
 
 ### Scale factor (macOS only)
 
-High resolution displays have a higher pixel density than traditional standard displays. For pictures to render correctly on high resolution displays, the number of pixels in the picture must be multiplied by the *scale factor* (*i.e.*, two times larger, three times larger, etc.).
+Os ecrãs de alta resolução têm uma maior densidade de píxeis do que os ecrãs padrão tradicionais. Para que as imagens sejam renderizadas correctamente em ecrãs de alta resolução, o número de pixels na imagem deve ser multiplicado pelo factor de escala ** (*ou seja*, duas vezes maior, três vezes maior, etc.).
 
-When using high resolution pictures, you can specify the scale factor by adding "@nx" in the picture's name (where *n* designates the scale factor). In the table below, you can see that the scale factor is indicated in the names of the high resolution pictures, *circle@2x.png* and *circle@3x.png*.
+Ao utilizar imagens de alta resolução, pode especificar o factor de escala adicionando "@nx" no nome da imagem (onde *n* designa o factor de escala). No quadro abaixo, pode ver que o fator de escala está indicado nos nomes das imagens de alta resolução, *circle@2x.png* e *circle@3x.png*.
 
-| Display Type        | Scale Factor                                   | Exemplo                                                                      |
-| ------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------- |
-| Standard Resolution | Densidade de pixel 1:1.                        | **1x**<br/>![](../assets/en/FormEditor/pictureScale1.png) *circle.png* |
-| High Resolution     | Pixel density increased by a factor of 2 or 3. | <table><th>2x</th><th>3x</th><tr><td>![](../assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](../assets/en/FormEditor/pictureScale3.png)<br/>*circle@3x.png*</td></tr></table>                                                    |
+| Display Type         | Factor de escala                                        | Exemplo                                                                      |
+| -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Resolução ‘standard’ | Densidade de pixel 1:1.                                 | **1x**<br/>![](../assets/en/FormEditor/pictureScale1.png) *circle.png* |
+| Alta resolução       | A densidade de pixels aumentou por um factor de 2 ou 3. | <table><th>2x</th><th>3x</th><tr><td>![](../assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](../assets/en/FormEditor/pictureScale3.png)<br/>*circle@3x.png*</td></tr></table>                                                    |
 
-High resolution pictures with the @nx convention can be used in the following objects:
+As imagens de alta resolução com a convenção @nx podem ser utilizadas nos seguintes objectos:
 
-* [Static pictures](FormObjects/staticPicture.md)
-* [Buttons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[check boxes](FormObjects/checkbox_overview.md)
+* [Imagens estáticas](FormObjects/staticPicture.md)
+* [Botões](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[caixas de verificação](FormObjects/checkbox_overview.md)
 * [Picture buttons](FormObjects/pictureButton_overview.md)/[Picture pop-ups](FormObjects/picturePopupMenu_overview.md)
 * [Tab controls](FormObjects/tabControl.md)
 * [Cabeçalhos de list box](FormObjects/listbox_overview.md#list-box-headers)

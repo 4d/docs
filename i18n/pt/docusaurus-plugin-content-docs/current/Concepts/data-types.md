@@ -33,9 +33,9 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 ## Valor padrão
 
-When [variables](variables.md) or [parameters](parameters.md) are typed by means of an [explicit declaration](variables.md#declaring-variables), they receive a default value, which they will keep during the session as long as they have not been assigned.
+Quando as [variáveis](variables.md) ou [parâmetros](parameters.md) são digitados por meio de uma [declaração explícita](variables.md#declaring-variables), recebem um valor por defeito, que manterão durante a sessão enquanto não lhes for atribuído.
 
-The default value depends on the variable type:
+O valor por defeito depende do tipo de variável:
 
 | Tipo       | Valor padrão        |
 | ---------- | ------------------- |

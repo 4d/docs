@@ -65,7 +65,7 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -83,7 +83,7 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 
 El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo objeto del tipo `4D.File`<!-- END REF -->. El comando acepta dos sintaxis:
 
-**File ( path { ; pathType } { ; \* })**
+**File ( path { ; pathType } { ; * })**
 
 En el parámetro *path*, pase una ruta de archivo. Puede utilizar una cadena personalizada o un filesystem (por ejemplo, "/DATA/myfile.txt").
 
@@ -96,7 +96,7 @@ Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con 
 | fk platform path | 1     | Ruta expresada con una sintaxis específica de la plataforma (obligatoria en caso de nombre de ruta de plataforma) |
 | fk posix path    | 0     | Ruta expresada con sintaxis POSIX (por defecto)                                                                   |
 
-**File ( fileConstant { ; \* } )**
+**File ( fileConstant { ; * } )**
 
 En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizando una de las siguientes constantes:
 
@@ -644,7 +644,7 @@ Opcionalmente, puede designar el conjunto de caracteres que se utilizará para l
 
 Si existe un BOM (Byte Order Mark) para el conjunto de caracteres, 4D la inserta en el archivo. Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres "UTF-8" y un BOM.
 
-En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. The following constants, found in the **System Documents** theme are available:
+En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema** están disponibles:
 
 | Constante                     | Valor | Comentario                                                                                                                                                                 |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

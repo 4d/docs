@@ -19,16 +19,16 @@ El Editor de Código 4D ofrece una comprobación básica de errores de sintaxis.
 
 Cada ventana del Editor de Código tiene una barra de herramientas que ofrece acceso instantáneo a las funciones básicas relacionadas con la ejecución y edición de código.
 
-| Elemento                             | Icono                                                                             | Descripción                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Ejecución del método**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Cuando se trabaja con métodos, cada ventana del Editor de Código tiene un botón que puede utilizarse para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución:<ul><li> **Ejecutar nuevo proceso**: crea un proceso y ejecuta el método en modo estándar en este proceso.</li><li>**Ejecutar y depurar nuevo proceso**: crea un nuevo proceso y muestra el método en la ventana Depurador para la ejecución paso a paso en este proceso.</li><li>**Ejecutar en el proceso de Aplicación**: ejecuta el método en modo estándar en el contexto del proceso de Aplicación (en otras palabras, la ventana de visualización de registros).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
-| **Buscar en el método**              | ![search-icon](../assets/en/code-editor/search.png)                               | Displays the [*Search* area](#find-and-replace).                                                                                                                                                                                                                                                                                                                    |
-| **Macros**                           | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserta una macro en la selección. Haga clic en la flecha desplegable para mostrar una lista de macros disponibles. Para obtener más información sobre como crear e instanciar macros, consulte [Macros](creating-using-macros.md).                                                                                                                                 |
-| **Expandir todo/Contraer todo**      | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                                            |
-| **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                                               |
-| **Últimos valores del portapapeles** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Muestra los últimos valores almacenados en el portapapeles.                                                                                                                                                                                                                                                                                                         |
-| **Portapapeles**                     | ![iconos del portapapeles](../assets/en/code-editor/clipboards.png)               | Nueve portapapeles disponibles en el editor de código. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                                      |
-| **Despliegue de navegación**         | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Le permite navegar dentro de métodos y clases con contenido etiquetado automáticamente o marcadores declarados manualmente. Ver abajo                                                                                                                                                                                                                               |
+| Elemento                             | Icono                                                                             | Descripción                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Ejecución del método**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Cuando se trabaja con métodos, cada ventana del Editor de Código tiene un botón que puede utilizarse para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución:<ul><li> **Ejecutar nuevo proceso**: crea un proceso y ejecuta el método en modo estándar en este proceso.</li><li>**Ejecutar y depurar nuevo proceso**: crea un nuevo proceso y muestra el método en la ventana Depurador para la ejecución paso a paso en este proceso.</li><li>**Ejecutar en el proceso de Aplicación**: ejecuta el método en modo estándar en el contexto del proceso de Aplicación (en otras palabras, la ventana de visualización de registros).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>Para obtener más información sobre la ejecución de métodos, consulte [Llamar Métodos Proyecto](../Concepts/methods.md#calling-project-methods). |
+| **Buscar en el método**              | ![search-icon](../assets/en/code-editor/search.png)                               | Displays the [*Search* area](#find-and-replace).                                                                                                                                                                                                                                                                                                                                           |
+| **Macros**                           | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserta una macro en la selección. Haga clic en la flecha desplegable para mostrar una lista de macros disponibles. Para obtener más información sobre como crear e instanciar macros, consulte [Macros](creating-using-macros.md).                                                                                                                                                        |
+| **Expandir todo/Contraer todo**      | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                                                                   |
+| **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                                                                      |
+| **Últimos valores del portapapeles** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Muestra los últimos valores almacenados en el portapapeles.                                                                                                                                                                                                                                                                                                                                |
+| **Portapapeles**                     | ![iconos del portapapeles](../assets/en/code-editor/clipboards.png)               | Nueve portapapeles disponibles en el editor de código. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                                                             |
+| **Despliegue de navegación**         | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Le permite navegar dentro de métodos y clases con contenido etiquetado automáticamente o marcadores declarados manualmente. Ver abajo                                                                                                                                                                                                                                                      |
 
 
 ### Área de edición
@@ -226,7 +226,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | Doble clic                                                | Seleccionar un nombre de elemento del lenguaje                                                                                                |
 | [Alt]+doble clic                                          | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                |
 | [Shift]+[flecha derecha]                                  | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left        |
-| [Shift]+[flecha izquierda]                                | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left         |
+| [Shift]+[flecha izquierda]                                | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda       |
 | [Shift]+[flecha abajo]                                    | Create and enlarge a selection, line by line, from the top to the bottom                                                                      |
 | [Shift]+[flecha arriba]                                   | Create and enlarge a selection, line by line, from the bottom to the top                                                                      |
 | [Ctrl]+[Shift]+[flecha derecha]                           | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                           |
@@ -452,20 +452,20 @@ Presione la tecla **Intror** para seleccionar la ocurrencia más cercana al curs
 
 #### Opciones
 
-- **Sensible a mayúsculas y minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tiene en cuenta las mayúsculas y minúsculas de los caracteres tal y como se han introducido en el área de búsqueda. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
-- **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. Cuando esta opción está marcada, por ejemplo, una búsqueda de "cliente" no encontrará ni "clientes" ni "micliente" By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc.
+- **Sensible a mayúsculas y minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tiene en cuenta las mayúsculas y minúsculas de los caracteres tal y como se han introducido en el área de búsqueda. Esta opción también tiene en cuenta los caracteres diacríticos. Por ejemplo, una búsqueda de "MyVar" no encontrará "myVar"; una búsqueda de "dej" no encontrará "déjà".
+- **Palabra completa** ![full-word](../assets/en/code-editor/full-word.png): limita la búsqueda a las apariciones exactas de la palabra buscada. Cuando esta opción está marcada, por ejemplo, una búsqueda de "cliente" no encontrará ni "clientes" ni "micliente" Por defecto, esta opción no está marcada; por lo tanto, una búsqueda de "var" encontrará "Myvar", "variation", etc.
 
 
 
 ### Reemplazar
 
-Click on the **v** toggle button on the left side of the *Search* area to display/hide the *Replace* area. You can also select **Find > Replace...** in the **Edit** menu or type **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS) .
+Haga clic en el botón de alternancia **v** situado a la izquierda del área *Buscar* para mostrar/ocultar el área *Reemplazar*. También puede seleccionar **Buscar > Reemplazar...** en el menú **Editar** o escribir **Ctrl+Alt+F** (Windows)/**Cmd+Alt+F** (macOS).
 
-The *Replace* entry area is used to define the character string that will replace the one defined above.
+El área de entrada *Reemplazar* se utiliza para definir la cadena de caracteres que sustituirá a la definida anteriormente.
 
-Click the **Replace** button to launch the search with all defined options and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the [**Edit** menu](#shortcuts).
+Haga clic en el botón **Reemplazar** para iniciar la búsqueda con todas las opciones definidas y reemplazar la primera ocurrencia encontrada. 4D begins searching from the current text insertion point and continues to the end of the method. A continuación, es posible seguir buscando/reemplazando utilizando los comandos **Reemplazar siguiente** y **Reemplazar anterior** del menú [**Editar**](#shortcuts).
 
-Click the **Replace all** button to replace all the occurrences corresponding to the search criteria directly in the open method.
+Haga clic en el botón **Reemplazar todo** para reemplazar todas las ocurrencias correspondientes a los criterios de búsqueda directamente en el método abierto.
 
 
 
@@ -485,9 +485,9 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 
 
-## Syntax errors
+## Errores de sintaxis
 
-4D comprueba automáticamente la sintaxis del método para ver si es correcta. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+4D comprueba automáticamente la sintaxis del método para ver si es correcta. Si introduce texto o selecciona un componente que no es sintácticamente correcto, 4D muestra un símbolo para indicar la expresión incorrecta ![](../assets/en/code-editor/incorrect-expression-icon.png). Al pasar el ratón por encima del símbolo, un mensaje de ayuda muestra la causa del error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
@@ -507,19 +507,19 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. El compilador también ofrece una ayuda indispensable para detectar errores. Para más información sobre el compilador, consulte el capítulo [Compilación](../Project/compiler.md).
 
-## Help tips
+## Mensajes de ayuda
 
-The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
+El Editor de código ofrece diversa información contextual utilizando consejos de ayuda. Aparecen al pasar el ratón sobre un objeto.
 
 :::tip
 
-The [status bar](#status-bar) also provides contextual information.
+La [barra de estado](#status-bar) también ofrece información contextual.
 
 :::
 
-- **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Syntax errors](#syntax-errors)).
+- **Errores**: al pasar el ratón sobre el símbolo que indica un error a la izquierda del área de edición, aparece un consejo de ayuda que muestra la causa del error (ver [Errores de sintaxis](#syntax-errors)).
 
-- **4D command documentation**: When you move the mouse over a 4D command or function, a help tip provides its syntax along with a brief description of how it works. ![](../assets/en/code-editor/status-bar-description.png)
+- **Documentación de comandos 4D**: al pasar el ratón sobre un comando o función 4D, un mensaje de ayuda ofrece su sintaxis junto con una breve descripción de su funcionamiento. ![](../assets/en/code-editor/status-bar-description.png)
 
 - **Variable type and description**: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any. ![](../assets/en/code-editor/variable-type.png)
 
@@ -531,9 +531,9 @@ The [status bar](#status-bar) also provides contextual information.
 - You can also create a **dedicated documentation file** named `<MethodName>.md` in the `<package>/documentation` folder. See [Viewing documentation in the code editor](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
 
-## Comment / Uncomment
+## Comentar / Descomentar
 
-The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea. No hay límite en el número de líneas.
+El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), que son líneas de código inactivas. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea. No hay límite en el número de líneas.
 
 Existen dos tipos de comentarios: `//comment` (comentario de una línea) y `/*comment*/`(comentarios en línea o bloques de comentarios multilínea).
 
@@ -564,8 +564,8 @@ Hay varias formas de expandir y contraer código:
 - Use the commands of the **Method > Collapse/Expand** submenu:
 
   - **Collapse Selection** / **Expand Selection**: collapses or expands all the code structures found in the text selection.
-  - **Collapse Current Level** / **Expand Current Level**: collapses or expands the code structure at the level where the cursor is located. These commands are also available in the **context menu** of the editor.
-  - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. Estos comandos también están disponibles en la barra de herramientas del editor.
+  - **Contraer nivel actual** / **Expandir nivel actual**: contrae o expande la estructura del código en el nivel en el que se encuentra el cursor. Estos comandos también están disponibles en el **menú contextual** del editor.
+  - **Contraer todo** / **Expandir todo**: contrae o expande todos los bucles y condiciones de un método. Estos comandos también están disponibles en la barra de herramientas del editor.
 
 
 ## Blocks
@@ -574,49 +574,49 @@ Blocks can be defined by:
 
 - Comillas
 - Paréntesis
-- A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
+- Una estructura lógica (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Paréntesis
 
 ### Select Enclosing Block
 
 The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point.
 
-If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.
+Si ya se ha seleccionado un bloque de texto, la función selecciona el bloque adyacente del nivel inmediatamente superior, y así sucesivamente, hasta seleccionar todo el método.
 
-Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you to reverse this operation and deselect the last enclosing block selected.
+Si presiona **Ctrl+Mayús+B** (Windows) o **Comando+Mayús+B** (macOS), podrá invertir esta operación y anular la selección del último bloque delimitador seleccionado.
 
-**Note:** If the insertion point is placed in an `If` or `Else` type structure, the enclosing block will be the one containing, respectively, the `If` or `Else` statement.
+**Nota:** si el punto de inserción se sitúa en una estructura de tipo `If` o `Else`, el bloque que lo encierra será el que contenga, respectivamente, la sentencia `If` o `Else`.
 
 
 ### Inicio del bloque o fin del bloque
 
-Two commands make it easier to move around within code structures (e.g. `If...Else...End if`):
+Dos comandos facilitan el desplazamiento dentro de estructuras de código (por ejemplo, `If...Else...End if`):
 
 - **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
 - **End Of Block**: places the cursor at the end of the current structure, just after the final keyword.
 
 Estos comandos se encuentran en el menú **Método**, así como en el menú contextual del editor. También puede utilizar los siguientes atajos:
 
-- Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
+- Windows: **Ctrl + flecha arriba** o **Ctrl** + **flecha abajo**'
 - macOS: **Comando** + **flecha arriba** o **Comando** +**flecha abajo**.
 
-## Bookmarks
+## Marcadores
 
-4D le permite asociar marcadores con ciertas líneas en sus métodos. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
+4D le permite asociar marcadores con ciertas líneas en sus métodos. A continuación, puede navegar rápidamente por el código pasando de un marcador a otro utilizando comandos específicos.
 
 ![](../assets/en/code-editor/bookm.png)
 
-A bookmark moves along with its original row if additional rows are inserted in the method. Los marcadores se guardan con los métodos.
+Un marcador se desplaza junto con su línea original si se insertan líneas adicionales en el método. Los marcadores se guardan con los métodos.
 
-Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
+Los marcadores se gestionan utilizando el submenú **Marcadores** del menú **Método**:
 
-- **Toggle**: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. This function is also available using the **Toggle Bookmark** command of the editor's context menu or using the **Ctrl+F3** (Windows) or **Command+F3** (macOS) keyboard shortcut.
-- **Remove All**: Removes all bookmarks from the foreground window.
-- **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
+- **Toggle**: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. Esta función también está disponible utilizando el comando **Alternar marcador** del menú contextual del editor o utilizando el atajo de teclado **Ctrl+F3** (Windows) o **Comando+F3** (macOS).
+- **Eliminar todo**: elimina todos los marcadores de la ventana en primer plano.
+- **Ir al siguiente** / **Ir al anterior**: permite navegar entre los marcadores de la ventana. Al seleccionar uno de estos comandos, el cursor se sitúa en el primer caracter de la línea asociada al marcador en cuestión. También puede utilizar los atajos de teclado **F3** (ir a la siguiente) o **Mayús+F3** (ir a la anterior).
 
 |
 
-You can use bookmarks as markers for lines that contain an [item found by a search](#find). En este caso, 4D añade automáticamente los marcadores. For more information, refer to [Bookmark all](#bookmark-all).
+Puede utilizar marcadores como señalizadores de líneas que contengan un elemento [encontrado mediante una búsqueda](#find). En este caso, 4D añade automáticamente los marcadores. For more information, refer to [Bookmark all](#bookmark-all).
 
 :::
 
@@ -636,40 +636,40 @@ Este comando muestra sus resultados en una nueva ventana.
 
 ## Goto Definition
 
-The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
+The **Goto Definition** command opens the definition of an element referenced in the Code Editor. Para ello, coloque el cursor dentro del nombre del objeto o selecciónelo, y elija **Método** > **Ir a Definición...** o utilice el menú contextual del editor.
 
 :::tip
 
-This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) / **Command+K** (macOS) or  **Alt+double-click**.
+Esta funcionalidad también está disponible a través del atajo de teclado **Ctrl+K** (Windows) / **Command+K** (macOS) o  **Alt+doble clic**.
 
 :::
 
 The effect of the **Goto Definition...** command varies depending on the target element:
 
-- with a project method, it displays the contents of the method in a new window of the Code Editor
-- with a class name or class function, it opens the class in the the Code Editor
-- with a built-in 4D command or function, it has the same effect as the [**Show documentation**](#show-documentation) command.
+- con un método proyecto, muestra el contenido del método en una nueva ventana del Editor de código
+- con un nombre clase o una función clase, abre la clase en el Editor de código
+- con un comando o función 4D integrado, tiene el mismo efecto que el comando [**Mostrar documentación**](#show-documentation).
 
 ## Mostrar la documentación
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. El efecto varía en función del elemento objetivo. Por ejemplo:
+El comando **Mostrar documentación...** abre la documentación del elemento de destino. Para ello, coloque el cursor dentro del nombre del elemento o selecciónelo y, a continuación, elija **Método** > **Mostrar documentación...** o utilice el menú contextual. El efecto varía en función del elemento objetivo. Por ejemplo:
 
 - Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
-- Selecting a 4D command, function, or class name and choosing **Show documentation...** displays the online documentation.
-- If no element is selected, the command opens the documentation of the method currently opened in the Code Editor, [if any](../Project/documentation.md).
+- Al seleccionar un comando, función o nombre de clase 4D y elegir **Mostrar documentación...** se muestra la documentación en línea.
+- Si no se selecciona ningún elemento, el comando abre la documentación del método actualmente abierto en el Editor de Código, [si existe](../Project/documentation.md).
 
 :::tip
 
-To display the documentation of a 4D "classic" language command, select the command name or simply place the cursor in the name and press **F1**. The documentation of the command is displayed in a new window of your default browser. 4D looks for the documentation depending on the settings made in the Preferences (see [Documentation location](../Preferences/general.md#documentation-location)).
+Para mostrar la documentación de un comando del lenguaje "clásico" 4D, seleccione el nombre del comando o simplemente sitúe el cursor en el nombre y presione **F1**. La documentación del comando se muestra en una nueva ventana de su navegador predeterminado. 4D busca la documentación en función de los ajustes realizados en las Preferencias (ver [Ubicación de la documentación](../Preferences/general.md#documentation-location)).
 
 :::
 
 
-## Search References
+## Buscar referencias
 
-The **Search References...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the project where the current item of the method is referenced (used).
+El comando **Buscar Referencias...** que se encuentra en el menú **Método** o en el menú contextual del Editor de Código encuentra todos los objetos (métodos y formularios) del proyecto en los que el elemento actual del método está referenciado (utilizado).
 
-The current item is either the one selected or the one where the cursor is located. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Puede ser un nombre de campo, un nombre de variable, un comando, una cadena, etc. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 

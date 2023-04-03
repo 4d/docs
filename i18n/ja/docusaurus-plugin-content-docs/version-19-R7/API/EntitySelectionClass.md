@@ -1531,6 +1531,8 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 pathObjects コレクションには必要な数だけオブジェクトを追加することができます。
 > Null は他の値より小さいと評価されます。
 
+*pathString* または *pathObject* に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
+
 #### 例題
 
 
@@ -2010,6 +2012,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 | バージョン | 内容 |
 | ----- | -- |
 | v17   | 追加 |
+
 
 
 </details>

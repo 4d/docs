@@ -109,21 +109,28 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
     - **Rápido** (por defecto): esta opción es un compromiso entre la velocidad de la copia de seguridad y el tamaño del archivo.
     - **Compactado**: la tasa de compresión máxima se aplica a los archivos. Los ficheros de archivos ocupan el menor espacio posible en el disco, pero la copia de seguridad se ralentiza notablemente.
 
-- **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. Puedes configurar estos mecanismos en función de sus necesidades. Los menús asociados a estas opciones contienen índices de **Bajo**, **Medio**, **Alto** y **Ninguno** (por defecto).
+- **Tasa de entrelazamiento y tasa de redundancia** 4D genera archivos utilizando algoritmos específicos que se basan en mecanismos de optimización (entrelazamiento) y seguridad (redundancia). Puedes configurar estos mecanismos en función de sus necesidades. Los menús asociados a estas opciones contienen índices de **Bajo**, **Medio**, **Alto** y **Ninguno** (por defecto).
     - **Tasa de entrelazamiento**: el entrelazamiento consiste en almacenar los datos en sectores no adyacentes para limitar los riesgos en caso de daño de los sectores. Cuanto mayor sea la tasa, mayor será la seguridad; sin embargo, el procesamiento de datos utilizará más memoria.
     - **Tasa de redundancia**: la redundancia permite asegurar los datos presentes en un fichero repitiendo varias veces la misma información. Cuanto mayor sea la tasa de redundancia, mayor será la seguridad de los archivos; sin embargo, el almacenamiento será más lento y el tamaño de los archivos aumentará en consecuencia.
 
 
-### Restauración automática
+### Automatic Restore and log integration
 
 - **Restaurar la última copia de seguridad si la base está dañada**: cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la aplicación, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la aplicación. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 
-- **Integrar el último archivo de historial si la base está incompleta**: cuando se marca esta opción, el programa integra automáticamente el archivo de historial al abrir o restaurar la aplicación.
-    - Durante la apertura de una aplicación, el archivo de historial actual se integra automáticamente si 4D detecta que hay operaciones almacenadas en el archivo de historial que no están presentes en los datos. Esta situación se produce, por ejemplo, si se produce un corte de energía cuando hay operaciones en la caché de datos que aún no se han escrito en el disco.
-    - Al restaurar la aplicación, si el archivo de historial actual o un archivo de copia de seguridad del historial que tiene el mismo número que el archivo de copia de seguridad se almacena en la misma carpeta, 4D examina su contenido. Si contiene operaciones que no se encuentran en el archivo de datos, el programa las integra automáticamente.
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. With 4D Server, if there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
+
+    This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk, or after an anomaly was detected when opening the data file and a restore has occurred.
+
+    :::note
+
+    This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
+
+    :::
+
 
 El usuario no ve ninguna caja de diálogo; la operación es completamente automática. El objetivo es facilitar al máximo su uso. La operación se registra en el diario de copias de seguridad.
 
-> In the case of an automatic restore, only the following elements are restored: - .4DD file - .4DIndx file - .4DSyncData file - .4DSyncHeader file - External Data folder
+> En el caso de una restauración automática, sólo se restauran los siguientes elementos: - archivo .4DD - archivo .4DIndx - archivo .4DSyncData - archivo .4DSyncHeader - Carpeta de datos externa
 > 
 > Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una [restauración manual](restore.md#manually-restoring-a-backup-standard-dialog).

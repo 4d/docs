@@ -177,13 +177,19 @@ You create a new collection and then add a new element:
 
 The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
-Adding an element to this collection must be surrounded by the [`Use...End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Reading an element without a structure is, however, possible.
-> For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
+Adding an element to this collection using the assignment operator must be surrounded by the [`Use...End use`](Concepts/shared.md#useend-use) structure, otherwise an error is generated (this is not necessary when adding elements using functions such as [`push()`](#push) or [`map()`](#map) because they automatically trigger an internal *Use...End use*). Reading an element without a *Use...End use* structure is, however, possible.
+
+:::info
+
+For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
+
+:::
 
 If you do not pass any parameters, `New shared collection` creates an empty shared collection and returns its reference.
 
 You must assign the returned reference to a 4D variable of the Collection type.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+
+> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but do not create any collection.
 
 Optionally, you can prefill the new shared collection by passing one or several *value*(s) as parameter(s). Otherwise, you can add or modify elements subsequently through object notation assignment (see example).
 
@@ -1089,7 +1095,7 @@ You designate the callback to be executed to filter collection elements using ei
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional) and an object in first parameter (*$1*). The callback is called with the parameter(s) passed in *param* (optional).
 
 The callback receives the following parameters:
 
@@ -1099,9 +1105,14 @@ The callback receives the following parameters:
 
 It can set the following parameter(s):
 
-*   (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
+*   *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
 *   *$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
+:::note
+
+When using *methodName* as callback, and if the method does not return any value, `.filter()` will look at the property *$1.result* that you must set to **true** for each element fulfilling the condition.
+
+:::
 
 #### Beispiel 1
 
@@ -1540,6 +1551,8 @@ By default, null or empty elements of the collection are returned in the resulti
 
 
 
+
+
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
@@ -1887,7 +1900,7 @@ If the collection contains elements of different types, they are first grouped b
 Ordering a collection of numbers in ascending and descending order:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)

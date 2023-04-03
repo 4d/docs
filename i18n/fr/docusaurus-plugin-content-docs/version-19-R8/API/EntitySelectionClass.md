@@ -1528,6 +1528,9 @@ Par défaut, les attributs sont triés par ordre croissant ("descending" est fal
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
+
 #### Exemple
 
 
@@ -2011,6 +2014,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 
 
 
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2108,9 +2112,9 @@ Si un filtre est spécifié pour un attribut de type `relatedEntity` :
 
 Si un filtre est spécifié pour un attribut de type`relatedEntities` :
 
-:::caution Warning
+:::caution Avertissement
 
-If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
+Si vous utilisez un autre attribut que la clé primaire comme attribut 1 dans une relation, la valeur de cet attribut sera inscrite dans la propriété "__KEY". N'oubliez pas qu'il est recommandé d'utiliser la clé primaire comme attribut 1 dans vos relations, en particulier lorsque vous utilisez les fonctions `.toCollection()` et `.fromCollection()` .
 
 :::
 
@@ -2254,6 +2258,7 @@ Retourne :
 ```4d
 var $employeesCollection; $filter : Collection
 var $employees : cs.EmployeeSelection
+
 
 $employeesCollection:=New collection
 $filter:=New collection

@@ -3,6 +3,10 @@ id: HTTPRequestClass
 title: HTTPRequest
 ---
 
+`HTTPRequest` クラスを使って、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を扱うことができます。このオブジェクトは、HTTPサーバーへのリクエストの設定と送信、および HTTPサーバーのレスポンスを処理するのに使用します。
+
+`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。 HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
+
 <details><summary>履歴</summary>
 
 | バージョン  | 内容     |
@@ -11,9 +15,6 @@ title: HTTPRequest
 
 </details>
 
-`HTTPRequest` クラスを使って、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を扱うことができます。このオブジェクトは、HTTPサーバーへのリクエストの設定と送信、および HTTPサーバーのレスポンスを処理するのに使用します。
-
-`HTTPRequest` クラスは、`4D` クラスストアにて提供されています。 HTTPリクエストを作成・送信するには、[`HTTPRequest オブジェクト`](#httprequest-オブジェクト) を返す [4D.HTTPRequest.new()](#4dhttprequestnew) 関数を使用します。
 
 ### 例題
 
@@ -259,6 +260,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 #### 説明
 
 `.protocol` プロパティは、 <!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します<!-- END REF -->。 (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
+
 
 <!-- END REF -->
 

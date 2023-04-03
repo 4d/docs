@@ -137,7 +137,7 @@ Devuelve todos los datos de una clase de datos específica.
 
 ## {dataClass}\[{key}]
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company[22] or Company[IT0911AB2200]`
+Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, *por ejemplo*, `Company[22] o Company[IT0911AB2200]`
 
 ### Descripción
 

@@ -73,7 +73,7 @@ Esta pestaña le permite generar un archivo de estructura compilado estándar y/
 
 Genera una aplicación que sólo contiene código compilado.
 
-This feature creates a `.4dz`file within a `Compiled Database/<project name>` folder. Por ejemplo, si ha llamado a su aplicación "MyProject", 4D creará:
+Esta funcionalidad crea un archivo `.4dz` en una carpeta `Compiled Database/<project name>`. Por ejemplo, si ha llamado a su aplicación "MyProject", 4D creará:
 
 *<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
@@ -335,12 +335,13 @@ Si la parte servidor y/o la del cliente de su aplicación ejecutable se utiliza 
 Los elementos deben ser instalados:
 
 * **en Windows**
-  * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server\Server Database` subfolder.
-  * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
+  * **Aplicación servidor** - en la subcarpeta `Client Server
+executable\&#060;ApplicationName&#062;Server\Server Database`.
+  * **Aplicación cliente** - en la subcarpeta `Client Server executable\&#060;ApplicationName&#062;Client`.
 
 * **en macOS**
-  * **Server application** - next to the `<ApplicationName>Server`software package.
-  * **Client application** - next to the `<ApplicationName>Client`software package.
+  * **Aplicación del servidor** - junto al paquete de software `<ApplicationName>Server`.
+  * **Aplicación cliente** - junto al paquete de software `<ApplicationName>Cliente`.
 
 ### Integrar una aplicación cliente monopuesto
 

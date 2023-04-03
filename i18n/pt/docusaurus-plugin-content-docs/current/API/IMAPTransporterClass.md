@@ -1259,7 +1259,7 @@ Para mover uma selecção de mensagens:
 
 #### Exemplo 2
 
-To move all messages in the current mailbox:
+Para mover todas as mensagens na mailbox atual:
 
 ```4d
  var $server;$boxInfo;$status : Object
@@ -1421,13 +1421,13 @@ $options.port:=993
 $options.user:="4d@gmail.com"
 $options.password:="xxxxx"
 
-// Create transporter
+// Criar transporter
 $transporter:=IMAP New transporter($options)
 
-// Select mailbox
+// Selecionar mailbox
 $boxInfo:=$transporter.selectBox("INBOX")
 
-// Mark all messages from INBOX as unseen
+// Marcar todas as mensagens de INBOX como invisíveis
 $flags:=New object
 $flags["$seen"]:=True
 $status:=$transporter.removeFlags(IMAP all;$flags)
@@ -1460,7 +1460,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 #### Descrição
 
-A função `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Attempting to rename a mailbox from a mailbox name that does not exist or to a mailbox name that already exists will generate an error.
+A função `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->muda o nome de uma caixa de correio no servidor IMAP<!-- END REF -->. Tentar mudar o nome de uma caixa de correio de um nome de caixa de correio que não existe ou para um nome de caixa de correio que já existe irá gerar um erro.
 
 No parâmetro `currentName`, passar o nome da caixa de correio para renommer.
 
@@ -1498,7 +1498,7 @@ $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// rename mailbox
+// renomear caixa de correio
 $status:=$transporter.renameBox("Invoices"; "Bills")
 
 If ($status.success)
@@ -1539,9 +1539,9 @@ End if
 
 > Esta função é baseada na especificação do [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. *searchCriteria* consiste em uma ou mais chaves de pesquisa.
+A função `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->procura por mensagens que correspondam ao dado *searchCriteria* na caixa de correio actual<!-- END REF -->. *searchCriteria* consiste em uma ou mais chaves de pesquisa.
 
-*searchCriteria* is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. A search key may be a single or multiple items. Por exemplo:
+*searchCriteria* é um parâmetro de texto que lista uma ou mais chaves de pesquisa (ver [Chaves de pesquisa autorizadas](#authorized-search-keys) abaixo) associadas ou não a valores a procurar. Uma chave de pesquisa pode ser um único ou vários itens. Por exemplo:
 
 ```
 SearchKey1 = FLAGGED SearchKey2 = NOT FLAGGED SearchKey3 = FLAGGED DRAFT
@@ -1549,102 +1549,102 @@ SearchKey1 = FLAGGED SearchKey2 = NOT FLAGGED SearchKey3 = FLAGGED DRAFT
 
 > A correspondência não é normalmente sensível a maiúsculas e minúsculas
 
-* If the *searchCriteria* is a null string, the search will be equivalent to a “select all”.
-* If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
+* Se a *searchCriteria* for uma cadeia nula, a pesquisa será equivalente a uma "seleccionar tudo".
+* Se a *searchCriteria* inclui múltiplas chaves de pesquisa, o resultado é a intersecção (E função) de todas as mensagens que correspondem a essas chaves.
 
 ```
 searchCriteria = FLAGGED FROM "SMITH"
 ```
 
-... returns all messages with \Flagged flag set AND sent by Smith.
+... devolve todas as mensagens com o conjunto de bandeiras sinalizadas E enviadas por Smith.
 
-* You can use the **OR** or **NOT** operators as follows:
+* Pode utilizar os operadores **OR** ou **NOT** como se segue:
 
 ```
 searchCriteria = OR SEEN FLAGGED
 ```
 
-... returns all messages with \Seen flag set OR \Flagged flag set
+... devolve todas as mensagens com o conjunto de bandeiras visíveis OU o conjunto de bandeiras sinalizadoras
 
 ```
 searchCriteria = NOT SEEN
 ```
 
-... returns all messages with \Seen flag not set.
+... devolve todas as mensagens com a bandeira não estabelecida.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
 ```
 
-... returns message whose content-type header contains “Mixed” and does not contain “Text”.
+... devolve mensagem cujo cabeçalho de tipo de conteúdo contém "Mixed" e não contém "Text".
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
 ```
 
-... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+... retorna mensagem cujo cabeçalho do tipo de conteúdo contém " e " e cujo cabeçalho do tipo de conteúdo não contém " o " e cujo cabeçalho do tipo de conteúdo não é " Mixed ".
 
-As concerns the last two examples, notice that the result of the search is different when you remove the parentheses of the first search key list.
+No que diz respeito aos dois últimos exemplos, note que o resultado da pesquisa é diferente quando se remove os parênteses da primeira lista de chaves de pesquisa.
 
-* The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.
+* A *searchCriteria* pode incluir a especificação opcional \[CHARSET] . Esta consiste na palavra "CHARSET" seguida de uma palavra registada \[CHARSET] (US ASCII, ISO-8859). Indica o charset da string *searchCriteria* . Portanto, deve converter a string *searchCriteria* no charset especificado se utilizar a especificação \[CHARSET] (ver os comandos `CONVERT FROM TEXT` ou `Convert to text`). Como padrão, os códigos 4D em Quotable Printable the searchCriteria string se conter caracteres estendidos
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ```
 
-... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.
+... significa que o critério de pesquisa utiliza o iso-8859 charset e o servidor terá de converter o critério de pesquisa antes de efectuar a pesquisa, se necessário.
 
-#### Search value types
+#### Tipos de valores de pesquisa
 
-Search-keys may request the value to search for:
+As chaves de pesquisa podem solicitar o valor a pesquisar:
 
-* **Search-keys with a date value**: the date is a string that must be formatted as follows: *date-day+"-"+date-month+"-"+date-year* where date-day indicates the number of the day of the month (max. 2 characters), date-month indicates the name of the month (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) and date-year indicates the year (4 characters). Example: `searchCriteria = SENTBEFORE 1-Feb-2020` (a date does not usually need to be quoted since it does not contain any special characters)
+* **Chaves de pesquisa com um valor de data**: a data é uma string que deve ser formatada da seguinte forma: *date-day+"-"+date-month+"-"+dateyear* onde data-dia indica o número do dia do mês (máx. 2 caracteres), data-mês indica o nome do mês (Jan/Fev/Mar/Abr/Abr/May/Jun/Jul/Aug/Sep/Oct/Dec) e data-ano indica o ano (4 caracteres). Exemplo: `searchCriteria = SENTBEFORE 1-Fev-2020` (uma data não precisa normalmente de ser citada uma vez que não contém quaisquer caracteres especiais)
 
-* **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Example: `searchCriteria = FROM "SMITH"` For all search keys that use strings, a message matches the key if the string is a substring of the field. Matching is not case-sensitive.
+* **Chaves de pesquisa com um valor de cadeia**: a cadeia pode conter qualquer carácter e deve ser citada. Se a string não conter quaisquer caracteres especiais, como o carácter espacial, por exemplo, não precisa de ser citada. A citação de tais strings assegurará que o seu valor de strings será interpretado correctamente. Exemplo: `searchCriteria = FROM "SMITH"` Para todas as chaves de pesquisa que utilizam strings uma mensagem corresponde à chave se a corda for uma substring do campo. A correspondência não é sensível a maiúsculas e minúsculas.
 
-* **Search-keys with a field-name value**: the field-name is the name of a header field. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
+* **Pesquisa-chaves com um valor de nome de campo**: o nome de campo é o nome de um campo de cabeçalho. Exemplo: `searchCriteria = HEADER CONTENT-TYPE "MISTURADO"`
 
-* **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
+* **Chaves de pesquisa com um valor de marcador**: o valor pode aceitar uma ou várias palavras-chave (incluindo marcadores padrão), separadas por espaços. Exemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
-* **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Exemplos: `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa de correio com 15 mensagens. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+* **Pesquisa-chaves com um valor de conjunto de mensagens**: Identifica um conjunto de mensagens. Para números de sequência de mensagens, estes são números consecutivos de 1 até ao número total de mensagens na caixa de correio. Uma vírgula delimita números individuais; uma vírgula delimita entre dois números, inclusive. Exemplos: `2,4:7,9,12:*` é `2,4,5,6,7,9,12,13,14,15` para uma caixa de correio com 15 mensagens. `searchCriteria = 1:5 RESPOSTA` pesquisa na selecção de mensagens a partir da sequência de mensagens número 1 a 5 para mensagens que tenham o marcador \i1 `searchCriteria= 2,4 RESPOSTA` pesquisa na selecção de mensagens (mensagens números 2 e 4) por mensagens que tenham o marcador \i1
 
 #### Chaves de pesquisa autorizadas
 
-**ALL**: All messages in the mailbox.  
-**ANSWERED**: Messages with the \Answered flag set.  
-**UNANSWERED**: Messages that do not have the \Answered flag set.  
-**DELETED**: Messages with the \Deleted flag set.  
-**UNDELETED**: Messages that do not have the \Deleted flag set.  
-**DRAFT**: Messages with the \Draft flag set.  
-**UNDRAFT**: Messages that do not have the \Draft flag set.  
-**FLAGGED**: Messages with the \Flagged flag set.  
-**UNFLAGGED**: Messages that do not have the \Flagged flag set.  
-**RECENT**: Messages that have the \Recent flag set.  
-**OLD**: Messages that do not have the \Recent flag set.  
-**SEEN**: Messages that have the \Seen flag set.  
-**UNSEEN**: Messages that do not have the \Seen flag set.  
-**NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.  
-***KEYWORD ***flag******: Messages with the specified keyword set.  
-***UNKEYWORD ***flag******: Messages that do not have the specified keyword set.  
-***BEFORE ***date******: Messages whose internal date is earlier than the specified date.  
-***ON ***date******: Messages whose internal date is within the specified date.  
-***SINCE ***date******: Messages whose internal date is within or later than the specified date.  
-***SENTBEFORE ***date******: Messages whose Date header is earlier than the specified date.  
-***SENTON ***date******: Messages whose Date header is within the specified date.  
-***SENTSINCE ***date******: Messages whose Date header is within or later than the specified date.  
-***TO ***string******: Messages that contain the specified string in the TO header.  
-***FROM ***string******: Messages that contain the specified string in the FROM header.  
-***CC ***string******: Messages that contain the specified string in the CC header.  
-***BCC ***string******: Messages that contain the specified string in the BCC header.  
-***SUBJECT ***string******: Messages that contain the specified string in the Subject header.  
-***BODY ***string******: Messages that contain the specified string in the message body.  
-***TEXT ***string******: Messages that contain the specified string in the header or in the message body.  
-***HEADER *field-name* ***string******: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
-***UID ***message-UID******: Messages with unique identifiers corresponding to the specified unique identifier set.  
-***LARGER ***n******: Messages with a size larger than the specified number of bytes.  
-***SMALLER ***n******: Messages with a size smaller than the specified number of bytes.  
-***NOT ***search-key******: Messages that do not match the specified search key.  
-***OR *search-key1* ***search-key2******: Messages that match either search key.  
+**ALL**: Todas as mensagens em mailbox.  
+**ANSWERED**: Mensagens com marcador \Answered .  
+**UNANSWERED**: Mensagens sem o marcador \Answered.  
+**DELETED**: Mensagens com marcador \Deleted.  
+**UNDELETED**: Mensagens com o marcador \Deleted .  
+**DRAFT**: Mensagens com o marcador \Draft.  
+**UNDRAFT**: Mensagens sem o marcador \Draft.  
+**FLAGGED**: Mensagens com o marcador \Flagged.  
+**UNFLAGGED**:Mensagens sem o marcador \Flagged .  
+**RECENT**: Mensagens com o marcador \Recent.  
+**OLD**: Mensagens sem o marcador \Recent .  
+**SEEN**: Mensagens com o marcador \Seen.  
+**UNSEEN**: Mensagens sem o marcador \Seen.  
+**NEW**: Mensagens com o marcador \Recent mas não o marcador \Seen. Isto é funcionalmente equivalente a "(RECENTEMENTE UNSEENTE)".  
+***KEYWORD ***flag******: Mensagens com o conjunto de palavras-chave especificado.  
+***UNKEYWORD ***flag******: Mensagens que não têm a palavra-chave especificada.  
+***ANTES da data *********: Mensagens cuja data interna é anterior à data especificada.  
+***ANTES da data *********: Mensagens cuja data interna está dentro da data especificada.  
+***DESDE ***data******: Mensagens cuja data interna se encontra dentro ou fora da data especificada.  
+***SENTBEFORE ***data******: Mensagens cujo cabeçalho da data é anterior à data especificada.  
+***SENTON ***data******: Mensagens cujo cabeçalho da Data se encontra dentro da data especificada.  
+***SENTSINCE ***data******: Mensagens cujo cabeçalho da Data está dentro ou mais tarde do que a data especificada.  
+***TO ***string******: Mensagens que contêm a string especificada no cabeçalho da TO.  
+***DE ***string******: Mensagens que contêm a cadeia de caracteres especificada no cabeçalho DE.  
+***CC ***string******: Mensagens que contêm a cadeia de caracteres especificada no cabeçalho CC.  
+***BCC ***string******: Mensagens que contêm a cadeia de caracteres especificada no cabeçalho BCC.  
+***SUBJECT ***string******: Mensagens que contêm a cadeia de caracteres especificada no cabeçalho do Subject.  
+***BODY ***string******: Mensagens que contêm a cadeia de caracteres especificada no corpo da mensagem.  
+***TEXTO ***cadeia de caracteres******: Mensagens que contêm a cadeia de caracteres especificada no cabeçalho ou no corpo da mensagem.  
+***HEADER *nome de campo* ***corda******: Mensagens que têm um cabeçalho com o nome de campo especificado e que contêm a corda especificada no corpo do campo.  
+***UID ***message-UID******: Mensagens com identificadores únicos correspondentes ao conjunto de identificadores únicos especificado.  
+***LARGER ***n******: Mensagens com um tamanho maior do que o número de bytes especificado.  
+***SMALLER ***n******: Mensagens com um tamanho menor do que o número especificado de bytes.  
+***NOT ***search-key******: Mensagens que não correspondem à chave de pesquisa especificada.  
+***OU *search-key1* ***search-key2******: Mensagens que correspondem a qualquer uma das chaves de pesquisa.  
 
 <!-- END REF -->
 
@@ -1682,10 +1682,10 @@ No parâmetro *name*, passar o nome da caixa de correio para aceder. O nome repr
 
 O parâmetro opcional *state* define o tipo de acesso à caixa de correio. Os valores possíveis são:
 
-| Constante             | Value | Comentário                                                                                                                                                                          |
-| --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | A caixa de correio seleccionada é acedida com privilégios apenas de leitura. As mensagens com uma flag "recente" (indicando novas mensagens) permanecem inalteradas.                |
-| IMAP read write state | 0     | A caixa de correio seleccionada é acedida com privilégios de leitura e escrita. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Valor padrão) |
+| Constante             | Value | Comentário                                                                                                                                                                                       |
+| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| IMAP read only state  | 1     | A caixa de correio seleccionada é acedida com privilégios apenas de leitura. As mensagens com uma flag "recente" (indicando novas mensagens) permanecem inalteradas.                             |
+| IMAP read write state | 0     | A caixa de correio seleccionada é acedida com privilégios de leitura e escrita. As mensagens são consideradas "vistas" e perdem o marcador "recente" (indicando novas mensagens). (Valor padrão) |
 > * A função gera um erro e devolve **Null** se *name* designar uma caixa de correio inexistente.
 > * Se não houver uma conexão aberta, `.selectBox()` irá abrir uma conexão.
 > * Se a conexão não tiver sido utilizada desde o atraso da ligação determinado (ver `IMAP New transpor ter`), a função [`.checkConnection()`](#checkconnection) é automaticamente chamada.
@@ -1694,18 +1694,18 @@ O parâmetro opcional *state* define o tipo de acesso à caixa de correio. Os va
 
 O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
-| Propriedade    | Tipo   | Descrição                                                                                                                                     |
-| -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| name           | Text   | Nome da nova caixa de correio                                                                                                                 |
-| mailCount      | number | Número de mensagens na caixa de email                                                                                                         |
-| mailRecent     | number | Número de mensagens com a flag "recent"                                                                                                       |
-| id             | text   | Identificação única da caixa de correio                                                                                                       |
-| flags          | text   | Lista de flags actualmente utilizadas para a caixa de correio, separadas por espaços                                                          |
-| permanentFlags | text   | List of flags that the client can change permanently (except for the \Recent flag, which is managed by the IMAP server), separated by spaces |
+| Propriedade    | Tipo   | Descrição                                                                                                                                 |
+| -------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| name           | Text   | Nome da nova caixa de correio                                                                                                             |
+| mailCount      | number | Número de mensagens na caixa de email                                                                                                     |
+| mailRecent     | number | Número de mensagens com a flag "recent"                                                                                                   |
+| id             | text   | Identificação única da caixa de correio                                                                                                   |
+| flags          | text   | Lista de flags actualmente utilizadas para a caixa de correio, separadas por espaços                                                      |
+| permanentFlags | text   | Lista de marcadores que o cliente pode mudar permanentemente (excepto a \Recent, que é gerida pelo servidor IMAP), separadas por espaços |
 
 :::info
 
-If `permanentFlags` string includes the special flag \*, it means that the server supports [custom flags](#addflags).
+Se a string `permanentFlags`  incluir marcador especial \*, significa que o servidor suporta [marcadores (flags) personalizadas](#addflags).
 
 :::
 
@@ -1749,9 +1749,9 @@ If `permanentFlags` string includes the special flag \*, it means that the serve
 
 #### Descrição
 
-A função `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.
+A função `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->permite adicionar ou remover a caixa de correio especificada de/para o conjunto de caixas de correio "subscritas" do servidor IMAP<!-- END REF -->. Como tal, pode optar por restringir uma grande lista de caixas de correio disponíveis, subscrevendo as que normalmente deseja ver.
 
-In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
+No parâmetro `name` , passe o nome da caixa de correio para adicionar (subscrever) às suas caixas de correio "subscritas".
 
 **Objeto devolvido**
 
@@ -1768,7 +1768,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 #### Exemplo
 
-To subscribe to the "Atlas Corp” mailbox in the "Bills" hierarchy:
+Para subscrever a caixa de correio "Atlas Corp" na hierarquia "Bills":
 
 ```4d
 var $pw; $name : text
@@ -1820,9 +1820,9 @@ End if
 
 #### Descrição
 
-A função `.unsubscribe()` <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->removes a mailbox from a set of subscribed mailboxes<!-- END REF -->. This allows you reduce the number of mailboxes you usually see.
+A função `.unsubscribe()` <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->remove uma caixa de correio de um conjunto de caixas de correio subscritas<!-- END REF -->. Isto permite reduzir o número de caixas de correio que normalmente se vêem.
 
-In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
+No parâmetro `name` , passe o nome da caixa de correio para remover (cancelar a subscrição) das suas caixas de correio activas.
 
 **Objeto devolvido**
 
@@ -1839,7 +1839,7 @@ A função devolve um objecto que descreve o estado IMAP:
 
 #### Exemplo
 
-To unsubscribe from the "Atlas Corp” mailbox in the "Bills" hierarchy:
+Para cancelar a subscrição da caixa de correio "Atlas Corp" na hierarquia "Bills":
 
 ```4d
 var $pw; $name : text

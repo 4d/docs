@@ -171,7 +171,7 @@ Pour plus d’informations, reportez-vous à la section [Implémentations du mot
 
 ##### Serveur REST
 
-*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
+*Cette option est obsolète. L'appel de code par le biais d'appels REST n'est possible qu'avec les fonctions de classe du [modèle de données ORDA](../REST/ClassFunctions.md).*
 
 #### Modifier attributs globalement
 

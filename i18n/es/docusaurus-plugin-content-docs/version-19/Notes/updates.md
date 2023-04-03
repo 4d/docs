@@ -3,9 +3,22 @@ id: updates
 title: Notas del lanzamiento
 ---
 
-## 4D v19.5
+:::tip
+
+Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), la entrada del blog que lista todas las nuevas funcionalidades y mejoras de 4D v19 LTS.
+
+:::
+
+## 4D v19.6
 
 #### Lo más destacado
+
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.6): lista de todos los errores que se han corregido en 4D v19.6.
+
+
+## 4D v19.5
+
+#### Puntos fuertes
 
 - 4D v19.5 está certificado en Windows 11 22H2
 - 4D v19.5 está certificado en macOS Ventura (macOS 13)
@@ -15,27 +28,20 @@ title: Notas del lanzamiento
 
 ## Lanzamientos anteriores
 
-:::tip
 
-Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), la entrada del blog que lista todas las nuevas funcionalidades y mejoras de 4D v19 LTS.
-
-:::
-
-- Consulte las [**notas de la versión anterior (19 a 19.4)**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) en doc.4d.com.
+- Consulte las [**notas de la versión anterior**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) en doc.4d.com.
 
 
 ## Tabla de la librería
 
-<details><summary>Haga clic para ver la tabla de las librerías utilizadas en 4D v19.x</summary>
 
 | Librería | Versión actual | Actualizado en 4D | Comentario                                                                                                    |
 | -------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
-| SpreadJS | 14.1.6         | **19.5**          | Motor 4D View Pro                                                                                             |
+| OpenSSL  | 1.1.1s         | 19.6              |                                                                                                               |
+| SpreadJS | 14.1.6         | 19.5              | Motor 4D View Pro                                                                                             |
 | CEF      | 4324           | 19                | Chromium v88. Permite la compilación nativa en las plataformas Apple Silicon.                                 |
-| OpenSSL  | 1.1.1n         | 19.3              |                                                                                                               |
 | webKit   | WKWebView      | 19                |                                                                                                               |
 | ICU      | 68.1           | 18 R6             | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
 | PHP      | 7.3.27         | 18 R6             |                                                                                                               |
 | libldap  | 2.4.48         | 18 R2             |                                                                                                               |
 
-</details>

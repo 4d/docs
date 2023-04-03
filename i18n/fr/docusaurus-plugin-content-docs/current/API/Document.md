@@ -122,7 +122,7 @@ Cette propriété est en **lecture seule**.
 
 La propriété `.hidden` retourne <!-- REF #document.hidden.Summary -->vrai si le fichier est défini comme "caché" au niveau du système<!-- END REF -->, et faux sinon.
 
-Cette propriété est en **lecture seule**.
+Cette propriété est en **lecture/écriture**.
 
 <!-- END REF -->
 

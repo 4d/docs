@@ -13,6 +13,7 @@ Les entity selections peuvent être créées à partir de sélections existantes
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
@@ -177,6 +178,52 @@ A noter que l'entité correspondante est rechargée depuis le datastore.
 
 <!-- END REF -->
 
+
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v20     | Ajout         |
+
+</details>
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| Paramètres | Type      |    | Description                                         |
+| ---------- | --------- |:--:| --------------------------------------------------- |
+| index      | Integer   | -> | Index of entity to return                           |
+| Résultat   | 4D.Entity | <- | The entity at that index|<!-- END REF -->
+
+
+|
+
+
+#### Description
+
+The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
+
+If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+
+The function returns Null if *index* is beyond entity selection limits.
+
+#### Exemple
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
+$emp2:=$employees.at(-3) //starting from the end, 3rd entity
+    //of the $employees entity selection
+```
+
+<!-- END REF -->
 
 
 
@@ -1528,6 +1575,9 @@ Par défaut, les attributs sont triés par ordre croissant ("descending" est fal
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
+
 #### Exemple
 
 
@@ -2011,6 +2061,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 
 
 
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2108,9 +2159,9 @@ Si un filtre est spécifié pour un attribut de type `relatedEntity` :
 
 Si un filtre est spécifié pour un attribut de type`relatedEntities` :
 
-:::caution Warning
+:::caution Avertissement
 
-If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toCollection()` and `.fromCollection()` functions.
+Si vous utilisez un autre attribut que la clé primaire comme attribut 1 dans une relation, la valeur de cet attribut sera inscrite dans la propriété "__KEY". N'oubliez pas qu'il est recommandé d'utiliser la clé primaire comme attribut 1 dans vos relations, en particulier lorsque vous utilisez les fonctions `.toCollection()` et `.fromCollection()` .
 
 :::
 
@@ -2254,6 +2305,7 @@ Retourne :
 ```4d
 var $employeesCollection; $filter : Collection
 var $employees : cs.EmployeeSelection
+
 
 $employeesCollection:=New collection
 $filter:=New collection

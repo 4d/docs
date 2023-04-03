@@ -219,7 +219,7 @@ Function add($x : Integer)
  $0:=String($value)
 ```
 
-#### Return value
+#### Valor retornado
 
 You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. Por exemplo:
 

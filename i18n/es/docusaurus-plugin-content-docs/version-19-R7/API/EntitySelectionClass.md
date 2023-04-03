@@ -1512,6 +1512,8 @@ Por defecto, los atributos se clasifican en orden ascendente ("descending" es fa
 Puede añadir tantos objetos en la colección de criterios como sea necesario.
 > Esta función sólo funciona con un datastore remoto (cliente/servidor o conexión `Open datastore`).
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
 #### Ejemplo
 
 
@@ -1977,6 +1979,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
+
 
 
 </details>

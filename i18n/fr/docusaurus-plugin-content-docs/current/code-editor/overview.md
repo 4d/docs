@@ -76,7 +76,7 @@ Le nouveau nom doit respecter les règles de nommage 4D (voir [Identifiants](../
 
 :::caution
 
-Changing the name of a method already used in the database can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. Vous pouvez renommer la méthode manuellement mais il est fortement recommandé d'utiliser la fonction de renommage des méthodes projet, décrite dans la section [Renommer](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
+Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Vous pouvez renommer la méthode manuellement mais il est fortement recommandé d'utiliser la fonction de renommage des méthodes projet, décrite dans la section [Renommer](https://doc.4d.com/4Dv19R5/4D/19-R5/Renaming.300-5851389.en.html). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
 
 Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. Vous pouvez désigner un propriétaire de la méthode pour que seuls certains utilisateurs puissent changer son nom.
 
@@ -179,7 +179,7 @@ Pour plus d’informations, reportez-vous à la section [Implémentations du mot
 
 #### Serveur REST
 
-*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
+*Cette option est obsolète. L'appel de code par le biais d'appels REST n'est possible qu'avec les fonctions de classe du [modèle de données ORDA](../REST/ClassFunctions.md).*
 
 #### Modifier attributs globalement
 

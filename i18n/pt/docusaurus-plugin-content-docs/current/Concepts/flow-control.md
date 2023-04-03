@@ -1,9 +1,9 @@
 ---
 id: control-flow
-title: Control flow
+title: Fluxo de controlo
 ---
 
-Regardless of the simplicity or complexity of a method or function, you will always use one or more of three types of programming structures. Programming structures control the flow of execution, whether and in what order statements are executed within a method. Há três tipos de estruturas:
+Independentemente da simplicidade ou da complexidade de um método ou função, sempre utilizará um ou vários dos três tipos de estruturas de programação. As estruturas de programação determinam o fluxo de execução, se serão executadas, e a ordem das linhas de instruções no método. Há três tipos de estruturas:
 
 - **Sequencial**: uma estrutura sequencial é uma estrutura simples e linear. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. Por exemplo: `[People]lastName:=Uppercase([People]lastName)`
 - **Branching**: uma estrutura de bifurcação permite que os métodos provem uma condição e tomem caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional e a estrutura [`If...Else...End if`](#ifelseend-if), que dirige o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura condicional é a estrutura [`Case of... End case`](#case-ofelseend-case) que direciona fluxo de programa para um de muitas caminhos.
@@ -49,7 +49,7 @@ Note que a expressão booleana é sempre avaliada completamente. Considere parti
  End if
 ```
 
-The expression is TRUE only if both methods are TRUE. Entretanto, mesmo se _MethodA_ devolver  FALSE, 4D ainda iria avaliar _MethodB_, o que seria uma perda de tempo. Nesse caso, é mais interessante usar uma estrutra como:
+A expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo se _MethodA_ devolver  FALSE, 4D ainda iria avaliar _MethodB_, o que seria uma perda de tempo. Nesse caso, é mais interessante usar uma estrutra como:
 
 ```4d
  If(MethodA)
@@ -507,7 +507,7 @@ O loop `For... End for` é geralmente mais rápido que os loops `While... End wh
 
 ### Nested For... End for looping structures
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. This includes nesting `For... End for` loops. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
@@ -621,7 +621,7 @@ Se quiser computar algumas estatísticas para uma coleção de números:
 
 ### Loop nas seleções de entidades
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+When `For each... End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
 
 O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração do loop, o parâmetro *Current_Item* é preenchido automaticamente com a entidade da seleção de entidade que estiver sendo processada atualmente.
 
@@ -782,9 +782,9 @@ End for
 | v19 R4 | Adicionado |
 </details>
 
-The `return` statement can be called from anywhere. When a `return` statement is used in a function or method, the execution of the function or method is stopped. The remaining code is not executed and the control is returned to the caller.
+A declaração `return` pode ser chamada de qualquer lugar. Quando uma declaração `return` é utilizada numa função ou método, a execução da função ou método é interrompida. O código restante não é executado e o controlo é devolvido ao autor da chamada.
 
-The `return` statement can be used to [return a value](parameters.md#return-expression) to the caller.
+A declaração `return` pode ser utilizada para [devolver um valor](parameters.md#return-expression) ao autor da chamada.
 
 #### Exemplo
 

@@ -114,13 +114,20 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
     - **Taux de redondance** : la redondance permet de sécuriser les données présentes dans un fichier en répétant plusieurs fois les mêmes informations. Plus le taux est élevé, plus le fichier est sécurisé, mais plus le stockage est lent et la taille du fichier importante.
 
 
-### Restitution automatique
+### Automatic Restore and log integration
 
 - **Restituer la dernière sauvegarde si la base est endommagée** : lorsque cette option est cochée, le programme déclenche automatiquement la restitution du fichier de données de la dernière sauvegarde valide de l'application s’il détecte une anomalie (fichier corrompu par exemple) lors du lancement de l'application. Aucune intervention de l’utilisateur n’est requise ; l’opération est cependant consignée dans le Journal des sauvegardes.
 
-- **Intégrer le dernier historique si la base est incomplète** : lorsque cette option est cochée, le programme intègre automatiquement l’historique lors de l’ouverture ou de la restitution de l'application.
-    - Lors de l’ouverture d'une application, l’historique courant est automatiquement intégré si 4D détecte que des opérations stockées dans l’historique ne sont pas présentes dans les données. Cette situation se produit par exemple lorsqu’une panne de courant a lieu alors que des opérations non encore écrites sur le disque se trouvaient dans le cache de données.
-    - Lors de la restitution de l'application, si le fichier d’historique courant ou un fichier de sauvegarde d’historique ayant le même numéro que le fichier de sauvegarde est stocké dans le même dossier, 4D examine son contenu. S’il contient des opérations non présentes dans le fichier de données, le programme l’intègre automatiquement.
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. With 4D Server, if there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
+
+    This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk, or after an anomaly was detected when opening the data file and a restore has occurred.
+
+    :::note
+
+    This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
+
+    :::
+
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.
 

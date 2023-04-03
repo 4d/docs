@@ -10,7 +10,7 @@ ORDA permite crear funciones de clase de alto nivel arriba del modelo de datos. 
 Por ejemplo, podría crear una función `getNextWithHigherSalary()` en la clase `EmployeeEntity` para devolver los empleados con un salario superior al seleccionado. Sería tan sencillo como llamar:
 
 ```4d
-$nextHigh:=ds.Employee(1).getNextWithHigherSalary()
+$nextHigh:=ds.Employee.get(1).getNextWithHigherSalary()
 ```
 
 Los desarrolladores no sólo pueden utilizar estas funciones en almacenes de datos locales, sino también en arquitecturas cliente/servidor y remotas:
@@ -701,6 +701,7 @@ Alias students courses.student //relatedEntities
 ```
 
 In the Student dataclass, an alias attribute returns all teachers of a student:
+
 
 ```4d
 // cs.StudentEntity class

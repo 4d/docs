@@ -62,10 +62,10 @@ El comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summa
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                             | Valor por defecto (si se omite)                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| *server*                                                                                                                                                                                                                                                                                                                                                                  | Valor por defecto (si se omite)                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                    |
-| .**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2. | ninguno                                                                  |
+| .**accessTokenOAuth2**: cadena Text que representa las credenciales de autorización OAuth 2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2. | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| se utiliza el modo de autenticación más seguro soportado por el servidor |
 | [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->| `mail mode UTF8` (US-ASCII_UTF8_QP)                                    |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                       |
@@ -73,7 +73,7 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                              |
 | [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->| True                                                                     |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                                  |
-| **password** : TextUser password for authentication on the server. Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2.                                                                                                                                                                                                          | ninguno                                                                  |
+| **password**: contraseña Text usuario para la autenticación en el servidor. Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2.                                                                                                                                                                                                      | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 587                                                                      |
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->| 100                                                                      |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
@@ -86,11 +86,11 @@ La función devuelve un [**SMTP transporter**](#smtp-transporter-object). Todas 
 
 ```4d
  $server:=New object
- $server.host:="smtp.gmail.com" //Mandatory
+ $server.host:="smtp.gmail.com" //Obligatorio
  $server.port:=465
  $server.user:="4D@gmail.com"
  $server.password:="XXXX"
- $server.logFile:="LogTest.txt" //Extended log to save in the Logs folder
+ $server.logFile:="LogTest.txt" //Log extendido a guardar en la carpeta Logs
 
  var $transporter : 4D.SMTPTransporter
  $transporter:=SMTP New transporter($server)
