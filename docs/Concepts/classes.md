@@ -30,7 +30,7 @@ Function sayHello()->$welcome : Text
 
 In a method, creating a "Person":
 
-```
+```4d
 var $person : cs.Person //object of Person class  
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
@@ -163,9 +163,9 @@ When 4D does not find a function or a property in a class, it searches it in its
 Specific 4D keywords can be used in class definitions:
 
 - `Function <Name>` to define class functions of the objects.
+- `Class constructor` to initialize new objects of the class.
 - `property` to define static properties of the objects with a type.
 - `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
-- `Class constructor` to define static properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
 
 ### `Function`
@@ -290,13 +290,51 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
  End if
 ```
 
+### `Class Constructor`
+
+#### Syntax
+
+```4d
+// Class: MyClass
+Class Constructor({$parameterName : type; ...})
+// code
+```
+
+A class constructor function accepts [parameters](#parameters) and can be used to create and initialize objects of the user class.  
+
+When you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function. 
+
+There can only be one constructor function in a class (otherwise an error is returned). A constructor can use the [`Super`](#super) keyword to call the constructor of the super class.
+
+You can create and type instance properties inside the constructor (see example). Alternatively, if your instance properties' values do not depend on parameters passed to the constructor, you can define them using the [`property`](#property) keyword.
+
+
+#### Example
+
+```4d
+// Class: MyClass
+// Class constructor of MyClass
+Class Constructor ($name : Text ; $age : Number)
+ This.name:=$name
+ This.age:=$age
+```
+
+```4d
+// In a project method
+// You can instantiate an object
+var $o : cs.MyClass
+$o:=cs.MyClass.new("John";42)  
+// $o = {"name":"HelloWorld";"age":42}
+```
+
+
 ### `property`
 
 #### Syntax
 
 `property <propertyName>{; propertyName2>;...}{ : <propertyType>}`
 
-The `property` keyword can be used to define a **static** property inside a user class. Declaring class properties enhances code editor suggestions and type-ahead features.
+The `property` keyword can be used to define a static property inside a user class. Declaring class properties enhances code editor suggestions and type-ahead features.
 
 A class property has a name and a type:
 
@@ -326,15 +364,23 @@ The `property` keyword can only be used in class methods and outside any `Functi
 
 :::
 
+
 #### Example
 
-```4d
-property lastname; firstname : Text
+With the `property` keyword, the constructor example can be written as:
 
-function doSomething($lastname : Text; $firstname : Text)
-	This.lastname:=$lastname
-	This.firstname:=$firstname
+```4d
+// Class: MyClass
+
+property name : Text
+property age : Number
+
+Class Constructor ($name : Text ; $age : Number)
+ This.name:=$name
+ This.age:=$age
+
 ```
+
 
 
 ### `Function get` and `Function set`
@@ -408,39 +454,6 @@ Function get fullAddress()->$result : Object
  $result.city:=This.city
  $result.state:=This.state
  $result.country:=This.country 
-```
-
-### `Class Constructor`
-
-#### Syntax
-
-```4d
-// Class: MyClass
-Class Constructor({$parameterName : type; ...})
-// code
-```
-
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.  
-
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
-
-For a class constructor function, the `Current method name` command returns: `<ClassName>:constructor`, for example "MyClass:constructor".
-
-#### Example
-
-```4d
-// Class: MyClass
-// Class constructor of MyClass
-Class Constructor ($name : Text)
- This.name:=$name
-```
-
-```4d
-// In a project method
-// You can instantiate an object
-var $o : cs.MyClass
-$o:=cs.MyClass.new("HelloWorld")  
-// $o = {"name":"HelloWorld"}
 ```
 
 ### `Class extends <ClassName>`
