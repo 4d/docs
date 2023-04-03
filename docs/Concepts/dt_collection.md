@@ -42,14 +42,59 @@ If you assign an element's index that surpasses the last existing element of the
 
 ## Initialization 
 
-Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
+Collections must have been initialized, otherwise trying to read or modify their elements will generate a syntax error.
 
-Example:
+Collection initialization can be done in one of the following ways:
+
+- using the [`New collection`](../API/CollectionClass.md#new-collection) command,
+- using the `[]` operator.
+
+:::info
+
+Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). With such commands, it is not necessary to initialize explicitely objects in this case, the 4D command or function does it for you.
+
+:::
+
+### `New collection` command
+
+The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference. 
+
+Examples:
 
 ```4d
  var $colVar : Collection //creation of collection type 4D variable
  $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ 
+ var $colFilled : Collection
+ $colFilled:=New collection("a";"b";1;42;{}) //initialization of a prefilled collection and assignment
 ```
+
+### `[]` operator
+
+The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets ([]). When you create a collection using a collection literal, it is initialized with the specified values as its elements, and its length is set to the number of arguments specified.
+
+Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **object literals**. 
+
+If an element is undefined, it will appear as Null in the collection.
+
+Examples:
+
+```4d
+var $col1; $col2; $users : Collection
+$col1:=[] //empty collection
+$col2:=[1;2;3;4;5;6] //collection of numbers
+$users:=[{name: "Alice"; \
+	height: 183; \
+	eyecolor: "hazel"; \
+	id: $col2[5]\
+	}; \
+	{name: "Bob"; \
+	height: 172; \
+	eyecolor: "blue"\
+	}]
+```
+
+
 
 ### Regular or shared collection  
 

@@ -41,11 +41,17 @@ Each property value accessed through the object notation is considered an expres
 
 Objects must have been initialized, otherwise trying to read or modify their properties will generate a syntax error.
 
-Object initialization can be done using one of the following ways:
+Object initialization can be done in one of the following ways:
 
-- using [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html)
-- using `{}` operator
-- using a built-in command or function that returns an object.
+- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- using the `{}` operator.
+
+:::info
+
+Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). With such commands, it is not necessary to initialize explicitely objects in this case. The 4D command or function does it for you.
+
+:::
+
 
 
 ### `New object` command
@@ -67,7 +73,7 @@ Examples:
 
 The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). The object literal syntax creates empty or filled objects. 
 
-Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  
+Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
 
 Examples:
 
@@ -77,7 +83,7 @@ Examples:
  $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // initialization of an object
  		// with properties {"a":"foo","b":42,"c":{},"d":false})
 
-	// same properties with variables
+	// same properties using variables
  var $a : Text
  var $b : Number
  var $c : Object
@@ -88,9 +94,23 @@ Examples:
 
 ```
 
-### Commands that return objects
+You can mix the `New object` and literal syntaxes:
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md/#file). With such commands, it is not necessary to initialize explicitely objects in this case, the 4D command or function does it for you.
+```4d
+$o:={\
+	ob1: {age: 42}; \
+	ob2: New object("message"; "Hello"); \
+	form1: Formula(return This.ob1.age+10); \
+	form2 : Formula(ALERT($1)); \
+	col: [1; 2; 3; 4; 5; 6]\
+	}
+
+$o.form1()  //52
+$o.form2($o.ob2.message)  // displays Hello
+$col:=$o.col[5] //6
+```
+
+
 
 
 ### Regular or shared object  
