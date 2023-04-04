@@ -51,7 +51,7 @@ Collection initialization can be done in one of the following ways:
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). With such commands, it is not necessary to initialize explicitely objects in this case, the 4D command or function does it for you.
+Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). In this context, it is not necessary to initialize explicitely the collection, the 4D language does it for you.
 
 :::
 
@@ -66,14 +66,14 @@ Examples:
  $colVar:=New collection //initialization of the collection and assignment to the 4D variable
  
  var $colFilled : Collection
- $colFilled:=New collection("a";"b";1;42;{}) //initialization of a prefilled collection and assignment
+ $colFilled:=New collection("a";"b";1;42;{}) //initialization and assignment of a prefilled collection
 ```
 
 ### `[]` operator
 
-The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets ([]). When you create a collection using a collection literal, it is initialized with the specified values as its elements, and its length is set to the number of arguments specified.
+The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is initialized with the specified values as its elements, and its length is set to the number of arguments specified.
 
-Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **object literals**. 
+Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**. 
 
 If an element is undefined, it will appear as Null in the collection.
 
@@ -83,6 +83,7 @@ Examples:
 var $col1; $col2; $users : Collection
 $col1:=[] //empty collection
 $col2:=[1;2;3;4;5;6] //collection of numbers
+//collection of objects
 $users:=[{name: "Alice"; \
 	height: 183; \
 	eyecolor: "hazel"; \
@@ -100,14 +101,14 @@ $users:=[{name: "Alice"; \
 
 You can create two types of collections:
 
-- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. These collections can be edited without any specific access control but cannot be shared between processes. 
+- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command or collection literal syntax (`[]`). These collections can be edited without any specific access control but cannot be shared between processes. 
 - shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures. 
 
-For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+For more information, refer to the [Shared objects and collections](shared.md) section.
 
 ## Collection functions  
 
-4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](API/CollectionClass.md) section.
+4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](../API/CollectionClass.md) section.
 
 For example:
 
@@ -132,7 +133,7 @@ Several functions accept a _propertyPath_ as parameter. This parameter stands fo
 - either an object property name, for example "lastName"
 - or an object property path, i.e. a hierarchical sequence of sub-properties linked with dot characters, for example "employee.children.firstName".
 
-**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Warning:** When using functions and *propertyPath* parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined

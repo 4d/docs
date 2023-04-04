@@ -48,7 +48,7 @@ Object initialization can be done in one of the following ways:
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). With such commands, it is not necessary to initialize explicitely objects in this case. The 4D command or function does it for you.
+Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). In this case, it is not necessary to initialize explicitely the object, the 4D language does it for you.
 
 :::
 
@@ -65,7 +65,7 @@ Examples:
  $obVar:=New object //initialization of the object and assignment to the 4D variable
  
  var $obFilled : Object 
- $obFilled:=New object("name":"Smith";"age":42) //initialization of a prefilled object and assignment
+ $obFilled:=New object("name":"Smith";"age":42) //initialization and assignment of a prefilled object
 ```
 
 
@@ -119,7 +119,7 @@ You can create two types of objects:
 
 - regular (non-shared) objects, using the [`New object`] command or object literal syntax (`{}`). These objects can be edited without any specific access control but cannot be shared between processes. 
 - shared objects, using the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1526.html) command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
-For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
 ## Syntax basics
