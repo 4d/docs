@@ -718,7 +718,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 |Constant|Value|Comment|
 |---|---|---|
 |`dk diacritical`|8|Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed|
-|`dk count values`|32|Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*, "count":*count*}` properties.|
+|`dk count values`|32|Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties.|
 
 :::note
 
@@ -809,6 +809,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 :::note
 
@@ -2089,6 +2090,7 @@ Assuming we have ds.Employee.all().length = 10
 
 ```4d
 var $slice : cs.EmployeeSelection
+
 $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
 
 ```

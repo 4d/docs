@@ -778,7 +778,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 |Constant|Value|Comment|
 |---|---|---|
 |`ck diacritical`|8|Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed|
-|`ck count values`|32|Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*,"count":*count*}` attributes.|
+|`ck count values`|32|Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*;"count":*count*}` attributes.|
 
 
 #### Examples
@@ -2771,6 +2771,7 @@ var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
+
 
 
 #### Example 2
