@@ -225,8 +225,7 @@ Optionally, use the `Class constructor` keyword to declare properties of the obj
 
 ```4d  
 //in the Rectangle.4dm file
-Class constructor
-var $height; $width : Integer
+Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
 This.width:=$width 
 This.name:="Rectangle"
@@ -238,9 +237,7 @@ A class can extend another class by using `Class extends <ClassName>`. Superclas
 //in the Square.4dm file
 Class extends rectangle
 
-Class constructor
-var $length : Integer
-
+Class constructor ($length : Integer)
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height
 Super($length;$length)
@@ -250,6 +247,7 @@ This.name:="Square"
 
 
 ## Operadores
+
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
 
 | Operator | Operação      | Exemplo   |

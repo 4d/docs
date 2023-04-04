@@ -19,8 +19,10 @@ Entity selections can be created from existing selections using various function
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.distinctPaths().Syntax -->](#distinctPaths)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinctPaths().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->|
@@ -691,20 +693,21 @@ Then this entity selection is updated with products and you want to share the pr
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| Version | Changes                      |
+| ------- | ---------------------------- |
+| v20     | Support of `dk count values` |
+| v17     | Added                        |
 
 </details>
 
-<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| Parameter     | Typ        |    | Beschreibung                                                     |
-| ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Text       | -> | Path of attribute whose distinct values you want to get          |
-| option        | Ganzzahl   | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
+| Parameter     | Typ        |    | Beschreibung                                                    |
+| ------------- | ---------- |:--:| --------------------------------------------------------------- |
+| attributePath | Text       | -> | Path of attribute whose distinct values you want to get         |
+| options       | Ganzzahl   | -> | `dk diacritical`, `dk count values`                             |
 | Ergebnis      | Collection | <- | Collection with only distinct values|<!-- END REF -->
 
 |
@@ -724,7 +727,18 @@ In the *attributePath* parameter, pass the entity attribute whose distinct value
 
 You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
+In the *options* parameter, you can pass one or a combination of the following constants:
+
+| Constant          | Wert | Kommentar                                                                                                                                                                                              |
+| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dk diacritical`  | 8    | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                  |
+| `dk count values` | 32   | Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
+
+:::note
+
+The `dk count values` is only available with storage attributes of type boolean, string, number, and date.
+
+:::
 
 An error is returned if:
 
@@ -736,8 +750,12 @@ An error is returned if:
 You want to get a collection containing a single element per country name:
 
 ```4d
- var $countries : Collection
- $countries:=ds.Employee.all().distinct("address.country")
+var $countries : Collection
+$countries:=ds.Employee.all().distinct("address.country")
+//$countries[0]={"Argentina"}
+//$countries[1]={"Australia"}
+//$countries[2]={"Belgium"}
+///...
 ```
 
 `nicknames` is a collection and `extra` is an object attribute:
@@ -745,6 +763,76 @@ You want to get a collection containing a single element per country name:
 ```4d
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
+
+You want to get the number of different job names in the company:
+
+```4d
+var $jobs : Collection
+$jobs:=ds.Employee.all().distinct("jobName";dk count values)  
+//$jobs[0]={"value":"Developer";"count":17}
+//$jobs[1]={"value":"Office manager";"count":5}
+//$jobs[2]={"value":"Accountant";"count":2}
+//...
+```
+
+
+
+<!-- END REF -->
+
+
+<!-- REF EntitySelectionClass.distinctPaths().Desc -->
+## .distinctPaths()
+
+<details><summary>History</summary>
+
+| Version | Changes |
+| ------- | ------- |
+| v20     | Added   |
+
+</details>
+
+<!-- REF #EntitySelectionClass.distinctPaths().Syntax -->**.distinctPaths**( *attribute* : Text ) : Collection<!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.distinctPaths().Params -->
+| Parameter | Typ        |    | Beschreibung                                                  |
+| --------- | ---------- |:--:| ------------------------------------------------------------- |
+| attribute | Text       | -> | Object attribute name whose paths you want to get             |
+| Ergebnis  | Collection | <- | New collection with distinct paths|<!-- END REF -->
+
+
+|
+
+
+#### Beschreibung
+
+The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->.
+
+If *attribute* is not an indexed object attribute, an error is generated.
+
+After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+
+#### Beispiel
+
+You want to get all paths stored in a *fullData* object attribute:
+
+```4d
+var $paths : Collection
+$paths:=ds.Employee.all().distinctPaths("fullData")
+//$paths[0]="age"
+//$paths[1]="Children"
+//$paths[2]="Children[].age"
+//$paths[3]="Children[].name"
+//$paths[4]="Children.length"
+///...
+```
+
+
+:::note
+
+*length* is automatically added as path for nested collection properties.
+
+:::
 
 <!-- END REF -->
 
@@ -778,6 +866,7 @@ The `.drop()` function <!-- REF #EntitySelectionClass.drop().Summary -->removes 
 > Removing entities is permanent and cannot be undone. It is recommended to call this action in a transaction in order to have a rollback option.
 
 If a locked entity is encountered during the execution of `.drop()`, it is not removed. By default, the method processes all entities of the entity selection and returns non-droppable entities in the entity selection. If you want the method to stop execution at the first encountered non-droppable entity, pass the `dk stop dropping on first error` constant in the *mode* parameter.
+
 
 #### Beispiel
 
@@ -1221,6 +1310,7 @@ The result of this function is similar to:
 If the entity selection is empty, the function returns Null.
 
 
+
 #### Beispiel
 
 
@@ -1538,13 +1628,9 @@ If the original entity selection and the parameter are not related to the same d
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| Parameter   | Typ                |    | Beschreibung                                                           |
-| ----------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| pathString  | Text               | -> | Attribute path(s) and sorting instruction(s) for the entity selection  |
-| pathObjects | Collection         | -> | Collection of criteria objects                                         |
-| Ergebnis    | 4D.EntitySelection | <- | New entity selection in the specified order|<!-- END REF -->
+|Parameter|Type||Description|
 
-|
+|---------|--- |:---:|------| |pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection| |pathObjects |Collection    |->|Collection of criteria objects| |Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
 
 #### Beschreibung
 
@@ -2043,6 +2129,7 @@ Assuming we have ds.Employee.all().length = 10
 
 ```4d
 var $slice : cs.EmployeeSelection
+
 $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
 
 ```

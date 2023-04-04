@@ -19,8 +19,10 @@ As seleções de entidades podem ser criadas a partir de seleções existentes u
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
+| [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                                              |
+| [<!-- INCLUDE #EntitySelectionClass.distinctPaths().Syntax -->](#distinctPaths)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinctPaths().Summary -->                               |
 | [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->                                                          |
 | [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->                                                       |
@@ -678,14 +680,15 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Versão | Mudanças                     |
+| ------ | ---------------------------- |
+| v20    | Support of `dk count values` |
+| v17    | Adicionado                   |
 
 </details>
 
 
-<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *options* : Integer } ) : Collection<!-- END REF -->
 
 
 
@@ -693,7 +696,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 | Parâmetros    | Tipo       |    | Descrição                                                       |
 | ------------- | ---------- |:--:| --------------------------------------------------------------- |
 | attributePath | Text       | -> | Rota do atributo cujos valores quer obter                       |
-| option        | Integer    | -> | `dk diacritical`: avaliação diacríticos ("A" # "a" por exemplo) |
+| options       | Integer    | -> | `dk diacritical`, `dk count values`                             |
 | Resultados    | Collection | <- | Coleção apenas com valores distintos|<!-- END REF --> |
 
 #### Descrição
@@ -711,7 +714,18 @@ No parámetro *attributePath*, passe o atributo de entidade cujos valores distin
 
 Pode utilizar a notação `[]` para designar uma coleção quando *attributePath* for uma rota dentro de um objeto (ver exemplos).
 
-Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie minúsculas de maiúsculas ou que diferencie letras acentuadas, passe a constante `dk diacritical` no parâmetro*option*.
+In the *options* parameter, you can pass one or a combination of the following constants:
+
+| Constante         | Value | Comentário                                                                                                                                                                                             |
+| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dk diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                  |
+| `dk count values` | 32    | Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
+
+:::note
+
+The `dk count values` is only available with storage attributes of type boolean, string, number, and date.
+
+:::
 
 Um erro é retornado se:
 
@@ -723,8 +737,12 @@ Um erro é retornado se:
 Se quiser obter uma coleção que contenha um só elemento por nome de país:
 
 ```4d
- var $countries : Collection
- $countries:=ds. Employee.all().distinct("address.country")
+var $countries : Collection
+$countries:=ds.Employee.all().distinct("address.country")
+//$countries[0]={"Argentina"}
+//$countries[1]={"Australia"}
+//$countries[2]={"Belgium"}
+///...
 ```
 
 `nicknames` é uma coleção e `extra` for um atributo de objeto:
@@ -733,6 +751,72 @@ Se quiser obter uma coleção que contenha um só elemento por nome de país:
 $values:=ds. Employee.all().distinct("extra.nicknames[].first")
 ```
 
+You want to get the number of different job names in the company:
+
+```4d
+var $jobs : Collection
+$jobs:=ds.Employee.all().distinct("jobName";dk count values)  
+//$jobs[0]={"value":"Developer";"count":17}
+//$jobs[1]={"value":"Office manager";"count":5}
+//$jobs[2]={"value":"Accountant";"count":2}
+//...
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntitySelectionClass.distinctPaths().Desc -->
+## .distinctPaths()
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v20    | Adicionado |
+
+</details>
+
+
+<!-- REF #EntitySelectionClass.distinctPaths().Syntax -->**.distinctPaths**( *attribute* : Text ) : Collection<!-- END REF -->
+
+
+
+<!-- REF #EntitySelectionClass.distinctPaths().Params -->
+| Parâmetros | Tipo       |    | Descrição                                                     |
+| ---------- | ---------- |:--:| ------------------------------------------------------------- |
+| atributo   | Text       | -> | Object attribute name whose paths you want to get             |
+| Resultados | Collection | <- | New collection with distinct paths|<!-- END REF --> |
+
+
+#### Descrição
+
+The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->.
+
+If *attribute* is not an indexed object attribute, an error is generated.
+
+After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+
+#### Exemplo
+
+You want to get all paths stored in a *fullData* object attribute:
+
+```4d
+var $paths : Collection
+$paths:=ds.Employee.all().distinctPaths("fullData")
+//$paths[0]="age"
+//$paths[1]="Children"
+//$paths[2]="Children[].age"
+//$paths[3]="Children[].name"
+//$paths[4]="Children.length"
+///...
+```
+
+
+:::note
+
+*length* is automatically added as path for nested collection properties.
+
+:::
 
 <!-- END REF -->
 
@@ -764,6 +848,7 @@ A função `.drop()` <!-- REF #EntitySelectionClass.drop().Summary -->remove as 
 > A eliminação de entidades é permanente e não pode ser desfeita. É recomendado chamar esta ação em uma transação para ter uma opção de recuperação.
 
 Se encontrar uma entidade bloqueada durante a execução de `.drop()`, não é eliminado. Como padrão o método processa todas as entidades da seleção de entidades e retorna as entidades não elimináveis na entity selection. Se quiser que o método pare a execução na primeira entidade não eliminável encontrada, passe a constante `dk stop dropping on first error` no parâmetro *mode*.
+
 
 #### Exemplo
 
@@ -1199,6 +1284,7 @@ O resultado desta função é similar a:
 Se a entity selection estiver vazia, a função devolve Null.
 
 
+
 #### Exemplo
 
 
@@ -1514,12 +1600,9 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 
 
-<!-- REF #EntitySelectionClass.orderBy().Params -->
-| Parâmetros  | Tipo                |    | Descrição                                                                 |
-| ----------- | ------------------- |:--:| ------------------------------------------------------------------------- |
-| pathString  | Text                | -> | Rota(s) de atributos e instruções de clasificação para a entity selection |
-| pathObjects | Collection          | -> | Coleção de objetos criterio                                               |
-| Resultados  | 4D. EntitySelection | <- | Nova seleção de entidade em ordem especificada|<!-- END REF --> |
+<!-- REF #EntitySelectionClass.orderBy().Params --> |Parameter|Type||Description|
+
+|---------|--- |:---:|------| |pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection| |pathObjects |Collection    |->|Collection of criteria objects| |Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
 
 #### Descrição
 
@@ -2004,8 +2087,9 @@ $sliced:=$sel.slice(0;9) //
 Assuming we have ds. Employee.all().length = 10
 
 ```4d
-var $slice : cs. EmployeeSelection
-$slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+var $slice : cs.EmployeeSelection
+
+$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
 
 ```
 

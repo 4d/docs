@@ -228,9 +228,8 @@ $message:=$o.myClass.hello()
 Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d  
-//en el archivo Rectangle.4dm
-Class constructor
-var $height; $width : Integer
+//in the Rectangle.4dm file
+Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
 This.width:=$width 
 This.name:="Rectangle"
@@ -239,14 +238,12 @@ This.name:="Rectangle"
 Una clase puede extender otra clase utilizando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por ejemplo:
 
 ```4d  
-//en el archivo Square.4dm
+//in the Square.4dm file
 Class extends rectangle
 
-Class constructor
-var $length : Integer
-
-  // Llama al constructor de la clase padre con las dimensiones    
-  // suministradas para el ancho y el alto del Rectángulo
+Class constructor ($length : Integer)
+  // It calls the parent class's constructor with lengths   
+  // provided for the Rectangle's width and height
 Super($length;$length)
 
 This.name:="Square"
@@ -254,6 +251,7 @@ This.name:="Square"
 
 
 ## Operadores
+
 Cuando se utiliza el lenguaje, es raro que se quiera simplemente un dato. Es más probable que quiera hacer algo con esos datos. Estos cálculos se realizan con operadores. Los operadores, en general, toman dos datos y realizan una operación sobre ellos que da como resultado un nuevo dato. Usted ya conoce a la mayoría de los operadores. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
 
 | Operador | Operación      | Ejemplo   |

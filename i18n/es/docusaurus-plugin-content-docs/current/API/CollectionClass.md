@@ -770,20 +770,21 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Versión | Modificaciones               |
+| ------- | ---------------------------- |
+| v20     | Support of `ck count values` |
+| v16 R6  | Añadidos                     |
 
 </details>
 
-<!-- REF #collection.distinct().Syntax -->**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #collection.distinct().Syntax -->**.distinct**( {*options* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.distinct().Params -->
 | Parámetros   | Tipo       |    | Descripción                                                           |
 | ------------ | ---------- |:--:| --------------------------------------------------------------------- |
-| option       | Integer    | -> | `ck diacritical`: evaluación diacrítica ("A" # "a" por ejemplo)       |
 | propertyPath | Text       | -> | Ruta del atributo cuyos valores distintos desea obtener               |
+| options      | Integer    | -> | `ck diacritical`, `ck count values`                                   |
 | Result       | Collection | <- | Nueva colección con sólo valores distintos|<!-- END REF -->
 
 
@@ -797,16 +798,20 @@ La función `.distinct()` <!-- REF #collection.distinct().Summary -->devuelve un
 
 La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
 
-Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación distinga entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro *option*.
+If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
-Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para indicar la propiedad del objeto cuyos valores distintos desea obtener.
+In the *options* parameter, you can pass one or a combination of the following constants:
+
+| Constante         | Valor | Comentario                                                                                                                                                                                            |
+| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                 |
+| `ck count values` | 32    | Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*;"count":*count*}` attributes. |
 
 
-
-#### Ejemplo
+#### Ejemplos
 
 ```4d
- var $c; $c2 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  $c.push("a";"b";"c";"A";"B";"c";"b";"b")
  $c.push(New object("size";1))
@@ -815,6 +820,8 @@ Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para
  $c2:=$c.distinct() //$c2=["a","b","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct(ck diacritical) //$c2=["a","A","b","B","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct("size") //$c2=[1,3]
+ $c3:=$c.distinct("size";ck count values) //$c3=[{value:1,count:2},{value:3,count:1}]
+
 ```
 
 <!-- END REF -->
@@ -1661,6 +1668,7 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 
 <!-- REF #collection.indexOf().Params -->
+
 | Parámetros | Tipo      |    | Descripción                                                                                                   |
 | ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------- |
 | toSearch   | expresión | -> | Expresión a buscar en la colección                                                                            |
@@ -1914,6 +1922,7 @@ $last:=$emptyCol.last() // devuelve Indefinido
 ```
 
 <!-- END REF -->
+
 
 
 
@@ -2238,6 +2247,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 {
     "propertyPath": string,
     "descending": boolean
+
 }
 ```
 
@@ -2375,6 +2385,7 @@ Esta función devuelve una *copia superficial*, lo que significa que los objetos
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
+
 - o en *methodName*, el nombre de un método proyecto (texto).
 
 En la retrolamada, pase un código que compare dos valores y devuelva **true** si el primer valor es menor que el segundo. Puede ofrecer los parámetros *extraParam* a la retrollamada si es necesario.
@@ -2829,6 +2840,7 @@ var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
+
 
 
 #### Ejemplo 2

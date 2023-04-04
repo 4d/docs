@@ -228,8 +228,7 @@ Vous pouvez utiliser le mot-clé `Class constructor` pour déclarer les proprié
 
 ```4d  
 //in the Rectangle.4dm file
-Class constructor
-var $height; $width : Integer
+Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
 This.width:=$width 
 This.name:="Rectangle"
@@ -241,9 +240,7 @@ Une classe peut étendre une autre classe en utilisant `Class extends<ClassName>
 //in the Square.4dm file
 Class extends rectangle
 
-Class constructor
-var $length : Integer
-
+Class constructor ($length : Integer)
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height
 Super($length;$length)
@@ -253,6 +250,7 @@ This.name:="Square"
 
 
 ## Opérateurs
+
 Lorsque vous programmez avec 4D, il est rare que vous ayez simplement besoin de données “brutes”. Le plus souvent, il sera nécessaire de traiter ces données d'une manière ou d'une autre. Vous effectuez ces calculs avec des opérateurs. Les opérateurs, en général, prennent deux valeurs et effectuent avec elles une opération dont le résultat est une troisième valeur. Vous connaissez déjà la plupart des opérateurs. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
 
 | Opérateur | Opération      | Exemple   |

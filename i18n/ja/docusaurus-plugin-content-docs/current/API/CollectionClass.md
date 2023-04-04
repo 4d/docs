@@ -248,10 +248,10 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 
 <!-- REF #collection.at().Params -->
-| 引数    | タイプ     |    | 説明                                                   |
-| ----- | ------- |:--:| ---------------------------------------------------- |
-| index | Integer | -> | Index of element to return                           |
-| 戻り値   | any     | <- | The element at that index|<!-- END REF -->
+| 引数    | タイプ     |    | 説明                                       |
+| ----- | ------- |:--:| ---------------------------------------- |
+| index | Integer | -> | 取得する要素のインデックス                            |
+| 戻り値   | any     | <- | そのインデックスにある要素|<!-- END REF -->
 
 
 |
@@ -259,12 +259,12 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 #### 説明
 
-The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->。
+`.at()` 関数は、 <!-- REF #collection.at().Summary -->*index* の位置にある要素を返します (index は正負の整数)<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-Negative integers count back from the last item in the collection.
+負の整数が渡された場合、コレクションの最後の要素から逆向きに数えます。
 
-The function returns Undefined if *index* is beyond collection limits.
+*index* がコレクションの範囲を超える場合、この関数は Undefined を返します。
 
 #### 例題
 
@@ -765,20 +765,21 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v16 R6 | 追加 |
+| バージョン  | 内容                      |
+| ------ | ----------------------- |
+| v20    | `ck count values` をサポート |
+| v16 R6 | 追加                      |
 
 </details>
 
-<!-- REF #collection.distinct().Syntax -->**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #collection.distinct().Syntax -->**.distinct**( {*options* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.distinct().Params -->
-| 引数           | タイプ        |    | 説明                                                       |
-| ------------ | ---------- |:--:| -------------------------------------------------------- |
-| option       | Integer    | -> | `ck diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
-| propertyPath | Text       | -> | 重複しない値を取得する属性のパス                                         |
+| 引数           | タイプ        |    | 説明                                               |
+| ------------ | ---------- |:--:| ------------------------------------------------ |
+| propertyPath | Text       | -> | 重複しない値を取得する属性のパス                                 |
+| options      | Integer    | -> | `ck diacritical`, `ck count values`              |
 | 戻り値          | Collection | <- | 重複しない値のみを格納した新規コレクション|<!-- END REF -->
 
 
@@ -792,16 +793,20 @@ End use
 
 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
-デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、*option* に `ck diacritical` 定数を渡します。
+If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
-コレクションがオブジェクトを格納している場合には、重複しない値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
+In the *options* parameter, you can pass one or a combination of the following constants:
 
+| 定数                | 値  | 説明                                                                                                                                                                                                    |
+| ----------------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck diacritical`  | 8  | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                 |
+| `ck count values` | 32 | Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*;"count":*count*}` attributes. |
 
 
 #### 例題
 
 ```4d
- var $c; $c2 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  $c.push("a";"b";"c";"A";"B";"c";"b";"b")
  $c.push(New object("size";1))
@@ -810,6 +815,8 @@ End use
  $c2:=$c.distinct() //$c2=["a","b","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct(ck diacritical) //$c2=["a","A","b","B","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct("size") //$c2=[1,3]
+ $c3:=$c.distinct("size";ck count values) //$c3=[{value:1,count:2},{value:3,count:1}]
+
 ```
 
 <!-- END REF -->
@@ -1656,6 +1663,7 @@ The `.includes()` function <!-- REF #collection.includes().Summary -->returns Tr
 
 
 <!-- REF #collection.indexOf().Params -->
+
 | 引数        | タイプ     |    | 説明                                                                   |
 | --------- | ------- |:--:| -------------------------------------------------------------------- |
 | toSearch  | 式       | -> | コレクション内を検索する式                                                        |
@@ -1909,6 +1917,7 @@ $last:=$emptyCol.last() // returns Undefined
 ```
 
 <!-- END REF -->
+
 
 
 
@@ -2233,6 +2242,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 {
     "propertyPath": string,
     "descending": boolean
+
 }
 ```
 
@@ -2370,6 +2380,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:
 
 - *formula* (推奨シンタックス)、関数やプロジェクトメソッドを含むあらゆる実行可能な式を格納できる [Formula オブジェクト](FunctionClass.md)。
+
 - または *methodName*、プロジェクトメソッドの名前 (テキスト)。
 
 コールバックには、二つの値を比較して、最初の値が二つ目の値より低い場合に **true** を返すコードの名称を渡します。 必要に応じて、 *extraParam* に指定した引数をコールバックに渡せます。
@@ -2819,6 +2830,7 @@ var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
+
 
 
 #### 例題 2
