@@ -738,7 +738,7 @@ La collection retournée est automatiquement triée. Les valeurs **Null** ne son
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre *option*.
 
-Si la collection contient des objets, vous pouvez passer le paramètre *propertyPath* afin d'indiquer la propriété d'objet dont vous souhaitez obtenir les valeurs distinctes.
+If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
 
 
