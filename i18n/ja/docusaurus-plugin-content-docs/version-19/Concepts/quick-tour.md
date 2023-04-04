@@ -225,9 +225,8 @@ $message:=$o.myClass.hello()
 `Class constructor` キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。
 
 ```4d  
-// Rectangle.4dm ファイル内
-Class constructor
-var $height; $width : Integer
+//in the Rectangle.4dm file
+Class constructor ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width 
 This.name:="Rectangle"
@@ -236,14 +235,13 @@ This.name:="Rectangle"
 クラスはほかのクラスから継承することもできます: `Class extends <ClassName>`。 また、`Super` コマンドを使って、スーパークラスを呼び出すことができます。 例:
 
 ```4d  
-// Square.4dm ファイル内
+//in the Square.4dm file
 Class extends rectangle
 
-Class constructor
-var $length : Integer
+Class constructor($length : Integer)
 
-  // 親クラスのコンストラクターを呼び出します   
-  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
+  // It calls the parent class's constructor with lengths   
+  // provided for the Rectangle's width and height
 Super($length;$length)
 
 This.name:="Square"
