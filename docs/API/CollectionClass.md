@@ -1594,7 +1594,7 @@ Optionally, you can pass the index of collection from which to start the search 
  var $in : Boolean
  var $obj : Object
  $obj:=New object("value"; 10)
- $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5)
+ $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5;$obj)
  $in:=$col.includes(3) //True
  $in:=$col.includes(5;6) //True
  $in:=$col.includes("al@") //True
@@ -2771,6 +2771,7 @@ var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ```
+
 
 
 
