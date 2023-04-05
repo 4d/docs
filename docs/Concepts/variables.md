@@ -78,6 +78,8 @@ The following table lists all supported `varType` values:
 |`Object`|Object with default class (4D.Object)|
 |`4D.<className>`|Object of the 4D class name|
 |`cs.<className>`|Object of the user class name|
+|`cs.<namespace><className>`|Object of the `<namespace>` component class name|
+
 
 #### Examples
 
