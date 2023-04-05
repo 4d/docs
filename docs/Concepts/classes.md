@@ -17,7 +17,6 @@ For example, you could create a `Person` class with the following definition:
 ```4d  
 //Class: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
- property firstName; firstName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
