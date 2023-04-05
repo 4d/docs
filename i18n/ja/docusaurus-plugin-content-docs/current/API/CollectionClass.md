@@ -793,14 +793,14 @@ End use
 
 返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
-If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
+コレクションがオブジェクトを格納している場合には、重複しない値を取得するオブジェクトプロパティのパスを *propertyPath* に渡します。
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+*options* 引数として、以下の定数を 1つ、または組み合わせで渡すことができます:
 
-| 定数                | 値  | 説明                                                                                                                                                                                                    |
-| ----------------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck diacritical`  | 8  | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                 |
-| `ck count values` | 32 | Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*;"count":*count*}` attributes. |
+| 定数                | 値  | 説明                                                                                                                                    |
+| ----------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck diacritical`  | 8  | 文字の大小とアクセントを区別して評価をおこないます。 省略された場合のデフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。                                                               |
+| `ck count values` | 32 | 特定の値を持つ要素の数 (重複がなければ 1、重複があればその数) を返します。 このオプションを渡すと、`.distinct()` は、`{"value":*value*;"count":*count*}` のプロパティを含むオブジェクトのコレクションを返します。 |
 
 
 #### 例題
@@ -1407,10 +1407,10 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### 説明
 
-`.first()` 関数は、 <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->。
+`.first()` 関数は、 <!-- REF #collection.first().Summary -->コレクションの先頭要素を返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-The function returns Undefined if the collection is empty.
+コレクションが空の場合、この関数は undefined を返します。
 
 #### 例題
 
@@ -1421,9 +1421,9 @@ var $first : Variant
 $col:=New collection(10; 20; 30; "hello"; 50)
 $first:=$col.first() // 10
 
-$emptyCol:=New collection() //empty
-// $first:=$emptyCol[0] //would return error
-$first:=$emptyCol.first() // returns Undefined
+$emptyCol:=New collection() // 空のコレクション
+// $first:=$emptyCol[0] // このコードはエラーを返します
+$first:=$emptyCol.first() // このコードは undefined を返します
 ```
 <!-- END REF -->
 
@@ -1445,10 +1445,10 @@ $first:=$emptyCol.first() // returns Undefined
 
 
 <!-- REF #collection.flat().Params -->
-| 引数    | タイプ        |    | 説明                                                                    |
-| ----- | ---------- |:--:| --------------------------------------------------------------------- |
-| depth | Integer    | -> | How deep a nested collection structure should be flattened. デフォルト = 1 |
-| 戻り値   | Collection | <- | Flattened collection|<!-- END REF -->
+| 引数    | タイプ        |    | 説明                                      |
+| ----- | ---------- |:--:| --------------------------------------- |
+| depth | Integer    | -> | ネストされたコレクションの階層をどの範囲まで平坦化するか。 デフォルト = 1 |
+| 戻り値   | Collection | <- | 平坦化されたコレクション|<!-- END REF -->
 
 
 |
@@ -1456,9 +1456,9 @@ $first:=$emptyCol.first() // returns Undefined
 
 #### 説明
 
-The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->。
+`.flat()` 関数は、 <!-- REF #collection.flat().Summary -->*depth* に指定した階層の深さまで、すべてのサブコレクション要素を再帰的に連結した新しいコレクションを作成します<!-- END REF -->。
 
-By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
+*depth* が省略された場合のデフォルトでは、コレクション階層の一つ目のレベルのネストのみが解除されます。
 > このコマンドは、元のコレクションを変更しません。
 
 
@@ -1501,20 +1501,20 @@ $col.flat(MAXLONG)
 <!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
-| 引数         | タイプ         |    | 説明                                                                                        |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                                              |
-| methodName | Text        | -> | メソッド名                                                                                     |
-| param      | any         | -> | *formula* または *methodName* に渡す引数                                                          |
-| 戻り値        | Collection  | <- | Collection of transformed values and flattened by a depth of 1|<!-- END REF -->
+| 引数         | タイプ         |    | 説明                                                            |
+| ---------- | ----------- |:--:| ------------------------------------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                  |
+| methodName | Text        | -> | メソッド名                                                         |
+| param      | any         | -> | *formula* または *methodName* に渡す引数                              |
+| 戻り値        | Collection  | <- | 変換された値を格納し、1レベルのネストが解除された新しいコレクション|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->。 オプションで、*param* パラメーターに、*formula* または *methodName* に渡す引数を指定することができます。
+`.flatMap()` 関数は、 <!-- REF #collection.flatMap().Summary -->元のコレクションの各要素に対して *formula* フォーミュラまたは *methodName* メソッドを呼び出した結果に基づき、1レベルのネストが解除された新しいコレクションを作成します<!-- END REF -->。 オプションで、*param* パラメーターに、*formula* または *methodName* に渡す引数を指定することができます。
 
-This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+この機能は、[`map()`](#map) の呼び出し後に、depth = 1 で [`flat()`](#flat) を呼び出すのと同じです。
 > このコマンドは、元のコレクションを変更しません。
 
 
@@ -1565,7 +1565,7 @@ $result:=$col.flatMap(Formula(Split string($1.value; " ")))
 
 #### 例題 3
 
-You want to compute the percentage of each value in the collection to the total:
+コレクションに含まれる各値の合計に対する割合を計算します:
 
 ```4d
 var $c; $c2 : Collection
@@ -1596,11 +1596,11 @@ $c2:=$c.flatMap($f; $c.sum())
 
 
 <!-- REF #collection.includes().Params -->
-| 引数        | タイプ     |    | 説明                                                                       |
-| --------- | ------- |:--:| ------------------------------------------------------------------------ |
-| toSearch  | 式       | -> | コレクション内を検索する式                                                            |
-| startFrom | Integer | -> | 検索を開始するインデックス                                                            |
-| 戻り値       | Boolean | <- | True if *toSearch* is found in the collection|<!-- END REF -->
+| 引数        | タイプ     |    | 説明                                                       |
+| --------- | ------- |:--:| -------------------------------------------------------- |
+| toSearch  | 式       | -> | コレクション内を検索する式                                            |
+| startFrom | Integer | -> | 検索を開始するインデックス                                            |
+| 戻り値       | Boolean | <- | *toSearch* がコレクションにある場合は true。<!-- END REF -->
 
 
 |
@@ -1608,7 +1608,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 #### 説明
 
-The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->。
+`.includes()` 関数は、 <!-- REF #collection.includes().Summary -->*toSearch* に指定した式がコレクション内で見つかれば true を、そうでなければ false を返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
 *toSearch* パラメーターには、コレクション内で検索する式を渡します。 以下のものを渡すことができます:
@@ -1621,8 +1621,8 @@ The `.includes()` function <!-- REF #collection.includes().Summary -->returns Tr
 
 オプションとして、*startFrom* 引数を渡すことで、検索を開始するコレクション要素のインデックスを指定することができます。
 
-*   If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
-*   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。 Note that even if *startFrom* is negative, the collection is still searched from left to right.
+*   *startFrom* がコレクションの length 以上だった場合、false が返されます。これはコレクションが検索されていないことを意味します。
+*   *startFrom* < 0 の場合には、コレクションの終わりからのオフセットであるとみなされます(*startFrom:=startFrom+length*)。 なお、*startFrom* が負の値であっても、コレクションは左から右へと検索されます。
 *   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
@@ -1632,7 +1632,7 @@ The `.includes()` function <!-- REF #collection.includes().Summary -->returns Tr
  var $in : Boolean
  var $obj : Object
  $obj:=New object("value"; 10)
- $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5)
+ $col:=New collection(1;2;"Henry";5;3;"Albert";6;4;"Alan";5;$obj)
  $in:=$col.includes(3) //True
  $in:=$col.includes(5;6) //True
  $in:=$col.includes("al@") //True
@@ -1896,10 +1896,10 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.last()` 関数は、 <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->。
+`.last()` 関数は、 <!-- REF #collection.last().Summary -->コレクションの最後の要素を返します<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
-The function returns Undefined if the collection is empty.
+コレクションが空の場合、この関数は undefined を返します。
 
 #### 例題
 
@@ -1910,9 +1910,9 @@ var $last : Variant
 $col:=New collection(10; 20; 30; "hello"; 50)
 $last:=$col.last() // 50
 
-$emptyCol:=New collection() //empty
-// $last:=$emptyCol[$emptyCol.length-1] //returns an error
-$last:=$emptyCol.last() // returns Undefined
+$emptyCol:=New collection() // 空のコレクション
+// $last:=$emptyCol[$emptyCol.length-1] // このコードはエラーを返します
+$last:=$emptyCol.last() // このコードは undefined を返します
 
 ```
 
@@ -2735,7 +2735,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 です
 ```
 
 
@@ -2798,7 +2798,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 #### 説明
 
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->。
+`.reduceRight()` 関数は、 <!-- REF #collection.reduceRight().Summary -->*formula* または *methodName* コールバックをアキュムレーターおよびコレクションの各要素に (右から左へ) 適用して、単一の値にまとめます<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
 次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:
@@ -2828,8 +2828,9 @@ The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->appl
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 です
 ```
+
 
 
 
@@ -2850,7 +2851,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
 ***Flatten*** メソッドのコードは以下のとおりです:
 
 ```4d
-    //Flatten project method
+    // Flatten プロジェクトメソッド
  If($1.accumulator=Null)
     $1.accumulator:=New collection
  End if
