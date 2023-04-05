@@ -20,13 +20,14 @@ The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component f
 
 ## Opening the Data Explorer
 
-The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
+[The `WebAdmin` web server](webAdmin.md#starting-the-webadmin-web-server) is started automatically when the Data Explorer is clicked on.
 
-To connect to the Data Explorer web page:
+Connect to the Data Explorer web page:
 
-- if you use a 4D application with interface, select **Data Explorer...** command from:
-  - the **Records** menu (in 4D stand-alone)
-  - the **Window** menu (in 4D Server)  
+- From the 4D interface:
+  - To open a new 4D window with the Data Explorer page displayed in a web area, click on the **Data..** button in the main toolbar or select **Data Explorer** in the Records menu. 
+  - To open the Data Explorer in an external browser tab, click on the **Data..** button in the main toolbar  with the "alt" key (Windows) or "Option" key (macOS) or select **Open Data Explorer in browser** in the Records menu.
+  - In 4D Server, select **Data Explorer** in the Window menu (the Data Explorer is opened automatically on an external browser).
 
 - whether you use a headless 4D application or not, you can open your web browser and enter the following address:
 
