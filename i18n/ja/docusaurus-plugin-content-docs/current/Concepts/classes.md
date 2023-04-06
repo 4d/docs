@@ -8,7 +8,7 @@ title: クラス
 
 4D ランゲージでは **クラス** の概念がサポートされています。 プログラミング言語では、クラスを利用することによって、属性やメソッドなどを持つ特定のオブジェクト種を定義することができます。
 
-ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([スタティック](#class-constructor) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
+ユーザークラスが定義されていれば、そのクラスのオブジェクトをコード内で **インスタンス化** することができます。 各オブジェクトは、それ自身が属するクラスのインスタンスです。 クラスは、別のクラスを [継承](#class-extends-classname) することで、その [関数](#function) と、([宣言された](#property) および [計算された](#function-get-と-function-set)) プロパティを受け継ぐことができます。
 
 > 4D におけるクラスモデルは JavaScript のクラスに類似しており、プロトタイプチェーンに基づきます。
 
@@ -29,7 +29,7 @@ Function sayHello()->$welcome : Text
 
 この "Person" のインスタンスをメソッド内で作成するには、以下のように書けます:
 
-```
+```4d
 var $person : cs.Person // Person クラスのオブジェクト
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
@@ -157,8 +157,9 @@ Class オブジェクトは [共有オブジェクト](shared.md) です。し�
 クラス定義内では、専用の 4Dキーワードが使用できます:
 
 - `Function <Name>`: オブジェクトのクラス関数を定義します。
+- `Class constructor`: クラスの新規インスタンス (オブジェクト) を初期化します。
+- `property`: オブジェクトのスタティックプロパティを型定義します。
 - `Function get <Name>` と `Function set <Name>`: オブジェクトの計算プロパティを定義します。
-- `Class Constructor`: オブジェクトのスタティックプロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
 
 ### `Function`
@@ -174,7 +175,11 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 
 クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
-> **Tip:** アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、この関数は候補として提示されません。
+:::tip
+
+アンダースコア ("_") 文字で関数名を開始すると、その関数は 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateFunction` を宣言した場合、コードエディターにおいて `"cs.MyClass "` とタイプしても、候補として提示されません。
+
+:::
 
 関数名のすぐ後に、名前とデータ型を指定して [引数](#引数) を宣言します (戻り値の宣言も可)。 例:
 
@@ -248,6 +253,8 @@ Function add($x : Variant; $y : Integer): Integer
 ```4d
 // クラス: Rectangle
 Class constructor($width : Integer; $height : Integer)
+ property name : Text
+ property height; width : Integer
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
@@ -279,6 +286,110 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
   return 0
  End if
 ```
+
+### `Class Constructor`
+
+#### シンタックス
+
+```4d
+// クラス: MyClass
+Class Constructor({$parameterName : type; ...})
+// コード
+```
+
+クラスコンストラクター関数を使って、ユーザークラスのオブジェクトを生成・初期化することができます。 このコンストラクターは任意の [引数](#引数) を受け取ることができます。
+
+クラスコンストラクターが定義されていると、[`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
+
+コンストラクター関数は、1つのクラスに 1つしか存在できません (そうでない場合はエラーが返されます)。 [`Super`](#super) キーワードを使用することで、コンストラクターはスーパークラス (親クラス) のコンストラクターを呼び出すことができます。
+
+コンストラクター内でインスタンスのプロパティを作成し、型宣言することができます (例題参照)。 また、インスタンスプロパティの値が、コンストラクターに渡される引数に依存しない場合は、[`property`](#property) キーワードを使用して定義することができます。
+
+
+#### 例題
+
+```4d
+// クラス: MyClass
+// MyClass のクラスコンストラクター
+Class constructor ($name : Text ; $age : Integer)
+ This.name:=$name
+ This.age:=$age
+```
+
+```4d
+// プロジェクトメソッドにて
+// オブジェクトをインスタンス化します
+var $o : cs.MyClass
+$o:=cs.MyClass.new("John";42)
+// $o = {"name":"John";"age":42}
+```
+
+
+### `property`
+
+#### シンタックス
+
+`property <propertyName>{; <propertyName2>;...}{ : <propertyType>}`
+
+`property` キーワードを使用して、ユーザークラス内のプロパティを宣言することができます。 クラスプロパティには、名前と型があります。
+
+クラスプロパティを宣言することで、コードエディターの自動補完機能とエラー検出機能を強化します。
+
+プロパティは、[`new()`](API/ClassClass.md#new) 関数が呼び出されたときに、新規作成するオブジェクトについて宣言されますが、自動で追加されるわけではありません (値が割り当てられた場合にのみ追加されます)。
+
+プロパティ名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
+
+:::tip
+
+アンダースコア ("_") 文字でプロパティ名を開始すると、そのプロパティは 4Dコードエディターの自動補完機能から除外されます。 たとえば、`MyClass` に `Function _myPrivateProperty` を宣言した場合、コードエディターにおいて `"cs.MyClass. "` とタイプしても、候補として提示されません。
+
+:::
+
+プロパティの型として、以下のものがサポートされています:
+
+| propertyType                             | 内容                                     |
+| ---------------------------------------- | -------------------------------------- |
+| `Text`                                   | テキスト値                                  |
+| `Date`                                   | 日付値                                    |
+| `Time`                                   | 時間値                                    |
+| `Boolean`                                | ブール値                                   |
+| `Integer`                                | 倍長整数値                                  |
+| `Real`                                   | 実数値                                    |
+| `Pointer`                                | ポインター値                                 |
+| `Picture`                                | ピクチャー値                                 |
+| `Blob`                                   | スカラーBLOB値                              |
+| `Collection`                             | コレクション値                                |
+| `Variant`                                | バリアント値                                 |
+| `Object`                                 | デフォルトクラス (4D.Object) のオブジェクト           |
+| `4D.<className>`                   | 4Dクラス名のオブジェクト                          |
+| `cs.<className>`                   | ユーザークラス名のオブジェクト                        |
+| `cs.<namespace>.<className>` | `<namespace>` コンポーネントクラス名のオブジェクト |
+
+:::info
+
+`property` キーワードは、クラス関数内の `Function` ブロック外でのみ使用できます。
+
+:::
+
+
+#### 例題
+
+```4d
+// クラス: MyClass
+
+property name : Text
+property age : Integer
+```
+
+メソッド内で:
+
+```4d
+var $o : cs.MyClass
+$o:=cs.MyClass.new() //$o:{}
+$o.name:="John" // $o:{"name" : "John"}
+$o.age:="Smith"  // シンタックスチェックでエラーに
+```
+
 
 ### `Function get` と `Function set`
 
@@ -319,6 +430,7 @@ Function set <name>($parameterName : type)
 // クラス: Person.4dm
 
 Class constructor($firstname : Text; $lastname : Text)
+ property firstName; lastName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -350,39 +462,6 @@ Function get fullAddress()->$result : Object
  $result.city:=This.city
  $result.state:=This.state
  $result.country:=This.country 
-```
-
-### `Class Constructor`
-
-#### シンタックス
-
-```4d
-// クラス: MyClass
-Class Constructor({$parameterName : type; ...})
-// コード
-```
-
-クラスコンストラクター関数を使って、ユーザークラスを定義することができます。このコンストラクターは [引数](#引数) を受け取ることができます。
-
-クラスコンストラクターが定義されていると、[` new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
-
-クラスコンストラクター関数の場合、`Current method name` コマンドは次を返します: `<ClassName>:constructor` (例: "MyClass:constructor")。
-
-#### 例題
-
-```4d
-// クラス: MyClass
-// MyClass のクラスコンストラクター
-Class Constructor ($name : Text)
- This.name:=$name
-```
-
-```4d
-// プロジェクトメソッドにて
-// オブジェクトをインスタンス化します
-var $o : cs.MyClass
-$o:=cs.MyClass.new("HelloWorld")  
-// $o = {"name":"HelloWorld"}
 ```
 
 ### `Class extends <ClassName>`
@@ -434,6 +513,8 @@ Class constructor ($side : Integer)
   $0:=This.height*This.width
 ```
 
+
+
 ### `Super`
 
 #### シンタックス
@@ -441,6 +522,7 @@ Class constructor ($side : Integer)
 ```4d
 Super {( param{;...;paramN} )} {-> Object}
 ```
+
 
 | 引数    | タイプ    |    | 説明               |
 | ----- | ------ | -- | ---------------- |
@@ -585,6 +667,7 @@ Class Constructor
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
+
 
 > コンストラクター内で [Super](#super) キーワードを使ってスーパークラスのコンストラクターを呼び出す場合、必ず `This` より先にスーパークラスのコンストラクターを呼ぶ必要があることに留意してください。順番を違えるとエラーが生成されます。 こちらの [例題](#例題-1) を参照ください。
 

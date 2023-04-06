@@ -695,10 +695,10 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容                           |
-| ----- | ---------------------------- |
-| v20   | Support of `dk count values` |
-| v17   | 追加                           |
+| バージョン | 内容                      |
+| ----- | ----------------------- |
+| v20   | `dk count values` をサポート |
+| v17   | 追加                      |
 
 </details>
 
@@ -729,16 +729,16 @@ $sellist2:=$sellist2.add($sellist1)
 
 *attributePath* がオブジェクト内のパスの場合、`[]` を使ってコレクションを指定できます (例題参照)。
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+*options* 引数として、以下の定数を 1つ、または組み合わせで渡すことができます:
 
-| 定数                | 値  | 説明                                                                                                                                                                                                     |
-| ----------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk diacritical`  | 8  | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                  |
-| `dk count values` | 32 | Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
+| 定数                | 値  | 説明                                                                                                                                         |
+| ----------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dk diacritical`  | 8  | 文字の大小とアクセントを区別して評価をおこないます。 省略された場合のデフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。                                                                    |
+| `dk count values` | 32 | 特定の値を持つエンティティの数 (重複がなければ 1、重複があればその数) を返します。 このオプションを渡すと、`.distinct()` は、`{"value":*value*; "count":*count*}` のプロパティを含むオブジェクトのコレクションを返します。 |
 
 :::note
 
-The `dk count values` is only available with storage attributes of type boolean, string, number, and date.
+`dk count values` は、ブール、文字列、数値、日付型のストレージ属性でのみ利用可能です。
 
 :::
 
@@ -766,7 +766,7 @@ $countries:=ds.Employee.all().distinct("address.country")
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
 
-You want to get the number of different job names in the company:
+社内における職種の名称とそれぞれの社員数を把握するには:
 
 ```4d
 var $jobs : Collection
@@ -797,10 +797,10 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
-| 引数  | タイプ        |    | 説明                                                            |
-| --- | ---------- |:--:| ------------------------------------------------------------- |
-| 属性  | Text       | -> | Object attribute name whose paths you want to get             |
-| 戻り値 | Collection | <- | New collection with distinct paths|<!-- END REF -->
+| 引数        | タイプ        |    | 説明                                              |
+| --------- | ---------- |:--:| ----------------------------------------------- |
+| attribute | Text       | -> | 取得したいパスを持つオブジェクト属性名                             |
+| 戻り値       | Collection | <- | 重複しないパスを格納した新規コレクション|<!-- END REF -->
 
 
 |
@@ -808,15 +808,15 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 #### 説明
 
-The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->。
+`.distinctPaths()` 関数は、 <!-- REF #EntitySelectionClass.distinctPaths().Summary -->対象のエンティティセレクションにおいて *attribute* に指定した、インデックスされているオブジェクト属性の重複しない (異なる) パスを格納したコレクションを返します<!-- END REF -->。
 
-If *attribute* is not an indexed object attribute, an error is generated.
+*attribute* が、インデックスされているオブジェクト属性でない場合、エラーが生成されます。
 
-After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+呼び出し後、返されるコレクションのサイズは、対象のエンティティセレクションにおいて *attribute* で指定したオブジェクト属性が持つ重複しないのパスの数に等しい。 パスは、ネストされた属性やコレクション ("info.address.number" や "children[].birthdate" など) を含め、文字列として返されます。 *attribute* が null 値のエンティティは考慮されません。
 
 #### 例題
 
-You want to get all paths stored in a *fullData* object attribute:
+*fullData* オブジェクト属性に格納されているすべてのパスを取得します:
 
 ```4d
 var $paths : Collection
@@ -832,7 +832,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 :::note
 
-*length* is automatically added as path for nested collection properties.
+*length* は、ネストされたコレクションプロパティのパスとして自動的に追加されます。
 
 :::
 
@@ -1631,7 +1631,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 |引数|タイプ||説明|
 
-|---------|--- |:---:|------| |pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection| |pathObjects |Collection    |->|Collection of criteria objects| |Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
+|---------|--- |:---:|------| |pathString |Text   |->|エンティティセレクションの属性パスと並べ替えの指定| |pathObjects |Collection    |->|条件オブジェクトのコレクション| |Result|4D.EntitySelection|<-|指定された順番に並べ替えられた新規エンティティセレクション|<!-- END REF -->
 
 #### 説明
 
@@ -2131,7 +2131,7 @@ ds.Employee.all().length = 10 である場合:
 ```4d
 var $slice : cs.EmployeeSelection
 
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番までを返そうとしますが、9 > 8 なので空のセレクションが返されます
 
 ```
 
