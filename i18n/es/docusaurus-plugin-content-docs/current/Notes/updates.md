@@ -17,6 +17,7 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) soportan palabras clave personalizadas.
 - Nuevas clases [WebSocketServer](../API/WebSocketServerClass.md) y [WebSocketConnection](../API/WebSocketConnectionClass.md) para crear y gestionar conexiones WebSocket desde 4D.
+- Support of [`property`](../Concepts/classes.md#property) keyword in user class definitions.
 - Nuevas funciones para bloquear/desbloquear el datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
 - New [`.at()`](../API/EntitySelectionClass#at) function in the Entity selection class.
 - New functions in the Collection class: [`.at()`](../API/CollectionClass#at), [`.first()`](../API/CollectionClass#first), [`.flat()`](../API/CollectionClass#flat), [`.flatMap()`](../API/CollectionClass#flatmap),[`.includes()`](../API/CollectionClass#includes), [`.last()`](../API/CollectionClass#last), [`.reduceRight()`](../API/CollectionClass#reduceright).
