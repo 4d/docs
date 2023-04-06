@@ -8,7 +8,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Chaque objet est une instance de sa classe. Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Une classe peut [`étendre`](#class-extends-classname) une autre classe, et hérite alors de ses [fonctions](#function) et de ses propriétés ([statiques](#class-constructor) et [calculées](#function-get-and-function-set)).
+Chaque objet est une instance de sa classe. Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([declared](#property) and [computed](#function-get-and-function-set)).
 
 > Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -29,7 +29,7 @@ Function sayHello()->$welcome : Text
 
 Dans une méthode, créons une "Personne" :
 
-```
+```4d
 var $person : cs.Person //objet de classe Person
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
@@ -157,8 +157,9 @@ Lorsque 4D ne trouve pas de fonction ou de propriété dans une classe, il la re
 Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de classe :
 
 - `Function <Name>` pour définir les fonctions de classe des objets.
+- `Class constructor` to initialize new objects of the class.
+- `property` to define static properties of the objects with a type.
 - `Function get <Name>` et `Function set <Name>` pour définir les propriétés calculées des objets.
-- `Class constructor` pour définir les propriétés statiques des objets.
 - `Class extends <ClassName>` pour définir l'héritage.
 
 ### `Function`
@@ -174,7 +175,11 @@ Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
-> **Astuce :** Si vous préfixez le nom d'une fonction par un trait de soulignement ("_"), elle ne sera pas proposée par les fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
+:::tip
+
+Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
+
+:::
 
 Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
 
@@ -248,11 +253,13 @@ Function add($x : Variant; $y : Integer): Integer
 ```4d
 // Class: Rectangle
 Class constructor($width : Integer; $height : Integer)
+ property name : Text
+ property height; width : Integer
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
 
-// Définition de fonction
+// Function definition
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
@@ -279,6 +286,111 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
   return 0
  End if
 ```
+
+### `Class Constructor`
+
+#### Syntaxe
+
+```4d
+// Class: MyClass
+Class Constructor({$parameterName : type; ...})
+// code
+// code
+```
+
+A class constructor function accepts optional [parameters](#parameters) and can be used to create and initialize objects of the user class.
+
+When you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+
+There can only be one constructor function in a class (otherwise an error is returned). A constructor can use the [`Super`](#super) keyword to call the constructor of the super class.
+
+You can create and type instance properties inside the constructor (see example). Alternatively, if your instance properties' values do not depend on parameters passed to the constructor, you can define them using the [`property`](#property) keyword.
+
+
+#### Exemple
+
+```4d
+// Class: MyClass
+// Class constructor of MyClass
+Class Constructor ($name : Text ; $age : Integer)
+ This.name:=$name
+ This.age:=$age
+```
+
+```4d
+// In a project method
+// You can instantiate an object
+var $o : cs.MyClass
+$o:=cs.MyClass.new("John";42)  
+// $o = {"name":"HelloWorld";"age":42}
+```
+
+
+### `property`
+
+#### Syntaxe
+
+`property <propertyName>{; <propertyName2>;...}{ : <propertyType>}`
+
+The `property` keyword can be used to declare a property inside a user class. A class property has a name and a type.
+
+Declaring class properties enhances code editor suggestions, type-ahead features and error detection.
+
+Properties are declared for new objects when you call the [`new()`](API/ClassClass.md#new) function, however they are not automatically added to objects (they are only added when they are assigned a value).
+
+Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+
+:::tip
+
+Starting the property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `property _myPrivateProperty` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+
+:::
+
+The property type can be one of the following supported types:
+
+| propertyType                             | Contenu                                                |
+| ---------------------------------------- | ------------------------------------------------------ |
+| `Text`                                   | Valeur texte                                           |
+| `Date`                                   | Valeur date                                            |
+| `Time`                                   | Valeur Heure                                           |
+| `Boolean`                                | Valeur booléen                                         |
+| `Integer`                                | Valeur entier long                                     |
+| `Real`                                   | Valeur réel                                            |
+| `Pointer`                                | Valeur pointeur                                        |
+| `Picture`                                | Valeur image                                           |
+| `Blob`                                   | Valeur Blob scalaire                                   |
+| `Collection`                             | Valeur collection                                      |
+| `Variant`                                | Valeur variant                                         |
+| `Object`                                 | Objet avec classe par défaut (4D.Object)               |
+| `4D.<className>`                   | Objet du nom de la classe 4D                           |
+| `cs.<className>`                   | Objet du nom de la classe utilisateur                  |
+| `cs.<namespace>.<className>` | Object of the `<namespace>` component class name |
+
+:::info
+
+The `property` keyword can only be used in class methods and outside any `Function` block.
+
+:::
+
+
+#### Exemple
+
+```4d
+// Class: MyClass
+
+property name : Text
+property age : Integer
+```
+
+In a method:
+
+```4d
+var $o : cs.MyClass
+$o:=cs.MyClass.new() //$o:{}
+$o.name:="John" //$o:{"name" : "John"}
+$o.age:="Smith"  //error with check syntax
+```
+
 
 ### `Function get` et `Function set`
 
@@ -319,6 +431,7 @@ Le type de la propriété calculée est défini par la déclaration de type `$re
 //Class: Person.4dm
 
 Class constructor($firstname : Text; $lastname : Text)
+ property firstName; lastName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -350,40 +463,6 @@ Function get fullAddress()->$result : Object
  $result.city:=This.city
  $result.state:=This.state
  $result.country:=This.country 
-```
-
-### `Class Constructor`
-
-#### Syntaxe
-
-```4d
-// Class: MyClass
-Class Constructor({$parameterName : type; ...})
-// code
-// code
-```
-
-Une fonction class constructor, qui accepte des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
-
-Dans ce cas, lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new), le class constructor est appelé avec les paramètres optionnellement passés à la fonction `new()`.
-
-Pour une fonction class constructor, la commande `Current method name` retourne : `<ClassName>:constructor`, par exemple "MyClass.constructor".
-
-#### Exemple
-
-```4d
-// Class: MyClass
-// Class constructor of MyClass
-Class Constructor ($name : Text)
- This.name:=$name
-```
-
-```4d
-// Dans une méthode projet
-// Vous pouvez instancier un objet
-var $o : cs.MyClass
-$o:=cs.MyClass.new("HelloWorld")  
-// $o = {"name":"HelloWorld"}
 ```
 
 ### `Class extends <ClassName>`
@@ -435,6 +514,8 @@ Class constructor ($side : Integer)
   $0:=This.height*This.width
 ```
 
+
+
 ### `Super`
 
 #### Syntaxe
@@ -442,6 +523,7 @@ Class constructor ($side : Integer)
 ```4d
 Super {( param{;...;paramN} )} {-> Object}
 ```
+
 
 | Paramètres | Type   |    | Description                                                |
 | ---------- | ------ | -- | ---------------------------------------------------------- |
@@ -592,6 +674,7 @@ Class Constructor
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
+
 
 > En cas d'appel de la superclasse du constructeur depuis le constructeur en utilisant le mot-clé [Super](#super), n'oubliez pas que `This` ne doit pas être appelé avant le constructeur de la superclasse, sinon une erreur est générée. Voir [cet exemple](#example-1).
 
