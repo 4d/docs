@@ -85,8 +85,8 @@ Here is the list of tags and their mode of use:
 | `<caret/>` | Location of the insertion point in the code after the macro has been inserted. |
 | `<user_4D/>` | Tag replaced by the name of the current 4D user. |
 | `<user_os/>` | Tag replaced by the current system user name. |
-| `<method_name/>` | Tag replaced by the current project method name. |
-| `<method_path/>` | Tag replaced by full pathname of the current project method. |
+| `<method_name/>` | Tag replaced by the current method name. |
+| `<method_path/>` | Tag replaced by full pathname of the current method. |
 | `<date/>` | Tag replaced by the current date. |
 |  |*Attribute*: |
 |  | - format: 4D format used to display the date. If no format is set, the default format is used. Values = number of 4D format (0 to 8). |
