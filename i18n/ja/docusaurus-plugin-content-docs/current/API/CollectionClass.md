@@ -1471,7 +1471,7 @@ $col.flat()
 // [1, 2, 3, 4]
 
 $col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
-$col.flat()
+$col.flat() // $col.flat(1) と同じ
 // [1, 2, 3, 4, [5, 6]]
 
 $col:=New collection(1; 2; New collection(3; 4; New collection(5; 6)))
