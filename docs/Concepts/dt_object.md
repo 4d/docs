@@ -37,18 +37,18 @@ Each property value accessed through the object notation is considered an expres
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
-## Initialization 
+## Instantiation 
 
-Objects must have been initialized, otherwise trying to read or modify their properties will generate a syntax error.
+Objects must have been instantiated, otherwise trying to read or modify their properties will generate a syntax error.
 
-Object initialization can be done in one of the following ways:
+Object instantiation can be done in one of the following ways:
 
 - using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
 - using the `{}` operator.
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). In this case, it is not necessary to initialize explicitely the object, the 4D language does it for you.
+Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
 
 :::
 
@@ -61,11 +61,11 @@ The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) comm
 Examples:
 
 ```4d
- var $obVar : Object //creation of an object type 4D variable
- $obVar:=New object //initialization of the object and assignment to the 4D variable
+ var $obVar : Object //declaration of an object type 4D variable
+ $obVar:=New object //instantiation of an object and assignment to the 4D variable
  
  var $obFilled : Object 
- $obFilled:=New object("name";"Smith";"age";42) //initialization and assignment of a prefilled object
+ $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
 ```
 
 
@@ -78,9 +78,9 @@ Since any property value is considered an expression, you can create sub-objects
 Examples:
 
 ```4d
- var $o ; $o2 ; $o3 : Object //creation of object variables
- $o := {} // initialization of an empty object 
- $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // initialization of an object
+ var $o ; $o2 ; $o3 : Object //declaration of object variables
+ $o := {} // instantiation of an empty object 
+ $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instantiation of an object
  		// with properties {"a":"foo","b":42,"c":{},"d":false})
 
 	// same properties using variables

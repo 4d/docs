@@ -40,18 +40,18 @@ If you assign an element's index that surpasses the last existing element of the
   //myCol[4]=null
 ```
 
-## Initialization 
+## Instantiation 
 
-Collections must have been initialized, otherwise trying to read or modify their elements will generate a syntax error.
+Collections must have been instantiated, otherwise trying to read or modify their elements will generate a syntax error.
 
-Collection initialization can be done in one of the following ways:
+Collection instantiation can be done in one of the following ways:
 
 - using the [`New collection`](../API/CollectionClass.md#new-collection) command,
 - using the `[]` operator.
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). In this context, it is not necessary to initialize explicitely the collection, the 4D language does it for you.
+Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
 
 :::
 
@@ -62,16 +62,16 @@ The [`New collection`](../API/CollectionClass.md#new-collection) command creates
 Examples:
 
 ```4d
- var $colVar : Collection //creation of collection type 4D variable
- $colVar:=New collection //initialization of the collection and assignment to the 4D variable
+ var $colVar : Collection //declaration of a collection type 4D variable
+ $colVar:=New collection //instantiation of the collection and assignment to the 4D variable
  
  var $colFilled : Collection
- $colFilled:=New collection("a";"b";1;42;{}) //initialization and assignment of a prefilled collection
+ $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
 ```
 
 ### `[]` operator
 
-The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is initialized with the specified values as its elements, and its length is set to the number of arguments specified.
+The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is instantiated with the specified values as its elements, and its length is set to the number of arguments specified.
 
 Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**. 
 
@@ -94,6 +94,12 @@ $users:=[{name: "Alice"; \
 	eyecolor: "blue"\
 	}]
 ```
+
+:::note
+
+If you create a collection literal containing a single element, make sure you do not use a name corresponding to an existing table name, otherwise the table syntax `[tableName]` will take priority. 
+
+:::
 
 
 
