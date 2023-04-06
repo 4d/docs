@@ -65,7 +65,7 @@ Examples:
  $obVar:=New object //initialization of the object and assignment to the 4D variable
  
  var $obFilled : Object 
- $obFilled:=New object("name":"Smith";"age":42) //initialization and assignment of a prefilled object
+ $obFilled:=New object("name";"Smith";"age";42) //initialization and assignment of a prefilled object
 ```
 
 
