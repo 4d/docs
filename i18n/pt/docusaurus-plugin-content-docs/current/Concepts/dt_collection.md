@@ -40,29 +40,81 @@ Se atribuir um índice de elemento que ultrapasse o último elemento existente d
   //myCol[4]=null
 ```
 
-## Inicialização
+## Instantiation
 
-As coleções devem ter sido inicializadas, por exemplo utilizando o comando `New collection`, do contrário ao tentar ler ou modificar seus elementos se gerará um erro de sintaxe.
+Collections must have been instantiated, otherwise trying to read or modify their elements will generate a syntax error.
 
-Exemplo:
+Collection instantiation can be done in one of the following ways:
+
+- using the [`New collection`](../API/CollectionClass.md#new-collection) command,
+- using the `[]` operator.
+
+:::info
+
+Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
+
+:::
+
+### `New collection` command
+
+The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference.
+
+Exemplos:
 
 ```4d
- var $colVar : Collection //criação de uma variável 4D de tipo coleção
- $colVar:=New collection //initialização da coleção e atribuição à variável 4D
+ var $colVar : Collection //declaration of a collection type 4D variable
+ $colVar:=New collection //instantiation of the collection and assignment to the 4D variable
+
+ var $colFilled : Collection
+ $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
 ```
+
+### `[]` operator
+
+The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is instantiated with the specified values as its elements, and its length is set to the number of arguments specified.
+
+Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**.
+
+If an element is undefined, it will appear as Null in the collection.
+
+Exemplos:
+
+```4d
+var $col1; $col2; $users : Collection
+$col1:=[] //empty collection
+$col2:=[1;2;3;4;5;6] //collection of numbers
+//collection of objects
+$users:=[{name: "Alice"; \
+    height: 183; \
+    eyecolor: "hazel"; \
+    id: $col2[5]\
+    }; \
+    {name: "Bob"; \
+    height: 172; \
+    eyecolor: "blue"\
+    }]
+```
+
+:::note
+
+If you create a collection literal containing a single element, make sure you do not use a name corresponding to an existing table name, otherwise the table syntax `[tableName]` will take priority.
+
+:::
+
+
 
 ### Coleção regular ou partilhada
 
 Pode criar dois tipos de coleções:
 
-- colecções regulares (não partilhadas), utilizando o comando [`Nova colecção`](API/CollectionClass.md#new-collection) . Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command or collection literal syntax (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
 - colecções partilhadas, utilizando o comando [`Nova colecção partilhada`](API/CollectionClass.md#new-shared-collection) . Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use... End use`](Concepts/shared.md#useend-use) structures.
 
-Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
+For more information, refer to the [Shared objects and collections](shared.md) section.
 
 ## Funções de Collection
 
-As referências de colecção 4D beneficiam de funções de classe especiais (por vezes nomeadas *funções de membro*). As funções de recolhimento estão listadas na seção [Class API Reference](API/CollectionClass.md) .
+As referências de colecção 4D beneficiam de funções de classe especiais (por vezes nomeadas *funções de membro*). Collection functions are listed in the [Class API Reference](../API/CollectionClass.md) section.
 
 Por exemplo:
 
@@ -87,7 +139,7 @@ Várias funções aceitam um _propertyPath_ como parâmetro. Este parâmetro sig
 - um nome de objeto propriedade por exemplo "Sobrenome"
 - ou uma rota de propriedades de objeto, ou seja, uma sequência hierárquica de subpropriedades vinculadas com caracteres de ponto, por exemplo "empregado.filhos.nome".
 
-**Advertência:** Ao usar funções e parâmetros de propriedadePath, não se pode usar ".", "[ ]", ou espaços nos nomes das propriedades, uma vez que isso impedirá que 4D analise correctamente o caminho:
+**Warning:** When using functions and *propertyPath* parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indefinido
