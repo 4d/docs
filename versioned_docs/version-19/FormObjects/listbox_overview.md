@@ -631,8 +631,8 @@ Depending of the list box type, you can use different properties to customize ro
 |---|----|---|---|
 |Background color|[Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array)|[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression)|[Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
 |Font color|[Row Font Color Array](properties_Text.md#row-font-color-array)|[Font Color Expression](properties_Text.md#font-color-expression)|[Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
-Font style|[Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
-Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
+|Font style|[Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)|
+|Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
 
 ## Printing list boxes
 
@@ -1004,6 +1004,7 @@ The behavior attribute provides variations to the regular representation of valu
 
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
+
 
  OB SET($ob4;"valueType";"integer")
  OB SET($ob4;"value";-3)
