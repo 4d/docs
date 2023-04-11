@@ -178,6 +178,34 @@ Here are the results using the various options for this property:
 
 ---
 
+## Image hugs title
+
+This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+
+This property has no effect when the button contains only a title (no associated picture) or a picture (no title). 
+
+By default, when a button contains a title and a picture, the elements are joined:
+
+![](../assets/en/hug1.png)
+
+Setting this property to `false` keeps the elements away from each other:
+
+![](../assets/en/hug2.png)
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|imageHugsTitle|boolean|true (default), false|
+
+#### Objects Supported
+
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular) - [Radio Button](radio_overview.md) (all styles except Regular)
+
+
+---
+
 ## Vertical Margin
 
 This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
