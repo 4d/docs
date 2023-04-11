@@ -22,6 +22,7 @@ title: リリースノート
 - EntitySelection クラスに新しく [`.at()`](../API/EntitySelectionClass#at) 関数が追加されました。
 - Collection クラスに次の新しい関数が追加されました: [`.at()`](../API/CollectionClass#at), [`.first()`](../API/CollectionClass#first), [`.flat()`](../API/CollectionClass#flat), [`.flatMap()`](../API/CollectionClass#flatmap), [`.includes()`](../API/CollectionClass#includes), [`.last()`](../API/CollectionClass#last), [`.reduceRight()`](../API/CollectionClass#reduceright)。
 - コードエディター: 強化された [検索/置換機能](../code-editor/write-class-method.md#検索と置換)。
+- [**デザインモードを検索**](https://doc.4d.com/4Dv19R8/4D/19-R8/Performing-a-search.300-6125772.ja.html#105269) ダイアログボックスにおいて、"property" ランゲージ要素が新たに検索可能になりました。
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
 - [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail) で *headerOnly* パラメーターをサポート 。
 - [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) および [`collection.distinct()`](../API/CollectionClass.md#distinct) 関数で `count values` オプションをサポートしました。
