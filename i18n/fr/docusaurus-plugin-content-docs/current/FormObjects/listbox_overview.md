@@ -654,9 +654,8 @@ Selon le type de list box, vous pouvez utiliser différentes propriétés pour p
 | -------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Couleur de fond      | [Tableau couleurs de fond](properties_BackgroundAndBorder.md#row-background-color-array) | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) | [Expression couleur de fond](properties_BackgroundAndBorder.md#expression-couleur-de-fond) ou [Meta info expression](properties_Text.md#meta-info-expression) |
 | Couleur de la police | [Tableau couleurs de police](properties_Text.md#row-font-color-array)                    | [Expression couleur police](properties_Text.md#font-color-expression)                       | [Expression couleur police](properties_Text.md#expression-couleur-police) or [Meta info expression](properties_Text.md#meta-info-expression)                  |
- Style de police|
-
-[Tableau de styles](properties_Text.md#tableau-de-styles)|[Expression style](properties_Text.md#expression-style)|[Expression style](properties_Text.md#expression-style) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Tableau de contrôle des lignes](properties_ListBox.md#tableau-de-controle-des-lignes)|-|-|
+| Font style           | [Tableau de styles](properties_Text.md#row-style-array)                                  | [Expression style](properties_Text.md#style-expression)                                     | [Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                                    |
+| Affichage            | [Tableau de contrôle des lignes](properties_ListBox.md#row-control-array)                | -                                                                                           | -                                                                                                                                                             |
 
 
 
@@ -798,6 +797,7 @@ Ce principe est mis en oeuvre pour les tableaux internes permettant de gérer :
 
 - les couleurs
 - background colors
+
 
 - styles
 - les lignes masquées
