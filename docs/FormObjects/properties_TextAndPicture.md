@@ -99,24 +99,32 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 ## Number of States
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive.
+This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). 
+
+The picture can contain 2, 4, 5, or 6 states.
+
+- 2 states: false, true
+- 4 states: false, true, rollover, disabled,
+- 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
+- 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable. 
+
+:::note
+
+- "false" means button not clicked or check box unchecked (variable value=0)
+- "true" means button clicked or check box checked (variable value=1)
+
+:::
 
 Each state is represented by a different picture. In the source picture, the states must be stacked vertically:
 
-![](../assets/en/property_numberOfStates.png)
+![](../assets/en/six-states.png)
 
-The following states are represented:
-
-1. button not clicked / check box unchecked (variable value=0)
-2. button clicked / check box checked (variable value=1)
-3. roll over
-4. disabled
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|iconFrames|number|minimum: 1|
+|iconFrames|number|Number of states in the icon picture. Minimum: 1|
 
 #### Objects Supported
 
