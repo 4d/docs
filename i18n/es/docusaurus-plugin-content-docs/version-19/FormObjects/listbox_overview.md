@@ -616,9 +616,8 @@ Según el tipo de list box, puede utilizar diferentes propiedades para personali
 | --------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Color de fondo  | [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) | [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) o [Meta info expresión](properties_Text.md#meta-info-expression) |
 | Color de fuente | [Array colores de fuente](properties_Text.md#row-font-color-array)                     | [Expresión color fuente](properties_Text.md#font-color-expression)                        | [Expresión color de fuente](properties_Text.md#font-color-expression) o [Meta info expression](properties_Text.md#meta-info-expression)                    |
-
-
-[Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
+| Font style      | [Array de estilos](properties_Text.md#row-style-array)                                 | [Expresión estilo](properties_Text.md#style-expression)                                   | [Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                                 |
+| Visualización   | [Array de control de líneas](properties_ListBox.md#row-control-array)                  | -                                                                                         | -                                                                                                                                                          |
 
 ## Imprimir list boxes
 
@@ -990,6 +989,7 @@ El atributo behavior ofrece variaciones a la representación estándar de los va
 
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
+
 
  OB SET($ob4;"valueType";"integer")
  OB SET($ob4;"value";-3)
