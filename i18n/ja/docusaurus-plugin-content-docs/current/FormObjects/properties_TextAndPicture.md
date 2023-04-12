@@ -98,24 +98,34 @@ title: テキスト、ピクチャー
 
 ## 状態の数
 
-このプロパティは [ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md)、[ラジオボタン](radio_overview.md) のアイコンとして使用されるピクチャーに含まれる状態の数を指定します。 一般的にボタンアイコンは 4つの状態 (アクティブ、クリック、ロールオーバー、無効) を含んでいます。
+This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
+
+The picture can contain from 2 to 6 states.
+
+- 2 states: false, true
+- 3 states: false, true, rollover,
+- 4 states: false, true, rollover, disabled,
+- 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
+- 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable.
+
+:::note
+
+- "false" means button not clicked/not selected or check box unchecked (variable value=0)
+- "true" means button clicked/selected or check box checked (variable value=1)
+
+:::
 
 一つの状態につき、一つの画像を割り当てます。 ソースピクチャーでは、状態を表すアイコンは縦に並んでいなければなりません:
 
-![](../assets/en/property_numberOfStates.png)
+![](../assets/en/FormObjects/six-states.png)
 
-状態は次の順番で割り当てられます:
 
-1. ボタン未クリック / チェックボックス未選択 (変数値=0)
-2. ボタンクリック / チェックボックス選択 (変数値=1)
-3. ロールオーバー
-4. 無効
 
 #### JSON 文法
 
-| 名称         | データタイプ | とりうる値  |
-| ---------- | ------ | ------ |
-| iconFrames | number | 最小値: 1 |
+| 名称         | データタイプ | とりうる値                                            |
+| ---------- | ------ | ------------------------------------------------ |
+| iconFrames | number | Number of states in the icon picture. Minimum: 1 |
 
 #### 対象オブジェクト
 
@@ -166,6 +176,29 @@ title: テキスト、ピクチャー
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
+
+---
+
+## Image hugs title
+
+This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+
+ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。
+
+By default, when a button contains a title and a picture, the elements are joined. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
+
+![](../assets/en/FormObjects/hugs.png)
+
+
+#### JSON 文法
+
+| 名称             | データタイプ  | とりうる値                 |
+| -------------- | ------- | --------------------- |
+| imageHugsTitle | boolean | true (default), false |
+
+#### 対象オブジェクト
+
+[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
 
 ---
 
