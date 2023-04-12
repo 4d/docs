@@ -247,12 +247,18 @@ Horizontal location of text within the area that contains it.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|textAlign|string |"right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md), "justify" ([4D Write Pro areas](writeProArea_overview.md) only)|
+|textAlign|string |"right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) ), "justify"|
 
+:::note
+
+- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
+- "justify" is only supported by [group boxes](groupBox.md), [inputs](input_overview.md), and [text areas](text.md)
+ 
+:::
 
 #### Objects Supported
 
-[4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
 
 ---
 
@@ -379,7 +385,7 @@ By default, this option is not enabled.
 
 #### Objects Supported
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) 
 
 ---
 

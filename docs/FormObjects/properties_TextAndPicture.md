@@ -111,14 +111,15 @@ The picture can contain from 2 to 6 states.
 
 :::note
 
-- "false" means button not clicked or check box unchecked (variable value=0)
-- "true" means button clicked or check box checked (variable value=1)
+- "false" means button not clicked/not selected or check box unchecked (variable value=0)
+- "true" means button clicked/selected or check box checked (variable value=1)
 
 :::
 
 Each state is represented by a different picture. In the source picture, the states must be stacked vertically:
 
-![](../assets/en/six-states.png)
+![](../assets/en/FormObjects/six-states.png)
+
 
 
 #### JSON Grammar
@@ -185,13 +186,9 @@ This property allows you to define whether the title and the picture of the butt
 
 This property has no effect when the button contains only a title (no associated picture) or a picture (no title). 
 
-By default, when a button contains a title and a picture, the elements are joined:
+By default, when a button contains a title and a picture, the elements are joined. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
 
-![](../assets/en/hug1.png)
-
-Setting this property to `false` keeps the elements away from each other:
-
-![](../assets/en/hug2.png)
+![](../assets/en/FormObjects/hugs.png)
 
 
 #### JSON Grammar
