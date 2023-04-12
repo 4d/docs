@@ -98,7 +98,7 @@ title: テキスト、ピクチャー
 
 ## 状態の数
 
-このプロパティは [ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md)、[ラジオボタン](radio_overview.md) のアイコンとして使用されるピクチャーに含まれる状態の数を指定します。 一般的にボタンアイコンは 4つの状態 (アクティブ、クリック、ロールオーバー、無効) を含んでいます。
+This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). 一般的にボタンアイコンは 4つの状態 (アクティブ、クリック、ロールオーバー、無効) を含んでいます。
 
 一つの状態につき、一つの画像を割り当てます。 ソースピクチャーでは、状態を表すアイコンは縦に並んでいなければなりません:
 
