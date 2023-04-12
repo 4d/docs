@@ -247,12 +247,12 @@ Horizontal location of text within the area that contains it.
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|textAlign|string |"automatic", "right", "center", "left", "justify" ([4D Write Pro areas](writeProArea_overview.md) only)|
+|textAlign|string |"right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md), "justify" ([4D Write Pro areas](writeProArea_overview.md) only)|
 
 
 #### Objects Supported
 
-[4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular) - [Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular) - [Text Area](text.md)
+[4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
 
 ---
 

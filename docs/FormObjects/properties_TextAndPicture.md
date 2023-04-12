@@ -101,9 +101,10 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). 
 
-The picture can contain 2, 4, 5, or 6 states.
+The picture can contain from 2 to 6 states.
 
 - 2 states: false, true
+- 3 states: false, true, rollover,
 - 4 states: false, true, rollover, disabled,
 - 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
 - 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable. 
@@ -201,8 +202,7 @@ Setting this property to `false` keeps the elements away from each other:
 
 #### Objects Supported
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular) - [Radio Button](radio_overview.md) (all styles except Regular)
-
+[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
 
 ---
 

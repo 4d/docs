@@ -65,7 +65,6 @@ Only actions that can represent a true/false status ("checkable" actions) are su
 |spell/grammarEnabled	|Mac only|
 |spell/showDialog	|Mac only|
 |spell/visibleSubstitutions	||
-
 |visibleBackground	|4D Write Pro areas only|
 |visibleFooters	|4D Write Pro areas only|
 |visibleHeaders	|4D Write Pro areas only|
@@ -327,6 +326,12 @@ This check box button style can be used to add a standard collapse/expand icon. 
  
   ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
+:::info
+
+The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
+
 
 #### JSON Example:    
 
@@ -355,6 +360,12 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
  - *macOS*
  
 	![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+
+:::info
+
+The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
 
 
 #### JSON Example:    
@@ -418,4 +429,5 @@ Additional specific properties are available, depending on the [button style](#b
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
 - [Three-States](properties_Display.md#three-states) (Flat, Regular)
 - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
-- [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title) (all styles except Regular)
+- [Horizontal Alignment](properties_Text.md#horizontal-alignment) (all styles except Regular and Flat)
+- [Image hugs title](properties_TextAndPicture.md#image-hugs-title) (all styles except Regular, Flat, Disclosure and Collapse/Expand)

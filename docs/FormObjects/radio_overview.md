@@ -130,12 +130,17 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 
 
-### Collapse / Expand
+### Collapse/Expand
 
 This button style can be used to add a standard collapse/expand icon. These buttons are used natively in hierarchical lists. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down. 
 
 ![](../assets/en/FormObjects/checkbox_collapse.png)
 
+:::info
+
+The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
 
 
 ### Disclosure Button
@@ -143,6 +148,12 @@ This button style can be used to add a standard collapse/expand icon. These butt
 The disclosure radio button style displays the radio button as a standard disclosure button, usually used to show/hide additional information. The button symbol points downwards with value 0 and upwards with value 1. 
 
 ![](../assets/en/FormObjects/checkbox_disclosure.png)
+
+:::info
+
+The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
 
 
 ### Custom
@@ -160,4 +171,5 @@ Additional specific properties are available depending on the [button style](#bu
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
 - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
-- [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title) (all styles except Regular)
+- [Horizontal Alignment](properties_Text.md#horizontal-alignment) (all styles except Regular and Flat)
+- [Image hugs title](properties_TextAndPicture.md#image-hugs-title) (all styles except Regular, Flat, Disclosure and Collapse/Expand)
