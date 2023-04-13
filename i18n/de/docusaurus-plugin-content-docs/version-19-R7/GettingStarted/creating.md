@@ -20,8 +20,8 @@ To create a new project:
 
 3. Enter the name of your project folder and click **Save**. This name will be used:
 
-* as the name of the entire project folder,
-* as the name of the .4DProject file at the first level of the "Project" folder.
+    * as the name of the entire project folder,
+    * as the name of the .4DProject file at the first level of the ["Project" folder](../Project/architecture.md#project-folder).
 
  You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
 
@@ -34,14 +34,19 @@ You can then start developing your project.
 To open an existing project from 4D:
 
 1. Do one of the following:
+
+    * Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.
     * Select **Open a local application project** in the Welcome Wizard dialog
-    * Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. The standard Open dialog appears.
 
-2. Select the project's `.4dproject` file and click **Open**. By default, the project is opened with its current data file. Other file types are suggested:
+The standard Open dialog appears.
 
-* *Packed project files*: `.4dz` extension  - deployment projects
-* *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
-* *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
+2. Select the project's `.4dproject` file (located inside the ["Project" folder of the project](../Project/architecture.md#project-folder)) and click **Open**.
+
+    By default, the project is opened with its current data file. Other file types are suggested:
+
+    * *Packed project files*: `.4dz` extension  - deployment projects
+    * *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
+    * *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
 
 ### Options
 
@@ -102,7 +107,7 @@ That folder is divided into two subfolders:
 
 ## File saving
 
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
 Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
 
