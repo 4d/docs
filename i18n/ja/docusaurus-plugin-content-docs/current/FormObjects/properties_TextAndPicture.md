@@ -98,24 +98,34 @@ title: テキスト、ピクチャー
 
 ## 状態の数
 
-このプロパティは [ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md)、[ラジオボタン](radio_overview.md) のアイコンとして使用されるピクチャーに含まれる状態の数を指定します。 一般的にボタンアイコンは 4つの状態 (アクティブ、クリック、ロールオーバー、無効) を含んでいます。
+このプロパティは [ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md)、[ラジオボタン](radio_overview.md) のアイコンとして使用されるピクチャーに含まれる状態の数を指定します。
+
+ピクチャーには 2～6 の状態を含めることができます。
+
+- 2つの状態: false、true
+- 3つの状態: false、true、ロールオーバー
+- 4つの状態: false、true、ロールオーバー、無効
+- 5つの状態 (チェックボックスとラジオボタンのみ): false、true、false時ロールオーバー, true時ロールオーバー、無効
+- 6つの状態 (チェックボックスとラジオボタンのみ): false、true、false時ロールオーバー, true時ロールオーバー、false時無効、true時無効
+
+:::note
+
+- "false" とは "ボタン未クリック / 未選択"、あるいは "チェックボックス未選択" という意味です (変数値=0)
+- "true" とは "ボタンクリック / 選択" あるいは "チェックボックス選択" という意味です (変数値=1)
+
+:::
 
 一つの状態につき、一つの画像を割り当てます。 ソースピクチャーでは、状態を表すアイコンは縦に並んでいなければなりません:
 
-![](../assets/en/property_numberOfStates.png)
+![](../assets/en/FormObjects/six-states.png)
 
-状態は次の順番で割り当てられます:
 
-1. ボタン未クリック / チェックボックス未選択 (変数値=0)
-2. ボタンクリック / チェックボックス選択 (変数値=1)
-3. ロールオーバー
-4. 無効
 
 #### JSON 文法
 
-| 名称         | データタイプ | とりうる値  |
-| ---------- | ------ | ------ |
-| iconFrames | number | 最小値: 1 |
+| 名称         | データタイプ | とりうる値                     |
+| ---------- | ------ | ------------------------- |
+| iconFrames | number | ソースピクチャーに含まれる状態の数。 最小値: 1 |
 
 #### 対象オブジェクト
 
@@ -166,6 +176,29 @@ title: テキスト、ピクチャー
 #### 対象オブジェクト
 
 [ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
+
+---
+
+## Image hugs title
+
+This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+
+ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。
+
+By default, when a button contains a title and a picture, the elements are joined. 次の図は、様々な配置における `imageHugsTitle` プロパティ (有効な場合は true) の効果を示したものです:
+
+![](../assets/en/FormObjects/hugs.png)
+
+
+#### JSON 文法
+
+| 名称             | データタイプ  | とりうる値               |
+| -------------- | ------- | ------------------- |
+| imageHugsTitle | boolean | true (デフォルト), false |
+
+#### 対象オブジェクト
+
+[ボタン](button_overview.md) (ヘルプ スタイル以外) - [チェックボックス](checkbox_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開 スタイル以外) - [ラジオボタン](radio_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開 スタイル以外)
 
 ---
 

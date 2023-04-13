@@ -98,7 +98,7 @@ Le titre du bouton sera décalé vers la droite et vers le bas pour le nombre de
 
 ## Nombre d'états
 
-Cette propriété définit le nombre exact d'états présents dans l'image utilisée comme icône pour un [bouton avec icône](button_overview.md), une [case à cocher](checkbox_overview.md) ou un [bouton radio](radio_overview.md) personnalisé. En général, une icône de bouton comprend quatre états : actif, cliqué, survolé et inactif.
+This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). En général, une icône de bouton comprend quatre états : actif, cliqué, survolé et inactif.
 
 Chaque état est représenté par une image différente. Dans l'image source, les états doivent être empilés verticalement :
 
