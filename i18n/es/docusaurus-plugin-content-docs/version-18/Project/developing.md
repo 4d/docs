@@ -13,15 +13,15 @@ El desarrollo multiusuario se gestiona a través de herramientas estándar de co
 
 ## Acceso al archivo de proyecto
 
-Cuando trabaja en un proyecto en 4D Developer, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
+Cuando trabaja en un proyecto en 4D Developer, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
 
 4D Developer incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
 
 - if an open file which is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes:![](../assets/en/Project/projectReload.png)
   - **Sí**: ignorar los cambios del editor y volver a cargar
-  - **No**: guardar los cambios y sobrescribir la otra versión
-  - **Cancelar**: no guardar
+  - **No**: save changes and overwrite the other version
+  - **Cancel**: do not save
 
 Esta funcionalidad está habilitada para todos los editores integrados:
 
