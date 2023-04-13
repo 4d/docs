@@ -313,7 +313,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 
 
 
-### Collapse/Expand
+### 折りたたみ/展開
 
 このチェックボックススタイルは標準の折りたたみ/展開アイコンを表示するのに使用します。 これらは階層リストで使用されます。
 
@@ -327,7 +327,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
 
 :::info
 
-The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+折りたたみ/展開 スタイルは、[ボタンスタイル JSON 文法](properties_TextAndPicture.md#ボタンスタイル)では "disclosure" という名称です。
 
 :::
 
@@ -348,7 +348,7 @@ The Collapse/Expand style is named "disclosure" in the [button style JSON Gramma
 
 
 
-### Disclosure
+### 開示ボタン
 
 開示ボタンスタイルが適用されたチェックボックスは macOS および Windowsにおいて、詳細情報の表示/非表示にするのに使われる標準的な開示ボタンとして描画されます。 値が 0 のときにはボタンの矢印が下向き、値が 1 のときは上向きになります。
 
@@ -362,7 +362,7 @@ The Collapse/Expand style is named "disclosure" in the [button style JSON Gramma
 
 :::info
 
-The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+開示ボタンスタイルは、[ボタンスタイル JSON 文法](properties_TextAndPicture.md#ボタンスタイル)では "roundedDisclosure" という名称です。
 
 :::
 
@@ -426,5 +426,5 @@ The Disclosure style is named "roundedDisclosure" in the [button style JSON Gram
 
 [ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
 
-- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- カスタム: [背景パス名](properties_TextAndPicture.md#背景パス名) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン)
 - Flat, Regular: [Three-States](properties_Display.md#three-states)
