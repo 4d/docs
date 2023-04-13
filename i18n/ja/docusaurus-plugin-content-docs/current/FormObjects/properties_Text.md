@@ -177,7 +177,7 @@ title: テキスト
 
 `セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
-リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 この点に関する詳細は 4Dランゲージリファレンスマニュアルの [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.ja.html) コマンドの説明を参照してください。
+リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 詳細については、4Dランゲージリファレンス マニュアルの [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/ja/page628.html) コマンドの説明を参照ください。
 
 式または変数 (配列を除く) を入力します。 表示される行ごとに式や変数は評価されます。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。
 
@@ -238,13 +238,20 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### JSON 文法
 
-| 名称        | データタイプ | とりうる値                                             |
-| --------- | ------ | ------------------------------------------------- |
-| textAlign | string | "automatic", "right", "center", "justify", "left" |
+| 名称        | データタイプ | とりうる値                                                                                                     |
+| --------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| textAlign | string | "right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) ), "justify" |
+
+:::note
+
+- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
+- "justify" is only supported by [group boxes](groupBox.md), [inputs](input_overview.md), and [text areas](text.md)
+
+:::
 
 #### 対象オブジェクト
 
-[グループボックス](groupBox.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [テキストエリア](text.md)
+[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
 
 ---
 
@@ -257,7 +264,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 - ピクチャーを除き、すべて `下` です。
 - ピクチャーは `上` です。
 
-このプロパティは、[OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.ja.html) と [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.ja.html) コマンドを使用して設定することもできます。
+This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
 
 #### JSON 文法
 
@@ -371,7 +378,7 @@ End if
 
 #### 対象オブジェクト
 
-[リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
+[入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 

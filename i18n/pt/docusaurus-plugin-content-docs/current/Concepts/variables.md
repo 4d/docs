@@ -61,22 +61,24 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-| varType                | Conteúdos                              |
-| ---------------------- | -------------------------------------- |
-| `Text`                 | Valor texto                            |
-| `Date`                 | Valor data                             |
-| `Hora`                 | Valor Hora                             |
-| `Booleano`             | Valor booleano                         |
-| `Integer`              | Valor inteiro longo                    |
-| `Real`                 | Valor real                             |
-| `Ponteiro`             | Valor ponteiro                         |
-| `Imagem`               | Valor imagem                           |
-| `Blob`                 | Valor Blob Scalar                      |
-| `Collection`           | Valor colecção                         |
-| `Variant`              | Valor variant                          |
-| `Objeto`               | Object with default class (4D. Object) |
-| `4D.<className>` | Objecto do nome da classe 4D           |
-| `cs.<className>` | Object of the user class name          |
+| varType                                 | Conteúdos                                              |
+| --------------------------------------- | ------------------------------------------------------ |
+| `Text`                                  | Valor texto                                            |
+| `Date`                                  | Valor data                                             |
+| `Hora`                                  | Valor Hora                                             |
+| `Booleano`                              | Valor booleano                                         |
+| `Integer`                               | Valor inteiro longo                                    |
+| `Real`                                  | Valor real                                             |
+| `Ponteiro`                              | Valor ponteiro                                         |
+| `Imagem`                                | Valor imagem                                           |
+| `Blob`                                  | Valor Blob Scalar                                      |
+| `Collection`                            | Valor colecção                                         |
+| `Variant`                               | Valor variant                                          |
+| `Objeto`                                | Object with default class (4D. Object)                 |
+| `4D.<className>`                  | Objecto do nome da classe 4D                           |
+| `cs.<className>`                  | Object of the user class name                          |
+| `cs.<namespace><className>` | Object of the `<namespace>` component class name |
+
 
 #### Exemplos
 

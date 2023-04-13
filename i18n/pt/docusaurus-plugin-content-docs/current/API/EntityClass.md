@@ -163,13 +163,13 @@ Se uma das entidades comparadas for **Null**, um erro é gerado.
 
 ```4d
  var $diff1; $diff2 : Collection
- employee:=ds. Employee.query("ID=1001").first()
+ employee:=ds.Employee.query("ID=1001").first()
  $clone:=employee.clone()
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
  $diff1:=$clone.diff(employee) // All differences are returned
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
   // Only differences on firstName and lastName are returned
 ```
 

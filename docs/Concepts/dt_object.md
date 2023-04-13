@@ -3,7 +3,7 @@ id: object
 title: Object
 ---
 
-Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation: 
+Variables, fields or expressions of the Object type can contain various types of data. The structure of native 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation: 
 
 - A property name is always a text, for example "Name". It must follow [specific rules](identifiers.md#object-properties).
 
@@ -22,9 +22,14 @@ Variables, fields or expressions of the Object type can contain various types of
 
 (2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]". 
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+:::caution
 
-You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the classic commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields. 
+Keep in mind that property names differentiate between upper and lower case.
+
+:::
+
+
+You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields. 
 
 Each property value accessed through the object notation is considered an expression. You can use such values wherever 4D expressions are expected:
 
@@ -32,23 +37,89 @@ Each property value accessed through the object notation is considered an expres
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
-## Initialization 
+## Instantiation 
 
-Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
+Objects must have been instantiated, otherwise trying to read or modify their properties will generate a syntax error.
 
-Example:
+Object instantiation can be done in one of the following ways:
+
+- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- using the `{}` operator.
+
+:::info
+
+Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
+
+:::
+
+
+
+### `New object` command
+
+The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference. 
+
+Examples:
+
 ```4d
- C_OBJECT($obVar) //creation of an object type 4D variable
- $obVar:=New object //initialization of the object and assignment to the 4D variable
+ var $obVar : Object //declaration of an object type 4D variable
+ $obVar:=New object //instantiation of an object and assignment to the 4D variable
+ 
+ var $obFilled : Object 
+ $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
 ```
+
+
+### `{}` operator
+
+The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). The object literal syntax creates empty or filled objects. 
+
+Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
+
+Examples:
+
+```4d
+ var $o ; $o2 ; $o3 : Object //declaration of object variables
+ $o := {} // instantiation of an empty object 
+ $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instantiation of an object
+ 		// with properties {"a":"foo","b":42,"c":{},"d":false})
+
+	// same properties using variables
+ var $a : Text
+ var $b : Number
+ var $c : Object
+ $a:="foo"
+ $b:=42
+ $c:={}
+ $o3:={ a: $a; b: $b; c: $c } // {"a":"foo";b":42;"c":{}}
+
+```
+
+You can mix the `New object` and literal syntaxes:
+
+```4d
+$o:={\
+	ob1: {age: 42}; \
+	ob2: New object("message"; "Hello"); \
+	form1: Formula(return This.ob1.age+10); \
+	form2 : Formula(ALERT($1)); \
+	col: [1; 2; 3; 4; 5; 6]\
+	}
+
+$o.form1()  //52
+$o.form2($o.ob2.message)  // displays Hello
+$col:=$o.col[5] //6
+```
+
+
+
 
 ### Regular or shared object  
 
 You can create two types of objects:
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes. 
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
-For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- regular (non-shared) objects, using the [`New object`] command or object literal syntax (`{}`). These objects can be edited without any specific access control but cannot be shared between processes. 
+- shared objects, using the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1526.html) command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
+For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
 ## Syntax basics
@@ -80,9 +151,11 @@ Examples:
 ```
 
 Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+
 ```4d
  $vAge:=employee.children[2].age
 ```
+
 Object notation is available on any language element that can contains or returns an object, i.e:
 
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements).
@@ -98,7 +171,6 @@ Object notation is available on any language element that can contains or return
 - **4D commands** that return objects.
     Example:
 
-
 ```4d
      $measures:=Get database measures.DB.tables
 ```
@@ -108,8 +180,8 @@ Object notation is available on any language element that can contains or return
     
 ```4d
       // MyMethod1
-     C_OBJECT($0)
-     $0:=New object("a";10;"b";20)
+     #DECLARE -> $o : Object
+     $o:=New object("a";10;"b";20)
      
       //myMethod2
      $result:=MyMethod1.a //10
@@ -137,8 +209,8 @@ Using object notation with pointers is very similar to using object notation dir
 Example:
 
 ```4d
- C_OBJECT(vObj)
- C_POINTER(vPtr)
+ var vObj : Object
+ var vPtr : Pointer
  vObj:=New object
  vObj.a:=10
  vPtr:=->vObj
@@ -154,17 +226,17 @@ When using the object notation, the **null** value is supported though the **Nul
  If(myColl[2]=Null)
 ```
 
-For more information, please refer to the `Null` command description.
+For more information, please refer to [Null and Undefined](dt_null_undefined.md).
 
 ### Undefined value
 
 Evaluating an object property can sometimes produce an undefined value. Typically when trying to read or assign undefined expressions, 4D will generate errors. This does not happen in the following cases:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling `CLEAR VARIABLE` with them:
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page89.html) with them:
 
 ```4d
-     C_OBJECT($o)
-     C_LONGINT($val)
+     var $o : Object
+     var $val : Integer
      $val:=10 //$val=10
      $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
       //$val=0
@@ -173,25 +245,25 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 - Reading the **length** property of an undefined collection produces 0:
 
 ```4d
-     C_COLLECTION($c) //variable created but no collection is defined
+     var $c : Collection //variable created but no collection is defined
      $size:=$c.length //$size = 0
 ```
 
 - An undefined value passed as parameter to a project method is automatically converted to 0 or "" according to the declared parameter type.
 
 ```4d
-     C_OBJECT($o)
+     var $o : Object
      mymethod($o.a) //pass an undefined parameter
      
       //In mymethod method
-     C_TEXT($1) //parameter type is text
-      // $1 contains ""
+     #Declare ($myText : Text) //parameter type is text
+      // $myText contains ""
 ```
 
 - A condition expression is automatically converted to false when evaluating to undefined with the If and Case of keywords:
 
 ```4d
-     C_OBJECT($o)
+     var $o : Object
      If($o.a) // false
      End if
      Case of
@@ -210,7 +282,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
  - Undefined, Null: no change
 
 ```4d
-     C_OBJECT($o)
+     var $o : Object
      $o:=New object("a";2)
      $o.a:=$o.b //$o.a=0
 ```
@@ -224,6 +296,7 @@ When expressions of a given type are expected in your 4D code, you can make sure
   //to avoid errors in the code
 ```
 
+For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
 ## Examples
 
@@ -233,18 +306,18 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
 
 ```4d
   // Using the object notation
- C_OBJECT($myObj) //declares a 4D variable object
- $myObj:=New object //creates an object and assigns to the variable
+ var $myObj : Object //declares a 4D variable object
+ $myObj:={} //creates an object literal and assigns it to the variable
  $myObj.age:=56
  $age:=$myObj.age //56
  
   // Using the command notation
- C_OBJECT($myObj2) //declares a 4D variable object
+ var $myObj2 : Object //declares a 4D variable object
  OB SET($myObj2;"age";42) //creates an object and adds the age property
  $age:=OB Get($myObj2;"age") //42
  
   // Of course, both notations can be mixed
- C_OBJECT($myObj3)
+ var $myObj3 : Object
  OB SET($myObj3;"age";10)
  $age:=$myObj3.age //10
 ```
@@ -252,7 +325,7 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
 - Create a property and assign values, including objects:
 
 ```4d
- C_OBJECT($Emp)
+ var $Emp : Object
  $Emp:=New object
  $Emp.city:="London" //creates the city property and sets its value to "London"
  $Emp.city:="Paris" //modifies the city property
@@ -271,7 +344,7 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property
   //this can be useful for creating properties through variables
- C_TEXT($addr)
+ var $addr : Text
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
