@@ -118,7 +118,7 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 - **Restaura o último backup se o banco de dados é danificado**: Quando essa opção for marcada, o programa automaticamente inicia a restauração dos arquivos de dados do último backup válido da aplicação, se uma anomalia for detectada (arquivo corrupto, por exemplo) durante o lançamento da aplicação. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. With 4D Server, if there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
+- **Integrate the latest logs if the database is incomplete**: When this option is checked, the program automatically integrates the current log file if it contains operations that are not present in the data file. If there is a valid sequence of .journal files in the same repository, the program integrates beforehand all the .journal files needed from the oldest to the most current.
 
     This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk, or after an anomaly was detected when opening the data file and a restore has occurred.
 
