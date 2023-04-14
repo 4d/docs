@@ -736,7 +736,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 :::note
 
-The `dk count values` is only available with storage attributes of type boolean, string, number, and date.
+The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
 
 :::
 
@@ -826,6 +826,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 
 :::note
