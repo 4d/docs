@@ -31,86 +31,86 @@ Vous pouvez alors commencer à développer votre projet.
 
 Pour ouvrir un projet existant depuis 4D :
 
-1. Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. La boîte de dialogue standard d’ouverture de fichiers apparaît.
+1. Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. The standard Open dialog appears.
 
-2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**. Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
+2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**. By default, the project is opened with its current data file. Other file types are suggested:
 
-- *Fichiers de projets compressés* : extension `.4dz` - projets pour le déploiement
-- *Fichiers de raccourcis* : extension `.4DLink` - stockent des paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
-- *Fichiers binaires* : extension `.4db` ou `.4dc` - formats de base de données 4D traditionnels
+- *Packed project files*: `.4dz` extension  - deployment projects
+- *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
+- *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
 
 ### Options
 
-En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D propose deux menus d'options spécifiques disponibles des bouton **Ouvrir** et **Fichier de données**.
+In addition to standard system options, the *Open* dialog in 4D provides two menus with specific options that are available using the **Open** button and the **Data file** menu.
 
-- **Ouvrir** - mode d'ouverture du projet :
-  - **Projet interprété** ou **Projet compilé** : ces options sont disponibles lorsque le projet sélectionné contient à la fois du [code interprété et compilé](Concepts/interpreted.md).
-  - **[Centre de sécurité et de maintenance](MSC/overview.md)** : Ouverture en mode sécurisé permettant d'accéder aux projets endommagés afin d'effectuer les réparations nécessaires.
+- **Open** - opening mode of the project:
+  - **Interpreted** or **Compiled**: These options are available when the selected project contains both [interpreted and compiled code](Concepts/interpreted.md).
+  - **[Maintenance Security Center](MSC/overview.md)**: Opening in secure mode allowing access to damaged projects in order to perform any necessary repairs.
 
-- **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée.
+- **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected.
 
 ## Raccourcis d’ouverture des projets
 
-4D propose plusieurs façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
+4D offers several ways to open projects directly and bypass the Open dialog:
 
-- via des commandes de menus :
-  - *Barre de menus* - **Fichier** > **Ouvrir projets récents / {project name}**
-  - *Barre d'outils 4D* -  Sélectionnez le projet à partir du menu associé au bouton **Ouvrir**
+- via menu options:
+  - *Menu bar* - **File** > **Open Recent Projects / {project name}**
+  - *4D Tool bar* -  Select the project from the menu associated with the **Open** button
 
-- via les préférences :
-  - Fixez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
+- via preferences:
+  - Set the **At startup** general preference to **Open last used project**.
 
-- via un fichier `.4DLink`.
+- using a `.4DLink` file.
 
 ### Ouvrir un projet avec un fichier 4DLink
 
-Vous pouvez utiliser un [fichier `.4DLink`](#about-4DLink-files) pour lancer l'application 4D et ouvrir le projet 4D cible. Il existe deux façons de procéder :
+You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. Il existe deux façons de procéder :
 
-- double-cliquez ou faites glisser et déposez le fichier `.4DLink` sur l'application 4D
-- allez dans **Fichier** > **Ouvrir des projets récents** et sélectionnez un projet
+- double-click or drag and drop the `.4DLink` file onto the 4D application
+- go to **File** > **Open Recent Projects** and select a project
 
 ![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
 
-Un fichier .4DLink de type "projet distant" peut être copié et utilisé sur plusieurs machines.
+A .4DLink file of "remote project" type can be copied and used on several machines.
 > Il est également possible de sélectionner un fichier 4DLink dans la boîte de dialogue d'ouverture de 4D et 4D Server (ouverture de projet local uniquement).
 
 ## À propos des fichiers 4DLink
 
-Les fichiers portant l'extension `.4DLink` sont des fichiers XML qui contiennent des paramètres destinés à automatiser et à simplifier l'ouverture de projets 4D locaux ou distants.
+Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
 
-Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que ses identifiants de connexion et son mode d'ouverture, afin de vous faire gagner du temps lors de l'ouverture des projets.
+`.4DLink` files can save the address of a 4D project as well as its connection identifiers and opening mode, saving you time when opening projects.
 
-4D génère automatiquement un fichier `.4DLink` lorsqu'un projet local est ouvert pour la première fois ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
+4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
 
-- Windows : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-- macOS : Users/UserName/Library/Application Support/4D/Favorites vXX/
+- Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+- OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
-XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
+XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
 
-Ce dossier est composé de deux sous-dossiers :
+That folder is divided into two subfolders:
 
-- le dossier **Local** contient les fichiers `.4DLink` qui peuvent être utilisés pour ouvrir des projets locaux
-- le dossier **Remote** contient les fichiers `.4DLink` des projets distants récents
+- the **Local** folder contains the `.4DLink` files that can be used to open local projects
+- the **Remote** folder contains the `.4DLink` files of recent remote projects
 
-Les fichiers `.4DLink` peuvent également être créés avec un éditeur XML.
+`.4DLink` files can also be created with an XML editor.
 
-4D fournit un DTD décrivant les clés XML qui peuvent être utilisées pour créer un fichier `.4DLink`. Ce DTD est nommé database_link.dtd et se trouve dans le sous-dossier \Resources\DTD\ de l'application 4D.
+4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
 
 ## Enregistrement des fichiers
 
-Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur disque lorsque vous sélectionnez une commande **Sauvegarde**, ou lorsque la fenêtre de l'éditeur perd ou récupère le focus.
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
-Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
+Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
 
-Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
+The 4D development framework includes a file access manager to control concurrent access:
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
-- si un fichier ouvert est édité simultanément à partir de différents emplacements, 4D affichera une boîte de dialogue d'alerte lorsque vous tenterez d'enregistrer les modifications :
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
 
 ![](../assets/en/Project/projectReload.png)
 
-- **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
-- **Non** : enregistre les modifications et écrase l'autre version
-- **Annuler** : ne pas enregistrer
+- **Yes**: discard editor changes and reload the modified version
+- **No**: save changes and overwrite the other version
+- **Cancel**: do not save
 
-Cette fonctionnalité est activée pour tous les éditeurs 4D intégrés (Structure, Formulaire, Méthode, Paramètres et Boite à outils).
+This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).

@@ -238,20 +238,20 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### JSON 文法
 
-| 名称        | データタイプ | とりうる値                                                                                                     |
-| --------- | ------ | --------------------------------------------------------------------------------------------------------- |
-| textAlign | string | "right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) ), "justify" |
+| 名称        | データタイプ | とりうる値                                                                                    |
+| --------- | ------ | ---------------------------------------------------------------------------------------- |
+| textAlign | string | "right", "center", "left", "automatic" ([チェックボックス](checkbox_overview.md) 非対応), "justify" |
 
 :::note
 
-- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- "justify" is only supported by [group boxes](groupBox.md), [inputs](input_overview.md), and [text areas](text.md)
+- "automatic" は、[チェックボックス](checkbox_overview.md) および [ラジオボタン](radio_overview.md) ではサポートされていません。
+- "justify" は、[グループボックス](groupBox.md)、[入力](input_overview.md)、[テキストエリア](text.md) でのみサポートされています。
 
 :::
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) (通常とフラット以外のスタイル) - [グループボックス](groupBox.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [ラジオボタン](radio_overview.md) (通常とフラット以外のスタイル) - [テキストエリア](text.md)
 
 ---
 
@@ -264,7 +264,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 - ピクチャーを除き、すべて `下` です。
 - ピクチャーは `上` です。
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
+このプロパティは、[OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/ja/page1188.html) と [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/ja/page1187.html) コマンドを使用して設定することもできます。
 
 #### JSON 文法
 
