@@ -20,13 +20,14 @@ El Explorador de datos se basa en el componente servidor web [`WebAdmin`](webAdm
 
 ## Apertura del Explorador de datos
 
-La página del Explorador de datos está disponible automáticamente cuando [el servidor web `WebAdmin` se inicia](webAdmin.md#starting-the-webadmin-web-server).
+[The `WebAdmin` web server](webAdmin.md#starting-the-webadmin-web-server) is started automatically when the Data Explorer is clicked on.
 
-Para conectarse a la página web del Explorador de datos:
+Connect to the Data Explorer web page:
 
-- si utiliza una aplicación 4D con interfaz, seleccione el comando **Explorador de datos...** de:
-  - el menú **Registros** (en 4D monopuesto)
-  - el menú **Ventana** (en 4D Server)
+- From the 4D interface:
+  - To open a new 4D window with the Data Explorer page displayed in a web area, click on the **Data** button in the main toolbar or select **Data Explorer** in the Records menu.
+  - To open the Data Explorer in an external browser tab, click on the **Data** button in the main toolbar  with the "alt" key (Windows) or "Option" key (macOS) or select **Open Data Explorer In Browser** in the Records menu.
+  - In 4D Server, select **Data Explorer In Browser** in the Window menu (the Data Explorer is opened automatically on an external browser).
 
 - tanto si utiliza una aplicación 4D sin interfaz como si no, puede abrir su navegador web e introducir la siguiente dirección:
 
