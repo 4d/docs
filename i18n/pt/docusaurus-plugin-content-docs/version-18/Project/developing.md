@@ -13,7 +13,7 @@ O desenvolvimento multiusuário é gerenciado através de ferramentas padrão de
 
 ## Acesso ao arquivo de projeto
 
-When working on a project in 4D Developer, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. Quando trabalhar em um projeto em 4D Developer, pode usar os editores integrados de 4D para criar, modificar ou salvar elementos da estrutura, os métodos, os formulários, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+When working on a project in 4D Developer, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
 
 4D Developer incluem um gestor de acesso aos arquivos para controlar os acessos simultâneos:
 

@@ -179,13 +179,13 @@ title: テキスト、ピクチャー
 
 ---
 
-## Image hugs title
+## タイトルと画像を隣接させる
 
-This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+このプロパティは、[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置) と [横揃え](properties_Text.md#横揃え) プロパティを考慮しながら、ボタンのタイトルと画像を隣接して表示するか、あるいは分離するかを定義します。
 
 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。
 
-By default, when a button contains a title and a picture, the elements are joined. 次の図は、様々な配置における `imageHugsTitle` プロパティ (有効な場合は true) の効果を示したものです:
+ボタンがタイトルと画像を持つ場合、デフォルトでは、それらは隣接して表示されます。 次の図は、様々な配置における `imageHugsTitle` プロパティ (有効な場合は true) の効果を示したものです:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -198,7 +198,7 @@ By default, when a button contains a title and a picture, the elements are joine
 
 #### 対象オブジェクト
 
-[ボタン](button_overview.md) (ヘルプ スタイル以外) - [チェックボックス](checkbox_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開 スタイル以外) - [ラジオボタン](radio_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開 スタイル以外)
+[ボタン](button_overview.md) (ヘルプ以外のスタイル) - [チェックボックス](checkbox_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開以外のスタイル) - [ラジオボタン](radio_overview.md) (通常、フラット、開示ボタン、折りたたみ/展開以外のスタイル)
 
 ---
 
