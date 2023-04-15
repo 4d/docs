@@ -18,7 +18,7 @@ title: リリースノート
 - [IMAP Transporter クラス](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) がカスタムキーワードをサポートするようになりました。
 - 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
 - ユーザークラス定義で [`property`](../Concepts/classes.md#property) キーワードをサポート。
-- データストアをロック/ロック解除する新しい関数が追加されました: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock)。
+- New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DataStoreClass#flushandlock), [`.locked()`](../API/DataStoreClass#locked), [`.unlock()`](../API/DataStoreClass#unlock).
 - EntitySelection クラスに新しく [`.at()`](../API/EntitySelectionClass#at) 関数が追加されました。
 - Collection クラスに次の新しい関数が追加されました: [`.at()`](../API/CollectionClass#at), [`.first()`](../API/CollectionClass#first), [`.flat()`](../API/CollectionClass#flat), [`.flatMap()`](../API/CollectionClass#flatmap), [`.includes()`](../API/CollectionClass#includes), [`.last()`](../API/CollectionClass#last), [`.reduceRight()`](../API/CollectionClass#reduceright)。
 - コードエディター: 強化された [検索/置換機能](../code-editor/write-class-method.md#検索と置換)。
@@ -29,6 +29,7 @@ title: リリースノート
 - 新しい [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths) 関数を追加しました。
 - [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) および [`collection.distinct()`](../API/CollectionClass.md#distinct) 関数で `count values` オプションをサポートしました。
 - CLI でコードを実行するための新しいツール: [tool4d](../Admin/cli.md#tool4d) および [ユーティリティモードの 4D Server](../Admin/cli.md#ユーティリティモードの-4d-server)。
+- [Data Explorer](../Admin/dataExplorer.md#opening-the-data-explorer): new button and display in a 4D window.
 - New properties for buttons, check boxes and radio buttons: [Image hugs title](../FormObjects/properties_TextAndPicture.md#image-hugs-title) and [Horizontal Alignment](../FormObjects/properties_Text.md#horizontal-alignment).
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。

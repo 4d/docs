@@ -8,29 +8,30 @@ title: Notas del lanzamiento
 Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la entrada del blog que enumera todas las nuevas funcionalidades y mejoras de 4D v20.
 
 
-#### Index rebuild warning
+#### Aviso de reconstrucción del índice
 
-4D v20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
+4D v20 incluye una actualización de la librería ICU (ver abajo) que forzará una reconstrucción automática de los índices de tipo alpha, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
 #### Puntos fuertes
 
-- 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
+- 4D Server integra automáticamente varios historiales: [Restauración automática](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass#removeflags) soportan palabras clave personalizadas.
 - Nuevas clases [WebSocketServer](../API/WebSocketServerClass.md) y [WebSocketConnection](../API/WebSocketConnectionClass.md) para crear y gestionar conexiones WebSocket desde 4D.
-- Support of [`property`](../Concepts/classes.md#property) keyword in user class definitions.
-- Nuevas funciones para bloquear/desbloquear el datastore: [`.flushAndLock()`](../API/DatastoreClass#flushandlock), [`.locked()`](../API/DatastoreClass#locked), [`.unlock()`](../API/DatastoreClass#unlock).
-- New [`.at()`](../API/EntitySelectionClass#at) function in the Entity selection class.
-- New functions in the Collection class: [`.at()`](../API/CollectionClass#at), [`.first()`](../API/CollectionClass#first), [`.flat()`](../API/CollectionClass#flat), [`.flatMap()`](../API/CollectionClass#flatmap),[`.includes()`](../API/CollectionClass#includes), [`.last()`](../API/CollectionClass#last), [`.reduceRight()`](../API/CollectionClass#reduceright).
+- Soporte de la palabra clave [`property`](../Concepts/classes.md#property) en las definiciones de clase usuario.
+- Nuevas funciones para bloquear/desbloquear el datastore: [`.flushAndLock()`](../API/DataStoreClass#flushandlock), [`.locked()`](../API/DataStoreClass#locked), [`.unlock()`](../API/DataStoreClass#unlock).
+- Nueva función [`.at()`](../API/EntitySelectionClass#at) en la clase de selección de entidades.
+- Nuevas funciones en la clase Collection: [`.at()`](../API/CollectionClass#at), [`.first()`](../API/CollectionClass#first), [`.flat()`](../API/CollectionClass#flat), [`.flatMap()`](../API/CollectionClass#flatmap),[`.includes()`](../API/CollectionClass#includes), [`.last()`](../API/CollectionClass#last), [`.reduceRight()`](../API/CollectionClass#reduceright).
 - Editor de código: mejorado [Funciones de búsqueda y sustitución](../code-editor/write-class-method.md#find-and-replace).
-- New searchable "property" Language element in the [**Find in design...**](https://doc.4d.com/4Dv19R8/4D/19-R8/Performing-a-search.300-6125772.en.html#105269) dialog box.
+- Nuevo elemento de búsqueda del lenguaje "property" en el diálogo [**Buscar en diseño...**](https://doc.4d.com/4Dv19R8/4D/19-R8/Performing-a-search.300-6125772.en.html#105269).
 - Para simplificar el código, algunos operadores de comparación pueden utilizarse ahora con [Valores indefinidos](../Concepts/dt_null_undefined.md#undefined-operators) sin generar errores.
 - Soporte del parámetro *headerOnly* en [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail).
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
-- New [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths) function.
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
-- New tools for code execution in CLI: [tool4d](../Admin/cli.md#tool4d) and [4D Server in utility mode](../Admin/cli.md#4d-server-in-utility-mode).
-- New properties for buttons, check boxes and radio buttons: [Image hugs title](../FormObjects/properties_TextAndPicture.md#image-hugs-title) and [Horizontal Alignment](../FormObjects/properties_Text.md#horizontal-alignment).
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- Soporte de la opción `count values` en las funciones [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) y [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Nueva función [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths).
+- Soporte de la opción `count values` en las funciones [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) y [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Nuevas herramientas para la ejecución de código en CLI: [tool4d](../Admin/cli.md#tool4d) y [4D Server en modo utilitario](../Admin/cli.md#4d-server-in-utility-mode).
+- [Explorador de datos](../Admin/dataExplorer.md#opening-the-data-explorer): nuevo botón y visualización en una ventana 4D.
+- Nuevas propiedades para botones, casillas de verificación y botones radio: [Imagen abraza título](../FormObjects/properties_TextAndPicture.md#image-hugs-title) y [Alineación horizontal](../FormObjects/properties_Text.md#horizontal-alignment).
+- Comandos del lenguaje 4D: [Página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20): lista de todos los bugs corregidos en 4D v20.
 
@@ -49,13 +50,13 @@ Lea las [**Novedades de 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 #### Puntos fuertes
 
 - Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
-- Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
+- Los listboxes con fuentes de datos colección o selección de entidades ahora soportan la propiedad de columna [Alto de línea automático](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height).
 - ORDA: soporte del archivo *roles.json* para definir [privilegios](../ORDA/privileges.md) asignados a la sesión con [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Soporte del [modo SDI en el modo de aplicación de prueba](../Menus/sdi.md#sdi-mode-availability) en Windows.
 - 4D View Pro:
     - soporte de temas en tablas: nuevos comandos [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) y [VP Get table theme](../ViewPro/method-list#vp-get-table-theme), soporte de opciones de tema en [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
     - nuevo [comando VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows)
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
+- Comandos del lenguaje 4D: [Página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19_R8): lista de todos los errores que se han corregido en 4D v18.
 
@@ -63,7 +64,7 @@ Lea las [**Novedades de 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 #### Cambios de comportamiento
 
 - Para el cumplimiento HTTP RFC, la propiedad [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) devuelve ahora todos los nombres de encabezado **en minúsculas**. Si desea que su código siga funcionando como antes, utilice la nueva propiedad [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response).
-- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
+- Cuando a un [botón de bisel con menú emergente vinculado](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) se le asigna una acción estándar, ésta ya no se genera si se selecciona una opción de menú emergente.
 - En las áreas Web que utilizan blink (CEF), los diálogos mostrados desde scripts externos ahora se bloquean si no se llaman desde una función `setTimeout()` JS. Esto se debe a las actualizaciones actuales CEF, en las que los diálogos mostrados por funciones como `alert()` o `print()` ya no son gestionados por el SO sino por el área Web. Ver [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) y [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
@@ -77,9 +78,9 @@ Lea [**Novedades de 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/)
 
 - Los datos relacionados y los atributos calculados/alias pueden mostrarse en el [explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass) y nueva función [`.open()`](../API/FileClass#open) en la clase `File`.
-- [Entity selection Class](../API/EntitySelectionClass): [`.add()`](../API/EntitySelectionClass#add) supports an *entitySelection* parameter, [`.minus()`](../API/EntitySelectionClass#minus) supports a *keepOrder* parameter.
-- 4D View Pro: new table commands [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes).
-- Component namespaces are now [displayed in the Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
+- [Clase selección de entidades](../API/EntitySelectionClass): [`.add()`](../API/EntitySelectionClass#add) soporta un parámetro *entitySelection*, [`.minus()`](../API/EntitySelectionClass#minus) soporta un parámetro *keepOrder*.
+- 4D View Pro: nuevos comandos tabla [VP Find table](../ViewPro/method-list#vp-find-table), [VP Get table column attributes](../ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list#vp-set-table-column-attributes).
+- Los espacios de nombres de los componentes ahora se [muestran en el Explorador](../Extensions/develop-components.md#declaring-the-component-namespace).
 - Los objetos Área de texto y Formulario de entrada ahora soportan la [propiedad de radio de esquina](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - Comandos de lenguaje 4D: [Novedades de la página](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) en doc.4d.com.
@@ -158,7 +159,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - Because of the support of the [ternary operator](../Concepts/operators#ternary-operator), the colon ":" is no longer allowed in variable, field, constant, function, plugin and project method names. If your database/project contains identifiers with colons, you must replace them before converting it to v19 R4 or higher, otherwise errors may occur in your code. For example, if you have a variable named *a:b*, it could be interpreted as ternary operator syntax:
 
 ```4d
-$value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
+$value:=($size>1000)? a:b // Aquí 'a:b' se considera un operador ternario.
 ```
 
 
@@ -246,18 +247,18 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 
 
-| Librería  | Versión actual | Actualizado en 4D | Comentario                                                                                                                                                         |
-| --------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ICU       | 72.1           | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                                      |
-| CEF       | 109            | 20                | Chromium 5414. CORS policies now also apply when accessing files on disk (see the "security" paragraph on web areas in the [4D v19 R5](#4d-v19-r5) section above). |
-| Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                          |
-| PDFWriter | 4.3            | 20                | FreeType dependency in 12.2.1                                                                                                                                      |
-| SpreadJS  | 16.0.4         | 20                | Motor 4D View Pro                                                                                                                                                  |
-| OpenSSL   | 1.1.1s         | 19 R7             |                                                                                                                                                                    |
-| libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                             |
-| LZMA      | 5.4.1          | 20                |                                                                                                                                                                    |
-| Zlib      | 1.2.13         | 20                |                                                                                                                                                                    |
-| webKit    | WKWebView      | 19                |                                                                                                                                                                    |
-| PHP       | 8.2.4          | 20                |                                                                                                                                                                    |
-| libldap   | 2.4.48         | 18 R2             |                                                                                                                                                                    |
+| Librería  | Versión actual | Actualizado en 4D | Comentario                                                                                                                                                                                 |
+| --------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ICU       | 72.1           | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                                                              |
+| CEF       | 109            | 20                | Chromium 5414. Las políticas CORS ahora también se aplican cuando se accede a archivos en disco (ver el párrafo "seguridad" sobre áreas web en la sección [4D v19 R5](#4d-v19-r5) arriba). |
+| Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                                                  |
+| PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                                                                                             |
+| SpreadJS  | 16.0.4         | 20                | Motor 4D View Pro                                                                                                                                                                          |
+| OpenSSL   | 1.1.1s         | 19 R7             |                                                                                                                                                                                            |
+| libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                                                     |
+| LZMA      | 5.4.1          | 20                |                                                                                                                                                                                            |
+| Zlib      | 1.2.13         | 20                |                                                                                                                                                                                            |
+| webKit    | WKWebView      | 19                |                                                                                                                                                                                            |
+| PHP       | 8.2.4          | 20                |                                                                                                                                                                                            |
+| libldap   | 2.4.48         | 18 R2             |                                                                                                                                                                                            |
 
