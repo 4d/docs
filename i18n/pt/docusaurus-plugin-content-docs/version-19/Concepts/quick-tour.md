@@ -225,8 +225,7 @@ Optionally, use the `Class constructor` keyword to declare properties of the obj
 
 ```4d  
 //in the Rectangle.4dm file
-Class constructor
-var $height; $width : Integer
+Class constructor ($height: Integer; $width : Integer)
 This.height:=$height
 This.width:=$width 
 This.name:="Rectangle"
@@ -238,8 +237,7 @@ A class can extend another class by using `Class extends <ClassName>`. Superclas
 //in the Square.4dm file
 Class extends rectangle
 
-Class constructor
-var $length : Integer
+Class constructor($length : Integer)
 
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height

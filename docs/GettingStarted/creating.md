@@ -18,11 +18,10 @@ To create a new project:
     * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
     * (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Enter the name of your project folder and click **Save**.
-This name will be used:
+3. Enter the name of your project folder and click **Save**. This name will be used:
 
-* as the name of the entire project folder,
-* as the name of the .4DProject file at the first level of the "Project" folder.
+	* as the name of the entire project folder,
+	* as the name of the .4DProject file at the first level of the ["Project" folder](../Project/architecture.md#project-folder).
 
  You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
 
@@ -35,16 +34,19 @@ You can then start developing your project.
 To open an existing project from 4D:
 
 1. Do one of the following:
-    * Select **Open a local application project** in the Welcome Wizard dialog
+
     * Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.
+    * Select **Open a local application project** in the Welcome Wizard dialog
+
 The standard Open dialog appears.
 
-2. Select the project's `.4dproject` file and click **Open**.
-By default, the project is opened with its current data file. Other file types are suggested:
+2. Select the project's `.4dproject` file (located inside the ["Project" folder of the project](../Project/architecture.md#project-folder)) and click **Open**. 
 
-* *Packed project files*: `.4dz` extension  - deployment projects
-* *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
-* *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
+	By default, the project is opened with its current data file. Other file types are suggested:
+
+	* *Packed project files*: `.4dz` extension  - deployment projects
+	* *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
+	* *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
 
 ### Options
 

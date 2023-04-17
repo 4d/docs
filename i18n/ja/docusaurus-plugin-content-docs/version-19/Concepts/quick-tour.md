@@ -226,8 +226,7 @@ $message:=$o.myClass.hello()
 
 ```4d  
 // Rectangle.4dm ファイル内
-Class constructor
-var $height; $width : Integer
+Class constructor ($height : Integer; $width : Integer)
 This.height:=$height
 This.width:=$width 
 This.name:="Rectangle"
@@ -239,8 +238,7 @@ This.name:="Rectangle"
 // Square.4dm ファイル内
 Class extends rectangle
 
-Class constructor
-var $length : Integer
+Class constructor ($length : Integer)
 
   // 親クラスのコンストラクターを呼び出します   
   // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します

@@ -164,9 +164,9 @@ Si l'une des entités comparées vaut **Null**, une erreur est retournée.
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // Toutes les différences sont retournées
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // Seules les différences relevées sur firstName et lastName sont retournées
+ $diff1:=$clone.diff(employee) // All differences are returned
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
+  // Only differences on firstName and lastName are returned
 ```
 
 $diff1:
@@ -1313,11 +1313,11 @@ Mise à jour d'une entité avec option `dk auto merge` :
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Paramètres   | Type       |    | Description                                                                                                  |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------------ |
-| filterString | Text       | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                   |
-| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                                          |
-| options      | Integer    | -> | `dk with primary key`: adds the \_\_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
+| Paramètres   | Type       |    | Description                                                                                                       |
+| ------------ | ---------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                        |
+| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                                               |
+| options      | Integer    | -> | `dk with primary key`: ajoute la propriété \_\_KEY ;<br/>`dk with stamp`: ajoute la propriété \_STAMP |
 | Résultat     | Object     | <- | Objet généré à partir de l'entité|<!-- END REF -->
 
 |
@@ -1350,9 +1350,9 @@ Si un filtre contient de attributs dont le [kind](DataClassAttributeClass.md#kin
 
 Dans le paramètre *options*, vous pouvez passer les sélecteurs `dk with primary key` et/ou `dk with stamp` afin d'ajouter les clés primaires et/ou les stamps dans les objets extraits.
 
-:::caution Warning
+:::caution Avertissement
 
-If you use another attribute than the primary key as the One attribute in a relation, the value of this attribute will be written in the "__KEY" property. Keep in mind that it is recommended to use the primary key as One attribute in your relations, especially when you use `.toObject()` and `.fromObject()` functions.
+Si vous utilisez un autre attribut que la clé primaire comme attribut 1 dans une relation, la valeur de cet attribut sera inscrite dans la propriété "__KEY". Gardez à l'esprit qu'il est recommandé d'utiliser la clé primaire comme attribut 1 dans vos relations, en particulier lorsque vous utilisez les fonctions `.toObject()` et `.fromObject()` .
 
 :::
 

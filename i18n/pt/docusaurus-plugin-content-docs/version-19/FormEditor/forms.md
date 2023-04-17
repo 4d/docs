@@ -8,14 +8,14 @@ Forms provide the interface through which information is entered, modified, and 
 
 ![](../assets/en/FormObjects/form1.png)
 
-Forms can also contain other forms through the following features:
+Os formulários também podem conter outros formulários através das seguintes funcionalidades:
 
-- [subform objects](FormObjects/subform_overview.md)
-- [inherited forms](properties_FormProperties.md#inherited-forms)
+- [os objectos sub-formulário](FormObjects/subform_overview.md)
+- [os formulários herdados](properties_FormProperties.md#inherited-forms)
 
 ## Criar formulários
 
-You can add or modify 4D forms using the following elements:
+É possível adicionar ou modificar formulários 4D usando os seguintes elementos:
 
 - **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
 - **Form Editor**: Modify your forms using the **[Form Editor](FormEditor/formEditor.md)**.
@@ -67,11 +67,11 @@ You can add or modify 4D forms using the following elements:
 }
 ```
 
-## Project form and Table form
+## Formulário projeto e formulário tabela
 
-There are two categories of forms:
+Existem duas categorias de formulários:
 
-- **Project forms** - Independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.
+- **Formulários projecto** - Formulários independentes que não estão anexados a qualquer tabela. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.
 
 - **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Typically, a table has separate input and output forms.
 
@@ -81,23 +81,23 @@ Typically, you select the form category when you create the form, but you can ch
 
 Each form has is made of at least two pages:
 
-- a page 1: a main page, displayed by default
-- a page 0: a background page, whose contents is displayed on every other page.
+- uma página 1: uma página principal, exibida por defeito
+- uma página 0: uma página de fundo, cujo conteúdo é exibido em todas as outras páginas.
 
-You can create multiple pages for an input form. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. Multiple pages allow you to do the following:
+É possível criar várias páginas para um formulário de entrada. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. Multiple pages allow you to do the following:
 
 - Place the most important information on the first page and less important information on other pages.
 - Organize each topic on its own page.
 - Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
 - Provide space around the form elements for an attractive screen design.
 
-Multiple pages are a convenience used for input forms only. They are not for printed output. When a multi-page form is printed, only the first page is printed.
+Multiple pages are a convenience used for input forms only. Não são para produção impressa. When a multi-page form is printed, only the first page is printed.
 
 There are no restrictions on the number of pages a form can have. The same field can appear any number of times in a form and on as many pages as you want. However, the more pages you have in a form, the longer it will take to display it.
 
 A multi-page form has both a background page and several display pages. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
 
-## Inherited Forms
+## Formulários herdados
 
 4D forms can use and be used as "inherited forms," meaning that all of the objects from *Form A* can be used in *Form B*. In this case, *Form B* "inherits" the objects from *Form A*.
 
@@ -107,10 +107,10 @@ All forms (table forms and project forms) can be designated as an inherited form
 
 When a form is executed, the objects are loaded and combined in the following order:
 
-1. Page zero of the inherited form
-2. Page 1 of the inherited form
-3. Page zero of the open form
-4. Current page of the open form.
+1. Página zero do formulário herdado
+2. Página 1 do formulário herdado
+3. Página zero do formulário aberto
+4. Página actual do formulário aberto.
 
 This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
 

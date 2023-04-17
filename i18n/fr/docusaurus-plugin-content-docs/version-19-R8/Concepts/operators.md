@@ -137,7 +137,7 @@ $t2*=2 // $t2="HelloHello"
 
 Les opérateurs **&&** et **||** sont des **opérateurs en court-circuit**. Un opérateur en court-circuit est un opérateur qui n'évalue pas nécessairement toutes ses opérandes.
 
-La différence avec les opérateurs booléens simples [**&** et **||**](dt_boolean.md#logical-operators) est que les opérateurs en court-circuit **&&** et **||** ne renvoient pas de valeur booléenne. Ils évaluent les expressions comme étant [truthy ou falsy](#truthy-and-falsy), puis retournent l'une des expressions.
+La différence avec les opérateurs booléens simples [**&** et **|**](dt_boolean.md#logical-operators) est que les opérateurs en court-circuit **&&** et **||** ne renvoient pas de valeur booléenne. Ils évaluent les expressions comme étant [truthy ou falsy](#truthy-and-falsy), puis retournent l'une des expressions.
 
 ### Opérateur en court-circuit AND (&&)
 

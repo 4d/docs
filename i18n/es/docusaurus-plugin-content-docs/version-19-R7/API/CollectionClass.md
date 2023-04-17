@@ -177,12 +177,18 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 El comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crea una nueva colección vacía o precargada compartida<!-- END REF --> y devuelve su referencia.
 
-La adición de un elemento a esta colección debe estar rodeada por la estructura de uso [`Use...End`](Concepts/shared.md#useend-use), de lo contrario se genera un error. Sin embargo, es posible leer un elemento sin estructura.
-> Para más información sobre las colecciones compartidas, consulte la página [Objetos y colecciones compartidos](Concepts/shared.md).
+La adición de un elemento a esta colección utilizando el operador de asignación debe estar rodeada por la estructura [`Use...End use`](Concepts/shared.md#useend-use), de lo contrario se genera un error (esto no es necesario cuando se añaden elementos utilizando funciones como [`push()`](#push) o [`map()`](#map) porque activan automáticamente una estructura interna *Use...End use*). Sin embargo, es posible leer un elemento sin una estructura *Use...End use*.
+
+|
+
+Para más información sobre las colecciones compartidas, consulte la página [Objetos y colecciones compartidos](Concepts/shared.md).
+
+:::
 
 Si no se pasa ningún parámetro, `New shared collection` crea una colección compartida vacía y devuelve su referencia.
 
 Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
+
 > Tenga en cuenta que las instrucciones `var : Collection` or `C_COLLECTION` declaran una variable de tipo `Collection` pero no crea ninguna colección.
 
 Opcionalmente, puede prellenar la nueva colección compartida pasando uno o varios *valores* como parámetro(s). De lo contrario, puede añadir o modificar elementos posteriormente por asignación notación objeto (ver ejemplo).
@@ -737,7 +743,7 @@ La colección devuelta se clasifica automáticamente. Los valores **Null** no se
 
 Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación distinga entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro *option*.
 
-Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para indicar la propiedad del objeto cuyos valores distintos desea obtener.
+If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
 
 
@@ -1094,7 +1100,7 @@ Se designa la retrollamada a ejecutar para filtrar los elementos de la colecció
 - *formula* (sintaxis recomendada), un [objeto Fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
-La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
+Se llama a la retrollamada con los parámetros pasados en *param* (opcional) y un objeto en primer parámetro (*$1*). The callback is called with the parameter(s) passed in *param* (optional).
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -1104,9 +1110,14 @@ La retrollamada recibe los siguientes parámetros:
 
 Puede definir los siguientes parámetros:
 
-*   (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si el valor del elemento coincide con la condición del filtro y debe conservarse, en caso contrario **false**.
+*   *$1.result* (booleano): **true** si el valor del elemento coincide con la condición del filtro y debe conservarse, **false** en caso contrario.
 *   *$1.stop* (Boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
+:::note
+
+Cuando se utiliza *methodName* como callback, y si el método no devuelve ningún valor, `.filter()` buscará la propiedad *$1.result* que debe definir como **true** para cada elemento que cumpla la condición.
+
+:::
 
 #### Ejemplo 1
 
@@ -1545,6 +1556,8 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 
 
+
+
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
 
@@ -1892,7 +1905,7 @@ Si la colección contiene elementos de diferentes tipos, se agrupan primero por 
 Ordenar una colección de números de forma ascendente y descendente:
 
 ```4d
- var $c; $c2; $3 : Collection
+ var $c; $c2; $c3 : Collection
  $c:=New collection
  For($vCounter;1;10)
     $c.push(Random)
@@ -2640,7 +2653,7 @@ Si la colección está vacía, este método no hace nada.
 
 #### Descripción
 
-La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una parte de una colección en una nueva colección<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una parte de una colección en una nueva colección<!-- END REF -->, seleccionado desde *startFrom* index hasta *end* index (final no incluido). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 La colección devuelta contiene el elemento especificado por *startFrom* y todos los elementos subsiguientes hasta, pero sin incluir, el elemento especificado por *end*. Si sólo se especifica el parámetro *startFrom*, la colección devuelta contiene todos los elementos desde *startFrom* hasta el último elemento de la colección original.

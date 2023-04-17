@@ -313,7 +313,7 @@ Los colores (resaltado y fondo) de una casilla de selección con el estilo de bo
 
 
 
-### Contraer/Desplegar
+### Collapse/Expand
 
 Este estilo de botón de casilla de selección se puede utilizar para añadir un icono estándar de contraer/expandir. Estos iconos se utilizan de forma nativa en las listas jerárquicas.
 
@@ -324,6 +324,12 @@ Este estilo de botón de casilla de selección se puede utilizar para añadir un
  - *macOS* - se ve como un triángulo que apunta hacia la derecha o hacia abajo.
 
   ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
+
+|
+
+The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
 
 
 #### Ejemplo JSON:
@@ -342,7 +348,7 @@ Este estilo de botón de casilla de selección se puede utilizar para añadir un
 
 
 
-### Botón de divulgación
+### Disclosure
 
 En macOS y Windows, una casilla de selección con el estilo de botón "Divulgación" aparece como un botón de información estándar, normalmente utilizado para mostrar/ocultar información adicional. Cuando se utiliza como botón radio, el símbolo del botón apunta hacia abajo con el valor 0 y hacia arriba con el valor 1.
 
@@ -353,6 +359,12 @@ En macOS y Windows, una casilla de selección con el estilo de botón "Divulgaci
  - *macOS*
 
     ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+
+|
+
+The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
 
 
 #### Ejemplo JSON:
@@ -408,11 +420,11 @@ Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#nu
 Todas las casillas de selección comparten un mismo conjunto de propiedades básicas:
 
 
-[Negrita](properties_Text.md#bold) - [Abajo](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Clase](properties_Object.md#css-class) - [Editable](properties_Entry.md#enterable) - [Tipo de expresión](properties_Object.md#expression-type) - [Focalizable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Mensaje de ayuda](properties_Help.md#help-tip) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Itálico](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Nombre](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Guardar valor](properties_Object.md#save-value) - [Ahorro](properties_Entry.md#shortcut) - [Acción estándar](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment)(1) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(2) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Number of States](properties_TextAndPicture.md#number-of-states)(2) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(2) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(2) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
+> (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
 Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
-- [Ruta de acceso fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
-- [Tres estados](properties_Display.md#three-states) (Plano, Clásico)
-- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname) - [Posición Título/Imagen](properties_TextAndPicture.md#title-picture-position) (Botón barra de herramientas, Bevel Redondeado, OS X Gradient, OS X Textured, Office XP, Personalizado)
+- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- Flat, Regular: [Three-States](properties_Display.md#three-states)

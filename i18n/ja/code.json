@@ -283,7 +283,7 @@
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "開発中",
+    "message": "次へ",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.versionBadge.label": {
@@ -576,5 +576,14 @@
   },
   "homepage.sections.mobile-applications.go-mobile-url": {
     "message": "https://developer.4d.com/go-mobile/ja/"
+  },
+  "Class Functions": {
+    "message": "クラス関数"
+  },
+  "Handling Code": {
+    "message": "コードの扱い方"
+  },
+  "Transformation Tags": {
+    "message": "変換タグ"
   }
 }

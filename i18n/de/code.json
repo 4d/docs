@@ -576,5 +576,14 @@
   },
   "homepage.sections.mobile-applications.go-mobile-url": {
     "message": "https://developer.4d.com/go-mobile/"
+  },
+  "Class Functions": {
+    "message": "Class Functions"
+  },
+  "Handling Code": {
+    "message": "Handling Code"
+  },
+  "Transformation Tags": {
+    "message": "Transformation Tags"
   }
 }

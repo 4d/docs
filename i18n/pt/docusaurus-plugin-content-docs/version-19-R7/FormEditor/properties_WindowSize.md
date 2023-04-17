@@ -7,9 +7,9 @@ title: Tamanho da janela
 ## Altura fixa
 
 
-If you select this option, the window height will be locked and it will not be possible for the user to resize it.
+Se seleccionar esta opção, a altura da janela será bloqueada e não será possível para o utilizador redimensioná-la.
 
-If this option is not selected, the width of the form window can be modified. In this case, the [Minimum Height and Maximum Height](#maximum-height-minimum-height) properties can be used to determine the resizing limits.
+Se esta opção não for seleccionada, a largura da janela do formulário pode ser modificada. Neste caso, as propriedades [Altura Mínima e Altura Máxima](#maximum-height-minimum-height) podem ser utilizadas para determinar os limites de redimensionamento.
 
 
 #### Gramática JSON
@@ -24,9 +24,9 @@ If this option is not selected, the width of the form window can be modified. In
 ## Largura fixa
 
 
-If you select this option, the window width will be locked and it will not be possible for the user to resize it.
+Se seleccionar esta opção, a largura da janela será bloqueada e não será possível para o utilizador redimensioná-la.
 
-If this option is not selected, the width of the form window can be modified. In this case, the [Minimum Width and Maximum Width](#maximum-width-minimum-width) properties can be used to determine the resizing limits.
+Se esta opção não for seleccionada, a largura da janela do formulário pode ser modificada. Neste caso, as propriedades [Largura Mínima e Largura Máxima](#maximum-width-minimum-width) podem ser utilizadas para determinar os limites de redimensionamento.
 
 
 #### Gramática JSON
@@ -39,9 +39,9 @@ If this option is not selected, the width of the form window can be modified. In
 
 
 
-## Maximum Height, Minimum Height
+## Altura máxima, Altura mínima
 
-Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed Height](#fixed-height) option is not set.
+Altura máxima e mínima (em pixels) de uma janela de forma redimensionável se a opção [Altura fixa](#fixed-height) não estiver definida.
 
 ##### Gramática JSON
 
@@ -51,9 +51,9 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 | windowMaxHeight | number        | valor inteiro     |
 
 
-## Maximum Width, Minimum Width
+## Largura máxima, Largura mínima
 
-Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed Width](#fixed-width) option is not set.
+Largura máxima e mínima (em pixels) de uma janela de forma redimensionável se a opção [Largura fixa](#fixed-width) não estiver definida.
 
 
 #### Gramática JSON

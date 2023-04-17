@@ -10,7 +10,7 @@ ORDA allows you to create high-level class functions above the data model. This 
 For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple as calling:
 
 ```4d
-$nextHigh:=ds. Employee(1).getNextWithHigherSalary()
+$nextHigh:=ds.Employee.get(1).getNextWithHigherSalary()
 ```
 
 Developers can not only use these functions in local datastores, but also in client/server and remote architectures:
@@ -36,6 +36,7 @@ In addition, 4D [automatically pre-creates](#creating-classes) the classes for e
 ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
+
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 

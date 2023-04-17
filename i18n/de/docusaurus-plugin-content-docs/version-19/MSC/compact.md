@@ -69,3 +69,5 @@ Beachten Sie, dass diese Option die Komprimierung beträchtlich verlangsamt und 
 > - Beim Komprimieren werden auch die Datensätze von Tabellen berücksichtigt, die im Papierkorb liegen. Gibt es dort eine große Anzahl Datensätze, kann das ein weiterer Faktor sein, der die Operation verlangsamt.
 > - Diese Option macht die Adresstabelle und folglich auch die Anwendung inkompatibel zum aktuellen Logbuch (sofern vorhanden). Es wird automatisch gesichert und beim nächsten Start der Anwendung muss ein neues Logbuch angelegt werden.
 > - Um zu sehen, ob die Adresstabelle komprimiert werden muss, gehen Sie auf die Seite [Information](information.md) des MSC und vergleichen die Gesamtanzahl der Datensätze mit der Größe der Adresstabelle.
+> - The [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) command automatically resets the address table for the specified table.  
+

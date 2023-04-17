@@ -130,7 +130,7 @@ The Flat check box button style is a minimalist appearance. A natureza gráfica 
 
 
 
-### Toolbar Button
+### Botão barra de ferramentas
 
 The Toolbar Button check box button style is primarily intended for integration in a toolbar.
 
@@ -259,7 +259,7 @@ By default, the OS X Textured button style appears as:
 
   ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button. Sua altura está predefinida: não é possível ampliar ou reduzir.
+ - *macOS* - um botão de sistema ‘standard’. Sua altura está predefinida: não é possível ampliar ou reduzir.
 
   ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -313,17 +313,23 @@ The colors (highlight and background) of a check box with the Office XP button s
 
 
 
-### Contrair/expandir
+### Collapse/Expand
 
-This check box button style can be used to add a standard collapse/expand icon. These icons are used natively in hierarchical lists.
+This check box button style can be used to add a standard collapse/expand icon. Estes ícones são utilizados nativamente em listas hierárquicas.
 
- - *Windows* - the icon looks like a [+] or a [-]
+ - *Windows* - o ícone parece-se com um [+] ou um [-]
 
   ![](../assets/en/FormObjects/checkbox_collapse.png)
 
  - *macOS* - parece com um triângulo apontando para cima ou para baixo.
 
   ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
+
+:::info
+
+The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
 
 
 #### JSON Exemplo:
@@ -342,9 +348,9 @@ This check box button style can be used to add a standard collapse/expand icon. 
 
 
 
-### Botão disclosure
+### Disclosure
 
-In macOS and Windows, a check box with the "Disclosure" button style appears as a standard disclosure button, usually used to show/hide additional information. Quando usar um botão radio, o símbolo botão aponta para baixo com o valor 0 e para cima com o valor 1.
+Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação" aparece como um botão de informação padrão, normalmente utilizado para mostrar/ocultar informação adicional. Quando usar um botão radio, o símbolo botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
  - *Windows*
 
@@ -353,6 +359,12 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
  - *macOS*
 
     ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
+
+:::info
+
+The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+
+:::
 
 
 #### JSON Exemplo:
@@ -372,7 +384,7 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
 
 ### Personalizado
 
-The Custom button style accepts a personalized background picture and allows managing specific properties:
+O estilo de botão Personalizado aceita uma imagem de fundo personalizada e permite gerir propriedades específicas:
 
 - [Rota de acesso ao Fundo](properties_TextAndPicture.md#backgroundPathname)
 - [Offset do ícone](properties_TextAndPicture.md#icon-offset)
@@ -408,11 +420,11 @@ Geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#
 Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas:
 
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment)(1) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(2) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Number of States](properties_TextAndPicture.md#number-of-states)(2) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(2) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(2) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
+> (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
-- [Rota de acesso do fundo](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Deslocamento ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
-- [Três Estados](properties_Display.md#three-states) (Flat, Clássico)
-- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Rota de imagem](properties_TextAndPicture.md#picture-pathname) - [Titulo/posição imagem](properties_TextAndPicture.md#title-picture-position) (botão Toolbar, Bevel, Bevel arredondado, OS X Gradient, OS X Textured, Office XP, Custom)
+- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- Flat, Regular: [Three-States](properties_Display.md#three-states)

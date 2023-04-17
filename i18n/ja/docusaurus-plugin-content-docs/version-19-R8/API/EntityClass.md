@@ -165,7 +165,7 @@ title: Entity
  employee.lastName:="SOPHIE"
  employee.salary:=500
  $diff1:=$clone.diff(employee) // すべての差異が返されます
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
+ $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
   // firstName と lastName についての差異のみが返されます
 ```
 

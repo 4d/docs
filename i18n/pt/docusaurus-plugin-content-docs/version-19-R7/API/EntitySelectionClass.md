@@ -18,6 +18,7 @@ As seleções de entidades podem ser criadas a partir de seleções existentes u
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
+| [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                                              |
 | [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->                                                          |
@@ -1506,6 +1507,8 @@ Como padrão, atributos são ordenados em ordem ascendente ("descendente" é fal
 Pode adicionar quantos objetos quiser nos critérios da coleção.
 > Valores null são avaliados como menor que outros valores.
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
 #### Exemplo
 
 
@@ -1972,6 +1975,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v17    | Adicionado |
+
 
 
 </details>

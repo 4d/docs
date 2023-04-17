@@ -61,11 +61,18 @@ Ist diese Option markiert, schreibt 4D während der Komprimierung jeden Datensat
 > Ist diese Option gewählt, werden alle Indizes aktualisiert.
 
 ### Komprimiere Adresstabelle
+
 (Option nur aktiv, wenn die vorige Option markiert ist)
 
 Diese Option baut beim Komprimieren die Adresstabelle für die Datensätze komplett neu auf. Das optimiert die Größe der Adresstabelle und ist nur sinnvoll für Datenbanken, wo umfangreiches Datenvolumen erstellt und dann wieder gelöscht wurde. In anderen Fällen ist die Optimierung nicht signifikant.
 
 Beachten Sie, dass diese Option die Komprimierung beträchtlich verlangsamt und alle Mengen, die über den Befehl `SAVE SET` gesichert wurden, ungültig werden. Wir empfehlen außerdem dringend, in diesem Fall gesicherte Mengen zu löschen, da ihre Verwendung zur Auswahl nicht-korrekter Daten führen kann.
-> - Beim Komprimieren werden auch die Datensätze von Tabellen berücksichtigt, die im Papierkorb liegen. Gibt es dort eine große Anzahl Datensätze, kann das ein weiterer Faktor sein, der die Operation verlangsamt.
-> - Diese Option macht die Adresstabelle und folglich auch die Anwendung inkompatibel zum aktuellen Logbuch (sofern vorhanden). Es wird automatisch gesichert und beim nächsten Start der Anwendung muss ein neues Logbuch angelegt werden.
-> - Um zu sehen, ob die Adresstabelle komprimiert werden muss, gehen Sie auf die Seite [Information](information.md) des MSC und vergleichen die Gesamtanzahl der Datensätze mit der Größe der Adresstabelle.
+
+:::note Notes
+
+- Beim Komprimieren werden auch die Datensätze von Tabellen berücksichtigt, die im Papierkorb liegen. Gibt es dort eine große Anzahl Datensätze, kann das ein weiterer Faktor sein, der die Operation verlangsamt.
+- Diese Option macht die Adresstabelle und folglich auch die Anwendung inkompatibel zum aktuellen Logbuch (sofern vorhanden). Es wird automatisch gesichert und beim nächsten Start der Anwendung muss ein neues Logbuch angelegt werden.
+- Um zu sehen, ob die Adresstabelle komprimiert werden muss, gehen Sie auf die Seite [Information](information.md) des MSC und vergleichen die Gesamtanzahl der Datensätze mit der Größe der Adresstabelle.
+- The [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) command automatically resets the address table for the specified table.
+
+:::

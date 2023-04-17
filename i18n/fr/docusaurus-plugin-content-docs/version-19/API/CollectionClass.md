@@ -162,7 +162,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 La commande `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crée une nouvelle collection partagée vide ou pré-remplie<!-- END REF --> et retourne sa référence.
 
-L'ajout et la modification d'éléments dans une collection partagée doivent être encadrés par une structure [`Use...End`](Concepts/shared.md#useend-use), sinon une erreur est générée. La lecture d'un élement hors [`Use...End`](Concepts/shared.md#useend-use) est toutefois possible.
+L'ajout d'un élément à cette collection à l'aide de l'opérateur d'assignation doit être entouré de la structure [`Use...End use`](Concepts/shared.md#useend-use) , sinon une erreur est générée (cela n'est pas nécessaire lors de l'ajout d'éléments à l'aide de fonctions telles que [`push()`](#push) ou [`map()`](#map) , car elles déclenchent automatiquement une structure interne *Use...End use*). La lecture d'un élément sans structure *Use...End use* est toutefois possible.
 > Pour plus d'informations sur les collections partagées, reportez-vous à la page [Objets et collections partagés](Concepts/shared.md).
 
 Si vous ne passez aucun paramètre, `New shared collection` crée une collection vide et retourne sa référence.
@@ -668,7 +668,7 @@ La collection retournée est automatiquement triée. Les valeurs **Null** ne son
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre *option*.
 
-Si la collection contient des objets, vous pouvez passer le paramètre *propertyPath* afin d'indiquer la propriété d'objet dont vous souhaitez obtenir les valeurs distinctes.
+If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
 #### Exemple
 
@@ -2178,7 +2178,7 @@ Cet exemple permet de réduire plusieurs éléments de collection en un seul él
 
 #### Exemple 2
 
-Avec la méthode ***Flatten*** suivante :
+Cet exemple permet de réduire plusieurs éléments de collection à un seul :
 
 ```4d
  var $c;$r : Collection
@@ -2190,7 +2190,7 @@ Avec la méthode ***Flatten*** suivante :
  $r:=$c.reduce("Flatten") //$r=[0,1,2,3,4,5,6,7]
 ```
 
-Avec la méthode *NumberGreaterThan0* suivante :
+Avec la méthode ***Flatten*** suivante :
 
 ```4d
  If($1.accumulator=Null)
@@ -2640,6 +2640,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 ```4d
  var $col : Collection
+
  var $vSum : Real
  $col:=New collection(10;20;"Monday";True;2)
  $vSum:=$col.sum() //32

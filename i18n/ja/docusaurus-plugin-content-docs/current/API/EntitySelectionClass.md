@@ -13,13 +13,16 @@ title: EntitySelection
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.distinctPaths().Syntax -->](#distinctPaths)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinctPaths().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->|
@@ -177,6 +180,52 @@ $result:=$sel[0].lock() //動作しません
 
 <!-- END REF -->
 
+
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| 引数    | タイプ       |    | 説明                                           |
+| ----- | --------- |:--:| -------------------------------------------- |
+| index | Integer   | -> | 取得するエンティティのインデックス                            |
+| 戻り値   | 4D.Entity | <- | そのインデックスにあるエンティティ|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.at()` 関数は、 <!-- REF #EntitySelectionClass.at().Summary -->*index* の位置にあるエンティティを返します (index は正負の整数)<!-- END REF -->。
+
+*index* に負の整数 (-1 から -n; n はエンティティセレクションの length) が渡された場合、エンティティセレクションの最後から逆向きに数えます。
+
+*index* がエンティティセレクションの範囲を超える場合、この関数は Null を返します。
+
+#### 例題
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  // $employees エンティティセレクションの 3番目のエンティティ 
+$emp2:=$employees.at(-3) // $employees エンティティセレクションの
+    // 終わりから 3番目のエンティティ
+```
+
+<!-- END REF -->
 
 
 
@@ -646,20 +695,21 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| バージョン | 内容                      |
+| ----- | ----------------------- |
+| v20   | `dk count values` をサポート |
+| v17   | 追加                      |
 
 </details>
 
-<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *options* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| 引数            | タイプ        |    | 説明                                                       |
-| ------------- | ---------- |:--:| -------------------------------------------------------- |
-| attributePath | Text       | -> | 重複しない値を取得する属性のパス                                         |
-| option        | Integer    | -> | `dk diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
+| 引数            | タイプ        |    | 説明                                             |
+| ------------- | ---------- |:--:| ---------------------------------------------- |
+| attributePath | Text       | -> | 重複しない値を取得する属性のパス                               |
+| options       | Integer    | -> | `dk diacritical`, `dk count values`            |
 | 戻り値           | Collection | <- | 重複しない値のみを格納したコレクション|<!-- END REF -->
 
 |
@@ -679,7 +729,18 @@ $sellist2:=$sellist2.add($sellist1)
 
 *attributePath* がオブジェクト内のパスの場合、`[]` を使ってコレクションを指定できます (例題参照)。
 
-デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、*option* に `dk diacritical` 定数を渡します。
+*options* 引数として、以下の定数を 1つ、または組み合わせで渡すことができます:
+
+| 定数                | 値  | 説明                                                                                                                                         |
+| ----------------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dk diacritical`  | 8  | 文字の大小とアクセントを区別して評価をおこないます。 省略された場合のデフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。                                                                    |
+| `dk count values` | 32 | 特定の値を持つエンティティの数 (重複がなければ 1、重複があればその数) を返します。 このオプションを渡すと、`.distinct()` は、`{"value":*value*; "count":*count*}` のプロパティを含むオブジェクトのコレクションを返します。 |
+
+:::note
+
+The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
+
+:::
 
 以下の場合には、エラーが返されます:
 
@@ -691,8 +752,12 @@ $sellist2:=$sellist2.add($sellist1)
 国名ごとに重複しない要素を格納するコレクションを取得します:
 
 ```4d
- var $countries : Collection
- $countries:=ds.Employee.all().distinct("address.country")
+var $countries : Collection
+$countries:=ds.Employee.all().distinct("address.country")
+//$countries[0]={"Argentina"}
+//$countries[1]={"Australia"}
+//$countries[2]={"Belgium"}
+///...
 ```
 
 `extra` がオブジェクト属性で、`nicknames` がコレクションの場合:
@@ -700,6 +765,77 @@ $sellist2:=$sellist2.add($sellist1)
 ```4d
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
+
+社内における職種の名称とそれぞれの社員数を把握するには:
+
+```4d
+var $jobs : Collection
+$jobs:=ds.Employee.all().distinct("jobName";dk count values)  
+//$jobs[0]={"value":"Developer";"count":17}
+//$jobs[1]={"value":"Office manager";"count":5}
+//$jobs[2]={"value":"Accountant";"count":2}
+//...
+```
+
+
+
+<!-- END REF -->
+
+
+<!-- REF EntitySelectionClass.distinctPaths().Desc -->
+## .distinctPaths()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #EntitySelectionClass.distinctPaths().Syntax -->**.distinctPaths**( *attribute* : Text ) : Collection<!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.distinctPaths().Params -->
+| 引数        | タイプ        |    | 説明                                              |
+| --------- | ---------- |:--:| ----------------------------------------------- |
+| attribute | Text       | -> | 取得したいパスを持つオブジェクト属性名                             |
+| 戻り値       | Collection | <- | 重複しないパスを格納した新規コレクション|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.distinctPaths()` 関数は、 <!-- REF #EntitySelectionClass.distinctPaths().Summary -->対象のエンティティセレクションにおいて *attribute* に指定した、インデックスされているオブジェクト属性の重複しない (異なる) パスを格納したコレクションを返します<!-- END REF -->。
+
+*attribute* が、インデックスされているオブジェクト属性でない場合、エラーが生成されます。
+
+呼び出し後、返されるコレクションのサイズは、対象のエンティティセレクションにおいて *attribute* で指定したオブジェクト属性が持つ重複しないのパスの数に等しい。 パスは、ネストされた属性やコレクション ("info.address.number" や "children[].birthdate" など) を含め、文字列として返されます。 *attribute* が null 値のエンティティは考慮されません。
+
+#### 例題
+
+*fullData* オブジェクト属性に格納されているすべてのパスを取得します:
+
+```4d
+var $paths : Collection
+$paths:=ds.Employee.all().distinctPaths("fullData")
+//$paths[0]="age"
+//$paths[1]="Children"
+//$paths[2]="Children[].age"
+//$paths[3]="Children[].name"
+//$paths[4]="Children.length"
+///...
+```
+
+
+
+:::note
+
+*length* は、ネストされたコレクションプロパティのパスとして自動的に追加されます。
+
+:::
 
 <!-- END REF -->
 
@@ -733,6 +869,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 > エンティティの削除は恒久的なものであり、取り消しはできません。 ロールバックで戻すことができるように、この関数はトランザクション内で呼び出すことが推奨されています。
 
 `.drop()` の実行中にロックされたエンティティに遭遇した場合、そのエンティティは削除されません。 デフォルトでは、メソッドはエンティティセレクション内のすべてのエンティティを処理し、ドロップ不可なエンティティはエンティティセレクション内に返します。 最初のドロップ不可なエンティティに遭遇した時点でメソッドの実行を止めたい場合は、*mode* パラメーターに `dk stop dropping on first error` 定数を渡します。
+
 
 #### 例題
 
@@ -1175,6 +1312,7 @@ Form.products.add(Form.product)
 エンティティセレクションが空の場合、関数は null を返します。
 
 
+
 #### 例題
 
 
@@ -1492,13 +1630,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| 引数          | タイプ                |    | 説明                                                       |
-| ----------- | ------------------ |:--:| -------------------------------------------------------- |
-| pathString  | Text               | -> | エンティティセレクションの属性パスと並べ替えの指定                                |
-| pathObjects | Collection         | -> | 条件オブジェクトのコレクション                                          |
-| 戻り値         | 4D.EntitySelection | <- | 指定された順番に並べ替えられた新規エンティティセレクション|<!-- END REF -->
+|引数|タイプ||説明|
 
-|
+|---------|--- |:---:|------| |pathString |Text   |->|エンティティセレクションの属性パスと並べ替えの指定| |pathObjects |Collection    |->|条件オブジェクトのコレクション| |Result|4D.EntitySelection|<-|指定された順番に並べ替えられた新規エンティティセレクション|<!-- END REF -->
 
 #### 説明
 
@@ -1529,6 +1663,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 pathObjects コレクションには必要な数だけオブジェクトを追加することができます。
 > Null は他の値より小さいと評価されます。
+
+*pathString* または *pathObject* に無効な属性パスを渡すと、この関数は空のエンティティセレクションを返します。
+
 
 #### 例題
 
@@ -1994,6 +2131,7 @@ ds.Employee.all().length = 10 である場合:
 
 ```4d
 var $slice : cs.EmployeeSelection
+
 $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番までを返そうとしますが、9 > 8 なので空のセレクションが返されます
 
 ```
@@ -2009,6 +2147,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 | バージョン | 内容 |
 | ----- | -- |
 | v17   | 追加 |
+
 
 
 
@@ -2256,6 +2395,7 @@ $employeesCollection:=$employees.toCollection("";dk with primary key+dk with sta
 ```4d
 var $employeesCollection; $filter : Collection
 var $employees : cs.EmployeeSelection
+
 
 $employeesCollection:=New collection
 $filter:=New collection

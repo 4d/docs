@@ -64,7 +64,7 @@ Uma coleção se inicializa com:
 | [<!-- INCLUDE #collection.sum().Syntax -->](#sum)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->                               |
 | [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->                   |
 
-## `Nova colecção`
+## `Nova coleção`
 
 
 <!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
@@ -162,7 +162,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova colecção partilhada vazia ou pré-carregada<!-- END REF --> e devolve a sua referência.
 
-A adição de um elemento a esta colecção deve ser rodeada pela estrutura de utilização [`Use...End`](Concepts/shared.md#useend-use) , caso contrário é gerado um erro. Ler um elemento sem a estrutura é entretanto possível.
+A adição de um elemento a esta coleção utilizando o operador de atribuição deve ser rodeada pela estrutura [`Use...End use`](Concepts/shared.md#useend-use) , caso contrário é gerado um erro (isto não é necessário ao adicionar elementos utilizando funções como [`push()`](#push) ou [`map()`](#map) porque estes ativam automaticamente uma estrutura interna *Use...End use*). A leitura de um elemento sem um *Use...End use* estrutura é, no entanto, possível.
 > Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
 
 Se não quiser passar parâmetros, `New shared collection` cria uma coleção vazia partilhada e retorna sua referência.
@@ -663,7 +663,7 @@ A coleção retornada é ordenada automaticamente. Valores **Null** não são re
 
 Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie minúsculas de maiúsculas ou que diferencie letras acentuadas, passe a constante `ck diacritical` no parâmetro*option*.
 
-Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores diferentes você quer obter.
+If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
 
 #### Exemplo
 
@@ -2634,6 +2634,7 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 ```4d
  var $col : Collection
+
  var $vSum : Real
  $col:=New collection(10;20;"Monday";True;2)
  $vSum:=$col.sum() //32

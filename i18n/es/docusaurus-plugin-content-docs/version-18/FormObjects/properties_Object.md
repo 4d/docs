@@ -123,7 +123,7 @@ Sin embargo, esta propiedad tiene una función tipográfica en los siguientes ca
 
 | Nombre             | Tipos de datos | Valores posibles          |
 | ------------------ | -------------- | ------------------------- |
-| dataSourceTypeHint | string         | <ul><li>**objetos estándar:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</li></ul> |
+| dataSourceTypeHint | string         | <ul><li>**objetos estándar:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**Columnas list box:** "boolean", "number", "picture", "text", date" (*sólo list box array/selección*) "integer", "time", "object"</li></ul> |
 
 #### Objetos soportados
 

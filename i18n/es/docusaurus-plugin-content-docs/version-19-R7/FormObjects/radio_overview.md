@@ -24,7 +24,7 @@ Los botones radio se controlan con métodos. Como todos los botones, la variable
 ![](../assets/en/FormObjects/radio2.png)
 
 Al seleccionar un botón radio de un grupo, ese botón se pone en 1 y todos los demás del grupo en 0. Sólo se puede seleccionar un botón de radio a la vez.
-> Puede asociar [expresiones de tipo booleano](properties_Object.md#variable-or-expression) a botones radio. En este caso, cuando se selecciona un botón radio de un grupo, su variable es True y las variables de los demás botones radio del grupo son False.
+> You can associate [Boolean type expressions](properties_Object.md#variable-or-expression) with radio buttons. In this case, when a radio button in a group is selected, its variable is True and the variables for the group's other radio buttons are False.
 
 El valor contenido en un objeto botón radio no se guarda automáticamente (excepto si es la representación de un campo booleano); los valores de los botones radio deben almacenarse en sus variables y gestionarse con métodos.
 

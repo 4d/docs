@@ -1,6 +1,6 @@
 ---
 id: data-collect
-title: Data Collection
+title: Recopilación de datos
 ---
 
 Para que nuestros productos sean siempre mejores, recogemos automáticamente los datos relativos a las estadísticas de uso de las aplicaciones 4D Server en funcionamiento. Los datos recogidos son completamente anónimos y se transfieren sin afectar la experiencia del usuario.

@@ -18,6 +18,7 @@ Entity selections can be created from existing selections using various function
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->|
@@ -1529,6 +1530,9 @@ By default, attributes are sorted in ascending order ("descending" is false).
 You can add as many objects in the criteria collection as necessary.
 > Null values are evaluated as less than other values.
 
+If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+
+
 #### Beispiel
 
 
@@ -2012,6 +2016,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 
 
+
 </details>
 
 <!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
@@ -2255,6 +2260,7 @@ Example with slicing and filtering on properties:
 ```4d
 var $employeesCollection; $filter : Collection
 var $employees : cs.EmployeeSelection
+
 
 $employeesCollection:=New collection
 $filter:=New collection

@@ -51,7 +51,7 @@ Sintaxe:
 
 > A pasta atual do usuário é alcançada usando o comando  "~ " em macOS e o comando "%HOMEPATH%" em Windows.
 
-Launch a 4D application stored on the desktop:
+Lance uma aplicação 4D armazenada no desktop:
 
 *   macOS:
 
@@ -70,13 +70,13 @@ open "~/Desktop/4D Server.app"
 ```
 
 
-Open a package file on macOS:
+Abrir um ficheiro de pacote em macOS:
 
 ```bash
 --args ~/Documents/myDB.4dbase
 ```
 
-Open a project file:
+Abrir um ficheiro de projecto:
 
 *   macOS:
 
@@ -95,7 +95,7 @@ Open a project file:
 
 
 
-Open a project file and a data file:
+Abrir um ficheiro de projecto e um ficheiro de dados:
 
 *   macOS:
 
@@ -130,7 +130,7 @@ Abrir um ficheiro .4DLink:
 %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
-Open compiled mode and create a data file if not available:
+Abrir em modo compilado e criar um arquivo de dados se não disponível:
 
 *   macOS:
 
@@ -146,7 +146,7 @@ Open compiled mode and create a data file if not available:
 %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-Open a project file and a data file and pass a string as a user parameter:
+Abrir um ficheiro projeto e um arquivo de dados e passar uma “string” como parâmetro do usuário:
 
 *   macOS:
 
@@ -162,7 +162,7 @@ Open a project file and a data file and pass a string as a user parameter:
 --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-Open without interface (headless mode):
+Aberto sem interface (modo headless):
 
 *   macOS:
 

@@ -226,8 +226,7 @@ $message:=$o.myClass.hello()
 
 ```4d  
 // Rectangle.4dm ファイル内
-Class constructor
-var $height; $width : Integer
+Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
 This.width:=$width 
 This.name:="Rectangle"
@@ -239,9 +238,7 @@ This.name:="Rectangle"
 // Square.4dm ファイル内
 Class extends rectangle
 
-Class constructor
-var $length : Integer
-
+Class constructor ($length : Integer)
   // 親クラスのコンストラクターを呼び出します   
   // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
 Super($length;$length)
@@ -251,6 +248,7 @@ This.name:="Square"
 
 
 ## 演算子
+
 プログラミング言語を使用する際に、データのみを必要とする場合は非常に稀です。 データを加工、または何らかの目的のために使用することがほとんどです。 そういった計算は演算子を使っておこないます。 一般的に演算子とは、2つのデータをもとに処理をおこない、1つの新しいデータを生成します。 日常的に使用されている演算子も多くあります。 たとえば、1 + 2 という式は加算演算子 (プラス記号) を使用し、2つの数値を足し合わせて、3という結果を返します。 以下に、よく知られている 4つの演算子を示します:
 
 | 演算子 | 演算       | 例題           |

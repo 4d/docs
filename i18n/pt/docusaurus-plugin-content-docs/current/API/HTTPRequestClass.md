@@ -3,17 +3,18 @@ id: HTTPRequestClass
 title: HTTPRequest
 ---
 
-<details><summary>Histórico</summary>
-
-| Versão | Mudanças    |
-| ------ | ----------- |
-| v19 R6 | Class added |
-
-</details>
-
 A classe `HTTPRequest` permite-lhe tratar [`objectos HTTPRequest`](#httprequest-object) que podem ser utilizados para configurar e enviar pedidos para um servidor HTTP, bem como para processar as respostas do servidor HTTP.
 
 A classe `HTTPRequest` está disponível a partir da loja de classes `4D` . Você cria e envia pedidos HTTP usando a função [4D.HTTPRequest.new()](#4dhttprequestnew) , que retorna um objecto HTTPRequest [``](#httprequest-object).
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças          |
+| ------ | ----------------- |
+| v19 R6 | Classe adicionada |
+
+</details>
+
 
 ### Exemplo
 
@@ -259,6 +260,7 @@ A propriedade `.method` contém <!-- REF #HTTPRequestClass.method.Summary -->o m
 #### Descrição
 
 A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary -->o protocolo `` passou no objecto [`opções`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido ou se "auto" foi utilizado, contém a versão do protocolo utilizado.
+
 
 <!-- END REF -->
 

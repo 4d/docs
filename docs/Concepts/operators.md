@@ -272,7 +272,7 @@ This means that `a || b && c` is evaluated as `(a || b) && c`.
 |v19 R4|Added
 </details>
 
-The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](./cf_branching.md#ifelseend-if) statements.
+The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](flow-control.md#ifelseend-if) statements.
 
 It takes three operands in the following order: 
 
@@ -344,7 +344,7 @@ All other values are considered **truthy**, including:
 
 * 0 - numeric zero (Integer or otherwise)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
+In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
 For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
 

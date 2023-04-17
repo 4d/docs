@@ -98,7 +98,7 @@ El título del botón se desplazará hacia la derecha y hacia la parte inferior 
 
 ## Número de estados
 
-Esta propiedad define el número exacto de estados presentes en la imagen utilizada como icono para un [botón con icono](button_overview.md), una [casilla de selección](checkbox_overview.md) o un [botón radio](radio_overview.md) personalizado. En general, el icono de un botón incluye cuatro estados: activo, presionado, sobre el ratón e inactivo.
+This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). En general, el icono de un botón incluye cuatro estados: activo, presionado, sobre el ratón e inactivo.
 
 Cada estado está representado por una imagen diferente. En la imagen fuente, los estados deben apilarse verticalmente:
 

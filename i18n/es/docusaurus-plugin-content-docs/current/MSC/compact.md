@@ -61,11 +61,18 @@ Cuando esta opción está marcada, 4D reescribe cada registro de cada tabla dura
 > Todos los índices se actualizan cuando se selecciona esta opción.
 
 ### Compactar la tabla de direcciones
+
 (opción activa únicamente cuando la opción anterior está marcada)
 
 Esta opción reconstruye completamente la tabla de direcciones para los registros durante la compactación. Esto optimiza el tamaño de la tabla de direcciones y se utiliza principalmente para las bases de datos en las que se crearon grandes volúmenes de datos y luego se borraron. En otros casos, la optimización no es un factor decisivo.
 
 Tenga en cuenta que esta opción ralentiza sustancialmente la compactación e invalida cualquier conjunto guardado mediante el comando `SAVE SET`. Además, recomendamos especialmente que se borren los conjuntos guardados en este caso, ya que su uso puede dar lugar a selecciones de datos incorrectas.
-> - La compactación tiene en cuenta los registros de las tablas que se han puesto en la Papelera. Si hay un gran número de registros en la Papelera, esto puede ser un factor adicional que puede ralentizar la operación.
-> - El uso de esta opción hace que la tabla de direcciones, y por tanto la base de datos, sea incompatible con el archivo de diario actual (si existe). Se guardará automáticamente y habrá que crear un nuevo archivo de historial la próxima vez que se inicie la aplicación.
-> - Puede decidir si la tabla de direcciones necesita ser compactada comparando el número total de registros y el tamaño de la tabla de direcciones en la página [Información](information.md) del CSM.
+
+:::note Notes
+
+- La compactación tiene en cuenta los registros de las tablas que se han puesto en la Papelera. Si hay un gran número de registros en la Papelera, esto puede ser un factor adicional que puede ralentizar la operación.
+- El uso de esta opción hace que la tabla de direcciones, y por tanto la base de datos, sea incompatible con el archivo de diario actual (si existe). Se guardará automáticamente y habrá que crear un nuevo archivo de historial la próxima vez que se inicie la aplicación.
+- Puede decidir si la tabla de direcciones necesita ser compactada comparando el número total de registros y el tamaño de la tabla de direcciones en la página [Información](information.md) del CSM.
+- The [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) command automatically resets the address table for the specified table.
+
+:::
