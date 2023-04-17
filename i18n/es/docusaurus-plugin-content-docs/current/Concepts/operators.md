@@ -302,7 +302,7 @@ Esto significa que `a || b && c` se evalúa como `(a || b) && c`.
 | v19 R4  | Añadidos       |
 </details>
 
-El operador condicional ternario permite escribir expresiones condicionales de una línea. Por ejemplo, puede reemplazar una secuencia completa de instrucciones [If…Else](./cf_branching.md#ifelseend-if).
+El operador condicional ternario permite escribir expresiones condicionales de una línea. For example, it can replace a full sequence of [If…Else](flow-control.md#ifelseend-if) statements.
 
 Se necesitan tres operandos en el siguiente orden:
 
@@ -376,7 +376,7 @@ Todos los demás valores se consideran **truthy**, incluyendo:
 
 * 0 - cero numérico (Entero u otro)
 
-En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es proporcionar una forma conveniente de manejar *valores no definidos* y *valores nulos* en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](./cf_branching.md#ifelseend-if) sean necesarias para evitar errores de ejecución.
+En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
 Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-or-operator-):
 
