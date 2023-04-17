@@ -20,12 +20,12 @@ title: Webデータエクスプローラー
 
 ## データエクスプローラーを開く
 
-[The `WebAdmin` web server](webAdmin.md#starting-the-webadmin-web-server) is started automatically when the Data Explorer is clicked on.
+データエクスプローラーがクリックされると、[`WebAdmin` Webサーバー](webAdmin.md#starting-the-webadmin-web-server) が自動的に開始されます。
 
-Connect to the Data Explorer web page:
+データエクスプローラーWebページに接続するには:
 
-- From the 4D interface:
-  - To open a new 4D window with the Data Explorer page displayed in a web area, click on the **Data** button in the main toolbar or select **Data Explorer** in the Records menu.
+- 4D インターフェースを使用する場合:
+  - Webエリアにデータエクスプローラーを表示した新しい 4Dウィンドウを開くには、メインツールバーの **データ** ボタンをクリックするか、レコードメニューから **データエクスプローラー** を選択します。
   - To open the Data Explorer in an external browser tab, click on the **Data** button in the main toolbar  with the "alt" key (Windows) or "Option" key (macOS) or select **Open Data Explorer In Browser** in the Records menu.
   - In 4D Server, select **Data Explorer In Browser** in the Window menu (the Data Explorer is opened automatically on an external browser).
 
