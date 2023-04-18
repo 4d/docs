@@ -271,7 +271,7 @@ $name:=$person.maidenName || $person.name
 | v19 R4 | 追加 |
 </details>
 
-三項演算子を使うと、条件式を 1行で書くことができます。 たとえば、[If...Else](./cf_branching.md#ifelseend-if) 文を完全に置き換えることができます。
+三項演算子を使うと、条件式を 1行で書くことができます。 For example, it can replace a full sequence of [If…Else](flow-control.md#ifelseend-if) statements.
 
 三項演算子は 3つのオペランドを次の順序で受け取ります:
 
@@ -343,7 +343,7 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 * 0 - 数値のゼロ (整数かどうかを問わず)
 
-4Dでは、**truthy** と **falsy** の評価は値の **使用性** を反映します。つまり、truthy な値は存在し、エラーや予期せぬ結果を発生させずにコードによって処理できることを意味します。 その目的は、オブジェクトやコレクションにおける *undefined* や *null* 値を扱うための便利な方法を提供し、実行時エラーを回避するのに必要な [If...Else](./cf_branching.md#ifelseend-if) 文の数を少なくすることにあります。
+4Dでは、**truthy** と **falsy** の評価は値の **使用性** を反映します。つまり、truthy な値は存在し、エラーや予期せぬ結果を発生させずにコードによって処理できることを意味します。 The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
 たとえば、[OR 短絡演算子](#or-短絡演算子-) を使用すると:
 

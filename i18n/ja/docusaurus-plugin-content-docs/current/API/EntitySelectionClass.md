@@ -738,7 +738,7 @@ $sellist2:=$sellist2.add($sellist1)
 
 :::note
 
-The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
+`dk count values` のオプションは、ブール、文字列、数値、日付型のストレージ属性でのみ利用可能です。
 
 :::
 

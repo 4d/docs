@@ -1,9 +1,7 @@
 ---
 id: dataExplorer
-title: Webデータエクスプローラー
+title: データエクスプローラー
 ---
-
-> **プレビュー**: Webデータエクスプローラーは、プレビュー機能として提供されています。 運用環境でこの機能を使用することは推奨されません。 最終的な実装は若干異なる可能性があります。
 
 データエクスプローラーは、プロジェクトのデータストアにあるデータを表示・クエリするための Webインターフェースを提供します。 このツールを使用すると、すべてのエンティティを簡単に照会し、属性値に基づいて検索・並べ替え・フィルターすることができます。 このツールは、開発プロセスのどの段階においても、データを管理し、問題を迅速に特定するのに役立ちます。
 
@@ -20,16 +18,16 @@ title: Webデータエクスプローラー
 
 ## データエクスプローラーを開く
 
-データエクスプローラーがクリックされると、[`WebAdmin` Webサーバー](webAdmin.md#starting-the-webadmin-web-server) が自動的に開始されます。
+データエクスプローラーがクリックされると、必要に応じて [`WebAdmin` Webサーバー](webAdmin.md#starting-the-webadmin-web-server) が自動的に開始されます。
 
 データエクスプローラーWebページに接続するには:
 
-- 4D インターフェースを使用する場合:
-  - Webエリアにデータエクスプローラーを表示した新しい 4Dウィンドウを開くには、メインツールバーの **データ** ボタンをクリックするか、レコードメニューから **データエクスプローラー** を選択します。
-  - To open the Data Explorer in an external browser tab, click on the **Data** button in the main toolbar  with the "alt" key (Windows) or "Option" key (macOS) or select **Open Data Explorer In Browser** in the Records menu.
-  - In 4D Server, select **Data Explorer In Browser** in the Window menu (the Data Explorer is opened automatically on an external browser).
+- 4Dアプリケーションから (インターフェースあり):
+  - Webエリアにデータエクスプローラーを表示した新しい 4Dウィンドウを開くには、**レコード** メニューから **データエクスプローラー** を選択するか、メインツールバーの **データ** ボタンをクリックします。
+  - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
+- From 4D Server, select **Data Explorer In Browser** in the **Window** menu (the Data Explorer can only be opened on an external browser).
 
-- ヘッドレス4Dアプリケーションを使用しているかどうかに関わらず、Webブラウザーを開いて次のアドレスを入力します:
+- Whether you use a headless 4D application or not, you can open your web browser and enter the following address:
 
  `IPaddress:HTTPPort/dataexplorer`<br /> または<br /> `IPaddress:HTTPSPort/dataexplorer`
 

@@ -1,9 +1,7 @@
 ---
 id: dataExplorer
-title: Explorateur de données Web
+title: Data Explorer
 ---
-
-> **Aperçu** : L'Explorateur de données Web est fourni à titre d'aperçu. L'utilisation de cette fonctionnalité en production n'est pas recommandée. L'implémentation finale pourrait être légèrement différente.
 
 L'Explorateur de données fournit une interface web pour visualiser et rechercher les données de votre datastore. Grâce à cet outil, vous pouvez facilement naviguer parmi toutes vos entités et rechercher, ordonner ou filtrer les valeurs des attributs. Il vous aide à contrôler les données et à identifier rapidement les problèmes rencontrés à chaque étape du développement.
 
@@ -20,16 +18,16 @@ L'Explorateur de données s'appuie sur le composant serveur web [`WebAdmin`](web
 
 ## Ouverture de l'Explorateur de données
 
-[The `WebAdmin` web server](webAdmin.md#starting-the-webadmin-web-server) is started automatically when the Data Explorer is clicked on.
+[The `WebAdmin` web server](webAdmin.md#starting-the-webadmin-web-server) is started automatically if necessary when the Data Explorer is clicked on.
 
-Connect to the Data Explorer web page:
+Pour se connecter à la page web de l'Explorateur de données :
 
-- From the 4D interface:
-  - To open a new 4D window with the Data Explorer page displayed in a web area, click on the **Data** button in the main toolbar or select **Data Explorer** in the Records menu.
-  - To open the Data Explorer in an external browser tab, click on the **Data** button in the main toolbar  with the "alt" key (Windows) or "Option" key (macOS) or select **Open Data Explorer In Browser** in the Records menu.
-  - In 4D Server, select **Data Explorer In Browser** in the Window menu (the Data Explorer is opened automatically on an external browser).
+- From a 4D application (with interface):
+  - To open a new 4D window with the Data Explorer page displayed in a web area, select **Data Explorer** in the **Records** menu or click on the **Data** button in the main toolbar.
+  - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
+- From 4D Server, select **Data Explorer In Browser** in the **Window** menu (the Data Explorer can only be opened on an external browser).
 
-- que vous utilisiez une application 4D headless ou non, vous pouvez ouvrir votre navigateur web et entrer l'adresse suivante :
+- Whether you use a headless 4D application or not, you can open your web browser and enter the following address:
 
  `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
 
