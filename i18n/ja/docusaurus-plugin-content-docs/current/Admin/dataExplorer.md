@@ -1,6 +1,6 @@
 ---
 id: dataExplorer
-title: Data Explorer
+title: データエクスプローラー
 ---
 
 データエクスプローラーは、プロジェクトのデータストアにあるデータを表示・クエリするための Webインターフェースを提供します。 このツールを使用すると、すべてのエンティティを簡単に照会し、属性値に基づいて検索・並べ替え・フィルターすることができます。 このツールは、開発プロセスのどの段階においても、データを管理し、問題を迅速に特定するのに役立ちます。
@@ -18,12 +18,12 @@ title: Data Explorer
 
 ## データエクスプローラーを開く
 
-[The `WebAdmin` web server](webAdmin.md#starting-the-webadmin-web-server) is started automatically if necessary when the Data Explorer is clicked on.
+データエクスプローラーがクリックされると、必要に応じて [`WebAdmin` Webサーバー](webAdmin.md#starting-the-webadmin-web-server) が自動的に開始されます。
 
 データエクスプローラーWebページに接続するには:
 
-- From a 4D application (with interface):
-  - To open a new 4D window with the Data Explorer page displayed in a web area, select **Data Explorer** in the **Records** menu or click on the **Data** button in the main toolbar.
+- 4Dアプリケーションから (インターフェースあり):
+  - Webエリアにデータエクスプローラーを表示した新しい 4Dウィンドウを開くには、**レコード** メニューから **データエクスプローラー** を選択するか、メインツールバーの **データ** ボタンをクリックします。
   - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
 - From 4D Server, select **Data Explorer In Browser** in the **Window** menu (the Data Explorer can only be opened on an external browser).
 
