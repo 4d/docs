@@ -18,7 +18,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 
 ## 4D v19.5
 
-#### Highlights
+#### Destaques
 
 - 4D v19.5 é certificado no Windows 11 22H2
 - 4D v19.5 é certificado em macOS Ventura (macOS 13)
