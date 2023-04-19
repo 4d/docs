@@ -354,16 +354,22 @@ You can use a **log configuration file** to easily manage log recording in a pro
 There are several ways to enable the log configuration file, depending on your configuration: 
 
 - **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
-- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder). It is enabled at project startup (only on the server in client/server).
+- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). It is enabled at project startup (only on the server in client/server).
 - **a built application**: the file must be named `logConfig.json` and copied in the following folder:
 	* Windows: `Users\[userName]\AppData\Roaming\[application]`
 	* macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **all projects in stand-alone and remote 4D applications**: the file must be named `logConfig.json` and copied in the following folder:
+- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
 	* Windows: `Users\[userName]\AppData\Roaming\4D`
 	* macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
-- **all projects in 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
 	* Windows: `Users\[userName]\AppData\Roaming\4D Server`
 	* macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+	
+:::note
+
+If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
+
+:::
 
 ### JSON file description
 
