@@ -53,7 +53,7 @@ Barber shop displays a continuous animation, like the [spinner](spinner.md). The
 
 When the form is executed, the object is not animated. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
 
-* 1 (or any value other than 0) = Start animation,
+* 1 = Start animation,
 * 0 = Stop animation.
 
 ### Supported Properties
