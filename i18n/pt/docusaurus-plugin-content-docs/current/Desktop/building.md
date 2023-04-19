@@ -23,6 +23,13 @@ Building a project package can be carried out using:
 * either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command,
 * or the [Build Application dialog](#application-builder).
 
+:::tip
+
+You can also download and use `[Build4D]`(https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
+
+:::
+
+
 ### Build application dialog
 
 To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
