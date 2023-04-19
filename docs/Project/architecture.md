@@ -24,7 +24,7 @@ A 4D project is made of several folders and files, stored within a project root 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
 
-## Project folder
+## `Project` folder
 
 The Project folder typically contains the following hierarchy:
 
@@ -169,11 +169,11 @@ This folder contains **user settings files for data** used for application admin
 
 > These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files. 
 
-Contents|Description|Format|
-----|----|---|
-directory.json|Description of 4D groups, users, and their access rights when the application is run with this data file.|JSON|
-Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
-settings.4DSettings|Custom database settings for this data file.|XML|
+|Contents|Description|Format|
+|----|----|---|
+|directory.json|Description of 4D groups, users, and their access rights when the application is run with this data file.|JSON|
+|Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
+|settings.4DSettings|Custom database settings for this data file.|XML|
 
 
 ### `Logs`
@@ -194,12 +194,13 @@ This folder contains **user settings files** used for application administration
 
 > These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file. 
 
-Contents|Description|Format|
-----|----|---|
-directory.json|Description of 4D groups and users for the application, as well as their access rights|JSON|  
-Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
-BuildApp.4DSettings|Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command|XML|
-settings.4DSettings|Custom settings for this project (all data files)|XML|
+|Contents|Description|Format|
+|----|----|---|
+|directory.json|Description of 4D groups and users for the application, as well as their access rights|JSON|  
+|Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
+|BuildApp.4DSettings|Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command|XML|
+|settings.4DSettings|Custom settings for this project (all data files)|XML|
+|logConfig.json|Custom [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file)|json|
 
 
 ## `userPreferences.<userName>`
