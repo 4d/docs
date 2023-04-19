@@ -133,6 +133,7 @@ SET DATABASE PARAMETER(Client Log Recording;1) // リモートサイド
 
 ```4d
 
+
 WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可能
 ```
 
@@ -346,22 +347,29 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 ### ファイルを有効化する方法
 
-ログ設定ファイルを有効化する方法はいくつかあります:
+There are several ways to enable the log configuration file, depending on your configuration:
 
-* インターフェース付きの 4D Server のメンテナンスページを開き、[ログ設定ファイルを読み込む](ServerWindow/maintenance.md#ログ設定ファイルを読み込む) ボタンをクリックしてファイルを選択します。 この場合、設定ファイルには任意の名前を使用することができます。 ファイルは、サーバー上で即座に有効化されます。
-* ログ設定ファイルを、プロジェクトの [Settingsフォルダー](Project/architecture.md#settings-1) にコピーすることができます。 この場合、ファイル名は `logConfig.json` でなくてはなりません。 このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
-* ビルドしたアプリケーションでは、`logConfig.json` ファイルを次のフォルダーにコピーできます:
-  * Windows: `Users\[userName]\AppData\Roaming\[application]`
-  * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. この場合、設定ファイルには任意の名前を使用することができます。 ファイルは、サーバー上で即座に有効化されます。
+- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
+- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+    * Windows: `Users\[userName]\AppData\Roaming\[application]`
+    * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+    * Windows: `Users\[userName]\AppData\Roaming\4D`
+    * macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+    * Windows: `Users\[userName]\AppData\Roaming\4D Server`
+    * macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
-> スタンドアロン、サーバー、リモート4Dアプリケーションのプロジェクトすべてでログ設定ファイルを有効化するには、次のフォルダーに `logConfig.json` ファイルをコピーします:
-> 
-> * Windows: `Users\[userName]\AppData\Roaming\4D または \4D Server`
-> * macOS: `/Users/[userName]/Library/ApplicationSupport/4D または /4D Server`
+:::note
+
+If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
+
+:::
 
 ### JSONでの記述
 
-ログ設定ファイルは、次のようなプロパティを持つ `.json` ファイルです:
+The log configuration file is a `.json` file that must comply with the following json schema:
 
 ```json
 {
@@ -370,7 +378,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
     "description": "A file that controls the state of different types of logs in 4D clients and servers",
     "type": "object",
     "properties": {
-        "forceLoggingConfiguration": {
+        "forceConfiguration": {
             "description": "Forcing the logs configuration described in the file ingoring changes coming from code or user interface",
             "type": "boolean",
             "default": true
