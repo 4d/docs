@@ -24,7 +24,7 @@ Un projet 4D est composé de plusieurs dossiers et fichiers, stockés dans un do
 > Si votre projet a été converti depuis une base binaire, des dossiers supplémentaires peuvent être présents. Voir "Conversion de bases en projets" sur [doc.4d.com](https://doc.4d.com).
 
 
-## Dossier Project
+## `Project` folder
 
 La hiérarchie du dossier Project se présente généralement comme suit :
 
@@ -199,6 +199,7 @@ Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour 
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) à chaque lancement de sauvegarde. Ce fichier peut également être utilisé pour lire ou définir des options supplémentaires, telles que la quantité d'informations stockées dans le *journal de sauvegarde*. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 | BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
 | settings.4DSettings | Paramètres personnalisés pour ce projet (tous les fichiers de données)                                                                                                                                                                                                                                                                                                                                                                             | XML    |
+| logConfig.json      | Custom [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file)                                                                                                                                                                                                                                                                                                                                                      | json   |
 
 
 ## `userPreferences.<userName>`
