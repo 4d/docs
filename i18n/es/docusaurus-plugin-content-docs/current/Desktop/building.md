@@ -23,6 +23,13 @@ Generar un paquete de proyecto puede realizarse utilizando:
 * el comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
 * o el [diálogo Generador de aplicaciones](#application-builder).
 
+:::tip
+
+You can also download and use `[Build4D]`(https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
+
+:::
+
+
 ### Diálogo crear aplicación
 
 Para mostrar la caja de diálogo Generar la aplicación, seleccione **Diseño** > **Generar la aplicación...** en la barra de menús.
