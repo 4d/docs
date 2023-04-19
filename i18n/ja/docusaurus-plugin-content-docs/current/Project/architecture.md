@@ -24,7 +24,7 @@ title: プロジェクトのアーキテクチャー
 > バイナリデータベースから変換されたプロジェクトの場合には、追加のフォルダーが存在している場合があります  (doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照)。
 
 
-## Project フォルダー
+## `Project` folder
 
 典型的な Project フォルダーの構造です:
 
@@ -199,6 +199,7 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 | Backup.4DSettings   | バックアップ開始時に [バックアップオプション](Backup/settings.md) を指定するためのデータベースバックアップ設定です。 このファイルは、*バックアップジャーナル* に保存する情報量などの追加オプションの確認や設定にも使用することができます。 バックアップ設定に使われるキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。 | XML  |
 | BuildApp.4DSettings | アプリケーションビルダーのダイアログボックス、または `BUILD APPLICATION` コマンドを使ったときに自動的に作成されるビルド設定ファイル                                                                                                                                                                                    | XML  |
 | settings.4DSettings | プロジェクト用のカスタム設定 (すべてのデータファイル)                                                                                                                                                                                                                                    | XML  |
+| logConfig.json      | Custom [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file)                                                                                                                                                                   | json |
 
 
 ## `userPreferences.<userName>`
