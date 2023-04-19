@@ -23,6 +23,13 @@ title: アプリケーションビルド
 * [`BUILD APPLICATION`](https://doc.4d.com/4Dv19/4D/19/BUILD-APPLICATION.301-5392523.ja.html) コマンドを使う
 * [アプリケーションビルド](#application-builder) ダイアログを使う
 
+:::tip
+
+You can also download and use `[Build4D]`(https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
+
+:::
+
+
 ### アプリケーションビルド
 
 このウィンドウを開くには 4D の**デザイン**メニューから**アプリケーションビルド...**を選択します。
