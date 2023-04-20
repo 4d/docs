@@ -472,6 +472,7 @@ La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un 
 Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 
 
+
 | *mode*   | Description                                                                                                                                                                                                                                                 |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "read"   | (Par défaut) Crée un file handle pour lire les valeurs dans le fichier. Si le fichier n'existe pas sur disque, une erreur est renvoyée. Vous pouvez ouvrir autant de file handles que vous voulez en mode "read" sur le même objet File.                    |
@@ -600,21 +601,21 @@ Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existan
 
 Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
 
-| Propriété        | Type | Commentaire                                                                                |
-| ---------------- | ---- | ------------------------------------------------------------------------------------------ |
-| InternalName     | Text |                                                                                            |
-| ProductName      | Text |                                                                                            |
-| CompanyName      | Text |                                                                                            |
-| LegalCopyright   | Text |                                                                                            |
-| ProductVersion   | Text |                                                                                            |
-| FileDescription  | Text |                                                                                            |
-| FileVersion      | Text |                                                                                            |
-| OriginalFilename | Text |                                                                                            |
-| WinIcon          | Text | Posix path of .ico file. Setting this property is only supported with 4D application files |
+| Propriété        | Type | Commentaire                                                                           |
+| ---------------- | ---- | ------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                       |
+| ProductName      | Text |                                                                                       |
+| CompanyName      | Text |                                                                                       |
+| LegalCopyright   | Text |                                                                                       |
+| ProductVersion   | Text |                                                                                       |
+| FileDescription  | Text |                                                                                       |
+| FileVersion      | Text |                                                                                       |
+| OriginalFilename | Text |                                                                                       |
+| WinIcon          | Text | Posix path of .ico file. This property applies only to 4D generated executable files. |
 
 For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Si vous passez une valeur de type autre que Texte, elle est "stringifiée".
 
-For the `WinIcon` property, if the target file does not exist or has an incorrect format, an error is generated.
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
 **Paramètre *info* avec un fichier .plist**
 
