@@ -456,6 +456,7 @@ The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns
 If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
 
+
 |*mode*|Description|
 |---|---|
 |"read"|(Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.|
@@ -590,11 +591,11 @@ Each valid property set in the *info* object parameter is written in the version
 |FileDescription|Text||
 |FileVersion|Text||
 |OriginalFilename|Text||
-|WinIcon|Text|Posix path of .ico file. Setting this property is only supported with 4D application files|
+|WinIcon|Text|Posix path of .ico file. This property applies only to 4D generated executable files.|
 
 For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
-For the `WinIcon` property, if the target file does not exist or has an incorrect format, an error is generated.
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
 ***info* parameter object with a .plist file**
 
