@@ -569,10 +569,10 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容                 |
-| ----- | ------------------ |
-| v20   | Support of WinIcon |
-| v19   | 追加                 |
+| バージョン | 内容            |
+| ----- | ------------- |
+| v20   | WinIcon をサポート |
+| v19   | 追加            |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -599,21 +599,21 @@ $fhandle:=$f.open("read")
 
 *info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
-| プロパティ            | タイプ  | 説明                                                                                         |
-| ---------------- | ---- | ------------------------------------------------------------------------------------------ |
-| InternalName     | Text |                                                                                            |
-| ProductName      | Text |                                                                                            |
-| CompanyName      | Text |                                                                                            |
-| LegalCopyright   | Text |                                                                                            |
-| ProductVersion   | Text |                                                                                            |
-| FileDescription  | Text |                                                                                            |
-| FileVersion      | Text |                                                                                            |
-| OriginalFilename | Text |                                                                                            |
-| WinIcon          | Text | Posix path of .ico file. Setting this property is only supported with 4D application files |
+| プロパティ            | タイプ  | 説明                                                             |
+| ---------------- | ---- | -------------------------------------------------------------- |
+| InternalName     | Text |                                                                |
+| ProductName      | Text |                                                                |
+| CompanyName      | Text |                                                                |
+| LegalCopyright   | Text |                                                                |
+| ProductVersion   | Text |                                                                |
+| FileDescription  | Text |                                                                |
+| FileVersion      | Text |                                                                |
+| OriginalFilename | Text |                                                                |
+| WinIcon          | Text | .icoファイルの Posixパス。 このプロパティの設定は、4Dアプリケーションファイルに対してのみサポートされています。 |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. テキストでない型の値を渡した場合には、文字列に変換されます。
+`WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 
-For the `WinIcon` property, if the target file does not exist or has an incorrect format, an error is generated.
+`WinIcon` プロパティにおいては、ターゲットファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
 
 **.plist ファイル用の *info* オブジェクト**
 
@@ -626,7 +626,7 @@ For the `WinIcon` property, if the target file does not exist or has an incorrec
 #### 例題
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
+  // .exe ファイルの著作権、バージョン、およびアイコン情報を設定します (Windows)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -639,15 +639,15 @@ $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
+  // info.plist ファイルのキーをいくつか設定します (すべてのプラットフォーム)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2023" //text
-$info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
-$info.CFBundleIconFile:="myApp.icns" //for macOS
+$info.Copyright:="Copyright 4D 2023" // テキスト
+$info.ProductVersion:=12 // 整数
+$info.ShipmentDate:="2023-04-22T06:00:00Z" // タイムスタンプ
+$info.CFBundleIconFile:="myApp.icns" // macOS 用
 $infoPlistFile.setAppInfo($info)
 ```
 
