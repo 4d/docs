@@ -23,6 +23,13 @@ Générer un package de projet peut être réalisée à l'aide de :
 * soit la commande [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html),
 * Utiliser la [Page Application](#application) ou la [Page Client/Serveur](#client-server) de boîte de dialogue du Générateur d'applications.
 
+:::tip
+
+You can also download and use `[Build4D]`(https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
+
+:::
+
+
 ### Construire application cliente
 
 Cochez l'option **Créer une application autonome** et cliquez sur **Générer** pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application.

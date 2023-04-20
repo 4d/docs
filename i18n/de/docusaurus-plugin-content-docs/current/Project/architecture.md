@@ -24,7 +24,7 @@ A 4D project is made of several folders and files, stored within a project root 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
 
-## Project folder
+## `Project` folder
 
 The Project folder typically contains the following hierarchy:
 
@@ -199,6 +199,7 @@ This folder contains **user settings files** used for application administration
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML              |
 | BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML              |
 | settings.4DSettings | Custom settings for this project (all data files)                                                                                                                                                                                                                                                                                    | XML              |
+| logConfig.json      | Custom [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file)                                                                                                                                                                                                                                        | json             |
 
 
 ## `userPreferences.<userName>`

@@ -471,6 +471,7 @@ La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un n
 
 Si utiliza el parámetro *mode* (text), pase el modo de apertura al gestor del archivo:
 
+
 | *modo*   | Descripción                                                                                                                                                                                                                                            |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | "read"   | (Por defecto) Crea un manejador de archivos para leer los valores del archivo. Si el archivo no existe en el disco, se devuelve un error. Puedes abrir tantos manejadores de archivo como quiera en modo "lectura" en el mismo objeto Archivo.         |
@@ -569,9 +570,10 @@ Quieresrenombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Versión | Modificaciones     |
+| ------- | ------------------ |
+| v20     | Support of WinIcon |
+| v19     | Añadidos           |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -598,18 +600,21 @@ La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el 
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
-| Propiedad        | Tipo |
-| ---------------- | ---- |
-| InternalName     | Text |
-| ProductName      | Text |
-| CompanyName      | Text |
-| LegalCopyright   | Text |
-| ProductVersion   | Text |
-| FileDescription  | Text |
-| FileVersion      | Text |
-| OriginalFilename | Text |
+| Propiedad        | Tipo | Comentario                                                                                 |
+| ---------------- | ---- | ------------------------------------------------------------------------------------------ |
+| InternalName     | Text |                                                                                            |
+| ProductName      | Text |                                                                                            |
+| CompanyName      | Text |                                                                                            |
+| LegalCopyright   | Text |                                                                                            |
+| ProductVersion   | Text |                                                                                            |
+| FileDescription  | Text |                                                                                            |
+| FileVersion      | Text |                                                                                            |
+| OriginalFilename | Text |                                                                                            |
+| WinIcon          | Text | Posix path of .ico file. Setting this property is only supported with 4D application files |
 
-Si se pasa un texto null o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
+For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
+
+For the `WinIcon` property, if the target file does not exist or has an incorrect format, an error is generated.
 
 **Parámetro *info* con un un archivo .plist**
 
@@ -622,25 +627,28 @@ Si una llave definida en el parámetro *info* ya está definida en el archivo .p
 #### Ejemplo
 
 ```4d
-  // definir el copyright y versión de un archivo .exe (Windows)
-var $exeFile : 4D.File
+  // set copyright, version and icon of a .exe file (Windows)
+var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
+$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021"
+$info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
+$info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // establecer algunas claves en un archivo info.plist (todas las plataformas)
-var $infoPlistFile : 4D. ile
-var $info : Objeto
+  // set some keys in an info.plist file (all platforms)
+var $infoPlistFile : 4D.File
+var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2021" //text
+$info.Copyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
 

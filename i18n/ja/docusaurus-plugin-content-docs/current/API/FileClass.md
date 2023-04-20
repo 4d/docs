@@ -470,6 +470,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 *mode* (text) 引数として、どのモードで FileHandle を開くかを指定します。
 
+
 | *mode*   | 説明                                                                                                                                          |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | "read"   | (デフォルト) ファイルから値を読み取るための FileHandle を作成します。 ディスク上にファイルが存在しない場合は、エラーが返されます。 "read" モードの FileHandle は、同じ File オブジェクトに対していくつでも開くことができます。        |
@@ -568,9 +569,10 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| バージョン | 内容            |
+| ----- | ------------- |
+| v20   | WinIcon をサポート |
+| v19   | 追加            |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -597,18 +599,21 @@ $fhandle:=$f.open("read")
 
 *info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
-| プロパティ            | タイプ  |
-| ---------------- | ---- |
-| InternalName     | Text |
-| ProductName      | Text |
-| CompanyName      | Text |
-| LegalCopyright   | Text |
-| ProductVersion   | Text |
-| FileDescription  | Text |
-| FileVersion      | Text |
-| OriginalFilename | Text |
+| プロパティ            | タイプ  | 説明                                                             |
+| ---------------- | ---- | -------------------------------------------------------------- |
+| InternalName     | Text |                                                                |
+| ProductName      | Text |                                                                |
+| CompanyName      | Text |                                                                |
+| LegalCopyright   | Text |                                                                |
+| ProductVersion   | Text |                                                                |
+| FileDescription  | Text |                                                                |
+| FileVersion      | Text |                                                                |
+| OriginalFilename | Text |                                                                |
+| WinIcon          | Text | .icoファイルの Posixパス。 このプロパティの設定は、4Dアプリケーションファイルに対してのみサポートされています。 |
 
-値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
+`WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
+
+`WinIcon` プロパティにおいては、ターゲットファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
 
 **.plist ファイル用の *info* オブジェクト**
 
@@ -621,25 +626,28 @@ $fhandle:=$f.open("read")
 #### 例題
 
 ```4d
-  // .exe ファイルの著作権およびバージョン情報を設定します (Windows)
-var $exeFile : 4D.File
+  // .exe ファイルの著作権、バージョン、およびアイコン情報を設定します (Windows)
+var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
+$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021"
+$info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
+$info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // info.plist ファイルのキーをいくつか設定します (Windows および macOS)
+  // info.plist ファイルのキーをいくつか設定します (すべてのプラットフォーム)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2021" // テキスト
+$info.Copyright:="Copyright 4D 2023" // テキスト
 $info.ProductVersion:=12 // 整数
-$info.ShipmentDate:="2021-04-22T06:00:00Z" // タイムスタンプ
+$info.ShipmentDate:="2023-04-22T06:00:00Z" // タイムスタンプ
+$info.CFBundleIconFile:="myApp.icns" // macOS 用
 $infoPlistFile.setAppInfo($info)
 ```
 
