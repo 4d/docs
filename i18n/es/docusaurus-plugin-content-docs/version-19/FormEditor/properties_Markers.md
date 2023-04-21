@@ -12,7 +12,7 @@ Los métodos asociados a los objetos de estas áreas se ejecutan cuando las áre
 
 ---
 
-## Form Break
+## Ruptura de formulario
 
 Las áreas de interrupción del formulario se muestran una vez al final de la lista de registros y se imprimen una vez después de imprimir los registros en un informe.
 
