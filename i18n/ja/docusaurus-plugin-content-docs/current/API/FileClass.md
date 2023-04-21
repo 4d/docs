@@ -600,21 +600,21 @@ $fhandle:=$f.open("read")
 
 *info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
-| プロパティ            | タイプ  | 説明                                                                              |
-| ---------------- | ---- | ------------------------------------------------------------------------------- |
-| InternalName     | Text |                                                                                 |
-| ProductName      | Text |                                                                                 |
-| CompanyName      | Text |                                                                                 |
-| LegalCopyright   | Text |                                                                                 |
-| ProductVersion   | Text |                                                                                 |
-| FileDescription  | Text |                                                                                 |
-| FileVersion      | Text |                                                                                 |
-| OriginalFilename | Text |                                                                                 |
-| WinIcon          | Text | .icoファイルの Posixパス。 This property applies only to 4D generated executable files. |
+| プロパティ            | タイプ  | 説明                                                   |
+| ---------------- | ---- | ---------------------------------------------------- |
+| InternalName     | Text |                                                      |
+| ProductName      | Text |                                                      |
+| CompanyName      | Text |                                                      |
+| LegalCopyright   | Text |                                                      |
+| ProductVersion   | Text |                                                      |
+| FileDescription  | Text |                                                      |
+| FileVersion      | Text |                                                      |
+| OriginalFilename | Text |                                                      |
+| WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
 `WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+`WinIcon` プロパティにおいては、アイコンファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
 
 **.plist ファイル用の *info* オブジェクト**
 
