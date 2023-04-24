@@ -232,7 +232,7 @@ Keep in mind that tool4d runs automatically in **headless mode** (see `--headles
 - all components such as 4D View Pro, 4D SVG, 4D NetKit...,
 - hunspell spell checker,
 - japanese spellchecker (*mecab* library),
-- WebAdmin,
+- WebAdmin
 - CEF,
 - PHP,
 - remote debugger (local debugger, `TRACE` command and breakpoints are ignored in headless applications).

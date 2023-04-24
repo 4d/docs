@@ -141,7 +141,7 @@ The Collapse/Expand style is named "disclosure" in the [button style JSON Gramma
 :::
 
 
-### Disclosure
+### Divulgación
 
 El estilo de botón radio de divulgación muestra el botón radio como un botón de divulgación estándar, normalmente utilizado para mostrar/ocultar información adicional. El símbolo del botón apunta hacia abajo con el valor 0 y hacia arriba con el valor 1.
 

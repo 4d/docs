@@ -348,7 +348,7 @@ The Collapse/Expand style is named "disclosure" in the [button style JSON Gramma
 
 
 
-### Disclosure
+### Divulgación
 
 En macOS y Windows, una casilla de selección con el estilo de botón "Divulgación" aparece como un botón de información estándar, normalmente utilizado para mostrar/ocultar información adicional. Cuando se utiliza como botón radio, el símbolo del botón apunta hacia abajo con el valor 0 y hacia arriba con el valor 1.
 
