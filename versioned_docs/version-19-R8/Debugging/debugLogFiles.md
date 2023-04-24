@@ -135,6 +135,7 @@ How to start this log:
 
 ```4d
 
+
 WEB SET OPTION(Web debug log;wdl enable without body)  
 //other values are available
 ```
@@ -350,22 +351,29 @@ You can use a **log configuration file** to easily manage log recording in a pro
 
 ### How to enable the file
 
-There are several ways to enable the log configuration file:
+There are several ways to enable the log configuration file, depending on your configuration: 
 
-* On 4D Server with interface, you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
-* You can copy the log configuration file in the [Settings folder](Project/architecture.md#settings-1) of the project. In this case, the file must be named `logConfig.json`. It is enabled at project startup (only on the server in client/server).
-* With a built application, you can copy the `logConfig.json` file in the following folder:
-  * Windows: `Users\[userName]\AppData\Roaming\[application]`
-  * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
+- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). It is enabled at project startup (only on the server in client/server).
+- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+	* Windows: `Users\[userName]\AppData\Roaming\[application]`
+	* macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+	* Windows: `Users\[userName]\AppData\Roaming\4D`
+	* macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
+- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+	* Windows: `Users\[userName]\AppData\Roaming\4D Server`
+	* macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+	
+:::note
 
-> If you want to enable the log configuration file for all projects in stand-alone, server and remote 4D applications, you can copy the `logConfig.json` file in the following folder:
->
-> * Windows: `Users\[userName]\AppData\Roaming\4D or \4D Server`
-> * macOS: `/Users/[userName]/Library/ApplicationSupport/4D or /4D Server`
+If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
+
+:::
 
 ### JSON file description
 
-The log configuration file is a `.json` file that can contain the following properties:
+The log configuration file is a `.json` file that must comply with the following json schema:
 
 ```json
 {
@@ -374,7 +382,7 @@ The log configuration file is a `.json` file that can contain the following prop
     "description": "A file that controls the state of different types of logs in 4D clients and servers",
     "type": "object",
     "properties": {
-        "forceLoggingConfiguration": {
+        "forceConfiguration": {
             "description": "Forcing the logs configuration described in the file ingoring changes coming from code or user interface",
             "type": "boolean",
             "default": true

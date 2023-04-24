@@ -4,23 +4,23 @@ import Link from '@docusaurus/Link';
 
 const localizedLinks = {
   "homepage.sections.core-development.langage-ref-url" : translate({
-    message: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Language-Reference.100-6101683.en.html',
+    message: 'https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html',
     id: 'homepage.sections.core-development.langage-ref-url',
   }),
   "homepage.sections.textensions.4D-Write-Pro-Reference-url" : translate({
-    message: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Write-Pro-Reference.100-6130471.en.html',
+    message: 'https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html',
     id: 'homepage.sections.textensions.4D-Write-Pro-Reference-url',
   }),
   "homepage.sections.textensions.4D-Progress-url" : translate({
-    message: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Progress.100-6205973.en.html',
+    message: 'https://doc.4d.com/4Dv20/4D/20/4D-Progress.100-6341911.en.html',
     id: 'homepage.sections.textensions.4D-Progress-url',
   }),
   "homepage.sections.textensions.4D-SVG-Component-url" : translate({
-    message: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-SVG-Component.100-6206845.en.html',
+    message: 'https://doc.4d.com/4Dv20/4D/20/4D-SVG-Component.100-6342795.en.html',
     id: 'homepage.sections.textensions.4D-SVG-Component-url',
   }),
   "homepage.sections.textensions.4D-Widgets-url" : translate({
-    message: 'https://doc.4d.com/4Dv19R8/4D/19-R8/4D-Widgets.100-6207497.en.html',
+    message: 'https://doc.4d.com/4Dv20/4D/20/4D-Widgets.100-6343453.en.html',
     id: 'homepage.sections.textensions.4D-Widgets-url',
   }),
   "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
