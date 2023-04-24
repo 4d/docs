@@ -248,7 +248,7 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 <!-- REF #collection.at().Params -->
 | Parâmetros | Tipo    |    | Descrição                                            |
 | ---------- | ------- |:--:| ---------------------------------------------------- |
-| index      | Integer | -> | Index of element to return                           |
+| index      | Integer | -> | Índice de elemento a devolver                        |
 | Resultados | any     | <- | The element at that index|<!-- END REF --> |
 
 
@@ -2599,7 +2599,7 @@ A chamada de retorno recebe os seguintes parâmetros):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //retorna 86400
 ```
 
 
@@ -2688,7 +2688,7 @@ A chamada de retorno recebe os seguintes parâmetros):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //retorna 86400
 ```
 
 
