@@ -22,7 +22,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 #### Gramática JSON
 
-| Nome               | Tipo de dados | Valores Possíveis |
+| Nome               | Tipo de dados | Valores possíveis |
 | ------------------ | ------------- | ----------------- |
 | automaticInsertion | boolean       | true, false       |
 
