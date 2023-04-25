@@ -22,7 +22,7 @@ title: リリースノート
 - EntitySelection クラスに新しく [`.at()`](../API/EntitySelectionClass#at) 関数が追加されました。
 - Collection クラスに次の新しい関数が追加されました: [`.at()`](../API/CollectionClass#at), [`.first()`](../API/CollectionClass#first), [`.flat()`](../API/CollectionClass#flat), [`.flatMap()`](../API/CollectionClass#flatmap), [`.includes()`](../API/CollectionClass#includes), [`.last()`](../API/CollectionClass#last), [`.reduceRight()`](../API/CollectionClass#reduceright)。
 - コードエディター: 強化された [検索/置換機能](../code-editor/write-class-method.md#検索と置換)。
-- New searchable "property" Language element in the [**Find in design...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) dialog box.
+- [**デザインモードを検索**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.ja.html#6337726) ダイアログボックスにおいて、"property" ランゲージ要素が新たに検索可能になりました。
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
 - [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail) で *headerOnly* パラメーターをサポート。
 - [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) および [`collection.distinct()`](../API/CollectionClass.md#distinct) 関数で `count values` オプションをサポートしました。
@@ -31,9 +31,9 @@ title: リリースノート
 - CLI でコードを実行するための新しいツール: [tool4d](../Admin/cli.md#tool4d) および [ユーティリティモードの 4D Server](../Admin/cli.md#ユーティリティモードの-4d-server)。
 - [データエクスプローラー](../Admin/dataExplorer.md#データエクスプローラーを開く) 用の新しいツールバーボタンと 4Dウィンドウでの表示。
 - ボタン、チェックボックス、ラジオボタンに新しいプロパティが追加されました: [タイトルと画像を隣接させる](../FormObjects/properties_TextAndPicture.md#タイトルと画像を隣接させる) と [横揃え](../FormObjects/properties_Text.md#横揃え)
-- Support of `WinIcon` in [`file.setAppInfo()`](../API/FileClass.md#setappinfo) function.
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
+- [`file.setAppInfo()`](../API/FileClass.md#setappinfo) 関数で `WinIcon` をサポート。
+- 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
+- 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20): 4D v20 で修正されたバグのリストです。
 
 
@@ -191,9 +191,9 @@ ALERT($param1+" "+$param2)
 - Webサーバーセッションのデバッグが [4D Server 上で容易になりました](../WebServer/sessions#プリエンプティブモード)。
 - 新しい [4D NetKit](https://github.com/4d/4D-NetKit) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 - 4D v19 R3 では、4Dユーザーパスワードに対して、bcrypt というより強力なハッシュ化アルゴリズムを使用しています。 ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。 パスワードが一度変更されると、4D v19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。 そのため、4Dパスワードを使用している場合には、4D v19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
-- For accuracy, the `4D digest` constant has been renamed `4D REST digest`.
+- 正確性のため、`4D digest` 定数は、`4D REST digest` へと名称が改められました。
 
-- End-of-line and BOM management for XML commands: When opened in 4D v19 R3, projects or databases created with previous releases behave differently regarding default end-of-line characters and BOM management in XML documents: line feed (LF) characters are used instead of CR (on macOS), and byte order marks (BOM) are not included. This allows a better compatibility with VCS tools. If necessary, you can restore the v19 R2 behavior using the `XML SET OPTIONS` command. In projects or databases converted from versions prior to 19 R2, these options are managed by two compatibility settings.
+- XML コマンドにおける改行文字と BOM 管理: 以前のバージョンで作成されたプロジェクトまたはデータベースが 4D v19 R3 で開かれた場合、XMLドキュメントにおける改行文字と BOM 管理に関わる振る舞いが異なります: macOS において CR の代わりにラインフィード(LF) が使用されるほか、バイトオーダーマーク (BOM) が含まれなくなります。 これにより、VCS ツールとの互換性が改善されます。 必要であれば、`XML SET OPTIONS` コマンドを使用することで、v19 R2 以前の振る舞いに戻すことができます。 v19 R2 以前のバージョンから変換されたプロジェクトまたはデータベースにおいては、これらのオプションは 2つの互換性設定によって管理されます。
 - ビルドされたプロジェクトで、ランタイムエクスプローラーへのショートカットが削除: シングルユーザー版の組み込みプロジェクトアプリケーションにおいて、**Cmd/Ctrl+Shift+F9** ショートカットは、ランタイムエクスプローラーを表示しないようになりました。 このショートカットは、ユーザーアプリケーション用のショートカットとして使用できるようになりました。 ランタイムエクスプローラーウィンドウは、新しい `OPEN RUNTIME EXPLORER` コマンドを使用することで呼び出し可能です。
 - 4D Server のデバッグ機能の拡張: 4D Server はインタープリターモードにおいて、スケーラブルWeb セッションを含め、全種類のプロセスをデバッグできるようになりました。 これには、デバッガーをサーバーまたはリモートクライアントで有効化するだけです。   
   *警告: インタープリターモードにおいて、サーバーでデバッガーが有効化された場合 (デフォルト) には、サーバーマシン上でのデバッグを可能にするため、すべてのサーバープロセスが自動でコオペラティブ実行されます。 これは、4D Server v19 R3 以降に変換されたアプリケーションにおいては、パフォーマンスに重大な影響を生ずる可能性があります。 サーバーをプリエンプティブ実行に戻すには、サーバーのデバッガーを無効化します (そして必要な場合にはリモートクライアント側でデバッガーを有効化します)。*
