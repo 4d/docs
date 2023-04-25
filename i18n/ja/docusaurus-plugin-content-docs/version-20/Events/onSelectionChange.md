@@ -16,14 +16,14 @@ title: On Selection Change
 ### 4D View Pro
 現在の行や列の選択が変更された。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ         | タイプ     | 説明                    |
-| ------------- | ------- | --------------------- |
-| code          | longint | 31                    |
-| description   | text    | "On Selection Change" |
-| objectName    | text    | 4D View Pro エリア名      |
-| sheetName     | text    | イベントが発生したシート名         |
-| oldSelections | object  | 変更前のセルレンジ             |
-| newSelections | object  | 変更後のセルレンジ             |
+| プロパティ         | タイプ    | 説明                    |
+| ------------- | ------ | --------------------- |
+| code          | 倍長整数   | 31                    |
+| description   | text   | "On Selection Change" |
+| objectName    | text   | 4D View Pro エリア名      |
+| sheetName     | text   | イベントが発生したシート名         |
+| oldSelections | object | 変更前のセルレンジ             |
+| newSelections | object | 変更後のセルレンジ             |
 
 #### 例題
 
