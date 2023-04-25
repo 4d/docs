@@ -68,9 +68,9 @@ Designates the placement of an icon in relation to the form object.
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                |
-| ------------- | ------------- | -------------------------------- |
-| iconPlacement | string        | "nenhuma", "esquerda", "direita" |
+| Nome          | Tipo de dados | Valores possíveis       |
+| ------------- | ------------- | ----------------------- |
+| iconPlacement | string        | "none", "left", "right" |
 
 #### Objectos suportados
 
