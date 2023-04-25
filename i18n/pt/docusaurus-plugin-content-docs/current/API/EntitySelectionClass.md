@@ -215,10 +215,10 @@ The function returns Null if *index* is beyond entity selection limits.
 ```4d
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
-$emp2:=$employees.at(-3) //starting from the end, 3rd entity
-    //of the $employees entity selection
+$employees:=ds.Employee.query("lastName = :1"; "H@")
+$emp1:=$employees.at(2) //3ª entidade da selecção de entidades $employees 
+$emp2:=$employees.at(-3) //começando do fim, 3ª entidade
+    //da selecção de entidades $employees
 ```
 
 
@@ -682,7 +682,7 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 | Versão | Mudanças                     |
 | ------ | ---------------------------- |
-| v20    | Support of `dk count values` |
+| v20    | Suporte de `dk count values` |
 | v17    | Adicionado                   |
 
 </details>
