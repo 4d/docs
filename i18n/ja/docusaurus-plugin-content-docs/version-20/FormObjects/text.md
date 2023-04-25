@@ -1,6 +1,6 @@
 ---
 id: text
-title: テキスト
+title: Text
 ---
 
 

@@ -20,7 +20,7 @@ Define o número de colunas numa tabela de miniaturas.
 
 ---
 
-## Linhas
+## Rows
 
 Define o número de linhaas numa tabela de miniaturas.
 

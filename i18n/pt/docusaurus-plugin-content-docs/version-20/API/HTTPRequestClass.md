@@ -176,7 +176,7 @@ Um evento `` objecto é devolvido quando uma função de retorno de chamada [](#
 | .dados      | blob | Dados recebidos. É sempre *indefinido* excepto no `onData` callback                        |
 | .type       | text | Tipo de evento. Possíveis valores: "resposta", "erro", "cabeçalhos", "dados", ou "terminar |
 
-#### objecto autenticação
+#### authentication-object
 
 Um objecto de autenticação lida com o `options.serverAuthentication` ou `options.proxyAuthentication` propriedade. Pode conter as seguintes propriedades:
 

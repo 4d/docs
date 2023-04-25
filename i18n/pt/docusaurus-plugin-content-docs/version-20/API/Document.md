@@ -59,7 +59,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.exists` devolve <!-- REF #document.exists.Summary -->true se o ficheiro existir em disco<!-- END REF -->, e false de outra forma.
+A propriedade `.exists` devolve <!-- REF #document.exists.Summary -->true se o ficheiro existir em disco<!-- END REF -->e false de outra forma.
 
 Essa propriedade é **apenas leitura**.
 

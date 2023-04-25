@@ -88,7 +88,7 @@ As regras abaixo são válidas:
 
 - A linha de declaração deve ser a primeira linha do método ou código da função, senão um erro é exibido (só comentários ou quebras de linha podem preceder a declaração).
 - Os nomes dos parâmetros devem começar com um caractere `$` e cumprir com [as regras de denominação das propriedades](identifiers.md#object-properties).
-- Os parâmetros múltiplos (e tipo) estão separados por ponto e vírgula (;).
+- Multiple parameters (and types) are separated by semicolons (;).
 - Sintaxes multilinha são aceitas (usando "\\").
 
 

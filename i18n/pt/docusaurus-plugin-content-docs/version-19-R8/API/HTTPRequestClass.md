@@ -277,7 +277,7 @@ A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary --
 
 #### Descrição
 
-The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
+O sítio `.resposta` contém <!-- REF #HTTPRequestClass.response.Summary -->a resposta ao pedido, se tiver recebido pelo menos o código de estatuto, indefinido de outra forma<!-- END REF -->.
 
 Uma `resposta` objecto é um objecto não partilhável. Contém as seguintes propriedades:
 
@@ -298,7 +298,7 @@ Uma `resposta` objecto é um objecto não partilhável. Contém as seguintes pro
 
 #### Descrição
 
-A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->o `returnResponseBody` passado no objeto [`opções`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains True.
+A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->o `returnResponseBody` passado no objeto [`opções`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém True.
 
 <!-- END REF -->
 
@@ -319,7 +319,7 @@ A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnRes
 
 > Esta função é thread segura.
 
-A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta o pedido HTTP<!-- END REF -->. It triggers the `onTerminate` event.
+A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborta o pedido HTTP<!-- END REF -->. Desencadeia o evento `onTerminate` .
 
 <!-- END REF -->
 
@@ -330,7 +330,7 @@ A função `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->abor
 
 #### Descrição
 
-A propriedade `.terminated` contém <!-- REF #HTTPRequestClass.terminated.Summary -->True if the request is terminated (after the call to `onTerminate`), false otherwise<!-- END REF -->.
+A propriedade `.terminated` contém <!-- REF #HTTPRequestClass.terminated.Summary -->Verdadeiro se o pedido for terminado (após a chamada para `onTerminate`), falso caso contrário<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -341,7 +341,7 @@ A propriedade `.terminated` contém <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Descrição
 
-A propriedade `.timeout` contém <!-- REF #HTTPRequestClass.timeout.Summary -->o `timeout` passado no objeto [`opções`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains Undefined.
+A propriedade `.timeout` contém <!-- REF #HTTPRequestClass.timeout.Summary -->o `timeout` passado no objeto [`opções`](#options-parameter) ao chamar [new()](#4dhttprequestnew)<!-- END REF -->. Se foi omitido, contém Indefinido.
 
 <!-- END REF -->
 
@@ -352,7 +352,7 @@ A propriedade `.timeout` contém <!-- REF #HTTPRequestClass.timeout.Summary -->o
 
 #### Descrição
 
-A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary -->the URL of the HTTP request<!-- END REF -->.
+A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary -->o URL do pedido HTTP<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -374,7 +374,7 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 > Esta função é thread segura.
 
-A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->waits for the response from the server<!-- END REF -->.
+A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->aguarda a resposta do servidor<!-- END REF -->.
 
 Se for passado um parâmetro *tempo* , a função esperará no máximo o número definido de segundos.
 

@@ -126,7 +126,8 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
 
     This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
 
-    :::
+
+:::
 
 
 Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération est entièrement automatique. Le but est de faciliter au maximum la remise en route de l’exploitation. L’opération est consignée dans le Journal des sauvegardes.

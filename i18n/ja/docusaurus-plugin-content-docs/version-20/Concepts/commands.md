@@ -59,7 +59,7 @@ title: コマンド
 | [`ARRAY TO SELECTION`](https://doc.4d.com/4dv19R/help/command/ja/page261.html)                      | 261    |
 | [`ASSERT`](https://doc.4d.com/4dv19R/help/command/ja/page1129.html)                                 | 1129   |
 | [`Asserted`](https://doc.4d.com/4dv19R/help/command/ja/page1132.html)                               | 1132   |
-| [`Average`](https://doc.4d.com/4dv19R/help/command/ja/page2.html)                                   | 2      |
+| [`平均`](https://doc.4d.com/4dv19R/help/command/ja/page2.html)                                        | 2      |
 | <a name="B">**B**</a>                                                                           |        |
 | [`BACKUP`](https://doc.4d.com/4dv19R/help/command/ja/page887.html)                                  | 887    |
 | [`BASE64 DECODE`](https://doc.4d.com/4dv19R/help/command/ja/page896.html)                           | 896    |
@@ -98,7 +98,7 @@ title: コマンド
 | [`C_TEXT`](https://doc.4d.com/4dv19R/help/command/ja/page284.html)                                  | 284    |
 | [`C_TIME`](https://doc.4d.com/4dv19R/help/command/ja/page306.html)                                  | 306    |
 | [`C_VARIANT`](https://doc.4d.com/4dv19R/help/command/ja/page1683.html)                              | 1683   |
-| [`Cache info`](https://doc.4d.com/4dv19R/help/command/ja/page1402.html)                             | 1402   |
+| [`キャッシュ情報`](https://doc.4d.com/4dv19R/help/command/ja/page1402.html)                                | 1402   |
 | [`CALL FORM`](https://doc.4d.com/4dv19R/help/command/ja/page1391.html)                              | 1391   |
 | [`CALL SUBFORM CONTAINER`](https://doc.4d.com/4dv19R/help/command/ja/page1086.html)                 | 1086   |
 | [`CALL WORKER`](https://doc.4d.com/4dv19R/help/command/ja/page1389.html)                            | 1389   |
@@ -173,7 +173,7 @@ title: コマンド
 | [`CREATE THUMBNAIL`](https://doc.4d.com/4dv19R/help/command/ja/page679.html)                        | 679    |
 | [`cs`](https://doc.4d.com/4dv19R/help/command/ja/page1710.html)                                     | 1710   |
 | [`Current client authentication`](https://doc.4d.com/4dv19R/help/command/ja/page1355.html)          | 1355   |
-| [`Current date`](https://doc.4d.com/4dv19R/help/command/ja/page33.html)                             | 33     |
+| [`本日の日付`](https://doc.4d.com/4dv19R/help/command/ja/page33.html)                                    | 33     |
 | [`Current default table`](https://doc.4d.com/4dv19R/help/command/ja/page363.html)                   | 363    |
 | [`Current form name`](https://doc.4d.com/4dv19R/help/command/ja/page1298.html)                      | 1298   |
 | [`Current form table`](https://doc.4d.com/4dv19R/help/command/ja/page627.html)                      | 627    |
@@ -184,13 +184,13 @@ title: コマンド
 | [`Current process`](https://doc.4d.com/4dv19R/help/command/ja/page322.html)                         | 322    |
 | [`Current process name`](https://doc.4d.com/4dv19R/help/command/ja/page1392.html)                   | 1392   |
 | [`Current system user`](https://doc.4d.com/4dv19R/help/command/ja/page484.html)                     | 484    |
-| [`Current time`](https://doc.4d.com/4dv19R/help/command/ja/page178.html)                            | 178    |
+| [`現在の時刻`](https://doc.4d.com/4dv19R/help/command/ja/page178.html)                                   | 178    |
 | [`Current user`](https://doc.4d.com/4dv19R/help/command/ja/page182.html)                            | 182    |
 | [`CUT NAMED SELECTION`](https://doc.4d.com/4dv19R/help/command/ja/page334.html)                     | 334    |
 | <a name="D">**D**</a>                                                                           |        |
 | [`Data file`](https://doc.4d.com/4dv19R/help/command/ja/page490.html)                               | 490    |
 | [`Data file encryption status`](https://doc.4d.com/4dv19R/help/command/ja/page1609.html)            | 1609   |
-| [`Date`](https://doc.4d.com/4dv19R/help/command/ja/page102.html)                                    | 102    |
+| [`日付`](https://doc.4d.com/4dv19R/help/command/ja/page102.html)                                      | 102    |
 | [`Day number`](https://doc.4d.com/4dv19R/help/command/ja/page114.html)                              | 114    |
 | [`Day of`](https://doc.4d.com/4dv19R/help/command/ja/page23.html)                                   | 23     |
 | [`Deactivated`](https://doc.4d.com/4dv19R/help/command/ja/page347.html)                             | 347    |
@@ -294,8 +294,8 @@ title: コマンド
 | [`EXPORT TEXT`](https://doc.4d.com/4dv19R/help/command/ja/page167.html)                             | 167    |
 | <a name="F">**F**</a>                                                                           |        |
 | [`False`](https://doc.4d.com/4dv19R/help/command/ja/page215.html)                                   | 215    |
-| [`Field`](https://doc.4d.com/4dv19R/help/command/ja/page253.html)                                   | 253    |
-| [`Field name`](https://doc.4d.com/4dv19R/help/command/ja/page257.html)                              | 257    |
+| [`フィールド`](https://doc.4d.com/4dv19R/help/command/ja/page253.html)                                   | 253    |
+| [`フィールド名`](https://doc.4d.com/4dv19R/help/command/ja/page257.html)                                  | 257    |
 | [`File`](https://doc.4d.com/4dv19R/help/command/ja/page1566.html)                                   | 1566   |
 | [`FILTER EVENT`](https://doc.4d.com/4dv19R/help/command/ja/page321.html)                            | 321    |
 | [`FILTER KEYSTROKE`](https://doc.4d.com/4dv19R/help/command/ja/page389.html)                        | 389    |
@@ -312,7 +312,7 @@ title: コマンド
 | [`Font file`](https://doc.4d.com/4dv19R/help/command/ja/page1700.html)                              | 1700   |
 | [`FONT LIST`](https://doc.4d.com/4dv19R/help/command/ja/page460.html)                               | 460    |
 | [`FONT STYLE LIST`](https://doc.4d.com/4dv19R/help/command/ja/page1362.html)                        | 1362   |
-| [`Form`](https://doc.4d.com/4dv19R/help/command/ja/page1466.html)                                   | 1466   |
+| [`フォーム`](https://doc.4d.com/4dv19R/help/command/ja/page1466.html)                                   | 1466   |
 | [`FORM Convert to dynamic`](https://doc.4d.com/4dv19R/help/command/ja/page1570.html)                | 1570   |
 | [`FORM EDIT`](https://doc.4d.com/4dv19R/help/command/ja/page1749.html)                              | 1749   |
 | [`FORM Event`](https://doc.4d.com/4dv19R/help/command/ja/page1606.html)                             | 1606   |
@@ -545,8 +545,8 @@ title: コマンド
 | [`LDAP LOGOUT`](https://doc.4d.com/4dv19R/help/command/ja/page1327.html)                            | 1327   |
 | [`LDAP Search`](https://doc.4d.com/4dv19R/help/command/ja/page1328.html)                            | 1328   |
 | [`LDAP SEARCH ALL`](https://doc.4d.com/4dv19R/help/command/ja/page1329.html)                        | 1329   |
-| [`Length`](https://doc.4d.com/4dv19R/help/command/ja/page16.html)                                   | 16     |
-| [`Level`](https://doc.4d.com/4dv19R/help/command/ja/page101.html)                                   | 101    |
+| [`長`](https://doc.4d.com/4dv19R/help/command/ja/page16.html)                                        | 16     |
+| [`レベル`](https://doc.4d.com/4dv19R/help/command/ja/page101.html)                                     | 101    |
 | [`List item parent`](https://doc.4d.com/4dv19R/help/command/ja/page633.html)                        | 633    |
 | [`List item position`](https://doc.4d.com/4dv19R/help/command/ja/page629.html)                      | 629    |
 | [`LIST OF CHOICE LISTS`](https://doc.4d.com/4dv19R/help/command/ja/page957.html)                    | 957    |
@@ -665,7 +665,7 @@ title: コマンド
 | [`MINIMIZE WINDOW`](https://doc.4d.com/4dv19R/help/command/ja/page454.html)                         | 454    |
 | [`MOBILE APP REFRESH SESSIONS`](https://doc.4d.com/4dv19R/help/command/ja/page1596.html)            | 1596   |
 | [`Mod`](https://doc.4d.com/4dv19R/help/command/ja/page98.html)                                      | 98     |
-| [`Modified`](https://doc.4d.com/4dv19R/help/command/ja/page32.html)                                 | 32     |
+| [`変更`](https://doc.4d.com/4dv19R/help/command/ja/page32.html)                                       | 32     |
 | [`Modified record`](https://doc.4d.com/4dv19R/help/command/ja/page314.html)                         | 314    |
 | [`MODIFY RECORD`](https://doc.4d.com/4dv19R/help/command/ja/page57.html)                            | 57     |
 | [`MODIFY SELECTION`](https://doc.4d.com/4dv19R/help/command/ja/page204.html)                        | 204    |
@@ -846,7 +846,7 @@ title: コマンド
 | [`PLAY`](https://doc.4d.com/4dv19R/help/command/ja/page290.html)                                    | 290    |
 | [`PLUGIN LIST`](https://doc.4d.com/4dv19R/help/command/ja/page847.html)                             | 847    |
 | [`POP RECORD`](https://doc.4d.com/4dv19R/help/command/ja/page177.html)                              | 177    |
-| [`Pop up menu`](https://doc.4d.com/4dv19R/help/command/ja/page542.html)                             | 542    |
+| [`ポップアップメニュー`](https://doc.4d.com/4dv19R/help/command/ja/page542.html)                              | 542    |
 | [`POP3 New transporter`](https://doc.4d.com/4dv19R/help/command/ja/page1697.html)                   | 1697   |
 | [`Position`](https://doc.4d.com/4dv19R/help/command/ja/page15.html)                                 | 15     |
 | [`POST CLICK`](https://doc.4d.com/4dv19R/help/command/ja/page466.html)                              | 466    |
@@ -1015,12 +1015,12 @@ title: コマンド
 | [`SELECTION TO ARRAY`](https://doc.4d.com/4dv19R/help/command/ja/page260.html)                      | 260    |
 | [`Selection to JSON`](https://doc.4d.com/4dv19R/help/command/ja/page1234.html)                      | 1234   |
 | [`Self`](https://doc.4d.com/4dv19R/help/command/ja/page308.html)                                    | 308    |
-| [`Semaphore`](https://doc.4d.com/4dv19R/help/command/ja/page143.html)                               | 143    |
+| [`セマフォー`](https://doc.4d.com/4dv19R/help/command/ja/page143.html)                                   | 143    |
 | [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19R/help/command/ja/page1632.html)            | 1632   |
 | [`SEND PACKET`](https://doc.4d.com/4dv19R/help/command/ja/page103.html)                             | 103    |
 | [`SEND RECORD`](https://doc.4d.com/4dv19R/help/command/ja/page78.html)                              | 78     |
 | [`SEND VARIABLE`](https://doc.4d.com/4dv19R/help/command/ja/page80.html)                            | 80     |
-| [`Sequence number`](https://doc.4d.com/4dv19R/help/command/ja/page244.html)                         | 244    |
+| [`シーケンス番号`](https://doc.4d.com/4dv19R/help/command/ja/page244.html)                                 | 244    |
 | [`Session`](https://doc.4d.com/4dv19R/help/command/ja/page1714.html)                                | 1714   |
 | [`SET ABOUT`](https://doc.4d.com/4dv19R/help/command/ja/page316.html)                               | 316    |
 | [`SET ALLOWED METHODS`](https://doc.4d.com/4dv19R/help/command/ja/page805.html)                     | 805    |
@@ -1152,13 +1152,13 @@ title: コマンド
 | [`Std deviation`](https://doc.4d.com/4dv19R/help/command/ja/page26.html)                            | 26     |
 | [`STOP MONITORING ACTIVITY`](https://doc.4d.com/4dv19R/help/command/ja/page1721.html)               | 1721   |
 | [`STOP SQL SERVER`](https://doc.4d.com/4dv19R/help/command/ja/page963.html)                         | 963    |
-| [`Storage`](https://doc.4d.com/4dv19R/help/command/ja/page1525.html)                                | 1525   |
+| [`ストレージ`](https://doc.4d.com/4dv19R/help/command/ja/page1525.html)                                  | 1525   |
 | [`String`](https://doc.4d.com/4dv19R/help/command/ja/page10.html)                                   | 10     |
 | [`STRING LIST TO ARRAY`](https://doc.4d.com/4dv19R/help/command/ja/page511.html)                    | 511    |
 | [`Structure file`](https://doc.4d.com/4dv19R/help/command/ja/page489.html)                          | 489    |
 | [`Substring`](https://doc.4d.com/4dv19R/help/command/ja/page12.html)                                | 12     |
 | [`Subtotal`](https://doc.4d.com/4dv19R/help/command/ja/page97.html)                                 | 97     |
-| [`Sum`](https://doc.4d.com/4dv19R/help/command/ja/page1.html)                                       | 1      |
+| [`合計`](https://doc.4d.com/4dv19R/help/command/ja/page1.html)                                        | 1      |
 | [`Sum squares`](https://doc.4d.com/4dv19R/help/command/ja/page28.html)                              | 28     |
 | [`Super`](https://doc.4d.com/4dv19R/help/command/ja/page1706.html)                                  | 1706   |
 | [`SUSPEND TRANSACTION`](https://doc.4d.com/4dv19R/help/command/ja/page1385.html)                    | 1385   |
@@ -1171,7 +1171,7 @@ title: コマンド
 | [`System folder`](https://doc.4d.com/4dv19R/help/command/ja/page487.html)                           | 487    |
 | <a name="T">**T**</a>                                                                          |        |
 | [`Table`](https://doc.4d.com/4dv19R/help/command/ja/page252.html)                                   | 252    |
-| [`Table name`](https://doc.4d.com/4dv19R/help/command/ja/page256.html)                              | 256    |
+| [`表組みの名称`](https://doc.4d.com/4dv19R/help/command/ja/page256.html)                                  | 256    |
 | [`Tan`](https://doc.4d.com/4dv19R/help/command/ja/page19.html)                                      | 19     |
 | [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/ja/page486.html)                        | 486    |
 | [`Test path name`](https://doc.4d.com/4dv19R/help/command/ja/page476.html)                          | 476    |
@@ -1181,7 +1181,7 @@ title: コマンド
 | [`TEXT TO DOCUMENT`](https://doc.4d.com/4dv19R/help/command/ja/page1237.html)                       | 1237   |
 | [`This`](https://doc.4d.com/4dv19R/help/command/ja/page1470.html)                                   | 1470   |
 | [`Tickcount`](https://doc.4d.com/4dv19R/help/command/ja/page458.html)                               | 458    |
-| [`Time`](https://doc.4d.com/4dv19R/help/command/ja/page179.html)                                    | 179    |
+| [`時間`](https://doc.4d.com/4dv19R/help/command/ja/page179.html)                                      | 179    |
 | [`Time string`](https://doc.4d.com/4dv19R/help/command/ja/page180.html)                             | 180    |
 | [`Timestamp`](https://doc.4d.com/4dv19R/help/command/ja/page1445.html)                              | 1445   |
 | [`TITLE`](URL)                                                                                      | ID     |
@@ -1194,9 +1194,9 @@ title: コマンド
 | [`TRIGGER PROPERTIES`](https://doc.4d.com/4dv19R/help/command/ja/page399.html)                      | 399    |
 | [`Trunc`](https://doc.4d.com/4dv19R/help/command/ja/page95.html)                                    | 95     |
 | [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/ja/page1051.html)                         | 1051   |
-| [`Type`](https://doc.4d.com/4dv19R/help/command/ja/page295.html)                                    | 295    |
+| [`タイプ`](https://doc.4d.com/4dv19R/help/command/ja/page295.html)                                     | 295    |
 | <a name="U">**U**</a>                                                                          |        |
-| [`Undefined`](https://doc.4d.com/4dv19R/help/command/ja/page82.html)                                | 82     |
+| [`未定義`](https://doc.4d.com/4dv19R/help/command/ja/page82.html)                                      | 82     |
 | [`UNION`](https://doc.4d.com/4dv19R/help/command/ja/page120.html)                                   | 120    |
 | [`UNLOAD RECORD`](https://doc.4d.com/4dv19R/help/command/ja/page212.html)                           | 212    |
 | [`UNREGISTER CLIENT`](https://doc.4d.com/4dv19R/help/command/ja/page649.html)                       | 649    |
@@ -1210,7 +1210,7 @@ title: コマンド
 | <a name="V">**V**</a>                                                                          |        |
 | [`Validate password`](https://doc.4d.com/4dv19R/help/command/ja/page638.html)                       | 638    |
 | [`VALIDATE TRANSACTION`](https://doc.4d.com/4dv19R/help/command/ja/page240.html)                    | 240    |
-| [`Value type`](https://doc.4d.com/4dv19R/help/command/ja/page1509.html)                             | 1509   |
+| [`値の型`](https://doc.4d.com/4dv19R/help/command/ja/page1509.html)                                    | 1509   |
 | [`VARIABLE TO BLOB`](https://doc.4d.com/4dv19R/help/command/ja/page532.html)                        | 532    |
 | [`VARIABLE TO VARIABLE`](https://doc.4d.com/4dv19R/help/command/ja/page635.html)                    | 635    |
 | [`Variance`](https://doc.4d.com/4dv19R/help/command/ja/page27.html)                                 | 27     |

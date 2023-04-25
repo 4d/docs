@@ -673,7 +673,7 @@ Los comandos 4D se dividen en dos categorías:
 | [`MOVE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page540.html)                           | 540    |
 | [`MULTI SORT ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page718.html)                        | 718    |
 | <a name="N">**N**</a>                                                                          |        |
-| [`New collection`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                         | 1472   |
+| [`Nueva colección`](https://doc.4d.com/4dv19R/help/command/en/page1472.html)                        | 1472   |
 | [`New data key`](https://doc.4d.com/4dv19R/help/command/en/page1611.html)                           | 1611   |
 | [`New list`](https://doc.4d.com/4dv19R/help/command/en/page375.html)                                | 375    |
 | [`New log file`](https://doc.4d.com/4dv19R/help/command/en/page926.html)                            | 926    |
@@ -1015,12 +1015,12 @@ Los comandos 4D se dividen en dos categorías:
 | [`SELECTION TO ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page260.html)                      | 260    |
 | [`Selection to JSON`](https://doc.4d.com/4dv19R/help/command/en/page1234.html)                      | 1234   |
 | [`Self`](https://doc.4d.com/4dv19R/help/command/en/page308.html)                                    | 308    |
-| [`Semaphore`](https://doc.4d.com/4dv19R/help/command/en/page143.html)                               | 143    |
+| [`Semáforo`](https://doc.4d.com/4dv19R/help/command/en/page143.html)                                | 143    |
 | [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19R/help/command/en/page1632.html)            | 1632   |
 | [`SEND PACKET`](https://doc.4d.com/4dv19R/help/command/en/page103.html)                             | 103    |
 | [`SEND RECORD`](https://doc.4d.com/4dv19R/help/command/en/page78.html)                              | 78     |
 | [`SEND VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page80.html)                            | 80     |
-| [`Sequence number`](https://doc.4d.com/4dv19R/help/command/en/page244.html)                         | 244    |
+| [`Número de secuencia`](https://doc.4d.com/4dv19R/help/command/en/page244.html)                     | 244    |
 | [`Session`](https://doc.4d.com/4dv19R/help/command/en/page1714.html)                                | 1714   |
 | [`SET ABOUT`](https://doc.4d.com/4dv19R/help/command/en/page316.html)                               | 316    |
 | [`SET ALLOWED METHODS`](https://doc.4d.com/4dv19R/help/command/en/page805.html)                     | 805    |

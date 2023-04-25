@@ -257,7 +257,7 @@ No parâmetro opcional `opções` , pode passar um objecto para definir o charse
 | Propriedade   | Tipo | Descrição                                                                                                                                                                                    |
 | ------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | headerCharset | Text | Charset e codificação usados para as seguintes partes do e-mail: assunto, nomes de arquivos de anexo e atributos de nome de e-mail. Possíveis valores: Ver tabela de possíveis cartas abaixo |
-| bodyCharset   | Text | Charset e codificação usados para o conteúdo html e corpo do e-mail. Possíveis valores: Ver tabela de possíveis charsets abaixo                                                              |
+| bodyCharset   | Text | Charset e codificação usados para o conteúdo html e corpo do e-mail. Possíveis valores: Ver tabela de possíveis cartas abaixo                                                                |
 
 Charsets possíveis:
 
@@ -850,7 +850,7 @@ Cada objecto da coleção devolvida contém as seguintes propriedades:
 
 | Propriedade      | Tipo    | Descrição                                                                                                                           |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | text    | Nome da caixa de correio                                                                                                            |
+| \[].name        | text    | Nome da nova caixa de correio                                                                                                       |
 | \[].selectable  | boolean | Indica se os direitos de acesso permitem ou não a selecção da caixa de correio: <ul><li>true - a caixa de correio pode ser seleccionada</li><li>falso - a caixa de correio não pode ser seleccionada</li></ul>                           |
 | \[].inferior    | boolean | Indica se os direitos de acesso permitem ou não a criação de uma hierarquia inferior na caixa de correio: <ul><li>true - pode ser criado um nível inferior</li><li>falso - um nível inferior não pode ser criado</li></ul> |
 | \[].interesting | boolean | Indica se a caixa de correio foi marcada como "interessante" pelo servidor: <ul><li>true - A caixa de correio foi marcada como "interessante" pelo servidor. Por exemplo, pode conter novas mensagens.</li><li>falso - A caixa de correio não foi marcada como "interessante" pelo servidor.</li></ul>                               |
@@ -964,7 +964,7 @@ No primeiro parâmetro, pode passar qualquer um dos dois:
 * *msgNumber*, um valor *inteiro* indicando o número de sequência da mensagem a recuperar ou
 * *msgID*, um texto *valor* indicando a identificação única da mensagem a recuperar.
 
-O parâmetro opcional *opções* permite-lhe passar um objecto definindo instruções adicionais para o tratamento da mensagem. Estão disponíveis as seguintes propriedades:
+O parâmetro opcional *opções* permite-lhe passar um objecto definindo instruções adicionais para o tratamento da mensagem. As seguintes propriedades estão disponíveis:
 
 | Propriedade | Tipo    | Descrição                                                                                                                                 |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |

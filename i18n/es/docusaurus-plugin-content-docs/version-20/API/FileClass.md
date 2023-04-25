@@ -473,7 +473,7 @@ Si utiliza el parámetro *mode* (text), pase el modo de apertura al gestor del a
 
 
 
-| *modo*   | Descripción                                                                                                                                                                                                                                            |
+| *mode*   | Descripción                                                                                                                                                                                                                                            |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | "read"   | (Por defecto) Crea un manejador de archivos para leer los valores del archivo. Si el archivo no existe en el disco, se devuelve un error. Puedes abrir tantos manejadores de archivo como quiera en modo "lectura" en el mismo objeto Archivo.         |
 | "write"  | Crea un gestor de archivo para escribir valores en el archivo (empezando por el principio del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un gestor de archivo en modo "write" en el mismo objeto File.  |
@@ -601,21 +601,21 @@ La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el 
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
-| Propiedad        | Tipo | Comentario                                                                            |
-| ---------------- | ---- | ------------------------------------------------------------------------------------- |
-| InternalName     | Text |                                                                                       |
-| ProductName      | Text |                                                                                       |
-| CompanyName      | Text |                                                                                       |
-| LegalCopyright   | Text |                                                                                       |
-| ProductVersion   | Text |                                                                                       |
-| FileDescription  | Text |                                                                                       |
-| FileVersion      | Text |                                                                                       |
-| OriginalFilename | Text |                                                                                       |
-| WinIcon          | Text | Posix path of .ico file. This property applies only to 4D generated executable files. |
+| Propiedad        | Tipo | Comentario                                                                                          |
+| ---------------- | ---- | --------------------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                                     |
+| ProductName      | Text |                                                                                                     |
+| CompanyName      | Text |                                                                                                     |
+| LegalCopyright   | Text |                                                                                                     |
+| ProductVersion   | Text |                                                                                                     |
+| FileDescription  | Text |                                                                                                     |
+| FileVersion      | Text |                                                                                                     |
+| OriginalFilename | Text |                                                                                                     |
+| WinIcon          | Text | Posix path of .ico file. Esta propiedad sólo se aplica a los archivos ejecutables generados por 4D. |
 
-For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
+Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
 
-For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
+Para la propiedad `WinIcon`, si el archivo del icono no existe o tiene un formato incorrecto, se genera un error.
 
 **Parámetro *info* con un un archivo .plist**
 

@@ -541,7 +541,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 
-*Propriedade só de leitura*
+*Propriedade apenas leitura*
 
 O <!-- REF #WebServerClass.name.Summary -->nome da aplicação do servidor web<!-- END REF -->.
 
@@ -554,7 +554,7 @@ O <!-- REF #WebServerClass.name.Summary -->nome da aplicação do servidor web<!
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
 
-*Propriedade só de leitura*
+*Propriedade apenas leitura*
 
 O <!-- REF #WebServerClass.openSSLVersion.Summary -->versão da biblioteca OpenSSL utilizada<!-- END REF -->.
 
@@ -567,7 +567,7 @@ O <!-- REF #WebServerClass.openSSLVersion.Summary -->versão da biblioteca OpenS
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
 
-*Propriedade só de leitura*
+*Propriedade apenas leitura*
 
 O <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilidade do PFS no servidor<!-- END REF -->.
 
@@ -618,7 +618,7 @@ O <!-- REF #WebServerClass.sessionCookieDomain.Summary -->campo "domínio" do co
 
 O <!-- REF #WebServerClass.sessionCookieName.Summary -->nome do cookie utilizado para guardar o ID da sessão<!-- END REF -->.
 
-*Propriedade só de leitura*
+*Propriedade apenas leitura*
 
 <!-- END REF -->
 
@@ -707,7 +707,7 @@ As definições personalizadas da sessão serão reiniciadas quando a função [
 
 #### Objeto devolvido
 
-A função devolve um objecto que descreve o estado de lançamento do servidor Web. Este objecto pode conter as seguintes propriedades:
+A função devolve um objecto que descreve o estado de lançamento do servidor Web. Este objeto pode conter as seguintes propriedades:
 
 | Propriedade |                         | Tipo       | Descrição                                                                     |
 | ----------- | ----------------------- | ---------- | ----------------------------------------------------------------------------- |

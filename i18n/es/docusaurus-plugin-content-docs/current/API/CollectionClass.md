@@ -250,8 +250,8 @@ Esta función modifica la colección original.
 <!-- REF #collection.at().Params -->
 | Parámetros | Tipo    |    | Descripción                                          |
 | ---------- | ------- |:--:| ---------------------------------------------------- |
-| index      | Integer | -> | Index of element to return                           |
-| Result     | any     | <- | The element at that index|<!-- END REF -->
+| index      | Integer | -> | Índice del elemento a devolver                       |
+| Result     | any     | <- | El elemento en ese índice|<!-- END REF -->
 
 
 |
@@ -259,12 +259,12 @@ Esta función modifica la colección original.
 
 #### Descripción
 
-The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->.
+La función `.at()` <!-- REF #collection.at().Summary -->devuelve el elemento en la posición *index*, permitiendo enteros positivos y negativos<!-- END REF -->.
 > Esta función no modifica la colección original.
 
-Negative integers count back from the last item in the collection.
+Los números enteros negativos cuentan hacia atrás desde el último elemento de la colección.
 
-The function returns Undefined if *index* is beyond collection limits.
+La función devuelve Undefined si el *index* sobrepasa los límites de la colección.
 
 #### Ejemplo
 
@@ -772,7 +772,7 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 | Versión | Modificaciones               |
 | ------- | ---------------------------- |
-| v20     | Support of `ck count values` |
+| v20     | Soporte de `ck count values` |
 | v16 R6  | Añadidos                     |
 
 </details>
@@ -798,14 +798,14 @@ La función `.distinct()` <!-- REF #collection.distinct().Summary -->devuelve un
 
 La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
 
-If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
+Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para indicar la propiedad del objeto cuyos valores distintos desea obtener.
 
 In the *options* parameter, you can pass one or a combination of the following constants:
 
-| Constante         | Valor | Comentario                                                                                                                                                                                            |
-| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                 |
-| `ck count values` | 32    | Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*;"count":*count*}` attributes. |
+| Constante         | Valor | Comentario                                                                                                                                                                                                    |
+| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                         |
+| `ck count values` | 32    | Devuelve el conteo de elementos para cada valor distinto. Cuando se pasa esta opción, `.distinct()` devuelve una colección de objetos que contienen un par de atributos `{"value":*value*; "count":*count*}`. |
 
 
 #### Ejemplos
@@ -1453,7 +1453,7 @@ $first:=$emptyCol.first() // devuelve Undefined
 | Parámetros | Tipo       |    | Descripción                                                               |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
 | depth      | Integer    | -> | How deep a nested collection structure should be flattened. Por defecto=1 |
-| Result     | Collection | <- | Flattened collection|<!-- END REF -->
+| Result     | Collection | <- | Colección aplanada|<!-- END REF -->
 
 
 |
@@ -1461,7 +1461,7 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 #### Descripción
 
-La función `.flat()` <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
+La función `.flat()` <!-- REF #collection.flat().Summary -->crea una nueva colección con todos los elementos de la subcolección concatenados en ella recursivamente hasta la *profundidad* especificada<!-- END REF -->.
 
 By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
 > Esta función no modifica la colección original.
@@ -2838,7 +2838,7 @@ La retrollamada define los siguientes parámetros:
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //devuelve 86400
 ```
 
 
@@ -2861,9 +2861,9 @@ Este ejemplo permite reducir varios elementos de la colección a uno solo:
 Con el siguiente método ***Flatten***:
 
 ```4d
-    //Flatten project method
+    //Método proyecto Flatten
  If($1.accumulator=Null)
-    $1.accumulator:=New collection
+    $1.accumulator:=Nueva colección
  End if
  $1.accumulator.combine($1.value)
 ```

@@ -275,10 +275,10 @@ $c:=$a+$b
 
 * フィールド
 * 変数
-* ポインター
+* pointer
 * 演算
 * 4Dコマンド
-* メソッド
+* method
 * ほか値を返すものなら何でも
 
 ![カスタムウォッチエリア](../assets/en/Debugging/custom-watch-pane.png)
