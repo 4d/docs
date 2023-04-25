@@ -200,13 +200,13 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
 <!-- REF #EntitySelectionClass.at().Params -->
 | Parámetros | Tipo      |    | Descripción                                         |
 | ---------- | --------- |:--:| --------------------------------------------------- |
-| index      | Integer   | -> | Index of entity to return                           |
-| Result     | 4D.Entity | <- | The entity at that index|<!-- END REF --> |
+| index      | Integer   | -> | Índice de la entidad a devolver                     |
+| Result     | 4D.Entity | <- | La entidad en ese índice|<!-- END REF --> |
 
 
 #### Descripción
 
-The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
+La función `.at()` <!-- REF #EntitySelectionClass.at().Summary -->devuelve la entidad en la posición *index*, permitiendo enteros positivos y negativos<!-- END REF -->.
 
 If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
 
@@ -686,7 +686,7 @@ A continuación, esta selección de entidades se actualiza con productos y se de
 
 | Versión | Modificaciones               |
 | ------- | ---------------------------- |
-| v20     | Support of `dk count values` |
+| v20     | Soporte de `dk count values` |
 | v17     | Añadidos                     |
 
 </details>
@@ -720,10 +720,10 @@ Se puede utilizar la notación `[]` para designar una colección cuando *attribu
 
 In the *options* parameter, you can pass one or a combination of the following constants:
 
-| Constante         | Valor | Comentario                                                                                                                                                                                             |
-| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                  |
-| `dk count values` | 32    | Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
+| Constante         | Valor | Comentario                                                                                                                                                                                                |
+| ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                     |
+| `dk count values` | 32    | Devuelve el conteo de entidades para cada valor distinto. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
 
 :::note
 
@@ -819,9 +819,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 :::note
 
-*length* is automatically added as path for nested collection properties.
+*length* se añade automáticamente como ruta para las propiedades de colección anidadas.
 
-:::
+:::  
 
 <!-- END REF -->
 
@@ -2095,7 +2095,7 @@ Assuming we have ds. Employee.all().length = 10
 ```4d
 var $slice : cs.EmployeeSelection
 
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 9 al 8, pero como 9 > 8, devuelve una entity selection vacía
 
 ```
 
