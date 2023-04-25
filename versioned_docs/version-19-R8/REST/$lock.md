@@ -23,7 +23,7 @@ To unlock the entity for other sessions and 4D processes:
 ```
 
 
-The [`lockKindText` property](../API/EntityClass.html#lock) is "Locked by session".
+The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session".
 
 
 ### Description
