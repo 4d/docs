@@ -1015,7 +1015,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`SELECTION TO ARRAY`](https://doc.4d.com/4dv19R/help/command/en/page260.html)                                 | 260    |
 | [`Selection to JSON`](https://doc.4d.com/4dv19R/help/command/en/page1234.html)                                 | 1234   |
 | [`Self`](https://doc.4d.com/4dv19R/help/command/en/page308.html)                                               | 308    |
-| [`Semaphore`](https://doc.4d.com/4dv19R/help/command/en/page143.html)                                          | 143    |
+| [`Semáforo`](https://doc.4d.com/4dv19R/help/command/en/page143.html)                                           | 143    |
 | [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19R/help/command/en/page1632.html)                       | 1632   |
 | [`SEND PACKET`](https://doc.4d.com/4dv19R/help/command/en/page103.html)                                        | 103    |
 | [`SEND RECORD`](https://doc.4d.com/4dv19R/help/command/en/page78.html)                                         | 78     |
