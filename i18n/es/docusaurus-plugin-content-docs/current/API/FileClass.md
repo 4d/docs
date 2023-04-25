@@ -573,7 +573,7 @@ Quieresrenombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v20     | Support of WinIcon |
+| v20     | Soporte de WinIcon |
 | v19     | Añadidos           |
 </details>
 
@@ -601,17 +601,17 @@ La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el 
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
-| Propiedad        | Tipo | Comentario                                                                                          |
-| ---------------- | ---- | --------------------------------------------------------------------------------------------------- |
-| InternalName     | Text |                                                                                                     |
-| ProductName      | Text |                                                                                                     |
-| CompanyName      | Text |                                                                                                     |
-| LegalCopyright   | Text |                                                                                                     |
-| ProductVersion   | Text |                                                                                                     |
-| FileDescription  | Text |                                                                                                     |
-| FileVersion      | Text |                                                                                                     |
-| OriginalFilename | Text |                                                                                                     |
-| WinIcon          | Text | Posix path of .ico file. Esta propiedad sólo se aplica a los archivos ejecutables generados por 4D. |
+| Propiedad        | Tipo | Comentario                                                                                              |
+| ---------------- | ---- | ------------------------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                                         |
+| ProductName      | Text |                                                                                                         |
+| CompanyName      | Text |                                                                                                         |
+| LegalCopyright   | Text |                                                                                                         |
+| ProductVersion   | Text |                                                                                                         |
+| FileDescription  | Text |                                                                                                         |
+| FileVersion      | Text |                                                                                                         |
+| OriginalFilename | Text |                                                                                                         |
+| WinIcon          | Text | Ruta Posix del archivo .ico. Esta propiedad sólo se aplica a los archivos ejecutables generados por 4D. |
 
 Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
 
@@ -628,7 +628,7 @@ Si una llave definida en el parámetro *info* ya está definida en el archivo .p
 #### Ejemplo
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
+  // definir el copyright y versión de un archivo .exe (Windows)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -641,7 +641,7 @@ $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
+  // definir algunas llaves en un archivo info.plist (todas las plataformas)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
