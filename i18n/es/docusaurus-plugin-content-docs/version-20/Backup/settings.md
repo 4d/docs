@@ -126,7 +126,8 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
     This feature implies that the program parses all the log files in the current log file folder at startup. Therefore, for performance reasons, make sure that no useless log files are stored in the folder.
 
-    :::
+
+:::
 
 
 El usuario no ve ninguna caja de diálogo; la operación es completamente automática. El objetivo es facilitar al máximo su uso. La operación se registra en el diario de copias de seguridad.
