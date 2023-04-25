@@ -248,7 +248,7 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 <!-- REF #collection.at().Params -->
 | Parâmetros | Tipo    |    | Descrição                                            |
 | ---------- | ------- |:--:| ---------------------------------------------------- |
-| index      | Integer | -> | Index of element to return                           |
+| index      | Integer | -> | Índice de elemento a devolver                        |
 | Resultados | any     | <- | The element at that index|<!-- END REF --> |
 
 
@@ -404,7 +404,7 @@ $vSize:=$col.length //$vSize=0
 
 #### Descrição
 
-A função `.combine()` <!-- REF #collection.combine().Summary -->insere *col2* elementos no final ou no índice *especificado* posição na instância de coleção e devolve a colecção editada<!-- END REF -->. Ao contrário da função `.insert()` , `.combine()` adiciona cada valor de *col2* na coleção original, e não como um único elemento de coleção.
+A função `.combine()` <!-- REF #collection.combine().Summary -->insere *col2* elementos no final ou no índice *especificado* posição na instância de coleção e devolve a colecção editada<!-- END REF -->. .
 > Essa função modifica a coleção original.
 
 Como padrão, elementos *col2* são adicionados ao final da collection original. Pode passar em *index* a posição onde quiser que os elmentos *col2* sejam inseridos na coleção.
@@ -1275,7 +1275,7 @@ Designa-se a chamada de retorno a ser executada para avaliar os elementos da col
 - *fórmula* (sintaxe recomendada), um [Objecto de fórmula](FunctionClass.md) que pode encapsular qualquer expressão executável, incluindo funções e métodos de projecto;
 - *methodName*, o nome de um método projecto (texto).
 
-A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em *param* (opcional). A chamada de retorno pode realizar qualquer teste, com ou sem o(s) parâmetro(s) e deve retornar **verdadeiro** para o primeiro elemento que preencha a condição. Recebe um `objecto ` no primeiro parâmetro ($1).
+A chamada de retorno é chamada com o(s) parâmetro(s) aprovado(s) em *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recebe um `objecto ` no primeiro parâmetro ($1).
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -1652,7 +1652,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 #### Descrição
 
-A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->e não os elementos em si. Indices são retornados em ordem ascendente.
+A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
 > Essa função não modifica a coleção original.
 
 O parâmetro *queryString* usa a sintaxe abaixo:
@@ -2462,7 +2462,7 @@ Se quiser ordenar a coleção resultante:
 
 #### Descrição
 
-A função `.query()` <!-- REF #collection.query().Summary -->devolve todos os elementos de uma coleção de objectos que correspondem às condições de pesquisa <!-- END REF -->definido por *queryString* e (opcionalmente) *valor* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.query()` <!-- REF #collection.query().Summary -->devolve todos os elementos de uma coleção de objectos que correspondem às condições de pesquisa <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 O parâmetro *queryString* usa a sintaxe abaixo:
@@ -2599,7 +2599,7 @@ A chamada de retorno recebe os seguintes parâmetros):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //retorna 86400
 ```
 
 
@@ -2688,7 +2688,7 @@ A chamada de retorno recebe os seguintes parâmetros):
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //retorna 86400
 ```
 
 
@@ -2952,7 +2952,7 @@ Se a colecção estiver vazia, este método não faz nada.
 
 #### Descrição
 
-A função `.slice()` <!-- REF #collection.slice().Summary -->devolve uma parte de uma colecção para uma nova colecção<!-- END REF -->, seleccionado de *startFrom* index to *end* index (end não incluído). Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.slice()` <!-- REF #collection.slice().Summary -->devolve uma parte de uma colecção para uma nova colecção<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 A colecção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom* , a colecção devolvida contém todos os elementos desde *startFrom* até ao último elemento da colecção original.
