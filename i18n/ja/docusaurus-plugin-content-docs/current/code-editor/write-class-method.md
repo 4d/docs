@@ -465,7 +465,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 **置換** ボタンをクリックすると、設定したオプションに応じて検索をおこない、最初に見つかった語句に対する置換が実行されます。 4D は現在のカーソル位置から検索を実行します。 その後は、[**編集** メニュー](#ショートカット) の **次を置換** / **前を置換** コマンドを使用して、同じ条件の検索/置換を繰り返すことができます。
 
-Click the **Replace all** button to replace all the occurrences corresponding to the search criteria directly in the open method.
+**すべて置換** ボタンをクリックすると、開かれているメソッド内で検索条件に合致するすべての語句が一度に置換されます。
 
 
 

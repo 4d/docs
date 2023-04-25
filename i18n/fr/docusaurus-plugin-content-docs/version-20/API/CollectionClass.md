@@ -1736,7 +1736,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 #### Description
 
-La fonction `.indices()` fonctionne exactement comme [`.query()`](#query) mais <!-- REF #collection.indices().Summary -->retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de *queryString*<!-- END REF -->, et non les éléments eux-mêmes. Les positions sont retournées dans un ordre croissant.
+La fonction `.indices()` fonctionne exactement comme [`.query()`](#query) mais <!-- REF #collection.indices().Summary -->retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de *queryString*<!-- END REF -->, and not elements themselves. Les positions sont retournées dans un ordre croissant.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Le paramètre *queryString* doit respecter la syntaxe suivante :
@@ -3114,7 +3114,7 @@ Si la collection est vide, cette méthode ne fait rien.
 
 #### Description
 
-La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, découpée depuis l'élément numéro *startFrom*jusqu'au numéro *end* (non inclus). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.

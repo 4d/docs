@@ -13,7 +13,7 @@ As seguintes classes podem ser usadas em 4D View Pro.
 <!-- REF #LineBorder.color.Syntax -->
 **.color**: Text<!-- END REF -->
 
-A propriedade `.color` é o <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) del borde<!-- END REF -->. Padrão = black.
+A propriedade `.color` é o <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) del borde<!-- END REF -->. Default = black.
 
 
 ### .style
@@ -21,7 +21,7 @@ A propriedade `.color` é o <!-- REF #LineBorder.color.Summary -->[color](config
 <!-- REF #LineBorder.style.Syntax -->
 **.style**: Integer<!-- END REF -->
 
-A propriedade `.style` é o <!-- REF #LineBorder.style.Summary -->[estilo](configuring.md#borders) da borda<!-- END REF -->. Padrão = empty.
+A propriedade `.style` é o <!-- REF #LineBorder.style.Summary -->[estilo](configuring.md#borders) da borda<!-- END REF -->. Default = empty.
 
 
 ## TableColumn
@@ -328,7 +328,7 @@ A propriedade `.headerRowStyle` é o <!-- REF #TableThemeOptions.headerRowStyle.
 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Syntax -->
 **.highlightFirstColumnStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-A propriedade `.highlightFirstColumnStyle` é o <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->estilo da primeira coluna<!-- END REF -->. "highlightFirstColumn" deve ser true.
+A propriedade `.highlightFirstColumnStyle` é o <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->estilo da primeira coluna<!-- END REF -->. "highlightFirstColumn" deve ser verdade.
 
 ### .highlightLastColumnStyle
 

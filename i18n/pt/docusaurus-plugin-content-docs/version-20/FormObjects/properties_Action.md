@@ -150,7 +150,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### Objectos suportados
 
-[Lista hierárquica](list_overview.md)
+[Hierarchical List](list_overview.md)
 
 
 

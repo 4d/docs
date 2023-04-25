@@ -207,7 +207,8 @@ Si surge un problema al añadir o modificar una entidad, se le devolverá un err
 :::note
 *   **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Si ha seleccionado la propiedad Fecha únicamente para su atributo Fecha, se eliminará la zona horaria y la hora (hora, minutos y segundos). En este caso, también puede enviar la fecha en el formato que se le devuelve dd!mm!aaaa (por ejemplo, 05!10!2013).
 *   **Booleanos** son true o false.
-*   Los archivos subidos mediante `$upload` pueden aplicarse a un atributo de tipo Imagen o BLOB pasando el objeto devuelto en el siguiente formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`:::
+*   Los archivos subidos mediante `$upload` pueden aplicarse a un atributo de tipo Imagen o BLOB pasando el objeto devuelto en el siguiente formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
+:::
 
 
 ### Ejemplo
