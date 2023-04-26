@@ -246,10 +246,10 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 
 <!-- REF #collection.at().Params -->
-| Parâmetros | Tipo    |    | Descrição                                            |
-| ---------- | ------- |:--:| ---------------------------------------------------- |
-| index      | Integer | -> | Índice de elemento a devolver                        |
-| Resultados | any     | <- | The element at that index|<!-- END REF --> |
+| Parâmetros | Tipo    |    | Descrição                                          |
+| ---------- | ------- |:--:| -------------------------------------------------- |
+| index      | Integer | -> | Índice de elemento a devolver                      |
+| Resultados | any     | <- | O elemento nesse índice|<!-- END REF --> |
 
 
 #### Descrição
