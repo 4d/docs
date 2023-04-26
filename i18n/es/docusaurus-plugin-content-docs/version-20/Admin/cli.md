@@ -222,7 +222,7 @@ On Windows, tool4d is a console application so that the `stdout` stream is displ
 :::
 
 
-### Disabled 4D features
+### Funcionalidades 4D desactivadas
 
 Keep in mind that tool4d runs automatically in **headless mode** (see `--headless` in [this table](#launch-a-4d-application)), and does neither give access to the 4D IDE nor any of its servers. En concreto, se desactivan las siguientes funcionalidades:
 
