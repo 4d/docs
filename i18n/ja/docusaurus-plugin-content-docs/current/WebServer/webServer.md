@@ -20,18 +20,18 @@ Webアプリケーションの公開は、いつでも開始または停止す�
 
 データセキュリティは、4D Webサーバーの実装のすべての段階に存在します。 セキュリティレベルは調整可能で、デフォルト設定では通常、もっとも安全なオプションが選択されます。 4D Webサーバーのセキュリティは、以下の要素に基づいています:
 
-* Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
+* [**TLSプロトコル (HTTPS)**](../Admin/tls.md) の拡張サポート。
 
-* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+* **認証**: ビルトインの設定および、フォールバックデータベースメソッド (Webサーバー用の [`On Web Authentication`](authentication.md#on-web-authentication)、RESTサーバー用の [`On REST Authentication`](../REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)) に基づく柔軟でカスタマイズ可能な [認証機能](authentication.md)
 
 * **公開するコンテンツの管理**: 明示的に公開した要素のみが、Web や RESTリクエストで直接利用できます。 次のものについて、宣言する必要があります:
   * HTTPリクエストで公開する [プロジェクトメソッド](allowProject.md)
-  * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
+  * RESTリクエストで公開する [ORDAのデータモデルクラス関数](../ORDA/ordaClasses.md#公開vs非公開関数)
   * RESTリクエストに公開しない [テーブルやフィールド](REST/configuration.md#テーブルやフィールドの公開) テーブルやフィールド
 
 * [デフォルトHTMLルート](webServerConfig.md#ルートフォルダー) フォルダーを定義することによる **サンドボックス化**
 
-* **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
+* **サーバーによるリソース使用の管理** (例: [最大同時Webプロセス](webServerConfig.md#最大同時webプロセス)オプション)
 > 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 
 ## ユーザーセッション
@@ -54,7 +54,7 @@ RESTリクエストの詳細については、[RESTサーバー](REST/gettingSta
 
 * テンプレートページには、ブラウザーに送信される際に Webサーバーの処理を開始する [特別なタグ](templates.md) が含まれています。
 
-* [specific URLs](httpRequests.md) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
+* [専用のURL](httpRequests.md) は、任意のアクションを実行するために 4D を呼び出すもので、ユーザーが HTMLフォームを POST したときに処理を開始するフォームアクションとしても使用できます。
 
 ## 専用のデータベースメソッド
 
