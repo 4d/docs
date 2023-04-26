@@ -23,7 +23,7 @@ Pour déverrouiller l'entité pour les autres sessions et processus 4D :
 ```
 
 
-La propriété [`lockKindText`](../API/EntityClass.html#lock) est "Locked by session".
+The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session".
 
 
 ### Description

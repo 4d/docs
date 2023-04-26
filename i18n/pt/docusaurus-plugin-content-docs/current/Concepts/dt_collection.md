@@ -46,12 +46,12 @@ Collections must have been instantiated, otherwise trying to read or modify thei
 
 Collection instantiation can be done in one of the following ways:
 
-- using the [`New collection`](../API/CollectionClass.md#new-collection) command,
+- utilizando o comando [`New collection`](../API/CollectionClass.md#new-collection),
 - using the `[]` operator.
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
+Vários comandos e funções 4D retornam colecções, por exemplo [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) ou [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
 
 :::
 

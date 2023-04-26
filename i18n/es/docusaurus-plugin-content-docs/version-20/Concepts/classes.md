@@ -318,8 +318,8 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// En un método proyecto
+// Se puede instanciar un objeto
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
 // $o = {"name":"HelloWorld";"age":42}
@@ -332,7 +332,7 @@ $o:=cs.MyClass.new("John";42)
 
 `property <propertyName>{; <propertyName2>;...}{ : <propertyType>}`
 
-The `property` keyword can be used to declare a property inside a user class. A class property has a name and a type.
+La palabra clave`property` se puede utilizar para declarar una propiedad dentro de una clase usuario. A class property has a name and a type.
 
 Declaring class properties enhances code editor suggestions, type-ahead features and error detection.
 
@@ -342,7 +342,7 @@ Property names must be compliant with [property naming rules](Concepts/identifie
 
 :::tip
 
-Starting the property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `property _myPrivateProperty` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+Starting the property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. Por ejemplo, si declara `propiedad _myPrivateProperty` en `MyClass`, no se propondrá en el editor de código cuando escriba en `"cs.MyClass. "`.
 
 :::
 

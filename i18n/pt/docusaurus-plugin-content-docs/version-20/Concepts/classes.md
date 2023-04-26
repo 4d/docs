@@ -380,7 +380,7 @@ In a method:
 var $o : cs.MyClass
 $o:=cs.MyClass.new() //$o:{}
 $o.name:="John" //$o:{"name" : "John"}
-$o.age:="Smith"  //error with check syntax
+$o.age:="Smith" //erro com a sintaxe de verificação
 ```
 
 
@@ -667,7 +667,7 @@ Several commands of the 4D language allows you to handle class features.
 
 #### `OB Class ( object ) -> Object | Null`
 
-`OB Class` returns the class of the object passed in parameter.
+`OB Class` devolve a classe do objecto passado como parâmetro.
 
 ### `OB Instance of`
 

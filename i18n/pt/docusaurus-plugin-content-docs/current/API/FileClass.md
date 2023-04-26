@@ -573,7 +573,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 | Versão | Mudanças           |
 | ------ | ------------------ |
-| v20    | Support of WinIcon |
+| v20    | Suporte de WinIcon |
 | v19    | Adicionado         |
 </details>
 

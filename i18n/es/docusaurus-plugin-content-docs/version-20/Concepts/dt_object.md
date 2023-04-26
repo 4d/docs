@@ -3,7 +3,7 @@ id: object
 title: Object
 ---
 
-Las variables, campos o expresiones de tipo objeto pueden contener datos de diversos tipos. The structure of native 4D objects is based on the classic principle of "property/value" pairs. La sintaxis de estos objetos se basa en la notación JSON:
+Las variables, campos o expresiones de tipo objeto pueden contener datos de diversos tipos. La estructura de los objetos nativos de 4D se basa en el principio clásico de los pares "propiedad/valor". La sintaxis de estos objetos se basa en la notación JSON:
 
 - El nombre de una propiedad es siempre un texto, por ejemplo "Name". Debe seguir [reglas específicas](identifiers.md#object-properties).
 
@@ -24,7 +24,7 @@ Las variables, campos o expresiones de tipo objeto pueden contener datos de dive
 
 :::caution
 
-Keep in mind that property names differentiate between upper and lower case.
+Tenga en cuenta que los nombres de las propiedades distinguen entre mayúsculas y minúsculas.
 
 :::
 
@@ -54,7 +54,7 @@ Several 4D commands and functions return objects, for example [`Get database mea
 
 
 
-### `New object` command
+### comando `New object`
 
 The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
 
@@ -69,21 +69,21 @@ Ejemplos:
 ```
 
 
-### `{}` operator
+### operador `{}`
 
-The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). The object literal syntax creates empty or filled objects.
+El operador `{}` permite crear un **objeto literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). The object literal syntax creates empty or filled objects.
 
 Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
 
 Ejemplos:
 
 ```4d
- var $o ; $o2 ; $o3 : Object //declaration of object variables
- $o := {} // instantiation of an empty object 
- $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instantiation of an object
-        // with properties {"a":"foo","b":42,"c":{},"d":false})
+ var $o ; $o2 ; $o3 : Objeto //declaración de variables objeto
+ $o := {} // instanciación de un objeto vacío 
+ $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instanciación de un objeto
+        // con propiedades {"a": "foo", "b":42, "c":{}, "d":false})
 
-    // same properties using variables
+    // mismas propiedades utilizando variables
  var $a : Text
  var $b : Number
  var $c : Object
@@ -105,8 +105,8 @@ $o:={\
     col: [1; 2; 3; 4; 5; 6]\
     }
 
-$o.form1()  //52
-$o.form2($o.ob2.message)  // displays Hello
+$o.form1() //52
+$o.form2($o.ob2.message) // muestra Hello
 $col:=$o.col[5] //6
 ```
 
@@ -117,7 +117,7 @@ $col:=$o.col[5] //6
 
 Puede crear dos tipos de objetos:
 
-- regular (non-shared) objects, using the [`New object`] command or object literal syntax (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
+- objetos regulares (no compartidos), utilizando el comando [`New object`] o la sintaxis literal objeto (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
 - shared objects, using the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1526.html) command. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. El acceso a estos objetos se controla mediante estructuras `Use...End use`. For more information, refer to the [Shared objects and collections](shared.md) section.
 
 

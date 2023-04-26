@@ -23,7 +23,7 @@ title: '$lock'
 ```
 
 
-[`lockKindText` プロパティ](../API/EntityClass.html#lock) は "Locked by session" です。
+[`lockKindText` プロパティ](../API/EntityClass.md#lock) は "Locked by session" です。
 
 
 ### 説明

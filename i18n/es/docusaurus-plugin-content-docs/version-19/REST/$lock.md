@@ -23,7 +23,7 @@ Para desbloquear la entidad para las otras sesiones y procesos 4D:
 ```
 
 
-La propiedad [`lockKindText`](../API/EntityClass.html#lock) es "Locked by session".
+The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session".
 
 
 ### Descripción
