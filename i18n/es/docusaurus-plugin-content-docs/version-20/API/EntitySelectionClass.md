@@ -13,10 +13,10 @@ Las selecciones de entidades pueden crearse a partir de selecciones existentes u
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->                                                         |
-| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->                                                       |
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
@@ -181,51 +181,6 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.at().Desc -->
-## .at()
-
-<details><summary>Histórico</summary>
-
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
-
-</details>
-
-
-<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
-
-
-
-<!-- REF #EntitySelectionClass.at().Params -->
-| Parámetros | Tipo      |    | Descripción                                         |
-| ---------- | --------- |:--:| --------------------------------------------------- |
-| index      | Integer   | -> | Índice de la entidad a devolver                     |
-| Result     | 4D.Entity | <- | La entidad en ese índice|<!-- END REF --> |
-
-
-#### Descripción
-
-La función `.at()` <!-- REF #EntitySelectionClass.at().Summary -->devuelve la entidad en la posición *index*, permitiendo enteros positivos y negativos<!-- END REF -->.
-
-If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
-
-The function returns Null if *index* is beyond entity selection limits.
-
-#### Ejemplo
-
-```4d
-var $employees : cs.EmployeeSelection
-var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1"; "H@")
-$emp1:=$employees.at(2) /3ª entidad de la selección de entidades $employees 
-$emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
-    //de la selección de entidades $employees
-```
-
-
-<!-- END REF -->
-
 <!-- REF EntitySelectionClass.attributeName.Desc -->
 ## .*attributeName*
 
@@ -363,11 +318,11 @@ Se produce un error si *entity* y la entity selection no están relacionadas con
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@")
+ $employees:=ds.Employee.newSelection()
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //La entidad $employee se añade a la entity selection $employees
+ $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
 #### Ejemplo 2
@@ -381,7 +336,7 @@ Las llamadas a la función se pueden encadenar:
  $p1:=ds.Product.get(10)
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
- $sel:=ds.Product.query("ID > 50")
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -459,6 +414,51 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
  $sel1:=ds.Employee.query("name =:1";"Jones")
  $sel2:=ds.Employee.query("city=:1";"New York")
  $sel3:=$sel1.and($sel2)
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v20     | Añadidos       |
+
+</details>
+
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| Parámetros | Tipo      |    | Descripción                                         |
+| ---------- | --------- |:--:| --------------------------------------------------- |
+| index      | Integer   | -> | Índice de la entidad a devolver                     |
+| Result     | 4D.Entity | <- | La entidad en ese índice|<!-- END REF --> |
+
+
+#### Descripción
+
+La función `.at()` <!-- REF #EntitySelectionClass.at().Summary -->devuelve la entidad en la posición *index*, permitiendo enteros positivos y negativos<!-- END REF -->.
+
+If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+
+The function returns Null if *index* is beyond entity selection limits.
+
+#### Ejemplo
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1"; "H@")
+$emp1:=$employees.at(2) /3ª entidad de la selección de entidades $employees 
+$emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
+    //de la selección de entidades $employees
 ```
 
 
@@ -1607,9 +1607,12 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 
 
 
-<!-- REF #EntitySelectionClass.orderBy().Params --> |Parámetro|Tipo||Descripción|
-
-|---------|--- |:---:|------| |pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection| |pathObjects |Collection    |->|Collection of criteria objects| |Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
+<!-- REF #EntitySelectionClass.orderBy().Params -->
+| Parámetros  | Tipo               |    | Descripción                                                                      |
+| ----------- | ------------------ |:--:| -------------------------------------------------------------------------------- |
+| pathString  | Text               | -> | Ruta(s) de atributos e instrucciones de clasificación para la entity selection   |
+| pathObjects | Collection         | -> | Colección de objetos criterio                                                    |
+| Result      | 4D.EntitySelection | <- | Nueva selección de entidades en el orden especificado|<!-- END REF --> |
 
 #### Descripción
 
