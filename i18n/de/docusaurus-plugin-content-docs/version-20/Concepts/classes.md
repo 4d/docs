@@ -95,6 +95,7 @@ In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime
 
 Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 
+
 - `cs` Store für Benutzerklassen
 - `4D` Store für vorgegebene Klassen
 
@@ -340,29 +341,26 @@ Properties are declared for new objects when you call the [`new()`](API/ClassCla
 
 Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
-:::tip
 
-Starting the property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `property _myPrivateProperty` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass.  </p>
+The property type can be one of the following supported types:
 
-<p spaces-before="0">:::  </p>
-
-<p spaces-before="0">The property type can be one of the following supported types:</p>
-
-<table spaces-before="0">
-<thead>
-<tr>
-  <th>propertyType</th>
-  <th>Inhalt
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><code>Text`</td> 
-
-</tr> 
-
-</tbody> </table>
+| propertyType                             | Inhalt                                                 |
+| ---------------------------------------- | ------------------------------------------------------ |
+| `Text`                                   | Textwert                                               |
+| `Datum`                                  | Datumswert                                             |
+| `Zeit`                                   | Zeitwert                                               |
+| `Boolean`                                | Boolean Wert                                           |
+| `Ganzzahl`                               | Wert Lange Ganzzahl                                    |
+| `Zahl`                                   | Zahlenwert                                             |
+| `Zeiger`                                 | Zeigerwert                                             |
+| `Bild`                                   | Bildwert                                               |
+| `Blob`                                   | Scalar Blob value                                      |
+| `Collection`                             | Collection Wert                                        |
+| `Variant`                                | Variant Wert                                           |
+| `Objekt`                                 | Objekt mit Standardklasse (4D.Objekt)                  |
+| `4D.<className>`                   | Objekt des 4D Klassennamens                            |
+| `cs.<className>`                   | Objekt des Benutzerklassennamens                       |
+| `cs.<namespace>.<className>` | Object of the `<namespace>` component class name |
 
 :::info
 
