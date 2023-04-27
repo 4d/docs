@@ -42,9 +42,16 @@ monObjet.monAttribut:="10"
  $valeur:=$clientObj.data.address.city
 ```
 
-> Si vous utilisez la **notation chaine** avec des crochets, les noms de propriété peuvent contenir n'importe quel caractère (ex: `myObject["1. First property"]`).
+:::tip
+
+Starting an object property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+
+:::
 
 Voir également le [standard ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+
+> Si vous utilisez la **notation chaine** avec des crochets, les noms de propriété peuvent contenir n'importe quel caractère (ex: `myObject["1. First property"]`).
+
 
 ## Paramètres
 
