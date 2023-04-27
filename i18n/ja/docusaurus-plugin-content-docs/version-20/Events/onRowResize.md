@@ -14,7 +14,7 @@ title: On Row Resize
 
 | プロパティ       | タイプ     | 説明                                                |
 | ----------- | ------- | ------------------------------------------------- |
-| code        | 倍長整数    | 60                                                |
+| code        | longint | 60                                                |
 | description | text    | "On Row Resize"                                   |
 | objectName  | text    | 4D View Pro エリア名                                  |
 | sheetName   | text    | イベントが発生したシート名                                     |
