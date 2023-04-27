@@ -70,7 +70,7 @@ If(<>vtName#"")
 
 ## Variables proceso
 
-You designate a process variable by using its name (which cannot start with the `<>` symbols nor the dollar sign $). Un nombre de variable proceso puede contener hasta 31 caracteres.
+Una variable de proceso se designa con su nombre (que no puede empezar con los símbolos `<>` ni el signo dólar $). Un nombre de variable proceso puede contener hasta 31 caracteres.
 
 Ejemplos:
 
@@ -102,7 +102,7 @@ Un array se designa escribiendo su nombre, que es el nombre que se pasa a un com
 
 ### Arrays interproceso
 
-The name of an interprocess array is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+El nombre de un array interproceso va precedido de los símbolos (`<>`) - un signo "menor que" seguido de un signo "mayor que".
 
 An interprocess array name can contain up to 31 characters, not including the `<>` symbols.
 
