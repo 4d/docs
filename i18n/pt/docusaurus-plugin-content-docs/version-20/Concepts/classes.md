@@ -90,6 +90,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
+
 - `cs` para class stores dos usuários
 - `4D` para class stores incorporadas
 
@@ -332,11 +333,6 @@ Properties are declared for new objects when you call the [`new()`](API/ClassCla
 
 Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
-:::tip
-
-Starting the property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `property _myPrivateProperty` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
-
-:::
 
 The property type can be one of the following supported types:
 
@@ -374,7 +370,7 @@ property name : Text
 property age : Integer
 ```
 
-In a method:
+Num método:
 
 ```4d
 var $o : cs.MyClass
