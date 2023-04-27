@@ -321,7 +321,7 @@ An error occurs if *entity* and the entity selection are not related to the same
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@")
+ $employees:=ds.Employee.newSelection()
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
@@ -339,7 +339,7 @@ Calls to the function can be chained:
  $p1:=ds.Product.get(10)
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
- $sel:=ds.Product.query("ID > 50")
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -810,6 +810,7 @@ The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->Th
 If *attributePath* is invalid, an empty collection is returned.
 
 This function accepts two syntaxes.
+
 
 **.extract( attributePath : Text { ; option : Integer } ) : Collection**
 
