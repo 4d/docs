@@ -192,9 +192,9 @@ By default, when a button contains a title and a picture, the elements are joine
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles      |
-| -------------- | -------------- | --------------------- |
-| imageHugsTitle | boolean        | true (default), false |
+| Nombre         | Tipos de datos | Valores posibles          |
+| -------------- | -------------- | ------------------------- |
+| imageHugsTitle | boolean        | true (por defecto), false |
 
 #### Objetos soportados
 
