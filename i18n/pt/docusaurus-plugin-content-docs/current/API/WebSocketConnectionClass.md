@@ -86,7 +86,7 @@ The following contents are sent depending on the *message* type:
 | Tipo   | Conteúdo                                                                                                             |
 | ------ | -------------------------------------------------------------------------------------------------------------------- |
 | Text   | Text in UTF-8                                                                                                        |
-| Blob   | Binary data                                                                                                          |
+| Blob   | Dados binários                                                                                                       |
 | Objeto | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
 
 <!-- END REF -->
