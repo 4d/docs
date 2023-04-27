@@ -117,8 +117,8 @@ $col:=$o.col[5] //6
 
 Sie können zwei Arten von Objekten erstellen:
 
-- regular (non-shared) objects, using the [`New object`] command or object literal syntax (`{}`). Diese Objekte lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
-- shared objects, using the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1526.html) command. Diese Objekte lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Objekte wird über `Use...End use` Strukturen gesteuert. For more information, refer to the [Shared objects and collections](shared.md) section.
+- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Diese Objekte lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
+- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Diese Objekte lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Objekte wird über `Use...End use` Strukturen gesteuert. For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
 ## Grundlagen der Syntax
@@ -281,6 +281,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
 ```
 
 - Einer nicht vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, führt nichts aus.
+
 
 Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen, dass diese den korrekten Typ haben, selbst wenn sie als undefiniert bewertet werden. Dazu übergeben Sie die passenden 4D Befehle `String`, `Num`, `Date`, `Time`, `Bool`. Sie geben einen leeren Wert des angegebenen Typs zurück, wenn der Ausdruck als undefiniert bewertet wird. Beispiel:
 
