@@ -495,7 +495,7 @@ Several commands of the 4D language allows you to handle class features.
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter.
+`OB Class` devolve a classe do objecto passado como parâmetro.
 
 ### OB Instance of
 

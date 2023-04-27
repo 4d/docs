@@ -201,7 +201,7 @@ A linguagem 4D suporta classes de objectos. Add a `myClass.4dm` file in the Proj
 To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
 
 ```4d  
-// in a 4D method
+// num método 4D
 $o:=cs.myClass.new() 
 ```
 
@@ -231,7 +231,7 @@ This.width:=$width
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Por exemplo:
+Uma classe pode estender outra classe utilizando `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Por exemplo:
 
 ```4d  
 //in the Square.4dm file

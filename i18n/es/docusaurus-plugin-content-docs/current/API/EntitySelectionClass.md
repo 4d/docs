@@ -217,10 +217,10 @@ The function returns Null if *index* is beyond entity selection limits.
 ```4d
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
-$emp2:=$employees.at(-3) //starting from the end, 3rd entity
-    //of the $employees entity selection
+$employees:=ds.Employee.query("lastName = :1"; "H@")
+$emp1:=$employees.at(2) /3ª entidad de la selección de entidades $employees 
+$emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
+    //de la selección de entidades $employees
 ```
 
 
@@ -718,12 +718,12 @@ En el parámetro *attributePath*, pase el atributo de entidad cuyos valores dist
 
 Se puede utilizar la notación `[]` para designar una colección cuando *attributePath* es una ruta dentro de un objeto (ver ejemplos).
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+En el parámetro *options*, puede pasar una o una combinación de las siguientes constantes:
 
-| Constante         | Valor | Comentario                                                                                                                                                                                                |
-| ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                     |
-| `dk count values` | 32    | Devuelve el conteo de entidades para cada valor distinto. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
+| Constante         | Valor | Comentario                                                                                                                                                                                                      |
+| ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk diacritical`  | 8     | La evaluación distingue entre mayúsculas y minúsculas y diferencia los caracteres acentuados. Por defecto si se omite, se realiza una evaluación no diacrítica                                                  |
+| `dk count values` | 32    | Devuelve el conteo de entidades para cada valor distinto. Cuando se pasa esta opción, `.distinct()` devuelve una colección de objetos que contienen un par de propiedades `{"value":*value*; "count":*count*}`. |
 
 :::note
 
@@ -794,11 +794,11 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 #### Descripción
 
-The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->.
+La función `.distinctPaths()` <!-- REF #EntitySelectionClass.distinctPaths().Summary -->devuelve una colección de rutas distintas encontradas en el objeto indexado *attribute* para la selección de entidades<!-- END REF -->.
 
-If *attribute* is not an indexed object attribute, an error is generated.
+Si *attribute* no es un atributo de objeto indexado, se genera un error.
 
-After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+Tras la llamada, el tamaño de la colección devuelta es igual al número de rutas distintas encontradas en *attribute* para la selección de entidades. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
 
 #### Ejemplo
 

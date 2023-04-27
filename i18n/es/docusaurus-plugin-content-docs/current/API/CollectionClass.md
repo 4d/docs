@@ -800,11 +800,11 @@ La colección devuelta se clasifica automáticamente. Los valores **Null** no se
 
 Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para indicar la propiedad del objeto cuyos valores distintos desea obtener.
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+En el parámetro *options*, puede pasar una o una combinación de las siguientes constantes:
 
 | Constante         | Valor | Comentario                                                                                                                                                                                                    |
 | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                         |
+| `ck diacritical`  | 8     | La evaluación distingue entre mayúsculas y minúsculas y diferencia los caracteres acentuados. Por defecto si se omite, se realiza una evaluación no diacrítica                                                |
 | `ck count values` | 32    | Devuelve el conteo de elementos para cada valor distinto. Cuando se pasa esta opción, `.distinct()` devuelve una colección de objetos que contienen un par de atributos `{"value":*value*; "count":*count*}`. |
 
 
