@@ -1463,7 +1463,7 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 La función `.flat()` <!-- REF #collection.flat().Summary -->crea una nueva colección con todos los elementos de la subcolección concatenados en ella recursivamente hasta la *profundidad* especificada<!-- END REF -->.
 
-By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
+Por defecto, si se omite el parámetro *depth*, sólo se aplanará el primer nivel de la estructura de la colección anidada.
 > Esta función no modifica la colección original.
 
 
