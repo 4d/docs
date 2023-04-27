@@ -100,7 +100,7 @@ Coordenada superior do objecto no formulário.
 
 ---
 
-## Corner Radius
+## Raio de canto
 
 Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
 
