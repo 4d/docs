@@ -84,7 +84,7 @@ This property allows you to specify either the **font theme** or the **font fami
 
 The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
 
-- the platform,
+- a plataforma,
 - the system language,
 - and the type of form object.
 
