@@ -100,6 +100,7 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
 
 Available classes are accessible from their class stores. Two class stores are available:
 
+
 - `cs` for user class store
 - `4D` for built-in class store
 
@@ -345,11 +346,6 @@ Properties are declared for new objects when you call the [`new()`](API/ClassCla
 
 Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
-:::tip
-
-Starting the property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `property _myPrivateProperty` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
-
-:::
 
 The property type can be one of the following supported types:
 

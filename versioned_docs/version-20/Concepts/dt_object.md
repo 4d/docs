@@ -117,8 +117,8 @@ $col:=$o.col[5] //6
 
 You can create two types of objects:
 
-- regular (non-shared) objects, using the [`New object`] command or object literal syntax (`{}`). These objects can be edited without any specific access control but cannot be shared between processes. 
-- shared objects, using the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1526.html) command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
+- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). These objects can be edited without any specific access control but cannot be shared between processes. 
+- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. 
 For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
@@ -288,6 +288,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
 ```
 
 - Assigning an undefined value to a non existing object property does nothing.
+
 
 When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
 
