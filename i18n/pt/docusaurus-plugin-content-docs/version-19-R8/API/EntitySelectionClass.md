@@ -312,13 +312,13 @@ Se produz um erro se *entity* e a entity selection não estão relacionadas com 
 #### Exemplo 1
 
 ```4d
- var $employees : cs. EmployeeSelection
- var $employee : cs. EmployeeEntity
- $employees:=ds. Employee.query("lastName = :1";"S@")
- $employee:=ds. Employee.new()
+ var $employees : cs.EmployeeSelection
+ var $employee : cs.EmployeeEntity
+ $employees:=ds.Employee.newSelection()
+ $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //A entidade $employee se adiciona a entity selection $employees
+ $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
 #### Exemplo 2
@@ -326,13 +326,13 @@ Se produz um erro se *entity* e a entity selection não estão relacionadas com 
 As chamadas à função podem ser encadeadas:
 
 ```4d
- var $sel : cs. ProductSelection
- var $p1;$p2;$p3 : cs. ProductEntity
+ var $sel : cs.ProductSelection
+ var $p1;$p2;$p3 : cs.ProductEntity
 
- $p1:=ds. Product.get(10)
- $p2:=ds. Product.get(11)
- $p3:=ds. Product.get(12)
- $sel:=ds. Product.query("ID > 50")
+ $p1:=ds.Product.get(10)
+ $p2:=ds.Product.get(11)
+ $p3:=ds.Product.get(12)
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -794,6 +794,7 @@ A função `.extract()` <!-- REF #EntitySelectionClass.extract().Summary -->retu
 Se *attributePath* não for válido, se devolve uma coleção vazia.
 
 Esta função aceita duas sintaxes.
+
 
 **.extract( attributePath : Text { ; option : Integer } ) : Collection**
 
