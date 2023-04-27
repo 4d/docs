@@ -114,7 +114,7 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
     - **Tasa de redundancia**: la redundancia permite asegurar los datos presentes en un fichero repitiendo varias veces la misma información. Cuanto mayor sea la tasa de redundancia, mayor será la seguridad de los archivos; sin embargo, el almacenamiento será más lento y el tamaño de los archivos aumentará en consecuencia.
 
 
-### Automatic Restore and log integration
+### Restauración automática e integración de registros
 
 - **Restaurar la última copia de seguridad si la base está dañada**: cuando se marca esta opción, el programa inicia automáticamente la restauración del archivo de datos de la última copia de seguridad válida de la aplicación, si se detecta una anomalía (archivo dañado, por ejemplo) durante el lanzamiento de la aplicación. No se requiere ninguna intervención por parte del usuario; sin embargo, la operación se registra en el diario de copias de seguridad.
 
