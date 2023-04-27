@@ -316,11 +316,11 @@ Se produce un error si *entity* y la entity selection no están relacionadas con
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@")
+ $employees:=ds.Employee.newSelection()
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //La entidad $employee se añade a la entity selection $employees
+ $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
 #### Ejemplo 2
@@ -334,7 +334,7 @@ Las llamadas a la función se pueden encadenar:
  $p1:=ds.Product.get(10)
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
- $sel:=ds.Product.query("ID > 50")
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -798,6 +798,7 @@ La función `.reduce()` <!-- REF #EntitySelectionClass.extract().Summary -->devu
 Si *attributePath* no es válido, se devuelve una colección vacía.
 
 Esta función acepta dos sintaxis.
+
 
 **.extract( attributePath : Text { ; option : Integer } ) : Collection**
 
