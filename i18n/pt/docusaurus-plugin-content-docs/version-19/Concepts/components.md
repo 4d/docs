@@ -13,7 +13,7 @@ A 4D component is a set of 4D methods and forms representing one or more functio
 - **Host Project**: Application project in which a component is installed and used.
 - **Component**: Matrix project, compiled or not, copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
 
-### Principles
+### Princípios
 
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basicamente, os componentes são geridos como [plug-ins](Concepts/plug-ins.md) de acordo com os seguintes princípios:
 
