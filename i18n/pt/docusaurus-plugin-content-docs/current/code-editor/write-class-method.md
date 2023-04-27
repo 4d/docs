@@ -248,7 +248,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 | [**Find and replace**](#find-and-replace)                   |                                                                                                                                            |
 | [Ctrl]+F                                                    | Pesquisar                                                                                                                                  |
-| [Ctrl]+G                                                    | Find Next                                                                                                                                  |
+| [Ctrl]+G                                                    | Encontrar o próximo                                                                                                                        |
 | [Ctrl]+[Shift]+G                                            | Find Previous                                                                                                                              |
 | [Ctrl]+E                                                    | Find Same Next                                                                                                                             |
 | [Ctrl]+[Shift]+E                                            | Find Same Previous                                                                                                                         |
@@ -507,7 +507,7 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
-## Help tips
+## Dicas de ajuda
 
 The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
 
@@ -600,7 +600,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.
 
-## Bookmarks
+## Marcadores
 
 4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 
