@@ -230,7 +230,7 @@ Keep in mind that tool4d runs automatically in **headless mode** (see `--headles
 - programador de copias de seguridad,
 - ODBC and SQL pass-through,
 - todos los componentes como 4D View Pro, 4D SVG, 4D NetKit...,
-- hunspell spell checker,
+- corrector ortográfico hunspell,
 - corrector ortográfico japonés (librería *mecab*),
 - WebAdmin
 - CEF,
@@ -257,6 +257,6 @@ A diferencia de tool4d, 4D Server en modo utilitario tiene todas sus funcionalid
 
 :::tip Ver también
 
-See [this blog post](https://blog.4d.com/a-tool-for-4d-code-execution-in-cli/) for examples of how to use tool4d and 4D Server in utility mode.
+Consulte [esta entrada del blog](https://blog.4d.com/a-tool-for-4d-code-execution-in-cli/) para ver ejemplos de cómo utilizar tool4d y 4D Server en modo utilitario.
 
 :::
