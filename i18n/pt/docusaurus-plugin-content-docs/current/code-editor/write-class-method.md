@@ -223,7 +223,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | **Atalho**                                                  | **Ação**                                                                                                                                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Selection and navigation**                                |                                                                                                                                            |
-| Double-click                                                | Select a language element name                                                                                                             |
+| Duplo clique                                                | Select a language element name                                                                                                             |
 | [Alt]+Double-click                                          | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
 | [Shift]+[right arrow]                                       | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
 | [Shift]+[left arrow]                                        | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
@@ -253,7 +253,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+E                                                    | Find Same Next                                                                                                                             |
 | [Ctrl]+[Shift]+E                                            | Find Same Previous                                                                                                                         |
 | [Ctrl]+[Alt]+F                                              | Replace                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                              | Replace Next                                                                                                                               |
+| [Ctrl]+[Alt]+G                                              | Substituir próximo                                                                                                                         |
 | [Ctrl]+[Alt]+[Shift]+G                                      | Replace Previous                                                                                                                           |
 | [**Clipboards**](#clipboards)                               |                                                                                                                                            |
 | [Shift]+click or [Alt]+click on clipboard icon              | Copy selected text to a clipboard                                                                                                          |
