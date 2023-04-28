@@ -370,7 +370,7 @@ property name : Text
 property age : Integer
 ```
 
-In a method:
+Num método:
 
 ```4d
 var $o : cs.MyClass
