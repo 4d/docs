@@ -26,8 +26,8 @@ Control characters do not appear in the menu command labels. You should therefor
 | Caracter   | Descrição                   | Utilização                                                    |
 | ---------- | --------------------------- | ------------------------------------------------------------- |
 | (          | open parenthese             | Disable item                                                  |
-| <B         | less than B                 | Negrito                                                       |
-| <I         | less than I                 | Itálica                                                       |
+| <B         | menor que B                 | Negrito                                                       |
+| <I         | maior que I                 | Itálica                                                       |
 | <U         | menor que U                 | Underline font                                                |
 | !+caracter | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
 | /+caracter | slash+character             | Add character as shortcut                                     |
@@ -104,7 +104,7 @@ You can also add the **Shift** key as well as the **Alt** key (Windows) or **Opt
     - Ctrl+Alt+character
     - Ctrl+Shift+Alt+character
 
-- Under macOS:
+- Em macOS:
     - Comando+caractere
     - Command+Shift+character
     - Command+Option+character
@@ -140,7 +140,7 @@ To assign a keyboard shortcut using the 4D language, use the `SET ITEM SHORTCUT`
 > An active object can also have a keyboard shortcut. If the **Ctrl/Command** key assignments conflict, the active object takes precedence.
 
 
-### Enabled item
+### Item habilitado
 
 In the Menu editor, you can specify whether a menu item will appear enabled or disabled. An enabled menu command can be chosen by the user; a disabled menu command is dimmed and cannot be chosen. When the **Enabled Item** check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.
 
@@ -153,7 +153,7 @@ This Menu editor option can be used to associate a system check mark with a menu
 
 Check marks are generally used for continuous action menu items and indicate that the action is currently underway.
 
-### Font styles
+### Estilos de letra
 
 4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the `SET MENU ITEM STYLE` language command.
 
