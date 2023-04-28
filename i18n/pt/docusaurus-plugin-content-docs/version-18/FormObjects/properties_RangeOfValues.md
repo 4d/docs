@@ -39,7 +39,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 ---
 
-## Excluded List
+## Lista de excluídos
 
 Allows setting a list whose values cannot be entered in the object. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
 > If a specified list is hierarchical, only the items of the first level are taken into account.
@@ -56,7 +56,7 @@ Allows setting a list whose values cannot be entered in the object. Se um valor 
 
 ---
 
-## Required List
+## Lista obrigatória
 
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 
