@@ -223,7 +223,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objectos suportados
 
-[Radio Button](radio_overview.md)
+[Botão rádio](radio_overview.md)
 
 ---
 
