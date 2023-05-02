@@ -1450,9 +1450,9 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 
 <!-- REF #collection.flat().Params -->
-| Parámetros | Tipo       |    | Descripción                                                               |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| depth      | Integer    | -> | How deep a nested collection structure should be flattened. Por defecto=1 |
+| Parámetros | Tipo       |    | Descripción                                                                         |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
+| depth      | Integer    | -> | A qué profundidad debe aplanarse una estructura de colección anidada. Por defecto=1 |
 | Result     | Collection | <- | Colección aplanada|<!-- END REF -->
 
 
@@ -1506,18 +1506,18 @@ $col.flat(MAXLONG)
 <!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                               |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objeto formula                                                                            |
-| methodName | Text        | -> | Nombre de un método                                                                       |
-| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                        |
-| Result     | Collection  | <- | Collection of transformed values and flattened by a depth of 1|<!-- END REF -->
+| Parámetros | Tipo        |    | Descripción                                                                                       |
+| ---------- | ----------- |:--:| ------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objeto formula                                                                                    |
+| methodName | Text        | -> | Nombre de un método                                                                               |
+| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                                |
+| Result     | Collection  | <- | Colección de valores transformados y aplanados en una profundidad de 1|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.flatMap()` <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
+La función `.flatMap()` <!-- REF #collection.flatMap().Summary -->crea una nueva colección basada en el resultado de la llamada a la función 4D *formula* o al método *methodName* sobre cada elemento de la colección original y aplanada en una profundidad de 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
 
 This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
 > Esta función no modifica la colección original.
