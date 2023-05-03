@@ -372,7 +372,7 @@ When a connection is terminated, its [`status`](WebSocketConnectionClass.md#stat
 
 A propriedade `.dataType` contém <!-- REF #WebSocketServerClass.dataType.Summary -->the type of the data received or sent<!-- END REF -->.
 
-This property is read-only.
+Esta propriedade é só de leitura.
 <!-- END REF -->
 
 
@@ -383,7 +383,7 @@ This property is read-only.
 
 #### Descrição
 
-The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
+A propriedade `.handler` contém <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -397,7 +397,7 @@ The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary 
 
 A propriedade `.path` contém <!-- REF #WebSocketServerClass.path.Summary -->the pattern of the path to access the WebSocket server<!-- END REF -->. If no path was defined, the WebSocket server manages all connections.
 
-This property is read-only.
+Esta propriedade é só de leitura.
 <!-- END REF -->
 
 
@@ -431,6 +431,6 @@ A função `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary -->
 
 A propriedade `.terminated` contém <!-- REF #WebSocketServerClass.terminated.Summary -->True if the WebSocket server is closed<!-- END REF -->.
 
-This property is read-only.
+Esta propriedade é só de leitura.
 <!-- END REF -->
 
