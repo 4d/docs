@@ -320,7 +320,7 @@ Se produce un error si *entity* y la entity selection no están relacionadas con
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //The $employee entity is added to the $employees entity selection
+ $employees.add($employee) //La entidad $employee se añade a la selección de entidades $employees
 ```
 
 #### Ejemplo 2
