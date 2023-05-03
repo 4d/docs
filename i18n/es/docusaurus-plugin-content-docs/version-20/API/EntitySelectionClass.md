@@ -322,7 +322,7 @@ Se produce un error si *entity* y la entity selection no están relacionadas con
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //The $employee entity is added to the $employees entity selection
+ $employees.add($employee) //La entidad $employee se añade a la selección de entidades $employees
 ```
 
 #### Ejemplo 2
@@ -446,9 +446,9 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
 
 La función `.at()` <!-- REF #EntitySelectionClass.at().Summary -->devuelve la entidad en la posición *index*, permitiendo enteros positivos y negativos<!-- END REF -->.
 
-If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+Si *index* es negativo (de -1 a -n con n: longitud de la selección de entidades), la entidad devuelta se basará en el orden inverso de la selección de entidades.
 
-The function returns Null if *index* is beyond entity selection limits.
+La función devuelve Null si *index* está más allá de los límites de selección de entidades.
 
 #### Ejemplo
 
@@ -727,7 +727,7 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 :::note
 
-The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
+La opción `dk count values` sólo está disponible con atributos de almacenamiento de tipo booleano, cadena, número y fecha.
 
 :::
 
@@ -755,7 +755,7 @@ $countries:=ds.Employee.all().distinct("address.country")
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
 
-You want to get the number of different job names in the company:
+Desea obtener el número de nombres de posiciones diferentes en la empresa:
 
 ```4d
 var $jobs : Collection
@@ -786,10 +786,10 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
-| Parámetros | Tipo       |    | Descripción                                                   |
-| ---------- | ---------- |:--:| ------------------------------------------------------------- |
-| atributo   | Text       | -> | Object attribute name whose paths you want to get             |
-| Result     | Collection | <- | New collection with distinct paths|<!-- END REF --> |
+| Parámetros | Tipo       |    | Descripción                                                    |
+| ---------- | ---------- |:--:| -------------------------------------------------------------- |
+| atributo   | Text       | -> | Nombre del atributo del objeto cuyas rutas desea obtener       |
+| Result     | Collection | <- | Nueva colección con rutas distintas|<!-- END REF --> |
 
 
 #### Descripción
@@ -798,11 +798,11 @@ La función `.distinctPaths()` <!-- REF #EntitySelectionClass.distinctPaths().Su
 
 Si *attribute* no es un atributo de objeto indexado, se genera un error.
 
-Tras la llamada, el tamaño de la colección devuelta es igual al número de rutas distintas encontradas en *attribute* para la selección de entidades. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+Tras la llamada, el tamaño de la colección devuelta es igual al número de rutas distintas encontradas en *attribute* para la selección de entidades. Las rutas se devuelven como cadenas que incluyen atributos anidados y colecciones, por ejemplo "info.address.number" o "children[].birthdate". Las entidades con un valor null en el *attribute* no se tienen en cuenta.
 
 #### Ejemplo
 
-You want to get all paths stored in a *fullData* object attribute:
+Desea obtener todas las rutas almacenadas en un atributo objeto *fullData*:
 
 ```4d
 var $paths : Collection
