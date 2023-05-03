@@ -1519,7 +1519,7 @@ $col.flat(MAXLONG)
 
 La función `.flatMap()` <!-- REF #collection.flatMap().Summary -->crea una nueva colección basada en el resultado de la llamada a la función 4D *formula* o al método *methodName* sobre cada elemento de la colección original y aplanada en una profundidad de 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
 
-This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamada a [`flat()`](#flat) de profundidad 1.
 > Esta función no modifica la colección original.
 
 
@@ -1570,7 +1570,7 @@ $result:=$col.flatMap(Formula(Split string($1.value; " ")))
 
 #### Ejemplo 3
 
-You want to compute the percentage of each value in the collection to the total:
+Desea calcular el porcentaje de cada valor de la colección con respecto al total:
 
 ```4d
 var $c; $c2 : Collection
@@ -1597,15 +1597,15 @@ $c2:=$c.flatMap($f; $c.sum())
 
 </details>
 
-<!-- REF #collection.includes().Syntax -->**.includes**( *toSearch* : expression { ; *startFrom* : Integer } ) : Boolean<!-- END REF -->
+<!-- REF #collection.includes().Syntax -->**.includes**( *toSearch* : expresión { ; *startFrom* : entero } ) : Booleano<!-- END REF -->
 
 
 <!-- REF #collection.includes().Params -->
-| Parámetros | Tipo      |    | Descripción                                                              |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------ |
-| toSearch   | expresión | -> | Expresión a buscar en la colección                                       |
-| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                       |
-| Result     | Boolean   | <- | True if *toSearch* is found in the collection|<!-- END REF -->
+| Parámetros | Tipo      |    | Descripción                                                                |
+| ---------- | --------- |:--:| -------------------------------------------------------------------------- |
+| toSearch   | expresión | -> | Expresión a buscar en la colección                                         |
+| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                         |
+| Result     | Boolean   | <- | True si *toSearch* se encuentra en la colección|<!-- END REF -->
 
 
 |
@@ -1626,8 +1626,8 @@ En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 
 Opcionalmente, puede pasar el índice de la colección desde el que iniciar la búsqueda en *startFrom*.
 
-*   If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
-*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
+*   Si *startFrom* >= longitud de la colección, se devuelve False, lo que significa que no se busca en la colección.
+*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). Tenga en cuenta que incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
 *   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
