@@ -2808,7 +2808,7 @@ Con el siguiente método ***Flatten***:
 #### Descripción
 
 
-La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplica la *formula * o retrollamada *methodName* contra un acumulador y cada elemento de la colección (de derecha a izquierda) para reducirlo a un único valor<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
