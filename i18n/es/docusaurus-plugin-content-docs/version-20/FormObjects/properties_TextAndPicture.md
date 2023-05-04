@@ -98,9 +98,9 @@ El título del botón se desplazará hacia la derecha y hacia la parte inferior 
 
 ## Número de estados
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
+Esta propiedad define el número exacto de estados presentes en la imagen utilizada como icono para un [botón con icono](button_overview.md), una [casilla de selección](checkbox_overview.md) o un [botón radio](radio_overview.md) personalizado.
 
-The picture can contain from 2 to 6 states.
+La imagen puede contener de 2 a 6 estados.
 
 - 2 estados: false, true
 - 3 estados: false, true, rollover,
@@ -123,9 +123,9 @@ Cada estado está representado por una imagen diferente. En la imagen fuente, lo
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                |
-| ---------- | -------------- | ----------------------------------------------- |
-| iconFrames | number         | Number of states in the icon picture. Mínimo: 1 |
+| Nombre     | Tipos de datos | Valores posibles                                    |
+| ---------- | -------------- | --------------------------------------------------- |
+| iconFrames | number         | Número de estados en la imagen del icono. Mínimo: 1 |
 
 #### Objetos soportados
 
@@ -181,11 +181,11 @@ Aquí están los resultados utilizando las distintas opciones para esta propieda
 
 ## Image hugs title
 
-This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+Esta propiedad permite definir si el título y la imagen del botón deben estar visualmente contiguos o separados, según las propiedades [Posición del título/imagen](#titlepicture-position) y [Alineación horizontal](#horizontal-alignment).
 
 Esta propiedad no tiene efecto cuando el botón sólo contiene un título (sin imagen asociada) o una imagen (sin título).
 
-By default, when a button contains a title and a picture, the elements are joined. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
+Por defecto, cuando un botón contiene un título y una imagen, los elementos se unen. El siguiente gráfico muestra el efecto de la propiedad `imageHugsTitle` (true cuando la propiedad está activada) con diferentes alineaciones de los botones:
 
 ![](../assets/en/FormObjects/hugs.png)
 
@@ -198,7 +198,7 @@ By default, when a button contains a title and a picture, the elements are joine
 
 #### Objetos soportados
 
-[Button](button_overview.md) (all styles except Help) - [Check Box](checkbox_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand) - [Radio Button](radio_overview.md) (all styles except Regular, Flat, Disclosure and Collapse/Expand).
+[Botón](button_overview.md) (todos los estilos excepto Ayuda) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular, Plano, Revelar y Contraer/Expandir) - [Botón radio](radio_overview.md) (todos los estilos excepto Regular, Plano, Revelar y Contraer/Expandir).
 
 ---
 
