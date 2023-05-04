@@ -215,7 +215,7 @@ On Windows, tool4d is a console application so that the `stdout` stream is displ
 
 :::note Notas
 
-- tool4d is always executed headless (the `headless` command line option is useless).
+- tool4d é sempre executado sem ‘interface’ (a opção de linha de comando `headless` é inútil).
 - The [`Application type`](https://doc.4d.com/4dv19R/help/command/en/page494.html) command returns the value 6 ("tool4d") when called from the tool4d application.
 - the [diagnostic log file](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) is prefixed with "4DDiagnosticLogTool".
 
