@@ -177,7 +177,7 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 `List box de tipo colección/selección de entidades`
 
-Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) command in the 4D Language Reference manual.
+Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) en el manual Lenguaje de 4D.
 
 Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
 
@@ -238,14 +238,14 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Gramática JSON
 
-| Nombre    | Tipos de datos | Valores posibles                                                                                          |
-| --------- | -------------- | --------------------------------------------------------------------------------------------------------- |
-| textAlign | string         | "right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) ), "justify" |
+| Nombre    | Tipos de datos | Valores posibles                                                                                                          |
+| --------- | -------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| textAlign | string         | "right", "center", "left", "automatic" (no es soportado por las [casillas de selección](checkbox_overview.md)), "justify" |
 
 :::note
 
-- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- "justify" is only supported by [group boxes](groupBox.md), [inputs](input_overview.md), and [text areas](text.md)
+- "automatic" no es compatible con [casillas de selección](checkbox_overview.md) y [botones radio](radio_overview.md)
+- "justify" sólo es compatible con las [cajas de grupo](groupBox.md), las [entradas](input_overview.md) y las [áreas de texto](text.md)
 
 :::
 
@@ -264,7 +264,7 @@ La opción **Predeterminado** (`automático` valor JSON) define la alineación s
 - `abajo` para todos los datos (excepto las imágenes) y
 - `arriba` para los datos del tipo imagen.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
+Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) y [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html).
 
 #### Gramática JSON
 
