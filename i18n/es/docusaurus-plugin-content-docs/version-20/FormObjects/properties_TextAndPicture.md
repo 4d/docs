@@ -102,16 +102,16 @@ This property sets the exact number of states present in the picture used as the
 
 The picture can contain from 2 to 6 states.
 
-- 2 states: false, true
-- 3 states: false, true, rollover,
-- 4 states: false, true, rollover, disabled,
-- 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
-- 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable.
+- 2 estados: false, true
+- 3 estados: false, true, rollover,
+- 4 estados: false, true, rollover, desactivado,
+- 5 estados (sólo para casillas de verificación y botones radio): false, true, rollover false, rollover true, desactivado
+- 6 estados (sólo para casillas de verificación y botones radio): false, true, false rollover, true rollover, false desactivado, true desactivado.
 
 :::note
 
-- "false" means button not clicked/not selected or check box unchecked (variable value=0)
-- "true" means button clicked/selected or check box checked (variable value=1)
+- "false" significa botón no presionado/no seleccionado o casilla desmarcada (valor de la variable=0)
+- "true" significa botón presionado/seleccionado o casilla marcada (valor de la variable=1)
 
 :::
 
