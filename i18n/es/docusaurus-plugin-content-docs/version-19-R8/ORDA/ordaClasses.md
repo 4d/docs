@@ -972,7 +972,7 @@ Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
 
 ### Editar las clases
 
-To open a defined ORDA class in the 4D Code Editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
+Para abrir una clase ORDA definida en el editor de código 4D, seleccione o haga doble clic en el nombre de una clase ORDA y utilice **Editar...** en el menú contextual/menú de opciones de la ventana del Explorador:
 
 ![](../assets/en/ORDA/classORDA4.png)
 
