@@ -336,12 +336,12 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 - Puede acceder a las propiedades como cadenas utilizando el operador [ ]
 
 ```4d
- $Emp["city"]:="Berlin" //modifies the city property
-  //this can be useful for creating properties through variables
+ $Emp["city"]:="Berlin" //modifica la propiedad city
+  //esto puede ser útil para crear propiedades a través de variables
  var $addr : Text
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
  End for
-  // creates 4 empty properties "address1...address4" in the $Emp object
+  // crea 4 propiedades vacías "address1...address4" en el objeto $Emp
 ```
