@@ -628,7 +628,7 @@ Se um conjunto de chaves no parâmetro *info* já estiver definido no arquivo .p
 #### Exemplo
 
 ```4d
-  // set copyright, version and icon of a .exe file (Windows)
+  // definir copyright, versão e ícone de um arquivo .exe (Windows)
 var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -641,7 +641,7 @@ $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
+  // definir algumas chaves num ficheiro info.plist (todas as plataformas)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
