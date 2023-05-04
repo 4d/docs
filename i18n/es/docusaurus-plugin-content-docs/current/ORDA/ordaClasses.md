@@ -690,7 +690,7 @@ Considerando el siguiente modelo:
 
 ![](../assets/en/ORDA/alias1.png)
 
-In the Teacher dataclass, an alias attribute returns all students of a teacher:
+En la clase de datos Teacher, un atributo alias devuelve todos los alumnos de un profesor:
 
 ```4d
 // cs.TeacherEntity class
@@ -724,8 +724,8 @@ En la dataclass Course:
 Class extends Entity
 
 Exposed Alias courseName name //scalar 
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias teacherName teacher.name //valor escalar
+Exposed Alias studentName student.name //valor escalar
 
 ```
 
@@ -757,10 +757,10 @@ ds. Teacher.query("students.name = :1";"Martin")
 También puede editar el valor del alias *courseName*:
 
 ```4d
-// Rename a course using its alias attribute
-$arch:=ds.Course.query("courseName = :1";"Archaeology")
+// Renombrar un curso utilizando su atributo alias
+$arch:=ds.Course.query("courseName = :1"; "Archaeology")
 $arch.courseName:="Archaeology II"
-$arch.save() //courseName and name are "Archaeology II"
+$arch.save() //courseName y name son "Archaeology II"
 ```
 
 
@@ -983,7 +983,7 @@ Para las clases ORDA basadas en el datastore local (`ds`), puede acceder directa
 
 ### Editor de código
 
-In the 4D Code Editor, variables typed as an ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
+En el editor de código de 4D, las variables escritas como una clase ORDA se benefician automáticamente de las funcionalidades de autocompletado. Ejemplo con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
