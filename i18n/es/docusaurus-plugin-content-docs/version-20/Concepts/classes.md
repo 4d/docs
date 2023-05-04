@@ -372,7 +372,7 @@ The `property` keyword can only be used in class methods and outside any `Functi
 #### Ejemplo
 
 ```4d
-// Class: MyClass
+// Clase: MyClass
 
 property name : Text
 property age : Integer
