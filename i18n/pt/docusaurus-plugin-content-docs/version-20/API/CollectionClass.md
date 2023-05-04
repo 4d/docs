@@ -1377,10 +1377,10 @@ $first:=$emptyCol.first() // devolve Indefinido
 
 
 <!-- REF #collection.flat().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                              |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| depth      | Integer    | -> | How deep a nested collection structure should be flattened. O padrão=1 |
-| Resultados | Collection | <- | Colecção achatada|<!-- END REF -->                           |
+| Parâmetros | Tipo       |    | Descrição                                                                             |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------- |
+| depth      | Integer    | -> | A profundidade a que uma estrutura de colecção aninhada deve ser aplanada. O padrão=1 |
+| Resultados | Collection | <- | Colecção achatada|<!-- END REF -->                                          |
 
 
 #### Descrição
@@ -1802,7 +1802,7 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 
 #### Descrição
 
-A função `.last()` <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
+A função `.last()` <!-- REF #collection.last().Summary -->devolve o último elemento da colecção<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 A função retorna Undefined se a coleção estiver vazia.
