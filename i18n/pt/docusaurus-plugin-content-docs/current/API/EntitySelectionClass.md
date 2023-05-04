@@ -320,7 +320,7 @@ Se produz um erro se *entity* e a entity selection não estão relacionadas com 
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //The $employee entity is added to the $employees entity selection
+ $employees.add($employee) //A entidade $employee é adicionada à selecção de entidades $employees
 ```
 
 #### Exemplo 2
@@ -432,19 +432,19 @@ Se quisermos ter uma seleção de empregados chamados "Jones" que morem em Nova 
 
 
 <!-- REF #EntitySelectionClass.at().Params -->
-| Parâmetros | Tipo       |    | Descrição                                           |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| index      | Integer    | -> | Index of entity to return                           |
-| Resultados | 4D. Entity | <- | The entity at that index|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                          |
+| ---------- | ---------- |:--:| -------------------------------------------------- |
+| index      | Integer    | -> | Índice da entidade a devolver                      |
+| Resultados | 4D. Entity | <- | A entidade nesse índice|<!-- END REF --> |
 
 
 #### Descrição
 
-A função `.at()` <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
+A função `.at()` <!-- REF #EntitySelectionClass.at().Summary -->devolve a entidade na posição *index*, permitindo a utilização de números inteiros positivos e negativos<!-- END REF -->.
 
-If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+Se o *index* for negativo (de -1 a -n com n : comprimento da selecção de entidades), a entidade devolvida será baseada na ordem inversa da selecção de entidades.
 
-The function returns Null if *index* is beyond entity selection limits.
+A função devolve Null se o *index* estiver para além dos limites de selecção de entidades.
 
 #### Exemplo
 
@@ -714,16 +714,16 @@ No parámetro *attributePath*, passe o atributo de entidade cujos valores distin
 
 Pode utilizar a notação `[]` para designar uma coleção quando *attributePath* for uma rota dentro de um objeto (ver exemplos).
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+No parâmetro *options*, pode passar uma ou uma combinação das seguintes constantes:
 
-| Constante         | Value | Comentário                                                                                                                                                                                             |
-| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                  |
-| `dk count values` | 32    | Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
+| Constante         | Value | Comentário                                                                                                                                                                                                  |
+| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk diacritical`  | 8     | A avaliação é sensível a maiúsculas e minúsculas e diferencia os caracteres acentuados. Como padrão, se omitida, é efectuada uma avaliação não-diacrítica                                                   |
+| `dk count values` | 32    | Devolve a contagem de entidades para cada valor distinto. Quando esta opção é passada, `.distinct()` devolve uma colecção de objectos contendo um par de propriedades `{"value":*value*; "count":*count*}`. |
 
 :::note
 
-The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
+A opção `dk count values` só está disponível com atributos de armazenamento do tipo booleano, cadeia de caracteres, número e data.
 
 :::
 
@@ -751,7 +751,7 @@ $countries:=ds.Employee.all().distinct("address.country")
 $values:=ds. Employee.all().distinct("extra.nicknames[].first")
 ```
 
-You want to get the number of different job names in the company:
+Pretende obter o número de nomes de funções diferentes na empresa:
 
 ```4d
 var $jobs : Collection
@@ -784,17 +784,17 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
 | Parâmetros | Tipo       |    | Descrição                                                     |
 | ---------- | ---------- |:--:| ------------------------------------------------------------- |
-| atributo   | Text       | -> | Object attribute name whose paths you want to get             |
+| atributo   | Text       | -> | Nome do atributo do objecto cujos caminhos pretende obter     |
 | Resultados | Collection | <- | New collection with distinct paths|<!-- END REF --> |
 
 
 #### Descrição
 
-The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->.
+A função `.distinctPaths()` <!-- REF #EntitySelectionClass.distinctPaths().Summary -->devolve uma colecção de caminhos distintos encontrados no objecto indexado *attribute* para a selecção da entidade<!-- END REF -->.
 
-If *attribute* is not an indexed object attribute, an error is generated.
+Se *attribute* não for um atributo de objecto indexado, é gerado um erro.
 
-After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+Após a chamada, o tamanho da colecção devolvida é igual ao número de caminhos distintos encontrados em *attribute* para a selecção da entidade. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
 
 #### Exemplo
 
