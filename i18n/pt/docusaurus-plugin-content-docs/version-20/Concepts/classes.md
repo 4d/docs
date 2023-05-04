@@ -208,14 +208,14 @@ In the application code, class functions are called as member methods of the obj
 
 #### Parâmetros
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;).
+Os parâmetros da função são declarados utilizando o nome do parâmetro e o tipo de parâmetro, separados por dois pontos. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 > If the type is not stated, the parameter will be defined as `Variant`.
 
-The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. Por exemplo:
+A [sintaxe 4D clássica](parameters.md#sequential-parameters) para parâmetros de métodos pode ser utilizada para declarar parâmetros de funções de classe. Ambas as sintaxes podem ser misturadas. Por exemplo:
 
 ```4d
 Function add($x : Integer)
@@ -238,14 +238,14 @@ You can also declare the return parameter by adding only `: type` and use the [`
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
- // some code
+ // algum código
  return $x+$y
 ```
 
 #### Exemplo 1
 
 ```4d
-// Class: Rectangle
+// Classe: Rectangle
 Class constructor($width : Integer; $height : Integer)
  property name : Text
  property height; width : Integer
@@ -270,7 +270,7 @@ $area:=$rect.getArea() //5000
 
 #### Exemplo 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+Este exemplo utiliza a [expressão return``](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -325,7 +325,7 @@ $o:=cs.MyClass.new("John";42)
 
 `property <propertyName>{; <propertyName2>;...}{ : <propertyType>}`
 
-The `property` keyword can be used to declare a property inside a user class. A class property has a name and a type.
+The `property` keyword can be used to declare a property inside a user class. Uma propriedade de classe tem um nome e um tipo.
 
 Declaring class properties enhances code editor suggestions, type-ahead features and error detection.
 
@@ -394,7 +394,7 @@ Function set <name>($parameterName : type)
 // código
 ```
 
-`As funções obter` e `conjunto de funções` são acessores que definem **propriedades computadas** na classe. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+`As funções obter` e `conjunto de funções` são acessores que definem **propriedades computadas** na classe. Uma propriedade calculada é uma propriedade nomeada com um tipo de dados que oculta um cálculo. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
 
 - when the property is read, the `Function get` is executed,
 - when the property is written, the `Function set` is executed.
@@ -433,9 +433,9 @@ Function set fullName( $fullName : Text )
 ```
 
 ```4d
-//in a project method
-$fullName:=$person.fullName // Function get fullName() is called
-$person.fullName:="John Smith" // Function set fullName() is called
+//num método projecto
+$fullName:=$person.fullName // A função get fullName() é chamada
+$person.fullName:="John Smith" // A função set fullName() é chamada
 ```
 
 #### Exemplo 2
@@ -467,8 +467,8 @@ Class extension must respect the following rules:
 
 - A user class cannot extend a built-in class (except 4D.Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
 - A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- Uma classe utilizador não se pode estender a si própria.
+- Não é possível estender classes de forma circular (ou seja, "a" estende "b" que estende "a").
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
@@ -476,7 +476,7 @@ An extended class can call the constructor of its parent class using the [`Super
 
 #### Exemplo
 
-This example creates a class called `Square` from a class called `Polygon`.
+Este exemplo cria uma classe chamada `Square` a partir de uma classe chamada `Polygon`.
 
 ```4d
 //Class: Square
@@ -519,7 +519,7 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
 1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
 
-- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
+- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. É o programador 4D que se certifica de que as chamadas são válidas.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
 - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
 
