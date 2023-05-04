@@ -200,7 +200,7 @@ will trigger the Runtime Error shown here:
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 
 ```4d
-  //Capitalize_text project method
+  //Método projecto Capitalize_text
   //Capitalize_text ( Text ) -> Text
   //Capitalize_text ( Source text ) -> Capitalized text
 
