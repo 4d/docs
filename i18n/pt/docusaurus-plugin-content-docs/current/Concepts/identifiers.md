@@ -127,7 +127,7 @@ The name of a variable can be up to 31 characters, not including the scope symbo
 
 - A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables).
 - A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
-- Thereafter, the name can include any letter or digit, and the underscore character ("_").
+- A partir daí, o nome pode incluir qualquer letra ou dígito e o carácter de sublinhado ("_").
 - Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
 - Variable names are case insensitive.
@@ -148,7 +148,7 @@ In the 4D language, several elements have their names handled as strings: **form
 Such string names can contain up to 255 characters, not including the `$` or `<>` characters (if any).
 
 - String names can contain any characters.
-- String names are case insensitive.
+- Os nomes das cadeias de caracteres não diferenciam maiúsculas de minúsculas.
 
 Exemplos:
 
