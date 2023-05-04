@@ -56,9 +56,9 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## Variables interproceso
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Una variable interproceso se designa precediendo el nombre de la variable con los símbolos (`<>`) — un signo "menor que" seguido de un signo "mayor que".
 
-The name of an interprocess variable can be up to 31 characters, not including the `<>` symbols.
+El nombre de una variable interproceso puede tener hasta 31 caracteres, sin incluir los símbolos `<>`.
 
 Ejemplos:
 
