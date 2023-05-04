@@ -61,11 +61,11 @@ The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) comm
 Ejemplos:
 
 ```4d
- var $obVar : Object //declaration of an object type 4D variable
- $obVar:=New object //instantiation of an object and assignment to the 4D variable
+ var $obVar : Object //declaración de una variable 4D de tipo objeto
+ $obVar:=New object //instanciación de un objeto y asignación a la variable 4D
 
  var $obFilled : Object 
- $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
+ $obFilled:=New object("name";"Smith";"age";42) //instanciación y asignación de un objeto pre-rellenado
 ```
 
 
