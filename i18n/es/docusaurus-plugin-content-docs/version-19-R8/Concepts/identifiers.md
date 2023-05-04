@@ -44,7 +44,7 @@ $value:=$clientObj.data.address.city
 
 :::tip
 
-Starting an object property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+Comenzar el nombre de una propiedad objeto con un carácter de subrayado ("_") excluirá la propiedad de las características de autocompletado en el editor de código de 4D. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
 
 :::
 
