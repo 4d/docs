@@ -216,50 +216,50 @@ Multiple features of 4D's Code Editor are available through default keyboard sho
 
 :::info macOS
 
-Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
+En macOS, utilice la tecla **Command** en lugar de la tecla **Ctrl** mencionada (Windows).
 
 :::
 
-| **Atajo**                                                 | **Acción**                                                                                                                                    |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Selección y navegación**                                |                                                                                                                                               |
-| Doble clic                                                | Seleccionar un nombre de elemento del lenguaje                                                                                                |
-| [Alt]+doble clic                                          | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                |
-| [Shift]+[flecha derecha]                                  | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left        |
-| [Shift]+[flecha izquierda]                                | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda       |
-| [Shift]+[flecha abajo]                                    | Create and enlarge a selection, line by line, from the top to the bottom                                                                      |
-| [Shift]+[flecha arriba]                                   | Create and enlarge a selection, line by line, from the bottom to the top                                                                      |
-| [Ctrl]+[Shift]+[flecha derecha]                           | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                           |
-| [Ctrl]+[Shift]+[flecha izquierda]                         | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda          |
-| [Ctrl]+[flecha derecha]                                   | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                      |
-| [Ctrl]+[flecha izquierda]                                 | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                      |
-| [Alt]+[flecha abajo]                                      | Mover la(s) línea(s) donde está el cursor hacia abajo                                                                                         |
-| [Alt]+[flecha arriba]                                     | Mover la(s) línea(s) donde está el cursor a la parte superior                                                                                 |
-| [Home]                                                    | Colocar el punto de inserción al comienzo de la línea                                                                                         |
-| [End]                                                     | Coloca el punto de inserción al final de la línea                                                                                             |
-| [Ctrl]+[Home]                                             | Colocar el punto de inserción al comienzo del método                                                                                          |
-| [Ctrl]+[End]                                              | Coloca el punto de inserción al final del método                                                                                              |
-| [Shift]+[Home]                                            | Seleccionar todos los caracteres de la línea situados a la izquierda del cursor                                                               |
-| [Shift]+[End]                                             | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                                 |
-| [PgUp]                                                    | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                     |
-| [PgDn]                                                    | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                       |
-| [**Introspección**](#goto-definition)                     |                                                                                                                                               |
-| [Ctrl]+K o [Alt]+doble clic                               | Same as [**Goto definition**](#goto-definition) command                                                                                       |
-| \[Ctrl\] (Windows) o \[Alt\] (macOS)+pasar sobre un token | Subraye el token (elemento lingüístico identificado). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
-| [**Buscar y reemplazar**](#find-and-replace)              |                                                                                                                                               |
-| [Ctrl]+F                                                  | Buscar                                                                                                                                        |
-| [Ctrl]+G                                                  | Buscar siguiente                                                                                                                              |
-| [Ctrl]+[Shift]+G                                          | Buscar anterior                                                                                                                               |
-| [Ctrl]+E                                                  | Find Same Next                                                                                                                                |
-| [Ctrl]+[Shift]+E                                          | Find Same Previous                                                                                                                            |
-| [Ctrl]+[Alt]+F                                            | Reemplazar                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                            | Reemplazar siguiente                                                                                                                          |
-| [Ctrl]+[Alt]+[Shift]+G                                    | Reemplazar anterior                                                                                                                           |
-| [**Portapapeles**](#clipboards)                           |                                                                                                                                               |
-| [Shift]+clic o [Alt]+clic en el icono del portapapeles    | Copiar el texto seleccionado en el portapapeles                                                                                               |
-| [Ctrl]+[Shift]+tecla numérica                             | Copiar el texto seleccionado en el portapapeles numérico                                                                                      |
-| [Ctrl]+clic en el icono del portapapeles                  | Pegar el contenido de un portapapeles en la posición del cursor                                                                               |
-| [Ctrl]+tecla numérica                                     | Pegar el contenido del portapapeles numérico en la posición del cursor                                                                        |
+| **Atajo**                                                 | **Acción**                                                                                                                                           |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Selección y navegación**                                |                                                                                                                                                      |
+| Doble clic                                                | Seleccionar un nombre de elemento del lenguaje                                                                                                       |
+| [Alt]+doble clic                                          | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                       |
+| [Shift]+[flecha derecha]                                  | Crear y ampliar la selección, caracter por caracter, hacia la derecha, o Reducir la selección, caracter por caracter, desde la izquierda             |
+| [Shift]+[flecha izquierda]                                | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda              |
+| [Shift]+[flecha abajo]                                    | Crear y ampliar una selección, línea por línea, de arriba abajo                                                                                      |
+| [Shift]+[flecha arriba]                                   | Crear y ampliar una selección, línea por línea, desde abajo hacia arriba                                                                             |
+| [Ctrl]+[Shift]+[flecha derecha]                           | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                                  |
+| [Ctrl]+[Shift]+[flecha izquierda]                         | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda                 |
+| [Ctrl]+[flecha derecha]                                   | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                             |
+| [Ctrl]+[flecha izquierda]                                 | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                             |
+| [Alt]+[flecha abajo]                                      | Mover la(s) línea(s) donde está el cursor hacia abajo                                                                                                |
+| [Alt]+[flecha arriba]                                     | Mover la(s) línea(s) donde está el cursor a la parte superior                                                                                        |
+| [Home]                                                    | Colocar el punto de inserción al comienzo de la línea                                                                                                |
+| [End]                                                     | Coloca el punto de inserción al final de la línea                                                                                                    |
+| [Ctrl]+[Home]                                             | Colocar el punto de inserción al comienzo del método                                                                                                 |
+| [Ctrl]+[End]                                              | Coloca el punto de inserción al final del método                                                                                                     |
+| [Shift]+[Home]                                            | Seleccionar todos los caracteres de la línea situados a la izquierda del cursor                                                                      |
+| [Shift]+[End]                                             | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                                        |
+| [PgUp]                                                    | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                            |
+| [PgDn]                                                    | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                              |
+| [**Introspección**](#goto-definition)                     |                                                                                                                                                      |
+| [Ctrl]+K o [Alt]+doble clic                               | Igual que el comando [**Goto definition**](#goto-definition)                                                                                         |
+| \[Ctrl\] (Windows) o \[Alt\] (macOS)+pasar sobre un token | Subraye el token (elemento lingüístico identificado). Haga clic en el token subrayado = igual que el comando [**Goto definition**](#goto-definition) |
+| [**Buscar y reemplazar**](#find-and-replace)              |                                                                                                                                                      |
+| [Ctrl]+F                                                  | Buscar                                                                                                                                               |
+| [Ctrl]+G                                                  | Buscar siguiente                                                                                                                                     |
+| [Ctrl]+[Shift]+G                                          | Buscar anterior                                                                                                                                      |
+| [Ctrl]+E                                                  | Buscar el siguiente                                                                                                                                  |
+| [Ctrl]+[Shift]+E                                          | Buscar el mismo anterior                                                                                                                             |
+| [Ctrl]+[Alt]+F                                            | Reemplazar                                                                                                                                           |
+| [Ctrl]+[Alt]+G                                            | Reemplazar siguiente                                                                                                                                 |
+| [Ctrl]+[Alt]+[Shift]+G                                    | Reemplazar anterior                                                                                                                                  |
+| [**Portapapeles**](#clipboards)                           |                                                                                                                                                      |
+| [Shift]+clic o [Alt]+clic en el icono del portapapeles    | Copiar el texto seleccionado en el portapapeles                                                                                                      |
+| [Ctrl]+[Shift]+tecla numérica                             | Copiar el texto seleccionado en el portapapeles numérico                                                                                             |
+| [Ctrl]+clic en el icono del portapapeles                  | Pegar el contenido de un portapapeles en la posición del cursor                                                                                      |
+| [Ctrl]+tecla numérica                                     | Pegar el contenido del portapapeles numérico en la posición del cursor                                                                               |
 
 :::tip
 
@@ -286,12 +286,12 @@ El Editor de código incluye numerosos [atajos de navegación](#shortcuts).
 El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4D:
 
 - inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
-- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
+- permite definir [secuencias de escape](../Concepts/quick-tour.md#escape-sequences).
 
 
 :::caution
 
-The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. For instance,``C:\MyDocuments`will become`C:\\MyDocuments`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). En general, 4D interpretará correctamente los nombres de ruta de Windows introducidos en el Editor de código sustituyendo la barra invertida simple `\` por una barra invertida doble ``\\`. Por ejemplo,``C:\MisDocumentos`se convertirá en`C:\MisDocumentos`. Sin embargo, si escribe`"C:\MisDocumentos\New"`, 4D mostrará`"C:\MisDocumentos\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
@@ -491,12 +491,12 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
+Al introducir un código, puede comprobar inmediatamente la sintaxis de la línea actual (sin avanzar a la línea siguiente) presionando la tecla **Intro** del teclado numérico. 4D evalúa la línea, le da formato, marca cualquier error y coloca el punto de inserción al final de la línea. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
 
-When the method, class or function is validated, 4D checks for:
+Cuando se valida el método, clase o función, 4D verifica:
 
 - errores de sintaxis básicos
-- the structure of statements (`If`, `End if` and so on)
+- la estructura de las instrucciones (`If`, `End if` y así sucesivamente)
 - que coincidan con los caracteres que encierran el código, como paréntesis o comillas. Cuando escribe un caracter de encierro, 4D indica la coincidencia enmarcando los caracteres de inicio/fin con rectángulos grises:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
