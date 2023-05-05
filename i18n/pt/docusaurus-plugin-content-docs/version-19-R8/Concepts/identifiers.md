@@ -23,7 +23,7 @@ A class name must be compliant with standard [property naming rules](#object-pro
 
 Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+> **Dica:** Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D.
 
 ## Propriedades dos objectos
 
