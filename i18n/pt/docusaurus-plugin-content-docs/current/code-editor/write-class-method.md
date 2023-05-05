@@ -27,7 +27,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Expand all / Collapse all** | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                       |
 | **Method information**        | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Last clipboard values**     | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
-| **Clipboards**                | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
+| **Pranchetas**                | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
 | **Navigation dropdown**       | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. Ver abaixo                                                                                                                                                                                                                        |
 
 
@@ -37,7 +37,7 @@ This is where you write and edit your code. The editor automatically indents cod
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                 | Descrição                                                                                                                                                                                                   | Set in...                                                                                                                                                                                                  |
+| Option                                 | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                             |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                      |
 | **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
@@ -164,7 +164,7 @@ The following items are added automatically:
 
 | Ícone                                                                       | Elemento                                         |
 | --------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | No tag                                           |
+| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                     |
 | ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
 | ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
 | ![function-icon](../assets/en/code-editor/function.png)                     | Class function name                              |
@@ -255,7 +255,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[Alt]+F                                              | Replace                                                                                                                                    |
 | [Ctrl]+[Alt]+G                                              | Substituir próximo                                                                                                                         |
 | [Ctrl]+[Alt]+[Shift]+G                                      | Replace Previous                                                                                                                           |
-| [**Clipboards**](#clipboards)                               |                                                                                                                                            |
+| [**Pranchetas**](#clipboards)                               |                                                                                                                                            |
 | [Shift]+click or [Alt]+click on clipboard icon              | Copy selected text to a clipboard                                                                                                          |
 | [Ctrl]+[Shift]+number key                                   | Copy selected text to the number clipboard                                                                                                 |
 | [Ctrl]+click on clipboard icon                              | Paste contents of a clipboard at cursor location                                                                                           |
@@ -329,7 +329,7 @@ becomes
 
 This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area. Within the selection, only the lines assigning a value will be modified.
 
-### Clipboards
+### Pranchetas
 
 In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
 
