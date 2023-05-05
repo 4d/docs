@@ -37,7 +37,7 @@ Cada valor de propiedad al que se accede a través de la notación de objeto se 
 - en las áreas de expresiones del depurador y del explorador de ejecución,
 - en la lista de propiedades del editor de formularios para los objetos formulario: campo Variable o Expresión, así como diversas expresiones de list box y columnas (fuente de datos, color de fondo, estilo o color de fuente).
 
-## Instantiation
+## Instanciación
 
 Objects must have been instantiated, otherwise trying to read or modify their properties will generate a syntax error.
 
@@ -231,7 +231,7 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
      var $o : Object
      var $val : Integer
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o.a //$o. es indefinido (no hay error) y la asignación de este valor borra la variable
       //$val=0
 ```
 
