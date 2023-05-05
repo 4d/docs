@@ -50,7 +50,7 @@ Default parameters are used the first time the Build Application dialog box is u
 
 XML keys provide additional options besides those displayed in the Build Application dialog box. XML keys provide additional options besides those displayed in the Build Application dialog box.
 
-### Log file
+### Arquivo histórico
 
 When an application is built, 4D generates a log file named *BuildApp.log.xml* in the **Logs** folder of the project. The log file stores the following information for each build:
 
