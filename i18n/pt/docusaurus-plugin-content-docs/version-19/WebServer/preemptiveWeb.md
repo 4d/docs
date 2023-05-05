@@ -14,14 +14,14 @@ The following table indicates whether the preemptive mode is used or is availabl
 
 | 4D Server           | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compilado     |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------- |
-| Servidor REST       | cooperative                                                                                                              | preemptive                                                   | preemptive    |
+| Servidor REST       | cooperative                                                                                                              | apropiativo                                                  | apropiativo   |
 | Servidor Web        | cooperative                                                                                                              | *web setting*                                                | *web setting* |
 | Web Services Server | cooperative                                                                                                              | *web setting*                                                | *web setting* |
 | Legacy REST         | cooperative                                                                                                              | *web setting*                                                | *web setting* |
 
 | 4D remote/single-user | Interpretado | Compilado     |
 | --------------------- | ------------ | ------------- |
-| Servidor REST         | cooperative  | preemptive    |
+| Servidor REST         | cooperative  | apropiativo   |
 | Servidor Web          | cooperative  | *web setting* |
 | Web Services Server   | cooperative  | *web setting* |
 | Legacy REST           | cooperative  | *web setting* |
