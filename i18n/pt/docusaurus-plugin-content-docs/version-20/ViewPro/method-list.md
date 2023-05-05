@@ -338,7 +338,7 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 | ---------- | ------- | -- | -------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name      |
 | column     | Longint | -> | Column index                           |
-| row        | Longint | -> | Row index                              |
+| row        | Longint | -> | Índice de linha                        |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted) |
 | Resultados | Objeto  | <- | Range object of a single cell          |
 
@@ -394,7 +394,7 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 | ----------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                |
 | column      | Integer | -> | Column index                                     |
-| row         | Integer | -> | Row index                                        |
+| row         | Integer | -> | Índice de linha                                  |
 | columnCount | Integer | -> | Number of columns                                |
 | rowCount    | Integer | -> | Number of rows                                   |
 | sheet       | Integer | -> | Sheet index (current sheet if omitted)           |
@@ -2134,7 +2134,7 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 | Parâmetros      | Tipo    |    | Descrição                                |
 | --------------- | ------- | -- | ---------------------------------------- |
 | vpAreaName      | Text    | -> | 4D View Pro area form object name        |
-| sheet           | Integer | -> | Sheet index                              |
+| sheet           | Integer | -> | Índice da folha                          |
 | Function result | Text    | <- | Nome da folha|<!-- END REF --> |
 
 #### Descrição
@@ -2211,7 +2211,7 @@ If($options.colHeaderVisible) //column headers are visible
 | Parâmetros      | Tipo     |    | Descrição                                                                   |
 | --------------- | -------- | -- | --------------------------------------------------------------------------- |
 | vpAreaName      | Text     | -> | 4D View Pro area form object name                                           |
-| sheet           | Integer  | <- | Sheet index                                                                 |
+| sheet           | Integer  | <- | Índice da folha                                                             |
 | Function result | Booleano | <- | True if print lines are visible, False otherwise|<!-- END REF --> |
 
 #### Descrição
@@ -3929,7 +3929,7 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | Parâmetros | Tipo    |    | Descrição                                         |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                 |
-| row        | Integer | -> | Row index                                         |
+| row        | Integer | -> | Índice de linha                                   |
 | rowCount   | Integer | -> | Number of rows                                    |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)            |
 | Resultados | Objeto  | <- | Range object of row(s)|<!-- END REF --> |
