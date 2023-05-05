@@ -72,7 +72,7 @@ List of operators from most to least important:
 | Operator                                      | Descrição                     |
 | --------------------------------------------- | ----------------------------- |
 | ()                                            | Parênteses (para agrupamento) |
-| -                                             | Negate                        |
+| -                                             | Negativo                      |
 | +                                             | Mais                          |
 | %                                             | Porcentagem                   |
 | ^                                             | Expoente                      |
@@ -112,13 +112,13 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Exemplo   | Tipo de referência | Descrição                                                                                                                                      |
-| --------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5        | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5      | Absoluto           | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
-| $C5       | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
-| C$5       | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Cell name | Absoluto           | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Exemplo        | Tipo de referência | Descrição                                                                                                                                      |
+| -------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
+| $C$5           | Absoluto           | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
+| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
+| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
+| Nome da célula | Absoluto           | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 
 
