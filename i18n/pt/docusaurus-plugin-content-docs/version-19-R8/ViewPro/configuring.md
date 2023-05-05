@@ -233,7 +233,7 @@ In addition to the special characters and codes described in the previous sectio
 | £           | British Pound                                                      | £###.00              |
 | ¥           | Iene japonês                                                       | ¥###.00              |
 | $           | Sinal de dólar                                                     | $###.00              |
-| ¢           | Cent sign                                                          | .00¢                 |
+| ¢           | Sinal de cêntimo                                                   | .00¢                 |
 
 ## Atributos de impressão
 
@@ -313,7 +313,7 @@ Margin attributes are used to specify the 4D View Pro area margins for printing.
 |             | header  | inteiro longo | Header offset, in hundredths of an inch. Valor padrão = 30 |
 |             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30 |
 
-### Orientation
+### Orientação
 
 Os atributos de orientação são utilizados para especificar a direcção da disposição da página impressa.
 > This attribute defines rendering information only.
