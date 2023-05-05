@@ -233,7 +233,7 @@ In addition to the special characters and codes described in the previous sectio
 | £           | British Pound                                                      | £###.00              |
 | ¥           | Iene japonês                                                       | ¥###.00              |
 | $           | Sinal de dólar                                                     | $###.00              |
-| ¢           | Cent sign                                                          | .00¢                 |
+| ¢           | Sinal de cêntimo                                                   | .00¢                 |
 
 ## Atributos de impressão
 
