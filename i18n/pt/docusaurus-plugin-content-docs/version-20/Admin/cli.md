@@ -246,11 +246,11 @@ You can launch a 4D Server instance in a utility mode (headless) by using the `-
 1. 4D Server executes the `On Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` parameter is passed.
 2. 4D Server executes the method designated by the `--startup-method`, if any.
 3. 4D Server executes the `On Exit` database method, except if the `--skip-onstartup` parameter is passed.
-4. 4D Server quits.
+4. 4D Server é encerrado.
 
 :::info
 
-Unlike tool4d, 4D Server in utility mode has all its features enabled. However, the application server and all other servers are not started.
+Ao contrário de tool4d, 4D Server em modo utilitário tem todas as suas funcionalidades ativadas. No entanto, o servidor de aplicações e todos os outros servidores não são iniciados.
 
 :::
 
