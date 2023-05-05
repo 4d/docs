@@ -14,13 +14,13 @@ The following table indicates whether the preemptive mode is used or is availabl
 
 | 4D Server           | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpreted (debugger detached) | Compilado     |
 | ------------------- | ------------------------------------------------------------------- | ------------------------------- | ------------- |
-| Servidor REST       | cooperative                                                         | preemptive                      | preemptive    |
+| Servidor REST       | cooperative                                                         | apropiativo                     | apropiativo   |
 | Servidor Web        | cooperative                                                         | *web setting*                   | *web setting* |
 | Web Services Server | cooperative                                                         | *web setting*                   | *web setting* |
 
 | 4D remote/single-user | Interpretado | Compilado     |
 | --------------------- | ------------ | ------------- |
-| Servidor REST         | cooperative  | preemptive    |
+| Servidor REST         | cooperative  | apropiativo   |
 | Servidor Web          | cooperative  | *web setting* |
 | Web Services Server   | cooperative  | *web setting* |
 
