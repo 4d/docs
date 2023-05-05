@@ -93,7 +93,7 @@ You can save the encryption key each time a new passphrase has been provided:
 
 Successive encryption keys can be stored on the same device.
 
-## Log file
+## Arquivo histórico
 
 After an encryption operation has been completed, 4D generates a file in the Logs folder of the application. It is created in XML format and named "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
