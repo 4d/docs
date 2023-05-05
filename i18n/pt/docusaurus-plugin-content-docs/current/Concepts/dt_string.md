@@ -26,7 +26,7 @@ The following escape sequences can be used within strings:
 
 | Escape sequence | Character replaced   |
 | --------------- | -------------------- |
-| \n             | LF (Line feed)       |
+| \n             | LF (Avanço de linha) |
 | \t             | HT (Tab)             |
 | \r             | CR (Carriage return) |
 | \\\          | \ (Barra invertida) |
