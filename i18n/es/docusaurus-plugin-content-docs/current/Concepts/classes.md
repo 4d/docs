@@ -8,7 +8,7 @@ title: Clases
 
 El lenguaje 4D soporta el concepto de **clases**. En un lenguaje de programación, el uso de una clase permite definir el comportamiento de un objeto con propiedades y funciones asociadas.
 
-Cada objeto es una instancia de su clase. Una vez definida una clase usuario, puede **instanciar** los objetos de esta clase en cualquier parte de su código. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([declared](#property) and [computed](#function-get-and-function-set)).
+Cada objeto es una instancia de su clase. Una vez definida una clase usuario, puede **instanciar** los objetos de esta clase en cualquier parte de su código. Una clase puede extenderse a otra clase con la palabra clave [`extender`](#class-extends-classname) y entonces hereda sus [funciones](#function) y sus propiedades ([declarada](#property) y [calculada](#function-get-and-function-set)).
 
 > El modelo de clases en 4D es similar al de las clases en JavaScript, y se basa en una cadena de prototipos.
 
@@ -95,6 +95,7 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
 
 Las clases disponibles son accesibles desde sus class stores. Hay dos class stores disponibles:
 
+
 - `cs` para el class store usuario
 - `4D` para el class store integrado
 
@@ -157,8 +158,8 @@ Cuando 4D no encuentra una función o una propiedad en una clase, la busca en su
 En las definiciones de clase se pueden utilizar palabras claves específicas de 4D:
 
 - `Function <Name>` para definir las funciones de clase de los objetos.
-- `Class constructor` to initialize new objects of the class.
-- `property` to define static properties of the objects with a type.
+- `Class constructor` para inicializar nuevos objetos de la clase.
+- `property` para definir propiedades estáticas de los objetos con un tipo.
 - `Function get <Name>` y `Function set <Name>` para definir las propiedades calculadas de los objetos.
 - `Class extends <ClassName>` para definir la herencia.
 
@@ -177,7 +178,7 @@ En el archivo de definición de clase, las declaraciones de función utilizan la
 
 :::tip
 
-Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. Por ejemplo, si declara `Function _myPrivateFunction` en `MyClass`, no se propondrá en el editor de código cuando digite en `"cs.MyClass. "`.
+Comenzar el nombre de la función con un caracter guión bajo ("_") excluirá la función de las funcionalidades de autocompletado en el editor de código 4D. Por ejemplo, si declara `Function _myPrivateFunction` en `MyClass`, no se propondrá en el editor de código cuando digite en `"cs.MyClass. "`.
 
 :::
 
@@ -259,7 +260,7 @@ Class constructor($width : Integer; $height : Integer)
  This.height:=$height
  This.width:=$width
 
-// Function definition
+// Definición de función
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
@@ -340,11 +341,6 @@ Properties are declared for new objects when you call the [`new()`](API/ClassCla
 
 Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
-:::tip
-
-Starting the property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. Por ejemplo, si declara `propiedad _myPrivateProperty` en `MyClass`, no se propondrá en el editor de código cuando escriba en `"cs.MyClass. "`.
-
-:::
 
 The property type can be one of the following supported types:
 
@@ -376,19 +372,19 @@ The `property` keyword can only be used in class methods and outside any `Functi
 #### Ejemplo
 
 ```4d
-// Class: MyClass
+// Clase: MyClass
 
 property name : Text
 property age : Integer
 ```
 
-In a method:
+En un método:
 
 ```4d
 var $o : cs.MyClass
 $o:=cs.MyClass.new() //$o:{}
 $o.name:="John" //$o:{"name" : "John"}
-$o.age:="Smith"  //error with check syntax
+$o.age:="Smith" //error con sintaxis de verificación
 ```
 
 

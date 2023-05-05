@@ -610,9 +610,9 @@ Document contents are converted with respect to their viewing attributes, includ
 * Text : style / font / size / alignment / orientation / rotation / format
 * Cell background : color / image
 * Cell borders : thickness / color / style
-* Cell merge
+* Fusão de células
 * Imagens
-* Row height
+* Altura da linha
 * Largura da coluna
 * Hidden columns / rows.
 > > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
@@ -2513,7 +2513,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | 4D View Pro area form object name                                                                 |
 | tableName  | Text       | -> | Nome da tabela                                                                                    |
-| reset      | Booleano   | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True   |
+| reset      | Booleano   | -> | True to clear the dirty status from the current table, False to keep it untouched. Padrão=True    |
 | sheet      | Integer    | -> | Sheet index (current sheet if omitted)                                                            |
 | Resultados | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF --> |
 

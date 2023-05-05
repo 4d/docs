@@ -254,12 +254,12 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 #### Descrição
 
-A função `.at()` <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->.
+A função `.at()` <!-- REF #collection.at().Summary -->devolve o item na posição *índice*, permitindo números inteiros positivos e negativos<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
-Negative integers count back from the last item in the collection.
+Os números inteiros negativos contam para trás a partir do último item da colecção.
 
-The function returns Undefined if *index* is beyond collection limits.
+A função devolve Undefined se o *index* estiver para além dos limites da colecção.
 
 #### Exemplo
 
@@ -729,7 +729,7 @@ O parâmetro opcional *propertyPath* permite contar valores dentro de uma coleç
 
 | Versão | Mudanças                     |
 | ------ | ---------------------------- |
-| v20    | Support of `ck count values` |
+| v20    | Suporte de `ck count values` |
 | v16 R6 | Adicionado                   |
 
 </details>
@@ -754,14 +754,14 @@ A função `.distinct()` <!-- REF #collection.distinct().Summary -->devolve uma 
 
 A coleção retornada é ordenada automaticamente. Valores **Null** não são retornados.
 
-If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
+Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores diferentes você quer obter.
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+No parâmetro *options*, pode passar uma ou uma combinação das seguintes constantes:
 
-| Constante         | Value | Comentário                                                                                                                                                                                            |
-| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                 |
-| `ck count values` | 32    | Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*;"count":*count*}` attributes. |
+| Constante         | Value | Comentário                                                                                                                                                                                                 |
+| ----------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ck diacritical`  | 8     | A avaliação é sensível a maiúsculas e minúsculas e diferencia os caracteres acentuados. Como padrão, se omitida, é efectuada uma avaliação não-diacrítica                                                  |
+| `ck count values` | 32    | Devolve a contagem de elementos para cada valor distinto. Quando esta opção é passada, `.distinct()` devolve uma colecção de objectos que contém um par de atributos `{"value":*value*; "count":*count*}`. |
 
 
 #### Exemplos
@@ -1377,17 +1377,17 @@ $first:=$emptyCol.first() // devolve Indefinido
 
 
 <!-- REF #collection.flat().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                              |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
-| depth      | Integer    | -> | How deep a nested collection structure should be flattened. O padrão=1 |
-| Resultados | Collection | <- | Flattened collection|<!-- END REF -->                        |
+| Parâmetros | Tipo       |    | Descrição                                                                             |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------- |
+| depth      | Integer    | -> | A profundidade a que uma estrutura de colecção aninhada deve ser aplanada. O padrão=1 |
+| Resultados | Collection | <- | Colecção achatada|<!-- END REF -->                                          |
 
 
 #### Descrição
 
 A função `.flat()` <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
 
-By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
+Por defeito, se o parâmetro *depth* for omitido, apenas o primeiro nível da estrutura de colecção aninhada será aplanado.
 > Essa função não modifica a coleção original.
 
 
@@ -1442,7 +1442,7 @@ $col.flat(MAXLONG)
 
 A função `.flatMap()` <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Opcionalmente, pode passar parâmetros para *fórmula* ou *methodName* usando o(s) parâmetro(s) *param* .
 
-This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+Esta função é idêntica a uma chamada [`map()`](#map) seguida de uma chamada [`flat()`](#flat) de profundidade 1.
 > Essa função não modifica a coleção original.
 
 
@@ -1802,7 +1802,7 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 
 #### Descrição
 
-A função `.last()` <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
+A função `.last()` <!-- REF #collection.last().Summary -->devolve o último elemento da colecção<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 A função retorna Undefined se a coleção estiver vazia.

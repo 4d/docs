@@ -170,7 +170,7 @@ Se uma das entidades comparadas for **Null**, um erro é gerado.
  employee.salary:=500
  $diff1:=$clone.diff(employee) // All differences are returned
  $diff2:=$clone.diff(employee;New collection("firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+  // Apenas as diferenças em firstName e lastName são devolvidas
 ```
 
 $diff1:

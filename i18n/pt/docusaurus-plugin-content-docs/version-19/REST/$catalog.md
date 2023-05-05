@@ -194,7 +194,7 @@ The information you retrieve concerns the following:
 *   Dataclass
 *   Atributo(s)
 *   Method(s) if any
-*   Primary key
+*   Chave primária
 
 ### DataClass
 

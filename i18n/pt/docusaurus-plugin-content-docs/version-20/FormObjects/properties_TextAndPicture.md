@@ -62,7 +62,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 ---
 
-## Icon Location
+## Localização do ícone
 
 Designates the placement of an icon in relation to the form object.
 

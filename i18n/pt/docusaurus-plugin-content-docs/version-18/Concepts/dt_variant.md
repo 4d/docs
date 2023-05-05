@@ -3,9 +3,9 @@ id: variant
 title: Variant
 ---
 
-Variante é um tipo de variável que permite encapsular dados de qualquer tipo regular válido numa variável. Typically, this variable type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.
+Variante é um tipo de variável que permite encapsular dados de qualquer tipo regular válido numa variável. Normalmente, este tipo de variável pode ser utilizado para escrever código genérico que devolve ou recebe valores para os quais o tipo não é conhecido. É o caso, por exemplo, do código que trata os atributos dos objectos.
 
-A variant type variable can contain a value of the following data types:
+Uma variável de tipo variante pode conter um valor dos seguintes tipos de dados:
 
 - BLOB
 - boolean

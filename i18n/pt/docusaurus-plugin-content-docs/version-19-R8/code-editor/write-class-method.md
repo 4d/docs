@@ -262,7 +262,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 - Comandos 4D
 - Comandos SQL
-- User methods
+- Métodos utilizador
 - Table names
 - Field names
 - Constantes

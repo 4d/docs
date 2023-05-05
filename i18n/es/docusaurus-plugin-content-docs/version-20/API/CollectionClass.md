@@ -1450,9 +1450,9 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 
 <!-- REF #collection.flat().Params -->
-| Parámetros | Tipo       |    | Descripción                                                               |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| depth      | Integer    | -> | How deep a nested collection structure should be flattened. Por defecto=1 |
+| Parámetros | Tipo       |    | Descripción                                                                         |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
+| depth      | Integer    | -> | A qué profundidad debe aplanarse una estructura de colección anidada. Por defecto=1 |
 | Result     | Collection | <- | Colección aplanada|<!-- END REF -->
 
 
@@ -1506,20 +1506,20 @@ $col.flat(MAXLONG)
 <!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                               |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objeto formula                                                                            |
-| methodName | Text        | -> | Nombre de un método                                                                       |
-| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                        |
-| Result     | Collection  | <- | Collection of transformed values and flattened by a depth of 1|<!-- END REF -->
+| Parámetros | Tipo        |    | Descripción                                                                                       |
+| ---------- | ----------- |:--:| ------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objeto formula                                                                                    |
+| methodName | Text        | -> | Nombre de un método                                                                               |
+| param      | any         | -> | Parámetro(s) a pasar a la *fórmula* o *methodName*                                                |
+| Result     | Collection  | <- | Colección de valores transformados y aplanados en una profundidad de 1|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.flatMap()` <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
+La función `.flatMap()` <!-- REF #collection.flatMap().Summary -->crea una nueva colección basada en el resultado de la llamada a la función 4D *formula* o al método *methodName* sobre cada elemento de la colección original y aplanada en una profundidad de 1<!-- END REF -->. Opcionalmente, puede pasar parámetros a *formula* o*methodName* utilizando el(los) parámetro(s) *param*.
 
-This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+Esta función es idéntica a una llamada a [`map()`](#map) seguida de una llamada a [`flat()`](#flat) de profundidad 1.
 > Esta función no modifica la colección original.
 
 
@@ -1570,7 +1570,7 @@ $result:=$col.flatMap(Formula(Split string($1.value; " ")))
 
 #### Ejemplo 3
 
-You want to compute the percentage of each value in the collection to the total:
+Desea calcular el porcentaje de cada valor de la colección con respecto al total:
 
 ```4d
 var $c; $c2 : Collection
@@ -1597,15 +1597,15 @@ $c2:=$c.flatMap($f; $c.sum())
 
 </details>
 
-<!-- REF #collection.includes().Syntax -->**.includes**( *toSearch* : expression { ; *startFrom* : Integer } ) : Boolean<!-- END REF -->
+<!-- REF #collection.includes().Syntax -->**.includes**( *toSearch* : expresión { ; *startFrom* : entero } ) : Booleano<!-- END REF -->
 
 
 <!-- REF #collection.includes().Params -->
-| Parámetros | Tipo      |    | Descripción                                                              |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------ |
-| toSearch   | expresión | -> | Expresión a buscar en la colección                                       |
-| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                       |
-| Result     | Boolean   | <- | True if *toSearch* is found in the collection|<!-- END REF -->
+| Parámetros | Tipo      |    | Descripción                                                                |
+| ---------- | --------- |:--:| -------------------------------------------------------------------------- |
+| toSearch   | expresión | -> | Expresión a buscar en la colección                                         |
+| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                         |
+| Result     | Boolean   | <- | True si *toSearch* se encuentra en la colección|<!-- END REF -->
 
 
 |
@@ -1626,8 +1626,8 @@ En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 
 Opcionalmente, puede pasar el índice de la colección desde el que iniciar la búsqueda en *startFrom*.
 
-*   If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
-*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
+*   Si *startFrom* >= longitud de la colección, se devuelve False, lo que significa que no se busca en la colección.
+*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). Tenga en cuenta que incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
 *   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
@@ -2808,7 +2808,7 @@ Con el siguiente método ***Flatten***:
 #### Descripción
 
 
-La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La función `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->aplica la *formula * o retrollamada *methodName* contra un acumulador y cada elemento de la colección (de derecha a izquierda) para reducirlo a un único valor<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:

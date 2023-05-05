@@ -66,13 +66,13 @@ You can search in the object by writing the following:
 
 `GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
-## Comparator
+## Comparador
 
 The comparator must be one of the following values:
 
-| Comparator | Descrição            |
+| Comparador | Descrição            |
 | ---------- | -------------------- |
-| =          | equals to            |
+| =          | é igual a            |
 | !=         | diferente de         |
 | >          | maior que            |
 | >=         | maior ou igual a     |

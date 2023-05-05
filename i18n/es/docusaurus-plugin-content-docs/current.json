@@ -16,7 +16,7 @@
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
-    "message": "4D Language Concepts",
+    "message": "Conceptos del lenguaje 4D",
     "description": "The label for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Data Types": {
@@ -24,7 +24,7 @@
     "description": "The label for category Data Types in sidebar docs"
   },
   "sidebar.docs.category.Control Flow": {
-    "message": "Control Flow",
+    "message": "Condiciones y bucles",
     "description": "The label for category Control Flow in sidebar docs"
   },
   "sidebar.docs.category.ORDA": {
@@ -220,11 +220,11 @@
     "description": "The generated-index page title for category Core Development in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.title": {
-    "message": "4D Language Concepts",
+    "message": "Conceptos del lenguaje 4D",
     "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
-    "message": "The main concepts of the 4D Language",
+    "message": "Los principales conceptos del Lenguaje 4D",
     "description": "The generated-index page description for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Class Functions": {
@@ -236,7 +236,7 @@
     "description": "The generated-index page title for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.description": {
-    "message": "List of built-in 4D classes",
+    "message": "Lista de clases 4D integradas",
     "description": "The generated-index page description for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Tags": {
@@ -248,7 +248,7 @@
     "description": "The generated-index page title for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Administration.link.generated-index.description": {
-    "message": "How to monitor your 4D applications",
+    "message": "Cómo supervisar sus aplicaciones 4D",
     "description": "The generated-index page description for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.title": {
@@ -256,7 +256,7 @@
     "description": "The generated-index page title for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.description": {
-    "message": "4D web tools for administrating and monitoring your applications.",
+    "message": "Herramientas web 4D para administrar y supervisar sus aplicaciones.",
     "description": "The generated-index page description for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.4D View Pro.link.generated-index.title": {
@@ -268,7 +268,7 @@
     "description": "The generated-index page title for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Applications.link.generated-index.description": {
-    "message": "Guides for developing Web applications with 4D",
+    "message": "Guías para el desarrollo de aplicaciones Web con 4D",
     "description": "The generated-index page description for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.REST Server.link.generated-index.title": {
@@ -276,7 +276,7 @@
     "description": "The generated-index page title for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.REST Server.link.generated-index.description": {
-    "message": "Configuring the 4D REST Server and using the REST API.",
+    "message": "Configuración del servidor 4D REST y uso de la API REST.",
     "description": "The generated-index page description for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.API (general).link.generated-index.title": {
@@ -284,7 +284,7 @@
     "description": "The generated-index page title for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (general).link.generated-index.description": {
-    "message": "REST API for global information",
+    "message": "API REST para información global",
     "description": "The generated-index page description for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass).link.generated-index.title": {
@@ -292,7 +292,7 @@
     "description": "The generated-index page title for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass).link.generated-index.description": {
-    "message": "REST API for dataClass.",
+    "message": "API REST para dataClass.",
     "description": "The generated-index page description for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications.link.generated-index.title": {
@@ -300,7 +300,7 @@
     "description": "The generated-index page title for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
-    "message": "Guides for developing Desktop applications with 4D",
+    "message": "Guías para el desarrollo de aplicaciones de escritorio con 4D",
     "description": "The generated-index page description for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.title": {
@@ -308,7 +308,7 @@
     "description": "The generated-index page title for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.description": {
-    "message": "Access control and user privileges for desktop applications.",
+    "message": "Control de acceso y privilegios de usuario para aplicaciones de escritorio.",
     "description": "The generated-index page description for category Access Rights in sidebar docs"
   },
   "sidebar.docs.doc.Command Line Interface": {

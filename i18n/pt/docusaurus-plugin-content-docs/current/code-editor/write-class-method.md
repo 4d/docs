@@ -223,7 +223,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | **Atalho**                                                  | **Ação**                                                                                                                                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Selection and navigation**                                |                                                                                                                                            |
-| Double-click                                                | Select a language element name                                                                                                             |
+| Duplo clique                                                | Select a language element name                                                                                                             |
 | [Alt]+Double-click                                          | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
 | [Shift]+[right arrow]                                       | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
 | [Shift]+[left arrow]                                        | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
@@ -248,12 +248,12 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 | [**Find and replace**](#find-and-replace)                   |                                                                                                                                            |
 | [Ctrl]+F                                                    | Pesquisar                                                                                                                                  |
-| [Ctrl]+G                                                    | Find Next                                                                                                                                  |
+| [Ctrl]+G                                                    | Encontrar o próximo                                                                                                                        |
 | [Ctrl]+[Shift]+G                                            | Find Previous                                                                                                                              |
 | [Ctrl]+E                                                    | Find Same Next                                                                                                                             |
 | [Ctrl]+[Shift]+E                                            | Find Same Previous                                                                                                                         |
 | [Ctrl]+[Alt]+F                                              | Replace                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                              | Replace Next                                                                                                                               |
+| [Ctrl]+[Alt]+G                                              | Substituir próximo                                                                                                                         |
 | [Ctrl]+[Alt]+[Shift]+G                                      | Replace Previous                                                                                                                           |
 | [**Clipboards**](#clipboards)                               |                                                                                                                                            |
 | [Shift]+click or [Alt]+click on clipboard icon              | Copy selected text to a clipboard                                                                                                          |
@@ -384,7 +384,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 - Comandos 4D
 - Comandos SQL
-- User methods
+- Métodos utilizador
 - Table names
 - Field names
 - Constantes
@@ -507,7 +507,7 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
-## Help tips
+## Dicas de ajuda
 
 The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
 
@@ -600,7 +600,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.
 
-## Bookmarks
+## Marcadores
 
 4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 

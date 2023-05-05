@@ -29,7 +29,7 @@ Tenga en cuenta que los nombres de las propiedades distinguen entre mayúsculas 
 :::
 
 
-You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the commands available in the **Objects (Language)** theme. Tenga en cuenta que se pueden utilizar comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos.
+Las variables, campos o expresiones de tipo Objeto se gestionan mediante la [notación de objetos](dt_object.md#syntax-basics) o los comandos disponibles en el tema **Objetos (Lenguaje)**. Tenga en cuenta que se pueden utilizar comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos.
 
 Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. Puede utilizar estos valores siempre que se esperen expresiones 4D:
 
@@ -61,11 +61,11 @@ The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) comm
 Ejemplos:
 
 ```4d
- var $obVar : Object //declaration of an object type 4D variable
- $obVar:=New object //instantiation of an object and assignment to the 4D variable
+ var $obVar : Object //declaración de una variable 4D de tipo objeto
+ $obVar:=New object //instanciación de un objeto y asignación a la variable 4D
 
  var $obFilled : Object 
- $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
+ $obFilled:=New object("name";"Smith";"age";42) //instanciación y asignación de un objeto pre-rellenado
 ```
 
 
@@ -117,8 +117,8 @@ $col:=$o.col[5] //6
 
 Puede crear dos tipos de objetos:
 
-- objetos regulares (no compartidos), utilizando el comando [`New object`] o la sintaxis literal objeto (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
-- shared objects, using the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1526.html) command. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. El acceso a estos objetos se controla mediante estructuras `Use...End use`. For more information, refer to the [Shared objects and collections](shared.md) section.
+- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
+- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. El acceso a estos objetos se controla mediante estructuras `Use...End use`. For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
 ## Principios de la sintaxis
@@ -282,6 +282,7 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
 
 - La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
 
+
 Cuando se esperan expresiones de un tipo determinado en su código 4D, puede asegurarse de que tienen el tipo correcto incluso cuando se evalúan como indefinidas, rodeándolas con el comando de transformación 4D apropiado: `String`, `Num`, `Date`, `Time`, `Bool`. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. Por ejemplo:
 
 ```4d
@@ -335,12 +336,12 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 - Puede acceder a las propiedades como cadenas utilizando el operador [ ]
 
 ```4d
- $Emp["city"]:="Berlin" //modifies the city property
-  //this can be useful for creating properties through variables
+ $Emp["city"]:="Berlin" //modifica la propiedad city
+  //esto puede ser útil para crear propiedades a través de variables
  var $addr : Text
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
  End for
-  // creates 4 empty properties "address1...address4" in the $Emp object
+  // crea 4 propiedades vacías "address1...address4" en el objeto $Emp
 ```

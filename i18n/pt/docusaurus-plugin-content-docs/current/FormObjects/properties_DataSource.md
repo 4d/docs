@@ -32,7 +32,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 ---
 
-## Choice List
+## Lista de escolha
 
 Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
 

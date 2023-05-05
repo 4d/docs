@@ -44,11 +44,11 @@ Puede hacer el área Detalle más pequeña o más grande. Whatever you place in 
 
 ## Pie del formulario
 
-El área de pie de página del formulario se muestra en pantalla bajo la lista de registros. Siempre se imprime al final de cada página de un informe. The Footer area is defined as the area between the Break control line and the Footer control line.
+El área de pie de página del formulario se muestra en pantalla bajo la lista de registros. Siempre se imprime al final de cada página de un informe. El área de pie de página se define como el área comprendida entre la línea de control de salto y la línea de control de pie de página.
 
 Puede hacer que el área del pie de página sea más pequeña o más grande.
 
-You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Se aceptan los objetos activos.
+Puede utilizar el área de pie de página para imprimir gráficos, números de página, la fecha actual o cualquier texto que desee en la parte inferior de cada página de un informe. En los formularios de salida diseñados para su uso en pantalla, el área de pie de página suele contener botones que ofrecen al usuario opciones como realizar una búsqueda u ordenación, imprimir registros o guardar el informe actual. Se aceptan los objetos activos.
 
 #### Gramática JSON
 
@@ -62,9 +62,9 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 El área de encabezado del formulario se muestra en la parte superior de cada pantalla y se imprime en la parte superior de cada página de un informe. El área de encabezado se define como el área por encima de la línea de control del encabezado.
 
-Puede hacer el área Encabezado más pequeña o más grande. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
+Puede hacer el área Encabezado más pequeña o más grande. Puede utilizar el área Encabezado para los nombres de las columnas, para instrucciones, información adicional o incluso un gráfico como el logotipo de una empresa o un patrón decorativo.
 
-You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Se pueden insertar los siguientes objetos activos:
+También puede colocar y utilizar objetos activos en el área de encabezado de los formularios de salida mostrados como subformularios, en la ventana de visualización de registros o utilizando los comandos `DISPLAY SELECTION` y `MODIFY SELECTION`. Se pueden insertar los siguientes objetos activos:
 
 - Botones, botones imagen,
 - Combo boxes, listas desplegables, menús emergentes de imágenes,
@@ -72,7 +72,7 @@ You can also place and use active objects in the Header area of output forms dis
 - Botones de radio, casillas de selección, casillas de selección 3D,
 - Indicadores de progreso, reglas, steppers, spinners.
 
-Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPLAY SELECTION` and `MODIFY SELECTION`) or `Automatic splitter` can be assigned to the inserted buttons. Los siguientes eventos se aplican a los objetos activos que inserte en el área Encabezado: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Tenga en cuenta que el método formulario se llama con el evento `On Header` después de llamar a los métodos del objeto del área.
+A los botones insertados se les pueden asignar acciones estándar como `Add Subrecord`, `Cancel` (listas visualizadas utilizando `DISPLAY SELECTION` y `MODIFY SELECTION`) o `Automatic splitter`. Los siguientes eventos se aplican a los objetos activos que inserte en el área Encabezado: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Tenga en cuenta que el método formulario se llama con el evento `On Header` después de llamar a los métodos del objeto del área.
 
 El formulario puede contener [áreas de encabezado adicionales](#additional-areas) que se asociarán a rupturas adicionales. Se imprime un Encabezado nivel 1 justo antes de imprimir los registros agrupados por el primer campo ordenado.
 

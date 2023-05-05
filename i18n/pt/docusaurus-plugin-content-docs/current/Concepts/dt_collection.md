@@ -47,15 +47,15 @@ Collections must have been instantiated, otherwise trying to read or modify thei
 Collection instantiation can be done in one of the following ways:
 
 - utilizando o comando [`New collection`](../API/CollectionClass.md#new-collection),
-- using the `[]` operator.
+- utilizando o operador `[]`.
 
 :::info
 
-Vários comandos e funções 4D retornam colecções, por exemplo [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) ou [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
+Vários comandos e funções 4D retornam colecções, por exemplo [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) ou [`collection.copy`](../API/CollectionClass.md#copy). Neste caso, não é necessário instanciar explicitamente a coleção, a linguagem 4D fá-lo por si.
 
 :::
 
-### `New collection` command
+### comando `New collection`
 
 The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference.
 
@@ -69,7 +69,7 @@ Exemplos:
  $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
 ```
 
-### `[]` operator
+### operador `[]`
 
 The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is instantiated with the specified values as its elements, and its length is set to the number of arguments specified.
 

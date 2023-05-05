@@ -13,10 +13,10 @@ Les entity selections peuvent être créées à partir de sélections existantes
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
-| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->|
@@ -182,51 +182,6 @@ A noter que l'entité correspondante est rechargée depuis le datastore.
 
 
 
-<!-- REF EntitySelectionClass.at().Desc -->
-## .at()
-
-<details><summary>Historique</summary>
-
-| Version | Modifications |
-| ------- | ------------- |
-| v20     | Ajout         |
-
-</details>
-
-<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
-
-
-<!-- REF #EntitySelectionClass.at().Params -->
-| Paramètres | Type      |    | Description                                         |
-| ---------- | --------- |:--:| --------------------------------------------------- |
-| index      | Integer   | -> | Index of entity to return                           |
-| Résultat   | 4D.Entity | <- | The entity at that index|<!-- END REF -->
-
-
-|
-
-
-#### Description
-
-The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
-
-If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
-
-The function returns Null if *index* is beyond entity selection limits.
-
-#### Exemple
-
-```4d
-var $employees : cs.EmployeeSelection
-var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
-$emp2:=$employees.at(-3) //starting from the end, 3rd entity
-    //of the $employees entity selection
-```
-
-<!-- END REF -->
-
 
 
 <!-- REF EntitySelectionClass.attributeName.Desc -->
@@ -369,11 +324,11 @@ Une erreur est générée si *entity* et l'entity selection ne sont pas liées �
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@")
+ $employees:=ds.Employee.newSelection()
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //L'entité $employee est ajoutée à l'entity selection $employees
+ $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
 #### Exemple 2
@@ -387,7 +342,7 @@ Les appels vers la fonction peuvent être chaînés :
  $p1:=ds.Product.get(10)
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
- $sel:=ds.Product.query("ID > 50")
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -469,6 +424,53 @@ Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à Ne
 ```
 
 <!-- END REF -->
+
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v20     | Ajout         |
+
+</details>
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| Paramètres | Type      |    | Description                                         |
+| ---------- | --------- |:--:| --------------------------------------------------- |
+| index      | Integer   | -> | Index of entity to return                           |
+| Résultat   | 4D.Entity | <- | The entity at that index|<!-- END REF -->
+
+
+|
+
+
+#### Description
+
+The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
+
+If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+
+The function returns Null if *index* is beyond entity selection limits.
+
+#### Exemple
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
+$emp2:=$employees.at(-3) //starting from the end, 3rd entity
+    //of the $employees entity selection
+```
+
+<!-- END REF -->
+
 
 
 <!-- REF EntitySelectionClass.average().Desc -->
@@ -1628,9 +1630,13 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-|Parameter|Type||Description|
+| Paramètres  | Type               |    | Description                                                                |
+| ----------- | ------------------ |:--:| -------------------------------------------------------------------------- |
+| pathString  | Text               | -> | Chemin(s) d'attribut(s) et mode(s) de tri pour l'entity selection          |
+| pathObjects | Collection         | -> | Collection d'objets critère                                                |
+| Résultat    | 4D.EntitySelection | <- | Nouvelle entity selection dans l'ordre spécifié|<!-- END REF -->
 
-|---------|--- |:---:|------| |pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection| |pathObjects |Collection    |->|Collection of criteria objects| |Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
+|
 
 #### Description
 

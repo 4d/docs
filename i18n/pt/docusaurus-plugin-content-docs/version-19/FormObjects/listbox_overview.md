@@ -512,7 +512,7 @@ Standard sort support depends on the list box type:
 | Named selection             | Não                      |                                                                                                              |
 | Arrays                      | Sim                      | Columns bound to picture and pointer arrays are not sortable                                                 |
 
-### Custom sort
+### Ordenação personalizada
 
 The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
@@ -904,8 +904,8 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
 | *Attributes*          | *Descrição*                             |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
-| min                   | minimum value                           |      | x    | x       |         |       |       |
-| max                   | maximum value                           |      | x    | x       |         |       |       |
+| min                   | valor mínimo                            |      | x    | x       |         |       |       |
+| max                   | valor máximo                            |      | x    | x       |         |       |       |
 | behavior              | "threeStates" value                     |      |      | x       |         |       |       |
 | requiredList          | drop-down list defined in object        | x    | x    | x       |         |       |       |
 | choiceList            | combo box defined in object             | x    | x    | x       |         |       |       |

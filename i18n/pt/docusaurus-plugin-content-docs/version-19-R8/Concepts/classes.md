@@ -169,7 +169,7 @@ As funções de classe são propriedades específicas da classe. São objectos d
 
 No ficheiro de definição de classe, as declarações de função utilizam a palavra-chave `Função` , e o nome da função. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs. MyClass. "`.
+> **Dica:** Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs. MyClass. "`.
 
 Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Por exemplo:
 
@@ -202,14 +202,14 @@ In the application code, class functions are called as member methods of the obj
 
 #### Parâmetros
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;).
+Os parâmetros da função são declarados utilizando o nome do parâmetro e o tipo de parâmetro, separados por dois pontos. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 > If the type is not stated, the parameter will be defined as `Variant`.
 
-The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. Por exemplo:
+A [sintaxe 4D clássica](parameters.md#sequential-parameters) para parâmetros de métodos pode ser utilizada para declarar parâmetros de funções de classe. Ambas as sintaxes podem ser misturadas. Por exemplo:
 
 ```4d
 Function add($x : Integer)
@@ -232,7 +232,7 @@ You can also declare the return parameter by adding only `: type` and use the [`
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
- // some code
+ // algum código
  return $x+$y
 ```
 
@@ -260,7 +260,7 @@ $area:=$rect.getArea() //5000
 
 #### Exemplo 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+Este exemplo utiliza a [expressão return``](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -285,12 +285,12 @@ Function set <name>($parameterName : type)
 // código
 ```
 
-`As funções obter` e `conjunto de funções` são acessores que definem **propriedades computadas** na classe. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+`As funções obter` e `conjunto de funções` são acessores que definem **propriedades computadas** na classe. Uma propriedade calculada é uma propriedade nomeada com um tipo de dados que oculta um cálculo. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
 
 - when the property is read, the `Function get` is executed,
 - when the property is written, the `Function set` is executed.
 
-If the property is not accessed, the code never executes.
+Se a propriedade não for acedida, o código nunca é executado.
 
 Computed properties are designed to handle data that do not necessary need to be kept in memory. São geralmente baseados em propriedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
 
@@ -317,9 +317,9 @@ The type of the computed property is defined by the `$return` type declaration o
 ```
 
 ```4d
-//in a project method
-$fullName:=$person.fullName // Function get fullName() is called
-$person.fullName:="John Smith" // Function set fullName() is called
+//num método projecto
+$fullName:=$person.fullName // A função get fullName() é chamada
+$person.fullName:="John Smith" // A função set fullName() é chamada
 ```
 
 #### Exemplo 2
@@ -383,8 +383,8 @@ Class extension must respect the following rules:
 
 - A user class cannot extend a built-in class (except 4D.Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
 - A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- Uma classe utilizador não se pode estender a si própria.
+- Não é possível estender classes de forma circular (ou seja, "a" estende "b" que estende "a").
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
@@ -392,7 +392,7 @@ An extended class can call the constructor of its parent class using the [`Super
 
 #### Exemplo
 
-This example creates a class called `Square` from a class called `Polygon`.
+Este exemplo cria uma classe chamada `Square` a partir de uma classe chamada `Polygon`.
 
 ```4d
 //Class: Square
@@ -424,15 +424,15 @@ Super {( param{;...;paramN} )} {-> Object}
 | Parâmetros | Tipo   |    | Descrição                                      |
 | ---------- | ------ | -- | ---------------------------------------------- |
 | param      | misto  | -> | Parameter(s) to pass to the parent constructor |
-| Resultados | object | <- | Object's parent                                |
+| Resultados | object | <- | Pai do objecto                                 |
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
-`Super` serves two different purposes:
+`Super` tem dois objectivos diferentes:
 
 1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
 
-- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
+- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. É o programador 4D que se certifica de que as chamadas são válidas.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
 - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
 
@@ -521,7 +521,7 @@ This -> Object
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
+Na maioria dos casos, o valor de `This` é determinado pela forma como uma função é chamada. It can't be set by assignment during execution, and it may be different each time the function is called.
 
 When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Por exemplo:
 

@@ -350,15 +350,15 @@ Puede utilizar un **archivo de configuración de log** para gestionar fácilment
 
 There are several ways to enable the log configuration file, depending on your configuration:
 
-- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
-- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
+- **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
+- **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la carpeta [Settings](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la carpeta [`Project`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
 - **a built application**: the file must be named `logConfig.json` and copied in the following folder:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 - **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
     * Windows: `Users\[userName]\AppData\Roaming\4D`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
-- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+- **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
     * Windows: `Users\[userName]\AppData\Roaming\4D Server`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 

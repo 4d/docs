@@ -42,22 +42,22 @@ Si se asigna un índice de elemento que sobrepasa el último elemento existente 
 
 ## Instantiation
 
-Collections must have been instantiated, otherwise trying to read or modify their elements will generate a syntax error.
+Las colecciones deben haber sido instanciadas, de lo contrario intentar leer o modificar sus elementos generará un error de sintaxis.
 
-Collection instantiation can be done in one of the following ways:
+La instanciación de la colección puede realizarse de una de las siguientes maneras:
 
-- using the [`New collection`](../API/CollectionClass.md#new-collection) command,
-- using the `[]` operator.
+- utilizando el comando [`New collection`](../API/CollectionClass.md#new-collection),
+- utilizando el operador `[]`.
 
 |
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
+Varios comandos y funciones de 4D devuelven colecciones, por ejemplo [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
 
 :::
 
-### `New collection` command
+### Comando `New collection`
 
-The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference.
+El comando [`New collection`](../API/CollectionClass.md#new-collection) crea una nueva colección vacía o prellenada y devuelve su referencia.
 
 Ejemplos:
 
@@ -69,9 +69,9 @@ Ejemplos:
  $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
 ```
 
-### `[]` operator
+### operador `[]`
 
-The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is instantiated with the specified values as its elements, and its length is set to the number of arguments specified.
+El operador `[]` permite crear una **colección literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is instantiated with the specified values as its elements, and its length is set to the number of arguments specified.
 
 Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**.
 
@@ -81,9 +81,9 @@ Ejemplos:
 
 ```4d
 var $col1; $col2; $users : Collection
-$col1:=[] //empty collection
-$col2:=[1;2;3;4;5;6] //collection of numbers
-//collection of objects
+$col1:=[] //colección vacía
+$col2:=[1;2;3;4;5;6] //colección de números
+//colección de objetos
 $users:=[{name: "Alice"; \
     height: 183; \
     eyecolor: "hazel"; \
@@ -139,7 +139,7 @@ Varias funciones aceptan una _propertyPath_ como parámetro. Este parámetro sig
 - o bien un nombre de propiedad del objeto, por ejemplo "apellido"
 - o una ruta de propiedades del objeto, es decir, una secuencia jerárquica de subpropiedades vinculadas con caracteres de punto, por ejemplo "empleado.hijos.nombre".
 
-**Warning:** When using functions and *propertyPath* parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Atención:** cuando se utilizan funciones y parámetros *propertyPath*, no se puede utilizar ".", "[ ]", o espacios en los nombres de las propiedades ya que impedirá que 4D analice correctamente la ruta:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indefinido
