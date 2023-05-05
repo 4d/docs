@@ -123,9 +123,9 @@ Each state is represented by a different picture. In the source picture, the sta
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                |
-| ---------- | ------------- | ------------------------------------------------ |
-| iconFrames | number        | Number of states in the icon picture. Minimum: 1 |
+| Nome       | Tipo de dados | Valores possíveis                               |
+| ---------- | ------------- | ----------------------------------------------- |
+| iconFrames | number        | Number of states in the icon picture. Mínimo: 1 |
 
 #### Objectos suportados
 
