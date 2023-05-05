@@ -8,7 +8,7 @@ title: Classes
 
 A linguagem 4D é compatível com o conceito de **classes**. Numa linguagem de programação, a utilização de uma classe permite definir um comportamento do objecto com propriedades e funções associadas.
 
-Uma vez definida uma classe de usuário, pode **instanciar** objectos desta classe em qualquer parte do seu código. Cada objecto é uma instância da sua classe. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([declared](#property) and [computed](#function-get-and-function-set)).
+Uma vez definida uma classe de usuário, pode **instanciar** objectos desta classe em qualquer parte do seu código. Cada objecto é uma instância da sua classe. Uma classe pode [`estender`](#class-extends-classname) outra classe, e depois herda das suas [funções](#function) e propriedades ([declarada](#property) e [computada](#function-get-and-function-set)).
 
 > O modelo de classe em 4D é semelhante às classes em JavaScript, e baseado numa cadeia de protótipos.
 
@@ -153,7 +153,7 @@ Quando 4D não encontrar uma função ou uma propriedade numa classe, procura-a 
 As palavras-chave 4D específicas podem ser utilizadas nas definições de classes:
 
 - `Função <Name>` para definir as funções de classe dos objectos.
-- `Class constructor` to initialize new objects of the class.
+- `Class constructor` para inicializar novos objectos da classe.
 - `property` to define static properties of the objects with a type.
 - `Função obter <Name>` e `Conjunto de funções <Name>` para definir as propriedades computorizadas dos objectos.
 - `A classe estende-se a <ClassName>` para definir a herança.
@@ -399,7 +399,7 @@ Function set <name>($parameterName : type)
 - when the property is read, the `Function get` is executed,
 - when the property is written, the `Function set` is executed.
 
-If the property is not accessed, the code never executes.
+Se a propriedade não for acedida, o código nunca é executado.
 
 Computed properties are designed to handle data that do not necessary need to be kept in memory. São geralmente baseados em propriedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
 
@@ -511,11 +511,11 @@ Super {( param{;...;paramN} )} {-> Object}
 | Parâmetros | Tipo   |    | Descrição                                      |
 | ---------- | ------ | -- | ---------------------------------------------- |
 | param      | misto  | -> | Parameter(s) to pass to the parent constructor |
-| Resultados | object | <- | Object's parent                                |
+| Resultados | object | <- | Pai do objecto                                 |
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
-`Super` serves two different purposes:
+`Super` tem dois objectivos diferentes:
 
 1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
 
@@ -608,7 +608,7 @@ This -> Object
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
 
-In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
+Na maioria dos casos, o valor de `This` é determinado pela forma como uma função é chamada. It can't be set by assignment during execution, and it may be different each time the function is called.
 
 When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Por exemplo:
 
