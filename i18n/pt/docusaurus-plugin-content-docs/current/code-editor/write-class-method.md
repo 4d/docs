@@ -385,7 +385,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Comandos 4D
 - Comandos SQL
 - Métodos utilizador
-- Table names
+- Nomes de tabelas
 - Field names
 - Constantes
 - Local, process or interprocess variable, declared in the method
