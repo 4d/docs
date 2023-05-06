@@ -25,7 +25,7 @@ Control characters do not appear in the menu command labels. You should therefor
 
 | Caracter   | Descrição                   | Utilização                                                    |
 | ---------- | --------------------------- | ------------------------------------------------------------- |
-| (          | open parenthese             | Disable item                                                  |
+| (          | open parenthese             | Desactivar item                                               |
 | <B         | menor que B                 | Negrito                                                       |
 | <I         | maior que I                 | Itálica                                                       |
 | <U         | menor que U                 | Underline font                                                |
