@@ -497,7 +497,7 @@
     "description": "The ARIA label for the Enter key button that makes the selection"
   },
   "theme.SearchModal.footer.navigateText": {
-    "message": "to navigate",
+    "message": "para navegar",
     "description": "The explanatory text of the action for the Arrow up and Arrow down key"
   },
   "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
@@ -537,7 +537,7 @@
     "description": "The text for the link to report missing results"
   },
   "theme.SearchModal.placeholder": {
-    "message": "Search docs",
+    "message": "Pesquisar documentos",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
   "This is the documentation for the latest": {
