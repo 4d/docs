@@ -51,7 +51,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
 > ... you are indicating that you want to modify the font of the hierarchical list item associated with the *mylist1* form object. The command will take the current item of the *mylist1* object into account to specify the item to modify, but this modification will be carried over to all the representations of the list in all of the processes.
 
-### Support of @
+### Suporte da @
 
 As with other object property management commands, it is possible to use the “@” character in the `ListName` parameter. As a rule, this syntax is used to designate a set of objects in the form. However, in the context of hierarchical list commands, this does not apply in every case. This syntax will have two different effects depending on the type of command:
 
