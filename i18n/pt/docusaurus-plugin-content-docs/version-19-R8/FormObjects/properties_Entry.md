@@ -21,7 +21,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 ---
 
-## Context Menu
+## Menu de contexto
 
 Allows the user access to a standard context menu in the object when the form is executed.
 
