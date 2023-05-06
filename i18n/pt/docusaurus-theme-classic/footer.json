@@ -56,7 +56,7 @@
     "description": "The label of footer link with label=Resources linking to https://us.4d.com/resources"
   },
   "link.item.label.Get Support": {
-    "message": "Get Support",
+    "message": "Obter suporte",
     "description": "The label of footer link with label=Get Support linking to https://us.4d.com/4d-technical-support"
   },
   "link.item.label.About 4D": {
