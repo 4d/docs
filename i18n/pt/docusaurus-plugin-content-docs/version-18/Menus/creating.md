@@ -40,7 +40,7 @@ When menus are handled by means of *MenuRef* references, there is no difference 
 
 `Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
 
-## Adding items
+## Adicionar itens
 
 For each of the menus, you must add the commands that appear when the menu drops down. You can insert items that will be associated with methods or standard actions, or attach other menus (submenus).
 
