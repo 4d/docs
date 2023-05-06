@@ -135,7 +135,7 @@ A pasta Resources contém todos os arquivos e pastas de recursos personalizados 
 
 (*) only if the project was exported from a .4db binary database.
 
-## Data folder
+## Pasta Data
 
 The data folder contains the data file and all files and folders relating to the data.
 
