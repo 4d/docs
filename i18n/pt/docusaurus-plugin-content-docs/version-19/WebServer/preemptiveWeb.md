@@ -12,19 +12,19 @@ For in-depth information on preemptive process in 4D, please refer to the *Preem
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
-| 4D Server           | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compilado     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------- |
-| Servidor REST       | cooperative                                                                                                              | apropiativo                                                  | apropiativo   |
-| Servidor Web        | cooperative                                                                                                              | *web setting*                                                | *web setting* |
-| Web Services Server | cooperative                                                                                                              | *web setting*                                                | *web setting* |
-| Legacy REST         | cooperative                                                                                                              | *web setting*                                                | *web setting* |
+| 4D Server           | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compilado       |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------- |
+| Servidor REST       | cooperativo                                                                                                              | apropiativo                                                  | apropiativo     |
+| Servidor Web        | cooperativo                                                                                                              | *parâmetro web*                                              | *parâmetro web* |
+| Web Services Server | cooperativo                                                                                                              | *parâmetro web*                                              | *parâmetro web* |
+| Legacy REST         | cooperativo                                                                                                              | *parâmetro web*                                              | *parâmetro web* |
 
-| 4D remote/single-user | Interpretado | Compilado     |
-| --------------------- | ------------ | ------------- |
-| Servidor REST         | cooperative  | apropiativo   |
-| Servidor Web          | cooperative  | *web setting* |
-| Web Services Server   | cooperative  | *web setting* |
-| Legacy REST           | cooperative  | *web setting* |
+| 4D remote/single-user | Interpretado | Compilado       |
+| --------------------- | ------------ | --------------- |
+| Servidor REST         | cooperativo  | apropiativo     |
+| Servidor Web          | cooperativo  | *parâmetro web* |
+| Web Services Server   | cooperativo  | *parâmetro web* |
+| Legacy REST           | cooperativo  | *parâmetro web* |
 
 - REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
 - Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
