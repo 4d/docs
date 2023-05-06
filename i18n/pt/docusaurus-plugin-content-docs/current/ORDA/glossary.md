@@ -218,7 +218,7 @@ Each time a new session is opened, a license is used. Each time a session is clo
 
 Inactive sessions are automatically closed after a timeout. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
 
-## Shallow copy
+## Cópia superficial (Shallow copy)
 
 A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. See also Deep copy.
 
