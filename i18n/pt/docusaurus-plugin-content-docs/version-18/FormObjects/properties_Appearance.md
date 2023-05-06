@@ -135,7 +135,7 @@ Displays/hides both background images and background color.
 
 ---
 
-## Show footers
+## Mostrar rodapés
 
 Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
@@ -171,7 +171,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 ---
 
-## Show headers
+## Mostrar cabeçalhos
 
 Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
