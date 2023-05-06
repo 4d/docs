@@ -94,7 +94,7 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 4D provides various default number formats.
 
-### Placeholders
+### Marcadores
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
@@ -398,7 +398,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 ---
 
-## Three-States
+## Três Estados
 
 Allows a check box object to accept a third state. A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.
 
