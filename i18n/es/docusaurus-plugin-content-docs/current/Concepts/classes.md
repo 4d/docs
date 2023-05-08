@@ -299,7 +299,7 @@ Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-A class constructor function accepts optional [parameters](#parameters) and can be used to create and initialize objects of the user class.
+Una función constructora de clase acepta [parámetros](#parameters) opcionales y puede ser utilizada para crear e inicializar objetos de la clase del usuario.
 
 Cuando se llama a la función [`new()`](API/ClassClass.md#new), el constructor de clase es llamado con los parámetros opcionalmente pasados a la función `new()`.
 
