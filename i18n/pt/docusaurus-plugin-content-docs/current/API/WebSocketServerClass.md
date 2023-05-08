@@ -131,19 +131,19 @@ Para chamar esta função é necessário que o servidor Web [4D](WebServerClass.
 
 No parâmetro *WSSHandler* , passe uma instância de uma classe de usuário que será chamada sempre que ocorrer um evento no servidor WebSocket - essencialmente, eventos de conexão. A classe deve definir as seguintes funções de retorno de chamada (apenas `onConnection` é obrigatório):
 
-| Propriedade  | Tipo                         | Descrição                                                                | Predefinição |
-| ------------ | ---------------------------- | ------------------------------------------------------------------------ | ------------ |
-| onConnection | [Function](FunctionClass.md) | (mandatory) Callback when a new client connection is started (see below) | indefinido   |
-| onOpen       | [Function](FunctionClass.md) | Callback when the WebSocket server is started (see below)                | indefinido   |
-| onTerminate  | [Function](FunctionClass.md) | Callback when the WebSocket server is terminated (see below)             | indefinido   |
-| onError      | [Function](FunctionClass.md) | Callback when an error has occurred (see below)                          | indefinido   |
+| Propriedade  | Tipo                         | Descrição                                                                                   | Predefinição |
+| ------------ | ---------------------------- | ------------------------------------------------------------------------------------------- | ------------ |
+| onConnection | [Function](FunctionClass.md) | (obrigatório) Chamada de retorno quando é iniciada uma nova ligação de cliente (ver abaixo) | indefinido   |
+| onOpen       | [Function](FunctionClass.md) | Callback quando o servidor WebSocket é iniciado (ver abaixo)                                | indefinido   |
+| onTerminate  | [Function](FunctionClass.md) | Callback quando o servidor WebSocket é terminado (ver abaixo)                               | indefinido   |
+| onError      | [Function](FunctionClass.md) | Callback quando ocorre um erro (ver abaixo)                                                 | indefinido   |
 
 
 **WSHandler.onConnection**(*WSServer* : Object ; *param* : Object) : Object | null
 
 | Parâmetros      |         | Tipo               |    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | --------------- | ------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer        |         | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| WSServer        |         | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | param           |         | Objeto             | <- | Parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |                 | type    | Text               |    | "connection"                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |                 | request | Objeto             |    | `request` object. Contains information on the connection request (see below)                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -154,22 +154,22 @@ This callback is called when the handshake is complete. It must be called with a
 
 **WSHandler.onOpen**(*WSServer* : Object ; *param* : Object)
 
-| Parâmetros |      | Tipo               |    | Descrição                       |
-| ---------- | ---- | ------------------ |:--:| ------------------------------- |
-| WSServer   |      | 4D.WebSocketServer | <- | Current WebSocket server object |
-| param      |      | Objeto             | <- | Parâmetros                      |
-|            | type | Text               |    | "open"                          |
+| Parâmetros |      | Tipo               |    | Descrição                            |
+| ---------- | ---- | ------------------ |:--:| ------------------------------------ |
+| WSServer   |      | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket |
+| param      |      | Objeto             | <- | Parâmetros                           |
+|            | type | Text               |    | "open"                               |
 
 Event emitted when the websocket server is started.
 
 
 **WSHandler.onTerminate**(*WSServer* : Object ; *param* : Object)
 
-| Parâmetros |      | Tipo               |    | Descrição                       |
-| ---------- | ---- | ------------------ |:--:| ------------------------------- |
-| WSServer   |      | 4D.WebSocketServer | <- | Current WebSocket server object |
-| param      |      | Objeto             | <- | Parâmetros                      |
-|            | type | Text               |    | "terminate"                     |
+| Parâmetros |      | Tipo               |    | Descrição                            |
+| ---------- | ---- | ------------------ |:--:| ------------------------------------ |
+| WSServer   |      | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket |
+| param      |      | Objeto             | <- | Parâmetros                           |
+|            | type | Text               |    | "terminate"                          |
 
 Event emitted when the HTTP server or the WebSocket server is closed.
 
@@ -178,7 +178,7 @@ Event emitted when the HTTP server or the WebSocket server is closed.
 
 | Parâmetros |            | Tipo               |    | Descrição                                                                                                                           |
 | ---------- | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer   |            | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                     |
+| WSServer   |            | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket                                                                                                |
 | param      |            | Objeto             | <- | Parâmetros                                                                                                                          |
 |            | type       | Text               |    | "erro"                                                                                                                              |
 |            | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
@@ -191,7 +191,7 @@ Event emitted when an error occurs on the WebSocket server.
 
 | Parâmetros |            | Tipo               |    | Descrição                                                                                                                           |
 | ---------- | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer   |            | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                     |
+| WSServer   |            | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket                                                                                                |
 | param      |            | Objeto             | <- | Parâmetros                                                                                                                          |
 |            | type       | Text               |    | "erro"                                                                                                                              |
 |            | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
