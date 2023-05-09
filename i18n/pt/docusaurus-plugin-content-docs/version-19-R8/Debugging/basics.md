@@ -9,7 +9,7 @@ The 4D development environment provides several debugging tools for all types of
 
 ## Tipos de erro
 
-### Typing errors
+### Erros de dactilografia
 
 Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Aqui está um erro de dactilografia:
 
@@ -18,7 +18,7 @@ Typing errors are detected by the Code Editor. They are displayed in red and add
 
 Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. When this occurs, fix the typing error and type Enter to validate the fix.
 
-### Syntax Errors
+### Erros de sintaxe
 
 Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. Por exemplo:
 
