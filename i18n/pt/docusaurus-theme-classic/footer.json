@@ -44,7 +44,7 @@
     "description": "The label of footer link with label=4D Doc Center (Where It All Began) linking to https://doc.4d.com"
   },
   "link.item.label.Knowledgebase": {
-    "message": "Knowledgebase",
+    "message": "Base de conhecimento",
     "description": "The label of footer link with label=Knowledgebase linking to https://kb.4d.com"
   },
   "link.item.label.Downloads": {
