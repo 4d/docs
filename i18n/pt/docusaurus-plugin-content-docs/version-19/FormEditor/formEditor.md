@@ -65,7 +65,7 @@ A barra de ferramentas contém os seguintes elementos:
 | ![](../assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                        | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.                                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/displyAndPage.png)   | [Visualização e gestão de páginas](forms.html#form-pages) | Esta área permite passar de uma página de formulário para outra e adicionar páginas. Para navegar entre páginas de formulários, clique nos botões de seta, ou clique na área central e escolha a página a exibir a partir do menu que aparece. Se clicar no botão da seta para a direita enquanto é exibida a última página do formulário, 4D permite-lhe adicionar uma página. |
 | ![](../assets/en/FormEditor/cssPreviewicon.png)  | [Pré-visualização CSS](#css-preview)                      | Este botão é utilizado para seleccionar o Modo CSS a utilizar.                                                                                                                                                                                                                                                                                                                  |
-| ![](../assets/en/FormEditor/views.png)           | [Managing views](#views)                                  | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                                                                              |
+| ![](../assets/en/FormEditor/views.png)           | [Gestão da vistas](#views)                                | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                                                                              |
 | ![](../assets/en/FormEditor/shields2.png)        | [Displaying shields](#shields)                            | Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                                                                          |
 | ![](../assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)        | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                                                                         |
 | ![](../assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                     | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                                                                            |
@@ -119,7 +119,7 @@ You can use the following shortcuts in the Property List:
 
 ## Manipulação de objetos formulário
 
-### Adding objects
+### Adicionar objectos
 
 É possível adicionar objetos a formulários de várias maneiras:
 
@@ -195,7 +195,7 @@ A caixa de diálogo "Duplicar muitos" aparece quando se seleciona um ou mais obj
 
 - Se desejar criar uma matriz de variáveis, seleccione a opção **Number Variables** e seleccione a direcção em que as variáveis devem ser numeradas, seja por linha(s) ou por coluna(s). Esta opção só está activa quando o objecto seleccionado é uma variável. For more information on this option, refer to **Duplicating on a matrix** in the *Design Reference*.
 
-### Moving objects
+### Mover objetos
 
 You can move any graphic or active object in the form including fields and objects created with a template. When moving an object, you have the following options:
 
@@ -572,7 +572,7 @@ Here are a few important things to know before you start working with views:
 
 - **Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being edited and the name is displayed in bold text.
 
-### Managing views
+### Gestão da vistas
 
 #### Criar vistas
 
@@ -592,7 +592,7 @@ There are two ways to add additional views:
 
 There is no limitation on the number of views.
 
-#### Renaming views
+#### Renomear vistas
 
 By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
 
@@ -614,7 +614,7 @@ Note that the Default view does not change:
 
 ![](../assets/en/FormEditor/reorderView.png)
 
-#### Deleting views
+#### Eliminar vistas
 
 To rename a view, you can use either:
 
