@@ -9,7 +9,7 @@ title: Tamanho formulário
 Size options depend on the value of the **Size based on** option.
 
 ---
-## Size based on
+## Tamanho baseado em
 
 
 *   **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor Margin**](#hor-margin) and [**Vert Margin**](#vert-margin) fields.
