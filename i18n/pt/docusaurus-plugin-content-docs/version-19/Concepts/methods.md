@@ -29,9 +29,9 @@ In the 4D Language, there are several categories of methods. The category depend
 A project method can have one of the following roles, depending on how it is executed and used:
 
 - Subrotina
-- Object formula
+- Objeto fórmula
 - Método do menu
-- Process method
+- Método de gerenciamento de processos
 - Event or Error catching method
 
 ### Subrotinas
