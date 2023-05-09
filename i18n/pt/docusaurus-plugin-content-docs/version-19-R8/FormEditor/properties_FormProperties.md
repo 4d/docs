@@ -82,7 +82,7 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Tipo de formulário       | Gramática JSON   | Descrição                                                     | Supported with              |
+| Tipo de formulário       | Gramática JSON   | Descrição                                                     | Suportado por               |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
 | Formulário detalhado     | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
