@@ -48,7 +48,7 @@ La instanciación de objetos puede realizarse de una de las siguientes maneras:
 
 |
 
-Varios comandos y funciones 4D devuelven objetos, por ejemplo [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) o [`Archivo`](../API/FileClass.md#file). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
+Varios comandos y funciones 4D devuelven objetos, por ejemplo [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) o [`Archivo`](../API/FileClass.md#file). En este caso, no es necesario instanciar explícitamente el objeto, el lenguaje 4D lo hace por usted.
 
 :::
 
@@ -56,7 +56,7 @@ Varios comandos y funciones 4D devuelven objetos, por ejemplo [`Get database mea
 
 ### comando `New object`
 
-The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
+El comando [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) crea un nuevo objeto vacío o precargado y devuelve su referencia.
 
 Ejemplos:
 
@@ -71,9 +71,9 @@ Ejemplos:
 
 ### operador `{}`
 
-El operador `{}` permite crear un **objeto literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). The object literal syntax creates empty or filled objects.
+El operador `{}` permite crear un **objeto literal**. Un literal de objeto es una lista separada por semicolumnas de cero o más pares de nombres de propiedades y valores asociados de un objeto, encerrados entre llaves (`{}`). La sintaxis literal de objeto crea objetos vacíos o llenos.
 
-Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
+Dado que cualquier valor de propiedad se considera una expresión, puede crear subobjetos utilizando `{}` en los valores de propiedad.  También puede crear y hacer referencia a los **literales de colección**.
 
 Ejemplos:
 
@@ -94,7 +94,7 @@ Ejemplos:
 
 ```
 
-You can mix the `New object` and literal syntaxes:
+Puede mezclar las sintaxis `New object` y literal:
 
 ```4d
 $o:={\
@@ -117,8 +117,8 @@ $col:=$o.col[5] //6
 
 Puede crear dos tipos de objetos:
 
-- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
-- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. El acceso a estos objetos se controla mediante estructuras `Use...End use`. For more information, refer to the [Shared objects and collections](shared.md) section.
+- objetos regulares (no compartidos), utilizando el comando [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) o la sintaxis literal de objeto (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
+- objetos compartidos, utilizando el comando [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. El acceso a estos objetos se controla mediante estructuras `Use...End use`. Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 
 ## Principios de la sintaxis
@@ -219,13 +219,13 @@ Cuando se utiliza la notación de objetos, se soporta el valor **null** con el c
  If(myColl[2]=Null)
 ```
 
-For more information, please refer to [Null and Undefined](dt_null_undefined.md).
+Para más información, consulte [Null e indefinido](dt_null_undefined.md).
 
 ### Valor indefinido
 
 La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará errores. Esto no ocurre en los siguientes casos:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page89.html) with them:
+- Leer una propiedad de un objeto o valor indefinido devuelve indefinido; asignar un valor indefinido a variables (excepto arrays) tiene el mismo efecto que llamar a [`CLEAR VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page89.html) con ellas:
 
 ```4d
      var $o : Object
@@ -238,7 +238,7 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
 - La lectura de la propiedad **length** de una colección indefinida produce 0:
 
 ```4d
-     var $c : Collection //variable created but no collection is defined
+     var $c : Collection //variable creada pero sin colección definida
      $size:=$c.length //$size = 0
 ```
 
@@ -246,11 +246,11 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
 
 ```4d
      var $o : Object
-     mymethod($o.a) //pass an undefined parameter
+     mymethod($o.a) //Pasar un parámetro indefinido
 
-      //In mymethod method
-     #Declare ($myText : Text) //parameter type is text
-      // $myText contains ""
+      //En el método mymethod
+     #Declare ($myText : Text) //El tipo de parámetro es texto
+      // $myText contiene ""
 ```
 
 - Una expresión de condición se convierte automáticamente en falsa cuando se evalúa a indefinido con las palabras clave If y Case of:
@@ -290,7 +290,7 @@ Cuando se esperan expresiones de un tipo determinado en su código 4D, puede ase
   //para evitar errores en el código
 ```
 
-For more information, please refer to [Null and Undefined](dt_null_undefined.md)
+Para más información, consulte [Null e indefinido](dt_null_undefined.md)
 
 ## Ejemplos
 
