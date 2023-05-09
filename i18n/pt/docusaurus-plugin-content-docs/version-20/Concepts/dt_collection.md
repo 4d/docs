@@ -40,7 +40,7 @@ Se atribuir um índice de elemento que ultrapasse o último elemento existente d
   //myCol[4]=null
 ```
 
-## Instantiation
+## Instanciação
 
 Collections must have been instantiated, otherwise trying to read or modify their elements will generate a syntax error.
 
