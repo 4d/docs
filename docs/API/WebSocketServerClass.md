@@ -22,7 +22,7 @@ The WebSocket protocol provides full-duplex communication channel between a WebS
 
 :::info See also
 
-See also [this blog post](https://blog.4d.com/websocket-server/) about the 4D WebSocket server.
+See also [this blog post](https://blog.4d.com/new-built-in-websocket-server/) about the 4D WebSocket server.
 
 :::
 
@@ -178,21 +178,8 @@ Event emitted when the HTTP server or the WebSocket server is closed.
 |WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
 |param||Object|<-|Parameters|
 ||type|Text||"error"|
-||statusText|Text||HTTP error or last error returned in the 4D error stack|
-||errors|Collection||Collection of 4D errors stack in case of execution error<li>[ ].errCode (number) -  4D error code</li><li>[ ].message (text) - Description of the 4D error</li><li>[ ].componentSignature (text) - Signature of the internal component which returned the error</li>|
-
-
-Event emitted when an error occurs on the WebSocket server.
-
-**WSHandler.onError**(*WSServer* : Object ; *param* : Object)
-
-|Parameter||Type||Description|
-|---------|---|---|:---:|------|
-|WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
-|param||Object|<-|Parameters|
-||type|Text||"error"|
-||statusText|Text||HTTP error or last error returned in the 4D error stack|
-||errors|Collection||Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
+||statusText|Text||Last error returned in the 4D error stack|
+||errors|Collection||Collection of 4D error stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
 
 
 Event emitted when an error occurs on the WebSocket server.
@@ -294,9 +281,8 @@ Function called when the WebSocket is closed.
 |----|-----|---|---|:---:|------|
 |ws|||[`4D.WebSocketConnection`](WebSocketConnectionClass.md)|<-|Current WebSocket connection object|
 |param|||Object|<-|Parameters|
-||type||Text||"terminate"|
+||type||Text||"error"|
 ||status||Object|||
-|||HTTPError|Text||HTTP error or last error returned in the 4D error stack|
 |||errors|Collection ||Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
 
 Function called when an error has occurred.
