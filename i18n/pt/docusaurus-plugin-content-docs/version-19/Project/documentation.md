@@ -119,7 +119,7 @@ New documentation files are created with the following default contents:
 
 | Linha                                               | Descrição                                                                                                                                            |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "\<!-- Type your summary here -->"       | HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
+| "\<!-- Type your summary here -->"       | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                     |
 | ## Description                                     | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
 | ## Exemplo                                         | Heading level 2, you can use this area to show sample code                                                                                           |
 | \``` 4D <br/>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
