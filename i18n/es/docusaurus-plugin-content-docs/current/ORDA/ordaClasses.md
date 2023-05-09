@@ -26,7 +26,7 @@ Gracias a esta funcionalidad, toda la lógica de negocio de su aplicación 4D pu
 
 - Si la estructura física evoluciona, basta con adaptar el código de las funciones y las aplicaciones cliente seguirán llamándolas de forma transparente.
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes-1)) and [alias attributes](#alias-attributes-1) are **not exposed** to remote applications and cannot be called from REST requests. Debe declarar explícitamente cada función pública y alias con la palabra clave [`exposed`](#exposed-vs-non-exposed-functions).
+- Por defecto, todas las funciones de clase de su modelo de datos (incluidas las [funciones de atributo calculado](#computed-attributes-1)) y los [atributos alias](#alias-attributes-1) **no se exponen** a aplicaciones remotas y no se pueden llamar desde solicitudes REST. Debe declarar explícitamente cada función pública y alias con la palabra clave [`exposed`](#exposed-vs-non-exposed-functions).
 
 ![](../assets/en/ORDA/api.png)
 
