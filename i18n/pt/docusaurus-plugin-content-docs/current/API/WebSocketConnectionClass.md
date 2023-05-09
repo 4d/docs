@@ -1,5 +1,5 @@
 ---
-id: Classe WebSocketConnection
+id: WebSocketConnectionClass
 title: Ligação WebSocket
 ---
 
@@ -138,6 +138,7 @@ Um código ** e uma mensagem ** podem ser enviados ao cliente durante o encerram
 <!-- REF #WebSocketConnectionClass.wss.Syntax -->**wss** : 4D.WebSocketServer<!-- END REF -->
 
 #### Descrição
+
 
 A propriedade `.wss` contém <!-- REF #WebSocketConnectionClass.wss.Summary -->o [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) objecto pai da ligação<!-- END REF -->.
 
