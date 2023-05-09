@@ -44,7 +44,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 ---
 
-## Save value
+## Guardar valor
 
 This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
 

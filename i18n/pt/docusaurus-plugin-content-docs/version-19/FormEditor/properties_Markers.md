@@ -28,7 +28,7 @@ You can make Break areas smaller or larger. You can use a Break area to display 
 
 ---
 
-## Form Detail
+## Formulário detalhado
 
 The form Detail area is displayed on the screen and printed once for each record in a report. The Detail area is defined as the area between the Header control line and the Detail control line.
 

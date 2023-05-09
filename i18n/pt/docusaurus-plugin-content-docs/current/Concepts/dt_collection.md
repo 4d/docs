@@ -40,7 +40,7 @@ Se atribuir um índice de elemento que ultrapasse o último elemento existente d
   //myCol[4]=null
 ```
 
-## Instantiation
+## Instanciação
 
 Collections must have been instantiated, otherwise trying to read or modify their elements will generate a syntax error.
 
@@ -81,9 +81,9 @@ Exemplos:
 
 ```4d
 var $col1; $col2; $users : Collection
-$col1:=[] //empty collection
-$col2:=[1;2;3;4;5;6] //collection of numbers
-//collection of objects
+$col1:=[] //colecção vazia
+$col2:=[1;2;3;4;5;6] //colecção de números
+//colecção de objectos
 $users:=[{name: "Alice"; \
     height: 183; \
     eyecolor: "hazel"; \
@@ -92,7 +92,7 @@ $users:=[{name: "Alice"; \
     {name: "Bob"; \
     height: 172; \
     eyecolor: "blue"\
-    }]
+}]
 ```
 
 :::note

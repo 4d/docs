@@ -118,7 +118,7 @@ To lock the whole sheet, you only need to set the *isProtected* property to **tr
 |                   | allowDeleteColumns       | boolean | Specifies whether the user can delete columns, optional. Padrão é falso.                                                          |
 > Todas as propriedades são opcionais.
 
-## Cell Format
+## Formato das células
 
 Defining a format pattern ensures that the content of your 4D View Pro documents is displayed the way you intended. Formats can be set using the selected 4D View Pro [interface](#selecting-a-user-interface), or using the [VP SET VALUE](method-list.md#vp-set-value) or [VP SET NUM VALUE](method-list.md#vp-set-num-value) methods.
 
@@ -233,7 +233,7 @@ In addition to the special characters and codes described in the previous sectio
 | £           | British Pound                                                      | £###.00              |
 | ¥           | Iene japonês                                                       | ¥###.00              |
 | $           | Sinal de dólar                                                     | $###.00              |
-| ¢           | Cent sign                                                          | .00¢                 |
+| ¢           | Sinal de cêntimo                                                   | .00¢                 |
 
 ## Atributos de impressão
 
@@ -288,7 +288,7 @@ The following special characters allow the automatic addition or formatting of i
 | P        | Página actual                    | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
 | N        | Contagem de páginas              | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
 | D        | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
-| T        | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
+| T        | Hora actual                      | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
 | G        | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S        | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
 | U        | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Sublinhado)                           |

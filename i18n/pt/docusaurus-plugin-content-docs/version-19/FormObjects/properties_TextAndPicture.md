@@ -22,7 +22,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 ---
 
-## Button Style
+## Estilo de botão
 
 General appearance of the button. The button style also plays a part in the availability of certain options.
 

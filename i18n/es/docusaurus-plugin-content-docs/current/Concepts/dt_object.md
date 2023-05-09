@@ -37,18 +37,18 @@ Cada valor de propiedad al que se accede a través de la notación de objeto se 
 - en las áreas de expresiones del depurador y del explorador de ejecución,
 - en la lista de propiedades del editor de formularios para los objetos formulario: campo Variable o Expresión, así como diversas expresiones de list box y columnas (fuente de datos, color de fondo, estilo o color de fuente).
 
-## Instantiation
+## Instanciación
 
-Objects must have been instantiated, otherwise trying to read or modify their properties will generate a syntax error.
+Los objetos deben haber sido instanciados, de lo contrario intentar leer o modificar sus propiedades generará un error de sintaxis.
 
-Object instantiation can be done in one of the following ways:
+La instanciación de objetos puede realizarse de una de las siguientes maneras:
 
-- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
-- using the `{}` operator.
+- utilizando el comando [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html),
+- utilizando el operador `{}`.
 
 |
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
+Varios comandos y funciones 4D devuelven objetos, por ejemplo [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) o [`Archivo`](../API/FileClass.md#file). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
 
 :::
 
@@ -231,7 +231,7 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
      var $o : Object
      var $val : Integer
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o.a //$o. es indefinido (no hay error) y la asignación de este valor borra la variable
       //$val=0
 ```
 

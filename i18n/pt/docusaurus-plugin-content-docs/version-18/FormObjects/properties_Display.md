@@ -49,7 +49,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 ---
 
-## Date Format
+## Formato Data
 
 Date formats control the way dates appear when displayed or printed. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
@@ -94,7 +94,7 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 4D provides various default number formats.
 
-### Placeholders
+### Marcadores
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
@@ -398,7 +398,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 ---
 
-## Three-States
+## Três Estados
 
 Allows a check box object to accept a third state. A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.
 

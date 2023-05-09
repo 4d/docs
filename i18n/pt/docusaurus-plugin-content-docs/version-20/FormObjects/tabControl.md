@@ -47,7 +47,7 @@ To supply the labels for a tab control, you can use:
 
 - um objeto
 - a choice list
-- an array
+- um array
 
 ### Utilização de um objecto
 

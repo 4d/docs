@@ -174,7 +174,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 ---
 
-## Window Title
+## Título da janela
 
 The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
 

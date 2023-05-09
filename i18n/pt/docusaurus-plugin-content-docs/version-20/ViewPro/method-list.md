@@ -337,8 +337,8 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 | Parâmetros | Tipo    |    | Descrição                              |
 | ---------- | ------- | -- | -------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name      |
-| column     | Longint | -> | Column index                           |
-| row        | Longint | -> | Row index                              |
+| column     | Longint | -> | Índice de coluna                       |
+| row        | Longint | -> | Índice de linha                        |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted) |
 | Resultados | Objeto  | <- | Range object of a single cell          |
 
@@ -393,8 +393,8 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 | Parâmetros  | Tipo    |    | Descrição                                        |
 | ----------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                |
-| column      | Integer | -> | Column index                                     |
-| row         | Integer | -> | Row index                                        |
+| column      | Integer | -> | Índice de coluna                                 |
+| row         | Integer | -> | Índice de linha                                  |
 | columnCount | Integer | -> | Number of columns                                |
 | rowCount    | Integer | -> | Number of rows                                   |
 | sheet       | Integer | -> | Sheet index (current sheet if omitted)           |
@@ -442,7 +442,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 | Parâmetros  | Tipo    |    | Descrição                                        |
 | ----------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                |
-| column      | Integer | -> | Column index                                     |
+| column      | Integer | -> | Índice de coluna                                 |
 | columnCount | Integer | -> | Number of columns                                |
 | sheet       | Integer | -> | Sheet index (current sheet if omitted)           |
 | Resultados  | Objeto  | <- | Range object of cells|<!-- END REF --> |
@@ -1242,7 +1242,7 @@ You want to trace the execution of the commands and empty the command buffer:
 | Parâmetros | Tipo   |    | Descrição             |
 | ---------- | ------ | -- | --------------------- |
 | font       | Text   | -> | Font shorthand string |
-| Resultados | Objeto | <- | Font object           |
+| Resultados | Objeto | <- | Objecto letra         |
 
 <!-- END REF -->
 
@@ -2093,11 +2093,11 @@ Get the sheet count and set the current sheet to the last sheet:
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| Parâmetros      | Tipo    |    | Descrição                              |
-| --------------- | ------- | -- | -------------------------------------- |
-| vpAreaName      | Text    | -> | 4D View Pro area form object name      |
-| name            | Text    | -> | Nome da folha                          |
-| Function result | Integer | <- | Sheet index|<!-- END REF --> |
+| Parâmetros      | Tipo    |    | Descrição                                  |
+| --------------- | ------- | -- | ------------------------------------------ |
+| vpAreaName      | Text    | -> | 4D View Pro area form object name          |
+| name            | Text    | -> | Nome da folha                              |
+| Function result | Integer | <- | Índice da folha|<!-- END REF --> |
 
 #### Descrição
 
@@ -2134,7 +2134,7 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 | Parâmetros      | Tipo    |    | Descrição                                |
 | --------------- | ------- | -- | ---------------------------------------- |
 | vpAreaName      | Text    | -> | 4D View Pro area form object name        |
-| sheet           | Integer | -> | Sheet index                              |
+| sheet           | Integer | -> | Índice da folha                          |
 | Function result | Text    | <- | Nome da folha|<!-- END REF --> |
 
 #### Descrição
@@ -2211,7 +2211,7 @@ If($options.colHeaderVisible) //column headers are visible
 | Parâmetros      | Tipo     |    | Descrição                                                                   |
 | --------------- | -------- | -- | --------------------------------------------------------------------------- |
 | vpAreaName      | Text     | -> | 4D View Pro area form object name                                           |
-| sheet           | Integer  | <- | Sheet index                                                                 |
+| sheet           | Integer  | <- | Índice da folha                                                             |
 | Function result | Booleano | <- | True if print lines are visible, False otherwise|<!-- END REF --> |
 
 #### Descrição
@@ -3311,7 +3311,7 @@ VP NEW DOCUMENT("myVPArea")
 
 | Parâmetros | Tipo   |    | Descrição                                 |
 | ---------- | ------ | -- | ----------------------------------------- |
-| fontObj    | Objeto | -> | Font object                               |
+| fontObj    | Objeto | -> | Objecto letra                             |
 | Resultados | Text   | <- | Font shorthand|<!-- END REF --> |
 
 #### Descrição
@@ -3929,7 +3929,7 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | Parâmetros | Tipo    |    | Descrição                                         |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                 |
-| row        | Integer | -> | Row index                                         |
+| row        | Integer | -> | Índice de linha                                   |
 | rowCount   | Integer | -> | Number of rows                                    |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)            |
 | Resultados | Objeto  | <- | Range object of row(s)|<!-- END REF --> |
@@ -4656,7 +4656,7 @@ Case of
 | dataObj    | Objeto  | -> | Data object to load in the data context     |
 | dataColl   | Objeto  | -> | Data collection to load in the data context |
 | options    | Objeto  | -> | Additional options                          |
-| sheet      | Integer | -> | Sheet index|<!-- END REF -->      |
+| sheet      | Integer | -> | Índice da folha|<!-- END REF -->  |
 
 #### Descrição
 

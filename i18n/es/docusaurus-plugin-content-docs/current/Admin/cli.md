@@ -228,7 +228,7 @@ Tenga en cuenta que tool4d se ejecuta automáticamente en **modo headless** (ver
 
 - servidor de aplicaciones, servidor web, servidor SQL,
 - programador de copias de seguridad,
-- ODBC and SQL pass-through,
+- ODBC y SQL pass-through,
 - todos los componentes como 4D View Pro, 4D SVG, 4D NetKit...,
 - corrector ortográfico hunspell,
 - corrector ortográfico japonés (librería *mecab*),

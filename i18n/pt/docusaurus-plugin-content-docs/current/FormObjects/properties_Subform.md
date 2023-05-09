@@ -65,7 +65,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 ---
 ## Duplo clique em linha
 
-`List subform`
+`Subformulário lista`
 
 Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
 

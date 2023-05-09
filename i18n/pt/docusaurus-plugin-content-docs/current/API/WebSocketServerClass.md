@@ -12,85 +12,85 @@ title: WebSocketServer
 </details>
 
 
-The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
+A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Uma vez que o servidor 4D WebSocket está ativo, você pode abrir e usar conexões WebSocket entre 4D e clientes usando a classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
-:::note Sobre os Servidores WebSocket
+:::nota Sobre os servidores WebSocket
 
-The WebSocket protocol provides full-duplex communication channel between a WebSocket Server and a client (e.g. a Web browser). For more information on WebSocket servers, read [this page on Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
+O protocolo WebSocket proporciona um canal de comunicação full-duplex entre um servidor WebSocket e um cliente (por exemplo, um navegador Web). Para mais informações sobre servidores WebSocket, leia [esta página na Wikipédia](https://en.wikipedia.org/wiki/WebSocket).
 
 :::
 
 :::info Ver também
 
-See also [this blog post](https://blog.4d.com/websocket-server/) about the 4D WebSocket server.
+Veja também [este post do blog](https://blog.4d.com/websocket-server/) sobre o servidor 4D WebSocket.
 
 :::
 
 ### Requisitos
 
-To create and handle your WebSocket Server in 4D, you will have to use two 4D build-in classes:
+Para criar e manipular seu servidor WebSocket em 4D, é preciso usar duas classes embutidas em 4D:
 
-- this class (`4D.WebSocketServer`) to manage the server itself,
-- the [`4D.WebSocketConnection`](WebSocketConnectionClass.md) class to manage connections and messages.
+- esta classe (`4D.WebSocketServer`) para gerir o próprio servidor,
+- a classe [`4D.WebSocketConnection`](WebSocketConnectionClass.md) para gerir as ligações e as mensagens.
 
-In addition, you will have to create two user classes that will contain callback functions:
+Além disso, terá de criar duas classes de utilizador que conterão funções de retorno de chamada:
 
-- a user class to handle server connections,
-- a user class to handle messages.
+- uma classe de usuário para tratar as ligações ao servidor,
+- uma classe de usuário para tratar as mensagens.
 
-You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) to keep the connection alive.
+É necessário [criar o servidor WebSocket](#4dwebsocketservernew) dentro de um [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) para manter a ligação activa.
 
-The [4D Web Server](WebServerClass.md) must started.
+O servidor Web [4D](WebServerClass.md) deve ser iniciado.
 
 
 ### Exemplo
 
-In this basic example, our WebSocket server will return messages in uppercase.
+Neste exemplo básico, o nosso servidor WebSocket devolverá mensagens em maiúsculas.
 
-1. Create the WebSocket server using a worker (mandatory) and pass your server connection class as parameter:
+1. Crie o servidor WebSocket utilizando um trabalhador (obrigatório) e passe a sua classe de ligação ao servidor como parâmetro:
 
 ```4d
-    //create an instance of the user class
-    //that will handle the connections to the server
+    //criar uma instância da classe de utilizador
+    //que tratará das ligações ao servidor
 var $handler:cs.myServerHandler
 $handler:=cs.myServerHandler.new()
 
 CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))  
-    //assign a variable (wss) to the WebSocket allows you  
-    //to call wss.terminate() afterwards
+    //atribuir uma variável (wss) ao WebSocket permite-lhe  
+    //chamar posteriormente wss.terminate()
 ```
 
-2. Define the `myServerHandler` user class containing callback function(s) used to handle connections to the server:
+2. Definir a classe de utilizador `myServerHandler` que contém as funções de retorno de chamada utilizadas para tratar as ligações ao servidor:
 
 ```4d
-//myServerHandler class
+//classe myServerHandler
 
 Function onConnection($wss : Object; $param : Object) : Object
-    //returns an instance of the user class
-    //that will handle the messages
+    //retorna uma instância da classe de utilizador
+    //que tratará as mensagens
     return cs.myConnectionHandler.new() 
 ```
 
-3. Define the `myConnectionHandler` user class containing callback function(s) used to handle messages:
+3. Definir a classe de utilizador `myConnectionHandler` que contém funções de retorno de chamada utilizadas para tratar mensagens:
 
 ```4d
-// myConnectionHandler class
+// classe myConnectionHandler
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    //resends the message in uppercase  
+    //envia a mensagem em maiúsculas  
     $ws.send(Uppercase($message.data))
 
 ```
 
-:::tip Client-Side JS
+:::tip JS do lado do cliente
 
-See [this blog post](https://blog.4d.com/websocket-server/) for an example of client-side Javascript code handling a WebSocket connection.
+Consulte [esta publicação do blogue](https://blog.4d.com/websocket-server/) para obter um exemplo de código Javascript do lado do cliente que trata de uma ligação WebSocket.
 
 :::
 
-### WebSocketServer object
+### Objecto WebSocketServer
 
-WebSocket server objects provide the following properties and functions:
+Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 |                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -110,40 +110,40 @@ WebSocket server objects provide the following properties and functions:
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parâmetros                          | Tipo               |    | Descrição                                                         |
-| ----------------------------------- | ------------------ |:--:| ----------------------------------------------------------------- |
-| [WSSHandler](#wsshandler-parameter) | Objeto             | -> | Object of the user class declaring the WebSocket Server callbacks |
-| [options](#options-parameter)       | Objeto             | -> | WebSocket configuration parameters                                |
-| Resultados                          | 4D.WebSocketServer | <- | New WebSocketServer object|<!-- END REF -->
+| Parâmetros                          | Tipo               |    | Descrição                                                                                |
+| ----------------------------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
+| [WSSHandler](#wsshandler-parameter) | Objeto             | -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |
+| [options](#options-parameter)       | Objeto             | -> | Parâmetros de configuração do WebSocket                                                  |
+| Resultados                          | 4D.WebSocketServer | <- | Novo objecto WebSocketServer|<!-- END REF -->
 
 
 |
 
 
-The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server that will use the specified *WSSHandler* callbacks and (optionally) *options*, and returns a `4D.WebSocketServer` object<!-- END REF -->.
+A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que utilizará as chamadas de retorno *WSSHandler* e (opcionalmente) as opções *especificadas*, e devolve um objecto `4D.WebSocketServer`<!-- END REF -->.
 
-Calling this function requires that the [4D Web Server](WebServerClass.md) is started. The **host** and **port** of the WebSocket server are the same as the host and port of the 4D Web Server.
-
-
+Para chamar esta função é necessário que o servidor Web [4D](WebServerClass.md) seja iniciado. O host **** e a porta **** do servidor WebSocket são os mesmos que o host e a porta do Servidor Web 4D.
 
 
-### *WSSHandler* parameter
 
-In the *WSSHandler* parameter, pass an instance of a user class that will be called every time an event occurs on the WebSocket server --essentially, connection events. The class should define the following callback functions (only `onConnection` is mandatory):
 
-| Propriedade  | Tipo                         | Descrição                                                                | Predefinição |
-| ------------ | ---------------------------- | ------------------------------------------------------------------------ | ------------ |
-| onConnection | [Function](FunctionClass.md) | (mandatory) Callback when a new client connection is started (see below) | indefinido   |
-| onOpen       | [Function](FunctionClass.md) | Callback when the WebSocket server is started (see below)                | indefinido   |
-| onTerminate  | [Function](FunctionClass.md) | Callback when the WebSocket server is terminated (see below)             | indefinido   |
-| onError      | [Function](FunctionClass.md) | Callback when an error has occurred (see below)                          | indefinido   |
+### parâmetro*WSSHandler*
+
+No parâmetro *WSSHandler* , passe uma instância de uma classe de usuário que será chamada sempre que ocorrer um evento no servidor WebSocket - essencialmente, eventos de conexão. A classe deve definir as seguintes funções de retorno de chamada (apenas `onConnection` é obrigatório):
+
+| Propriedade  | Tipo                         | Descrição                                                                                   | Predefinição |
+| ------------ | ---------------------------- | ------------------------------------------------------------------------------------------- | ------------ |
+| onConnection | [Function](FunctionClass.md) | (obrigatório) Chamada de retorno quando é iniciada uma nova ligação de cliente (ver abaixo) | indefinido   |
+| onOpen       | [Function](FunctionClass.md) | Callback quando o servidor WebSocket é iniciado (ver abaixo)                                | indefinido   |
+| onTerminate  | [Function](FunctionClass.md) | Callback quando o servidor WebSocket é terminado (ver abaixo)                               | indefinido   |
+| onError      | [Function](FunctionClass.md) | Callback quando ocorre um erro (ver abaixo)                                                 | indefinido   |
 
 
 **WSHandler.onConnection**(*WSServer* : Object ; *param* : Object) : Object | null
 
 | Parâmetros      |         | Tipo               |    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | --------------- | ------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer        |         | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| WSServer        |         | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | param           |         | Objeto             | <- | Parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |                 | type    | Text               |    | "connection"                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |                 | request | Objeto             |    | `request` object. Contains information on the connection request (see below)                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -154,22 +154,22 @@ This callback is called when the handshake is complete. It must be called with a
 
 **WSHandler.onOpen**(*WSServer* : Object ; *param* : Object)
 
-| Parâmetros |      | Tipo               |    | Descrição                       |
-| ---------- | ---- | ------------------ |:--:| ------------------------------- |
-| WSServer   |      | 4D.WebSocketServer | <- | Current WebSocket server object |
-| param      |      | Objeto             | <- | Parâmetros                      |
-|            | type | Text               |    | "open"                          |
+| Parâmetros |      | Tipo               |    | Descrição                            |
+| ---------- | ---- | ------------------ |:--:| ------------------------------------ |
+| WSServer   |      | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket |
+| param      |      | Objeto             | <- | Parâmetros                           |
+|            | type | Text               |    | "open"                               |
 
 Event emitted when the websocket server is started.
 
 
 **WSHandler.onTerminate**(*WSServer* : Object ; *param* : Object)
 
-| Parâmetros |      | Tipo               |    | Descrição                       |
-| ---------- | ---- | ------------------ |:--:| ------------------------------- |
-| WSServer   |      | 4D.WebSocketServer | <- | Current WebSocket server object |
-| param      |      | Objeto             | <- | Parâmetros                      |
-|            | type | Text               |    | "terminate"                     |
+| Parâmetros |      | Tipo               |    | Descrição                            |
+| ---------- | ---- | ------------------ |:--:| ------------------------------------ |
+| WSServer   |      | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket |
+| param      |      | Objeto             | <- | Parâmetros                           |
+|            | type | Text               |    | "terminate"                          |
 
 Event emitted when the HTTP server or the WebSocket server is closed.
 
@@ -178,7 +178,7 @@ Event emitted when the HTTP server or the WebSocket server is closed.
 
 | Parâmetros |            | Tipo               |    | Descrição                                                                                                                           |
 | ---------- | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer   |            | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                     |
+| WSServer   |            | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket                                                                                                |
 | param      |            | Objeto             | <- | Parâmetros                                                                                                                          |
 |            | type       | Text               |    | "erro"                                                                                                                              |
 |            | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
@@ -191,7 +191,7 @@ Event emitted when an error occurs on the WebSocket server.
 
 | Parâmetros |            | Tipo               |    | Descrição                                                                                                                           |
 | ---------- | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer   |            | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                     |
+| WSServer   |            | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket                                                                                                |
 | param      |            | Objeto             | <- | Parâmetros                                                                                                                          |
 |            | type       | Text               |    | "erro"                                                                                                                              |
 |            | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
