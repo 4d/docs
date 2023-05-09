@@ -56,7 +56,7 @@ Project development file, used to designate and launch the project. This file ca
 | menus.json              | Menu definitions                                                                                                                                                                                                                                                                                                                                                                            | JSON    |
 | settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined. **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML     |
 | tips.json               | Dicas definidas                                                                                                                                                                                                                                                                                                                                                                             | JSON    |
-| lists.json              | Defined lists                                                                                                                                                                                                                                                                                                                                                                               | JSON    |
+| lists.json              | Listas definidas                                                                                                                                                                                                                                                                                                                                                                            | JSON    |
 | filters.json            | Defined filters                                                                                                                                                                                                                                                                                                                                                                             | JSON    |
 | styleSheets.css         | CSS style sheets                                                                                                                                                                                                                                                                                                                                                                            | CSS     |
 | styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                       | CSS     |
@@ -80,7 +80,7 @@ Project development file, used to designate and launch the project. This file ca
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text    |
 
-#### Forms folder
+#### Pasta Forms
 
 | Conteúdos                                 | Descrição                                  | Formato |
 | ----------------------------------------- | ------------------------------------------ | ------- |
@@ -110,7 +110,7 @@ Project development file, used to designate and launch the project. This file ca
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
-### Trash folder
+### Pasta Trash
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
