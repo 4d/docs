@@ -1,6 +1,6 @@
 ---
 id: structure
-title: Structure Page
+title: Página Estrutura
 ---
 
 ## Chave primária
