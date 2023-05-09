@@ -110,7 +110,7 @@ Puede crear dos tipos de colecciones:
 - colecciones regulares (no compartidas), utilizando el comando [`New collection`](API/CollectionClass.md#new-collection) o la sintaxis literal de colección (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
 - colecciones compartidas, utilizando el comando [`New shared collection`](API/CollectionClass.md#new-shared-collection). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos.
 
-For more information, refer to the [Shared objects and collections](shared.md) section.
+Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 ## Funciones de colección
 
