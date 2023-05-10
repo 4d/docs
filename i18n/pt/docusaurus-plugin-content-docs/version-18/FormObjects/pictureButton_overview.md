@@ -1,6 +1,6 @@
 ---
 id: pictureButtonOverview
-title: Picture Button
+title: Botão imagem
 ---
 
 ## Visão Geral

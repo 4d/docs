@@ -189,7 +189,7 @@ When you apply one of these commands to a text selection, the spaces and "_" cha
 
 #### Swap expression
 
-The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. For instance,
+The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por exemplo,
 
 `variable1:=variable2`
 
@@ -264,7 +264,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Comandos SQL
 - Métodos utilizador
 - Nomes de tabelas
-- Field names
+- Nomes de campos
 - Constantes
 - Local, process or interprocess variable, declared in the method
 - Object property names
@@ -555,7 +555,7 @@ Os resultados são os seguintes:
 
 All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
 
-#### Display order
+#### Ordem de visualização
 
 Tags are displayed in their appearing order inside the method/class.
 

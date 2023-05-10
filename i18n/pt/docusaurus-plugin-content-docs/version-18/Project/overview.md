@@ -8,7 +8,7 @@ Um projeto 4D contém todo o código fonte de uma aplicação de banco de dados 
 Os projetos 4D são criados e gerenciados usando a aplicação 4D Developer. Os arquivos de projeto se utilizam para criar arquivos de lançamento da aplicação final, que podem ser abertos com 4D Server ou com uma licencia 4D Volume (aplicações fusionadas).
 
 
-## Project files
+## Ficheiros de projeto
 
 Os arquivos de projeto 4D se abrem e editam com as aplicações padrão da plataforma 4D. Editores completos para gerenciar os arquivos, como um editor de estruturas, um editor de métodos, um editor de formulários, um editor de menu...
 

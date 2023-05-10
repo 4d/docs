@@ -34,7 +34,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 * **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.md#maximum-concurrent-web-processes) option).
 > Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
 
-## User Sessions
+## Sessões Usuário
 
 The 4D web server includes complete automatic features for easily managing [web sessions](sessions.md) (user sessions) based on cookies.
 

@@ -348,7 +348,7 @@ Puede utilizar un **archivo de configuración de log** para gestionar fácilment
 
 ### Cómo activar el archivo
 
-There are several ways to enable the log configuration file, depending on your configuration:
+Hay varias maneras de activar el archivo de configuración de registro, dependiendo de su configuración:
 
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
 - **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la carpeta [Settings](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la carpeta [`Project`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
@@ -364,7 +364,7 @@ There are several ways to enable the log configuration file, depending on your c
 
 :::note
 
-If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
+Si se instala un archivo `logConfig.json` tanto en la carpeta Settings como en AppData/Library, el archivo de la carpeta Settings tendrá prioridad.
 
 :::
 

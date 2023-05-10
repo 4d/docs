@@ -72,7 +72,7 @@ Stops method execution, and returns to the state before the method started execu
 * When tracing a form or object method executing in response to an event: Stops and returns to the form.
 * When tracing a method executing from within the Application environment: Stops and returns to the environment.
 
-#### Abort and Edit
+#### Abortar e editar
 
 Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 > **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.

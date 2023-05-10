@@ -48,7 +48,7 @@ With 4D in remote mode, these files must be located in the local resources folde
 > TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate).
 
 
-## Character Set
+## Conjunto de caracteres
 
 | Can be set with                    | Nome                                                              | Comentários                    |
 | ---------------------------------- | ----------------------------------------------------------------- | ------------------------------ |
@@ -70,7 +70,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 > The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
 
-## CORS Settings
+## Parâmetros CORS
 
 | Can be set with                    | Nome                                                                                                            | Comentários                                                                    |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -174,7 +174,7 @@ When disabled (default), all cross site requests sent with CORS are ignored.
 Para obter mais informações sobre o CORS, consulte a [página de compartilhamento de recursos entre origens](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipédia.
 
 #### Veja também
-[CORS Settings](#cors-settings)
+[Parâmetros CORS](#cors-settings)
 
 ## Ativar HTTP
 

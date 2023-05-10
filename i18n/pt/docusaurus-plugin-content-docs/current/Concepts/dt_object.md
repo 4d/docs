@@ -37,7 +37,7 @@ Cada valor de propriedade acessado através da notação de objeto é considerad
 - nas áreas de expressão do depurador e do explorador de Runtime,
 - na lista de propriedades do editor de formulários para objectos de formulários: Variável ou Campo de expressão, bem como várias caixas de selecção e expressões de colunas (Fonte de dados, cor de fundo, estilo, ou cor da fonte).
 
-## Instantiation
+## Instanciação
 
 Objects must have been instantiated, otherwise trying to read or modify their properties will generate a syntax error.
 

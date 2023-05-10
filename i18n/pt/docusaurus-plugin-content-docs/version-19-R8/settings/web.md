@@ -68,7 +68,7 @@ Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
 Sets the cache size. See [Cache](../WebServer/webServerConfig.md#cache).
 
 
-#### Clear Cache
+#### Limpar cache
 
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). The cache is then immediately cleared.
 
@@ -133,7 +133,7 @@ Allows you to set the maximum timeout before closing for inactive Web processes 
 
 
 
-### Web Passwords
+### Palavras-passe Web
 
 Set the authentication system that you want to apply to your Web server. Three options are proposed:
 
@@ -158,7 +158,7 @@ Define the set of characters to be used by the 4D Web server. See [Character Set
 
 See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections).
 
-### CORS Settings
+### Parâmetros CORS
 
 #### Ativar CORS
 

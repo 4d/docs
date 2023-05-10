@@ -22,7 +22,7 @@ Only one debugger can debug a 4D Server application at a given time. It is calle
 * the debugger of a remote 4D client - if the remote session has access to Design mode.
 
 The attached debugger is called whenever a 4D Server encounters:
-* a break point
+* um ponto de ruptura
 * a `TRACE` command
 * a caught command
 * um erro

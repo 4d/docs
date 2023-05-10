@@ -36,7 +36,7 @@ $mylist:=New list
 
 Each representation of the list has its own specific characteristics and shares common characteristics with all the other representations. The following characteristics are specific to each representation of the list:
 
-- The selection,
+- A selecção,
 - The expanded/collapsed state of its items,
 - The position of the scrolling cursor.
 
@@ -99,7 +99,7 @@ Certain properties of hierarchical lists (for example, the **Enterable** attribu
 
 1. Commands of the “Hierarchical Lists” theme
 2. Generic object property commands
-3. Form property
+3. Propriedade formulário
 
 This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the `SET LIST ITEM PROPERTIES` command, the `OBJECT SET COLOR` command will have no effect on this item.
 

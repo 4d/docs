@@ -197,7 +197,7 @@ Os resultados são os seguintes:
 
 All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
 
-#### Display order
+#### Ordem de visualização
 
 Tags are displayed in their appearing order inside the method/class.
 
@@ -243,13 +243,13 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Shift]+[End]                                               | Select all the characters in the line that are to the right of the cursor                                                                  |
 | [PgUp]                                                      | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                           |
 | [PgDn]                                                      | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                           |
-| [**Introspection**](#goto-definition)                       |                                                                                                                                            |
+| [**Introspecção**](#goto-definition)                        |                                                                                                                                            |
 | [Ctrl]+K or [Alt]+double-click                              | Same as [**Goto definition**](#goto-definition) command                                                                                    |
 | \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 | [**Find and replace**](#find-and-replace)                   |                                                                                                                                            |
 | [Ctrl]+F                                                    | Pesquisar                                                                                                                                  |
 | [Ctrl]+G                                                    | Encontrar o próximo                                                                                                                        |
-| [Ctrl]+[Shift]+G                                            | Find Previous                                                                                                                              |
+| [Ctrl]+[Shift]+G                                            | Procurar Anterior                                                                                                                          |
 | [Ctrl]+E                                                    | Find Same Next                                                                                                                             |
 | [Ctrl]+[Shift]+E                                            | Find Same Previous                                                                                                                         |
 | [Ctrl]+[Alt]+F                                              | Replace                                                                                                                                    |
@@ -297,7 +297,7 @@ The backslash character (`\`) is used as a separator in [pathnames under Windows
 
 
 
-### Drag-and-drop
+### Arrastar e largar
 
 From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
@@ -319,7 +319,7 @@ When you apply one of these commands to a text selection, the spaces and "_" cha
 
 ### Swap expression
 
-The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. For instance,
+The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por exemplo,
 
 `variable1:=variable2`
 
@@ -386,7 +386,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Comandos SQL
 - Métodos utilizador
 - Nomes de tabelas
-- Field names
+- Nomes de campos
 - Constantes
 - Local, process or interprocess variable, declared in the method
 - Object property names
@@ -485,7 +485,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 
 
-## Syntax errors
+## Erros de sintaxe
 
 4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
 

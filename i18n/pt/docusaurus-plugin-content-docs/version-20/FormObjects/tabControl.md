@@ -46,7 +46,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 To supply the labels for a tab control, you can use:
 
 - um objeto
-- a choice list
+- uma lista de escolha
 - um array
 
 ### Utilização de um objecto

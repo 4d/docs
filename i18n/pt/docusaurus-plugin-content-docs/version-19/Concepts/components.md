@@ -5,7 +5,7 @@ title: Componentes
 
 A 4D component is a set of 4D methods and forms representing one or more functionalities that can be installed in different applications. For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications.
 
-## Presentation
+## Apresentação
 
 ### Definições
 
