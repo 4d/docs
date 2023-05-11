@@ -84,7 +84,7 @@ This property allows you to specify either the **font theme** or the **font fami
 
 The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
 
-- the platform,
+- a plataforma,
 - the system language,
 - and the type of form object.
 
@@ -109,7 +109,7 @@ Three font themes are available:
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
-### Font Family
+### Família de letras
 
 There are two types of font family names:
 
@@ -381,7 +381,7 @@ By default, this option is not enabled.
 
 ---
 
-## Orientation
+## Orientação
 
 Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
 

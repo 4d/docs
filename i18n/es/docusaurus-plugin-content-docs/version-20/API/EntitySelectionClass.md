@@ -13,10 +13,10 @@ Las selecciones de entidades pueden crearse a partir de selecciones existentes u
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->                                                         |
-| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->                                                       |
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->                                                       |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
@@ -181,51 +181,6 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.at().Desc -->
-## .at()
-
-<details><summary>Histórico</summary>
-
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
-
-</details>
-
-
-<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
-
-
-
-<!-- REF #EntitySelectionClass.at().Params -->
-| Parámetros | Tipo      |    | Descripción                                         |
-| ---------- | --------- |:--:| --------------------------------------------------- |
-| index      | Integer   | -> | Índice de la entidad a devolver                     |
-| Result     | 4D.Entity | <- | La entidad en ese índice|<!-- END REF --> |
-
-
-#### Descripción
-
-La función `.at()` <!-- REF #EntitySelectionClass.at().Summary -->devuelve la entidad en la posición *index*, permitiendo enteros positivos y negativos<!-- END REF -->.
-
-If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
-
-The function returns Null if *index* is beyond entity selection limits.
-
-#### Ejemplo
-
-```4d
-var $employees : cs.EmployeeSelection
-var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1"; "H@")
-$emp1:=$employees.at(2) /3ª entidad de la selección de entidades $employees 
-$emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
-    //de la selección de entidades $employees
-```
-
-
-<!-- END REF -->
-
 <!-- REF EntitySelectionClass.attributeName.Desc -->
 ## .*attributeName*
 
@@ -363,11 +318,11 @@ Se produce un error si *entity* y la entity selection no están relacionadas con
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@")
+ $employees:=ds.Employee.newSelection()
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //La entidad $employee se añade a la entity selection $employees
+ $employees.add($employee) //La entidad $employee se añade a la selección de entidades $employees
 ```
 
 #### Ejemplo 2
@@ -381,7 +336,7 @@ Las llamadas a la función se pueden encadenar:
  $p1:=ds.Product.get(10)
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
- $sel:=ds.Product.query("ID > 50")
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -459,6 +414,51 @@ Queremos tener una selección de empleados llamados "Jones" que vivan en Nueva Y
  $sel1:=ds.Employee.query("name =:1";"Jones")
  $sel2:=ds.Employee.query("city=:1";"New York")
  $sel3:=$sel1.and($sel2)
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v20     | Añadidos       |
+
+</details>
+
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| Parámetros | Tipo      |    | Descripción                                         |
+| ---------- | --------- |:--:| --------------------------------------------------- |
+| index      | Integer   | -> | Índice de la entidad a devolver                     |
+| Result     | 4D.Entity | <- | La entidad en ese índice|<!-- END REF --> |
+
+
+#### Descripción
+
+La función `.at()` <!-- REF #EntitySelectionClass.at().Summary -->devuelve la entidad en la posición *index*, permitiendo enteros positivos y negativos<!-- END REF -->.
+
+Si *index* es negativo (de -1 a -n con n: longitud de la selección de entidades), la entidad devuelta se basará en el orden inverso de la selección de entidades.
+
+La función devuelve Null si *index* está más allá de los límites de selección de entidades.
+
+#### Ejemplo
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1"; "H@")
+$emp1:=$employees.at(2) /3ª entidad de la selección de entidades $employees 
+$emp2:=$employees.at(-3) //empezando por el final, 3ª entidad
+    //de la selección de entidades $employees
 ```
 
 
@@ -727,7 +727,7 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 :::note
 
-The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
+La opción `dk count values` sólo está disponible con atributos de almacenamiento de tipo booleano, cadena, número y fecha.
 
 :::
 
@@ -755,7 +755,7 @@ $countries:=ds.Employee.all().distinct("address.country")
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
 
-You want to get the number of different job names in the company:
+Desea obtener el número de nombres de posiciones diferentes en la empresa:
 
 ```4d
 var $jobs : Collection
@@ -786,10 +786,10 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
-| Parámetros | Tipo       |    | Descripción                                                   |
-| ---------- | ---------- |:--:| ------------------------------------------------------------- |
-| atributo   | Text       | -> | Object attribute name whose paths you want to get             |
-| Result     | Collection | <- | New collection with distinct paths|<!-- END REF --> |
+| Parámetros | Tipo       |    | Descripción                                                    |
+| ---------- | ---------- |:--:| -------------------------------------------------------------- |
+| atributo   | Text       | -> | Nombre del atributo del objeto cuyas rutas desea obtener       |
+| Result     | Collection | <- | Nueva colección con rutas distintas|<!-- END REF --> |
 
 
 #### Descripción
@@ -798,11 +798,11 @@ La función `.distinctPaths()` <!-- REF #EntitySelectionClass.distinctPaths().Su
 
 Si *attribute* no es un atributo de objeto indexado, se genera un error.
 
-Tras la llamada, el tamaño de la colección devuelta es igual al número de rutas distintas encontradas en *attribute* para la selección de entidades. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+Tras la llamada, el tamaño de la colección devuelta es igual al número de rutas distintas encontradas en *attribute* para la selección de entidades. Las rutas se devuelven como cadenas que incluyen atributos anidados y colecciones, por ejemplo "info.address.number" o "children[].birthdate". Las entidades con un valor null en el *attribute* no se tienen en cuenta.
 
 #### Ejemplo
 
-You want to get all paths stored in a *fullData* object attribute:
+Desea obtener todas las rutas almacenadas en un atributo objeto *fullData*:
 
 ```4d
 var $paths : Collection
@@ -1607,9 +1607,12 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 
 
 
-<!-- REF #EntitySelectionClass.orderBy().Params --> |Parámetro|Tipo||Descripción|
-
-|---------|--- |:---:|------| |pathString |Text   |->|Attribute path(s) and sorting instruction(s) for the entity selection| |pathObjects |Collection    |->|Collection of criteria objects| |Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
+<!-- REF #EntitySelectionClass.orderBy().Params -->
+| Parámetros  | Tipo               |    | Descripción                                                                      |
+| ----------- | ------------------ |:--:| -------------------------------------------------------------------------------- |
+| pathString  | Text               | -> | Ruta(s) de atributos e instrucciones de clasificación para la entity selection   |
+| pathObjects | Collection         | -> | Colección de objetos criterio                                                    |
+| Result      | 4D.EntitySelection | <- | Nueva selección de entidades en el orden especificado|<!-- END REF --> |
 
 #### Descripción
 
@@ -1641,7 +1644,7 @@ Por defecto, los atributos se clasifican en orden ascendente ("descending" es fa
 Puede añadir tantos objetos en la colección de criterios como sea necesario.
 > Esta función sólo funciona con un datastore remoto (cliente/servidor o conexión `Open datastore`).
 
-If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la función devuelve una selección de entidad vacía.
 
 
 #### Ejemplo

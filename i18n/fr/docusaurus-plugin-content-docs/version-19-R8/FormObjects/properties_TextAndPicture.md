@@ -109,7 +109,7 @@ Les états suivants sont représentés :
 1. bouton non cliqué / case non cochée (valeur de la variable = 0)
 2. bouton cliqué / case cochée (valeur de la variable = 1)
 3. survolé
-4. désactivé
+4. disabled
 
 #### Grammaire JSON
 

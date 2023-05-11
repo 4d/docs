@@ -13,10 +13,10 @@ title: EntitySelection
 |                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
-| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
+| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->|
@@ -182,51 +182,6 @@ $result:=$sel[0].lock() //動作しません
 
 
 
-<!-- REF EntitySelectionClass.at().Desc -->
-## .at()
-
-<details><summary>履歴</summary>
-
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
-
-</details>
-
-<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
-
-
-<!-- REF #EntitySelectionClass.at().Params -->
-| 引数    | タイプ       |    | 説明                                           |
-| ----- | --------- |:--:| -------------------------------------------- |
-| index | Integer   | -> | 取得するエンティティのインデックス                            |
-| 戻り値   | 4D.Entity | <- | そのインデックスにあるエンティティ|<!-- END REF -->
-
-
-|
-
-
-#### 説明
-
-`.at()` 関数は、 <!-- REF #EntitySelectionClass.at().Summary -->*index* の位置にあるエンティティを返します (index は正負の整数)<!-- END REF -->。
-
-*index* に負の整数 (-1 から -n; n はエンティティセレクションの length) が渡された場合、エンティティセレクションの最後から逆向きに数えます。
-
-*index* がエンティティセレクションの範囲を超える場合、この関数は Null を返します。
-
-#### 例題
-
-```4d
-var $employees : cs.EmployeeSelection
-var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  // $employees エンティティセレクションの 3番目のエンティティ 
-$emp2:=$employees.at(-3) // $employees エンティティセレクションの
-    // 終わりから 3番目のエンティティ
-```
-
-<!-- END REF -->
-
 
 
 <!-- REF EntitySelectionClass.attributeName.Desc -->
@@ -369,12 +324,11 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@") // 共有可能なエンティティセレクションです
+ $employees:=ds.Employee.newSelection()
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees:=$employees.copy() // 追加可能なエンティティセレクションを取得します
- $employees.add($employee) // $employee エンティティが $employees エンティティセレクションへと追加されます
+ $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
 #### 例題 2
@@ -388,8 +342,7 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
  $p1:=ds.Product.get(10)
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
- $sel:=ds.Product.query("ID > 50")
- $sel:=$sel.copy()
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -471,6 +424,53 @@ $sellist2:=$sellist2.add($sellist1)
 ```
 
 <!-- END REF -->
+
+
+<!-- REF EntitySelectionClass.at().Desc -->
+## .at()
+
+<details><summary>履歴</summary>
+
+| バージョン | 内容 |
+| ----- | -- |
+| v20   | 追加 |
+
+</details>
+
+<!-- REF #EntitySelectionClass.at().Syntax -->**.at**( *index* : Integer ) : 4D.Entity <!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.at().Params -->
+| 引数    | タイプ       |    | 説明                                           |
+| ----- | --------- |:--:| -------------------------------------------- |
+| index | Integer   | -> | 取得するエンティティのインデックス                            |
+| 戻り値   | 4D.Entity | <- | そのインデックスにあるエンティティ|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.at()` 関数は、 <!-- REF #EntitySelectionClass.at().Summary -->*index* の位置にあるエンティティを返します (index は正負の整数)<!-- END REF -->。
+
+*index* に負の整数 (-1 から -n; n はエンティティセレクションの length) が渡された場合、エンティティセレクションの最後から逆向きに数えます。
+
+*index* がエンティティセレクションの範囲を超える場合、この関数は Null を返します。
+
+#### 例題
+
+```4d
+var $employees : cs.EmployeeSelection
+var $emp1; $emp2 : cs.EmployeeEntity
+$employees:=ds.Employee.query("lastName = :1";"H@")
+$emp1:=$employees.at(2)  // $employees エンティティセレクションの 3番目のエンティティ 
+$emp2:=$employees.at(-3) // $employees エンティティセレクションの
+    // 終わりから 3番目のエンティティ
+```
+
+<!-- END REF -->
+
 
 
 <!-- REF EntitySelectionClass.average().Desc -->
@@ -1630,14 +1630,18 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-|引数|タイプ||説明|
+| 引数          | タイプ                |    | 説明                                                       |
+| ----------- | ------------------ |:--:| -------------------------------------------------------- |
+| pathString  | Text               | -> | エンティティセレクションの属性パスと並べ替えの指定                                |
+| pathObjects | Collection         | -> | 条件オブジェクトのコレクション                                          |
+| 戻り値         | 4D.EntitySelection | <- | 指定された順番に並べ替えられた新規エンティティセレクション|<!-- END REF -->
 
-|---------|--- |:---:|------| |pathString |Text   |->|エンティティセレクションの属性パスと並べ替えの指定| |pathObjects |Collection    |->|条件オブジェクトのコレクション| |Result|4D.EntitySelection|<-|指定された順番に並べ替えられた新規エンティティセレクション|<!-- END REF -->
+|
 
 #### 説明
 
 .orderBy() 関数は、 <!-- REF #EntitySelectionClass.orderBy().Summary -->エンティティセレクションの全エンティティが *pathString* または *pathObjects* が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します<!-- END REF -->。
-> * この関数は、エンティティセレクションを変更しません。
+> * この関数は、元のエンティティセレクションを変更しません。
 > * エンティティセレクションの順列については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 引数を渡して、エンティティの並び替えを指定する必要があります。 並べ替えの指定方法は 2つあります:

@@ -15,7 +15,7 @@ In your code, you control the events using the `FORM Event` command, that return
 > Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
 
 
-## Event object
+## Objecto evento
 
 Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
 

@@ -19,8 +19,8 @@ The default value can only be used if the [data source type](properties_Object.m
 
 | Stamp | Significado     |
 | ----- | --------------- |
-| #D    | Current date    |
-| #H    | Current time    |
+| #D    | Data actual     |
+| #H    | Hora actual     |
 | #N    | Sequence number |
 
 You can use a sequence number to create a unique number for each record in the table for the current data file. A sequence number is a longint that is generated for each new record. The numbers start at one (1) and increase incrementally by one (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Each table has its own internal counter of sequence numbers. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph.
@@ -39,7 +39,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 ---
 
-## Excluded List
+## Lista de excluídos
 
 Allows setting a list whose values cannot be entered in the object. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
 > If a specified list is hierarchical, only the items of the first level are taken into account.
@@ -56,7 +56,7 @@ Allows setting a list whose values cannot be entered in the object. Se um valor 
 
 ---
 
-## Required List
+## Lista obrigatória
 
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 

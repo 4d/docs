@@ -22,7 +22,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 ---
 
-## Button Style
+## Estilo de botão
 
 General appearance of the button. The button style also plays a part in the availability of certain options.
 
@@ -62,7 +62,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 ---
 
-## Icon Location
+## Localização do ícone
 
 Designates the placement of an icon in relation to the form object.
 
@@ -123,9 +123,9 @@ Each state is represented by a different picture. In the source picture, the sta
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                |
-| ---------- | ------------- | ------------------------------------------------ |
-| iconFrames | number        | Number of states in the icon picture. Minimum: 1 |
+| Nome       | Tipo de dados | Valores possíveis                               |
+| ---------- | ------------- | ----------------------------------------------- |
+| iconFrames | number        | Number of states in the icon picture. Mínimo: 1 |
 
 #### Objectos suportados
 

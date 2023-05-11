@@ -337,8 +337,8 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 | Parâmetros | Tipo    |    | Descrição                              |
 | ---------- | ------- | -- | -------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name      |
-| column     | Longint | -> | Column index                           |
-| row        | Longint | -> | Row index                              |
+| column     | Longint | -> | Índice de coluna                       |
+| row        | Longint | -> | Índice de linha                        |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted) |
 | Resultados | Objeto  | <- | Range object of a single cell          |
 
@@ -393,8 +393,8 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 | Parâmetros  | Tipo    |    | Descrição                                        |
 | ----------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                |
-| column      | Integer | -> | Column index                                     |
-| row         | Integer | -> | Row index                                        |
+| column      | Integer | -> | Índice de coluna                                 |
+| row         | Integer | -> | Índice de linha                                  |
 | columnCount | Integer | -> | Number of columns                                |
 | rowCount    | Integer | -> | Number of rows                                   |
 | sheet       | Integer | -> | Sheet index (current sheet if omitted)           |
@@ -442,7 +442,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 | Parâmetros  | Tipo    |    | Descrição                                        |
 | ----------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                |
-| column      | Integer | -> | Column index                                     |
+| column      | Integer | -> | Índice de coluna                                 |
 | columnCount | Integer | -> | Number of columns                                |
 | sheet       | Integer | -> | Sheet index (current sheet if omitted)           |
 | Resultados  | Objeto  | <- | Range object of cells|<!-- END REF --> |
@@ -610,9 +610,9 @@ Document contents are converted with respect to their viewing attributes, includ
 * Text : style / font / size / alignment / orientation / rotation / format
 * Cell background : color / image
 * Cell borders : thickness / color / style
-* Cell merge
+* Fusão de células
 * Imagens
-* Row height
+* Altura da linha
 * Largura da coluna
 * Hidden columns / rows.
 > > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
@@ -1242,7 +1242,7 @@ You want to trace the execution of the commands and empty the command buffer:
 | Parâmetros | Tipo   |    | Descrição             |
 | ---------- | ------ | -- | --------------------- |
 | font       | Text   | -> | Font shorthand string |
-| Resultados | Objeto | <- | Font object           |
+| Resultados | Objeto | <- | Objecto letra         |
 
 <!-- END REF -->
 
@@ -2093,11 +2093,11 @@ Get the sheet count and set the current sheet to the last sheet:
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| Parâmetros      | Tipo    |    | Descrição                              |
-| --------------- | ------- | -- | -------------------------------------- |
-| vpAreaName      | Text    | -> | 4D View Pro area form object name      |
-| name            | Text    | -> | Nome da folha                          |
-| Function result | Integer | <- | Sheet index|<!-- END REF --> |
+| Parâmetros      | Tipo    |    | Descrição                                  |
+| --------------- | ------- | -- | ------------------------------------------ |
+| vpAreaName      | Text    | -> | 4D View Pro area form object name          |
+| name            | Text    | -> | Nome da folha                              |
+| Function result | Integer | <- | Índice da folha|<!-- END REF --> |
 
 #### Descrição
 
@@ -2134,7 +2134,7 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 | Parâmetros      | Tipo    |    | Descrição                                |
 | --------------- | ------- | -- | ---------------------------------------- |
 | vpAreaName      | Text    | -> | 4D View Pro area form object name        |
-| sheet           | Integer | -> | Sheet index                              |
+| sheet           | Integer | -> | Índice da folha                          |
 | Function result | Text    | <- | Nome da folha|<!-- END REF --> |
 
 #### Descrição
@@ -2211,7 +2211,7 @@ If($options.colHeaderVisible) //column headers are visible
 | Parâmetros      | Tipo     |    | Descrição                                                                   |
 | --------------- | -------- | -- | --------------------------------------------------------------------------- |
 | vpAreaName      | Text     | -> | 4D View Pro area form object name                                           |
-| sheet           | Integer  | <- | Sheet index                                                                 |
+| sheet           | Integer  | <- | Índice da folha                                                             |
 | Function result | Booleano | <- | True if print lines are visible, False otherwise|<!-- END REF --> |
 
 #### Descrição
@@ -2513,7 +2513,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | 4D View Pro area form object name                                                                 |
 | tableName  | Text       | -> | Nome da tabela                                                                                    |
-| reset      | Booleano   | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True   |
+| reset      | Booleano   | -> | True to clear the dirty status from the current table, False to keep it untouched. Padrão=True    |
 | sheet      | Integer    | -> | Sheet index (current sheet if omitted)                                                            |
 | Resultados | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF --> |
 
@@ -3311,7 +3311,7 @@ VP NEW DOCUMENT("myVPArea")
 
 | Parâmetros | Tipo   |    | Descrição                                 |
 | ---------- | ------ | -- | ----------------------------------------- |
-| fontObj    | Objeto | -> | Font object                               |
+| fontObj    | Objeto | -> | Objecto letra                             |
 | Resultados | Text   | <- | Font shorthand|<!-- END REF --> |
 
 #### Descrição
@@ -3929,7 +3929,7 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | Parâmetros | Tipo    |    | Descrição                                         |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                 |
-| row        | Integer | -> | Row index                                         |
+| row        | Integer | -> | Índice de linha                                   |
 | rowCount   | Integer | -> | Number of rows                                    |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)            |
 | Resultados | Objeto  | <- | Range object of row(s)|<!-- END REF --> |
@@ -4656,7 +4656,7 @@ Case of
 | dataObj    | Objeto  | -> | Data object to load in the data context     |
 | dataColl   | Objeto  | -> | Data collection to load in the data context |
 | options    | Objeto  | -> | Additional options                          |
-| sheet      | Integer | -> | Sheet index|<!-- END REF -->      |
+| sheet      | Integer | -> | Índice da folha|<!-- END REF -->  |
 
 #### Descrição
 
@@ -5204,7 +5204,7 @@ O PDF:
 
 | Parâmetros  | Tipo   |    | Descrição                                                   |
 | ----------- | ------ | -- | ----------------------------------------------------------- |
-| rangeObj    | Objeto | -> | Range of rows                                               |
+| rangeObj    | Objeto | -> | Intervalo de linhas                                         |
 | propertyObj | Objeto | -> | Object containing row properties|<!-- END REF --> |
 
 #### Descrição
@@ -5962,7 +5962,7 @@ The following table lists the available workbook options:
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                          |
 | pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
-| referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table>                                                                                                                                                  |
+| referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table>                                                                                                                                                  |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                              |
 | rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
 | scrollbarAppearance                   | number                  | Scrollbar appearance. Valores disponíveis: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>                                                                                                                                                                                  |

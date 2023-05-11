@@ -15,9 +15,9 @@ Las siguientes ubicaciones pueden utilizarse para las imágenes estáticas:
 
 #### Gramática JSON
 
-| Nombre  | Tipos de datos | Valores posibles                                                                            |
-|:-------:|:--------------:| ------------------------------------------------------------------------------------------- |
-| picture |      text      | Relative or filesystem path in POSIX syntax, or "var:<variableName\>" for picture variable |
+| Nombre  | Tipos de datos | Valores posibles                                                                                                  |
+|:-------:|:--------------:| ----------------------------------------------------------------------------------------------------------------- |
+| picture |      text      | Ruta relativa o del sistema de archivos en sintaxis POSIX, o "var:<variableName\>" para una variable tipo imagen |
 
 #### Objetos soportados
 

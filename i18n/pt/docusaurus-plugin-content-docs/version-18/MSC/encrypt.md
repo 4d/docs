@@ -91,7 +91,7 @@ You can save the encryption key each time a new passphrase has been provided:
 
 Successive encryption keys can be stored on the same device.
 
-## Log file
+## Arquivo histórico
 
 Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. É criado no formato XML e se chama "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 

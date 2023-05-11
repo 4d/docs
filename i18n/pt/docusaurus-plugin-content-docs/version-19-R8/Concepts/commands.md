@@ -173,7 +173,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`CREATE THUMBNAIL`](https://doc.4d.com/4dv19R/help/command/en/page679.html)                                   | 679    |
 | [`cs`](https://doc.4d.com/4dv19R/help/command/en/page1710.html)                                                | 1710   |
 | [`Current client authentication`](https://doc.4d.com/4dv19R/help/command/en/page1355.html)                     | 1355   |
-| [`Current date`](https://doc.4d.com/4dv19R/help/command/en/page33.html)                                        | 33     |
+| [`Data actual`](https://doc.4d.com/4dv19R/help/command/en/page33.html)                                         | 33     |
 | [`Current default table`](https://doc.4d.com/4dv19R/help/command/en/page363.html)                              | 363    |
 | [`Current form name`](https://doc.4d.com/4dv19R/help/command/en/page1298.html)                                 | 1298   |
 | [`Current form table`](https://doc.4d.com/4dv19R/help/command/en/page627.html)                                 | 627    |
@@ -184,7 +184,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`Current process`](https://doc.4d.com/4dv19R/help/command/en/page322.html)                                    | 322    |
 | [`Current process name`](https://doc.4d.com/4dv19R/help/command/en/page1392.html)                              | 1392   |
 | [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html)                                | 484    |
-| [`Current time`](https://doc.4d.com/4dv19R/help/command/en/page178.html)                                       | 178    |
+| [`Hora actual`](https://doc.4d.com/4dv19R/help/command/en/page178.html)                                        | 178    |
 | [`Current user`](https://doc.4d.com/4dv19R/help/command/en/page182.html)                                       | 182    |
 | [`CUT NAMED SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page334.html)                                | 334    |
 | <a name="D">**D**</a>                                                                                      |        |
@@ -846,7 +846,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`PLAY`](https://doc.4d.com/4dv19R/help/command/en/page290.html)                                               | 290    |
 | [`PLUGIN LIST`](https://doc.4d.com/4dv19R/help/command/en/page847.html)                                        | 847    |
 | [`POP RECORD`](https://doc.4d.com/4dv19R/help/command/en/page177.html)                                         | 177    |
-| [`Pop up menu`](https://doc.4d.com/4dv19R/help/command/en/page542.html)                                        | 542    |
+| [`Menu pop-up`](https://doc.4d.com/4dv19R/help/command/en/page542.html)                                        | 542    |
 | [`POP3 New transporter`](https://doc.4d.com/4dv19R/help/command/en/page1697.html)                              | 1697   |
 | [`Position`](https://doc.4d.com/4dv19R/help/command/en/page15.html)                                            | 15     |
 | [`POST CLICK`](https://doc.4d.com/4dv19R/help/command/en/page466.html)                                         | 466    |

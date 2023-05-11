@@ -408,7 +408,7 @@ In 4D, the following escape sequences can be used:
 
 | Escape sequence               | Character replaced   |
 | ----------------------------- | -------------------- |
-| `\n`                         | LF (Line feed)       |
+| `\n`                         | LF (Avanço de linha) |
 | `\t`                         | HT (Tab)             |
 | `\r`                         | CR (Carriage return) |
 | ``\\` |``&#96; (Backslash) |                      |

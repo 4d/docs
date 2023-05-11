@@ -3,7 +3,7 @@ id: cli
 title: Interfaz de línea de comando
 ---
 
-You can use the macOS Terminal or the Windows console to drive your 4D applications (4D, 4D Server, merged application, and [tool4d](#tool4d)) using command lines. Más concretamente, esta funcionalidad le permite:
+Puede utilizar el Terminal de macOS o la consola de Windows para manejar sus aplicaciones 4D (4D, 4D Server, aplicación fusionada y [tool4d](#tool4d)) utilizando líneas de comando. Más concretamente, esta funcionalidad le permite:
 
 - lanzar una base de datos de forma remota, lo que puede ser especialmente útil para administrar los servidores web.
 - ejecutar pruebas automáticas para sus aplicaciones.
@@ -19,7 +19,7 @@ Puede ejecutar líneas de comando para las aplicaciones 4D utilizando el termina
 
 ## Lanzar una aplicación 4D
 
-Here is a description of command lines and arguments supported to launch 4D applications.
+A continuación se describen las líneas de comando y los argumentos soportados para lanzar aplicaciones 4D.
 
 Sintaxis:
 
@@ -32,7 +32,7 @@ Sintaxis:
 
 | Argumento&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Valor                                                | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `applicationPath`                                                                                                                                                                             | Ruta de 4D, 4D Server, aplicación fusionada o tool4d | Launches the application.<br/>If not headless: identical to double-clicking the application; when called without structure file argument, the application is executed and the 'select database' dialog box appears.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `applicationPath`                                                                                                                                                                             | Ruta de 4D, 4D Server, aplicación fusionada o tool4d | Lanza la aplicación.<br/>Si no es sin interfaz: idéntico a hacer doble clic en la aplicación; cuando se llama sin argumento de archivo de estructura, la aplicación se ejecuta y aparece la caja de diálogo "seleccionar base de datos".                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `--version`                                                                                                                                                                                   |                                                      | Muestra la versión de la aplicación y sale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `--help`                                                                                                                                                                                      |                                                      | Muestra el mensaje de ayuda y sale. Argumentos alternativos: -?, -h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--project`                                                                                                                                                                                   | projectPath &#124; packagePath &#124; 4dlinkPath     | Archivo de proyecto a abrir con el archivo de datos actual. No aparece ninguna caja de diálogo.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -47,8 +47,8 @@ Sintaxis:
 | `--webadmin-auto-start`                                                                                                                                                                       | Boolean                                              | Estado del inicio automático del [servidor web WebAdmin](webAdmin.md). No disponible con la herramienta [4d](#tool4d).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `--webadmin-store-settings`                                                                                                                                                                   |                                                      | Almacena la llave de acceso y los parámetros de inicio automático en el archivo de parámetros actual (es decir, el archivo [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) por defecto o un archivo personalizado designado por el parámetro `--webadmin-settings-path`). Utilice el argumento `--webadmin-store-settings` para guardar estos parámetros si es necesario. No disponible con la herramienta [4d](#tool4d).                                                                                                                                                                                                                                                         |
 | `--utility`                                                                                                                                                                                   |                                                      | Sólo disponible con 4D Server. Inicia [4D Server en modo utilitario](#4d-server-in-utility-mode).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `--skip-onstartup`                                                                                                                                                                            |                                                      | Launches the project without executing any "automatic" methods, including the `On Startup` and `On Exit` database methods                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `--startup-method`                                                                                                                                                                            | Project method name (string)                         | Project method to execute immediately after the `On Startup` database method (if not skipped with `--skip-onstartup`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `--skip-onstartup`                                                                                                                                                                            |                                                      | Lanza el proyecto sin ejecutar ningún método "automático", incluidos los métodos base `On Startup` y `On Exit`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `--startup-method`                                                                                                                                                                            | Nombre del método proyecto (cadena)                  | Método proyecto a ejecutar inmediatamente después del método base `On Startup` (si no se omite con `--skip-onstartup`).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). En este caso, se lanza un mensaje de error tanto en el flujo stderr como en el registro de eventos sistema, y luego la aplicación se cierra.
 
@@ -188,49 +188,49 @@ Apertura sin interfaz (modo headless):
 ## tool4d
 
 
-**tool4d** is a free, lightweight, stand-alone application allowing you to open a 4D project in headless mode and execute some 4D code using the CLI.
+**tool4d** es una aplicación gratuita, ligera y autónoma que le permite abrir un proyecto 4D en modo sin interfaz y ejecutar código 4D utilizando la lìnea de comando (CLI).
 
-tool4d is available on Windows and macOS and is always associated to a 4D release (same version and build number). It is only provided in English localization.
+tool4d está disponible en Windows y macOS y siempre está asociado a una versión 4D (misma versión y número de compilación). Sólo está disponible en inglés.
 
-tool4d is a perfect tool if you want to:
+tool4d es una herramienta perfecta si desea:
 
-- implement a CI/CD chain for your 4D application,
-- use a light 4D executable to run 4D scripts, for example to execute automatic unit tests.
+- implementar una cadena CI/CD para su aplicación 4D,
+- utilizar un ejecutable 4D ligero para ejecutar scripts 4D, por ejemplo para ejecutar pruebas unitarias automáticas.
 
 
 
 ### Uso de tool4d
 
-You can get tool4d from the 4D [Product download page](https://product-download.4d.com/).
+Puede obtener tool4d en la página de descarga de productos de 4D [](https://product-download.4d.com/).
 
-You use tool4d by executing a [command line](#launch-a-4d-application) with a standard 4D project. You can use all arguments described in the above table, except --`webadmin` since this component is [disabled in tool4d](#disabled-4d-features). With tool4d, the following specific sequence is launched:
+Se utiliza tool4d ejecutando una [línea de comandos](#launch-a-4d-application) con un proyecto 4D estándar. Puede utilizar todos los argumentos descritos en la tabla anterior, excepto --`webadmin` ya que este componente está [desactivado en tool4d](#disabled-4d-features). Con tool4d, se lanza la siguiente secuencia específica:
 
-1. tool4d executes the `On Startup` database method (and all "automatic" methods such as [user method](../Users/handling_users_groups.md#user-properties)), except if the `--skip-onstartup` argument is passed.
-2. tool4d executes the method designated by the `--startup-method` argument, if any.
-3. tool4d executes the `On Exit` database method, except if the `--skip-onstartup` argument is passed.
-4. tool4d quits.
+1. tool4d ejecuta el método base `On Startup` (y todos los métodos "automáticos" como el [método usuario](../Users/handling_users_groups.md#user-properties)), excepto si se pasa el argumento `--skip-onstartup`.
+2. tool4d ejecuta el método designado por el argumento `--startup-method`, si existe.
+3. tool4d ejecuta el método base `On Exit`, excepto si se pasa el argumento `--skip-onstartup`.
+4. tool4d cierra.
 
-On Windows, tool4d is a console application so that the `stdout` stream is displayed in the terminal (cmd, powershell...).
+En Windows, tool4d es una aplicación de consola, de modo que el flujo `stdout` se muestra en el terminal (cmd, powershell...).
 
 
 :::note Notas
 
-- tool4d is always executed headless (the `headless` command line option is useless).
-- The [`Application type`](https://doc.4d.com/4dv19R/help/command/en/page494.html) command returns the value 6 ("tool4d") when called from the tool4d application.
-- the [diagnostic log file](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) is prefixed with "4DDiagnosticLogTool".
+- tool4d se ejecuta siempre sin interfaz (la opción de línea de comandos `headless` es inútil).
+- El comando [`Application type`](https://doc.4d.com/4dv19R/help/command/en/page494.html) devuelve el valor 6 ("tool4d") cuando se llama desde la aplicación tool4d.
+- el archivo de registro de diagnóstico [](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) lleva el prefijo "4DDiagnosticLogTool".
 
 :::
 
 
 ### Funcionalidades 4D desactivadas
 
-Keep in mind that tool4d runs automatically in **headless mode** (see `--headless` in [this table](#launch-a-4d-application)), and does neither give access to the 4D IDE nor any of its servers. En concreto, se desactivan las siguientes funcionalidades:
+Tenga en cuenta que tool4d se ejecuta automáticamente en **modo headless** (ver `--headless` en [esta tabla](#launch-a-4d-application)), y no da acceso al IDE 4D ni a ninguno de sus servidores. En concreto, se desactivan las siguientes funcionalidades:
 
 - servidor de aplicaciones, servidor web, servidor SQL,
 - programador de copias de seguridad,
-- ODBC and SQL pass-through,
+- ODBC y SQL pass-through,
 - todos los componentes como 4D View Pro, 4D SVG, 4D NetKit...,
-- hunspell spell checker,
+- corrector ortográfico hunspell,
 - corrector ortográfico japonés (librería *mecab*),
 - WebAdmin
 - CEF,
@@ -257,6 +257,6 @@ A diferencia de tool4d, 4D Server en modo utilitario tiene todas sus funcionalid
 
 :::tip Ver también
 
-See [this blog post](https://blog.4d.com/a-tool-for-4d-code-execution-in-cli/) for examples of how to use tool4d and 4D Server in utility mode.
+Consulte [esta entrada del blog](https://blog.4d.com/a-tool-for-4d-code-execution-in-cli/) para ver ejemplos de cómo utilizar tool4d y 4D Server en modo utilitario.
 
 :::

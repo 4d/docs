@@ -37,7 +37,7 @@ Create another entity set based on previously created entity sets
 | Parâmetros       | Tipo   | Descrição                                                      |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | String | One of the logical operators to test with the other entity set |
-| $otherCollection | String | Entity set ID                                                  |
+| $otherCollection | String | ID do conjunto de entidades                                    |
 
 ### Descrição
 

@@ -1,6 +1,6 @@
 ---
 id: dataExplorer
-title: Data Explorer
+title: Explorador de dados
 ---
 
 O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. Ajuda a controlar dados e rapidamente identificar problemas em qualquer etapa do processo de desenvolvimento.
@@ -22,7 +22,7 @@ O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para 
 
 Para se conectar à página web do Data Explorer:
 
-- From a 4D application (with interface):
+- A partir de uma aplicação 4D (com interface):
   - To open a new 4D window with the Data Explorer page displayed in a web area, select **Data Explorer** in the **Records** menu or click on the **Data** button in the main toolbar.
   - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
 - From 4D Server, select **Data Explorer In Browser** in the **Window** menu (the Data Explorer can only be opened on an external browser).

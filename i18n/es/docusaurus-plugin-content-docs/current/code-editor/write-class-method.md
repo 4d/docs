@@ -21,13 +21,13 @@ Cada ventana del Editor de Código tiene una barra de herramientas que ofrece ac
 
 | Elemento                             | Icono                                                                             | Descripción                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Ejecución del método**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Cuando se trabaja con métodos, cada ventana del Editor de Código tiene un botón que puede utilizarse para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución:<ul><li> **Ejecutar nuevo proceso**: crea un proceso y ejecuta el método en modo estándar en este proceso.</li><li>**Ejecutar y depurar nuevo proceso**: crea un nuevo proceso y muestra el método en la ventana Depurador para la ejecución paso a paso en este proceso.</li><li>**Ejecutar en el proceso de Aplicación**: ejecuta el método en modo estándar en el contexto del proceso de Aplicación (en otras palabras, la ventana de visualización de registros).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>Para obtener más información sobre la ejecución de métodos, consulte [Llamar Métodos Proyecto](../Concepts/methods.md#calling-project-methods). |
-| **Buscar en el método**              | ![search-icon](../assets/en/code-editor/search.png)                               | Displays the [*Search* area](#find-and-replace).                                                                                                                                                                                                                                                                                                                                           |
+| **Ejecución del método**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | Cuando se trabaja con métodos, cada ventana del Editor de Código tiene un botón que puede utilizarse para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución:<ul><li> **Ejecutar nuevo proceso**: crea un proceso y ejecuta el método en modo estándar en este proceso.</li><li>**Ejecutar y depurar nuevo proceso**: crea un nuevo proceso y muestra el método en la ventana Depurador para la ejecución paso a paso en este proceso.</li><li>**Ejecutar en el proceso de Aplicación**: ejecuta el método en modo estándar en el contexto del proceso de Aplicación (en otras palabras, la ventana de visualización de registros).</li><li>**Ejecutar y depurar en el proceso Aplicación**: muestra el método en la ventana Depurador para su ejecución paso a paso en el contexto del proceso Aplicación (es decir, en la ventana de visualización de registros).</li></ul>Para obtener más información sobre la ejecución de métodos, consulte [Llamar Métodos Proyecto](../Concepts/methods.md#calling-project-methods). |
+| **Buscar en el método**              | ![search-icon](../assets/en/code-editor/search.png)                               | Muestra el [*área de búsqueda*](#find-and-replace).                                                                                                                                                                                                                                                                                                                                        |
 | **Macros**                           | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserta una macro en la selección. Haga clic en la flecha desplegable para mostrar una lista de macros disponibles. Para obtener más información sobre como crear e instanciar macros, consulte [Macros](creating-using-macros.md).                                                                                                                                                        |
-| **Expandir todo/Contraer todo**      | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                                                                   |
-| **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                                                                      |
+| **Expandir todo/Contraer todo**      | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | Estos botones permiten expandir o contraer todas las estructuras de flujo de control del código.                                                                                                                                                                                                                                                                                           |
+| **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Muestra el diálogo [Propiedades del método](../Concepts/methods.md#project-method-properties) (sólo métodos proyecto).                                                                                                                                                                                                                                                                     |
 | **Últimos valores del portapapeles** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Muestra los últimos valores almacenados en el portapapeles.                                                                                                                                                                                                                                                                                                                                |
-| **Portapapeles**                     | ![iconos del portapapeles](../assets/en/code-editor/clipboards.png)               | Nueve portapapeles disponibles en el editor de código. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                                                             |
+| **Portapapeles**                     | ![iconos del portapapeles](../assets/en/code-editor/clipboards.png)               | Nueve portapapeles disponibles en el editor de código. Puede [utilizar estos portapapeles](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) haciendo clic directamente sobre ellos o utilizando atajos de teclado. Puede utilizar la opción [Preferencias](Preferences/methods.md#options-1) para ocultarlas.                                                      |
 | **Despliegue de navegación**         | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Le permite navegar dentro de métodos y clases con contenido etiquetado automáticamente o marcadores declarados manualmente. Ver abajo                                                                                                                                                                                                                                                      |
 
 
@@ -122,10 +122,10 @@ Para obtener más información sobre los puntos de interrupción, consulte la se
 
 Puede mostrar u ocultar los números de línea en el área de puntos de interrupción para cada ventana del Editor de código.
 
-- To enable or disable the display of line numbers by default,  choose **Preferences** > **Methods** > **Show line numbers**.
-- To modify this display separately for each window of the Code Editor, choose **Method** > **View** > **Line Numbers**.
+- Para activar o desactivar la visualización de los números de línea por defecto, seleccione **Preferencias** > **Métodos** > **Mostrar números de línea**.
+- Para modificar esta visualización por separado para cada ventana del Editor de Código, elija **Método** > **Ver** > **Números de línea**.
 
-Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
+La visualización de los números de línea facilita la orientación en la ventana. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
 
 This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
 
@@ -136,7 +136,7 @@ The status bar located at the bottom right part of the editor window displays th
 ![](../assets/en/code-editor/status-bar.png)
 
 - **Ln**: número de línea
-- **Col**: Column number, i.e., the level in the hierarchy of programming structures. El primer nivel es 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
+- **Col**: número de columna, es decir, el nivel en la jerarquía de las estructuras de programación. El primer nivel es 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
 - **Ch**: ubicación del caracter en la línea.
 - ![](../assets/en/code-editor/show-hide-list.png): Ocultar/mostrar listas.
 
@@ -216,50 +216,50 @@ Multiple features of 4D's Code Editor are available through default keyboard sho
 
 :::info macOS
 
-Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
+En macOS, utilice la tecla **Command** en lugar de la tecla **Ctrl** mencionada (Windows).
 
 :::
 
-| **Atajo**                                                 | **Acción**                                                                                                                                    |
-| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Selección y navegación**                                |                                                                                                                                               |
-| Doble clic                                                | Seleccionar un nombre de elemento del lenguaje                                                                                                |
-| [Alt]+doble clic                                          | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                |
-| [Shift]+[flecha derecha]                                  | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left        |
-| [Shift]+[flecha izquierda]                                | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda       |
-| [Shift]+[flecha abajo]                                    | Create and enlarge a selection, line by line, from the top to the bottom                                                                      |
-| [Shift]+[flecha arriba]                                   | Create and enlarge a selection, line by line, from the bottom to the top                                                                      |
-| [Ctrl]+[Shift]+[flecha derecha]                           | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                           |
-| [Ctrl]+[Shift]+[flecha izquierda]                         | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda          |
-| [Ctrl]+[flecha derecha]                                   | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                      |
-| [Ctrl]+[flecha izquierda]                                 | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                      |
-| [Alt]+[flecha abajo]                                      | Mover la(s) línea(s) donde está el cursor hacia abajo                                                                                         |
-| [Alt]+[flecha arriba]                                     | Mover la(s) línea(s) donde está el cursor a la parte superior                                                                                 |
-| [Home]                                                    | Colocar el punto de inserción al comienzo de la línea                                                                                         |
-| [End]                                                     | Coloca el punto de inserción al final de la línea                                                                                             |
-| [Ctrl]+[Home]                                             | Colocar el punto de inserción al comienzo del método                                                                                          |
-| [Ctrl]+[End]                                              | Coloca el punto de inserción al final del método                                                                                              |
-| [Shift]+[Home]                                            | Seleccionar todos los caracteres de la línea situados a la izquierda del cursor                                                               |
-| [Shift]+[End]                                             | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                                 |
-| [PgUp]                                                    | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                     |
-| [PgDn]                                                    | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                       |
-| [**Introspección**](#goto-definition)                     |                                                                                                                                               |
-| [Ctrl]+K o [Alt]+doble clic                               | Same as [**Goto definition**](#goto-definition) command                                                                                       |
-| \[Ctrl\] (Windows) o \[Alt\] (macOS)+pasar sobre un token | Subraye el token (elemento lingüístico identificado). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
-| [**Buscar y reemplazar**](#find-and-replace)              |                                                                                                                                               |
-| [Ctrl]+F                                                  | Buscar                                                                                                                                        |
-| [Ctrl]+G                                                  | Buscar siguiente                                                                                                                              |
-| [Ctrl]+[Shift]+G                                          | Buscar anterior                                                                                                                               |
-| [Ctrl]+E                                                  | Find Same Next                                                                                                                                |
-| [Ctrl]+[Shift]+E                                          | Find Same Previous                                                                                                                            |
-| [Ctrl]+[Alt]+F                                            | Reemplazar                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                            | Reemplazar siguiente                                                                                                                          |
-| [Ctrl]+[Alt]+[Shift]+G                                    | Reemplazar anterior                                                                                                                           |
-| [**Portapapeles**](#clipboards)                           |                                                                                                                                               |
-| [Shift]+clic o [Alt]+clic en el icono del portapapeles    | Copiar el texto seleccionado en el portapapeles                                                                                               |
-| [Ctrl]+[Shift]+tecla numérica                             | Copiar el texto seleccionado en el portapapeles numérico                                                                                      |
-| [Ctrl]+clic en el icono del portapapeles                  | Pegar el contenido de un portapapeles en la posición del cursor                                                                               |
-| [Ctrl]+tecla numérica                                     | Pegar el contenido del portapapeles numérico en la posición del cursor                                                                        |
+| **Atajo**                                                 | **Acción**                                                                                                                                           |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Selección y navegación**                                |                                                                                                                                                      |
+| Doble clic                                                | Seleccionar un nombre de elemento del lenguaje                                                                                                       |
+| [Alt]+doble clic                                          | Seleccionar un nombre de elemento del lenguaje que contenga espacios (constante, método, etc.)                                                       |
+| [Shift]+[flecha derecha]                                  | Crear y ampliar la selección, caracter por caracter, hacia la derecha, o Reducir la selección, caracter por caracter, desde la izquierda             |
+| [Shift]+[flecha izquierda]                                | Reducir la selección, caracter por caracter, desde la derecha o Crear y ampliar la selección, caracter por caracter, hacia la izquierda              |
+| [Shift]+[flecha abajo]                                    | Crear y ampliar una selección, línea por línea, de arriba abajo                                                                                      |
+| [Shift]+[flecha arriba]                                   | Crear y ampliar una selección, línea por línea, desde abajo hacia arriba                                                                             |
+| [Ctrl]+[Shift]+[flecha derecha]                           | Crear y ampliar la selección, palabra por palabra, desde la derecha                                                                                  |
+| [Ctrl]+[Shift]+[flecha izquierda]                         | Reducir la selección, palabra por palabra, desde la derecha, o crear y ampliar la selección, palabra por palabra, desde la izquierda                 |
+| [Ctrl]+[flecha derecha]                                   | Mover el punto de inserción, palabra por palabra, de izquierda a derecha                                                                             |
+| [Ctrl]+[flecha izquierda]                                 | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                                             |
+| [Alt]+[flecha abajo]                                      | Mover la(s) línea(s) donde está el cursor hacia abajo                                                                                                |
+| [Alt]+[flecha arriba]                                     | Mover la(s) línea(s) donde está el cursor a la parte superior                                                                                        |
+| [Home]                                                    | Colocar el punto de inserción al comienzo de la línea                                                                                                |
+| [End]                                                     | Coloca el punto de inserción al final de la línea                                                                                                    |
+| [Ctrl]+[Home]                                             | Colocar el punto de inserción al comienzo del método                                                                                                 |
+| [Ctrl]+[End]                                              | Coloca el punto de inserción al final del método                                                                                                     |
+| [Shift]+[Home]                                            | Seleccionar todos los caracteres de la línea situados a la izquierda del cursor                                                                      |
+| [Shift]+[End]                                             | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                                        |
+| [PgUp]                                                    | Desplazar el contenido del método, página a página, de abajo a arriba (no modifica el punto de inserción)                                            |
+| [PgDn]                                                    | Desplazar el contenido del método, página a página, de arriba abajo (no modifica el punto de inserción)                                              |
+| [**Introspección**](#goto-definition)                     |                                                                                                                                                      |
+| [Ctrl]+K o [Alt]+doble clic                               | Igual que el comando [**Goto definition**](#goto-definition)                                                                                         |
+| \[Ctrl\] (Windows) o \[Alt\] (macOS)+pasar sobre un token | Subraye el token (elemento lingüístico identificado). Haga clic en el token subrayado = igual que el comando [**Goto definition**](#goto-definition) |
+| [**Buscar y reemplazar**](#find-and-replace)              |                                                                                                                                                      |
+| [Ctrl]+F                                                  | Buscar                                                                                                                                               |
+| [Ctrl]+G                                                  | Buscar siguiente                                                                                                                                     |
+| [Ctrl]+[Shift]+G                                          | Buscar anterior                                                                                                                                      |
+| [Ctrl]+E                                                  | Buscar el siguiente                                                                                                                                  |
+| [Ctrl]+[Shift]+E                                          | Buscar el mismo anterior                                                                                                                             |
+| [Ctrl]+[Alt]+F                                            | Reemplazar                                                                                                                                           |
+| [Ctrl]+[Alt]+G                                            | Reemplazar siguiente                                                                                                                                 |
+| [Ctrl]+[Alt]+[Shift]+G                                    | Reemplazar anterior                                                                                                                                  |
+| [**Portapapeles**](#clipboards)                           |                                                                                                                                                      |
+| [Shift]+clic o [Alt]+clic en el icono del portapapeles    | Copiar el texto seleccionado en el portapapeles                                                                                                      |
+| [Ctrl]+[Shift]+tecla numérica                             | Copiar el texto seleccionado en el portapapeles numérico                                                                                             |
+| [Ctrl]+clic en el icono del portapapeles                  | Pegar el contenido de un portapapeles en la posición del cursor                                                                                      |
+| [Ctrl]+tecla numérica                                     | Pegar el contenido del portapapeles numérico en la posición del cursor                                                                               |
 
 :::tip
 
@@ -286,12 +286,12 @@ El Editor de código incluye numerosos [atajos de navegación](#shortcuts).
 El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4D:
 
 - inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
-- it allows to define [escape sequences](../Concepts/quick-tour.md#escape-sequences).
+- permite definir [secuencias de escape](../Concepts/quick-tour.md#escape-sequences).
 
 
 :::caution
 
-The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. For instance,``C:\MyDocuments`will become`C:\\MyDocuments`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+El caracter de barra invertida (`\`) se utiliza como separador en [los nombres de ruta en Windows](../Concepts/paths.md#windows). En general, 4D interpretará correctamente los nombres de ruta de Windows introducidos en el Editor de código sustituyendo la barra invertida simple `\` por una barra invertida doble ``\\`. Por ejemplo,``C:\MisDocumentos`se convertirá en`C:\MisDocumentos`. Sin embargo, si escribe`"C:\MisDocumentos\New"`, 4D mostrará`"C:\MisDocumentos\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
@@ -491,21 +491,21 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
+Al introducir un código, puede comprobar inmediatamente la sintaxis de la línea actual (sin avanzar a la línea siguiente) presionando la tecla **Intro** del teclado numérico. 4D evalúa la línea, le da formato, marca cualquier error y coloca el punto de inserción al final de la línea. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
 
-When the method, class or function is validated, 4D checks for:
+Cuando se valida el método, clase o función, 4D verifica:
 
 - errores de sintaxis básicos
-- the structure of statements (`If`, `End if` and so on)
-- matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
+- la estructura de las instrucciones (`If`, `End if` y así sucesivamente)
+- que coincidan con los caracteres que encierran el código, como paréntesis o comillas. Cuando escribe un caracter de encierro, 4D indica la coincidencia enmarcando los caracteres de inicio/fin con rectángulos grises:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
+> Si hace clic en un caracter delimitador del código, 4D indica por defecto su coincidencia con rectángulos grises. Puede modificar la forma en que 4D indica los caracteres de cierre coincidentes o desactivar esta función en **Preferencias** > **Métodos** > **Opciones** > **Paréntesis coincidentes**.
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). No verifica errores que sólo ocurren durante la ejecución. Los errores de ejecución son detectados por 4D cuando se ejecuta el código.
+El editor de código sólo puede comprobar errores de sintaxis evidentes (faltas de ortografía y similares). No verifica errores que sólo ocurren durante la ejecución. Los errores de ejecución son detectados por 4D cuando se ejecuta el código.
 
-4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. El compilador también ofrece una ayuda indispensable para detectar errores. Para más información sobre el compilador, consulte el capítulo [Compilación](../Project/compiler.md).
+4D tiene un depurador integrado (ver [Depuración](../Debugging/debugger.md)) para manejar y corregir estos errores. El compilador también ofrece una ayuda indispensable para detectar errores. Para más información sobre el compilador, consulte el capítulo [Compilación](../Project/compiler.md).
 
 ## Mensajes de ayuda
 
@@ -521,7 +521,7 @@ La [barra de estado](#status-bar) también ofrece información contextual.
 
 - **Documentación de comandos 4D**: al pasar el ratón sobre un comando o función 4D, un mensaje de ayuda ofrece su sintaxis junto con una breve descripción de su funcionamiento. ![](../assets/en/code-editor/status-bar-description.png)
 
-- **Variable type and description**: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any. ![](../assets/en/code-editor/variable-type.png)
+- **Tipo de variable y descripción**: al pasar el ratón sobre una variable, un mensaje de ayuda muestra su tipo (si se ha definido explícitamente en el método) y el comentario asociado, si existe. ![](../assets/en/code-editor/variable-type.png)
 
 - **Project methods or functions**: When you mouse over a project method or class function, a help tip displays:
 
@@ -537,11 +537,11 @@ El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), qu
 
 Existen dos tipos de comentarios: `//comment` (comentario de una línea) y `/*comment*/`(comentarios en línea o bloques de comentarios multilínea).
 
-Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the **Comment/Uncomment** command:
+Se pueden crear comentarios digitando los caracteres `/`. Or, the **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. Para utilizar este comando, seleccione el código que desea marcar como comentado y, a continuación, seleccione el comando **Comentar/Descomentar**:
 
 ![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
-When the selection contains only active code, the **Comment** command is applied. When the selection includes both active code and commented lines, an additional pair of comment characters ( // ) is added to the latter; this way, they will retain their initial commented status if the line is subsequently "uncommented." Cuando la selección contiene sólo líneas comentadas, se aplica el comando **Descomentar**.
+Cuando la selección sólo contiene código activo, se aplica el comando **Comentario**. When the selection includes both active code and commented lines, an additional pair of comment characters ( // ) is added to the latter; this way, they will retain their initial commented status if the line is subsequently "uncommented." Cuando la selección contiene sólo líneas comentadas, se aplica el comando **Descomentar**.
 
 > The **Comment/Uncomment** command only operates with full lines --- it cannot be used to comment only part of a line.
 

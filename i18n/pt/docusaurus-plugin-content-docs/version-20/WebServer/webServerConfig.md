@@ -13,8 +13,8 @@ There are different ways to configure the 4D web server settings, depending on t
 | Localização do parâmetro                                      | Scope                                    | Involved web server                             |
 | ------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
 | [webServer object](webServerObject.md)                        | Temporary (current session)              | Any web server, including component web servers |
-| `WEB SET OPTION` or a `WEB XXX` command                       | Temporary (current session)              | Main server                                     |
-| [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanent (all sessions, stored on disk) | Main server                                     |
+| `WEB SET OPTION` or a `WEB XXX` command                       | Temporary (current session)              | Servidor principal                              |
+| [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanent (all sessions, stored on disk) | Servidor principal                              |
 
 > Some settings are not available from all locations.
 
@@ -48,13 +48,13 @@ With 4D in remote mode, these files must be located in the local resources folde
 > TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate).
 
 
-## Character Set
+## Conjunto de caracteres
 
 | Can be set with                    | Nome                                                              | Comentários                    |
 | ---------------------------------- | ----------------------------------------------------------------- | ------------------------------ |
 | webServer object                   | `characterSet`                                                    | MIBEnum integer or Name string |
 | `WEB SET OPTION`                   | `Web character set`                                               | MIBEnum integer or Name string |
-| Caixa de diálogos de configurações | [Options (II) page/Standard Set](../settings/web.md#standard-set) | Pop up menu                    |
+| Caixa de diálogos de configurações | [Options (II) page/Standard Set](../settings/web.md#standard-set) | Menu pop-up                    |
 
 Defines the set of characters to be used by the 4D web server. O valor padrão realmente depende da linguagem do SO.
 > This setting is also used for generating Quick Reports in HTML format .
@@ -70,7 +70,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 > The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
 
-## CORS Settings
+## Parâmetros CORS
 
 | Can be set with                    | Nome                                                                                                            | Comentários                                                                    |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -174,7 +174,7 @@ When disabled (default), all cross site requests sent with CORS are ignored.
 Para obter mais informações sobre o CORS, consulte a [página de compartilhamento de recursos entre origens](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipédia.
 
 #### Veja também
-[CORS Settings](#cors-settings)
+[Parâmetros CORS](#cors-settings)
 
 ## Ativar HTTP
 
@@ -329,7 +329,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 | ---------------------------------- | -------------------------------------------------------------- | ----------- |
 | webServer object                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
 | `WEB SET OPTION`                   | `Web IP address to listen`                                     |             |
-| Caixa de diálogos de configurações | [Configuration page/IP Address](../settings/web.md#ip-address) | Pop up menu |
+| Caixa de diálogos de configurações | [Configuration page/IP Address](../settings/web.md#ip-address) | Menu pop-up |
 
 IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).
 
@@ -377,19 +377,19 @@ Legacy session management enabling status for the 4D web server (deprecated).
 | ---------------------------------- | ---------------------------------------------------- | ----------- |
 | webServer object                   | [`logRecording`](API/WebServerClass.md#logrecording) |             |
 | `WEB SET OPTION`                   | `Web log recording`                                  |             |
-| Caixa de diálogos de configurações | [Log (type) page](../settings/web.md#log-format)     | Pop up menu |
+| Caixa de diálogos de configurações | [Log (type) page](../settings/web.md#log-format)     | Menu pop-up |
 
 Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 
 This setting allows you to select the format of this file. Available values are:
 
-| Value | Nome do formato      | Descrição                                                                                                                                                                                                                |
-| ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | No Log File          | Predefinição                                                                                                                                                                                                             |
-| 1     | Record in CLF format | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
-| 2     | Record in DLF format | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
-| 3     | Record in ELF format | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
-| 4     | Record in WLF format | WebStar Log Format - To be customized in the Settings dialog box                                                                                                                                                         |
+| Value | Nome do formato         | Descrição                                                                                                                                                                                                                |
+| ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 0     | Sem ficheiro de registo | Predefinição                                                                                                                                                                                                             |
+| 1     | Record in CLF format    | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
+| 2     | Record in DLF format    | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
+| 3     | Record in ELF format    | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
+| 4     | Record in WLF format    | WebStar Log Format - To be customized in the Settings dialog box                                                                                                                                                         |
 
 > Formats 3 and 4 are custom formats whose contents must be set beforehand in the [Settings dialog box](../settings/web.md#log-format). If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
 
@@ -532,7 +532,7 @@ Another example:
 In this case, robots are not allowed to access the entire site.
 
 
-## Root Folder
+## Pasta raiz
 
 | Can be set with                    | Nome                                                                         | Comentários                                                                                                                            |
 | ---------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |

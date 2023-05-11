@@ -23,7 +23,7 @@ A class name must be compliant with standard [property naming rules](#object-pro
 
 Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor.
+> **Dica:** Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D.
 
 ## Propriedades dos objectos
 
@@ -42,9 +42,16 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-> If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`).
+:::tip
+
+Starting an object property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+
+:::
 
 Ver também [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+
+> If you use **string notation** within square brackets, property names can contain any characters (ex: `myObject["1. First property"]`).
+
 
 ## Parâmetros
 
@@ -116,7 +123,7 @@ The name of a variable can be up to 31 characters, not including the scope symbo
 
 - A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables).
 - A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
-- Thereafter, the name can include any letter or digit, and the underscore character ("_").
+- A partir daí, o nome pode incluir qualquer letra ou dígito e o carácter de sublinhado ("_").
 - Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (`If`, `For`, etc.), or constant names (`Euro`, `Black`, `Friday`, etc.).
 - Variable names are case insensitive.
@@ -137,7 +144,7 @@ In the 4D language, several elements have their names handled as strings: **form
 Such string names can contain up to 255 characters, not including the `$` or `<>` characters (if any).
 
 - String names can contain any characters.
-- String names are case insensitive.
+- Os nomes das cadeias de caracteres não diferenciam maiúsculas de minúsculas.
 
 Exemplos:
 

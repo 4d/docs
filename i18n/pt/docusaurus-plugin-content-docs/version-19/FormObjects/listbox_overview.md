@@ -229,7 +229,7 @@ Form events on list box or list box column objects may return the following addi
 | ---------------- | ------------- | --------------------------------------------------------------------- |
 | area             | text          | List box object area ("header", "footer", "cell")                     |
 | areaName         | text          | Name of the area                                                      |
-| column           | inteiro longo | Column number                                                         |
+| column           | inteiro longo | Número da coluna                                                      |
 | columnName       | text          | Name of the column                                                    |
 | footerName       | text          | Name of the footer                                                    |
 | headerName       | text          | Name of the header                                                    |
@@ -495,7 +495,7 @@ Pode escrever no método *UI_SetColor*:
 
 A sort in a list box can be standard or custom. When a column of a list box is sorted, all other columns are always synchronized automatically.
 
-### Standard sort
+### Ordenação standard
 
 By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.
 
@@ -503,7 +503,7 @@ You can enable or disable standard user sorts by disabling the [Sortable](proper
 
 Standard sort support depends on the list box type:
 
-| List box type               | Support of standard sort | Comentários                                                                                                  |
+| Tipo de list box            | Support of standard sort | Comentários                                                                                                  |
 | --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | Uma coleção de objetos      | Sim                      | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
 | Collection of scalar values | Não                      | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
@@ -512,7 +512,7 @@ Standard sort support depends on the list box type:
 | Named selection             | Não                      |                                                                                                              |
 | Arrays                      | Sim                      | Columns bound to picture and pointer arrays are not sortable                                                 |
 
-### Custom sort
+### Ordenação personalizada
 
 The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
@@ -612,12 +612,12 @@ Para restaurar a aparência original da list box, é possível:
 
 Dependendo do tipo de list box, pode usar diferentes propriedades para personalizar cores de linha, estilos e exibição:
 
-| Propriedade  | List box array                                                                       | List box seleção                                                                        | List box coleção ou entity selection                                                                                                                            |
-| ------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cor de fundo | [Array cores de fundo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expressão cor de fundo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) ou [Meta info expression](properties_Text.md#meta-info-expression) |
-| Cor de fundo | [Array cores de Fonte](properties_Text.md#row-font-color-array)                      | [Expressão cor fonte](properties_Text.md#font-color-expression)                         | [Font Color Expression](properties_Text.md#font-color-expression) ou [Meta info expression](properties_Text.md#meta-info-expression)                            |
-| Font style   | [Array estilo linha](properties_Text.md#row-style-array)                             | [Expressão estilo](properties_Text.md#style-expression)                                 | [Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                                      |
-| Visualização | [Array controle linha](properties_ListBox.md#row-control-array)                      | -                                                                                       | -                                                                                                                                                               |
+| Propriedade     | List box array                                                                       | List box seleção                                                                        | List box coleção ou entity selection                                                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cor de fundo    | [Array cores de fundo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expressão cor de fundo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) ou [Meta info expression](properties_Text.md#meta-info-expression) |
+| Cor de fundo    | [Array cores de Fonte](properties_Text.md#row-font-color-array)                      | [Expressão cor fonte](properties_Text.md#font-color-expression)                         | [Font Color Expression](properties_Text.md#font-color-expression) ou [Meta info expression](properties_Text.md#meta-info-expression)                            |
+| Estilo de letra | [Array estilo linha](properties_Text.md#row-style-array)                             | [Expressão estilo](properties_Text.md#style-expression)                                 | [Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                                      |
+| Visualização    | [Array controle linha](properties_ListBox.md#row-control-array)                      | -                                                                                       | -                                                                                                                                                               |
 
 ## Imprimir list boxes
 
@@ -748,7 +748,7 @@ This principle is implemented for internal arrays that can be used to manage:
 
 * cores
 * background colors
-* styles
+* estilos
 * filas ocultas
 * seleções
 
@@ -867,7 +867,7 @@ When a list box column is associated with an object array, the way a cell is dis
 
 4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
 
-| valueType | Default widget                                 | Alternative widget(s)                                                                          |
+| valueType | Widget padrão                                  | Alternative widget(s)                                                                          |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | text      | entrada de texto                               | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
@@ -883,7 +883,7 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Tipo de valor | Default format                                             | Entry control         |
+| Tipo de valor | Formato predefinido                                        | Controlo de entrada   |
 | ------------- | ---------------------------------------------------------- | --------------------- |
 | text          | same as defined in object                                  | any (no control)      |
 | real          | same as defined in object (using system decimal separator) | "0-9" e "." e "-"     |
@@ -904,8 +904,8 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
 | *Attributes*          | *Descrição*                             |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
-| min                   | minimum value                           |      | x    | x       |         |       |       |
-| max                   | maximum value                           |      | x    | x       |         |       |       |
+| min                   | valor mínimo                            |      | x    | x       |         |       |       |
+| max                   | valor máximo                            |      | x    | x       |         |       |       |
 | behavior              | "threeStates" value                     |      |      | x       |         |       |       |
 | requiredList          | drop-down list defined in object        | x    | x    | x       |         |       |       |
 | choiceList            | combo box defined in object             | x    | x    | x       |         |       |       |

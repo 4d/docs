@@ -42,9 +42,20 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-> 大カッコ [ ] に文字列を含める記法を利用すれば、プロパティ名にはあらゆる文字を使用することができます (例: `myObject["1. First property"]`)。
+:::tip
+
+アンダースコア ("_") 文字でオブジェクトプロパティ名を開始すると、そのプロパティは 4Dコードエディターの自動補完機能から除外されます。 たとえば、`$o._myPrivateProperty` を宣言した場合、コードエディターにおいて `"$o. "`とタイプしても、このプロパティは候補として提示されません。
+
+:::
 
 詳細は [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) を参照ください。
+
+:::note
+
+大カッコ [ ] に文字列を含める記法を利用すれば、プロパティ名にはあらゆる文字を使用することができます (例: `myObject["1. First property"]`)。
+
+:::
+
 
 ## 引数
 

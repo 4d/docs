@@ -95,7 +95,7 @@ Allows you to disable/enable the "international" code settings for the local 4D 
 
 > If you modify this option, you need to restart the 4D application so that the change is taken into account.
 
-#### Indentation
+#### Indentação
 
 Changes the indentation value for the 4D code in the Code Editor. The width must be specified in points (10 by default).
 
@@ -182,7 +182,7 @@ Highlights the line that is currenty running in the debugger in addition to the 
 
 If you deselect this option, only the yellow arrow is shown.
 
-### Suggestions
+### Sugestões
 
 This area lets you configure autocomplete mechanisms in the Code Editor to adapt it to your own work habits.
 

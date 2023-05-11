@@ -113,7 +113,7 @@ Coordenada superior do objecto no formulário.
 
 ---
 
-## Corner Radius
+## Raio de canto
 
 <details><summary>Histórico</summary>
 

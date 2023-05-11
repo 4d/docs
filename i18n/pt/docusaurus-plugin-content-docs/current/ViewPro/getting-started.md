@@ -147,7 +147,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 |             | \[ ].name        | text       | Range name                                                          | name                                               |
 |             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | cell, cells, row, rows, column, columns, all, name |
 |             | \[ ].row         | number     | Row index (counting begins at 0)                                    | cell, cells, row, rows                             |
-|             | \[ ].rowCount    | number     | Row count                                                           | cells, rows                                        |
+|             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                    |
 |             | \[ ].column      | number     | Column index (counting begins at 0)                                 | cell, cells, column, columns                       |
 |             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                     |
 

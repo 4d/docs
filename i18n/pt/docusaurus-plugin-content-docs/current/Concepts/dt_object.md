@@ -37,14 +37,14 @@ Cada valor de propriedade acessado através da notação de objeto é considerad
 - nas áreas de expressão do depurador e do explorador de Runtime,
 - na lista de propriedades do editor de formulários para objectos de formulários: Variável ou Campo de expressão, bem como várias caixas de selecção e expressões de colunas (Fonte de dados, cor de fundo, estilo, ou cor da fonte).
 
-## Instantiation
+## Instanciação
 
 Objects must have been instantiated, otherwise trying to read or modify their properties will generate a syntax error.
 
 Object instantiation can be done in one of the following ways:
 
 - using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
-- using the `{}` operator.
+- utilizando o operador `{}`.
 
 :::info
 
@@ -54,7 +54,7 @@ Several 4D commands and functions return objects, for example [`Get database mea
 
 
 
-### `New object` command
+### comando `New object`
 
 The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
 
@@ -69,7 +69,7 @@ Exemplos:
 ```
 
 
-### `{}` operator
+### operador `{}`
 
 The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). The object literal syntax creates empty or filled objects.
 
@@ -80,21 +80,21 @@ Exemplos:
 ```4d
  var $o ; $o2 ; $o3 : Object //declaration of object variables
  $o := {} // instantiation of an empty object 
- $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instantiation of an object
-        // with properties {"a":"foo","b":42,"c":{},"d":false})
+ $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instanciação de um objecto
+        // com propriedades {"a": "foo", "b":42, "c":{}, "d":false})
 
-    // same properties using variables
+    // mesmas propriedades utilizando variáveis
  var $a : Text
  var $b : Number
  var $c : Object
  $a:="foo"
  $b:=42
  $c:={}
- $o3:={ a: $a; b: $b; c: $c } // {"a":"foo";b":42;"c":{}}
+ $o3:={ a: $a; b: $b; c: $c } // {"a": "foo";b":42; "c":{}}
 
 ```
 
-You can mix the `New object` and literal syntaxes:
+É possível misturar as sintaxes `New object` e literal:
 
 ```4d
 $o:={\
@@ -105,8 +105,8 @@ $o:={\
     col: [1; 2; 3; 4; 5; 6]\
     }
 
-$o.form1()  //52
-$o.form2($o.ob2.message)  // displays Hello
+$o.form1() //52
+$o.form2($o.ob2.message) // apresenta Hello
 $col:=$o.col[5] //6
 ```
 
@@ -117,8 +117,8 @@ $col:=$o.col[5] //6
 
 Pode criar dois tipos de objetos:
 
-- regular (non-shared) objects, using the [`New object`] command or object literal syntax (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- shared objects, using the [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1526.html) command. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. For more information, refer to the [Shared objects and collections](shared.md) section.
+- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
+- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
 ## Noções básicas de sintaxe
@@ -231,14 +231,14 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
      var $o : Object
      var $val : Integer
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o.a //$o.a é indefinido (sem erro), e a atribuição deste valor limpa a variável
       //$val=0
 ```
 
 - Lendo a propriedade de **comprimento** de uma coleção indefinida produz 0:
 
 ```4d
-     var $c : Collection //variable created but no collection is defined
+     var $c : Collection //variável criada mas nenhuma colecção está definida
      $size:=$c.length //$size = 0
 ```
 
@@ -246,11 +246,11 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
 
 ```4d
      var $o : Object
-     mymethod($o.a) //pass an undefined parameter
+     mymethod($o.a) //passa um parâmetro indefinido
 
-      //In mymethod method
-     #Declare ($myText : Text) //parameter type is text
-      // $myText contains ""
+      //No método mymethod
+     #Declare ($myText : Text) //o tipo de parâmetro é texto
+      // $myText contém ""
 ```
 
 - Uma expressão de condição é automaticamente convertida em falsa quando se avalia para indefinida com as palavras-chave If e Case:
@@ -282,6 +282,7 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
 
 - Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
 
+
 Quando expressões de um certo tipo são esperadas em seu código 4D, pode garantir que tenha o tipo correto mesmo quando são avaliadas como indefinidas, cercando-as com o comando de transformação 4D apropriado: `String`, `Num`, `Date`, `Time`, `Bool`. Estes comandos devolvem um valor vazio de tipo especificado quando a expressão é avaliada como indefinida. Por exemplo:
 
 ```4d
@@ -289,7 +290,7 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
   // para evitar erros no código
 ```
 
-For more information, please refer to [Null and Undefined](dt_null_undefined.md)
+Para mais informações, consulte [Null e Undefined](dt_null_undefined.md)
 
 ## Exemplos
 

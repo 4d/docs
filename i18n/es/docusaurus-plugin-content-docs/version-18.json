@@ -8,7 +8,7 @@
     "description": "The label for category Getting Started in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
-    "message": "4D Language Concepts",
+    "message": "Conceptos del lenguaje 4D",
     "description": "The label for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Data Types": {
@@ -16,11 +16,11 @@
     "description": "The label for category Data Types in sidebar docs"
   },
   "sidebar.docs.category.Control Flow": {
-    "message": "Control Flow",
+    "message": "Condiciones y bucles",
     "description": "The label for category Control Flow in sidebar docs"
   },
   "sidebar.docs.category.Project Databases": {
-    "message": "Project Databases",
+    "message": "Bases proyecto",
     "description": "The label for category Project Databases in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {
@@ -48,7 +48,7 @@
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Users and Groups": {
-    "message": "Users and Groups",
+    "message": "Usuarios y grupos",
     "description": "The label for category Users and Groups in sidebar docs"
   },
   "sidebar.docs.category.REST Server": {

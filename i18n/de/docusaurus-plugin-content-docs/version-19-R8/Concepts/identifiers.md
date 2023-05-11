@@ -42,9 +42,20 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-> Verwenden Sie die **String-Notation** in eckigen Klammern, können Eigenschaftsnamen ein beliebiges Zeichen enthalten, z. B: `myObject["1. First property"]`).
+:::tip
+
+Starting an object property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+
+:::
 
 Siehe auch unter [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+
+:::note
+
+Verwenden Sie die **String-Notation** in eckigen Klammern, können Eigenschaftsnamen ein beliebiges Zeichen enthalten, z. B: `myObject["1. First property"]`).
+
+:::
+
 
 ## Parameter
 

@@ -1269,7 +1269,6 @@ Name (Number)
 [Time](https://doc.4d.com/4dv20/help/command/en/page179.html) (179) - 
 [Time string](https://doc.4d.com/4dv20/help/command/en/page180.html) (180) - 
 [Timestamp](https://doc.4d.com/4dv20/help/command/en/page1445.html) (1445) - 
-[TITLE](URL) (ID) - 
 [Tool bar height](https://doc.4d.com/4dv20/help/command/en/page1016.html) (1016) - 
 [TRACE](https://doc.4d.com/4dv20/help/command/en/page157.html) (157) - 
 [Transaction level](https://doc.4d.com/4dv20/help/command/en/page961.html) (961) - 

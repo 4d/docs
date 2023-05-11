@@ -27,7 +27,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Expand all / Collapse all** | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                       |
 | **Method information**        | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Last clipboard values**     | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
-| **Clipboards**                | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
+| **Pranchetas**                | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
 | **Navigation dropdown**       | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. Ver abaixo                                                                                                                                                                                                                        |
 
 
@@ -37,7 +37,7 @@ This is where you write and edit your code. The editor automatically indents cod
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                 | Descrição                                                                                                                                                                                                   | Set in...                                                                                                                                                                                                  |
+| Option                                 | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                             |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                      |
 | **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
@@ -164,7 +164,7 @@ The following items are added automatically:
 
 | Ícone                                                                       | Elemento                                         |
 | --------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | No tag                                           |
+| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                     |
 | ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
 | ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
 | ![function-icon](../assets/en/code-editor/function.png)                     | Class function name                              |
@@ -197,7 +197,7 @@ Os resultados são os seguintes:
 
 All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
 
-#### Display order
+#### Ordem de visualização
 
 Tags are displayed in their appearing order inside the method/class.
 
@@ -223,7 +223,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | **Atalho**                                                  | **Ação**                                                                                                                                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Selection and navigation**                                |                                                                                                                                            |
-| Double-click                                                | Select a language element name                                                                                                             |
+| Duplo clique                                                | Select a language element name                                                                                                             |
 | [Alt]+Double-click                                          | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
 | [Shift]+[right arrow]                                       | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
 | [Shift]+[left arrow]                                        | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
@@ -243,19 +243,19 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Shift]+[End]                                               | Select all the characters in the line that are to the right of the cursor                                                                  |
 | [PgUp]                                                      | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                           |
 | [PgDn]                                                      | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                           |
-| [**Introspection**](#goto-definition)                       |                                                                                                                                            |
+| [**Introspecção**](#goto-definition)                        |                                                                                                                                            |
 | [Ctrl]+K or [Alt]+double-click                              | Same as [**Goto definition**](#goto-definition) command                                                                                    |
 | \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 | [**Find and replace**](#find-and-replace)                   |                                                                                                                                            |
 | [Ctrl]+F                                                    | Pesquisar                                                                                                                                  |
-| [Ctrl]+G                                                    | Find Next                                                                                                                                  |
-| [Ctrl]+[Shift]+G                                            | Find Previous                                                                                                                              |
+| [Ctrl]+G                                                    | Encontrar o próximo                                                                                                                        |
+| [Ctrl]+[Shift]+G                                            | Procurar Anterior                                                                                                                          |
 | [Ctrl]+E                                                    | Find Same Next                                                                                                                             |
 | [Ctrl]+[Shift]+E                                            | Find Same Previous                                                                                                                         |
 | [Ctrl]+[Alt]+F                                              | Replace                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                              | Replace Next                                                                                                                               |
+| [Ctrl]+[Alt]+G                                              | Substituir próximo                                                                                                                         |
 | [Ctrl]+[Alt]+[Shift]+G                                      | Replace Previous                                                                                                                           |
-| [**Clipboards**](#clipboards)                               |                                                                                                                                            |
+| [**Pranchetas**](#clipboards)                               |                                                                                                                                            |
 | [Shift]+click or [Alt]+click on clipboard icon              | Copy selected text to a clipboard                                                                                                          |
 | [Ctrl]+[Shift]+number key                                   | Copy selected text to the number clipboard                                                                                                 |
 | [Ctrl]+click on clipboard icon                              | Paste contents of a clipboard at cursor location                                                                                           |
@@ -297,7 +297,7 @@ The backslash character (`\`) is used as a separator in [pathnames under Windows
 
 
 
-### Drag-and-drop
+### Arrastar e largar
 
 From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
@@ -319,7 +319,7 @@ When you apply one of these commands to a text selection, the spaces and "_" cha
 
 ### Swap expression
 
-The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. For instance,
+The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por exemplo,
 
 `variable1:=variable2`
 
@@ -329,7 +329,7 @@ becomes
 
 This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area. Within the selection, only the lines assigning a value will be modified.
 
-### Clipboards
+### Pranchetas
 
 In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
 
@@ -384,9 +384,9 @@ If the characters typed correspond to different types of objects, the list displ
 
 - Comandos 4D
 - Comandos SQL
-- User methods
-- Table names
-- Field names
+- Métodos utilizador
+- Nomes de tabelas
+- Nomes de campos
 - Constantes
 - Local, process or interprocess variable, declared in the method
 - Object property names
@@ -485,7 +485,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 
 
-## Syntax errors
+## Erros de sintaxe
 
 4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
 
@@ -507,7 +507,7 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
-## Help tips
+## Dicas de ajuda
 
 The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
 
@@ -600,7 +600,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.
 
-## Bookmarks
+## Marcadores
 
 4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 

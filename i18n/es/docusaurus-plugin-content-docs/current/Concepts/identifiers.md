@@ -42,9 +42,20 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-> Si utiliza **notación de cadena** entre corchetes, los nombres de las propiedades pueden contener cualquier caracter (ej.: `miObjeto["1. First property"]`).
+:::tip
+
+Comenzar el nombre de una propiedad objeto con un carácter de subrayado ("_") excluirá la propiedad de las características de autocompletado en el editor de código de 4D. Por ejemplo, si declara `$o._myPrivateProperty`, no se propondrá en el editor de código cuando escriba `"$o. "`.
+
+:::
 
 Ver también [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6).
+
+:::note
+
+Si utiliza **notación de cadena** entre corchetes, los nombres de las propiedades pueden contener cualquier caracter (ej.: `miObjeto["1. First property"]`).
+
+:::
+
 
 ## Parámetros
 

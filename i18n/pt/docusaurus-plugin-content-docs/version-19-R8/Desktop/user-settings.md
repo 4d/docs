@@ -70,7 +70,7 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Página Web/Web services](../settings/web.md#web-services)                               | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível |
 | [Página SQL](../settings/sql.md)                                                         | Identical to standard settings               | Identical to standard settings               |
 | [Página PHP](../settings/php.md)                                                         | Identical to standard settings               | Identical to standard settings               |
-| [Security page](../settings/security.md)                                                 | N/a                                          | N/a                                          |
+| [Página segurança](../settings/security.md)                                              | N/a                                          | N/a                                          |
 | [Página de compatibilidade](../settings/compatibility.md)                                | N/a                                          | N/a                                          |
 
 When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
@@ -116,7 +116,7 @@ Settings files are XML files; they can be read and modified using integrated 4D 
 
 Settings can be stored at three levels. Each setting defined at one level overrides the same setting defined at a previous level, if any:
 
-| **Nível de prioridade** | **Nome**                                                                  | **Location**                                                                                                                                                  | **Comentários**                                                                                                      |
+| **Nível de prioridade** | **Nome**                                                                  | **Localização**                                                                                                                                               | **Comentários**                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | 3 (mais baixo)          | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.                        |
 | 2                       | User settings (all data files)                                            | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Overrides Structure settings. Stored within the application package.                                                 |

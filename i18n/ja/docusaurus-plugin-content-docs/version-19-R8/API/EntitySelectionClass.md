@@ -321,12 +321,11 @@ $result:=$sel[0].lock() //動作しません
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@") // 共有可能なエンティティセレクションです
+ $employees:=ds.Employee.newSelection()
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees:=$employees.copy() // 追加可能なエンティティセレクションを取得します
- $employees.add($employee) // $employee エンティティが $employees エンティティセレクションへと追加されます
+ $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
 #### 例題 2
@@ -340,8 +339,7 @@ $result:=$sel[0].lock() //動作しません
  $p1:=ds.Product.get(10)
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
- $sel:=ds.Product.query("ID > 50")
- $sel:=$sel.copy()
+ $sel:=ds.Product.newSelection()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -812,6 +810,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 *attributePath* 引数が無効な場合、空のコレクションが返されます。
 
 このメソッドは 2種類のシンタックスを受け入れます。
+
 
 **.extract( attributePath : Text { ; option : Integer } ) : Collection**
 
@@ -1504,7 +1503,7 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 #### 説明
 
 .orderBy() 関数は、 <!-- REF #EntitySelectionClass.orderBy().Summary -->エンティティセレクションの全エンティティが *pathString* または *pathObjects* が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します<!-- END REF -->。
-> * この関数は、エンティティセレクションを変更しません。
+> * この関数は、元のエンティティセレクションを変更しません。
 > * エンティティセレクションの順列については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 引数を渡して、エンティティの並び替えを指定する必要があります。 並べ替えの指定方法は 2つあります:

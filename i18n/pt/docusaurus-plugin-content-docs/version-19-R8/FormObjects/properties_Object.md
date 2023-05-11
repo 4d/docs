@@ -44,7 +44,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 ---
 
-## Save value
+## Guardar valor
 
 This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
 
@@ -56,7 +56,7 @@ Here is the list of objects whose value can be saved:
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Check Box](checkbox_overview.md)                       | Value of associated variable (0, 1, 2)                                                 |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Number of selected row                                                                 |
-| [Radio Button](radio_overview.md)                       | Value of associated variable (1, 0, True or False for buttons according to their type) |
+| [Botão rádio](radio_overview.md)                        | Value of associated variable (1, 0, True or False for buttons according to their type) |
 | [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
 
 #### Gramática JSON
@@ -249,7 +249,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Objectos suportados
 
-[Radio Button](radio_overview.md)
+[Botão rádio](radio_overview.md)
 
 ---
 

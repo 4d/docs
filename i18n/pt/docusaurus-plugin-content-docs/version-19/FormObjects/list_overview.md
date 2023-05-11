@@ -35,7 +35,7 @@ mylist:=New list
 
 Each representation of the list has its own specific characteristics and shares common characteristics with all the other representations. The following characteristics are specific to each representation of the list:
 
-- The selection,
+- A selecção,
 - The expanded/collapsed state of its items,
 - The position of the scrolling cursor.
 
@@ -50,7 +50,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
 > ... you are indicating that you want to modify the font of the hierarchical list item associated with the *mylist1* form object. The command will take the current item of the *mylist1* object into account to specify the item to modify, but this modification will be carried over to all the representations of the list in all of the processes.
 
-### Support of @
+### Suporte da @
 
 As with other object property management commands, it is possible to use the “@” character in the `ListName` parameter. As a rule, this syntax is used to designate a set of objects in the form. However, in the context of hierarchical list commands, this does not apply in every case. This syntax will have two different effects depending on the type of command:
 
@@ -98,7 +98,7 @@ Certain properties of hierarchical lists (for example, the **Enterable** attribu
 
 1. Commands of the “Hierarchical Lists” theme
 2. Generic object property commands
-3. Form property
+3. Propriedade formulário
 
 This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the `SET LIST ITEM PROPERTIES` command, the `OBJECT SET COLOR` command will have no effect on this item.
 
