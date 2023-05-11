@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Description of log files
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
@@ -15,7 +15,7 @@ Information logged needs to be analyzed to detect and fix issues. This section p
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-* [ORDA client requests log file](#orda-client-requests)
+* [ORDA requests log file](#orda-requests)
 
 > When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
 
@@ -72,6 +72,7 @@ For each request, the following fields are logged:
 |write\_duration| Time taken in microseconds for sending the:<li>Request (when run on the client). A to B in image below.</li><li>Response (when run on the server). E to F in image below.</li>|
 |task_kind| Preemptive or cooperative (respectively 'p' or 'c')|
 |rtt| Time estimate in microseconds for the client to send the request and the server to acknowledge it. A to D and E to H in image below.<li>Only measured when using the ServerNet network layer, returns 0 when used with the legacy network layer.</li><li>For Windows versions prior to Windows 10 or Windows Server 2016, the call will return 0.</li>|
+|extra|Additional information related to the context, for example dataclass name and/or attribute name in case of ORDA requests |
 
 Request flow:
 
@@ -134,6 +135,7 @@ This log file records each HTTP request and each response in raw mode. Whole req
 How to start this log:
 
 ```4d
+
 
 
 WEB SET OPTION(Web debug log;wdl enable without body)  
@@ -307,43 +309,51 @@ For each request, the following fields are logged:
 |4| Unique process ID|
 |5| <ul><li>SMTP,POP3, or IMAP session startup information, including server host name, TCP port number used to connect to SMTP,POP3, or IMAP server and TLS status,or</li><li>data exchanged between server and client, starting with "S <" (data received from the SMTP,POP3, or IMAP server) or "C >" (data sent by the SMTP,POP3, or IMAP client): authentication mode list sent by the server and selected authentication mode, any error reported by the SMTP,POP3, or IMAP Server, header information of sent mail (standard version only) and if the mail is saved on the server,or</li><li>SMTP,POP3, or IMAP session closing information.</li></ul>|
 
-## ORDA client requests  
+## ORDA requests  
 
-This log records each ORDA request sent from a remote machine. You can direct log information to memory or to a file on disk. The name and location of this log file are your choice.
+This log records each ORDA request and server response. The log can be started on a remote machine or on the server.
+
+:::note Notes
+
+- On a remote machine, you can direct log information to memory or to a file on disk; on the server, information can only be logged to a file.
+- On the server, an optional parameter of the [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) allows you to configure the log.
+
+:::
 
 How to start this log:
 
 ```4d
-//to be executed on a remote machine
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  
-//can be also sent to memory
-```
-
-If you want to use the unique sequence number in ORDA request log, you need to trigger it:
-
-```4d
-//to be executed on a remote machine
-
+	//on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-//to enable log sequence number
-
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  
-//can be also sent to memory
-
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+	//can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
-//disabling sequence number
+
+
+	//on the server
+SET DATABASE PARAMETER(4D Server log recording;1)
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt");srl log response without body) 
+	//srl... parameter is optional 
+SET DATABASE PARAMETER(4D Server log recording;0) 
 ```
+
+Triggering the [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber`; on the server, it allows also to log the `duration` field.
 
 The following fields are logged for each request:
 
-|Field name| Description |Example|
-|---|---|---|
-|sequenceNumber| Unique and sequential operation number in the logging session |104|
-|url| Client ORDA request URL| "rest/Persons(30001)"|
-|startTime| Starting date and time using ISO 8601 format| "2019-05-28T08:25:12.346Z"|
-|endTime| Ending date and time using ISO 8601 format| "2019-05-28T08:25:12.371Z"|
-|duration| Client processing duration (ms) |25|
-|response| Server response object |{"status":200,"body":{"__entityModel":"Persons",\[...]}}|
+|Field name| Description (client)| Description (server) |Example|
+|---|---|---|---|
+|sequenceNumber| Unique and sequential operation number in the logging session |same as client|104|
+|url| Request URL|same as client| "rest/Persons(30001)"|
+|startTime| Starting date and time using ISO 8601 format|same as client| "2019-05-28T08:25:12.346Z"|
+|endTime| Ending date and time using ISO 8601 format|n/a|"2019-05-28T08:25:12.371Z"|
+|duration| Client processing duration in milliseconds (ms) |Server processing duration in microseconds (µ) |25|
+|response| Server response object |Server response object, can be configured in [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog)|{"status":200,"body":{"__entityModel":"Persons",\[...]}}|
+|ipAddress|n/a |User IP address|"192.168.1.5"|
+|userName| n/a |Name of the 4D user|"henry"|
+|systemUserName| n/a |Login name of the user on the machine|"hsmith"|
+|machineName| n/a |Name of the user machine|"PC of Henry Smith"|
+
 
 ## Using a log configuration file
 
