@@ -1024,6 +1024,7 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
+
 <!-- REF DataStoreClass.startRequestLog().Desc -->
 ## .startRequestLog()
 
@@ -1031,37 +1032,63 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 |Version|Changes|
 |---|---|
+|v20|Server side support, new `logResponse` parameter|
 |v17 R6|Added|
 
 </details>
 
-<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
+<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *file* : 4D.File ; *logResponse* : Integer )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|file |4D.File|->|File object|
+|file |4D.File|->|File object |
+|logResponse |Integer|->|Log response option|
 |reqNum |Integer|->|Number of requests to keep in memory|<!-- END REF -->
 
 #### Description
 
-The `.startRequestLog()` function <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->.
+The `.startRequestLog()` function <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side or on the server side<!-- END REF -->. It is designed for debugging purposes in client/server configurations.
 
-This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.
 
-The ORDA request log can be sent to a file or to memory, depending on the parameter type:
+- The following syntax is supported both **client-side** AND **server-side**:
 
-* If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br/>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
-If `.startRequestLog( )` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+**.startRequestLog**( *file* : 4D.File )
+
+In this case, the ORDA request log is sent to a *file* object created with the `File` command. The log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br/>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
 
  >A \] character must be manually appended at the end of the file to perform a JSON validation
 
-* If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
+- The following syntaxes are supported **client-side** only:
 
-* If you did not pass any parameter, the log is started in memory. If `.startRequestLog()` was previously called with a *reqNum* (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called.
+**.startRequestLog**()<br/>
+**.startRequestLog**( *reqNum* : Integer )
 
-For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
+If you did not pass any parameter, the log is started in memory. If `.startRequestLog()` was previously called with a *reqNum* (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called. <br/>If `.startRequestLog()` is called with a *file* while a logging was previously started in memory, the memory log is stopped and emptied.
+
+If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped. 
+
+
+- The following syntax is supported **server-side** only:
+
+**.startRequestLog**( *file* : 4D.File ; *logResponse* : Integer )
+
+The *logResponse* optional parameter is used to specify if the server response has to be logged, and if it should include the body. By default if the parameter is omitted, the full response is logged. The following constants can be used in the *logResponse* parameter:
+
+|Constant|Type|Description|
+|----|----|---|
+|srl log all|Integer|Log the response entirely (default value)|
+|srl log no response|Integer|Disable the logging of the response|
+|srl log response without body|Integer|Log the response without the body|
+
+If *file* is null, the log file is created in the "/LOGS" folder and is automatically named *4DRestRequestsLogServer.log*.
+
+:::info
+
+For a description of the ORDA request log format, please refer to the [**ORDA requests**](../Debugging/debugLogFiles.md#orda-requests) section.
+
+:::
 
 #### Example 1
 
@@ -1170,6 +1197,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 |Version|Changes|
 |---|---|
+|v20|Server side support|
 |v17 R6|Added|
 
 </details>
@@ -1184,9 +1212,11 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 #### Description
 
-The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (in file or in memory). It is particularly useful when logging in a file, since it actually closes the opened document on disk.
+The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->. 
 
-This function must be called on a remote 4D, otherwise it does nothing. It is designed for debugging purposes in client/server configurations.
+It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped. 
+
+This function does nothing if logging of ORDA requests was not started on the machine. 
 
 #### Example
 
