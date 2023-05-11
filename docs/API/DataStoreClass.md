@@ -1044,8 +1044,8 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 |Parameter|Type||Description|
 |---|---|---|---|
 |file |4D.File|->|File object |
-|logResponse |Integer|->|Log response option|
-|reqNum |Integer|->|Number of requests to keep in memory|<!-- END REF -->
+|logResponse |Integer|->|Log response option (server only)|
+|reqNum |Integer|->|Number of requests to keep in memory (client only)|<!-- END REF -->
 
 #### Description
 
