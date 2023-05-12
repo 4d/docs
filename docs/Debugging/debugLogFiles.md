@@ -311,11 +311,11 @@ For each request, the following fields are logged:
 
 ## ORDA requests  
 
-This log records each ORDA request and server response. The log can be started on a remote machine or on the server.
+This log records each ORDA request and server response. The log can be started for remote requests or server requests.
 
 :::note Notes
 
-- On a remote machine, you can direct log information to memory or to a file on disk; on the server, information can only be logged to a file.
+- For remote requests, you can direct log information to memory or to a file on disk; on the server, information can only be logged to a file.
 - On the server, an optional parameter of the [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) allows you to configure the log.
 
 :::
