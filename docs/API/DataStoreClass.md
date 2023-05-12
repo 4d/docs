@@ -483,6 +483,7 @@ Each object in the returned collection has the properties listed in the [`.getRe
 
 #### Example
 
+
 The following code sets up two contexts and retrieves them using `.getAllRemoteContexts()`:
 
 ```4d
@@ -1082,7 +1083,7 @@ The *logResponse* optional parameter is used to specify if the server response h
 |srl log no response|Integer|Disable the logging of the response|
 |srl log response without body|Integer|Log the response without the body|
 
-If *file* is null, the log file is created in the "/LOGS" folder and is automatically named *4DRestRequestsLogServer.log*.
+If *file* is null, the log file is created in the "/LOGS" folder and is automatically named *4DRestRequestsLogServer.txt*.
 
 :::info
 
