@@ -1033,63 +1033,57 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 |Version|Changes|
 |---|---|
-|v20|Server side support, new `logResponse` parameter|
+|v20|Server side support, new `options` parameter|
 |v17 R6|Added|
 
 </details>
 
-<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *file* : 4D.File ; *logResponse* : Integer )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
+<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *file* : 4D.File ; *options* : Integer )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |file |4D.File|->|File object |
-|logResponse |Integer|->|Log response option (server only)|
+|options |Integer|->|Log response option (server only)|
 |reqNum |Integer|->|Number of requests to keep in memory (client only)|<!-- END REF -->
 
 #### Description
 
 The `.startRequestLog()` function <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side or on the server side<!-- END REF -->. It is designed for debugging purposes in client/server configurations.
 
-
-- The following syntax is supported both **client-side** AND **server-side**:
-
-**.startRequestLog**( *file* : 4D.File )
-
-In this case, the ORDA request log is sent to a *file* object created with the `File` command. The log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br/>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
-
- >A \] character must be manually appended at the end of the file to perform a JSON validation
-
-- The following syntaxes are supported **client-side** only:
-
-**.startRequestLog**()<br/>
-**.startRequestLog**( *reqNum* : Integer )
-
-If you did not pass any parameter, the log is started in memory. If `.startRequestLog()` was previously called with a *reqNum* (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called. <br/>If `.startRequestLog()` is called with a *file* while a logging was previously started in memory, the memory log is stopped and emptied.
-
-If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped. 
-
-
-- The following syntax is supported **server-side** only:
-
-**.startRequestLog**( *file* : 4D.File ; *logResponse* : Integer )
-
-The *logResponse* optional parameter is used to specify if the server response has to be logged, and if it should include the body. By default if the parameter is omitted, the full response is logged. The following constants can be used in the *logResponse* parameter:
-
-|Constant|Type|Description|
-|----|----|---|
-|srl log all|Integer|Log the response entirely (default value)|
-|srl log no response|Integer|Disable the logging of the response|
-|srl log response without body|Integer|Log the response without the body|
-
-If *file* is null, the log file is created in the "/LOGS" folder and is automatically named *4DRestRequestsLogServer.txt*.
-
 :::info
 
 For a description of the ORDA request log format, please refer to the [**ORDA requests**](../Debugging/debugLogFiles.md#orda-requests) section.
 
 :::
+
+#### Client-side
+
+To create a client-side ORDA request log, call this function on a remote machine. The log can be sent to a file or to memory, depending on the parameter type:
+
+* If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br/>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
+If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+
+ >A \] character must be manually appended at the end of the file to perform a JSON validation
+
+* If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
+
+* If you did not pass any parameter, the log is started in memory. If `.startRequestLog()` was previously called with a *reqNum* (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called.
+
+#### Server-side
+
+To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Each object represents a request. If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
+
+- If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
+- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
+
+|Constant|Description|
+|----|----|---|
+|srl log all|Log the response entirely (default value)|
+|srl log no response|Disable the logging of the response|
+|srl log response without body|Log the response without the body|
+
 
 #### Example 1
 
@@ -1125,6 +1119,25 @@ You want to log ORDA client requests in memory:
  $log:=ds.getRequestLog()
  ALERT("The longest request lasted: "+String($log.max("duration"))+" ms")
 ```
+
+#### Example 3
+
+You want to log ORDA server requests in a specific file and enable the log sequence number and duration:
+
+```4d
+SET DATABASE PARAMETER(4D Server Log Recording;1)
+
+$file:=Folder(fk logs folder).file("myOrdaLog.jsonl")
+ds.startRequestLog($file)
+...
+ds.stopRequestLog()
+SET DATABASE PARAMETER(4D Server Log Recording;0)
+
+
+```
+
+
+
 
 <!-- END REF -->
 
