@@ -332,7 +332,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 :::note
 
-Triggering the [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` field.
+Triggering the client-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` field.
 
 :::
 
@@ -350,10 +350,20 @@ The following fields are logged for each request:
 
 #### Example
 
-Here is an example of a client-side ORDA log file record line:
+Here is an example of a client-side ORDA log file record:
 
-```
-XXXX
+```json
+	{
+		"sequenceNumber": 7880,
+		"url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+		"startTime": "2023-05-15T10:43:39.400Z",
+		"endTime": "2023-05-15T10:43:39.419Z",
+		"duration": 19,
+		"response": {
+			"status": 200,
+			"body": 75651
+		}
+	}
 ```
 
 ### Server-side
@@ -365,21 +375,21 @@ How to start this log:
 ```4d
 	//on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt");srl log response without body) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
 	//srl... parameter is optional 
 SET DATABASE PARAMETER(4D Server log recording;0) 
 ```
 
 :::note
 
-Triggering the [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` and the `duration` fields.
+Triggering the server-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` and the `duration` fields.
 
 :::
 
 The following fields are logged for each request:
 
 |Field name| Description |Example|
-|---|---|---|---|
+|---|---|---|
 |sequenceNumber| Unique and sequential operation number in the logging session |104|
 |url| Request URL| "rest/Persons(30001)"|
 |startTime| Starting date and time using ISO 8601 format| "2019-05-28T08:25:12.346Z"|
@@ -392,10 +402,24 @@ The following fields are logged for each request:
 
 #### Example
 
-Here is an example of a server-side ORDA log file:
+Here is an example of a server-side ORDA log record:
 
 ```json
-XXXX
+   {
+		"url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+		"systemUserName": "Admin",
+		"userName": "Designer",
+		"machineName": "DESKTOP-QSK9738",
+		"taskID": 5,
+		"taskName": "P_1",
+		"startTime": "2023-05-15T11:43:39.401",
+		"response": {
+			"status": 200,
+			"body": 75651
+		},
+		"sequenceNumber": 7008,
+		"duration": 240
+	}
 
 ```
 
