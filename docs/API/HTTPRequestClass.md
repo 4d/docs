@@ -79,7 +79,7 @@ HTTPRequest objects provide the following properties and functions:
 
 |Version|Changes|
 |---|---|
-|v20 R2|TLS validation by default |
+|v20|TLS validation by default |
 |v19 R7|Support of *decodeData* property |
 
 </details>
@@ -146,7 +146,7 @@ In the *options* parameter, pass an object that can contain the following proper
 |serverAuthentication|[authentication object](#authentication-object)|Object handling server authentication|undefined|
 |returnResponseBody|Boolean|If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined|True|
 |timeout|Real|Timeout in seconds. Undefined = no timeout|Undefined|
-|validateTLSCertificate|Boolean|If true (or if the property is omitted), 4D validates the TLS certificate and returns an error if it is invalid (i.e. expired, self-signed...). Note that the Certification Authority itself is not verified.|True|
+|validateTLSCertificate|Boolean|If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Note that the Certification Authority itself is not verified, whatever the option value.|True|
 
 
 #### Callback functions
