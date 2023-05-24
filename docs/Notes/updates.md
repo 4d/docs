@@ -3,6 +3,21 @@ id: updates
 title: Release Notes
 ---
 
+
+## 4D v20 R2
+
+Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
+
+
+#### Highlights
+
+- New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.   
+
+#### Behavior changes
+
+- TLS certificates are now automatically validated by 4D when sending [HTTP requests](../API/HTTPRequestClass.md#new), and rejected with an error if invalid. A new option allows you to control this validation. 
+
+
 ## 4D v20
 
 Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D v20.
