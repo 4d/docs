@@ -146,7 +146,7 @@ In the *options* parameter, pass an object that can contain the following proper
 |serverAuthentication|[authentication object](#authentication-object)|Object handling server authentication|undefined|
 |returnResponseBody|Boolean|If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined|True|
 |timeout|Real|Timeout in seconds. Undefined = no timeout|Undefined|
-|validateTLSCertificate|Boolean|If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Note that the Certification Authority itself is not verified, whatever the option value.|True|
+|validateTLSCertificate|Boolean|If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.|True|
 
 
 #### Callback functions
@@ -258,6 +258,7 @@ The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the
 <!-- REF #HTTPRequestClass.protocol.Syntax -->**protocol** : Text<!-- END REF -->
 
 #### Description
+
 
 The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary -->the `protocol` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted or if "auto" was used, contains the version of the protocol used.
 
