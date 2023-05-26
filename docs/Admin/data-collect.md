@@ -27,94 +27,94 @@ Some data is also collected at regular intervals.
 
 ### Collected at database startup
 
-|Data|Example|Notes|
+|Data|Type|Notes|
 |---|----|---|
-|CPU|Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz|Name, type, and speed of the processor|
-|numberOfCores|4|Total number of cores|
-|memory|419430400|Volume of memory storage (in bytes) available on the machine|
-|system|Microsoft Windows 10 Pro 1809 (17763.253)|Operating system version and build number|
-|headless|false|True if the application is running in headless mode|
-|version|1960|Version number of the 4D application|
-|buildNumber|123456|Build number of the 4D application|
-|license|{"name":"4D Developer Professional 19R6","products":[{"id":808464433,"name":"4D","allowedCount":1}]}|Commercial name and description of product licenses|
-|isRosetta|true|True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).|
-|uniqueID|"123456"|Unique ID of the 4D Server|
-|id|hashed string|Unique id associated to the database (*Polynomial Rolling hash of the database name*)|
-|dataFileSize|419430400|Data file size in bytes|
-|indexesSize|419430400|Index size in bytes|
-|cacheSize|419430400|Cache size in bytes|
-|usingLegacyNetworkLayer|False|True if legacy network layer used for the application server|
-|usingQUICNetworkLayer|True|True if the database uses the QUIC network layer|
-|encryptedConnections|True|True if client/server connections are encrypted|
-|encrypted|true|True if the data file is encrypted|
-|compiled|true|True if the application is compiled|
-|isEngined|true|True if the application is merged with 4D Volume Desktop|
-|projectMode|true|True if the application is a project|
-|mobile|[{"os":"iOS", "version":"12.465", "simulator":"false"}]|Information on mobile sessions|
+|CPU|Text|Name, type, and speed of the processor|
+|numberOfCores|Number|Total number of cores|
+|memory|Number|Volume of memory storage (in bytes) available on the machine|
+|system|Text|Operating system version and build number|
+|headless|Boolean|True if the application is running in headless mode|
+|version|Number|Version number of the 4D application|
+|buildNumber|Number|Build number of the 4D application|
+|license|Object|Commercial name and description of product licenses|
+|isRosetta|Boolean|True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).|
+|uniqueID|Text|Unique ID of the 4D Server|
+|id|Text (hashed string)|Unique id associated to the database (*Polynomial Rolling hash of the database name*)|
+|dataFileSize|Number|Data file size in bytes|
+|indexesSize|Number|Index size in bytes|
+|cacheSize|Number|Cache size in bytes|
+|usingLegacyNetworkLayer|Boolean|True if legacy network layer used for the application server|
+|usingQUICNetworkLayer|Boolean|True if the database uses the QUIC network layer|
+|encryptedConnections|Boolean|True if client/server connections are encrypted|
+|encrypted|Boolean|True if the data file is encrypted|
+|compiled|Boolean|True if the application is compiled|
+|isEngined|Boolean|True if the application is merged with 4D Volume Desktop|
+|projectMode|Boolean|True if the application is a project|
+|mobile|Collection|Information on mobile sessions|
 
 
 ### Collected at web server startup and data collection sending
 
-|Data|Example|Notes|
+|Data|Type|Notes|
 |---|----|---|
-|webServer|{"started":true}|True if the web server is starting or started|
+|webServer|Object|"started":true if the web server is starting or started|
 
 
 ### Collected at regular intervals
 
-|Data|Example|Notes|
+|Data|Type|Notes|
 |---|----|---|
-|maximumNumberOfWebProcesses|123456|Maximum number of simultaneous web processes|
-|maximumUsedPhysicalMemory|419430400|Maximum use of physical memory|
-|maximumUsedVirtualMemory|419430400|Maximum use of virtual memory|
+|maximumNumberOfWebProcesses|Number|Maximum number of simultaneous web processes|
+|maximumUsedPhysicalMemory|Number|Maximum use of physical memory|
+|maximumUsedVirtualMemory|Number|Maximum use of virtual memory|
 
 
 ### Collected at data collection sending
 
-|Data|Example|Notes|
+|Data|Type|Notes|
 |---|----|---|
-|uptime|123456|Time elapsed (in seconds) since local 4D database was opened|
-|cacheReadBytes|123456|Number of bytes read from cache|
-|cacheMissBytes|123456|Number of bytes missed from cache |
-|cacheReadCount|123456|Number of reads in the cache |
-|cacheMissCount|123456|Number of reads missed in the cache |
-|dataDiskReadBytes|123456|Number of bytes read in the data file |
-|dataDiskWriteBytes|123456|Number of bytes written in the data file |
-|dataDiskReadCount|123456|Number of reads in the data file |
-|dataDiskWriteCount|123456|Number of writes in the data file |
-|indexDiskReadBytes|123456|Number of bytes read in the index file|
-|indexDiskWriteBytes|123456|Number of bytes written in the index file |
-|indexDiskReadCount|123456|Number of reads in the index file |
-|indexDiskWriteCount|123456|Number of writes in the index file |
+|uptime|Number|Time elapsed (in seconds) since local 4D database was opened|
+|cacheReadBytes|Object|Number of bytes read from cache|
+|cacheMissBytes|Object|Number of bytes missed from cache |
+|cacheReadCount|Object|Number of reads in the cache |
+|cacheMissCount|Object|Number of reads missed in the cache |
+|dataSegment1.diskReadBytes|Object|Number of bytes read in the data file |
+|dataSegment1.diskWriteBytes|Object|Number of bytes written in the data file |
+|dataSegment1.diskReadCount|Object|Number of reads in the data file |
+|dataSegment1.diskWriteCount|Object|Number of writes in the data file |
+|indexSegment.diskReadBytes|Number|Number of bytes read in the index file|
+|indexSegment.diskWriteBytes|Number|Number of bytes written in the index file |
+|indexSegment.diskReadCount|Number|Number of reads in the index file |
+|indexSegment.diskWriteCount|Number|Number of writes in the index file |
 
 
 
 ### Collected at database closure and data collection sending
 
-|Data|Example|Notes|
+|Data|Type|Notes|
 |---|----|---|
-|webserverHits|123456|Number of hits on the web server during the data collection|
-|restHits|123456|Number of hits on the REST server during the data collection|
-|webserverBytesIn|123456|Bytes received by the web server during the data collection|
-|webserverBytesOut|123456|Bytes sent by the web server during the data collection|
+|webserverHits|Number|Number of hits on the web server during the data collection|
+|restHits|Number|Number of hits on the REST server during the data collection|
+|webserverBytesIn|Number|Bytes received by the web server during the data collection|
+|webserverBytesOut|Number|Bytes sent by the web server during the data collection|
 
 
 
 
 ### Collected every time PHP execute is called
 
-|Data|Example|Notes|
+|Data|Type|Notes|
 |---|----|---|
-|callToPHPExecute|123456|Number of calls to `PHP execute` |
-|clientVersionOfPHP|True|True if the client performs a call to `PHP execute` and uses its own version of php |
+|phpCall|Number|Number of calls to `PHP execute` |
+|externalPHP|Boolean|True if the client performs a call to `PHP execute` and uses its own version of php |
 
 
 ### Collected at client connection 
 
-|Data|Example|Notes|
+|Data|Type|Notes|
 |---|----|---|
-|maximum4DClientConnections|123456|Maximum number of 4D Client connections to the server |
-|clientSystems|[{"os":"Microsoft Windows 10 Pro 1809", "count":"123456"}]|Client OS without the build number (in parenthesis) and number of clients using it|
+|maximum4DClientConnections|Number|Maximum number of 4D Client connections to the server |
+|connectionSystems|Collection|Client OS without the build number (in parenthesis) and number of clients using it|
 
 
 
