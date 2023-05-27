@@ -18,7 +18,7 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 A merged client/server application is customized and its starting is simplified:
 
-- To launch the server portion, the user simply double-clicks on the server application. The project file does not need to be selected.
+- To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
 - To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application.
 
 These principles are detailed in the [Build Application](building.md#what-is-a-clientserver-application) page.
