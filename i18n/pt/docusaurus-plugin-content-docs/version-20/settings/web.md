@@ -7,7 +7,7 @@ Using the tabs on the **Web** page, you can configure various aspects of the int
 
 ## Configuração
 
-### Publishing Information
+### Informações de publicação
 
 #### Launch Web Server at Startup
 
@@ -18,7 +18,7 @@ Indicates whether the Web server will be launched on startup of the 4D applicati
 Indicates whether or not the Web server will accept non-secure connections. See [Enable HTTP](../WebServer/webServerConfig.md#enable-http).
 
 
-#### HTTP Port
+#### Porta HTTP
 
 Listening IP (TCP) port number for HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
 
@@ -36,18 +36,18 @@ Indicates whether or not the Web server will accept secure connections. See [Ena
 
 Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). See [HTTPS Port](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database access through 4DSYNC URLs
+#### Allow database Access through 4DSYNC URLs
 
 *Compatibility Note*: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
 
 
-### Paths
+### Caminhos
 
-#### Default HTML Root
+#### Raiz HTML predefinida
 
 Define the default location of the Web site files and to indicate the hierarchical level on the disk above which the files will not be accessible. See [Root Folder](../WebServer/webServerConfig.md#root-folder).
 
-#### Default Home Page
+#### Página inicial predefinida
 
 Designate a default home page for the Web server. See [Default Home page](../WebServer/webServerConfig.md#default-home-page).
 
@@ -59,13 +59,13 @@ Designate a default home page for the Web server. See [Default Home page](../Web
 ### Cache
 
 
-#### Use the 4D Web cache
+#### Usar o cache Web 4D
 
 Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Pages Cache Size
 
-Sets the cache size. See [Cache](../WebServer/webServerConfig.md#cache).
+Define o tamanho da cache. See [Cache](../WebServer/webServerConfig.md#cache).
 
 
 #### Limpar cache
@@ -144,7 +144,7 @@ Using **Custom** authentication is recommended. See [**Authentication**](../WebS
 
 ## Opções (II)
 
-### Text Conversion
+### Conversão texto
 
 #### Send Extended Characters Directly
 
@@ -154,7 +154,7 @@ See [Deprecated Settings](../WebServer/webServerConfig.md#deprecated-settings).
 
 Define the set of characters to be used by the 4D Web server. See [Character Set](../WebServer/webServerConfig.md#character-set).
 
-### Keep-Alive Connections
+### Ligações Keep-Alive
 
 See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections).
 
@@ -212,19 +212,19 @@ The log format menu provides the following options:
 
 -   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Like the ELF format, it can be customized.
 
-**Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, use the arrow buttons or simply drag and drop the desired fields into the "Selected Tokens" area.
+**Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
 
 **Note**: You cannot select the same field twice.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Value                                                                      |
+| Campo          | ELF | WLF | Valor                                                                      |
 | -------------- | --- | --- | -------------------------------------------------------------------------- |
 | BYTES_RECEIVED |     | X   | Number of bytes received by the server                                     |
 | BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                           |
 | C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
-| CONNECTION_ID  |     | X   | Connection ID number                                                       |
+| CONNECTION_ID  |     | X   | Número de identificação da ligação                                         |
 | CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
 | CS(HOST)       | X   | X   | Host field of the HTTP request                                             |
 | CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
@@ -254,8 +254,8 @@ Configure the automatic backup parameters for the request log. Configure the aut
 
     -   **starting at**: Used to set the time at which the first back up will begin.
 -   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
--   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
--   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Enter 1 if you want to perform a monthly backup.
+-   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
+-   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
 -   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
 
 > In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
