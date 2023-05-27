@@ -1,6 +1,6 @@
 ---
 id: propertiesGridlines
-title: Gridlines
+title: Linhas de grelha
 ---
 
 ## Cor linha horizontal
@@ -19,7 +19,7 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 ---
 
-## Cor linha vertical
+## Array cores de fundo
 
 Defines the color of the vertical lines in a list box (gray by default).
 
