@@ -74,7 +74,7 @@ Uma coleção de objetos de endereço.
 
 As propriedades [`textBody`](#textbody) e [`htmlBody`](#htmlbody) são usadas apenas com o [SMTP. send()](SMTPTransporterClass.md#send) permitir envio de e-mails simples. Quando ambas as propriedades são preenchidas, o tipo de conteúdo MIME multiparte/alternativo é utilizada. O cliente de email deve reconhecer a parte multiparte/alternativa e exibir a parte do texto ou html conforme necessário.
 
-[`bodyStructure`](#bodystructure) e [`bodyValues`](#bodyvalues) são utilizados para [SMTP](SMTPTransporterClass.md) quando o [objeto Email](#email-object) for construído a partir de um documento MIME., ou seja,  quando gerado pelo comando `MAIL Convert from MIME`. Neste caso, tanto as propriedades `bodyStructure` e `bodyValues` devem ser passados juntas, e não é recomendado usar o `textBody` e `htmlBody`.
+[`bodyStructure`](#bodystructure) e [`bodyValues`](#bodyvalues) são utilizados para [SMTP](SMTPTransporterClass.md) quando o [objeto Email](email-object) for construído a partir de um documento MIME., ou seja,  quando gerado pelo comando `MAIL Convert from MIME`. Neste caso, tanto as propriedades `bodyStructure` e `bodyValues` devem ser passados juntas, e não é recomendado usar o `textBody` e `htmlBody`.
 
 #### Exemplo de objetos bodyStructure e bodyValues
 
@@ -126,11 +126,11 @@ A propriedade `.bcc` contém a <!-- REF #EmailObjectClass.bcc.Summary -->Destina
 
 #### Descrição
 
-A propriedade `.bodyStructure` contém a <!-- REF #EmailObjectClass.bodyStructure.Summary -->Objeto *EmailBodyPart* ou seja a estrutura MIME completa do corpo da mensagem (opcional)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
+A propriedade `.bodyStructure` contém a <!-- REF #EmailObjectClass.bodyStructure.Summary -->Objeto *EmailBodyPart* ou seja a estrutura MIME completa do corpo da mensagem (opcional)<!-- END REF -->. .
 
 O objeto `.bodyStructure` contém as seguintes propriedades:
 
-| Propriedade | Tipo                   | Value                                                                                                                                                                    |
+| Propriedade | Tipo                   | Valor                                                                                                                                                                    |
 | ----------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | partID      | Text                   | Identifica a parte de maneira única dentro do email                                                                                                                      |
 | type        | Text                   | (obrigatório) Valor do campo de cabeçalho Content-Type da parte                                                                                                          |
@@ -148,11 +148,11 @@ O objeto `.bodyStructure` contém as seguintes propriedades:
 
 #### Descrição
 
-A propriedade `.bodyValues` contém a <!-- REF #EmailObjectClass.bodyValues.Summary -->Objeto *EmailBodyValue* contendo um objeto para cada \<partID\> of `bodyStructure` (opcional)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
+A propriedade `.bodyValues` contém a <!-- REF #EmailObjectClass.bodyValues.Summary -->Objeto *EmailBodyValue* contendo um objeto para cada \<partID\> of `bodyStructure` (opcional)<!-- END REF -->. .
 
 O objeto `.bodyValues` contém as seguintes propriedades:
 
-| Propriedade                | Tipo    | Value                                                                                                                                                                               |
+| Propriedade                | Tipo    | Valor                                                                                                                                                                               |
 | -------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *partID*.value             | text    | Valor da parte do corpo                                                                                                                                                             |
 | *partID*.isEncodingProblem | boolean | Verdadeiro se seções malformadas forem encontradas durante a decodificação do conjunto de charset, ou charset desconhecido, ou codificação de conteúdo desconhecido. Padrão é falso |
@@ -204,7 +204,7 @@ A propriedade `.headers` contém a <!-- REF #EmailObjectClass.headers.Summary --
 
 Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 
-| Propriedade | Tipo | Value                                                                                                                                                                                             |
+| Propriedade | Tipo | Valor                                                                                                                                                                                             |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [].name     | text | (obrigatório) Nome do campo de cabeçalho como definido em [RFC#5322](https://tools.ietf.org/html/rfc5322). Caso seja nulo ou indefinido, o campo cabeçalho não será adicionado ao cabeçalho MIME. |
 | [].value    | text | Valores do campo de cabeçalho, conforme definido em [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                               |
@@ -215,7 +215,7 @@ Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 
 #### Descrição
 
-A propriedade `.htmlBody` contém a <!-- REF #EmailObjectClass.htmlBody.Summary -->Representação HTML da mensagem de correio electrónico (o charset padrão é UTF-8) (opcional, apenas SMTP)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
+A propriedade `.htmlBody` contém a <!-- REF #EmailObjectClass.htmlBody.Summary -->Representação HTML da mensagem de correio electrónico (o charset padrão é UTF-8) (opcional, apenas SMTP)<!-- END REF -->. .
 
 ## .id
 
@@ -247,7 +247,7 @@ A propriedade `.keywords` contém a <!-- REF #EmailObjectClass.keywords.Summary 
 
 Esta propriedade é o cabeçalho das "palavras-chave" (veja [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propriedade    | Tipo    | Value                                               |
+| Propriedade    | Tipo    | Valor                                               |
 | -------------- | ------- | --------------------------------------------------- |
 | .\<keyword\> | boolean | Palavra-chave a definir (valor deve ser verdadeiro) |
 
@@ -350,7 +350,7 @@ A propriedade `.subject` contém o <!-- REF #EmailObjectClass.subject.Summary --
 
 #### Descrição
 
-A propriedade `.textBody` contém o <!-- REF #EmailObjectClass.textBody.Summary -->Representação em texto simples da mensagem de correio electrónico (o conjunto de caracteres padrão é UTF-8) (opcional, apenas SMTP)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
+A propriedade `.textBody` contém o <!-- REF #EmailObjectClass.textBody.Summary -->Representação em texto simples da mensagem de correio electrónico (o conjunto de caracteres padrão é UTF-8) (opcional, apenas SMTP)<!-- END REF -->. .
 
 ## .to
 
@@ -374,7 +374,7 @@ The `MAIL Convert from MIME` command <!-- REF #EmailObjectClass.to.Summary -->co
 
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
-| Parâmetros | Tipo       |    | Descrição                               |
+| Parâmetro  | Tipo       |    | Descrição                               |
 | ---------- | ---------- |:--:| --------------------------------------- |
 | mime       | Blob, Text | -> | E-mail no MIME                          |
 | Resultados | Objeto     | <- | Objeto Email|<!-- END REF -->
@@ -459,7 +459,7 @@ $status:=$transporter.send($email)
 
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
-| Parâmetros | Tipo   |    | Descrição                                                  |
+| Parâmetro  | Tipo   |    | Descrição                                                  |
 | ---------- | ------ |:--:| ---------------------------------------------------------- |
 | mail       | Objeto | -> | Objeto Email                                               |
 | options    | Objeto | -> | Opções de codificação e Charset                            |
@@ -478,7 +478,7 @@ Em *opções*, você pode definir um conjunto de caracteres e uma configuração
 
 | Propriedade   | Tipo | Descrição                                                                                                                                                                       |
 | ------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headerCharset | Text | Charset e codificação usados para as seguintes partes do e-mail: assunto, nomes de arquivos de anexo e atributos de nome de e-mail. Valores possíveis:<table><tr><th>Constante</th><th>Value</th><th>Comentário</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII se possível, japonês (ISO-2022-JP) & impressora, se possível, caso contrário, UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII se possível, japonês (ISO-2022-JP) & 7-bit se possível, caso contrário, UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII se possível, caso contrário UTF-8 & Quoted-printable (**valor padrão**)</td></tr><tr><td>modo de correio UTF8 na base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII se possível, caso contrário UTF-8 & base64</td></tr></table> |
+| headerCharset | Text | Charset e codificação usados para as seguintes partes do e-mail: assunto, nomes de arquivos de anexo e atributos de nome de e-mail. Valores possíveis:<table><tr><th>Parâmetros</th><th>Valor</th><th>Comentário</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII se possível, japonês (ISO-2022-JP) & impressora, se possível, caso contrário, UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII se possível, japonês (ISO-2022-JP) & 7-bit se possível, caso contrário, UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII se possível, caso contrário UTF-8 & Quoted-printable (**valor padrão**)</td></tr><tr><td>modo de correio UTF8 na base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII se possível, caso contrário UTF-8 & base64</td></tr></table> |
 | bodyCharset   | Text | Charset e codificação usados para o conteúdo html e corpo do e-mail. Valores possíveis: o mesmo que para headerCharset (ver acima)                                              |
 
 Se o parâmetro *opções* for omitido, a configuração do modo de email UTF8 é usada para cabeçalho e partes do corpo.
