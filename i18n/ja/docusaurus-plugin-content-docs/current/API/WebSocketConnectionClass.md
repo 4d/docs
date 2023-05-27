@@ -40,7 +40,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 <!-- REF #WebSocketConnectionClass.handler.Desc -->
 ## .handler
 
-<!-- REF #WebSocketConnectionClass.handler.Syntax -->**handler** : Object<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
 
 #### 説明
 
@@ -54,7 +54,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 <!-- REF #WebSocketConnectionClass.id.Desc -->
 ## .id
 
-<!-- REF #WebSocketConnectionClass.id.Syntax -->**id** : Integer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.id.Syntax -->**.id** : Integer<!-- END REF -->
 
 #### 説明
 
@@ -97,7 +97,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 <!-- REF #WebSocketConnectionClass.status.Desc -->
 ## .status
 
-<!-- REF #WebSocketConnectionClass.status.Syntax -->**status** : Text<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.status.Syntax -->**.status** : Text<!-- END REF -->
 
 #### 説明
 
@@ -135,7 +135,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 <!-- REF #WebSocketConnectionClass.wss.Desc -->
 ## .wss
 
-<!-- REF #WebSocketConnectionClass.wss.Syntax -->**wss** : 4D.WebSocketServer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.wss.Syntax -->**.wss** : 4D.WebSocketServer<!-- END REF -->
 
 #### 説明
 
