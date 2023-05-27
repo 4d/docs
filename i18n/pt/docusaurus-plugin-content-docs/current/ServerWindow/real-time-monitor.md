@@ -1,6 +1,6 @@
 ---
 id: real-time-monitor
-title: Real Time Monitor Page
+title: Página do monitor em tempo real
 ---
 
 
@@ -16,7 +16,7 @@ The following information is provided for each line:
 - **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
 - **Duration** (ms): duration in milliseconds of operation in progress
 - **Information**: title of operation.
-- **Details**: this area displays detailed information which will vary according to the type of operation selected. More specifically:
+- **Details**: this area displays detailed information which will vary according to the type of operation selected. Mais especificamente:
     + **Created on**: indidates whether the operation results from a client action (Created on client) or if it was started explicitly on the server by means of a stored procedure or the "Execute on server" option (Created on server).
     + **Operation Details**: Operation type and (for query operations) query plan.
     + **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
@@ -47,7 +47,7 @@ In advanced mode (**Shift+Click** on the operation), additional information is d
 
 ![](../assets/en/Admin/server-admin-monitor-adv2.png)
 
-## Snapshot button
+## Botão instantânea
 
 The **Snapshot** button allows you to copy to the clipboard all the operations displayed in the RTM panel, as well as their related details (process and sub-operation info):
 
