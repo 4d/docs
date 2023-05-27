@@ -17,7 +17,7 @@ Informação gravada precisa ser analisada para detectar e corrigir os problemas
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [Petições de arquivo de log por cliente ORDA](#orda-client-requests)
 
-> When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
+> Nota: quando um arquivo de histórico for gerado seja em 4D Server ou em cliente remoto, a palavra "Server" é adicionada ao nome do arquivo do lado servidor, por exemplo "4DRequestsLogServer.txt"
 
 Arquivos de Histórico compartilham alguns campos para que possa estabelecer uma cronologia e fazer conexões entre entradas quando depurar:
 
@@ -43,7 +43,7 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 //lado remoto
 ```
-> Esta declaração também começa um arquivo de histórico [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt).
+> Esta declaração também começa o arquivo de histórico [4DRequestsLog.txt](#4drequestslogtxt).
 
 #### Cabeçalhos
 
@@ -63,7 +63,7 @@ Para cada petição, os campos abaixo estão logados:
 | time                                       | Data e hora usando formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                     |
 | systemid                                   | ID de sistema                                                                                                                                                                      |
 | componente                                 | Assinatura de componente (por exemplo '4SQLS' ou 'dbmg')                                                                                                                           |
-| process\_info\_index                   | Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                 |
+| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                           |
 | request                                    | ID de petição em C/S ou string de mensagem para petições SQL ou mensagens `LOG EVENT`                                                                                              |
 | bytes_in                                   | Número de bytes recebidos                                                                                                                                                          |
 | bytes_out                                  | Número de bytes enviados                                                                                                                                                           |
@@ -93,7 +93,7 @@ SET DATABASE PARAMETER(4D Server log recording;1) //lado servidor
 ```4d
 SET DATABASE PARAMETER(Client Log Recording;1) //lado remoto
 ```
-> Esta declaração também começa o arquivo de histórico [4DRequestsLog.txt](#4drequestslogtxt).
+> Esta declaração também começa um arquivo de histórico [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt).
 
 #### Cabeçalhos
 
@@ -190,7 +190,7 @@ Os campos abaixo estão registrados para cada evento:
 | -------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1        | sequence_number                 | Número de operação único e sequencial da sessão de histórico                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 2        | time                            | Data e hora em formato ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 3        | ProcessID                       | ID do processo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 3        | ProcessID                       | Process ID                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | 4        | unique_processID                | ID de processo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 5        | stack_level                     | Nível de stack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 6        | operation_type                  | Tipo operação histórico. Esse valor pode ser um valor absoluto:<p><ol><li>Comando</li><li>Método (método de projeto, método de banco de dados, etc)</li><li>Mensagem (enviada só pelo comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html))</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarefa</li><li>Método membro (método anexado à coleção ou a um objeto)</li></ol></p>Quando fechar um nível de stack, as colunas `operation_type`, `operation` e `operation_parameters` tem o mesmo valor que o nível de stack registrado na coluna `stack_opening_sequence_number` column. Por exemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>A primeira e segunda linha abrem o nível de stack, a terceira e quarta linha fecham o nível de stack. Valores nas colunas 6, 7 e 8 são repetidos na linha do nível de stack ao fechar. A coluna 10 contém os números de sequência de abertura do nível de stack, ou seja, 122 para a terceira linha e 121 para a quarta. |
@@ -218,7 +218,7 @@ Os campos abaixo estão registrados para cada evento:
 | timestamp          | Data e hora em formato ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)    |
 | loggerID           | Opcional                                                     |
 | componentSignature | Opcional - assinatura interna de componente                  |
-| messageLevel       | Info, Warning, Error                                         |
+| messageLevel       | Informação, Aviso, Erro                                      |
 | message            | Descrição da entrada de histórico                            |
 
 Dependendo do evento, vários outros campos podem ser registrados, como task, socket, etc.
@@ -256,12 +256,12 @@ Os arquivos de histórico podem ser produzidos em duas versões:
  Para começar esse histórico:
 
  ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
+ SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log 
+ SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log 
  SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
  ```
 
-> 4D Server: Clique no botão **Start Request and Debug Logs** na página [Maintenance](ServerWindow/maintenance.md) da janela de administração de 4D Server.
+> 4D Server: Clique no botão **Start Request and Debug Logs** na página [Maintenance](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) da janela de administração de 4D Server.
 
    A rota do histórico é retornada pelo comando `Get 4D file`.
 
@@ -325,20 +325,20 @@ ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
 
 Os campos abaixo são registrados para cada petição:
 
-| Campo nome     | Descrição                                                    | Exemplo                                                   |
-| -------------- | ------------------------------------------------------------ | --------------------------------------------------------- |
-| sequenceNumber | Número de operação único e sequencial da sessão de histórico | 104                                                       |
-| url            | URL de petição de cliente ORDA                               | "rest/Persons(30001)"                                     |
-| startTime      | Starting date and time using ISO 8601 format                 | "2019-05-28T08:25:12.346Z"                                |
-| endTime        | Data e hora final usando formato ISO 8601                    | "2019-05-28T08:25:12.371Z"                                |
-| duration       | Duração de processamento do cliente (ms)                     | 25                                                        |
-| response       | Objeto resposta servidor                                     | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+| Campo nome     | Descrição                                                    | Exemplo                                                 |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| sequenceNumber | Número de operação único e sequencial da sessão de histórico | 104                                                     |
+| url            | URL de petição de cliente ORDA                               | "rest/Persons(30001)"                                   |
+| startTime      | Starting date and time using ISO 8601 format                 | "2019-05-28T08:25:12.346Z"                              |
+| endTime        | Data e hora final usando formato ISO 8601                    | "2019-05-28T08:25:12.371Z"                              |
+| duration       | Duração de processamento do cliente (ms)                     | 25                                                      |
+| response       | Objeto resposta servidor                                     | {"status":200,"body":{"__entityModel":"Persons",\[...] |
 
 ## Using a log configuration file
 
 You can use a **log configuration file** to easily manage log recording in a production environment. This file is preconfigured by the developer. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Once enabled, the log configuration file triggers the recording of specific logs.
 
-### How to enable the file
+### Como activar o ficheiro
 
 There are several ways to enable the log configuration file, depending on your configuration:
 
@@ -441,60 +441,7 @@ The log configuration file is a `.json` file that must comply with the following
                     "maximum": 7
                 },
                 "state": {
-                    "description": "Enable/Disable recording of web requests",
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 4
-                }
-            }
-        },
-        "POP3Logs": {
-            "description": "Configuration for POP3 logs",
-            "type": "object",
-            "properties": {
-                "state": {
-                    "description": "Enable/Disable POP3 logs (from 0 to N)",
-                    "type": "integer",
-                    "minimum": 0
-                }
-            }
-        },
-        "SMTPLogs": {
-            "description": "Configuration for SMTP logs",
-            "type": "object",
-            "properties": {
-                "state": {
-                    "description": "Enable/Disable SMTP log recording (form 0 to N)",
-                    "type": "integer",
-                    "minimum": 0
-                }
-            }
-        },
-        "IMAPLogs": {
-            "description": "Configuration for IMAP logs",
-            "type": "object",
-            "properties": {
-                "state": {
-                    "description": "Enable/Disable IMAP log recording (form 0 to N)",
-                    "type": "integer"
-                }
-            }
-        },
-        "ORDALogs": {
-            "description": "Configuration for ORDA logs",
-            "type": "object",
-            "properties": {
-                "state": {
-                    "description": "Enable/Disable ORDA logs (0 or 1)",
-                    "type": "integer"
-                },
-                "filename": {
-                    "type": "string"
-                }
-            }
-        }
-    }
-}
+                    "description":
 ```
 
 ### Exemplo
