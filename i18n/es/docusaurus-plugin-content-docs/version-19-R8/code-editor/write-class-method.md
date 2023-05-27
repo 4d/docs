@@ -125,16 +125,16 @@ Puede mostrar u ocultar los números de línea en el área de puntos de interrup
 
 La visualización de los números de línea facilita la orientación en la ventana. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
 
-This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
+Este tipo de búsqueda es útil cuando se utiliza junto con el [compilador](../Project/compiler.md), que señala los errores de ejecución por el número de línea en el que se producen.
 
 ## Barra de estado
 
-The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
+La barra de estado situada en la parte inferior derecha de la ventana del editor muestra la posición del cursor en todo momento:
 
 ![](../assets/en/code-editor/status-bar.png)
 
 - **Ln**: número de línea
-- **Col**: número de columna, es decir, el nivel en la jerarquía de las estructuras de programación. El primer nivel es 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
+- **Col**: número de columna, es decir, el nivel en la jerarquía de las estructuras de programación. El primer nivel es 0. El número de columna es útil para la depuración, ya que esta información puede ser proporcionada por el intérprete en caso de error en el código.
 - **Ch**: ubicación del caracter en la línea.
 - ![](../assets/en/code-editor/show-hide-list.png): Ocultar/mostrar listas.
 
@@ -154,7 +154,7 @@ El Editor de código incluye numerosos [atajos de navegación](#shortcuts).
 
 El carácter barra invertida (`\`) tiene un soporte específico en el lenguaje 4D:
 
-- inserted at the end of lines, it allows to write a single statement on [several lines](../Concepts/quick-tour.md#code-on-several-lines).
+- insertado al final de las líneas, permite escribir una única instrucción en [varias líneas](../Concepts/quick-tour.md#code-on-several-lines).
 - permite definir [secuencias de escape](../Concepts/quick-tour.md#escape-sequences).
 
 
@@ -170,7 +170,7 @@ El caracter de barra invertida (`\`) se utiliza como separador en [los nombres d
 
 From the Explorer, you can drag and drop tables, fields, forms, project methods, constants, or 4D commands. When you drag and drop an element, 4D always uses the correct syntax. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
 
-When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
+Cuando inserta un comando arrastrándolo desde la página **Comandos** del Explorador, aparece con su sintaxis (que consiste en todos sus parámetros) en el Editor de Código. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
 
 #### Arrastrar y soltar dentro de un método, clase, función o entre dos diferentes
 
@@ -187,7 +187,7 @@ You can automatically modify the case of selected characters using the commands 
 
 Cuando aplica uno de estos comandos a una selección de texto, se eliminan los espacios y los caracteres "_" y la primera letra de cada palabra pasa a ser mayúscula.
 
-#### Swap expression
+#### Intercambiar expresión
 
 The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por ejemplo,
 
@@ -199,7 +199,7 @@ se convierte en
 
 Esta función es extremadamente útil para invertir un conjunto de asignaciones utilizadas para obtener o definir propiedades, o para corregir errores de entrada. Within the selection, only the lines assigning a value will be modified. To use this function, select the line(s) to be modified, then choose **Method** > **Swap Expression** or use the context menu of the area.
 
-#### Multiple copy-paste and numbering of clipboards
+#### Copia-pega múltiple y numeración de portapapeles
 
 Además de la operación estándar de copiar y pegar, 4D ofrece dos funciones adicionales que le permiten trabajar con el contenido de diferentes portapapeles:
 
@@ -361,9 +361,9 @@ El Editor de código ofrece diversa información contextual utilizando consejos 
 - **Project methods or functions**: When you mouse over a project method or class function, a help tip displays:
 
   - o los comentarios especificados en el Explorador.
-  - or the first few lines of the method or class function if it includes comments (lines beginning with // or /*...*/ comment block). It is common practice to insert documentation for the method as well as its parameters in the form of comments at the beginning of the method. You can get this information directly in the help tip, just make sure to first remove any comments found in the Explorer. Comments at the beginning of a method: ![](../assets/en/code-editor/comments-method.png) Help tip in another method: ![](../assets/en/code-editor/help-tip.png)
+  - or the first few lines of the method or class function if it includes comments (lines beginning with // or /*...*/ comment block). Es práctica habitual insertar la documentación del método, así como sus parámetros, en forma de comentarios al principio del método. Puede obtener esta información directamente en el mensaje de ayuda, sólo asegúrese de eliminar primero todo comentario que se encuentre en el Explorador. Comments at the beginning of a method: ![](../assets/en/code-editor/comments-method.png) Help tip in another method: ![](../assets/en/code-editor/help-tip.png)
 
-- You can also create a **dedicated documentation file** named `<MethodName>.md` in the `<package>/documentation` folder. See [Viewing documentation in the code editor](../Project/documentation.md#viewing-documentation-in-the-code-editor)
+- También puede crear un **archivo de documentación dedicado** llamado `<MethodName>.md` en la carpeta `<package>/documentation`. Ver [Visualización de la documentación en el editor de código](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
 
 ## Mostrar la documentación
@@ -386,33 +386,33 @@ El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), qu
 
 Existen dos tipos de comentarios: `//comment` (comentario de una línea) y `/*comment*/`(comentarios en línea o bloques de comentarios multilínea).
 
-Se pueden crear comentarios digitando los caracteres `/`. Or, the **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. Para utilizar este comando, seleccione el código que desea marcar como comentado y, a continuación, seleccione el comando **Comentar/Descomentar**:
+Se pueden crear comentarios digitando los caracteres `/`. O, el comando **Comentar/Descomentar**, que se encuentra en el menú **Método** así como en el menú contextual del Editor de Código se utiliza para marcar un grupo de líneas de código seleccionadas como comentarios de una sola línea o, por el contrario, para eliminar los caracteres de comentario de una sola línea de una selección. Para utilizar este comando, seleccione el código que desea marcar como comentado y, a continuación, seleccione el comando **Comentar/Descomentar**:
 
 ![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
-Cuando la selección sólo contiene código activo, se aplica el comando **Comentario**. When the selection includes both active code and commented lines, an additional pair of comment characters ( // ) is added to the latter; this way, they will retain their initial commented status if the line is subsequently "uncommented." Cuando la selección contiene sólo líneas comentadas, se aplica el comando **Descomentar**.
+Cuando la selección sólo contiene código activo, se aplica el comando **Comentario**. Cuando la selección incluye tanto código activo como líneas comentadas, se añade a estas últimas un par adicional de caracteres de comentario ( // ); de este modo, conservarán su estado inicial de comentadas si la línea se "descomenta" posteriormente Cuando la selección contiene sólo líneas comentadas, se aplica el comando **Descomentar**.
 
-> The **Comment/Uncomment** command only operates with full lines --- it cannot be used to comment only part of a line.
+> El comando **Comentar/Descomentar** sólo funciona con líneas completas --- no puede utilizarse para comentar sólo parte de una línea.
 
 
 ## Expandir / Contraer
 
-4D code located inside loops and conditions can now be collapsed or expanded, in order to facilitate the reading of methods:
+El código 4D situado dentro de bucles y condiciones puede ahora contraerse o expandirse, para facilitar la lectura de los métodos:
 
 - Expanded code: ![](../assets/en/code-editor/expanded-code.png)
 
 - Collapsed code: ![](../assets/en/code-editor/collapsed-code.png)
 
-If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.
+Si sitúa el ratón sobre el botón de expansión [...], aparece un mensaje de ayuda que muestra las primeras líneas del código oculto.
 
-Se puede seleccionar, copiar, pegar o eliminar una porción de código contraída. All the lines included therein will be copied, pasted or deleted respectively. When a portion of code is pasted, it is automatically expanded.
+Se puede seleccionar, copiar, pegar o eliminar una porción de código contraída. Todas las líneas incluidas en él se copiarán, pegarán o borrarán respectivamente. Cuando se pega una parte del código, se expande automáticamente.
 
 Hay varias formas de expandir y contraer código:
 
-- Click on the expand/collapse icons ([+] and [-] under Windows) or on the opening button [...]
-- Use the commands of the **Method > Collapse/Expand** submenu:
+- Haga clic en los iconos de expandir/contraer ([+] y [-] en Windows) o en el botón de abrir [...]
+- Utilice los comandos del submenú **Método > Contraer/Expandir**:
 
-  - **Collapse Selection** / **Expand Selection**: collapses or expands all the code structures found in the text selection.
+  - **Contraer selección** / **Expandir selección**: contrae o expande todas las estructuras de código que se encuentran en la selección de texto.
   - **Contraer nivel actual** / **Expandir nivel actual**: contrae o expande la estructura del código en el nivel en el que se encuentra el cursor. Estos comandos también están disponibles en el **menú contextual** del editor.
   - **Contraer todo** / **Expandir todo**: contrae o expande todos los bucles y condiciones de un método. Estos comandos también están disponibles en la barra de herramientas del editor.
 
@@ -475,7 +475,7 @@ The **Goto Definition** command opens the definition of an element referenced in
 El efecto varía en función del elemento objetivo. Por ejemplo:
 
 - Seleccionando un método proyecto y eligiendo **Goto Definition...** muestra el contenido del método en una nueva ventana del Editor de Código
-- Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
+- Seleccionando un nombre de clase o un atributo de clase y eligiendo **Ir a definición...** se abre la clase en el Editor de Código
 
 ## Revelar en el Explorador
 
