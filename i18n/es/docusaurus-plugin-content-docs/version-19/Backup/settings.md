@@ -129,6 +129,6 @@ El usuario no ve ninguna caja de diálogo; la operación es completamente autom�
 > - archivo .4DIndx
 > - archivo .4DSyncData
 > - archivo .4DSyncHeader
-> - External Data folder
+> - Carpeta External Data
 > 
 > Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una [restauración manual](restore.md#manually-restoring-a-backup-standard-dialog).
