@@ -211,7 +211,7 @@
     "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog list page navigation",
+    "message": "Navegación por la página de la lista de blogs",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -584,6 +584,6 @@
     "message": "Gestión del código"
   },
   "Transformation Tags": {
-    "message": "Transformation Tags"
+    "message": "Etiquetas de transformación"
   }
 }
