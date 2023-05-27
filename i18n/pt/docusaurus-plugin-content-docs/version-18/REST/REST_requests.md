@@ -20,7 +20,7 @@ As estrutyuras abaixo são compatíveis com petições REST:
 |                                  | [$info]($info.md)                                                           |                                                                            |                                                                 |
 
 
-Todas as petições REST devem conter os parâmetros URI e Resource, mas o parâmetro Subresource (que filtra os dados retornados) é opcional.
+While all REST requests must contain the URI and Resource parameters, the Subresource (which filters the data returned) is optional.
 
 Como com todas as URIs, o primeiro parâmetro é definido por um “?” e todos os parâmetros subsequentes por “&”. Por exemplo:
 
