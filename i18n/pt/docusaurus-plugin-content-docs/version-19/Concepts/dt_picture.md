@@ -25,7 +25,7 @@ O formulário retornado para cada formato dependerá da forma como o Codec é gr
 
 A maioria dos [comandos de gerenciamento de imagens 4D](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) pode receber um Codec ID como parâmetro. É imperativo, portanto, usar a ID do sistema retornada pelo comando `PICTURE CODEC LIST`. Os formatos de imagem reconhecidos por 4D são devolvidos pelo comando `PICTURE CODEC LIST` .
 
-## Operadores Bitwise
+## Operadores de imagem
 
 | Operação                | Sintaxe                | Retorna | Ação                                                                                                                                                                       |
 | ----------------------- | ---------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
