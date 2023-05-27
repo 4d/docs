@@ -1,12 +1,12 @@
 ---
 id: entities
-title: Working with data
+title: Trabalhar com dados
 ---
 
 In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
 
 
-## Creating an entity
+## Criar uma entidade
 
 There are two ways to create a new entity in a dataclass:
 
@@ -47,7 +47,7 @@ This is illustrated by the following graphic:
 
 ![](../assets/en/ORDA/entityRef1.png)
 
-Now if you execute:
+Agora, se executar:
 
 ```4d
  var $e1; $e2 : cs. EmployeeEntity
@@ -73,7 +73,7 @@ In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entit
  End for each
 ```
 
-And the method is:
+E o método é:
 
 ```4d
  $entity:=$1
@@ -99,7 +99,6 @@ For example, to set a storage attribute:
  $entity:=ds. Employee.get(1) //get employee attribute with ID 1
  $name:=$entity.lastname //get the employee name, e.g. "Smith"
  $entity.lastname:="Jones" //set the employee name
- $entity.save() //save the modifications
 ```
 
 > Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D. Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
@@ -206,7 +205,7 @@ An **alterable** entity selection has the following characteristics:
 - it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
 
 
-#### How are they defined?
+#### Como é que são definidos?
 
 The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
 
@@ -246,11 +245,11 @@ Exemplos:
 
 ```4d
 $highSal:=ds. Employee.query("salary >= :1"; 1000000)   
-    //$highSal is shareable because of the query on dataClass
+ //$highSal is shareable because of the query on dataClass
 $comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
 $lowSal:=ds. Employee.query("salary <= :1"; 10000).copy() 
-    //$lowSal is alterable because of the copy()
+ //$lowSal is alterable because of the copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
@@ -292,7 +291,6 @@ O método `sendMails`:
  For each($invoice;$paid)
     $email.to:=$invoice.customer.address // email address of the customer
     $email.subject:="Payment OK for invoice # "+String($invoice.number)
-
     $status:=$transporter.send($email)
  End for each
 
@@ -327,10 +325,10 @@ In addition to the variety of ways you can query, you can also use relation attr
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
+The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
 
 
-## Entity Locking
+## Bloqueio de entidades
 
 You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
 
@@ -379,7 +377,7 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
-This feature is based upon two functions of the `Entity` class:
+This feature is based upon two methods of the `Entity` class:
 
 *   [`entity.lock()`](../API/EntityClass.md#lock)
 *   [`entity.unlock()`](../API/EntityClass.md#unlock)
@@ -404,4 +402,4 @@ These principles are shown in the following diagram:
 **Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
 *   Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-*   Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+*   Example with a lock set by an ORDA method:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
