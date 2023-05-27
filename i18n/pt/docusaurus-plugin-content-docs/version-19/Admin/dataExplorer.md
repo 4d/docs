@@ -3,9 +3,9 @@ id: dataExplorer
 title: Web Data Explorer
 ---
 
-> **Preview**: O Web Data Explorer está sendo oferecido como uma funcionalidade em modo preview. Não é recomendado usar ainda essa funcionalidade em modo de produção; a implementação final poderia ser ligeiramente diferente.
+> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
 
-O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. Ajuda a controlar dados e rapidamente identificar problemas em qualquer etapa do processo de desenvolvimento.
+O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. It helps you to control data and quickly identify issues at any steps of the development process.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 
@@ -20,15 +20,15 @@ O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para 
 
 ## Abrindo o Data Explorer
 
-A página do Data Explorer está disponível automaticamente quando o web server [the `WebAdmin` for iniciado](webAdmin.md#starting-the-webadmin-web-server).
+The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
 
-Para se conectar à página web do Data Explorer:
+To connect to the Data Explorer web page:
 
-- Se usar a aplicação 4D com interface, selecione o comando **Data Explorer...** :
-  - no menu **Records**  (em 4D monousuário)
-  - no menu **Window**  (em 4D Server)
+- if you use a 4D application with interface, select **Data Explorer...** command from:
+  - the **Records** menu (in 4D stand-alone)
+  - the **Window** menu (in 4D Server)
 
-- mesmo se usar uma aplicação 4D headless, pode abrir seu navegador web e digitar o endereço abaixo:
+- whether you use a headless 4D application or not, you can open your web browser and enter the following address:
 
  `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
 
@@ -120,7 +120,7 @@ Com atributos de data, pode introduzir a data a utilizar através de um widget d
 
 ![alt-text](../assets/en/Admin/DEFilter2.png)
 
-#### Booleans
+#### Booleanos
 
 Ao clicar numa área de atributos booleanos, pode filtrar em **valores verdadeiros**/**valores falsos** ou também em **null**/**e não null**:
 
