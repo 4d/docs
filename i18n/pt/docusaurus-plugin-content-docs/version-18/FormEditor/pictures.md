@@ -29,4 +29,4 @@ O ícone indica que a imagem não pode ser exibida ou manipulada localmente - ma
 
 As coordenadas são devolvidas nas [Variáveis de Sistema](https://doc.4d.com/4Dv18/4D/18/System-Variables.300-4505547.en.html). *MouseX* e*MouseY*. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0). Se o mouse estiver fora do sistema de coordenadas da imagem, se devolverá -1 em *MouseX* e *MouseY*.
 
-Pode obter o valor dessas variáveis como parte dos eventos formulário `On Clicked`, `On Double Clicked`, `On Mouse up`, `On Mouse Enter`, ou `On Mouse Move`.
+You can get the value of these variables as part of the `On Clicked`, `On Double Clicked`, `On Mouse up`, `On Mouse Enter`, or `On Mouse Move` form events.
