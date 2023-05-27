@@ -3,9 +3,9 @@ id: onColumnResize
 title: On Column Resize
 ---
 
-| Code | Pode ser chamado por                                                                                                                                                        | Definição                                                                                      |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| 33   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The width of a column is modified directly by the user or consequently to a form window resize |
+| Code | Pode ser chamado por                                                                                                                                                        | Definição                                                                                                                                |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 33   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A largura de uma coluna é modificada directamente pelo utilizador ou, consequentemente, por um redimensionamento da janela do formulário |
 
 
 ## Descrição
@@ -25,7 +25,7 @@ This event is generated when the width of a column is modified by a user. On thi
 | code        | inteiro longo | On Column Resize                                                    |
 | description | text          | "On Column Resize"                                                  |
 | objectName  | text          | Nome da área 4D View Pro                                            |
-| sheetName   | text          | Name of the sheet of the event                                      |
+| sheetName   | text          | Nome da folha do evento                                             |
 | range       | object        | Cell range of the columns whose widths have changed                 |
 | header      | boolean       | True if the row header column (first column) is resized, else false |
 
