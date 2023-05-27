@@ -12,7 +12,7 @@ You can use object librairies in your forms. An object library offers a collecti
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
 
 
-## Utilização da biblioteca de objetos padrão
+## Criar e utilizar bibliotecas de objetos personalizadas
 
 The standard object library is available from the Form editor: click on the last button of the toolbar:  
 ![](../assets/en/FormEditor/library1.png)
@@ -34,7 +34,7 @@ This library is read-only. If you want to edit default objects or create your ow
 All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 
-## Criar e utilizar bibliotecas de objetos personalizadas
+## Utilização da biblioteca de objetos padrão
 
 You can create and use custom object libraries in 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. You can then reuse these objects in different forms and different projects.
 
@@ -55,7 +55,7 @@ You can create as many libraries as desired per project. A library created and b
 
 ### Opening an object library
 
-A given object library can only be opened by one project at a time. However, several different libraries can be opened in the same project.
+Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dados por vez. Entretanto, várias livrarias diferentes podem ser abertas no mesmo banco de dados.
 
 To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 - **.4dproject**
