@@ -19,7 +19,7 @@ Enables the "barber shop" variant for the thermometer.
 
 ---
 
-## Display graduation
+## Exibir graduação
 
 Displays/Hides the graduations next to the labels.
 
@@ -51,7 +51,7 @@ Scale display measurement.
 
 ---
 
-## Label Location
+## Localização da etiqueta
 
 Specifies the location of an object's displayed text.
 
