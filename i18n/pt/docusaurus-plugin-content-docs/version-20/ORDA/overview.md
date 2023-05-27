@@ -10,7 +10,7 @@ Relations are transparently included in the concept, in combination with [lazy l
 With ORDA, data is accessed through an abstraction layer, the [datastore](dsMapping.md#datastore). A datastore is an object that provides an interface to the database model and data through objects and classes. For example, a table is mapped to a [dataclass](dsMapping.md#dataclass) object, a field is an [attribute](dsMapping.md##attribute) of a dataclass, and records are accessed through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection).
 
 
-## Porquê usar ORDA?
+## Porquê utilizar ORDA?
 
 Instead of representing information as tables, records, and fields, ORDA uses an alternate approach that more accurately maps data to real-world concepts.
 
@@ -22,7 +22,7 @@ A query returns a list of entities called an entity selection, which fulfills th
 
 In addition, ORDA objects such as entity selections or entities can be easily bound to UI objects such as list boxes or variables. Combined with powerful features such as the `This` and `Form` commands, they allow the building modern and modular interfaces based upon objects and collections.
 
-## Como utilizar a ORDA?
+## Como utilizar ORDA?
 
 Basically, ORDA handles objects. In ORDA, all main concepts, including the datastore itself, are available through objects. In 4D, the datastore is automatically [mapped upon the 4D structure](dsMapping.md).
 
