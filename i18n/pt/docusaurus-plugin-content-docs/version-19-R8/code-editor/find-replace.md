@@ -1,6 +1,6 @@
 ---
 id: find-replace
-title: Find and replace
+title: Procurar e substituir
 ---
 
 The Code Editor has specific find and replace functions that apply to the current window.
@@ -13,7 +13,7 @@ The Find/Replace commands for methods, classes or functions are located in **Edi
 
 > The find commands located above the **Find** submenu are not specific to the Code Editor but may be used to search for a value among all the methods, classes or functions, using the **Find in design** feature in the toolbar or in the **Edit** menu.
 
-## Pesquisar
+## Find
 
 Selecting the **Find...** command displays the following dialog box:
 
@@ -26,7 +26,7 @@ The search defined in this dialog box will be performed in the method located in
 - The **Case Sensitive** option is used to take the case of characters as they were entered in the "Find What:" area into account. For instance, a search for "MyVar" will not find "myVar."
 - The **Previous/Next** radio buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
 
-4D begins searching from the current text insertion point and continues to the end of the method. The **Replace** button is used to launch the search and replace the first occurrence found. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the **Edit** menu.
+When you click on **OK**, 4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
 
 ### Encontrar o mesmo
 
@@ -44,7 +44,7 @@ The **Bookmark All** command is enabled when a search has already been specified
 
 For more information about bookmarks, refer to [Using bookmarks](./write-class-method.md#using-bookmarks).
 
-## Replace
+## Substituir
 
 The **Replace** command displays the following dialog box:
 
