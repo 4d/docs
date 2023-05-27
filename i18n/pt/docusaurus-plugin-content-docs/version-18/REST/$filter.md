@@ -19,7 +19,7 @@ A filter is composed of the following elements:
 
 For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
 
-### Using a complex filter
+### Utilizar um filtro complexo
 
 A more compex filter is composed of the following elements, which joins two queries:
 
