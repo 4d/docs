@@ -3,9 +3,9 @@ id: ZipFileClass
 title: ZIPFile
 ---
 
-The following properties and functions from the [File](FileClass.md) class are available to `ZIPFile` objects:
+As seguintes propriedades e funções da classe [File](FileClass.md) estão disponíveis para os objectos `ZIPFile`:
 
-| Available [File](FileClass.md) APIs for ZIPFile                                               | Comentário                             |
+| APIs disponível [File](FileClass.md) para ZIPFile                                             | Comentário                             |
 | --------------------------------------------------------------------------------------------- | -------------------------------------- |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](FileClass.md#copyto)                   |                                        |
 | [<!-- INCLUDE #document.creationDate.Syntax -->](FileClass.md#creationdate)         |                                        |
@@ -26,5 +26,5 @@ The following properties and functions from the [File](FileClass.md) class are a
 | [<!-- INCLUDE #document.name.Syntax -->](FileClass.md#name)                         |                                        |
 | [<!-- INCLUDE #document.original.Syntax -->](FileClass.md#original)                 |                                        |
 | [<!-- INCLUDE #document.parent.Syntax -->](FileClass.md#parent)                     |                                        |
-| [<!-- INCLUDE #document.path.Syntax -->](FileClass.md#path)                         | Returns a path relative to the archive |
+| [<!-- INCLUDE #document.path.Syntax -->](FileClass.md#path)                         | Devolve um caminho relativo ao arquivo |
 | [<!-- INCLUDE #document.platformPath.Syntax -->](FileClass.md#platformpath)         |                                        |
