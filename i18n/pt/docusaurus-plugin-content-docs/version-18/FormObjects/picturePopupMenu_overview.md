@@ -1,6 +1,6 @@
 ---
 id: picturePopupMenuOverview
-title: Picture Pop-up Menu
+title: Menu pop-up imagem
 ---
 
 ## Visão Geral
