@@ -10,10 +10,10 @@ title: Modos interpretado e compilado
 
 As vantagens da compilação são:
 
-- **Velocidade**: A sua aplicação pode correr de 3 a 1.000 vezes mais rápido.
-- **Verificação do código**: A sua aplicação é digitalizada para verificar a consistência do código. São detectados conflitos tanto lógicos como sintácticos.
-- **Protecção**: Uma vez compilada a sua aplicação, pode apagar o código interpretado. Então, a aplicação compilada é funcionalmente idêntico ao original, exceto que a estrutura e métodos não pode ser vista ou modificada, seja de forma deliberada ou por acidente.
-- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
+- **Velocidade**: seu banco de dados é executa de 3 a 1.000 vezes mais rápido.
+- **Verificação de código**: sua aplicação de banco de dados se analisa para comprovar a coerência do código. São detectados conflitos tanto lógicos como sintácticos.
+- **Proteção:**: quando seu banco de dados for compilado, pode eliminar o código interpretado. Então, o banco de dados compilado é funcionalmente idêntico ao original, exceto que a estrutura e métodos não pode ser vista ou modificada, seja de forma deliberada ou por acidente.
+- **Aplicações independentes/stand alone com duplo clique**: os bancos compilados também podem se transformar em aplicações independentes (arquivos.EXE) com seu proprio icone.
 - **Preemptive mode**: only compiled code can be executed in preemptive processes.
 
 ## Differences between interpreted and compiled code
@@ -32,9 +32,9 @@ Although application will work the same way in interpreted and compiled modes, t
 
 ## Utilização de directivas de compilação com o Intérprete
 
-As directivas de compilação não são necessárias para aplicações não compiladas. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the application project.
+Os bancos não compilados não exigem diretivas de compilador. O intérprete digita automaticamente cada variável em função de como é utilizada em cada declaração, e uma variável pode voltar a ser escrita livremente em todo o banco de dados
 
-Because of this flexibility, it is possible that an application can perform differently in interpreted and compiled modes.
+Por causa da flexibilidade, é possível que um banco de dado possa atuar diretamente em modos interpretado e compilado.
 
 Por exemplo, se escrever:
 
@@ -51,7 +51,7 @@ In this example, `MyInt` is assigned the same value (3) in both the interpreted 
 
 The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire project for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your project so that your compiler directives are executed prior to any statements containing declared variables.
+A ordem na qual as duas declarações aparecem é irrelevante para o compilador porque primeiro escaneia o banco inteiro por diretivas de compilador. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. Por isso, é importante projetar seu banco de dados de forma que as diretivas de compilador sejam executadas antes de qualquer declarações que contenham variáveis declaradas.
 
 
 ## Using pointers to avoid retyping
@@ -66,12 +66,12 @@ C_LONGINT($age)
 $name:="Smith"
 $age:=50
 
-$p:=->$name //text target for the pointer
-$p->:="Wesson" //assigns a text value
+$p:=->$name //alvo de texto para o ponteiro
+$p->:="Wesson" //atribui um valor de texto
 
 $p:=->$age  
-// new target of different type for the pointer
-$p->:=55 //assigns a number value
+//novo alvo de tipo diferente para o ponteiro
+$p->:=55 //atribui um valor numérico
 ```
 
 Imagine a function that returns the length (number of charaters) of values that can be of any type.
