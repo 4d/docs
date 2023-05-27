@@ -12,7 +12,7 @@ title: On Deactivate
 
 If the window of a form was the frontmost window, this event is called when the window is sent to the background.
 
-This event applies to the form as a whole and not to a particular object. Consequently, if the `On Deactivate` form event property is selected, only the form will have its form method called.
+Este evento aplica-se ao formulário como um todo e não a um objecto específico. Consequently, if the `On Deactivate` form event property is selected, only the form will have its form method called.
 
 ### Veja também
 [On Activate](onActivate.md)
