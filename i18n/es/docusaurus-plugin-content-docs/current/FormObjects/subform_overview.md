@@ -54,7 +54,7 @@ Por defecto, 4D crea una variable o expresión de [tipo objeto](properties_Objec
 
 ### Sincronizando formulario padre y subformulario (valor único)
 
-Binding the same variable or expression to your subform container and other objects of the parent form lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. Imagine a subform that contains a clock displaying a static time, inserted into a parent form containing an [input area](input_overview.md):
+Binding the same variable or expression to your subform container and other objects of the parent form lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. Imagine un subformulario que contiene un reloj que muestra una hora estática, insertado en un formulario padre que contiene un [área de entrada](input_overview.md):
 
 ![](../assets/en/FormObjects/subforms1.png)
 
