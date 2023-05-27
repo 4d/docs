@@ -1,6 +1,6 @@
 ---
 id: WebSocketConnectionClass
-title: Ligação WebSocket
+title: WebSocketConnection
 ---
 
 <details><summary>Histórico</summary>
@@ -22,9 +22,9 @@ Para uma visão geral e alguns exemplos da implementação do servidor WebSocket
 
 ### Objecto WebSocketConnection
 
-Um objeto `WebSocketConnection` é automaticamente criado quando a função de retorno de chamada [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) do objecto [WebSocketServer](WebSocketServerClass.md#4dwebsocketservernew) devolve um objecto [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object) .
+Um objeto `WebSocketConnection` é automaticamente criado quando a função de retorno de chamada [`WSHandler.onConnection`](WebSocketServerClass.md#wsshandler-parameter) do objecto [WebSocketServer](WebSocketServerClass.md#4dwebsocketservernew) devolve um objecto [`connectionHandler`](WebSocketServerClass.md#connectionhandler-object).
 
-Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
+Os objectos Httprequest fornecem as seguintes propriedades e funções:
 
 |                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,11 +40,11 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 <!-- REF #WebSocketConnectionClass.handler.Desc -->
 ## .handler
 
-<!-- REF #WebSocketConnectionClass.handler.Syntax -->**handler** : Object<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.handler.Syntax -->**.handler** : Objecto<!-- END REF -->
 
 #### Descrição
 
-A propriedade `.handler` contém <!-- REF #WebSocketConnectionClass.handler.Summary -->o acessor que obtém o objecto `connectionHandler` utilizado para iniciar a ligação<!-- END REF -->.
+The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summary -->o acessor que obtém o objecto `connectionHandler` utilizado para iniciar a ligação<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -54,7 +54,7 @@ A propriedade `.handler` contém <!-- REF #WebSocketConnectionClass.handler.Summ
 <!-- REF #WebSocketConnectionClass.id.Desc -->
 ## .id
 
-<!-- REF #WebSocketConnectionClass.id.Syntax -->**id** : Integer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.id.Syntax -->**.id** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -71,17 +71,17 @@ Esta propriedade é só de leitura.
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| Parâmetros | Tipo                 |    | Descrição                                      |
-| ---------- | -------------------- |:--:| ---------------------------------------------- |
-| message    | Text / Blob / Object | -> | A mensagem a enviar|<!-- END REF -->
+| Parâmetro | Tipo                 |    | Descrição                                      |
+| --------- | -------------------- |:--:| ---------------------------------------------- |
+| message   | Text / Blob / Object | -> | A mensagem a enviar|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envia uma mensagem ** ao cliente<!-- END REF -->.
+A função `.send()` <!-- REF #WebSocketConnectionClass.send().Summary -->envia uma *mensagem* ao cliente<!-- END REF -->.
 
-Os conteúdos seguintes são enviados em função do tipo de mensagem **:
+Os conteúdos seguintes são enviados em função do tipo de *mensagem*:
 
 | Tipo   | Conteúdo                                                                                                                    |
 | ------ | --------------------------------------------------------------------------------------------------------------------------- |
@@ -95,9 +95,9 @@ Os conteúdos seguintes são enviados em função do tipo de mensagem **:
 
 
 <!-- REF #WebSocketConnectionClass.status.Desc -->
-## .estado
+## .status
 
-<!-- REF #WebSocketConnectionClass.status.Syntax -->**status** : Text<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.status.Syntax -->**.status** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -115,10 +115,10 @@ Esta propriedade é só de leitura.
 
 
 <!-- REF #WebSocketConnectionClass.terminate().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                                                    |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------------------- |
-| code       | Integer | -> | Código de erro enviado ao cliente (deve ser > 3000, caso contrário a mensagem não é enviada) |
-| message    | Text    | -> | Mensagem de erro enviada ao cliente|<!-- END REF -->
+| Parâmetro | Tipo    |    | Descrição                                                                                    |
+| --------- | ------- |:--:| -------------------------------------------------------------------------------------------- |
+| code      | Integer | -> | Código de erro enviado ao cliente (deve ser > 3000, caso contrário a mensagem não é enviada) |
+| message   | Text    | -> | Mensagem de erro enviada ao cliente|<!-- END REF -->
 
 
 |
@@ -128,17 +128,16 @@ Esta propriedade é só de leitura.
 
 A função `.terminate()` <!-- REF #WebSocketConnectionClass.terminate().Summary -->força o encerramento da ligação<!-- END REF -->.
 
-Um código ** e uma mensagem ** podem ser enviados ao cliente durante o encerramento para indicar o motivo da rescisão.
+Um *code* e uma *message* podem ser enviados ao cliente durante o encerramento para indicar o motivo da rescisão.
 
 <!-- END REF -->
 
 <!-- REF #WebSocketConnectionClass.wss.Desc -->
 ## .wss
 
-<!-- REF #WebSocketConnectionClass.wss.Syntax -->**wss** : 4D.WebSocketServer<!-- END REF -->
+<!-- REF #WebSocketConnectionClass.wss.Syntax -->**.wss** : 4D.WebSocketServer<!-- END REF -->
 
 #### Descrição
-
 
 A propriedade `.wss` contém <!-- REF #WebSocketConnectionClass.wss.Summary -->o [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) objecto pai da ligação<!-- END REF -->.
 
