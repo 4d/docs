@@ -9,7 +9,7 @@ title: Objetos
 
  `CONFIGURAÇÃO OBRIGATÓRIA`
 
-This property designates the type of the [active or inactive form object](formObjects_overview.md).
+Esta propriedade designa o tipo de [objecto formulárioactivo ou inactivo](formObjects_overview.md).
 
 #### Gramática JSON
 
@@ -60,7 +60,7 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 
-### Dynamic variables
+### Variáveis dinâmicas
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
@@ -111,7 +111,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. Em vista da compilação de um banco de dados, deve utilizar os comandos da linguagem 4D do tema `Compilador`.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
 
 However, this property has a typing function in the following specific cases:
 
@@ -137,9 +137,9 @@ A list of space-separated words used as class selectors in css files.
 
 #### Gramática JSON
 
-| Nome  | Tipo de dados | Valores possíveis                                         |
-| ----- | ------------- | --------------------------------------------------------- |
-| class | string        | One string with CSS name(s) separated by space characters |
+| Nome    | Tipo de dados | Valores possíveis                                         |
+| ------- | ------------- | --------------------------------------------------------- |
+| "class" | string        | One string with CSS name(s) separated by space characters |
 
 #### Objectos suportados
 
@@ -217,9 +217,9 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis |
-| ---------- | ------------- | ----------------- |
-| radioGroup | string        | Radio group name  |
+| Nome       | Tipo de dados | Valores possíveis   |
+| ---------- | ------------- | ------------------- |
+| radioGroup | string        | Nome do grupo rádio |
 
 #### Objectos suportados
 
@@ -239,7 +239,7 @@ To insert a \ in the label, enter "&#92;&#92;".
 
 By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
-Para a tradução do banco de dados, pode introduzir uma referência XLIFF na área do título de um botão (ver [Apêndice B: arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+For database translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
 #### Gramática JSON
 
@@ -256,21 +256,21 @@ Para a tradução do banco de dados, pode introduzir uma referência XLIFF na á
 ## Variable Calculation
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
-> Ó cálculo de rodapés também pode ser definido com o comando 4D `LISTBOX SET FOOTER CALCULATION`.
+> The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo               | Num | Text | Date | Hora | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
-| Mínimo                | X   |      | X    | X    | X    |      | Same as column type |
-| Máximo                | X   |      | X    | X    | X    |      | Same as column type |
-| Sum                   | X   |      | X    |      | X    |      | Same as column type |
-| Contagem              | X   | X    | X    | X    | X    | X    | Longint             |
-| Average               | X   |      |      | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |      | X    |      |      | Real                |
-| Variância(*)          | X   |      |      | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |      | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X    | X    | X    | X    | Qualquer            |
+| Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
+| ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
+| Mínimo                 | X   |      | X    | X    | X    |      | Igual ao tipo de coluna |
+| Máximo                 | X   |      | X    | X    | X    |      | Igual ao tipo de coluna |
+| Soma                   | X   |      | X    |      | X    |      | Igual ao tipo de coluna |
+| Contagem               | X   | X    | X    | X    | X    | X    | Longint                 |
+| Average                | X   |      |      | X    |      |      | Real                    |
+| Desvio padrão(*)       | X   |      |      | X    |      |      | Real                    |
+| Variância(*)           | X   |      |      | X    |      |      | Real                    |
+| Soma dos quadrados(*)  | X   |      |      | X    |      |      | Real                    |
+| Personalizado ("none") | X   | X    | X    | X    | X    | X    | Qualquer                |
 
 (*) Only for array type list boxes.
 
@@ -290,4 +290,4 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### Objectos suportados
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[Rodapé do List Box](listbox_overview.md#list-box-footers)
