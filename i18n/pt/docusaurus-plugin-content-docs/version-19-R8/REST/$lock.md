@@ -32,7 +32,7 @@ The locks triggered by the REST API are put at the [session](authUsers.md#openin
 
 A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
 
-- other REST sessions
+- outras sessões REST
 - 4D processes (client/server, remote datastore, standalone) running on the REST server.
 
 An entity locked by the REST API can only be unlocked:
@@ -57,7 +57,7 @@ The returned "__STATUS" object has the following properties:
 | lockKindText |                | text    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
 | lockInfo     |                | object  | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                     |
 |              |                |         | ***Disponível só para um processo trava 4D:***                                                                                                              |
-|              | task_id        | number  | ID do processo                                                                                                                                              |
+|              | task_id        | number  | Process ID                                                                                                                                                  |
 |              | user_name      | text    | Nome de usuário de sessão na máquina                                                                                                                        |
 |              | user4d_alias   | text    | Nome ou apelido do usuário 4D                                                                                                                               |
 |              | user4d_id      | number  | Id do usuário no diretório do banco de dados 4D                                                                                                             |
@@ -115,11 +115,8 @@ In a second browser (other session), we send the same request.
         "statusText":"Already Locked",
         "lockKind":7,
         "lockKindText":"Locked By Session",
-        "lockInfo":{
-            "host":"127.0.0.1:8043",
-            "IPAddr":"127.0.0.1",
-            "recordNumber": 7,
-            "userAgent": ""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36..."
+    }
+}
         }
     }
 }
