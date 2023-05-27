@@ -15,18 +15,18 @@ This page allows selecting, creating, or configuring Code Editor themes. A theme
 
 In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
 
-*   **Default Light Theme**
-*   **Default Dark Theme**
+*   **Tema Light predefinido**
+*   **Tema escuro predefinido**
 
 > Default themes cannot be modified or deleted.
 
 A **myTheme** theme is automatically added if you already customized Code Editor styles in previous 4D releases.
 
-### Creating custom themes
+### Criar temas personalizados
 
 You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
 
-### Custom theme files
+### Ficheiros de temas personalizados
 
 Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
 
@@ -43,7 +43,7 @@ Defining a theme means:
 
 Combining different colors and styles is particularly useful for code maintenance purposes.
 
-### Font and Font size
+### Tipo e tamanho de letra
 
 The **font** and **font size** menus allows you to select the font name and size used in the Code Editor entry area for all categories.
 
@@ -71,11 +71,11 @@ These options configure the various colors used in the Code Editor and debugger 
 | **Highlight of the same variable or field**       | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
 | **Selection back color**                          | Background color of selection.                                                                                                                                           |
-| **Suggested text**                                | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
+| **Texto sugerido**                                | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
 
 
 
-## Options
+## Opções
 
 
 This page configures Code Editor display options.
@@ -83,7 +83,7 @@ This page configures Code Editor display options.
 ![](../assets/en/Preferences/options.png)
 
 
-### Options
+### Opções
 
 
 
@@ -105,7 +105,7 @@ Changes the indentation value for the 4D code in the Code Editor. The width must
 
 Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Narrower indentation can be used in order to limit horizontal scrolling.
 
-#### Show Line Numbers
+#### Mostrar los números de línea
 
 Lets you display the line numbers by default in each window of the Code Editor. You can also show/hide line numbers for the current window directly from the Code Editor.
 
