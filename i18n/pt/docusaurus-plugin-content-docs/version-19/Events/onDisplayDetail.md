@@ -21,7 +21,7 @@ A record is about to be displayed in a list form displayed via `DISPLAY SELECTIO
 In this context, the following sequence of calls to methods and form events is triggered:
 
 - Para cada registo:
-    - For each object in the detail area:
+    - Para cada objecto na área de detalhes:
         - Método objecto com o evento`On Display Detail`
     - Método formulário com o evento`On Display Detail`
 
@@ -35,6 +35,6 @@ Calling a 4D command that displays a dialog box from the `On Display Detail` eve
 This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
 
 
-### Displayed line number
+### Número de linha apresentado
 
 The `Displayed line number` 4D command works with the `On Display Detail` form event. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.
