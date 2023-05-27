@@ -5,7 +5,7 @@ title: Página Geral
 
 This page contains various options to configure the general operation of your 4D application.
 
-## Options
+## Opções
 
 ### Na inicialização
 
@@ -13,10 +13,10 @@ This option allows you to configure the default 4D display at startup, when the 
 
 *   **Do nothing**: Only the application window appears, empty.
 *   **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-*   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears. >To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
+*   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box. To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
 *   **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
-*   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
-> > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+*   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
+> > > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
 
 ### Automatic form creation
 
@@ -28,8 +28,8 @@ Starting with macOS Sierra, Mac applications can benefit from the Automatic Wind
 
 You can benefit from this feature in the following environments (with 4D 64-bit versions only):
 
-*   Code Editor windows
-*   Form Editor windows
+*   Method Editor windows
+*   Janelas do editor de formulários
 
 All windows from these editors can be put in tab form:
 
@@ -46,7 +46,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 Three options are available:
 
 *   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-*   **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
+*   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
 *   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
 
 ### Appearance (macOS only)
@@ -86,7 +86,7 @@ These items allow you to create binary databases (see [Creating a new database](
 
 When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
 
-### Create package
+### Criar pacote
 
 When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
 
@@ -132,28 +132,28 @@ This parameter configures the default language used for character string process
 A 4D database can thus operate in a language different from that of the system. When a database is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the database engine or the language, are done in the same language.
 
 When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](../settings/database.md#text-comparison)).
+> You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
-## Documentation Location
+## Documentation location
 
-This area configures access to the 4D HTML documentation displayed in your current browser:
+This area configures access to the 4D HTML documentation displayed in the current browser:
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
-*   When you double-click on a 4D command in the **Commands Page** of the Explorer.
+*   When the user clicks on a command name in the Method editor and hits the **F1** key.
+*   When the user double-clicks on a command on the **Commands Page** of the Explorer;
 
 
 ### Documentation language
 
-Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
+Language of the HTML documentation to display. You can modify it, for example if you want to display documentation in a different language from the application language.
 
 ### Look in the local folder first
 
 > This option is only taken into account for command documentation access (excluding class functions).
 
-Sets where 4D will look for documentation pages.
+4D builds calls to the pages of the documentation based on this URL.
 
-*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
-*   When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+*   When it is checked, 4D first looks for the page in the local folder. If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
+*   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
 
 ### Pasta local
 
@@ -161,4 +161,4 @@ Sets where 4D will look for documentation pages.
 
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 
+You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja). 
