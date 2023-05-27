@@ -1,6 +1,6 @@
 ---
 id: http-server
-title: HTTP Server Page
+title: Página Servidor HTTP
 ---
 
 
@@ -17,7 +17,7 @@ The upper part of the page provides information about the current status of the 
 - **Total HTTP hits**: Number of (low level) HTTP hits received by the HTTP server since it was started.
 
 
-## Start/Stop HTTP Server
+## Iniciar/parar o servidor HTTP
 
 This button toggles and can be used to control the activation of the 4D Server HTTP server.
 
@@ -28,14 +28,14 @@ This button toggles and can be used to control the activation of the 4D Server H
 > 
 > The HTTP server can also be launched automatically on application startup (Settings) or by programming.
 
-## Web Information
+## Informação Web
 
 This area provides specific information about the Web server of 4D Server.
 
 - **Web requests**: Accepted or Rejected. This information indicates whether the Web server is activated. Since the Web server is directly linked to the HTTP server, Web requests are accepted when the HTTP server is started and rejected when it is stopped.
 - **Maximum connections**: Maximum number of Web connections allowed. This value depends on the license installed on the server machine.
 
-## SOAP Information
+## Informação SOAP
 
 This area provides specific information about the SOAP server of 4D Server and includes a control button.
 
