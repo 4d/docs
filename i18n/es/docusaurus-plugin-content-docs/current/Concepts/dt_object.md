@@ -299,20 +299,20 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 - Escritura y lectura de propiedades de objetos (este ejemplo compara la notación de objetos y la notación de comandos):
 
 ```4d
-  // Using the object notation
- var $myObj : Object //declares a 4D variable object
- $myObj:={} //creates an object literal and assigns it to the variable
+  // Utilizando la notación objeto
+ var $myObj : Object //declara un objeto variable 4D 
+ $myObj:={} //crea un literal de objeto y lo asigna a la variable
  $myObj.age:=56
  $age:=$myObj.age //56
 
-  // Using the command notation
- var $myObj2 : Object //declares a 4D variable object
- OB SET($myObj2;"age";42) //creates an object and adds the age property
- $age:=OB Get($myObj2;"age") //42
+  // Utilizando la notación de comando
+ var $myObj2 : Object //declara un objeto variable 4D
+ OB SET($myObj2; "age";42) //crea un objeto y añade la propiedad age
+ $age:=OB Get($myObj2; "age") //42
 
-  // Of course, both notations can be mixed
+  // Por supuesto, ambas notaciones pueden mezclarse
  var $myObj3 : Object
- OB SET($myObj3;"age";10)
+ OB SET($myObj3; "age";10)
  $age:=$myObj3.age //10
 ```
 
@@ -321,10 +321,10 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 ```4d
  var $Emp : Object
  $Emp:=New object
- $Emp.city:="London" //creates the city property and sets its value to "London"
- $Emp.city:="Paris" //modifies the city property
+ $Emp.city:="London" //crea la propiedad city y establece su valor como"London"
+ $Emp.city:="Paris" //modifica la propiedad city
  $Emp.phone:=New object("office";"123456789";"home";"0011223344")
-  //creates the phone property and sets its value to an object
+  //crea la propiedad phone y establece su valor para un objeto
 ```
 
 - Obtener un valor en un subobjeto es muy sencillo utilizando la notación de objetos:
