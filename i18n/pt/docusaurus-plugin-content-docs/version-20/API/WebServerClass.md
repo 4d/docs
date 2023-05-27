@@ -72,7 +72,7 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parâmetros | Tipo          |    | Descrição                                                                          |
+| Parâmetro  | Tipo          |    | Descrição                                                                          |
 | ---------- | ------------- | -- | ---------------------------------------------------------------------------------- |
 | option     | Integer       | -> | Servidor Web a ser obtido (padrão se omitido = `Banco de dados de servidores Web`) |
 | Resultados | 4D. WebServer | <- | Objeto Web Server                                                                  |
@@ -81,13 +81,13 @@ Eles oferecem as propriedades abaixo e funções:
 
 O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retorna o objeto padrão web server ou o objeto web server definido através do parâmetro *option*<!-- END REF -->.
 
-Por padrão, se o parâmetro *opção* for omitido, o comando retorna uma referência ao servidor Web do banco de dados, i. . o servidor web padrão. Para designar o servidor da Web para retornar, você pode passar uma das seguintes constantes no parâmetro de *opção*:
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION` . No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
-| Constante                                    | Value | Comentário                                                  |
-| -------------------------------------------- | ----- | ----------------------------------------------------------- |
-| `Web server database`                        | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
-| `Web server database`                        | 2     | Servidor Web do banco de dados de host de um componente     |
-| `Solicitação de recebimento do servidor web` | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
+| Parâmetros                                      | Valor | Comentário                                                  |
+| ----------------------------------------------- | ----- | ----------------------------------------------------------- |
+| `Web server database`                           | 1     | Servidor Web de banco de dados atual (padrão caso omitido)  |
+| `<a href="#keepsession">.keepSession</a>` | 2     | Servidor Web do banco de dados de host de um componente     |
+| `Solicitação de recebimento do servidor web`    | 3     | Servidor web que recebeu o pedido (servidor Web de destino) |
 
 O objeto Servidor Web retornado contém os valores atuais das propriedades do Servidor Web.
 
@@ -118,7 +118,7 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parâmetros | Tipo       |    | Descrição                                     |
+| Parâmetro  | Tipo       |    | Descrição                                     |
 | ---------- | ---------- | -- | --------------------------------------------- |
 | Resultados | Collection | <- | Coleção de objetos do Servidor Web disponível |
 
@@ -255,7 +255,7 @@ Contém <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts permitid
 
 O <!-- REF #WebServerClass.debugLog.Summary -->estado do arquivo de log da petição HTTP<!-- END REF --> (HTTPDebugLog_nn.txt, armazenado na pasta "Logs" da aplicação - nn é o número de arquivo).
 
-- 0 = disabled
+- 0 = desactivado
 - 1 = habilitado sem partes do corpo (o tamanho do corpo é fornecido neste caso)
 - 3 = ativado com partes do corpo apenas em resposta
 - 5 = ativado com partes do corpo apenas em resposta
@@ -398,7 +398,7 @@ O padrão = 443
 
 > Esta propriedade não é retornada em [scalable sessions mode](#scalablesession).
 
-O <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->Duração (em minutos) dos processos de sessão legado inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
+O <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->O Duração (em minutos) dos processos de sessão legado inativos<!-- END REF -->. No final do timeout, o processo é terminado no servidor, o método de database `On Web Legacy Close Session` é chamado, e então o contexto sessão legado é destruído.
 
 Default = 480 minutos
 
@@ -650,7 +650,7 @@ O <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "caminho" do cooki
 
 O <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"Valor do cookie da sessão "SameSite<!-- END REF -->. Possíveis valores (usando constantes):
 
-| Constante           | Value    | Descrição                                                                                                                                                |
+| Parâmetros          | Valor    | Descrição                                                                                                                                                |
 | ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *Valor por defeito* - Os cookies só são enviados num contexto de primeira parte                                                                          |
 | Web SameSite Lax    | "Lax"    | Os cookies também são enviados em pedidos cruzados mas apenas quando um utilizador está a navegar para o sítio de origem (isto é, quando segue um link). |
@@ -690,7 +690,7 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->Validação de 
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Parâmetros | Tipo   |    | Descrição                                           |
+| Parâmetro  | Tipo   |    | Descrição                                           |
 | ---------- | ------ | -- | --------------------------------------------------- |
 | settings   | Objeto | -> | Configurações do servidor Web a definir no arranque |
 | Resultados | Objeto | <- | Estado de arranque do servidor web                  |
@@ -699,7 +699,7 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->Validação de 
 
 A função `.start()` <!-- REF #WebServerClass.start().Summary -->inicia o servidor web em que é aplicado<!-- END REF -->, utilizando propriedades definidas nas definições opcionais ** parâmetro do objecto.
 
-O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION` . No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
+O servidor web começa com as definições padrão definidas no ficheiro de definições do projecto ou (apenas base de dados anfitriã) usando o comando `WEB SET OPTION`. No entanto, utilizando o parâmetro *settings*, pode definir propriedades personalizadas para a sessão do servidor web.
 
 Todas as definições dos objectos do [Web Server](#web-server-object) podem ser personalizadas, excepto propriedades só de leitura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), e [.sessionCookieName(#sessioncookiename)]).
 
@@ -711,7 +711,7 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 | Propriedade |                         | Tipo       | Descrição                                                                     |
 | ----------- | ----------------------- | ---------- | ----------------------------------------------------------------------------- |
-| success     |                         | Booleano   | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário |
+| success     |                         | Parâmetros | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário |
 | errors      |                         | Collection | pilha de erros 4D (não devolvidos se o servidor web começou com sucesso)      |
 |             | \[].errCode            | Número     | Código de erro 4D                                                             |
 |             | \[].message            | Text       | Descrição do erro 4D                                                          |
@@ -750,9 +750,9 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 
 
 <!-- REF #WebServerClass.stop().Params -->
-| Parâmetros | Tipo |  | Descrição                                             |
-| ---------- | ---- |  | ----------------------------------------------------- |
-|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
+| Parâmetro | Tipo |  | Descrição                                             |
+| --------- | ---- |  | ----------------------------------------------------- |
+|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
