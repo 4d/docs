@@ -55,14 +55,14 @@ Web processes usually do not end, they are recycled in a pool for efficiency. Wh
 
 ### Preemptive mode
 
-On 4D Server, Web server sessions are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your web server code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
+On 4D Server, Web server sessions are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your web code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](Debugging/debugging-remote.md) or [to a remote machine](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
+> To debug web code on 4D Server (interpreted), you need to launch and connect [4D on the same machine as 4D Server](Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine) and open the development environment (e.g., the Explorer) on the 4D application. With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
 
-With 4D single-user, interpreted code always runs in cooperative mode.
+With 4D single-user, interpreted code is always run in cooperative mode.
 
 
-## Sharing information
+## Partilhar informações
 
 Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
 
@@ -96,8 +96,8 @@ Exemplo:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-    //Access is granted, do nothing Else
-    //Display an authentication page End if
+ //Access is granted, do nothing Else
+ //Display an authentication page End if
 ```
 
 
@@ -126,8 +126,8 @@ http://localhost:8044/authenticate.shtml
 <html>
 <body bgcolor="#ffffff">
 <FORM ACTION="/4DACTION/authenticate" METHOD=POST>
-    UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
-    Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+ UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+ Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
 </FORM>
 </body>
@@ -159,12 +159,12 @@ $sales:=ds. SalesPersons.query("userId = :1"; $userId).first() If ($sales#Null)
             If (Session.storage.myTop3=Null)
                 $userTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
                 Session.storage.myTop3:=$userTop3
-            End if
-        End use
+            End if 
+        End use 
         WEB SEND HTTP REDIRECT("/authenticationOK.shtml")
-    Else
+    Else 
         WEB SEND TEXT("This password is wrong")
-    End if Else
+    End if Else 
     WEB SEND TEXT("This userId is unknown")
 End if
 ```
