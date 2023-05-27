@@ -3,7 +3,7 @@ id: looping
 title: Estruturas de loop
 ---
 
-Estruturas de loop repetem uma sequência de declarações até que uma condição seja atingida ou até que alcance um certo número de vezes.
+Looping structures repeat a sequence of statements until a condition is met or a number of times is reached.
 
 
 ## While... End while
@@ -18,9 +18,9 @@ The formal syntax of the `While... End while` control flow structure is:
  End while
 ```
 
-A `While... End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 It is common to initialize the value tested in the Boolean expression immediately before entering the `While... End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While... End while` executes the loop.
 
@@ -52,13 +52,14 @@ The formal syntax of the `Repeat... Until` control flow structure is:
 Repeat
     statement(s)
     {break}  
-    {continue} Until(Boolean_Expression)
+    {continue}
+Until(Boolean_Expression)
 ```
-The other difference with a `Repeat... Until` loop is that the loop continues until the Boolean expression is TRUE.
+A `Repeat...Until` loop is similar to a [While...End while](flow-control.md#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
 
-Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
+The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Exemplo
 
@@ -70,7 +71,7 @@ Compare the following example with the example for the `While... End while` loop
  Until(OK=0)
 ```
 
-## For... End for
+## For...End for
 
 The formal syntax of the `For... End for` control flow structure is:
 
@@ -78,7 +79,8 @@ The formal syntax of the `For... End for` control flow structure is:
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
    statement(s)
     {break}  
-    {continue} End for
+    {continue}
+End for
 ```
 
 The `For... End for` loop is a loop controlled by a counter variable:
@@ -95,7 +97,7 @@ The `For... End for` loop is a loop controlled by a counter variable:
 - Se *Start_Expression* e *End_Expression* forem iguais, o loop se executará só uma vez.
 - Se *Start_Expression* for maior que *End_Expression*, o loop não vai executar a não ser que especifique uma *Increment_Expression* negativa. Ver os exemplos.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Exemplos básicos
 
@@ -140,7 +142,7 @@ A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-cont
  End for
 ```
 
-Most of the `For... End for` loops you will write in your projects will look like the ones listed in these examples.
+Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
 
 ### Diminuir a variável contador
 
@@ -210,7 +212,7 @@ Let's go back to the first `For... End for` example. O seguinte exemplo executa 
  End for
 ```
 
-Here is the equivalent `Repeat... Until` loop:
+Here is the equivalent `While... End while` loop:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -219,7 +221,7 @@ Here is the equivalent `Repeat... Until` loop:
  End while
 ```
 
-Here is the equivalent `While... End while` loop:
+Here is the equivalent `Repeat... Until` loop:
 ```4d
  $i:=1 //Initializa o contador
  Repeat
@@ -285,7 +287,7 @@ Aqui são dois exemplos:
 
 ## For each... End for each
 
-A sintaxe da estrutura condicional `For each... End for each` é:
+The formal syntax of the `For each...End for each` control flow structure is:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
@@ -317,7 +319,7 @@ The following table compares the three types of `For each... End for each`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Loop através da coleção
 
@@ -472,29 +474,30 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## `break` e `continue`
+## `break` and `continue`
 
-Todas as estruturas de looping acima suportam tanto `quebrar` como `continuar` declarações. Estas declarações dão-lhe mais controle sobre os loops, permitindo-lhe sair do loop e contornar a iteração atual a qualquer momento.
+All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
 
 ### break
 
-A declaração `quebra` termina o loop que a contém. O controle do programa flui para a declaração imediatamente após o corpo do loop.
+The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
 
-Se a declaração `quebrar` estiver dentro de um loop aninhado [](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `quebrar` terminará o loop mais interno.
+If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
 
 
 #### Exemplo
 
 ```4d
 For (vCounter;1;100)
-    If ($tab{vCounter}="") //if a condition becomes true
-        break //end of the for loop
-    End if End for
+    If ($tab{vCounter}="") //se uma condição se tornar verdadeira
+        break //fim do ciclo for
+    End if
+End for
 ```
 
 ### continue
 
-A declaração `continua` encerra a execução das declarações na iteração actual do loop atual, e continua a execução do loop com a próxima iteração.
+The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
 
 ```4d
 var $text : Text
