@@ -1,6 +1,6 @@
 ---
 id: propertiesResizingOptions
-title: Resizing Options
+title: Opções de redimensionamento
 ---
 
 
@@ -67,7 +67,7 @@ Three options are available:
 
 ---
 
-## Dimensionamento vertical
+## Alinhamento vertical
 
 This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
