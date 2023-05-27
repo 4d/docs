@@ -3,11 +3,11 @@ id: database
 title: Página Base de dados
 ---
 
-## Data storage page
+## Página de armazenamento de dados
 
 You use this page to configure data storage on disk for the 4D database.
 
-### General Settings
+### Parámetros generales
 
 
 #### Allow Read Only Data file Use
@@ -38,7 +38,7 @@ Three location options are provided:
 
 > This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
 
-### Text comparison
+### Comparação de textos
 
 > If you change one of these options, you have to quit and reopen the database to make the change effective. Once the database is reopened, all of the database's indexes are automatically re-indexed.
 
