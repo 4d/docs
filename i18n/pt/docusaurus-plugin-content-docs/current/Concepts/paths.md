@@ -23,10 +23,10 @@ The following filesystem pathnames are supported:
 
 | filesystem   | Designa                                            |
 | ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
+| "/DATA"      | Pasta de dados actual                              |
 | "/LOGS"      | Pasta Logs                                         |
 | "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Project folder                                     |
+| "/PROJECT"   | Pasta Project                                      |
 | "/RESOURCES" | Current database resources folder                  |
 | "/SOURCES"   | Current project resources folder                   |
 
@@ -58,7 +58,7 @@ Platform-specific syntax depends on the operating system on which the command is
 The following patterns are supported:
 
 - folder separators are "\"
-- the text contains ":" and "\" as the second and third character,
+- the text contains ':' and '\' as the second and third character,
 - the text starts with "\\".
 
 Examples with [`Folder`](../API/FolderClass.md#folder):
@@ -68,11 +68,11 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Windows pathnames and escape sequences
+#### Entering Windows pathnames and escape sequences
 
-The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). Escape sequences begin with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
+The 4D language allows the use of [escape sequences](quick-tour.md#escape-sequences). The sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
 
-Since the `\` character is also used as the separator in pathnames in Windows, you need to enter a double `\\` in windows pathnames.
+The `\` character is also used as the separator in pathnames in Windows.
 
 ### macOS
 
@@ -81,7 +81,7 @@ The following patterns are supported (HFS+ syntax):
 - folder separators are ":"
 - the path must not start with a ":"
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+Exemplos com [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -96,17 +96,17 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ```4d
     //ERROR
-$ko:=Folder("myFolder").create() //relative pathname with constructor
+$ko:=Folder("myFolder").create() //nome do caminho relativo com construtor
 ```
 
 If you want to handle files or folders in various locations (project folder, system folders, etc.), you can use `filesystems` (see above). Por exemplo, pode escrever:
 
 ```4d
-$okFolder:=Folder("/PACKAGE/myFolder").create() //folder created at the structure level
-$okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folder
+$okFolder:=Folder("/PACKAGE/myFolder").create() //pasta criada ao nível da estrutura
+$okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de dados
 ```
 
-### `.file()` and `.folder()` folder functions
+### `.file()` and `.folder()` folder methods
 
 Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por exemplo:
 
