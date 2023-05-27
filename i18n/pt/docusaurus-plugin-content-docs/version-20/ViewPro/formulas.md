@@ -7,7 +7,7 @@ title: Fórmulas e funções
 
 A spreadsheet formula is an expression that calculates the value of a cell.
 
-### Entering formulas
+### Introduzir fórmulas
 
 To enter a formula in a 4D View Pro area:
 
@@ -42,20 +42,20 @@ All formulas have operands and operators:
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
-| Tipos de dados                     | Valores                                               | Operadores                                                                                                                                                                                                                                             |
-| ---------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Número](Concepts/dt_number.md)    | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
-| [Date](Concepts/dt_date.md)        | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
-| [Hora](Concepts/dt_time.md)        | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
-| [String](Concepts/dt_string.md)    | 'Sophie' ou "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
-| [Booleano](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                                      |
+| Tipos de dados                       | Valores                                               | Operadores                                                                                                                                                                                                                                             |
+| ------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Número](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
+| [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
+| [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
+| [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
+| [Parâmetros](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                                      |
 
 
-### Comparison operators
+### Operadores de comparação
 
 The following operators can be used with two operands of the same type:
 
-| Operator   | Comparação           |
+| Operador   | Comparação           |
 | ---------- | -------------------- |
 | =          | igual a              |
 | `<>` | diferente de         |
@@ -69,15 +69,15 @@ The following operators can be used with two operands of the same type:
 
 List of operators from most to least important:
 
-| Operator                                      | Descrição                     |
+| Operador                                      | Descrição                     |
 | --------------------------------------------- | ----------------------------- |
 | ()                                            | Parênteses (para agrupamento) |
 | -                                             | Negativo                      |
 | +                                             | Mais                          |
 | %                                             | Porcentagem                   |
 | ^                                             | Expoente                      |
-| * and /                                       | Multiply and divide           |
-| + and -                                       | Add and Subtract              |
+| * e /                                         | Multiplicar e dividir         |
+| + e -                                         | Adicionar e subtrair          |
 | &                                             | Concatenar                    |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparar                      |
 
@@ -112,13 +112,13 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Exemplo        | Tipo de referência | Descrição                                                                                                                                      |
-| -------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5           | Absoluto           | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
-| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
-| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Nome da célula | Absoluto           | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Exemplo        | Tipo de referência | Descrição                                                                                                                                        |
+| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                     |
+| $C$5           | Absoluto           | A referência é absoluta. Will always refer to cell C5 no matter where it is used.                                                                |
+| $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.             |
+| C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used              |
+| Nome da célula | Absoluto           | A referência é absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 
 
@@ -137,10 +137,10 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 
 4D custom functions provide access, from within your 4D View Pro formulas, to:
 
-- 4D process variables,
+- Variáveis processo 4D,
 - campos,
 - métodos projeto,
-- 4D language commands,
+- Comandos de linguagem 4D,
 - or any valid 4D expression.
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
@@ -243,10 +243,10 @@ For more information on supported incoming parameter types, please refer to the 
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 * [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
-    | Propriedade | Tipo | Descrição       |
-    | ----------- | ---- | --------------- |
-    | value       | Date | Valor data      |
-    | time        | Real | Time in seconds |
+    | Propriedade | Tipo | Descrição         |
+    | ----------- | ---- | ----------------- |
+    | value       | Date | Valor data        |
+    | time        | Real | Tempo em segundos |
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
@@ -361,5 +361,5 @@ To be called in a 4D View Pro formula, a project method must be:
 *   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 
