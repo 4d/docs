@@ -11,7 +11,7 @@ The following project elements accept documentation:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Formulários
-- Tabelas e Campos
+- Tabela
 
 Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 
@@ -21,7 +21,7 @@ Documentation is displayed in the preview area (right-side panel) of the Explore
 
 It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
 
-## Documentation files
+## Ficheiros documentação
 
 ### Documentation file name
 
@@ -44,7 +44,7 @@ The `Documentation` folder architecture is the following:
   - **Formulários**
     - loginDial.md
     - ...
-  - **Métodos**
+  - **Página Métodos**
     - myMethod.md
     - ...
   - **TableForms**
@@ -124,7 +124,7 @@ New documentation files are created with the following default contents:
 | ## Exemplo                                         | Heading level 2, you can use this area to show sample code                                                                                           |
 | \``` 4D <br/>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
 
-### Supported Markdown
+### Markdown suportado
 
 - The title tag is supported:
 
@@ -145,7 +145,8 @@ _italic_
 
 - The code block tag (\```4d ... ```) is supported with 4D code highlight:
 
- \``` 4d C_TEXT($txt)  
+ \``` 4d  
+C_TEXT($txt)  
 $txt:="Hello world!"  
 \` ``
 
@@ -161,8 +162,7 @@ $txt:="Hello world!"
 - The link tag is supported:
 
 ```
-// Case 1
-The [documentation](https://doc.4d.com) of the command ....
+// Case 1 The [documentation](https://doc.4d.com) of the command ....
 
 // Case 2
 [4D blog][1]
@@ -189,7 +189,10 @@ The [documentation](https://doc.4d.com) of the command ....
 In the `WP SwitchToolbar.md` file, you can write:
 
 ```4d
-<!-- This method returns a different logo depending on the size parameter --> GetLogo (size) -> logo
+<!-- This method returns a different logo depending on the size parameter -->
+
+
+GetLogo (size) -> logo
 
 
 | Parameter | Type   | in/out | Description |
@@ -198,10 +201,14 @@ In the `WP SwitchToolbar.md` file, you can write:
 | logo      | Picture | out | Selected logo |
 
 
-## Description This method returns a logo of a specific size, depending on the value of the *size* parameter value.
+## Description
+
+This method returns a logo of a specific size, depending on the value of the *size* parameter value.
 1 = smallest size, 5 = largest size.
 
-## Example C_PICTURE($logo)
+## Example
+
+C_PICTURE($logo)
 C_LONGINT($size)
 
 //Get the largest logo
