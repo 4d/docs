@@ -4,22 +4,22 @@ title: Página Retrocesso
 sidebar_label: Página Retrocesso
 ---
 
-You use the Rollback page to access the rollback function among the operations carried out on the data file. It resembles an undo function applied over several levels. It is particularly useful when a record has been deleted by mistake in a database.
+A página Rollback é utilizada para acessar à função de rollback entre as operações executadas no arquivo de dados. Assemelha-se a uma função de reverter aplicada a vários níveis. É particularmente útil quando um registo foi eliminado por engano numa base de dados.
 
-Esta função só está disponível quando o banco de dados funciona com um arquivo de histórico de dados.
+This function is only available when the database functions with a data log file.
 
 ![](../assets/en/MSC/MSC_rollback1.png)
 
-> If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in the **Values** column and a dialog requesting the passphrase or the data key is displayed if you click the **Rollback** button.
+> Se a base de dados estiver criptografada e não tiver sido fornecida uma chave de dados válida correspondente ao arquivo de histórico aberto, os valores encriptados não são apresentados na coluna **Values** e é apresentada uma caixa de diálogo a pedir a frase-chave ou a chave de criptografia se clicar no botão **Rollback** .
 
-The contents and functioning of the list of operations are the same as for the [Activity analysis](analysis.md) window.
+O conteúdo e o funcionamento da lista de operações são os mesmos que para a janela [Análise de actividade](analysis.md) .
 
-To perform a rollback among the operations, select the row after which all operations must be cancelled. The operation of the selected row will be the last kept. If, for example, you wish to cancel a deletion, select the operation located just before it. The deletion operation, as well as all subsequent operations, will be cancelled.
+Para executar uma reversão entre as operações, selecionar a linha após a qual todas as operações devem ser canceladas. A operação da linha seleccionada será a última a ser mantida. Se, por exemplo, desejar anular uma eliminação, seleccione a operação situada imediatamente antes da mesma. A operação de eliminação, assim como todas as operações subsequentes, serão anuladas.
 
 ![](../assets/en/MSC/MSC_rollback2.png)
 
-Next click on the **Rollback** button. 4D asks you to confirm the operation. If you click **OK**, the data is then restored to the exact state it was in at the moment of the selected action.
+Em seguida, clique no botão **Rollback** . 4D pede-lhe para confirmar a operação. Se clicar em **OK**, os dados são restaurados para o estado exato em que se encontravam no momento da ação selecionada.
 
-You use the menu found at the bottom of the window to select a data log file to be used when you apply the rollback function to a database restored from an archive file. In this case, you must specify the data log file corresponding to the archive.
+Utilize o menu que se encontra na parte inferior da janela para selecionar um arquivo de registo de dados que vai ser utilizado quando aplicar a função de reversão a uma base de dados restaurada a partir de um arquivo. Neste caso, é necessário especificar o arquivo de registo de dados correspondente ao arquivado.
 
-Here is how the rollback function works: when the user clicks the **Rollback** button, 4D shuts the current database and restores the last backup of the database data. The restored database is then opened and 4D integrates the operations of the data log file up through to the selected operation. If the database has not yet been saved, 4D starts with a blank data file.
+Aqui está como a função de rollback funciona: quando o usuário clica no botão **Rollback** , 4D fecha o banco de dados atual e restaura o último backup dos dados do banco de dados. A base de dados restaurada é então aberta e 4D integra as operações do arquivo de registo de dados até à operação seleccionada. Se a base de dados ainda não foi guardada, 4D começa com um arquivo de dados em branco.
