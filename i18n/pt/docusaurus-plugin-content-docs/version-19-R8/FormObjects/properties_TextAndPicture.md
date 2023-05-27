@@ -1,6 +1,6 @@
 ---
 id: propertiesTextAndPicture
-title: Text and Picture
+title: Texto e imagem
 ---
 
 
@@ -38,7 +38,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 ---
 
-## Horizontal Margin
+## Margem horizontal
 
 This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
 
@@ -46,7 +46,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 | Com / Sem            | Exemplo                                                      |
 | -------------------- | ------------------------------------------------------------ |
-| Without margin       | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
+| Sem margem           | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | With 13-pixel margin | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
 > This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
 
@@ -74,7 +74,7 @@ Designates the placement of an icon in relation to the form object.
 
 #### Objectos suportados
 
-[List Box Header](listbox_overview.md#list-box-headers)
+[Cabeçalho do List Box](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -96,7 +96,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 ---
 
-## Number of States
+## Número de estados
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive.
 
@@ -151,9 +151,9 @@ Here are the results using the various options for this property:
 
 | Option       | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| **Esquerda** | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Direita**  | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Topo**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Direita**  | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Esquerda** | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
 | **Fundo**    | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centrado** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
@@ -169,7 +169,7 @@ Here are the results using the various options for this property:
 
 ---
 
-## Vertical Margin
+## Margem vertical
 
 This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
 
@@ -219,7 +219,7 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 ### Managing the pop-up menu
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
+It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
 
 #### Gramática JSON
 
