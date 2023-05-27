@@ -31,17 +31,17 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| Parâmetros  | Tipo               |    | Descrição                                                             |
+| Parâmetro   | Tipo               |    | Descrição                                                             |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
-| file        | 4D. File           | -> | arquivo anexo                                                         |
+| file        | 4D. File           | -> | Parâmetros                                                            |
 | zipFile     | 4D. ZipFile        | -> | Arquivo zip                                                           |
-| blob        | 4D.Blob            | -> | Blob contendo o anexo                                                 |
-| path        | Text               | -> | Rota do arquivo anexo                                                 |
+| blob        | 4D. Blob           | -> | Blob contendo o anexo                                                 |
+| path        | Text               | -> | Pode passar uma rota ou um Blob para definir o anexo.                 |
 | name        | Text               | -> | Nome + extensão usado pelo cliente email para designar o anexo        |
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
@@ -68,13 +68,13 @@ O parâmetro opcional *name* permite passar o nome e extensão para ser usado pe
 *   passar uma rota de arquivo, o nome e extensão do arquivo é usado,
 *   passar um BLOB, um nome aleatório sem extensão é gerado automaticamente.
 
-O parâmetro opcional *cid* permite passar uma ID interna para o anexo. A ID é o valor do cabeçalho `Content-Id`, vai ser usado apenas em mensagens HTML.  O cid associa o anexo com uma referência definida no corpo da mensagem usando uma tag HTML tais como`\&#060;img src="cid:ID"&#062;`. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail. O resultado final deve variar dependendo do cliente mail. Pode passar uma string vazia em *cid* se não quiser usar esse parâmetro.
+O parâmetro opcional *cid* permite passar uma ID interna para o anexo. A ID é o valor do cabeçalho `Content-Id`, vai ser usado apenas em mensagens HTML. O cid associa o anexo com uma referência definida no corpo da mensagem usando uma tag HTML tais como`\&#060;img src="cid:ID"&#062;`. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail. O resultado final deve variar dependendo do cliente mail. Pode passar uma string vazia em *cid* se não quiser usar esse parâmetro.
 
 Pode usar o parâmetro opcional *type* para estabeçecer explicitamente o `content-type` do arquivo anexo. Por exemplo, pode passar uma string definindo um tipo MIME ("video/mpeg"). Esse valor de content-type vai ser estabelecido para o anexo, independente de sua extensão. Para saber mais sobre tipos MIME veja a página sobre tipos MIME [em Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
 Como padrão, se o parâmetro *type* for omitido ou conter uma string vazia, o `content-type` do arquivo anexo é baseado em sua extensão. As regras abaixo são aplicadas aos tipos MIME:
 
-| Extensão  | Content-Type                  |
+| Extensão  | Tipo                          |
 | --------- | ----------------------------- |
 | jpg, jpeg | image/jpeg                    |
 | png       | image/png                     |
@@ -95,7 +95,7 @@ Como padrão, se o parâmetro *type* for omitido ou conter uma string vazia, o `
 
 O parâmetro opcional *disposition* permite passar o cabeçalho `content-disposition` do anexo. Pode passar uma das constantes abaixo da constante tema de "Mail":
 
-| Constante                   | Value        | Comentário                                                                                                                                                                                                  |
+| Parâmetros                  | Valor        | Comentário                                                                                                                                                                                                  |
 | --------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Estabelece o valor de cabeçalho Content-disposition para "attachment" que significa que o arquivo anexo deve ser fornecido como um link na mensagem.                                                        |
 | mail disposition inline     | "inline"     | Estabelece o valor de cabeçalho Content-disposition para "inline", o que significa que o anexo deve ser renderizado dentro do conteúdo da mensagem, no local "cid". A renderização depende do cliente mail. |
@@ -173,17 +173,17 @@ $transporter.send($email)
 | v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
-<!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #4D.MailAttachment.new().Syntax -->**4D. MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**4D. MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| Parâmetros  | Tipo               |    | Descrição                                                             |
+| Parâmetro   | Tipo               |    | Descrição                                                             |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
-| file        | 4D. File           | -> | arquivo anexo                                                         |
+| file        | 4D. File           | -> | Parâmetros                                                            |
 | zipFile     | 4D. ZipFile        | -> | Arquivo zip                                                           |
-| blob        | 4D.Blob            | -> | Blob contendo o anexo                                                 |
-| path        | Text               | -> | Rota do arquivo anexo                                                 |
+| blob        | 4D. Blob           | -> | Blob contendo o anexo                                                 |
+| path        | Text               | -> | Pode passar uma rota ou um Blob para definir o anexo.                 |
 | name        | Text               | -> | Nome + extensão usado pelo cliente email para designar o anexo        |
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
@@ -196,7 +196,7 @@ $transporter.send($email)
 
 #### Descrição
 
-A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D.MailAttachment`<!-- END REF -->. Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
+A função `4D. MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D. MailAttachment`<!-- END REF -->. . Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
 
 
 ## .cid
@@ -224,13 +224,13 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 ## .getContent()
 
-<!-- REF #MailAttachmentClass.getContent().Syntax -->**.getContent()** : 4D. Blob<!-- END REF -->
+<!-- REF #MailAttachmentClass.getContent().Syntax -->**.getContent()** : Blob<!-- END REF -->
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parâmetros | Tipo    |    | Descrição                                    |
-| ---------- | ------- |:--:| -------------------------------------------- |
-| Resultados | 4D.Blob | <- | Conteúdo do anexo|<!-- END REF -->
+| Parâmetro  | Tipo     |    | Descrição                                    |
+| ---------- | -------- |:--:| -------------------------------------------- |
+| Resultados | 4D. Blob | <- | Conteúdo do anexo|<!-- END REF -->
 
 
 |
@@ -238,7 +238,7 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descrição
 
-A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devolve o conteúdo do objecto anexo num objecto `4D.Blob`<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime) command.
+A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->devolve o conteúdo do objecto anexo num objecto `4D. Blob`<!-- END REF -->. Pode utilizar este método com objectos anexos recebidos pelo comando [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
 
 
 
@@ -275,7 +275,7 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->o ca
 
 #### Descrição
 
-A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->o caminho do arquivo anexo expresso com a sintaxe da plataforma actual<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->A propriedade `.platformPath` devolve<!-- END REF -->.
 
 
 ## .type
