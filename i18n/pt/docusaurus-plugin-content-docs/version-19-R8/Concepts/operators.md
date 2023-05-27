@@ -24,7 +24,7 @@ The values that operators affect are operands. Na expressão `1 + 2`, o símbolo
 The **assignment operator** (`a:=b`) initializes or updates the value of `a` with the value of `b`:
 
 ```4d
-$myNumber:=3 //assigns 3 to MyNumber variable  
+$myNumber:=3 //atribui 3 à variável MyNumber  
 $myDate:=!2018/01/21! //assigns a date literal
 $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
@@ -37,17 +37,17 @@ $col:=New collection //$col is initialized with an empty collection
 
 Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:
 
-- [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
+- [**Operadores lógicos**](dt_boolean.md#logical-operators) (em expressões **booleanas**)
 - [**Operadores de data**](dt_date.md#date-operators)
 - [**Operadores de horas**](dt_time.md#time-operators)
 - [**Operadores de números**](dt_number.md#number-operators)
 - [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
-- [**Operadores Bitwise**](dt_picture.md#picture-operators)
+- [**Operadores de imagem**](dt_picture.md#picture-operators)
 - [**Operadores de Ponteiros**](dt_pointer.md#pointer-operators)
 - [**String operators**](dt_string.md#string-operators)
 
 
-## Compound assignment operators
+## Operadores de atribuição compostos
 
 <details><summary>Histórico</summary>
 
@@ -66,7 +66,7 @@ $a+=2 // $a=3
 
 The following compound assignment operators are supported:
 
-| Operator      | Sintaxe            | Assigns | Exemplo                                                                    |
+| Operador      | Sintaxe            | Assigns | Exemplo                                                                    |
 | ------------- | ------------------ | ------- | -------------------------------------------------------------------------- |
 | Adição        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                          |
 |               | Number += Number   | Número  | `$n+=5 //$n:=$n+5`                                                         |
@@ -177,7 +177,7 @@ $v := 5 && 10 && "hello" //"hello"
 
 #### Exemplo 2
 
-Say you have an online store, and some products have a tax rate applied, and others don't.
+Digamos que tem uma loja online e que alguns produtos têm uma taxa de imposto aplicada e outros não.
 
 To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
 
@@ -230,7 +230,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Exemplo 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Say you have a table called Employee. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
 
 ```4d
 var $phone : Text
@@ -331,14 +331,14 @@ The following values are **falsy**:
 * Null picture
 * Null date !00-00-00!
 * "" - Empty strings
-* [] - Empty collections
-* {} - Empty objects
+* [] - Colecções vazias
+* {} - Objectos vazios
 
-All other values are considered **truthy**, including:
+Todos os outros valores são considerados **truthy**, incluindo:
 
 * 0 - numeric zero (Integer or otherwise)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If… Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
+In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
 For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
 
