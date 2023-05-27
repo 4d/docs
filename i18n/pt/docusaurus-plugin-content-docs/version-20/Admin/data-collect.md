@@ -3,12 +3,12 @@ id: data-collect
 title: Coleta de dados
 ---
 
-Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário.
+Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário. Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário.
 
 Esta página explica:
 
-- que informação é coletada
-- onde a informação é armazenada e quando é enviada a 4D
+- what information is collected,
+- where information is stored and when it is sent to 4D,
 - como desativar a coleção de dados automática em aplicações cliente/servidor
 
 
@@ -16,59 +16,111 @@ Esta página explica:
 
 Dados são coletados durante os eventos abaixo:
 
-- 4D Server startup,
-- abertura de banco de dados,
+- database startup,
 - fechamento de banco de dados,
-- início do 4D Servidor.
+- web server startup,
+- php execution,
+- client connection,
+- data collection sending.
 
-### Dados coletados no início do 4D Server
+Some data is also collected at regular intervals.
 
-| Dados         | Exemplo                                                                                              | Notas                                                               |
-| ------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| CPU           | Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz                                                       | Nome, tipo, e velocidade do processador                             |
-| numberOfCores | 4                                                                                                    | Número total de núcleos                                             |
-| memory        | 419430400                                                                                            | Volume de armazenamento de memória (em bytes) disponível na máquina |
-| system        | Microsoft Windows 10 Pro 1809 (17763.253)                                                            | Versão do sistema operativo e número de construção                  |
-| headless      | false                                                                                                | Verdadeiro se a aplicação estiver a correr em modo sem cabeça       |
-| version       | 1960                                                                                                 | Número da versão da aplicação 4D                                    |
-| buildNumber   | 123456                                                                                               | Número da versão da aplicação 4D                                    |
-| licença       | {"name":"4D Developer Professional 19R6","products":[{"id":808464433,"name":"4D","allowedCount":1}]} | Nome comercial e descrição das licenças do produto                  |
+### Collected at database startup
 
-
-### Recolhido por base de dados na abertura
-
-| Dados                   | Exemplo                                                 | Notas                                                                                             |
-| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| id                      | string hashed                                           | Identificação única associada à base de dados (*Polinômio Rolling hash do nome da base de dados*) |
-| dataFileSize            | 419430400                                               | Tamanho do arquivo de dados em bytes                                                              |
-| indexesSize             | 419430400                                               | Tamanho do índice em bytes                                                                        |
-| cacheSize               | 419430400                                               | Tamanho da cache em bytes                                                                         |
-| usingLegacyNetworkLayer | False                                                   | Verdadeiro se a usar a camada de rede herdada para o servidor de aplicações                       |
-| isEncrypted             | true                                                    | True se o arquivo de dados estiver criptografado                                                  |
-| isCompiled              | true                                                    | Verdadeiro se a aplicação for compilada                                                           |
-| isEngined               | true                                                    | Verdadeiro se a aplicação for fundida com o Volume Desktop 4D                                     |
-| isProjectMode           | true                                                    | Verdadeiro se a aplicação for compilada                                                           |
-| mobile                  | [{"os":"iOS", "version":"12.465", "simulator":"false"}] | Informação sobre sessões móveis                                                                   |
-
-
-### Recolhido por base de dados no encerramento
-
-| Dados  | Exemplo | Notas                                                                       |
-| ------ | ------- | --------------------------------------------------------------------------- |
-| uptime | 123456  | Tempo decorrido (em segundos) desde que a base de dados 4D local foi aberta |
+| Dados                   | Tipo                 | Notas                                                                                             |
+| ----------------------- | -------------------- | ------------------------------------------------------------------------------------------------- |
+| CPU                     | Text                 | Nome, tipo, e velocidade do processador                                                           |
+| numberOfCores           | Número               | Número total de núcleos                                                                           |
+| memory                  | Número               | Volume de armazenamento de memória (em bytes) disponível na máquina                               |
+| system                  | Text                 | Versão do sistema operativo e número de construção                                                |
+| headless                | Parâmetros           | Verdadeiro se a aplicação estiver a correr em modo sem cabeça                                     |
+| version                 | Número               | Número da versão da aplicação 4D                                                                  |
+| buildNumber             | Número               | Número da versão da aplicação 4D                                                                  |
+| licença                 | Objeto               | Nome comercial e descrição das licenças do produto                                                |
+| isRosetta               | Parâmetros           | True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).    |
+| uniqueID                | Text                 | Unique ID of the 4D Server                                                                        |
+| id                      | Text (hashed string) | Identificação única associada à base de dados (*Polinômio Rolling hash do nome da base de dados*) |
+| dataFileSize            | Número               | Tamanho do arquivo de dados em bytes                                                              |
+| indexesSize             | Número               | Tamanho do índice em bytes                                                                        |
+| cacheSize               | Número               | Tamanho da cache em bytes                                                                         |
+| usingLegacyNetworkLayer | Parâmetros           | Verdadeiro se a usar a camada de rede herdada para o servidor de aplicações                       |
+| usingQUICNetworkLayer   | Parâmetros           | True if the database uses the QUIC network layer                                                  |
+| encryptedConnections    | Parâmetros           | True if client/server connections are encrypted                                                   |
+| encrypted               | Parâmetros           | True se o arquivo de dados estiver criptografado                                                  |
+| compiled                | Parâmetros           | Verdadeiro se a aplicação for compilada                                                           |
+| isEngined               | Parâmetros           | Verdadeiro se a aplicação for fundida com o Volume Desktop 4D                                     |
+| projectMode             | Parâmetros           | Verdadeiro se a aplicação for compilada                                                           |
+| mobile                  | Collection           | Informação sobre sessões móveis                                                                   |
 
 
-### Recolhido pelo banco de dados ao iniciar o servidor web
+### Collected at web server startup and data collection sending
 
-| Dados     | Exemplo          | Notas          |
-| --------- | ---------------- | -------------- |
-| webServer | {"started":true} | Sempre verdade |
+| Dados     | Tipo   | Notas                                                   |
+| --------- | ------ | ------------------------------------------------------- |
+| webServer | Objeto | "started":true if the web server is starting or started |
+
+
+### Collected at regular intervals
+
+| Dados                       | Tipo   | Notas                                        |
+| --------------------------- | ------ | -------------------------------------------- |
+| maximumNumberOfWebProcesses | Número | Maximum number of simultaneous web processes |
+| maximumUsedPhysicalMemory   | Número | Maximum use of physical memory               |
+| maximumUsedVirtualMemory    | Número | Maximum use of virtual memory                |
+
+
+### Collected at data collection sending
+
+| Dados                       | Tipo   | Notas                                                                       |
+| --------------------------- | ------ | --------------------------------------------------------------------------- |
+| uptime                      | Número | Tempo decorrido (em segundos) desde que a base de dados 4D local foi aberta |
+| cacheReadBytes              | Objeto | Number of bytes read from cache                                             |
+| cacheMissBytes              | Objeto | Number of bytes missed from cache                                           |
+| cacheReadCount              | Objeto | Number of reads in the cache                                                |
+| cacheMissCount              | Objeto | Number of reads missed in the cache                                         |
+| dataSegment1.diskReadBytes  | Objeto | Number of bytes read in the data file                                       |
+| dataSegment1.diskWriteBytes | Objeto | Number of bytes written in the data file                                    |
+| dataSegment1.diskReadCount  | Objeto | Number of reads in the data file                                            |
+| dataSegment1.diskWriteCount | Objeto | Number of writes in the data file                                           |
+| indexSegment.diskReadBytes  | Número | Number of bytes read in the index file                                      |
+| indexSegment.diskWriteBytes | Número | Number of bytes written in the index file                                   |
+| indexSegment.diskReadCount  | Número | Number of reads in the index file                                           |
+| indexSegment.diskWriteCount | Número | Number of writes in the index file                                          |
+
+
+
+### Collected at database closure and data collection sending
+
+| Dados             | Tipo   | Notas                                                        |
+| ----------------- | ------ | ------------------------------------------------------------ |
+| webserverHits     | Número | Number of hits on the web server during the data collection  |
+| restHits          | Número | Number of hits on the REST server during the data collection |
+| webserverBytesIn  | Número | Bytes received by the web server during the data collection  |
+| webserverBytesOut | Número | Bytes sent by the web server during the data collection      |
+
+
+
+
+### Collected every time PHP execute is called
+
+| Dados       | Tipo       | Notas                                                                               |
+| ----------- | ---------- | ----------------------------------------------------------------------------------- |
+| phpCall     | Número     | Number of calls to `PHP execute`                                                    |
+| externalPHP | Parâmetros | True if the client performs a call to `PHP execute` and uses its own version of php |
+
+
+### Collected at client connection
+
+| Dados                      | Tipo       | Notas                                                                              |
+| -------------------------- | ---------- | ---------------------------------------------------------------------------------- |
+| maximum4DClientConnections | Número     | Maximum number of 4D Client connections to the server                              |
+| connectionSystems          | Collection | Client OS without the build number (in parenthesis) and number of clients using it |
 
 
 
 ## Onde é armazenado e enviado?
 
-Os dados recolhidos são escritos num ficheiro de texto (formato JSON) quando o Servidor 4D abandona o servidor. O ficheiro é armazenado dentro da pasta 4D ativa [](https://doc.4d.com/4dv19/help/command/en/page485.html), ou seja,
+Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
 
 - no Windows: `Utilizadores\[userName]\AppData\Roaming\4D Server`
 - em macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
