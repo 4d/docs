@@ -110,7 +110,7 @@ Los objetos compartidos y las colecciones compartidas están diseñados para per
 
 :::note
 
-Keep in mind that [collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed.
+Tenga en cuenta que las [funciones colección](../API/CollectionClass.md) que modifican colecciones compartidas activan automáticamente un **Use** interno para esta colección compartida mientras se ejecuta la función.
 
 :::
 
