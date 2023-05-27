@@ -5,7 +5,7 @@ title: "$entityset"
 
 After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
 
-## Sintaxe
+## Sintaxe disponível
 
 | Sintaxe                                                                                                    | Exemplo                                                                            | Descrição                                                    |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
@@ -34,7 +34,7 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 Create another entity set based on previously created entity sets
 
-| Parâmetros       | Tipo   | Descrição                                                      |
+| Parâmetro        | Tipo   | Descrição                                                      |
 | ---------------- | ------ | -------------------------------------------------------------- |
 | $operator        | String | One of the logical operators to test with the other entity set |
 | $otherCollection | String | ID do conjunto de entidades                                    |
@@ -47,7 +47,7 @@ You can then create another entity set containing the results from this call by 
 
 Here are the logical operators:
 
-| Operator  | Descrição                                                                                                                                                  |
+| Operador  | Descrição                                                                                                                                                  |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND       | Returns the entities in common to both entity sets                                                                                                         |
 | OU        | Returns the entities in both entity sets                                                                                                                   |
