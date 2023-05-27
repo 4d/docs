@@ -12,27 +12,27 @@ You can combine both features and use menus created in structure as templates to
 
 ## Default menu bar
 
-A custom application must contain at least one menu bar with one menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
+A custom application must contain at least one menu bar with one menu. By default, when you create a new database, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. The default menu bar includes standard menus and a command for returning to the Design mode.
 
-Isso permite ao usuário acessar o modo Aplicação logo que se crie o banco de dados. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
+This allows the user to access the Application environment as soon as the database is created. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
 
 The default menu bar includes three menus:
 
 - **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
 - **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
-> > Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
+> > > Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
 
 You can modify this menu bar as desired or create additional ones.
 
-## Creating menus
+## Criar menus
 
-### Using the Menu editor
+### Utilizar o editor de menus
 
 1. Select the item you want to create and click the add ![](../assets/en/Menus/PlussNew.png) button below the menu bar area. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
 2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Menu bar names must be unique. They may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
-### Using the 4D language
+### Utilizar a linguagem 4D
 
 Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
 
@@ -44,21 +44,21 @@ When menus are handled by means of *MenuRef* references, there is no difference 
 
 For each of the menus, you must add the commands that appear when the menu drops down. You can insert items that will be associated with methods or standard actions, or attach other menus (submenus).
 
-### Using the Menu editor
+### Utilizar o editor de menus
 
-To add a menu item:
+Para adicionar um item de menu:
 
 1. In the list of source menus, select the menu to which you want to add a command. If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
 2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list). OR Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list. 4D adds a new item with the default name “Item X” where X is the number of items already created.
 3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. It may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see below).
 
-### Using the 4D language
+### Utilizar a linguagem 4D
 
 Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
 
 ## Deleting menus and items
 
-### Using the Menu editor
+### Utilizar o editor de menus
 
 You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
 
@@ -69,7 +69,7 @@ To delete a menu bar, menu or menu item:
 
 > It is not possible to delete Menu Bar #1.
 
-### Using the 4D language
+### Utilizar a linguagem 4D
 
 Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
 
@@ -83,7 +83,7 @@ You can create sub-menus of sub-menus to a virtually unlimited depth. Note, howe
 
 At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
 
-### Using the Menu editor
+### Utilizar o editor de menus
 
 A menu can be attached to a menu bar or to another menu.
 
@@ -97,6 +97,6 @@ You can detach a menu from a menu bar or a sub-menu from a menu at any time. The
 
 To detach a menu, right-click with the right button on the menu or sub-menu that you want to detach in the central list, then choose the **Detach the menu(...)** or **Detach the sub-menu(...)**
 
-### Using the 4D language
+### Utilizar a linguagem 4D
 
 Since there is no difference between menus and menu bars in the 4D language, attaching menus or sub-menus is done in the same manner: use the *subMenu* parameter of the `APPEND MENU ITEM` command to attach a menu to a menu bar or an menu.  
