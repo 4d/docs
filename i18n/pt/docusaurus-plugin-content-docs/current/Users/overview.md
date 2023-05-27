@@ -51,12 +51,12 @@ If you want to use the system user name in 4D instead of "Designer" (e.g. in log
 SET USER ALIAS(Current system user)
 ```
 
-### Protecting access
+### Protecção do acesso
 
 #### Privilégios
 
 On a machine that is shared by several users, you can install the 4D application in a folder and give appropriate user access privileges to the folder at the OS level.
 
-#### Encrypting data
+#### Encriptação de dados
 
 If you want to protect access to the application data, we recommend to [encrypt data](MSC/encrypt.md) and provide the encryption key to the authorized user(s). 
