@@ -12,15 +12,15 @@
     "description": "The generated-index page title for category Getting Started in sidebar docs"
   },
   "sidebar.docs.category.Core Development": {
-    "message": "Core Development",
+    "message": "Desenvolvimento",
     "description": "The label for category Core Development in sidebar docs"
   },
   "sidebar.docs.category.Core Development.link.generated-index.title": {
-    "message": "Core Development",
+    "message": "Desenvolvimento",
     "description": "The generated-index page title for category Core Development in sidebar docs"
   },
   "sidebar.docs.category.Project Management": {
-    "message": "Project Management",
+    "message": "Gestão de projectos",
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
@@ -76,11 +76,11 @@
     "description": "The label for category Preferences in sidebar docs"
   },
   "sidebar.docs.category.Administration": {
-    "message": "Administration",
+    "message": "Administração",
     "description": "The label for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Administration.link.generated-index.title": {
-    "message": "Administration",
+    "message": "Administração",
     "description": "The generated-index page title for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Administration.link.generated-index.description": {
@@ -92,11 +92,11 @@
     "description": "The label for category 4D Server Administration Window in sidebar docs"
   },
   "sidebar.docs.category.Web Administration": {
-    "message": "Web Administration",
+    "message": "Administração Web",
     "description": "The label for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.title": {
-    "message": "Web Administration",
+    "message": "Administração Web",
     "description": "The generated-index page title for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.description": {
@@ -108,7 +108,7 @@
     "description": "The label for category MSC in sidebar docs"
   },
   "sidebar.docs.category.Backup and Restore": {
-    "message": "Backup and Restore",
+    "message": "Cópia de segurança e restauração",
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Extensions": {
@@ -140,7 +140,7 @@
     "description": "The label for category Web Server in sidebar docs"
   },
   "sidebar.docs.category.Web Development": {
-    "message": "Web Development",
+    "message": "Desenvolvimento Web",
     "description": "The label for category Web Development in sidebar docs"
   },
   "sidebar.docs.category.REST Server": {
@@ -160,11 +160,11 @@
     "description": "The label for category Guides in sidebar docs"
   },
   "sidebar.docs.category.API (general)": {
-    "message": "API (general)",
+    "message": "API (geral)",
     "description": "The label for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (general).link.generated-index.title": {
-    "message": "API (general)",
+    "message": "API (geral)",
     "description": "The generated-index page title for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (general).link.generated-index.description": {
@@ -184,11 +184,11 @@
     "description": "The generated-index page description for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications": {
-    "message": "Desktop Applications",
+    "message": "Aplicações Desktop",
     "description": "The label for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications.link.generated-index.title": {
-    "message": "Desktop Applications",
+    "message": "Aplicações Desktop",
     "description": "The generated-index page title for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
@@ -196,11 +196,11 @@
     "description": "The generated-index page description for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Access Rights": {
-    "message": "Access Rights",
+    "message": "Direitos de acesso",
     "description": "The label for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.title": {
-    "message": "Access Rights",
+    "message": "Direitos de acesso",
     "description": "The generated-index page title for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.description": {
@@ -216,15 +216,15 @@
     "description": "The label for category Form Editor in sidebar docs"
   },
   "sidebar.docs.category.Form Properties": {
-    "message": "Form Properties",
+    "message": "Propriedades do formulário",
     "description": "The label for category Form Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Objects": {
-    "message": "Form Objects",
+    "message": "Objectos formulário",
     "description": "The label for category Form Objects in sidebar docs"
   },
   "sidebar.docs.category.Form Object Properties": {
-    "message": "Form Object Properties",
+    "message": "Propriedades dos objectos formulário",
     "description": "The label for category Form Object Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Events": {
@@ -236,11 +236,11 @@
     "description": "The label for category Menus in sidebar docs"
   },
   "sidebar.docs.category.Mobile Applications": {
-    "message": "Mobile Applications",
+    "message": "Aplicações móveis",
     "description": "The label for category Mobile Applications in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference": {
-    "message": "4D Language Reference",
+    "message": "Referência da linguagem 4D",
     "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html"
   },
   "sidebar.docs.link.4D Write Pro": {
@@ -248,7 +248,7 @@
     "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Reference.100-6229455.en.html"
   },
   "sidebar.docs.link.4D Write Pro Interface": {
-    "message": "4D Write Pro Interface",
+    "message": "Interface 4D Write Pro",
     "description": "The label for link 4D Write Pro Interface in sidebar docs, linking to https://github.com/4d/4D-WritePro-Interface"
   },
   "sidebar.docs.link.4D Mobile App Server": {
@@ -276,7 +276,7 @@
     "description": "The label for link Go Mobile in sidebar docs, linking to https://developer.4d.com/go-mobile/"
   },
   "sidebar.docs.link.4D for iOS (archive)": {
-    "message": "4D for iOS (archive)",
+    "message": "4D for iOS (arquivo)",
     "description": "The label for link 4D for iOS (archive) in sidebar docs, linking to https://developer.4d.com/4d-for-ios"
   },
   "sidebar.docs.doc.Command Line Interface": {
@@ -296,7 +296,7 @@
     "description": "The label for the doc item Data Collection in sidebar docs, linking to the doc Admin/data-collect"
   },
   "sidebar.docs.doc.Client/Server": {
-    "message": "Client/Server",
+    "message": "Cliente/Servidor",
     "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
   },
   "sidebar.docs.doc.User Settings": {
@@ -304,7 +304,7 @@
     "description": "The label for the doc item User Settings in sidebar docs, linking to the doc Desktop/user-settings"
   },
   "sidebar.docs.doc.Build Application": {
-    "message": "Build Application",
+    "message": "Build application overview",
     "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
   }
 }
