@@ -24,7 +24,7 @@ $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
-Fin pour
+End for
 
 //Ecriture ligne par ligne depuis la fin
 $fhandle:=$f.open("append")
