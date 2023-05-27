@@ -14,16 +14,17 @@ O evento `On Close Box` é gerado quando o utilizador clica na caixa de fecho da
 
 ### Exemplo
 
-This example shows how to respond to a close window event with a form used for record data entry:
+Este exemplo mostra como responder a um evento de fecho de janela com um formulário utilizado para a introdução de dados de registo:
 
 ```4d
-  //Method for an input form
+  //Método para um formulário de entrada
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
-          CONFIRM("This record has been modified. Save Changes?")
+          CONFIRM("Este registo foi modificado. Save Changes?")
+          Save Changes?")
           Save Changes?")
           If(OK=1)
              ACCEPT
