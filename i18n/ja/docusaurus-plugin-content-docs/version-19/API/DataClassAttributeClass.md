@@ -313,7 +313,7 @@ title: DataClassAttribute
 
 | dataClassAttribute.kind | type                                                  | 説明                                                                       |
 | ----------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------ |
-| storage                 | "number", "date", "object", "bool", "image", "string" | 数値型の場合 "number" が返されます (期間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 |
+| storage                 | "number", "date", "object", "bool", "image", "string" | 数値型の場合 "number" が返されます (時間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 |
 | relatedEntity           | リレートされたデータクラス名                                        | 例: "Companies"                                                           |
 | relatedEntities         | リレートされたデータクラス名 + "Selection"                          | 例: "EmployeeSelection"                                                   |
 
