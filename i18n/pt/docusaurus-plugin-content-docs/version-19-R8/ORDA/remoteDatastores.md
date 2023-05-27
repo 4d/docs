@@ -6,8 +6,8 @@ title: Using a remote datastore
 A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command. These accesses are handled by the **HTTP REST server**.
-- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. These accesses are handled by the **HTTP server**.
+- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**.
+- 4D for iOS queries for updating iOS applications. These accesses are handled by the **HTTP server**.
 
 
 
@@ -15,7 +15,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
 
-A session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. This session automatically manages access to data, entity selections, or entities.
+When a 4D application (*i.e.* a process) opens an external datastore using the `Open datastore` command, a session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application. This session automatically manages access to data, entity selections, or entities.
 
 The `localID` is local to the machine that connects to the remote datastore, which means:
 
@@ -35,7 +35,7 @@ Processes that manage sessions for datastore access are shown in the 4D Server a
 
 *   name: "REST Handler: \<process name\>"
 *   type: HTTP Server Worker type
-*   session: session name is the user name passed to the `Open datastore` command.
+*   session: session name is the user name passed to the Open datastore command.
 
 In the following example, two processes are running for the same session:
 
@@ -55,7 +55,7 @@ ORDA features related to entity locking and transaction are managed at process l
 
 ### Closing sessions
 
-A session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the `Open datastore` command.
+A session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the `connectionInfo` parameter of the `Open datastore` command.
 
 If a request is sent to the remote datastore after the session has been closed, it is automatically re-created if possible (license available, server not stopped...). However, keep in mind that the context of the session regarding locks and transactions is lost (see above).
 
