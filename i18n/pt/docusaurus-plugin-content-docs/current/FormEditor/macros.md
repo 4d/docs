@@ -1,6 +1,6 @@
 ---
 id: macros
-title: Form Editor Macros
+title: Macros do editor de formulários
 ---
 
 
@@ -9,7 +9,7 @@ The 4D Form editor supports macros. A macro is a set of instructions to perform 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
 *   Create and execute 4D code
-*   Display dialogs
+*   Exibir diálogos
 *   Select form objects
 *   Add / delete / modify forms, form objects as well as their properties
 *   Modify project files (update, delete)
@@ -43,28 +43,28 @@ In this short example, you'll see how to create and call a macro that adds a "He
 ```4d
 Function onInvoke($editor : Object)->$result : Object
 
-    var $btnHello : Object
+ var $btnHello : Object
 
-    // Create a "Hello" button
-    $btnHello:=New object("type"; "button"; \
-    "text"; "Hello World!"; \
-    "method"; New object("source"; "ALERT(\"Hello World!\")"); \
-    "events"; New collection("onClick"); \
-    "width"; 120; \
-    "height"; 20; \
-    "top"; 0; \
-    "left"; 0)  
+ // Create a "Hello" button
+ $btnHello:=New object("type"; "button"; \
+ "text"; "Hello World!"; \
+ "method"; New object("source"; "ALERT(\"Hello World!\")"); \
+ "events"; New collection("onClick"); \
+ "width"; 120; \
+ "height"; 20; \
+ "top"; 0; \
+ "left"; 0) 
 
-    // Add button in the current page
-    $editor.editor.currentPage.objects.btnHello:=$btnHello  
+ // Add button in the current page
+ $editor.editor.currentPage.objects.btnHello:=$btnHello 
 
-    // Select the new button in the form editor
-    $editor.editor.currentSelection.clear() //unselect elements
-    $editor.editor.currentSelection.push("btnHello")    
+ // Select the new button in the form editor
+ $editor.editor.currentSelection.clear() //unselect elements
+ $editor.editor.currentSelection.push("btnHello") 
 
-    // Notify the modification to the 4D Form editor
-    $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
-        "currentPage"; $editor.editor.currentPage)
+ // Notify the modification to the 4D Form editor
+ $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
+  "currentPage"; $editor.editor.currentPage)
 ```
 
 You can then call the macro: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
@@ -111,9 +111,9 @@ Here is the description of the JSON file contents:
 
 | Atributo |                     |                          | Tipo   | Descrição                                              |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
-| macros   |                     |                          | object | list of defined macros                                 |
+| macros   |                     |                          | object | lista de macros definidas                              |
 |          | `<macroName>` |                          | object | definição macro                                        |
-|          |                     | class                    | string | nome da classe macro                                   |
+|          |                     | "class"                  | string | nome da classe macro                                   |
 |          |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
@@ -140,7 +140,7 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 
 
 
-## Instantiating macros in 4D
+## Instanciando macros em 4D
 
 Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
 
@@ -160,9 +160,9 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : Object)
 
-| Parâmetros | Tipo   | Descrição                                                |
-| ---------- | ------ | -------------------------------------------------------- |
-| $macro     | Objeto | Macro declaration object (in the `formMacros.json` file) |
+| Parâmetro | Tipo   | Descrição                                                |
+| --------- | ------ | -------------------------------------------------------- |
+| $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
@@ -200,10 +200,10 @@ Você pode escrever:
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Parâmetros | Tipo   | Descrição                                                                            |
-| ---------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor    | Objeto | Form Editor Macro Proxy object containing the form properties                        |
-| $result    | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| Parâmetro | Tipo   | Descrição                                                                            |
+| --------- | ------ | ------------------------------------------------------------------------------------ |
+| $editor   | Objeto | Form Editor Macro Proxy object containing the form properties                        |
+| $result   | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
 
 The `onInvoke` function is automatically executed each time the macro is called.
 
@@ -227,21 +227,21 @@ Here are the properties returned in the *$editor* parameter:
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Propriedade       | Tipo       | Descrição                                                      |
-| ----------------- | ---------- | -------------------------------------------------------------- |
-| currentPage       | Objeto     | currentPage including objects modified by the macro, if any    |
-| currentSelection  | Collection | currentSelection se modificada pela macro                      |
-| formProperties    | Objeto     | formProperties se modificada pela macro                        |
-| editor.groups     | Objeto     | informação do grupo, se os grupos forem modificados pela macro |
-| editor.views      | Objeto     | view info, se as vistas forem modificadas pela macro           |
-| editor.activeView | String     | Nome da vista activa                                           |
+| Propriedade       | Tipo       | Descrição                                                              |
+| ----------------- | ---------- | ---------------------------------------------------------------------- |
+| currentPage       | Objeto     | currentPage incluindo os objectos modificados pela macro, se existirem |
+| currentSelection  | Collection | currentSelection se modificada pela macro                              |
+| formProperties    | Objeto     | formProperties se modificada pela macro                                |
+| editor.groups     | Objeto     | informação do grupo, se os grupos forem modificados pela macro         |
+| editor.views      | Objeto     | view info, se as vistas forem modificadas pela macro                   |
+| editor.activeView | String     | Nome da vista activa                                                   |
 
 
 Por exemplo, se objectos da página actual e grupos tiverem sido modificados, pode escrever:
 
 ```4d
     $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
-            "editor"; New object("groups"; $editor.editor.form.editor.groups))
+   "editor"; New object("groups"; $editor.editor.form.editor.groups))
 
 ```
 
@@ -276,25 +276,29 @@ You want to define a macro function that will apply the red color and italic fon
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
-    var $name : Text
+ var $name : Text
 
-    If ($editor.editor.currentSelection.length>0)       
-        // Set stroke to red and style to italic for each selected object
-        For each ($name; $editor.editor.currentSelection)
-            $editor.editor.currentPage.objects[$name].stroke:="red"
-            $editor.editor.currentPage.objects[$name].fontStyle:="italic"
+ If ($editor.editor.currentSelection.length>0)  
+  // Set stroke to red and style to italic for each selected object
+  For each ($name; $editor.editor.currentSelection)
+   $editor.editor.currentPage.objects[$name].stroke:="red"
+   $editor.editor.currentPage.objects[$name].fontStyle:="italic"
 
-        End for each 
+  End for each 
 
-    Else 
-        ALERT("Please select a form object.")
+ Else 
+  ALERT("Please select a form object.")
+ End if 
+
+ // Notify to 4D the modification
+ $result:=New object("currentPage"; $editor.editor.currentPage)
+ End if 
+
+ // Notify to 4D the modification
+ $result:=New object("currentPage"; $editor.editor.currentPage)
     End if 
 
-    // Notify to 4D the modification
-    $result:=New object("currentPage"; $editor.editor.currentPage)
-    End if 
-
-    // Notify to 4D the modification
+    // Notificar ao 4D a modificação
     $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
@@ -303,12 +307,12 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parâmetros   |                       | Tipo       | Descrição                                   |
+| Parâmetro    |                       | Tipo       | Descrição                                   |
 | ------------ | --------------------- | ---------- | ------------------------------------------- |
 | $editor      |                       | Objeto     | Objeto enviado para [emInvoke](#oninvoke)   |
 | $resultMacro |                       | Objeto     | Objecto devolvido por [onInvoke](#oninvoke) |
 | $error       |                       | Collection | Pilha de erros                              |
-|              | [].errCode            | Número     | Error code                                  |
+|              | [].errCode            | Número     | Código de erro                              |
 |              | [].message            | Text       | Descrição do erro                           |
 |              | [].componentSignature | Text       | Assinatura da componente interna            |
 
@@ -325,13 +329,13 @@ In a macro class definition, you can write the following generic error code:
 
 ```4d
 Function onError($editor : Object; $resultMacro : Object; $error : Collection)
-    var $obj : Object
-    var $txt : Text
-    $txt:=""
+ var $obj : Object
+ var $txt : Text
+ $txt:=""
 
-    For each ($obj; $error)
-        $txt:=$txt+$obj.message+" \n"
-    End for each 
+ For each ($obj; $error)
+  $txt:=$txt+$obj.message+" \n"
+ End for each 
 
-    ALERT($txt)
+ ALERT($txt)
 ```
