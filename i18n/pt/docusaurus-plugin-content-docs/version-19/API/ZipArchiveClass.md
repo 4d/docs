@@ -31,7 +31,7 @@ End if
 
 |                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary --> |
+| [<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary -->|
 
 ## ZIP Create archive
 
@@ -43,20 +43,20 @@ End if
 
 </details>
 
-
 <!-- REF #_command_.ZIP Create archive.Syntax -->**ZIP Create archive** ( *fileToZip* : 4D. File ; *destinationFile* : 4D. File ) : Object<br/>**ZIP Create archive** ( *folderToZip* : 4D. Folder ; *destinationFile* : 4D. File { ; *options* : Integer }) : Object<br/>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D. File ) : Object<!-- END REF -->
 
 
-
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parâmetros      | Tipo       |    | Descrição                                            |
+| Parâmetro       | Tipo       |    | Descrição                                            |
 | --------------- | ---------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D. File   | -> | Objeto File ou Folder a comprimir                    |
 | folderToZip     | 4D. Folder | -> | Objeto File ou Folder a comprimir                    |
 | zipStructure    | Objeto     | -> | Objeto File ou Folder a comprimir                    |
 | destinationFile | 4D. File   | -> | Arquivo destino para o arquivo                       |
-| options         | Integer    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Resultados      | Objeto     | <- | Objeto de estado|<!-- END REF -->          |
+| options         | Integer    | -> | Option *folderToZip*: `ZIP Without enclosing folder` |
+| Resultados      | Objeto     | <- | Objeto de estado|<!-- END REF -->
+
+|
 
 #### Descrição
 
@@ -64,7 +64,7 @@ O comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary --
 
 You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parameter:
 
-- *fileToZip*: simplesmente passar  `4D.File` para compactar.
+- *fileToZip*: simplesmente passar  `4D. File` para compactar.
 
 - *folderToZip*: You pass a `4D. Folder` to compress. Nesse caso, o parâmetro *options* permite compactar só os conteúdos da pasta (ou seja, excluir a pasta parente). Como padrão, `ZIP Create archive` compacta a pasta e seus conteúdos, assim a operação de descompactação vai recriar a pasta. Se quiser que a operação de descompactação restaure apenas os conteúdos da pasta, passe a cosntante `ZIP Without enclosing folder` no parâmetro *options*.
 
@@ -87,11 +87,11 @@ Quando um arquivo for criado, pode usar o comando [ZIP Read archive](#zip-read-a
 
 O estado do objeto retornado contém as propriedades abaixo:
 
-| Propriedade | Tipo     | Descrição                                                                                                   |
-| ----------- | -------- | ----------------------------------------------------------------------------------------------------------- |
-| statusText  | Text     | Mensagem de erro (se houver):<li>Impossível abrir o arquivo ZIP</li><li>IMpossível criar o arquivo ZIP</li><li>Uma senha é necessária para criptografia</li> |
-| status      | Integer  | Código de estado                                                                                            |
-| success     | Booleano | True se o arquivo for criado com sucesso, senão false                                                       |
+| Propriedade | Tipo       | Descrição                                                                                                   |
+| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------- |
+| statusText  | Text       | Mensagem de erro (se houver):<li>Impossível abrir o arquivo ZIP</li><li>IMpossível criar o arquivo ZIP</li><li>Uma senha é necessária para criptografia</li> |
+| status      | Integer    | Código de estado                                                                                            |
+| success     | Parâmetros | True se o arquivo for criado com sucesso, senão false                                                       |
 
 #### Exemplo 1
 
@@ -112,9 +112,9 @@ To compress a `4D. File`:
 To compress a `4D. Folder` without the folder itself:
 
 ```4d
- var $folder : 4D. Folder
+ var $folder : 4D.Folder
 
- var $destination : 4D. File
+ var $destination : 4D.File
  var $status : Object
 
  $destination:=Folder(fk desktop folder).file("MyDocs/Images.zip")
@@ -153,7 +153,7 @@ Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
  Progress SET PROGRESS(progID;Num($1/100))
 ```
 
-#### Exemplo 4
+#### Exemplo
 
 Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStructure*:
 
@@ -180,17 +180,17 @@ Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStru
 
 </details>
 
-
 <!-- REF #_command_.ZIP Read archive.Syntax -->**ZIP Read archive** ( *zipFile* : 4D. File { ; *password* : Text }) : 4D. ZipArchive<!-- END REF -->
 
 
-
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parâmetros | Tipo           |    | Descrição                                 |
-| ---------- | -------------- |:--:| ----------------------------------------- |
-| zipFile    | 4D. File       | -> | Arquivos Zip                              |
-| senha      | Text           | -> | Senha do arquivo ZIP, se houver           |
-| Resultados | 4D. ZipArchive | <- | Objeto arquivo|<!-- END REF --> |
+| Parâmetro  | Tipo       |    | Descrição                                 |
+| ---------- | ---------- |:--:| ----------------------------------------- |
+| zipFile    | 4D. File   | -> | Arquivos Zip                              |
+| senha      | Text       | -> | Senha do arquivo ZIP, se houver           |
+| Resultados | Parâmetros | <- | Objeto arquivo|<!-- END REF -->
+
+|
 
 #### Descrição
 
@@ -204,7 +204,7 @@ Se *zipFile* for protegido por uma senha, precisa usar o parâmetro opcional *pa
 
 **Objeto arquivo**
 
-The returned `4D. ZipArchive` object contains a single [`root`](#root) property whose value is a `4D. ZipFolder` object. Summary -->uma pasta virtual que oferece acesso aos conteúdos do arquivo ZIP<!-- END REF -->.
+The returned `4D. ZipArchive` object contains a single [`root`](#root) property whose value is a `4D. ZipFolder` object. Esta pasta descreve todo o conteúdo do ficheiro ZIP.
 
 #### Exemplo
 
@@ -225,7 +225,7 @@ Para recuperar a lista dos arquivos e pastas no arquivo:
  $files:=$archive.root.files()
 ```
 
-Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
+Para extrair da pasta root:
 
 ```4d
 
@@ -236,7 +236,7 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
  End if
 ```
 
-Para extrair da pasta root:
+Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 
 ```4d
   //extrair um arquivo
@@ -247,7 +247,6 @@ Para extrair da pasta root:
 ```
 
 ## .root
-
 
 <!-- REF #ZipArchiveClass.root.Syntax -->**.root** : 4D. ZipFolder<!-- END REF -->
 
