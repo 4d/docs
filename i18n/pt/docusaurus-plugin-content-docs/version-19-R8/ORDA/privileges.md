@@ -37,19 +37,19 @@ A permission action defined at a given level is inherited by default at lower le
 - Unlike dataclass permissions, a permission action defined at the attribute level does not override the parent dataclass permission(s), but is added to. For example, if you assigned the "general" privilege to a dataclass and the "detail" privilege to an attribute of the dataclass, both "general" and "detail" privileges must be set to the session to access the attribute.
 
 
-## Permission actions
+## Acções de autorização
 
 
 Available actions are related to target resource.
 
-| Actions      | armazém de dados                                                                     | dataclass                                                                                                                                       | atributo                                                                                                              | data model function                                                                                                                                                                                                                                                      |
+| Acções       | armazém de dados                                                                     | dataclass                                                                                                                                       | atributo                                                                                                              | função de modelo de dados                                                                                                                                                                                                                                                |
 | ------------ | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **create**   | Create entity in any dataclass                                                       | Create entity in this dataclass                                                                                                                 | Create an entity with a value different from default value allowed for this attribute (ignored for alias attributes). | n/a                                                                                                                                                                                                                                                                      |
 | **read**     | Read attributes in any dataclass                                                     | Read attributes in this dataclass                                                                                                               | Read this attribute content                                                                                           | n/a                                                                                                                                                                                                                                                                      |
 | **update**   | Update attributes in any dataclass.                                                  | Update attributes in this dataclass.                                                                                                            | Update this attribute content (ignored for alias attributes).                                                         | n/a                                                                                                                                                                                                                                                                      |
 | **drop**     | Delete data in any dataclass.                                                        | Delete data in this dataclass.                                                                                                                  | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                      |
-| **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                   | Execute this function                                                                                                                                                                                                                                                    |
-| **describe** | All the dataclasses are available in the /rest/$catalog API                          | This dataclass is available in the /rest/$catalog API                                                                                           | This attribute is available in the /rest/$catalog API.                                                                | This dataclass function is available in the /rest/$catalog API                                                                                                                                                                                                           |
+| **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                   | Executar esta função                                                                                                                                                                                                                                                     |
+| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                    | This dataclass is available in the /rest/$catalog API                                                                                           | This attribute is available in the /rest/$catalog API.                                                                | This dataclass function is available in the /rest/$catalog API                                                                                                                                                                                                           |
 | **promote**  | n/a                                                                                  | n/a                                                                                                                                             | n/a                                                                                                                   | Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
 
 **Notas:**
@@ -84,13 +84,13 @@ To allow a role in a session:
 
 exposed Function authenticate($identifier : Text; $password : Text)->$result : Text
 
-    var $user : cs.UsersEntity
+    var $user : cs. UsersEntity
 
     Session.clearPrivileges()
 
     $result:="Your are authenticated as Guest"
 
-    $user:=ds.Users.query("identifier = :1"; $identifier).first()
+    $user:=ds. Users.query("identifier = :1"; $identifier).first()
 
     If ($user#Null)
         If (Verify password hash($password; $user.password))
@@ -130,16 +130,16 @@ The `roles.json` file syntax is the following:
 |                     | allowed         |               | Collection of `permission` objects |             | List of allowed permissions                                                  |
 |                     |                 | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                         |
 |                     |                 | \[].type     | String                             | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
-|                     |                 | \[].read     | Coleção de strings                 |             | List of privileges                                                           |
-|                     |                 | \[].create   | Coleção de strings                 |             | List of privileges                                                           |
-|                     |                 | \[].update   | Coleção de strings                 |             | List of privileges                                                           |
-|                     |                 | \[].drop     | Coleção de strings                 |             | List of privileges                                                           |
-|                     |                 | \[].describe | Coleção de strings                 |             | List of privileges                                                           |
-|                     |                 | \[].execute  | Coleção de strings                 |             | List of privileges                                                           |
-|                     |                 | \[].promote  | Coleção de strings                 |             | List of privileges                                                           |
+|                     |                 | \[].read     | Coleção de strings                 |             | Lista de privilégios                                                         |
+|                     |                 | \[].create   | Coleção de strings                 |             | Lista de privilégios                                                         |
+|                     |                 | \[].update   | Coleção de strings                 |             | Lista de privilégios                                                         |
+|                     |                 | \[].drop     | Coleção de strings                 |             | Lista de privilégios                                                         |
+|                     |                 | \[].describe | Coleção de strings                 |             | Lista de privilégios                                                         |
+|                     |                 | \[].execute  | Coleção de strings                 |             | Lista de privilégios                                                         |
+|                     |                 | \[].promote  | Coleção de strings                 |             | Lista de privilégios                                                         |
 
 
-:::caution Reminder
+:::caution Lembrete
 
 - The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
 - `privileges` and `roles` names are case insensitive.
@@ -160,7 +160,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // you can prevent the project to open
  ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
  QUIT 4D
-End if 
+ End if 
 ```
 
 ## Initializing privileges for deployment
