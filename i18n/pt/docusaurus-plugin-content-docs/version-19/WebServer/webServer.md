@@ -48,7 +48,7 @@ REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
 
 The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
 
-## Templates and URLs
+## Modelos e URLs
 
 The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
 
