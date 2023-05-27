@@ -23,18 +23,18 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 -   **User Settings...** gives you access to settings that can be stored externally in a user file. If these are modified, they are used instead of structure settings.
 -   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. If they are modified, they are used instead of user or structure settings.
 
-### Locking information
+### Informações de bloqueio
 
 Locking can occur in both Project and Client/server modes when:
 
 -   The *settings.4DSettings* file is 'Read-only' (Projects only). Modifying a setting will display an alert to unlock it, if possible.
--   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Client/server only)
+-   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
 
 In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
 
 
 
-## Customizing parameters
+## Personalização de parâmetros
 
 In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
 
@@ -47,7 +47,7 @@ A parameter still appears in bold even when its value is replaced manually with 
 Most of the settings are applied immediately. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
 
 
-## Resetting the settings
+## Repor os parâmetros
 
 To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
 
