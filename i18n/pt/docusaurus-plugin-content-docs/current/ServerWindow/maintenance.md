@@ -41,7 +41,7 @@ After verification, a report file is generated in XML format on the server in th
 This area indicates the duration of the 4D Server application execution since the last time it was started (days, hours and minutes).
 
 
-### Restart server...
+### Reiniciar o servidor...
 
 This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. The 4D users can then be reconnected.
 
@@ -74,7 +74,7 @@ The **Start Request and Debug Logs** button starts log files. Since this may not
 
 When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. Pay attention to the fact that restarting the log after stopping it "erases" the previous file.
 
-### View Report
+### Ver relatório
 
 The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
 
@@ -83,7 +83,7 @@ The **View Report** button (named **Download report** if the operation was carri
 This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 
 
-### Pause logging
+### Pausar no registo
 
 This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
 
