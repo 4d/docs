@@ -1,6 +1,6 @@
 ---
 id: authUsers
-title: Users and sessions
+title: Usuários e sessões
 ---
 
 REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
@@ -8,9 +8,9 @@ REST requests can benefit from [web user sessions](WebServer/sessions.md), provi
 Como primeiro passo para abrir uma sessão REST no servidor 4D, o usuário que envia a solicitude deve estar autenticado.
 
 
-## Authenticating users
+## Autenticação de usuários
 
-You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
+Pode iniciar a sessão de um usuário em sua aplicação passando o nome e a senhar de usuário em  [`$directory/login`]($directory.md#directorylogin). This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
 
 ## Opening sessions
 
@@ -23,7 +23,7 @@ If the `On REST Authentication` database method has not been defined, a `guest` 
 
 In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
 
-The HTML login page:
+A página de início de sessão em HTML:
 
 ![alt-text](../assets/en/REST/login.png)
 
@@ -32,7 +32,7 @@ The HTML login page:
 <html><body bgcolor="#ffffff">
 
 <div id="demo">
-    <FORM name="myForm"> Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/> Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+ <FORM name="myForm"> Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/> Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <button type="button" onclick="onClick()"> Login
 </button>
 <div id="authenticationFailed" style="visibility:hidden;">Authentication failed</div>
@@ -78,7 +78,7 @@ var $sales : cs. SalesPersonsEntity
 
 $Accepted:=False
 
-    //A '/rest' URL has been called with headers username-4D and password-4D If ($userId#"")
+ //A '/rest' URL has been called with headers username-4D and password-4D If ($userId#"")
     $sales:=ds. SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)
         If (Verify password hash($password; $sales.password))

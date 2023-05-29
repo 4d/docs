@@ -3,52 +3,52 @@ id: installation
 title: Instalação
 ---
 
-Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
+Bem-vindo a 4D! Vai encontrar abaixo toda informação necessário para instalar e registrar sua aplicação 4D.
 
 
-## Required configuration
+## Configuração necessária
 
-The [Product Download](https://us.4d.com/product-download) page on the 4D website provides information about the minimum macOS / Windows system requirements for your 4D series.
+Consulte a [página de descarga de produto](https://us.4d.com/product-download) no web site de 4D para conhecer a configuração mínima de Mac / Windows para sua serie 4D.
 
-Additional technical details are available on the 4D website's [Resources page](https://us.4d.com/resources/feature-release).
+Todos os detalhes estão disponíveis na [página Recursos](https://us.4d.com/resources/feature-release) do website de 4D.
 
 
-## Installation on disk
+## Instalação no disco
 
-4D products are installed from the 4D website:
+Os produtos 4D são instalados desde o website de 4D:
 
-1. Connect to the 4D website and go to the [Downloads](https://us.4d.com/product-download) page.
+1. Utilizando seu navegador, conecte-se ao website de 4D e vá à página de [Descargas/downloads](https://us.4d.com/product-download/Feature-Release).
 
-2. Click on the download link for your 4D product and follow the on-screen instructions.
+2. Clique no link de download do seu produto e siga as instruções exibidas na tela.
 
 
 ## Iniciar sessão
 
-Once you have completed the installation, you can start 4D and sign in. To do so, double-click on the 4D product icon.
+Quando tiver completado a instalação, pode iniciar 4D e entrar. Para fazer isso, clique duas vezes no ícone do produto 4D.
 
 ![](../assets/en/getStart/logo4d.png)
 
-The Welcome Wizard then appears:
+Aparece então o Assistente de Boas-vindas:
 
 ![](../assets/en/getStart/welcome2.png)
 
-- If you want to discover and explore 4D, click on the **free trial** link. You will only be asked to sign in or to create a 4D account.
+- Se quiser descobrir e explorar 4D, clique no link **free trial** . Digite seu ID (email ou conta 4D) e sua senha.
 
-- If you already have a 4D account, click on the **Sign in** link in the upper right side of the Welcome Wizard dialog and enter your account information. Any already registered 4D licenses are automatically updated (or additional expansion packs loaded) on your machine.
+- Se já tiver uma conta 4D, clique no link **Sign in** no canto superior direito da caixa de diálogo do Welcome Wizard e introduza a informação da sua conta. Qualquer licença 4D já registada é automaticamente atualizada (ou pacotes de expansão adicionais são carregados) na sua máquina.
 
-Expand the **Open or create project application** area and select the action you want to perform:
+Expanda a área **Abrir ou criar aplicação de projecto** e selecione a ação que quiser executar:
 
-- **Connect to 4D Server** - use 4D as a remote client and connect to an application that is already loaded by 4D Server.
+- **Conectar ao Servidor 4D** - use 4D como um cliente remoto e conecte-se a uma aplicação que já esteja carregada pelo Servidor 4D.
 
-- **Open a local application project** - load an existing application project stored on your disk.
+- **Abrir um projeto de aplicação local** - carregar um projeto de aplicação existente armazenado no seu disco.
 
-- **Create a new application project** - create a new, empty application project on your disk.
+- **Criar um novo projeto de aplicação** - criar um novo projeto de aplicação vazio no seu disco.
 
-Enjoy your 4D experience!
+Desfrute da sua experiência 4D!
 
 
 :::info
 
-Need to activate specific licenses? Visit the [Managing 4D licenses](../Admin/licenses.md) page.
+Também é preciso ativar qualquer licença adicional que obter. Visite a página [Managing 4D licenses](../Admin/licenses.md) .
 
 :::

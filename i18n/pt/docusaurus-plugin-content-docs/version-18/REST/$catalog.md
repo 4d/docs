@@ -7,7 +7,7 @@ title: "$catalog"
 O catálogo descreve todos os dataclasses e atributos disponíveis na datastore.
 
 
-## Sintaxe
+## Sintaxe disponível
 
 | Sintaxe                                       | Exemplo              | Descrição                                                                            |
 | --------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
@@ -29,11 +29,11 @@ Nesta lista apenas são mostrados os dataclasses expostos para a datastore do se
 Aqui está uma descrição das propriedades devolvidas para cada dataclass na datastore do seu projecto:
 
 
-| Propriedade | Tipo   | Descrição                                                                        |
-| ----------- | ------ | -------------------------------------------------------------------------------- |
-| name        | String | Nome da dataclass.                                                               |
-| uri         | String | Um URI que lhe permite obter informações sobre o |dataclass e os seus atributos. |
-| dataURI     | String | Uma URI que lhe permite visualizar os dados no dataclass.                        |
+| Propriedade | Tipo   | Descrição                                                                         |
+| ----------- | ------ | --------------------------------------------------------------------------------- |
+| name        | String | Nome da dataclass.                                                                |
+| uri         | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
+| dataURI     | String | Uma URI que lhe permite visualizar os dados no dataclass.                         |
 
 
 ### Exemplo
@@ -167,17 +167,7 @@ Para saber mais sobre o que se devolve para cada classe de dados e seus atributo
                     "kind": "relatedEntity",
                     "scope": "public",
                     "type": "Company",
-                    "path": "Company"
-                }
-            ],
-            "key": [
-                {
-                    "name": "ID"
-                }
-            ]
-        }
-    ]
-}
+                    "path":
 ````
 
 
@@ -214,21 +204,21 @@ As seguintes propriedades são devolvidas para um dataclass exposto:
 
 Aqui estão as propriedades para cada atributo exposto que são devolvidas:
 
-| Propriedade | Tipo     | Descrição                                                                                                                                                            |
-| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String   | o nome de atributo.                                                                                                                                                  |
-| kind        | String   | Tipo de atributo (armazenamento ou relatedEntity).                                                                                                                   |
-| fieldPos    | Número   | Posição do campo na tabela da base de dados).                                                                                                                        |
-| scope       | String   | Âmbito do atributo (apenas aparecerão os atributos cujo âmbito seja Público).                                                                                        |
-| indexed     | String   | Se algum **Index Kind** foi seleccionado, esta propriedade voltará a ser verdadeira. Caso contrário, esta propriedade não aparece.                                   |
-| type        | String   | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
-| identifying | Booleano | Esta propriedade retorna True se o atributo for a chave primária. Caso contrário, esta propriedade não aparece.                                                      |
-| path        | String   | Nome da relação de um atributo relatedEntity ou relateEntities.                                                                                                      |
+| Propriedade | Tipo       | Descrição                                                                                                                                                            |
+| ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | String     | o nome de atributo.                                                                                                                                                  |
+| kind        | String     | Tipo de atributo (armazenamento ou relatedEntity).                                                                                                                   |
+| fieldPos    | Número     | Posição do campo na tabela da base de dados).                                                                                                                        |
+| scope       | String     | Âmbito do atributo (apenas aparecerão os atributos cujo âmbito seja Público).                                                                                        |
+| indexed     | String     | Se algum **Index Kind** foi seleccionado, esta propriedade voltará a ser verdadeira. Caso contrário, esta propriedade não aparece.                                   |
+| type        | String     | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
+| identifying | Parâmetros | Esta propriedade retorna True se o atributo for a chave primária. Caso contrário, esta propriedade não aparece.                                                      |
+| path        | String     | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                |
  foreignKey|String   |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.|
 
 ### Método(s)
 
-Define os métodos projeto associados à classe de dados, se houver.
+Defines the project methods asociated to the dataclass, if any.
 
 ### Chave primária
 
@@ -332,9 +322,6 @@ Pode recuperar a informação relativa a uma classe de dados específica.
    ],
     key: [
         {
-            name: "ID"
-        }
-    ]
-}
+            name:
 ````
 

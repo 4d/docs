@@ -112,7 +112,7 @@ En cualquier momento, puede arrastrar y soltar temas, sublistas de temas (si las
 
 ### Lista de expresiones
 
-#### Line Objects
+#### Objetos línea
 
 Este tema le permite seguir los valores de los objetos o expresiones:
 
@@ -207,7 +207,7 @@ Este tema lista los conjuntos definidos en el proceso actual (el que está rastr
 
 #### Selecciones temporales
 
-This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. Para cada selección temporal, la columna Valor muestra el número de registros y el nombre de la tabla. Las expresiones de este tema no pueden ser modificadas.
+Este tema lista las selecciones temporales que están definidas en el proceso actual (el que está rastreando en ese momento); también lista las selecciones temporales entre procesos. Para cada selección temporal, la columna Valor muestra el número de registros y el nombre de la tabla. Las expresiones de este tema no pueden ser modificadas.
 
 #### Información
 
@@ -397,8 +397,8 @@ El menú contextual de la Ventana de evaluación de los métodos da acceso a var
 * **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.
 * **Ejecutar hasta el cursor**: ejecuta las instrucciones encontradas entre el contador del programa y la línea seleccionada del método (donde se encuentra el cursor).
 * **Fijar siguiente instrucción**: mueve el contador del programa a la línea seleccionada sin ejecutar esta línea ni las intermedias. La línea designada sólo se ejecuta si el usuario hace clic en uno de los botones de ejecución.
-* **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. Esta función modifica el punto de interrupción de forma permanente: por ejemplo, si elimina un punto de interrupción en el depurador, ya no aparece en el método original.
-* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Cualquier cambio realizado modifica el punto de interrupción de forma permanente.
+* **Alternar punto de interrupción** (también disponible en el Editor de código): inserta o elimina alternativamente el punto de interrupción correspondiente a la línea seleccionada. Esta función modifica el punto de interrupción de forma permanente: por ejemplo, si elimina un punto de interrupción en el depurador, ya no aparece en el método original.
+* **Editar punto de interrupción** (también disponible en el Editor de Código): muestra el diálogo Propiedades del punto de interrupción. Cualquier cambio realizado modifica el punto de interrupción de forma permanente.
 
 ### Buscar siguiente/anterior
 

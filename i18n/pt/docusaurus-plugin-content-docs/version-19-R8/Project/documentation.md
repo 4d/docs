@@ -5,14 +5,14 @@ title: Documenting a project
 
 
 
-In application projects, you can document your methods as well as your classes, forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
 The following project elements accept documentation:
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
+- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Classes
 - Formulários
-- Tabelas e Campos
+- Tabela
 
 Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 
@@ -23,7 +23,7 @@ Documentation is displayed in the preview area (right-side panel) of the Explore
 It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
 
 
-## Documentation files
+## Ficheiros documentação
 
 ### Documentation file name
 
@@ -47,7 +47,7 @@ The `Documentation` folder architecture is the following:
     + `Formulários`
         * loginDial.md
         * ...
-    + `Métodos`
+    + `Página Métodos`
         * myMethod.md
         * ...
     + `TableForms`
@@ -136,7 +136,7 @@ New documentation files are created with the following default contents:
 | ` ```4d Type here your example``` `     | Used to format 4D code examples (uses highlight.js library)                                                                                          |
 
 
-### Supported Markdown
+### Markdown suportado
 - The title tag is supported:
 
 ```md
@@ -176,8 +176,7 @@ _italic_
 - The link tag is supported:
 
 ```md
-// Case 1
-The [documentation](https://doc.4d.com) of the command ....
+// Case 1 The [documentation](https://doc.4d.com) of the command ....
 
 // Case 2
 [4D blog][1]
@@ -209,7 +208,7 @@ In the `WP SwitchToolbar.md` file, you can write:
 <!-- This method returns a different logo depending on the size parameter -->
 
 
-GetLogo (size) -> logo
+<!-- This method returns a different logo depending on the size parameter --> GetLogo (size) -> logo
 
 
 | Parameter | Type   | in/out | Description |
@@ -218,23 +217,17 @@ GetLogo (size) -> logo
 | logo      | Picture | out | Selected logo |
 
 
-## Description
-
-This method returns a logo of a specific size, depending on the value of the *size* parameter.
+## Description This method returns a logo of a specific size, depending on the value of the *size* parameter value.
 1 = smallest size, 5 = largest size.
 
-## Example
-
-```4d
-C_PICTURE($logo)
+## Example C_PICTURE($logo)
 C_LONGINT($size)
 
 //Get the largest logo
 $logo:=GetLogo(5)
-```
 ````
 
-- Vista do explorador:
+- Explorer view:
 
 ![](../assets/en/Project/explorer_Doc.png)
 

@@ -3,19 +3,19 @@ id: blob
 title: BLOB
 ---
 
-Um campo, variável ou expressão BLOB (Binary Large OBjects) é uma série contígua de bytes que pode ser tratada como um objeto completo ou cujos bytes podem ser direcionados individualmente. Um BLOB pode estar vazio (longitude nula) ou pode conter até 2147483647 bytes (2 GB).
+A BLOB (Binary Large OBjects) field, variable or expression is a contiguous series of bytes which can be treated as one whole object or whose bytes can be addressed individually. A BLOB can be empty (null length) or can contain up to 2147483647 bytes (2 GB).
 
-> Como padrão, 4D estabelece o tamanho blob máximo para 2GB mas esse limite de tamanho pode ser menor dependendo de seu SO e de quanto espaço está disponível.
+> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
-Um BLOB é carregado totalmente na memória. Uma variável BLOB é mantida e existe apenas na memória. Um campo BLOB é carregado na memória desde o disco, como o resto do registro ao que pertence.
+A BLOB is loaded into memory in its entirety. A BLOB variable is held and exists in memory only. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
 
-Como os outros tipos de campo que podem reter uma grande quantidade de dados (tais como tipo de campo Imagem), os campos BLOB não são duplicados na memória quando um registro for modificado. Consequentemente o resultado devolvido pelos comandos `Old` e `Modified` não é significativo quando for aplicado a um campo BLOB.
+Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
 
-## Passando parâmetros, ponteiros e resultados de funções
+## Parameter passing, Pointers and function results
 
-Os BLOBs em 4D podem ser passados como parâmetros aos comandos 4D ou às rotinas dos plugins que esperam parâmetros BLOB. Os BLOBS também podem ser passados como parâmetros para um método usuário ou serem retornados como resultado de uma função
+4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
 
-Para passar um BLOB a seus próprios métodos, pode também definir um ponteiro ao BLOB e passar o ponteiro como um parâmetro.
+To pass a BLOB to your own methods, you can also define a pointer to the BLOB and pass the pointer as parameter.
 
 **Exemplos:**
 ```4d
@@ -35,31 +35,31 @@ Para passar um BLOB a seus próprios métodos, pode também definir um ponteiro 
 
 ## Operador de atribuição
 
-Pode atribuir BLOBS um para o outro.
+You can assign BLOBs to each other.
 
 **Exemplo:**
 ```4d
-  ` Declara duas variáveis de tipo BLOB
+  ` Declare two variables of type BLOB
  C_BLOB(vBlobA;vBlobB)
-  ` Estabelece o tamanho do primeiro  BLOB a 10K
+  ` Set the size of the first BLOB to 10K
  SET BLOB SIZE(vBlobA;10*1024)
-  ` Atribui o primeiro BLOB ao segundo
+  ` Assign the first BLOB to the second one
  vBlobB:=vBlobA
 ```
 
-Entretanto, nenhum operador pode ser aplicado aos BLOBs.
+However, no operator can be applied to BLOBs.
 
-## Direcionar os conteúdos de um BLOB
+## Addressing BLOB contents
 
-Cada byte de um BLOB pode ser dirigido individualmente utilizando os símbolos de colchetes {...}. Dentro de um BLOB, os bytes são numerados de 0 a N-1, onde N é o tamanho do BLOB. Exemplo:
+You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Exemplo:
 ```4d
-  ` Declarar uma variável de tipo BLOB
+  ` Declare a variable of type BLOB
  C_BLOB(vBlob)
-  ` Estabelece o tamanho do BLOB para 256 bytes
+  ` Set the size of the BLOB to 256 bytes
  SET BLOB SIZE(vBlob;256)
-  ` O loop abaixo inicia os 256 bytes do BLOB para zero
+  ` The loop below initializes the 256 bytes of the BLOB to zero
  For(vByte;0;BLOB size(vBlob)-1)
     vBlob{vByte}:=0
  End for
 ```
-Como todos os bytes de um BLOB podem ser direcionados de forma individual, é possível armazenar o que quiser em um campo ou variável BLOB.
+Because you can address all the bytes of a BLOB individually, you can actually store whatever you want in a BLOB field or variable.

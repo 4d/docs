@@ -3,18 +3,18 @@ id: control-flow
 title: Fluxo de controlo
 ---
 
-Independentemente da simplicidade ou da complexidade de um método ou função, sempre utilizará um ou vários dos três tipos de estruturas de programação. As estruturas de programação determinam o fluxo de execução, se serão executadas, e a ordem das linhas de instruções no método. Há três tipos de estruturas:
+Independentemente da simplicidade ou da complexidade de um método, sempre utilizará um ou vários dos três tipos de estruturas de programação. As estruturas de programação determinam o fluxo de execução, se serão executadas, e a ordem das linhas de instruções dentro do método. Há três tipos de estruturas:
 
 - **Sequencial**: uma estrutura sequencial é uma estrutura simples e linear. Uma sequência é uma série de sentenças que 4D executa uma atrás da outra, da primera à última. Uma instrução de uma linha, utilizada frequentemente para os métodos dos objetos, é o caso mais simples de uma estrutura sequencial. Por exemplo: `[People]lastName:=Uppercase([People]lastName)`
-- **Branching**: uma estrutura de bifurcação permite que os métodos provem uma condição e tomem caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE. Uma estrutura condicional e a estrutura [`If...Else...End if`](#ifelseend-if), que dirige o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura condicional é a estrutura [`Case of... End case`](#case-ofelseend-case) que direciona fluxo de programa para um de muitas caminhos.
-- **Bucle**: quando se escrevem métodos, é muito comum descobrir que se necessita que uma sequência de sentenças se repita um número de vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
+- **[Branching](Concepts/cf_branching.md)**: uma estrutura de bifurcação permite que os métodos provem uma condição e tomem caminhos alternativos, dependendo do resultado. A condição é uma expressão booleana, uma expressão que avalia TRUE ou FALSE Uma estrutura condicional e a estrutura `If... Uma estrutura condicional e a estrutura <code>If... Else... End if`, que dirige o fluxo do programa ao longo de um dos dois caminhos. A outra estrutura condicional é a estrutura `Case of... End case` que direciona fluxo de programa para um de muitas caminhos.
+- **[Bucle](Concepts/cf_looping.md)**: quando se escrevem métodos, é muito comum descobrir que se necessita que uma sequência de sentenças se repita um número de vezes. Para lidar com esta necessidade, a linguagem 4D oferece as estruturas de loop abaixo:
 
     - [`While... End while`](#whileend-while)
     - [`Repeat... Until`](#repeatuntil)
-    - [`For... End for`](#forend-for)
+    - [`For...End for`](#forend-for)
     - [`For each... End for each`](#for-eachend-for-each)
 
-The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Cada estrutura de looping pode ser usada de qualquer forma, mas loops`While` e `Repeat` são mais apropriados para repetir até que uma condição seja satisfeita, e loops `For` são mais apropriados para looping um número especificado de vezes. `For each... End for each` permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
+Os loops são controlados de duas maneiras: ou fazem loop até que uma condição seja satisfeita, ou fazem loop um número especificado de vezes. Cada estrutura de looping pode ser usada de qualquer forma, mas loops`While`  e `Repeat` são mais apropriados para repetir até que uma condição seja satisfeita, e loops `For` são mais apropriados para looping um número especificado de vezes. `For each... End for each` permite misturar ambas as formas e foi concebido para fazer loop dentro de objectos e colecções.
 
 **Nota:** 4D permite incorporar estruturas de programação até uma "profundidade" de 512 níveis.
 
@@ -49,7 +49,7 @@ Note que a expressão booleana é sempre avaliada completamente. Considere parti
  End if
 ```
 
-A expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo se _MethodA_ devolver  FALSE, 4D ainda iria avaliar _MethodB_, o que seria uma perda de tempo. Nesse caso, é mais interessante usar uma estrutra como:
+The expression is TRUE only if both methods are TRUE. Entretanto, mesmo se _MethodA_ devolver  FALSE, 4D ainda iria avaliar _MethodB_, o que seria uma perda de tempo. Nesse caso, é mais interessante usar uma estrutra como:
 
 ```4d
  If(MethodA)
@@ -61,7 +61,7 @@ A expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo s
 
 O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 
-> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..
+> **Note:** The [ternary operator](operators.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of If..Else statements.
 
 #### Exemplo
 
@@ -72,6 +72,7 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
+ End if
  End if
  End if 
 ```
@@ -146,15 +147,19 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
-    :(vResult=1)
-       ... //Se for 1, mostrar um alerta
+    :(vResult=1) //Test if the number is 1
+       ALERT("One.") //Se for 1, mostrar um alerta
     :(vResult=2) //Testar se o número é 2
        ALERT("Two.") //Se for 2, exibe um alerta
     :(vResult=3) //Testa se o número é 3
        ALERT("Three.") //Se for 3, exibe um alerta
     Else //Se não for 1, 2, ou 3, exibe um alerta
+       ALERT("It was not one, two, or three.")
+ //statement(s)
+ End case //If it is 2, display an alert
+    :(vResult=3) //Test if the number is 3
+       ALERT("Three.") //If it is 3, display an alert
+    Else //If it is not 1, 2, or 3, display an alert
        ALERT("It was not one, two, or three.")
  //statement(s)
  End case
@@ -163,24 +168,24 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 For comparison, here is the `If... Else... End if` version of the same method:
 
 ```4d
- If(vResult=1) //Teste se o número é 1
-    ALERT("One.") If(vResult=1) //Teste se o número é 1
+ If(vResult=1) //Test if the number is 1
+    ALERT("One.") If(vResult=1) //Test if the number is 1
     ALERT("One.") //If it is 1, display an alert
  Else
-    If(vResult=2) //Teste se o número é  2
-       ALERT("Two.") //Se for 2, exibe um alerta
+    If(vResult=2) //Test if the number is 2
+       ALERT("Two.") //If it is 2, display an alert
     Else
-       If(vResult=3) //Teste se o número é 3
-          ALERT("Three.") //Se for 3, exibe um alerta
-       Else //Se não for 1, 2, ou 3,  exibe um alerta
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
           ALERT("It was not one, two, or three.")
        End if
     End if
- End if //Se for 2, exibe um alerta
+ End if //If it is 2, display an alert
     Else
-       If(vResult=3) //Teste se o número é 3
-          ALERT("Three.") //Se for 3, exibe um alerta
-       Else //Se não for 1, 2, ou 3,  exibe um alerta
+       If(vResult=3) //Test if the number is 3
+          ALERT("Three.") //If it is 3, display an alert
+       Else //If it is not 1, 2, or 3, display an alert
           ALERT("It was not one, two, or three.")
        End if
     End if
@@ -190,6 +195,16 @@ For comparison, here is the `If... Else... End if` version of the same method:
 Remember that with a `Case of... Else... End case` structure, only the first TRUE case is executed. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
 Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste para a presença da condition1 cobre o teste para a preença de condition1&condition2 e portanto deveria estar localizada por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
+
+```4d
+ Case of
+    :((vResult=1) & (vCondition#2)) //this case will be detected first
+       ... //statement(s)
+    :(vResult=1)
+       ...
+```
+
+No código anterior, a presença da segunda condição não é detectada, já que o teste "vResult=1" ramifica o código antes de qualquer outro teste. Para que o código funcione corretamente, pode escrevê-lo assim:
 
 ```4d
  Case of
@@ -204,27 +219,9 @@ Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que
  End case
 ```
 
-No código anterior, a presença da segunda condição não é detectada, já que o teste "vResult=1" ramifica o código antes de qualquer outro teste. Para que o código funcione corretamente, pode escrevê-lo assim:
-
-```4d
- If(vResult=1) //Test if the number is 1
-    ALERT("One.") //If it is 1, display an alert
- Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
-          ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if
-```
-
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -274,9 +271,9 @@ The formal syntax of the `While... End while` control flow structure is:
  End while
 ```
 
-A `While... End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 It is common to initialize the value tested in the Boolean expression immediately before entering the `While... End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While... End while` executes the loop.
 
@@ -308,13 +305,14 @@ The formal syntax of the `Repeat... Until` control flow structure is:
 Repeat
     statement(s)
     {break}  
-    {continue} Until(Boolean_Expression)
+    {continue}
+Until(Boolean_Expression)
 ```
-The other difference with a `Repeat... Until` loop is that the loop continues until the Boolean expression is TRUE.
+A `Repeat...Until` loop is similar to a [While...End while](flow-control.md#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
 
-Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
+The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 #### Exemplo
 
@@ -326,7 +324,7 @@ Compare the following example with the example for the `While... End while` loop
  Until(OK=0)
 ```
 
-## For... End for
+## For...End for
 
 The formal syntax of the `For... End for` control flow structure is:
 
@@ -334,7 +332,8 @@ The formal syntax of the `For... End for` control flow structure is:
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
    statement(s)
     {break}  
-    {continue} End for
+    {continue}
+End for
 ```
 
 The `For... End for` loop is a loop controlled by a counter variable:
@@ -351,7 +350,7 @@ The `For... End for` loop is a loop controlled by a counter variable:
 - Se *Start_Expression* e *End_Expression* forem iguais, o loop se executará só uma vez.
 - Se *Start_Expression* for maior que *End_Expression*, o loop não vai executar a não ser que especifique uma *Increment_Expression* negativa. Ver os exemplos.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 #### Exemplos básicos
 
@@ -396,7 +395,7 @@ A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-cont
  End for
 ```
 
-Most of the `For... End for` loops you will write in your projects will look like the ones listed in these examples.
+Most of the `For...End for` loops you will write in your projects will look like the ones listed in these examples.
 
 ### Variável contador
 
@@ -480,7 +479,7 @@ Let's go back to the first `For... End for` example. O seguinte exemplo executa 
  End for
 ```
 
-Here is the equivalent `Repeat... Until` loop:
+Here is the equivalent `While... End while` loop:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -489,7 +488,7 @@ Here is the equivalent `Repeat... Until` loop:
  End while
 ```
 
-Here is the equivalent `While... End while` loop:
+Here is the equivalent `Repeat... Until` loop:
 ```4d
  $i:=1 //Initializa o contador
  Repeat
@@ -500,7 +499,7 @@ Here is the equivalent `While... End while` loop:
 
 :::tip
 
-O loop `For... End for` é geralmente mais rápido que os loops `While... End while` ou `Repeat... Until`, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Therefore, use the `For... End for` loop whenever possible.
+Here is the equivalent `While... Therefore, use the <code>For... End for` loop whenever possible.
 
 :::
 
@@ -548,7 +547,7 @@ Aqui são dois exemplos:
 
 ## For each... End for each
 
-A sintaxe da estrutura condicional `For each... End for each` é:
+The formal syntax of the `For each...End for each` control flow structure is:
 
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
@@ -580,7 +579,7 @@ The following table compares the three types of `For each... End for each`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-A `pausa` e `continuam` as declarações são [descritas abaixo](#break-and-continue).
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Loop através da coleção
 
@@ -635,7 +634,7 @@ Se quiser aumentar o salário de todos os empregados britânicos em uma seleçã
 
 ```4d
  var emp : Object
- For each(emp;ds.Employees.query("country='UK'"))
+ For each(emp;ds. Employees.query("country='UK'"))
     emp.salary:=emp.salary*1,03
     emp.save()
  End for each
@@ -737,27 +736,28 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
 
 ## break e continue
 
-Todas as estruturas de looping acima suportam tanto `quebrar` como `continuar` declarações. Estas declarações dão-lhe mais controle sobre os loops, permitindo-lhe sair do loop e contornar a iteração atual a qualquer momento.
+All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
 
 ### break
 
-A declaração `quebra` termina o loop que a contém. O controle do programa flui para a declaração imediatamente após o corpo do loop.
+The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
 
-Se a declaração `quebrar` estiver dentro de um loop aninhado [](#nested-forend-for-looping-structures) (loop dentro de outro loop), a declaração `quebrar` terminará o loop mais interno.
+If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
 
 
 #### Exemplo
 
 ```4d
 For (vCounter;1;100)
-    If ($tab{vCounter}="") //if a condition becomes true
-        break //end of the for loop
-    End if End for
+    If ($tab{vCounter}="") //se uma condição se tornar verdadeira
+        break //fim do ciclo for
+    End if
+End for
 ```
 
 ### continue
 
-A declaração `continua` encerra a execução das declarações na iteração actual do loop atual, e continua a execução do loop com a próxima iteração.
+The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
 
 ```4d
 var $text : Text

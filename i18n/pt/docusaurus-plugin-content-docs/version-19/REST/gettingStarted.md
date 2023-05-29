@@ -3,22 +3,22 @@ id: gettingStarted
 title: Começando
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D applications.
+4D oferece um servidor REST poderoso que permite acesso direto aos dados armazenadas em seus bancos 4D.
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+O servidor REST está incluído nas aplicações 4D e 4D Server, e disponível automaticamente em seus bancos 4D [logo após ser configurado](configuration.md).
 
 Esta seção tem o objetivo de familiarizar com as funcionalidades REST com um exemplo simples. Nós vamos:
 
-- create and configure a basic 4D application project
-- access data from the 4D project through REST using a standard browser.
+- criar e configurar um banco de dados 4D simples
+- acessar aos dados do banco 4D através de REST usando um navegador padrão.
 
-To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Também poderia usar uma arquitetura remota.
+Para simplificar o exemplo, vamos usar uma aplicação 4D e um navegador que são executados na mesma máquina. Também poderia usar uma arquitetura remota.
 
-## Creating and configuring the 4D project
+## Criar e configurar o banco de dados 4D
 
-1. Launch your 4D or 4D Server application and create a new project. Pode chamar de "Emp4D", por exemplo.
+1. Lançar sua aplicação 4D ou 4D server e criar um novo banco de dados. Pode chamar de "Emp4D", por exemplo.
 
-2. No editor de Estrutura, crie uma [Employees] tabela e adicione os campos abaixo:
+2. Create a table with some fields, for example:
 
 - Lastname (Alpha)
 - Firstname (Alpha)
@@ -34,9 +34,9 @@ To keep the example simple, we’re going to use 4D and a browser that are runni
 
 4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
 
-5. No menu **Run**, selecione **Start Web Server** (se necessário) então selecione **Test Web Server**.
+5. In the **Run** menu, select **Start Web Server**.
 
-4D exibe a página home padrão do 4D Web Server.
+The default home page is displayed:
 
 ## Acessar dados 4D através do navegador
 
@@ -45,7 +45,7 @@ Pode ler e editar dados com 4D apenas através de petições REST.
 Qualquer petição 4D Rest URL  inicia com `/ rest`, para ser inserido depois da área `adress:port`. Por exemplo, para ver o que está dentro da 4D Datastore, pode escrever:
 
 ```
-http://127.0.0.1/rest/$catalog
+http://localhost/rest/$catalog
 ```
 
 O servidor REST responde:
@@ -134,4 +134,4 @@ Tem muitas possibilidades para filtrar dados a receber. Por exemplo, para obter 
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.  
+A [REST API](REST_requests.md) oferece vários comandos para interagir com o banco de dados 4D.  

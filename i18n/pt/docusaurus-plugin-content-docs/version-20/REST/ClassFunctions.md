@@ -1,6 +1,6 @@
 ---
 id: classFunctions
-title: Calling ORDA class functions
+title: Chamada de funções de classe ORDA
 ---
 
 
@@ -20,13 +20,13 @@ $city:=ds. City.getCity("Aguada")
 
 > Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
 
-## Function calls
+## Chamadas funções
 
 Functions must always be called using REST **POST** requests (a GET request will receive an error).
 
 Functions are called on the corresponding object on the server datastore.
 
-| Class function                                                     | Sintaxe                                                                     |
+| Função de classe                                                   | Sintaxe                                                                     |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
@@ -38,8 +38,7 @@ Functions are called on the corresponding object on the server datastore.
 
 
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).   
-> The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
+> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
 > All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
@@ -56,12 +55,12 @@ As regras abaixo são válidas:
 - Parameters must be passed in the **body of the POST request**
 - Parameters must be enclosed within a collection (JSON format)
 - All scalar data types supported in JSON collections can be passed as parameters.
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
+- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
 
 See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
 
 
-### Scalar value parameter
+### Parâmetro de valor escalar
 
 Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
@@ -70,22 +69,22 @@ Parameter(s) must simply be enclosed in a collection defined in the body. For ex
 All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
 
 
-### Entity parameter
+### Parâmetro da entidade
 
 Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
 
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
-| Propriedades             | Tipo                                 | Descrição                                                                  |
-| ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
-| Attributes of the entity | misto                                | Optional - Values to modify                                                |
-| __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                 | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
-| __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
+| Propriedades          | Tipo                                 | Descrição                                                                  |
+| --------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
+| Atributos da entidade | misto                                | Optional - Values to modify                                                |
+| __DATACLASS           | String                               | Mandatory - Indicates the Dataclass of the entity                          |
+| __ENTITY              | Parâmetros                           | Mandatory - True to indicate to the server that the parameter is an entity |
+| __KEY                 | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
-- If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes
+- If __KEY is provided, the entity corresponding to__KEY is loaded on the server with the given attributes
 
 See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
 
@@ -103,11 +102,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
 
-| Propriedades             | Tipo     | Descrição                                                                            |
-| ------------------------ | -------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | misto    | Optional - Values to modify                                                          |
-| __DATASET                | String   | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Propriedades          | Tipo       | Descrição                                                                            |
+| --------------------- | ---------- | ------------------------------------------------------------------------------------ |
+| Atributos da entidade | misto      | Optional - Values to modify                                                          |
+| __DATASET             | String     | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES            | Parâmetros | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
@@ -149,10 +148,10 @@ The Dataclass class `City` provides an API that returns a city entity from a nam
 // City class Class extends DataClass
 
 exposed Function getCity()
-    var $0 : cs. CityEntity
-    var $1,$nameParam : text
-    $nameParam:=$1
-    $0:=This.query("name = :1";$nameParam).first()
+ var $0 : cs. CityEntity
+ var $1,$nameParam : text
+ $nameParam:=$1
+ $0:=This.query("name = :1";$nameParam).first()
 ```
 
 You can then run this request:
@@ -163,7 +162,7 @@ Body of the request: ["Aguada"]
 
 #### Resultados
 
-The result is an entity:
+Le résultat est une entité:
 ```
 {
     "__entityModel": "City",
@@ -243,14 +242,14 @@ The `StudentsSelection` class has a `getAgeAverage` function:
 // StudentsSelection Class Class extends EntitySelection
 
 exposed Function getAgeAverage
-    C_LONGINT($sum;$0)
-    C_OBJECT($s)
+ C_LONGINT($sum;$0)
+ C_OBJECT($s)
 
-    $sum:=0
-    For each ($s;This)
-        $sum:=$sum+$s.age()
-    End for each 
-    $0:=$sum/This.length
+ $sum:=0
+ For each ($s;This)
+     $sum:=$sum+$s.age()
+ End for each 
+ $0:=$sum/This.length
 ```
 
 Once you have created an entityset, you can run this request:
@@ -273,11 +272,11 @@ The `StudentsSelection` class has a `getLastSummary` function:
 // StudentsSelection Class Class extends EntitySelection
 
 exposed Function getLastSummary
-    C_TEXT($0)
-    C_OBJECT($last)
+ C_TEXT($0)
+ C_OBJECT($last)
 
-    $last:=This.last()
-    $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
+ $last:=This.last()
+ $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
 You can then run this request:
@@ -303,20 +302,20 @@ The Dataclass class `Students` has the function `pushData()` receiving an entity
 // Students Class Class extends DataClass
 
 exposed Function pushData
-    var $1, $entity, $status, $0 : Object
+ var $1, $entity, $status, $0 : Object
 
-    $entity:=$1
+ $entity:=$1
 
-    $status:=checkData($entity) // $status is an object with a success boolean property
+ $status:=checkData($entity) // $status is an object with a success boolean property
 
-    $0:=$status
+ $0:=$status
 
-    If ($status.success)
-        $status:=$entity.save()
-       If ($status.success)
-           $0:=$entity
-      End if 
-    End if
+ If ($status.success)
+     $status:=$entity.save()
+     If ($status.success)
+         $0:=$entity
+     End if 
+ End if
 
 ```
 
@@ -324,7 +323,7 @@ You run this request:
 
 **POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Corpo do pedido:
 
 ```
 [{
@@ -363,7 +362,7 @@ You run this request:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Corpo do pedido:
 ```
 [{
 "__DATACLASS":"Students",
@@ -400,7 +399,7 @@ You run this request:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+Corpo do pedido:
 ```
 [{
 "__DATACLASS":"Students",
@@ -442,16 +441,16 @@ In this example, we associate an existing school to a Students entity. A classe 
 // StudentsEntity class Class extends Entity
 
 exposed Function putToSchool()
-    var $1, $school , $0, $status : Object
+ var $1, $school , $0, $status : Object
 
-        //$1 is a Schools entity
-    $school:=$1
-        //Associate the related entity school to the current Students entity
-    This.school:=$school
+  //$1 is a Schools entity
+ $school:=$1
+  //Associate the related entity school to the current Students entity
+ This.school:=$school
 
-    $status:=This.save()
+ $status:=This.save()
 
-    $0:=$status
+ $0:=$status
 ```
 
 You run this request, called on a Students entity : **POST** `http://127.0.0.1:8044/rest/Students(1)/putToSchool` Body of the request:
@@ -515,7 +514,7 @@ Then you can run this request:
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
-Body of the request:
+Corpo do pedido:
 
 ```
 [

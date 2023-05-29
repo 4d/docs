@@ -77,12 +77,12 @@ Con:
  vPtrC:=->outroObject
 ```
 
-| Operação     | Sintaxe           | Retorna  | Expression    | Value |
-| ------------ | ----------------- | -------- | ------------- | ----- |
-| Igual        | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
-|              |                   |          | vPtrA = vPtrB | False |
-| Desigualdade | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
-|              |                   |          | vPtrA # vPtrB | False |
+| Operação     | Sintaxe             | Retorna    | Expression    | Valor |
+| ------------ | ------------------- | ---------- | ------------- | ----- |
+| Igual        | Ponteiro = Ponteiro | Parâmetros | vPtrA = vPtrB | True  |
+|              |                     |            | vPtrA = vPtrC | False |
+| Desigualdade | Pointer # Pointer   | Parâmetros | vPtrA # vPtrC | True  |
+|              |                     |            | vPtrA # vPtrB | False |
 
 ## Principais usos
 ### Ponteiros para tabelas
@@ -198,7 +198,7 @@ Aqui está uma explicação de cada linha do exemplo:
 - $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
 - $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Assim, neste caso, $MyVar é atribuído o "Adeus".
-- ALERTA (($PointerTwo->)->) --> O mesmo: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
+- ALERTA (($PointerTwo->)->) --> O mesmo: $PointerTwo-> refere o conteúdo de $PointerOne, que por sua vez refere $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar. Por conseguinte ($PointerTwo->)-> faz referência ao conteúdo de $MyVar.
 
 A seguinte linha coloca "Olá" em $MyVar:
 ```4d

@@ -16,6 +16,6 @@ The `On Open Detail` event can be used in the following contexts:
 - List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record is about to be displayed in the detail form associated with a list box of the selection type (and before this form is opened).
 
 
-### Displayed line number
+### Número de linha apresentado
 
 The `Displayed line number` 4D command works with the `On Open Detail` form event. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.

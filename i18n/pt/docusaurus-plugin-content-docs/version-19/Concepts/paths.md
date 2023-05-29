@@ -23,10 +23,10 @@ The following filesystem pathnames are supported:
 
 | filesystem   | Designa                                            |
 | ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
+| "/DATA"      | Pasta de dados actual                              |
 | "/LOGS"      | Pasta Logs                                         |
 | "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Project folder                                     |
+| "/PROJECT"   | Pasta Project                                      |
 | "/RESOURCES" | Current database resources folder                  |
 | "/SOURCES"   | Current project resources folder                   |
 
@@ -77,7 +77,7 @@ However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New
 
 The following escape sequences are recognized by 4D:
 
-| Escape sequence              | Character replaced   |
+| Escape sequence              | Carácter substituído |
 | ---------------------------- | -------------------- |
 | `\n`                        | LF (Nova linha)      |
 | `\t`                        | HT (Horizontal tab)  |
@@ -107,14 +107,14 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ```4d
     //ERROR
-$ko:=Folder("myFolder").create() //relative pathname with constructor
+$ko:=Folder("myFolder").create() //nome do caminho relativo com construtor
 ```
 
 If you want to handle files or folders in various locations (project folder, system folders, etc.), you can use `filesystems` (see above). Por exemplo, pode escrever:
 
 ```4d
-$okFolder:=Folder("/PACKAGE/myFolder").create() //folder created at the structure level
-$okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folder
+$okFolder:=Folder("/PACKAGE/myFolder").create() //pasta criada ao nível da estrutura
+$okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de dados
 ```
 
 ### `.file()` and `.folder()` folder methods

@@ -170,7 +170,7 @@ Lista de valores que se utilizarán como valores por defecto para la columna del
 
 > No confunda esta propiedad con la propiedad "[valor por defecto](properties_RangeOfValues.md#default-list-of-values)" que permite definir un valor de campo en los nuevos registros.
 
-Debe introducir una lista de valores. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
+Debe introducir una lista de valores. En el editor de formularios, un diálogo específico permite introducir valores separados por retornos de carro:
 
 ![](../assets/en/FormObjects/defaultValues.png)
 

@@ -67,7 +67,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 ---
-## Execute object method
+## Executar método objecto
 When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
 
 #### Gramática JSON
@@ -119,7 +119,7 @@ Several types of method references are supported:
 
 ---
 ## Linhas móveis
-`List boxes de tipo array`
+`List box de tipo array`
 
 Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
 
@@ -138,7 +138,7 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 
 ---
-## Multi-selectable
+## Multi-seleccionável
 
 Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
 

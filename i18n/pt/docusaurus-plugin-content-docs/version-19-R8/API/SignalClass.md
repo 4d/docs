@@ -62,7 +62,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  $signal.trigger()
 ```
 
-***OpenForm*** method :
+Método ***OpenForm***:
 
 ```4d
  var $signal : 4D. Signal
@@ -105,11 +105,11 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D. Signal<!-- END REF -->
+<!-- REF #_command_.New signal.Syntax -->|<!-- END REF -->
 
 
 <!-- REF #_command_.New signal.Params -->
-| Parâmetros  | Tipo       |    | Descrição                                                     |
+| Parâmetro   | Tipo       |    | Descrição                                                     |
 | ----------- | ---------- |:--:| ------------------------------------------------------------- |
 | description | Text       | -> | Descrição para o sinal                                        |
 | Resultados  | 4D. Signal | <- | Objeto nativo encapsulando o sinal|<!-- END REF -->
@@ -210,7 +210,7 @@ Essa propriedade é**apenas escrita**.
 
 #### Descrição
 
-A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado actual do objecto `Sinal`<!-- END REF -->. Quando se cria um sinal, `.signaled` é **False**. When the signal is created, `.signaled` is **False**.
+A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado actual do objecto `Sinal`<!-- END REF -->. . Quando se cria um sinal, `.signaled` é **False**.
 
 Essa propriedade é **apenas leitura**.
 
@@ -233,9 +233,9 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parâmetros | Tipo |  | Descrição                                             |
-| ---------- | ---- |::| ----------------------------------------------------- |
-|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
+| Parâmetro | Tipo |  | Descrição                                             |
+| --------- | ---- |::| ----------------------------------------------------- |
+|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 
 |
@@ -266,10 +266,10 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 
 <!-- REF #SignalClass.wait().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                    |
-| ---------- | -------- | -- | ------------------------------------------------------------ |
-| timeout    | Real     | -> | Tempo máximo de espera do sinal em segundos                  |
-| Resultados | Booleano | <- | Estado da propriedade `.signaled`|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                    |
+| ---------- | ---------- | -- | ------------------------------------------------------------ |
+| timeout    | Real       | -> | Tempo máximo de espera do sinal em segundos                  |
+| Resultados | Parâmetros | <- | Estado da propriedade `.signaled`|<!-- END REF -->
 
 
 |

@@ -3,7 +3,7 @@ id: develop-plug-ins
 title: Plug-ins de desenvolvimento
 ---
 
-## Why the need for a plug-in?
+## Porquê a necessidade de um plug-in?
 
 Although 4D provides hundred of built-in methods used to manipulate objects, records and implement user interface, some special use or feature (sometimes platform dependant) may be needed: one may need ODBC under Windows, another may need Apple services under macOS, while yet another may want to implement specific statistics tools, social network login, payment platform, file access over the network, a special user interface, or a private picture structure.
 
@@ -11,9 +11,9 @@ It is obvious that covering all areas of both the macOS and Windows operating sy
 
 The modular nature of the 4D environment allows the creation of basic applications but does not preclude the development of highly complex systems. The 4D Plug-in architecture opens the 4D environment to any type of application or user. 4D Plug-ins multiply that application or user's power and productivity.
 
-## What is a plug-in and what can it do?
+## Por que a necessidade de um plug-in?
 
-A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
+A plug-in is a piece of code that 4D launches at start up. Acrescenta funcionalidade ao 4D e aumenta assim a sua capacidade.
 
 Usually, a plug-in does things that:
 - 4D cannot do (ie, specific platform technology),
@@ -38,6 +38,6 @@ Um plug-in pode ser muito simples, com apenas uma rotina executando uma tarefa m
 - O [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) é uma ferramenta essencial que simplifica a tarefa de desenvolvimento de plug-ins 4D. Escreve o código 4D precisa de carregar corretamente e interagir com um plug-in, permitindo-lhe concentrar-se no seu próprio código.
 
 
-## Sharing plug-ins
+## Partilhar plug-ins
 
 We encourage you to support the 4D developer community by sharing your plug-ins, preferably on the [GitHub platform](https://github.com/topics/4d-plugin). We recommend that you use the **`4d-plugin`** topic to be correctly referenced.  

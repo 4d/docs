@@ -104,7 +104,7 @@
     "description": "The label for category Menus in sidebar docs"
   },
   "sidebar.docs.category.Build application": {
-    "message": "Build application",
+    "message": "Generador de aplicación",
     "description": "The label for category Build application in sidebar docs"
   },
   "sidebar.docs.category.4D Language Reference": {

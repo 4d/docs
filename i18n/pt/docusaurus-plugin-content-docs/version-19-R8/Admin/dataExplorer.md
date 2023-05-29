@@ -3,7 +3,7 @@ id: dataExplorer
 title: Web Data Explorer
 ---
 
-> **Preview**: O Web Data Explorer está sendo oferecido como uma funcionalidade em modo preview. A utilização desta característica na produção não é recomendada. A implementação final poderia ser ligeiramente diferente.
+> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in production is not recommended. The final implementation could be slightly different.
 
 O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. Ajuda a controlar dados e rapidamente identificar problemas em qualquer etapa do processo de desenvolvimento.
 
@@ -20,15 +20,15 @@ O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para 
 
 ## Abrindo o Data Explorer
 
-A página do Data Explorer está disponível automaticamente quando o web server [the `WebAdmin` for iniciado](webAdmin.md#starting-the-webadmin-web-server).
+The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
 
-Para se conectar à página web do Data Explorer:
+To connect to the Data Explorer web page:
 
-- Se usar a aplicação 4D com interface, selecione o comando **Data Explorer...** :
-  - no menu **Records**  (em 4D monousuário)
-  - no menu **Window**  (em 4D Server)
+- if you use a 4D application with interface, select **Data Explorer...** command from:
+  - the **Records** menu (in 4D stand-alone)
+  - the **Window** menu (in 4D Server)
 
-- mesmo se usar uma aplicação 4D headless, pode abrir seu navegador web e digitar o endereço abaixo:
+- whether you use a headless 4D application or not, you can open your web browser and enter the following address:
 
  `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
 
@@ -73,10 +73,10 @@ A página contém várias áreas:
   - É possível reduzir o número de colunas desmarcando os atributos do lado esquerdo. Também pode mudar as colunas da grade de dados utilizando arrastar e soltar. Pode clicar no cabeçalho de uma coluna  para [ordenar entidades](#ordering-entities) de acordo com seus valores (quando for possível).
   - Se uma operação exigir muito tempo, é mostrada uma barra de progresso. Pode deter a operação executando a qualquer momento clicando no botão vermelho:<br/> ![alt-text](../assets/en/Admin/dataExplorer5.png)
 
-- No lado direito de **Details area**: exibe os valores de atributo da entidade atual de seleção assim como **related data**, se houver. Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
-  - Todos os tipos de atributo são exibidos, incluindo imagens, objetos (expressos como json) assim como atributos[computed](../ORDA/ordaClasses.md#computed-attributes-1) e [alias](../ORDA/ordaClasses.md#alias-attributes-1).
+- On the right side is the **Details area**: it displays the attribute values of the currently selected entity. Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
+  - All attribute types are displayed, including pictures and objects (expressed in json).
   - Os dados relacionados (relações um a um e um a muitos) podem ser mostradas através de áreas expandíveis/colapsáveis:<br/> ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
-  - **Ctrl+Click** (Windows) ou **Command+Click** (macOS) em um nome de atributo relacionado na área do lado direito mostra os valores do atributo numa área independente e flutuante:<br/> ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
+  - no menu **Records**  (em 4D monousuário)<br/> ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
 
 ### Atualização de conteúdos
 
@@ -120,7 +120,7 @@ Com atributos de data, pode introduzir a data a utilizar através de um widget d
 
 ![alt-text](../assets/en/Admin/DEFilter2.png)
 
-#### Booleans
+#### Booleanos
 
 Ao clicar numa área de atributos booleanos, pode filtrar em **valores verdadeiros**/**valores falsos** ou também em **null**/**e não null**:
 

@@ -4,7 +4,7 @@ title: Using preemptive web processes
 ---
 
 
-The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your applications. You can configure your web-related code, including 4D tags, web database methods or ORDA REST class functions to run simultaneously on as many cores as possible.
+The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
 
 For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
 
@@ -12,17 +12,17 @@ For in-depth information on preemptive process in 4D, please refer to the *Preem
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
-| 4D Server           | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpreted (debugger detached) | Compilado       |
-| ------------------- | ------------------------------------------------------------------- | ------------------------------- | --------------- |
-| Servidor REST       | cooperativo                                                         | apropiativo                     | apropiativo     |
-| Servidor Web        | cooperativo                                                         | *parâmetro web*                 | *parâmetro web* |
-| Web Services Server | cooperativo                                                         | *parâmetro web*                 | *parâmetro web* |
+| 4D Server             | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpreted (debugger detached) | Compilado       |
+| --------------------- | ------------------------------------------------------------------- | ------------------------------- | --------------- |
+| Servidor REST         | cooperativo                                                         | preemptive                      | preemptive      |
+| Servidor Web          | cooperativo                                                         | *parâmetro web*                 | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                         | *parâmetro web*                 | *parâmetro web* |
 
 | 4D remote/single-user | Interpretado | Compilado       |
 | --------------------- | ------------ | --------------- |
-| Servidor REST         | cooperativo  | apropiativo     |
+| Servidor REST         | cooperativo  | preemptive      |
 | Servidor Web          | cooperativo  | *parâmetro web* |
-| Web Services Server   | cooperativo  | *parâmetro web* |
+| Servidor Web Services | cooperativo  | *parâmetro web* |
 
 - REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
 - Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
@@ -37,17 +37,17 @@ The following table indicates whether the preemptive mode is used or is availabl
 
 ## Writing thread-safe web server code
 
-All 4D code executed by the web server must be thread-safe if you want your web processes to be run in preemptive mode. When the [preemptive mode is enabled](#availability-of-preemptive-mode-for-web-processes), the following parts of the application will be automatically evaluated by the 4D compiler:
+All 4D code executed by the web server must be thread-safe if you want your web processes to be run in preemptive mode. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
 
 *   All web-related database methods:
     *   [`On Web Authentication`](authentication.md#on-web-authentication)
     *   [`On Web Connection`](httpRequests.md#on-web-connection)
     *   [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
-    *   [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+    *   https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication
 
 *   The `compiler_web` project method (regardless of its actual "Execution mode" property);
 
-*   Basically any code processed by the [`PROCESS 4D TAGS`](https://doc.4d.com/4dv19R/help/command/en/page816.html) command in the web context, for example through .shtml pages
+*   Basically any code processed by the `PROCESS 4D TAGS` command in the web context, for example through .shtml pages.
 
 *   Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
 
@@ -68,12 +68,12 @@ All 4D web-related commands are thread-safe, *i.e.*:
 *   all commands from the *Web Server* theme,
 *   all commands from the *HTTP Client* theme.
 
-The web-related database methods are thread-safe and can be used in preemptive mode (see above): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
+The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
 Of course, the code executed by these methods must also be thread-safe.
 
 
-### Web Server URLs
+### URLs do servidor Web
 
 The following 4D Web Server URLs are thread-safe and can be used in preemptive mode:
 

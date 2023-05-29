@@ -10,17 +10,17 @@ A group box is a static object that allows you to visually assemble multiple for
 
 
 
-#### JSON Exemplo:
+#### JSON Exemplo
 
 ```
     "myGroup": {
-        "type": "groupBox", 
-        "title": "Employee Info"
-        "left": 60,
-        "top": 160,
-        "width": 100,
-        "height": 20
-        }
+  "type": "groupBox", 
+  "title": "Employee Info"
+  "left": 60,
+  "top": 160,
+  "width": 100,
+  "height": 20
+  }
 ```
 
 #### Propriedades compatíveis

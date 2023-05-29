@@ -25,7 +25,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 Allows the user access to a standard context menu in the object when the form is executed.
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display.md#picture-format) using this menu is temporary; it is not saved with the record.
+For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display#picture-format) using this menu is temporary; it is not saved with the record.
 
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
@@ -63,7 +63,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Objectos suportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -86,27 +86,27 @@ Most of the time, you can use one of the [built-in filters](#default-entry-filte
 
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
-### Default entry filters
+### Filtros de entrada predefinidos
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
 | Filtro de entrada             | Descrição                                                                                                                                            |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                            | Allow any letters, but convert to uppercase.                                                                                                         |
-| &9                            | Allow only numbers.                                                                                                                                  |
+| &9                            | Permitir apenas números.                                                                                                                             |
 | &A                            | Allow only capital letters.                                                                                                                          |
 | &a                            | Allow only letters (uppercase and lowercase).                                                                                                        |
 | &@                            | Allow only alphanumeric characters. No special characters.                                                                                           |
 | ~a##                          | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                 |
-| !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                        |
-| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Allow any numbers. Limited to hours and minutes.                                                   |
-| !0&9##:##                     | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                        |
-| !0&9## Hrs ## Mins ## Secs    | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                            |
-| !0&9Hrs: ## Mins: ## Secs: ## | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                             |
+| !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
+| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                          |
+| !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.              |
+| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers before each word.                                                  |
+| !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers after each word.                                                   |
 | !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, four entries.                         |
 | !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |
 | !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-####               | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                            |
+| !0&9###-##-####               | Social Security number. Display zeros in entry spaces. Permitir quaisquer números.                                                                   |
 | ~"A-Z;0-9; ;,;.;-"            | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                        |
 | &"a-z;0-9; ;,;.;-"            | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                 |
 | &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                               |
@@ -115,11 +115,11 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 | Nome        | Tipo de dados | Valores possíveis                                    |
 | ----------- | ------------- | ---------------------------------------------------- |
-| entryFilter | string        | <li>Entry filter code</li> ou <li>Entry filter name (filter names start with &#124; )</li> |
+| entryFilter | string        | <li>Entry filter code or</li> ou <li>Entry filter code or Entry filter name (filter names start with &#124; )</li> |
 
 #### Objectos suportados
 
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -147,7 +147,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 ---
 
-## Keyboard Layout
+## Layout do teclado
 
 This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
 

@@ -5,7 +5,7 @@ title: '$method'
 
 This parameter allows you to define the operation to execute with the returned entity or entity selection.
 
-## Sintaxe
+## Sintaxe disponível
 
 | Sintaxe                                         | Exemplo                                                                                         | Descrição                                                                                                  |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -106,8 +106,7 @@ If the request was successful, the following response is returned:
 ```json
 {
     "ok": true
-}
-If the entity set wasn't found, an error is returned:
+} If the entity set wasn't found, an error is returned:
 
 {
     "__ERROR": [

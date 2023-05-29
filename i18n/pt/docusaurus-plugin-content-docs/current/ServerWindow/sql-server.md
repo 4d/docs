@@ -1,6 +1,6 @@
 ---
 id: sql-server
-title: SQL Server Page
+title: Página servidor SQL
 ---
 
 
@@ -36,6 +36,6 @@ These parameters can be modified via the 4D Settings.
 
 Number of SQL connections currently open on 4D Server.
 
-### Maximum Connections
+### Ligações máximas
 
 Maximum number of simultaneous SQL connections allowed. This value depends on the license installed on the server machine.

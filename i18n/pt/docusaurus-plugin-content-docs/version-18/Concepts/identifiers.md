@@ -3,36 +3,36 @@ id: identifiers
 title: Identificadores
 ---
 
-Esta seção descreve as convenções e regras para nomear os vários elementos da linguagem 4D (variáveis, tabelas, objetos, formulários, etc)
+This section describes the conventions and rules for naming various elements in the 4D language (variables, tables, objects, forms, etc.).
 
 ## Regras básicas
 
-As regras abaixo são aplicadas à todas as estruturas de 4D.
+The following rules apply for all 4D frameworks.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") Periods (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
-- Não são permitidos vírgulas, barras inclinadas, aspas nem dois pontos.
-- Os caracteres reservados para seu uso como oepradores como * e + não estão permitidos.
-- Não use nomes reservados, ou seja, nomes de comando 4D (`Date`, `Time`, etc), palavras chaves (If, For, etc.), e constantes.
-- Os espaços finais são ignorados.
+- Pontos (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
+- Commas, slashes, quotation marks, and colons are not allowed.
+- Characters reserved for use as operators, such as * and +, are not allowed.
+- Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
+- Any trailing spaces are ignored.
 
-### Regras adicionais para as propriedades dos objetos e os nomes ORDA
+### Additional rules for object property and ORDA names
 
-- Os caracteres de espaço não estão permitidos.
-- Pontos (".") Periods (".") and brackets ("[ ]") are not allowed.
-- Os nomes são sensíveis às maiúsculas e minúsculas.
+- Space characters are not allowed.
+- Pontos (".") and brackets ("[ ]") are not allowed.
+- Names are case sensitive.
 
-### Regras adicionais para SQL
+### Additional rules for SQL
 
-- Só são aceitos os caracteres _0123456789abcdefghijklmnopqrstuvwxyz
-- Nomes não devem incluir palavras chave SQL (comando, atributo, etc).
+- Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
+- Names must not include any SQL keywords (command, attribute, etc.).
 
-**Nota:** a área "SQL" do Inspector no editor de estruturas indica automaticamente qualquer caractere não autorizado no nome de uma tabela ou campo.
+**Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
 
 ## Tabelas
 
-Uma tabela se designa colocando seu nome entre parênteses: [...]. Um nome de tabela pode conter até 31 caracteres.
+You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
 
 Exemplos:
 
@@ -44,7 +44,7 @@ ADD RECORD([Letters])
 
 ## Campos
 
-Para designar um campo, primeiro se especifica a tabela a qual pertence. O nome do campo segue imediatamene o nome da tabela. Um nome campo pode conter até 31 caracteres.
+You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
 
 Exemplos:
 
@@ -54,11 +54,11 @@ QUERY([Clients];[Clients]Name="Smith")
 [Letters]Text:=Capitalize text([Letters]Text)
 ```
 
-## Variáveis interprocesso
+## Interprocess Variables
 
-Designa-se uma variável interprocessada precedendo o nome da variável com os símbolos (`<>`) - um sinal "menos do que" seguido de um sinal "maior do que".
+You designate an interprocess variable by preceding the name of the variable with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
 
-O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
+The name of an interprocess variable can be up to 31 characters, not including the `<>` symbols.
 
 Exemplos:
 
@@ -70,7 +70,7 @@ If(<>vtName#"")
 
 ## Variáveis processo
 
-Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). Um nome de processo pode conter até 31 caracteres.
+Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). Um nome de variável de processo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -82,7 +82,7 @@ vsCurrentName:=""
 
 ## Variáveis locais
 
-Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável.  Um nome de variável local pode conter até 31 caracteres, sem incluir o sinal de dólar.
+Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável. A local variable name can contain up to 31 characters, not including the dollar sign.
 
 Exemplos:
 
@@ -94,17 +94,17 @@ $vsMyString:="Hello there"
 
 ## Arrays
 
-Um array se designa escrevendo seu nome, que é o nome que se passa a um comando de declaração de array (como ARRAY LONGINT) quando criar o array. Arrays são variáveis, e desde o ponto de vista do escopo,da mesma forma que as variáveis, têm três tipos diferentes de arrays:
+You designate an array by using its name, which is the name you pass to an array declaration (such as ARRAY LONGINT) when you create the array. Arrays are variables, and from the scope point of view, like variables, there are three different types of arrays:
 
 - Arrays interprocesso,
 - Arrays processo,
-- Arrays local.
+- Arrays locais.
 
 ### Arrays interprocesso
 
-Designa-se uma variável interprocessada precedendo o nome da variável com os símbolos (`<>`) - um sinal "menos do que" seguido de um sinal "maior do que".
+The name of an interprocess array is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
 
-O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
+An interprocess array name can contain up to 31 characters, not including the `<>` symbols.
 
 Exemplos:
 
@@ -116,7 +116,7 @@ ARRAY INTEGER(<>aiBigArray;10000)
 
 ### Arrays proceso
 
-Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). Um nome de array processo pode conter até 31 caracteres.
+Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). A process array name can contain up to 31 characters.
 
 Exemplos:
 
@@ -128,7 +128,7 @@ ARRAY INTEGER(aiBigArray;10000)
 
 ### Arrays locais
 
-O nome de um array local vai precedido do sinal de dólar ($). Um nome de array local pode conter até 31 caracteres, sem incluir o sinal de dólar.
+O nome de um array local vai precedido do sinal de dólar ($). A local array name can contain up to 31 characters, not including the dollar sign.
 
 Exemplos:
 
@@ -138,9 +138,9 @@ SORT ARRAY($asKeywords;>)
 ARRAY INTEGER($aiBigArray;10000)
 ```
 
-### Elementos de arrays
+### Elements of arrays
 
-A referência a um elemento de um array local, processo ou interprocesso se realiza mediante chaves ("{ }"). O elemento ao qual faz referência se indica com uma expressão numérica.
+You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
 
 Exemplos:
 
@@ -149,38 +149,41 @@ Exemplos:
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
-    //Direcionar um elemento de um array processo If(asKeywords{1}="Stop")
+ //Direcionar um elemento de um array processo If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
-    //Direcionar um elemento de um array local If($asKeywords{1}="Stop")
+ //Direcionar um elemento de um array local If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elementos de arrays de duas dimensões
+### Elements of two-dimensional arrays
 
-A referência a um elemento de um array local, processo ou interprocesso se realiza mediante chaves ("{ }}) duas vezes. O elemento ao que se faz referência se denota através de duas expressões numéricas em dois conjuntos de pares de chaves
+You reference an element of a two-dimensional array by using the curly braces ({…}) duas vezes. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
 Exemplos:
 
 ```4d
- //Direcionamento de um elemento de um array interprocesso de duas dimensões If(<>asKeywords{$vlNextRow}{1}="Stop")
+ //Addressing an element of a two-dimensional interprocess array
+If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
-    //Direcionar um elemento de uma array processo de duas dimensões If(asKeywords{$vlNextRow}{1}="Stop")
+ //Addressing an element of a two-dimensional process array
+If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
-    //Direcionar um elemento de um array local de duas dimensões If($asKeywords{$vlNextRow}{1}="Stop")
+ //Addressing an element of a two-dimensional local array
+If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
 ## Atributos de objetos
 
-Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".")  entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
+When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. An attribute name can contain up to 255 characters and is case sensitive.
 
 Exemplos:
 
@@ -189,11 +192,11 @@ myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
 ```
 
-**Nota:** são aplicadas regras adicionais aos nomes de atributos de objetos (devem ser ajustados à especificação ECMAScript). Para saber mais, consulte [Identificadores de propriedades de objetos](Concepts/dt_object.md#object-property-identifiers).
+**Note:** Additional rules apply to object attribute names (they must conform to the ECMAScript specification). For more information, see [Object property identifiers](Concepts/dt_object.md#object-property-identifiers).
 
 ## Formulários
 
-Um formulário se designa mediante uma expressão de tipo string que representa seu nome. Um nome de formulário pode conter até 31 caracteres.
+You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
 
 Exemplos:
 
@@ -203,9 +206,9 @@ FORM SET OUTPUT([People];"Output")
 DIALOG([Storage];"Note box"+String($vlStage))
 ```
 
-## Objetos de formulários
+## Objectos de formulário
 
-Se designar um objeto de formulário passando seu nome como uma string, precedida pelo parâmetro *. Um nome de objeto de formulário pode conter até 255 caracteres.
+You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
 
 Exemplo:
 
@@ -213,13 +216,13 @@ Exemplo:
 OBJECT SET FONT(*;"Binfo";"Times")
 ```
 
-**Nota:** não confunda os objetos de formulário (botões, list boxes, variáveis editáveis, etc.) e os objetos da linguagem 4D. Os objetos da linguagem 4D são criados e manipulados através da notação de objetos ou de comandos dedicados.
+**Note:** Do not confuse form objects (buttons, list boxes, variables that can be entered, etc.) and objects in the 4D language. 4D language objects are created and manipulated via object notation or dedicated commands.
 
 ## Métodos projeto
 
-Um método projeto (procedimento ou função) se designa utilizando seu nome. Um nome de método pode conter até 31 caracteres.
+You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
 
-**Nota:** um método projeto que não devolve um resultado também se chama um procedimento. Um método projeto que devolve um resultado também se denomina função.
+**Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
 
 Exemplos:
 
@@ -228,22 +231,19 @@ If(New client)
 DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use maiúsculas para nomear seus métodos, entretanto, se um método for uma função, coloque em maiúsculas o primeiro caractere de seu nome. Dessa maneira, quando reabrir um banco de dados para manutenção depois de alguns meses, já saberá se um método retorna um resultado, simplesmente olhando seu nome na janela do Explorer.
+**Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use uppercase characters for naming your methods; however if a method is a function, capitalize the first character of its name. By doing so, when you reopen a database for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
 
-**Nota:** quando chamar a um método, só tem que escrever seu nome. Entretanto, alguns comandos integrados em 4D, como `ON EVENT CALL`, assim como todos os comandos de Plug-In, esperam o nome de um método como uma string quando se passar um parâmetro de tipo método. Exemplo:
+**Note:** When you call a method, you just type its name. However, some 4D built-in commands, such as `ON EVENT CALL`, as well as all the Plug-In commands, expect the name of a method as a string when a method parameter is passed. Exemplo:
 
 Exemplos:
 
 ```4d
- // Este comando espera um método (função) ou fórmula
-QUERY BY FORMULA([aTable];Special query)
- // Este comando espera um método (procedimento) ou declaração
-APPLY TO SELECTION([Employees];INCREASE SALARIES)
- //Mas este comando espera um nome de método
-ON EVENT CALL("HANDLE EVENTS")
+ // Este comando espera um método (função) ou fórmula QUERY BY FORMULA([aTable];Special query)
+ // Este comando espera um método (procedimento) ou declaração APPLY TO SELECTION([Employees];INCREASE SALARIES)
+ //Mas este comando espera um nome de método ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Os métodos projeto podem aceitar parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Os parametros estão disponíveis dentro do método chamado como variáveis locais numeradas consecutivamente: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro.
+Project methods can accept parameters (arguments). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Além disso, podem ser endereçados múltiplos parâmetros consecutivos (e últimos) com a sintaxe ${n}onde n, expressão numérica, é o número do parâmetro.
 
 Dentro de uma função, a variável local $0 contém o valor a devolver.
 
@@ -252,24 +252,24 @@ Exemplos:
 ```4d
  //Dentro de DROP SPACES $1 é um ponteiro ao campo [People]Name DROP SPACES(->[People]Name)
 
-    //Dentro de Calc creator:
-    //- $1 é numérico e igual a 1
-    //- $2 é numérico e igual a 5
-    //- $3 é texto ou string e igual a "Nice"
-    //- O valor do resultado se atribui a $0
+ //Dentro de Calc creator:
+ //- $1 é numérico e igual a 1
+ //- $2 é numérico e igual a 5
+ //- $3 é texto ou string e igual a "Nice"
+ //- O valor do resultado se atribui a $0
 $vsResult:=Calc creator(1;5; "Nice")
 
-    //Dentro de Dump:
-    //- os tres parâmetros são texto ou string
-    //- Se pode direcionar como $1, $2 ou $3
-    //- Também  podem ser direcionados como, por exemplo, ${$vlParam} onde $vlParam é 1, 2 ou 3
-    //- O valor resultante se atribui a $0
+ //Dentro de Dump:
+ //- os tres parâmetros são texto ou string
+ //- Se pode direcionar como $1, $2 ou $3
+ //- Também podem ser direcionados como, por exemplo, ${$vlParam} onde $vlParam é 1, 2 ou 3
+ //- O valor resultante se atribui a $0
 vtClone:=Dump("is";"the";"it")
 ```
 
 ## Comandos de plug-in
 
-Para designar um comando de plug-in se utiliza seu nome, tal e como o define o plug-in. O nome de um comando plug-in pode conter até 31 caracteres.
+You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
 
 Exemplos:
 
@@ -279,30 +279,30 @@ $error:=SMTP_From($smtp_id;"henry@gmail.com")
 
 ## Conjuntos
 
-Desde o ponto de vista do escopo, há dois tipos de conjuntos:
+From the scope point of view, there are two types of sets:
 
 - Conjuntos interprocesso
-- Conjuntos processo
+- Conjuntos process
 
-4D Server também inclui:
+4D Server also includes:
 
 - Conjuntos clientes
 
 ### Conjuntos interprocesso
 
-Um conjunto é um conjunto interprocesso quando o nome do conjunto está precedido pelos símbolos (`<>`) — um sinal "menor que" seguido de um sinal "maior que".
+A set is an interprocess set if the name of the set is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
 
-O nome de um conjunto interprocesso pode ter até 255 caracteres, não incluindo os símbolos `<>`.
+An interprocess set name can contain up to 255 characters, not including the `<>` symbols.
 
-### Conjuntos processo
+### Conjuntos process
 
-Para designar um conjunto processo se utilizar uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>`  ou o sinal de dólar $). O nome de um conjunto processo pode conter até 255 caracteres.
+Para designar um conjunto processo se utilizar uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). A set name can contain up to 255 characters.
 
 ### Conjuntos clientes
 
-O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). Um nome de conjunto cliente pode conter até 255 caracteres, sem incluir o sinal de dólar.
+O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). A client set name can contain up to 255 characters, not including the dollar sign.
 
-**Nota:** os conjuntos são mantidos pelo equipamento servidor. Em certos casos, por motivos especiais ou por eficiência, pode querer trabalhar com conjuntos localmente no equipamento Cliente. Para fazer isso, use conjuntos Clientes.
+**Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
 
 Exemplos:
 
@@ -320,44 +320,44 @@ If(Records in set("$Selection"+String($i))>0)
 
 ## Seleções temporárias
 
-Relativo ao escopo, há dois tipos de seleções temporárias/named:
+From the scope point of view, there are two types of named selections:
 
-- Seleções interprocesso temporárias
-- Seleções processo temporárias.
+- Interprocess named selections
+- Process named selections.
 
-### Seleções interprocesso temporárias
+### Interprocess Named Selections
 
-Uma seleção temporária é uma seleção interprocesso temporária se seu nome for precedido dos símbolos (`<>`) - um sinal "menor que" seguido de um sinal "maior que".
+A named selection is an interprocess named selection if its name is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
 
-O nome de uma variável interprocessada pode ter até 255 caracteres, não incluindo os símbolos `<>` .
+An interprocess named selection name can contain up to 255 characters, not including the `<>` symbols.
 
-### Seleções processo temporárias
+### Process Named Selections
 
-Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>`  ou o sinal de dólar $). O nome de uma seleção temporária pode conter até 255 caracteres.
+Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). A named selection name can contain up to 255 characters.
 
 Exemplos:
 
 ```4d
- //Seleção nomeada interprocesso
+ //Interprocess Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
- //Seleção nomeada processo
+ //Process Named Selection
 USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
 ## Processos
 
-Em modo monousuário, ou em Cliente/Servidor do lado do Cliente, há dois tipos de processos:
+In the single-user version, or in Client/Server on the Client side, there are two types of processes:
 
 - Processos globais
 - Processos locais.
 
 ### Processos globais
 
-Pode determinar um processo global usando uma expressão string que represente seu nome (que não pode começar com o sinal de dólar $). Um nome de processo pode conter até 255 caracteres.
+Pode determinar um processo global usando uma expressão string que represente seu nome (que não pode começar com o sinal de dólar $). A process name can contain up to 255 characters.
 
 ### Processos locais
 
-Pode determinar um processo local se o nome do processo for precedido pelo sinal de dólar ($). O nome de processo pode conter até 255 caracteres, sem incluir o sinal de dólar.
+Pode determinar um processo local se o nome do processo for precedido pelo sinal de dólar ($). The process name can contain up to 255 characters, not including the dollar sign.
 
 Exemplos:
 
@@ -368,44 +368,44 @@ $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
-## Resumo das convenções de escrita em 4D
+## Summary of Naming Conventions
 
-A tabela abaixo resume as convenções de nomes em 4D.
+The following table summarizes 4D naming conventions.
 
-| Identificador                  | Tamanho Máx      | Exemplo                            |
-| ------------------------------ | ---------------- | ---------------------------------- |
-| Tabela                         | 31               | [Invoices]                         |
-| Campo                          | 31               | [Employees]Last Name               |
-| Variável/array interprocesso   | `<>` + 31  | `<>vlNextProcessID`          |
-| Variável/Array processo        | 31               | vsCurrentName                      |
-| Variável/Array local           | $ + 31           | $vlLocalCounter                    |
-| Propriedades de objetos        | 255              | $o.myAttribute                     |
-| Formulário                     | 31               | "My Custom Web Input"              |
-| Objetos de formulário          | 255              | "MyButton"                         |
-| Método Projeto                 | 31               | M_ADD_CUSTOMERS                  |
-| Comando de plug-in             | 31               | PDF SET ROTATION                   |
-| Conjuntos interprocesso        | `<>` + 255 | `"<>Records to be Archived"` |
-| Conjuntos processo             | 255              | "Current selected records"         |
-| Conjunto cliente               | $ + 255          | "$Previous Subjects"               |
-| Seleção nomeada                | 255              | "Employees A to Z"                 |
-| Seleção temporal interprocesso | `<>` + 255 | `"<>Employees Z to A"`       |
-| Processo local                 | $ + 255          | "$Follow Events"                   |
-| Processo global                | 255              | "*P_INVOICES_MODULE*"            |
-| Semáforo                       | 255              | "mysemaphore"                      |
+| Identifier                   | Max. Largura     | Exemplo                            |
+| ---------------------------- | ---------------- | ---------------------------------- |
+| Tabela                       | 31               | [Invoices]                         |
+| Campo                        | 31               | [Employees]Last Name               |
+| Interprocess Variable/Array  | `<>` + 31  | `<>vlNextProcessID`          |
+| Variável/Array processo      | 31               | vsCurrentName                      |
+| Variável/Array local         | $ + 31           | $vlLocalCounter                    |
+| Propriedades de objetos      | 255              | $o.myAttribute                     |
+| Formulário                   | 31               | "My Custom Web Input"              |
+| Objecto de formulário        | 255              | "MyButton"                         |
+| Métodos proyecto             | 31               | M_ADD_CUSTOMERS                  |
+| Rotina Plug-in               | 31               | PDF SET ROTATION                   |
+| Interprocess Set             | `<>` + 255 | `"<>Records to be Archived"` |
+| Conjunto process             | 255              | "Current selected records"         |
+| Client Set                   | $ + 255          | "$Previous Subjects"               |
+| Seleção nomeada              | 255              | "Employees A to Z"                 |
+| Interprocess Named Selection | `<>` + 255 | `"<>Employees Z to A"`       |
+| Processo local               | $ + 255          | "$Follow Events"                   |
+| Processo global              | 255              | "*P_INVOICES_MODULE*"            |
+| Semáforo                     | 255              | "mysemaphore"                      |
 
-**Nota:** se caracteres não romanos, fora do alfabeto latino, forem usados nos nomes dos identificadores, o tamanho máximo pode ser menor.
+**Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 
-## Resolução de conflitos de nomes
+## Resolving Naming Conflicts
 
-Tenha certeza de usar nomes únicos para os diferentes elementos de seu banco de dados. Se um objeto particular tiver o mesmo nome que outro objeto de diferente tipo (por exemplo, se um campo se chamar Pessoa e uma variável também se chamar Pessoa), 4D utiliza um sistema de prioridade.
+Be sure to use unique names for the different elements in your database. If a particular object has the same name as another object of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
 
-4D identifica os nomes utilizados nos métodos em função na seguinte ordem de ordem de prioridade:
+4D identifies names used in procedures in the following order:
 
 1. Campos
 2. Comandos
-3. Métodos
+3. Página Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
-6. Variáveis.
+6. Variables.
 
-Por exemplo, 4D tem um comando integrado chamado `Date`. Se chamar a um método *Date*, 4D o reconhecerá como o comando integrado `Date`, e não como seu método. Isso impediria de chamar seu método. Se entretanto, chamar um campo de "Date", 4D tentará usar seu campo ao invés do comando `Date`.
+For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.

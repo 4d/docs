@@ -3,9 +3,9 @@ id: collection
 title: Collection
 ---
 
-As colecções são listas ordenadas de valores de tipos semelhantes ou mistos (texto, número, data, objecto, booleano, colecção, ou nulo).
+Coleções são listas ordenadas de valores de tipos diferentes ou não (texto, número, objeto, booleano, coleção ou null).
 
-As variáveis de tipo de colecção são geridas utilizando notação de objectos (ver [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Para gerenciar as variáveis de tipo Coleção se deve utilizar a notação de objetos (ver  [Syntax basics](Concepts/dt_object.md#syntax-basics)).
 
 Para acessar a um elemento de coleção, é necessário passar o número do elemento dentro de parênteses rectos:
 
@@ -13,7 +13,7 @@ Para acessar a um elemento de coleção, é necessário passar o número do elem
 collectionRef[expression]
 ```
 
-Pode passar qualquer expressão 4D válida que devolva um número inteiro positivo na expressão **. Exemplos:
+Pode passar toda expressão 4D válida que devolva um inteiro positivo na expressão. Exemplos:
 
 ```4d
  myCollection[5]  //aceso ao 6º elemento da coleção
@@ -22,7 +22,7 @@ Pode passar qualquer expressão 4D válida que devolva um número inteiro positi
 
 **Atenção:** os elementos da coleção estão numerados desde 0.
 
-Pode atribuir um valor a um elemento de colecção ou obter um valor de um elemento de colecção:
+Pode atribuir um valor a um elemento da coleção ou obter o valor de um elemento da coleção utilizando a notação de objetos:
 
 ```4d
  myCol[10]:="My new element"
@@ -32,7 +32,7 @@ Pode atribuir um valor a um elemento de colecção ou obter um valor de um eleme
 Se atribuir um índice de elemento que ultrapasse o último elemento existente da coleção, a coleção se redimensiona automaticamente e a todos os novos elementos intermediários se lhes atribui um valor nulo:
 
 ```4d
- var myCol : Collection
+ C_COLLECTION(myCol)
  myCol:=New collection("A";"B")
  myCol[5]:="Z"
   //myCol[2]=null
@@ -42,7 +42,7 @@ Se atribuir um índice de elemento que ultrapasse o último elemento existente d
 
 ## Inicialização
 
-As coleções devem ter sido inicializadas, por exemplo utilizando o comando `New collection`, do contrário ao tentar ler ou modificar seus elementos se gerará um erro de sintaxe.
+Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
 
 Exemplo:
 
@@ -55,14 +55,14 @@ Exemplo:
 
 Pode criar dois tipos de coleções:
 
-- colecções regulares (não partilhadas), utilizando o comando [`Nova colecção`](API/CollectionClass.md#new-collection) . Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- colecções partilhadas, utilizando o comando [`Nova colecção partilhada`](API/CollectionClass.md#new-shared-collection) . Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use... End use`](Concepts/shared.md#useend-use) structures.
+- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções compartidas, utilizando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use... End use`](Concepts/shared.md#useend-use) structures.
 
-Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
+For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 ## Funções de Collection
 
-As referências de colecção 4D beneficiam de funções de classe especiais (por vezes nomeadas *funções de membro*). As funções de recolhimento estão listadas na seção [Class API Reference](API/CollectionClass.md) .
+As referências a coleções 4D se beneficiam de métodos especiais (as vezes chamados *funções membro*). Collection functions are listed in the [Class API Reference](API/CollectionClass.md) section.
 
 Por exemplo:
 
@@ -71,7 +71,7 @@ $newCol:=$col.copy() //cópia de $col a $newCol
 $col.push(10;100) //adiciona 10 e 100 para a coleção
 ```
 
-Algumas funções devolvem a colecção original após modificação, para que se possa executar as chamadas numa sequência:
+Alguns métodos retornam a coleção original depois de moficiação, para que possa rodar as chamadas em sequência:
 
 ```4d
  $col:=New collection(5;20)
@@ -79,15 +79,15 @@ Algumas funções devolvem a colecção original após modificação, para que s
 ```
 
 
-### Parâmetro rotaPropriedade
+### parâmetro caminoPropriedade
 
 
-Várias funções aceitam um _propertyPath_ como parâmetro. Este parâmetro significa:
+Vários métodos aceitam uma _propertyPath_ como parâmetro. Este parâmetro significa:
 
 - um nome de objeto propriedade por exemplo "Sobrenome"
 - ou uma rota de propriedades de objeto, ou seja, uma sequência hierárquica de subpropriedades vinculadas com caracteres de ponto, por exemplo "empregado.filhos.nome".
 
-**Advertência:** Ao usar funções e parâmetros de propriedadePath, não se pode usar ".", "[ ]", ou espaços nos nomes das propriedades, uma vez que isso impedirá que 4D analise correctamente o caminho:
+**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
 
 ```4d
  $vmin:=$col.min("My.special.property") //indefinido

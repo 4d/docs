@@ -22,7 +22,7 @@ WebSocketプロトコルは、WebSocketサーバーとクライアント (Webブ
 
 :::info こちらもご覧ください
 
-4D WebSocketサーバーについては、[こちらのブログ記事](https://blog.4d.com/ja/websocket-server/) も参照ください。
+4D WebSocketサーバーについては、[こちらのブログ記事](https://blog.4d.com/ja/new-built-in-websocket-server/) も参照ください。
 
 :::
 
@@ -181,20 +181,7 @@ HTTPサーバーまたは WebSocketサーバーが終了したときに発生す
 | WSServer |            | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                            |
 | param    |            | Object             | <- | 引数                                                                                                   |
 |          | type       | Text               |    | "error"                                                                                              |
-|          | statusText | Text               |    | HTTPエラー、または 4Dエラースタックに最後に返されたエラー                                                                     |
-|          | errors     | Collection         |    | 実行エラーの場合、4Dエラースタックのコレクション<li>[ ].errCode (数値) - 4Dエラーコード</li><li>[ ].message (テキスト) - 4Dエラーの説明</li><li>[ ].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
-
-
-WebSocketサーバーでエラーが発生したときに発生するイベントです。
-
-**WSHandler.onError**(*WSServer* : Object ; *param* : Object)
-
-| 引数       |            | タイプ                |    | 説明                                                                                                   |
-| -------- | ---------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------- |
-| WSServer |            | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                            |
-| param    |            | Object             | <- | 引数                                                                                                   |
-|          | type       | Text               |    | "error"                                                                                              |
-|          | statusText | Text               |    | HTTPエラー、または 4Dエラースタックに最後に返されたエラー                                                                     |
+|          | statusText | Text               |    | 4Dエラースタックに返された最後のエラー                                                                                 |
 |          | errors     | Collection         |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
 
 
@@ -293,14 +280,13 @@ WebSocket 終了したときに呼び出されます。
 
 **connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *param* : Object)
 
-| 引数    |        |           | タイプ                                                     |    | 説明                                                                                                   |
-| ----- | ------ | --------- | ------------------------------------------------------- |:--:| ---------------------------------------------------------------------------------------------------- |
-| ws    |        |           | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト                                                                             |
-| param |        |           | Object                                                  | <- | 引数                                                                                                   |
-|       | type   |           | Text                                                    |    | "terminate"                                                                                          |
-|       | status |           | Object                                                  |    |                                                                                                      |
-|       |        | HTTPError | Text                                                    |    | HTTPエラー、または 4Dエラースタックに最後に返されたエラー                                                                     |
-|       |        | errors    | Collection                                              |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
+| 引数    |        |        | タイプ                                                     |    | 説明                                                                                                   |
+| ----- | ------ | ------ | ------------------------------------------------------- |:--:| ---------------------------------------------------------------------------------------------------- |
+| ws    |        |        | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト                                                                             |
+| param |        |        | Object                                                  | <- | 引数                                                                                                   |
+|       | type   |        | Text                                                    |    | "error"                                                                                              |
+|       | status |        | Object                                                  |    |                                                                                                      |
+|       |        | errors | Collection                                              |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
 
 エラーが発生したときに呼び出されます。
 
@@ -351,7 +337,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- REF #WebSocketServerClass.connections.Desc -->
 ## .connections
 
-<!-- REF #WebSocketServerClass.connections.Syntax -->**connections** : Collection<!-- END REF -->
+<!-- REF #WebSocketServerClass.connections.Syntax -->**.connections** : Collection<!-- END REF -->
 
 #### 説明
 
@@ -366,7 +352,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- REF #WebSocketServerClass.dataType.Desc -->
 ## .dataType
 
-<!-- REF #WebSocketServerClass.dataType.Syntax -->**dataType** : Text<!-- END REF -->
+<!-- REF #WebSocketServerClass.dataType.Syntax -->**.dataType** : Text<!-- END REF -->
 
 #### 説明
 
@@ -379,7 +365,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- REF #WebSocketServerClass.handler.Desc -->
 ## .handler
 
-<!-- REF #WebSocketServerClass.handler.Syntax -->**handler** : Object<!-- END REF -->
+<!-- REF #WebSocketServerClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
 
 #### 説明
 
@@ -391,7 +377,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- REF #WebSocketServerClass.path.Desc -->
 ## .path
 
-<!-- REF #WebSocketServerClass.path.Syntax -->**path** : Text<!-- END REF -->
+<!-- REF #WebSocketServerClass.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### 説明
 
@@ -425,7 +411,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 <!-- REF #WebSocketServerClass.terminated.Desc -->
 ## .terminated
 
-<!-- REF #WebSocketServerClass.terminated.Syntax -->**terminated** : Boolean<!-- END REF -->
+<!-- REF #WebSocketServerClass.terminated.Syntax -->**.terminated** : Boolean<!-- END REF -->
 
 #### 説明
 

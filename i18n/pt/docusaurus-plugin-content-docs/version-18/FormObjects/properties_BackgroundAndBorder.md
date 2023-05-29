@@ -79,15 +79,15 @@ Allows setting a standard style for the object border.
 
 ---
 
-## Dotted Line Type
+## Tipo de linha pontilhada
 
 Describes dotted line type as a sequence of black and white points.
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados          | Valores possíveis                                                            |
-| --------------- | ---------------------- | ---------------------------------------------------------------------------- |
-| strokeDashArray | number array or string | Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| Nome            | Tipo de dados          | Valores possíveis                                                                |
+| --------------- | ---------------------- | -------------------------------------------------------------------------------- |
+| strokeDashArray | number array or string | Ex. Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
 #### Objectos suportados
 
@@ -157,9 +157,9 @@ Designa a espessura de uma linha.
 
 ---
 
-## Array cores de fundo
+## Array controle linha
 
-`List boxes de tipo array`
+`List box de tipo array`
 
 The name of an array to apply a custom background color to each row of the list box or column.
 

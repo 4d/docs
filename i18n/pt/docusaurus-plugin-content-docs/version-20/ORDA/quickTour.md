@@ -1,6 +1,6 @@
 ---
 id: quickTour
-title: A Quick Tour in ORDA
+title: Uma visita rápida à ORDA
 ---
 
 Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
@@ -43,13 +43,13 @@ It means that, whenever you need to access the list of employees working for a c
 ds. Company.hires //returns the list of employees
 ```
 
-But don't go too fast. Let's see now how to record data in ORDA dataclasses.
+Mas não vá demasiado depressa. Let's see now how to record data in ORDA dataclasses.
 
 
 ## Adicionar dados
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
-> In the ORDA world, ds. Company is a **dataclass**. A command that is attached to a specific object is called a **member method**.
+> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
 $entity:=ds. Company.new() //create a new entity reference

@@ -77,9 +77,10 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                      |
-| ------ | ----------------------- |
-| v19 R7 | *decodeData* プロパティをサポート |
+| バージョン  | 内容                        |
+| ------ | ------------------------- |
+| v20    | TLS validation by default |
+| v19 R7 | *decodeData* プロパティをサポート   |
 
 </details>
 
@@ -127,26 +128,27 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 *options* に渡すオブジェクトは、次のプロパティを持つことができます:
 
-| プロパティ                | タイプ                                             | 説明                                                                                                                                                                       | デフォルト       |
-| -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
-| body                 | Variant                                         | リクエストの本文 (`post` または `put` リクエストの場合に必須)。 テキスト、BLOB、またはオブジェクトを指定できます。 ヘッダー内で設定されていない限り、content-type は当プロパティの型によって決定されます。                                                  | undefined   |
-| certificatesFolder   | [Folder](FolderClass.md)                        | 使用するクライアント証明書フォルダーを指定します。                                                                                                                                                | undefined   |
-| dataType             | Text                                            | レスポンス本文のデータ型。 値: "text", "blob", "object", または "auto"。 "auto" の場合、本文の型は MIMEタイプから推定されます (JSON ならオブジェクト、テキスト・javascript・xml・httpメッセージ・URLエンコードされたフォームなどはテキスト、それ以外は BLOB)。 | "auto"      |
-| decodeData           | Boolean                                         | true の場合、`onData` コールバックが受け取るデータは非圧縮です                                                                                                                                   | false       |
-| encoding             | Text                                            | `body` のあるリクエストの場合にのみ使用 (`post` または `put` メソッド)。 本文がテキストの場合のエンコーディング。ヘッダーにて content-type が指定されている場合は無視されます。                                                              | "UTF-8"     |
-| headers              | Object                                          | リクエストのヘッダー。 シンタックス: `headers.key=value` (同じ key に対して *value* を複数指定する場合、*value* にコレクションを使用できます)                                                                           | 空のオブジェクト    |
-| method               | Text                                            | "POST"、"GET"、またはその他のメソッド                                                                                                                                                 | "GET"       |
-| minTLSVersion        | Text                                            | TLS の最小バージョンを指定します: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                   | "`TLSv1_2`" |
-| onData               | [Function](FunctionClass.md)                    | 本文のデータ受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                   | undefined   |
-| onError              | [Function](FunctionClass.md)                    | エラー発生時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                      | undefined   |
-| onHeaders            | [Function](FunctionClass.md)                    | ヘッダー受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                     | undefined   |
-| onResponse           | [Function](FunctionClass.md)                    | レスポンス受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                    | undefined   |
-| onTerminate          | [Function](FunctionClass.md)                    | リクエスト終了時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                    | undefined   |
-| protocol             | Text                                            | "auto" または "HTTP1"。 "auto" は現在の実装における HTTP1 を意味します。                                                                                                                      | "auto"      |
-| proxyAuthentication  | [authentication オブジェクト](#authentication-object) | プロキシ認証のためのオブジェクト                                                                                                                                                         | undefined   |
-| serverAuthentication | [authentication オブジェクト](#authentication-object) | サーバー認証のためのオブジェクト                                                                                                                                                         | undefined   |
-| returnResponseBody   | Boolean                                         | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                           | true        |
-| timeout              | Real                                            | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                              | 未定義         |
+| プロパティ                  | タイプ                                             | 説明                                                                                                                                                                                                                             | デフォルト       |
+| ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| body                   | Variant                                         | リクエストの本文 (`post` または `put` リクエストの場合に必須)。 テキスト、BLOB、またはオブジェクトを指定できます。 ヘッダー内で設定されていない限り、content-type は当プロパティの型によって決定されます。                                                                                                        | undefined   |
+| certificatesFolder     | [Folder](FolderClass.md)                        | 使用するクライアント証明書フォルダーを指定します。                                                                                                                                                                                                      | undefined   |
+| dataType               | Text                                            | レスポンス本文のデータ型。 値: "text", "blob", "object", または "auto"。 "auto" の場合、本文の型は MIMEタイプから推定されます (JSON ならオブジェクト、テキスト・javascript・xml・httpメッセージ・URLエンコードされたフォームなどはテキスト、それ以外は BLOB)。                                                       | "auto"      |
+| decodeData             | Boolean                                         | true の場合、`onData` コールバックが受け取るデータは非圧縮です                                                                                                                                                                                         | false       |
+| encoding               | Text                                            | `body` のあるリクエストの場合にのみ使用 (`post` または `put` メソッド)。 本文がテキストの場合のエンコーディング。ヘッダーにて content-type が指定されている場合は無視されます。                                                                                                                    | "UTF-8"     |
+| headers                | Object                                          | リクエストのヘッダー。 シンタックス: `headers.key=value` (同じ key に対して *value* を複数指定する場合、*value* にコレクションを使用できます)                                                                                                                                 | 空のオブジェクト    |
+| method                 | Text                                            | "POST"、"GET"、またはその他のメソッド                                                                                                                                                                                                       | "GET"       |
+| minTLSVersion          | Text                                            | TLS の最小バージョンを指定します: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                         | "`TLSv1_2`" |
+| onData                 | [Function](FunctionClass.md)                    | 本文のデータ受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                                                         | undefined   |
+| onError                | [Function](FunctionClass.md)                    | エラー発生時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                                                            | undefined   |
+| onHeaders              | [Function](FunctionClass.md)                    | ヘッダー受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                                                           | undefined   |
+| onResponse             | [Function](FunctionClass.md)                    | レスポンス受信時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                                                          | undefined   |
+| onTerminate            | [Function](FunctionClass.md)                    | リクエスト終了時のコールバック。 コールバックは 2つのオブジェクトを引数として受け取ります (後述参照)                                                                                                                                                                          | undefined   |
+| protocol               | Text                                            | "auto" または "HTTP1"。 "auto" は現在の実装における HTTP1 を意味します。                                                                                                                                                                            | "auto"      |
+| proxyAuthentication    | [authentication オブジェクト](#authentication-object) | プロキシ認証のためのオブジェクト                                                                                                                                                                                                               | undefined   |
+| serverAuthentication   | [authentication オブジェクト](#authentication-object) | サーバー認証のためのオブジェクト                                                                                                                                                                                                               | undefined   |
+| returnResponseBody     | Boolean                                         | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                                                                                 | true        |
+| timeout                | Real                                            | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                                                                                    | 未定義         |
+| validateTLSCertificate | Boolean                                         | If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified. | true        |
 
 
 #### コールバック関数
@@ -258,6 +260,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 <!-- REF #HTTPRequestClass.protocol.Syntax -->**protocol** : Text<!-- END REF -->
 
 #### 説明
+
 
 `.protocol` プロパティは、 <!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します<!-- END REF -->。 (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
 
@@ -375,6 +378,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 #### 説明
 
 > この関数はスレッドセーフです。
+
 
 `4D.HTTPRequest.wait()` 関数は、 <!-- REF #HTTPRequestClass.wait().Summary -->サーバーのレスポンスを待ちます<!-- END REF -->。
 

@@ -13,10 +13,10 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Text](Concepts/dt_string.md)                  | Sim                      | Sim                     | `C_TEXT`, `ARRAY TEXTO`      |
 | [Date](Concepts/dt_date.md)                    | Sim                      | Sim                     | `C_DATE`, `ARRAY DATE`       |
 | [Hora](Concepts/dt_time.md)                    | Sim                      | Sim                     | `C_TIME`, `ARRAY TIME`       |
-| [Booleano](Concepts/dt_boolean.md)             | Sim                      | Sim                     | `C_BOOLEAN`, `ARRAY BOOLEAN` |
+| [Parâmetros](Concepts/dt_boolean.md)           | Sim                      | Sim                     | `C_BOOLEAN`, `ARRAY BOOLEAN` |
 | [Integer](Concepts/dt_number.md)               | Sim                      | Convertido para longInt | `ARRAY INTEGER`              |
 | [Longint](Concepts/dt_number.md)               | Sim                      | Sim                     | `C_LONGINT`, `ARRAY LONGINT` |
-| [Inteiro longo 64 bits](Concepts/dt_number.md) | Yes (SQL)                | Convertido para real    | -                            |
+| [Inteiro longo 64 bits](Concepts/dt_number.md) | Sim (SQL)                | Convertido para real    | -                            |
 | [Real](Concepts/dt_number.md)                  | Sim                      | Sim                     | `C_REAL`, `ARRAY REAL`       |
 | [Indefinido](Concepts/dt_null_undefined.md)    | -                        | Sim                     | -                            |
 | [Null](Concepts/dt_null_undefined.md)          | -                        | Sim                     | -                            |
@@ -33,34 +33,34 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 
 ## Valor padrão
 
-Quando as variáveis são introduzidas através de uma diretiva do compilador, recebem um valor padrão, que manterão durante a sessão enquanto não tenham sido atribuidas.
+When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
 
-O valor padrão depende do tipo variável e categoria, seu contexto de educação (interpretado ou compilado) assim como, para o modo compilado, as opções de compilação definidas na página Compilador das configurações de Banco de dados:
+The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
 
-- Variáveis processo e interprocesso são sempre estabelecidas "para zero" (o que significa, dependendo do caso, "0", uma string vazia, um Blob vazio, um ponteiro Nil, uma data em branco (00-00-00), etc)
-- Variáveis locais são estabelecidas:
-    - em modo interpretado: em zero
-    - em modo compilado, dependendo da opção **Initialize local variables** das configurações de banco de dados:
-        - "em zero": em zero (ver acima),
-        - "a um valor aleatório": 0x72677267 para números e horas, sempre True para booleanos, igual que "em zero" para os outros,
-        - "no": nenhuma inicialização, significando o que quer que esteja na RAM é usado para as variáveis, como valores usados antes para outras variáveis. **Nota:** 4D recomenda a utilização de "a zero".
+- Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
+- Local variables are set:
+    - in interpreted mode: to zero
+    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
+        - "to zero": to zero (see above),
+        - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
+        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Note:** 4D recommends to use "to zero".
 
-A tabela a seguir ilustra estes valores padrões:
+The following table illustrates these default values:
 
-| Tipo       | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Compilação local "aleatória | Compilação local "não       |
-| ---------- | ----------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
-| Booleano   | False                                                                               | True                        | True (varía)                |
-| Date       | 00-00-00                                                                            | 00-00-00                    | 00-00-00                    |
-| Longint    | 0                                                                                   | 1919382119                  | 909540880 (varia)           |
-| Hora       | 00:00:00                                                                            | 533161:41:59                | 249345:34:24 (varia)        |
-| Imagem     | tamanho da imagem=0                                                                 | tamanho da imagem=0         | tamanho da imagem=0         |
-| Real       | 0                                                                                   | 1.250753659382e+243         | 1.972748538022e-217 (varia) |
-| Ponteiro   | Nil=true                                                                            | Nil=true                    | Nil=true                    |
-| Text       | ""                                                                                  | ""                          | ""                          |
-| Blob       | Tamanho do Blob =0                                                                  | Tamanho do Blob =0          | Tamanho do Blob =0          |
-| Objeto     | null                                                                                | null                        | null                        |
-| Collection | null                                                                                | null                        | null                        |
-| Variant    | indefinido                                                                          | indefinido                  | indefinido                  |
+| Tipo         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compilado "não"        |
+| ------------ | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
+| Booleano     | False                                                                               | True                    | True (varia)                 |
+| Date         | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
+| Longint      | 0                                                                                   | 1919382119              | 909540880 (varies)           |
+| Hora         | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
+| Imagem       | tamanho da imagem=0                                                                 | tamanho da imagem=0     | tamanho da imagem=0          |
+| Real         | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
+| Ponteiro     | Nil=true                                                                            | Nil=true                | Nil=true                     |
+| Text         | ""                                                                                  | ""                      | ""                           |
+| Blob         | Tamanho do Blob =0                                                                  | Tamanho do Blob =0      | Tamanho do Blob =0           |
+| Objeto       | null                                                                                | null                    | null                         |
+| Collection   | null                                                                                | null                    | null                         |
+| Diferente de | indefinido                                                                          | indefinido              | indefinido                   |
 
 
 ## Conversão de tipos de dados
@@ -75,7 +75,7 @@ O quadro seguinte lista os tipos de dados básicos, os tipos de dados para os qu
 | Número (2)                | String      |             |           |            | Bool          |
 | Date                      | String      |             |           |            | Bool          |
 | Hora                      | String      |             |           |            | Bool          |
-| Booleano                  |             | Num         |           |            |               |
+| Parâmetros                |             | Num         |           |            |               |
 
 (1) Strings formatadas em JSON podem ser convertidas em dados escalares, objetos ou coleções, usando o comando `JSON Parse`
 

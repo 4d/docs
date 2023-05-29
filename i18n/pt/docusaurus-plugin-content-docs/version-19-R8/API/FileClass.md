@@ -67,11 +67,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->|<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
-| Parâmetros   | Tipo     |    | Descrição                                           |
+| Parâmetro    | Tipo     |    | Descrição                                           |
 | ------------ | -------- |:--:| --------------------------------------------------- |
 | path         | Text     | -> | Rota do arquivo                                     |
 | fileConstant | Integer  | -> | Constante de arquivo 4D                             |
@@ -83,7 +83,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### Descrição
 
-O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `File` <!-- REF #_command_.File.Summary -->cria e devolve um novo objecto do tipo `4D.File`<!-- END REF -->. O comando aceita duas sintaxes:
 
 **File ( path { ; pathType } { ; * })**
 
@@ -93,7 +93,7 @@ No parâmetro *path* , passe um file path string. Pode utilizar uma string perso
 
 Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType* . Estão disponíveis as seguintes constantes:
 
-| Constante        | Value | Comentário                                                                                               |
+| Parâmetros       | Valor | Comentário                                                                                               |
 | ---------------- | ----- | -------------------------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma) |
 | fk posix path    | 0     | Caminho expresso com a sintaxe POSIX (por padrão)                                                        |
@@ -102,7 +102,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar co
 
 No parâmetro *fileConstant* , passe um ficheiro 4D incorporado ou de sistema, utilizando uma das constantes seguintes:
 
-| Constante                         | Value | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Parâmetros                        | Valor | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Backup history file               | 19    | Arquivo de histórico de cópias de segurança (ver Arquivos de configuração e rastreio). Armazenado na pasta de destino de cópia de segurança.                                                                                                                                                                                                                                                                                                  |
 | Backup log file                   | 13    | Arquivo atual do diário de backup. Armazenado na pasta Logs da aplicação.                                                                                                                                                                                                                                                                                                                                                                     |
@@ -141,11 +141,11 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
+**4D. File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. File<br/>**4D. File.new** ( *fileConstant* : Integer { ; * } ) : 4D. File<!-- END REF -->
 
 #### Descrição
 
-A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.POP3Transporter`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
+A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um novo objecto do tipo `4D.File`<!-- END REF -->. É idêntico ao comando [`File`](#file) (atalho).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D. File.new()`.
 
@@ -169,9 +169,9 @@ A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um 
 
 
 <!--REF #FileClass.create().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                                      |
-| ---------- | -------- | -- | ---------------------------------------------------------------------------------------------- |
-| Resultados | Booleano | <- | Verdadeiro se o arquivo foi criado com sucesso, falso caso contrário<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                      |
+| ---------- | ---------- | -- | ---------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | Verdadeiro se o arquivo foi criado com sucesso, falso caso contrário<!-- END REF -->
 
 |
 
@@ -210,7 +210,7 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 
 <!--REF #FileClass.createAlias().Params -->
-| Parâmetros        | Tipo       |    | Descrição                                                                |
+| Parâmetro         | Tipo       |    | Descrição                                                                |
 | ----------------- | ---------- | -- | ------------------------------------------------------------------------ |
 | destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho                             |
 | aliasName         | Text       | -> | Nome do pseudónimo ou atalho                                             |
@@ -227,7 +227,7 @@ Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType* . Estão disponíveis as seguintes constantes:
 
-| Constante          | Value | Comentário                   |
+| Parâmetros         | Valor | Comentário                   |
 | ------------------ | ----- | ---------------------------- |
 | `fk alias link`    | 0     | Alias link (padrão)          |
 | `fk symbolic link` | 1     | Link simbólico (só em macOS) |
@@ -266,9 +266,9 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parâmetros | Tipo |  | Descrição                                             |
-| ---------- | ---- |  | ----------------------------------------------------- |
-|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
+| Parâmetro | Tipo |  | Descrição                                             |
+| --------- | ---- |  | ----------------------------------------------------- |
+|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
@@ -290,7 +290,6 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
  If($tempo.exists)
     $tempo.delete()
     ALERT("User preference file deleted.")
- End if
  End if
 ```
 <!-- END REF -->
@@ -315,7 +314,7 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                            |
+| Parâmetro  | Tipo   |    | Descrição                                                                            |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
 | Resultados | Objeto | <- | Conteúdo do recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
@@ -410,7 +409,7 @@ ALERT($info.
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Parâmetros        | Tipo       |    | Descrição                                 |
+| Parâmetro         | Tipo       |    | Descrição                                 |
 | ----------------- | ---------- | -- | ----------------------------------------- |
 | destinationFolder | 4D. Folder | -> | Pasta de destino                          |
 | newName           | Text       | -> | Nome completo para o arquivo movido       |
@@ -453,21 +452,21 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | v19 R7 | Adicionado |
 </details>
 
-<!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
+<!--REF #FileClass.open().Syntax -->$tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs") If($tempo.exists) $tempo.delete() ALERT("User preference file deleted.") End if End if<!-- END REF -->
 
 
 <!--REF #FileClass.open().Params -->
-| Parâmetros | Tipo                             |    | Descrição                                                         |
-| ---------- | -------------------------------- | -- | ----------------------------------------------------------------- |
-| mode       | Text                             | -> | Modo de abertura: "ler", "escrever", "anexar".                    |
-| options    | Objeto                           | -> | Opções de abertura                                                |
-| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto de manipulação de arquivos|<!-- END REF -->
+| Parâmetro  | Tipo                              |    | Descrição                                                         |
+| ---------- | --------------------------------- | -- | ----------------------------------------------------------------- |
+| mode       | Text                              | -> | Modo de abertura: "ler", "escrever", "anexar".                    |
+| options    | Objeto                            | -> | Opções de abertura                                                |
+| Resultados | [4D. FileHandle](FileHandleClass) | <- | Novo objeto de manipulação de arquivos|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.open()` <!-- REF #FileClass.open().Summary -->cria e devolve um novo objeto [4D.FileHandle](FileHandleClass) no arquivo, no modo especificado ** ou com as opções especificadas **<!-- END REF -->. Pode utilizar funções e propriedades da classe [4D.FileHandle](FileHandleClass) para escrever, ler, ou anexar conteúdo ao arquivo.
+A função `.open()` <!-- REF #FileClass.open().Summary -->cria e devolve um novo objeto [4D. FileHandle](FileHandleClass) no arquivo, no modo especificado ** ou com as opções especificadas **<!-- END REF -->. Pode utilizar funções e propriedades da classe [4D. FileHandle](FileHandleClass) para escrever, ler, ou anexar conteúdo ao arquivo.
 
 Se utilizar o parâmetro *modo* (texto), passe o modo de abertura para a manipulação do arquivo:
 
@@ -481,7 +480,7 @@ Se utilizar o parâmetro *modo* (texto), passe o modo de abertura para a manipul
 
 Se utilizar o parâmetro *opções* (objecto), pode passar mais opções para o file handle através das seguintes propriedades (estas propriedades podem ser lidas posteriormente a partir do objeto aberto [file handle](FileHandleClass)):
 
-| *options*         | Tipo           | Descrição                                                                                                                       | Predefinição  |
+| *options*         | Tipo           | Descrição                                                                                                                       | O padrãO      |
 | ----------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `.mode`           | Text           | Modo de abertura (ver *modo* acima)                                                                                             | "read"        |
 | `.charset`        | Text           | Charset utilizado na leitura ou na escrita do arquivo. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
@@ -490,12 +489,12 @@ Se utilizar o parâmetro *opções* (objecto), pode passar mais opções para o 
 
 Os documentos `.breakModeRead` e `.breakModeWrite` indicam o processamento a aplicar aos caracteres de fim de linha no documento. Pode utilizar um dos seguintes valores (texto ou número):
 
-| Modo de pausa como texto | Modo de pausa como número (constante) | Descrição                                                                                                                                                          |
-| ------------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| "native"                 | 1 (`Documento com formato nativo`)    | (Default) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (line feed) sob macOS, CRLF (carriage return + line feed) sob Windows |
-| "crlf"                   | 2 (`Documento com CRLF`)              | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows                                                           |
-| "cr"                     | 3 (`Documento com CR`)                | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS                                                                  |
-| "lf"                     | 4 (`Documento com LF`)                | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                             |
+| Modo de pausa como texto | Modo de pausa como número (constante) | Descrição                                                                                                |
+| ------------------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| "native"                 | 1 (`Documento com formato nativo`)    | Pasta de destino                                                                                         |
+| "crlf"                   | 2 (`Documento com CRLF`)              | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows |
+| "cr"                     | 3 (`Documento com CR`)                | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS        |
+| "lf"                     | 4 (`Documento com LF`)                | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                   |
 
 > O modo de pausa *como texto* valor é sensível a maiúsculas e minúsculas.
 
@@ -504,8 +503,8 @@ Os documentos `.breakModeRead` e `.breakModeWrite` indicam o processamento a apl
 Pretende criar um cabo de arquivo para a leitura do arquivo "ReadMe.txt":
 
 ```4d
-var $f : 4D.File
-var $fhandle : 4D.FileHandle
+var $f : 4D. File
+var $fhandle : 4D. FileHandle
 
 $f:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
 $fhandle:=$f.open("read")
@@ -531,11 +530,11 @@ $fhandle:=$f.open("read")
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. File<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->|<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
-| Parâmetros | Tipo     |    | Descrição                                    |
+| Parâmetro  | Tipo     |    | Descrição                                    |
 | ---------- | -------- | -- | -------------------------------------------- |
 | newName    | Text     | -> | Novo nome completo para o arquivo            |
 | Resultados | 4D. File | <- | Renomeado arquivo|<!-- END REF -->
@@ -578,9 +577,9 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                                              |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------ |
-| info       | Objeto | -> | Propriedades para escrever no recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
+| Parâmetro | Tipo   |    | Descrição                                                                                              |
+| --------- | ------ | -- | ------------------------------------------------------------------------------------------------------ |
+| info      | Objeto | -> | Propriedades para escrever no recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
 |
 
@@ -588,7 +587,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. The function must be used with an existing .exe, .dll or .plist file.
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente.
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
@@ -609,7 +608,7 @@ Cada propriedade válida definida no parâmetro de objecto *info* está escrita 
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-Se passar um texto nulo ou vazio como valor, uma string vazia é escrita na propriedade. Se passar um tipo de valor diferente do texto, este é transformado em string.
+If you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente do texto, este é transformado em string.
 
 ***info* objeto de parâmetro com um arquivo  .plist**
 
@@ -622,25 +621,25 @@ Se um conjunto de chaves no parâmetro *info* já estiver definido no arquivo .p
 #### Exemplo
 
 ```4d
-  // set copyright and version of a .exe file (Windows)
-var $exeFile : 4D. File
+  // definir copyright e versão de um arquivo .exe (Windows)
+var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
 $info:=New object
-$info. LegalCopyright:="Copyright 4D 2021"
-$info. ProductVersion:="1.0.0"
+$info.LegalCopyright:="Copyright 4D 2021"
+$info.ProductVersion:="1.0.0"
 $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // set some keys in an info.plist file (all platforms)
-var $infoPlistFile : 4D. File
+  // definir algumas chaves num ficheiro info.plist (todas as plataformas)
+var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info. Copyright:="Copyright 4D 2021" //text
-$info. ProductVersion:=12 //integer
-$info. ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$info.Copyright:="Copyright 4D 2021" //texto
+$info.ProductVersion:=12 //inteiro
+$info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -662,15 +661,15 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parâmetros | Tipo |    | Descrição                                                 |
-| ---------- | ---- | -- | --------------------------------------------------------- |
-| content    | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
+| Parâmetro | Tipo |    | Descrição                                                 |
+| --------- | ---- | -- | --------------------------------------------------------- |
+| content   | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB <!-- REF #FileClass.setContent().Summary -->A função `.setContent()`<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 
@@ -697,7 +696,7 @@ A função `.setContent()` <!-- REF #FileClass.setContent().Summary -->reescreve
 
 
 <!--REF #FileClass.setText().Params -->
-| Parâmetros  | Tipo    |    | Descrição                                                              |
+| Parâmetro   | Tipo    |    | Descrição                                                              |
 | ----------- | ------- | -- | ---------------------------------------------------------------------- |
 | text        | Text    | -> | Texto a armazenar no arquivo                                           |
 | charSetName | Text    | -> | Nome do conjunto de caracteres                                         |
@@ -723,17 +722,17 @@ Opcionalmente, pode designar o conjunto de caracteres a ser utilizado para a esc
 
 > Para a lista de conjuntos de caracteres suportados por 4D, consulte a descrição do comando `CONVERT FROM TEXT`.
 
-Se existir uma Marca de Ordem de Byte (BOM) para o conjunto de caracteres, 4D insere-a no arquivo, a menos que o conjunto de caracteres utilizado contenha o sufixo "-no-bom" (por exemplo, "UTF-8-no-bom"). Se não especificar um conjunto de caracteres, por padrão  4D utiliza o conjunto de caracteres "UTF-8" sem BOM.
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
 
-Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no arquivo. As constantes seguintes, encontradas no tema **System Documents** , estão disponíveis:
+Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no arquivo. The following constants, found in the **System Documents** theme are available:
 
-| Constante                     | Value | Comentário                                                                                                                                                      |
-| ----------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                                  |
-| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (line feed) em macOS, CRLF (carriage return + line feed) em Windows |
-| `Documento com CRLF`          | 2     | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows                                                        |
-| `Documento com CR`            | 3     | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS                                                               |
-| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                          |
+| Parâmetros                    | Valor | Comentário                                                                                                                                               |
+| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                           |
+| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
+| `Documento com CRLF`          | 2     | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows                                                 |
+| `Documento com CR`            | 3     | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS                                                        |
+| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                   |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 

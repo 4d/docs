@@ -1,6 +1,6 @@
 ---
 id: variables
-title: Variáveis
+title: Variáveis.
 ---
 
 Os dados em 4D são armazenados de duas formas fundamentalmente diferentes. **Os campos** armazenam os dados permanentemente no disco; **as variáveis** armazenam os dados na memória de forma temporal.
@@ -9,11 +9,11 @@ Quando cria a sua base de dados 4D, especifica os nomes e tipos de campos que pr
 
 As variáveis são objetos da linguagem; pode criar e utilizar variables que nunca aparecerão na tela. Nos seus formulários, pode exibir variáveis (exceto Pointer e BLOB) na tela, introduzir dados neles, e imprimi-los em relatórios. Desta forma, variáveis de área editáveis ou não editáveis atuam tal como os campos, e os mesmos controles incorporados estão disponíveis ao serem criados. Variáveis formulário podem controlar botões, list boxes, aréas de rolagem, botões de imagem, e assim por diante, ou exibir resultados de cálculos que não precisam ser salvos.
 
-## Criação de variáveis
+## Creating Variables
 
-Você cria as variáveis declarando-as mediante um dos comandos dos temas "Compilador" ou "Arrays".
+You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
 
-**Nota:**os arrays são um tipo particular de variáveis. Um array é uma série ordenada de variáveis do mesmo tipo. Para mais informações, consulte por favor [Arrays](Concepts/arrays.md).
+**Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. Para mais informações, consulte por favor [Arrays](Concepts/arrays.md).
 
 Por exemplo, se quiser definir uma variável texto, escreva:
 
@@ -21,13 +21,13 @@ Por exemplo, se quiser definir uma variável texto, escreva:
  C_TEXT(myText)
 ```
 
-**Nota:** apesar de não recomendado, pode criar variáveis simplesmente usando-as; não precisa definir as variáveis formalmente como se faz com os campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+**Note:** Although it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. For example, if you want to create a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
- MyDate:=Current date+30 //MyDate é criada e obtém a data atual mais  30 días
+ MyDate:=Current date+30 //MyDate is created and gets the current date plus 30 days
 ```
 
-Após a criação pode usar a variável onde quiser no seu banco de dados. Por exemplo, pode precisar armazenar a variável texto em um campo do mesmo tipo
+Once created, you can use a variable wherever you need it in your database. For example, you might need to store the text variable in a field of same type:
 
 ```4d
  [MyTable]MyField:=MyText
@@ -49,7 +49,7 @@ Seguem-se algumas declarações de variáveis básicas:
 
 Os dados podem ser colocados e copiados de variáveis e arrays. Colocar dados em uma variável é chamado **atribuiindo os dados a uma variável** e é feito com o operador de atribuição (:=). O operador de atribuição também é usado para atribuir dados para elementos campos.
 
-O operador de atribuição é a maneira mais importante de criar uma variável e jogar dados nela. Escreve-se o nome da variável que se pretende criar no lado esquerdo do operador de atribuição. Por exemplo:
+The assignment operator is the primary way to create a variable and to put data into it. Escreve-se o nome da variável que se pretende criar no lado esquerdo do operador de atribuição. Por exemplo:
 
 ```4d
 MyNumber:=3
@@ -87,9 +87,9 @@ Poderá querer utilizar uma variável local para:
 
 O nome de uma variável local começa sempre com um sinal de dólar ($) e pode conter até 31 caracteres adicionais. Se introduzir um nome mais longo, 4D trunca o nome com o comprimento apropriado.
 
-Quando trabalhar em um banco de dados com muitos métodos e variáveis, geralmente só precisa usar uma variável dentro do método no qual trabalha. Pode criar e utilizar uma variável local no método sem se preocupar se utilizou o mesmo nome de variável noutro lugar.
+When you are working in a database with many methods and variables, you often find that you need to use a variable only within the method on which you are working. Pode criar e utilizar uma variável local no método sem se preocupar se utilizou o mesmo nome de variável noutro lugar.
 
-Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. O comando `Request` pode obter esta informação. Apresenta uma caixa de diálogo com uma mensagem que solicita ao utilizador uma resposta. Quando o utilizador introduz a resposta, o comando devolve a informação que o utilizador introduziu. Normalmente não precisa de manter esta informação nos seus métodos durante muito tempo. Esta é uma forma típica de utilizar uma variável local. Aqui um exemplo simples:
+Frequently, in a database, small pieces of information are needed from the user. O comando `Request` pode obter esta informação. Apresenta uma caixa de diálogo com uma mensagem que solicita ao utilizador uma resposta. Quando o utilizador introduz a resposta, o comando devolve a informação que o utilizador introduziu. Normalmente não precisa de manter esta informação nos seus métodos durante muito tempo. Esta é uma forma típica de utilizar uma variável local. Aqui um exemplo simples:
 
 ```4d
  $vsID:=Request("Por favor insira o seu ID:")
@@ -100,7 +100,7 @@ Frequentemente, em um banco de dados, pequenas pedaços de informação são nec
 
 Este método pede simplesmente ao utilizador que introduza uma identificação. Coloca a resposta numa variável local, $vsID, e depois procura o ID que o utilizador introduziu. Quando este método termina, a variável local $vsID é apagada da memória. Isto é ótimo, porque a variável é necessária apenas uma vez e apenas neste método.
 
-**Nota:** Os parâmetros $1, $2... passados aos métodos são variáveis locais. Para mais informações, consulte por favor [Parâmetros](Concepts/parameters.md).
+**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
 ### Variáveis processo
 
@@ -120,10 +120,10 @@ Para mais informações, ver o capítulo **Processos** e a descrição destes co
 
 ### Variáveis interprocesso
 
-As variáveis interprocessadas estão disponíveis em toda a base de dados e são partilhadas em todos os processos cooperativos. São utilizados principalmente para partilhar informação entre processos.
+Interprocess variables are available throughout the database and are shared across all cooperative processes. São utilizados principalmente para partilhar informação entre processos.
 
 > O uso de variáveis interprocessadas não é recomendado, uma vez que não estão disponíveis a partir de processos preventivos e tendem a tornar o código mais difícil para manutenção.
 
-O nome de uma variável interprocessada começa sempre com os símbolos (`<>`) - um sinal "menor que" seguido de um sinal "maior do que" - seguido de 31 caracteres.
+The name of an interprocess variable always begins with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 Em Cliente/Servidor, cada máquina (máquinas Cliente e máquina Servidor) partilham a mesma definição de variáveis interprocessadas, mas cada máquina tem um exemplo diferente para cada variável.

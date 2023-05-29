@@ -49,7 +49,7 @@ The **Mode** field indicates the current execution mode of the application: comp
 
 The lower part of the area indicates the server configuration parameters (launched as service, port and IP address) and the enabling of TLS for client-server connections (does not concern SQL nor HTTP connections).
 
-### Memory
+### Memória
 
 This area indicates the **Total cache memory** (parameter set in the settings) and the **Used cache memory** (dynamic allocation by 4D Server according to its needs).
 

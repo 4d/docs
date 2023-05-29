@@ -14,7 +14,7 @@ You use this type of object to indicate that an operation such as establishing a
 When the form is executed, the object is not animated. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
 
 * 1 (or any value other than 0) = Start animation,
-* 0 = Stop animation
+* 0 = Parar a animação
 
 ### Propriedades compatíveis
 

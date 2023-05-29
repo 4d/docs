@@ -4,7 +4,7 @@ title: Modo SDI em Windows
 ---
 
 
-On Windows, 4D developers can test and configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar. SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window.
+SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window. On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar.
 
 :::info
 
@@ -12,22 +12,22 @@ The concept of SDI/MDI does not exist on macOS. This feature concerns Windows ap
 
 :::
 
-## SDI mode availability
+## Disponibilidade do modo SDI
 
-The SDI mode is available in the following execution environments only:
+The SDI mode is available in the following execution environment only:
 
 - Windows
 - Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
 - [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
 
-## Enabling the SDI mode
+## Activação do modo SDI
 
-To enable the SDI mode in your application, just check the **Use SDI mode on Windows** option in the ["Interface" page of the Settings dialog box](../settings/interface.md#display-windows).
+Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
 
-Once enabled, to actually run your application in SDI mode, you can either:
+Enabling and using the SDI mode in your application require the following steps:
 
-- build a merged application (standalone and/or client application) and execute it on Windows, or
-- select **Test Application in SDI Mode** from the **Run** menu on Windows to test the development.
+- Build a merged application (standalone and/or client application).
+- Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
 
 :::info
 
@@ -52,7 +52,7 @@ Windows can therefore be used in MDI or SDI modes without having to recalculate 
 
 #### Splash screen
 
-- If the **Splash screen** interface option was [selected in the Settings](../settings/interface.md#display-windows), the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
+- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
 - If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
 
 ### Depurador
@@ -68,8 +68,8 @@ To handle this case, 4D applications executed in SDI mode include a mechanism to
 - the user cannot interact anymore with the application
 - there are no live user processes
 - 4D processes or worker processes are waiting for an event
-- the Web server is not started
-- the [WebAdmin server](../Admin/webAdmin.md) is not started.
+- the Web server is not started.
+- Merged stand-alone or client 4D application
 
 :::note
 

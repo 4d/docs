@@ -1,46 +1,46 @@
 ---
 id: creating
-title: Working with a project
+title: Trabalhar com um projecto
 ---
 
 4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
-## Criar um projeto
+## Criar arquivos de projeto
 
-New 4D application projects can be created from **4D** or **4D Server**. In any case, project files are stored on the local machine.
+**Nota:** Servidor 4D pode abrir arquivos .4DProject em modo apenas leitura, mas apenas para propósitos de teste. Para lançamento, projetos 4D são oferecidos como arquivos .4dz (arquivos compactados zipados). Para saber mais, consulte [Construir um pacote de projetos](building.md). In any case, project files are stored on the local machine.
 
-To create a new project:
+Para criar um novo projeto de banco de dados:
 
 1. Launch 4D or 4D Server.
 2. Faça uma das seguintes opções:
-    * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
-    * (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+    * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)OR(4D only) Select **Project...** from the **New** toolbar button:![](../assets/en/getStart/projectCreate2.png)A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder. ![](../assets/en/getStart/projectCreate1.png)
+    * When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
 3. Enter the name of your project folder and click **Save**. This name will be used:
 
-    * as the name of the entire project folder,
-    * as the name of the .4DProject file at the first level of the ["Project" folder](../Project/architecture.md#project-folder).
+    * as the name of the .4DProject file at the first level of the "Project" folder.
+    * as the name of the .4DProject file at the first level of the "Project" folder.
 
- You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
+ You can choose any name allowed by your operating system. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
 
-When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. Para saber mais, consulte [Arquitetura de um projeto 4D](Project/architecture.md).
+Quando validar a caixa de diálogo, 4D fecha o banco de dados atual (se houver) e cria uma pasta "Project" no local indicado e coloca nela todos os arquivos necessários para o funcioanamento correto do banco de dados projeto. Para saber mais, consulte [Arquitetura de um projeto 4D](Project/architecture.md).
 
 You can then start developing your project.
 
 ## Abrir projeto
 
-To open an existing project from 4D:
+Lance uma aplicação 4D Developer.
 
 1. Faça uma das seguintes opções:
 
-    * Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.
+    * Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.
     * Select **Open a local application project** in the Welcome Wizard dialog
 
 The standard Open dialog appears.
 
-2. Select the project's `.4dproject` file (located inside the ["Project" folder of the project](../Project/architecture.md#project-folder)) and click **Open**.
+2. Select the project's `.4dproject` file and click **Open**.
 
     By default, the project is opened with its current data file. Other file types are suggested:
 
@@ -48,23 +48,23 @@ The standard Open dialog appears.
     * *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
     * *Binary files*: `.4db` or `.4dc` extension - legacy 4D database formats
 
-### Options
+### Opções
 
 In addition to standard system options, the *Open* dialog in 4D provides two menus with specific options that are available using the **Open** button and the **Data file** menu.
 
-* **Open** - opening mode of the project:
+* **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
   * **Interpreted** or **Compiled**: These options are available when the selected project contains both [interpreted and compiled code](Concepts/interpreted.md).
   * **[Maintenance Security Center](MSC/overview.md)**: Opening in secure mode allowing access to damaged projects in order to perform any necessary repairs.
 
-* **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected.
+* **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
 
 ## Project opening shortcuts
 
 4D offers several ways to open projects directly and bypass the Open dialog:
 
-* via menu options:
+* através de opções de menu:
   * *Menu bar* - **File** > **Open Recent Projects / {project name}**
-  * *4D Tool bar* -  Select the project from the menu associated with the **Open** button
+  * OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
 
 * via preferences:
   * Set the **At startup** general preference to **Open last used project**.
@@ -83,7 +83,7 @@ You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application
 A .4DLink file of "remote project" type can be copied and used on several machines.
 > It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
 
-## About 4DLink Files
+## Sobre 4DLink Files
 
 Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
 
@@ -107,9 +107,9 @@ That folder is divided into two subfolders:
 
 ## Guardar ficheiros
 
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list).
 
-Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
+Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
 
 The 4D development framework includes a file access manager to control concurrent access:
 
@@ -118,8 +118,8 @@ The 4D development framework includes a file access manager to control concurren
 
 ![](../assets/en/Project/projectReload.png)
 
-* **Yes**: discard editor changes and reload the modified version
-* **No**: save changes and overwrite the other version
+* or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
+* **Edit**: standard and completely modifiable.
 * **Cancel**: do not save
 
 This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).

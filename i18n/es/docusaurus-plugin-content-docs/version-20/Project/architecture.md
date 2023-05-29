@@ -24,7 +24,7 @@ Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de u
 > Si su proyecto se ha convertido desde una base binaria, puede haber carpetas adicionales. Ver "Conversión de bases en proyectos" en [doc.4d.com](https://doc.4d.com).
 
 
-## `Project` folder
+## Carpeta `Project`
 
 La carpeta Project suele contener la siguiente jerarquía:
 
@@ -199,7 +199,7 @@ Esta carpeta contiene **archivos de propiedades usuario** utilizados para la adm
 | Backup.4DSettings   | Parámetros de copia de seguridad de la base de datos, utilizados para definir las [opciones de copia de seguridad](Backup/settings.md)) cuando se lanza cada copia de seguridad. Este archivo también puede utilizarse para leer o definir opciones adicionales, como la cantidad de información almacenada en el *diario de backup*. Las llaves relativas a la configuración de la copia de seguridad se describen en el manual *Backup de las llaves XML 4D*. | XML     |
 | BuildApp.4DSettings | Archivo de parámetros de generación, creado automáticamente cuando se utiliza la caja de diálogo del generador de aplicaciones o del comando `BUILD APPLICATION`                                                                                                                                                                                                                                                                                                | XML     |
 | settings.4DSettings | Parámetros personalizados para este proyecto (todos los archivos de datos)                                                                                                                                                                                                                                                                                                                                                                                      | XML     |
-| logConfig.json      | Custom [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file)                                                                                                                                                                                                                                                                                                                                                                   | json    |
+| logConfig.json      | [Archivo de configuración de historial](../Debugging/debugLogFiles.md#using-a-log-configuration-file) personalizado                                                                                                                                                                                                                                                                                                                                             | json    |
 
 
 ## `userPreferences.<userName>`

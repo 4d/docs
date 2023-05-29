@@ -3,174 +3,174 @@ id: properties
 title: Propriedades dos menus
 ---
 
-You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
+Pode definir várias propriedades para itens de menu tais como ação, estilo de fonte, linhas separadoras, atalhos de teclado ou ícones.
 
 
 ## Título
 
-The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
+A propriedade **Title** contém a etiqueta de um menu ou item de menu, uma vez que será exibida na interface da aplicação.
 
-In the Menu editor, you can directly enter the label as "hard coded". Or, you can enter a reference for a variable or an XLIFF element, which will facilitate the maintenance and translation of applications. You can use the following types of references:
+No editor do Menu, pode introduzir directamente a etiqueta como "hard coded". Ou, pode introduzir uma referência para uma variável ou um elemento XLIFF, o que facilitará a manutenção e tradução das aplicações. Pode utilizar os seguintes tipos de referências:
 
-- An XLIFF resource reference of the type :xliff:MyLabel. For more information about XLIFF references, refer to *XLIFF Architecture* section in *4D Design Reference*.
-- An interprocess variable name followed by a number, for example: `:<>vlang,3`. Changing the contents of this variable will modify the menu label when it is displayed. In this case, the label will call an XLIFF resource. The value contained in the `<>vlang` variable corresponds to the *id* attribute of the *group* element. The second value (3 in this example) designates the *id* attribute of the *trans-unit* element.
+- Uma referência de recurso XLIFF do tipo :xliff:MyLabel. Para mais informações sobre referências XLIFF, consulte *XLIFF Architecture* secção em *4D Design Reference*.
+- Um nome de variável interprocesso seguido de um número, por exemplo:`<>vlang,3`. A alteração do conteúdo desta variável modificará a etiqueta do menu quando esta for exibida. Neste caso, a etiqueta chamará um recurso XLIFF. O valor contido na variável `<>vlang` corresponde ao atributo *id* do elemento *do grupo* . O segundo valor (3 neste exemplo) designa o atributo *id* do elemento *trans-unit* .
 
-Using the 4D language, you set the title property through the *itemText* parameter of the `APPEND MENU ITEM`, `INSERT MENU ITEM`, and `SET MENU ITEM` commands.
+Usando a linguagem 4D, define a propriedade título através do parâmetro *itemText* dos comandos `APPEND MENU ITEM`, `INSERT MENU ITEM`, e `SET MENU ITEM`.
 
-### Using control characters
+### Utilização de caracteres de controle
 
-You can set some properties of the menu commands by using control characters (metacharacters) directly in the menu command labels. For instance, you can assign the keyboard shortcut Ctrl+G (Windows) or Command+G (macOS) for a menu command by placing the "/G" characters in the label of the menu item label.
+Pode definir algumas propriedades dos comandos do menu utilizando caracteres de controle (metacaracteres) directamente nas etiquetas dos comandos do menu. Por exemplo, pode atribuir o atalho de teclado Ctrl+G (Windows) ou Command+G (macOS) para um comando de menu, colocando os caracteres "/G" na etiqueta do item do menu.
 
-Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
+Os caracteres de controle não aparecem nas etiquetas de comando do menu. Deve-se, portanto, evitar a sua utilização para não ter efeitos indesejáveis. Os caracteres de controle são os seguintes:
 
-| Caracter   | Descrição                   | Utilização                                                    |
-| ---------- | --------------------------- | ------------------------------------------------------------- |
-| (          | open parenthese             | Desactivar item                                               |
-| <B         | menor que B                 | Negrito                                                       |
-| <I         | maior que I                 | Itálica                                                       |
-| <U         | menor que U                 | Underline font                                                |
-| !+caracter | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
-| /+caracter | slash+character             | Add character as shortcut                                     |
+| Caracteres | Descrição                    | Utilização                                                                                    |
+| ---------- | ---------------------------- | --------------------------------------------------------------------------------------------- |
+| (          | abre parênteses              | Desactivar item                                                                               |
+| <B         | menor que B                  | fonte itálica                                                                                 |
+| <I         | maior que I                  | Itálico                                                                                       |
+| <U         | menor que U                  | fonte sublinhada                                                                              |
+| !+caracter | ponto de exclamação+caratere | Adiciona caractere como marca de verificação (macOS); adiciona marca de verificação (Windows) |
+| /+caracter | barra+caractere              | Adicionar caractere como atalho                                                               |
 
 
 
-## Parâmetros
+## Parâmetro
 
-You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the `SET MENU ITEM PARAMETER` command.
+É possível associar um parâmetro personalizado a cada item do menu. Um parâmetro de item de menu é uma string de caracteres cujo conteúdo pode ser livremente escolhido. Pode ser definido no editor do Menu, ou através do comando `SET MENU ITEM PARAMETER` .
 
-Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
+Os parâmetros do item de menu são úteis com a gestão programada de menus, em particular quando se utilizar os comandos `Dynamic pop up menu`, `Get menu item parameter` e `Get selected menu item parameter`.
 
 ## Ação
 
-Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a **Monthly Report** menu command can call a project method that prepares a monthly report from a table containing financial data. The **Cut** menu command usually calls the `cut` standard action in order to move the selection to the clipboard and erase it from the window in the foreground.
+Cada comando de menu pode ter um método de projeto ou uma ação padrão anexada a ele. Quando o comando do menu é escolhido, 4D executa a ação padrão associada ou o método de projecto. Por exemplo, um comando de menu **Monthly Report** pode chamar um método de projeto que prepara um relatório mensal a partir de uma tabela contendo dados financeiros. O comando do menu **Cut** chama geralmente a ação padrão `cut` a fim de mover a seleção para a área de transferência e apagá-la da janela em primeiro plano.
 
-If you do not assign a method or a standard action to a menu command, choosing that menu command causes 4D to exit the Application environment and go to the Design environment. If only the Application environment is available, this means quitting to the Desktop.
+Se não atribuir um método ou uma ação padrão a um comando de menu, a escolha desse comando de menu faz com que 4D saia do ambiente Application e vá para o ambiente Design. Se apenas o ambiente de Aplicação estiver disponível, isto significa desistir do Ambiente de Trabalho.
 
-Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the database (add record, select all, etc.).
+Ações padrão podem ser usadas para executar várias operações cotidianas conectadas às funções de sistema (copiar, sair, etc) ou às funções do banco de dados 4D (adicionar registro, selecionar tudo, etc.).
 
-You can assign both a standard action and a project method to a menu command. In this case, the standard action is never executed; however, 4D uses this action to enable/disable the menu command according to the current context and to associate a specific operation with it according to the platform. When a menu command is deactivated, the associated project method cannot be executed.
+Pode atribuir tanto uma acção padrão como um método de projecto a um comando de menu. Neste caso, a acção padrão nunca é executada; contudo, 4D utiliza esta acção para ativar/desativar o comando do menu de acordo com o contexto actual e para associar uma operação específica com ele de acordo com a plataforma. Quando um comando de menu for desativado, o método de projecto associado não pode ser executado.
 
-The choice between associating a standard action or a project method with a menu command depends on the type of result desired. In principle, it is preferable to choose a standard action whenever possible since they implement optimized mechanisms, more particularly activation/deactivation according to the context.
+A escolha entre associar uma ação padrão ou um método de projecto a um comando de menu depende do tipo de resultado desejado. Em princípio, é preferível escolher uma acção padrão sempre que possível, uma vez que implementam mecanismos otimizados, mais particularmente ativação/desativação de acordo com o contexto.
 
-### Associating a project method or a standard action
+### Associar um método de projecto ou uma acção padrão
 
-You can assign a project method and/or a standard action to a selected menu command in the Menu editor:
-- **Method Name**: Select an existing project method name in the combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] button. 4D displays a project method creation dialog that is used to access the Code Editor.
-- **Associated Standard Action**: Choose or write the action you want to assign in the "Associated Standard Action" combo box. You can enter any supported action and (optionally) parameter you want in the area. For a comprehensive list of standard actions, please refer to the **Standard actions** section in the *Design Reference*. **Note for macOS:** Under macOS, the custom menu commands associated with the *Quit* action are automatically placed in the application menu, in compliance with the platform interface standards.
+É possível atribuir um método de projecto e/ou uma acção padrão a um comando de menu seleccionado no editor de Menu:
+- **Nome do método**: Seleccionar um nome de método de projecto existente na caixa de combinação. Se o método de projecto não existir, introduzir o seu nome na caixa de combinação "Nome do método" e, em seguida, clicar no botão [...] . 4D exibe um diálogo de criação de métodos de projecto que é utilizado para aceder ao editor de métodos.
+- **Acção Padrão Associada**: Escolha ou escreva a acção que deseja atribuir na caixa combinada "Acção Padrão Associada". Pode introduzir qualquer acção apoiada e (opcionalmente) parâmetro que deseje na área. Para uma lista completa de acções padrão, consulte por favor a secção **Acções padrão** na *Design Reference*. **Nota para macOS:** Sob macOS, os comandos de menu personalizados associados à acção *Quit* são automaticamente colocados no menu de aplicação, em conformidade com as normas de interface da plataforma.
 
-Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
+Usando a linguagem 4D, pode associar um método de projecto usando o comando `SET MENU ITEM METHOD` , e uma acção padrão usando o comando `SET MENU ITEM PROPERTY` .
 
-### Start a new process
-The **Start a New Process** option is available for menu commands associated to methods. It can be set through a check box in the Menu editor, or through the *property* parameter of the `SET MENU ITEM PROPERTY` command.
+### Iniciar um novo processo
+A opção **Iniciar um Novo Processo** está disponível para comandos de menu associados a métodos. Pode ser definido através de uma caixa de verificação no editor do Menu, ou através *propriedade* parâmetro do comando `SET MENU ITEM PROPERTY` .
 
-When the **Start a New Process** option is enabled, a new process is created when the menu command is chosen. Normally, a method attached to a menu command executes within the current process unless you explicitly call a new process in your code. The **Start a New Process** option makes it easier to start a new process. When enabled, 4D will create a new process when the menu command is chosen.
+Quando a opção **Iniciar um Novo Processo** for activada, um novo processo é criado quando o comando do menu é escolhido. Normalmente, um método ligado a um comando de menu executa-se dentro do processo actual, a menos que chame explicitamente um novo processo no seu código. A opção **Iniciar um Novo Processo** facilita o início de um novo processo. Quando activado, 4D irá criar um novo processo quando o comando do menu for escolhido.
 
-In the Process list, 4D assigns the new process a default name using the format "ML_ProcessNumber". The names of processes started from a menu are created by combining the prefix "ML_" with the process number.
+Na lista de processos, 4D atribui ao novo processo um nome padrão usando o formato "ML_ProcessNumber". Os nomes dos processos iniciados a partir de um menu são criados através da combinação do prefixo "ML_" com o número do processo.
 
-### Execute without validating
-The **Execute without validating** option is available for menu commands associated to standard actions in the Menu editor only.
+### Executar sem validar
+A opção **Executar sem validar** está disponível apenas para comandos de menu associados a acções padrão no editor de menus.
 
-When this option is checked, 4D does not trigger the "validation" of the field where the cursor is located before executing the associated action. This option is mainly intended for **Edit** menu commands. By default, 4D processes and "validates" the contents of a field before executing a standard action (via a menu command or a shortcut), which has the effect of generating an `On Data Change` form event. This can disrupt the functioning of copy or paste type commands because when they are called, the `On Data Change` form event is generated unexpectedly. In this case, it is useful to check the **Execute without validating** option.
+Quando esta opção é verificada, 4D não activa a "validação" do campo onde se encontra o cursor antes de executar a acção associada. Esta opção destina-se principalmente a **Editar** comandos de menu. Por padrão, 4D processa e "valida" o conteúdo de um campo antes de executar uma acção padrão (através de um comando de menu ou de um atalho), o que tem o efeito de gerar um evento de formulário `On Data Change` . Isto pode perturbar o funcionamento dos comandos do tipo copiar ou colar porque, quando são chamados, o evento do formulário `On Data Change` é gerado inesperadamente. Neste caso, é útil verificar a opção **Executar sem validar** .
 
 
-## Remote access privileges
+## Privilégios de acesso remoto
 
-This Menu editor option allows defining a group to a menu command so that only users in that group can use the menu command from a 4D remote application (see Users and groups).
+Esta opção de menu editor permite definir um grupo para um comando de menu de modo a que apenas os utilizadores desse grupo possam utilizar o comando de menu de uma aplicação remota 4D (ver Utilizadores e grupos).
 
-## Options
+## Opções
 
-### Separator lines
+### Linhas separadoras
 
-Groups of menu commands in a menu can be divided by a separator line. This convention is useful for grouping associated menu commands by function.
+Grupos de comandos de menu num menu podem ser divididos por uma linha separadora. Esta convenção é útil para agrupar comandos de menu associados por função.
 
 ![](../assets/en/Menus/separator.png)
 
-You add a separator line by creating a specific menu command.
+Adiciona-se uma linha separadora através da criação de um comando de menu específico.
 
-In the Menu editor, instead of entering the menu command’s text in the title area, you simply select the **Separator Line** option. Instead of text, a line appears in the current menu bar area. When this option is checked, the other properties have no effect. **Note:** Under macOS, if you use the dash “-” as the first character of a menu item, it will appear as a separator line.
+No editor do Menu, em vez de introduzir o texto do comando do menu na área do título, basta seleccionar a opção **Linha Separadora** . Em vez de texto, aparece uma linha na área actual da barra de menu. Quando esta opção é verificada, as outras propriedades não têm qualquer efeito. **Nota:** Sob macOS, se usar o traço "-" como primeiro caracter de um item do menu, aparecerá como uma linha separadora.
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM` commands.
+Na língua 4D, insere-se uma linha separadora introduzindo `-` ou `(-` como itemTexto para `APPEND MENU ITEM`, `INSERT MENU ITEM`, ou `SET MENU ITEM` comandos.
 
 
-### Keyboard shortcuts
+### Atalhos do teclado
 
-You can add keyboard shortcuts to any menu command. If a menu command has one of these keyboard shortcuts, users will see it next to the menu command. For example, "Ctrl+C" (Windows) or "Command+C" (macOS) appears next to the **Copy** menu command in the **Edit** menu.
+Pode adicionar atalhos de teclado a qualquer comando de menu. Se um comando de menu tiver um destes atalhos de teclado, os utilizadores irão vê-lo ao lado do comando de menu. Por exemplo, "Ctrl+C" (Windows) ou "Command+C" (macOS) aparece ao lado do comando do menu **Copy** no menu **Edit** .
 
-You can also add the **Shift** key as well as the **Alt** key (Windows) or **Option** key (macOS) to the shortcut associated with a menu command. This multiplies the number of shortcuts that can be used. The following types of keyboard shortcuts can therefore be defined:
+Também pode adicionar a tecla **Shift** bem como a tecla **Alt** (Windows) ou **Opção** (macOS) ao atalho associado a um comando de menu. Isto multiplica o número de atalhos que podem ser utilizados. Os seguintes tipos de atalhos de teclado podem, portanto, ser definidos:
 
 - Em Windows:
-    - Ctrl+caracter
-    - Ctrl+Shift+character
-    - Ctrl+Alt+character
-    - Ctrl+Shift+Alt+character
+    - Ctrl+caractere
+    - Ctrl+Shift+caracter
+    - Ctrl+Alt+caractere
+    - Ctrl+Shift+Alt+caractere
 
 - Em macOS:
     - Comando+caractere
-    - Command+Shift+character
-    - Command+Option+character
-    - Command+Shift+Option+character
+    - Comando+Shift+caracter
+    - Comando+Opção+característica
+    - Comando+Shift+Option+character
 
-> We recommend that you keep the default keyboard shortcuts that are associated with standard actions.
+> Recomendamos que mantenha os atalhos de teclado padrão que estão associados a acções padrão.
 
-You can use any alphanumeric keys as a keyboard shortcut, except for the keys reserved by standard menu commands that appear in the **Edit** and **File** menus, and the keys reserved for 4D menu commands.
+Pode utilizar qualquer tecla alfanumérica como atalho de teclado, excepto as teclas reservadas pelos comandos do menu padrão que aparecem nos menus **Edit** e **File** , e as teclas reservadas aos comandos do menu 4D.
 
-These reserved key combinations are listed in the following table:
+Estas combinações chave reservadas estão listadas na tabela seguinte:
 
-| Tecla (Windows) | Tecla (macOS)     | Operação      |
-| --------------- | ----------------- | ------------- |
-| Ctrl+C          | Comando+C         | Copiar        |
-| Ctrl+Q          | Comando+Q         | Salir         |
-| Ctrl+V          | Comando+V         | Colar         |
-| Ctrl+X          | Comando+X         | Cortar        |
-| Ctrl+Z          | Comando+Z         | Deshacer      |
-| Ctrl+. (ponto)  | Comando+. (ponto) | Parar a acção |
+| Teclas (Windows) | Teclas (macOS)    | Operação      |
+| ---------------- | ----------------- | ------------- |
+| Ctrl+C           | Comando+C         | Copiar        |
+| Ctrl+Q           | Comando+Q         | Salir         |
+| Ctrl+V           | Comando+V         | Colar         |
+| Ctrl+X           | Comando+X         | Cortar        |
+| Ctrl+Z           | Comando+Z         | Deshacer      |
+| Ctrl+. (ponto)   | Comando+. (ponto) | Parar a acção |
 
-To assign a keyboard shortcut in the Menu editor:
+Atribuir um atalho de teclado no editor de menus:
 
-Select the menu item to which you want to assign a keyboard shortcut. Click on the [...] button to the right of the "Shortcut" entry area. The following window appears:
+Seleccione o item do menu ao qual pretende atribuir um atalho de teclado. Clique no botão [...] à direita da área de entrada "Atalho". Aparece a seguinte janela:
 
 ![](../assets/en/Menus/Shortcut.png)
 
-Enter the character to use then (optional) click the **Shift** and/or **Alt** (**Option**) checkboxes according to the combination desired. You can also directly press the keys that make up the desired combination (do not press the **Ctrl/Command** key).
+Introduzir o carácter a utilizar depois (opcional) clicar na caixa de verificação **Shift** e/ou **Alt** (**Opção**) de acordo com a combinação desejada. Também pode pressionar directamente as teclas que compõem a combinação desejada (não pressionar a tecla **Ctrl/Command**).
 
-> You cannot deselect the Ctrl/Command key, which is mandatory for keyboard shortcuts for menus. To start over, click on **Clear**. Click **OK** to validate the changes. The shortcut defined is shown in the "Shortcut" entry area.
+> Não é possível desmarcar a tecla Ctrl/Command, que é obrigatória para atalhos de teclado para menus. Para recomeçar, clique em **Limpar**. Clique **OK** para validar as alterações. O atalho definido é mostrado na área de entrada "Atalho".
 
-To assign a keyboard shortcut using the 4D language, use the `SET ITEM SHORTCUT` command.
+Para atribuir um atalho de teclado usando a linguagem 4D, usar o comando `SET ITEM SHORTCUT` .
 
-> An active object can also have a keyboard shortcut. If the **Ctrl/Command** key assignments conflict, the active object takes precedence.
+> Um objecto activo pode também ter um atalho de teclado. Se as atribuições-chave **Ctrl/Command** entrarem em conflito, o objecto activo tem precedência.
 
 
 ### Item habilitado
 
-In the Menu editor, you can specify whether a menu item will appear enabled or disabled. An enabled menu command can be chosen by the user; a disabled menu command is dimmed and cannot be chosen. When the **Enabled Item** check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.
+No editor do menu, pode especificar se um item do menu aparecerá activado ou desactivado. Um comando de menu activado pode ser escolhido pelo utilizador; um comando de menu desactivado é diminuído e não pode ser escolhido. Quando a caixa de verificação **Enabled Item** é desmarcada, o comando do menu aparece com um sombreado, indicando que não pode ser escolhido.
 
-Unless you specify otherwise, 4D automatically enables each menu item you add to a custom menu. You can disable an item in order, for example, to enable it only using programming with `ENABLE MENU ITEM` and `DISABLE MENU ITEM` commands.
+A menos que especifique o contrário, 4D activa automaticamente cada item de menu que acrescenta a um menu personalizado. Pode desactivar um item, por exemplo, para o activar apenas usando programação com `ENABLE MENU ITEM` e `DISABLE MENU ITEM` comandos.
 
 
 ### Marca de verificação
 
-This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands (`SET MENU ITEM MARK` and `Get menu item mark`).
+Esta opção de menu editor pode ser usada para associar uma marca de verificação do sistema com um item de menu. Pode então gerir a exibição da marca de verificação usando comandos de língua (`SET MENU ITEM MARK` e `Obter a marca do item do menu`).
 
-Check marks are generally used for continuous action menu items and indicate that the action is currently underway.
+As marcas de verificação são geralmente utilizadas para itens do menu de acção contínua e indicam que a acção está actualmente em curso.
 
-### Estilos de letra
+### Font-style
 
-4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the `SET MENU ITEM STYLE` language command.
+4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu. Pode personalizar os seus menus com os estilos Bold, Italic ou Underline através de opções no editor de menus, ou usando o comando de linguagem `SET MENU ITEM STYLE` .
 
-As a general rule, apply font styles sparingly to your menus — too many styles will be distracting to the user and give a cluttered look to your application.
-> You can also apply styles by inserting special characters in the menu title (see [Using control characters](properties.md#using-control-characters) above).
+Como regra geral, aplique estilos de fonte moderadamente aos seus menus - demasiados estilos distrairão o utilizador e darão um aspecto desorganizado à sua aplicação.
+> Também se pode aplicar estilos inserindo caracteres especiais no título do menu (ver [Utilizando caracteres de controlo](properties.md#using-control-characters) acima).
 
 
-### Item icon
+### Ícone do item
 
-You can associate an icon with a menu item. It will displayed directly in the menu, next to the item:
+Pode associar um ícone a um item do menu. Será exibido directamente no menu, ao lado do item:
 
 ![](../assets/en/Menus/iconMenu.png)
 
-To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area:
+Para definir o ícone no editor de Menu, clicar na área "Ícone de item" e seleccionar **Abrir** para abrir uma imagem do disco. Se selecionar um arquivo de imagem que não esteja já armazenado na pasta de recursos do banco de dados, é copiado automaticamente nessa pasta. Uma vez definido, o ícone do item aparece na área de pré-visualização:
 
 ![](../assets/en/Menus/iconpreview.png)
 
-To remove the icon from the item, choose the **No Icon** option from the "Item Icon" area.
+Para remover o ícone do item, escolher a opção **No Icon** da área "Item Icon".
 
-To define item icons using the 4D language, call the `SET MENU ITEM ICON` command. 
+Para definir ícones de itens usando a linguagem 4D, chamar o comando `SET MENU ITEM ICON` . 

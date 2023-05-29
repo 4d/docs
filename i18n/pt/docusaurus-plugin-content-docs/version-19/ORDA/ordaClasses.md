@@ -1,6 +1,6 @@
 ---
 id: ordaClasses
-title: Data Model Classes
+title: Classes de modelo de dados
 ---
 
 
@@ -10,7 +10,7 @@ ORDA allows you to create high-level class functions above the data model. This 
 For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple as calling:
 
 ```4d
-$nextHigh:=ds.Employee.get(1).getNextWithHigherSalary()
+$nextHigh:=ds. Employee.get(1).getNextWithHigherSalary()
 ```
 
 Developers can not only use these functions in local datastores, but also in client/server and remote architectures:
@@ -56,7 +56,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 - an Entity selection class object can call functions from the [ORDA Entity selection generic class](API/EntitySelectionClass.md).
 - an Entity class object can call functions from the [ORDA Entity generic class](API/EntityClass.md).
 
-## Class Description
+## Descrição da classe
 
 <details><summary>Histórico</summary>
 
@@ -98,10 +98,15 @@ Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 #### Exemplo
 
 ```4D
-// cs. Company class Class extends DataClass
+// cs.Company class
+
+
+Class extends DataClass
 
 // Returns companies whose revenue is over the average
-// Returns an entity selection related to the Company DataClass Function GetBestOnes()
+// Returns an entity selection related to the Company DataClass
+
+Function GetBestOnes()
  $sel:=This.query("revenues >= :1";This.all().average("revenues"));
  $0:=$sel
 ```
@@ -109,8 +114,8 @@ Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 Then you can get an entity selection of the "best" companies by executing:
 
 ```4d
- var $best : cs. CompanySelection
- $best:=ds. Company. GetBestOnes()
+ var $best : cs.CompanySelection
+ $best:=ds.Company.GetBestOnes()
 ```
 
 #### Example with a remote datastore
@@ -122,13 +127,17 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 The `City Class` provides an API:
 
 ```4d  
-// cs. City class Class extends DataClass Function getCityName()
+// cs.City class
+
+Class extends DataClass
+
+Function getCityName()
  var $1; $zipcode : Integer
- var $zip : 4D. Entity
+ var $zip : 4D.Entity
  var $0 : Text
 
  $zipcode:=$1
- $zip:=ds. ZipCode.get($zipcode)
+ $zip:=ds.ZipCode.get($zipcode)
  $0:="" 
 
  If ($zip#Null)
@@ -160,9 +169,14 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 #### Exemplo
 
 ```4d
-// cs. EmployeeSelection class Class extends EntitySelection
+// cs.EmployeeSelection class
 
-//Extract the employees with a salary greater than the average from this entity selection Function withSalaryGreaterThanAverage
+
+Class extends EntitySelection
+
+//Extract the employees with a salary greater than the average from this entity selection 
+
+Function withSalaryGreaterThanAverage
  C_OBJECT($0)
  $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
@@ -185,8 +199,16 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 #### Exemplo
 
 ```4d
-// cs. CityEntity class Class extends Entity Function getPopulation()
-    $0:=This.zips.sum("population") Function isBigCity C_BOOLEAN($0)
+// cs.CityEntity class
+
+Class extends Entity
+
+Function getPopulation()
+    $0:=This.zips.sum("population")
+
+
+Function isBigCity
+C_BOOLEAN($0)
 // The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
@@ -197,12 +219,14 @@ Then you can call this code:
 var $cityManager; $city : Object
 
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
-$city:=$cityManager. City.getCity("Caguas") If ($city.isBigCity())
+$city:=$cityManager.City.getCity("Caguas")
+
+If ($city.isBigCity())
  ALERT($city.name + " is a big city")
 End if
 ```
 
-### Specific rules
+### Regras específicas
 
 When creating or editing data model classes, you must pay attention to the following rules:
 
@@ -305,7 +329,7 @@ local Function getYoungest
 
 ### Exemplos
 
-#### Calculating age
+#### Cálculo da idade
 
 Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
 
@@ -315,15 +339,14 @@ On the *StudentsEntity* class:
 Class extends Entity
 
 local Function age() -> $age: Variant
-
-If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
     If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
 Else 
     $age:=Null End if
 ```
 
-#### Checking attributes
+#### Verificação de atributos
 
 We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
 

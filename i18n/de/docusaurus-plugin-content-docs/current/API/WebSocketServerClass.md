@@ -22,7 +22,7 @@ The WebSocket protocol provides full-duplex communication channel between a WebS
 
 :::info See also
 
-See also [this blog post](https://blog.4d.com/websocket-server/) about the 4D WebSocket server.
+See also [this blog post](https://blog.4d.com/new-built-in-websocket-server/) about the 4D WebSocket server.
 
 :::
 
@@ -176,26 +176,13 @@ Event emitted when the HTTP server or the WebSocket server is closed.
 
 **WSHandler.onError**(*WSServer* : Object ; *param* : Object)
 
-| Parameter |            | Typ                |    | Beschreibung                                                                                                                        |
-| --------- | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer  |            | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                     |
-| param     |            | Objekt             | <- | Parameter                                                                                                                           |
-|           | typ        | Text               |    | "error"                                                                                                                             |
-|           | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
-|           | errors     | Collection         |    | Collection of 4D errors stack in case of execution error<li>[ ].errCode (number) -  4D error code</li><li>[ ].message (text) - Description of the 4D error</li><li>[ ].componentSignature (text) - Signature of the internal component which returned the error</li> |
-
-
-Event emitted when an error occurs on the WebSocket server.
-
-**WSHandler.onError**(*WSServer* : Object ; *param* : Object)
-
-| Parameter |            | Typ                |    | Beschreibung                                                                                                                        |
-| --------- | ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer  |            | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                     |
-| param     |            | Objekt             | <- | Parameter                                                                                                                           |
-|           | typ        | Text               |    | "error"                                                                                                                             |
-|           | statusText | Text               |    | HTTP error or last error returned in the 4D error stack                                                                             |
-|           | errors     | Collection         |    | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |
+| Parameter |            | Typ                |    | Beschreibung                                                                                                                       |
+| --------- | ---------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
+| WSServer  |            | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                    |
+| param     |            | Objekt             | <- | Parameter                                                                                                                          |
+|           | typ        | Text               |    | "error"                                                                                                                            |
+|           | statusText | Text               |    | Last error returned in the 4D error stack                                                                                          |
+|           | errors     | Collection         |    | Collection of 4D error stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |
 
 
 Event emitted when an error occurs on the WebSocket server.
@@ -293,14 +280,13 @@ Function called when the WebSocket is closed.
 
 **connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *param* : Object)
 
-| Parameter |        |           | Typ                                                     |    | Beschreibung                                                                                                                        |
-| --------- | ------ | --------- | ------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| ws        |        |           | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Current WebSocket connection object                                                                                                 |
-| param     |        |           | Objekt                                                  | <- | Parameter                                                                                                                           |
-|           | typ    |           | Text                                                    |    | "terminate"                                                                                                                         |
-|           | status |           | Objekt                                                  |    |                                                                                                                                     |
-|           |        | HTTPError | Text                                                    |    | HTTP error or last error returned in the 4D error stack                                                                             |
-|           |        | errors    | Collection                                              |    | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |
+| Parameter |        |        | Typ                                                     |    | Beschreibung                                                                                                                        |
+| --------- | ------ | ------ | ------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
+| ws        |        |        | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Current WebSocket connection object                                                                                                 |
+| param     |        |        | Objekt                                                  | <- | Parameter                                                                                                                           |
+|           | typ    |        | Text                                                    |    | "error"                                                                                                                             |
+|           | status |        | Objekt                                                  |    |                                                                                                                                     |
+|           |        | errors | Collection                                              |    | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |
 
 Function called when an error has occurred.
 
@@ -351,7 +337,7 @@ In the optional *options* parameter, pass an object that contains the following 
 <!-- REF #WebSocketServerClass.connections.Desc -->
 ## .connections
 
-<!-- REF #WebSocketServerClass.connections.Syntax -->**connections** : Collection<!-- END REF -->
+<!-- REF #WebSocketServerClass.connections.Syntax -->**.connections** : Collection<!-- END REF -->
 
 #### Beschreibung
 
@@ -366,7 +352,7 @@ When a connection is terminated, its [`status`](WebSocketConnectionClass.md#stat
 <!-- REF #WebSocketServerClass.dataType.Desc -->
 ## .dataType
 
-<!-- REF #WebSocketServerClass.dataType.Syntax -->**dataType** : Text<!-- END REF -->
+<!-- REF #WebSocketServerClass.dataType.Syntax -->**.dataType** : Text<!-- END REF -->
 
 #### Beschreibung
 
@@ -379,7 +365,7 @@ This property is read-only.
 <!-- REF #WebSocketServerClass.handler.Desc -->
 ## .handler
 
-<!-- REF #WebSocketServerClass.handler.Syntax -->**handler** : Object<!-- END REF -->
+<!-- REF #WebSocketServerClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
 
 #### Beschreibung
 
@@ -391,7 +377,7 @@ The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary 
 <!-- REF #WebSocketServerClass.path.Desc -->
 ## .path
 
-<!-- REF #WebSocketServerClass.path.Syntax -->**path** : Text<!-- END REF -->
+<!-- REF #WebSocketServerClass.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### Beschreibung
 
@@ -425,7 +411,7 @@ The `.terminate()` function <!-- REF #WebSocketServerClass.terminate().Summary -
 <!-- REF #WebSocketServerClass.terminated.Desc -->
 ## .terminated
 
-<!-- REF #WebSocketServerClass.terminated.Syntax -->**terminated** : Boolean<!-- END REF -->
+<!-- REF #WebSocketServerClass.terminated.Syntax -->**.terminated** : Boolean<!-- END REF -->
 
 #### Beschreibung
 

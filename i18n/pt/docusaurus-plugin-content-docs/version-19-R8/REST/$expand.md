@@ -4,9 +4,9 @@ title: '$expand'
 ---
 
 
-Expands an image stored in an Image attribute (*e.g.*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/> or<br/> Expands an BLOB attribute to save it.
+Expande uma imagem armazenada num atributo Image (*, por exemplo,*, `Employee(1)/photo?$imageformat=best&$expand=photo`)<br/> ou<br/> Expande um atributo BLOB para o guardar.
 
-> **Compatibility**: For compatibility reasons, $expand can be used to expand a relational attribute (*e.g.*, `Company(1)?$expand=staff` or `Employee/?$filter="firstName BEGIN a"&$expand=employer`). It is however recommended to use [`$attributes`]($attributes.md) for this feature.
+> **Compatibilidade**: Por razões de compatibilidade, $expand pode ser utilizado para expandir um atributo relacional (*e.g.*, `Company(1)?$expand=staff` ou `Employee/?$filter="firstName BEGIN a"&$expand=employer`). No entanto, recomenda-se a utilização do endereço [`$attributes`]($attributes.md) para esta funcionalidade.
 
 
 

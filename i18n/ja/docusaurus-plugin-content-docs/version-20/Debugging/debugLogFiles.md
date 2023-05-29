@@ -3,7 +3,7 @@ id: debugLogFiles
 title: ログファイルの詳細
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html) あるいは [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/ja/page1210.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) あるいは [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1210.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
@@ -15,7 +15,7 @@ title: ログファイルの詳細
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
-* [ORDA クライアントリクエストのログファイル](#ordaクライアントリクエスト)
+* [ORDAリクエストのログファイル](#orda-requests)
 
 > サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。 たとえば、"4DRequestsLogServer.txt" のようにです。
 
@@ -57,20 +57,21 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 
 各リクエストに対して、以下のフィールドが記録されます:
 
-| フィールド名                                     | 説明                                                                                                                                   |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| sequence_number                            | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                                       |
-| time                                       | 'YYYY-MM-DDTHH:MM:SS.mmm' の ISO 8601フォーマットを使用した日付と時間                                                                                 |
-| systemid                                   | システムID                                                                                                                               |
-| component                                  | コンポーネント署名 (例: '4SQLS' または 'dbmg')                                                                                                    |
-| process\_info\_index                   | 4DRequestsLog_ProcessInfo.txt ログの "index"フ ィールドに対応し、リクエストとプロセスのリンクを可能にします。                                                           |
-| request                                    | C/SでのリクエストID、あるいは SQLリクエストまたは `LOG EVENT` メッセージ用のメッセージ文字列                                                                            |
-| bytes_in                                   | 受信したバイト数                                                                                                                             |
-| bytes_out                                  | 送信したバイト数                                                                                                                             |
-| server\_duration &#124; exec\_duration | ログが生成された場所によって変わります:<li>*server\_duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から F までに相当します。あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li>                                                               |
-| write\_duration                          | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。 以下の画像の A から B までに相当します。</li><li>レスポンス (サーバー上で実行された場合)。 以下の画像の E から F までに相当します。</li>                                                            |
-| task_kind                                  | プリエンプティブかコオペラティブか (それぞれ 'p' と 'c' で表される)                                                                                             |
-| rtt                                        | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。</li> |
+| フィールド名                                     | 説明                                                                                                                                           |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| sequence_number                            | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                                                                               |
+| time                                       | 'YYYY-MM-DDTHH:MM:SS.mmm' の ISO 8601フォーマットを使用した日付と時間                                                                                         |
+| systemid                                   | システムID                                                                                                                                       |
+| component                                  | コンポーネント署名 (例: '4SQLS' または 'dbmg')                                                                                                            |
+| process\_info\_index                   | 4DRequestsLog_ProcessInfo.txt ログの "index"フ ィールドに対応し、リクエストとプロセスのリンクを可能にします。                                                                   |
+| request                                    | [C/S または ORDA リクエストID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt)、または SQLリクエストのメッセージ文字列、または `LOG EVENT` メッセージ |
+| bytes_in                                   | 受信したバイト数                                                                                                                                     |
+| bytes_out                                  | 送信したバイト数                                                                                                                                     |
+| server\_duration &#124; exec\_duration | ログが生成された場所によって変わります:<li>*server\_duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から F までに相当します。あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li>                                                                       |
+| write\_duration                          | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。 以下の画像の A から B までに相当します。</li><li>レスポンス (サーバー上で実行された場合)。 以下の画像の E から F までに相当します。</li>                                                                    |
+| task_kind                                  | プリエンプティブかコオペラティブか (それぞれ 'p' と 'c' で表される)                                                                                                     |
+| rtt                                        | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。</li>         |
+| extra                                      | コンテキストに関連する追加情報 (ORDAリクエストの場合、データクラス名や属性名など)                                                                                                 |
 
 リクエストフロー:
 
@@ -132,6 +133,7 @@ SET DATABASE PARAMETER(Client Log Recording;1) // リモートサイド
 このログの開始方法:
 
 ```4d
+
 
 
 WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可能
@@ -196,7 +198,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 | 3     | ProcessID                       | プロセスID                                                                                                                                                                                                                                                                                                                                                              |
 | 4     | unique_processID                | 固有プロセスID                                                                                                                                                                                                                                                                                                                                                            |
 | 5     | stack_level                     | スタックレベル                                                                                                                                                                                                                                                                                                                                                             |
-| 6     | operation_type                  | ログオペレーションタイプ。 この値は絶対値を取ることがあります:<p><ol><li>コマンド</li><li>メソッド (プロジェクトメソッド、データベースメソッド、等)</li><li>メッセージ ([LOG EVENT](https://doc.4d.com/4dv19/help/command/ja/page667.html) コマンドによって送信されたもののみ)</li><li>プラグインメッセージ</li><li>プラグインイベント</li><li>プラグインコマンド</li><li>プラグインコールバック</li><li>タスク</li><li>メンバーメソッド (コレクションまたはオブジェクトに割り当てられているメソッド)</li></ol></p>スタックレベルを閉じる時には、`operation_type`、`operation` および `operation_parameters` カラムには `stack_opening_sequence_number` カラムに記録された開始スタックレベルと同じ値が記録されます。 例:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>1行目と 2行目はスタックレベルを開き、3行目と 4行目はスタックレベルを閉じます。 6、7、8カラム目の値は、終了スタックレベル行において繰り返されます。 10カラム目にはスタックレベル開始番号、つまり 3行目の 122 と 4行目の 121 が格納されます。 |
+| 6     | operation_type                  | ログオペレーションタイプ。 この値は絶対値を取ることがあります:<p><ol><li>コマンド</li><li>メソッド (プロジェクトメソッド、データベースメソッド、等)</li><li>メッセージ ([LOG EVENT](https://doc.4d.com/4dv20/help/command/ja/page667.html) コマンドによって送信されたもののみ)</li><li>プラグインメッセージ</li><li>プラグインイベント</li><li>プラグインコマンド</li><li>プラグインコールバック</li><li>タスク</li><li>メンバーメソッド (コレクションまたはオブジェクトに割り当てられているメソッド)</li></ol></p>スタックレベルを閉じる時には、`operation_type`、`operation` および `operation_parameters` カラムには `stack_opening_sequence_number` カラムに記録された開始スタックレベルと同じ値が記録されます。 例:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>1行目と 2行目はスタックレベルを開き、3行目と 4行目はスタックレベルを閉じます。 6、7、8カラム目の値は、終了スタックレベル行において繰り返されます。 10カラム目にはスタックレベル開始番号、つまり 3行目の 122 と 4行目の 121 が格納されます。 |
 | 7     | operation                       | 以下のいずれかを表す可能性があります (オペレーションタイプによる):<li>ランゲージコマンドID (type=1 の場合)</li><li>メソッド名 (type=2 の場合)</li><li>pluginIndex;pluginCommand の組み合わせ (type=4、5、6 または 7 の場合)。 '3;2' のような形式で格納されます。</li><li>タスク接続UUID (type=8 の場合)</li>                                                                                                                                                                                                                           |
 | 8     | operation_parameters            | コマンド、メソッド、プラグインに渡された引数                                                                                                                                                                                                                                                                                                                                              |
 | 9     | form_event                      | フォームイベント (あれば)。その他の場合には空になります (フォームメソッドまたはオブジェクトメソッド内でコードが実行された場合に使用されると考えて下さい)                                                                                                                                                                                                                                                                                     |
@@ -303,43 +305,120 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 | 4     | 固有プロセスID                                      |
 | 5     | <ul><li>SMTP、POP3、または IMAPセッションスタートアップ情報。サーバーホスト名、SMTP、POP3、または IMAPサーバーに接続するのに使用された TCPポート番号と TLSステータス。あるいは</li><li>サーバーとクライアント間でやりとりされたデータ。 "S <" (SMTP、POP3、 または IMAPサーバーから受信したデータ) または "C >" (SMTP、POP3、または IMAPクライアントから送信されたデータ) から始まります: サーバーから送信された認証モードの一覧と選択された認証モード、SMTP、POP3、または IMAPサーバーから報告されたエラー、送信されたメールのヘッダー情報 (通常バージョンのみ) およびメールがサーバー上に保存されているかどうか。あるいは</li><li>SMTP、POP3、または IMAPセッションの切断情報。</li></ul>                    |
 
-## ORDAクライアントリクエスト
+## ORDAリクエスト
 
-このログファイルには、リモートマシンが送信する ORDAリクエストが記録されます。 ログ情報はメモリか、ディスク上のファイルに書くことができます。 このログファイルの名称や保管場所は任意に決めることができます。
+ORDAリクエストログは、ORDAリクエストとサーバーのレスポンスを記録することができます。 2種類の ORDAリクエストログが利用可能です:
+
+- クライアント側の ORDAリクエストログ (.txt形式)
+- サーバー側の ORDAリクエストログ (.jsonl形式)
+
+### クライアント側
+
+クライアント側の ORDAログファイルには、リモートマシンが送信する ORDAリクエストが記録されます。 ログ情報はメモリか、リモートマシンディスク上の .txtファイルに書くことができます。 このログファイルの名称や保管場所は任意に決めることができます。
 
 このログの開始方法:
 
 ```4d
-// リモートマシンで実行します
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  
-// メモリに送ることもできます
-```
-
-ORDAリクエストログにおいてユニークなシーケンス番号を使うには、次のように開始します:
-
-```4d
-// リモートマシンで実行します
-
+    // リモートマシンにて
 SET DATABASE PARAMETER(Client Log Recording;1)  
-// ログシーケンス番号の有効化
-
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  
-// メモリに送ることもできます
-
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+    // メモリに送ることもできます
 SET DATABASE PARAMETER(Client Log Recording;0)  
-// ログシーケンス番号の無効化
 ```
+
+:::note
+
+`SET DATABASE PARAMETER` を用いてクライアント側の [4DRequestsLog.txt](#4drequestslogtxt) をトリガーすることは必須ではありません。 ただし、一意の `sequenceNumber` フィールドを記録したい場合には必須です。
+
+:::
+
 
 各リクエストに対して、以下のフィールドが記録されます:
 
 | フィールド名         | 説明                             | 例題                                                        |
 | -------------- | ------------------------------ | --------------------------------------------------------- |
 | sequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号 | 104                                                       |
-| url            | クライアントの ORDAリクエストURL           | "rest/Persons(30001)"                                     |
+| url            | リクエストURL                       | "rest/Persons(30001)"                                     |
 | startTime      | 開始日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.346Z"                                |
 | endTime        | 終了日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.371Z"                                |
 | duration       | クライアント処理時間 (ミリ秒)               | 25                                                        |
 | response       | サーバーレスポンスオブジェクト                | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+
+#### 例題
+
+以下は、クライアント側の ORDAログファイル記録の一例です:
+
+```json
+    {
+        "sequenceNumber": 7880,
+        "url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+        "startTime": "2023-05-15T10:43:39.400Z",
+        "endTime": "2023-05-15T10:43:39.419Z",
+        "duration": 19,
+        "response": {
+            "status": 200,
+            "body": 75651
+        }
+    }
+```
+
+### サーバー側
+
+サーバー側の ORDAログファイルには、サーバーが処理した ORDAリクエストと、サーバーのレスポンス (任意) が記録されます。 ログ情報は、サーバーマシンのディスク上にある .jsonlファイル (デフォルトでは、*ordaRequests.jsonl*) に保存されます。
+
+このログの開始方法:
+
+```4d
+    // サーバーマシンにて
+SET DATABASE PARAMETER(4D Server log recording;1)
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
+    // srl... パラメーターは任意です
+SET DATABASE PARAMETER(4D Server log recording;0) 
+```
+
+:::note
+
+`SET DATABASE PARAMETER` を用いてサーバー側の [4DRequestsLog.txt](#4drequestslogtxt) をトリガーすることは必須ではありません。 ただし、一意の `sequenceNumber` および `duration` フィールドを記録したい場合には必須です。
+
+:::
+
+各リクエストに対して、以下のフィールドが記録されます:
+
+| フィールド名         | 説明                                                                                       | 例題                                                        |
+| -------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| sequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                           | 104                                                       |
+| url            | リクエストURL                                                                                 | "rest/Persons(30001)"                                     |
+| startTime      | 開始日時 (ISO 8601 フォーマット)                                                                   | "2019-05-28T08:25:12.346Z"                                |
+| duration       | サーバー処理時間 (マイクロ秒)                                                                         | 2500                                                      |
+| response       | サーバーレスポンスオブジェクト ([`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) で設定可能) | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+| ipAddress      | ユーザー IPアドレス                                                                              | "192.168.1.5"                                             |
+| userName       | 4D ユーザーの名前                                                                               | "henry"                                                   |
+| systemUserName | マシン上でのユーザーのログイン名                                                                         | "hsmith"                                                  |
+| machineName    | ユーザーマシンの名前                                                                               | "PC of Henry Smith"                                       |
+
+#### 例題
+
+以下は、サーバー側の ORDAログ記録の一例です:
+
+```json
+   {
+        "url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+        "systemUserName": "Admin",
+        "userName": "Designer",
+        "machineName": "DESKTOP-QSK9738",
+        "taskID": 5,
+        "taskName": "P_1",
+        "startTime": "2023-05-15T11:43:39.401",
+        "response": {
+            "status": 200,
+            "body": 75651
+        },
+        "sequenceNumber": 7008,
+        "duration": 240
+    }
+
+```
+
 
 ## ログ設定ファイルを使用する
 

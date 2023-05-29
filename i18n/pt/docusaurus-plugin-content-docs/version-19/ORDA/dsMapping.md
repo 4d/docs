@@ -5,7 +5,7 @@ title: Data Model Objects
 
 The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
 
-## Structure mapping
+## Mapeamento da estrutura
 
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
@@ -39,7 +39,7 @@ This option must be selected at the 4D structure level for each table and each f
 
 ![](../assets/en/ORDA/ExposeDataclass.png)
 
-### Data model update
+### Actualização do modelo de dados
 
 Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
 
@@ -75,7 +75,7 @@ A datastore references only a single local or remote database.
 The datastore object itself cannot be copied as an object:
 
 ```4d
-$mydatastore:=OB Copy(ds) //returns null
+$mydatastore:=OB Copy(ds) //retorna nulo
 ```
 
 The datastore properties are however enumerable:
@@ -83,7 +83,7 @@ The datastore properties are however enumerable:
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds;$prop)
-  //$prop contains the names of all the dataclasses
+  //$prop contém os nomes de todas as classes de dados
 ```
 
 The main (default) datastore is always available through the `ds` command, but the `Open datastore` command allows referencing any remote datastore.
@@ -122,7 +122,7 @@ The dataclass properties are however enumerable:
 
 ```code4d
 ARRAY TEXT($prop;0)
-OB GET PROPERTY NAMES(ds. Employee;$prop)
+OB GET PROPERTY NAMES(ds.Employee;$prop)
 //$prop contains the names of all the dataclasse attributes
 ```
 
@@ -159,7 +159,7 @@ In addition, the following relation attributes will also be automatically availa
 
 * in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 * in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> > The Manual or Automatic property of a database relation has no effect in ORDA.
+> > > The Manual or Automatic property of a database relation has no effect in ORDA.
 
 All dataclass attributes are exposed as properties of the dataclass:
 
@@ -231,9 +231,9 @@ Unordered entity selections are created in the following cases:
 * result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 * result of the `newSelection()` method without option,
 * result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > * entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

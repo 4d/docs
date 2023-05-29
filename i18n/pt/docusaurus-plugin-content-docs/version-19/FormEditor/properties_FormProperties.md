@@ -1,6 +1,6 @@
 ---
 id: propertiesForm
-title: Form Properties
+title: Propriedades do formulário
 ---
 
 ---
@@ -11,8 +11,8 @@ title: Form Properties
 This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
 *   dark - light text on a dark background
-*   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
-> A defined color scheme can not be overridden by a CSS.
+*   light - dark text on a light background
+> > A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
 
@@ -31,9 +31,9 @@ A CSS file defined at the form level will override default style sheet(s). For m
 
 #### Gramática JSON
 
-| Nome | Tipo de dados        | Valores possíveis                                                                                        |
-| ---- | -------------------- | -------------------------------------------------------------------------------------------------------- |
-| css  | string or collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                        |
+| ---- | ------------------ | -------------------------------------------------------------------------------------------------------- |
+| css  | cadeia ou colecção | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
 
 ---
 
@@ -82,13 +82,13 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Tipo de formulário       | Gramática JSON   | Descrição                                                     | Suportado por               |
-| ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Formulário detalhado     | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| Formulário lista         | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
-| List Form for Printing   | listPrinter      | A printed report that list records                            | Formularios tabla           |
-| Nenhum                   | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Tipo de formulário                 | Gramática JSON   | Descrição                                                     | Suportado por               |
+| ---------------------------------- | ---------------- | ------------------------------------------------------------- | --------------------------- |
+| Formulário detalhado               | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
+| Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
+| Formulário lista                   | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
+| Formulário de lista para impressão | listPrinter      | A printed report that list records                            | Formularios tabla           |
+| Nenhum                             | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
 
 #### Gramática JSON
@@ -135,7 +135,7 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 ---
 
-## Published as Subform
+## Publicado como subformulário
 
 For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
 
@@ -152,13 +152,13 @@ Only project forms can be specified as published subforms.
 
 ---
 
-## Save Geometry
+## Guardar geometria
 
 When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
 
 *   a página atual,
 *   a posição, tamanho e visibilidade de cada objecto de formulário (incluindo o tamanho e visibilidade das colunas da lista box).
-> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+> > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
 
 When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
 
@@ -169,7 +169,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 | memorizeGeometry | boolean       | true, false       |
 
 #### Veja também
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+[**Guardar valor**](FormObjects/properties_Object.md#save-value)
 
 
 ---

@@ -6,13 +6,13 @@
     "message": "Instalação"
   },
   "Working with a project": {
-    "message": "Working with a project"
+    "message": "Trabalhar com um projecto"
   },
   "homepage.sections.core-development.title": {
-    "message": "Core Development"
+    "message": "Desenvolvimento"
   },
   "Project Management": {
-    "message": "Project Management"
+    "message": "Gestão de projectos"
   },
   "Language Concepts": {
     "message": "Language Concepts"
@@ -24,7 +24,7 @@
     "message": "Object Relational Data Access (ORDA)"
   },
   "Class API Reference": {
-    "message": "Class API Reference"
+    "message": "Referência da API de classe"
   },
   "Handling code": {
     "message": "Handling code"
@@ -39,13 +39,13 @@
     "message": "Preferências"
   },
   "homepage.administration.title": {
-    "message": "Administration"
+    "message": "Administração"
   },
   "4D Server Administration Window": {
     "message": "4D Server Administration Window"
   },
   "Web Administration": {
-    "message": "Web Administration"
+    "message": "Administração Web"
   },
   "Command Line Interface": {
     "message": "Interface de linha de comando"
@@ -57,13 +57,13 @@
     "message": "Licenses & Data Collection"
   },
   "Access Rights": {
-    "message": "Access Rights"
+    "message": "Direitos de acesso"
   },
   "Maintenance and Security Center": {
     "message": "Maintenance and Security Center"
   },
   "Backup and Restore": {
-    "message": "Backup and Restore"
+    "message": "Cópia de segurança e restauração"
   },
   "homepage.sections.textensions.title": {
     "message": "Extensões"
@@ -90,13 +90,13 @@
     "message": "4D Widgets"
   },
   "4D Write Pro Interface": {
-    "message": "4D Write Pro Interface"
+    "message": "Interface 4D Write Pro"
   },
   "Developing Components": {
-    "message": "Developing Components"
+    "message": "Componentes de desenvolvimento"
   },
   "Developing Plugins": {
-    "message": "Developing Plugins"
+    "message": "Plugins de desenvolvimento"
   },
   "homepage.sections.web-applications.title": {
     "message": "Aplicações Web"
@@ -105,28 +105,28 @@
     "message": "Servidor Web"
   },
   "Web Development": {
-    "message": "Web Development"
+    "message": "Desenvolvimento Web"
   },
   "REST Server": {
     "message": "Servidor REST"
   },
   "homepage.sections.desktop-applications.title": {
-    "message": "Desktop Applications"
+    "message": "Aplicações Desktop"
   },
   "Client/Server": {
-    "message": "Client/Server"
+    "message": "Cliente/Servidor"
   },
   "Forms": {
     "message": "Formulários"
   },
   "Form Properties": {
-    "message": "Form Properties"
+    "message": "Propriedades do formulário"
   },
   "Form Objects": {
-    "message": "Form Objects"
+    "message": "Objectos formulário"
   },
   "Form Object Properties": {
-    "message": "Form Object Properties"
+    "message": "Propriedades dos objectos formulário"
   },
   "Form Events": {
     "message": "Eventos formulário"
@@ -138,28 +138,28 @@
     "message": "User Settings"
   },
   "Build Application": {
-    "message": "Build Application"
+    "message": "Build application overview"
   },
   "homepage.sections.mobile-applications.title": {
-    "message": "Mobile Applications"
+    "message": "Aplicações móveis"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"
   },
   "4D for iOS (Archive)": {
-    "message": "4D for iOS (Archive)"
+    "message": "4D for iOS (Arquivo)"
   },
   "4D banner logo": {
-    "message": "4D banner logo"
+    "message": "Logótipo da faixa 4D"
   },
   "homepage.hero.title": {
     "message": "Documentation for 4D developers"
   },
   "Documentation updates": {
-    "message": "Documentation updates"
+    "message": "Actualizações da documentação"
   },
   "theme.ErrorPageContent.title": {
-    "message": "This page crashed.",
+    "message": "Esta página caiu.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.ErrorPageContent.tryAgain": {
@@ -167,7 +167,7 @@
     "description": "The label of the button to try again when the page crashed"
   },
   "theme.NotFound.title": {
-    "message": "Page Not Found",
+    "message": "Página não encontrada",
     "description": "The title of the 404 page"
   },
   "theme.NotFound.p1": {
@@ -187,7 +187,7 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Scroll back to top",
+    "message": "Voltar ao topo",
     "description": "The ARIA label for the back to top button"
   },
   "theme.admonition.note": {
@@ -215,11 +215,11 @@
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Newer Entries",
+    "message": "Entradas mais recentes",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Older Entries",
+    "message": "Entradas mais antigas",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
@@ -247,7 +247,7 @@
     "description": "The title of the page for a blog tag"
   },
   "theme.tags.tagsPageLink": {
-    "message": "View All Tags",
+    "message": "Ver todas as etiquetas",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel": {
@@ -275,7 +275,7 @@
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Docs pages navigation",
+    "message": "Navegação nas páginas dos documentos",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
@@ -302,11 +302,11 @@
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "latest version",
+    "message": "última versão",
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "Comment on this page",
+    "message": "Comentar esta página",
     "description": "The link label to edit the current page"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
@@ -338,7 +338,7 @@
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.common.skipToMainContent": {
-    "message": "Skip to main content",
+    "message": "Saltar para o conteúdo principal",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsListLabel": {
@@ -362,7 +362,7 @@
     "description": "The copy button label on code blocks"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "Toggle word wrap",
+    "message": "Alternar a quebra de palavras",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
@@ -374,7 +374,7 @@
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
+    "message": "Nesta página",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readingTime.plurals": {
@@ -390,23 +390,23 @@
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Collapse sidebar",
+    "message": "Recolher a barra lateral",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Collapse sidebar",
+    "message": "Recolher a barra lateral",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Back to main menu",
+    "message": "← Voltar ao menu principal",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Expand sidebar",
+    "message": "Expandir a barra lateral",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Expand sidebar",
+    "message": "Expandir a barra lateral",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.SearchBar.seeAll": {
@@ -425,7 +425,7 @@
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.inputPlaceholder": {
-    "message": "Type your search here",
+    "message": "Escreva aqui a sua pesquisa",
     "description": "The placeholder for search page input"
   },
   "theme.SearchPage.inputLabel": {
@@ -437,7 +437,7 @@
     "description": "The ARIA label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "No results were found",
+    "message": "Não foram encontrados resultados",
     "description": "The paragraph for empty search result"
   },
   "theme.SearchPage.fetchingNewResults": {
@@ -449,7 +449,7 @@
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchModal.searchBox.resetButtonTitle": {
-    "message": "Clear the query",
+    "message": "Limpar a consulta",
     "description": "The label and ARIA label for search box reset button"
   },
   "theme.SearchModal.searchBox.cancelButtonText": {
@@ -461,11 +461,11 @@
     "description": "The title for recent searches"
   },
   "theme.SearchModal.startScreen.noRecentSearchesText": {
-    "message": "No recent searches",
+    "message": "Nenhuma pesquisa recente",
     "description": "The text when no recent searches"
   },
   "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
-    "message": "Save this search",
+    "message": "Guardar esta búsqueda",
     "description": "The label for save recent search button"
   },
   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
@@ -521,7 +521,7 @@
     "description": "The text explain that the search is making by Algolia"
   },
   "theme.SearchModal.noResultsScreen.noResultsText": {
-    "message": "No results for",
+    "message": "Nenhum resultado para",
     "description": "The text explains that there are no results for the following search"
   },
   "theme.SearchModal.noResultsScreen.suggestedQueryText": {
@@ -533,7 +533,7 @@
     "description": "The text for the question where the user thinks there are missing results"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
-    "message": "Let us know.",
+    "message": "Informe-nos.",
     "description": "The text for the link to report missing results"
   },
   "theme.SearchModal.placeholder": {
@@ -554,7 +554,7 @@
     "description": "The title of the tag list page"
   },
   "Release Notes": {
-    "message": "Notas de lançamento"
+    "message": "Notas de Lançamento"
   },
   "homepage.sections.core-development.langage-ref-url": {
     "message": "https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html"
@@ -584,6 +584,6 @@
     "message": "Handling Code"
   },
   "Transformation Tags": {
-    "message": "Transformation Tags"
+    "message": "Etiquetas de transformação"
   }
 }

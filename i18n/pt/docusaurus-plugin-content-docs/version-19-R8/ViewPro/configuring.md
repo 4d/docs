@@ -37,15 +37,15 @@ With visible formula bar:
 
 Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
-| Tab      | Actions                         | Ribbon Interface | Toolbar Interface |
-| -------- | ------------------------------- |:----------------:|:-----------------:|
-| File     | File manipulation               |        X         |                   |
-| Inicio   | Text appearance                 |        X         |         X         |
-| Insert   | Add items                       |        X         |         X         |
-| Formulas | Formula calculation and library |        X         |         X         |
-| Dados    | Data manipulation               |        X         |         X         |
-| Mostrar  | Visual presentation             |        X         |         X         |
-| Settings | Sheet presentation reference    |        X         |                   |
+| Tab      | Acções                          | Ribbon Interface | Interface da barra de ferramentas |
+| -------- | ------------------------------- |:----------------:|:---------------------------------:|
+| File     | File manipulation               |        X         |                                   |
+| Inicio   | Text appearance                 |        X         |                 X                 |
+| Inserir  | Adicionar itens                 |        X         |                 X                 |
+| Fórmulas | Formula calculation and library |        X         |                 X                 |
+| Dados    | Data manipulation               |        X         |                 X                 |
+| Mostrar  | Apresentação visual             |        X         |                 X                 |
+| Settings | Sheet presentation reference    |        X         |                                   |
 
 ## Eventos formulário
 
@@ -103,8 +103,8 @@ To lock the whole sheet, you only need to set the *isProtected* property to **tr
 | ----------------- | ------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                              |
 | protectionOptions |                          | object  | A value that indicates the elements that you want users to be able to change. If null : the protectionOptions parameter is reset. |
-|                   | allowSelectLockedCells   | boolean | Specifies whether the user can select locked cells, optional. True by default.                                                    |
-|                   | allowSelectUnlockedCells | boolean | Specifies whether the user can select unlocked cells, optional. True by default.                                                  |
+|                   | allowSelectLockedCells   | boolean | Specifies whether the user can select locked cells, optional. True por defeito.                                                   |
+|                   | allowSelectUnlockedCells | boolean | Specifies whether the user can select unlocked cells, optional. True por defeito.                                                 |
 |                   | allowSort                | boolean | Specifies whether the user can sort ranges, optional. Padrão é falso.                                                             |
 |                   | allowFilter              | boolean | Specifies whether the user can filter ranges, optional. Padrão é falso.                                                           |
 |                   | allowEditObjects         | boolean | Specifies whether the user can edit floating objects, optional. Padrão é falso.                                                   |
@@ -134,23 +134,23 @@ Note that when creating your own format patterns, only the display of the data i
 
 Number formats apply to all number types (e.g., positive, negative, and zeros).
 
-| Caracter  | Descrição                                                                                                                                                                                                                  | Exemplo                                                                                                                    |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 0         | Placeholder that displays zeros.                                                                                                                                                                                           | #.00 mostrará 1.1 como 1.10                                                                                                |
-| .         | Displays a decimal point                                                                                                                                                                                                   | 0.00 mostrará 1999 como 1999.00                                                                                            |
-| ,         | Displays the thousands separator in a number. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 mostrará 12200000 como 12,200,000                                                                                      |
-| \_      | Skips the width of the next character.                                                                                                                                                                                     | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                     |
-| @         | Formatter for text. Applies the format to all text in the cell                                                                                                                                                             | "\[Red]@" applies the red font color for text values.                                                                     |
-| *         | Repeats the next character to fill the column width.                                                                                                                                                                       | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
-| " "       | Displays the text within the quotes without interpreting it.                                                                                                                                                               | "8%" will display as: 8%                                                                                                   |
-| %         | Displays numbers as a percentage of 100.                                                                                                                                                                                   | 8% will be displayed as .08                                                                                                |
-| \#      | Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                        | #.# will display 1.54 as 1.5                                                                                               |
-| ?         | Digit placeholder that leaves space for extra zeros, but does not display them. Typically used to align numbers by decimal point.                                                                                          | $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                               |
-| \        | Displays the character following it.                                                                                                                                                                                       | #.00\? will display 123 as 123.00?                                                                                        |
-| /         | When used with numbers, displays them as fractions. When used with text, date or time codes, displayed "as-is".                                                                                                            | #/# will display .75 as 3/4                                                                                                |
-| \[ ]     | Creates conditional formats.                                                                                                                                                                                               | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                        |
-| E         | Scientific notation format.                                                                                                                                                                                                | #E+# - will display 1,500,500 as 2E+6                                                                                      |
-| \[color] | Formats the text or number in the color specified                                                                                                                                                                          | \[Green]###.##\[Red]-###.###                                                                                             |
+| Caracteres | Descrição                                                                                                                                                                                                                  | Exemplo                                                                                                                    |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| 0          | Placeholder that displays zeros.                                                                                                                                                                                           | #.00 mostrará 1.1 como 1.10                                                                                                |
+| .          | Displays a decimal point                                                                                                                                                                                                   | 0.00 mostrará 1999 como 1999.00                                                                                            |
+| ,          | Displays the thousands separator in a number. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 mostrará 12200000 como 12,200,000                                                                                      |
+| \_       | Skips the width of the next character.                                                                                                                                                                                     | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                     |
+| @          | Formatador de texto. Applies the format to all text in the cell                                                                                                                                                            | "\[Red]@" applies the red font color for text values.                                                                     |
+| *          | Repeats the next character to fill the column width.                                                                                                                                                                       | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
+| " "        | Displays the text within the quotes without interpreting it.                                                                                                                                                               | "8%" will display as: 8%                                                                                                   |
+| %          | Displays numbers as a percentage of 100.                                                                                                                                                                                   | 8% will be displayed as .08                                                                                                |
+| \#       | Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                        | #.# will display 1.54 as 1.5                                                                                               |
+| ?          | Digit placeholder that leaves space for extra zeros, but does not display them. Typically used to align numbers by decimal point.                                                                                          | $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                               |
+| \         | Displays the character following it.                                                                                                                                                                                       | #.00\? will display 123 as 123.00?                                                                                        |
+| /          | When used with numbers, displays them as fractions. When used with text, date or time codes, displayed "as-is".                                                                                                            | #/# will display .75 as 3/4                                                                                                |
+| \[ ]      | Creates conditional formats.                                                                                                                                                                                               | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                        |
+| E          | Scientific notation format.                                                                                                                                                                                                | #E+# - will display 1,500,500 as 2E+6                                                                                      |
+| \[color]  | Formats the text or number in the color specified                                                                                                                                                                          | \[Green]###.##\[Red]-###.###                                                                                             |
 
 #### Exemplo
 
@@ -162,7 +162,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 4D View Pro provides the following constants for ISO 8601 date and time patterns:
 
-| Constante                                 | Value                                | Comentário                                                                                                                                                            |
+| Parâmetros                                | Valor                                | Comentário                                                                                                                                                            |
 | ----------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `vk pattern full date time`               | "*fullDateTimePattern*"              | ISO 8601 format for the full date and time in current localization.USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
 | `vk pattern long date`                    | "*longDatePattern*"                  | ISO 8601 format for the full date in current localization.USA default pattern: "dddd, dd MMMM yyyy"                                                                   |
@@ -184,53 +184,53 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
-|      | Código<br/>(não sensível a maiúsculas e minúsculas) | Descrição                                      | Exemplo            |
-| ---- | --------------------------------------------------------- | ---------------------------------------------- | ------------------ |
-| Date |                                                           |                                                | (January 1, 2019)  |
-|      | m                                                         | Month number without leading zero              | 1                  |
-|      | mm                                                        | Month number with leading zero                 | 01                 |
-|      | mmm                                                       | Month name, short                              | Jan                |
-|      | mmmm                                                      | Month name, long                               | January            |
-|      | d                                                         | Day number without leading zero                | 1                  |
-|      | dd                                                        | Day number with leading zero                   | 01                 |
-|      | ddd                                                       | Day of week, short                             | Tue                |
-|      | dddd                                                      | Day of week, long                              | Tuesday            |
-|      | yy                                                        | Ano, breve                                     | 19                 |
-|      | yyyy                                                      | Ano, longo                                     | 2019               |
-| Hora |                                                           |                                                | (2:03:05 PM)       |
-|      | h                                                         | Hour without leading zero. 0-23                | 2                  |
-|      | hh                                                        | Hour with leading zero. 00-23                  | 02                 |
-|      | m                                                         | Minutes without leading zero. 0-59             | 3                  |
-|      | mm                                                        | Minutes with leading zero. 00-59               | 03                 |
-|      | s                                                         | Seconds without leading zero. 0-59             | 5                  |
-|      | ss                                                        | Seconds with leading zero. 00-59               | 05                 |
-|      | \[h]                                                     | Elapsed time in hours                          | 14 (can exceed 24) |
-|      | \[mm]                                                    | Elapsed time in minutes                        | 843                |
-|      | \[ss]                                                    | Elapsed time in seconds                        | 50585              |
-|      | AM/PM                                                     | Periods of day. 24 hour fomat used if omitted. | PM                 |
+|      | Código<br/>(não sensível a maiúsculas e minúsculas) | Descrição                                       | Exemplo              |
+| ---- | --------------------------------------------------------- | ----------------------------------------------- | -------------------- |
+| Date |                                                           |                                                 | (January 1, 2019)    |
+|      | m                                                         | Month number without leading zero               | 1                    |
+|      | mm                                                        | Month number with leading zero                  | 01                   |
+|      | mmm                                                       | Nome do mês, abreviado                          | Jan                  |
+|      | mmmm                                                      | Nome do mês, long                               | January              |
+|      | d                                                         | Day number without leading zero                 | 1                    |
+|      | dd                                                        | Day number with leading zero                    | 01                   |
+|      | ddd                                                       | Dia da semana, curto                            | Tue                  |
+|      | dddd                                                      | Dia da semana, longo                            | Tuesday              |
+|      | yy                                                        | Ano, breve                                      | 19                   |
+|      | yyyy                                                      | Ano, longo                                      | 2019                 |
+| Hora |                                                           |                                                 | (2:03:05 PM)         |
+|      | h                                                         | Hour without leading zero. 0-23                 | 2                    |
+|      | hh                                                        | Hour with leading zero. 00-23                   | 02                   |
+|      | m                                                         | Minutes without leading zero. 0-59              | 3                    |
+|      | mm                                                        | Minutes with leading zero. 00-59                | 03                   |
+|      | s                                                         | Seconds without leading zero. 0-59              | 5                    |
+|      | ss                                                        | Seconds with leading zero. 00-59                | 05                   |
+|      | \[h]                                                     | Elapsed time in hours                           | 14 (pode exceder 24) |
+|      | \[mm]                                                    | Elapsed time in minutes                         | 843                  |
+|      | \[ss]                                                    | Elapsed time in seconds                         | 50585                |
+|      | AM/PM                                                     | Períodos do dia. 24 hour fomat used if omitted. | PM                   |
 > The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
 
 ### Símbolos adicionais
 
 In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or "" and do not impact the interpretation of the format pattern. They appear "as-is" within the pattern.
 
-| Caracter    | Descrição                                                          | Exemplo              |
+| Caracteres  | Descrição                                                          | Exemplo              |
 | ----------- | ------------------------------------------------------------------ | -------------------- |
-| + and -     | Sinais mais e menos                                                | ### + ### = ###,### |
+| + e -       | Sinais mais e menos                                                | ### + ### = ###,### |
 | ( )         | Parênteses esquerdo e direito                                      | (-###.##)            |
 | :           | Dois pontos                                                        | hh:mm:ss             |
 | ^           | Caret                                                              | #\^#                |
 | '           | Apóstrofe                                                          | '######              |
-| { }         | Curly brackets                                                     | {###,###,###}        |
+| { }         | Parêntesis enrolados                                               | {###,###,###}        |
 | `< >` | Less-than and greater than signs                                   | ## >##              |
 | =           | Sinal igual                                                        | #+#=##               |
 | /           | Forward slash. When used with numbers, displays them as fractions. | mm/dd/yyyy           |
-| !           | Exclamation point                                                  | $###.00!             |
+| !           | Ponto de exclamação                                                | $###.00!             |
 | &           | Ampersand                                                          | "Hello" & "Welcome"  |
 | ~           | Tilde                                                              | ~##                  |
 |             | Space character                                                    |                      |
 | €           | Euro                                                               | €###.00              |
-| £           | British Pound                                                      | £###.00              |
+| £           | Libra esterlina                                                    | £###.00              |
 | ¥           | Iene japonês                                                       | ¥###.00              |
 | $           | Sinal de dólar                                                     | $###.00              |
 | ¢           | Sinal de cêntimo                                                   | .00¢                 |
@@ -242,7 +242,7 @@ In addition to the special characters and codes described in the previous sectio
 * [VP SET PRINT INFO](method-list.md#vp-set-print-info)
 * [VP Get print info](method-list.md#vp-get-print-info)
 
-### Columns / Rows
+### Colunas / Linhas
 
 Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
 
@@ -278,34 +278,34 @@ Header and footer attributes are used to specify text or images in the left, rig
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
 
-### Special Characters
+### Caracteres especiais
 
 The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
 
-| Caracter | Descrição                        | Exemplo                                                                | Resultados                                           |
-| -------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| &        | Escape character                 | (see examples below)                                                   |                                                      |
-| P        | Página actual                    | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
-| N        | Contagem de páginas              | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
-| D        | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
-| T        | Hora actual                      | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
-| G        | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
-| S        | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
-| U        | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Sublinhado)                           |
-| B        | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
-| I        | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
-| "        | Prefixo do tipo de letra         | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
-| K        | Text Color prefix                | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (in red).                               |
-| F        | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
-| A        | Spreadsheet name                 | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
+| Caracteres | Descrição                        | Exemplo                                                                | Resultados                                           |
+| ---------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
+| &          | Escape character                 | (ver exemplos abaixo)                                                  |                                                      |
+| P          | Página actual                    | printInfo.headerLeft:="This is page &P."                               | Esta é a página 5.|                                  |
+| N          | Contagem de páginas              | printInfo.headerLeft:="There are &N pages."                            | Existem 10 páginas.                                  |
+| D          | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | Estamos em 2015/6/19.                                |
+| T          | Hora actual                      | printInfo.headerLeft:="It is &T."                                      | São 16:30:36.                                        |
+| G          | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+| S          | Riscado                          | printInfo.headerLeft:="&SThis is text."                                | ~Isto é texto.~                                      |
+| U          | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | Isto é texto. (Sublinhado)                           |
+| B          | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **Isto é texto.**                                    |
+| I          | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *Isto é texto.*                                      |
+| "          | Prefixo do tipo de letra         | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
+| K          | Prefixo da cor do texto          | printInfo.headerLeft:="&KFF0000This is text."                          | Este é o texto (a vermelho).                         |
+| F          | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
+| A          | Nome da folha de cálculo         | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
 
-### Margins
+### Margens
 
 Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
 
 | Propriedade |         | Tipo          | Descrição                                                  |
 | ----------- | ------- | ------------- | ---------------------------------------------------------- |
-| margin      |         | object        | The print margins                                          |
+| margin      |         | object        | As margens de impressão                                    |
 |             | top     | inteiro longo | Top margin, in hundredths of an inch. Valor padrão = 75    |
 |             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Valor padrão = 75 |
 |             | left    | inteiro longo | Left margin, in hundredths of an inch. Valor padrão = 70   |
@@ -328,7 +328,7 @@ Os atributos de página são utilizados para especificar as definições gerais 
 
 | Propriedade     | Tipo          | Descrição                                                                                                                                                                                             |
 | --------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean       | Impressão apenas em preto e branco. <p>Valor padrão = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                 |
+| blackAndWhite   | boolean       | Impressão apenas em preto e branco. <p>Valor padrão = false</p><p>**Note**: PDFs are not affected by this attribute. As cores nos PDFs mantêm-se.</p>                                                                                                                 |
 | centering       | inteiro longo | How the contents are centered on the printed page. Valores disponíveis: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (padrão), `vk print centering vertical` |
 | firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                         |
 | pageOrder       | inteiro longo | The order pages are printed. Valores disponíveis: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                   |
@@ -433,11 +433,11 @@ Exemplo:
 
 #### Borders
 
-| Propriedade                                                                |       | Tipo          | Descrição                                                                      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------- | ----- | ------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Defines the corresponding border line                                          |                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                            | color | text          | Defines the color of the border. Default = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
-|                                                                            | style | inteiro longo | Defines the style of the border. Default = empty. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
+| Propriedade                                                                |       | Tipo          | Descrição                                                                           | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------- | ----- | ------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Defines the corresponding border line                                               |                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                            | color | text          | Defines the color of the border. Predefinição = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
+|                                                                            | style | inteiro longo | Defines the style of the border. Predefinição = vazio. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
 #### Fontes e texto
 
@@ -447,9 +447,9 @@ Exemplo:
 | formatter       |              | text          | Pattern for value/time property.                                                                                                                                                                                                                                                                                                                                     | Number/text/date/time formats, special characters. See [Cell Format](#cell-format).                                                                                                                               |
 | isVerticalText  |              | boolean       | Specifies text direction.                                                                                                                                                                                                                                                                                                                                            | True = vertical text, False = horizontal text.                                                                                                                                                                    |
 | labelOptions    |              | object        | Defines cell label options (watermark options).                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                   |
-|                 | alignment    | inteiro longo | Specifies the position of the cell label. Optional property.                                                                                                                                                                                                                                                                                                         | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`           |
-|                 | visibilidade | inteiro longo | Specifies the visibility of the cell label. Optional property.                                                                                                                                                                                                                                                                                                       | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                           |
-|                 | foreColor    | text          | Defines the color of the foreground. Optional property.                                                                                                                                                                                                                                                                                                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                |
+|                 | alignment    | inteiro longo | Specifies the position of the cell label. Propriedade opcional.                                                                                                                                                                                                                                                                                                      | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`           |
+|                 | visibilidade | inteiro longo | Specifies the visibility of the cell label. Propriedade opcional.                                                                                                                                                                                                                                                                                                    | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                           |
+|                 | foreColor    | text          | Defines the color of the foreground. Propriedade opcional.                                                                                                                                                                                                                                                                                                           | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                |
 |                 | font         | text          | Specifies the font characteristics with CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). The font-size and font-family values are mandatory.                                                                                                                                                                            |                                                                                                                                                                                                                   |
 | textDecoration  |              | inteiro longo | Specifies the decoration added to text.                                                                                                                                                                                                                                                                                                                              | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                |
 | textIndent      |              | inteiro longo | Defines the unit of text indention. 1 = 8 píxeles                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                   |
@@ -468,7 +468,7 @@ Exemplo:
 | tabStop     | boolean       | Specifies if the focus to the cell can be set using the Tab key.                                                    | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
 | vAlign      | inteiro longo | Specifies the vertical alignment of cell contents.                                                                  | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
 
-#### Style information
+#### Informações sobre o estilo
 
 | Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                        |
 | ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -484,8 +484,8 @@ Contém as seguintes propriedades:
 | Propriedade  | Tipo de valor | Descrição                                    |
 | ------------ | ------------- | -------------------------------------------- |
 | version      | Longint       | Internal component version                   |
-| dateCreation | Timestamp     | Creation date                                |
-| dateModified | Timestamp     | Last modification date                       |
+| dateCreation | Timestamp     | Data de criação                              |
+| dateModified | Timestamp     | Data da última modificação                   |
 | meta         | Objeto        | Free contents, reserved for the 4D developer |
 | spreadJS     | Objeto        | Reserved for the 4D View Pro component       |
 
@@ -502,6 +502,6 @@ Contém as seguintes propriedades:
 | ViewPro.callbacks      | Objeto        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
 | ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
 | ViewPro.events         | Objeto        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
-| ViewPro.formulaBar     | Booleano      | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
-| ViewPro.inited         | Booleano      | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
+| ViewPro.formulaBar     | Parâmetros    | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
+| ViewPro.inited         | Parâmetros    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
 | ViewPro.interface      | Text          | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |

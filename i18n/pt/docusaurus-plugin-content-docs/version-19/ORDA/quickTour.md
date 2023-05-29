@@ -1,6 +1,6 @@
 ---
 id: quickTour
-title: A Quick Tour in ORDA
+title: Uma visita rápida à ORDA
 ---
 
 Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
@@ -43,12 +43,12 @@ It means that, whenever you need to access the list of employees working for a c
 ds. Company.hires //returns the list of employees
 ```
 
-But don't go too fast. Let's see now how to record data in ORDA dataclasses.
+Mas não vá demasiado depressa. Let's see now how to record data in ORDA dataclasses.
 
 ## Adicionar dados
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
-> In the ORDA world, ds. Company is a **dataclass**. A command that is attached to a specific object is called a **member method**.
+> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
 $entity:=ds. Company.new() //create a new entity reference
@@ -90,11 +90,11 @@ A lista de usuários exibe todos os usuários, incluindo o[Designer and the Admi
 
 4D adiciona um novo usuário para a lista, chamado "Novo usuárioX" como padrão.
 
-3. Digite o nome de usuário. Enter the user name. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
+3. Digite o nome de usuário. This name will be used by the user to open the database. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
 
 4. Para digitar uma senha para o usuário, clique o botão **Edit...** na área de propriedades de usuário e digite a senha daus vezes na caixa de diálogo. Pode usar até 15 caracteres alfanuméricos para a senha. O editor de senhas é sensível a maiúsculas ou minúsculas.
 
-> Os usuários podem mudar suas senhas a qualquer momento de acordo com as opções na página "Segurança" das configurações de banco de dados ou usando o comando `CHANGE PASSWORD`.
+> Users can change their password at any time according to the options in the "Security" page of the database settings, or using the `CHANGE PASSWORD` command.
 
 5. Estabeleça os grupos aos quais o usuário vai pertencer com a tabela "Membro de Grupos". Pode adicionar ou remover os usuários selecionados de ou para um grupo marcando a opção correspondente na coluna Membro.
 
@@ -110,9 +110,9 @@ Usuários deletados não aparecem mais no editor de Usuários. Note que as IDs d
 
 - **Tipo de usuário**: O campo Tipo de usuário/User Kind contém "Designer", "Administrador", ou (Para todos os outros usuários) "Usuário".
 
-- **Método de início Method**: Nome do método associado que será executado automaticamente quando o usuário abrir o banco de dados (opcional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
+- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
 
-## Editor de grupos
+## Editor de usuários
 
 O editor para grupos está na Barra de ferramentas de 4D.
 
@@ -124,7 +124,7 @@ Lembre que se um grupo for criado não pode ser apagado. Se quiser desativar um 
 
 Para criar um gurpo:
 
-1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. A lista de grupos exibe todos os grupos do banco de dados.
+1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. The list of groups displays all the groups of the database.
 
 2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  

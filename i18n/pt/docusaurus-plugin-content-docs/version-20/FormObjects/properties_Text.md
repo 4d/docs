@@ -5,7 +5,7 @@ title: Text
 
 ---
 
-## Allow font/color picker
+## Permitir a selecção de tipo de letra/cor
 
 When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
@@ -97,7 +97,7 @@ Three font themes are available:
 
 ![](../assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> Font themes manage the font as well as its size and color. Entretanto, pode aplicar propriedades de estilo personalizadas (Negrito, Itálico ou Subscrito) sem alterar seu funcionamento.
 
 #### Gramática JSON
 
@@ -137,9 +137,9 @@ Allows defining the object's font size in points.
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                     |
-| -------- | ------------- | ------------------------------------- |
-| fontSize | integer       | Font size in points. Minimum value: 0 |
+| Nome     | Tipo de dados | Valores possíveis                           |
+| -------- | ------------- | ------------------------------------------- |
+| fontSize | integer       | Tamanho da letra em pontos. Valor mínimo: 0 |
 
 #### Objectos suportados
 
@@ -177,7 +177,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 `Selection and collection/entity selection type list boxes`
 
-Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4dv19R/help/command/en/page628.html) command in the 4D Language Reference manual.
+Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
 
@@ -237,24 +237,24 @@ Horizontal location of text within the area that contains it.
 
 #### Gramática JSON
 
-| Nome      | Tipo de dados | Valores possíveis                                                                                         |
-| --------- | ------------- | --------------------------------------------------------------------------------------------------------- |
-| textAlign | string        | "right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) ), "justify" |
+| Nome      | Tipo de dados | Valores possíveis                                 |
+| --------- | ------------- | ------------------------------------------------- |
+| textAlign | string        | "automatic", "right", "center", "justify", "left" |
 
 :::note
 
 - "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- "justify" is only supported by [group boxes](groupBox.md), [inputs](input_overview.md), and [text areas](text.md)
+- Negrito
 
 :::
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Text Area](text.md)
 
 ---
 
-## Alinhamento vertical
+## Cor linha vertical
 
 Vertical location of text within the area that contains it.
 
@@ -263,7 +263,7 @@ The **Default** option (`automatic` JSON value) sets the alignment according to 
 - `bottom` for all data (except pictures) and
 - `top` for picture type data.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4dv19R/help/command/en/page1188.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4dv19R/help/command/en/page1187.html) commands.
+This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
 
 #### Gramática JSON
 
@@ -295,42 +295,36 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 The special "cell" property allows you to apply a set of properties to a single column:
 
-| Nome da propriedade |              |                | Tipo   | Descrição                                                                                                                                                                                                                   |
-| ------------------- | ------------ | -------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cell                |              |                | object | Properties to apply to single column(s)                                                                                                                                                                                     |
-|                     | *columnName* |                | object | *columnName* is the object name of the list box column                                                                                                                                                                      |
-|                     |              | *propertyName* | string | "stroke", "fill", "fontStyle", "fontWeight", or "textDecoration" property (see above). **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object |
+| Nome da propriedade |              |                                                                                                    | Tipo   | Descrição                                                                                                                                                                                                                   |
+| ------------------- | ------------ | -------------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cell                |              |                                                                                                    | object | Allows applying the property to a single column.                                                                                                                                                                            |
+|                     | *columnName* |                                                                                                    | object | Pass in `\<columnName>` the object name of the list box column.                                                                                                                                                      |
+|                     |              | *Esta propriedade só está disponível quando não estiver selecionado [tema de fonte](#font-theme).* | string | "stroke", "fill", "fontStyle", "fontWeight", or "textDecoration" property (see above). **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 **Exemplos**
 
-In a *Color* project method, write the following code:
+No método de projeto *Color*, entre o código abaixo:
 
 ```4d
 //Color method
-//Sets font color for certain rows and background color for Col2 and Col3 columns
-Form.meta:=New object
-If(This.ID>5) //ID is an attribute of collection objects/entities
+//Sets font color for certain rows and the background color for a specific column: C_OBJECT($0)
+Form.meta:=New object If(This.ID>5) //ID is an attribute of collection objects/entities
   Form.meta.stroke:="purple"
-  Form.meta.cell:=New object("Col2";New object("fill";"black");\
-    "Col3";New object("fill";"red"))
+  Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
-  Form.meta.stroke:="orange"
-End if
+  Form.meta.stroke:="orange" End if
+$0:=Form.meta
 ```
 
-**Best Practice:** For optimization reasons, it is usually recommended to create the `meta.cell` object once in the form method:
+**Melhores práticas:** Por razões de otimização, é recomendado nesse caso criar o objeto `meta.cell` uma vez no método formulário:
 
 ```4d
-  //form method
+  //método de formulário
  Case of
     :(Form event code=On Load)
-       Form.colStyle:=New object("Col2";New object("fill";"black");\
-        "Col3";New object("fill";"red"))  
- // you can also define other style sets  
-       Form.colStyle2:=New object("Col2";New object("fill";"green");\
-        "Col3";New object("fontWeight";"bold"))  
+       Form.colStyle:=New object("Column2";New object("fill";"black"))
  End case
 ```
 
@@ -341,11 +335,7 @@ O método *Color* iria conter :
  ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
-    Form.meta.cell:=Form.colStyle //reuse the same object for better performance
- Else
-    Form.meta.stroke:="orange"
-    Form.meta.cell:=Form.colStyle2
- End if
+    Form.meta.cell:=Form.colStyle //reusa o mesmo objeto para melhor performance
  ...
 ```
 
@@ -377,7 +367,7 @@ By default, this option is not enabled.
 
 #### Objectos suportados
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+Coluna da List Box
 
 ---
 
@@ -385,12 +375,12 @@ By default, this option is not enabled.
 
 Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
 
-| Orientation value | Resultados                                     |
-| ----------------- | ---------------------------------------------- |
-| 0 (o padrão)      | ![](../assets/en/FormObjects/orientation1.png) |
-| 90                | ![](../assets/en/FormObjects/orientation2.png) |
-| 180               | ![](../assets/en/FormObjects/orientation3.png) |
-| 270               | ![](../assets/en/FormObjects/orientation4.png) |
+| Valor de orientação | Resultados                                     |
+| ------------------- | ---------------------------------------------- |
+| 0 (o padrão)        | ![](../assets/en/FormObjects/orientation1.png) |
+| 90                  | ![](../assets/en/FormObjects/orientation2.png) |
+| 180                 | ![](../assets/en/FormObjects/orientation3.png) |
+| 270                 | ![](../assets/en/FormObjects/orientation4.png) |
 
 Além de [áreas de texto estáticas](text.md), [input](input_overview.md) os objetos de texto podem ser girados quando forem não-[digitáveis](properties_Entry.md#enterable). Quando uma propriedade rotação for aplicada a um objeto input, a propriedade digitável é removida (se houver). Esse objeto é então excluído da ordem de entrada.
 
@@ -408,7 +398,7 @@ Além de [áreas de texto estáticas](text.md), [input](input_overview.md) os ob
 
 ## Array cores de Fonte
 
-`List boxes de tipo array`
+`List box de tipo array`
 
 Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
 
@@ -416,9 +406,9 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis           |
-| --------------- | ------------- | --------------------------- |
-| rowStrokeSource | string        | The name of a longint array |
+| Nome            | Tipo de dados | Valores possíveis          |
+| --------------- | ------------- | -------------------------- |
+| rowStrokeSource | string        | O nome de um array longint |
 
 #### Objectos suportados
 
@@ -428,7 +418,7 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 ## Array estilo linha
 
-`List boxes de tipo array`
+`List box de tipo array`
 
 Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 
@@ -468,9 +458,9 @@ Quando a propriedade for ativada, a área armazena todas as informações de for
 
 #### Gramática JSON
 
-| Nome              | Tipo de dados | Valores possíveis      |
-| ----------------- | ------------- | ---------------------- |
-| storeDefaultStyle | boolean       | true, false (default). |
+| Nome              | Tipo de dados | Valores possíveis     |
+| ----------------- | ------------- | --------------------- |
+| storeDefaultStyle | boolean       | true, false (padrão). |
 
 #### Objectos suportados
 

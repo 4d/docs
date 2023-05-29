@@ -61,10 +61,10 @@ Por padrão, o modo mais seguro suportado pelo servidor é usado.
 
 Valores possíveis:
 
-| Value    | Constantes                     | Comentário                               |
+| Valor    | Constantes                     | Comentário                               |
 | -------- | ------------------------------ | ---------------------------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | Autenticação usando o protocolo CRAM-MD5 |
-| LOGIN    | `Autenticação do login/acesso` | Autenticação usando o protocolo LOGIN    |
+| LOGIN    | `IMAP authentication login`    | Autenticação usando o protocolo LOGIN    |
 | OAUTH2   | `Autenticação IMAP OAUTH2`     | Autenticação usando o protocolo OAuth2   |
 | PLAIN    | `IMAP authentication plain`    | Autenticação usando o protocolo PLAIN    |
 
@@ -93,7 +93,7 @@ Por padrão, o modo mais seguro suportado pelo servidor é usado.
 
 Valores possíveis:
 
-| Value    | Constantes                   | Comentário                                         |
+| Valor    | Constantes                   | Comentário                                         |
 | -------- | ---------------------------- | -------------------------------------------------- |
 | APOP     | `Autenticação POP3 APOP`     | Autenticação usando o protocolo APOP (POP3 apenas) |
 | CRAM-MD5 | `Autenticação POP3 CRAM-MD5` | Autenticação usando o protocolo CRAM-MD5           |
@@ -126,7 +126,7 @@ Por padrão, o modo mais seguro suportado pelo servidor é usado.
 
 Valores possíveis:
 
-| Value    | Constantes                     | Comentário                               |
+| Valor    | Constantes                     | Comentário                               |
 | -------- | ------------------------------ | ---------------------------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | Autenticação usando o protocolo CRAM-MD5 |
 | LOGIN    | `SMTP authentication login`    | Autenticação usando o protocolo LOGIN    |
@@ -157,7 +157,7 @@ A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -
 
 **Valores possíveis:**
 
-| Constante                      | Value                          | Comentário                                                                                                             |
+| Parâmetros                     | Valor                          | Comentário                                                                                                             |
 | ------------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP            | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII se for possível, japonês (ISO-2022-JP) & Quoted-printable se for possível, do contrário UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII se possível, japonês (ISO-2022-JP) e 7 bits se for possível, do contrário UTF-8 & Quoted-printable</li></ul>                                                                                              |
 | mail mode ISO88591             | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                              |
@@ -183,7 +183,7 @@ A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -
 
 #### Descrição
 
-A propriedade `.connectionTimeOut` contém <!-- REF #transporter.connectionTimeOut.Summary -->o tempo máximo de espera (em segundos) permitido para estabelecer uma conexão com o servidor<!-- END REF -->. Por padrão, se a propriedade não tiver sido definida no objecto servidor (utilizado para criar o objecto transportador com `SMTP Novo transportador`, `POP3 Novo transportador`, ou `IMAP Novo transportador`), o valor é 30.
+A propriedade `.sendTimeOut` contém <!-- REF #transporter.connectionTimeOut.Summary -->o tempo máximo de espera (em segundos) de uma chamada para `.send( )` antes de ocorrer um timeout<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -206,18 +206,18 @@ A propriedade `.connectionTimeOut` contém <!-- REF #transporter.connectionTimeO
 
 A propriedade `.headerCharset` contém <!-- REF #transporter.headerCharset.Summary --> o charset e a codificação utilizados para o cabeçalho do correio eletrônico<!-- END REF -->. O cabeçalho inclui as seguintes partes do e-mail:
 
-- subject,
+- assunto,
 - nome(s) de arquivo anexo,
 - email name.
 
 **Valores possíveis:**
 
-| Constante                      | Value                          | Comentário                                                                  |
-| ------------------------------ | ------------------------------ | --------------------------------------------------------------------------- |
-| mail mode ISO2022JP            | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII se for possível, japonês (ISO-2022-JP) & Quoted-printable se for possível, do contrário UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII se possível, japonês (ISO-2022-JP) e 7 bits se for possível, do contrário UTF-8 & Quoted-printable</li></ul>                                                   |
-| mail mode ISO88591             | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                  |
-| mail mode UTF8                 | US-ASCII_UTF8_QP             | texto                                                                       |
-| modo de correio UTF8 na base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII se possível, senão UTF-8 & base64 |
+| Parâmetros                     | Valor                          | Comentário                                                                                                         |
+| ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| mail mode ISO2022JP            | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII se for possível, japonês (ISO-2022-JP) & Quoted-printable se for possível, do contrário UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII se possível, japonês (ISO-2022-JP) e 7 bits se for possível, do contrário UTF-8 & Quoted-printable</li></ul>                                                                                          |
+| mail mode ISO88591             | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                         |
+| mail mode UTF8                 | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: US-ASCII se possível, caso contrário UTF-8 & Quoted-printable (valor por defeito) |
+| modo de correio UTF8 na base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII se possível, senão UTF-8 & base64                                        |
 
 <!-- END REF -->
 
@@ -263,9 +263,9 @@ A propriedade `.logFile` contém <!-- REF #transporter.logFile.Summary -->o cami
 
 Ao contrário dos arquivos de registo regulares (ativados através do comando `SET DATABASE PARAMETER` ), os arquivos de registo armazenam o conteúdo MIME de todos os e-mails enviados e não têm qualquer limite de tamanho. Para mais informações sobre arquivos de registo estendidos, consultar:
 
-- **Conexões SMTP** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **Conexões POP3** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-- **Conexões IMAP ** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **SMTP connections** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **POP3 connections** - [4DPOP3Log.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+- **IMAP connections** - [4DIMAPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 <!-- END REF -->
 
@@ -286,7 +286,7 @@ Ao contrário dos arquivos de registo regulares (ativados através do comando `S
 
 #### Descrição
 
-A propriedade `.port` contém <!-- REF #transporter.port.Summary --> o número do porto utilizado para as transações postais<!-- END REF -->. Por padrão, se a propriedade não tiver sido definida no objeto servidor (utilizado para criar o objecto transportador com `SMTP Novo transportador`, `POP3 Novo transportador`, ou `IMAP Novo transportador`), o valor é 30:
+A propriedade `.port` contém <!-- REF #transporter.port.Summary --> o número do porto utilizado para as transações postais<!-- END REF -->. Por padrão, se a propriedade *port* não tiver sido definida no objeto *server* (utilizado para criar o objecto transportador com `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), a porta utilizada é:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -310,7 +310,7 @@ A propriedade `.port` contém <!-- REF #transporter.port.Summary --> o número d
 
 #### Descrição
 
-A propriedade `.sendTimeOut` contém <!-- REF #transporter.sendTimeOut.Summary --> o tempo máximo de espera (em segundos) de uma chamada para `.send( )` antes de ocorrer um timeout<!-- END REF -->. .
+A propriedade `.connectionTimeOut` contém <!-- REF #transporter.sendTimeOut.Summary --> o tempo máximo de espera (em segundos) de uma chamada para `.send( )` antes de ocorrer um timeout<!-- END REF -->. Por padrão, se a propriedade `.sendTimeOut` não tiver sido definida no objecto `server`, é utilizado o valor 100.
 
 <!-- END REF -->
 
@@ -352,7 +352,7 @@ A propriedade `.user` contém <!-- REF #transporter.user.Summary --> o nome de u
 
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                             |
+| Parâmetro  | Tipo   |    | Descrição                                                             |
 | ---------- | ------ |:--:| --------------------------------------------------------------------- |
 | Resultados | Objeto | <- | Estado da ligação do objecto transportador|<!-- END REF -->
 

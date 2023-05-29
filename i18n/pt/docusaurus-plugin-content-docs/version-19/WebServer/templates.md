@@ -15,7 +15,7 @@ Welcome to <!--#4DTEXT vtSiteName-->!</P>
 
 The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
 
-## Tags for templates
+## Etiquetas para modelos
 
 The following 4D tags are available:
 
@@ -59,7 +59,7 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 </HTML>
 ```
 
-## Tag parsing
+## Análise de etiquetas
 
 For optimization reasons, the parsing of the HTML source code is not carried out by the 4D Web server when HTML pages are called using simple URLs that are suffixed with “.HTML” or “.HTM”.
 

@@ -7,7 +7,7 @@ The debugger is useful when you need to spot errors or monitor the execution of 
 
 ![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
-## Calling the Debugger
+## Chamando o depurador
 
 There are multiple ways to get the Debugger to display:
 
@@ -35,7 +35,7 @@ The Debugger window is usually displayed on the machine where the code is execut
 
 > If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
 
-## Tool bar Buttons
+## Botões da barra de ferramentas
 
 The debugger's tool bar includes several buttons, associated with default shortcuts:
 
@@ -49,7 +49,7 @@ Tracing stops and normal method execution resumes.
 
 > **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. It also disables all the subsequent TRACE calls for the current process.
 
-#### Step Over
+#### Passar por cima
 
 Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
 
@@ -57,7 +57,7 @@ The Step Over button does not step into subroutines and functions, it stays at t
 
 In remote debugging, if the method executes on the server, the parent method is called after the last line of the child method executes. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
-#### Step Into
+#### Passo a passo
 
 When a line that calls another method (subroutine or function) is executed, click this button to display the the other method and step through it.
 
@@ -110,7 +110,7 @@ The **Expression** column displays the names of the objects and expressions. The
 
 At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
-### Expression list
+### Lista de expressões
 
 #### Line Objects
 
@@ -153,7 +153,7 @@ $c:=a+b
 
     O valor da variável `$b` é agora 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-#### Variáveis
+#### Variáveis.
 
 This theme is composed of the following subthemes:
 
@@ -195,7 +195,7 @@ This theme lists the local semaphores currently being set. For each semaphore, t
 
 This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
 
-#### Tabelas e Campos
+#### Tabela
 
 This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
@@ -225,7 +225,7 @@ This theme displays information regarding the main Web server of the application
 
 The expressions contained within this theme cannot be modified.
 
-### Contextual Menu
+### Menu contextual
 
 Additional options are available from the contextual menu of the Watch pane.
 
@@ -240,7 +240,7 @@ Additional options are available from the contextual menu of the Watch pane.
 * **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. This option displays them in hexadecimal notation. Note: To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
 * **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
 
-## Call Chain Pane
+## Painel da cadeia de chamadas
 
 A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
 
@@ -300,7 +300,7 @@ To edit an expression, click on it to select it, then click again or press **Ent
 To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
 > **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
 
-### Contextual Menu
+### Menu contextual
 
 The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
 
@@ -325,7 +325,7 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
 * **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. Para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
 
-## Source Code Pane
+## Panel de código fuente
 
 The Source Code Pane shows the source code of the method or function currently being traced.
 
@@ -400,7 +400,7 @@ The contextual menu of the Source Code Pane provides access to several functions
 * **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
 * **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Any changes made modify the breakpoint permanently.
 
-### Find Next/Previous
+### Localizar seguinte/anterior
 
 Specific shortcuts allow you to find strings identical to the one selected:
 
@@ -420,7 +420,7 @@ Esta secção lista todos os atalhos disponíveis na janela do depurador.
 * **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
 * **Double-Click** in the Custom Watch Pane to create a new expression
 
-#### Source Code Pane
+#### Panel de código fuente
 
 * Click in the left margin to set or remove break points.
 * **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.

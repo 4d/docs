@@ -153,7 +153,7 @@ Fazer a mesma coisa com arrays seria impossível pelas razões abaixo:
 
 - Para manter os quatro tipos de informação (código postal, cidade, região e estado) teria que manter quatro arrays grandes na memória.
 - Como um array sempre é mantido na memória inteiramente, teria que manter toda a informação de códigos postais na memória durante a sessão inteira, mesmo quando os dados não estivessem sendo usados.
-- De novo, como um array é sempre mantido na memória em sua totalidade, a cada vez que a aplicação for iniciada, os quatro arrays teriam que ser carregados e então salvos no disco, mesmo se os dados não forem usados ou modificados na sessão de trabalho.
+- De novo,  como um array é sempre mantido na memória em sua totalidade, a cada vez que o banco de dados for iniciados, os quatro arrays teriam que ser carregados e então salvos no disco, mesmo se os dados não forem usados ou modificados na sessão de trabalho.
 
 **Conclusão:** os arrays estão pensados para manter quantidades razoáveis de dados durante um curto período de tempo. Por outro lado, como os arrays são mantidos na memória, são fáceis de manejar e rápidos de manipular.
 
@@ -162,7 +162,7 @@ Entretanto, em algumas circunstâncias, pode precisar trabalhar com arrays que c
 | Tipo de array   | Fórmula para determinar o uso da memoria em bytes                      |
 | --------------- | ---------------------------------------------------------------------- |
 | Blob            | (1+número de elementos) * 12 + Soma de tamanho de cada blob            |
-| Booleano        | (31+número de elementos)\N8                                           |
+| Parâmetros      | (31+número de elementos)\N8                                           |
 | Date            | (1+número de elementos) * 6                                            |
 | Integer         | (1+número de elementos) * 2                                            |
 | Long Integer    | (1+número de elementos) * 4                                            |

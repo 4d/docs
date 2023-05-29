@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Descripción de los archivos históricos
 ---
 
-Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los historiales suelen iniciarse o detenerse utilizando selectores de los comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) o [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) y se almacenan en la carpeta [Logs folder](Project/architecture.md#logs) del proyecto.
+Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los historiales suelen iniciarse o detenerse utilizando selectores de los comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) o [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) y se almacenan en la carpeta [Logs folder](Project/architecture.md#logs) del proyecto.
 
 La información histórica debe ser analizada para detectar y solucionar los problemas. Esta sección ofrece una descripción completa de los siguientes archivos de registro:
 
@@ -15,7 +15,7 @@ La información histórica debe ser analizada para detectar y solucionar los pro
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-* [Archivo de historial de peticiones ORDA clientes](#orda-client-requests)
+* [Archivo de registro de peticiones ORDA](#orda-requests)
 
 > Cuando un archivo de historial puede generarse tanto en 4D Server como en el cliente remoto, se añade la palabra "Server" al nombre del archivo de historial del lado del servidor, por ejemplo "4DRequestsLogServer.txt"
 
@@ -64,13 +64,14 @@ Para cada petición, se registran los siguientes campos:
 | systemid                                   | ID del sistema                                                                                                                                                                                                     |
 | component                                  | Firma del componente (por ejemplo, "4SQLS" o "dbmg")                                                                                                                                                               |
 | process\_info\_index                   | Corresponde al campo "index" en el archivo de historial 4DRequestsLog_ProcessInfo.txt, y permite vincular una petición a un proceso.                                                                               |
-| request                                    | ID de petición en modo remoto cadena de mensajes para las peticiones SQL o mensajes `LOG EVENT`                                                                                                                    |
+| request                                    | [ID de petición C/S u ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) o cadena de mensaje para peticiones SQL o mensajes `LOG EVENT`                                               |
 | bytes_in                                   | Número de bytes recibidos                                                                                                                                                                                          |
 | bytes_out                                  | Número de bytes enviados                                                                                                                                                                                           |
 | server\_duration &#124; exec\_duration | Depende de dónde se genere el registro:<li>*server\_duration* cuando se genera en el cliente --Tiempo que tarda el servidor en procesar la petición y devolver una respuesta en microsegundos. B a F en la imagen de abajo, O</li><li>*exec\_duration* cuando se genera en el servidor --Tiempo en microsegundos que tarda el servidor en procesar la petición. B a E en la imagen de abajo.</li>                                                                                                                          |
 | write\_duration                          | Tiempo de envío en microsegundos:<li>La petición (cuando se ejecuta en el cliente). A a B en la imagen de abajo.</li><li>Respuesta (cuando se ejecuta en el servidor). E a F en la imagen de abajo.</li>                                                                                                                                |
 | task_kind                                  | Apropiativo o cooperativo (respectivamente "p" o "c")                                                                                                                                                              |
 | rtt                                        | Tiempo estimado en microsegundos para que el cliente envíe la solicitud y el servidor la acuse de recibo. De la A a la D y de la E a la H en la imagen de abajo.<li>Sólo se mide cuando se utiliza la capa de red ServerNet, devuelve 0 cuando se utiliza con la capa de red heredada.</li><li>Para las versiones de Windows anteriores a Windows 10 o Windows Server 2016, la llamada devolverá 0.</li> |
+| extra                                      | Información adicional relacionada con el contexto, por ejemplo el nombre de la clase de datos y/o el nombre del atributo en caso de petición ORDA                                                                  |
 
 Flujo de solicitudes:
 
@@ -132,6 +133,7 @@ Este archivo de historial registra cada petición HTTP y cada respuesta en modo 
 Como iniciar este historial:
 
 ```4d
+
 
 
 WEB SET OPTION(Web debug log;wdl enable without body)  
@@ -197,7 +199,7 @@ Los siguientes campos se registran para cada evento:
 | 3         | ProcessID                       | ID del Proceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | 4         | unique_processID                | ID único del proceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | 5         | stack_level                     | Nivel de stack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 6         | operation_type                  | Tipo de operación histórico. Este valor puede ser un valor absoluto:<p><ol><li>Comando</li><li>Método (método de proyecto, método base, etc.)</li><li>Mensaje (enviado por el comando [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) únicamente)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Método miembro (método adjunto a una colección o a un objeto)</li></ol></p>Al cerrar un nivel de pila, las columnas `operation_type`, `operation` y `operation_parameters` tienen el mismo valor que el nivel de pila de apertura registrado en la columna `stack_opening_sequence_number`. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>La primera y la segunda línea abren el nivel de la pila, la tercera y la cuarta lo cierran. Los valores de las columnas 6, 7 y 8 se repiten en la línea del nivel de pila de cierre. La columna 10 contiene los números de secuencia de apertura del nivel de pila, es decir, 122 para la tercera línea y 121 para la cuarta. |
+| 6         | operation_type                  | Tipo de operación histórico. Este valor puede ser un valor absoluto:<p><ol><li>Comando</li><li>Método (método de proyecto, método base, etc.)</li><li>Mensaje (enviado sólo por el comando [LOG EVENT](https://doc.4d.com/4dv20/help/command/en/page667.html))</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarea</li><li>Método miembro (método adjunto a una colección o a un objeto)</li></ol></p>Al cerrar un nivel de pila, las columnas `operation_type`, `operation` y `operation_parameters` tienen el mismo valor que el nivel de pila de apertura registrado en la columna `stack_opening_sequence_number`. Por ejemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>La primera y la segunda línea abren el nivel de la pila, la tercera y la cuarta lo cierran. Los valores de las columnas 6, 7 y 8 se repiten en la línea del nivel de pila de cierre. La columna 10 contiene los números de secuencia de apertura del nivel de pila, es decir, 122 para la tercera línea y 121 para la cuarta. |
 | 7         | operation                       | Puede representar (según el tipo de operación):<li>un ID de comando de lenguaje (cuando tipo=1)</li><li>un nombre de método (cuando tipo=2)</li><li>una combinación de pluginIndex;pluginCommand (cuando tipo=4, 5, 6 o 7). Puede contener algo como '3;2'</li><li>una UUID task connection (cuando tipo = 8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | 8         | operation_parameters            | Parámetros pasados a comandos, métodos o plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 9         | form_event                      | Evento formulario si lo hay; vacío en otros casos (supongamos que la columna se utiliza cuando se ejecuta el código en un método formulario o en un método objeto)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -304,43 +306,120 @@ Para cada petición, se registran los siguientes campos:
 | 4         | ID único del proceso                                             |
 | 5         | <ul><li>Información de inicio de sesión SMTP, POP3 o IMAP, incluyendo el nombre del servidor, el número de puerto TCP utilizado para conectarse al servidor SMTP, POP3 o IMAP y el estado de TLS, o</li><li>datos intercambiados entre el servidor y el cliente, empezando por "S <" (datos recibidos del servidor SMTP,POP3 o IMAP) o "C >" (datos enviados por el cliente SMTP,POP3 o IMAP): lista de modos de autenticación enviada por el servidor y modo de autenticación seleccionado, cualquier error notificado por el servidor SMTP,POP3 o IMAP, información del encabezado del correo enviado (sólo versión estándar) y si el correo se guarda en el servidor, o</li><li>Información de cierre de sesión SMTP, POP3 o IMAP.</li></ul>                                       |
 
-## Peticiones cliente ORDA
+## Peticiones ORDA
 
-Este diario registra cada petición de ORDA enviada desde una máquina remota. Puede dirigir la información de registro a la memoria o a un archivo en el disco. El nombre y la ubicación de este archivo de registro son de su elección.
+Los registros de peticiones ORDA pueden registrar cada petición ORDA y la respuesta del servidor. Existen dos registros de peticiones ORDA:
+
+- un registro de peticiones ORDA del lado del cliente, en formato .txt
+- un registro de peticiones ORDA del lado del servidor, en formato .jsonl
+
+### Del lado del cliente
+
+El registro ORDA del lado del cliente registra cada petición ORDA enviada desde una máquina remota. Puede dirigir la información de registro a la memoria o a un archivo .txt en el disco de la máquina remota. El nombre y la ubicación de este archivo de registro son de su elección.
 
 Como iniciar este historial:
 
 ```4d
-//a ejecutar en una máquina remota
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  
-//también puede enviarse a la memoria
-```
-
-Si desea utilizar el número de secuencia único en el registro de peticiones de ORDA, debe activarlo:
-
-```4d
-//a ejecutar en una máquina remota
-
+    //en una máquina remota
 SET DATABASE PARAMETER(Client Log Recording;1)  
-//para activar el número de secuencia del historial
-
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  
-//también puede enviarse a la memoria
-
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+    //también se puede enviar a la memoria
 SET DATABASE PARAMETER(Client Log Recording;0)  
-//desactiva el número de secuencia
 ```
+
+:::note
+
+La activación del cliente [4DRequestsLog.txt](#4drequestslogtxt) utilianzdo `SET DATABASE PARAMETER` no es obligatoria. Sin embargo, es necesario si desea registrar el campo `sequenceNumber` único.
+
+:::
+
 
 Los siguientes campos se registran para cada petición:
 
 | Nombre del campo | Descripción                                                      | Ejemplo                                                   |
 | ---------------- | ---------------------------------------------------------------- | --------------------------------------------------------- |
 | sequenceNumber   | Número de operación único y secuencial en la sesión de historial | 104                                                       |
-| url              | URL de la petición ORDA efectuada por el cliente                 | "rest/Persons(30001)"                                     |
+| url              | Solicitar URL                                                    | "rest/Persons(30001)"                                     |
 | startTime        | Fecha y hora de inicio en formato ISO 8601                       | "2019-05-28T08:25:12.346Z"                                |
 | endTime          | Fecha y hora final en formato ISO 8601                           | "2019-05-28T08:25:12.371Z"                                |
-| duration         | Duración del procesamiento cliente (ms)                          | 25                                                        |
+| duration         | Duración del procesamiento del cliente en milisegundos (ms)      | 25                                                        |
 | response         | Objeto respuesta del servidor                                    | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+
+#### Ejemplo
+
+Here is an example of a client-side ORDA log file record:
+
+```json
+    {
+        "sequenceNumber": 7880,
+        "url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+        "startTime": "2023-05-15T10:43:39.400Z",
+        "endTime": "2023-05-15T10:43:39.419Z",
+        "duration": 19,
+        "response": {
+            "status": 200,
+            "body": 75651
+        }
+    }
+```
+
+### Del lado del servidor
+
+The server-side ORDA log records each ORDA request processed by the server, as well as the server response (optional). Log information is saved in a .jsonl file on the server machine disk (by default, *ordaRequests.jsonl*).
+
+Como iniciar este historial:
+
+```4d
+    //en el servidor
+SET DATABASE PARAMETER(4D Server log recording;1)
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
+    //srl... el parámetro es opcional 
+SET DATABASE PARAMETER(4D Server log recording;0) 
+```
+
+:::note
+
+La activación del lado del servidor [4DRequestsLog.txt](#4drequestslogtxt) utilianzdo `SET DATABASE PARAMETER` no es obligatoria. Sin embargo, es necesario si desea registrar los campos exclusivos `sequenceNumber` y `duration`.
+
+:::
+
+Los siguientes campos se registran para cada petición:
+
+| Nombre del campo | Descripción                                                                                                              | Ejemplo                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- |
+| sequenceNumber   | Número de operación único y secuencial en la sesión de historial                                                         | 104                                                       |
+| url              | Solicitar URL                                                                                                            | "rest/Persons(30001)"                                     |
+| startTime        | Fecha y hora de inicio en formato ISO 8601                                                                               | "2019-05-28T08:25:12.346Z"                                |
+| duration         | Duración del procesamiento del servidor en microsegundos (µ)                                                             | 2500                                                      |
+| response         | Objeto de respuesta del servidor, puede configurarse en [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+| ipAddress        | Dirección IP del usuario                                                                                                 | "192.168.1.5"                                             |
+| userName         | Nombre del usuario 4D                                                                                                    | "henry"                                                   |
+| systemUserName   | Nombre de inicio de sesión del usuario en la máquina                                                                     | "hsmith"                                                  |
+| machineName      | Nombre de la máquina del usuario                                                                                         | "PC of Henry Smith"                                       |
+
+#### Ejemplo
+
+Este es un ejemplo de un registro ORDA del lado del servidor:
+
+```json
+   {
+        "url": "rest/Employees/$entityset/F910C2E4A2EE6B43BBEE74A0A4F68E5A/Salary?$compute='sum'&$progress4Dinfo='D0706F1E77D4F24985BE4DDE9FFA1739'",
+        "systemUserName": "Admin",
+        "userName": "Designer",
+        "machineName": "DESKTOP-QSK9738",
+        "taskID": 5,
+        "taskName": "P_1",
+        "startTime": "2023-05-15T11:43:39.401",
+        "response": {
+            "status": 200,
+            "body": 75651
+        },
+        "sequenceNumber": 7008,
+        "duration": 240
+    }
+
+```
+
 
 ## Utilización de un archivo de configuración de log
 
@@ -352,10 +431,10 @@ Hay varias maneras de activar el archivo de configuración de registro, dependie
 
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
 - **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la carpeta [Settings](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la carpeta [`Project`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
-- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+- **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+- **todos los proyectos con un 4D autónomo o remoto**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
     * Windows: `Users\[userName]\AppData\Roaming\4D`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
@@ -370,7 +449,7 @@ Si se instala un archivo `logConfig.json` tanto en la carpeta Settings como en A
 
 ### Descripción del archivo JSON
 
-The log configuration file is a `.json` file that must comply with the following json schema:
+El archivo de configuración del registro es un archivo `.json` que debe cumplir con el siguiente esquema json:
 
 ```json
 {

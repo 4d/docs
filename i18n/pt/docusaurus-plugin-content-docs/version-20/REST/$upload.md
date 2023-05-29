@@ -4,35 +4,35 @@ title: '$upload'
 ---
 
 
-Returns an ID of the file uploaded to the server
+Devolve um ID do ficheiro carregado para o servidor
 
 ## Descrição
 
 Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout` parameter.
+You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
 
 ## Uploading scenario
 
 Imagine you want to upload an image to update the picture attribute of an entity.
 
-To upload an image (or any binary file), you must first select the file from the client application. The file itlself must be passed in the **body** of the request.
+To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. **Resultadoi**:
 
-Then, you upload the selected image to 4D Server using a request such as:
+Then, we upload the selected image to 4D Server:
 
  `POST  /rest/$upload?$rawPict=true`
 
 As a result, the server returns an ID that identifies the file:
 
-**Response**:
+**Resposta**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity. The request looks like:
+Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity: O pedido tem o seguinte aspecto:
 
  `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**Dados POST**:
 
 ```
 {
@@ -42,9 +42,9 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 }
 ```
 
-**Response**:
+**Resposta**:
 
-The modified entity is returned:
+A entidade modificada é devolvida:
 
 ```
 {
@@ -64,9 +64,9 @@ The modified entity is returned:
     },}
 ```
 
-## Example with a 4D HTTP client
+## Exemplo com um cliente 4D HTTP
 
-The following example shows how to upload a *.pdf* file to the server using the 4D HTTP client.
+O exemplo a seguir mostra como fazer o upload de um arquivo *.pdf* para o servidor usando o cliente 4D HTTP.
 
 ```4d
 var $params : Text
