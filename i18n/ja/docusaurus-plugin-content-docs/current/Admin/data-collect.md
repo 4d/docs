@@ -7,8 +7,8 @@ title: データ収集
 
 このページは以下を説明します:
 
-- what information is collected,
-- where information is stored and when it is sent to 4D,
+- どのような情報が収集されるか
+- どこに情報が保存され、いつ 4Dに送信されるか
 - ビルドされたクライアント/サーバーアプリケーションで自動データ収集を無効にする方法。
 
 
@@ -16,41 +16,41 @@ title: データ収集
 
 以下のイベント中にデータが収集されます:
 
-- database startup,
+- データベースが開かれる
 - データベースが閉じられる
-- web server startup,
-- php execution,
-- client connection,
-- data collection sending.
+- Webサーバーが起動される
+- php実行
+- クライアントが接続される
+- 収集データが送信される
 
-Some data is also collected at regular intervals.
+また、一部のデータは一定時間ごとに収集されます。
 
-### Collected at database startup
+### データベース起動時に収集される情報
 
-| データ                     | タイプ                  | 注記                                                                                             |
-| ----------------------- | -------------------- | ---------------------------------------------------------------------------------------------- |
-| CPU                     | Text                 | プロセッサーの名前、種類、および速度                                                                             |
-| numberOfCores           | Number               | コアの合計数                                                                                         |
-| memory                  | Number               | マシン上で利用可能なメモリ容量 (バイト単位)                                                                        |
-| system                  | Text                 | OS のバージョンとビルド番号                                                                                |
-| headless                | Boolean              | アプリケーションがヘッドレスモードで実行されている場合は true                                                              |
-| version                 | Number               | 4Dアプリケーションのバージョン番号                                                                             |
-| buildNumber             | Number               | 4Dアプリケーションのビルド番号                                                                               |
-| license                 | Object               | 製品ライセンスの名称と説明                                                                                  |
-| isRosetta               | Boolean              | True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows). |
-| uniqueID                | Text                 | Unique ID of the 4D Server                                                                     |
-| id                      | Text (hashed string) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                                  |
-| dataFileSize            | Number               | データファイルのサイズ (バイト単位)                                                                            |
-| indexesSize             | Number               | インデックスのサイズ (バイト単位)                                                                             |
-| cacheSize               | Number               | キャッシュのサイズ (バイト単位)                                                                              |
-| usingLegacyNetworkLayer | Boolean              | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                      |
-| usingQUICNetworkLayer   | Boolean              | True if the database uses the QUIC network layer                                               |
-| encryptedConnections    | Boolean              | True if client/server connections are encrypted                                                |
-| encrypted               | Boolean              | データファイルが暗号化されていれば true                                                                         |
-| compiled                | Boolean              | アプリケーションがコンパイル済みの場合は true                                                                      |
-| isEngined               | Boolean              | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                  |
-| projectMode             | Boolean              | アプリケーションがプロジェクトの場合は true                                                                       |
-| mobile                  | Collection           | モバイルセッションに関する情報                                                                                |
+| データ                     | タイプ            | 注記                                                                                       |
+| ----------------------- | -------------- | ---------------------------------------------------------------------------------------- |
+| CPU                     | Text           | プロセッサーの名前、種類、および速度                                                                       |
+| numberOfCores           | Number         | コアの合計数                                                                                   |
+| memory                  | Number         | マシン上で利用可能なメモリ容量 (バイト単位)                                                                  |
+| system                  | Text           | OS のバージョンとビルド番号                                                                          |
+| headless                | Boolean        | アプリケーションがヘッドレスモードで実行されている場合は true                                                        |
+| version                 | Number         | 4Dアプリケーションのバージョン番号                                                                       |
+| buildNumber             | Number         | 4Dアプリケーションのビルド番号                                                                         |
+| license                 | Object         | 製品ライセンスの名称と説明                                                                            |
+| isRosetta               | Boolean        | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
+| uniqueID                | Text           | 4D Server の固有ID                                                                          |
+| id                      | テキスト (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
+| dataFileSize            | Number         | データファイルのサイズ (バイト単位)                                                                      |
+| indexesSize             | Number         | インデックスのサイズ (バイト単位)                                                                       |
+| cacheSize               | Number         | キャッシュのサイズ (バイト単位)                                                                        |
+| usingLegacyNetworkLayer | Boolean        | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                |
+| usingQUICNetworkLayer   | Boolean        | True if the database uses the QUIC network layer                                         |
+| encryptedConnections    | Boolean        | True if client/server connections are encrypted                                          |
+| encrypted               | Boolean        | データファイルが暗号化されていれば true                                                                   |
+| compiled                | Boolean        | アプリケーションがコンパイル済みの場合は true                                                                |
+| isEngined               | Boolean        | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                            |
+| projectMode             | Boolean        | アプリケーションがプロジェクトの場合は true                                                                 |
+| mobile                  | Collection     | モバイルセッションに関する情報                                                                          |
 
 
 ### Collected at web server startup and data collection sending
