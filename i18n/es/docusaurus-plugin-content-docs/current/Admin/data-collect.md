@@ -44,7 +44,7 @@ Some data is also collected at regular intervals.
 | indexesSize             | Number               | Tamaño del índice en bytes                                                                       |
 | cacheSize               | Number               | Tamaño de caché en bytes                                                                         |
 | usingLegacyNetworkLayer | Boolean              | True si se utiliza la capa de red heredada para el servidor de aplicaciones                      |
-| usingQUICNetworkLayer   | Boolean              | True if the database uses the QUIC network layer                                                 |
+| usingQUICNetworkLayer   | Boolean              | True si la base utiliza la capa de red QUIC                                                      |
 | encryptedConnections    | Boolean              | True if client/server connections are encrypted                                                  |
 | encrypted               | Boolean              | True si el archivo de datos está encriptado                                                      |
 | compiled                | Boolean              | True si la aplicación está compilada                                                             |
@@ -62,11 +62,11 @@ Some data is also collected at regular intervals.
 
 ### Collected at regular intervals
 
-| Datos                       | Tipo   | Notas                                        |
-| --------------------------- | ------ | -------------------------------------------- |
-| maximumNumberOfWebProcesses | Number | Maximum number of simultaneous web processes |
-| maximumUsedPhysicalMemory   | Number | Maximum use of physical memory               |
-| maximumUsedVirtualMemory    | Number | Maximum use of virtual memory                |
+| Datos                       | Tipo   | Notas                                     |
+| --------------------------- | ------ | ----------------------------------------- |
+| maximumNumberOfWebProcesses | Number | Número máximo de procesos web simultáneos |
+| maximumUsedPhysicalMemory   | Number | Uso máximo de la memoria física           |
+| maximumUsedVirtualMemory    | Number | Uso máximo de la memoria virtual          |
 
 
 ### Collected at data collection sending
@@ -74,14 +74,14 @@ Some data is also collected at regular intervals.
 | Datos                       | Tipo   | Notas                                                                 |
 | --------------------------- | ------ | --------------------------------------------------------------------- |
 | uptime                      | Number | Tiempo transcurrido (en segundos) desde que se abrió la base 4D local |
-| cacheReadBytes              | Object | Number of bytes read from cache                                       |
-| cacheMissBytes              | Object | Number of bytes missed from cache                                     |
-| cacheReadCount              | Object | Number of reads in the cache                                          |
-| cacheMissCount              | Object | Number of reads missed in the cache                                   |
-| dataSegment1.diskReadBytes  | Object | Number of bytes read in the data file                                 |
-| dataSegment1.diskWriteBytes | Object | Number of bytes written in the data file                              |
-| dataSegment1.diskReadCount  | Object | Number of reads in the data file                                      |
-| dataSegment1.diskWriteCount | Object | Number of writes in the data file                                     |
+| cacheReadBytes              | Object | Número de bytes leídos de la caché                                    |
+| cacheMissBytes              | Object | Número de bytes perdidos de la caché                                  |
+| cacheReadCount              | Object | Número de lecturas en la caché                                        |
+| cacheMissCount              | Object | Número de lecturas perdidas en la caché                               |
+| dataSegment1.diskReadBytes  | Object | Número de bytes leídos en el archivo de datos                         |
+| dataSegment1.diskWriteBytes | Object | Número de bytes escritos en el archivo de datos                       |
+| dataSegment1.diskReadCount  | Object | Número de lecturas en el archivo de datos                             |
+| dataSegment1.diskWriteCount | Object | Número de escrituras en el archivo de datos                           |
 | indexSegment.diskReadBytes  | Number | Number of bytes read in the index file                                |
 | indexSegment.diskWriteBytes | Number | Number of bytes written in the index file                             |
 | indexSegment.diskReadCount  | Number | Number of reads in the index file                                     |
