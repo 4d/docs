@@ -44,8 +44,8 @@ title: データ収集
 | indexesSize             | Number         | インデックスのサイズ (バイト単位)                                                                       |
 | cacheSize               | Number         | キャッシュのサイズ (バイト単位)                                                                        |
 | usingLegacyNetworkLayer | Boolean        | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                |
-| usingQUICNetworkLayer   | Boolean        | True if the database uses the QUIC network layer                                         |
-| encryptedConnections    | Boolean        | True if client/server connections are encrypted                                          |
+| usingQUICNetworkLayer   | Boolean        | データベースが QUICネットワークレイヤーを使用している場合は True                                                    |
+| encryptedConnections    | Boolean        | クライアント/サーバー接続が暗号化されている場合は True                                                           |
 | encrypted               | Boolean        | データファイルが暗号化されていれば true                                                                   |
 | compiled                | Boolean        | アプリケーションがコンパイル済みの場合は true                                                                |
 | isEngined               | Boolean        | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                            |
@@ -53,74 +53,74 @@ title: データ収集
 | mobile                  | Collection     | モバイルセッションに関する情報                                                                          |
 
 
-### Collected at web server startup and data collection sending
+### Webサーバー起動時、収集データの送信時に収集される情報
 
-| データ       | タイプ    | 注記                                                      |
-| --------- | ------ | ------------------------------------------------------- |
-| webServer | Object | "started":true if the web server is starting or started |
-
-
-### Collected at regular intervals
-
-| データ                         | タイプ    | 注記                                           |
-| --------------------------- | ------ | -------------------------------------------- |
-| maximumNumberOfWebProcesses | Number | Maximum number of simultaneous web processes |
-| maximumUsedPhysicalMemory   | Number | Maximum use of physical memory               |
-| maximumUsedVirtualMemory    | Number | Maximum use of virtual memory                |
+| データ       | タイプ    | 注記                                     |
+| --------- | ------ | -------------------------------------- |
+| webServer | Object | Webサーバーが起動中、または起動済みの場合は "started":true |
 
 
-### Collected at data collection sending
+### 一定時間ごとに収集される情報
 
-| データ                         | タイプ    | 注記                                        |
-| --------------------------- | ------ | ----------------------------------------- |
-| uptime                      | Number | ローカル4Dデータベースが開かれてからの経過時間 (秒単位)            |
-| cacheReadBytes              | Object | Number of bytes read from cache           |
-| cacheMissBytes              | Object | Number of bytes missed from cache         |
-| cacheReadCount              | Object | Number of reads in the cache              |
-| cacheMissCount              | Object | Number of reads missed in the cache       |
-| dataSegment1.diskReadBytes  | Object | Number of bytes read in the data file     |
-| dataSegment1.diskWriteBytes | Object | Number of bytes written in the data file  |
-| dataSegment1.diskReadCount  | Object | Number of reads in the data file          |
-| dataSegment1.diskWriteCount | Object | Number of writes in the data file         |
-| indexSegment.diskReadBytes  | Number | Number of bytes read in the index file    |
-| indexSegment.diskWriteBytes | Number | Number of bytes written in the index file |
-| indexSegment.diskReadCount  | Number | Number of reads in the index file         |
-| indexSegment.diskWriteCount | Number | Number of writes in the index file        |
+| データ                         | タイプ    | 注記           |
+| --------------------------- | ------ | ------------ |
+| maximumNumberOfWebProcesses | Number | 最大同時Webプロセス数 |
+| maximumUsedPhysicalMemory   | Number | 最大使用した物理メモリ  |
+| maximumUsedVirtualMemory    | Number | 最大使用した仮想メモリ  |
 
 
+### 収集データの送信時に収集される情報
 
-### Collected at database closure and data collection sending
-
-| データ               | タイプ    | 注記                                                           |
-| ----------------- | ------ | ------------------------------------------------------------ |
-| webserverHits     | Number | Number of hits on the web server during the data collection  |
-| restHits          | Number | Number of hits on the REST server during the data collection |
-| webserverBytesIn  | Number | Bytes received by the web server during the data collection  |
-| webserverBytesOut | Number | Bytes sent by the web server during the data collection      |
+| データ                         | タイプ    | 注記                             |
+| --------------------------- | ------ | ------------------------------ |
+| uptime                      | Number | ローカル4Dデータベースが開かれてからの経過時間 (秒単位) |
+| cacheReadBytes              | Object | キャッシュから読み出したバイト数               |
+| cacheMissBytes              | Object | キャッシュミスバイト数                    |
+| cacheReadCount              | Object | キャッシュの読み出し回数                   |
+| cacheMissCount              | Object | キャッシュミス回数                      |
+| dataSegment1.diskReadBytes  | Object | データファイルから読み取ったバイト数             |
+| dataSegment1.diskWriteBytes | Object | データファイルに書き込んだバイト数              |
+| dataSegment1.diskReadCount  | Object | データファイルからの読み取り回数               |
+| dataSegment1.diskWriteCount | Object | データファイルへの書き込み回数                |
+| indexSegment.diskReadBytes  | Number | インデックスファイルから読み取ったバイト数          |
+| indexSegment.diskWriteBytes | Number | インデックスファイルに書き込んだバイト数           |
+| indexSegment.diskReadCount  | Number | インデックスファイルからの読み取り回数            |
+| indexSegment.diskWriteCount | Number | インデックスファイルへの書き込み回数             |
 
 
 
+### データベースの終了時、収集データの送信時に収集される情報
 
-### Collected every time PHP execute is called
+| データ               | タイプ    | 注記                       |
+| ----------------- | ------ | ------------------------ |
+| webserverHits     | Number | データ収集中の Webサーバーのヒット数     |
+| restHits          | Number | データ収集中の RESTサーバーのヒット数    |
+| webserverBytesIn  | Number | データ収集中に Webサーバーが受信したバイト数 |
+| webserverBytesOut | Number | データ収集中に Webサーバーが送信したバイト数 |
 
-| データ         | タイプ     | 注記                                                                                  |
-| ----------- | ------- | ----------------------------------------------------------------------------------- |
-| phpCall     | Number  | Number of calls to `PHP execute`                                                    |
-| externalPHP | Boolean | True if the client performs a call to `PHP execute` and uses its own version of php |
 
 
-### Collected at client connection
 
-| データ                        | タイプ        | 注記                                                                                 |
-| -------------------------- | ---------- | ---------------------------------------------------------------------------------- |
-| maximum4DClientConnections | Number     | Maximum number of 4D Client connections to the server                              |
-| connectionSystems          | Collection | Client OS without the build number (in parenthesis) and number of clients using it |
+### PHP execute の呼び出し毎に収集される情報
+
+| データ         | タイプ     | 注記                                                        |
+| ----------- | ------- | --------------------------------------------------------- |
+| phpCall     | Number  | `PHP execute` の呼び出し回数                                     |
+| externalPHP | Boolean | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。 |
+
+
+### クライアント接続時に収集される情報
+
+| データ                        | タイプ        | 注記                                        |
+| -------------------------- | ---------- | ----------------------------------------- |
+| maximum4DClientConnections | Number     | サーバーへのクライアントの最大接続数                        |
+| connectionSystems          | Collection | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数 |
 
 
 
 ## 保存先と送信先
 
-Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+収集されたデータは、4D Server の終了時にデータベース毎にテキストファイル (JSON形式) に書き込まれます。 このファイルは、[Active 4D Folder](https://doc.4d.com/4dv20/help/command/ja/page485.html) に格納されます。 つまり:
 
 - Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
