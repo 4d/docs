@@ -44,10 +44,10 @@ This property allows setting the size (in pixels) of the horizontal margins of t
 
 This parameter is useful, for example, when the background picture contains borders:
 
-| Com / Sem            | Exemplo                                                      |
-| -------------------- | ------------------------------------------------------------ |
-| Sem margem           | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
-| With 13-pixel margin | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
+| Com / Sem               | Exemplo                                                      |
+| ----------------------- | ------------------------------------------------------------ |
+| Sem margem              | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
+| Com margem de 13 píxeis | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
 > This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
 
 #### Gramática JSON
