@@ -289,7 +289,7 @@ This page contains the options used to enable and control advanced Web features 
 
 ### Publishing
 
-#### Expose as REST server
+#### Expor como servidor REST
 
 Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
 
