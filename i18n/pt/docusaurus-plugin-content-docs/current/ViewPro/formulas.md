@@ -102,7 +102,7 @@ When you copy or move these formulas to new locations, each cell address in that
 
 
 
-### Reference Notation
+### Notação de referências
 
 If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. You may make the reference an absolute reference by putting a dollar sign in front of the letter and the number, as in `$C$5`.
 
