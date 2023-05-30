@@ -134,7 +134,7 @@ The status bar located at the bottom right part of the editor window displays th
 ![](../assets/en/code-editor/status-bar.png)
 
 - **Ln**: Número da linha
-- **Col**: Column number, i.e., the level in the hierarchy of programming structures. The first level is 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
+- **Col**: Column number, i.e., the level in the hierarchy of programming structures. O primeiro nível é 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
 - **Ch**: Location of character in the line.
 - ![](../assets/en/code-editor/show-hide-list.png): Hide/display lists.
 
