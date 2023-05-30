@@ -46,7 +46,7 @@ The **License Manager** dialog box is displayed (Instant Activation page is sele
 
 ![](../assets/en/getStart/helpMenu.png)
 
-## 4D Activation mode
+## Modo de activação 4D
 
 4D oferece três modos de ativação. Recomendamos **Instant Activation**.
 
