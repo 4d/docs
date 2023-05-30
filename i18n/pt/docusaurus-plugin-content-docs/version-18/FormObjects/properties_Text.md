@@ -84,7 +84,7 @@ This property allows you to specify either the **font theme** or the **font fami
 The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
 
 - a plataforma,
-- the system language,
+- a língua do sistema,
 - and the type of form object.
 
 With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
@@ -119,9 +119,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis    |
-| ---------- | ------------- | -------------------- |
-| fontFamily | string        | CSS font family name |
+| Nome       | Tipo de dados | Valores possíveis             |
+| ---------- | ------------- | ----------------------------- |
+| fontFamily | string        | Nome da família de fontes CSS |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objectos suportados
@@ -271,7 +271,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 ---
 
-## Meta Info Expression
+## Meta Info expression
 
 `Collection or entity selection type list boxes`
 
