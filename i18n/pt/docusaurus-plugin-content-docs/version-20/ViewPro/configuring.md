@@ -40,7 +40,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 | Tab      | Acções                          | Ribbon Interface | Interface da barra de ferramentas |
 | -------- | ------------------------------- |:----------------:|:---------------------------------:|
 | File     | File manipulation               |        X         |                                   |
-| Inicio   | Text appearance                 |        X         |                 X                 |
+| Inicio   | Aspecto do texto                |        X         |                 X                 |
 | Inserir  | Adicionar itens                 |        X         |                 X                 |
 | Fórmulas | Formula calculation and library |        X         |                 X                 |
 | Dados    | Data manipulation               |        X         |                 X                 |
