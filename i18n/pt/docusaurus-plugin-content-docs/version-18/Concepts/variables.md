@@ -9,7 +9,7 @@ Quando cria a sua base de dados 4D, especifica os nomes e tipos de campos que pr
 
 As variáveis são objetos da linguagem; pode criar e utilizar variables que nunca aparecerão na tela. Nos seus formulários, pode exibir variáveis (exceto Pointer e BLOB) na tela, introduzir dados neles, e imprimi-los em relatórios. Desta forma, variáveis de área editáveis ou não editáveis atuam tal como os campos, e os mesmos controles incorporados estão disponíveis ao serem criados. Variáveis formulário podem controlar botões, list boxes, aréas de rolagem, botões de imagem, e assim por diante, ou exibir resultados de cálculos que não precisam ser salvos.
 
-## Creating Variables
+## Criação de variáveis
 
 You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
 
