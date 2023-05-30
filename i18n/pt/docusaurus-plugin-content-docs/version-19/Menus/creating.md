@@ -10,7 +10,7 @@ You can create menus and menu bars:
 
 You can combine both features and use menus created in structure as templates to define menus in memory.
 
-## Default menu bar
+## Barra de menu padrão
 
 A custom application must contain at least one menu bar with one menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
 
