@@ -10,7 +10,7 @@ You can create menus and menu bars:
 
 You can combine both features and use menus created in structure as templates to define menus in memory.
 
-## Default menu bar
+## Barra de menu padrão
 
 A custom application must contain at least one menu bar with one menu. By default, when you create a new database, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. The default menu bar includes standard menus and a command for returning to the Design mode.
 
