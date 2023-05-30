@@ -96,7 +96,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &9                            | Permitir apenas números.                                                                                                                             |
 | &A                            | Allow only capital letters.                                                                                                                          |
 | &a                            | Allow only letters (uppercase and lowercase).                                                                                                        |
-| &@                            | Allow only alphanumeric characters. No special characters.                                                                                           |
+| &@                            | Allow only alphanumeric characters. Sem caracteres especiais.                                                                                        |
 | ~a##                          | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                 |
 | !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
 | !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                          |
