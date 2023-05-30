@@ -104,7 +104,7 @@ Un array se designa escribiendo su nombre, que es el nombre que se pasa a un com
 
 El nombre de un array interproceso va precedido de los símbolos (`<>`) - un signo "menor que" seguido de un signo "mayor que".
 
-An interprocess array name can contain up to 31 characters, not including the `<>` symbols.
+Un nombre de array interproceso puede contener hasta 31 caracteres, sin incluir los símbolos `<>`.
 
 Ejemplos:
 
@@ -116,7 +116,7 @@ ARRAY INTEGER(<>aiBigArray;10000)
 
 ### Arrays proceso
 
-You designate a process array by using its name (which cannot start with the `<>` symbols nor the dollar sign $). Un nombre de array proceso puede contener hasta 31 caracteres.
+Un array proceso se designa con su nombre (que no puede empezar con los símbolos `<>` ni el signo dólar $). Un nombre de array proceso puede contener hasta 31 caracteres.
 
 Ejemplos:
 
@@ -145,17 +145,17 @@ La referencia a un elemento de un array local, proceso o interproceso se realiza
 Ejemplos:
 
 ```4d  
- //Addressing an element of an interprocess array
+ //Direccionar un elemento de un array interproceso
 If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
- //Addressing an element of a process array
+ //Direccionar un elemento de un array proceso
 If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
- //Addressing an element of a local array
+ //Direccionar un elemento de un array local
 If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
@@ -168,17 +168,17 @@ You reference an element of a two-dimensional array by using the curly braces ({
 Ejemplos:
 
 ```4d
- //Addressing an element of a two-dimensional interprocess array
+ //Direccionamiento de un elemento de un array interproceso de dos dimensiones 
 If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional process array
+ //Direccionar un elemento de una array proceso de dos dimensiones
 If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional local array
+ //Direccionar un elemento de un array local de dos dimensiones
 If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
@@ -257,21 +257,21 @@ Dentro de una función, la variable local $0 contiene el valor a devolver.
 Ejemplos:
 
 ```4d
- //Within DROP SPACES $1 is a pointer to the field [People]Name
+ //Dentro de DROP SPACES $1 es un puntero al campo [People]Name
 DROP SPACES(->[People]Name)
 
- //Within Calc creator:
- //- $1 is numeric and equal to 1
- //- $2 is numeric and equal to 5
- //- $3 is text or string and equal to "Nice"
- //- The result value is assigned to $0
-$vsResult:=Calc creator(1;5;"Nice")
+ //Dentro de Calc creator:
+ //- $1 es numérico e igual a 1
+ //- $2 es numérico e igual a 5
+ //- $3 es texto o cadena e igual a "Nice"
+ //- El valor resultante se asigna a $0
+$vsResult:=Calc creator(1;5; "Nice")
 
- //Within Dump:
- //- The three parameters are text or string
- //- They can be addressed as $1, $2 or $3
- //- They can also be addressed as, for instance, ${$vlParam} where $vlParam is 1, 2 or 3
- //- The result value is assigned to $0
+ //Dentro de Dump:
+ //- Los tres parámetros son texto o cadena
+ //- Pueden direccionarse como $1, $2 o $3
+ //- También pueden direccionarse como, por ejemplo, ${$vlParam} donde $vlParam es 1, 2 o 3
+ //- El valor resultante se asigna a $0
 vtClone:=Dump("is";"the";"it")
 ```
 
