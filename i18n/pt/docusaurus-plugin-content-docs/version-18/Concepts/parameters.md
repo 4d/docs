@@ -46,7 +46,7 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 **Note:** For a good execution of code, you need to make sure that all `$1`, `$2`... parameters are correctly declared within called methods (see [Declaring parameters](#declaring-parameters) below).
 
 
-### Supported expressions
+### Expressões suportadas
 
 You can use any [expression](Concepts/quick-tour.md#expression-types) as parameter, except:
 
@@ -335,7 +335,7 @@ APPEND TEXT(vtSomeText) //Will only display the  message APPEND TEXT(vtSomeText;
 ```
 
 
-## Parameter indirection
+## Indirecção de parâmetros
 
 4D project methods accept a variable number of parameters of the same type, starting from the right. This principle is called **parameter indirection**. Using the `Count parameters` command you can then address those parameters with a `For...End for` loop and the parameter indirection syntax.
 
