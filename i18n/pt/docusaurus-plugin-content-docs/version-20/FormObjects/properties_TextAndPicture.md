@@ -222,7 +222,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 ---
 
-## With pop-up menu
+## Com menu pop-up
 
 This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
 

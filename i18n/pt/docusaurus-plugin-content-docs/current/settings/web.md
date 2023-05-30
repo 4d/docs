@@ -63,7 +63,7 @@ Designate a default home page for the Web server. See [Default Home page](../Web
 
 Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
 
-#### Pages Cache Size
+#### Tamanho da cache das Páginas
 
 Define o tamanho da cache. See [Cache](../WebServer/webServerConfig.md#cache).
 

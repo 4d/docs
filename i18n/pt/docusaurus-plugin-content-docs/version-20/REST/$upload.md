@@ -12,7 +12,7 @@ Post this request when you have a file that you want to upload to the Server. If
 
 You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
 
-## Uploading scenario
+## Cenário de carregamento
 
 Imagine you want to upload an image to update the picture attribute of an entity.
 

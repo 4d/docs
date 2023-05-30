@@ -620,7 +620,7 @@ You can use bookmarks as markers for lines that contain an [item found by a sear
 
 :::
 
-## Reveal in Explorer
+## Revelar no Explorador
 
 The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
 
@@ -650,7 +650,7 @@ The effect of the **Goto Definition...** command varies depending on the target 
 - with a class name or class function, it opens the class in the the Code Editor
 - with a built-in 4D command or function, it has the same effect as the [**Show documentation**](#show-documentation) command.
 
-## Show documentation
+## Mostrar documentação
 
 The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. Por exemplo:
 

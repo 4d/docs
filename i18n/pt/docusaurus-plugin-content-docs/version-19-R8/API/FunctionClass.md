@@ -13,7 +13,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 
 
-### Formula Objects
+### Objetos Formula
 
 Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos [`4D. Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
 

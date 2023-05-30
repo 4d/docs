@@ -10,7 +10,7 @@ For example if you have a recurring report with specific formatting (e.g., certa
 
 *   Create and execute 4D code
 *   Exibir diálogos
-*   Select form objects
+*   Seleccionar objectos do formulário
 *   Add / delete / modify forms, form objects as well as their properties
 *   Modify project files (update, delete)
 

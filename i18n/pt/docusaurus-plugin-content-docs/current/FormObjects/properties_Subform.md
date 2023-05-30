@@ -92,7 +92,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 [Double click on empty row](#double-click-on-empty-row)
 
 ---
-## Enterable in list
+## Introduzível em lista
 
 When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
 

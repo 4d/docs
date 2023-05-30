@@ -133,7 +133,7 @@ For example, the `query()` method is a dataclass member function. If you have st
 $myClass.query("name = smith")
 ```
 
-## Mixed data type
+## Tipo de dados misto
 
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Inclui:
 
@@ -148,11 +148,11 @@ In this documentation, "Mixed" data type is used to designate the various type o
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
-## Optimistic Lock
+## Fechadura optimista
 
 In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. See also "Pessimistic lock".
 
-## Pessimistic Lock
+## Bloqueio pessimista
 
 A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 

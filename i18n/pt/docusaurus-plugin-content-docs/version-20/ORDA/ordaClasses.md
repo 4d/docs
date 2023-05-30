@@ -41,7 +41,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 
-| Class                       | Nome do exemplo       | Instantiated by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Class                       | Nome do exemplo       | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cs. DataStore               | cs. DataStore         | comando [`ds`](API/DataStoreClass.md#ds)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | cs.*DataClassName*          | cs. Employee          | [`dataStore. DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -71,7 +71,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 </details>
 
 
-### DataStore Class
+### Classe DataStore
 
 
 A 4D database exposes its own DataStore class in the `cs` class store.
@@ -97,7 +97,7 @@ $desc:=ds.getDesc() //"Database exposing..."
 
 
 
-### DataClass Class
+### Classe DataClass
 
 Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
@@ -204,7 +204,7 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 - **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
 - **Example name**: cs. CityEntity
 
-#### Computed attributes
+#### Atributos calculados
 
 Entity classes allow you to define **computed attributes** using specific keywords:
 
@@ -269,7 +269,7 @@ When compiled, data model class functions are executed:
 If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
 
 
-## Computed attributes
+## Atributos calculados
 
 
 ### Visão Geral
@@ -810,7 +810,7 @@ $id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method"
 ```
 
 
-## Local functions
+## Funções locais
 
 By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
 
@@ -923,7 +923,7 @@ Class extends Entity
 Once a class is defined, its name is no longer dimmed in the Explorer.
 
 
-### Editing classes
+### Edição de classes
 
 To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
 

@@ -18,7 +18,7 @@ This option allows configuration of the application operation when opening a loc
 
 Unless this option is checked, it is not possible to open a database when its data file is locked (default operation for 4D databases).
 
-#### About locked files
+#### Sobre ficheiros bloqueados
 
 Locked files can be read but their contents cannot be modified. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
 

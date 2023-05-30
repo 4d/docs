@@ -73,7 +73,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 | Versão | Mudanças                            |
 | ------ | ----------------------------------- |
-| v20    | TLS validation by default           |
+| v20    | Validação TLS por padrão            |
 | v19 R7 | Suporte de propriedade *decodeData* |
 
 </details>
@@ -142,7 +142,7 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 | serverAuthentication   | [authentication-object](#authentication-object) | Autenticação do servidor de tratamento de objectos                                                                                                                                                                                                                          | indefinido    |
 | returnResponseBody     | Parâmetros                                      | Se falso, o corpo de resposta não é devolvido na [`resposta` objecto](#response). Devolve um erro se falso e `onData` é indefinido                                                                                                                                          | True          |
 | timeout                | Real                                            | Tempo de espera em segundos. Indefinido = sem timeout                                                                                                                                                                                                                       | Indefinido    |
-| validateTLSCertificate | Parâmetros                                      | If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.                                              | True          |
+| validateTLSCertificate | Parâmetros                                      | Se false, 4D não valida o certificado TLS e não retorna um erro se ele for inválido (i.e. expirado, auto-assinado...). Importante: Na implementação actual, a Autoridade de Certificação em si não é verificada.                                                            | True          |
 
 
 #### Funções Callback

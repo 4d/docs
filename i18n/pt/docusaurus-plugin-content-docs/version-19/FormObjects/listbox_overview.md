@@ -530,7 +530,7 @@ You design a list box of the entity selection type, bound to the `Form.child` ex
 
 You display two columns:
 
-| Negrito     | Parent's nickname            |
+| Negrito     | Apelido do progenitor        |
 | ----------- | ---------------------------- |
 | `This.name` | `This.parent.extra.nickname` |
 

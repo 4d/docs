@@ -34,7 +34,7 @@ If key values are not defined in a custom theme, they default to the values from
 
 > When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
 
-## Theme definition
+## Definição do tema
 
 Defining a theme means:
 

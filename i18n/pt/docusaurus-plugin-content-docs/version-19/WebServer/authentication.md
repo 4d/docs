@@ -21,7 +21,7 @@ The operation of the 4D web server's access system is summarized in the followin
 
 > Requests starting with `rest/` are directly handled by the [REST server](REST/configuration.md).
 
-### Custom (default)
+### Personalizado (padrão)
 
 Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
 
