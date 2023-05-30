@@ -428,7 +428,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 Name of the web server application. Useful when component web servers are started.
 
-## OpenSSL Version
+## Versão OpenSSL
 
 | Pode ser definido com | Nome                                                     | Comentários     |
 | --------------------- | -------------------------------------------------------- | --------------- |
