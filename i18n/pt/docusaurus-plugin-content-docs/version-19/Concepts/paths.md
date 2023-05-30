@@ -77,13 +77,13 @@ However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New
 
 The following escape sequences are recognized by 4D:
 
-| Escape sequence              | Carácter substituído |
-| ---------------------------- | -------------------- |
-| `\n`                        | LF (Nova linha)      |
-| `\t`                        | HT (Horizontal tab)  |
-| `\r`                        | CR (Carriage return) |
-| ``\\`|``&#96; (Backslash) |                      |
-| `\"`                        | `"` (Quotes)         |
+| Escape sequence              | Carácter substituído      |
+| ---------------------------- | ------------------------- |
+| `\n`                        | LF (Nova linha)           |
+| `\t`                        | HT (Tabulação horizontal) |
+| `\r`                        | CR (Carriage return)      |
+| ``\\`|``&#96; (Backslash) |                           |
+| `\"`                        | `"` (Quotes)              |
 
 ### macOS
 
