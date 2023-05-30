@@ -68,7 +68,7 @@ The first parameter ($1) is the URL entered by users in the address area of thei
 
 Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
 
-| URL entered in web browser           | Value of parameter $1    |
+| URL entered in web browser           | Valor do parâmetro $1    |
 | ------------------------------------ | ------------------------ |
 | 123.4.567.89                         | /                        |
 | http://123.4.567.89                  | /                        |
