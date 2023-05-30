@@ -11,7 +11,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 
 
-## Opening sessions
+## Abertura de sessões
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
 
@@ -29,7 +29,7 @@ These principles are illustrated in the following graphics:
 
 > For sessions opened by REST requests, please refer to [Users and sessions](REST/authUsers.md).
 
-### Viewing sessions
+### Visionamento de sessões
 
 Processes that manage sessions for datastore access are shown in the 4D Server administration window:
 
