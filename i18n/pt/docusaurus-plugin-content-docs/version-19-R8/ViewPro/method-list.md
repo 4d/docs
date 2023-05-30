@@ -761,7 +761,7 @@ O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->create
 
 In *rangeObj*, pass the cell range where the table will be created.
 
-In *tableName*, pass a name for the table. The name must:
+In *tableName*, pass a name for the table. O nome deve:
 
 * ser único na folha
 * include at least 5 characters
@@ -4966,7 +4966,7 @@ Here's the result once the columns are generated:
 | Parâmetro     | Tipo   |    | Descrição                                   |
 | ------------- | ------ | -- | ------------------------------------------- |
 | rangeObj      | Objeto | -> | Range object                                |
-| dateValue     | Date   | -> | Date value to set                           |
+| dateValue     | Date   | -> | Valor date a definir                        |
 | timeValue     | Hora   | -> | Time value to set                           |
 | formatPattern | Text   | -> | Formato do valor|<!-- END REF -->
 
@@ -5214,7 +5214,7 @@ $0:=$1*3.33
 
 #### Exemplo 2
 
-To remove formulas:
+Para remover fórmulas:
 
 ```4d
 $formulas:=New collection
@@ -5952,7 +5952,7 @@ $param.theme.secondColumnStripStyle:=$styleColumn2 VP SET TABLE THEME("ViewProAr
 | Parâmetro     | Tipo   |    | Descrição                                   |
 | ------------- | ------ | -- | ------------------------------------------- |
 | rangeObj      | Objeto | -> | Range object                                |
-| textValue     | Text   | -> | Text value to set                           |
+| textValue     | Text   | -> | Valor texto a definir                       |
 | formatPattern | Text   | -> | Formato do valor|<!-- END REF -->
 
 |
@@ -6157,7 +6157,7 @@ The following table lists the available workbook options:
 | autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table>                                                                                                                                             |
 | backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                          |
 | backgroundImage                       | string / picture / file | Background image for the area.                                                                                                                                                                                                                         |
-| backgroundImageLayout                 | number                  | How the background image is displayed. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Fills the area.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                 |
+| backgroundImageLayout                 | number                  | How the background image is displayed. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                 |
 | calcOnDemand                          | boolean                 | Formulas are calculated only when they are demanded.                                                                                                                                                                                                   |
 | columnResizeMode                      | number                  | Resize mode for columns. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                               |
 | copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                   |
