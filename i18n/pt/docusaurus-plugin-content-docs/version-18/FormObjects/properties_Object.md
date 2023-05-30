@@ -253,7 +253,7 @@ For database translation purposes, you can enter an XLIFF reference in the title
 
 ---
 
-## Variable Calculation
+## Cálculo de variáveis
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
