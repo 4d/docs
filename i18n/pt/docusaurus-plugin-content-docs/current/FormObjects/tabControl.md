@@ -86,7 +86,7 @@ You can create a Text array that contains the names of each page of the form. Th
 > You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
 
 
-## Goto page features
+## Funcionalidades do Goto page
 
 ### Comando FORM GOTO PAGE
 
@@ -111,7 +111,7 @@ Here is an example object method:
  End case
 ```
 
-### Goto Page action
+### Acção Goto Page
 
 When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
 
