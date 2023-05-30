@@ -185,7 +185,7 @@ This very simple example shows how the web server interacts transparently with t
 
 
 
-## Login and session
+## Início de sessão e sessão
 
 In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
 
