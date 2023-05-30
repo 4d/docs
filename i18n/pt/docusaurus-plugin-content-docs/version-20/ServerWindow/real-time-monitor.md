@@ -27,7 +27,7 @@ The following information is provided for each line:
 The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 
 - clicking on the **Pause** button,
-- clicking in the list,
+- clicando na lista,
 - pressing the space bar.
 
 When you pause the page, a "PAUSED" message appears and the button label changes to **Resume**. You can resume monitoring of the operations by performing the same action as for pausing.
