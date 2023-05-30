@@ -204,7 +204,7 @@ To create your own date and time patterns, in your current localization, you can
 |      | mm                                                        | Minutes with leading zero. 00-59                | 03                   |
 |      | s                                                         | Seconds without leading zero. 0-59              | 5                    |
 |      | ss                                                        | Seconds with leading zero. 00-59                | 05                   |
-|      | \[h]                                                     | Elapsed time in hours                           | 14 (pode exceder 24) |
+|      | \[h]                                                     | Tempo decorrido em horas                        | 14 (pode exceder 24) |
 |      | \[mm]                                                    | Elapsed time in minutes                         | 843                  |
 |      | \[ss]                                                    | Elapsed time in seconds                         | 50585                |
 |      | AM/PM                                                     | Períodos do dia. 24 hour fomat used if omitted. | PM                   |
