@@ -166,7 +166,7 @@ Sets the number of columns of the list box.
 
 ## Array controle linha
 
-`Array type list box`
+`List box do tipo array`
 
 A 4D array controlling the display of list box rows.
 
