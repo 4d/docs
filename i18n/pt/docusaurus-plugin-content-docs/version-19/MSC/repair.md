@@ -55,7 +55,7 @@ The "Records found in the data file" area includes two tables summarizing the in
 
 - The second table lists the tables of the project file.
 
-### Manual assigning
+### Atribuição manual
 
 If several groups of records could not be assigned to tables due to a damaged address table, you can assign them manually. To do this, first select an unassigned group of records in the first table. The "Content of the records" area then displays a preview of the contents of the first records of the group to make it easier to assign them:
 
