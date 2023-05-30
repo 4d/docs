@@ -36,7 +36,7 @@ The Project folder typically contains the following hierarchy:
   - TableForms
   - Triggers
 - DerivedData
-- Trash (if any)
+- Trash (se houver)
 
 ### *applicationName*.4DProject file
 
