@@ -165,7 +165,7 @@ The ELF (Extended Log Format) format is very widespread in the world of HTTP bro
 
 The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
 
-##### Configuring the fields
+##### Configuração dos campos
 
 When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. To do so, check the desired fields.
 > You cannot select the same field twice.
