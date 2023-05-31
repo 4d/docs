@@ -39,7 +39,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
 - Sessão/Info:
     - Processo 4D - em branco,
     - User process - 4D user name,
-    - Web process - URL path,
+    - Processo web - caminho URL,
 - Nome do processo,
 - Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
 - Current state of the process,
