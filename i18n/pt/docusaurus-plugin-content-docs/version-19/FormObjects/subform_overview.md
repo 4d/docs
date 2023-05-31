@@ -4,7 +4,7 @@ title: Subformulário
 ---
 
 
-A subform is a form included in another form.
+Um subformulário é um formulário incluído noutro formulário.
 
 ## Terminologia
 
@@ -37,7 +37,7 @@ The page subform uses the input form indicated by the [Detail Form](properties_S
 
 > 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
-### Gestão da variável vinculada
+### Managing the bound variable
 
 The [variable](properties_Object.md#variable-or-expression) bound to a page subform lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
 
@@ -74,7 +74,7 @@ Assigning the value to the variable generates the `On Data Change` form event in
 
 > If you "manually" move the hands of the clock, this also generates the `On Data Change` form event in the object method of the *clockValue* variable in the subform.
 
-### Usar o objeto associado ao subformulário
+### Using the subform bound object
 
 4D automatically binds an object (`C_OBJECT`) to each subform. The contents of this object can be read and/or modified from within the context of the subform, allowing you to share values in a local context.
 
@@ -90,13 +90,13 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
  C_OBJECT($lang)
  $lang:=New object
  If(<>lang="fr")
-    $lang. CompanyName:="Société :"
-    $lang. LastName:="Nom :"
+    $lang.CompanyName:="Société :"
+    $lang.LastName:="Nom :"
  Else
-    $lang. CompanyName:="Company:"
-    $lang. LastName:="Name:"
+    $lang.CompanyName:="Company:"
+    $lang.LastName:="Name:"
  End if
- InvoiceAddress. Label:=$lang
+ InvoiceAddress.Label:=$lang
 ```
 
 ![](../assets/en/FormObjects/subforms5.png)
@@ -123,7 +123,7 @@ For example, the following statement:
 
 ... retrieves a pointer to the "MyButton" variable that is located in the "MySubForm" subform object. This syntax can be used to access from the parent form any object found in a subform. Also note the `OBJECT Get name` command which can be used to retrieve the name of the object that has the focus.
 
-#### CALL SUBFORM CONTAINER command
+#### Comando CALL SUBFORM CONTAINER
 
 The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to the subform container object, which can then process it in the context of the parent form. The event is received in the container object method. It may be at the origin of any event detected by the subform (click, drag-and-drop, etc.).
 

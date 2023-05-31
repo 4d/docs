@@ -1,104 +1,104 @@
 ---
 id: methods
-title: Métodos
+title: Página Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several action(s). A method is composed of statements.
+Um método é basicamente um pedaço de código que executa uma ou várias acções. Na linguagem 4D, há duas categorias de métodos:
 
-A statement performs an action, and may be simple or complex. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)).
+Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)).
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
+O tamanho máximo de um método de projecto é limitado a 2 GB de texto ou 32.000 linhas de comando.
 
-## Tipos de métodos
+## Métodos especializados
 
 In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
-| Tipo                                               | Calling context                                                                                             | Accepts parameters | Descrição                                                                                                                                                            |
-| -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Método Projeto**                                 | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
-| **Método objecto (widget)**                        | Automatic, when an event involves the object to which the method is attached                                | Não                | Property of a form object (also called widget)                                                                                                                       |
-| **Método formulário**                              | Automatic, when an event involves the form to which the method is attached                                  | Não                | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
-| **Trigger** (também conhecido por *método tabela*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | Não                | Property of a table. Triggers are methods that can prevent "illegal" operations with the records of your database.                                                   |
-| **Database method**                                | Automatic, when a working session event occurs                                                              | Yes (predefined)   | Existem 16 métodos base em 4D.                                                                                                                                       |
-| **Class**                                          | [**As funções de classe**](classes.md#function) são chamadas no contexto de uma instância de objecto        | sim                | Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or created by the 4D developer. See [**Classes**](classes.md)                    |
+| Tipo                          | Contexto de chamada                                                                                         | Aceita parâmetros  | Descrição                                                                                                                                                                                         |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Métodos proyecto**          | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado.                                 |
+| **Método objecto (widget)**   | Automático, quando um evento envolve a forma a que o método está ligado                                     | Não                | Propriedade de um objecto de formulário (também chamado widget)                                                                                                                                   |
+| **Método formulário**         | Automático, quando um evento envolve o objecto ao qual o método está ligado                                 | Não                | Propriedade de um formulário. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. |
+| **No**(default): No highlight | Automático, cada vez que manipula os registos de uma tabela (Adicionar, Apagar e Modificar)                 | Não                | Propriedade de uma tabela. Os gatilhos/triggers são métodos que podem prevenir operações "ilegais" com os registos da sua base de dados.                                                          |
+| **Método base**               | Automático, quando ocorre um evento de sessão de trabalho                                                   | Sim (pré-definido) | Existem 16 métodos base em 4D.                                                                                                                                                                    |
+| **Class**                     | The 4D Language also supports **Class functions**, that can be called in the context of an object instance. | sim                | Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function). Ver [**Classes**](classes.md)                    |
 
 
-## Métodos proyecto
+## Métodos projeto recursivos
 
-A project method can have one of the following roles, depending on how it is executed and used:
+Um método de projecto pode ter uma das seguintes funções, dependendo de como é executado e utilizado:
 
-- Subrotina
+- Constantes
 - Objeto fórmula
 - Método do menu
 - Método de gerenciamento de processos
-- Event or Error catching method
+- Método de captura de eventos ou erros
 
 You can also execute your project methods manually, for testing purpose for example.
 
-### Subrotinas
+### Sugestões
 
-A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
+Uma sub-rotina é um método de projecto que pode ser pensado como um servo. Executa as tarefas que outros métodos lhe pedem para executar. Uma função é uma sub-rotina que devolve um valor ao método que a chamou.
 
-When you create a project method, it becomes part of the language of the project in which you create it. You can then call the project method from another method (project method, object method...) in the same way that you call 4D’s built-in commands. A project method used in this way is called a subroutine.
+Quando criar um método projeto, este passa a formar parte da lingagem do banco de dados no qual foi criado. Pode daí chamar o método projeto desde outros métodos projeto ou desde [métodos predefinidos](#predefined-methods) da mesma maneira que chama aos comandos integrados de 4D. Um método de projecto utilizado desta forma é chamado de sub-rotina.
 
-You use subroutines to:
+Utiliza sub-rotinas para:
 
-- Reduce repetitive coding
-- Clarify your methods
-- Facilitate changes to your methods
-- Modularize your code
+- Reduzir a codificação repetitiva
+- Esclareça os seus métodos
+- Facilitar mudanças nos seus métodos
+- Modularize o seu código
 
-For example, let’s say you have a project of customers. As you customize the project, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. The code to do this might look like this:
+Por exemplo, suponha que tenha um banco de dados de clientes. Ao personalizar o banco de dados, pode perceber que ha'tarefas que tem que realizar repetidamente, como achar um cliente e modificar seu registro. O código para fazer isso  parece-se com o seguinte:
 
 ```4d
-  // Look for a customer
+  // Procure um cliente
  QUERY BY EXAMPLE([Customers])
-  // Select the input form
- FORM SET INPUT([Customers];"Data Entry")
-  // Modify the customer's record
+  // Selecione o formulário de entrada
+ FORMULÁRIO DE ENTRADA([Customers]; "Data Entry")
+  // Modifique o registo do cliente
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+Se não utilizar sub-rotinas, terá de escrever o código cada vez que quiser modificar o registo de um cliente. Se houver dez lugares na sua base de dados personalizada onde precise fazer isso, terá de escrever o código dez vezes. Se utilizar sub-rotinas, só terá de o escrever uma vez. Esta é a primeira vantagem das sub-rotinas - reduzir a quantidade de código.
 
-If the previously described code was a method called `MODIFY_CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
+Se o código descrito anteriormente fosse um método chamado `MODIFICAR CLIENTE`,  executaria simplesmente utilizando o nome do método em outro método. Por exemplo, para modificar o registo de um cliente e depois imprimir o registo, escrever-se-ia este método:
 
 ```4d
- MODIFY_CUSTOMER
+ MODIFY CUSTOMER
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. This capability simplifies your methods dramatically. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+Esta capacidade simplifica dramaticamente os seus métodos. No exemplo, não precisa saber como funciona o método `MODIFY CUSTOMER` , apenas o que ele faz. Esta é a segunda razão para a utilização de sub-rotinas para esclarecer os seus métodos. Desta forma, os seus métodos tornam-se extensões à linguagem 4D.
 
-If you need to change your method of finding customers in this example project, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
+Se precisar mudar seu método de pesquisa de clientes nesse banco de dados de exemplo, terá que mudar apenas um método, não dez. Este é o próximo motivo para utilizar sub-rotinas para facilitar mudanças nos seus métodos.
 
-Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account project:
+Usando sub-rotinas, você torna o seu código modular. Isto significa simplesmente a divisão do seu código em módulos (sub-rotinas), cada um dos quais executa uma tarefa lógica. Considere o código abaixo de um banco de dados de contas correntes:
 
 ```4d
- FIND_CLEARED_CHECKS //Buscar os cheques emitidos
- RECONCILE_ACCOUNT //Reconciliar a conta
- PRINT_CHECK_BOOK_REPORT //Imprimir um relatório da conta
+ FIND CLEARED CHECKS ` Buscar os cheques emitidos
+ RECONCILE ACCOUNT ` Reconciliar a conta
+ PRINT CHECK BOOK REPORT ` Imprimir um relatório da conta
 ```
 
-Mesmo para alguém que não conheça o projecto, é claro o que o código faz. Não é necessário examinar cada sub-rotina. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
+Mesmo para alguém que não conheça o banco de dados, é claro o que o código faz. Não é necessário examinar cada sub-rotina. Cada sub-rotina pode ter muitas linhas e realizar algumas operações complexas, mas aqui é apenas importante que desempenhe a sua tarefa. Recomendamos que divida o seu código em tarefas lógicas, ou módulos, sempre que possível.
 
-### Object formulas
+### Objeto fórmula
 
-You can encapsulate your project methods in **formula** objects and call them from your objects.
+Pode encapsular os seus métodos de projeto em **fórmula** objectos e chamá-los dos seus objectos.
 
-The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
+Os comandos `Formula` ou `Formula from string` permitem-lhe criar objectos de fórmula nativa que pode encapsular em propriedades de objectos. Permite-lhe implementar métodos de objectos personalizados.
 
-To execute a method stored in an object property, use the **()** operator after the property name. Por exemplo:
+Para executar um método armazenado numa propriedade objecto, utilizar o operador **( )** após o nome da propriedade. Por exemplo:
 
 ```4d
 //myAlert ALERT("Hello world!")
 ```
 
-Then `myAlert` can be encapsulated in any object and called:
+Pode encapsular `fullName` num objecto:
 
 ```4d
-var $o : Object
+C_OBJECT($o)
 $o:=New object("custom_Alert";Formula(myAlert))
 $o.custom_Alert() //displays "Hello world!"
 ```
@@ -109,34 +109,34 @@ Também se admite a sintaxe com parênteses:
 $o["custom_Alert"]() //exibe "Hello world!"
 ```
 
-You can also [pass parameters](Concepts/parameters.md) to your formula when you call it by using $1, $2… just like with 4D project methods:
+Pode também [passar parâmetros](Concepts/parameters.md) à sua fórmula quando lhe chamar utilizando $1, $2… , tal como nos métodos de projecto 4D:
 
 ```4d
 //fullName method C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
 
-You can encapsulate `fullName` in an object:
+Depois `myAlert` pode ser encapsulado em qualquer objecto e chamado:
 
 ```4d
-var $o : Object
+C_OBJECT($o)
 $o:=New object("full_name";Formula(fullName))
 $result:=$o.full_name("John";"Smith") 
 //$result = "John Smith"
-//equivalent to $result:=fullName("param1";"param2")
+// equivalent to $result:=fullName("param1";"param2")
 ```
 
-Combined with the `This`function, such object methods allow writing powerful generic code. Por exemplo:
+Combinado com a função`This`, tais métodos de objectos permitem escrever um poderoso código genérico. Por exemplo:
 
 ```4d
 //fullName2 method C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
 
-Then the method acts like a new, calculated attribute that can be added to other attributes:
+Então o método atua como um novo atributo calculado que pode ser adicionado a outros atributos:
 
 ```4d
-var $o : Object
+C_OBJECT($o)
 $o:=New object("firstName";"Jim";"lastName";"Wesson")
 $o.fullName:=Formula(fullName2) //add the method  
 
@@ -144,7 +144,7 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
-Note that, even if it does not have parameters, an object method to be executed must be called with `()` parenthesis. Chamar só a propriedade de objeto devolverá uma nova referência à fórmula (e não a executará):
+Note-se que, mesmo que não tenha parâmetros, um método de objeto a ser executado deve ser chamado com ( ) parênteses. Chamar só a propriedade de objeto devolverá uma nova referência à fórmula (e não a executará):
 
 ```4d
 $o:=$f.message //devolve o objeto fórmula em $o
@@ -152,23 +152,23 @@ $o:=$f.message //devolve o objeto fórmula em $o
 
 ### Métodos do menu
 
-Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
+Um método de menu é invocado quando se selecciona o comando do menu personalizado ao qual está anexado. Atribui-se o método ao comando menu usando o editor de menu ou um comando do tema "Menus". O método executa-se quando o comando do menu é escolhido. Ao criar menus personalizados com métodos de menu que realizam ações específicas, pode personalizar seu banco de dados.
 
-Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
+Os comandos personalizados do menu podem causar a realização de uma ou mais actividades. Por exemplo, um comando de menu para introduzir registos pode chamar um método que executa duas tarefas: exibir o formulário de introdução apropriado, e chamar o comando `ADD RECORD` até que o usuário cancele a atividade de introdução de dados.
 
-Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the application.
+A automatização de sequências de actividades é uma capacidade muito poderosa da linguagem de programação. Usando menus personalizados, pode automatizar sequências de tarefa e fornecer mais orientação aos usuários do banco de dados.
 
 ### Métodos Processo
 
-A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
+Um **método de processo** é um método de projecto que é chamado quando um processo é iniciado. O processo dura apenas enquanto o método do processo continuar a ser executado, excepto se for um processo de Worker. Note-se que um método de menu anexado a um comando de menu com a propriedade *Start a New Process*  é também o método de processo para o processo recentemente iniciado.
 
-### Event and Error catching Methods
+### Métodos de captura de eventos e erros
 
-An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
+Um **método de captação de eventos** decorre num processo separado como método de captação de eventos. Normalmente, deixa a 4D fazer a maior parte do tratamento do evento por si. Por exemplo, durante a introdução de dados, 4D detecta toques no teclado e cliques, depois chama os métodos corretos de objetos e formulários para que possa responder adequadamente aos eventos a partir destes métodos. Para mais informações, ver a descrição do comando `ON EVENT CALL`.
 
-An **error catching method** is an interrupt-based project method. It is called each time an error or an exception occurs. For more information, see the [Error handling](error-handling.md) section.
+Um **método de apanhar erros** é um método de projecto baseado na interrupção. Cada vez que ocorre um erro ou uma exceção, este é executado dentro do processo em que foi instalado. Para mais informações, ver a descrição do comando `ON EVENT CALL`.
 
-### Manual Execution
+### Execution mode
 
 Project methods written in your application are usually called automatically during the use of the application via menu commands, buttons, other methods, and so on. As for database methods, they are executed in relation to specific events that occur in the application.
 
@@ -179,7 +179,7 @@ You can execute methods in two ways:
 - From the Code Editor window,
 - From the Execute Method dialog box (project methods only).
 
-#### From the Code Editor
+#### No editor de código
 
 Each [**Code Editor**](../code-editor/write-class-method.md) window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution desired.
 
@@ -190,11 +190,11 @@ This button is only active for project methods and for the following database me
 - On Server Startup
 - On Server Shutdown
 
-For more information, see [Toolbar](../code-editor/write-class-method.md#toolbar).
+Para mais informações, consulte [Toolbar](../code-editor/write-class-method.md#toolbar).
 
 #### From the Execute Method dialog box
 
-When you select the **Method...** command of the **Run** menu,  displays the **Execute Method** dialog.
+**On selection**: All occurrences are highlighted when the text is selected
 
 This dialog box lists all the project methods of the database, including shared project methods of components. On the other hand, project methods that have been declared invisible will not appear.
 
@@ -202,30 +202,30 @@ To execute a project method, simply select its name in the list and click on **E
 
 If you check the **New Process** check box, the method you selected executes in another process. If the method is performing a time-consuming task such as printing a large set of records, you can continue to work with your database, adding records to a table, creating a graph to display data, and so on. For more information about processes, refer to [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) the 4D *Language Reference* manual.
 
-**Notas Servidor 4D**:
+**None**: No signaling
 
 - If you want the method to be executed on the server machine rather than on the client machine, select the **On 4D Server** option in the To be executed menu. In this case, a new process, call a *stored procedure*, is created on the server machine in order to execute the method. This option can be used to reduce network traffic and optimize the functioning of 4D Server, in particular for methods that call data stored on the disk. All types of methods can be executed on the server machine or on another client machine, except for those that modify the user interface. Neste caso, os procedimentos armazenados são ineficazes.
 - You can also choose to run the method on another client workstation. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
 
 By default, the **locally** option is selected. With the 4D single-user version, this is the only option available.
 
-## Métodos projeto recursivos
+## Métodos associados aos objetos
 
-Project methods can call themselves. Por exemplo:
+Os métodos de projecto podem chamar-se a si próprios. Por exemplo:
 
-- The method A may call the method B which may call A, so A will call B again and so on.
-- A method can call itself.
+- O método A pode chamar o método B que pode chamar A, por isso A chamará novamente B e assim por diante.
+- Um método pode chamar-se a si próprio.
 
-This is called recursion. The 4D language fully supports recursion.
+A isto chama-se recorrência. A linguagem 4D suporta plenamente a recorrência.
 
-Aqui um exemplo simples. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+Aqui um exemplo simples. Digamos que tem uma tabela `[Amigos e Parentes]` composta por este conjunto de campos extremamente simplificado:
 
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 
-For this example, we assume the values in the fields are unique (there are no two persons with the same name). Given a name, you want to build the sentence “A friend of mine, John who is the child of Paul who is the child of Jane who is the child of Robert who is the child of Eleanor, does this for a living!”:
+Para este exemplo, assumimos que os valores nos campos são únicos (não há duas pessoas com o mesmo nome). Dado um nome, quer construir a frase "Um amigo meu, João que é o filho de Paulo que é o filho de Jane que é o filho de Robert que é o filho de Eleanor, faz isto para viver":
 
-1. You can build the sentence in this way:
+1. Pode construir a frase desta forma:
 
 ```4d
  $vsName:=Request("Enter the name:";"John")
@@ -247,7 +247,7 @@ For this example, we assume the values in the fields are unique (there are no tw
  End if
 ```
 
-2. You can also build it this way:
+2. Também se pode construir desta forma:
 
 ```4d
  $vsName:=Request("Enter the name:";"John")
@@ -259,14 +259,16 @@ For this example, we assume the values in the fields are unique (there are no tw
  End if
     End if
  End if
+    End if
+ End if
 ```
 
-with the recursive function `Genealogy of` listed here:
+com a função recursiva `Genealogia de` listada aqui:
 
 ```4d
-  ` Genealogy of project method
-  ` Genealogy of ( String ) -> Text
-  ` Genealogy of ( Name ) -> Part of sentence
+  ` Método projecto Genealogia do 
+  ` Genealogia de ( String ) -> Text
+  ` Genealogia de ( Nome ) -> Parte de frase
 
  $0:=$1
  QUERY([Friends and Relatives];[Friends and Relatives]ChildrensName=$1)
@@ -275,15 +277,15 @@ with the recursive function `Genealogy of` listed here:
  End if
 ```
 
-Note the `Genealogy of` method which calls itself.
+Note-se o `Genealogia do método` que se autodenomina.
 
-The first way is an **iterative algorithm**. The second way is a **recursive algorithm**.
+**Bold**: Braces displayed in bold. A segunda via é um **algoritmo recursivo**.
 
-When implementing code for cases like the previous example, it is important to note that you can always write methods using iteration or recursion. Typically, recursion provides more concise, readable, and maintainable code, but using it is not mandatory.
+Ao implementar código para casos como o exemplo anterior, é importante notar que é sempre possível escrever métodos usando iteração ou recursividade. Tipicamente, a recursão fornece um código mais conciso, legível e de fácil manutenção, mas a sua utilização não é obrigatória.
 
 Alguns usos típicos da recursividade em 4D são:
 
-- Treating records within tables that relate to each other in the same way as in the example.
-- Browsing documents and folders on your disk, using the commands `FOLDER LIST` and `DOCUMENT LIST`. A folder may contain folders and documents, the subfolders can themselves contain folders and documents, and so on.
+- Tratar os registos dentro de tabelas que se relacionam entre si da mesma forma que no exemplo.
+- Navegar documentos e pastas no seu disco, utilizando os comandos `FOLDER LIST` e `DOCUMENT LIST`. Uma pasta pode conter pastas e documentos, as próprias subpastas podem conter pastas e documentos, e assim por diante.
 
-**Important:** Recursive calls should always end at some point. In the example, the method `Genealogy of` stops calling itself when the query returns no records. Without this condition test, the method would call itself indefinitely; eventually, 4D would return a “Stack Full” error becuase it would no longer have space to “pile up” the calls (as well as parameters and local variables used in the method).
+**Importante:** As chamadas recursivas devem sempre terminar em algum momento. No exemplo, o método `Genealogia de` deixa de se chamar a si próprio quando a consulta não devolve registos. Sem este teste de condição, o método chamar-se-ia indefinidamente; eventualmente, 4D retornaria um erro "Stack Full" porque deixaria de ter espaço para "empilhar" as chamadas (bem como os parâmetros e variáveis locais utilizados no método).

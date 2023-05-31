@@ -3,7 +3,7 @@ id: object
 title: Objetos
 ---
 
-Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objectos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
+Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. A sintaxe desses objetos é baseada na notação JSON:
 
 - Um nome de uma propriedade é sempre um texto, por exemplo "nome".
 
@@ -11,41 +11,41 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
     - number (Real, Integer, etc.)
     - text
     - null
-    - Booleano
+    - Parâmetros
     - ponteiro (armazenado como tal, avaliado usando o comando `JSON Stringify` ou quando copiando),
     - data (tipo de data ou cadeia de formato de data ISO)
-    - objeto (os objetos podem estar aninhados em vários níveis)
-    - imagem (*)
+    - object (objects can be nested on several levels)
+    - picture(*)
     - collection
 
-(*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
+(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
-**Atenção:** lembre que os nomes de atributos diferenciam entre maiúsculas e minúsculas.
+**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
 
-As variáveis, campos ou expressõees de tipo objeto são gerenciadas mediante os comandos disponíveis no tema **Objetos (Linguagem)** ou através da notação de objetos (ver [Básicos de sintaxe](Concepts/dt_object.md#syntax-basics)). Note que podem ser usados comandos específicos do tema Pesquisas, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, ou `ORDER BY ATTRIBUTE` para realizar o processamento dos campos objetos.
+You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
 
-Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Quando a notação de objeto for ativada em seu banco de dados (ver abaixo), pode usar esses valores sempre que expressões 4D forem esperadas:
+Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
 
-- Em código 4D, seja escrito nos métodos (editor de método) ou externalizado, fórmulas, arquivos de etiquetas 4D processados por PROCESS 4D TAGS ou o Web Server, arquivos exportar, documentos 4D Write Pro...),
+- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by PROCESS 4D TAGS or the Web Server, export files, 4D Write Pro documents...),
 - nas áreas de expressão do depurador e do explorador de Runtime,
 - na lista de propriedades do editor de formulários para objectos de formulários: Variável ou Campo de expressão, bem como várias caixas de selecção e expressões de colunas (Fonte de dados, cor de fundo, estilo, ou cor da fonte).
 
 ## Inicialização
 
-Os objetos devem ter sido inicializados, por exemplo utilizando o comando `New object`, do contrário ao tentar ler ou modificar suas propriedades se gerará um error de sintaxe.
+Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
 
 Exemplo:
 ```4d
- C_OBJECT($obVar) //criação de um objeto de tipo 4D variável
- $obVar:=Novo objeto //initialization do objeto e atribuição à variável 4D
+ C_OBJECT($obVar) //creation of an object type 4D variable
+ $obVar:=New object //initialization of the object and assignment to the 4D variable
 ```
 
 ### Objeto regular ou compartilhado
 
 Pode criar dois tipos de objetos:
 
-- objetos regulares (não compartilhados), usando o comando `Novo objeto`. Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- objectos partilhados, utilizando o comando `New shared object` . Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
+- regular (non-shared) objects, using the `New object` command. Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
+- shared objects, using the `New shared object` command. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 
 ## Noções básicas de sintaxe
@@ -54,21 +54,21 @@ A notação de objetos pode ser utilizada para acessar aos valores das proprieda
 
 ### Propriedades dos objectos
 
-Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
+Identificadores de propriedades de objetos
 
-- using a "dot" symbol: > object.propertyName
+- using a string within square brackets: > object["propertyName"]
 
 Exemplo:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- using a "dot" symbol: > object.propertyName
 
 Exemplos:
 ```4d
      $vName:=employee["name"]
-     //or also:
+     /ou também:
      $property:="name"
      $vName:=employee[$property]
 
@@ -143,26 +143,26 @@ Quando se usar a notação de objeto, o valore **null** se torna compatível com
  If(myColl[2]=Null)
 ```
 
-Para saber mais, veja a descrição do comando `Null`
+For more information, please refer to the `Null` command description.
 
 ### Valor não definido
 
 A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Normalmente ao tentar ler ou atribuir expressões indefinidas, 4D gera erros. Isso não acontece nos casos abaixo:
 
-- Ler uma propriedade de um objeto indefinido ou valores indefinidos devolve um indefinido; a atribuição de um valor indefinido a variáveis (exceto arrays) tem o mesmo efeito que chamar com elas:
+- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
 
 ```4d
      C_OBJECT($o)
      C_LONGINT($val)
      $val:=10 //$val=10
-     $val:=$o. //$o.a é indefinido (sem erro), e atribuir este valor limpa a variável
+     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
       //$val=0
 ```
 
 - Lendo a propriedade de **comprimento** de uma coleção indefinida produz 0:
 
 ```4d
-     C_COLLECTION($c) //variable criada, mas nenhuma coleção é definida
+     C_COLLECTION($c) //variable created but no collection is defined
      $size:=$c.length //$size = 0
 ```
 
@@ -170,11 +170,11 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
 
 ```4d
      C_OBJECT($o)
-     meumétodo($o. ) //passa um parâmetro indefinido
+     mymethod($o.a) //pass an undefined parameter
 
-      //In mymethod
-     C_TEXT($1) //parameter type é texto
-      // $1 contém ""
+      //In mymethod method
+     C_TEXT($1) //parameter type is text
+      // $1 contains ""
 ```
 
 - Uma expressão de condição é automaticamente convertida em falsa quando se avalia para indefinida com as palavras-chave If e Case:
@@ -213,18 +213,18 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
   // para evitar erros no código
 ```
 
-## Identificadores de propriedades de objetos
+## Object property identifiers
 
-As regras de nomes dos tokens (ou seja, os nomes das propriedades dos objetos aos que se acessa usando a notação de objeto) são mais restritivos que os nomes dos objetos padrão 4D. Devem cumprir com a gramática dos identificadores JavaScript ( ver [Padrão ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
-- o primeiro caractere deve ser uma letra, um sublinhado (_) ou um sinal de dólar ($),
-- Os caracteres seguintes podem ser qualquer letra, dígito, um sinal de subscrito ou um sinal de dólar (caracteres espaço NÂO são permitidos),
-- são sensíveis às maiúsculas e minúsculas.
+- the first character must be a letter, an underscore (_), or a dollar sign ($),
+- subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
+- they are case sensitive.
 
 **Nota:**
 
-- Usar um campo como índice de coleção, por exemplo a.b[[Table1]Id], não está permitida. Deve usar uma variável intermediária
-- A criação de atributos de objetos mediante uma string entre colchetes permite anular as regras de ECMA Script. Por exemplo, o atributo $o["My Att"] é válido em 4D, apesar do espaço. Nesse caso, entretanto, não é possível usar a notação de pontos com esse atributo.
+- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
+- Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
 
 ## Exemplos
@@ -233,32 +233,32 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
 - Escrita e leitura das propriedades de objetos (este exemplo compara a notação de objetos e anotação de comandos):
 
 ```4d
-  // Usando a notação de objecto
- C_OBJECT($myObj) //declara um objecto variável 4D
- $myObj:=Novo objecto //cria um objecto e atribui à variável
+  // Using the object notation
+ C_OBJECT($myObj) //declares a 4D variable object
+ $myObj:=New object //creates an object and assigns to the variable
  $myObj.age:=56
  $age:=$myObj.age //56
 
-  // Usando a notação de comando
- C_OBJECT($myObj2) //declara um objecto variável 4D
- OB SET($myObj2; "age";42) //cria um objecto e acrescenta a propriedade age
- $age:=OB Get($myObj2; "age") //42
+  // Using the command notation
+ C_OBJECT($myObj2) //declares a 4D variable object
+ OB SET($myObj2;"age";42) //creates an object and adds the age property
+ $age:=OB Get($myObj2;"age") //42
 
-  // Claro, ambas as notações podem ser misturadas
+  // Of course, both notations can be mixed
  C_OBJECT($myObj3)
- OB SET($myObj3; "age";10)
- $age:=$myObj3.idade //10
+ OB SET($myObj3;"age";10)
+ $age:=$myObj3.age //10
 ```
 
 - Criar uma propriedade e atribuir valores, incluindo objetos:
 
 ```4d
  C_OBJECT($Emp)
- $Emp:=Novo objecto
- $Emp.city:="London" //cria a propriedade da cidade e define o seu valor para "London"
- $Emp.city:="Paris" //modifica a propriedade da cidade
- $Emp.phone:=Novo objecto("office"; "123456789"; "home"; "0011223344")
-  //cria a propriedade do telefone e define o seu valor para um objecto
+ $Emp:=New object
+ $Emp.city:="London" //creates the city property and sets its value to "London"
+ $Emp.city:="Paris" //modifies the city property
+ $Emp.phone:=New object("office";"123456789";"home";"0011223344")
+  //creates the phone property and sets its value to an object
 ```
 
 - Obter um valor em um subobjeto é bem simples usando a notação de objeto:
@@ -270,12 +270,12 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
 - É possível acessar as propriedades como strings usando o operador []
 
 ```4d
- $Emp["city"]:="Berlim" //modifica a propriedade da cidade
-  //isto pode ser útil para criar propriedades através de variáveis
+ $Emp["city"]:="Berlin" //modifies the city property
+  //this can be useful for creating properties through variables
  C_TEXT($addr)
- $addr:="endereço"
+ $addr:="address"
  For($i;1;4)
-    $Emp[$addr+String($i)]:=""".
- Fim para
-  // cria 4 propriedades vazias "address1...address4" no objecto $Emp
+    $Emp[$addr+String($i)]:=""
+ End for
+  // creates 4 empty properties "address1...address4" in the $Emp object
 ```

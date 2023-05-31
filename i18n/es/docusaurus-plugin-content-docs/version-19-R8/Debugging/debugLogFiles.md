@@ -352,10 +352,10 @@ Hay varias maneras de activar el archivo de configuración de registro, dependie
 
 - **4D Server con interfaz**: puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file) y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
 - **un proyecto interpretado o compilado**: el archivo debe llamarse `logConfig.json` y copiarse en la carpeta [Settings](../Project/architecture.md#settings-1) del proyecto (situada al mismo nivel que la carpeta [`Project`](../Project/architecture.md#project-folder)). Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
-- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+- **una aplicación construida**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+- **todos los proyectos con un 4D autónomo o remoto**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
     * Windows: `Users\[userName]\AppData\Roaming\4D`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
 - **todos los proyectos con 4D Server**: el archivo debe llamarse `logConfig.json` y copiarse en la siguiente carpeta:
@@ -370,7 +370,7 @@ Si se instala un archivo `logConfig.json` tanto en la carpeta Settings como en A
 
 ### Descripción del archivo JSON
 
-The log configuration file is a `.json` file that must comply with the following json schema:
+El archivo de configuración del registro es un archivo `.json` que debe cumplir con el siguiente esquema json:
 
 ```json
 {

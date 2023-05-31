@@ -1,6 +1,6 @@
 ---
 id: listOverview
-title: Hierarchical List
+title: Lista hierárquica
 ---
 
 
@@ -32,7 +32,7 @@ The **form object** is not necessarily unique: there may be several representati
 You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value.
 
 ```4d
-mylist:=New list
+$mylist:=New list
 ```
 
 Each representation of the list has its own specific characteristics and shares common characteristics with all the other representations. The following characteristics are specific to each representation of the list:
@@ -153,4 +153,4 @@ You can control whether hierarchical list items can be modified by the user by u
 
 ## Propriedades compatíveis
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Draggable](properties_Action.md#draggable-and-droppable) - [Droppable](properties_Action.md#draggable-and-droppable) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Multi-selectable](properties_Action.md#multi-selectable) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Negrita](properties_Text.md#bold) - [Estilo de linha de borda](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - \[Lista de opções\](properties_DataSource. md#choice-list) - [Classe](properties_Object.md#css-class) - [Arrastável](properties_Action.md#draggable-and-droppable) - [Soltável](properties_Action.md#draggable-and-droppable) - \[Editável\](properties_Entry. md#enterable) - [Filtro de entrada](properties_Entry.md#entry-filter) - [Cor de preenchimento](properties_BackgroundAndBorder.md#background-color-fill-color) - [Focável](properties_Entry.md#focusable) - \[Fonte\](properties_Text. md#font) - [Cor da fonte](properties_Text.md#font-color) - [Tamanho da fonte](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - \[Ocultar retângulo de enfoque\](properties_Appearance. md#hide-focus-rectangle) - [Barra de deslocamento horizontal](properties_Appearance.md#horizontal-scroll-bar) - [Tamanho horizontal](properties_ResizingOptions.md#horizontal-sizing) - \[Itálica\](properties_Text. md#italic) - [esquerda](properties_CoordinatesAndSizing.md#left) - [Multi-selecionável](properties_Action.md#multi-selectable) - [Nome do objeto](properties_Object.md#object-name) - \[Direita\](properties_CoordinatesAndSizing. md#right) - [Superior](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - \[Sublinhado\](properties_Text. md#underline) - [Barra de deslocamento vertical](properties_Appearance.md#vertical-scroll-bar) - \[Tamanho vertical\](properties_ResizingOptions. md#vertical-sizing) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width) 

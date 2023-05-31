@@ -3,7 +3,7 @@ id: version
 title: "$version"
 ---
 
-Image version number
+Número da versão da imagem
 
 ## Descrição
 

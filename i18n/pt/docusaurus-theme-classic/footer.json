@@ -4,15 +4,15 @@
     "description": "The title of the footer links column with title=Community in the footer"
   },
   "link.title.Support": {
-    "message": "Support",
+    "message": "Suporte",
     "description": "The title of the footer links column with title=Support in the footer"
   },
   "link.title.Company": {
-    "message": "Company",
+    "message": "Empresa",
     "description": "The title of the footer links column with title=Company in the footer"
   },
   "link.item.label.4D Developer Center": {
-    "message": "4D Developer Center",
+    "message": "Centro de desenvolvimento 4D",
     "description": "The label of footer link with label=4D Developer Center linking to https://developer.4d.com"
   },
   "link.item.label.4D Blog": {
@@ -68,7 +68,7 @@
     "description": "The label of footer link with label=Contact us linking to https://us.4d.com/contact-us"
   },
   "link.item.label.4D around the world": {
-    "message": "4D around the world",
+    "message": "4D no mundo",
     "description": "The label of footer link with label=4D around the world linking to https://us.4d.com/4d-around-the-world"
   },
   "link.item.label.Careers": {

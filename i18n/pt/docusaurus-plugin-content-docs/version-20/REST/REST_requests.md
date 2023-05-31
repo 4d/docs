@@ -6,14 +6,14 @@ title: Sobre petições REST
 
 As estrutyuras abaixo são compatíveis com petições REST:
 
-| URI                              | Resource (Input)                                                                                    | /? or &{filter} (Output)                                                                              |
-| -------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)                                                                 | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
-|                                  | [{dataClass}](%7BdataClass%7D.html)/[$entityset/{entitySetID}](entityset.html#entitysetentitysetid) | [$method=...]($method.md)                                                                             |
-|                                  | [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)                                             | [$attributes]($attributes.md)                                                                         |
-|                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D.html#dataclassattributevalue)                      |                                                                                                       |
+| URI                              | Recurso                                                                                       | /? /? or &{filter} (Output)                                                |
+| -------------------------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)                                                           | [{attribute1, attribute2, ...}](manData.html#selecting-attributes-to-get)/ |
+|                                  | [{dataClass}](%7BdataClass%7D.html)/                                                          | [$method=...]($method.md)                                                  |
+|                                  | [[{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/](%7BdataClass%7D.html#dataclasskey) | [$attributes]($attributes.md)                                              |
+|                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D.html#dataclassattributevalue)                |                                                                            |
 
-While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
+Todas as petições REST devem conter os parâmetros URI e Resource, mas o parâmetro Subresource (que filtra os dados retornados) é opcional.
 
 Como com todas as URIs, o primeiro parâmetro é definido por um “?” e todos os parâmetros subsequentes por “&”. Por exemplo:
 

@@ -1,9 +1,9 @@
 ---
 id: data-collect
-title: Sobre a coleção de dados
+title: About Data Collection
 ---
 
-Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário.
+Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário. Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário.
 
 Esta página explica:
 
@@ -16,10 +16,10 @@ Esta página explica:
 
 Dados são coletados durante os eventos abaixo:
 
-- 4D Server startup,
+- Arranque do 4D Server,
 - abertura de banco de dados,
 - fechamento de banco de dados,
-- início do 4D Servidor.
+- início do servidor Web.
 
 ### Dados coletados no início do 4D Server
 
@@ -39,7 +39,7 @@ Dados são coletados durante os eventos abaixo:
 
 | Dados                   | Exemplo                                                 | Notas                                                                                             |
 | ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| id                      | string hashed                                           | Identificação única associada à base de dados (*Polinômio Rolling hash do nome da base de dados*) |
+| id                      | cadeia com hash                                         | Identificação única associada à base de dados (*Polinômio Rolling hash do nome da base de dados*) |
 | dataFileSize            | 419430400                                               | Tamanho do arquivo de dados em bytes                                                              |
 | indexesSize             | 419430400                                               | Tamanho do índice em bytes                                                                        |
 | cacheSize               | 419430400                                               | Tamanho da cache em bytes                                                                         |

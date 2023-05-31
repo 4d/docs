@@ -24,7 +24,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 
 * **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
-* **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. You must declare:
+* **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. É necessário declarar:
   * [Project methods](templates.md#allowing-project-methods) exposed through HTTP requests
   * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
   * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
@@ -48,7 +48,7 @@ REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
 
 The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
 
-## Templates and URLs
+## Modelos e URLs
 
 The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
 

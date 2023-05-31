@@ -21,14 +21,8 @@ Criar uma classe `MyHttpRequestOptions` para as opções de pedido:
 
 ```4d
 Class constructor($method : Text; $headers : Object; $body : Text)
-This.method:=$method
-This.headers:=$headers
-This.body:=$body
-
-Function onResponse($request : 4D.HTTPRequest; $event : Object)
-//Método My onResponse, se quiser manejar a petição de forma assincronica
-
-Function onError($request : 4D.HTTPRequest; $event : Object)
+This.method:=$method This.headers:=$headers This.body:=$body Function onResponse($request : 4D.HTTPRequest; $event : Object)
+//Método My onResponse, se quiser manejar a petição de forma assincronica Function onError($request : 4D.HTTPRequest; $event : Object)
 //Método My onError, se quiser manejar a petição de forma assincrônica
 ```
 
@@ -39,8 +33,8 @@ var $headers : Object
 $headers:=New object()
 $headers["field1"]:="value1"
 
-var myHttpRequestOptions : cs.MyHttpRequestOptions
-myHttpRequestOptions := cs.MyHttpRequestOptions.new("GET"; $headers; "")
+var myHttpRequestOptions : cs. MyHttpRequestOptions
+myHttpRequestOptions := cs. MyHttpRequestOptions.new("GET"; $headers; "")
 
 var $request : 4D.HTTPRequest
 $request:=4D.HTTPRequest.new("www.google.com"; myHttpRequestOptions)
@@ -86,7 +80,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parâmetros | Tipo           |    | Descrição                                           |
+| Parâmetro  | Tipo           |    | Descrição                                           |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | url        | Text           | -> | URL para onde enviar o pedido                       |
 | options    | Objeto         | -> | Pedir propriedades de configuração                  |
@@ -126,12 +120,12 @@ Por exemplo, pode passar as seguintes cordas:
 
 No parâmetro *opções* , passe um objeto que possa conter as seguintes propriedades:
 
-| Propriedade          | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | Predefinição  |
+| Propriedade          | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | O padrãO      |
 | -------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| body                 | Variant                                         | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
+| body                 | Diferente de                                    | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
 | certificatesFolder   | [Folder](FolderClass.md)                        | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                           | indefinido    |
 | dataType             | Text                                            | Tipo de atributo do corpo de resposta. Valores: "texto", "blob", "objecto", ou "auto". Se "auto", o tipo do conteúdo do corpo será deduzido do seu tipo MIME (objecto para JSON, texto para texto, javascript, xml, mensagem http e forma codificada url, ou então um blob) | "auto"        |
-| decodeData           | Booleano                                        | Se for verdade, os dados recebidos em `onData` callback não são compactados                                                                                                                                                                                                 | False         |
+| decodeData           | Parâmetros                                      | Se for verdade, os dados recebidos em `onData` callback não são compactados                                                                                                                                                                                                 | False         |
 | encoding             | Text                                            | Utilizado apenas em caso de pedidos com um `body` (métodos `post` ou `put`). Codificação do conteúdo do corpo do pedido se for um texto, ignorado se o tipo de conteúdo for colocado dentro dos cabeçalhos                                                                  | "UTF-8"       |
 | headers              | Objeto                                          | Cabeçalhos do pedido. Sintaxe: `headers.key=valor` (*valor* pode ser uma Colecção se a mesma chave tiver de aparecer várias vezes)                                                                                                                                          | Objecto vazio |
 | method               | Text                                            | "POST", "GET", ou outro método                                                                                                                                                                                                                                              | "GET"         |
@@ -144,7 +138,7 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 | protocol             | Text                                            | "auto" ou "HTTP1". "auto" significa HTTP1 na implementação actual                                                                                                                                                                                                           | "auto"        |
 | proxyAuthentication  | [authentication-object](#authentication-object) | Autenticação por procuração de tratamento de objectos                                                                                                                                                                                                                       | indefinido    |
 | serverAuthentication | [authentication-object](#authentication-object) | Autenticação do servidor de tratamento de objectos                                                                                                                                                                                                                          | indefinido    |
-| returnResponseBody   | Booleano                                        | Se falso, o corpo de resposta não é devolvido na [`resposta` objecto](#response). Devolve um erro se falso e `onData` é indefinido                                                                                                                                          | True          |
+| returnResponseBody   | Parâmetros                                      | Se falso, o corpo de resposta não é devolvido na [`resposta` objecto](#response). Devolve um erro se falso e `onData` é indefinido                                                                                                                                          | True          |
 | timeout              | Real                                            | Tempo de espera em segundos. Indefinido = sem timeout                                                                                                                                                                                                                       | Indefinido    |
 
 
@@ -152,10 +146,10 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 
 Todas as funções de chamada de retorno recebem dois parâmetros de objectos:
 
-| Parâmetros | Tipo                                        |
-| ---------- | ------------------------------------------- |
-| $param1    | [objeto `HTTPRequest`](#httprequest-object) |
-| $param2    | [`Event` objecto](#event-object)            |
+| Parâmetro | Tipo                                        |
+| --------- | ------------------------------------------- |
+| $param1   | [objeto `HTTPRequest`](#httprequest-object) |
+| $param2   | [`Event` objecto](#event-object)            |
 
 Aqui está a sequência de chamadas de retorno:
 
@@ -172,18 +166,18 @@ Um evento `` objecto é devolvido quando uma função de retorno de chamada [](#
 
 | Propriedade | Tipo | Descrição                                                                                  |
 | ----------- | ---- | ------------------------------------------------------------------------------------------ |
-| .dados      | blob | Dados recebidos. É sempre *indefinido* excepto no `onData` callback                        |
+| .data       | blob | Dados recebidos. É sempre *indefinido* excepto no `onData` callback                        |
 | .type       | text | Tipo de evento. Possíveis valores: "resposta", "erro", "cabeçalhos", "dados", ou "terminar |
 
 #### authentication-object
 
 Um objecto de autenticação lida com o `options.serverAuthentication` ou `options.proxyAuthentication` propriedade. Pode conter as seguintes propriedades:
 
-| Propriedade | Tipo | Descrição                                                      | Predefinição |
-| ----------- | ---- | -------------------------------------------------------------- | ------------ |
-| name        | Text | Nome utilizado para autenticação                               | indefinido   |
-| senha       | Text | Senha utilizada para autenticação                              | indefinido   |
-| method      | Text | Método utilizado para autenticação: "basic", "digest", "auto". | "auto"       |
+| Propriedade | Tipo | Descrição                                                      | O padrãO   |
+| ----------- | ---- | -------------------------------------------------------------- | ---------- |
+| name        | Text | Nome utilizado para autenticação                               | indefinido |
+| senha       | Text | Senha utilizada para autenticação                              | indefinido |
+| method      | Text | Método utilizado para autenticação: "basic", "digest", "auto". | "auto"     |
 
 <!-- END REF -->
 
@@ -205,7 +199,7 @@ A propriedade `.dataType` contém <!-- REF #HTTPRequestClass.dataType.Summary --
 
 #### Descrição
 
-A propriedade `.encoding` contém <!-- REF #HTTPRequestClass.encoding.Summary -->a codificação `` passou nas opções [``](#options-parameter) ao chamar [new()](#4dhttprequestnew), "UTF-8" se foi omitido<!-- END REF -->.
+A propriedade `.encoding` contém <!-- REF #HTTPRequestClass.encoding.Summary -->a codificação `passou nas opções [`](#options-parameter) ao chamar [new()](#4dhttprequestnew), "UTF-8" se foi omitido<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -281,13 +275,13 @@ O sítio `.resposta` contém <!-- REF #HTTPRequestClass.response.Summary -->a re
 
 Uma `resposta` objecto é um objecto não partilhável. Contém as seguintes propriedades:
 
-| Propriedade | Tipo    | Descrição                                                                                                                                                                                                                                                               |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Corpo da resposta. O tipo da mensagem é definido de acordo com a propriedade [`dataType`](#datatype) . Indefinido se o corpo ainda não tiver sido recebido                                                                                                              |
-| .headers    | Objeto  | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos em minúsculas. `<headername>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos.                      |
-| .estado     | Número  | Código de estado da resposta                                                                                                                                                                                                                                            |
-| .statusText | Text    | Mensagem que explica o código de estado                                                                                                                                                                                                                                 |
-| .rawHeaders | Objeto  | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos intactos (com o seu caso original). `<headerName>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos. |
+| Propriedade | Tipo         | Descrição                                                                                                                                                                                                                                                               |
+| ----------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Diferente de | Corpo da resposta. O tipo da mensagem é definido de acordo com a propriedade [`dataType`](#datatype) . Indefinido se o corpo ainda não tiver sido recebido                                                                                                              |
+| .headers    | Objeto       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos em minúsculas. `<headername>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos.                      |
+| .status     | Número       | Código de estado da resposta                                                                                                                                                                                                                                            |
+| .statusText | Text         | Mensagem que explica o código de estado                                                                                                                                                                                                                                 |
+| .rawHeaders | Objeto       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos intactos (com o seu caso original). `<headerName>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos. |
 
 <!-- END REF -->
 
@@ -309,9 +303,9 @@ A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnRes
 
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Parâmetros | Tipo |  | Descrição                                             |
-| ---------- | ---- |::| ----------------------------------------------------- |
-|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
+| Parâmetro | Tipo |  | Descrição                                             |
+| --------- | ---- |::| ----------------------------------------------------- |
+|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
@@ -363,7 +357,7 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary -->o URL do 
 
 
 <!-- REF #HTTPRequestClass.wait().Params -->
-| Parâmetros | Tipo           |    | Descrição                                           |
+| Parâmetro  | Tipo           |    | Descrição                                           |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | time       | Real           | -> | Tempo máximo em segundos para esperar pela resposta |
 | Resultados | 4D.HTTPRequest | <- | HTTPRequest object|<!-- END REF -->

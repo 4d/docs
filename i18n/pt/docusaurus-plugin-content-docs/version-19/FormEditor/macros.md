@@ -1,6 +1,6 @@
 ---
 id: macros
-title: Form Editor Macros
+title: Macros do editor de formulários
 ---
 
 
@@ -9,8 +9,8 @@ The 4D Form editor supports macros. A macro is a set of instructions to perform 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
 * Create and execute 4D code
-* Display dialogs
-* Select form objects
+* Exibir diálogos
+* Seleccionar objectos do formulário
 * Add / delete / modify forms, form objects as well as their properties
 * Modify project files (update, delete)
 
@@ -108,9 +108,9 @@ Here is the description of the JSON file contents:
 
 | Atributo |                     |                          | Tipo   | Descrição                                              |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
-| macros   |                     |                          | object | list of defined macros                                 |
+| macros   |                     |                          | object | lista de macros definidas                              |
 |          | `<macroName>` |                          | object | definição macro                                        |
-|          |                     | class                    | string | nome da classe macro                                   |
+|          |                     | "class"                  | string | nome da classe macro                                   |
 |          |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
@@ -135,7 +135,7 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 }
 ```
 
-## Instantiating macros in 4D
+## Instanciando macros em 4D
 
 Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
 
@@ -151,9 +151,9 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : Object)
 
-| Parâmetros | Tipo   | Descrição                                                |
-| ---------- | ------ | -------------------------------------------------------- |
-| $macro     | Objeto | Macro declaration object (in the `formMacros.json` file) |
+| Parâmetro | Tipo   | Descrição                                                |
+| --------- | ------ | -------------------------------------------------------- |
+| $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
@@ -188,10 +188,10 @@ Você pode escrever:
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Parâmetros | Tipo   | Descrição                                                                            |
-| ---------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor    | Objeto | Form Editor Macro Proxy object containing the form properties                        |
-| $result    | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| Parâmetro | Tipo   | Descrição                                                                            |
+| --------- | ------ | ------------------------------------------------------------------------------------ |
+| $editor   | Objeto | Form Editor Macro Proxy object containing the form properties                        |
+| $result   | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
 
 The `onInvoke` function is automatically executed each time the macro is called.
 
@@ -215,14 +215,14 @@ Here are the properties returned in the *$editor* parameter:
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Propriedade       | Tipo       | Descrição                                                      |
-| ----------------- | ---------- | -------------------------------------------------------------- |
-| currentPage       | Objeto     | currentPage including objects modified by the macro, if any    |
-| currentSelection  | Collection | currentSelection se modificada pela macro                      |
-| formProperties    | Objeto     | formProperties se modificada pela macro                        |
-| editor.groups     | Objeto     | informação do grupo, se os grupos forem modificados pela macro |
-| editor.views      | Objeto     | view info, se as vistas forem modificadas pela macro           |
-| editor.activeView | String     | Nome da vista activa                                           |
+| Propriedade       | Tipo       | Descrição                                                              |
+| ----------------- | ---------- | ---------------------------------------------------------------------- |
+| currentPage       | Objeto     | currentPage incluindo os objectos modificados pela macro, se existirem |
+| currentSelection  | Collection | currentSelection se modificada pela macro                              |
+| formProperties    | Objeto     | formProperties se modificada pela macro                                |
+| editor.groups     | Objeto     | informação do grupo, se os grupos forem modificados pela macro         |
+| editor.views      | Objeto     | view info, se as vistas forem modificadas pela macro                   |
+| editor.activeView | String     | Nome da vista activa                                                   |
 
 Por exemplo, se objectos da página actual e grupos tiverem sido modificados, pode escrever:
 
@@ -277,22 +277,18 @@ Function onInvoke($editor : Object)->$result : Object
 
  // Notify to 4D the modification
  $result:=New object("currentPage"; $editor.editor.currentPage)
- End if 
-
- // Notify to 4D the modification
- $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
 ### onError()
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parâmetros   |                       | Tipo       | Descrição                                   |
+| Parâmetro    |                       | Tipo       | Descrição                                   |
 | ------------ | --------------------- | ---------- | ------------------------------------------- |
 | $editor      |                       | Objeto     | Objeto enviado para [emInvoke](#oninvoke)   |
 | $resultMacro |                       | Objeto     | Objecto devolvido por [onInvoke](#oninvoke) |
 | $error       |                       | Collection | Pilha de erros                              |
-|              | [].errCode            | Número     | Error code                                  |
+|              | [].errCode            | Número     | Código de erro                              |
 |              | [].message            | Text       | Descrição do erro                           |
 |              | [].componentSignature | Text       | Assinatura da componente interna            |
 

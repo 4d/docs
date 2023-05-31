@@ -1,7 +1,7 @@
 ---
 id: quick-tour
-title: A Quick Tour
-sidebar_label: A Quick Tour
+title: Uma visita rápida
+sidebar_label: Uma visita rápida
 ---
 
 Usando a linguagem 4D, imprimir a mensagem tradicional ""Hello, world!" na tela pode ser feito de várias maneiras. A maneira mais simples é provavelmente escrever a linha única abaixo em um método de projeto:
@@ -10,9 +10,9 @@ Usando a linguagem 4D, imprimir a mensagem tradicional ""Hello, world!" na tela 
 ALERT("Hello, World!")
 ```
 
-Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. To execute the code, you just need to click on the execution button in the Code Editor:
+Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. Para executar o código, precisa clicar no botão de execução do editor de Método:
 
-![hello-world](../assets/en/Concepts/helloworld.png)
+!["Hello World"](../assets/en/Concepts/helloworld.png)
 
 Ou poderia anexar esse código a um botão em um formulário e executar o formulário, nesse caso, clicar no botão exibira a caixa de diálogo de alerta. Em qualquer caso, acabou de executar sua primeira linha de código 4D!
 
@@ -33,15 +33,15 @@ Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao inv�
 
 **Importante:** Não confunda o operador de atribuição := com o operador de comparação de igualdade =. Um operador de atribuição diferente (e não =) foi escolhido deliberadamente para evitar problemas e confusão que ocorrem frequentemente em outras linguagens com operadores como == ou ===. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
-## Variáveis
+## Variáveis.
 
-A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. You create a typed variable using the `var` keyword. Por exemplo, para criar uma variável do tipo dados, pode escrever:
+A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Pode criar uma variável digitada utilizando um comando `C_XXX`. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
 ```4d
 var MyDate : Date 
 ```
 
-The `var` keyword allows declaring object variables of a defined class type, for example:
+A palavra-chave `var` permite declarar variáveis objecto de um tipo de classe definido, por exemplo:
 
 ```4d
 var myPerson : cs. Person 
@@ -49,13 +49,13 @@ var myPerson : cs. Person
 ```
 
 
-Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
+Mesmo geralmente não sendo recomendado, é possível criar variáveis simplesmente usando-as; não precisa defini-las formalmente como se faz com campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” Essa linha cria a variável e a atribuiu com o tipo de data (temporário) e um conteúdo. Uma variável criada por atribuição é interpretada como sem tipo, ou seja, pode ser atribuída com outros tipos em outras linhas e então muda o tipo dinamicamente. Uma variável digitada com `C_XXX` não pode mudar de tipo. Em modo compilado, o tipo não pode ser modificado nunca, independentemente de como tenha criado a variável.
 
 ## Comandos
 
@@ -65,7 +65,7 @@ Os comandos 4D são métodos integrados para realizar uma ação. Comandos são 
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. Por exemplo:
+Alguns comandos são anexados à coleções ou objetos, em cujo caso são métodos temporais que se utilizam com a notação de pontos. Por exemplo:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -99,13 +99,13 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apenas leitura
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
+> As constantes pré-definidas aparecem sublinhadas como padrão no editor de métodos 4D.
 
-## Métodos
+## Página Métodos
 
 4D oferece un grande número de métodos (ou comandos) integrados, mas também lhe permite criar seus próprios **métodos de projeto**. Os métodos de projeto são métodos definidos pelo usuário que contenham comandos, operadores e outras partes da linguaje. Los métodos projeto são métodos genéricos, mas há outros tipos de métodos: métodos objeto, métodos formulário, métodos tabela (Triggers) e métodos base.
 
-Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex.
+Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa.
 
 Por exemplo, a linha abaixo é uma declaração que mostará uma caixa de diálogo de confirmação:
 
@@ -119,7 +119,7 @@ O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Fazer algo com o carácter se for um TAB
 
 
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -127,14 +127,14 @@ For($vlChar;1;Length(vtSomeText))
     End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are directly available within the called method if they have been declared. A method can return a single value in a parameter, which have to be declared. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). A method can return a single value in a parameter, which have to be declared. Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Do_Something($myText) //Chamar o método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something  
+  //Aqui o código do método Do_Something  
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
 ```
@@ -181,15 +181,19 @@ $vAge:=employee.children[2].age
 Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
 
 ```
-$f:=New object
-$f.message:=Formula(ALERT("Hello world!"))
-"Hello World"
+ALERT($myText) //"HELLO"
+
+  //Here the code of the method Do_Something  
+#DECLARE ($in : Text) -> $out : Text
+$out:=Uppercase($in)
+$myText:="hello"
+$myText:=Do_Something($myText) //Call the Do_Something method
 ```
 
 To access a collection element, you have to pass the element number embedded in square brackets:
 
 ```4d
-var myColl : Collection
+C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //acesso ao 4º elemento da colecção
 ```
@@ -208,8 +212,7 @@ $o:=cs.myClass.new()
 In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
-//in o ficheiro myClass.4dm
-Function hello -> $welcome : Text
+//in o ficheiro myClass.4dm Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
 
@@ -248,22 +251,22 @@ This.name:="Square"
 
 
 ## Operadores
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3.
+When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. You are already familiar with many operators. You are already familiar with many operators.
 
-| Operator | Operação      | Exemplo   |
+| Operador | Operação      | Exemplo   |
 | -------- | ------------- | --------- |
 | +        | Adição        | 1 +2 = 3  |
 | –        | Subtração     | 3 - 2 = 1 |
 | *        | Multiplicação | 2 * 3 = 6 |
 | /        | Divisão       | 6 / 2 = 3 |
 
-Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
+Os operadores numéricos são apenas um dos tipos de operadores disponíveis. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
 | Tipo de dados | Operação      | Exemplo                                                                                              |
 | ------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Número        | Adição        | 1 + 2 adds the numbers and results in 3                                                              |
+| Número        | Adição        | 1 + 2 adiciona os números e resultados em 3                                                          |
 | String        | Concatenação  | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Data e Número | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
@@ -286,30 +289,30 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 ### Tipos de expressões
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression               | Tipo                | Descrição                                                                                                                                                                       |
-| ------------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String              | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”       | String              | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Sr. ” + [People]Name    | String              | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String              | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. Retorna "SMITH".                                                     |
-| 4                        | Número              | Esta é uma constante numérica, 4.                                                                                                                                               |
-| 4 * 2                    | Número              | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
-| myButton                 | Número              | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
-| !1997-01-25!             | Date                | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
-| Current date+ 30         | Date                | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
-| ?8:05:30?                | Hora                | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
-| ?2:03:04? + ?1:02:03?    | Hora                | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
-| True                     | Booleano            | Este comando devolve o valor Booleano TRUE.                                                                                                                                     |
-| 10 # 20                  | Booleano            | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
-| “ABC” = “XYZ”            | Booleano            | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
-| My Picture + 50          | Imagem              | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Ponteiro            | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
-| Table(1)                 | Ponteiro            | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Objeto              | This is a command that returns MyString as an object (if proper format)                                                                                                         |
-| JSON Parse (MyJSONArray) | Collection          | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
-| Form.pageNumber          | Propriedade objecto | An object property is an expression that can be of any supported type                                                                                                           |
-| Col[5]                   | Collection element  | A collection element is an expression that can be of any supported type                                                                                                         |
-| $entitySel[0]            | Entity              | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
+| Expression               | Tipo                 | Descrição                                                                                                                                                                       |
+| ------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                  | String               | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
+| “Hello ” + “there”       | String               | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
+| “Sr. ” + [People]Name    | String               | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
+| Uppercase("smith")       | String               | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                                      |
+| 4                        | Número               | Esta é uma constante numérica, 4.                                                                                                                                               |
+| 4 * 2                    | Número               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
+| myButton                 | Número               | Esta é uma variável associada a um botão. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                            |
+| !1997-01-25!             | Date                 | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
+| Current date+ 30         | Date                 | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
+| ?8:05:30?                | Hora                 | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
+| ?2:03:04? + ?1:02:03?    | Hora                 | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
+| True                     | Parâmetros           | Este comando devolve o valor Booleano TRUE.                                                                                                                                     |
+| 10 # 20                  | Parâmetros           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
+| “ABC” = “XYZ”            | Parâmetros           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
+| My Picture + 50          | Imagem               | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
+| ->[People]Name           | Ponteiro             | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
+| Table(1)                 | Ponteiro             | This is a command that returns a pointer to the first table.                                                                                                                    |
+| JSON Parse (MyString)    | Objeto               | This is a command that returns MyString as an object (if proper format)                                                                                                         |
+| JSON Parse (MyJSONArray) | Collection           | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
+| Form.pageNumber          | Propriedade objecto  | An object property is an expression that can be of any supported type                                                                                                           |
+| Col[5]                   | Elemento de colecção | A collection element is an expression that can be of any supported type                                                                                                         |
+| $entitySel[0]            | Entity               | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
 
 ### Assignable vs non-assignable expressions
 
@@ -339,7 +342,7 @@ MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
 
 ```4d
-$str:=String("hello world!")
+C_DATE(MyDate) //Tipo data para a variável MyDate
 ```
 
 ```4d
@@ -355,24 +358,23 @@ Comments are inactive lines of code. These lines are not interpreted by the 4D l
 There are two ways to create comments:
 
 - `//` para comentários de linha única
-- `/*...*/` for inline or multiline commnents.
+- `/*...*/` para comentarios em linha ou multilinha.
 
 Both styles of comments can be used simultaneously.
 
-#### Single line comments (`//comment`)
+#### Single line comments (//)
 
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
 ```4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
+//This is a comment For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment
-End for
+ End for
 ```
 
-#### Inline or multiline comments (`/*comment*/`)
+#### Inline or multiline comments (/**/)
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
@@ -380,7 +382,7 @@ Surround contents with `/*` ... `*/` characters to create inline comments or mul
 
 ```4d
 For /* inline comment */ ($vCounter;1;100)
-    ...
+ ...
 End for
 ```
 
@@ -389,10 +391,10 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comentarios  
-    /*
-    outros comentarios
-    */
+comments  
+ /*
+ other comments
+ */
 */
 ...
 End for
@@ -406,13 +408,13 @@ The sequence consists of a backslash `\`, followed by a character. For instance,
 
 In 4D, the following escape sequences can be used:
 
-| Escape sequence               | Character replaced   |
-| ----------------------------- | -------------------- |
-| `\n`                         | LF (Avanço de linha) |
-| `\t`                         | HT (Tab)             |
-| `\r`                         | CR (Carriage return) |
-| ``\\` |``&#96; (Backslash) |                      |
-| `\"`                         | " (aspas)            |
+| Escape sequence                     | Carácter substituído |
+| ----------------------------------- | -------------------- |
+| `\n`                               | LF (Avanço de linha) |
+| `\t`                               | HT (Tab)             |
+| `\r`                               | CR (Carriage return) |
+| ``\\` |``&#96; (Barra invertida) |                      |
+| `\"`                               | " (aspas)            |
 
 > It is possible to use either upper or lower case in escape sequences.
 

@@ -3,7 +3,7 @@ id: manData
 title: Manipulação de dados
 ---
 
-All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](ClassFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
+Todos [os atributos, classes](configuration.md#exposing-tables-and-fields) e métodos da datastore expostos podem ser acessados através de REST. Os nomes de classes de dados, atributos e métodos são sensíveis às maiúsculas e minúsculas, entretanto, os dados das pesquisas não são.
 
 ## Pesquisas de dados
 
@@ -20,9 +20,9 @@ Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
 Para adicionar e modificar entidades, pode chamar [`$method=update`]($method.md#methodupdate). Se quiser apagar uma ou mais entidades, pode usar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
 
 
 ## Navegando dados
@@ -62,7 +62,7 @@ Usando [`$compute`]($compute.md), pode computar **average**, **count**, **min**,
 
 Por exemplo, para obter o maior salário:
 
-`/rest/Employee/salary/?$compute=max`
+`/rest/Employee/salary/?$compute=sum`
 
 Para computar todos os valores e retornar um objeto JSON:
 
@@ -78,14 +78,14 @@ You can call ORDA Data Model [user class functions](ClassFunctions.md) through P
 with data in the body of the request: `["Paris"]`
 
 
-> Calls to 4D project methods that are exposed as REST Service are still supported but are deprecated.
+> Pode chamar métodos de projeto 4D que são [expostos como serviços REST](%7BdataClass%7D.html#4d-configuration).
 
 
 ## Selecionar atributos a obter
 
 Sempre pode definir que atributos a retornar na resposta REST depois de uma petição inicial ao passar sua rota na petição (*e.g.*, `Company(1)/name,revenues/`)
 
-Pode aplicar esse filtro das maneiras a seguir:
+Pode aplicar essa técnica a:
 
 | Objeto                | Sintaxe                                             | Exemplo                                                       |
 | --------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
@@ -101,7 +101,7 @@ Os atributos devem ser delimitados por uma vírgula, *ou seja*, `/Employee/first
 ### Exemplos
 Aqui alguns exemplos, mostrando como especificar que atributos vai retornar dependendo da técnica usada para recuperar entidades.
 
-Pode aplicar essa técnica a:
+Pode aplicar esse filtro das maneiras a seguir:
 
 - Classes de dados (todas ou uma coleção de entidades em uma classe de dados)
 - Entidades especificas
@@ -114,7 +114,7 @@ As petições abaixo retornar apenas o primeiro nome e o último nome da classe 
  `GET  /rest/People/firstName,lastName/`
 
 
-**Resultadoi**:
+**Resultado**:
 
 ````
 {
@@ -195,7 +195,7 @@ As petições abaixo retornar apenas os atributos primeiro nome e último sobren
 
  `GET  /rest/People(3)/`
 
-**Resultadoi**:
+**Resultado**:
 
 ````
 {
@@ -222,7 +222,7 @@ As petições abaixo retornar apenas os atributos primeiro nome e último sobren
 
 Quanto tiver [criado um conjunto de entidade](#creating-and-managing-entity-set), pode filtrar a informação nele definindo quais atributos a retornar:
 
- `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer`
+ `` `GET  /rest/People/firstName,employer.name/$entityset/BDCD8AABE13144118A4CF8641D5883F5?$expand=employer ``
 
 
 ## Vendo um atributo de imagem

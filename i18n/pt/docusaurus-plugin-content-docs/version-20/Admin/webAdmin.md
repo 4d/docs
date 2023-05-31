@@ -1,6 +1,6 @@
 ---
 id: webAdmin
-title: WebAdmin
+title: Web Administration
 ---
 
 
@@ -82,7 +82,7 @@ Quando esta opção for marcada, pode conectar ao servidor web `WebAdmin` atrav�
 - Mesmo se esta opção for marcada, quando [Accept HTTPS](#accept-https) for marcado e a configuração  TLS for válida, as conexões localhost vão usar HTTPS.
 
 
-#### HTTP Port
+#### Porta HTTP
 
 Número de porta a usar para conexões com HTTP para o servidor web `WebAdmin` web server quando a opção **Accept HTTP connections on localhost** estiver marcada. Valor normal padrão é 7080
 
@@ -139,8 +139,8 @@ Exemplo:
 
 ```
 "%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key 
-    "my Fabulous AccessKey" --webadmin-auto-start true   
-    --webadmin-store-settings
+ "my Fabulous AccessKey" --webadmin-auto-start true   
+ --webadmin-store-settings
 
 ```
 

@@ -1,13 +1,13 @@
 ---
 id: boolean
-title: Booleano
+title: Parâmetros
 ---
 
 Um campo booleano, variável ou expressão pode ser VERDADEIRO ou FALSO.
 
 ## Funções booleanas
 
-4D fornece as funções booleanas `True`, `False`, e `Not` no tema dedicado **Boolean** . Para obter mais informações, consulte as descrições desses comandos
+4D fornece as funções booleanas `True`, `False`, e `Not` no tema dedicado **Boolean** . For more information, see the descriptions of these commands
 
 ### Exemplo
 
@@ -31,14 +31,14 @@ myBoolean:=(myButton=1)
 
 4D suporta dois operadores lógicos que trabalham com expressões booleanas: conjunção (AND) e disjunção inclusiva (OR). Uma lógica E retorna VERDADEIRA se ambas as expressões forem VERDADEIRAS. Uma lógica OU retorna VERDADEIRA se pelo menos uma das expressões for VERDADEIRA. O quadro seguinte mostra os operadores lógicos:
 
-| Operação | Sintaxe                 | Retorna  | Expression                   | Value |
-| -------- | ----------------------- | -------- | ---------------------------- | ----- |
-| AND      | Boolean & Boolean       | Booleano | ("A" = "A") & (15 # 3)       | True  |
-|          |                         |          | ("A" = "B") & (15 # 3)       | False |
-|          |                         |          | ("A" = "B") & (15 = 3)       | False |
-| OU       | Boolean  &#124; Boolean | Booleano | ("A" = "A") &#124; (15 # 3)  | True  |
-|          |                         |          | ("A" = "B") &#124;  (15 # 3) | True  |
-|          |                         |          | ("A" = "B") &#124;  (15 = 3) | False |
+| Operação | Sintaxe                 | Retorna    | Expression                   | Valor |
+| -------- | ----------------------- | ---------- | ---------------------------- | ----- |
+| AND      | Boolean & Boolean       | Parâmetros | ("A" = "A") & (15 # 3)       | True  |
+|          |                         |            | ("A" = "B") & (15 # 3)       | False |
+|          |                         |            | ("A" = "B") & (15 = 3)       | False |
+| OU       | Boolean  &#124; Boolean | Parâmetros | ("A" = "A") &#124; (15 # 3)  | True  |
+|          |                         |            | ("A" = "B") &#124;  (15 # 3) | True  |
+|          |                         |            | ("A" = "B") &#124;  (15 = 3) | False |
 
 A tabela seguinte é a tabela da verdade para o operador lógico AND:
 

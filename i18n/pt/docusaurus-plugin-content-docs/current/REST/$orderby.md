@@ -21,7 +21,7 @@ The example below sorts the entity set by lastName attribute in ascending order:
 
  `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 
-**Resultadoi**:
+**Resultado**:
 
 ```
 {

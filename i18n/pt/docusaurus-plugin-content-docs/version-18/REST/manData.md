@@ -3,7 +3,7 @@ id: manData
 title: Manipulação de dados
 ---
 
-Todos [os atributos, classes](configuration.md#exposing-tables-and-fields) e métodos da datastore expostos podem ser acessados através de REST. Os nomes de classes de dados, atributos e métodos são sensíveis às maiúsculas e minúsculas, entretanto, os dados das pesquisas não são.
+All [exposed datastore classes, attributes](configuration.md#exposing-tables-and-fields) and methods can be accessed through REST. Dataclass, attribute, and method names are case-sensitive; however, the data for queries is not.
 
 ## Pesquisas de dados
 
@@ -17,7 +17,7 @@ Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
 Para adicionar e modificar entidades, pode chamar [`$method=update`]($method.md#methodupdate). Se quiser apagar uma ou mais entidades, pode usar [`$method=delete`]($method.md#methoddelete).
 
-Além de recuperar uma única entidade em uma classe de dados utilizando [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), também pode escrever um método em sua classe DataClass e chamá-lo para devolver uma seleção de entidades (ou uma coleção) utilizando [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
+Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a method in your DataClass class and call it to return an entity selection (or a collection) by using [{dataClass}/{method}](%7BdataClass%7D.html#dataclassmethod).
 
 Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
 
@@ -59,28 +59,29 @@ Para computar todos os valores e retornar um objeto JSON:
 
 `/rest/Employee/salary/?$compute=$all`
 
-## Obter dados de métodos
+## Getting data from methods
 
-Pode chamar métodos de projeto 4D que são [expostos como serviços REST](%7BdataClass%7D.html#4d-configuration). Um método 4D pode retornar em $0:
+You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). Um método 4D pode retornar em $0:
 
 - um objeto
-- uma coleção
+- uma colecção
 
-O exemplo abaixo é um método de classe de dados que recebe parâmetros e retorna um objeto:
+The following example is a dataclass method that reveives parameters and returns an object:
 
 ```4d
-// 4D findPerson method C_TEXT($1;$firstname;$2;$lastname)
+// 4D findPerson method
+C_TEXT($1;$firstname;$2;$lastname)
 $firstname:=$1
 $lastname:=$2
 
-$0:=ds. Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
+$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
 ```
 
-As propriedades de método são configuradas de acordo com o lado do projeto 4D:
+The method properties are configured accordingly on the 4D project side:
 
 ![alt-text](../assets/en/REST/methodProp_ex.png)
 
-Pode então enviar a seguinte petição REST POST, por exemplo usando o comando 4D `HTTP Request`:
+Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
 
 ```4d
 C_TEXT($content)
@@ -91,13 +92,13 @@ $content:="[\"Toni\",\"Dickey\"]"
 $statusCode:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/Employee/findPerson";$content;$response)
 ```
 
-As chamadas de métodos são detalhadas na seção [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod).
+Method calls are detailed in the [{dataClass}](%7BdataClass%7D.html#dataclassmethod-and-dataclasskeymethod) section.
 
 ## Selecionar atributos a obter
 
 Sempre pode definir que atributos a retornar na resposta REST depois de uma petição inicial ao passar sua rota na petição (*e.g.*, `Company(1)/name,revenues/`)
 
-Pode aplicar esse filtro das maneiras a seguir:
+Pode aplicar essa técnica a:
 
 | Objeto                | Sintaxe                                             | Exemplo                                                       |
 | --------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
@@ -113,7 +114,7 @@ Os atributos devem ser delimitados por uma vírgula, *ou seja*, `/Employee/first
 
 Aqui alguns exemplos, mostrando como especificar que atributos vai retornar dependendo da técnica usada para recuperar entidades.
 
-Pode aplicar essa técnica a:
+Pode aplicar esse filtro das maneiras a seguir:
 
 - Classes de dados (todas ou uma coleção de entidades em uma classe de dados)
 - Entidades especificas

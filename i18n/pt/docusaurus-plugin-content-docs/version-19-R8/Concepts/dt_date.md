@@ -11,7 +11,7 @@ Apesar do modo de representação de datas de C_DATE permitir trabalhar com data
 
 ## Constantes literais de tipo hora
 
-Uma constante literal de tipo data está cercada de sinais de exclamação (!...!). Uma data deve ser estruturada usando o formato ISO (!YYYY-MM-DD!) Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas:
+Uma constante literal de tipo data está cercada de sinais de exclamação (!...!). Uma data deve ser estruturada utilizando o formato ISO (!AAAA-MM-DD!). Uma data deve ser estruturada usando o formato ISO (!YYYY-MM-DD!) Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas:
 
 ```4d
 !1976-01-01!
@@ -21,7 +21,7 @@ Uma constante literal de tipo data está cercada de sinais de exclamação (!...
 
 Uma data nula é especificada por _!00-00-00!_.
 
-**Dica:** O editor de código inclui um acesso direto para introduzir uma data nula. Para escrever uma data nula, introduza o caractere de exclamação (!) e aperte Enter..
+**Dica:** O editor de métodos inclui um acesso direto para introduzir uma data nula. Para escrever uma data nula, introduza o caractere de exclamação (!) e aperte Enter..
 
 **Notas:**
 
@@ -30,20 +30,20 @@ Uma data nula é especificada por _!00-00-00!_.
 
 ## Operadores de data
 
-| Operação             | Sintaxe       | Retorna  | Expression                   | Value        |
-| -------------------- | ------------- | -------- | ---------------------------- | ------------ |
-| Diferença de data    | Date - Date   | Número   | !2017-01-20! - !2017-01-01!  | 19           |
-| Acréscimo de dia     | Data + Número | Date     | !2017-01-20! !2017-01-20!    | !2017-01-29! |
-| Subtrair dia         | Data - Número | Date     | !2017-01-20! !2017-01-01!    | !2017-01-11! |
-| Igual                | Date = Date   | Booleano | !2017-01-20! = !2017-01-01!  | True         |
-|                      |               |          | !2017-01-20! !2017-01-20!    | False        |
-| Desigualdade         | Date # Date   | Booleano | !2017-01-20! !2017-01-01!    | True         |
-|                      |               |          | !2017-01-20! !2017-01-20!    | False        |
-| Maior que            | Date > Date   | Booleano | !2017-01-20! !2017-01-20!    | True         |
-|                      |               |          | !2017-01-20! !2017-01-20!    | False        |
-| Menor que            | Date < Date   | Booleano | !2017-01-20! !2017-01-20!    | True         |
-|                      |               |          | !2017-01-20! !2017-01-20!    | False        |
-| Maior ou igual a     | Date >= Date  | Booleano | !2017-01-20! !2017-01-20!    | True         |
-|                      |               |          | !2017-01-01!>=!2017-01-20!   | False        |
-| Menor que ou igual a | Date <= Date  | Booleano | !2017-01-01!\<=!2017-01-20! | True         |
-|                      |               |          | !2017-01-20!\<=!2017-01-01! | False        |
+| Operação             | Sintaxe       | Retorna    | Expression                   | Valor        |
+| -------------------- | ------------- | ---------- | ---------------------------- | ------------ |
+| Diferença de data    | Date - Date   | Número     | !2017-01-20! - !2017-01-01!  | 19           |
+| Acréscimo de dia     | Data + Número | Date       | !2017-01-20! !2017-01-20!    | !2017-01-29! |
+| Subtrair dia         | Data - Número | Date       | !2017-01-20! !2017-01-20!    | !2017-01-11! |
+| Igual                | Date = Date   | Parâmetros | !2017-01-20! = !2017-01-01!  | True         |
+|                      |               |            | !2017-01-20! !2017-01-20!    | False        |
+| Desigualdade         | Date # Date   | Parâmetros | !2017-01-20! !2017-01-20!    | True         |
+|                      |               |            | !2017-01-20! !2017-01-20!    | False        |
+| Maior que            | Date > Date   | Parâmetros | !2017-01-20! !2017-01-20!    | True         |
+|                      |               |            | !2017-01-20! !2017-01-20!    | False        |
+| Menor que            | Date < Date   | Parâmetros | !2017-01-20! !2017-01-20!    | True         |
+|                      |               |            | !2017-01-20! !2017-01-20!    | False        |
+| Maior ou igual a     | Date >= Date  | Parâmetros | !2017-01-20! !2017-01-20!    | True         |
+|                      |               |            | !2017-01-01!>=!2017-01-20!   | False        |
+| Menor que ou igual a | Date <= Date  | Parâmetros | !2017-01-01!\<=!2017-01-20! | True         |
+|                      |               |            | !2017-01-20!\<=!2017-01-01! | False        |

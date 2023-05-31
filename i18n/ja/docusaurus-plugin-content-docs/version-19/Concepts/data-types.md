@@ -10,7 +10,7 @@ title: データタイプの概要
 | データタイプ                                | データベース  | ランゲージ   | [`var` 宣言](variables.md#var-キーワードによる宣言) | [`C_` または `ARRAY` 宣言](variables.md#c_-指示子による宣言) |
 | ------------------------------------- | ------- | ------- | --------------------------------------- | ----------------------------------------------- |
 | [文字列](dt_string.md)                   | ◯       | テキストに変換 | -                                       | -                                               |
-| [Text](Concepts/dt_string.md)         | ◯       | ◯       | Text                                    | `C_TEXT`, `ARRAY TEXT`                          |
+| [テキスト](Concepts/dt_string.md)         | ◯       | ◯       | Text                                    | `C_TEXT`, `ARRAY TEXT`                          |
 | [日付](Concepts/dt_date.md)             | ◯       | ◯       | Date                                    | `C_DATE`, `ARRAY DATE`                          |
 | [時間](Concepts/dt_time.md)             | ◯       | ◯       | Time                                    | `C_TIME`, `ARRAY TIME`                          |
 | [ブール](Concepts/dt_boolean.md)         | ◯       | ◯       | Boolean                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                    |

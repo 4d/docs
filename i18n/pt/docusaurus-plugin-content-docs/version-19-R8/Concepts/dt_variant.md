@@ -1,6 +1,6 @@
 ---
 id: variant
-title: Variant
+title: Diferente de
 ---
 
 Variante é um tipo de variável que permite encapsular dados de qualquer tipo regular válido numa variável. Normalmente, este tipo de variável pode ser utilizado para escrever código genérico que devolve ou recebe valores para os quais o tipo não é conhecido. É o caso, por exemplo, do código que trata os atributos dos objectos.

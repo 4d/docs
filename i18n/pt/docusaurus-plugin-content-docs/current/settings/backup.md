@@ -3,5 +3,5 @@ id: backup
 title: Página Backup
 ---
 
-These options are detailed in the [**Backup Settings**](../Backup/settings.md) chapter.
+Estas opções estão descritas em pormenor no capítulo [**Parâmetros de cópia de segurança**](../Backup/settings.md).
 

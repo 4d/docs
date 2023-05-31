@@ -40,7 +40,7 @@ Height of the form (in pixels) when the [form size](#size-based-on) is **Set siz
 
 ---
 
-## Hor. Margin
+## Hor. Margem
 
 Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`
 
@@ -54,7 +54,7 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 ---
 
-## Vert. Margin
+## Vert. Margem
 
 Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
 

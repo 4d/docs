@@ -53,7 +53,7 @@ La Barber shop muestra una animación continua, como la [spinner](spinner.md). E
 
 Cuando se ejecuta el formulario, el objeto no se anima. La animación se gestiona pasando un valor a su [variable o expresión asociada](properties_Object.md#variable-or-expression):
 
-* 1 = Start animation,
+* 1 = Iniciar animación,
 * 0 = Detener la animación.
 
 ### Propiedades soportadas

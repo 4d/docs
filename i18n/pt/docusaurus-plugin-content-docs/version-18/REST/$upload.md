@@ -4,7 +4,7 @@ title: "$upload"
 ---
 
 
-Returns an ID of the file uploaded to the server
+Devolve um ID do ficheiro carregado para o servidor
 
 ## Descrição
 Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
@@ -26,7 +26,7 @@ Then, we upload the selected image to 4D Server:
 
  `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**Dados POST**:
 
 ````
 {
@@ -36,9 +36,9 @@ Then, we upload the selected image to 4D Server:
 }
 ````
 
-**Response**:
+**Resposta**:
 
-The modified entity is returned:
+A entidade modificada é devolvida:
 
 ````
 {

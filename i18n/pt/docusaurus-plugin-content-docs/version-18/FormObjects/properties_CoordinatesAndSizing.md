@@ -4,13 +4,13 @@ title: Coordinates & Sizing
 ---
 
 
-## Automatic Row Height
+## Altura automática da linha
 
-`Só para 4D View Pro: esta funcionalidade exige uma licença 4D View Pro.`
+`4D View Pro only: This feature requires a 4D View Pro license.`
 
 This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
 
-When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
+When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
 > When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
@@ -22,9 +22,9 @@ When this property is enabled, the height of every row is automatically calculat
   * the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
 * The row height calculation ignores:
-  * hidden column contents
+  * conteúdo da coluna oculta
   * [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
-> > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+> > > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
 #### Gramática JSON
 
@@ -54,7 +54,7 @@ Bottom coordinate of the object in the form.
 
 ---
 
-## Esquerda
+## Direita
 
 Coordenadas esquerda do objecto no formulário.
 
@@ -70,7 +70,7 @@ Coordenadas esquerda do objecto no formulário.
 
 ---
 
-## Direita
+## Esquerda
 
 Coordenada direita do objecto no formulário.
 
@@ -102,7 +102,7 @@ Coordenada superior do objecto no formulário.
 
 ---
 
-## Raio de canto
+## Retângulo
 
 Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
 
@@ -194,7 +194,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 ---
 
-## Altura linha
+## Array altura linha
 
 Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
 
@@ -210,13 +210,13 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### Veja também
 
-[Array altura linha](#row-height-array)
+[Array estilo linha](#row-height-array)
 
 ---
 
-## Array altura linha
+## Array estilo linha
 
-`Só para 4D View Pro: esta funcionalidade exige uma licença 4D View Pro.`
+`4D View Pro only: This feature requires a 4D View Pro license.`
 
 This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
 
@@ -245,4 +245,4 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### Veja também
 
-[Altura linha](#row-height)
+[Array altura linha](#row-height)

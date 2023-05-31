@@ -4,7 +4,7 @@ title: Subformulário
 ---
 
 ---
-## Allow Deletion
+## Permitir a eliminação
 
 Specifies if the user can delete subrecords in a list subform.
 
@@ -46,7 +46,7 @@ You use this property to declare the detail form to use in the subform. Pode ser
 
 Action to perform in case of a double-click on an empty line of a list subform. As opções abaixo estão disponíveis:
 - Do nothing: Ignores double-click.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List](#enterable-in-list) property is enabled. Otherwise, it will be created in page mode, in the [detail form](#detail-form) associated with the subform.
+- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
 
 
 #### Gramática JSON
@@ -60,7 +60,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 [Subformulário](subform_overview.md)
 
 #### Veja também
-[Double click on row](#double-click-on-row)
+[Duplo clique em linha](#double-click-on-row)
 
 ---
 ## Duplo clique em linha
@@ -92,7 +92,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 [Double click on empty row](#double-click-on-empty-row)
 
 ---
-## Enterable in list
+## Introduzível em lista
 
 When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
 

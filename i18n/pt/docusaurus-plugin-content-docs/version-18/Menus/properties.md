@@ -12,7 +12,7 @@ A propriedade **Title** contém a etiqueta de um menu ou item de menu, uma vez q
 No editor do Menu, pode introduzir directamente a etiqueta como "hard coded". Ou, pode introduzir uma referência para uma variável ou um elemento XLIFF, o que facilitará a manutenção e tradução das aplicações. Pode utilizar os seguintes tipos de referências:
 
 - Uma referência de recurso XLIFF do tipo :xliff:MyLabel. Para mais informações sobre referências XLIFF, consulte *XLIFF Architecture* secção em *4D Design Reference*.
-- Um nome de variável interprocesso seguido de um número, por exemplo:`<>vlang,3`. A alteração do conteúdo desta variável modificará a etiqueta do menu quando esta for exibida. Neste caso, a etiqueta chamará um recurso XLIFF. O valor contido na variável `<>vlang` corresponde ao atributo *id* do elemento *do grupo* . O segundo valor (3 neste exemplo) designa o atributo *id* do elemento *trans-unit* .
+- An interprocess variable name followed by a number, for example: :`<>vlang,3`. A alteração do conteúdo desta variável modificará a etiqueta do menu quando esta for exibida. Neste caso, a etiqueta chamará um recurso XLIFF. O valor contido na variável `<>vlang` corresponde ao atributo *id* do elemento *do grupo* . O segundo valor (3 neste exemplo) designa o atributo *id* do elemento *trans-unit* .
 
 Usando a linguagem 4D, define a propriedade título através do parâmetro *itemText* dos comandos `APPEND MENU ITEM`, `INSERT MENU ITEM`, e `SET MENU ITEM`.
 
@@ -22,16 +22,16 @@ Pode definir algumas propriedades dos comandos do menu utilizando caracteres de 
 
 Os caracteres de controle não aparecem nas etiquetas de comando do menu. Deve-se, portanto, evitar a sua utilização para não ter efeitos indesejáveis. Os caracteres de controle são os seguintes:
 
-| Caracteres  | Descrição                    | Utilização                                                                                    |
-| ----------- | ---------------------------- | --------------------------------------------------------------------------------------------- |
-| (           | abre parênteses              | Desativar a linha                                                                             |
-| <B          | menor que B                  | Negrito                                                                                       |
-| <I          | maior que I                  | fonte itálica                                                                                 |
-| <U          | menor que U                  | fonte sublinhada                                                                              |
-| !+character | ponto de exclamação+caratere | Adiciona caractere como marca de verificação (macOS); adiciona marca de verificação (Windows) |
-| /+caracter  | barra+caractere              | Adicionar caractere como atalho                                                               |
+| Caracteres | Descrição                    | Utilização                                                                                    |
+| ---------- | ---------------------------- | --------------------------------------------------------------------------------------------- |
+| (          | abre parênteses              | Desactivar item                                                                               |
+| <B         | menor que B                  | fonte itálica                                                                                 |
+| <I         | maior que I                  | Itálico                                                                                       |
+| <U         | menor que U                  | fonte sublinhada                                                                              |
+| !+caracter | ponto de exclamação+caratere | Adiciona caractere como marca de verificação (macOS); adiciona marca de verificação (Windows) |
+| /+caracter | barra+caractere              | Adicionar caractere como atalho                                                               |
 
-## Parâmetros
+## Parâmetro
 
 É possível associar um parâmetro personalizado a cada item do menu. Um parâmetro de item de menu é uma string de caracteres cujo conteúdo pode ser livremente escolhido. Pode ser definido no editor do Menu, ou através do comando `SET MENU ITEM PARAMETER` .
 
@@ -43,7 +43,7 @@ Cada comando de menu pode ter um método de projeto ou uma ação padrão anexad
 
 Se não atribuir um método ou uma ação padrão a um comando de menu, a escolha desse comando de menu faz com que 4D saia do ambiente Application e vá para o ambiente Design. Se apenas o ambiente de Aplicação estiver disponível, isto significa desistir do Ambiente de Trabalho.
 
-Ações padrão podem ser usadas para executar várias operações cotidianas conectadas às funções de sistema (copiar, sair, etc) ou às funções do banco de dados 4D (adicionar registro, selecionar tudo, etc.).
+Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the 4D database (add record, select all, etc.).
 
 Pode atribuir tanto uma acção padrão como um método de projecto a um comando de menu. Neste caso, a acção padrão nunca é executada; contudo, 4D utiliza esta acção para ativar/desativar o comando do menu de acordo com o contexto actual e para associar uma operação específica com ele de acordo com a plataforma. Quando um comando de menu for desativado, o método de projecto associado não pode ser executado.
 
@@ -53,7 +53,7 @@ A escolha entre associar uma ação padrão ou um método de projecto a um coman
 
 É possível atribuir um método de projecto e/ou uma acção padrão a um comando de menu seleccionado no editor de Menu:
 
-- **Nome do método**: Seleccionar um nome de método de projecto existente na caixa de combinação. Se o método de projecto não existir, introduzir o seu nome na caixa de combinação "Nome do método" e, em seguida, clicar no botão [...] . 4D exibe um diálogo de criação de métodos de projecto que é utilizado para aceder ao editor de métodos.
+- **Nome do método**: Seleccionar um nome de método de projecto existente na caixa de combinação. Se o método de projecto não existir, introduzir o seu nome na caixa de combinação "Nome do método" e, em seguida, clicar no botão [...] . 4D displays a project method creation dialog that is used to access the Method editor.
 - **Acção Padrão Associada**: Escolha ou escreva a acção que deseja atribuir na caixa combinada "Acção Padrão Associada". Pode introduzir qualquer acção apoiada e (opcionalmente) parâmetro que deseje na área. Para uma lista completa de acções padrão, consulte por favor a secção **Acções padrão** na *Design Reference*. **Nota para macOS:** Sob macOS, os comandos de menu personalizados associados à acção *Quit* são automaticamente colocados no menu de aplicação, em conformidade com as normas de interface da plataforma.
 
 Usando a linguagem 4D, pode associar um método de projecto usando o comando `SET MENU ITEM METHOD` , e uma acção padrão usando o comando `SET MENU ITEM PROPERTY` .
@@ -76,7 +76,7 @@ Quando esta opção é verificada, 4D não activa a "validação" do campo onde 
 
 Esta opção de menu editor permite definir um grupo para um comando de menu de modo a que apenas os utilizadores desse grupo possam utilizar o comando de menu de uma aplicação remota 4D (ver Utilizadores e grupos).
 
-## Options
+## Opções
 
 ### Linhas separadoras
 
@@ -114,14 +114,14 @@ Pode utilizar qualquer tecla alfanumérica como atalho de teclado, excepto as te
 
 Estas combinações chave reservadas estão listadas na tabela seguinte:
 
-| Teclas (Windows) | Teclas (macOS)    | Operação    |
-| ---------------- | ----------------- | ----------- |
-| Ctrl+C           | Comando+C         | Copiar      |
-| Ctrl+Q           | Comando+Q         | Salir       |
-| Ctrl+V           | Comando+V         | Colar       |
-| Ctrl+X           | Comando+X         | Cortar      |
-| Ctrl+Z           | Comando+Z         | Deshacer    |
-| Ctrl+. (ponto)   | Comando+. (ponto) | Para a ação |
+| Teclas (Windows) | Teclas (macOS)    | Operação      |
+| ---------------- | ----------------- | ------------- |
+| Ctrl+C           | Comando+C         | Copiar        |
+| Ctrl+Q           | Comando+Q         | Salir         |
+| Ctrl+V           | Comando+V         | Colar         |
+| Ctrl+X           | Comando+X         | Cortar        |
+| Ctrl+Z           | Comando+Z         | Deshacer      |
+| Ctrl+. (ponto)   | Comando+. (ponto) | Parar a acção |
 
 Atribuir um atalho de teclado no editor de menus:
 
@@ -162,7 +162,7 @@ Pode associar um ícone a um item do menu. Será exibido directamente no menu, a
 
 ![](../assets/en/Menus/iconMenu.png)
 
-Para definir o ícone no editor de Menu, clicar na área "Ícone de item" e seleccionar **Abrir** para abrir uma imagem do disco. Se selecionar um arquivo de imagem que não esteja já armazenado na pasta de recursos do banco de dados, é copiado automaticamente nessa pasta. Uma vez definido, o ícone do item aparece na área de pré-visualização:
+Para definir o ícone no editor de Menu, clicar na área "Ícone de item" e seleccionar **Abrir** para abrir uma imagem do disco. If you select a picture file that is not already stored in the database resources folder, it is automatically copied in that folder. Uma vez definido, o ícone do item aparece na área de pré-visualização:
 
 ![](../assets/en/Menus/iconpreview.png)
 

@@ -20,7 +20,7 @@ When working on a project in 4D Developer, you can use built-in 4D editors to cr
 - if an open file which is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes:![](../assets/en/Project/projectReload.png)
   - **Sim**: ignorar as mudanças do editor e voltar a carregar
-  - **No**: save changes and overwrite the other version
+  - **Edit**: standard and completely modifiable.
   - **Cancel**: do not save
 
 Esta funcionalidade está habilitada para todos os editores integrados:

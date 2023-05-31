@@ -4,31 +4,31 @@ title: Gestão de usuários e grupos 4D
 ---
 
 
-4D fornece aos usuários privilégios de acesso comuns e certos poderes. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
+4D provides users with certain standard access privileges and certain powers. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
 
 ## Designer e Administrador
 
-O usuário mais poderoso é chamado **Designer**. No aspect of the application is closed to the Designer. O Designer pode:
+O usuário mais poderoso é chamado **Designer**. Nenhum aspecto do banco de dados é fechado ao Designer. O Designer pode:
 
-- access all application servers without restriction,
+- acessar todos os servidores de banco de dados sem restrição,
 - criar usuários e grupos,
 - atribuir privilégios de acesso a grupos,
 - acessar o ambiente Design. Em ambiente monousuário, direitos de acesso de Designer são sempre usados. Em ambiente cliente/servidor, atribuir uma senha ao Designer ativa a exibição do diálogo de login de usuário 4D.  Acesso ao ambiente Design é apenas leitura.
 
 Depois do Designer, o usuário mais poderoso é o **Administrador**, ao qual é geralmente dada a tarefa de gerenciamento de acesso ao sistema e administração de funcionalidades.
 
-O administrador pode:
+O Administrador não pode:
 
 - criar usuários e grupos,
 - acessar ao monitor e janela de Administração 4D Server
 - acessar a janela MSC para gerenciar cópias de segurança, restaurações ou servidor.
 
-O Administrador não pode:
+O administrador pode:
 
 - editar o usuário Designer
-- by default, access to protected parts of the application. O Administrador não pode acessar o modo Design se for restringido. O Administrador não pode acessar o modo Design se for restringido. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
+- como padrão, acessar as partes protegidas do banco de dados. O Administrador não pode acessar o modo Design se for restringido. In particular, the Administrator cannot access to the Design mode if it is restricted. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
 
-Both the Designer and Administrator are available by default in all applications. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
+Tanto o Designer quanto o Administrador estão disponíveis como padrão em todos os bancos de dados. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
 
 - Ícone Designer: ![](../assets/en/Users/iconDesigner.png)
 - Ícone de Administrador: ![](../assets/en/Users/iconAdmin.png)
@@ -37,7 +37,7 @@ Pode renomear os usuários Designer e Administardor. Na linguagem, o ID de Desig
 
 O Designer e Administrador podem cada um criar até 16.000 grupos e 16 mil usuários.
 
-## Editor de usuários
+## Editor de grupos
 
 O editor de usuários está na Barra de Ferramentas de 4D.
 
@@ -59,11 +59,11 @@ A lista de usuários exibe todos os usuários, incluindo o[Designer and the Admi
 
 4D adiciona um novo usuário para a lista, chamado "Novo usuárioX" como padrão.
 
-3. Digite o nome de usuário. Digite o nome de usuário. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
+3. Digite o nome de usuário. Enter the user name. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
 
 4. Para digitar uma senha para o usuário, clique o botão **Edit...** na área de propriedades de usuário e digite a senha daus vezes na caixa de diálogo. Pode usar até 15 caracteres alfanuméricos para a senha. O editor de senhas é sensível a maiúsculas ou minúsculas.
 
-> Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
+> Os usuários podem mudar suas senhas a qualquer momento de acordo com as opções na página "Segurança" das configurações de banco de dados ou usando o comando `CHANGE PASSWORD`.
 
 5. Estabeleça os grupos aos quais o usuário vai pertencer com a tabela "Membro de Grupos". Pode adicionar ou remover os usuários selecionados de ou para um grupo marcando a opção correspondente na coluna Membro.
 
@@ -79,9 +79,9 @@ Usuários deletados não aparecem mais no editor de Usuários. Note que as IDs d
 
 - **Tipo de usuário**: O campo Tipo de usuário/User Kind contém "Designer", "Administrador", ou (Para todos os outros usuários) "Usuário".
 
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
+- **Método de início Method**: Nome do método associado que será executado automaticamente quando o usuário abrir o banco de dados (opcional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
 
-## Editor de grupos
+## Editor de usuários
 
 O editor para grupos está na Barra de ferramentas de 4D.
 
@@ -93,7 +93,7 @@ Lembre que se um grupo for criado não pode ser apagado. Se quiser desativar um 
 
 Para criar um gurpo:
 
-1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. The list of groups displays all the groups of the application project.
+1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. A lista de grupos exibe todos os grupos do banco de dados.
 
 2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  
@@ -121,7 +121,7 @@ To remove a user or group from another group, you just need to deselect the corr
 
 ### Assigning a group to a plug-in or to a server
 
-You can assign a group privileges to any plug-ins installed in the project. This includes all the 4D plug-ins and any third-party plug-ins.
+You can assign a group privileges to any plug-ins installed in the database. This includes all the 4D plug-ins and any third-party plug-ins.
 
 Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
 
@@ -135,7 +135,7 @@ The **4D Client Web Server** and **4D Client SOAP Server** items lets you contro
 
 ### An access hierarchy scheme
 
-The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
+The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
 
 In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 

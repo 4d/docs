@@ -19,12 +19,12 @@ Prism.languages["4d"] = {
 
 	'keyword': [
 		{
-      pattern: /\b(?:Begin SQL|This|End SQL|For each|Class extends|Class constructor|End for each|If|Else|End if|Case of|End case|DECLARE|For|End for|Use|End use|While|End while|Repeat|Until|Function|var)\b/,
+      pattern: /\b(?:Begin SQL|This|End SQL|For each|Class extends|Class constructor|End for each|If|Else|End if|Case of|End case|DECLARE|For|End for|Use|End use|While|End while|Repeat|Until|Function|var|property|exposed|local|return|break|continue)\b/,
 		},
 	],
   'builtin': [
     {
-      pattern: /(: )(4D|Integer|Text|Real|Picture|Pointer|Boolean|Tile|Date|Blob|Object|Collection|Variant|cs)/,
+      pattern: /(: )(4D|Integer|Text|Real|Picture|Pointer|Boolean|Time|Date|Blob|Object|Collection|Variant|cs)/,
       lookbehind : true
     }
   ],

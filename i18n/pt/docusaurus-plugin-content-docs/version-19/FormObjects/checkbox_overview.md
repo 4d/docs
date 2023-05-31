@@ -1,13 +1,13 @@
 ---
 id: checkboxOverview
-title: Check Box
+title: Caixa de selecção
 ---
 
 Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Basicamente, ou é verificada ou não, mas um [terceiro estado](#three-states-check-box) pode ser definido.
 
 ![](../assets/en/FormObjects/checkbox.png)
 
-Check boxes are controlled by methods or [standard actions](#using-a-standard-action). O método associado com ela é executado quando selecionar a caixa de seleção. Como todos os botões, uma variável da caixa de seleção é estabelecida em 0 quando o formulário é aberto pela primeira vez.
+As caixas de verificação são controladas por métodos ou [acções normalizadas](#using-a-standard-action). O método associado com ela é executado quando selecionar a caixa de seleção. Como todos os botões, uma variável da caixa de seleção é estabelecida em 0 quando o formulário é aberto pela primeira vez.
 
 Uma caixa de seleção mostra o teto do lado de um pequeno quadrado. Este texto é estabelecido na propriedade [Title](properties_Object.md#title) da caixa de seleção. Pode entrar um título no formulário de uma referência XLIFF nessa área (ver [Anexo B: XLIFF arquitetura](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -22,7 +22,7 @@ Uma parte ou todas as caixas de seleção de um formulário podem estar marcadas
 
 ### Caixas de seleção de três estados
 
-Check box objects with [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) [button style](properties_TextAndPicture.md#button-style) accept a third state. Este terceiro estado é um estado intermediário, que geralmente se usa para fins de visualização. Por exemplo, permite indicar que uma propriedade é presentada em uma seleção de objetos,
+Os objetos caixa de seleção de estilo [Clássico](checkbox_overview.md#regular) y [Plano](checkbox_overview.md#flat) aceitam um terceiro estado. Este terceiro estado é um estado intermediário, que geralmente se usa para fins de visualização. Por exemplo, permite indicar que uma propriedade é presentada em uma seleção de objetos,
 
 ![](../assets/en/FormObjects/checkbox_3states.png)
 
@@ -39,19 +39,19 @@ Pode atribuir uma [ação padrão](properties_Action.md#standard-action) a uma c
 
 Só as ações que podem representar um estado verdadeiro/falso (ações "marcáveis") são compatíveis com esse objeto:
 
-| Ações compatíveis                   | Condições de uso (se houver) |
+| Ações suportadas                    | Condições de uso (se houver) |
 | ----------------------------------- | ---------------------------- |
-| avoidPageBreakInsideEnabled         | 4D Write Pro areas only      |
+| avoidPageBreakInsideEnabled         | Apenas áreas 4D Write Pro    |
 | fontItalic                          |                              |
 | fontBold                            |                              |
 | fontLinethrough                     |                              |
-| fontSubscript                       | 4D Write Pro areas only      |
-| fontSuperscript                     | 4D Write Pro areas only      |
+| fontSubscript                       | Apenas áreas 4D Write Pro    |
+| fontSuperscript                     | Apenas áreas 4D Write Pro    |
 | fontUnderline                       |                              |
 | font/showDialog                     | Só em Mac                    |
-| htmlWYSIWIGEnabled                  | 4D Write Pro areas only      |
-| section/differentFirstPage          | 4D Write Pro areas only      |
-| section/differentLeftRightPages     | 4D Write Pro areas only      |
+| htmlWYSIWIGEnabled                  | Apenas áreas 4D Write Pro    |
+| section/differentFirstPage          | Apenas áreas 4D Write Pro    |
+| section/differentLeftRightPages     | Apenas áreas 4D Write Pro    |
 | spell/autoCorrectionEnabled         |                              |
 | spell/autoDashSubstitutionsEnabled  | Só em Mac                    |
 | spell/autoLanguageEnabled           | Só em Mac                    |
@@ -61,28 +61,28 @@ Só as ações que podem representar um estado verdadeiro/falso (ações "marcá
 | spell/grammarEnabled                | Só em Mac                    |
 | spell/showDialog                    | Só em Mac                    |
 | spell/visibleSubstitutions          |                              |
-| visibleBackground                   | 4D Write Pro areas only      |
-| visibleFooters                      | 4D Write Pro areas only      |
-| visibleHeaders                      | 4D Write Pro areas only      |
-| visibleHiddenChars                  | 4D Write Pro areas only      |
-| visibleHorizontalRuler              | 4D Write Pro areas only      |
-| visiblePageFrames                   | 4D Write Pro areas only      |
+| visibleBackground                   | Apenas áreas 4D Write Pro    |
+| visibleFooters                      | Apenas áreas 4D Write Pro    |
+| visibleHeaders                      | Apenas áreas 4D Write Pro    |
+| visibleHiddenChars                  | Apenas áreas 4D Write Pro    |
+| visibleHorizontalRuler              | Apenas áreas 4D Write Pro    |
+| visiblePageFrames                   | Apenas áreas 4D Write Pro    |
 | visibleReferences                   |                              |
-| widowAndOrphanControlEnabled        | 4D Write Pro areas only      |
+| widowAndOrphanControlEnabled        | Apenas áreas 4D Write Pro    |
 
 Para informações detalhas dessas ações, veja a seção [Ações padrão](properties_Action.md#standard-action).
 
 ## Estilos de botão caixas de seleção
 
-Check boxes use [button styles](properties_TextAndPicture.md#button-style) to control a check box's general appearance as well as its available properties. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
+Os estilos de caixa de seleção controlam a aparência geral de uma caixa de seleção assim como suas propriedades disponíveis. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
 
-Com exceção das[propriedades disponíveis](#supported-properties), muitos objetos caixa de seleção são *estruturalmente* idênticos. A diferença é no processamento das variáveis associadas.
+Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos caixa de seleção são *estruturalmente* idênticos. A diferença é no processamento das variáveis associadas.
 
-4D provides check boxes in the following predefined button styles:
+4D oferece caixas de seleção nos estilos predefinidos abaixo:
 
 ### Clássico
 
-The Regular check box button style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
+O estilo Clássico de caixa de seleção corresponde a um sistema de caixa de seleção padrão (*ou seja, *, um retângulo com um título descritivo):
 
 ![](../assets/en/FormObjects/checkbox_regular.png)
 
@@ -104,7 +104,7 @@ The Regular check box button style is a standard system check box (*i.e.*, a rec
 
 ### Plano
 
-The Flat check box button style is a minimalist appearance. A natureza gráfica do estilo Flat é especialmente útil para os formulários que vão ser impressos.
+O estilo de caixa de seleção Plano tem uma aparência minimalista. A natureza gráfica do estilo Flat é especialmente útil para os formulários que vão ser impressos.
 
 ![](../assets/en/FormObjects/checkbox_flat.png)
 
@@ -125,9 +125,9 @@ The Flat check box button style is a minimalist appearance. A natureza gráfica 
 
 ### Botão barra de ferramentas
 
-The Toolbar Button check box button style is primarily intended for integration in a toolbar.
+O estilo de botão barra de ferramentas está pensado principalmente para sua integração em uma barra de ferramentas.
 
-The Toolbar Button check box button style has a transparent background with a title. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Barra de ferramentas tem um fundo transparente com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
@@ -151,9 +151,9 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel
 
-The Bevel check box button style combines the appearance of the [Regular](#regular) button style (*i.e.*, a rectangle with a descriptive title) with the [Toolbar Button](#toolbar-button) button style's behavior.
+O estilo de caixa de seleção Bevel combina a aparência do estilo [Clássico ](#regular) (*ou seja*, um retângulo com um título descritivo) com o comportamento do estilo [Barra de ferramentas](#toolbar).
 
-The Bevel button style has a light gray background with a title. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Bevel tem um fundo cinza claro com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
@@ -177,15 +177,15 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 ### Bevel arredondado
 
-The Rounded Bevel check box button style is nearly identical to the [Bevel](#bevel) button style except, depending on the OS, the corners of the button may be rounded. As with the Bevel button style, the Rounded Bevel button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+O estilo de caixa de seleção Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, as esquinas do botão podem ser arredondadas. Da mesma forma que com o estilo Bevel, o estilo Bevel arredondado combina a aparência do estilo [Clássico](#regular) com o comportamento do estilo [Barra de ferramentas](#toolbar).
 
-The Rounded Bevel button style has a light gray background with a title. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Bevel arredondado tem um fundo cinza claro com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo em macOS:
 
   ![](../assets/en/FormObjects/checkbox_roundedbevel_mac.png)
 
-> On Windows, the Rounded Bevel button style is identical to the [Bevel](#bevel) button style.
+> em Windows, o estilo Bevel arredondado é idêntico ao estilo [Bevel](#bevel).
 
 #### JSON Exemplo
 
@@ -205,13 +205,13 @@ Exemplo em macOS:
 
 ### OS X Gradient
 
-The OS X Gradient check box button style is nearly identical to the [Bevel](#bevel) button style. As with the Bevel button style, the OS X Gradient button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+O estilo de caixa de seleção OS X Gradient é quase idêntico ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, pode ter uma aparência de dois tons. Da mesma forma que o estilo Bevel, o estilo OS X Gradient combina a aparência del estilo [Clássico](#regular) com o comportamento do estilo [Barra de ferramentas](#toolbar).
 
-The OS X Gradient button style has a light gray background with a title and may be displayed as a two-tone system button on macOS. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Gradient OS X tem um fundo cinza claro com um título e se mostra como um botão de sistema de dois tons em macOS. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
   ![](../assets/en/FormObjects/checkbox_osxgradient_mac.png)
 
-> On Windows, this check box button style is identical to the [Bevel](#bevel) button style.
+> Em Windows, este estilo é idêntico ao estilo [Bevel](#bevel).
 
 #### JSON Exemplo
 
@@ -231,9 +231,9 @@ The OS X Gradient button style has a light gray background with a title and may 
 
 ### OS X Texturizado
 
-The OS X Textured button style is similar to the [Bevel](#bevel) button style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel button style, the OS X Textured button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+O estilo de caixa de seleção OS X Textured é similar ao estilo [Bevel](#bevel), exceto que, dependendo do sistema operativo, pode ter uma aparência diferente. Da mesma forma que com o estilo Bevel, o estilo Bevel arredondado combina a aparência do estilo [Clássico](#regular) com o comportamento do estilo [Barra de ferramentas](#toolbar).
 
-By default, the OS X Textured button style appears as:
+Como padrão, o estilo OS X Textured aparece como:
 
 - *Windows* - um botão padrão com um fundo azul claro com um título no centro.
 
@@ -259,9 +259,9 @@ By default, the OS X Textured button style appears as:
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+O estilo de caixa de seleção Office XP combina a aparência do estilo [Clássico](#regular) com o comportamento do estilo [Barra de ferramentas](#toolbar).
 
-The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. The appearance of the check box can be different when the cursor hovers over it, depending on the OS:
+As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas nos sistemas de cores. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
 - *Windows* - seu fundo só aparece quando o mouse passa por cima. Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
@@ -290,7 +290,7 @@ The colors (highlight and background) of a check box with the Office XP button s
 
 ### Contrair/expandir
 
-This check box button style can be used to add a standard collapse/expand icon. Estes ícones são utilizados nativamente em listas hierárquicas.
+Este estilo de caixa de seleção pode ser usado para adicionar um ícone padrão de contrair/expandir. Estes ícones são utilizados nativamente em listas hierárquicas.
 
 - *Windows* - o ícone parece-se com um [+] ou um [-]
 
@@ -314,7 +314,7 @@ This check box button style can be used to add a standard collapse/expand icon. 
                 }
 ```
 
-### Botão disclosure
+### Botão de divulgação
 
 Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação" aparece como um botão de informação padrão, normalmente utilizado para mostrar/ocultar informação adicional. Quando usar um botão radio, o símbolo botão aponta para baixo com o valor 0 e para cima com o valor 1.
 
@@ -378,6 +378,6 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
-- [Rota de acesso do fundo](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Deslocamento ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
-- [Três Estados](properties_Display.md#three-states) (Flat, Clássico)
-- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Rota de imagem](properties_TextAndPicture.md#picture-pathname) - [Titulo/posição imagem](properties_TextAndPicture.md#title-picture-position) (botão Toolbar, Bevel, Bevel arredondado, OS X Gradient, OS X Textured, Office XP, Custom)
+- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
+- [Three-States](properties_Display.md#three-states) (Flat, Regular)
+- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

@@ -1,11 +1,22 @@
 ---
 id: updates
-title: Notas de lançamento
+title: Notas de Lançamento
 ---
 
-## 4D v20
 
-Leia [**O que há de novo em 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), o post do blog que lista todas as novas funcionalidades e melhoramentos em 4D v20.
+## 4D v20 R2
+
+Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
+
+
+#### Destaques
+
+#### Mudanças de comportamento
+
+
+## 4D v19.6
+
+See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
 
 
 #### Aviso de reconstrução do índice
@@ -27,25 +38,28 @@ Leia [**O que há de novo em 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v2
 - Suporte de *headerOnly* parâmetro em [`POP3Transporter.getMail()`](../API/POP3TransporterClass#getmail).
 - Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
 - Novo function [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths).
-- Suporte de a opção `count values` em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- ORDA requests logs are now available [on the server](../Debugging/debugLogFiles.md#orda-requests), new parameter for [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) function.
 - Novas ferramentas para execução de código no CLI: [tool4d](../Admin/cli.md#tool4d) e [4D Server em modo utilitário](../Admin/cli.md#4d-server-in-utility-mode).
 - [Explorador da Data](../Admin/dataExplorer.md#opening-the-data-explorer): novo botão e visualização numa janela 4D.
 - Novas propriedades para botões, caixas de selecção e botões de rádio: [Abraços de imagem título](../FormObjects/properties_TextAndPicture.md#image-hugs-title) e [Alinhamento horizontal](../FormObjects/properties_Text.md#horizontal-alignment).
 - Support of `WinIcon` in [`file.setAppInfo()`](../API/FileClass.md#setappinfo) function.
+- New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
-- [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=20): lista de todos os bugs que foram corrigidos em 4D v20.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D v19.6.
 
 
 
 #### Mudanças de comportamento
 
 - Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response).
+- TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new *option* property allows you to control this validation.
 
 
-## 4D v19 R8
+## 4D v19.5
 
-Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), the blog post that lists all new features and enhancements in 4D v19 R8.
+4D v19.5 é certificado em macOS Ventura (macOS 13)
 
 
 #### Destaques
@@ -54,12 +68,13 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
 - ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
-- 4D View Pro:
+- :::
     - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list#vp-create-table)
+
     - new [VP Get table dirty rows](../ViewPro/method-list#vp-get-table-dirty-rows) command
 - Comandos de linguagem 4D: [O que é a nova página](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) em doc.4d.com.
-- 4D Write Pro: [Qual é a nova página](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) em doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R8): list of all bugs that have been fixed in 4D v19 R8.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
+- [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=19.5): lista de todos os bugs que foram corrigidos em 4D v19.5.
 
 
 #### Mudanças de comportamento
@@ -72,7 +87,7 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 ## 4D v19 R7
 
-Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), the blog post that lists all new features and enhancements in 4D v19 R7.
+Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), o post do blog que lista todas as novas funcionalidades e melhorias em 4D v19 LTS.
 
 
 #### Destaques
@@ -85,7 +100,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - Text area and Input form objects now support the [corner radius property](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19_R7): list of all bugs that have been fixed in 4D v19 R7.
+- A versão SpreadJS foi atualizada (14.1.6).
 
 
 #### Mudanças de comportamento
@@ -98,7 +113,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 
-## 4D v19 R6
+## 4D v19.5 é certificado no Windows 11 22H2
 
 - New [HTTPRequest](../API/HTTPRequestClass) class.
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](../API/CollectionClass#every), [`.filter()`](../API/CollectionClass#filter), [`.find()`](../API/CollectionClass#find), [`.findIndex()`](../API/CollectionClass#findindex), [`.map()`](../API/CollectionClass#map), [`.orderByMethod()`](../API/CollectionClass#orderbymethod), [`.reduce()`](../API/CollectionClass#reduce), [`.some()`](../API/CollectionClass#some), [`.sort()`](../API/CollectionClass#sort)
@@ -178,8 +193,7 @@ $value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
 - Handling [optional parameters](../Concepts/parameters#optional-parameters) is more flexible in the 4D language when accessing parameters declared but not passed. For example, the following code no longer provokes an error:
 
 ```4d
-// "concate" function of myClass
-Function concate ($param1 : Text ; $param2 : Text)
+// "concate" function of myClass Function concate ($param1 : Text ; $param2 : Text)
 ALERT($param1+" "+$param2)
   // Calling method
  $class:=cs.myClass.new()
@@ -210,11 +224,11 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 ## 4D v19 R2
 
 - A [default .gitignore file](../Preferences/general#create-gitignore-file) can be created with new projects
-- New [Blob class API](../API/BlobClass) to handle new [`4D.Blob` objects](Concepts/dt_blob#blob-types)
+- New [Blob class API](../API/BlobClass) to handle new [`4D. Blob` objects](Concepts/dt_blob#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass#settext)
 
 
-## Previous releases
+## Lançamentos anteriores
 
 <details><summary>Click to see the release notes for previous versions</summary>
 
@@ -232,7 +246,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 
 
-### 4D v18 R6
+### 18 R6
 
 - [Entity Selection Class](../API/EntitySelectionClass): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](../API/IMAPTransporterClass), [POP3 Mail](../API/POP3TransporterClass) and [SMTP Mail](../API/SMTPTransporterClass): `authenticationMode` property enables OAuth 2.0
@@ -251,15 +265,15 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 | Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                                                                         |
 | ---------- | ------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ICU        | 72.1         | 20               | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                                           |
+| ICU        | 68.1         | 20               | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                                           |
 | CEF        | 109          | 20               | Chromium 5414. CORS policies now also apply when accessing files on disk (see the "security" paragraph on web areas in the [4D v19 R5](#4d-v19-r5) section above). |
-| Hunspell   | 1.7.2        | 20               | Used for spell checking in 4D forms and 4D Write Pro                                                                                                               |
+| Hunspell   | 7.3.27       | 20               | Used for spell checking in 4D forms and 4D Write Pro                                                                                                               |
 | PDFWriter  | 4.3          | 20               | FreeType dependency in 12.2.1                                                                                                                                      |
-| SpreadJS   | 16.0.4       | 20               | 4D View Pro engine                                                                                                                                                 |
-| OpenSSL    | 1.1.1s       | 19 R7            |                                                                                                                                                                    |
-| libZip     | 1.9.2        | 20               | Used by zip class, 4D Write Pro, svg and serverNet components                                                                                                      |
+| SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                                                                                                  |
+| OpenSSL    | 3.1          | 20 R2            |                                                                                                                                                                    |
+| libZip     | 19.5         | 20               | Used by zip class, 4D Write Pro, svg and serverNet components                                                                                                      |
 | LZMA       | 5.4.1        | 20               |                                                                                                                                                                    |
-| Zlib       | 1.2.13       | 20               |                                                                                                                                                                    |
+| Zlib       | 14.1.6       | 20               |                                                                                                                                                                    |
 | webKit     | WKWebView    | 19               |                                                                                                                                                                    |
 | PHP        | 8.2.4        | 20               |                                                                                                                                                                    |
 | libldap    | 2.4.48       | 18 R2            |                                                                                                                                                                    |

@@ -9,7 +9,7 @@ The 4D code used across your application is written in [methods](../Concepts/met
 The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](write-class-method.md) to work with your code.
 
 
-## Creating methods
+## Criação de métodos
 
 A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
 
@@ -20,7 +20,7 @@ You can create [several types of methods](../Concepts/methods.md):
 - Triggers can also be created or opened from the Structure editor.
 - Form methods can also be created or opened from the [Form editor](../FormEditor/formEditor.md).
 
-## Creating classes
+## Criação de classes
 
 A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. O nome do arquivo é o nome da classe.
 
@@ -88,7 +88,7 @@ Database methods cannot be renamed. The same goes for triggers, form methods, an
 
 :::
 
-### Attributes
+### Atributos
 
 You can control how project methods are used and/or called in different contexts using attributes. Note that you can set attributes for an entire selection of project methods using the Explorer (see following section).
 
@@ -110,7 +110,7 @@ This attribute is only taken into account for a 4D application in client-server 
 
 For more information on this option, refer to [Execute on Server attribute](https://doc.4d.com/4Dv19R6/4D/19-R6/Execute-on-Server-attribute.300-5941841.en.html).
 
-### Execution mode
+### Modo Execução
 
 This option allows you to declare the method eligible for execution in preemptive mode. By default, 4D executes all the project methods of your applications in cooperative mode.
 

@@ -32,7 +32,7 @@ The locks triggered by the REST API are put at the [session](authUsers.md#openin
 
 A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
 
-- other REST sessions
+- outras sessões REST
 - 4D processes (client/server, remote datastore, standalone) running on the REST server.
 
 An entity locked by the REST API can only be unlocked:

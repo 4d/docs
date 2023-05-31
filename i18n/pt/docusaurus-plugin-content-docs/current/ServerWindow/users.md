@@ -15,7 +15,7 @@ You can also sort the list of column values by clicking on its header. Click sev
 
 ![](../assets/en/Admin/server-users-sort.png)
 
-## List of Users
+## Lista de usuários
 
 For each user connected to the server, the list provides the following information:
 
@@ -28,7 +28,7 @@ For each user connected to the server, the list provides the following informati
 - **CPU Time**: CPU time consumed by this user since connecting.
 - **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
 
-### Managing sleeping users
+### Gerir usuários adormecidos
 
 4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
 
@@ -48,7 +48,7 @@ This feature can be used to reduce the number of rows displayed in the list to t
 The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. O operador do tipo `OR` é utilizado neste caso. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
 
 
-## Administration Buttons
+## Botões de administração
 
 This page includes three control buttons. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
 

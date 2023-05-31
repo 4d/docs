@@ -1,11 +1,11 @@
 ---
 id: entities
-title: Working with data
+title: Trabalhar com dados
 ---
 
 In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
 
-## Creating an entity
+## Criar uma entidade
 
 There are two ways to create a new entity in a dataclass:
 
@@ -46,7 +46,7 @@ This is illustrated by the following graphic:
 
 ![](../assets/en/ORDA/entityRef1.png)
 
-Now if you execute:
+Agora, se executar:
 
 ```4d
  var $e1; $e2 : cs. EmployeeEntity
@@ -72,7 +72,7 @@ In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entit
  End for each
 ```
 
-And the method is:
+E o método é:
 
 ```4d
  $entity:=$1
@@ -94,7 +94,7 @@ Entity attributes store data and map corresponding fields in the corresponding t
 For example, to set a storage attribute:
 
 ```4d
- $entity:=ds. Employee.get(1) //get employee attribute with ID 1
+ $entity:=ds.Employee.get(1) //get employee attribute with ID 1
  $name:=$entity.lastname //get the employee name, e.g. "Smith"
  $entity.lastname:="Jones" //set the employee name
 ```
@@ -201,7 +201,7 @@ An **alterable** entity selection has the following characteristics:
 * it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
 * it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
 
-#### How are they defined?
+#### Como é que são definidos?
 
 The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
 
@@ -240,11 +240,11 @@ A new entity selection **inherits** from the original entity selection nature in
 Exemplos:
 
 ```4d
-$highSal:=ds. Employee.query("salary >= :1"; 1000000)   
+$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
  //$highSal is shareable because of the query on dataClass
 $comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
-$lowSal:=ds. Employee.query("salary <= :1"; 10000).copy() 
+$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
  //$lowSal is alterable because of the copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
@@ -268,8 +268,8 @@ O método `sendMails`:
 
 ```4d
 
- #DECLARE ($paid : cs. InvoicesSelection; $unpaid : cs. InvoicesSelection)
- var $invoice : cs. InvoicesEntity
+ #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
+ var $invoice : cs.InvoicesEntity
 
  var $server; $transporter; $email; $status : Object
 
@@ -319,9 +319,9 @@ In addition to the variety of ways you can query, you can also use relation attr
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
+The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade. Quando se utiliza um atributo de relação como propriedade de uma seleção de entidades, o resultado é sempre outra seleção de entidades, mesmo que só se devolva uma entidade.
 
-## Entity Locking
+## Bloqueio de entidades
 
 You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
 
@@ -443,16 +443,16 @@ A same optimization context property can be passed to unlimited number of entity
  $querysettings:=New object("context";"shortList")
  $querysettings2:=New object("context";"longList")
 
- $sel1:=ds. Employee.query("lastname = S@";$querysettings)
+ $sel1:=ds.Employee.query("lastname = S@";$querysettings)
  $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
 
- $sel2:=ds. Employee.query("lastname = Sm@";$querysettings)
+ $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
  $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
 
- $sel3:=ds. Employee.query("lastname = Smith";$querysettings2)
+ $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
  $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
 
- $sel4:=ds. Employee.query("lastname = Brown";$querysettings2)
+ $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
  $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
 ```
 

@@ -3,9 +3,9 @@ id: onAfterSort
 title: On After Sort
 ---
 
-| Code | Pode ser chamado por                                                                                              | Definição                                                       |
-| ---- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| 30   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A standard sort has just been carried out in a list box column. |
+| Code | Pode ser chamado por                                                                                                 | Definição                                                       |
+| ---- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| 30   | [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | A standard sort has just been carried out in a list box column. |
 
 
 ## Descrição

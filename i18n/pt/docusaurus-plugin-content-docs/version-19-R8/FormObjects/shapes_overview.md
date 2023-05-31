@@ -20,16 +20,16 @@ The design of rectangles is controlled through many properties (color, line thic
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Exemplo:
+#### JSON Exemplo
 
 ```4d
     "myRectangle": {
-        "type": "rectangle",    //define the type of object
-        "left": 60,             //left position on the form  
-        "top": 160,             //top position on the form 
-        "width": 100,           //width of the object
-        "height": 20,           //height of the object
-        "borderRadius": 20      //define the roundness of the corners
+  "type": "rectangle", //define the type of object
+  "left": 60,    //left position on the form  
+  "top": 160,    //top position on the form 
+  "width": 100,   //width of the object
+  "height": 20,   //height of the object
+  "borderRadius": 20  //define the roundness of the corners
                 }
 ```
 
@@ -51,32 +51,32 @@ The `startPoint` JSON property defines from which coordinate to draw the line (s
 
 
 
-#### Exemplos JSON:
+#### Exemplos JSON
 
 ```
     "myLine": {
-        "type": "line",                
-        "left": 20,
-        "top": 40,
-        "width": 100,
-        "height": 80,
-        "startPoint": "topLeft", //first direction
-        "strokeDashArray": "6 2" //dashed
-        }
+  "type": "line",                
+  "left": 20,
+  "top": 40,
+  "width": 100,
+  "height": 80,
+  "startPoint": "topLeft", //first direction
+  "strokeDashArray": "6 2" //dashed
+  }
 ```
 Result: ![](../assets/en/FormObjects/shape_line1.png)
 
 
 ```
     "myLine": {
-        "type": "line",                
-        "left": 20,
-        "top": 40,
-        "width": 100,
-        "height": 80,
-        "startPoint": "bottomLeft", //2nd direction
-        "strokeDashArray": "6 2" //dashed
-        }
+  "type": "line",                
+  "left": 20,
+  "top": 40,
+  "width": 100,
+  "height": 80,
+  "startPoint": "bottomLeft", //2nd direction
+  "strokeDashArray": "6 2" //dashed
+  }
 ```
 Result: ![](../assets/en/FormObjects/shape_line2.png)
 
@@ -91,16 +91,16 @@ A static oval is a decorative object for forms. Oval objects can be used to draw
 
 ![](../assets/en/FormObjects/shape_oval.png)
 
-#### JSON Exemplo:
+#### JSON Exemplo
 
 ```4d
     "myOval": {
-        "type": "oval",     //define the type of object
-        "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form 
-        "width": 100,       //width of the object
-        "height": 20,       //height of the object
-        "fill": "blue"      //define the background color
+  "type": "oval",  //define the type of object
+  "left": 60,   //left position on the form  
+  "top": 160,   //top position on the form 
+  "width": 100,  //width of the object
+  "height": 20,  //height of the object
+  "fill": "blue"  //define the background color
                 }
 ```
 

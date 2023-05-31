@@ -678,7 +678,7 @@ Atributo alias [`kind`](../API/DataClassAttributeClass.md#kind) es "alias".
 
 An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute:
 
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "storage", the alias data type is of the same type,
+- si el atributo de destino [`kind`](../API/DataClassAttributeClass.md#kind) es "storage", el tipo de datos del alias es del mismo tipo,
 - if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
 
 Alias attributes based upon relations have a specific [`path`](../API/DataClassAttributeClass.md#path) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).

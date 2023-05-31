@@ -4,7 +4,7 @@ title: Subformulário
 ---
 
 ---
-## Allow Deletion
+## Permitir a eliminação
 
 Specifies if the user can delete subrecords in a list subform.
 
@@ -60,7 +60,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 [Subformulário](subform_overview.md)
 
 #### Veja também
-[Double click on row](#double-click-on-row)
+[Duplo clique em linha](#double-click-on-row)
 
 ---
 ## Duplo clique em linha
@@ -92,7 +92,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 [Double click on empty row](#double-click-on-empty-row)
 
 ---
-## Enterable in list
+## Introduzível em lista
 
 When a list subform has this property enabled, the user can modify record data directly in the list, without having to use the [associated detail form](#detail-form).
 

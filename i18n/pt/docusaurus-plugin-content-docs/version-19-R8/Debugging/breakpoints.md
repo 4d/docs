@@ -28,7 +28,7 @@ In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) butto
 To remove a break point, click the corresponding bullet.
 
 
-### Breakpoint Properties
+### Propriedades do ponto de interrupção
 
 You can edit the behavior of a breakpoint using the Breakpoint Properties window:
 
@@ -77,7 +77,7 @@ Usando esta janela, pode:
 You cannot add new breakpoints from this window. Breakpoints can only be created from within the Debugger window or the Code Editor.
 
 
-## Catching Commands
+## Comandos de captura
 
 The **Catch** tab of the Runtime Explorer lets you add additional breaks to your code by catching calls to 4D commands. Unlike a break point, which is located in a particular project method (and therefore triggers a trace exception only when it is reached), the scope of catching a command includes all the processes that execute 4D code and call that command.
 
@@ -93,7 +93,7 @@ To open the Caught Commands page:
 
 ![runtime-explorer-window](../assets/en/Debugging/catch-command.png)
 
-This page lists the commands to be caught during execution. It is composed of two columns:
+Esta página lista os comandos que devem ser capturados durante a execução. It is composed of two columns:
 
 * The left column displays the Enable/Disable status of the caught command, followed by the name of the command
 * The right column displays the condition associated with the caught command, if any

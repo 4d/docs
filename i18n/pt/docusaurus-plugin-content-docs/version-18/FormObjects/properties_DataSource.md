@@ -4,7 +4,7 @@ title: Fonte de dados
 ---
 
 
-## Automatic Insertion
+## Inserção automática
 
 When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
 
@@ -39,10 +39,10 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados    | Valores possíveis                                   |
-| ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | Uma lista de valores possíveis                      |
-| lista      | list, collection | A list of possible values (hierarchical lists only) |
+| Nome       | Tipo de dados     | Valores possíveis                                   |
+| ---------- | ----------------- | --------------------------------------------------- |
+| choiceList | liste, collection | Uma lista de valores possíveis                      |
+| lista      | liste, collection | A list of possible values (hierarchical lists only) |
 
 #### Objectos suportados
 
@@ -56,9 +56,9 @@ List of static values to use as labels for the tab control object.
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados    | Valores possíveis                        |
-| ------ | ---------------- | ---------------------------------------- |
-| labels | list, collection | A list of values to fill the tab control |
+| Nome   | Tipo de dados     | Valores possíveis                        |
+| ------ | ----------------- | ---------------------------------------- |
+| labels | liste, collection | A list of values to fill the tab control |
 
 #### Objectos suportados
 
@@ -75,9 +75,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### Gramática JSON
 
-| Nome              | Tipo de dados | Valores possíveis |
-| ----------------- | ------------- | ----------------- |
-| currentItemSource | string        | Object expression |
+| Nome              | Tipo de dados | Valores possíveis    |
+| ----------------- | ------------- | -------------------- |
+| currentItemSource | string        | Expressão de objecto |
 
 #### Objectos suportados
 
@@ -164,7 +164,7 @@ A 4D expression to be associated with a column. You can enter:
   - Numeric
   - Date
   - Imagem
-  - Booleano
+  - Parâmetros
 
  For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use `**This.\&#060;propertyPath&#062;**` where `**\&#060;propertyPath&#062;**` is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression.
@@ -251,7 +251,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 | Nome                | Tipo de dados | Valores possíveis     |
 | ------------------- | ------------- | --------------------- |
-| selectedItemsSource | string        | Collection expression |
+| selectedItemsSource | string        | Expressão da colecção |
 
 #### Objectos suportados
 
@@ -269,9 +269,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis    |
-| -------------- | ------------- | -------------------- |
-| namedSelection | string        | Named selection name |
+| Nome           | Tipo de dados | Valores possíveis |
+| -------------- | ------------- | ----------------- |
+| namedSelection | string        | Nome da selecção  |
 
 #### Objectos suportados
 

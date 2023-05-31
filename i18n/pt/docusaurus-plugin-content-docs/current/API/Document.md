@@ -19,7 +19,7 @@ title: Document Class
 
 #### Descrição
 
-A propriedade `.aceita a transação` devolve <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
+A propriedade `.aceita a transação` devolve <!-- REF #document.creationDate.Summary -->A propriedade `.modificationDate` devolve<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -59,7 +59,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.exists` devolve <!-- REF #document.exists.Summary -->true se o ficheiro existir em disco<!-- END REF -->, e false de outra forma.
+A propriedade `.exists` devolve <!-- REF #document.exists.Summary -->true se o ficheiro existir em disco<!-- END REF -->e false de outra forma.
 
 Essa propriedade é **apenas leitura**.
 
@@ -80,7 +80,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.extension` devolve <!-- REF #document.extension.Summary -->a extensão do nome do ficheiro (se existir)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
+A propriedade `.extension` devolve <!-- REF #document.extension.Summary -->a extensão do nome do ficheiro (se existir)<!-- END REF -->. Uma extensão sempre começa com ".". Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
 
 Essa propriedade é **apenas leitura**.
 
@@ -160,7 +160,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.isFile` devolve <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
+A propriedade `.isFile` devolve <!-- REF #document.isFile.Summary -->A função `.copyTo()`<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -180,7 +180,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.isFolder` devolve <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
+A propriedade `.isFolder` devolve <!-- REF #document.isFolder.Summary -->A propriedade `.platformPath` devolve<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -230,7 +230,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.modificationDate` devolve <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
+A propriedade `.modificationDate` devolve <!-- REF #document.modificationDate.Summary -->A propriedade `.aceita a transação` devolve<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -250,7 +250,7 @@ Essa propriedade é **apenas leitura**.
 
 ##### Descrição
 
-A propriedade `.modificationTime` devolve <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
+A propriedade `.modificationTime` devolve <!-- REF #document.modificationTime.Summary -->A propriedade `.modificationTime` devolve<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
 
 Essa propriedade é **apenas leitura**.
 
@@ -270,7 +270,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.name` devolve <!-- REF #document.name.Summary -->o nome do arquivo, sem extensão (se houver)<!-- END REF -->.
+A propriedade `.name` devolve <!-- REF #document.name.Summary -->A propriedade `.isFile` devolve<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -286,7 +286,7 @@ Essa propriedade é **apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.original.Syntax -->**.original** : 4D. File<br/>**.original** : 4D. Folder<!-- END REF -->
+<!-- REF #document.original.Syntax -->|<!-- END REF -->
 
 #### Descrição
 
@@ -315,7 +315,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.parent` devolve <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
+A propriedade `.parent` devolve <!-- REF #document.parent.Summary -->A propriedade `.parent` devolve<!-- END REF -->. .
 
 Essa propriedade é **apenas leitura**.
 
@@ -335,7 +335,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.path` devolve <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
+A propriedade `.path` devolve <!-- REF #document.path.Summary -->A propriedade `.path` devolve<!-- END REF -->. .
 
 Essa propriedade é **apenas leitura**.
 
@@ -355,7 +355,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.platformPath` devolve <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #document.platformPath.Summary -->o caminho do ficheiro expresso com a sintaxe da plataforma actual<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -395,7 +395,7 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #document.copyTo().Params -->
-| Parâmetros        | Tipo       |    | Descrição                                              |
+| Parâmetro         | Tipo       |    | Descrição                                              |
 | ----------------- | ---------- |:--:| ------------------------------------------------------ |
 | destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
 | newName           | Text       | -> | Nome para a copia                                      |
@@ -406,7 +406,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A função `.copyTo()` <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
+A função `.copyTo()` <!-- REF #document.copyTo().Summary -->A propriedade `.isFolder` devolve <!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
@@ -414,7 +414,7 @@ Como padrão, o arquivo é copiado com o nome do arquivo original. Se quiser ren
 
 Se já existir um arquivo com o mesmo nome em *destinationFolder*, por padrão 4D gera um erro. Pode passar a constante `fk overwrite` no parâmetro *overwrite* para ignorar e sobrescriber o arquivo existente
 
-| Constante      | Value | Comentário                                      |
+| Parâmetros     | Valor | Comentário                                      |
 | -------------- | ----- | ----------------------------------------------- |
 | `fk overwrite` | 4     | Sobrescrever os elementos existentes, se houver |
 
@@ -445,13 +445,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5 | Adicionado       |
 </details>
 
-<!-- REF #document.getContent().Syntax -->**.getContent( )** : 4D. Blob<!-- END REF -->
+<!-- REF #document.getContent().Syntax -->**.getContent( )** : Blob<!-- END REF -->
 
 
 <!-- REF #document.getContent().Params -->
-| Parâmetros | Tipo    |    | Descrição                                      |
-| ---------- | ------- | -- | ---------------------------------------------- |
-| Resultados | 4D.Blob | <- | Conteúdo do arquivo|<!-- END REF -->
+| Parâmetro  | Tipo     |    | Descrição                                      |
+| ---------- | -------- | -- | ---------------------------------------------- |
+| Resultados | 4D. Blob | <- | Conteúdo do arquivo|<!-- END REF -->
 
 |
 
@@ -461,7 +461,7 @@ A função `.getContent()`  <!-- REF #document.getContent().Summary -->returns a
 
 **Valor retornado**
 
-A `4D. Blob` object.
+Um `Blob`.
 
 #### Exemplo
 
@@ -469,8 +469,8 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 ```4d
  var $vPath : Text
- $vPath:=Select document("";"*";"Select a document";0)
- If(OK=1) //If a document has been chosen
+ $vPath:=Select document(""; "*"; "Select a document";0)
+ If(OK=1) //Se tiver sido escolhido um documento
     [aTable]aBlobField:=File($vPath;fk platform path).getContent()
  End if
 ```
@@ -491,7 +491,7 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 
 <!-- REF #document.getIcon().Params -->
-| Parâmetros | Tipo    |    | Descrição                                       |
+| Parâmetro  | Tipo    |    | Descrição                                       |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
 | Resultados | Imagem  | <- | Ícone|<!-- END REF -->
@@ -526,7 +526,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 
 <!-- REF #document.getText().Params -->
-| Parâmetros  | Tipo    |    | Descrição                                     |
+| Parâmetro   | Tipo    |    | Descrição                                     |
 | ----------- | ------- | -- | --------------------------------------------- |
 | charSetName | Text    | -> | Nome do conjunto de caracteres                |
 | charSetNum  | Integer | -> | Número de conjuntos de caracteres             |
@@ -550,7 +550,7 @@ Se o documento contiver uma nota de ordem de byte (BOM), 4D usa o conjunto de ca
 
 Em *breakMode*, você pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha no documento. As seguintes constantes do tema "Documentos do Sistema" estão disponíveis:
 
-| Constante                     | Value | Comentário                                                                                                                                                                     |
+| Parâmetros                    | Valor | Comentário                                                                                                                                                                     |
 | ----------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `Document unchanged`          | 0     | Não processado                                                                                                                                                                 |
 | `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operacional: CR (retorno de carro) sob OS X, CRLF (retorno do carro + salto de linha) em Windows |
@@ -581,11 +581,11 @@ Quando você executar este código:
  $txt:=$myFile.getText()
 ```
 
-... você recebe o seguinte por `$txt`:
+|
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
+com `\t` (tab) como separador e `\r\n` (CRLF) como delimitador de linha.
 
 Aqui está outro exemplo com o mesmo arquivo, mas um delimitador de linha diferente:
 

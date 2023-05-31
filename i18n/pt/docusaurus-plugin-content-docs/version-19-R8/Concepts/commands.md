@@ -8,7 +8,7 @@ A linguagem 4D contém um grande número de comandos incorporados, permitindo ao
 Os comandos 4D estão divididos em duas categorias:
 
 - **funções de classe**, que são APIs de classes incorporadas 4D. Estas funções estão descritas na secção [Class API Reference](../API/overview).
-- **comandos autónomos**, agrupados por temas. Estes comandos estão descritos em manual *4D Language* em [doc.4d.com](https://doc.4d.com). Para referência, estão listados abaixo:
+- **comandos autónomos**, agrupados por temas. These commands are described in the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). For reference, they are listed below:
 
 [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
@@ -90,7 +90,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`C_BOOLEAN`](https://doc.4d.com/4dv19R/help/command/en/page305.html)                                          | 305    |
 | [`C_COLLECTION`](https://doc.4d.com/4dv19R/help/command/en/page1488.html)                                      | 1488   |
 | [`C_DATE`](https://doc.4d.com/4dv19R/help/command/en/page307.html)                                             | 307    |
-| [`C_LONGINT`](https://doc.4d.com/4dv19R/help/command/en/page307.html)                                          | 283    |
+| [`C_LONGINT`](https://doc.4d.com/4dv19R/help/command/en/page283.html)                                          | 283    |
 | [`C_OBJECT`](https://doc.4d.com/4dv19R/help/command/en/page1216.html)                                          | 1216   |
 | [`C_PICTURE`](https://doc.4d.com/4dv19R/help/command/en/page286.html)                                          | 286    |
 | [`C_POINTER`](https://doc.4d.com/4dv19R/help/command/en/page301.html)                                          | 301    |
@@ -115,12 +115,12 @@ Os comandos 4D estão divididos em duas categorias:
 | [`Choose`](https://doc.4d.com/4dv19R/help/command/en/page955.html)                                             | 955    |
 | [`CLEAR LIST`](https://doc.4d.com/4dv19R/help/command/en/page377.html)                                         | 377    |
 | [`CLEAR NAMED SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page333.html)                              | 333    |
-| [`CLEAR PASTEBOARD`](https://doc.4d.com/4dv19R/help/command/en/page333.html)                                   | 402    |
+| [`CLEAR PASTEBOARD`](https://doc.4d.com/4dv19R/help/command/en/page402.html)                                   | 402    |
 | [`CLEAR SEMAPHORE`](https://doc.4d.com/4dv19R/help/command/en/page144.html)                                    | 144    |
 | [`CLEAR SET`](https://doc.4d.com/4dv19R/help/command/en/page117.html)                                          | 117    |
 | [`CLEAR VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page89.html)                                      | 89     |
 | [`Clickcount`](https://doc.4d.com/4dv19R/help/command/en/page1332.html)                                        | 1332   |
-| [`CLOSE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page1332.html)                                    | 267    |
+| [`CLOSE DOCUMENT`](https://doc.4d.com/4dv19R/help/command/en/page267.html)                                     | 267    |
 | [`CLOSE PRINTING JOB`](https://doc.4d.com/4dv19R/help/command/en/page996.html)                                 | 996    |
 | [`CLOSE RESOURCE FILE`](https://doc.4d.com/4dv19R/help/command/en/page498.html)                                | 498    |
 | [`CLOSE WINDOW`](https://doc.4d.com/4dv19R/help/command/en/page154.html)                                       | 154    |
@@ -136,7 +136,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`Contextual click`](https://doc.4d.com/4dv19R/help/command/en/page713.html)                                   | 713    |
 | [`CONVERT COORDINATES`](https://doc.4d.com/4dv19R/help/command/en/page1365.html)                               | 1365   |
 | [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html)                                 | 1011   |
-| [`Convert path POSIX to system`](https://doc.4d.com/4dv19R/help/command/en/page1011.html)                      | 1107   |
+| [`Convert path POSIX to system`](https://doc.4d.com/4dv19R/help/command/en/page1107.html)                      | 1107   |
 | [`Convert path system to POSIX`](https://doc.4d.com/4dv19R/help/command/en/page1106.html)                      | 1106   |
 | [`CONVERT PICTURE`](https://doc.4d.com/4dv19R/help/command/en/page1002.html)                                   | 1002   |
 | [`Convert to text`](https://doc.4d.com/4dv19R/help/command/en/page1012.html)                                   | 1012   |
@@ -189,13 +189,13 @@ Os comandos 4D estão divididos em duas categorias:
 | [`CUT NAMED SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page334.html)                                | 334    |
 | <a name="D">**D**</a>                                                                                      |        |
 | [`Data file`](https://doc.4d.com/4dv19R/help/command/en/page490.html)                                          | 490    |
-| [`Data file encryption status`](https://doc.4d.com/4dv19R/help/command/en/page490.html)                        | 1609   |
+| [`Data file encryption status`](https://doc.4d.com/4dv19R/help/command/en/page1609.html)                       | 1609   |
 | [`Date`](https://doc.4d.com/4dv19R/help/command/en/page102.html)                                               | 102    |
 | [`Day number`](https://doc.4d.com/4dv19R/help/command/en/page114.html)                                         | 114    |
 | [`Day of`](https://doc.4d.com/4dv19R/help/command/en/page23.html)                                              | 23     |
 | [`Deactivated`](https://doc.4d.com/4dv19R/help/command/en/page347.html)                                        | 347    |
 | [`Dec`](https://doc.4d.com/4dv19R/help/command/en/page9.html)                                                  | 9      |
-| [`DECRYPT BLOB`](https://doc.4d.com/4dv19R/help/command/en/page9.html)                                         | 690    |
+| [`DECRYPT BLOB`](https://doc.4d.com/4dv19R/help/command/en/page690.html)                                       | 690    |
 | [`Decrypt data BLOB`](https://doc.4d.com/4dv19R/help/command/en/page1774.html)                                 | 1774   |
 | [`DEFAULT TABLE`](https://doc.4d.com/4dv19R/help/command/en/page46.html)                                       | 46     |
 | [`DELAY PROCESS`](https://doc.4d.com/4dv19R/help/command/en/page323.html)                                      | 323    |
@@ -218,11 +218,11 @@ Os comandos 4D estão divididos em duas categorias:
 | [`DISPLAY NOTIFICATION`](https://doc.4d.com/4dv19R/help/command/en/page910.html)                               | 910    |
 | [`DISPLAY RECORD`](https://doc.4d.com/4dv19R/help/command/en/page105.html)                                     | 105    |
 | [`DISPLAY SELECTION`](https://doc.4d.com/4dv19R/help/command/en/page59.html)                                   | 59     |
-| [`Displayed line number`](https://doc.4d.com/4dv19R/help/command/en/page897.html)                              | 897    |
+| [`Número de linha apresentado`](https://doc.4d.com/4dv19R/help/command/en/page897.html)                        | 897    |
 | [`DISTINCT ATTRIBUTE PATHS`](https://doc.4d.com/4dv19R/help/command/en/page1395.html)                          | 1395   |
 | [`DISTINCT ATTRIBUTE VALUES`](https://doc.4d.com/4dv19R/help/command/en/page1397.html)                         | 1397   |
 | [`DISTINCT VALUES`](https://doc.4d.com/4dv19R/help/command/en/page339.html)                                    | 339    |
-| [`DOCUMENT LIST`](https://doc.4d.com/4dv19R/help/command/en/page339.html)                                      | 474    |
+| [`DOCUMENT LIST`](https://doc.4d.com/4dv19R/help/command/en/page474.html)                                      | 474    |
 | [`DOCUMENT TO BLOB`](https://doc.4d.com/4dv19R/help/command/en/page525.html)                                   | 525    |
 | [`Document to text`](https://doc.4d.com/4dv19R/help/command/en/page1236.html)                                  | 1236   |
 | [`DOM Append XML child node`](https://doc.4d.com/4dv19R/help/command/en/page1080.html)                         | 1080   |
@@ -545,7 +545,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`LDAP LOGOUT`](https://doc.4d.com/4dv19R/help/command/en/page1327.html)                                       | 1327   |
 | [`LDAP Search`](https://doc.4d.com/4dv19R/help/command/en/page1328.html)                                       | 1328   |
 | [`LDAP SEARCH ALL`](https://doc.4d.com/4dv19R/help/command/en/page1329.html)                                   | 1329   |
-| [`Máx`](https://doc.4d.com/4dv19R/help/command/en/page16.html)                                                 | 16     |
+| [`Largura`](https://doc.4d.com/4dv19R/help/command/en/page16.html)                                             | 16     |
 | [`Nível`](https://doc.4d.com/4dv19R/help/command/en/page101.html)                                              | 101    |
 | [`List item parent`](https://doc.4d.com/4dv19R/help/command/en/page633.html)                                   | 633    |
 | [`List item position`](https://doc.4d.com/4dv19R/help/command/en/page629.html)                                 | 629    |
@@ -1020,9 +1020,9 @@ Os comandos 4D estão divididos em duas categorias:
 | [`SEND PACKET`](https://doc.4d.com/4dv19R/help/command/en/page103.html)                                        | 103    |
 | [`SEND RECORD`](https://doc.4d.com/4dv19R/help/command/en/page78.html)                                         | 78     |
 | [`SEND VARIABLE`](https://doc.4d.com/4dv19R/help/command/en/page80.html)                                       | 80     |
-| [`Sequence number`](https://doc.4d.com/4dv19R/help/command/en/page244.html)                                    | 244    |
+| [`Número de sequência`](https://doc.4d.com/4dv19R/help/command/en/page244.html)                                | 244    |
 | [`Session`](https://doc.4d.com/4dv19R/help/command/en/page1714.html)                                           | 1714   |
-| [`SET ABOUT`](https://doc.4d.com/4dv19R/help/command/en/page316.html)                                          | 316    |
+| [`SET ABOUT`](https://doc.4d.com/4dv19R/help/command/en/page316.html)                                          | 244    |
 | [`SET ALLOWED METHODS`](https://doc.4d.com/4dv19R/help/command/en/page805.html)                                | 805    |
 | [`SET APPLICATION COLOR SCHEME`](https://doc.4d.com/4dv19R/help/command/en/page1762.html)                      | 1762   |
 | [`SET ASSERT ENABLED`](https://doc.4d.com/4dv19R/help/command/en/page1131.html)                                | 1131   |
@@ -1144,7 +1144,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`ST INSERT URL`](https://doc.4d.com/4dv19R/help/command/en/page1280.html)                                     | 1280   |
 | [`ST SET ATTRIBUTES`](https://doc.4d.com/4dv19R/help/command/en/page1093.html)                                 | 1093   |
 | [`ST SET OPTIONS`](https://doc.4d.com/4dv19R/help/command/en/page1289.html)                                    | 1289   |
-| [`ST SET PLAIN TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1136.html)                                 | 1136   |
+| [`ST SET ATTRIBUTES`](https://doc.4d.com/4dv19R/help/command/en/page1136.html)                                 | 1136   |
 | [`ST SET TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1115.html)                                       | 1115   |
 | [`START MONITORING ACTIVITY`](https://doc.4d.com/4dv19R/help/command/en/page1712.html)                         | 1712   |
 | [`START SQL SERVER`](https://doc.4d.com/4dv19R/help/command/en/page962.html)                                   | 962    |
@@ -1158,7 +1158,7 @@ Os comandos 4D estão divididos em duas categorias:
 | [`Structure file`](https://doc.4d.com/4dv19R/help/command/en/page489.html)                                     | 489    |
 | [`Substring`](https://doc.4d.com/4dv19R/help/command/en/page12.html)                                           | 12     |
 | [`Subtotal`](https://doc.4d.com/4dv19R/help/command/en/page97.html)                                            | 97     |
-| [`Sum`](https://doc.4d.com/4dv19R/help/command/en/page1.html)                                                  | 1      |
+| [`Soma`](https://doc.4d.com/4dv19R/help/command/en/page1.html)                                                 | 1      |
 | [`Sum squares`](https://doc.4d.com/4dv19R/help/command/en/page28.html)                                         | 28     |
 | [`Super`](https://doc.4d.com/4dv19R/help/command/en/page1706.html)                                             | 1706   |
 | [`SUSPEND TRANSACTION`](https://doc.4d.com/4dv19R/help/command/en/page1385.html)                               | 1385   |

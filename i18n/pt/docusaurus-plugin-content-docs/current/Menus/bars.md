@@ -17,7 +17,7 @@ You can enhance the appearance of each menu bar by associating a custom splash s
 
 A custom splash screen picture can come from any graphic application. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Any standard picture format supported by 4D can be used.
 
-The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note the "Background Image" area in the right-hand part of the window. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. A pop-up menu appears:
+The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note the "Background Image" area in the right-hand part of the window. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
 - To paste a picture from the clipboard, choose **Paste**.
 - To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Once set, the picture is displayed in miniature in the area. It is then associated with the menu bar.
 
@@ -25,12 +25,12 @@ The splash screen picture can be set only in the Menu editor: select the menu ba
 
 You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
 
-> You can choose whether to display or hide this window using the **Display toolbar** option in the Settings.
+> Pode escolher se quer exibir ou esconder a janela usando a opção **Mostrar a barra de ferramentas** nas Propriedades do Banco de Dados.
 
 To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
 
 
-## Previewing menu bars
+## Pré-visualização de barras de menu
 
 The Menu Bar editor lets you view the custom menus and splash screen at any time, without closing the toolbox window.
 

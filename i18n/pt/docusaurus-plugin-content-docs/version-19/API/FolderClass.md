@@ -25,34 +25,34 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 
 |                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->                           |
-| [<!-- INCLUDE #FolderClass.create().Syntax -->](#create)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.create().Summary -->                       |
-| [<!-- INCLUDE #FolderClass.createAlias().Syntax -->](#createalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.createAlias().Summary -->        |
-| [<!-- INCLUDE #directory.creationDate.Syntax -->](#creationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary -->             |
-| [<!-- INCLUDE #directory.creationTime.Syntax -->](#creationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary -->             |
-| [<!-- INCLUDE #FolderClass.delete().Syntax -->](#delete)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.delete().Summary -->                       |
-| [<!-- INCLUDE #directory.exists.Syntax -->](#exists)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->                               |
-| [<!-- INCLUDE #directory.extension.Syntax -->](#extension)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->                      |
-| [<!-- INCLUDE #directory.file().Syntax -->](#file)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.file().Summary -->                                 |
-| [<!-- INCLUDE #directory.files().Syntax -->](#files)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.files().Summary -->                              |
-| [<!-- INCLUDE #directory.folder().Syntax -->](#folder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folder().Summary -->                           |
-| [<!-- INCLUDE #directory.folders().Syntax -->](#folders)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folders().Summary -->                        |
-| [<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->                         |
-| [<!-- INCLUDE #directory.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.getIcon().Summary -->                        |
-| [<!-- INCLUDE #directory.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.hidden.Summary -->                               |
-| [<!-- INCLUDE #directory.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isAlias.Summary -->                            |
-| [<!-- INCLUDE #directory.isFile.Syntax -->](#isfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFile.Summary -->                               |
-| [<!-- INCLUDE #directory.isFolder.Syntax -->](#isfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFolder.Summary -->                         |
-| [<!-- INCLUDE #directory.isPackage.Syntax -->](#ispackage)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isPackage.Summary -->                      |
-| [<!-- INCLUDE #directory.modificationDate.Syntax -->](#modificationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationDate.Summary --> |
-| [<!-- INCLUDE #directory.modificationTime.Syntax -->](#modificationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationTime.Summary --> |
-| [<!-- INCLUDE #directory.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.name.Summary -->                                     |
-| [<!-- INCLUDE #directory.original.Syntax -->](#original)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.original.Summary -->                         |
-| [<!-- INCLUDE #directory.parent.Syntax -->](#parent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.parent.Summary -->                               |
-| [<!-- INCLUDE #directory.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary -->                                     |
-| [<!-- INCLUDE #directory.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->             |
-| [<!-- INCLUDE #FolderClass.moveTo().Syntax -->](#moveto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.moveTo().Summary -->                       |
-| [<!-- INCLUDE #FolderClass.rename().Syntax -->](#rename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.rename().Summary -->                       |
+| [<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
+| [<!-- INCLUDE #FolderClass.create().Syntax -->](#create)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.create().Summary -->|
+| [<!-- INCLUDE #FolderClass.createAlias().Syntax -->](#createalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.createAlias().Summary --> |
+| [<!-- INCLUDE #directory.creationDate.Syntax -->](#creationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary -->|
+| [<!-- INCLUDE #directory.creationTime.Syntax -->](#creationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary -->|
+| [<!-- INCLUDE #FolderClass.delete().Syntax -->](#delete)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.delete().Summary -->|
+| [<!-- INCLUDE #directory.exists.Syntax -->](#exists)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
+| [<!-- INCLUDE #directory.extension.Syntax -->](#extension)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->|
+| [<!-- INCLUDE #directory.file().Syntax -->](#file)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.file().Summary -->|
+| [<!-- INCLUDE #directory.files().Syntax -->](#files)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.files().Summary -->|
+| [<!-- INCLUDE #directory.folder().Syntax -->](#folder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folder().Summary -->|
+| [<!-- INCLUDE #directory.folders().Syntax -->](#folders)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folders().Summary -->|
+| [<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->|
+| [<!-- INCLUDE #directory.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.getIcon().Summary -->|
+| [<!-- INCLUDE #directory.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.hidden.Summary -->|
+| [<!-- INCLUDE #directory.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isAlias.Summary -->|
+| [<!-- INCLUDE #directory.isFile.Syntax -->](#isfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFile.Summary -->|
+| [<!-- INCLUDE #directory.isFolder.Syntax -->](#isfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isFolder.Summary -->|
+| [<!-- INCLUDE #directory.isPackage.Syntax -->](#ispackage)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.isPackage.Summary -->|
+| [<!-- INCLUDE #directory.modificationDate.Syntax -->](#modificationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationDate.Summary -->|
+| [<!-- INCLUDE #directory.modificationTime.Syntax -->](#modificationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.modificationTime.Summary -->|
+| [<!-- INCLUDE #directory.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.name.Summary -->|
+| [<!-- INCLUDE #directory.original.Syntax -->](#original)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.original.Summary -->|
+| [<!-- INCLUDE #directory.parent.Syntax -->](#parent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.parent.Summary -->|
+| [<!-- INCLUDE #directory.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary -->|
+| [<!-- INCLUDE #directory.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->|
+| [<!-- INCLUDE #FolderClass.moveTo().Syntax -->](#moveto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.moveTo().Summary -->|
+| [<!-- INCLUDE #FolderClass.rename().Syntax -->](#rename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.rename().Summary -->|
 
 ## Folder
 
@@ -64,23 +64,23 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 
 </details>
 
-
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
-
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D. Folder<!-- END REF -->
 
 
 <!-- REF #_command_.Folder.Params -->
-| Parâmetros     | Tipo       |    | Descrição                                             |
+| Parâmetro      | Tipo       |    | Descrição                                             |
 | -------------- | ---------- |:--:| ----------------------------------------------------- |
-| path           | Text       | -> | Rota de pasta                                         |
+| path           | Text       | -> | Folder path                                           |
 | folderConstant | Integer    | -> | Constante Pasta 4D                                    |
 | pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path`   |
 | *              |            | -> | * para devolver a pasta da base de dados do anfitrião |
-| Resultados     | 4D. Folder | <- | Novo Objeto Folder|<!-- END REF -->         |
+| Resultados     | 4D. Folder | <- | Novo Objeto Folder|<!-- END REF -->
+
+|
 
 #### Descrição
 
-O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. O comando aceita duas sintaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->cria e devolve um novo objecto do tipo `4D.Folder`<!-- END REF -->. O comando aceita duas sintaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -90,7 +90,7 @@ No parâmetro *path* , passe uma string de rotas de pasta. Pode utilizar uma str
 
 Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar com pathnames de plataforma (Windows ou macOS), deve declará-lo usando o parâmetro *pathType* . Estão disponíveis as seguintes constantes:
 
-| Constante        | Value | Comentário                                                                                               |
+| Parâmetros       | Valor | Comentário                                                                                               |
 | ---------------- | ----- | -------------------------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Caminho expresso com uma sintaxe específica da plataforma (obrigatória em caso de caminho de plataforma) |
 | fk posix path    | 0     | Caminho expresso com a sintaxe POSIX (por padrão)                                                        |
@@ -99,7 +99,7 @@ Como padrão, 4D espera um caminho expresso com a sintaxe POSIX. Se trabalhar co
 
 No parâmetro *folderConstant* , passe uma pasta 4D incorporada ou de sistema, utilizando uma das seguintes constantes:
 
-| Constante                  | Value | Comentário                                                                                                                  |
+| Parâmetros                 | Valor | Comentário                                                                                                                  |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                                             |
 | fk data folder             | 9     | Sistema de ficheiros associado: "/DATA"                                                                                     |
@@ -128,13 +128,13 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 | v18 R6 | Adicionado |
 </details>
 
-
-<!-- REF #4D.Folder.new().Syntax --> **4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+<!-- REF #4D.Folder.new().Syntax -->
+**4D. Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D. Folder<br/>**4D. Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D. Folder<!-- END REF -->
 
 
 #### Descrição
 
-A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolve um novo objeto do tipo `4D.Folder`<!-- END REF -->. Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolve um novo objecto do tipo `4D.Folder`<!-- END REF -->. Elle est identique à la commande [`Folder`](#folder) (raccourci).
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D. Folder.new()`.
 
@@ -150,15 +150,16 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolve
 | v17 R5 | Adicionado |
 </details>
 
-
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 
-
 <!--REF #FolderClass.create().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                                    |
-| ---------- | -------- | -- | -------------------------------------------------------------------------------------------- |
-| Resultados | Booleano | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF --> |
+| Parâmetro  | Tipo       |    | Descrição                                                                                    |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF -->
+
+
+|
 
 
 #### Descrição
@@ -192,8 +193,10 @@ If($newFolder.create())
 Else
  ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
+Else
+ ALERT("Impossível criar uma pasta "+$newFolder.name+".")
+End if
 ```
-
 
 <!-- END REF -->
 
@@ -207,18 +210,18 @@ End if
 | v17 R5 | Adicionado |
 </details>
 
-
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
 
 
-
 <!--REF #FolderClass.createAlias().Params -->
-| Parâmetros        | Tipo       |    | Descrição                                                |
+| Parâmetro         | Tipo       |    | Descrição                                                |
 | ----------------- | ---------- | -- | -------------------------------------------------------- |
 | destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho             |
 | aliasName         | Text       | -> | Nome do pseudónimo ou atalho                             |
 | aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                            |
-| Resultados        | 4D. File   | <- | Alias ou referência de atalho|<!-- END REF --> |
+| Resultados        | 4D. File   | <- | Alias ou referência de atalho|<!-- END REF -->
+
+|
 
 #### Descrição
 
@@ -228,7 +231,7 @@ Passar o nome do pseudónimo ou atalho para criar no parâmetro *aliasName* .
 
 Por padrão em macOS, a função cria um pseudónimo padrão. Também pode criar uma ligação simbólica utilizando o parâmetro *aliasType* . Estão disponíveis as seguintes constantes:
 
-| Constante          | Value | Comentário                   |
+| Parâmetros         | Valor | Comentário                   |
 | ------------------ | ----- | ---------------------------- |
 | `fk alias link`    | 0     | Alias link (padrão)          |
 | `fk symbolic link` | 1     | Link simbólico (só em macOS) |
@@ -247,8 +250,6 @@ Deseja criar um pseudónimo para uma pasta de arquivo na sua pasta de base de da
 $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
 $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ```
-
-
 <!-- END REF -->
 
 <!-- INCLUDE directory.creationDate.Desc -->
@@ -265,15 +266,15 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 | v17 R5 | Adicionado |
 </details>
 
-
 <!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
 
 
-
 <!-- REF #FolderClass.delete().Params -->
-| Parâmetros | Tipo    |    | Descrição                                               |
-| ---------- | ------- | -- | ------------------------------------------------------- |
-| option     | Integer | -> | Opção de eliminação de pasta|<!-- END REF --> |
+| Parâmetro | Tipo    |    | Descrição                                               |
+| --------- | ------- | -- | ------------------------------------------------------- |
+| option    | Integer | -> | Opção de eliminação de pasta|<!-- END REF -->
+
+|
 
 #### Descrição
 
@@ -281,7 +282,7 @@ A função `.delete()` <!-- REF #FolderClass.delete().Summary -->apaga a pasta<!
 
 Por padrão, por razões de segurança, se omitir o parâmetro de opção, `.delete( )` só permite a eliminação de pastas vazias. Se quiser que o comando possa apagar pastas que não estejam vazias, deve utilizar o parâmetro de opção com uma das seguintes constantes:
 
-| Constante              | Value | Comentário                                             |
+| Parâmetros             | Valor | Comentário                                             |
 | ---------------------- | ----- | ------------------------------------------------------ |
 | `Delete only if empty` | 0     | Elimina a pasta apenas quando está vazia               |
 | `Delete with contents` | 1     | Apaga a pasta juntamente com tudo o que a mesma contém |
@@ -339,17 +340,17 @@ Quando `Apagar com conteúdo` for aprovado:
 | v17 R5 | Adicionado |
 </details>
 
-
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. Folder<!-- END REF -->
 
 
-
 <!--REF #FolderClass.moveTo().Params -->
-| Parâmetros        | Tipo       |    | Descrição                               |
+| Parâmetro         | Tipo       |    | Descrição                               |
 | ----------------- | ---------- | -- | --------------------------------------- |
 | destinationFolder | 4D. Folder | -> | Pasta de destino                        |
 | newName           | Text       | -> | Nome completo para a pasta movida       |
-| Resultados        | 4D. Folder | <- | Pasta movida|<!-- END REF --> |
+| Resultados        | 4D. Folder | <- | Pasta movida|<!-- END REF -->
+
+|
 
 #### Descrição
 
@@ -373,8 +374,6 @@ Quer mover-se e renomear uma pasta:
  $tomove:=$docs.folder("Pictures")
  $tomove2:=$tomove.moveTo($docs.folder("Archives");"Pic_Archives")
 ```
-
-
 <!-- END REF -->
 
 <!-- INCLUDE directory.name.Desc -->
@@ -397,16 +396,16 @@ Quer mover-se e renomear uma pasta:
 | v17 R5 | Adicionado |
 </details>
 
-
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. Folder<!-- END REF -->
 
 
-
 <!--REF #FolderClass.rename().Params -->
-| Parâmetros | Tipo       |    | Descrição                                    |
+| Parâmetro  | Tipo       |    | Descrição                                    |
 | ---------- | ---------- | -- | -------------------------------------------- |
 | newName    | Text       | -> | Novo nome completo para a pasta              |
-| Resultados | 4D. Folder | <- | Renomeado arquivo|<!-- END REF --> |
+| Resultados | 4D. Folder | <- | Renomeado arquivo|<!-- END REF -->
+
+|
 
 #### Descrição
 
@@ -424,6 +423,4 @@ O objecto `Folder` renomeado.
  var $toRename : 4D. Folder
  $toRename:=Folder("/RESOURCES/Pictures").rename("Images")
 ```
-
-
 <!-- END REF -->

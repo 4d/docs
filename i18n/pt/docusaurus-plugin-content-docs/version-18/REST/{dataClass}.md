@@ -7,15 +7,15 @@ title: "{dataClass}"
 
 Os nomes das classes de dados podem ser usadas diretamente nas petições REST para trabalhar com entidades, seleções de entidades ou métodos da classe de dados.
 
-## Sintaxe
+## Sintaxe disponível
 
-| Sintaxe                                                                    | Exemplo                     | Descrição                                                                                          |
-| -------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
-| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados        |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Retorna os dados para uma entidade na qual os valores de atributo são definidas                    |
-| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executa um método projeto e devolve um objeto ou uma coleção (o método projeto deve estar exposto) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Retona um valor baseado no método de entidade                                                      |
+| Sintaxe                                                                       | Exemplo                     | Descrição                                                                                          |
+| ----------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                                 | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
+| [**[{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/**](#dataclasskey) | `/Employee(22)`             | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados        |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                | `/Employee:firstName(John)` | Retorna os dados para uma entidade na qual os valores de atributo são definidas                    |
+| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)           | `/Employee/getHighSalaries` | Executa um método projeto e devolve um objeto ou uma coleção (o método projeto deve estar exposto) |
+| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod)    | `/Employee(22)/getAge`      | Retona um valor baseado no método de entidade                                                      |
 
 ## {dataClass}
 
@@ -132,7 +132,7 @@ Retorna todas as datas para uma classe de dados específica.
 }
 ````
 
-## {dataClass}({key})
+## [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)/
 
 Retorna os dados para a entidade específica definida pela chave primária da classe de dados, *e.g.*, `Company(22) ou Company("IT0911AB2200")`
 

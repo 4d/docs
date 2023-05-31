@@ -27,13 +27,13 @@ You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity select
 
 
 
-## Example with related entities
+## Exemplo com entidades relacionadas
 
 Se passarmos a petição REST seguinte para nossa classe de dados Company (que tem um atributo de relação "empregados"):
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**Resposta**:
 
 ```
 {
@@ -73,14 +73,14 @@ If you want to get last name and job name attributes from employees:
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
 
-## Example with related entity
+## Exemplo com entidade relacionada
 
 Se passarmos a petição REST seguinte para nossa classe de dados Employee (que tem vários atributos relacionais, incluindo "employer"):
 
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**Resposta**:
 
 ```
 {
@@ -97,7 +97,7 @@ Se passarmos a petição REST seguinte para nossa classe de dados Employee (que 
 }
 ```
 
-If you want to get all attributes of the employer:
+Se quiser obter todos os atributos do empregador:
 
  `GET  /rest/Employee(1)?$attributes=employer.*`
 
