@@ -15,7 +15,7 @@ The upper part of the page provides information about the current status of the 
 - **Starting time**: Date and time the SQL server was last launched.
 - **Uptime**: Time elapsed since last startup of the SQL server.
 
-## Start / Stop SQL Server
+## Iniciar / Parar o SQL Server
 
 This button toggles and can be used to control the activation of the 4D Server SQL server.
 
