@@ -28,7 +28,7 @@ The page is active and updated permanently as soon as it is displayed. It should
 
 - clicking on the **Pause** button,
 - clicando na lista,
-- pressing the space bar.
+- premindo a barra de espaços.
 
 When you pause the page, a "PAUSED" message appears and the button label changes to **Resume**. You can resume monitoring of the operations by performing the same action as for pausing.
 
