@@ -56,7 +56,7 @@ If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4
 
 This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](WebServer/templates.md#prevention-of-malicious-code-insertion).
 
-### Identifiers with tokens
+### Identificadores com tokens
 
 To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time:C178`.
 
