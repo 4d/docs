@@ -35,7 +35,7 @@ and the user enters "proportion", the field displays:
 
  (portion)
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. Não se perde nenhuma informação.
 
 #### Gramática JSON
 
@@ -110,7 +110,7 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 Por exemplo, se quiser exibir números de três dígitos, pode usar o formato ####. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
-> No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
+> No matter what the display format, 4D accepts and stores the number entered in the field. Não se perde nenhuma informação.
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
