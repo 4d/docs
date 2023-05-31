@@ -170,7 +170,7 @@ Em Windows, não é recomendado acessar, através de uma área web, o servidor w
 
 As URLs manejadas por programação em áreas web em macOS devem começar com o  protocolo. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
 
-## Access to web inspector
+## Acesso ao inspector web
 
 Pode ver e usar um inspetor web dentro das áreas web de seus formulários. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
 
@@ -191,7 +191,7 @@ To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 
 For more information, refer to the description of the `WA SET PREFERENCE` command.
 
-### Using the web inspector
+### Utilizar o inspector Web
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 
