@@ -29,7 +29,7 @@ The default home page is displayed:
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-### Displaying Hello World
+### Exibindo Hello World
 
 1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
 
