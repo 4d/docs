@@ -231,7 +231,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 
 
-## HTTP Compression Level
+## Nível de compressão HTTP
 
 | Pode ser definido com | Nome                                                                 | Comentários                    |
 | --------------------- | -------------------------------------------------------------------- | ------------------------------ |
