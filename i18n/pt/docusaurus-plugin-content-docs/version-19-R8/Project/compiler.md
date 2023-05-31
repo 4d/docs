@@ -195,7 +195,7 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 These two lists contain four columns:
 
 - Names of process and interprocess variables and arrays used in your project. These variables are listed in alphabetical order.
-- Type of the variable. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
+- Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
 - Number of dimensions if the variable is an array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
     - If the variable was found in a database method, the database method name is given, preceded by (M)*.
@@ -214,7 +214,7 @@ The list of local variables is sorted by database method, project method, trigge
 This list is divided into three columns:
 
 - list of local variables used in the method;
-- type of the variable;
+- tipo da variável;
 - number of dimensions if the variable is an array.
 
 #### Complete list of methods
@@ -291,11 +291,11 @@ To do this, you must surround the code to be excluded from range checking with t
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
 
-|             | Compilar para Windows | Compile for Intel Mac | Compile for Silicon Mac |
-| ----------- |:---------------------:|:---------------------:|:-----------------------:|
-| Em Windows  |       &#10003;        |       &#10003;        |        &#10007;         |
-| Intel Mac   |       &#10003;        |       &#10003;        |        &#10003;         |
-| Silicon Mac |       &#10003;        |       &#10003;        |        &#10003;         |
+|             | Compilar para Windows | Compilar para Intel Mac | Compile for Silicon Mac |
+| ----------- |:---------------------:|:-----------------------:|:-----------------------:|
+| Em Windows  |       &#10003;        |        &#10003;         |        &#10007;         |
+| Intel Mac   |       &#10003;        |        &#10003;         |        &#10003;         |
+| Silicon Mac |       &#10003;        |        &#10003;         |        &#10003;         |
 
 
 Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.

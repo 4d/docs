@@ -229,7 +229,7 @@ The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR
 
 You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
 
-| Nível da mensagem | Descrição                                                                                     | When selected, includes         |
+| Nível da mensagem | Descrição                                                                                     | Quando seleccionado, inclui     |
 | ----------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
 | ERROR             | A part of the application does not work                                                       | ERROR                           |
 | WARN              | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |

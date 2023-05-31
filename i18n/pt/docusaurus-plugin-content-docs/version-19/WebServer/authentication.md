@@ -127,7 +127,7 @@ The first parameter (`$1`) is the URL received by the server, from which the hos
 
 Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
 
-| URL entered in web browser           | Value of parameter $1    |
+| URL entered in web browser           | Valor do parâmetro $1    |
 | ------------------------------------ | ------------------------ |
 | 123.45.67.89                         | /                        |
 | <http://123.45.67.89>                | /                        |
@@ -147,7 +147,7 @@ If your application uses this information, it is up to you to parse the header a
 The `$3` parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
 
-#### $4 - Server IP address
+#### $4 - Endereço IP do servidor
 
 The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
 

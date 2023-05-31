@@ -197,7 +197,7 @@ No código da aplicação, as funções de classe são chamadas como métodos me
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
+> **Aviso de segurança de thread:** Se uma função de classe não for thread-safe e for chamada por um método com o atributo "Pode ser executado num processo preemptivo":
 > 
 > - o compilador não gera qualquer erro (o que é diferente dos métodos normais),
 > - um erro é lançado por 4D apenas em tempo de execução.
@@ -299,18 +299,18 @@ $o:=cs.MyClass.new("HelloWorld")
 // Class: ChildClass Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+A palavra-chave `Class extends` é utilizada na declaração da classe para criar uma classe de utilizador que é filha de outra classe de utilizador. A classe filha herda todas as funções da classe mãe.
 
-Class extension must respect the following rules:
+A extensão de classe deve respeitar as seguintes regras:
 
-- A user class cannot extend a built-in class (except 4D. Object and [ORDA classes](../ORDA/ordaClasses.md) which are extended by default for user classes).
-- A user class cannot extend a user class from another project or component.
-- Uma classe utilizador não se pode estender a si própria.
+- Uma classe de usuário não pode estender uma classe incorporada (excepto as classes 4D.Object e [ORDA](../ORDA/ordaClasses.md) que são estendidas por defeito para as classes de utilizador).
+- Uma classe de usuário não pode estender uma classe de usuário de outro projeto ou componente.
+- Uma classe usuário não se pode estender a si própria.
 - Não é possível estender classes de forma circular (ou seja, "a" estende "b" que estende "a").
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
+A violação de uma regra deste tipo não é detectada pelo editor de código ou pelo intérprete, apenas o compilador e o `verificam a sintaxe` e, neste caso, emitem um erro.
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+Uma classe estendida pode chamar o construtor de sua classe pai usando o comando [`Super`](#super).
 
 #### Exemplo
 
@@ -346,27 +346,29 @@ Class constructor ($side : Integer)
 Super {( param{;...;paramN} )} {-> Object} 
 ```
 
-| Parâmetro  | Tipo   |    | Descrição                                      |
-| ---------- | ------ | -- | ---------------------------------------------- |
-| param      | misto  | -> | Parameter(s) to pass to the parent constructor |
-| Resultados | object | <- | Pai do objecto                                 |
+| Parâmetro  | Tipo   |    | Descrição                                   |
+| ---------- | ------ | -- | ------------------------------------------- |
+| param      | misto  | -> | Parâmetro(s) a passar para o construtor pai |
+| Resultados | object | <- | Pai do objecto                              |
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+A palavra-chave `Super` permite efectuar chamadas para a superclasse ``, ou seja, a classe-mãe.
 
 `Super` tem dois objectivos diferentes:
 
-1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
+1. Dentro de um código de construtor [](#class-constructor), `Super` é um comando que permite chamar o construtor da superclasse. Quando utilizado num construtor, o comando `Super` aparece sozinho e deve ser utilizado antes da palavra-chave `This` ser utilizada.
 
-- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. É o programador 4D que se certifica de que as chamadas são válidas.
-- If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
-- If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+- Se todos os construtores de classe na árvore de herança não forem correctamente chamados, é gerado o erro -10748. É o programador 4D que se certifica de que as chamadas são válidas.
+- Se o comando `This` for chamado num objecto cujas superclasses não tenham sido construídas, é gerado o erro -10743.
+- Se `Super` for chamado fora do âmbito de um objecto ou num objecto cujo construtor de superclasse já tenha sido chamado, é gerado o erro -10746.
 
 ```4d
-// inside myClass constructor
-var $text1; $text2 : Text Super($text1) //calls superclass constructor with a text param This.param:=$text2 // use second param
+// dentro do construtor myClass
+var $text1; $text2 : Text
+Super($text1) //chama o construtor da superclasse com um parâmetro de texto
+This.param:=$text2 // usa o segundo parâmetro
 ```
 
-2. Inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+2. No interior de uma função de membro da classe [](#class-function), `Super` designa o protótipo da superclasse e permite chamar uma função da hierarquia da superclasse.
 
 ```4d
 Super.doSomething(42) //chamada a função "doSomething"  
@@ -375,16 +377,18 @@ Super.doSomething(42) //chamada a função "doSomething"
 
 #### Exemplo 1
 
-This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
+Este exemplo ilustra a utilização de `Super` num construtor de classe. O comando é chamado para evitar a duplicação das partes do construtor que são comuns às classes `Rectangle` e `Square` .
 
 ```4d
-// Class: Rectangle Class constructor($width : Integer; $height : Integer)
+// Classe: Rectângulo
+Class constructor($width : Integer; $height : Integer)
  This.name:="Rectangle"
  This.height:=$height
- This.width:=$width Function sayName()
- ALERT("Hi, I am a "+This.name+".")
+ This.width:=$width
 
-// Function definition
+
+Function sayName()
+ ALERT("Hi, I am a "+This.name+".")
 
 // Function definition
 Function getArea()
@@ -393,14 +397,20 @@ Function getArea()
 ```
 
 ```4d
-//Class: Square Class extends Rectangle Class constructor ($side : Integer)
+//Classe: Square
 
- // It calls the parent class's constructor with lengths
- // provided for the Rectangle's width and height
+Classe extends Rectangle
+
+Construtor da classe ($side : Integer)
+
+ // Chama o construtor da classe pai com comprimentos
+ // fornecidos para a largura e altura do Rectangle
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
- This.name:="Square" Function getArea()
+ // Em classes derivadas, Super tem de ser chamado antes de
+ // poder usar 'This'
+ This.name:="Square"
+
+Function getArea()
  C_LONGINT($0)
  $0:=This.height*This.width
 ```

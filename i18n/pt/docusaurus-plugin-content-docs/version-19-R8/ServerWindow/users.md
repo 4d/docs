@@ -28,7 +28,7 @@ For each user connected to the server, the list provides the following informati
 - **CPU Time**: CPU time consumed by this user since connecting.
 - **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
 
-### Managing sleeping users
+### Gerir usuários adormecidos
 
 4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
 

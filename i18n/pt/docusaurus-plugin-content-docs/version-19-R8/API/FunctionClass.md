@@ -3,7 +3,7 @@ id: FunctionClass
 title: Function
 ---
 
-### About Function objects
+### Acerca dos objectos Function
 
 A `4D.Function` object contains a piece of code that can be executed from an object, either using the `()` operator, or using the [`apply()`](#apply) and [`call()`](#call) functions. 4D propõe três tipos de objetos `Function`:
 

@@ -142,7 +142,7 @@ This area configures access to the 4D HTML documentation displayed in the curren
 *   When the user double-clicks on a command on the **Commands Page** of the Explorer;
 
 
-### Documentation language
+### Língua da documentação
 
 Language of the HTML documentation to display. You can modify it, for example if you want to display documentation in a different language from the application language.
 

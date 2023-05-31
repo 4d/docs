@@ -88,7 +88,7 @@ The 4D View Pro sheet options object allows you to control various options of yo
 | colHeaderVisible     |                        | boolean       | Specifies whether the column header is visible.                                                                                                                                                                                                                                                            |
 | rowHeaderAutoText    |                        | inteiro longo | Specifies whether the row header displays letters or numbers or is blank. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                   |
 | colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                |
-| selectionBackColor   |                        | string        | The selection's background color for the sheet. (preferred RGBA format)                                                                                                                                                                                                                                    |
+| selectionBackColor   |                        | string        | The selection's background color for the sheet. (formato RGBA preferido)                                                                                                                                                                                                                                   |
 | selectionBorderColor |                        | string        | The selection's border color for the sheet.                                                                                                                                                                                                                                                                |
 | sheetAreaOffset      |                        | object        | The sheetAreaOffset's options.                                                                                                                                                                                                                                                                             |
 |                      | left                   | inteiro longo | The offset left of sheet from host.                                                                                                                                                                                                                                                                        |
@@ -199,14 +199,14 @@ To create your own date and time patterns, in your current localization, you can
 |      | yyyy                                                      | Ano, longo                                      | 2019                 |
 | Hora |                                                           |                                                 | (2:03:05 PM)         |
 |      | h                                                         | Hour without leading zero. 0-23                 | 2                    |
-|      | hh                                                        | Hour with leading zero. 00-23                   | 02                   |
+|      | hh                                                        | Hora com zero à esquerda. 00-23                 | 02                   |
 |      | m                                                         | Minutes without leading zero. 0-59              | 3                    |
 |      | mm                                                        | Minutes with leading zero. 00-59                | 03                   |
 |      | s                                                         | Seconds without leading zero. 0-59              | 5                    |
 |      | ss                                                        | Seconds with leading zero. 00-59                | 05                   |
-|      | \[h]                                                     | Elapsed time in hours                           | 14 (pode exceder 24) |
-|      | \[mm]                                                    | Elapsed time in minutes                         | 843                  |
-|      | \[ss]                                                    | Elapsed time in seconds                         | 50585                |
+|      | \[h]                                                     | Tempo decorrido em horas                        | 14 (pode exceder 24) |
+|      | \[mm]                                                    | Tempo decorrido em minutos                      | 843                  |
+|      | \[ss]                                                    | Tempo decorrido em segundos                     | 50585                |
 |      | AM/PM                                                     | Períodos do dia. 24 hour fomat used if omitted. | PM                   |
 > The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
 
@@ -363,8 +363,8 @@ Scale attributes are used to specify printing optimization and adjustments.
 
 | Propriedade    | Tipo          | Descrição                                                                                                   |
 | -------------- | ------------- | ----------------------------------------------------------------------------------------------------------- |
-| bestFitColumns | boolean       | Column width is adjusted to fit the largest text width for printing. Default value = "false"                |
-| bestFitRows    | boolean       | Row height is adjusted to fit the tallest text height for printing. Default value = "false"                 |
+| bestFitColumns | boolean       | Column width is adjusted to fit the largest text width for printing. Valor padrão = "false"                 |
+| bestFitRows    | boolean       | Row height is adjusted to fit the tallest text height for printing. Valor padrão = "false"                  |
 | fitPagesTall   | inteiro longo | The number of vertical pages (portrait orientation) to check when optimizing printing. Valor padrão = -1    |
 | fitPagesWide   | inteiro longo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Valor padrão = -1 |
 
@@ -376,7 +376,7 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 | ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                  |
 | showColumnHeader | inteiro longo | Column header print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean       | Prints the gridlines. Default value = "false"                                                                                                                                      |
+| showGridLine     | boolean       | Prints the gridlines. Valor padrão = "false"                                                                                                                                       |
 | showRowHeader    | inteiro longo | Row headers print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`   |
 
 ### Marca de água
@@ -409,7 +409,7 @@ Style sheets are created with the [VP ADD STYLESHEET](method-list.md#vp-add-styl
 
 The [VP Get stylesheet](method-list.md#vp-get-stylesheet) command can be used to return the style object of a single style sheet or you can use the [VP Get stylesheets](method-list.md#vp-get-stylesheets) command to retrieve a collection of style objects for multiple style sheets.
 
-### Style object properties
+### Propriedades do objecto de estilo
 
 Exemplo:
 

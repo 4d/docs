@@ -11,7 +11,7 @@ Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!=
 
 This parameter allows you to define the filter for your dataclass or method.
 
-### Using a simple filter
+### Utilizar um filtro simples
 
 A filter is composed of the following elements:
 

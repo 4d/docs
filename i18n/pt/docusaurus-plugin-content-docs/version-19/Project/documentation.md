@@ -1,6 +1,6 @@
 ---
 id: documentation
-title: Documenting a project
+title: Documentar um projecto
 ---
 
 
@@ -63,7 +63,7 @@ The `Documentation` folder architecture is the following:
 
 ## Documentation in the Explorer
 
-### Viewing documentation
+### Ver a documentação
 
 To view documentation in the Explorer window:
 

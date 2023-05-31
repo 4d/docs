@@ -35,7 +35,7 @@ and the user enters "proportion", the field displays:
 
  (portion)
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. Não se perde nenhuma informação.
 
 #### Gramática JSON
 
@@ -110,7 +110,7 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 Por exemplo, se quiser exibir números de três dígitos, pode usar o formato ####. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
-> No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
+> No matter what the display format, 4D accepts and stores the number entered in the field. Não se perde nenhuma informação.
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
@@ -310,7 +310,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Nome do formato              | Cadeia JSON  | Comentários                                                                                                                                      | Example for 04:30:25          |
+| Nome do formato              | Cadeia JSON  | Comentários                                                                                                                                      | Exemplo para 04:30:25         |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -318,7 +318,7 @@ The table below shows the Time field display formats and gives examples:
 | Hour Min                     | HH_MM        |                                                                                                                                                  | 4 horas 30 minutos            |
 | HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
 | MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
+| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 minutos 25 segundos       |
 | ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
 | System time short            | - (o padrão) | Standard time format defined in the system                                                                                                       | 04:30:25                      |
 | System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                    |

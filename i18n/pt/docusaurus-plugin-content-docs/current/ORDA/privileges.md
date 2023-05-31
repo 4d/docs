@@ -127,7 +127,7 @@ The `roles.json` file syntax is the following:
 | roles               |                 |               | Collection of `role` objects       |             | List of defined roles                                                        |
 |                     | \[].role       |               | String                             |             | Role name                                                                    |
 |                     | \[].privileges |               | Coleção de strings                 |             | List of included privilege names                                             |
-| permissions         |                 |               | Objeto                             | X           | List of allowed actions                                                      |
+| permissions         |                 |               | Objeto                             | X           | Lista de acções permitidas                                                   |
 |                     | allowed         |               | Collection of `permission` objects |             | List of allowed permissions                                                  |
 |                     |                 | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                         |
 |                     |                 | \[].type     | String                             | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |

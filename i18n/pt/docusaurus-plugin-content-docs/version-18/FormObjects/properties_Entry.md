@@ -97,7 +97,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &9                            | Permitir apenas números.                                                                                                                             |
 | &A                            | Allow only capital letters.                                                                                                                          |
 | &a                            | Allow only letters (uppercase and lowercase).                                                                                                        |
-| &@                            | Allow only alphanumeric characters. No special characters.                                                                                           |
+| &@                            | Allow only alphanumeric characters. Sem caracteres especiais.                                                                                        |
 | ~a##                          | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                 |
 | !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
 | !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                          |
@@ -107,7 +107,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, four entries.                         |
 | !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |
 | !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-####               | Social Security number. Display zeros in entry spaces. Permitir quaisquer números.                                                                   |
+| !0&9###-##-####               | Número de segurança social. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
 | ~"A-Z;0-9; ;,;.;-"            | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                        |
 | &"a-z;0-9; ;,;.;-"            | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                 |
 | &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                               |

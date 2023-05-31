@@ -643,7 +643,7 @@ Once views are created, you can use the View palette to:
 - Display or hide objects for each view,
 - Lock the objects of a view.
 
-#### Adding objects to views
+#### Adicionar objectos a vistas
 
 An object can only belong to a single view.
 

@@ -55,7 +55,7 @@ Here is the list of objects whose value can be saved:
 | Objeto                                                  | Valor guardado                                                                         |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Caixa de selecção](checkbox_overview.md)               | Value of associated variable (0, 1, 2)                                                 |
-| [Lista suspensa ou drop down](dropdownList_Overview.md) | Number of selected row                                                                 |
+| [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
 | [Botão rádio](radio_overview.md)                        | Value of associated variable (1, 0, True or False for buttons according to their type) |
 | [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
 
@@ -279,7 +279,7 @@ Para a tradução do banco de dados, pode introduzir uma referência XLIFF na á
 
 ---
 
-## Variable Calculation
+## Cálculo de variáveis
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > Ó cálculo de rodapés também pode ser definido com o comando 4D `LISTBOX SET FOOTER CALCULATION`.

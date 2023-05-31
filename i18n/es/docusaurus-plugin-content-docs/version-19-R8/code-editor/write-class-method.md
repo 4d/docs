@@ -419,7 +419,7 @@ Hay varias formas de expandir y contraer código:
 
 ## Handling blocks
 
-Blocks can be defined by:
+Los bloques pueden definirse por:
 
 - Comillas
 - Paréntesis
@@ -442,7 +442,7 @@ Si presiona **Ctrl+Mayús+B** (Windows) o **Comando+Mayús+B** (macOS), podrá i
 Dos comandos facilitan el desplazamiento dentro de estructuras de código (por ejemplo, `If...Else...End if`):
 
 - **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
-- **End Of Block**: places the cursor at the end of the current structure, just after the final keyword.
+- **Fin de bloque**: sitúa el cursor al final de la estructura actual, justo después de la palabra clave final.
 
 Estos comandos se encuentran en el menú **Método**, así como en el menú contextual del editor. También puede utilizar los siguientes atajos:
 

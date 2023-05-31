@@ -215,7 +215,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 > **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.
 
-## HTTP Compression Level
+## Nível de compressão HTTP
 
 | Pode ser definido com | Nome                                                                 | Comentários                    |
 | --------------------- | -------------------------------------------------------------------- | ------------------------------ |
@@ -353,7 +353,7 @@ Default is true (enabled).
 
 Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 
-This setting allows you to select the format of this file. Available values are:
+This setting allows you to select the format of this file. Os valores disponíveis são:
 
 | Valor | Nome do formato         | Descrição                                                                                                                                                                                                                |
 | ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

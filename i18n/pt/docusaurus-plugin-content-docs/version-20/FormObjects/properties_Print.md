@@ -11,7 +11,7 @@ You cannot place more than one variable frame object side-by-side on a form. You
 
 > The `Print object` and `Print form` commands do not support this property.
 
-The print options are:
+As opções de impressão são:
 
 - **Variable** option / **Print Variable Frame** checked: 4D enlarges or reduces the form object area in order to print all the subrecords.
 

@@ -70,7 +70,7 @@ These options configure the various colors used in the Code Editor and debugger 
 | **Highlight of the blocks**                       | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
 | **Highlight of the same variable or field**       | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Selection back color**                          | Background color of selection.                                                                                                                                           |
+| **Cor de fundo da seleção**                       | Background color of selection.                                                                                                                                           |
 | **Texto sugerido**                                | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
 
 
