@@ -52,7 +52,7 @@ As imagens de alta resolução com a convenção @nx podem ser utilizadas nos se
 4D automatically prioritizes pictures with the highest resolution. <br/><br/> **Example**: When using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D  automatically renders the highest possible resolution of the picture. Even if a command or property specifies *circle.png*, *circle@3x.png* will be used (if it exists).
 > Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.
 
-### DPI (macOS and Windows)
+### DPI (macOS e Windows)
 
 While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
 
