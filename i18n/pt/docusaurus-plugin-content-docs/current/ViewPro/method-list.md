@@ -696,7 +696,7 @@ You can pass an optional *options* parameter with the following properties:
 | Propriedade | Tipo       | Descrição                                                                                                               |
 | ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
 | copy        | Parâmetros | *True* (default) to keep the copied values, formatting and formulas after the command executes. *False* to remove them. |
-| copyOptions | Longint    | Specifies what is copied or moved. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copies only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copies only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>                                          |
+| copyOptions | Longint    | Specifies what is copied or moved. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copies only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>                                          |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -862,7 +862,7 @@ To delete columns selected by the user (in the image below columns B, C, and D):
 
 ![](../assets/en/ViewPro/cmd_vpDeleteColumns.PNG)
 
-use the following code:
+utilizar o seguinte código:
 
 ```4d
 VP DELETE COLUMNS(VP Get selection("ViewProArea"))
@@ -901,7 +901,7 @@ To delete rows selected by the user (in the image below rows 1, 2, and 3):
 
 ![](../assets/en/ViewPro/cmd_vpDeleteRows.PNG)
 
-use the following code:
+utilizar o seguinte código:
 
 ```4d
 
@@ -942,7 +942,7 @@ You can specify the exported file's format by including an extension after the d
 * 4D View Pro (".4vp")
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
-* CSV (".txt", or ".csv")
+* CSV (".txt", ou ".csv")
 
 If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
 
@@ -1745,7 +1745,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | Parâmetro  | Tipo   |    | Descrição                                                          |
 | ---------- | ------ | -- | ------------------------------------------------------------------ |
 | vpAreaName | Text   | -> | 4D View Pro area form object name                                  |
-| name       | Text   | -> | Name of the named range                                            |
+| name       | Text   | -> | Nome do intervalo nomeado                                          |
 | scope      | Número | -> | Target scope (default=current sheet)                               |
 | Resultados | Text   | <- | Named formula or named range definition|<!-- END REF -->
 
@@ -3335,7 +3335,7 @@ The *options* parameter has several properties:
 | Propriedade  | Tipo       | Descrição                                                                                                                                         |
 | ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | copy         | Parâmetros | Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (default) to remove them</li><li>*True* para os manter</li></ul> |
-| pasteOptions | Longint    | Specifies what is pasted. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                            |
+| pasteOptions | Longint    | Specifies what is pasted. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                            |
 
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
@@ -3702,7 +3702,7 @@ The document currently has three sheets:
 
 ![](../assets/en/ViewPro/vp-sheet-3.png)
 
-Remove the third sheet:
+Retirar a terceira folha:
 
 ```4d
 VP REMOVE SHEET("ViewProArea";2)
@@ -3760,7 +3760,7 @@ Resultados:
 | Parâmetro  | Tipo    |    | Descrição                                                         |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| styleName  | Text    | -> | Name of style to remove                                           |
+| styleName  | Text    | -> | Nome do estilo a remover                                          |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
 
 |
@@ -5151,7 +5151,7 @@ VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 
 #### Exemplo 2
 
-To remove the formula:
+Para remover a fórmula:
 
 ```4d
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"")
@@ -5174,10 +5174,10 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 
 <!-- REF #_method_.VP SET FORMULAS.Params -->
 
-| Parâmetro   | Tipo       |    | Descrição                                         |
-| ----------- | ---------- | -- | ------------------------------------------------- |
-| rangeObj    | Objeto     | -> | Cell range object                                 |
-| formulasCol | Collection | -> | Collection of formulas|<!-- END REF -->
+| Parâmetro   | Tipo       |    | Descrição                                       |
+| ----------- | ---------- | -- | ----------------------------------------------- |
+| rangeObj    | Objeto     | -> | Cell range object                               |
+| formulasCol | Collection | -> | Colecção de fórmulas|<!-- END REF -->
 
 |
 
@@ -5561,7 +5561,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 | Parâmetro  | Tipo |    | Descrição                         |
 | ---------- | ---- | -- | --------------------------------- |
 | vpAreaName | Text | -> | 4D View Pro area form object name |
-| name       | Text | -> | New name for the sheet            |
+| name       | Text | -> | Novo nome para a folha            |
 
 |sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
@@ -5608,7 +5608,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 | Parâmetro    | Tipo   |    | Descrição                                                         |
 | ------------ | ------ | -- | ----------------------------------------------------------------- |
 | vpAreaName   | Objeto | -> | Nome da área 4D View Pro                                          |
-| sheetOptions | Objeto | -> | Sheet option(s) to set                                            |
+| sheetOptions | Objeto | -> | Opção(ões) de folha a definir                                     |
 | sheet        | Objeto | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
 
 |
