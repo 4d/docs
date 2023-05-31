@@ -215,7 +215,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 > **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.
 
-## HTTP Compression Level
+## Nível de compressão HTTP
 
 | Pode ser definido com | Nome                                                                 | Comentários                    |
 | --------------------- | -------------------------------------------------------------------- | ------------------------------ |
