@@ -229,7 +229,7 @@ The following table lists the fields available for each format (in alphabetical 
 | CS(HOST)       | X   | X   | Host field of the HTTP request                                             |
 | CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
-| CS_SIP         | X   | X   | IP address of the server                                                   |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                    |
 | CS_URI         | X   | X   | URI on which the request is made                                           |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                   |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
