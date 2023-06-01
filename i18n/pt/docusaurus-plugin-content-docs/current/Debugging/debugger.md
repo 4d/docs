@@ -74,12 +74,12 @@ Stops method execution, and returns to the state before the method started execu
 
 #### Abortar e editar
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+Pausa na execução do método. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 > **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
 
 #### Editar
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Code Editor.
+Pausa na execução do método. The method that is executing at the time you click the Edit button opens in the Code Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
