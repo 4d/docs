@@ -250,7 +250,7 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 :::
 
-### Managing the pop-up menu
+### Gerir o menu pop-up
 
 It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
 
