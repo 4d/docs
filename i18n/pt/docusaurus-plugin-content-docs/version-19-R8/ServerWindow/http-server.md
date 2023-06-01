@@ -45,7 +45,7 @@ This area provides specific information about the SOAP server of 4D Server and i
 
 If you click on the **Accept SOAP requests** button and the HTTP server is stopped, 4D automatically starts it.
 
-## HTTP Server Configuration
+## Configuração servidor HTTP
 
 This area provides information about the configuration parameters and operation of the HTTP server:
 

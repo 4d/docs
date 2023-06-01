@@ -29,7 +29,7 @@ O ícone indica que a imagem não pode ser exibida ou manipulada localmente - ma
 
 4D suporta imagens de alta resolução tanto em plataformas MacOS como Windows. As imagens de alta resolução podem ser definidas quer por factor de escala quer por dpi.
 
-### Scale factor (macOS only)
+### Fator de escala (somente macOS)
 
 Os ecrãs de alta resolução têm uma maior densidade de píxeis do que os ecrãs padrão tradicionais. Para que as imagens sejam renderizadas correctamente em ecrãs de alta resolução, o número de pixels na imagem deve ser multiplicado pelo factor de escala ** (*ou seja*, duas vezes maior, três vezes maior, etc.).
 

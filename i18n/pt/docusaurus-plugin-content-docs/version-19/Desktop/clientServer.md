@@ -23,7 +23,7 @@ A merged client/server application is customized and its starting is simplified:
 
 These principles are detailed in the [Build Application](building.md#what-is-a-clientserver-application) page.
 
-## Opening a remote project
+## Abrir um projecto remoto
 
 A primeira vez que se liga a um projecto 4D Server através de um 4D remoto, normalmente utilizará o diálogo de ligação padrão. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file.
 

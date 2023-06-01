@@ -118,7 +118,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ---
 
-## Default (list of) values
+## Valores padrão (lista de)
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 

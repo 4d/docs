@@ -48,7 +48,7 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
 
-## Platform-specific syntax
+## Sintaxe específica da plataforma
 
 Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
 
@@ -56,7 +56,7 @@ Platform-specific syntax depends on the operating system on which the command is
 
 The following patterns are supported:
 
-- folder separators are "\"
+- os separadores de pasta são "\"
 - the text contains ':' and '\' as the second and third character,
 - the text starts with "\\".
 
@@ -89,7 +89,7 @@ The following escape sequences are recognized by 4D:
 
 The following patterns are supported (HFS+ syntax):
 
-- folder separators are ":"
+- os separadores de pasta são ":"
 - the path must not start with a ":"
 
 Examples with [`Folder`](../API/FolderClass.md#folder):

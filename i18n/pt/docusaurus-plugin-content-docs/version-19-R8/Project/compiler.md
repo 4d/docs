@@ -48,7 +48,7 @@ When you switch from one mode to the other, 4D closes the current mode and opens
 
 If you modify your project in interpreted mode, you must recompile it in order to have your edits taken into account in compiled mode.
 
-## Compiler window features
+## Características da janela do compilador
 
 In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
 
@@ -158,7 +158,7 @@ Two target options are proposed. The result depends on the processor of the mach
 | *Option*                                         | *no Windows Intel/AMD*                                                                     | *macOS Intel*                                                                                | *no macOS Silicon*                                                                           |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br/>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* |
-| **My processor (processor)**                     | Código para Intel/AMD                                                                      | Código para Intel/AMD                                                                        | Código para Apple Silicon                                                                    |
+| **O meu processador (processador)**              | Código para Intel/AMD                                                                      | Código para Intel/AMD                                                                        | Código para Apple Silicon                                                                    |
 
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
@@ -217,7 +217,7 @@ This list is divided into three columns:
 - tipo da variável;
 - number of dimensions if the variable is an array.
 
-#### Complete list of methods
+#### Lista completa de métodos
 
 A complete list of your database and project methods is given at the end of the file with:
 

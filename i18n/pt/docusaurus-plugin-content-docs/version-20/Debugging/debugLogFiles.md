@@ -391,7 +391,7 @@ Os campos abaixo são registrados para cada petição:
 | ipAddress      | Endereço IP do usuário                                                                                        | "192.168.1.5"                                           |
 | userName       | Nome do usuário 4D                                                                                            | "henry"                                                 |
 | systemUserName | Login name of the user on the machine                                                                         | "hsmith"                                                |
-| machineName    | Name of the user machine                                                                                      | "PC of Henry Smith"                                     |
+| machineName    | Nome da máquina do utilizador                                                                                 | "PC of Henry Smith"                                     |
 
 #### Exemplo
 

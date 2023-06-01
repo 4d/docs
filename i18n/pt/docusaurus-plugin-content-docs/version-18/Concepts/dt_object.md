@@ -219,7 +219,7 @@ Token member names (i.e., object property names accessed using the object notati
 
 - the first character must be a letter, an underscore (_), or a dollar sign ($),
 - subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
-- they are case sensitive.
+- eles são sensíveis às maiúsculas e minúsculas.
 
 **Nota:**
 

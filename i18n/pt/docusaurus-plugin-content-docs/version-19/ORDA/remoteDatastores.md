@@ -1,6 +1,6 @@
 ---
 id: datastores
-title: Using a remote datastore
+title: Utilizar um datastore remoto
 ---
 
 A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
@@ -39,7 +39,7 @@ In the following example, two processes are running for the same session:
 
 ![](../assets/en/ORDA/sessionAdmin.png)
 
-## Locking and transactions
+## Bloqueio e transacções
 
 ORDA features related to entity locking and transaction are managed at process level in remote datastores, just like in ORDA client/server mode:
 

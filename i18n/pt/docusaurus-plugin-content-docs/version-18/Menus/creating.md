@@ -56,7 +56,7 @@ Para adicionar um item de menu:
 
 Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
 
-## Deleting menus and items
+## Eliminar menus e itens
 
 ### Utilizar o editor de menus
 

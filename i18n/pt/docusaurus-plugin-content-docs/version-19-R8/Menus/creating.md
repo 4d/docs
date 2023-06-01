@@ -57,7 +57,7 @@ Para adicionar um item de menu:
 Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
 
 
-## Deleting menus and items
+## Eliminar menus e itens
 
 ### Utilizar o editor de menus
 You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.

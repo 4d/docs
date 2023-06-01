@@ -570,7 +570,7 @@ The *$event* parameter contains the following properties:
 | dataClassName | Text         | Nome do dataclass                                                                                          |
 | kind          | Text         | "orderBy"                                                                                                  |
 | value         | Diferente de | Value to be handled by the computed attribute                                                              |
-| operator      | Text         | "desc" or "asc" (default)                                                                                  |
+| operator      | Text         | "desc" ou "asc" (padrão)                                                                                   |
 | descending    | Parâmetros   | `true` for descending order, `false` for ascending order                                                   |
 | result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
 
@@ -754,7 +754,7 @@ $arch.save() //courseName and name are "Archaeology II"
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
-Remote requests include:
+Os pedidos remotos incluem:
 
 - Requests sent by remote 4D applications connected through `Open datastore`
 - Pedidos REST
@@ -796,7 +796,7 @@ $id:=...
 
 ```
 
-When the code is called:
+Quando o código é chamado:
 
 ```4d
 var $remoteDS; $student; $status : Object
