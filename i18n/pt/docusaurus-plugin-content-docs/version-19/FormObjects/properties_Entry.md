@@ -78,7 +78,7 @@ During data entry, an entry filter evaluates each character as it is typed. If t
 
 Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. When such a format is used, the user does not need to enter the parentheses or the dashes.
 
-### Defining an entry filter
+### Definição de um filtro de entrada
 
 Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
 
@@ -238,7 +238,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 ---
 
-## Selection always visible
+## Selecção sempre visível
 
 This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
 
