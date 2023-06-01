@@ -1,6 +1,6 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordinates & Sizing
+title: Coordenadas e dimensionamento
 ---
 
 
