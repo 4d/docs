@@ -38,7 +38,7 @@ When variables are typed by means of a compiler directive, they receive a defaul
 The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
 
 - Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
-- Local variables are set:
+- As variáveis locais são definidas:
     - in interpreted mode: to zero
     - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
         - "to zero": to zero (see above),
