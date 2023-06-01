@@ -71,7 +71,7 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 ![](../assets/en/Project/appbuilderProj.png)
 
-### Build compiled structure
+### Construir a estrutura compilada
 
 Gera um banco de dados que contém apenas código compilado.
 
@@ -184,7 +184,7 @@ If your stand-alone application is used as a Web server, the files and folders r
 * *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
 * pasta raiz Web padrão.
 
-Items must be installed:
+Os elementos devem ser instalados:
 
 * **on Windows**: in the *Final Application\MyProject\Database* subfolder.
 * **on macOS**: next to the *MyProject.app* software package.
@@ -214,7 +214,7 @@ Also, the client/server application is customized and its handling simplified:
 * A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application). This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism.
 * It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
 
-### Build server application
+### Criar aplicação servidor
 
 Check this option to generate the server part of your application during the building phase. You must designate the location on your disk of the 4D Server application to be used. You must designate the location on your disk of the 4D Server application to be used.
 
@@ -271,7 +271,7 @@ This option lets you choose the linking mode between the merged application and 
 
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
-### Build client application
+### Criar a aplicação cliente
 
 Checking this option generates the client part of your application during the building phase.
 
@@ -372,7 +372,7 @@ If the server and/or client part of your double-clickable application is used as
 * *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
 * Pasta raiz Web por defeito (WebFolder).
 
-Items must be installed:
+Os elementos devem ser instalados:
 
 * **em Windows**
   * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server\Server Database` subfolder.
