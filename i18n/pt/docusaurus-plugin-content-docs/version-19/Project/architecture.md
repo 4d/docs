@@ -84,7 +84,7 @@ Project development file, used to designate and launch the project. This file ca
 
 | Conteúdos                                 | Descrição                                   | Formato |
 | ----------------------------------------- | ------------------------------------------- | ------- |
-| *formName*/form.4DForm                    | Project form description                    | json    |
+| *formName*/form.4DForm                    | Descrição do formulário projeto             | json    |
 | *formName*/method.4dm                     | Método formulário projecto                  | text    |
 | *formName*/Images/*pictureName*           | Project form static picture                 | picture |
 | *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. One file per object method | text    |
@@ -191,7 +191,7 @@ Esta pasta contém **arquivos de configuração de dados** utilizados para a adm
 
 ## userPreferences.*userName* folder
 
-Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. It contains for example:
+Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. Contém, por exemplo:
 
 | Conteúdos                  | Descrição                                                   | Formato |
 | -------------------------- | ----------------------------------------------------------- | ------- |
@@ -199,7 +199,7 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 | methodWindowPositions.json | Current user window positions for methods                   | JSON    |
 | formWindowPositions.json   | Current user window positions for forms                     | JSON    |
 | workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON    |
-| debuggerCatches.json       | Caught calls to commands                                    | JSON    |
+| debuggerCatches.json       | Chamadas aos comandos                                       | JSON    |
 | recentTables.json          | Lista ordenada de tabelas                                   | JSON    |
 | preferences.4DPreferences  | Rota de dados atual e posições da janela principal          | XML     |
 | CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder  |
