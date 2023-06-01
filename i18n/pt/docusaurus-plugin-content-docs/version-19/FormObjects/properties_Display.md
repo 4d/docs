@@ -165,11 +165,11 @@ In this case, the display for zero would be $0.00.
 
 ### Notação científica
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
+If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. Por exemplo, o formato:
 
  &3
 
-would display 759.62 as:
+apresentaria 759,62 como:
 
  7.60e+2
 
@@ -190,7 +190,7 @@ The `&xml` format will make a number compliant with XML standard rules. In parti
 
 You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
 
-For example, the format:
+Por exemplo, o formato:
 
  &/5
 
