@@ -244,7 +244,7 @@ When creating or editing data model classes, you must pay attention to the follo
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
-Remote requests include:
+Os pedidos remotos incluem:
 
 - Requests sent by remote 4D applications connected through `Open datastore`
 - Pedidos REST
@@ -286,7 +286,7 @@ $id:=...
 
 ```
 
-When the code is called:
+Quando o código é chamado:
 
 ```4d
 var $remoteDS; $student; $status : Object
