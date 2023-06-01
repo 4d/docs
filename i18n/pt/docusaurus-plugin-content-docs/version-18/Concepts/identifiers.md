@@ -23,7 +23,7 @@ The following rules apply for all 4D frameworks.
 - Pontos (".") and brackets ("[ ]") are not allowed.
 - Names are case sensitive.
 
-### Additional rules for SQL
+### Regras adicionais para SQL
 
 - Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
 - Names must not include any SQL keywords (command, attribute, etc.).
@@ -284,7 +284,7 @@ From the scope point of view, there are two types of sets:
 - Conjuntos interprocesso
 - Conjuntos process
 
-4D Server also includes:
+4D Server também inclui:
 
 - Conjuntos clientes
 
