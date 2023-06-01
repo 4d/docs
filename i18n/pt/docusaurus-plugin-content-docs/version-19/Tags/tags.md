@@ -34,7 +34,7 @@ It is possible to mix several types of tags. For example, the following HTML str
 </HTML>
 ```
 
-## Principles for using tags
+## Princípios de utilização das etiquetas
 
 ### Parsing
 
@@ -237,7 +237,7 @@ The *entity* parameter is an object variable of the entity selection class.
 
 The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
 
-#### Example with a html table
+#### Exemplo com uma tabela html
 
 ```html
     <table class="table">     
