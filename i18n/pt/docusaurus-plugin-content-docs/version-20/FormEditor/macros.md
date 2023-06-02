@@ -221,7 +221,7 @@ Here are the properties returned in the *$editor* parameter:
 | $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                        |
 | $editor.editor.currentPageNumber | number     | O número da página actual                                                         |
 | $editor.editor.currentPage       | Objeto     | The current page, containing all the form objects and the entry order of the page |
-| $editor.editor.currentSelection  | Collection | Collection of names of selected objects                                           |
+| $editor.editor.currentSelection  | Collection | Colecção de nomes de objectos seleccionados                                       |
 | $editor.editor.formProperties    | Objeto     | Properties of the current form                                                    |
 | $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
