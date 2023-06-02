@@ -16,7 +16,7 @@ Esta página explica:
 
 Dados são coletados durante os eventos abaixo:
 
-- database startup,
+- arranque da base de dados,
 - fechamento de banco de dados,
 - início do servidor Web,
 - execução php,
