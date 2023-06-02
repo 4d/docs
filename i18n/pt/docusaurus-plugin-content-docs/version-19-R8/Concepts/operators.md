@@ -200,9 +200,9 @@ If(($myObject#Null) && ($myObject.value>10))
     //code End if
 ```
 
-If $myObject is Null, the second argument is not executed, thus no error is thrown.
+Se $myObject for nulo, o segundo argumento não é executado e, por conseguinte, não é lançado qualquer erro.
 
-### Short-circuit OR operator (||)
+### Operador em curto-circuito OR (||)
 
 <details><summary>Histórico</summary>
 
@@ -211,7 +211,7 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 | v19 R4 | Adicionado |
 </details>
 
-The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
+O operador || devolve o valor de um dos operandos especificados. A expressão é avaliada da esquerda para a direita e testada para uma possível avaliação de "curto-circuito" utilizando a seguinte regra:
 
 Dado `Expr1 || Expr2`:
 
