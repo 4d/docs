@@ -163,7 +163,7 @@ The ability to run one or more [actions](#actions) on [resources](#resource). Se
 
 ## Propriedade
 
-See [Attribute](#attribute).
+Ver [Atributo](#attribute).
 > > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## PropertyPath
