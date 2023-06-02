@@ -184,7 +184,7 @@ Están disponibles los siguientes modos de ejecución:
 
 #### Desde el Editor de código
 
-Each [**Code Editor**](../code-editor/overview.md) window has a button that can be used to run the current method. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución deseado.
+Cada ventana del [**editor de código**](../code-editor/overview.md) tiene un botón que se puede utilizar para ejecutar el método actual. Mediante el menú asociado a este botón, se puede elegir el tipo de ejecución deseado.
 
 Este botón sólo está activo para los métodos proyecto y para los siguientes métodos base de datos:
 
