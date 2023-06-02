@@ -123,7 +123,7 @@ The `roles.json` file syntax is the following:
 | privileges          |                 |               | Collection of `privilege` objects  | X           | List of defined privileges                                                   |
 |                     | \[].privilege  |               | String                             |             | Nome do privilégio                                                           |
 |                     | \[].includes   |               | Coleção de strings                 |             | List of included privilege names                                             |
-| roles               |                 |               | Collection of `role` objects       |             | List of defined roles                                                        |
+| roles               |                 |               | Coleção de objetos `role`          |             | List of defined roles                                                        |
 |                     | \[].role       |               | String                             |             | Role name                                                                    |
 |                     | \[].privileges |               | Coleção de strings                 |             | List of included privilege names                                             |
 | permissions         |                 |               | Objeto                             | X           | Lista de acções permitidas                                                   |
