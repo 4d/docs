@@ -162,7 +162,7 @@ A form can be submitted through two methods (both can be used with 4D):
 
 In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-the-requests) of all the fields included in an HTML page submitted to the server.
 
-Example to define the action of a form:
+Exemplo para definir a ação de um formulário:
 
 ```html
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
