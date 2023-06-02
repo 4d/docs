@@ -211,7 +211,7 @@ You can then run this request:
 ```
 
 
-### Using an entitySelection class function
+### Usar uma função de classe de uma seleção de entidade
 
 The EntitySelection class `CitySelection` provides an API:
 
