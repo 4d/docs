@@ -63,11 +63,11 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
 2. サーバーへの接続を処理するためのコールバック関数を含む `myServerHandler` ユーザークラスを定義します:
 
 ```4d
-//myServerHandler class
+// myServerHandler クラス
 
 Function onConnection($wss : Object; $event : Object) : Object
-    //returns an instance of the user class
-    //that will handle the messages
+    // ユーザークラスのインスタンスを返します
+    // このインスタンスがサーバーへの接続を処理します
     return cs.myConnectionHandler.new() 
 ```
 
@@ -191,30 +191,30 @@ WebSocketサーバーでエラーが発生したときに発生するイベン�
 この基本的なチャット機能の例では、*WSSHandler* クラスを使って WebSocket サーバー接続を管理する方法を説明します。
 
 ```4d
-//myWSServerHandler class 
+// myWSServerHandler クラス 
 
 Function onConnection($wss : Object; $event : Object) : Object
 
     If (VerifyAddress($event.request.remoteAddress))
-        // The VerifyAddress method validates the client address
-        // The returned WSConnectionHandler object will be used 
-        // by 4D to instantiate the 4D.WebSocketConnection object
-        // related to this connection
+        // VerifyAddress メソッドはクライアントのアドレスを検証します
+        // 返される WSConnectionHandler オブジェクトは、この接続に関連する 
+        // 4D.WebSocketConnection オブジェクトをインスタンス化するために
+        // 4D によって使用されます
         return cs.myConnectionHandler.new()   
-        // See connectionHandler object
+        // connectionHandler オブジェクト参照
     Else 
-        // The connection is cancelled      
+        // 接続は解除されます
         return Null 
     End if 
 
 Function onOpen($wss : Object; $event : Object)
-LogFile("*** Server started")
+LogFile("*** サーバー起動")
 
 Function onTerminate($wss : Object; $event : Object)
-LogFile("*** Server closed")
+LogFile("*** サーバー終了")
 
 Function onError($wss : Object; $event : Object)
-LogFile("!!! Server error: "+$event.errors.first().message)
+LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 
 ```
 
