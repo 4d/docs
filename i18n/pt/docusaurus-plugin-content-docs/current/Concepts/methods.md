@@ -192,7 +192,7 @@ This button is only active for project methods and for the following database me
 
 Para mais informações, consulte [Toolbar](../code-editor/write-class-method.md#toolbar).
 
-#### From the Execute Method dialog box
+#### Na caixa de diálogo Executar método
 
 **On selection**: All occurrences are highlighted when the text is selected
 
