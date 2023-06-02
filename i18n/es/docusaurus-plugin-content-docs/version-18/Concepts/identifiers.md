@@ -349,9 +349,9 @@ You denote a process named selection by using a string expression that represent
 Ejemplos:
 
 ```4d
- //Interprocess Named Selection
+ //Selección temporal interproceso
 USE NAMED SELECTION([Customers];"<>ByZipcode")
- //Process Named Selection
+ //Selección temporal proceso
 USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
@@ -373,9 +373,9 @@ Se denota un proceso local si el nombre del proceso está precedido por el signo
 Ejemplos:
 
 ```4d
- //Starting the global process "Add Customers"
+ //Lanzar el proceso global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
+ //Iniciar el proceso local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
