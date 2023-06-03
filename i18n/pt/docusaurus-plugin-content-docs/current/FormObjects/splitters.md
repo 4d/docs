@@ -15,7 +15,7 @@ Splitter are used for example in output forms so that columns can be resized:
 Some of the splitter’s general characteristics:
 
 *   You can place as many splitters as you want in any type of form and use a mixture of horizontal and vertical splitters in the same form.
-*   A splitter can cross (overlap) an object. This object will be resized when the splitter is moved.
+*   Um separador pode passar por um objeto. This object will be resized when the splitter is moved.
 *   Splitter stops are calculated so that the objects moved remain entirely visible in the form or do not pass under/next to another splitter. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
 *   If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Once a form is closed, the initial dimensions are restored.
 
