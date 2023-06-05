@@ -92,7 +92,7 @@ Formulas often refer to other cells by cell addresses. You can copy these formul
 = C6 + C7
 ```
 
-This formula refers to cells C6 and C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
+Essa fórmula se refere às células C6 e C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
 
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 

@@ -117,7 +117,7 @@ The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary
 <!-- REF #TableOptions.tableColumns.Syntax -->
 **.tableColumns** : Collection<!-- END REF -->
 
-The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->.
+A propriedade `tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->is a collection of [cs.ViewPro.TableColumn](#tablecolumn) objects used to create the table's columns<!-- END REF -->.
 
 
 

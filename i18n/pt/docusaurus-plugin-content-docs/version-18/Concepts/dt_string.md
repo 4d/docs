@@ -80,13 +80,13 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
 
 ### Wilcard character (@)
 
-The 4D language supports **@** as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is `TRUE`:
+A linguagem 4D suporta **@** como um caractere curinga. Este carácter pode ser utilizado em qualquer comparação de cadeia para corresponder a qualquer número de caracteres. Por exemplo, a seguinte expressão é `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+O carácter wildcard deve ser utilizado dentro do segundo operando (a cadeia do lado direito) para corresponder a qualquer número de caracteres. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
 
 ```4d
     "abc@"="abcdefghij"

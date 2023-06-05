@@ -217,8 +217,8 @@ icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
 
 * Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` e `verticalLineStroke`, três sintaxes são compatíveis:
 
-  * css color name: `fill: red;`
-  * hexa value: `fill: #FF0000;`
+  * nome da cor css: `fill: red;`
+  * valor hexadécimal: `fill: #FF0000;`
   * función `rgb()`: `fill:rgb(255,0,0)`
 
 * Se uma string utilizar caracteres proibidos em CSS, pode rodear a string com aspas simples ou duplas. Por exemplo:

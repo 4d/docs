@@ -101,7 +101,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
 | !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                          |
 | !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.              |
-| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers before each word.                                                  |
+| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números antes de cada palavra.                                             |
 | !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers after each word.                                                   |
 | !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, four entries.                         |
 | !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |

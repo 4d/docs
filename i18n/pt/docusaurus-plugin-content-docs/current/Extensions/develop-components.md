@@ -147,7 +147,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 > Non-hidden functions inside a hidden class appear as suggestions when you use code completion with a class that [inherits](../Concepts/classes.md#inheritance) from it. For example, if a component has a `Teacher` class that inherits from a `_Person` class, code completion for `Teacher` suggests non-hidden functions from `_Person`.
 
 
-## Code completion for compiled components
+## Completar o código dos componentes compilados
 
 To make your component easier to use for developers, you can check the [**Generate syntax file for code completion when compiled** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings.
 

@@ -91,7 +91,7 @@ Domain name or IP address from where external pages are allowed to send data req
 - myProject.myDomain.com
 - \*
 
-#### HTTP methods allowed (methods property)
+#### Métodos HTTP autorizados (propriedade methods)
 
 Accepted HTTP method(s) for the corresponding CORS host. The following HTTP methods are supported:
 
