@@ -90,7 +90,7 @@ To enable the [rendering of webforms](../rendering.md) that are created in the s
 
 When rendering webforms, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
-### Exposed and non-exposed datasources 
+#### Exposed and non-exposed datasources 
 
 The renderer engine applies the REST resource restrictions defined in your 4D project's database. This means that only exposed datasources are rendered in the browser. 
 
