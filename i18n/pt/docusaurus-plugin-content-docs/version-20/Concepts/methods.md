@@ -6,13 +6,13 @@ title: Página Métodos
 
 Um método é basicamente um pedaço de código que executa uma ou várias acções. Na linguagem 4D, há duas categorias de métodos:
 
-Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Each statement usually consists of one line in the method (if necessary, it can however be [split using the `\` character](quick-tour.md#code-on-several-lines)).
+Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Cada instrução é geralmente constituída por uma linha no método (se necessário, pode, no entanto, ser dividida [utilizando o carácter `\`](quick-tour.md#code-on-several-lines)).
 
 O tamanho máximo de um método de projecto é limitado a 2 GB de texto ou 32.000 linhas de comando.
 
 ## Métodos especializados
 
-In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+Na Linguagem 4D, existem várias categorias de métodos. A categoria depende da forma como podem ser chamados:
 
 | Tipo                          | Contexto de chamada                                                                                         | Aceita parâmetros  | Descrição                                                                                                                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ Um método de projecto pode ter uma das seguintes funções, dependendo de como 
 - Método de gerenciamento de processos
 - Método de captura de eventos ou erros
 
-You can also execute your project methods manually, for testing purpose for example.
+Também pode executar os seus métodos projeto manualmente, por exemplo, para fins de teste.
 
 ### Sugestões
 
