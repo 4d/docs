@@ -10,7 +10,7 @@ O tamanho máximo de um método de projecto é limitado a 2 GB de texto ou 32.00
 
 ## Métodos especializados
 
-In the 4D Language, there are several categories of methods. The category depends on how they can be called:
+Na Linguagem 4D, existem várias categorias de métodos. A categoria depende da forma como podem ser chamados:
 
 | Tipo                          | Contexto de chamada                                                                                         | Aceita parâmetros  | Descrição                                                                                                                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
