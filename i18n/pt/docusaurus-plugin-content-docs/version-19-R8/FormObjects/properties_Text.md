@@ -239,7 +239,14 @@ Horizontal location of text within the area that contains it.
 
 | Nome      | Tipo de dados | Valores possíveis                                 |
 | --------- | ------------- | ------------------------------------------------- |
-| textAlign | string        | "automatic", "right", "center", "justify", "left" |
+| textAlign | string        | "right", "center", "left", "automatic", "justify" |
+
+:::note
+
+- "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
+- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
+
+:::
 
 #### Objectos suportados
 
@@ -360,7 +367,7 @@ By default, this option is not enabled.
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+Coluna da List Box
 
 ---
 
