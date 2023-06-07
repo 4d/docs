@@ -82,11 +82,12 @@ Maximum value of an indicator.
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|max|string / number |minimum: 0 (for numeric data types)|
+|max| number |Any number|
 
 #### Objects Supported
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+
 
 ---
 
@@ -98,7 +99,7 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 
 |Name|Data Type|Possible Values|
 |:---:|:---:|---|
-|min|string / number |minimum: 0 (for numeric data types)|
+|min| number |Any number|
 
 #### Objects Supported
 
