@@ -10,9 +10,9 @@ Specifies if the user can delete subrecords in a list subform.
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis           |
-| --------------- | ------------- | --------------------------- |
-| deletableInList | boolean       | true, false (default: true) |
+| Nome            | Tipo de dados | Valores possíveis          |
+| --------------- | ------------- | -------------------------- |
+| deletableInList | boolean       | true, false (padrão: true) |
 
 #### Objectos suportados
 
