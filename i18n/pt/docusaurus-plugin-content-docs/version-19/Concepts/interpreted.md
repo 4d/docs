@@ -5,8 +5,8 @@ title: Modos interpretado e compilado
 
 As aplicações 4D podem funcionar no modo **interpretado** ou **compilado**:
 
-- in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
-- in compiled mode, all methods are read and translated once, at the compilation step. Posteriormente, a aplicação contém apenas instruções de nível de montagem, já não é possível editar o código.
+- no modo interpretado, as declarações são lidas e traduzidas em linguagem de máquina no momento da sua execução. Pode adicionar ou modificar o código sempre que precisar, a aplicação é actualizada automaticamente.
+- no modo compilado, todos os métodos são lidos e traduzidos uma vez, na etapa de compilação. Posteriormente, a aplicação contém apenas instruções de nível de montagem, já não é possível editar o código.
 
 As vantagens da compilação são:
 
@@ -84,7 +84,7 @@ $result:=String($1->)
 $0:=Length($result)
 ```
 
-Then this method can be called:
+Em seguida, este método pode ser chamado:
 ```4d
 $var1:="my text"
 $var2:=5.3
