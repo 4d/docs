@@ -69,7 +69,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 
 | Propriedades          | Tipo                                 | Descrição                                                                  |
 | --------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
-| Atributos da entidade | misto                                | Optional - Values to modify                                                |
+| Atributos da entidade | misto                                | Opcional - Valores a modificar                                             |
 | __DATACLASS           | String                               | Mandatory - Indicates the Dataclass of the entity                          |
 | __ENTITY              | Parâmetros                           | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                 | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
@@ -93,7 +93,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 
 | Propriedades          | Tipo       | Descrição                                                                            |
 | --------------------- | ---------- | ------------------------------------------------------------------------------------ |
-| Atributos da entidade | misto      | Optional - Values to modify                                                          |
+| Atributos da entidade | misto      | Opcional - Valores a modificar                                                       |
 | __DATASET             | String     | Mandatory - entitySetID (UUID) of the entity selection                               |
 | __ENTITIES            | Parâmetros | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
