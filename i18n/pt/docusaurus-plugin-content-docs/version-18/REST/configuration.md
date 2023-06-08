@@ -31,7 +31,7 @@ Pode configurar os acessos REST de uma das maneiras abaixo:
 
 > Não pode usar as duas funcionalidades ao mesmo tempo. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the Web/REST resource page of the Database Settings is ignored.
 
-### Using the Database settings
+### Uso dos parâmetros do banco de dados
 
 The **Read/Write** menu in the "Web/REST resource" page of the database settings specifies a group of 4D users that is authorized to establish the link to the 4D database using REST queries.
 
