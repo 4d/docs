@@ -22,7 +22,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 > This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
-### Window tabbing (macOS only)
+### Janela com guias (somente macOS)
 
 Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
 
@@ -80,7 +80,7 @@ If you check this option, two items are added in the **File > New** menu and the
 
 These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
 
-## When creating a new project
+## Ao criar um novo projeto
 
 ### Usar ficheiro de registo
 
