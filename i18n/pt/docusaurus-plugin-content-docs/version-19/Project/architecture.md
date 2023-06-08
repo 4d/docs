@@ -102,7 +102,7 @@ Project development file, used to designate and launch the project. This file ca
 | *n*/Output/*formName*/method.4dm                     | Output table form method                               | text    |
 | *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | text    |
 
-#### Triggers folder
+#### Pasta Triggers
 
 | Conteúdos     | Descrição                                                                                 | Formato |
 | ------------- | ----------------------------------------------------------------------------------------- | ------- |

@@ -75,14 +75,14 @@ Indique l'emplacement du texte d'un objet.
 
 Valeur maximale d'un indicateur.
 
-* Pour les steppers numériques, cette propriété représente les secondes lorsque l'objet est associé à une valeur de type heure, et représente les jours lorsqu'il est associé à une valeur de type date.
+* For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 * Pour activer les [thermomètres du barber shop](progressIndicator.md#barber-shop), cette propriété doit être omise.
 
 #### Grammaire JSON
 
-| Nom |  Type de données   | Valeurs possibles                                 |
-|:---:|:------------------:| ------------------------------------------------- |
-| max | chaîne / numérique | minimum: 0 (pour les types de données numériques) |
+| Nom | Type de données | Valeurs possibles |
+|:---:|:---------------:| ----------------- |
+| max |     number      | Any number        |
 
 #### Objets pris en charge
 
@@ -92,13 +92,13 @@ Valeur maximale d'un indicateur.
 
 ## Minimum
 
-Valeur minimale d'un indicateur. Pour les steppers numériques, cette propriété représente les secondes lorsque l'objet est associé à une valeur de type heure, et représente les jours lorsqu'il est associé à une valeur de type date.
+Valeur minimale d'un indicateur. For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 
 #### Grammaire JSON
 
-| Nom |  Type de données   | Valeurs possibles                                 |
-|:---:|:------------------:| ------------------------------------------------- |
-| min | chaîne / numérique | minimum: 0 (pour les types de données numériques) |
+| Nom | Type de données | Valeurs possibles |
+|:---:|:---------------:| ----------------- |
+| min |     number      | Any number        |
 
 #### Objets pris en charge
 

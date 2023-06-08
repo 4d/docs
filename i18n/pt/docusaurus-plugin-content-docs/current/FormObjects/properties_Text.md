@@ -239,12 +239,12 @@ Horizontal location of text within the area that contains it.
 
 | Nome      | Tipo de dados | Valores possíveis                                 |
 | --------- | ------------- | ------------------------------------------------- |
-| textAlign | string        | "automatic", "right", "center", "justify", "left" |
+| textAlign | string        | "right", "center", "left", "automatic", "justify" |
 
 :::note
 
 - "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- Negrito
+- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
 
 :::
 

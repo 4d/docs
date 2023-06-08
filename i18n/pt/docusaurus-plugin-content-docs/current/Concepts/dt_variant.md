@@ -61,4 +61,4 @@ Case of
  End case
 ```
 
-> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types. 
+> Quando as variáveis variant não são necessárias (ou seja, quando o tipo de dados é conhecido), recomenda-se a utilização de variáveis de tipo regular. As variáveis de tipo regular proporcionam um melhor desempenho, tornam o código mais claro e são úteis para o compilador evitar erros relacionados com a passagem de tipos de dados inesperados. 

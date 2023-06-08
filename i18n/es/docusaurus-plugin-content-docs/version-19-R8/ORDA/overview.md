@@ -26,9 +26,9 @@ Además, los objetos ORDA, como las selecciones de entidades o las entidades, pu
 
 Fundamentalmente, ORDA gestiona objetos. En ORDA, todos los conceptos principales, incluido el propio datastore, están disponibles a través de objetos. En 4D, el datastore es automáticamente [mapeado sobre la estructura 4D](dsMapping.md).
 
-ORDA objects can be handled like 4D standard objects, but they automatically benefit from specific properties and methods.
+Los objetos en ORDA pueden manejarse como los objetos estándar 4D, pero se benefician automáticamente de propiedades y de métodos específicos.
 
-ORDA objects are created and instanciated when necessary by 4D methods (you do not need to create them). However, ORDA data model objects are associated with [classes where you can add custom functions](ordaClasses.md).
+Los objetos ORDA son creados e instanciados cuando es necesario por los métodos 4D (no necesitas crearlos). Sin embargo, los objetos del modelo de datos ORDA están asociados a las [clases en las que se pueden añadir funciones personalizadas](ordaClasses.md).
 
 
 

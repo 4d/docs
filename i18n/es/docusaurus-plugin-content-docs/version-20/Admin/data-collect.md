@@ -105,7 +105,7 @@ También se recogen algunos datos a intervalos regulares.
 
 | Datos       | Tipo    | Notas                                                                               |
 | ----------- | ------- | ----------------------------------------------------------------------------------- |
-| phpCall     | Number  | Number of calls to `PHP execute`                                                    |
+| phpCall     | Number  | Nùmero de llamadas a `PHP execute`                                                  |
 | externalPHP | Boolean | True if the client performs a call to `PHP execute` and uses its own version of php |
 
 

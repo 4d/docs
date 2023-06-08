@@ -75,14 +75,14 @@ title: スケール
 
 インジケーターの最大値です。
 
-* 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
+* For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 * [バーバーショップサーモメーター](progressIndicator.md#バーバーショップ) を有効にするには、このプロパティを取り除きます。
 
 #### JSON 文法
 
-| 名称  |     データタイプ      | とりうる値           |
-|:---:|:---------------:| --------------- |
-| max | string / number | 最小値: 0 (数値型の場合) |
+| 名称  | データタイプ | とりうる値      |
+|:---:|:------:| ---------- |
+| max | number | Any number |
 
 #### 対象オブジェクト
 
@@ -92,13 +92,13 @@ title: スケール
 
 ## 最小
 
-インジケーターの最小値です。 時間型のステッパーの場合、値は秒を表します。日付型のステッパーでは、最小および最大プロパティは無視されます。
+インジケーターの最小値です。 For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 
 #### JSON 文法
 
-| 名称  |     データタイプ      | とりうる値           |
-|:---:|:---------------:| --------------- |
-| min | string / number | 最小値: 0 (数値型の場合) |
+| 名称  | データタイプ | とりうる値      |
+|:---:|:------:| ---------- |
+| min | number | Any number |
 
 #### 対象オブジェクト
 
