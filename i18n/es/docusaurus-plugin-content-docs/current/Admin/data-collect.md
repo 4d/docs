@@ -55,9 +55,9 @@ También se recogen algunos datos a intervalos regulares.
 
 ### Collected at web server startup and data collection sending
 
-| Datos     | Tipo   | Notas                                                   |
-| --------- | ------ | ------------------------------------------------------- |
-| webServer | Object | "started":true if the web server is starting or started |
+| Datos     | Tipo   | Notas                                                        |
+| --------- | ------ | ------------------------------------------------------------ |
+| webServer | Object | "started":true si el servidor web está arrancando o iniciado |
 
 
 ### Collected at regular intervals
