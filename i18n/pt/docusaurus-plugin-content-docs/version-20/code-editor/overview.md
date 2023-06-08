@@ -29,7 +29,7 @@ You can create a class file from the **File** menu or toolbar (**New/Class...**)
 For more information, please refer to the [Classes](../Concepts/classes.md) section.
 
 
-## Deleting methods or classes
+## Excluir os métodos ou as classes
 
 To delete an existing method or class, you can:
 
