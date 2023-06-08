@@ -11,7 +11,7 @@ The Maintenance and Security Center (MSC) window contains all the tools needed f
 There are several ways to open the MSC window. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. In standard mode, the project is opened by 4D.
 
 
-## Display in maintenance mode
+## Acesso no modo de manutenção
 
 In maintenance mode, only the MSC window is displayed (the project is not opened by the 4D application). This means that projects that are too damaged to be opened in standard mode by 4D can nevertheless be accessed. Moreover, certain operations (compacting, repair, and so on) require the project to be opened in maintenance mode (see [Feature availability](#feature-availability)).
 
