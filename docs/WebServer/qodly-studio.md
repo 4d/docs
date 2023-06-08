@@ -11,7 +11,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 - create webforms by placing components on a page
 - map components to data
-- trigger QodlyScript code by configuring events
+- trigger 4D code by configuring events
 - and much more. 
 
 :::info
@@ -41,26 +41,26 @@ Qodly Studio only works with 4D projects (binary databases are not supported).
 
 ### Enabling access to Qodly Studio
 
-By default, access to the studio is not granted. 
+By default, access to Qodly Studio is not granted. 
 
 Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md). 
 
-To enable access to the studio, you must explicitly allow it at two levels: 
+To enable access to Qodly Studio, you must explicitly allow it at two levels: 
 
 * at the 4D application level, for global access
 * at every project level
 
-If one of the two levels (or both) are not enabled, access to the studio is denied (a 403 page is returned).
+If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
 
 #### At the application level
 
-As a first security level, you need to [allow access to the studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
+As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
 This setting applies to the 4D application (4D or 4D Server) on the host machine. All projects opened with that 4D application take this setting into account.
 
-Keep this option unchecked if you want to make sure no access to the studio is allowed on the application. 
+Keep this option unchecked if you want to make sure no access to Qodly Studio is allowed on the application. 
 
-Check this option to make it possible to access the studio. However, you still need to enable it at every project level.
+Check this option to make it possible to access Qodly Studio. However, you still need to enable it at every project level.
 
 Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost). 
 
@@ -72,7 +72,7 @@ After any change to these settings, you must [restart the WebAdmin web server](.
 
 #### At the project level
 
-After you have enabled access to the studio at the application level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio). 
+After you have enabled access to Qodly Studio at the application level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio). 
 
 Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
 
@@ -83,7 +83,7 @@ Authentication on the WebAdmin web server is granted using an access key. For mo
 
 ### Enabling rendering
 
-To enable the [rendering of webforms](../rendering.md) that are created in the studio, the following options must be set.
+To enable the [rendering of webforms](../rendering.md) that are created in Qodly Studio, the following options must be set.
 
 * The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated 
 * The [4D web server](webServer.md) must be running
@@ -102,7 +102,7 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above). 
 
-There are two ways to access the studio:
+There are two ways to access Qodly Studio:
 
 * from your 4D single-user application, go to **Design** > **Qodly Studio...**. 
 If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
@@ -119,14 +119,14 @@ For example, after launching a local web server on port 7080, type this address 
 
 `localhost:7080/studio`
 
-You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access the studio.
+You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
 
 
 ## Qodly Studio Documentation
 
 The official Qodly Studio documentation is available on the [Qodly documentation website](developer.qodly.com/docs/studio).
 
-You can rely on this documentation and its associated resources for developing Qodly Studio-based webforms. However, keep in mind that some features (listed below) differ between on premise and cloud architecures.
+You can rely on this documentation and its associated resources for developing Qodly Studio-based webforms. However, some features (listed below) differ between on premise and cloud architectures.
 
 ### Cloud-only features
 
@@ -138,7 +138,7 @@ The following features, detailed in the Qodly Studio documentation, are only ava
 
 ### 4D Language vs QodlyScript
 
-QodlyScript inherits from the 4D Language, but with some differences. If you're familiar with the 4D language, you won't be lost, just keep in mind the following QodlyScript's specific features.
+QodlyScript inherits from the 4D Language, but with some differences. If you are familiar with the 4D language, you won't be lost, just keep in mind the following QodlyScript's specific features.
 
 #### Variables
 
