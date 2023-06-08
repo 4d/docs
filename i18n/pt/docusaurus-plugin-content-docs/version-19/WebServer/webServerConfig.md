@@ -11,8 +11,8 @@ There are different ways to configure the 4D web server settings, depending on t
 
 | Localização do parâmetro                | Scope                                    | Involved web server                             |
 | --------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
-| [webServer object](webServerObject.md)  | Temporary (current session)              | Any web server, including component web servers |
-| `WEB SET OPTION` or a `WEB XXX` command | Temporary (current session)              | Servidor principal                              |
+| [webServer object](webServerObject.md)  | Temporário (sessão atual)                | Any web server, including component web servers |
+| `WEB SET OPTION` or a `WEB XXX` command | Temporário (sessão atual)                | Servidor principal                              |
 | **Settings** dialog box (**Web** pages) | Permanent (all sessions, stored on disk) | Servidor principal                              |
 
 > Some settings are not available from all locations.
