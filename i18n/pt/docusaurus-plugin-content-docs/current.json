@@ -236,7 +236,7 @@
     "description": "The generated-index page title for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.description": {
-    "message": "List of built-in 4D classes",
+    "message": "Lista de classes 4D integradas",
     "description": "The generated-index page description for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Tags": {
