@@ -49,7 +49,7 @@ ORDA features related to entity locking and transaction are managed at process l
 *   Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. They do not impact other datastores.
 *   Classic 4D language commands (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) only apply to the main datastore (returned by `ds`). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.
 *   Locks on entities are removed and transactions are rollbacked:
-    *   when the process is killed.
+    *   quando o processo é eliminado.
     *   when the session is closed on the server
     *   when the session is killed from the server administration window.
 
