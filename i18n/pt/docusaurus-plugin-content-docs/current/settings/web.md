@@ -61,7 +61,7 @@ Designate a default home page for the Web server. See [Default Home page](../Web
 
 #### Usar o cache Web 4D
 
-Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
+Ativar o cache da página Web. See [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Tamanho da cache das Páginas
 
