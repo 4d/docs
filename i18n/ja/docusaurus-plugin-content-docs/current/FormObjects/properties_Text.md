@@ -245,7 +245,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 :::note
 
 - "automatic" は、[チェックボックス](checkbox_overview.md) および [ラジオボタン](radio_overview.md) ではサポートされていません。
-- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
+- "justify" は、[入力](input_overview.md) と [テキストエリア](text.md) でのみサポートされています。
 
 :::
 
