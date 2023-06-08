@@ -82,13 +82,13 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Tipo de formulário                 | Gramática JSON   | Descrição                                                     | Suportado por               |
-| ---------------------------------- | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Formulário detalhado               | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| Formulário lista                   | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
-| Formulário de lista para impressão | listPrinter      | A printed report that list records                            | Formularios tabla           |
-| Nenhum                             | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Tipo de formulário                 | Gramática JSON   | Descrição                                                     | Suportado por                            |
+| ---------------------------------- | ---------------- | ------------------------------------------------------------- | ---------------------------------------- |
+| Formulário detalhado               | detailScreen     | A display form for data entry and modification                | Formulários projeto - Formulários tabela |
+| Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice | Formulários projeto - Formulários tabela |
+| Formulário lista                   | listScreen       | A form for listing records on the screen                      | Formularios tabla                        |
+| Formulário de lista para impressão | listPrinter      | A printed report that list records                            | Formularios tabla                        |
+| Nenhum                             | *no destination* | A form with no specific feature                               | Formulários projeto - Formulários tabela |
 
 
 #### Gramática JSON
