@@ -82,7 +82,7 @@ This property allows you to specify either the **font theme** or the **font fami
 
 ### Tema Fonte
 
-The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
+The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. Esses parâmetros dependem de:
 
 - a plataforma,
 - a língua do sistema,
