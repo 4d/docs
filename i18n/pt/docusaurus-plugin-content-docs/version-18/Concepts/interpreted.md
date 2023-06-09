@@ -14,15 +14,15 @@ As vantagens da compilação são:
 - **Code checking**: Your database application is scanned for the consistency of code. São detectados conflitos tanto lógicos como sintácticos.
 - **Protection**: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
 - **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **Modo preemptivo**: só codigo compilado pode ser executado em processos preemptivos.
 
-## Differences between interpreted and compiled code
-Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler.
+## Diferenças entre código interpretado e compilado
+Apesar de aplicações funcionarem da mesma forma em modo compilado e interpretado, há diferenças quando escrever código que será compilado. O 4D interpreter é mais flexível que o compilador.
 
 | Compilado                                                                                                                                                                              | Interpretado                                                                   |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| You cannot have a method with the same name as a variable.                                                                                                                             | No error is generated, but priority is given to the method                     |
-| All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.                                                            | Variables can be typed on-the-fly (not recommended)                            |
+| Não pode ter um método com o mesmo nome que uma variável.                                                                                                                              | Nenhum erro é gerado, mas prioridade é dada ao método                          |
+| Todas as variáveis devem ser digitadas, seja através de uma diretiva do compilador (ex: `C_LONGINT`), ou pelo compilador no momento da compilação.                                     | As variáveis podem ser digitadas no momento (mas não é recomendado)            |
 | You cannot change the data type of any variable or array.                                                                                                                              | Changing the data type of a variable or an array is possible (not recommended) |
 | You cannot change a one-dimensional array to a two-dimensional array, or change a two-dimensional array to a one-dimensional array.                                                    | Possível                                                                       |
 | Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form. |                                                                                |
