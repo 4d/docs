@@ -336,7 +336,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Veja também
 
-[4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[guia de referência 4D View Pro](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 ---
 
@@ -374,7 +374,7 @@ Valores disponíveis:
 
 ## Modo de visualização
 
-Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
+Sets the mode for displaying the 4D Write Pro document in the form area. Há três valores disponíveis:
 
 - **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
 - **Draft**: draft mode with basic document properties
