@@ -213,7 +213,7 @@ To move an object one pixel at a time:
 
 - Select the object or objects and use the arrow keys on the keyboard to move the object. Each time you press an arrow key, the object moves one pixel in the direction of the arrow.
 
-To move an object by steps:
+Para mover um objeto em passos:
 
 - Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. By default, steps are 20 pixels at a time. You can change this value on the Forms Page of the Preferences.
 
