@@ -100,7 +100,7 @@ In merged applications, the user settings file is placed at the following locati
 * In single-user versions: ProjectFolder/Database/Settings/settings.4DSettings
 * In client/server versions: ProjectFolder/Server Database/Settings/settings.4DSettings
 
-### User Settings for Data File
+### Propriedades usuário para arquivo de dados
 
 The user settings file linked to the data file is automatically created and placed in a settings folder at the following location:
 
