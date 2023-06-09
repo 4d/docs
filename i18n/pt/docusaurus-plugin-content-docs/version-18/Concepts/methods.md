@@ -74,7 +74,7 @@ Usando sub-rotinas, você torna o seu código modular. Isto significa simplesmen
 
 Even for someone who doesn’t know the database, it is clear what this code does. Não é necessário examinar cada sub-rotina. Cada sub-rotina pode ter muitas linhas e realizar algumas operações complexas, mas aqui é apenas importante que desempenhe a sua tarefa. Recomendamos que divida o seu código em tarefas lógicas, ou módulos, sempre que possível.
 
-### Methods attached to objects
+### Métodos associados aos objetos
 
 Pode encapsular os seus métodos de projeto em **fórmula** objectos e chamá-los dos seus objectos.
 

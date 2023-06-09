@@ -32,7 +32,7 @@ When you check this option, the settings are separated into three dialog boxes:
 
 * **Structure Settings**
 * **User Settings**
-* **User Settings for Data file**
+* **Propriedades usuário para o arquivo de dados**
 
 You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
 

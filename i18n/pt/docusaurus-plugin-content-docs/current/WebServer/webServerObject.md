@@ -108,30 +108,30 @@ The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-S
 
 | Comando                         | Scope                                |
 | ------------------------------- | ------------------------------------ |
-| `SET DATABASE PARAMETER`        | Host application web server          |
+| `SET DATABASE PARAMETER`        | Aplicação local de servidor Web      |
 | `WEB CLOSE SESSION`             | Web server that received the request |
 | `WEB GET BODY PART`             | Web server that received the request |
 | `WEB Get body part count`       | Web server that received the request |
 | `WEB Get Current Session ID`    | Web server that received the request |
 | `WEB GET HTTP BODY`             | Web server that received the request |
 | `WEB GET HTTP HEADER`           | Web server that received the request |
-| `WEB GET OPTION`                | Host application web server          |
-| `WEB Get server info`           | Host application web server          |
+| `WEB GET OPTION`                | Aplicação local de servidor Web      |
+| `WEB Get server info`           | Aplicação local de servidor Web      |
 | `WEB GET SESSION EXPIRATION`    | Web server that received the request |
 | `WEB Get session process count` | Web server that received the request |
-| `WEB GET STATISTICS`            | Host application web server          |
+| `WEB GET STATISTICS`            | Aplicação local de servidor Web      |
 | `WEB GET VARIABLES`             | Web server that received the request |
 | `WEB Is secured connection`     | Web server that received the request |
-| `WEB Is server running`         | Host application web server          |
+| `WEB Is server running`         | Aplicação local de servidor Web      |
 | `WEB SEND BLOB`                 | Web server that received the request |
 | `WEB SEND FILE`                 | Web server that received the request |
 | `WEB SEND HTTP REDIRECT`        | Web server that received the request |
 | `WEB SEND RAW DATA`             | Web server that received the request |
 | `WEB SEND TEXT`                 | Web server that received the request |
-| `WEB SET HOME PAGE`             | Host application web server          |
+| `WEB SET HOME PAGE`             | Aplicação local de servidor Web      |
 | `WEB SET HTTP HEADER`           | Web server that received the request |
-| `WEB SET OPTION`                | Host application web server          |
-| `WEB SET ROOT FOLDER`           | Host application web server          |
-| `WEB START SERVER`              | Host application web server          |
-| `WEB STOP SERVER`               | Host application web server          |
+| `WEB SET OPTION`                | Aplicação local de servidor Web      |
+| `WEB SET ROOT FOLDER`           | Aplicação local de servidor Web      |
+| `WEB START SERVER`              | Aplicação local de servidor Web      |
+| `WEB STOP SERVER`               | Aplicação local de servidor Web      |
 | `WEB Validate digest`           | Web server that received the request |

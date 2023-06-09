@@ -43,7 +43,7 @@ When you click on the **Open log file** button, 4D displays the most recent log 
 
 The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
 
-### Compact records and indexes
+### Compactação de registros e índices
 
 The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window.
 

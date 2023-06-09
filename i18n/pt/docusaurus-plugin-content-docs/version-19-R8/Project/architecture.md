@@ -37,12 +37,12 @@ The Project folder typically contains the following hierarchy:
     + `TableForms`
     + `Triggers`
 - `DerivedData`
-- `Trash` (if any)
+- `Trash` (se houver)
 
 
 ### *applicationName*.4DProject file
 
-Project development file, used to designate and launch the project. This file can be opened by:
+Project development file, used to designate and launch the project. Esse arquivo pode ser aberto por:
 
 - 4D
 - 4D Server (apenas leitura, ver [Desenvolver um projeto](developing.md))
@@ -55,8 +55,8 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 | Conteúdos               | Descrição                                                                                                                                                                                                                                                                                                                                                                                   | Formato |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                 | XML     |
-| folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
+| catalog.4DCatalog       | Definições de tabelas e campos                                                                                                                                                                                                                                                                                                                                                              | XML     |
+| folders.json            | Definições de pasta do Explorer                                                                                                                                                                                                                                                                                                                                                             | JSON    |
 | menus.json              | Menu definitions                                                                                                                                                                                                                                                                                                                                                                            | JSON    |
 | settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined. **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML     |
 | tips.json               | Dicas definidas                                                                                                                                                                                                                                                                                                                                                                             | JSON    |

@@ -33,7 +33,7 @@ The following 4D tags are available:
 
 These tags are described in the [Transformation Tags](Tags/tags.md) page.
 
-It is possible to mix tags. For example, the following HTML code is allowed:
+É possível combinar etiquetas. For example, the following HTML code is allowed:
 
 ```html
 <HTML>

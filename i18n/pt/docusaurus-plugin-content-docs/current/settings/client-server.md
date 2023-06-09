@@ -60,7 +60,7 @@ This device is used to set the timeout (period of inactivity beyond which the co
 
 When a timeout is selected, the server will close the connection of a client if it does not receive any requests from the latter during the specified time limit.
 
-### Client-Server Communication
+### Comunicação cliente-servidor
 
 #### Register Clients at Startup For Execute On Client
 
