@@ -82,7 +82,7 @@ Valor máximo de un indicador.
 
 | Nombre | Tipos de datos | Valores posibles |
 |:------:|:--------------:| ---------------- |
-|  max   |     number     | Any number       |
+|  max   |     number     | Cualquier número |
 
 #### Objetos soportados
 
@@ -99,7 +99,7 @@ Valor mínimo de un indicador. Para los steppers numéricos, esta propiedad repr
 
 | Nombre | Tipos de datos | Valores posibles |
 |:------:|:--------------:| ---------------- |
-|  min   |     number     | Any number       |
+|  min   |     number     | Cualquier número |
 
 #### Objetos soportados
 
