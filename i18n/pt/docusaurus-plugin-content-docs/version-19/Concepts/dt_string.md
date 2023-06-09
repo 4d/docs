@@ -145,7 +145,7 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
 > - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 > - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
-## Character Reference Symbols
+## Símbolos de referência de caracteres
 
 The character reference symbols: [[...]]
 
