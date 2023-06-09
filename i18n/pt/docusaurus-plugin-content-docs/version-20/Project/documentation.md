@@ -137,7 +137,7 @@ New documentation files are created with the following default contents:
 
 
 ### Markdown suportado
-- The title tag is supported:
+- A etiqueta de título é suportada:
 
 ```md
 # Title 1
@@ -163,7 +163,7 @@ _italic_
     $txt:="Hello world!"  
 ```
 ````
-- The table tag is supported:
+- A etiqueta de tabela é suportada:
 
 ```md
 | Parameter | Type   | Description  |
