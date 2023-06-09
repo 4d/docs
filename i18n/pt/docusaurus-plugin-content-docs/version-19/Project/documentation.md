@@ -126,7 +126,7 @@ New documentation files are created with the following default contents:
 
 ### Markdown suportado
 
-- The title tag is supported:
+- A etiqueta de título é suportada:
 
 ```
 # Title 1
@@ -150,7 +150,7 @@ C_TEXT($txt)
 $txt:="Hello world!"  
 \` ``
 
-- The table tag is supported:
+- A etiqueta de tabela é suportada:
 
 ```
 | Parameter | Type   | Description  |
