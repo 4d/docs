@@ -125,7 +125,7 @@ You can define the default contents of the `.gitignore` file by clicking the pen
 
 The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
 
-### Language of text comparison
+### Linguagem de comparação de texto
 
 This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
 
