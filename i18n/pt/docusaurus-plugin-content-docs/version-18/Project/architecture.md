@@ -86,7 +86,7 @@ Project development file, used to designate and launch the project. Esse arquivo
 | ----------------------------------------- | ------------------------------------------- | ------- |
 | *formName*/form.4DForm                    | Descrição do formulário projeto             | json    |
 | *formName*/method.4dm                     | Método formulário projecto                  | text    |
-| *formName*/Images/*pictureName*           | Project form static picture                 | picture |
+| *formName*/Images/*pictureName*           | Imagem estática do formulário projeto       | picture |
 | *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. One file per object method | text    |
 
 #### Pasta TableForms
@@ -122,7 +122,7 @@ Within these folders, deleted element names are in parentheses, e.g. "(myMethod)
 
 ### DerivedData folder
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
+The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. Você pode ignorar essa pasta.
 
 ## Pasta Resources
 
