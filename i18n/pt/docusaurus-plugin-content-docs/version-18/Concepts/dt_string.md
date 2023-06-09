@@ -147,7 +147,7 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
 
 - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
-## Character Reference Symbols
+## Símbolos de referência de caracteres
 
 The character reference symbols: [[...]]
 
