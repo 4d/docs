@@ -376,7 +376,7 @@ The following table summarizes 4D naming conventions.
 | ---------------------------- | ---------------- | ---------------------------------- |
 | Tabela                       | 31               | [Invoices]                         |
 | Campo                        | 31               | [Employees]Last Name               |
-| Interprocess Variable/Array  | `<>` + 31  | `<>vlNextProcessID`          |
+| Variável/array interprocesso | `<>` + 31  | `<>vlNextProcessID`          |
 | Variável/Array processo      | 31               | vsCurrentName                      |
 | Variável/Array local         | $ + 31           | $vlLocalCounter                    |
 | Propriedades de objetos      | 255              | $o.myAttribute                     |
