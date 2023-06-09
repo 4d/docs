@@ -481,7 +481,7 @@ This syntax makes a loop for each array item. The array current item is increase
 
 > This syntax cannot be used with two dimension arrays. In this case, it is better to combine a method with nested loops.
 
-The following code example:
+O seguinte exemplo de código:
 
 ```html
 <!--#4DLOOP arr_names-->
@@ -506,7 +506,7 @@ For security reasons, within a Web process, the `On Web Authentication` database
 
 `C_BOOLEAN($0)` e `C_LONGINT($1)` DEVEM ser declarados no método para efeitos de compilação.
 
-The following code example:
+O seguinte exemplo de código:
 
 ```html
 <!--#4DLOOP my_method-->
