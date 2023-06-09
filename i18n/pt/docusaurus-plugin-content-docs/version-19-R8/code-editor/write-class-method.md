@@ -217,7 +217,7 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 | ----------- | ------------------------------------ | ------------------------------------------------ |
 | **Windows** | Shift or Alt+click on clipboard icon | Ctrl+click on clipboard icon                     |
 |             |                                      | Ctrl+número do clipboard                         |
-| **macOS**   | Shift or Alt+click on clipboard icon | Cmd+click on clipboard icon                      |
+| **macOS**   | Shift or Alt+click on clipboard icon | Cmd+clique no ícone da área de transferência     |
 |             | Cmd+Shift+clipboard number           | Cmd+clipboard number                             |
 
 You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.
