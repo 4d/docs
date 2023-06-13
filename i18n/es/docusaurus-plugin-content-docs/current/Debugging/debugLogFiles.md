@@ -347,7 +347,7 @@ Los siguientes campos se registran para cada petición:
 
 #### Ejemplo
 
-Here is an example of a client-side ORDA log file record:
+Este es un ejemplo de un registro de archivo de historial ORDA del lado del cliente:
 
 ```json
     {
