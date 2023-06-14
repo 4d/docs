@@ -45,7 +45,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 
 ![](../assets/en/Preferences/general4.png)
 
-Three options are available:
+Estão disponíveis três opções:
 
 * **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
 * **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
