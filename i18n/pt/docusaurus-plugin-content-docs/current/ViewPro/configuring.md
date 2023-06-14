@@ -45,7 +45,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 | Fórmulas | Formula calculation and library |        X         |                 X                 |
 | Dados    | Data manipulation               |        X         |                 X                 |
 | Mostrar  | Apresentação visual             |        X         |                 X                 |
-| Settings | Sheet presentation reference    |        X         |                                   |
+| Settings | Presentação da folha            |        X         |                                   |
 
 ## Eventos formulário
 
@@ -372,12 +372,12 @@ Scale attributes are used to specify printing optimization and adjustments.
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                          |
-| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                  |
-| showColumnHeader | inteiro longo | Column header print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean       | Prints the gridlines. Valor padrão = "false"                                                                                                                                       |
-| showRowHeader    | inteiro longo | Row headers print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`   |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                            |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                                    |
+| showColumnHeader | inteiro longo | Column header print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`                   |
+| showGridLine     | boolean       | Prints the gridlines. Valor padrão = "false"                                                                                                                                                         |
+| showRowHeader    | inteiro longo | Parâmetros de impressão de cabeçalhos de linha. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
 
 ### Marca de água
 
@@ -387,7 +387,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 | ------------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | marca de água |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
 |               | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
-|               | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                            |
+|               | \[ ].imageSrc | picture &#124; text* | O texto/imagem da marca de água.                                                                                                                       |
 |               | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
 |               | \[ ].width    | inteiro longo        | The width of the watermark text / image.                                                                                                               |
 |               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
@@ -422,7 +422,7 @@ Exemplo:
  VP SET DEFAULT STYLE("myDoc";$style)
 ```
 
-#### Background & Foreground
+#### Fundo & Primeiro plano
 
 | Propriedade           | Tipo          | Descrição                                    | Valores possíveis                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------- | ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
