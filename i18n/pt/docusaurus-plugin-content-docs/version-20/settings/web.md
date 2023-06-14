@@ -9,7 +9,7 @@ Using the tabs on the **Web** page, you can configure various aspects of the int
 
 ### Informações de publicação
 
-#### Launch Web Server at Startup
+#### Iniciar o servidor Web no arranque
 
 Indicates whether the Web server will be launched on startup of the 4D application. This option is described in the [Web server administration](../WebServer/webServerAdmin.md#starting-the-4d-web-server) section.
 
