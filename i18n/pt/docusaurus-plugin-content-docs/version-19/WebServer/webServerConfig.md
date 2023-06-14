@@ -5,7 +5,7 @@ title: Configuração
 
 The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.
 
-## Where to configure settings?
+## Onde configurar os parâmetros?
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
@@ -76,7 +76,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 List of allowed hosts and methods for the CORS service.
 
-#### Domain names (host property)
+#### Nomes de domínio
 
 Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
 
@@ -490,7 +490,7 @@ Path of web server root folder, i.e. the folder in which 4D will search for the 
 
 Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. If a requested URL or a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.
 
-By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time. The root folder is created:
+By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time. A pasta raiz é criada:
 
 - with 4D (local) and 4D Server, at the same level as the [Project folder](Project/architecture.md#project-folder).
 - with 4D in remote mode, in the local resources folder.
