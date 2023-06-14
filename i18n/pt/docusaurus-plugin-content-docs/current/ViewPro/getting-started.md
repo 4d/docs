@@ -23,7 +23,7 @@ However, 4D View Pro requires a license. You need to activate this license in yo
 ![](../assets/en/ViewPro/licenseError.png)
 
 
-## Inserting a 4D View Pro area
+## Inserção de uma área 4D View Pro
 
 4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. To select this object, click on the last tool in the object bar:
 
