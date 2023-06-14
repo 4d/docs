@@ -13,7 +13,7 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 The main 4D web server can be started in different ways:
 
-* Using a button/menu command.
+* Utilizar um botão/comando de menu.
   * 4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
   * 4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 
