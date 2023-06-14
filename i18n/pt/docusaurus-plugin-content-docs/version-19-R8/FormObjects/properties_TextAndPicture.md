@@ -52,9 +52,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                      |
-| ------------- | ------------- | -------------------------------------- |
-| customBorderX | number        | For use with "custom" style. Mínimo: 0 |
+| Nome          | Tipo de dados | Valores possíveis                                     |
+| ------------- | ------------- | ----------------------------------------------------- |
+| customBorderX | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
@@ -179,9 +179,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                      |
-| ------------- | ------------- | -------------------------------------- |
-| customBorderY | number        | For use with "custom" style. Mínimo: 0 |
+| Nome          | Tipo de dados | Valores possíveis                                     |
+| ------------- | ------------- | ----------------------------------------------------- |
+| customBorderY | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
