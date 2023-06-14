@@ -67,7 +67,7 @@ A barra de ferramentas contém os seguintes elementos:
 | ![](../assets/en/FormEditor/cssPreviewicon.png)  | [Pré-visualização CSS](#css-preview)                      | Este botão é utilizado para seleccionar o Modo CSS a utilizar.                                                                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/views.png)           | [Gestão da vistas](#views)                                | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                                                                              |
 | ![](../assets/en/FormEditor/shields2.png)        | [Displaying shields](#shields)                            | Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                                                                          |
-| ![](../assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)        | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                                                                         |
+| ![](../assets/en/FormEditor/library.png)         | [Librería de objetos preconfigurada](objectLibrary.html)  | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                                                                         |
 | ![](../assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                     | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                                                                            |
 
 ### Barra de objetos
@@ -635,7 +635,7 @@ Once views are created, you can use the View palette to:
 - Move objects from one view to another,
 - Select all objects of the same view in a single click,
 - Display or hide objects for each view,
-- Lock the objects of a view.
+- Bloquear os objectos de uma vista.
 
 #### Adicionar objectos a vistas
 
