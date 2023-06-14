@@ -10,9 +10,9 @@ Collection of columns of the list box.
 
 #### Gramática JSON
 
-| Nome    | Tipo de dados                | Valores possíveis                                |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| Nome    | Tipo de dados               | Valores possíveis                                |
+| ------- | --------------------------- | ------------------------------------------------ |
+| columns | colecção de objectos coluna | Contains the properties for the list box columns |
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
