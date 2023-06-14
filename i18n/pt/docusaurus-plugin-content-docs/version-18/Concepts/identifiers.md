@@ -372,26 +372,26 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 The following table summarizes 4D naming conventions.
 
-| Identifier                   | Max. Largura     | Exemplo                            |
-| ---------------------------- | ---------------- | ---------------------------------- |
-| Tabela                       | 31               | [Invoices]                         |
-| Campo                        | 31               | [Employees]Last Name               |
-| Variável/array interprocesso | `<>` + 31  | `<>vlNextProcessID`          |
-| Variável/Array processo      | 31               | vsCurrentName                      |
-| Variável/Array local         | $ + 31           | $vlLocalCounter                    |
-| Propriedades de objetos      | 255              | $o.myAttribute                     |
-| Formulário                   | 31               | "My Custom Web Input"              |
-| Objecto de formulário        | 255              | "MyButton"                         |
-| Métodos proyecto             | 31               | M_ADD_CUSTOMERS                  |
-| Rotina Plug-in               | 31               | PDF SET ROTATION                   |
-| Interprocess Set             | `<>` + 255 | `"<>Records to be Archived"` |
-| Conjunto process             | 255              | "Current selected records"         |
-| Client Set                   | $ + 255          | "$Previous Subjects"               |
-| Seleção nomeada              | 255              | "Employees A to Z"                 |
-| Interprocess Named Selection | `<>` + 255 | `"<>Employees Z to A"`       |
-| Processo local               | $ + 255          | "$Follow Events"                   |
-| Processo global              | 255              | "*P_INVOICES_MODULE*"            |
-| Semáforo                     | 255              | "mysemaphore"                      |
+| Identifier                     | Max. Largura     | Exemplo                            |
+| ------------------------------ | ---------------- | ---------------------------------- |
+| Tabela                         | 31               | [Invoices]                         |
+| Campo                          | 31               | [Employees]Last Name               |
+| Variável/array interprocesso   | `<>` + 31  | `<>vlNextProcessID`          |
+| Variável/Array processo        | 31               | vsCurrentName                      |
+| Variável/Array local           | $ + 31           | $vlLocalCounter                    |
+| Propriedades de objetos        | 255              | $o.myAttribute                     |
+| Formulário                     | 31               | "My Custom Web Input"              |
+| Objecto de formulário          | 255              | "MyButton"                         |
+| Métodos proyecto               | 31               | M_ADD_CUSTOMERS                  |
+| Rotina Plug-in                 | 31               | PDF SET ROTATION                   |
+| Interprocess Set               | `<>` + 255 | `"<>Records to be Archived"` |
+| Conjunto process               | 255              | "Current selected records"         |
+| Client Set                     | $ + 255          | "$Previous Subjects"               |
+| Seleção nomeada                | 255              | "Employees A to Z"                 |
+| Seleção temporal interprocesso | `<>` + 255 | `"<>Employees Z to A"`       |
+| Processo local                 | $ + 255          | "$Follow Events"                   |
+| Processo global                | 255              | "*P_INVOICES_MODULE*"            |
+| Semáforo                       | 255              | "mysemaphore"                      |
 
 **Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 
