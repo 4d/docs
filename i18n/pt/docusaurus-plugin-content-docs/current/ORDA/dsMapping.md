@@ -23,7 +23,7 @@ The following rules are applied for any conversions:
 
 * Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
 *   Uma datastore só referencia as tabelas com uma única chave primária. The following tables are not referenced:
-    *   Tables without a primary key
+    *   Tabelas sem chave primária
     *   Tables with composite primary keys.
 *   [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore.
 
@@ -42,7 +42,7 @@ This option must be selected at the 4D structure level for each table and each f
 
 ### Actualização do modelo de dados
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
+Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificações incluem:
 
 *   adding or removing a table, a field, or a relation
 *   renaming of a table, a field, or a relation
