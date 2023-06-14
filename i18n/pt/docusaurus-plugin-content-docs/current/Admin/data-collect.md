@@ -27,30 +27,30 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ### Recolhidos no arranque da base de dados
 
-| Dados                   | Tipo                 | Notas                                                                                                 |
-| ----------------------- | -------------------- | ----------------------------------------------------------------------------------------------------- |
-| CPU                     | Text                 | Nome, tipo, e velocidade do processador                                                               |
-| numberOfCores           | Número               | Número total de núcleos                                                                               |
-| memory                  | Número               | Volume de armazenamento de memória (em bytes) disponível na máquina                                   |
-| system                  | Text                 | Versão do sistema operativo e número de construção                                                    |
-| headless                | Parâmetros           | Verdadeiro se a aplicação estiver a correr em modo sem cabeça                                         |
-| version                 | Número               | Número da versão da aplicação 4D                                                                      |
-| buildNumber             | Número               | Número da versão da aplicação 4D                                                                      |
-| licença                 | Objeto               | Nome comercial e descrição das licenças do produto                                                    |
-| isRosetta               | Parâmetros           | True se 4D for emulado através do Rosetta no macOS, False caso contrário (não emulado ou no Windows). |
-| uniqueID                | Text                 | ID único do 4D Server                                                                                 |
-| id                      | Text (hashed string) | Identificação única associada à base de dados (*Polinômio Rolling hash do nome da base de dados*)     |
-| dataFileSize            | Número               | Tamanho do arquivo de dados em bytes                                                                  |
-| indexesSize             | Número               | Tamanho do índice em bytes                                                                            |
-| cacheSize               | Número               | Tamanho da cache em bytes                                                                             |
-| usingLegacyNetworkLayer | Parâmetros           | Verdadeiro se a usar a camada de rede herdada para o servidor de aplicações                           |
-| usingQUICNetworkLayer   | Parâmetros           | True if the database uses the QUIC network layer                                                      |
-| encryptedConnections    | Parâmetros           | True se as ligações cliente/servidor forem encriptadas                                                |
-| encrypted               | Parâmetros           | True se o arquivo de dados estiver criptografado                                                      |
-| compiled                | Parâmetros           | Verdadeiro se a aplicação for compilada                                                               |
-| isEngined               | Parâmetros           | Verdadeiro se a aplicação for fundida com o Volume Desktop 4D                                         |
-| projectMode             | Parâmetros           | Verdadeiro se a aplicação for compilada                                                               |
-| mobile                  | Collection           | Informação sobre sessões móveis                                                                       |
+| Dados                   | Tipo                                  | Notas                                                                                                 |
+| ----------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| CPU                     | Text                                  | Nome, tipo, e velocidade do processador                                                               |
+| numberOfCores           | Número                                | Número total de núcleos                                                                               |
+| memory                  | Número                                | Volume de armazenamento de memória (em bytes) disponível na máquina                                   |
+| system                  | Text                                  | Versão do sistema operativo e número de construção                                                    |
+| headless                | Parâmetros                            | Verdadeiro se a aplicação estiver a correr em modo sem cabeça                                         |
+| version                 | Número                                | Número da versão da aplicação 4D                                                                      |
+| buildNumber             | Número                                | Número da versão da aplicação 4D                                                                      |
+| licença                 | Objeto                                | Nome comercial e descrição das licenças do produto                                                    |
+| isRosetta               | Parâmetros                            | True se 4D for emulado através do Rosetta no macOS, False caso contrário (não emulado ou no Windows). |
+| uniqueID                | Text                                  | ID único do 4D Server                                                                                 |
+| id                      | Texto (cadeia de caracteres com hash) | Identificação única associada à base de dados (*Polinômio Rolling hash do nome da base de dados*)     |
+| dataFileSize            | Número                                | Tamanho do arquivo de dados em bytes                                                                  |
+| indexesSize             | Número                                | Tamanho do índice em bytes                                                                            |
+| cacheSize               | Número                                | Tamanho da cache em bytes                                                                             |
+| usingLegacyNetworkLayer | Parâmetros                            | Verdadeiro se a usar a camada de rede herdada para o servidor de aplicações                           |
+| usingQUICNetworkLayer   | Parâmetros                            | True se a base de dados utilizar a camada de rede QUIC                                                |
+| encryptedConnections    | Parâmetros                            | True se as ligações cliente/servidor forem encriptadas                                                |
+| encrypted               | Parâmetros                            | True se o arquivo de dados estiver criptografado                                                      |
+| compiled                | Parâmetros                            | Verdadeiro se a aplicação for compilada                                                               |
+| isEngined               | Parâmetros                            | Verdadeiro se a aplicação for fundida com o Volume Desktop 4D                                         |
+| projectMode             | Parâmetros                            | Verdadeiro se a aplicação for compilada                                                               |
+| mobile                  | Collection                            | Informação sobre sessões móveis                                                                       |
 
 
 ### Collected at web server startup and data collection sending
