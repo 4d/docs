@@ -39,7 +39,7 @@ The default value depends on the variable type and category, its execution conte
 
 - Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
 - As variáveis locais são definidas:
-    - in interpreted mode: to zero
+    - em modo interpretado: a zero
     - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
         - "to zero": to zero (see above),
         - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
