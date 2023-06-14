@@ -233,7 +233,7 @@ For information, please refer to the [Alias attributes](#alias-attributes-1) sec
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Em seguida, pode chamar este código:
 
 ```4d
 var $cityManager; $city : Object
