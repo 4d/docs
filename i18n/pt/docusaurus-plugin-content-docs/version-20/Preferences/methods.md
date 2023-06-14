@@ -47,7 +47,7 @@ Combining different colors and styles is particularly useful for code maintenanc
 
 The **font** and **font size** menus allows you to select the font name and size used in the Code Editor entry area for all categories.
 
-### 4D Language and SQL Language
+### Linguagem 4D e Linguagem SQL
 
 You can set different font styles and colors (font color or background color) for each type of language element. You can select the element(s) to customize in the Category list.
 
@@ -63,10 +63,10 @@ These options configure the various colors used in the Code Editor and debugger 
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Cor de fundo**                                  | Background color of Code Editor window.                                                                                                                                  |
 | **Border of the running line in the debugger**    | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Cursor line background color**                  | Background color of line containing the cursor.                                                                                                                          |
+| **Cor de fundo da linha do cursor**               | Background color of line containing the cursor.                                                                                                                          |
 | **Execution line background color**               | Background color of line being executed in the debugger.                                                                                                                 |
-| **Highlight of the found words**                  | Highlight color of words found in a search.                                                                                                                              |
-| **Highlight of the parentheses**                  | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
+| **Destaque das palavras encontradas**             | Highlight color of words found in a search.                                                                                                                              |
+| **Destaque dos parênteses**                       | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
 | **Highlight of the blocks**                       | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
 | **Highlight of the same variable or field**       | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
@@ -121,7 +121,7 @@ Lets you choose whether or not to show the multiple clipboards in the code edito
 
 The corresponding [clipboard shorcuts](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) are still active when these clipboards are hidden.
 
-#### Highlight the logical blocks
+#### Destacar os blocos lógicos
 
 When checked, the whole code belonging to a logical block (If/End if for example) is highlighted when the mouse is placed over the expanded node:
 
