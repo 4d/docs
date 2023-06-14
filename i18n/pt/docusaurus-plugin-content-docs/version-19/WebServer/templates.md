@@ -20,7 +20,7 @@ The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
 The following 4D tags are available:
 
 - 4DTEXT, to insert 4D variables and expressions as text,
-- 4DHTML, to insert HTML code,
+- 4DHTML, para inserir código HTML,
 - 4DEVAL, to evaluate any 4D expression,
 - 4DSCRIPT, to execute a 4D method,
 - 4DINCLUDE, to include a page within another one,
