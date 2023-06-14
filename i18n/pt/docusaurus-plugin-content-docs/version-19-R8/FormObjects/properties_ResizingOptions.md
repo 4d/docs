@@ -45,7 +45,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
-Three options are available:
+Estão disponíveis três opções:
 
 | Option   | Valor JSON | Resultados                                                                                                             |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Three options are available:
 
 This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
-Three options are available:
+Estão disponíveis três opções:
 
 | Option   | Valor JSON | Resultados                                                                                                           |
 | -------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
