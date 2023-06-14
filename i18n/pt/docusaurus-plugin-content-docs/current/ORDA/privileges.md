@@ -29,7 +29,7 @@ You can assign specific permission actions to the following exposed resources in
 - the datastore
 - uma classe de dados
 - an attribute (including computed and alias)
-- a data model class function
+- uma função de classe de modelo de dados
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -105,7 +105,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 
 
-## `roles.json` file
+## ficheiro `roles.json`
 
 
 The `roles.json` file describes the whole security settings for the project.
