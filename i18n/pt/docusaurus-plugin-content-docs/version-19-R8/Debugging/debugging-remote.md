@@ -23,7 +23,7 @@ Only one debugger can debug a 4D Server application at a given time. It is calle
 
 The attached debugger is called whenever a 4D Server encounters:
 * um ponto de ruptura
-* a `TRACE` command
+* um comando `TRACE`
 * a caught command
 * um erro
 
@@ -77,7 +77,7 @@ To attach the debugger back to the server:
 
 > This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
 
-## Rejected attachment requests
+## Pedidos de ligação rejeitados
 
 While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.
 
