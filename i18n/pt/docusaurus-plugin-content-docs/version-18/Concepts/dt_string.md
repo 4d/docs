@@ -121,7 +121,7 @@ If you want to execute comparisons or queries using @ as a character (and not as
 ($vsValue[[Length($vsValue)]]="@")
 ```
 
-The following expression will be evaluated correctly:
+A seguinte expressão será avaliada correctamente:
 
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
