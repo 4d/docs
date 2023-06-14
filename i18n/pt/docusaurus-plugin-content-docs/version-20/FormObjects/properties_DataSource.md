@@ -137,7 +137,7 @@ Defines the type of data to save in the field or variable associated to the [dro
 - the [Choice List](properties_DataSource.md#choice-list) JSON property
 - Drop-down lists [associated to a hierarchical choice list](dropdownList_Overview.md#using-a-hierarchical-choice-list).
 
-Three options are available:
+Estão disponíveis três opções:
 
 - **Save as Reference**: the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the `APPEND TO LIST` or `SET LIST ITEM` commands, or in the lists editor.
 - **Save as Value** (default option): the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.
