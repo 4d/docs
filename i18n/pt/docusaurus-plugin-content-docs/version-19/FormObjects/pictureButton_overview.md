@@ -7,7 +7,7 @@ A picture button is similar to a [standard button](button_overview.md). However 
 
 Picture buttons can be used in two ways:
 
-* As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over. For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+* Como botões de comando num formulário. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over. For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
   | Propriedade                | Nome JSON              | Valor |
   | -------------------------- | ---------------------- | ----- |
