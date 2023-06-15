@@ -20,7 +20,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 ---
 
-## Background Color / Fill Color
+## Cor de fundo / Cor de preenchimento
 
 Defines the background color of an object.
 
@@ -215,4 +215,4 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### Veja também
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Cor de fundo / Cor de preenchimento](#background-color-fill-color)
