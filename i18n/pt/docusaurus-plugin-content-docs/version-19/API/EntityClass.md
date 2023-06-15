@@ -870,7 +870,7 @@ A função `.lock()` <!-- REF #EntityClass.lock().Summary -->põe uma fechadura 
 
 Outros processos verão este registro como bloqueado (o resultado. `a propriedade` uccess conterá Falso se eles tentarem bloquear a mesma entidade usando esta função). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
-A locked record is unlocked:
+Um registo bloqueado é desbloqueado:
 
 * quando a função [`desbloqueia()`](#unlock) é chamada a uma entidade correspondente no mesmo processo
 * automaticamente, quando já não é referenciado por nenhuma entidade em memória. Por exemplo, se a fechadura for colocada apenas numa referência local de uma entidade, a entidade é desbloqueada quando a função termina. Enquanto houver referências à entidade em memória, o registo permanece bloqueado.
