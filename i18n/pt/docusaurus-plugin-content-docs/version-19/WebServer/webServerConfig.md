@@ -243,7 +243,7 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 | ---------------------------------- | -------------------------------------------- | ----------- |
 | webServer object                   | [`HTTPPort`](API/WebServerClass.md#httpport) | number      |
 | `WEB SET OPTION`                   | `Web port ID`                                |             |
-| Caixa de diálogos de configurações | Configuration page/HTTP Port                 |             |
+| Caixa de diálogos de configurações | Página Configuração/Porta HTTP               |             |
 
 Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
 
