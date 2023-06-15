@@ -334,7 +334,7 @@ MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
 
 ```4d
-C_DATE(MyDate) //Tipo data para a variável MyDate
+$str:=String("hello world!")
 ```
 
 ```4d
