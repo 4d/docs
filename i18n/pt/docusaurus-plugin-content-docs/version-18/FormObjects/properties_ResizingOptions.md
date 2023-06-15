@@ -22,7 +22,7 @@ When this property is disabled (`legacy` value in JSON), only the rightmost colu
 
 ![](../assets/en/FormObjects/property_columnAutoResizing.png)
 
-#### About the fake (blank) column
+#### Sobre a coluna falsa (em branco)
 
 The appearance of the fake column matches that of the existing columns; it will have a fake header and/or footer if these elements are present in the existing list box columns and it will have the same background color(s) applied.
 
