@@ -236,7 +236,7 @@ The following table lists the fields available for each format (in alphabetical 
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
-| STATUS         | X   | X   | Reply provided by the server                                               |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                           |
 | TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                         |
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
