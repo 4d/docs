@@ -215,7 +215,7 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
 | Plataforma  | Copy selected text to a clipboard    | Paste contents of a clipboard at cursor location |
 | ----------- | ------------------------------------ | ------------------------------------------------ |
-| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+click on clipboard icon                     |
+| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+clique no ícone da área de transferência    |
 |             |                                      | Ctrl+número do clipboard                         |
 | **macOS**   | Shift or Alt+click on clipboard icon | Cmd+clique no ícone da área de transferência     |
 |             | Cmd+Shift+clipboard number           | Cmd+clipboard number                             |
