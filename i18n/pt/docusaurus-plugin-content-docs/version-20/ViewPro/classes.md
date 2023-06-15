@@ -384,7 +384,7 @@ The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowS
 <!-- REF #TableThemeOptions.secondRowStripStyle.Syntax -->
 **.secondRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->second alternating row style<!-- END REF -->.
+The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->segundo estilo de linha alternada<!-- END REF -->.
 
 ### .wholeTableStyle
 
