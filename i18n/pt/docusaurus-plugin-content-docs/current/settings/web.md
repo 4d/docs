@@ -164,7 +164,7 @@ See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections
 
 Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
 
-#### Domain names/HTTP methods allowed
+#### Nomes de domínio/Métodos HTTP permitidos
 
 List of allowed hosts and methods for the CORS service. See [CORS Settings](../WebServer/webServerConfig.md#cors-settings).
 
@@ -196,7 +196,7 @@ The log format menu provides the following options:
 > The date and time are local to the server.
 
 -   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
--   state: reply given by the server.
+-   estado: resposta dada pelo servidor.
 -   length: size of the data returned (except the HTTP header) or 0.
 
 > **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
