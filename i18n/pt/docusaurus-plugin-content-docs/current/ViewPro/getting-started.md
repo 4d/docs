@@ -157,7 +157,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 
 
-## Importing and exporting documents
+## Importação e exportação de documentos
 
 4D View Pro supports the import and export of several document formats:
 
