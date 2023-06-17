@@ -280,7 +280,7 @@ At the very minimum, a computed attribute requires a `get` function that describ
 
 A computed attribute can also implement a `set` function, which executes whenever a value is assigned to the attribute. The *setter* function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
 
-Just like storage attributes, computed attributes may be included in **queries**. By default, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In some cases this is sufficient. However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
+Just like storage attributes, computed attributes may be included in **queries**. By default, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. Em alguns casos, isto é suficiente. However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
 
 Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance.
 
@@ -313,7 +313,7 @@ The *getter* function is mandatory to declare the *attributeName* computed attri
 The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
 
 - Scalar (text, boolean, date, time, number)
-- Objeto
+- Object
 - Imagem
 - BLOB
 - Entity (i.e. cs. EmployeeEntity)
