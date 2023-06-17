@@ -3,7 +3,7 @@ id: operators
 title: Operadores
 ---
 
-An operator is a symbol or a group of symbols that you use to check, modify, or combine values. Já está familiarizado com muitos operadores. Por exemplo, `1 + 2` utiliza o operador de adição (ou sinal de mais) para adicionar dois números e o resultado é 3. Os operadores de comparação, como = ou >, permitem-lhe comparar dois ou mais valores.
+Um operador é um símbolo ou um grupo de símbolos que é utilizado para verificar, modificar ou combinar valores. Já está familiarizado com muitos operadores. Por exemplo, `1 + 2` utiliza o operador de adição (ou sinal de mais) para adicionar dois números e o resultado é 3. Os operadores de comparação, como = ou >, permitem-lhe comparar dois ou mais valores.
 
 A linguagem 4D suporta os operadores que talvez já conheça de outras linguagens como C ou JavaScript. No entanto, o operador de atribuição é `:=` para evitar que seja utilizado por engano quando se pretende utilizar o operador igual a (`=`). [Operadores básicos](#basic-operators) tais como operadores aritméticos (+, -, *, /, %...) e operadores de comparação (=, >, >=...) podem ser utilizados com números, mas também com tipos de dados booleanos, texto, data, hora, ponteiro ou imagem. Tal como JavaScript, a linguagem 4D suporta o conceito de [valores truthy e falsy](#truthy-and-falsy), que são usados em [operadores de curto-circuito](#short-circuit-operators).
 
@@ -69,26 +69,26 @@ São suportados os seguintes operadores de atribuição compostos:
 | Operador      | Sintaxe            | Assigns | Exemplo                                                                    |
 | ------------- | ------------------ | ------- | -------------------------------------------------------------------------- |
 | Adição        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                          |
-|               | Number += Number   | Número  | `$n+=5 //$n:=$n+5`                                                         |
+|               | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                         |
 |               | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                         |
 |               | Time += Time       | Hora    | `$t1+=$t2 //$t1:=$t1+$t2`                                                  |
-|               | Time += Number     | Número  | `$t1+=5 //$t1:=$t1+5`                                                      |
+|               | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                                      |
 |               | Picture += Picture | Imagem  | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                    |
 |               | Picture += Number  | Imagem  | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`        |
-| Subtração     | Number -= Number   | Número  | `$n-=5 //$n:=$n-5`                                                         |
+| Subtração     | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                         |
 |               | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                         |
 |               | Time -= Time       | Hora    | `$t1-=$t2 //$t1:=$t1-$t2`                                                  |
-|               | Time -= Number     | Número  | `$t1-=5 //$t1:=$t1-5`                                                      |
+|               | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                                      |
 |               | Picture -= Number  | Imagem  | `$p1-=5 //$p1:=$p1-5 (mover horizontalmente $p1 5 pixels para a esquerda)` |
-| Divisão       | Number /= Number   | Número  | `$n/=5 //$n:=$n/5`                                                         |
+| Divisão       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                         |
 |               | Time /= Time       | Hora    | `$t1/=$t2 //$t1:=$t1/$t2`                                                  |
-|               | Time /= Number     | Número  | `$t1/=5 //$t1:=$t1/5`                                                      |
+|               | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                                      |
 |               | Picture /= Picture | Imagem  | `$p1/=$p2 //$p1:=$p1/$p2 (adicione $p2 ao fundo de $p1)`                   |
 |               | Picture /= Number  | Imagem  | `$p1/=5 //$p1:=$p1/5 (mover $p1 verticalmente 5 pixels)`                   |
 | Multiplicação | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                |
-|               | Number *= Number   | Número  | `$n*=5 //$n:=$n*5`                                                         |
+|               | Number *= Number   | Number  | `$n*=5 //$n:=$n*5`                                                         |
 |               | Time *= Time       | Hora    | `$t1*=$t2 //$t1:=$t1*$t2`                                                  |
-|               | Time *= Number     | Número  | `$t1*=5 //$t1:=$t1*5`                                                      |
+|               | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                                      |
 |               | Picture *= Number  | Imagem  | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 por 5)`                            |
 
 These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
