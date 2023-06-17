@@ -19,16 +19,16 @@ As vantagens da compilação são:
 ## Diferenças entre código interpretado e compilado
 Apesar de aplicações funcionarem da mesma forma em modo compilado e interpretado, há diferenças quando escrever código que será compilado. O 4D interpreter é mais flexível que o compilador.
 
-| Compilado                                                                                                                                                                              | Interpretado                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Não pode ter um método com o mesmo nome que uma variável.                                                                                                                              | Nenhum erro é gerado, mas prioridade é dada ao método                               |
-| Todas as variáveis devem ser digitadas, seja através de uma diretiva do compilador (ex: `C_LONGINT`), ou pelo compilador no momento da compilação.                                     | As variáveis podem ser digitadas no momento (mas não é recomendado)                 |
-| Não é possível alterar o tipo de dados de qualquer variável ou array.                                                                                                                  | É possível alterar o tipo de dados de uma variável ou de um array (não recomendado) |
-| Não é possível mudar um array unidimensional para um array bidimensional ou mudar um array bidimensional para uma array unidimensional.                                                | Possível                                                                            |
-| Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form. |                                                                                     |
-| A função `Undefined` retorna sempre False para variáveis. As variáveis são sempre definidas.                                                                                           |                                                                                     |
-| If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.                | Preemptive process properties are ignored                                           |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                           | É sempre possível interromper 4D                                                    |
+| Compilado                                                                                                                                                                                            | Interpretado                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Não pode ter um método com o mesmo nome que uma variável.                                                                                                                                            | Nenhum erro é gerado, mas prioridade é dada ao método                               |
+| Todas as variáveis devem ser digitadas, seja através de uma diretiva do compilador (ex: `C_LONGINT`), ou pelo compilador no momento da compilação.                                                   | As variáveis podem ser digitadas no momento (mas não é recomendado)                 |
+| Não é possível alterar o tipo de dados de qualquer variável ou array.                                                                                                                                | É possível alterar o tipo de dados de uma variável ou de um array (não recomendado) |
+| Não é possível mudar um array unidimensional para um array bidimensional ou mudar um array bidimensional para uma array unidimensional.                                                              | Possível                                                                            |
+| Embora o compilador vá digitar a variável por você, deve especificar o tipo de dados de uma variável utilizando as directivas do compilador quando o tipo de dados for ambíguo, como num formulário. |                                                                                     |
+| A função `Undefined` retorna sempre False para variáveis. As variáveis são sempre definidas.                                                                                                         |                                                                                     |
+| Se tiver marcado a propriedade "Pode ser executado em processos preemptivos" para o método, o código não deve chamar quaisquer comandos thread-unsafe ou outros métodos thread-unsafe.               | As propriedades do processo preemptivo são ignoradas                                |
+| O comando `IDLE` é necessário para chamar 4D em loops específicos                                                                                                                                    | É sempre possível interromper 4D                                                    |
 
 ## Utilização de directivas de compilação com o Intérprete
 
@@ -47,11 +47,11 @@ and elsewhere in the database, you write:
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted *prior* to the assignment statement.
+Neste exemplo, `MyInt` é atribuído ao mesmo valor (3) nos modos interpretado e compilado, desde que a diretiva do compilador seja interpretada *antes* da instrução de atribuição.
 
-The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
+O interpretador 4D usa as diretivas do compilador para digitar variáveis. Quando o intérprete encontra uma diretiva do compilador, digita a variável de acordo com a diretiva. Se uma expressão subsequente tentar atribuir um valor incorreto (por exemplo, atribuir um valor alfanumérico a uma variável numérica), a atribuição não será efectuada e gerará um erro.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.
+The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. O intérprete, porém, não é sistemático. Interpreta as instruções pela ordem em que são executadas. Esta ordem, como é óbvio, pode mudar de sessão para sessão, dependendo do que o utilizador faz. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.
 
 
 ## Utilizar ponteiros para evitar redigitar
