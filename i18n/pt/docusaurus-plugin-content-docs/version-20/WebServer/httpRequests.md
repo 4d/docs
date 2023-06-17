@@ -219,7 +219,7 @@ End if
 
 
 
-## Getting values from HTTP requests
+## Obter valores de pedidos HTTP
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
 
