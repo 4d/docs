@@ -194,20 +194,20 @@ Para mais informações, consulte [Toolbar](../code-editor/write-class-method.md
 
 #### Na caixa de diálogo Executar método
 
-**On selection**: All occurrences are highlighted when the text is selected
+Quando selecionar o comando **Method...** do menu **Run**,  exibe o diálogo **Execute Method** .
 
 Esta caixa de diálogo lista todos os métodos de projecto da base de dados, incluindo métodos de projecto partilhados de componentes. Por outro lado, os métodos de projecto que foram declarados invisíveis não aparecerão.
 
 Para executar um método projeto, basta selecionar o seu nome na lista e clicar em **Executar**. Para executar um método passo a passo no modo Debug, clique em **Debug**. Para mais informações sobre o depurador 4D, consulte a secção [Debugging](../Debugging/basics.md).
 
-Se você marcar a caixa de seleção **Novo processo**, o método selecionado será executado em outro processo. If the method is performing a time-consuming task such as printing a large set of records, you can continue to work with your database, adding records to a table, creating a graph to display data, and so on. For more information about processes, refer to [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) the 4D *Language Reference* manual.
+Se você marcar a caixa de seleção **Novo processo**, o método selecionado será executado em outro processo. Se o método estiver executando uma tarefa demorada, como a impressão de um grande conjunto de registos, pode continuar trabalhando com a base de dados, adicionando registos a uma tabela, criando um gráfico para apresentar dados, etc. Para mais informações sobre processos, consulte [Processos](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) o manual 4D *Language Reference* .
 
 **None**: No signaling
 
-- If you want the method to be executed on the server machine rather than on the client machine, select the **On 4D Server** option in the To be executed menu. In this case, a new process, call a *stored procedure*, is created on the server machine in order to execute the method. Essa opção pode ser usada para reduzir o tráfego de rede e otimizar o funcionamento do 4D Server, em particular para métodos que chamam dados armazenados no disco. Todos os tipos de métodos podem ser executados na máquina servidor ou noutra máquina cliente, excepto os que modificam a interface do utilizador. Neste caso, os procedimentos armazenados são ineficazes.
-- Também pode optar por executar o método noutra estação de trabalho cliente. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
+- Se quiser que o método seja executado na máquina do servidor e não na máquina do cliente, selecione a opção **On 4D Server** no menu To be executed. Neste caso, é criado um novo processo, chamado *stored procedure*, na máquina do servidor para executar o método. Essa opção pode ser usada para reduzir o tráfego de rede e otimizar o funcionamento do 4D Server, em particular para métodos que chamam dados armazenados no disco. Todos os tipos de métodos podem ser executados na máquina servidor ou noutra máquina cliente, excepto os que modificam a interface do utilizador. Neste caso, os procedimentos armazenados são ineficazes.
+- Também pode optar por executar o método noutra estação de trabalho cliente. Outras estações de trabalho clientes não aparecerão no menu, a menos que tenham sido previamente "registadas" (para mais informações, consulte a descrição do [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
 
-By default, the **locally** option is selected. With the 4D single-user version, this is the only option available.
+Por predefinição, a opção **locally** está seleccionada. Com a versão 4D para um único utilizador, esta é a única opção disponível.
 
 ## Métodos associados aos objetos
 
