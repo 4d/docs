@@ -198,9 +198,9 @@ Para mais informações, consulte [Toolbar](../code-editor/write-class-method.md
 
 Esta caixa de diálogo lista todos os métodos de projecto da base de dados, incluindo métodos de projecto partilhados de componentes. Por outro lado, os métodos de projecto que foram declarados invisíveis não aparecerão.
 
-To execute a project method, simply select its name in the list and click on **Execute**. To run a method step by step in Debug mode, click on **Debug**. For more information about the 4D debugger, refer to the [Debugging](../Debugging/basics.md) section.
+Para executar um método projeto, basta selecionar o seu nome na lista e clicar em **Executar**. Para executar um método passo a passo no modo Debug, clique em **Debug**. Para mais informações sobre o depurador 4D, consulte a secção [Debugging](../Debugging/basics.md).
 
-If you check the **New Process** check box, the method you selected executes in another process. If the method is performing a time-consuming task such as printing a large set of records, you can continue to work with your database, adding records to a table, creating a graph to display data, and so on. For more information about processes, refer to [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) the 4D *Language Reference* manual.
+Se você marcar a caixa de seleção **Novo processo**, o método selecionado será executado em outro processo. If the method is performing a time-consuming task such as printing a large set of records, you can continue to work with your database, adding records to a table, creating a graph to display data, and so on. For more information about processes, refer to [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) the 4D *Language Reference* manual.
 
 **None**: No signaling
 
