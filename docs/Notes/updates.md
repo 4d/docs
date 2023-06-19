@@ -268,7 +268,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
 |ICU|72.1|20|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
-|CEF|109|20 R2|Chromium 5672|
+|CEF|113|20 R2|Chromium 5672|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
 |SpreadJS|16.0.4|20|4D View Pro engine|
