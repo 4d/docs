@@ -265,18 +265,19 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 
 
 
-| Librería  | Versión actual | Actualizado en 4D | Comentario                                                                                                                                                                                 |
-| --------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ICU       | 72.1           | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                                                                              |
-| CEF       | 109            | 20                | Chromium 5414. Las políticas CORS ahora también se aplican cuando se accede a archivos en disco (ver el párrafo "seguridad" sobre áreas web en la sección [4D v19 R5](#4d-v19-r5) arriba). |
-| Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                                                  |
-| PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                                                                                             |
-| SpreadJS  | 16.0.4         | 20                | Motor 4D View Pro                                                                                                                                                                          |
-| OpenSSL   | 3.1            | 20 R2             |                                                                                                                                                                                            |
-| libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                                                     |
-| LZMA      | 5.4.1          | 20                |                                                                                                                                                                                            |
-| Zlib      | 1.2.13         | 20                |                                                                                                                                                                                            |
-| webKit    | WKWebView      | 19                |                                                                                                                                                                                            |
-| PHP       | 8.2.4          | 20                |                                                                                                                                                                                            |
-| libldap   | 2.4.48         | 18 R2             |                                                                                                                                                                                            |
+| Librería  | Versión actual | Actualizado en 4D | Comentario                                                                                                    |
+| --------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
+| ICU       | 72.1           | 20                | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
+| CEF       | 109            | 20 R2             | Chromium 5672                                                                                                 |
+| Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
+| PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                |
+| SpreadJS  | 16.0.4         | 20                | Motor 4D View Pro                                                                                             |
+| OpenSSL   | 3.1.1          | 20                |                                                                                                               |
+| libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
+| LZMA      | 5.4.1          | 20                |                                                                                                               |
+| Zlib      | 1.2.13         | 20                |                                                                                                               |
+| webKit    | WKWebView      | 19                |                                                                                                               |
+| PHP       | 8.2.4          | 20                |                                                                                                               |
+| libldap   | 2.4.48         | 18 R2             |                                                                                                               |
+| libsasl   | 2.1.28         | 20                |                                                                                                               |
 
