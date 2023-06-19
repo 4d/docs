@@ -1,6 +1,6 @@
 ---
 id: architecture
-title: Architecture of a 4D project
+title: Arquitectura de um projecto 4D
 ---
 
 A 4D project is made of several folders and files, stored within a single parent database folder (package folder). Por exemplo:
@@ -64,9 +64,9 @@ Project development file, used to designate and launch the project. Esse arquivo
 
 #### Pasta DatabaseMethods
 
-| Conteúdos                | Descrição                                                     | Formato |
-| ------------------------ | ------------------------------------------------------------- | ------- |
-| *databaseMethodName*.4dm | Database methods defined in the database. One file per method | text    |
+| Conteúdos                | Descrição                                                                      | Formato |
+| ------------------------ | ------------------------------------------------------------------------------ | ------- |
+| *databaseMethodName*.4dm | Database methods defined in the database. Um ficheiro por método base de dados | text    |
 
 #### Pasta Methods
 
@@ -86,7 +86,7 @@ Project development file, used to designate and launch the project. Esse arquivo
 | ----------------------------------------- | ------------------------------------------- | ------- |
 | *formName*/form.4DForm                    | Descrição do formulário projeto             | json    |
 | *formName*/method.4dm                     | Método formulário projecto                  | text    |
-| *formName*/Images/*pictureName*           | Project form static picture                 | picture |
+| *formName*/Images/*pictureName*           | Imagem estática do formulário projeto       | picture |
 | *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. One file per object method | text    |
 
 #### Pasta TableForms
@@ -122,7 +122,7 @@ Within these folders, deleted element names are in parentheses, e.g. "(myMethod)
 
 ### DerivedData folder
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
+The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. Você pode ignorar essa pasta.
 
 ## Pasta Resources
 

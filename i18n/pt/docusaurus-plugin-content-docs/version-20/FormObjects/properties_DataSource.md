@@ -111,7 +111,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 ## Tipo de dados
 
-Defines the data type for the displayed expression. This property is used with:
+Defines the data type for the displayed expression. Esta propriedade é utilizada com:
 
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list).
 - Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
@@ -132,12 +132,12 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ## Tipo de dados (lista)
 
-Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). This property is used with:
+Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). Esta propriedade é utilizada com:
 
 - the [Choice List](properties_DataSource.md#choice-list) JSON property
 - Drop-down lists [associated to a hierarchical choice list](dropdownList_Overview.md#using-a-hierarchical-choice-list).
 
-Three options are available:
+Estão disponíveis três opções:
 
 - **Save as Reference**: the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the `APPEND TO LIST` or `SET LIST ITEM` commands, or in the lists editor.
 - **Save as Value** (default option): the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.

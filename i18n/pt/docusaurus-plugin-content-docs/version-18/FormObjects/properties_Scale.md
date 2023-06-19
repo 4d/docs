@@ -55,7 +55,7 @@ Scale display measurement.
 
 Specifies the location of an object's displayed text.
 
-* None - no label is displayed
+* Nenhum - não é apresentada qualquer etiqueta
 * Top - Displays labels to the left of or above an indicator
 * Bottom - Displays labels to the right of or below an indicator
 

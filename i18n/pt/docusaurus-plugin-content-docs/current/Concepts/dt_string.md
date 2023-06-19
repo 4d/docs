@@ -8,9 +8,9 @@ String é um termo genérico que significa:
 - Campos ou variáveis texto: um campo, uma variável ou uma expressão texto pode conter de 0 a 2 GB de texto.
 - Campos alfanuméricos: um campo alfanumérico pode conter de 0 a 255 caracteres (limite estabelecido aquando da definição do campo).
 
-## String literals
+## Constantes literais String
 
-A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
+Uma constante string é colocada entre aspas duplas e rectas ("..."). Eis alguns exemplos:
 
 ```4d
 "Adicionar registos"
@@ -18,7 +18,7 @@ A string literal is enclosed in double, straight quotation marks ("..."). Here a
 "Fatura "
 ```
 
-An empty string is specified by two quotation marks with nothing between them ("").
+Uma cadeia vazia é especificada por duas aspas sem nada entre elas ("").
 
 ### Escape sequences
 
@@ -121,7 +121,7 @@ If you want to execute comparisons or queries using @ as a character (and not as
 ($vsValue[[Length($vsValue)]]="@")
 ```
 
-The following expression will be evaluated correctly:
+A seguinte expressão será avaliada correctamente:
 
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
@@ -145,7 +145,7 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
 > - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 > - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
-## Character Reference Symbols
+## Símbolos de referência de caracteres
 
 The character reference symbols: [[...]]
 
@@ -162,7 +162,7 @@ End if
 Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Por exemplo:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//O exemplo a seguir testa se o último caractere de vtText é um sinal de At "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...

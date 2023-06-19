@@ -86,7 +86,7 @@ The font theme property designates an automatic style name. Automatic styles det
 
 - a plataforma,
 - a língua do sistema,
-- and the type of form object.
+- e o tipo de objeto do formulário.
 
 With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
 
@@ -156,7 +156,7 @@ Designates the font color.
 The color can be specified by:
 
 - a color name - like "red"
-- a HEX value - like "#ff0000"
+- um valor HEX - como "#ff0000"
 - an RGB value - like "rgb(255,0,0)"
 
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.

@@ -15,7 +15,7 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 The main 4D web server can be started in different ways:
 
-*   Using a button/menu command.
+*   Utilizar um botão/comando de menu.
     *   4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
     *   4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 
@@ -212,11 +212,11 @@ The following table lists the fields available for each format (in alphabetical 
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                      |
-| STATUS         | X   | X   | Reply provided by the server                                                                                                |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                            |
 | TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                          |
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                                                                              |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
-| URL            |     | X   | URL requested by the client                                                                                                 |
+| URL            |     | X   | URL solicitado pelo cliente                                                                                                 |
 
 > Dates and times are given in GMT.
 

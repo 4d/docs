@@ -89,7 +89,7 @@ An entity selection is an object. When querying the datastore, an entity selecti
 An entity selection contains:
 
 * a set of 0 to X entity references,
-* a length property (always),
+* uma propriedade length (sempre),
 * queryPlan and queryPath properties (if asked while querying).
 
 An entity selection can also be empty.

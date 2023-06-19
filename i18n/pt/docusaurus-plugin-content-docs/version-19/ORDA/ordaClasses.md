@@ -213,7 +213,7 @@ C_BOOLEAN($0)
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Em seguida, pode chamar este código:
 
 ```4d
 var $cityManager; $city : Object

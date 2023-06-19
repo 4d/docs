@@ -674,7 +674,7 @@ The whole procedure is described in the following diagram:
 
 ![](../assets/en/Desktop/client-connect.png)
 
-### Storing the last server path
+### Armazenar o último caminho do servidor
 
 The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
 

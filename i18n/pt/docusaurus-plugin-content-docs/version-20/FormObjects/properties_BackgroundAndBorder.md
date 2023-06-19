@@ -20,7 +20,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 ---
 
-## Background Color / Fill Color
+## Cor de fundo / Cor de preenchimento
 
 Defines the background color of an object.
 
@@ -122,7 +122,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 Designates the color of the object's lines. The color can be specified by:
 
 * a color name - like "red"
-* a HEX value - like "#ff0000"
+* um valor HEX - como "#ff0000"
 * an RGB value - like "rgb(255,0,0)"
 
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
@@ -215,4 +215,4 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### Veja também
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Cor de fundo / Cor de preenchimento](#background-color-fill-color)

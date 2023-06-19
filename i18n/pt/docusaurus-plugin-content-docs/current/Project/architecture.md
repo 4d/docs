@@ -69,9 +69,9 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `DatabaseMethods`
 
-| Conteúdos                | Descrição                                                     | Formato |
-| ------------------------ | ------------------------------------------------------------- | ------- |
-| *databaseMethodName*.4dm | Métodos de projeto definidos na database. One file per method | text    |
+| Conteúdos                | Descrição                                                                      | Formato |
+| ------------------------ | ------------------------------------------------------------------------------ | ------- |
+| *databaseMethodName*.4dm | Métodos de projeto definidos na database. Um ficheiro por método base de dados | text    |
 
 #### `Página Métodos`
 
@@ -92,7 +92,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 | ----------------------------------------- | ------------------------------------------- | ------- |
 | *formName*/form.4DForm                    | Descrição do formulário projeto             | json    |
 | *formName*/method.4dm                     | Método formulário projecto                  | text    |
-| *formName*/Images/*pictureName*           | Project form static picture                 | picture |
+| *formName*/Images/*pictureName*           | Imagem estática do formulário projeto       | picture |
 | *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. One file per object method | text    |
 
 #### `TableForms`
@@ -130,7 +130,7 @@ Within these folders, deleted element names are in parentheses, e.g. "(myMethod)
 
 ### `DerivedData`
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
+The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. Você pode ignorar essa pasta.
 
 ## `Libraries folder`
 

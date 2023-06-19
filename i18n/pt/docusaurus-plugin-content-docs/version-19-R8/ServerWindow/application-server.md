@@ -15,7 +15,7 @@ The upper part of the page provides information about the current status of the 
 - **Starting time**: Date and time the application server was launched. This date corresponds to the opening of the project by 4D Server.
 - **Uptime**: Time elapsed since last opening of the project by the server.
 
-## Accept/Reject New Connections
+## Aceitar/Rejeitar novas ligações
 
 This button toggles and can be used to manage the access of new desktop client machines to the application server.
 

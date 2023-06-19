@@ -254,7 +254,7 @@ Mecanismos automáticos são operacionais: os arquivos XLIFF encontrados na past
 
 In a host database containing one or more components, each component as well as the host databases has its own “resources string.” Resources are partitioned between the different databases: it is not possible to access the resources of component A from component B or the host database.
 
-## On-line help for components
+## Ajuda on-line para componentes
 
 A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D databases:
 

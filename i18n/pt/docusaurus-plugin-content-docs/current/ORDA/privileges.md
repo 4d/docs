@@ -29,7 +29,7 @@ You can assign specific permission actions to the following exposed resources in
 - the datastore
 - uma classe de dados
 - an attribute (including computed and alias)
-- a data model class function
+- uma função de classe de modelo de dados
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
@@ -50,7 +50,7 @@ Available actions are related to target resource.
 | **update**   | Update attributes in any dataclass.                                                  | Update attributes in this dataclass.                                                                                                            | Update this attribute content (ignored for alias attributes).                                                         | n/a                                                                                                                                                                                                                                                                      |
 | **drop**     | Delete data in any dataclass.                                                        | Delete data in this dataclass.                                                                                                                  | Delete a not null value for this attribute (except for alias and computed attribute).                                 | n/a                                                                                                                                                                                                                                                                      |
 | **execute**  | Execute any function on the project (datastore, dataclass, entity selection, entity) | Execute any function on the dataclass. Dataclass functions, entity functions, and entity selection functions are handled as dataclass functions | n/a                                                                                                                   | Executar esta função                                                                                                                                                                                                                                                     |
-| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                    | This dataclass is available in the /rest/$catalog API                                                                                           | This attribute is available in the /rest/$catalog API.                                                                | This dataclass function is available in the /rest/$catalog API                                                                                                                                                                                                           |
+| **describe** | Todas as classes de dados estão disponíveis na /rest/$catalog API                    | This dataclass is available in the /rest/$catalog API                                                                                           | This attribute is available in the /rest/$catalog API.                                                                | Esta função de classe de dados está disponível na API /rest/$catalog                                                                                                                                                                                                     |
 | **promote**  | n/a                                                                                  | n/a                                                                                                                                             | n/a                                                                                                                   | Associates a given privilege during the execution of the function. The privilege is temporary added to the session and removed at the end of the function execution. By security, only the process executing the function is added the privilege, not the whole session. |
 
 **Notas:**
@@ -105,7 +105,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 
 
-## `roles.json` file
+## ficheiro `roles.json`
 
 
 The `roles.json` file describes the whole security settings for the project.
@@ -128,7 +128,7 @@ The `roles.json` file syntax is the following:
 |                     | \[].role       |               | String                             |             | Role name                                                                    |
 |                     | \[].privileges |               | Coleção de strings                 |             | List of included privilege names                                             |
 | permissions         |                 |               | Objeto                             | X           | Lista de acções permitidas                                                   |
-|                     | allowed         |               | Collection of `permission` objects |             | List of allowed permissions                                                  |
+|                     | allowed         |               | Collection of `permission` objects |             | Lista de permissões permitidas                                               |
 |                     |                 | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                         |
 |                     |                 | \[].type     | String                             | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
 |                     |                 | \[].read     | Coleção de strings                 |             | Lista de privilégios                                                         |

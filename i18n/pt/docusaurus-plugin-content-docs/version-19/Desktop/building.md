@@ -599,7 +599,7 @@ The connection procedure for merged client applications supports cases where the
   * If the user clicks on the **Quit** button, the client application quits.
 * If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
 
-### Storing the last server path
+### Armazenar o último caminho do servidor
 
 The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
 

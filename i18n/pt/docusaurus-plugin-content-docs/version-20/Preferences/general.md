@@ -43,7 +43,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 
 ![](../assets/en/Preferences/general4.png)
 
-Three options are available:
+Estão disponíveis três opções:
 
 *   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
 *   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
@@ -55,7 +55,7 @@ This menu lets you select the color scheme to use for the **4D development** env
 
 > You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
 
-Three options are available:
+Estão disponíveis três opções:
 
 *   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
 *   **Light**: Use the Light Theme
@@ -125,7 +125,7 @@ You can define the default contents of the `.gitignore` file by clicking the pen
 
 The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
 
-### Language of text comparison
+### Linguagem de comparação de texto
 
 This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
 

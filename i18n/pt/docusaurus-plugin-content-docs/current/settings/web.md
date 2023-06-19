@@ -9,7 +9,7 @@ Using the tabs on the **Web** page, you can configure various aspects of the int
 
 ### Informações de publicação
 
-#### Launch Web Server at Startup
+#### Iniciar o servidor Web no arranque
 
 Indicates whether the Web server will be launched on startup of the 4D application. This option is described in the [Web server administration](../WebServer/webServerAdmin.md#starting-the-4d-web-server) section.
 
@@ -135,7 +135,7 @@ Allows you to set the maximum timeout before closing for inactive Web processes 
 
 ### Palavras-passe Web
 
-Set the authentication system that you want to apply to your Web server. Three options are proposed:
+Set the authentication system that you want to apply to your Web server. São propostas três opções:
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
@@ -164,7 +164,7 @@ See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections
 
 Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
 
-#### Domain names/HTTP methods allowed
+#### Nomes de domínio/Métodos HTTP permitidos
 
 List of allowed hosts and methods for the CORS service. See [CORS Settings](../WebServer/webServerConfig.md#cors-settings).
 
@@ -196,7 +196,7 @@ The log format menu provides the following options:
 > The date and time are local to the server.
 
 -   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
--   state: reply given by the server.
+-   estado: resposta dada pelo servidor.
 -   length: size of the data returned (except the HTTP header) or 0.
 
 > **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
@@ -236,12 +236,12 @@ The following table lists the fields available for each format (in alphabetical 
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
-| STATUS         | X   | X   | Reply provided by the server                                               |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                           |
 | TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                         |
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
 |                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
-| URL            |     | X   | URL requested by the client                                                |
+| URL            |     | X   | URL solicitado pelo cliente                                                |
 
 > Dates and times are given in GMT.
 

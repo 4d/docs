@@ -45,7 +45,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 
 ![](../assets/en/Preferences/general4.png)
 
-Three options are available:
+Estão disponíveis três opções:
 
 * **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
 * **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
@@ -78,7 +78,7 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Language of text comparison
+### Linguagem de comparação de texto
 
 This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
 

@@ -83,7 +83,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Table** (submenu): Field names of the table selected using the submenu.
 - **Current table**: Field names of the current table (available in triggers, form methods and object methods).
 - **Project forms**: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
-- **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. For example: [Table];"Form".
+- **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. Por exemplo: [Table]; "Form".
 - **Methods**: Database project method names.
 - **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.
 - **Folders** (submenu): Contents of the folder selected using the submenu.
@@ -215,9 +215,9 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
 | Plataforma  | Copy selected text to a clipboard    | Paste contents of a clipboard at cursor location |
 | ----------- | ------------------------------------ | ------------------------------------------------ |
-| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+click on clipboard icon                     |
+| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+clique no ícone da área de transferência    |
 |             |                                      | Ctrl+número do clipboard                         |
-| **macOS**   | Shift or Alt+click on clipboard icon | Cmd+click on clipboard icon                      |
+| **macOS**   | Shift or Alt+click on clipboard icon | Cmd+clique no ícone da área de transferência     |
 |             | Cmd+Shift+clipboard number           | Cmd+clipboard number                             |
 
 You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.

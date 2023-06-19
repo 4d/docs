@@ -45,7 +45,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 | Fórmulas | Formula calculation and library |        X         |                 X                 |
 | Dados    | Data manipulation               |        X         |                 X                 |
 | Mostrar  | Apresentação visual             |        X         |                 X                 |
-| Settings | Sheet presentation reference    |        X         |                                   |
+| Settings | Presentação da folha            |        X         |                                   |
 
 ## Eventos formulário
 
@@ -143,13 +143,13 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 | @          | Formatador de texto. Applies the format to all text in the cell                                                                                                                                                            | "\[Red]@" applies the red font color for text values.                                                                     |
 | *          | Repeats the next character to fill the column width.                                                                                                                                                                       | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
 | " "        | Displays the text within the quotes without interpreting it.                                                                                                                                                               | "8%" will display as: 8%                                                                                                   |
-| %          | Displays numbers as a percentage of 100.                                                                                                                                                                                   | 8% will be displayed as .08                                                                                                |
-| \#       | Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                        | #.# will display 1.54 as 1.5                                                                                               |
+| %          | Displays numbers as a percentage of 100.                                                                                                                                                                                   | 8% será exibido como 0,08                                                                                                  |
+| \#       | Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                        | #.# mostrará 1.54 como 1.5                                                                                                 |
 | ?          | Digit placeholder that leaves space for extra zeros, but does not display them. Typically used to align numbers by decimal point.                                                                                          | $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                               |
-| \         | Displays the character following it.                                                                                                                                                                                       | #.00\? will display 123 as 123.00?                                                                                        |
-| /          | When used with numbers, displays them as fractions. When used with text, date or time codes, displayed "as-is".                                                                                                            | #/# will display .75 as 3/4                                                                                                |
-| \[ ]      | Creates conditional formats.                                                                                                                                                                                               | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                        |
-| E          | Scientific notation format.                                                                                                                                                                                                | #E+# - will display 1,500,500 as 2E+6                                                                                      |
+| \         | Displays the character following it.                                                                                                                                                                                       | #.00\? mostrará 123 como 123.00?                                                                                          |
+| /          | When used with numbers, displays them as fractions. When used with text, date or time codes, displayed "as-is".                                                                                                            | #/# mostrará .75 como 3/4                                                                                                  |
+| \[ ]      | Cria formatos condicionais.                                                                                                                                                                                                | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                        |
+| E          | Formato notação científica.                                                                                                                                                                                                | #E+# - will display 1,500,500 as 2E+6                                                                                      |
 | \[color]  | Formats the text or number in the color specified                                                                                                                                                                          | \[Green]###.##\[Red]-###.###                                                                                             |
 
 #### Exemplo
@@ -180,7 +180,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 //Set the cell value as specific date and time VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
 ```
 
-### Custom date and time formats
+### Formatos data e hora personalizados
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
@@ -192,7 +192,7 @@ To create your own date and time patterns, in your current localization, you can
 |      | mmm                                                       | Nome do mês, abreviado                          | Jan                  |
 |      | mmmm                                                      | Nome do mês, long                               | January              |
 |      | d                                                         | Day number without leading zero                 | 1                    |
-|      | dd                                                        | Day number with leading zero                    | 01                   |
+|      | dd                                                        | Número do dia com zero à esquerda               | 01                   |
 |      | ddd                                                       | Dia da semana, curto                            | Tue                  |
 |      | dddd                                                      | Dia da semana, longo                            | Tuesday              |
 |      | yy                                                        | Ano, breve                                      | 19                   |
@@ -372,12 +372,12 @@ Scale attributes are used to specify printing optimization and adjustments.
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                          |
-| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                  |
-| showColumnHeader | inteiro longo | Column header print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean       | Prints the gridlines. Valor padrão = "false"                                                                                                                                       |
-| showRowHeader    | inteiro longo | Row headers print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`   |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                                            |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                                    |
+| showColumnHeader | inteiro longo | Column header print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`                   |
+| showGridLine     | boolean       | Prints the gridlines. Valor padrão = "false"                                                                                                                                                         |
+| showRowHeader    | inteiro longo | Parâmetros de impressão de cabeçalhos de linha. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
 
 ### Marca de água
 
@@ -387,7 +387,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 | ------------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | marca de água |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
 |               | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
-|               | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                            |
+|               | \[ ].imageSrc | picture &#124; text* | O texto/imagem da marca de água.                                                                                                                       |
 |               | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
 |               | \[ ].width    | inteiro longo        | The width of the watermark text / image.                                                                                                               |
 |               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
@@ -422,7 +422,7 @@ Exemplo:
  VP SET DEFAULT STYLE("myDoc";$style)
 ```
 
-#### Background & Foreground
+#### Fundo & Primeiro plano
 
 | Propriedade           | Tipo          | Descrição                                    | Valores possíveis                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------- | ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -433,11 +433,11 @@ Exemplo:
 
 #### Borders
 
-| Propriedade                                                                |       | Tipo          | Descrição                                                                           | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------- | ----- | ------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Defines the corresponding border line                                               |                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                            | color | text          | Defines the color of the border. Predefinição = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
-|                                                                            | style | inteiro longo | Defines the style of the border. Predefinição = vazio. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
+| Propriedade                                                                |       | Tipo          | Descrição                                                                               | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------- | ----- | ------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Defines the corresponding border line                                                   |                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                            | color | text          | Defines the color of the border. Predefinição = black.                                  | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
+|                                                                            | style | inteiro longo | Defines the style of the border. Predefinição = vazio. Não pode ser null ou indefinido. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
 #### Fontes e texto
 

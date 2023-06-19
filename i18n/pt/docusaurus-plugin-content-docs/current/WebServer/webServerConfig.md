@@ -6,7 +6,7 @@ title: Configuração
 The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.
 
 
-## Where to configure settings?
+## Onde configurar os parâmetros?
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
@@ -80,7 +80,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 List of allowed hosts and methods for the CORS service.
 
-#### Domain names (host property)
+#### Nomes de domínio
 
 Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
 
@@ -256,11 +256,11 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 
 ## Porta HTTP
 
-| Pode ser definido com              | Nome                                                         | Comentários |
-| ---------------------------------- | ------------------------------------------------------------ | ----------- |
-| webServer object                   | [`HTTPPort`](API/WebServerClass.md#httpport)                 | number      |
-| `WEB SET OPTION`                   | `Web port ID`                                                |             |
-| Caixa de diálogos de configurações | [Configuration page/HTTP Port](../settings/web.md#http-port) |             |
+| Pode ser definido com              | Nome                                                           | Comentários |
+| ---------------------------------- | -------------------------------------------------------------- | ----------- |
+| webServer object                   | [`HTTPPort`](API/WebServerClass.md#httpport)                   | number      |
+| `WEB SET OPTION`                   | `Web port ID`                                                  |             |
+| Caixa de diálogos de configurações | [Página Configuração/Porta HTTP](../settings/web.md#http-port) |             |
 
 Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
 
@@ -544,7 +544,7 @@ Path of web server root folder, i.e. the folder in which 4D will search for the 
 
 Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. If a requested URL or a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.
 
-By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time. The root folder is created:
+By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time. A pasta raiz é criada:
 - with 4D (local) and 4D Server, at the same level as the [Project folder](Project/architecture.md#project-folder).
 - with 4D in remote mode, in the local resources folder.
 
@@ -611,7 +611,7 @@ Value of the `SameSite` attribute value of the session cookie. This attribute al
 
 > For a detailed description of the `SameSite` attribute, please refer to the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) or [this web.dev page](https://web.dev/samesite-cookies-explained/).
 
-Three values are available:
+Há três valores disponíveis:
 
 - "Strict" (default `SameSite` attribute value for 4D session cookies): cookies will only be sent in the first-party context, i.e. context matching the domain of the current site, and never to third-party websites.
 - "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).

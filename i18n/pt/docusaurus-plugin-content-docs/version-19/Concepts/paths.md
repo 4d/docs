@@ -36,7 +36,7 @@ The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** 
 
 With this syntax:
 
-- folders are separated by "/"
+- as pastas são separadas por "/"
 - absolute pathnames start with a "/"
 - to move up one folder in a relative path, use "../" in front of the pathname (for security, you cannot move up the filesystem).
 

@@ -39,7 +39,7 @@ To delete an existing method or class, you can:
 > To delete an object method, choose **Clear Object Method** from the [Form editor](../FormEditor/formEditor.md) (**Object** menu or context menu).
 
 
-## Importing and exporting code
+## Importação e exportação de código
 
 You can import and export a method or a class code in the form of a file. These commands are found in the **Method** menu of the Code editor.
 

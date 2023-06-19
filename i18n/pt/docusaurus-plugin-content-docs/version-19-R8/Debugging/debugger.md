@@ -157,13 +157,13 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtema       | Descrição                                                    | Can the values be modified? |
-| ------------- | ------------------------------------------------------------ | --------------------------- |
-| Interprocesso | List of interprocess variables being used at this point      | Sim                         |
-| Processo      | List of process variables used by the current process        | Sim                         |
-| Local         | List of local variables used by the method being traced      | Sim                         |
-| Parâmetros    | List of parameters received by the method                    | Sim                         |
-| Self          | Pointer to the current object, when tracing an Object Method | Não                         |
+| Subtema       | Descrição                                                    | Os valores podem ser modificados? |
+| ------------- | ------------------------------------------------------------ | --------------------------------- |
+| Interprocesso | List of interprocess variables being used at this point      | Sim                               |
+| Processo      | List of process variables used by the current process        | Sim                               |
+| Local         | List of local variables used by the method being traced      | Sim                               |
+| Parâmetros    | List of parameters received by the method                    | Sim                               |
+| Self          | Pointer to the current object, when tracing an Object Method | Não                               |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 

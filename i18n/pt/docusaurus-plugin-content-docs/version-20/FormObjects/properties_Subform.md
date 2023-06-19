@@ -137,9 +137,9 @@ Specifies the table that the list subform belongs to (if any).
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                 |
-| ------ | ------------- | --------------------------------- |
-| tabela | string        | 4D table name, or "" if no table. |
+| Nome   | Tipo de dados | Valores possíveis                              |
+| ------ | ------------- | ---------------------------------------------- |
+| tabela | string        | Nome da tabela 4D, ou "" se não houver tabela. |
 
 #### Objectos suportados
 

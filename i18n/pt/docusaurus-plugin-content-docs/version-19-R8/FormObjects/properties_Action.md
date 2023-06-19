@@ -9,7 +9,7 @@ title: Ação
 
 Control whether and how the user can drag the object. By default, no drag operation is allowed.
 
-Two drag modes are available:
+Estão disponíveis dois modos de arrastamento:
 
 - **Custom**: In this mode, any drag operation performed on the object triggers the `On Begin Drag` form event in the context of the object. You then manage the drag action using a method.   
   In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.

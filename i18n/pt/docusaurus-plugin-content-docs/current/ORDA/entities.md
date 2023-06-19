@@ -172,7 +172,7 @@ You can assign or modify the value of a "1" related entity attribute from the "N
   //the related entity is updated
 ```
 
-## Creating an entity selection
+## Criar uma selecção de entidade
 
 You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
 

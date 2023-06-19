@@ -83,9 +83,9 @@ También se recogen algunos datos a intervalos regulares.
 | dataSegment1.diskReadCount  | Object | Número de lecturas en el archivo de datos                             |
 | dataSegment1.diskWriteCount | Object | Número de escrituras en el archivo de datos                           |
 | indexSegment.diskReadBytes  | Number | Number of bytes read in the index file                                |
-| indexSegment.diskWriteBytes | Number | Number of bytes written in the index file                             |
-| indexSegment.diskReadCount  | Number | Number of reads in the index file                                     |
-| indexSegment.diskWriteCount | Number | Number of writes in the index file                                    |
+| indexSegment.diskWriteBytes | Number | Número de bytes escritos en el archivo índice                         |
+| indexSegment.diskReadCount  | Number | Número de lecturas en el archivo índice                               |
+| indexSegment.diskWriteCount | Number | Número de escrituras en el archivo índice                             |
 
 
 
@@ -113,7 +113,7 @@ También se recogen algunos datos a intervalos regulares.
 
 | Datos                      | Tipo       | Notas                                                                              |
 | -------------------------- | ---------- | ---------------------------------------------------------------------------------- |
-| maximum4DClientConnections | Number     | Maximum number of 4D Client connections to the server                              |
+| maximum4DClientConnections | Number     | Número máximo de conexiones 4D Client al servidor                                  |
 | connectionSystems          | Collection | Client OS without the build number (in parenthesis) and number of clients using it |
 
 

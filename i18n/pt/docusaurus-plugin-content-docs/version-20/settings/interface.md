@@ -18,7 +18,7 @@ Click **Select...** to set the font and size for the characters used by the `MES
 
 The default font and its size depend on the platform where 4D is running.
 
-> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
+> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>a régua do editor de formulários</li>
 ### Display Windows
 
 Other options configure the display of various windows in the Application mode.

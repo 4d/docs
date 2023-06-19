@@ -35,10 +35,10 @@ The lower area of the window is used to display the graphic representation of th
 
 The activity of the process is the percentage of time that 4D Server has devoted to this process (ratio). The window provides the following information for each process:
 
-- Type of process (see below),
+- Tipo de processo (ver abaixo),
 - Sessão/Info:
     - Processo 4D - em branco,
-    - User process - 4D user name,
+    - Processo usuário - nome do usuário 4D,
     - Processo web - caminho URL,
 - Nome do processo,
 - Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
@@ -72,10 +72,10 @@ Each process is identified by an icon as well as a type. The color and form of t
 | ![](../assets/en/Admin/server-icon-19.png) | TCP connection listener                                                                                                                                                                             |
 | ![](../assets/en/Admin/server-icon-20.png) | Gestor de sessões TCP                                                                                                                                                                               |
 | ![](../assets/en/Admin/server-icon-21.png) | Outro processo                                                                                                                                                                                      |
-| ![](../assets/en/Admin/server-icon-22.png) | Worker process (cooperative)                                                                                                                                                                        |
+| ![](../assets/en/Admin/server-icon-22.png) | Processo worker (cooperativo)                                                                                                                                                                       |
 | ![](../assets/en/Admin/server-icon-23.png) | 4D client process (preemptive)                                                                                                                                                                      |
 | ![](../assets/en/Admin/server-icon-24.png) | Stored procedure (preemptive process)                                                                                                                                                               |
-| ![](../assets/en/Admin/server-icon-25.png) | Worker process (preemptive)                                                                                                                                                                         |
+| ![](../assets/en/Admin/server-icon-25.png) | Processo worker (apropriativo)                                                                                                                                                                      |
 
 > Each main 4D client process and its "twinned" 4D client base process are grouped together when the **Display processes by groups** option is checked.
 

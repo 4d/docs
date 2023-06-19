@@ -9,7 +9,7 @@ The **Maintenance** page of the 4D Server Administration window provides informa
 ![](../assets/en/Admin/server-maintenance.png)
 
 
-## Last verification/compacting
+## Última verificação/compactação
 
 These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
 
@@ -78,7 +78,7 @@ When the logs have been activated, the button title changes to **Stop Request an
 
 The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
 
-### Load logs configuration file
+### Carregar ficheiro de configuração dos registos
 
 This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 

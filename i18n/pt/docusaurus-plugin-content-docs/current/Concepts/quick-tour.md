@@ -243,7 +243,7 @@ Uma classe pode estender outra classe utilizando `Class extends <ClassName>`. Su
 
 ## Operadores
 
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. You are already familiar with many operators. You are already familiar with many operators.
+When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
 
 | Operador | Operação      | Exemplo   |
 | -------- | ------------- | --------- |
@@ -334,7 +334,7 @@ MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
 
 ```4d
-C_DATE(MyDate) //Tipo data para a variável MyDate
+$str:=String("hello world!")
 ```
 
 ```4d

@@ -120,9 +120,9 @@ QUERY([Clients];[Clients]Name="Smith")
 O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
 
 - O nome de uma variável tem de começar por uma letra, um sublinhado ou um dólar ("$") para os [parâmetros](parameters.md) e [variáveis locais](variables.md#local-variables), ou `<>` para as [variáveis interprocessos](variables.md#interprocess-variables).
-- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Pode usar um digito como primeiro caractere, mas isso não é recomendado e nem é compatível com a declaração de sintaxe [`var`](variables.md#using-the-var-keyword).
 - A partir daí, o nome pode incluir qualquer letra ou dígito e o carácter de sublinhado ("_").
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Pod eusar um caractere Espaço, mas isso não é recomendado nem compatível com a sintaxe de declaração [  `var` ](variables.md#using-the-var-keyword).
 - 4D identifica os nomes utilizados nos métodos em função na seguinte ordem de ordem de prioridade:
 - O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
 
@@ -136,7 +136,7 @@ $vsMyString:="Hello there"
 
 ## Outros nomes
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+Na linguagem 4D, vários elementos têm seus nomes manejados como strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
 
 O nome de um conjunto interprocesso pode ter até 255 caracteres, não incluindo os símbolos `<>`.
 

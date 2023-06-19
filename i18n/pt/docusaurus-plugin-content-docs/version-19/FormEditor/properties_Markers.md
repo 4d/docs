@@ -48,7 +48,7 @@ The Form Footer area is displayed on screen under the list of records. It is alw
 
 You make the Footer area smaller or larger.
 
-You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Active objects are accepted.
+You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. São aceites objectos activos.
 
 #### Gramática JSON
 

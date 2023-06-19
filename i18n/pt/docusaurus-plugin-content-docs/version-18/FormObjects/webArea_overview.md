@@ -167,7 +167,7 @@ For reasons related to window redrawing mechanisms, the insertion of a Web area 
 
 Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
 
-### Web plugins and Java applets
+### Plugins Web e applets Java
 
 The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
@@ -179,7 +179,7 @@ The URLs handled by programming in Web areas under macOS must begin with the pro
 
 You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
 
-### Displaying the Web inspector
+### Exibir o inspector Web
 
 The following conditions must be met in order to view the Web inspector in a Web area:
 

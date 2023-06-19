@@ -12,7 +12,7 @@ When you call this request for your project, you retrieve information in the fol
 | -------------- | ---------- | ----------------------------------------------------------------------------------- |
 | cacheSize      | Número     | 4D Server's cache size.                                                             |
 | usedCache      | Número     | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Número     | Number of entity selections.                                                        |
+| entitySetCount | Número     | Número de selecções de entidades.                                                   |
 | entitySet      | Collection | A collection in which each object contains information about each entity selection. |
 | ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
 | sessionInfo    | Collection | A collection in which each object contains information about each user session.     |

@@ -117,16 +117,16 @@ New documentation files are created with the following default contents:
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Linha                                               | Descrição                                                                                                                                            |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "\<!-- Type your summary here -->"       | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                     |
-| ## Description                                     | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Exemplo                                         | Heading level 2, you can use this area to show sample code                                                                                           |
-| \``` 4D <br/>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
+| Linha                                               | Descrição                                                                                                                                              |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "\<!-- Type your summary here -->"       | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                       |
+| ## Description                                     | Título de nível 2 em Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
+| ## Exemplo                                         | Heading level 2, you can use this area to show sample code                                                                                             |
+| \``` 4D <br/>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                            |
 
 ### Markdown suportado
 
-- The title tag is supported:
+- A etiqueta de título é suportada:
 
 ```
 # Title 1
@@ -150,7 +150,7 @@ C_TEXT($txt)
 $txt:="Hello world!"  
 \` ``
 
-- The table tag is supported:
+- A etiqueta de tabela é suportada:
 
 ```
 | Parameter | Type   | Description  |
