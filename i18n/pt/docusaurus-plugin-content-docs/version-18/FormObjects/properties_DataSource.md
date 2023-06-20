@@ -138,7 +138,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### Objectos suportados
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[Coluna List Box (apenas tipo array)](listbox_overview.md#list-box-columns)
 
 ---
 
