@@ -161,7 +161,7 @@ This folder contains **user settings files for data** used for database administ
 
 ### Pasta Logs
 
-The Logs folder contains all log files used by the project. Log files include, in particular:
+The Logs folder contains all log files used by the project. Os ficheiros de registo incluem, em particular:
 
 - conversão da base de dados,
 - pedidos do servidor Web,
