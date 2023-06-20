@@ -560,7 +560,7 @@ For example, the following code:
 <!--#4DENDLOOP-->
 ```
 
-...produces the following result:
+...produz o seguinte resultado:
 
 ```
 
