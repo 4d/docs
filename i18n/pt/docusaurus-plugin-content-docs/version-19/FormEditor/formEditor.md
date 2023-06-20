@@ -387,7 +387,7 @@ When you release the mouse button, the objects enclosed or touched by the rectan
 
 By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
 
-1. Select the Entry order mode, then
+1. Selecionar o modo ordem de entrada e, em seguida
 
 2. **shift-click** on the object
 
