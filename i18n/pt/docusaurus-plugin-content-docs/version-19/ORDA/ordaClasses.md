@@ -398,7 +398,7 @@ ORDA user classes have a different icon from regular classes. Empty classes are 
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
+To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. Por exemplo, para uma classe Entity:
 
 ```
 Class extends Entity
