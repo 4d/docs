@@ -269,7 +269,7 @@ Simply put, expressions return a value. In fact, when using the 4D language, you
 
 Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Inclui:
+As expressões raramente são "autónomas." There are several places in 4D where an expression can be used by itself. Inclui:
 
 - Formula editor (apply formula, query with formula, order by formula)
 - O comando `EXECUTE FORMULA`
