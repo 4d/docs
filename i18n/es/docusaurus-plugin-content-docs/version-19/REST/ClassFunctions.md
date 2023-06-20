@@ -443,11 +443,11 @@ En este ejemplo, asociamos una escuela existente a una entidad Students. La clas
 Class extends Entity
 
 exposed Function putToSchool()
- var $1, $school , $0, $status : Object
+    var $1, $school , $0, $status : Object
 
-  //$1 is a Schools entity
+  //$1 es una entidad Schools
  $school:=$1
-  //Associate the related entity school to the current Students entity
+  //Asocia la entidad relacionada "school" con la entidad actual "Students"
  This.school:=$school
 
  $status:=This.save()
