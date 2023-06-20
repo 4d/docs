@@ -56,7 +56,7 @@ The order in which the two statements appear is irrelevant to the compiler, beca
 
 ## Utilizar ponteiros para evitar redigitar
 
-Uma variável não pode ser redigida de novo. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Uma variável não pode ser redigida de novo. No entanto, é possível utilizar um ponteiro para fazer referência a variáveis de diferentes tipos de dados. Por exemplo, o seguinte código é permitido nos modos interpretado e compilado:
 
 ```4d
 C_POINTER($p)
@@ -74,7 +74,7 @@ $p:=->$age
 $p->:=55 //atribui um valor numérico
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+Imagine uma função que devolve o comprimento (número de caracteres) de valores que podem ser de qualquer tipo.
 
 ```4d
   // Calc_Length (how many characters)
