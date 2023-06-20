@@ -44,6 +44,7 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 - Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response).
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new *option* property allows you to control this validation.
+- TLS v1.0 and TLS v1.1 are deprecated, they are no longer supported as `Min TLS version` on 4D Server. Version 1.3 is now selected by default and version 1.2 is automatically used if `_o_TLSv1_0` or `_o_TLSv1_1` constants are set with [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
 - As of 4D v20, [4D for Mobile](https://developer.4d.com/go-mobile/) is no longer installed by default in the 4D environment. To benefit from the 4D for Mobile development features in 4D, you need to [install the 4D Mobile App component](https://developer.4d.com/go-mobile/docs/getting-started/installation) in the ["Components"](../Project/architecture.md#components) folder of your projects. If a converted project uses features from the [4D Mobile App Server component](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), make sure you also install it in the "Components" folder of the project.
 
 
@@ -260,11 +261,12 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | Hunspell   | 7.3.27       | 20               | Used for spell checking in 4D forms and 4D Write Pro                                                                                                               |
 | PDFWriter  | 4.3          | 20               | FreeType dependency in 12.2.1                                                                                                                                      |
 | SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                                                                                                  |
-| OpenSSL    | 1.1.1s       | 18 R6            |                                                                                                                                                                    |
+| OpenSSL    | 3.1.1        | 20               |                                                                                                                                                                    |
 | libZip     | 19.5         | 20               | Used by zip class, 4D Write Pro, svg and serverNet components                                                                                                      |
 | LZMA       | 5.4.1        | 20               |                                                                                                                                                                    |
 | Zlib       | 14.1.6       | 20               |                                                                                                                                                                    |
 | webKit     | WKWebView    | 19               |                                                                                                                                                                    |
 | PHP        | 8.2.4        | 20               |                                                                                                                                                                    |
 | libldap    | 2.4.48       | 18 R2            |                                                                                                                                                                    |
+| libsasl    | 2.1.28       | 20               |                                                                                                                                                                    |
 
