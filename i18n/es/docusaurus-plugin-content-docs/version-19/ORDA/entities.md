@@ -241,12 +241,12 @@ Ejemplos:
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
- //$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+ //$highSal es compartible debido a la búsqueda en dataClass
+$comp:=$highSal.employer //$comp es compartible porque $highSal es compartible
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
- //$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+ //$lowSal es modificable debido a copy()
+$comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
 ```
 
 #### Compartir una selección de entidades entre procesos (ejemplo)
