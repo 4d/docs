@@ -308,7 +308,7 @@ To distribute objects using the Align and Distribute dialog box:
 
 1. Select the objects you want to distribute.
 
-2. Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor. The following dialog box appears:![](../assets/en/FormEditor/alignmentAssistant.png)
+2. Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor. Aparece a seguinte caixa de diálogo:![](../assets/en/FormEditor/alignmentAssistant.png)
 
 3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png)(Standard horizontal distribution icon)The example area displays the results of your selection.![](../assets/en/FormEditor/horizontalDistribution.png) <p>(Standard horizontal distribution icon)</p>The example area displays the results of your selection.
 
@@ -392,7 +392,7 @@ When you release the mouse button, the objects enclosed or touched by the rectan
 
 By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
 
-1. Select the Entry order mode, then
+1. Selecionar o modo ordem de entrada e, em seguida
 
 2. **shift-click** on the object
 
