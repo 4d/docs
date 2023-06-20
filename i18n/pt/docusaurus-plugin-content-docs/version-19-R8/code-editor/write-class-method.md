@@ -213,12 +213,12 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
-| Plataforma  | Copy selected text to a clipboard    | Paste contents of a clipboard at cursor location |
-| ----------- | ------------------------------------ | ------------------------------------------------ |
-| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+clique no ícone da área de transferência    |
-|             |                                      | Ctrl+número do clipboard                         |
-| **macOS**   | Shift or Alt+click on clipboard icon | Cmd+clique no ícone da área de transferência     |
-|             | Cmd+Shift+clipboard number           | Cmd+clipboard number                             |
+| Plataforma  | Copiar texto selecionado para uma área de transferência | Paste contents of a clipboard at cursor location |
+| ----------- | ------------------------------------------------------- | ------------------------------------------------ |
+| **Windows** | Shift or Alt+click on clipboard icon                    | Ctrl+clique no ícone da área de transferência    |
+|             |                                                         | Ctrl+número do clipboard                         |
+| **macOS**   | Shift or Alt+click on clipboard icon                    | Cmd+clique no ícone da área de transferência     |
+|             | Cmd+Shift+clipboard number                              | Cmd+clipboard number                             |
 
 You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.
 
@@ -279,7 +279,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
-- type a dot "." after an object or
+- digite um ponto "." depois de um objeto ou
 - use the Tab key after a dereferenced object pointer "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
