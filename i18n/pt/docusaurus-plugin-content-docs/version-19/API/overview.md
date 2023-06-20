@@ -24,7 +24,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
 
-| Nome                                                                                                          | Número |
+| Nome                                                                                                          | Number |
 | ------------------------------------------------------------------------------------------------------------- | ------ |
 | [`4D`](https://doc.4d.com/4dv19/help/command/en/page1709.html)                                                | 1709   |
 | <a name="A">**A**</a>                                                                                     |        |
