@@ -84,7 +84,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 | dataSegment1.diskWriteCount | Object | Número de escritas no ficheiro de dados                                     |
 | indexSegment.diskReadBytes  | Number | Número de bytes lidos no ficheiro de índice                                 |
 | indexSegment.diskWriteBytes | Number | Número de bytes escritos no ficheiro de índice                              |
-| indexSegment.diskReadCount  | Number | Número de leituras no ficheiro de índice                                    |
+| indexSegment.diskReadCount  | Number | Número de leituras no ficheiro índice                                       |
 | indexSegment.diskWriteCount | Number | Número de escritas no ficheiro de índice                                    |
 
 
