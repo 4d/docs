@@ -117,7 +117,7 @@ Usar a datastore principal do banco de dados 4D:
 <!-- REF #_command_.Open datastore.Params -->
 | Parâmetro      | Tipo          |    | Descrição                                                                    |
 | -------------- | ------------- | -- | ---------------------------------------------------------------------------- |
-| connectionInfo | Objeto        | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
+| connectionInfo | Object        | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
 | localID        | Text          | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
 | Resultados     | cs. DataStore | <- | Objeto do armazém de dados|<!-- END REF -->
 
@@ -325,7 +325,7 @@ Nestes casos, pode usar `.clearAllRemoteContexts()` para limpar os seus contexto
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                                                                        |
 | ---------- | ------ |:--:| ------------------------------------------------------------------------------------------------ |
-| Resultados | Objeto | <- | Informação sobre o cifrado do armazém de dados atual e de cada tabela|<!-- END REF -->
+| Resultados | Object | <- | Informação sobre o cifrado do armazém de dados atual e de cada tabela|<!-- END REF -->
 
 |
 
@@ -342,10 +342,10 @@ O objeto retornado contém as propriedades abaixo:
 | ----------- | ----------- | ------------- | ---------- | ----------------------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Parâmetros | True se o arquivo de dados estiver criptografado                                                |
 | keyProvided |             |               | Parâmetros | True se proporcionar a chave de encriptação que coincide com o arquivo de dados encriptados(*). |
-| tabelas     |             |               | Objeto     | Objeto que contém tantas propriedades como tabelas encriptadas ou codificadas.                  |
-|             | *tableName* |               | Objeto     | Tabla encriptada ou cifrada                                                                     |
+| tabelas     |             |               | Object     | Objeto que contém tantas propriedades como tabelas encriptadas ou codificadas.                  |
+|             | *tableName* |               | Object     | Tabla encriptada ou cifrada                                                                     |
 |             |             | name          | Text       | Nombre da tabela                                                                                |
-|             |             | num           | Número     | Número de tabela                                                                                |
+|             |             | num           | Number     | Número de tabela                                                                                |
 |             |             | isEncryptable | Parâmetros | Verdadero se a tabela estiver declarada como encriptada no arquivo de estrutura                 |
 |             |             | isEncrypted   | Parâmetros | True se os registros da tabela estiverem encriptados no arquivo de dados                        |
 
@@ -559,7 +559,7 @@ $info:=$ds.getAllRemoteContexts()
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                           |
 | ---------- | ------ |:--:| --------------------------------------------------- |
-| Resultados | Objeto | <- | Propiedades de datastore|<!-- END REF -->
+| Resultados | Object | <- | Propiedades de datastore|<!-- END REF -->
 
 |
 
@@ -637,7 +637,7 @@ Em um armazém de dados remoto:
 | Parâmetro   | Tipo   |    | Descrição                                                       |
 | ----------- | ------ | -- | --------------------------------------------------------------- |
 | contextName | Text   | -> | Nome do contexto                                                |
-| Resultados  | Objeto | <- | Descrição do contexto de optimização|<!-- END REF -->
+| Resultados  | Object | <- | Descrição do contexto de optimização|<!-- END REF -->
 
 |
 
@@ -835,8 +835,8 @@ quando nesta função não for chamada, as novas seleções de entidades podem s
 | Parâmetro     | Tipo   |    | Descrição                                                                     |
 | ------------- | ------ | -- | ----------------------------------------------------------------------------- |
 | curPassPhrase | Text   | -> | Frase de cifrado atual                                                        |
-| curDataKey    | Objeto | -> | Chave de criptografia de dados atual                                          |
-| Resultados    | Objeto | <- | Resultado da coincidência da chave de criptografia|<!-- END REF -->
+| curDataKey    | Object | -> | Chave de criptografia de dados atual                                          |
+| Resultados    | Object | <- | Resultado da coincidência da chave de criptografia|<!-- END REF -->
 
 |
 
@@ -863,11 +863,11 @@ O resultado da ordem se descreve no objeto devolvido:
 | ----------- | ------------------------ | ---------- | -------------------------------------------------------------------------------------------------------- |
 | success     |                          | Parâmetros | True se a chave da criptografia proporcionada coincide com os dados encriptados, False em caso contrário |
 |             |                          |            | As seguintes propriedades são devolvidas só se success for *FALSE*                                       |
-| status      |                          | Número     | Código de erro (4 se a chave de encriptação fornecida for errada)                                        |
+| status      |                          | Number     | Código de erro (4 se a chave de encriptação fornecida for errada)                                        |
 | statusText  |                          | Text       | Mensagem de erro                                                                                         |
 | errors      |                          | Collection | Pilha de erros. O primeiro erro tem o índice mais alto                                                   |
 |             | \[ ].componentSignature | Text       | Nome do componente interno                                                                               |
-|             | \[ ].errCode            | Número     | Número de erro                                                                                           |
+|             | \[ ].errCode            | Number     | Número de erro                                                                                           |
 |             | \[ ].message            | Text       | Mensagem de erro                                                                                         |
 
 Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolve **null** (não é gerado nenhum erro).
@@ -1108,7 +1108,7 @@ To create a client-side ORDA request log, call this function on a remote machine
 
 #### Do lado do servidor
 
-To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Each object represents a request. If the file does not already exist, it is created. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
+To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Cada objeto representa um pedido. If the file does not already exist, it is created. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
 
 - If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
 - The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
@@ -1117,7 +1117,7 @@ To create a server-side ORDA request log, call this function on the server machi
 | ----------------------------- | ----------------------------------------- |
 | srl log all                   | Log the response entirely (default value) |
 | srl log no response           | Disable the logging of the response       |
-| srl log response without body | Log the response without the body         |
+| srl log response without body | Registar a resposta sem o corpo           |
 
 
 #### Exemplo 1
