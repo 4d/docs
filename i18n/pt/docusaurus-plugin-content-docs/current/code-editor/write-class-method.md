@@ -256,7 +256,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[Alt]+G                                                   | Substituir próximo                                                                                                                         |
 | [Ctrl]+[Alt]+[Shift]+G                                           | Reemplazar anterior                                                                                                                        |
 | [**Pranchetas**](#clipboards)                                    |                                                                                                                                            |
-| [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copy selected text to a clipboard                                                                                                          |
+| [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                    |
 | [Ctrl]+[Shift]+tecla numérica                                    | Copy selected text to the number clipboard                                                                                                 |
 | [Ctrl]+click on clipboard icon                                   | Paste contents of a clipboard at cursor location                                                                                           |
 | [Ctrl]+chave numérica                                            | Paste contents of the number clipboard at cursor location                                                                                  |
@@ -401,7 +401,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
-- type a dot "." after an object or
+- digite um ponto "." depois de um objeto ou
 - use the Tab key after a dereferenced object pointer "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
