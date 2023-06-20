@@ -1108,7 +1108,7 @@ To create a client-side ORDA request log, call this function on a remote machine
 
 #### Do lado do servidor
 
-To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Each object represents a request. If the file does not already exist, it is created. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
+To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Cada objeto representa um pedido. If the file does not already exist, it is created. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
 
 - If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
 - The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
@@ -1117,7 +1117,7 @@ To create a server-side ORDA request log, call this function on the server machi
 | ----------------------------- | ----------------------------------------- |
 | srl log all                   | Log the response entirely (default value) |
 | srl log no response           | Disable the logging of the response       |
-| srl log response without body | Log the response without the body         |
+| srl log response without body | Registar a resposta sem o corpo           |
 
 
 #### Exemplo 1
