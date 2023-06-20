@@ -243,7 +243,7 @@ The following table lists the fields available for each format (in alphabetical 
 |                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
 | URL            |     | X   | URL solicitado pelo cliente                                                |
 
-> Dates and times are given in GMT.
+> As datas e horas são indicadas em GMT.
 
 ## Log (backup)
 
@@ -291,7 +291,7 @@ This page contains the options used to enable and control advanced Web features 
 
 #### Expor como servidor REST
 
-Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
+Inicia e pára o servidor REST. See [REST Server Configuration](../REST/configuration.md).
 
 ### Acesso
 
