@@ -218,7 +218,7 @@ The following table lists the fields available for each format (in alphabetical 
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
 | URL            |     | X   | URL solicitado pelo cliente                                                                                                 |
 
-> Dates and times are given in GMT.
+> As datas e horas são indicadas em GMT.
 
 
 #### Backup Frequency
