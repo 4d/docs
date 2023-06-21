@@ -134,7 +134,7 @@ The DerivedData folder contains cached data used internally by 4D to optimize pr
 
 ## `Libraries folder`
 
-> This folder is used on macOS only.
+> Esta pasta é utilizada apenas no macOS.
 
 The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
 
