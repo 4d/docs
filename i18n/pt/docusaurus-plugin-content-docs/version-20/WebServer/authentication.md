@@ -51,7 +51,7 @@ When a user connects to the server, a standard dialog box appears on their brows
 
 > The name and password entered by the user are sent unencrypted in the HTTP request header. This mode typically requires HTTPS to provide confidentiality.
 
-Entered values are then evaluated:
+Os valores introduzidos são então avaliados:
 
 - If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md).
     - If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. If the password is incorrect, the connection is refused.
@@ -160,7 +160,7 @@ The `$3` parameter receives the IP address of the browser’s machine. This info
 The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
 
 
-#### $5 and $6 - User Name and Password
+#### $5 e $6 - Nome de usuário e palavra-passe
 
 The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
 > If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
