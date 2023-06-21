@@ -10,9 +10,9 @@ When you call this request for your project, you retrieve information in the fol
 
 | Propriedade    | Tipo       | Descrição                                                                           |
 | -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Número     | 4D Server's cache size.                                                             |
-| usedCache      | Número     | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Número     | Número de selecções de entidades.                                                   |
+| cacheSize      | Number     | 4D Server's cache size.                                                             |
+| usedCache      | Number     | How much of 4D Server's cache has been used.                                        |
+| entitySetCount | Number     | Número de selecções de entidades.                                                   |
 | entitySet      | Collection | A collection in which each object contains information about each entity selection. |
 | ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
 | sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
@@ -25,7 +25,7 @@ For each entity selection currently stored in 4D Server's cache, the following i
 | ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | String     | A UUID that references the entity set.                                                                                                                                                                                                                              |
 | dataClass     | String     | Nome da dataclass.                                                                                                                                                                                                                                                  |
-| selectionSize | Número     | Number of entities in the entity selection.                                                                                                                                                                                                                         |
+| selectionSize | Number     | Number of entities in the entity selection.                                                                                                                                                                                                                         |
 | sorted        | Parâmetros | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
 | refreshed     | Date       | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
 | expires       | Date       | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
@@ -40,9 +40,9 @@ For each user session, the following information is returned in the *sessionInfo
 
 | Propriedade | Tipo   | Descrição                                                    |
 | ----------- | ------ | ------------------------------------------------------------ |
-| sessionID   | String | A UUID that references the session.                          |
+| sessionID   | String | Um UUID que faz referência à sessão.                         |
 | userName    | String | The name of the user who runs the session.                   |
-| lifeTime    | Número | The lifetime of a user session in seconds (3600 by default). |
+| lifeTime    | Number | The lifetime of a user session in seconds (3600 by default). |
 | expiration  | Date   | The current expiration date and time of the user session.    |
 
 ## Exemplo
