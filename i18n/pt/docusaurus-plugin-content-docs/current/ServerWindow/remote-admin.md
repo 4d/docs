@@ -1,6 +1,6 @@
 ---
 id: remote-admin
-title: Administration from Remote Machines
+title: Administração a partir de máquinas remotas
 ---
 
 You can administer the 4D Server application from a remote 4D (client machine) by opening the 4D Server administration window on the client machine.
