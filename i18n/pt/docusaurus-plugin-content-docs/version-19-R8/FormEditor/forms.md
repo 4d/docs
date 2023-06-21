@@ -87,7 +87,7 @@ Each form has is made of at least two pages:
 É possível criar várias páginas para um formulário de entrada. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. Multiple pages allow you to do the following:
 
 - Place the most important information on the first page and less important information on other pages.
-- Organize each topic on its own page.
+- Organize cada tópico na sua própria página.
 - Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
 - Provide space around the form elements for an attractive screen design.
 
