@@ -51,9 +51,9 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Gramática JSON
 
-| Nome                         | Tipo de dados | Valores possíveis                  |
-| ---------------------------- | ------------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string        | "addSubrecord" or "" to do nothing |
+| Nome                         | Tipo de dados | Valores possíveis                        |
+| ---------------------------- | ------------- | ---------------------------------------- |
+| doubleClickInEmptyAreaAction | string        | "addSubrecord" ou "" para não fazer nada |
 
 #### Objectos suportados
 
