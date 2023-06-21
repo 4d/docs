@@ -69,7 +69,7 @@ Para computar todos os valores e retornar um objeto JSON:
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Calling Data model class functions
+## Chamar as funções de classe do modelo de dados
 
 You can call ORDA Data Model [user class functions](ClassFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
@@ -87,7 +87,7 @@ Sempre pode definir que atributos a retornar na resposta REST depois de uma peti
 
 Pode aplicar essa técnica a:
 
-| Objeto                | Sintaxe                                             | Exemplo                                                       |
+| Object                | Sintaxe                                             | Exemplo                                                       |
 | --------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass             | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Coleção de entidades  | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
