@@ -5,7 +5,7 @@ title: Architecture of a project
 
 A 4D project is made of several folders and files, stored within a project root folder (package folder). For example:
 
-- MyProject (*project root folder*)
+- MyPackage (*project root folder*)
 	- `Components`
 	- `Data` 
 		- `Logs`
