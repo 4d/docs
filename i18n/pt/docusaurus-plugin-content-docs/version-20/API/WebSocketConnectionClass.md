@@ -87,7 +87,7 @@ Os conteúdos seguintes são enviados em função do tipo de *mensagem*:
 | ------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Text   | Texto em UTF-8                                                                                                              |
 | Blob   | Dados binários                                                                                                              |
-| Objeto | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Object | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
 
 <!-- END REF -->
 
