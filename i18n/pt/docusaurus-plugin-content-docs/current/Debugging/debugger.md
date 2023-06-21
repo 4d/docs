@@ -89,7 +89,7 @@ If you use this button to modify a method, the modifications are only effective 
 
 Saves the current configuration of the debugger window  and makes it the default configuration. Isto inclui:
 
-* the size and position of the window
+* o tamanho e a posição da janela
 * the position of the division lines and the contents of the area that evaluates the expressions
 
 These parameters are stored in the project.
