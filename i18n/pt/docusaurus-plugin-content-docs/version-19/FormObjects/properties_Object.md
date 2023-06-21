@@ -52,7 +52,7 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Objeto                                                  | Valor guardado                                                                         |
+| Object                                                  | Valor guardado                                                                         |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Caixa de selecção](checkbox_overview.md)               | Value of associated variable (0, 1, 2)                                                 |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
@@ -298,7 +298,7 @@ There are several types of calculations available. The following table shows whi
 | Soma dos quadrados(*)  | X   |      |      | X    |      |      | Real                    |
 | Personalizado ("none") | X   | X    | X    | X    | X    | X    | Qualquer                |
 
-(*) Only for array type list boxes.
+(*) Apenas para list boxes do tipo array.
 
 > Only declared or dynamic [variables](Concepts/variables.md) can be used to display footer calculations. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.value` are not supported.
 
