@@ -110,7 +110,7 @@ Several types of method references are supported:
 
 `List box de tipo array`
 
-Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+Authorizes the movement of rows during execution. Esta opção é selecionada por defeito. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
 
 #### Gramática JSON
 
@@ -142,7 +142,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Ordenável
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
+Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opção é selecionada por defeito. Picture type arrays (columns) cannot be sorted using this feature.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 
