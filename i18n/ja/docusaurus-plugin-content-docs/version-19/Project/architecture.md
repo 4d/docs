@@ -5,7 +5,7 @@ title: プロジェクトのアーキテクチャー
 
 4D プロジェクトは、プロジェクトルートフォルダー (パッケージフォルダー) に格納された、複数のファイルやフォルダーから構成されています。 例:
 
-- My4DProject (*プロジェクトルートフォルダー*)
+- MyPackage (*project root folder*)
   - Components
   - Data
     - Logs
