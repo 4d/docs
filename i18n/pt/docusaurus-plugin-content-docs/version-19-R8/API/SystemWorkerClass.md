@@ -64,7 +64,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | Parâmetro   | Tipo            |    | Descrição                                                            |
 | ----------- | --------------- |:--:| -------------------------------------------------------------------- |
 | commandLine | Text            | -> | Linha de comando a executar                                          |
-| options     | Objeto          | -> | Parâmetros worker                                                    |
+| options     | Object          | -> | Parâmetros worker                                                    |
 | result      | 4D.SystemWorker | <- | Novo System worker assíncrono ou nulo se o processo não for iniciado |  
 <!-- END REF -->
 
@@ -91,10 +91,10 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 | onDataError      | Formula    | indefinido | Chamada de retorno para os erros do processo externo (*stderr* do processo externo). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                        |
 | onError          | Formula    | indefinido | Chamada de retorno para erros de execução, devolvida pelo worker do sistema em caso de condições anormais de tempo de execução (erros de sistema). Recebe dois objectos como parâmetros (ver abaixo)                                                                                                          |
 | onTerminate      | Formula    | indefinido | Chamada de retorno quando o processo externo é terminado. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                                                   |
-| timeout          | Número     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                     |
+| timeout          | Number     | indefinido | Tempo em segundos antes de o processo ser terminado se ainda estiver vivo                                                                                                                                                                                                                                     |
 | dataType         | Text       | "text"     | Tipo de conteúdo do corpo da resposta. Valores possíveis: "text" (predefinição), "blob".                                                                                                                                                                                                                      |
 | encoding         | Text       | "UTF-8"    | Sólo si `dataType="text"`. Codificação do conteúdo do corpo da resposta. Para obter a lista de valores disponíveis, consulte a descrição do comando [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html)                                                                            |
-| variables        | Objeto     |            | Define variáveis de ambiente personalizadas para o system worker. Sintaxe: `variables.key=value`, onde `key` é o nome da variável e `valor` o seu valor. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
+| variables        | Object     |            | Define variáveis de ambiente personalizadas para o system worker. Sintaxe: `variables.key=value`, onde `key` é o nome da variável e `valor` o seu valor. Os valores são convertidos em cordas quando possível. O valor não pode conter um '='. Se não estiver definido, o system worker herda do ambiente 4D. |
 | currentDirectory | Folder     |            | Directório de trabalho no qual o processo é executado                                                                                                                                                                                                                                                         |
 | hideWindow       | Parâmetros | true       | (Windows) Esconder a janela de aplicação (se possível) ou a consola Windows                                                                                                                                                                                                                                   |
 
@@ -102,7 +102,7 @@ Todas as funções de chamada de retorno recebem dois parâmetros de objectos. O
 
 | Parâmetro    | Tipo         | *onResponse* | *onData*        | *onDataError* | *onError*    | *onTerminate* |
 | ------------ | ------------ | ------------ | --------------- | ------------- | ------------ | ------------- |
-| $param1      | Objeto       | SystemWorker | SystemWorker    | SystemWorker  | SystemWorker | SystemWorker  |
+| $param1      | Object       | SystemWorker | SystemWorker    | SystemWorker  | SystemWorker | SystemWorker  |
 | $param2.type | Text         | "response"   | "data"          | "error"       | "error"      | "termination" |
 | $param2.data | Text ou Blob |              | dados recebidos | dados de erro |              |               |
 
