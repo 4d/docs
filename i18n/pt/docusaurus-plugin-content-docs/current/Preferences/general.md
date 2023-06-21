@@ -113,7 +113,7 @@ You can configure your existing projects to save code **without tokens** by inse
 > This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
 
 
-### Create `.gitignore` file
+### Criar o ficheiro `.gitignore`
 
 You might need or want git to ignore some files in your new projects.
 
