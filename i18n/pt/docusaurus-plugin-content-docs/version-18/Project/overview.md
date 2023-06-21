@@ -28,7 +28,7 @@ The flexibility of developing a 4D project is especially demonstrated when multi
 
 ## Trabalhar com projetos
 
-You create a 4D database project by:
+Cria-se um projeto de base de dados 4D:
 
 - creating a new, blank project -- see [Creating a 4D project](creating.md).
 - exporting an existing 4D "binary" development to a project -- see "Export from a 4D database" on [doc.4d.com](https://doc.4d.com).
