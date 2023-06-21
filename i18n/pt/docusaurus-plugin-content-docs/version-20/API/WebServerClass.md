@@ -692,8 +692,8 @@ O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->Validação de 
 
 | Parâmetro  | Tipo   |    | Descrição                                           |
 | ---------- | ------ | -- | --------------------------------------------------- |
-| settings   | Objeto | -> | Configurações do servidor Web a definir no arranque |
-| Resultados | Objeto | <- | Estado de arranque do servidor web                  |
+| settings   | Object | -> | Configurações do servidor Web a definir no arranque |
+| Resultados | Object | <- | Estado de arranque do servidor web                  |
 
 <!-- END REF -->
 
@@ -713,7 +713,7 @@ A função devolve um objecto que descreve o estado de lançamento do servidor W
 | ----------- | ----------------------- | ---------- | ----------------------------------------------------------------------------- |
 | success     |                         | Parâmetros | Verdadeiro se o servidor web foi correctamente iniciado, Falso caso contrário |
 | errors      |                         | Collection | pilha de erros 4D (não devolvidos se o servidor web começou com sucesso)      |
-|             | \[].errCode            | Número     | Código de erro 4D                                                             |
+|             | \[].errCode            | Number     | Código de erro 4D                                                             |
 |             | \[].message            | Text       | Descrição do erro 4D                                                          |
 |             | \[].componentSignature | Text       | Assinatura da componente interna que devolveu o erro                          |
 > Se o servidor Web já tiver sido lançado, é devolvido um erro.
