@@ -402,7 +402,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
 | option       | Integer    | -> | `ck resolve pointers`: resolve ponteiros antes de copiar,<br/>`ck shared`: retorna uma coleção partilihada |
 | groupWithCol | Collection | -> | Coleção partilhada a ser agrupada com a coleção resultante                                                       |
-| groupWithObj | Objeto     | -> | Objeto partilhado a ser agrupado com a coleção resultante                                                        |
+| groupWithObj | Object     | -> | Objeto partilhado a ser agrupado com a coleção resultante                                                        |
 | Resultados   | Collection | <- | Cópia profunda da collection original|<!-- END REF -->
 
 |
@@ -564,11 +564,11 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse ca
 
 
 <!-- REF #collection.countValues().Params -->
-| Parâmetro    | Tipo                                            |    | Descrição                                                      |
-| ------------ | ----------------------------------------------- |:--:| -------------------------------------------------------------- |
-| value        | Text, Number, Boolean, Date, Object, Collection | -> | Valor a contar                                                 |
-| propertyPath | Text                                            | -> | Rota de propriedade objeto a ser usado para cálculos           |
-| Resultados   | Real                                            | <- | Number of occurrences of the value |<!-- END REF -->
+| Parâmetro    | Tipo                                            |    | Descrição                                                  |
+| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------------------- |
+| value        | Text, Number, Boolean, Date, Object, Collection | -> | Valor a contar                                             |
+| propertyPath | Text                                            | -> | Rota de propriedade objeto a ser usado para cálculos       |
+| Resultados   | Real                                            | <- | Número de ocorrências do valor |<!-- END REF -->
 
 |
 
@@ -1991,7 +1991,7 @@ Se quiser ordenar a coleção resultante:
 | ------------- | ---------- |:--:| -------------------------------------------------------------------------------- |
 | queryString   | Text       | -> | Critérios de pesquisa                                                            |
 | value         | Mixed      | -> | Valores a comparar quando usar placeholders (valores temporários)                |
-| querySettings | Objeto     | -> | Opções de pesquisa: parâmetros, atributos                                        |
+| querySettings | Object     | -> | Opções de pesquisa: parâmetros, atributos                                        |
 | Resultados    | Collection | <- | Elementos que correspondem com queryString na coleção|<!-- END REF -->
 
 |
