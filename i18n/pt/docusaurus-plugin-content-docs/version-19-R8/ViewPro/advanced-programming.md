@@ -23,7 +23,7 @@ $js+="window.dispatchEvent(new Event('resize'));"
 $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 ```
 
-## Calling SpreadJS Javascript methods
+## Chamar métodos Transcriptase do SpreadJS
 
 You can tap into the SpreadJS library of Javascript methods and call them directly to control your spreadsheets.
 
