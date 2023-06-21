@@ -1,6 +1,6 @@
 ---
 id: object
-title: Objeto
+title: Object
 ---
 
 Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objectos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
