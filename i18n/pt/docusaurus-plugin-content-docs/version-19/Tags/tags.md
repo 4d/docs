@@ -449,7 +449,7 @@ This comment allows repetition of a portion of code as long as the condition is 
 
 The `<!--#4DLOOP condition-->` ... `<!--#4DENDLOOP-->` blocks can be nested. Like in 4D, each `<!--#4DLOOP condition-->` must match a `<!--#4DENDLOOP-->`.
 
-There are five kinds of conditions:
+Existem cinco tipos de condições:
 
 ### `<!--#4DLOOP [table]-->`
 
