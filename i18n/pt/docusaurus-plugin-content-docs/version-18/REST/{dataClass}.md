@@ -30,9 +30,9 @@ Aqui está uma descrição dos dados retornados:
 | Propriedade   | Tipo       | Descrição                                                                                                                                                                                              |
 | ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | __entityModel | String     | Nome da dataclass.                                                                                                                                                                                     |
-| __COUNT       | Número     | Número de entidades na classe de dados.                                                                                                                                                                |
-| __SENT        | Número     | Número de entidades enviadas pela petição REST. Esse número pode ser o número total de entidades se for menor que o valor definido por `$top/$limit`.                                                  |
-| __FIRST       | Número     | Número de entidade em que a seleção vai começar. Ou o valor padrão 0 ou o valor definido por `$skip`.                                                                                                  |
+| __COUNT       | Number     | Número de entidades na classe de dados.                                                                                                                                                                |
+| __SENT        | Number     | Número de entidades enviadas pela petição REST. Esse número pode ser o número total de entidades se for menor que o valor definido por `$top/$limit`.                                                  |
+| __FIRST       | Number     | Número de entidade em que a seleção vai começar. Ou o valor padrão 0 ou o valor definido por `$skip`.                                                                                                  |
 | __ENTITIES    | Collection | Esta coleção de objetos contém um objeto para cada entidade com todos seus atributos. Todos os atributos relacionais são retornados como objetos com uma URI para obter informação sobre o objeto pai. |
 
 Cada entidade contém as propriedades abaixo:
@@ -41,7 +41,7 @@ Cada entidade contém as propriedades abaixo:
 | ----------- | ------ | ------------------------------------------------------------------------------------------------------------- |
 | __KEY       | String | Valor da chave primária definida para a classe de dados.                                                      |
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                            |
-| __STAMP     | Número | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
+| __STAMP     | Number | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
 
 Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
