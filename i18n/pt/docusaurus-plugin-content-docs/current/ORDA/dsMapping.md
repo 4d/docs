@@ -24,7 +24,7 @@ The following rules are applied for any conversions:
 * Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
 *   Uma datastore só referencia as tabelas com uma única chave primária. The following tables are not referenced:
     *   Tabelas sem chave primária
-    *   Tables with composite primary keys.
+    *   Tabelas com chaves primárias compostas.
 *   [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore.
 
 > ORDA mapping does not take into account:  
