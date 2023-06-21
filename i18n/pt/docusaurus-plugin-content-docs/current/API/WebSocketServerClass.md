@@ -109,7 +109,7 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 <!-- REF #4D.WebSocketServer.new().Syntax -->**4D.WebSocketServer.new**( *WSSHandler* : Object { ; *options* : Object } ) : 4D.WebSocketServer<!-- END REF -->
 
 
-<!-- REF #4D.HTTPRequest.new().Params -->
+<!-- REF #4D.WebSocketServer.new().Params -->
 | Parâmetro                           | Tipo               |    | Descrição                                                                                |
 | ----------------------------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             | -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |
