@@ -38,7 +38,7 @@ To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X
 
 ![](../assets/en/Menus/splash3.png)
 
-4D displays a preview of the menu bar as well as the splash screen. You can scroll down the menus and sub-menus to preview their contents. However, these menus are not active. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
+4D displays a preview of the menu bar as well as the splash screen. You can scroll down the menus and sub-menus to preview their contents. No entanto, estes menus não estão activos. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
 
 :::info
 
