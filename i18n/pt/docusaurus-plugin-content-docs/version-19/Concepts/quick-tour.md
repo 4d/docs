@@ -287,7 +287,7 @@ As expressões raramente são "autónomas." There are several places in 4D where
 
 
 ### Tipos de expressões
-You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
+You refer to an expression by the data type it returns. Existem vários tipos de expressão. The following table gives examples of each type of expression.
 
 | Expression               | Tipo                 | Descrição                                                                                                                                                                       |
 | ------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
