@@ -23,7 +23,7 @@ This option allows setting the behavior of the Form editor when moving an object
 
 You can configure this option depending on your work habits and development needs.
 
-### Activate auto alignment by default
+### Ativar o alinhamento automático por padrão
 
 This option activates auto alignment by default in each new window of the Form editor. It is possible to modify this option individually in each window (refer to [Using the magnetic grid](FormEditor/formEditor.md#using-the-magnetic-grid)).
 
