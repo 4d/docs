@@ -58,7 +58,7 @@ Once this page assigns a server, clicking the **OK** button will allow you to co
 
 Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
 
-### Updating project files on the server
+### Atualizar ficheiros de projeto no servidor
 
 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the *.4DProject* project file (not compressed) in interpreted mode.
 
