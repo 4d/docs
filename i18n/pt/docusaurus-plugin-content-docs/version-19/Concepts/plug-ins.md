@@ -17,7 +17,7 @@ The modular nature of the 4D environment allows the creation of basic applicatio
 
 A plug-in is a piece of code that 4D launches at start up. Acrescenta funcionalidade ao 4D e aumenta assim a sua capacidade.
 
-Usually, a plug-in does things that:
+Normalmente, um plug-in faz coisas que:
 - 4D cannot do (ie, specific platform technology),
 - será muito difícil de escrever usando apenas 4D,
 - só estão disponíveis como Ponto de Entrada Plug-in
@@ -48,7 +48,7 @@ You install plug-ins in the 4D environment by copying their files into the appro
 You can put the Plugins folder in two different places:
 
 - At the level of the 4D executable application, i.e.:
-  - Under Windows: next to the .exe file
+  - No Windows: junto ao ficheiro .exe
   - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
 - At the same level as the Project folder. In this case, plug-ins are only available in this particular project.
 
