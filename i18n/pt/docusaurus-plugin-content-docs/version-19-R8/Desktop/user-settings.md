@@ -50,28 +50,28 @@ The **User Settings** and **User Settings for Data File** dialog boxes contain a
 
 The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
 
-| **Page of Structure Settings**                                                           | **Page of User Settings**                    | **Page of User Settings for Data File**      |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| [Página geral](../settings/general.md)                                                   | N/a                                          | N/a                                          |
-| [Página Interface](../settings/interface.md)                                             | Identical to standard settings               | Identical to standard settings               |
-| [Página Compilador](../settings/compiler.md)                                             | N/a                                          | N/a                                          |
-| [Página Base de dados/armazenamento de dados](../settings/database.md#data-storage)      | N/a                                          | N/a                                          |
-| [Página Base de dados/Memória](../settings/database.md#memory)                           | Identical to standard settings               | Identical to standard settings               |
-| [Página Backup/Peridiocidade](../settings/backup.md#scheduler)                           | N/a                                          | Identical to standard settings               |
-| [Página Backup/Configuração](../settings/backup.md#configuration)                        | N/a                                          | Identical to standard settings               |
-| [Página Backup/Backup e restaurar](../settings/backup.md#backup-restore)                 | N/a                                          | Identical to standard settings               |
-| [Página cliente-servidor/opções rede](../settings/client-server.md#network-options)      | Identical to standard settings               | Identical to standard settings               |
-| [Página cliente-servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Configuração](../settings/web.md#configuration)                              | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Opções (I)](../settings/web.md#options)                                      | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Opções (II)](../settings/web.md#options-ii)                                  | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Log (tipo)](../settings/web.md#log)                                          | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Log (backup)](../settings/web.md#log)                                        | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Web services](../settings/web.md#web-services)                               | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível |
-| [Página SQL](../settings/sql.md)                                                         | Identical to standard settings               | Identical to standard settings               |
-| [Página PHP](../settings/php.md)                                                         | Identical to standard settings               | Identical to standard settings               |
-| [Página segurança](../settings/security.md)                                              | N/a                                          | N/a                                          |
-| [Página de compatibilidade](../settings/compatibility.md)                                | N/a                                          | N/a                                          |
+| **Page of Structure Settings**                                                           | **Page of User Settings**                    | **Página de Propriedades usuário para ficheiro de dados** |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------- |
+| [Página geral](../settings/general.md)                                                   | N/a                                          | N/a                                                       |
+| [Página Interface](../settings/interface.md)                                             | Identical to standard settings               | Identical to standard settings                            |
+| [Página Compilador](../settings/compiler.md)                                             | N/a                                          | N/a                                                       |
+| [Página Base de dados/armazenamento de dados](../settings/database.md#data-storage)      | N/a                                          | N/a                                                       |
+| [Página Base de dados/Memória](../settings/database.md#memory)                           | Identical to standard settings               | Identical to standard settings                            |
+| [Página Backup/Peridiocidade](../settings/backup.md#scheduler)                           | N/a                                          | Identical to standard settings                            |
+| [Página Backup/Configuração](../settings/backup.md#configuration)                        | N/a                                          | Identical to standard settings                            |
+| [Página Backup/Backup e restaurar](../settings/backup.md#backup-restore)                 | N/a                                          | Identical to standard settings                            |
+| [Página cliente-servidor/opções rede](../settings/client-server.md#network-options)      | Identical to standard settings               | Identical to standard settings                            |
+| [Página cliente-servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Configuração](../settings/web.md#configuration)                              | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Opções (I)](../settings/web.md#options)                                      | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Opções (II)](../settings/web.md#options-ii)                                  | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Log (tipo)](../settings/web.md#log)                                          | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Log (backup)](../settings/web.md#log)                                        | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Web services](../settings/web.md#web-services)                               | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível              |
+| [Página SQL](../settings/sql.md)                                                         | Identical to standard settings               | Identical to standard settings                            |
+| [Página PHP](../settings/php.md)                                                         | Identical to standard settings               | Identical to standard settings                            |
+| [Página segurança](../settings/security.md)                                              | N/a                                          | N/a                                                       |
+| [Página de compatibilidade](../settings/compatibility.md)                                | N/a                                          | N/a                                                       |
 
 When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
 
