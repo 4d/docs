@@ -106,7 +106,7 @@ Here is an example of a macro definition:
 | `<?xml version="1.0"...?>`                     | Declaração XML                                                                                                                                  |
 | `<!DOCTYPE macros SYSTEM>`                     | Declaração do documento                                                                                                                         |
 | `<macros>`                                     | Início do ficheiro XML das macros                                                                                                               |
-| `<macro name="RecordLoop">`                    | Start of macro definition and name                                                                                                              |
+| `<macro name="RecordLoop">`                    | Início da definição e nome da macro                                                                                                             |
 | `<text>`                                       | Início do código da macro                                                                                                                       |
 | For($i;1;Records in selection(`<Selection/>`)) | The `<Selection/>` tag will be replaced by the selected code in the 4D method at the time of macro insertion (for instance, a table name) |
 | SAVE RECORD(`<Selection/>`)                    |                                                                                                                                                 |
