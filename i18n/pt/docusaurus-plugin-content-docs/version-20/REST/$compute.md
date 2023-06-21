@@ -28,7 +28,7 @@ You can use any of the following keywords:
 | count         | Obter o número total na coleção ou na classe de dados (em ambos os casos há que especificar um atributo)                                                                              |
 | min           | Get the minimum value on a numerical attribute or the lowest value in an attribute of type String                                                                                     |
 | max           | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
-| sum           | Get the sum on a numerical attribute                                                                                                                                                  |
+| sum           | Obter a soma de um atributo numérico                                                                                                                                                  |
 
 
 ## Exemplo
