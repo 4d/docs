@@ -60,7 +60,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 - via preferences:
   - Set the **At startup** general preference to **Open last used project**.
 
-- using a `.4DLink` file.
+- utilizando um ficheiro `.4DLink`.
 
 ### Opening a Project with a 4DLink file
 
