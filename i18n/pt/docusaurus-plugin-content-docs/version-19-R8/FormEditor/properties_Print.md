@@ -30,7 +30,7 @@ You can modify the following print settings:
 | paperName   | string        | "A4", "US Letter"...                                                                 |
 | paperWidth  | string        | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
 | paperHeight | string        | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| orientation | string        | "landscape" (default is "portrait")                                                  |
+| orientation | string        | "landscape" (padrão é "retrato")                                                     |
 | scale       | number        | mínimo: 0                                                                            |
 
 
