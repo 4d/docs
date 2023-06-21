@@ -189,7 +189,7 @@ The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR serve
 
 ##### Configuração dos campos
 
-When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. To do so, check the desired fields.
+When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. Para o efeito, assinalar os campos pretendidos.
 > You cannot select the same field twice.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
