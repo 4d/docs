@@ -90,7 +90,7 @@ The following escape sequences are recognized by 4D:
 The following patterns are supported (HFS+ syntax):
 
 - os separadores de pasta são ":"
-- the path must not start with a ":"
+- o caminho não deve começar com um ":"
 
 Examples with [`Folder`](../API/FolderClass.md#folder):
 

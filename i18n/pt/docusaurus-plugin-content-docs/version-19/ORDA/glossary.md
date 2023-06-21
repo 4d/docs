@@ -88,7 +88,7 @@ An entity selection is an object. When querying the datastore, an entity selecti
 
 An entity selection contains:
 
-* a set of 0 to X entity references,
+* um conjunto de 0 a X referências de entidades,
 * uma propriedade length (sempre),
 * queryPlan and queryPath properties (if asked while querying).
 
@@ -133,7 +133,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 
 ## Fechadura optimista
 
-In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. See also "Pessimistic lock".
+In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. Ver também "Bloqueio pessimista".
 
 ## Bloqueio pessimista
 

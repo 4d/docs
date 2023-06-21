@@ -13,7 +13,7 @@ This page allows selecting, creating, or configuring Method editor themes. A the
 
 ### Lista de temas
 
-In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
+In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D fornece dois temas por padrão:
 
 * **Tema Light predefinido**
 * **Tema escuro predefinido**
@@ -159,7 +159,7 @@ Allows to highlight all occurrences of the same variable or field in an open met
 
 The highlight color can be set in the [Theme](#theme-definition) page.
 
-#### Debug (Highlight the line running)
+#### Depurar (Destacar a linha em execução)
 
 Highlights the line that is currenty running in the debugger in addition to the regular yellow arrow indicator.
 

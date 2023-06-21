@@ -237,13 +237,13 @@ The following table lists the fields available for each format (in alphabetical 
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
 | STATUS         | X   | X   | Resposta fornecida pelo servidor                                           |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                         |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                        |
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
 |                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
 | URL            |     | X   | URL solicitado pelo cliente                                                |
 
-> Dates and times are given in GMT.
+> As datas e horas são indicadas em GMT.
 
 ## Log (backup)
 
@@ -291,7 +291,7 @@ This page contains the options used to enable and control advanced Web features 
 
 #### Expor como servidor REST
 
-Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
+Inicia e pára o servidor REST. See [REST Server Configuration](../REST/configuration.md).
 
 ### Acesso
 

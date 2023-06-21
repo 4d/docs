@@ -76,7 +76,7 @@ The default shortcuts are as follows:
 -   Cancel input form: **Esc**
 -   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
 
-To change the shortcut of an operation, click the corresponding **Edit** button. The following dialog box appears:
+To change the shortcut of an operation, click the corresponding **Edit** button. Aparece a seguinte caixa de diálogo:
 
 ![](../assets/en/settings/shortcut.png)
 

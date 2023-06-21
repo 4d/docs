@@ -235,7 +235,7 @@ Form events on list box or list box column objects may return the following addi
 | headerName           | text          | Nome do cabeçalho                                                     |
 | horizontalScroll     | inteiro longo | Positive if scroll is towards the right, negative if towards the left |
 | isRowSelected        | boolean       | True if row is selected, else False                                   |
-| newPosition          | inteiro longo | New position of the column or row                                     |
+| newPosition          | inteiro longo | Nova posição da coluna ou linha                                       |
 | newSize              | inteiro longo | New size (in pixels) of the column or row                             |
 | oldPosition          | inteiro longo | Previous position of the column or row                                |
 | oldSize              | inteiro longo | Previous size (in pixels) of the column or row                        |
@@ -522,7 +522,7 @@ Custom sorts allow you to:
 
 #### Exemplo
 
-You want to sort a list box using values of a property stored in a related object attribute. You have the following structure:
+You want to sort a list box using values of a property stored in a related object attribute. Tem a seguinte estrutura:
 
 ![](../assets/en/FormObjects/relationLB.png)
 

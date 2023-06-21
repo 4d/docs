@@ -87,7 +87,7 @@ Supported types depend on the form category:
 | Formulário detalhado               | detailScreen     | A display form for data entry and modification                | Formulários projeto - Formulários tabela |
 | Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice | Formulários projeto - Formulários tabela |
 | Formulário lista                   | listScreen       | A form for listing records on the screen                      | Formularios tabla                        |
-| Formulário de lista para impressão | listPrinter      | A printed report that list records                            | Formularios tabla                        |
+| Formulário de lista para impressão | listPrinter      | Um relatório impresso que lista os registos                   | Formularios tabla                        |
 | Nenhum                             | *no destination* | A form with no specific feature                               | Formulários projeto - Formulários tabela |
 
 

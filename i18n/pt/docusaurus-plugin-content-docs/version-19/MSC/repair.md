@@ -14,7 +14,7 @@ Esta página é utilizada para reparar o ficheiro de dados quando este foi danif
 
 ### Ficheiro de dados a reparar
 
-Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Pathname of the current data file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
+Nome do caminho do ficheiro de dados atual. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Pathname of the current data file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
 
 ### Pasta de cópia de segurança dos ficheiros originais
 

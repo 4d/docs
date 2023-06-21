@@ -48,7 +48,7 @@ The returned "__STATUS" object has the following properties:
 
 | Propriedade  |  | Tipo    | Descrição                                                                                                                                       |
 | ------------ |  | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-|              |  |         | ***Available only in case of success:***                                                                                                        |
+|              |  |         | ***Disponível apenas em caso de sucesso:***                                                                                                     |
 | success      |  | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case). |
 |              |  |         | ***Disponível apenas em caso de erro:***                                                                                                        |
 | status       |  | number  | Código de erro, ver abaixo                                                                                                                      |

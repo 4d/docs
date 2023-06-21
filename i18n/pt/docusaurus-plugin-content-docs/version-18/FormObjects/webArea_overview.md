@@ -77,7 +77,7 @@ $4d.today()
 
 The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the Web area.
 
-Here is the code of the HTML page:
+Aqui está o código da página HTML:
 
 ```html
 <html>

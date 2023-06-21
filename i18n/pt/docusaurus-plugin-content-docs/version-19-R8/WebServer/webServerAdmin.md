@@ -126,7 +126,7 @@ The */4DWEBTEST* URL is designed to check the web server status. When this URL i
 
 | Campo HTTP | Descrição                            | Exemplo                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Date       | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
+| Date       | data atual no formato RFC 822        | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
 | Server     | 4D/número da versão                  | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
 | User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
@@ -161,7 +161,7 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. You need to select the log format.
+The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. É necessário selecionar o formato do registo.
 
 #### CLF/DLF
 
@@ -213,12 +213,12 @@ The following table lists the fields available for each format (in alphabetical 
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                      |
 | STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                            |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                          |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                         |
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                                                                              |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
 | URL            |     | X   | URL solicitado pelo cliente                                                                                                 |
 
-> Dates and times are given in GMT.
+> As datas e horas são indicadas em GMT.
 
 
 #### Backup Frequency

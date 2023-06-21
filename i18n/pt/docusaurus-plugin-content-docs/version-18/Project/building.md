@@ -495,7 +495,7 @@ The following graphic illustrates this feature:
 
 When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
 
-## Management of client connection(s)
+## Gestão da(s) ligação(ões) cliente
 
 The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
 

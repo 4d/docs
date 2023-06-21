@@ -64,9 +64,9 @@ Project development file, used to designate and launch the project. Esse arquivo
 
 #### Pasta DatabaseMethods
 
-| Conteúdos                | Descrição                                                     | Formato |
-| ------------------------ | ------------------------------------------------------------- | ------- |
-| *databaseMethodName*.4dm | Métodos de projeto definidos na database. One file per method | text    |
+| Conteúdos                | Descrição                                                                      | Formato |
+| ------------------------ | ------------------------------------------------------------------------------ | ------- |
+| *databaseMethodName*.4dm | Métodos de projeto definidos na database. Um ficheiro por método base de dados | text    |
 
 #### Pasta Methods
 
@@ -126,7 +126,7 @@ The DerivedData folder contains cached data used internally by 4D to optimize pr
 
 ## Pasta Libraries
 
-> This folder is used on macOS only.
+> Esta pasta é utilizada apenas no macOS.
 
 The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
 
@@ -167,7 +167,7 @@ Se existir um arquivo de propriedades de dados [em uma pasta de dados ](#setting
 
 ### Pasta Logs
 
-The Logs folder contains all log files used by the project. Log files include, in particular:
+The Logs folder contains all log files used by the project. Os ficheiros de registo incluem, em particular:
 
 - conversão da base de dados,
 - pedidos do servidor Web,

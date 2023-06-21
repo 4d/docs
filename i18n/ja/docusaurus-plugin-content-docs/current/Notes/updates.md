@@ -55,6 +55,7 @@ title: リリースノート
 
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response) プロパティを使用します。
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
+- TLS v1.0 および TLS v1.1 は廃止され、4D Server において `Min TLS version` としてサポートされなくなりました。 現在はバージョン 1.3 がデフォルトで選択されています。`_o_TLSv1_0` または `_o_TLSv1_1` 定数が [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) で設定されている場合には、バージョン 1.2 が自動的に使用されます。
 - 4D v20 より、[4D for Mobile](https://developer.4d.com/go-mobile/) は 4D環境にデフォルトでインストールされなくなりました。 4D for Mobile の開発機能を 4D で利用するには、プロジェクトの ["Components"](../Project/architecture.md#components) フォルダーに [4D Mobile App コンポーネントをインストール](https://developer.4d.com/go-mobile/docs/getting-started/installation) する必要があります。 プロジェクトが [4D Mobile App Server コンポーネント](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server) の機能を使用している場合、こちらも同じ場所にインストールする必要があります。
 
 
@@ -265,18 +266,19 @@ ALERT($param1+" "+$param2)
 
 
 
-| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                                                                                       |
-| --------- | --------- | -------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| ICU       | 72.1      | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                                         |
-| CEF       | 109       | 20             | Chromium 5414。 ディスク上のファイルにアクセスする際にも CORSポリシーが適用されるようになりました (上述の [4D v19 R5](#4d-v19-r5) のWebエリアに関する "セキュリティ" の項を参照ください)。 |
-| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                                   |
-| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                                                                                      |
-| SpreadJS  | 16.0.4    | 20             | 4D View Pro エンジン                                                                                                         |
-| OpenSSL   | 3.1       | 20 R2          |                                                                                                                          |
-| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                    |
-| LZMA      | 5.4.1     | 20             |                                                                                                                          |
-| Zlib      | 1.2.13    | 20             |                                                                                                                          |
-| webKit    | WKWebView | 19             |                                                                                                                          |
-| PHP       | 8.2.4     | 20             |                                                                                                                          |
-| libldap   | 2.4.48    | 18 R2          |                                                                                                                          |
+| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
+| --------- | --------- | -------------- | ----------------------------------------------------- |
+| ICU       | 72.1      | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| CEF       | 113       | 20 R2          | Chromium 5672                                         |
+| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
+| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                   |
+| SpreadJS  | 16.0.4    | 20             | 4D View Pro エンジン                                      |
+| OpenSSL   | 3.1.1     | 20             |                                                       |
+| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
+| LZMA      | 5.4.1     | 20             |                                                       |
+| Zlib      | 1.2.13    | 20             |                                                       |
+| webKit    | WKWebView | 19             |                                                       |
+| PHP       | 8.2.4     | 20             |                                                       |
+| libldap   | 2.4.48    | 18 R2          |                                                       |
+| libsasl   | 2.1.28    | 20             |                                                       |
 

@@ -35,13 +35,13 @@ This is where you write and edit your code. The editor automatically indents cod
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                   | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                                                  |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **tipo de letra** e **tamanho de letra** | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                           |
-| **style and color of syntax elements**   | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **espaços**                              | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                                                |
-| **temas**                                | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
-| **width of code indentations**           | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
+| Option                                    | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                                                  |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **tipo de letra** e **tamanho de letra**  | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                           |
+| **estilo e cor dos elementos de sintaxe** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
+| **espaços**                               | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                                                |
+| **temas**                                 | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
+| **width of code indentations**            | Definir a largura das indentações do código                                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
 
 ### Change bars
 
@@ -107,7 +107,7 @@ The following parameters are stored in the template:
 
 - Relative size of the editing and list areas
 - Número de listas
-- Location and contents of each list
+- Localização e conteúdo de cada lista
 - Relative width of each list
 
 To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
@@ -213,12 +213,12 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
 ![](../assets/en/code-editor/clipboards-2.png)
 
-| Plataforma  | Copy selected text to a clipboard    | Paste contents of a clipboard at cursor location |
-| ----------- | ------------------------------------ | ------------------------------------------------ |
-| **Windows** | Shift or Alt+click on clipboard icon | Ctrl+clique no ícone da área de transferência    |
-|             |                                      | Ctrl+número do clipboard                         |
-| **macOS**   | Shift or Alt+click on clipboard icon | Cmd+clique no ícone da área de transferência     |
-|             | Cmd+Shift+clipboard number           | Cmd+clipboard number                             |
+| Plataforma  | Copiar texto selecionado para uma área de transferência | Paste contents of a clipboard at cursor location |
+| ----------- | ------------------------------------------------------- | ------------------------------------------------ |
+| **Windows** | Shift or Alt+click on clipboard icon                    | Ctrl+clique no ícone da área de transferência    |
+|             |                                                         | Ctrl+número do clipboard                         |
+| **macOS**   | Shift or Alt+click on clipboard icon                    | Cmd+clique no ícone da área de transferência     |
+|             | Cmd+Shift+clipboard number                              | Cmd+clipboard number                             |
 
 You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.
 
@@ -279,7 +279,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
-- type a dot "." after an object or
+- digite um ponto "." depois de um objeto ou
 - use the Tab key after a dereferenced object pointer "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)

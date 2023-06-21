@@ -266,7 +266,7 @@ The same symbols are often used for different operations, depending on the data 
 
 | Tipo de dados | Operação      | Exemplo                                                                                              |
 | ------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Número        | Adição        | 1 + 2 adiciona os números e resultados em 3                                                          |
+| Number        | Adição        | 1 + 2 adiciona os números e resultados em 3                                                          |
 | String        | Concatenação  | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
 | Data e Número | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
 
@@ -277,7 +277,7 @@ Simply put, expressions return a value. In fact, when using the 4D language, you
 
 Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
 
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. Inclui:
+As expressões raramente são "autónomas." There are several places in 4D where an expression can be used by itself. Inclui:
 
 - Formula editor (apply formula, query with formula, order by formula)
 - O comando `EXECUTE FORMULA`
@@ -295,9 +295,9 @@ You refer to an expression by the data type it returns. There are several expres
 | “Hello ” + “there”       | String               | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
 | “Sr. ” + [People]Name    | String               | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
 | Uppercase("smith")       | String               | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                                      |
-| 4                        | Número               | Esta é uma constante numérica, 4.                                                                                                                                               |
-| 4 * 2                    | Número               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
-| myButton                 | Número               | Esta é uma variável associada a um botão. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                            |
+| 4                        | Number               | Esta é uma constante numérica, 4.                                                                                                                                               |
+| 4 * 2                    | Number               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
+| myButton                 | Number               | Esta é uma variável associada a um botão. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                            |
 | !1997-01-25!             | Date                 | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
 | Current date+ 30         | Date                 | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
 | ?8:05:30?                | Hora                 | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
@@ -308,7 +308,7 @@ You refer to an expression by the data type it returns. There are several expres
 | My Picture + 50          | Imagem               | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
 | ->[People]Name           | Ponteiro             | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
 | Table(1)                 | Ponteiro             | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Objeto               | This is a command that returns MyString as an object (if proper format)                                                                                                         |
+| JSON Parse (MyString)    | Object               | This is a command that returns MyString as an object (if proper format)                                                                                                         |
 | JSON Parse (MyJSONArray) | Collection           | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
 | Form.pageNumber          | Propriedade objecto  | An object property is an expression that can be of any supported type                                                                                                           |
 | Col[5]                   | Elemento de colecção | A collection element is an expression that can be of any supported type                                                                                                         |
@@ -342,7 +342,7 @@ MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
 
 ```4d
-C_DATE(MyDate) //Tipo data para a variável MyDate
+$str:=String("hello world!")
 ```
 
 ```4d
@@ -400,7 +400,7 @@ comments
 End for
 ```
 
-## Escape sequences
+## Sequências de escape
 
 The 4D language allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a "special" character.
 

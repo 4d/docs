@@ -3,7 +3,7 @@ id: creating
 title: Criação de menus e barras de menus
 ---
 
-You can create menus and menu bars:
+É possível criar menus e barras de menu:
 
 - using the Menus editor of the 4D Toolbox window. In this case, menus and menu bars are stored in the application's structure.
 - dynamically, using the language commands from the "Menus" theme. In this case, menus and menu bars are not stored, they only exist in memory.

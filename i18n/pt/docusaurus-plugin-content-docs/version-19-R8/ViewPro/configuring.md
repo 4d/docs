@@ -187,7 +187,7 @@ To create your own date and time patterns, in your current localization, you can
 |      | Código<br/>(não sensível a maiúsculas e minúsculas) | Descrição                                       | Exemplo              |
 | ---- | --------------------------------------------------------- | ----------------------------------------------- | -------------------- |
 | Date |                                                           |                                                 | (January 1, 2019)    |
-|      | m                                                         | Month number without leading zero               | 1                    |
+|      | m                                                         | Número do mês sem zero à esquerda               | 1                    |
 |      | mm                                                        | Month number with leading zero                  | 01                   |
 |      | mmm                                                       | Nome do mês, abreviado                          | Jan                  |
 |      | mmmm                                                      | Nome do mês, long                               | January              |
@@ -301,7 +301,7 @@ The following special characters allow the automatic addition or formatting of i
 
 ### Margens
 
-Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
+Margin attributes are used to specify the 4D View Pro area margins for printing. Expresso em centenas de polegada.
 
 | Propriedade |         | Tipo          | Descrição                                                  |
 | ----------- | ------- | ------------- | ---------------------------------------------------------- |
@@ -385,7 +385,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 | Propriedade   |                | Tipo                 | Descrição                                                                                                                                              |
 | ------------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| marca de água |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
+| marca de água |                | collection           | Coleção de parâmetros de marcas de água.  Default value: undefined                                                                                     |
 |               | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
 |               | \[ ].imageSrc | picture &#124; text* | O texto/imagem da marca de água.                                                                                                                       |
 |               | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
@@ -459,14 +459,14 @@ Exemplo:
 
 #### Layout
 
-| Propriedade | Tipo          | Descrição                                                                                                           | Valores possíveis                                                                                                    |
-| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| cellPadding | text          | Defines the cell padding                                                                                            |                                                                                                                      |
-| hAlign      | inteiro longo | Defines the horizontal alignment of cell contents.                                                                  | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
-| locked      | boolean       | Specifies cell protection status. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = locked, False = unlocked.                                                                                     |
-| shrinkToFit | boolean       | Specifies if the contents of the cell should be reduced.                                                            | True = reduced content, False = no reduction.                                                                        |
-| tabStop     | boolean       | Specifies if the focus to the cell can be set using the Tab key.                                                    | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
-| vAlign      | inteiro longo | Specifies the vertical alignment of cell contents.                                                                  | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
+| Propriedade | Tipo          | Descrição                                                                                                                    | Valores possíveis                                                                                                    |
+| ----------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| cellPadding | text          | Defines the cell padding                                                                                                     |                                                                                                                      |
+| hAlign      | inteiro longo | Defines the horizontal alignment of cell contents.                                                                           | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
+| locked      | boolean       | Especifica o estado de proteção da célula. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = locked, False = unlocked.                                                                                     |
+| shrinkToFit | boolean       | Specifies if the contents of the cell should be reduced.                                                                     | True = reduced content, False = no reduction.                                                                        |
+| tabStop     | boolean       | Specifies if the focus to the cell can be set using the Tab key.                                                             | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
+| vAlign      | inteiro longo | Specifies the vertical alignment of cell contents.                                                                           | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
 
 #### Informações sobre o estilo
 
@@ -486,8 +486,8 @@ Contém as seguintes propriedades:
 | version      | Longint       | Internal component version                   |
 | dateCreation | Timestamp     | Data de criação                              |
 | dateModified | Timestamp     | Data da última modificação                   |
-| meta         | Objeto        | Free contents, reserved for the 4D developer |
-| spreadJS     | Objeto        | Reserved for the 4D View Pro component       |
+| meta         | Object        | Free contents, reserved for the 4D developer |
+| spreadJS     | Object        | Reserved for the 4D View Pro component       |
 
 ## 4D View Pro Form Object Variable
 
@@ -499,9 +499,9 @@ Contém as seguintes propriedades:
 | Propriedade            | Tipo de valor | Descrição                                                                                                                                                                                                                                                                                                                    |
 | ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ViewPro.area           | Text          | Nome da área 4D View Pro                                                                                                                                                                                                                                                                                                     |
-| ViewPro.callbacks      | Objeto        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
+| ViewPro.callbacks      | Object        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
 | ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
-| ViewPro.events         | Objeto        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
+| ViewPro.events         | Object        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
 | ViewPro.formulaBar     | Parâmetros    | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
 | ViewPro.inited         | Parâmetros    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
 | ViewPro.interface      | Text          | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |

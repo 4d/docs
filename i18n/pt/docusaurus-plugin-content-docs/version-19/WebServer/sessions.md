@@ -5,7 +5,7 @@ title: Sessões usuário
 
 The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
 
-Web server user sessions allow to:
+As sessões de usuário do servidor Web permitem:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
 - share data between the processes of a web client,
@@ -106,7 +106,7 @@ In a CRM application, each salesperson manages their own client portfolio. The d
 
 We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
 
-1. We run this URL to open a session:
+1. Executamos este URL para abrir uma sessão:
 
 ```
 http://localhost:8044/authenticate.shtml

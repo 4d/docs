@@ -285,7 +285,7 @@ Just like storage attributes, computed attributes may be included in **queries**
 Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance.
 
 
-### How to define computed attributes
+### Como definir atributos computados
 
 You create a computed attribute by defining a `get` accessor in the [**entity class**](#entity-class) of the dataclass. The computed attribute will be automatically available in the dataclass attributes and in the entity attributes.
 
@@ -437,7 +437,7 @@ The *$event* parameter contains the following properties:
 | dataClassName | Text         | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                  |
 | kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Diferente de | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                      |
-| operator      | Text         | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (igual a, @ é um wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (greater than or equal to)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
+| operator      | Text         | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (igual a, @ é um wildcard)</li><li>=== (igual a, @ não é wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (greater than or equal to)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
 | result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                           |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
@@ -914,7 +914,7 @@ ORDA user classes have a different icon from regular classes. Empty classes are 
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
+To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. Por exemplo, para uma classe Entity:
 
 ```
 Class extends Entity

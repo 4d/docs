@@ -4,7 +4,7 @@ title: Macros do editor de formulários
 ---
 
 
-The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+O editor de formulários 4D suporta macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
@@ -153,7 +153,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 | Parâmetro | Tipo   | Descrição                                                |
 | --------- | ------ | -------------------------------------------------------- |
-| $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
+| $macro    | Object | Macro declaration object (in the `formMacros.json` file) |
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
@@ -190,8 +190,8 @@ Você pode escrever:
 
 | Parâmetro | Tipo   | Descrição                                                                            |
 | --------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor   | Objeto | Form Editor Macro Proxy object containing the form properties                        |
-| $result   | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| $editor   | Object | Form Editor Macro Proxy object containing the form properties                        |
+| $result   | Object | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
 
 The `onInvoke` function is automatically executed each time the macro is called.
 
@@ -203,25 +203,25 @@ Here are the properties returned in the *$editor* parameter:
 
 | Propriedade                      | Tipo       | Descrição                                                                         |
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Objeto     | O formulário completo                                                             |
+| $editor.editor.form              | Object     | O formulário completo                                                             |
 | $editor.editor.file              | File       | Objeto File do ficheiro do formulário                                             |
 | $editor.editor.name              | String     | Nome do formulário                                                                |
 | $editor.editor.table             | number     | Número da tabela do formulário, 0 para formulário projecto                        |
 | $editor.editor.currentPageNumber | number     | O número da página actual                                                         |
-| $editor.editor.currentPage       | Objeto     | The current page, containing all the form objects and the entry order of the page |
+| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
 | $editor.editor.currentSelection  | Collection | Colecção de nomes de objectos seleccionados                                       |
-| $editor.editor.formProperties    | Objeto     | Properties of the current form                                                    |
+| $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
 | $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Todas as propriedades são opcionais:
 
 | Propriedade       | Tipo       | Descrição                                                              |
 | ----------------- | ---------- | ---------------------------------------------------------------------- |
-| currentPage       | Objeto     | currentPage incluindo os objectos modificados pela macro, se existirem |
+| currentPage       | Object     | currentPage incluindo os objectos modificados pela macro, se existirem |
 | currentSelection  | Collection | currentSelection se modificada pela macro                              |
-| formProperties    | Objeto     | formProperties se modificada pela macro                                |
-| editor.groups     | Objeto     | informação do grupo, se os grupos forem modificados pela macro         |
-| editor.views      | Objeto     | view info, se as vistas forem modificadas pela macro                   |
+| formProperties    | Object     | formProperties se modificada pela macro                                |
+| editor.groups     | Object     | informação do grupo, se os grupos forem modificados pela macro         |
+| editor.views      | Object     | view info, se as vistas forem modificadas pela macro                   |
 | editor.activeView | String     | Nome da vista activa                                                   |
 
 Por exemplo, se objectos da página actual e grupos tiverem sido modificados, pode escrever:
@@ -285,10 +285,10 @@ Function onInvoke($editor : Object)->$result : Object
 
 | Parâmetro    |                       | Tipo       | Descrição                                   |
 | ------------ | --------------------- | ---------- | ------------------------------------------- |
-| $editor      |                       | Objeto     | Objeto enviado para [emInvoke](#oninvoke)   |
-| $resultMacro |                       | Objeto     | Objecto devolvido por [onInvoke](#oninvoke) |
+| $editor      |                       | Object     | Objeto enviado para [emInvoke](#oninvoke)   |
+| $resultMacro |                       | Object     | Objecto devolvido por [onInvoke](#oninvoke) |
 | $error       |                       | Collection | Pilha de erros                              |
-|              | [].errCode            | Número     | Código de erro                              |
+|              | [].errCode            | Number     | Código de erro                              |
 |              | [].message            | Text       | Descrição do erro                           |
 |              | [].componentSignature | Text       | Assinatura da componente interna            |
 

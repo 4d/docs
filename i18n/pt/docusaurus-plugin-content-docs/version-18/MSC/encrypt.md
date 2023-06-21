@@ -14,7 +14,7 @@ A new folder is created each time you perform an encryption/decryption operation
 - Encrypting a database is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that a database encryption operation always includes a compacting step.
 - Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.
 
-## Encrypting data for the first time
+## Encriptar dados pela primeira vez
 
 Encrypting your data for the first time using the MSC requires the following steps:
 
@@ -42,7 +42,7 @@ When a database is encrypted (see above), the Encrypt page provides several encr
 For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
 
 - If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
-- If the data encryption key is not found, you must provide it. The following dialog is displayed: ![](../assets/en/MSC/MSC_encrypt7.png)
+- If the data encryption key is not found, you must provide it. O seguinte diálogo se mostra: ![](../assets/en/MSC/MSC_encrypt7.png)
 
 At this step, you have two options:
 

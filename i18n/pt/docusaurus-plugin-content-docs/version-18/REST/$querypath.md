@@ -16,13 +16,13 @@ In the steps collection, there is an object with the following properties defini
 | Propriedade   | Tipo       | Descrição                                                                   |
 | ------------- | ---------- | --------------------------------------------------------------------------- |
 | description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Número     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Número     | Number of records found                                                     |
+| time          | Number     | Number of milliseconds needed to execute the query                          |
+| recordsfounds | Number     | Number of records found                                                     |
 | steps         | Collection | An collection with an object defining the subsequent step of the query path |
 
 ## Exemplo
 
-If you passed the following query:
+Se passou a seguinte consulta:
 
  `GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
 
@@ -64,7 +64,7 @@ __queryPath: {
 }
 ```
 
-If, on the other hand, the first query returns more than one entity, the second one will be executed. If we execute the following query:
+If, on the other hand, the first query returns more than one entity, the second one will be executed. Se executarmos a seguinte consulta:
 
  `GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
 

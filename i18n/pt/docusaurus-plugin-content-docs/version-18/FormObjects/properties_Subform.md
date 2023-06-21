@@ -51,9 +51,9 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 #### Gramática JSON
 
-| Nome                         | Tipo de dados | Valores possíveis                  |
-| ---------------------------- | ------------- | ---------------------------------- |
-| doubleClickInEmptyAreaAction | string        | "addSubrecord" or "" to do nothing |
+| Nome                         | Tipo de dados | Valores possíveis                        |
+| ---------------------------- | ------------- | ---------------------------------------- |
+| doubleClickInEmptyAreaAction | string        | "addSubrecord" ou "" para não fazer nada |
 
 #### Objectos suportados
 
@@ -150,7 +150,7 @@ Specifies the table that the list subform belongs to (if any).
 
 Designates the option for allowing users to select rows:
 - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
+- **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
   The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
     - The selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command.

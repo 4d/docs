@@ -60,7 +60,7 @@ This powerful principle meets most needs related to text transformation. Note, h
 
 To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time:C178`.
 
-### Using the "." as decimal separator
+### Utilizar o "." como separador decimal
 
 4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Regional settings are ignored. This feature facilitates code maintenance and compatibility between 4D languages and versions.
 
@@ -560,7 +560,7 @@ For example, the following code:
 <!--#4DENDLOOP-->
 ```
 
-...produces the following result:
+...produz o seguinte resultado:
 
 ```
 

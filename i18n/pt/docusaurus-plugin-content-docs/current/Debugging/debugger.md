@@ -136,7 +136,7 @@ $c:=a+b
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
+2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. Nesta altura, o tema mostra:
 
     | $a | 1          |
     | -- | ---------- |

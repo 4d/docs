@@ -39,13 +39,13 @@ Números negativos são especificados com o sinal de menos (-). Por exemplo:
 
 | Operação             | Sintaxe          | Retorna    | Expression | Valor |
 | -------------------- | ---------------- | ---------- | ---------- | ----- |
-| Adição               | Número + Número  | Número     | 2 + 3      | 5     |
-| Subtração            | Número - Número  | Número     | 3 – 2      | 1     |
-| Multiplicação        | Número * Número  | Número     | 5 * 2      | 10    |
-| Divisão              | Número / Número  | Número     | 5 / 2      | 2.5   |
-| Divisão inteira      | Número \ Número | Número     | 5 \ 2     | 2     |
-| Módulo               | Número % Número  | Número     | 5 % 2      | 1     |
-| Exponenciação        | Número ^ Número  | Número     | 2 ^ 3      | 8     |
+| Adição               | Número + Número  | Number     | 2 + 3      | 5     |
+| Subtração            | Número - Número  | Number     | 3 – 2      | 1     |
+| Multiplicação        | Número * Número  | Number     | 5 * 2      | 10    |
+| Divisão              | Número / Número  | Number     | 5 / 2      | 2.5   |
+| Divisão inteira      | Número \ Número | Number     | 5 \ 2     | 2     |
+| Módulo               | Número % Número  | Number     | 5 % 2      | 1     |
+| Exponenciação        | Número ^ Número  | Number     | 2 ^ 3      | 8     |
 | Igual                | Número = Número  | Parâmetros | 10 = 10    | True  |
 |                      |                  |            | 10 = 11    | False |
 | Desigualdade         | Número # Número  | Parâmetros | 10 #11     | True  |
@@ -127,8 +127,8 @@ O quadro seguinte lista os operadores bitwise e os seus efeitos:
 | Bitwise OR (exclusivo) | Each resulting bit is the logical XOR of the bits in the two operands. Here is the logical XOR table: <ul><li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li></ul> In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.                                                                                                                             |
 | Left Bit Shift         | The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. Os bits à esquerda são perdidos e os novos bits à direita são estabelecidos como 0. **Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N. |
 | Right Bit Shift        | The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0. **Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.             |
-| Bit Set                | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.                                                                                                                                                                                              |
-| Bit Clear              | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                              |
+| Bit Set                | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. Os outros bits permanecem inalterados.                                                                                                                                                                                          |
+| Bit Clear              | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. Os outros bits permanecem inalterados.                                                                                                                                                                                          |
 | Bit Test               | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                 |
 
 ### Exemplos

@@ -167,7 +167,7 @@ The figure below shows a marquee being drawn to select two objects:
 
 ![](../assets/en/FormEditor/selectMultiple.png)
 
-To deselect an object that is part of a set of selected objects, hold down the **Shift** key and click the object. The other objects remain selected. To deselect all the selected objects, click outside the boundaries of all the objects.
+To deselect an object that is part of a set of selected objects, hold down the **Shift** key and click the object. Os outros objetos permanecem selecionados. To deselect all the selected objects, click outside the boundaries of all the objects.
 
 ### Duplicação de objectos
 
@@ -360,7 +360,7 @@ You can view the current entry order either using the “Entry order” shields,
 
 This paragraph describes viewing and modifying the entry order using the “Entry order” mode. For more information about viewing the entry order using shields, refer to [Using shields](#using-shields).
 
-To view or change the entry order:
+Para ver ou alterar a ordem de entrada:
 
 1. Choose **Entry Order** from the **Form** menu or click on the Entry Order button in the toolbar of the window:![](../assets/en/FormEditor/zOrder.png)The pointer turns into an entry order pointer and 4D draws a line in the form showing the order in which it selects objects during data entry.Viewing and changing the data entry order are the only actions you can perform until you click any tool in the Tools palette.
 
@@ -387,7 +387,7 @@ When you release the mouse button, the objects enclosed or touched by the rectan
 
 By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
 
-1. Select the Entry order mode, then
+1. Selecionar o modo ordem de entrada e, em seguida
 
 2. **shift-click** on the object
 
@@ -522,7 +522,7 @@ Here is a description of each type of shield:
 | ![](../assets/en/FormEditor/viewNumber.png)     | Vista actual                        | Para todos os objectos na vista actual                                                                                               |
 | ![](../assets/en/FormEditor/cssShield.png)      | [Folha de estilo](stylesheets.html) | Para objectos com um ou mais valores de atributo anulados por uma folha de estilo.                                                   |
 | ![](../assets/en/FormEditor/filter.png)         | Filtro                              | Para objectos enterráveis com um filtro de entrada associado                                                                         |
-| ![](../assets/en/FormEditor/helpTip.png)        | Dica de Ajuda                       | For objects with an associated tip                                                                                                   |
+| ![](../assets/en/FormEditor/helpTip.png)        | Dica de Ajuda                       | Para objetos com uma mensagem de ajuda associada                                                                                     |
 | ![](../assets/en/FormEditor/localized.png)      | Localizado                          | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
 | ![](../assets/en/FormEditor/noShields.png)      | No Shields                          | No shields appear                                                                                                                    |
 
