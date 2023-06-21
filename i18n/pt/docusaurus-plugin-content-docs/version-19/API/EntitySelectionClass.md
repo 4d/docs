@@ -52,7 +52,7 @@ As seleções de entidades podem ser criadas a partir de seleções existentes u
 | Parâmetro  | Tipo                |    | Descrição                                                                                                         |
 | ---------- | ------------------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
 | dsTable    | Tabela              | -> | Tabela do banco de dados 4D cuja seleção atual se utilizará para construir a seleção de entidades                 |
-| settings   | Objeto              | -> | Opção de construção: context                                                                                      |
+| settings   | Object              | -> | Opção de construção: context                                                                                      |
 | Resultados | 4D. EntitySelection | <- | Seleção de entidades que coincidem com a classe de dados relacionada com a tabela dada|<!-- END REF -->
 
 |
@@ -1150,7 +1150,7 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 #### Descrição
 
-The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
+A função `.minus()` <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 * Se passar *entity* como parâmetro, a função cria uma nova seleção de entidade sem *entity* (se *entity* pertencer à seleção de entidade). Se *entity* não for incluída na seleção de entidade original, uma nova referência para a seleção de entidade é retornada.
 * Se a entity selection não estiver ordenada, *entity* se adiciona em qualquer lugar da seleção, sem uma ordem específica.
@@ -1342,9 +1342,9 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 | Parâmetro     | Tipo                |    | Descrição                                                   |
 | ------------- | ------------------- |:--:| ----------------------------------------------------------- |
 | formulaString | Text                | -> | Formula string                                              |
-| formulaObj    | Objeto              | -> | Objecto fórmula                                             |
+| formulaObj    | Object              | -> | Objecto fórmula                                             |
 | sortOrder     | Integer             | -> | `dk ascending` (normal) ou `dk descending`                  |
-| settings      | Objeto              | -> | Parâmetros da fórmula                                       |
+| settings      | Object              | -> | Parâmetros da fórmula                                       |
 | Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade ordenada<!-- END REF -->
 
 |
@@ -1464,9 +1464,9 @@ Neste exemplo, o objeto campo "marks" em **Students** dataClass contém as notas
 | Parâmetro     | Tipo                |    | Descrição                                                                                                                                                                       |
 | ------------- | ------------------- |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Text                | -> | Criterios de pesquisa como string                                                                                                                                               |
-| formula       | Objeto              | -> | Criterios de pesquisa como objeto fórmula                                                                                                                                       |
+| formula       | Object              | -> | Criterios de pesquisa como objeto fórmula                                                                                                                                       |
 | value         | any                 | -> | Valores a usar para placeholders indexados                                                                                                                                      |
-| querySettings | Objeto              | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                                                                   |
+| querySettings | Object              | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                                                                   |
 | Resultados    | 4D. EntitySelection | <- | Nova seleção de entidade feita de entidades da seleção de entidade que satisfazem o critério de pesquisa especificado em  *queryString* ou *formula*|<!-- END REF -->
 
 |
