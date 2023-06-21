@@ -42,7 +42,7 @@ The "Status" column displays the verification status of each item using symbols:
 | ![](../assets/en/MSC/MSC_OK.png)  | Verification carried out with no problem       |
 | --------------------------------- | ---------------------------------------------- |
 | ![](../assets/en/MSC/MSC_KO2.png) | Verification carried out, problems encountered |
-| ![](../assets/en/MSC/MSC_KO3.png) | Verification partially carried out             |
+| ![](../assets/en/MSC/MSC_KO3.png) | Verificação parcialmente efectuada             |
 | ![](../assets/en/MSC/MSC_KO.png)  | Verificação não efectuada                      |
 
 Click on **Verify** to begin the verification or on **Standard** to go back to the standard page.
