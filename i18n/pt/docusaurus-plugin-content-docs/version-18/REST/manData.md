@@ -100,7 +100,7 @@ Sempre pode definir que atributos a retornar na resposta REST depois de uma peti
 
 Pode aplicar essa técnica a:
 
-| Objeto                | Sintaxe                                             | Exemplo                                                       |
+| Object                | Sintaxe                                             | Exemplo                                                       |
 | --------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass             | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Coleção de entidades  | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
