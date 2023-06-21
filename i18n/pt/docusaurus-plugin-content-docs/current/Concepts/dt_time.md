@@ -35,13 +35,13 @@ Uma hora nula se escreve ?00:00:00?
 | -------------------- | -------------- | ---------- | ----------------------- | ---------- |
 | Adição               | Hora + Hora    | Hora       | ?02:03:04? + ?01:02:03? | ?03:05:07? |
 | Subtração            | Hora – Hora    | Hora       | ?02:03:04? ?02:03:04?   | ?01:01:01? |
-| Adição               | Hora + Número  | Número     | ?02:03:04? ?01:02:03?   | 7449       |
-| Subtração            | Hora – Número  | Número     | ?02:03:04? ?02:03:04?   | 7319       |
-| Multiplicação        | Hora * Número  | Número     | ?02:03:04? ?02:03:04?   | 14768      |
-| Divisão              | Hora / Número  | Número     | ?02:03:04? ?02:03:04?   | 3692       |
-| Divisão inteira      | Hora \ Número | Número     | ?02:03:04? ?02:03:04?   | 3692       |
+| Adição               | Hora + Número  | Number     | ?02:03:04? ?01:02:03?   | 7449       |
+| Subtração            | Hora – Número  | Number     | ?02:03:04? ?02:03:04?   | 7319       |
+| Multiplicação        | Hora * Número  | Number     | ?02:03:04? ?02:03:04?   | 14768      |
+| Divisão              | Hora / Número  | Number     | ?02:03:04? ?02:03:04?   | 3692       |
+| Divisão inteira      | Hora \ Número | Number     | ?02:03:04? ?02:03:04?   | 3692       |
 | Módulo               | Hora % Hora    | Hora       | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Módulo               | Hora % Número  | Número     | ?02:03:04? ?02:03:04?   | 0          |
+| Módulo               | Hora % Número  | Number     | ?02:03:04? ?02:03:04?   | 0          |
 | Igual                | Hora = Hora    | Parâmetros | ?01:02:03? ?01:02:03?   | True       |
 |                      |                |            | ?01:02:03? ?01:02:03?   | False      |
 | Desigualdade         | Hora # Hora    | Parâmetros | ?01:02:03? ?01:02:03?   | True       |
