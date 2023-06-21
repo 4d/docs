@@ -122,7 +122,7 @@ In *rangeObj*, pass a range object of cells to add to the current selection.
 
 #### Exemplo
 
-You have cells currently selected:
+Tem células atualmente seleccionadas:
 
 ![](../assets/en/ViewPro/cmd_vpAddSelection1.PNG)
 
@@ -243,7 +243,7 @@ To span the First quarter and Second quarter cells across the two cells beside t
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
 | styleName  | Text    | -> | Nome do estilo                                                    |
-| styleObj   | Object  | -> | Object defining attribute settings                                |
+| styleObj   | Object  | -> | Objeto que define as propriedades do atributo                     |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
 
 |
@@ -696,7 +696,7 @@ You can pass an optional *options* parameter with the following properties:
 | Propriedade | Tipo       | Descrição                                                                                                               |
 | ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
 | copy        | Parâmetros | *True* (default) to keep the copied values, formatting and formulas after the command executes. *False* to remove them. |
-| copyOptions | Longint    | Specifies what is copied or moved. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                          |
+| copyOptions | Longint    | Especifica o que é copiado ou movido. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                       |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -984,7 +984,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 
 | Variável |               | Tipo    | Descrição                                              |
 | -------- | ------------- | ------- | ------------------------------------------------------ |
-| $1       |               | text    | The name of the 4D View Pro object                     |
+| $1       |               | text    | O nome do objeto 4D View Pro                           |
 | $2       |               | text    | The filepath of the exported 4D View Pro object        |
 | $3       |               | object  | A reference to the command's *paramObj*                |
 | $4       |               | object  | An object returned by the method with a status message |
@@ -1261,9 +1261,9 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                                    |
-| ---------- | ---- | -- | ------------------------------------------------------------ |
-| vpAreaName | Text | -> | 4D View Pro area form object name|<!-- END REF -->
+| Parâmetro  | Tipo |    | Descrição                                                         |
+| ---------- | ---- | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text | -> | Nome da área 4D View Pro no formulário|<!-- END REF -->
 
 |
 
@@ -2436,11 +2436,11 @@ borderTop:{color:green,style:10}
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- | -- | ------------------------------------------------------------ |
-| vpAreaName | Text       | -> | 4D View Pro area form object name                            |
-| sheet      | Integer    | -> | Target scope (default = current sheet)                       |
-| Resultados | Collection | <- | Collection of style sheet objects|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                          |
+| ---------- | ---------- | -- | ------------------------------------------------------------------ |
+| vpAreaName | Text       | -> | 4D View Pro area form object name                                  |
+| sheet      | Integer    | -> | Target scope (default = current sheet)                             |
+| Resultados | Collection | <- | Coleção de objectos de folhas de estilo|<!-- END REF -->
 
 |
 
@@ -3412,9 +3412,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                                    |
-| ---------- | ---- | -- | ------------------------------------------------------------ |
-| vpAreaName | Text | -> | 4D View Pro area form object name|<!-- END REF -->
+| Parâmetro  | Tipo |    | Descrição                                                         |
+| ---------- | ---- | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text | -> | Nome da área 4D View Pro no formulário|<!-- END REF -->
 
 |
 
@@ -3466,7 +3466,7 @@ In *fontObj*, pass an object containing the font properties. As propriedades aba
 | size        | text | Defines the size of the font. The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | a number with one of the following units: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>              | Sim         |
 | style       | text | The style of the font.                                                                                              | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | Não         |
 | variant     | text | Specifies font in small capital letters.                                                                            | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | Não         |
-| weight      | text | Defines the thickness of the font.                                                                                  | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Não         |
+| weight      | text | Define a espessura do tipo de letra.                                                                                | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Não         |
 
 This object can be created with the [VP Font to object](#vp-font-to-object) command.
 
@@ -3601,9 +3601,9 @@ O seguinte código:
 
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                                    |
-| ---------- | ---- | -- | ------------------------------------------------------------ |
-| vpAreaName | Text | -> | 4D View Pro area form object name|<!-- END REF -->
+| Parâmetro  | Tipo |    | Descrição                                                         |
+| ---------- | ---- | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text | -> | Nome da área 4D View Pro no formulário|<!-- END REF -->
 
 |
 
@@ -4056,9 +4056,9 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 <!-- REF #_method_.VP RESUME COMPUTING.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                                    |
-| ---------- | ---- | -- | ------------------------------------------------------------ |
-| vpAreaName | Text | -> | 4D View Pro area form object name|<!-- END REF -->
+| Parâmetro  | Tipo |    | Descrição                                                         |
+| ---------- | ---- | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text | -> | Nome da área 4D View Pro no formulário|<!-- END REF -->
 
 |
 
@@ -4190,7 +4190,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 | onEvent                  | object (fórmula) | A callback method that will be launched when the offscreen area is ready. It can be either:<li>an `onEvent` function of a class, or</li><li>um objecto `Formula`</li>By default, the callback method is called on the [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), or [`On Timer`](../Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
 | autoQuit                 | boolean          | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                    |
 | timeout                  | number           | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| result                   | misto            | Result of the processing (if any)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| result                   | misto            | Resultado do processamento (se for caso disso)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `<customProperty>` | misto            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 
@@ -4307,7 +4307,7 @@ $result:=VP Run offscreen area($o)
 
 #### Descrição
 
-The `VP SET ACTIVE CELL` command <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->defines a specified cell as active<!-- END REF -->.
+The `VP SET ACTIVE CELL` command <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define uma célula específica como ativa<!-- END REF -->.
 
 In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell](#vp-cell)). If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
@@ -5019,7 +5019,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pa
 
 | Parâmetros              | Descrição                                | Padrão predefinido dos EUA |
 | ----------------------- | ---------------------------------------- | -------------------------- |
-| `vk pattern long date`  | ISO 8601 format for the full date        | "dddd, dd MMMM yyyy"       |
+| `vk pattern long date`  | Formato ISO 8601 para a data completa    | "dddd, dd MMMM yyyy"       |
 | `vk pattern month day`  | ISO 8601 format for the month and day    | "MMMM dd"                  |
 | `vk pattern short date` | Abbreviated ISO 8601 format for the date | "MM/dd/yyyy"               |
 | `vk pattern year month` | ISO 8601 format for the month and year   | "yyyy MMMM"                |
@@ -5399,10 +5399,10 @@ O PDF:
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
-| Parâmetro   | Tipo   |    | Descrição                                                   |
-| ----------- | ------ | -- | ----------------------------------------------------------- |
-| rangeObj    | Object | -> | Intervalo de linhas                                         |
-| propertyObj | Object | -> | Object containing row properties|<!-- END REF -->
+| Parâmetro   | Tipo   |    | Descrição                                                              |
+| ----------- | ------ | -- | ---------------------------------------------------------------------- |
+| rangeObj    | Object | -> | Intervalo de linhas                                                    |
+| propertyObj | Object | -> | Objeto que contém as propriedades da linhas|<!-- END REF -->
 
 |
 
@@ -5539,7 +5539,7 @@ The document currently has one sheet:
 
 ![](../assets/en/ViewPro/vp-sheet-1.png)
 
-To set the number of sheets to 3:
+Para definir o número de folhas como 3:
 
 ```4d
 VP SET SHEET COUNT("ViewProArea";3)
@@ -5869,11 +5869,11 @@ $param.filterButtonVisible:=False VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; 
 
 <!-- REF #_method_.VP SET TABLE THEME.Params -->
 
-| Parâmetro  | Tipo                                             |    | Descrição                                                   |
-| ---------- | ------------------------------------------------ | -- | ----------------------------------------------------------- |
-| vpAreaName | Text                                             | -> | 4D View Pro area form object name                           |
-| tableName  | Text                                             | -> | Nome da tabela                                              |
-| options    | [cs. ViewPro. TableTheme](classes.md#tabletheme) | -> | Table theme properties to modify|<!-- END REF -->
+| Parâmetro  | Tipo                                             |    | Descrição                                                             |
+| ---------- | ------------------------------------------------ | -- | --------------------------------------------------------------------- |
+| vpAreaName | Text                                             | -> | 4D View Pro area form object name                                     |
+| tableName  | Text                                             | -> | Nome da tabela                                                        |
+| options    | [cs. ViewPro. TableTheme](classes.md#tabletheme) | -> | Propriedades do tema da tabela a modificar|<!-- END REF -->
 
 
 |
@@ -6164,7 +6164,7 @@ The following table lists the available workbook options:
 | customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).         |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                   |
 | cutCopyIndicatorVisible               | boolean                 | Display an indicator when copying or cutting the selected item.                                                                                                                                                                                        |
-| defaultDragFillType                   | number                  | O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Limpa os valores das células.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Fills cells with values and not formatting. </td></tr></table>                                                                                                                                                        |
+| defaultDragFillType                   | number                  | O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Limpa os valores das células.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Preenche as células apenas com formatação.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Fills cells with values and not formatting. </td></tr></table>                                                                                                                                                        |
 | enableAccessibility                   | boolean                 | Accessibility support is enabled in the spreadsheet.                                                                                                                                                                                                   |
 | enableFormulaTextbox                  | boolean                 | The formula text box is enabled.                                                                                                                                                                                                                       |
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
@@ -6173,10 +6173,10 @@ The following table lists the available workbook options:
 | iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
 | iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
-| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                          |
+| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                          |
 | pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>Falso (padrão): colar dados</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                                  |
-| resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                              |
+| resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                              |
 | rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
 | scrollbarAppearance                   | number                  | Scrollbar appearance. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>                                                                                                                                                                                  |
 | scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                |
@@ -6187,7 +6187,7 @@ The following table lists the available workbook options:
 | showDragDropTip                       | boolean                 | Display the drag-drop tip.                                                                                                                                                                                                                             |
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                          |
 | showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                             |
-| showHorizontalScrollbar               | boolean                 | Display the horizontal scroll bar.                                                                                                                                                                                                                     |
+| showHorizontalScrollbar               | boolean                 | Mostrar a barra de deslocação horizontal.                                                                                                                                                                                                              |
 | showResizeTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                             |
 | showScrollTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                             |
 | showVerticalScrollbar                 | boolean                 | Display the vertical scroll bar.                                                                                                                                                                                                                       |
@@ -6280,9 +6280,9 @@ Resultados:
 
 <!-- REF #_method_.VP SUSPEND COMPUTING.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                                    |
-| ---------- | ---- | -- | ------------------------------------------------------------ |
-| vpAreaName | Text | -> | 4D View Pro area form object name|<!-- END REF -->
+| Parâmetro  | Tipo |    | Descrição                                                         |
+| ---------- | ---- | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text | -> | Nome da área 4D View Pro no formulário|<!-- END REF -->
 
 |
 
@@ -6301,7 +6301,7 @@ You've added two buttons to the form so that the user can suspend/resume calcula
 
 ![](../assets/en/ViewPro/cmd_vpStopCalculations.PNG)
 
-The Suspend Computing button code:
+O código do botão Suspend Computing:
 
 ```4d
  //pause calculations while users enter information
