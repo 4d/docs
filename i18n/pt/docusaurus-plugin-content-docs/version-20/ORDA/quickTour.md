@@ -33,7 +33,7 @@ ds. Company.city //returns the name of the city
 
 > ORDA e sensíveis às maiúsculas e minúsculas. `ds.company.city` will not refer to the ds. Company.city attribute.
 
-You have also noticed the extra `hires` property in the ds. Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
+You have also noticed the extra `hires` property in the ds. Company dataclass. Não corresponde a um campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
 ![](../assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
 
