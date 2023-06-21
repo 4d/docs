@@ -34,7 +34,7 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 ## Operador de atribuição
 
-You can assign BLOBs to each other.
+É possível atribuir BLOBs uns aos outros.
 
 **Exemplo:**
 ```4d
