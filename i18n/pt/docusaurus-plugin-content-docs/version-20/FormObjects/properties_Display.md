@@ -410,7 +410,7 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 * 1 = caixa marcada,
 * 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
 * -1 = invisible check box,
-* -2 = unchecked box, not enterable,
+* -2 = caixa desmarcada, não editável,
 * -3 = checked box, not enterable,
 * -4 = semi-checked box, not enterable
 
@@ -439,9 +439,9 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis                  |
-| ------------ | ------------- | ---------------------------------- |
-| controlTitle | string        | Any custom label for the check box |
+| Nome         | Tipo de dados | Valores possíveis                                           |
+| ------------ | ------------- | ----------------------------------------------------------- |
+| controlTitle | string        | Qualquer etiqueta personalizada para a caixa de verificação |
 
 #### Objectos suportados
 
@@ -491,7 +491,7 @@ This property allows hiding the object in the Application environment.
 
 You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default.
 
-#### Automatic visibility in list forms
+#### Visibilidade automática em formulários lista
 
 In the context of list forms, the Visibility property supports two specific values:
 
@@ -522,7 +522,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 Manages the display of contents when it exceeds the width of the object.
 
-#### Checked for list box/Yes for input
+#### Marcado para list box/Sim para entrada
 
 `Gramática JSON: "normal"`
 
