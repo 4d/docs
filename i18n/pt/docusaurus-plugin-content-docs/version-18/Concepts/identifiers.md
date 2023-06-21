@@ -158,7 +158,7 @@ $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elements of two-dimensional arrays
+### Elementos de arrays bidimensionais
 
 You reference an element of a two-dimensional array by using the curly braces ({…}) duas vezes. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
