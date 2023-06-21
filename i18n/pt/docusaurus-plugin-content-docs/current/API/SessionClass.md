@@ -296,7 +296,7 @@ If (Session.isGuest())
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------- |
 | privilege  | Text       | -> | Nome do privilégio                                                                          |
 | privileges | Collection | -> | Collection de nomes de privilégios                                                          |
-| settings   | Objeto     | -> | Objetos com as propriedades "privilégios" (string ou collection)|<!-- END REF -->
+| settings   | Object     | -> | Objetos com as propriedades "privilégios" (string ou collection)|<!-- END REF -->
 
 |
 
