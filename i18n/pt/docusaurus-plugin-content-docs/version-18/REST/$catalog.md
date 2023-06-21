@@ -195,7 +195,7 @@ As seguintes propriedades são devolvidas para um dataclass exposto:
 | -------------- | ------ | --------------------------------------------------------------------------------------------------------- |
 | name           | String | Nome da dataclass                                                                                         |
 | collectionName | String | Nome de uma selecção de entidade no dataclass                                                             |
-| tableNumber    | Número | Número da tabela na base de dados 4D                                                                      |
+| tableNumber    | Number | Número da tabela na base de dados 4D                                                                      |
 | scope          | String | Alcance da classe de dados (lembre que só são mostradas as classes de dados cujo **Alcance** for público) |
 | dataURI        | String | Um URI para os dados no dataclass                                                                         |
 
@@ -208,7 +208,7 @@ Aqui estão as propriedades para cada atributo exposto que são devolvidas:
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | String     | o nome de atributo.                                                                                                                                                  |
 | kind        | String     | Tipo de atributo (armazenamento ou relatedEntity).                                                                                                                   |
-| fieldPos    | Número     | Posição do campo na tabela da base de dados).                                                                                                                        |
+| fieldPos    | Number     | Posição do campo na tabela da base de dados).                                                                                                                        |
 | scope       | String     | Âmbito do atributo (apenas aparecerão os atributos cujo âmbito seja Público).                                                                                        |
 | indexed     | String     | Se algum **Index Kind** foi seleccionado, esta propriedade voltará a ser verdadeira. Caso contrário, esta propriedade não aparece.                                   |
 | type        | String     | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
