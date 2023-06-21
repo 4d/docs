@@ -47,7 +47,7 @@ This page consists of the following three areas:
 
 O estado da última cópia de segurança (correta ou com erro) é armazenada na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server. Também se registra no banco de dados **Backup journal.txt**.
 
-### Accessing the database during backup
+### Acesso à base de dados durante a cópia de segurança
 
 During a backup, access to the database is restricted by 4D according to the context. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura mas sim aos dados.
 
