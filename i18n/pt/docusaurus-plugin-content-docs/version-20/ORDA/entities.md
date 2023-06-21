@@ -32,7 +32,7 @@ $myEntity.save() //save the entity
 
 An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
 
-If you execute the following code:
+Se executar o seguinte código:
 
 ```4d
  var $e1; $e2 : cs. EmployeeEntity
