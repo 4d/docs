@@ -30,9 +30,9 @@ Expand the **Details** area to display the last error and its number.
 
 Occasionally, there may not be enough memory to create a BLOB. Or, when you access a document on disk, the document may not exist or may already be opened by another application. These environmental errors do not directly occur because of your code or the way you wrote it. Most of the time, these errors are easy to treat with an [error catching method](Concepts/error-handling.md) installed using the `ON ERR CALL` command.
 
-### Design or Logic Errors
+### Erros de concepção ou de lógica
 
-These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Use the [Debugger](debugger.md) to detect them. Por exemplo:
+These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Utilize o depurador [](debugger.md) para os detectar. Por exemplo:
 
 - A *syntax error* may occur when you try to use a variable that is not yet initialized.
 - An *environmental error* can occur when you try to open a document, because that document's name is received by a subroutine that did not get the right value as a parameter.
@@ -69,7 +69,7 @@ The syntax error window proposes several options:
 
 - **Trace**: Enters Trace/Debugger mode. The [Debugger](debugger.md) window is displayed. If the current line has only executed partially, you may have to click the **Trace** button several times.
 
-- **Continue**: Execution continues. The line with the error may be partially executed, depending on where the error is located. Continue with caution: the error may prevent the rest of your method from executing properly. We recommend clicking **Continue** only if the error is in a trivial call (such as `SET WINDOW TITLE`) that does not prevent executing and testing the rest of your code.
+- **Continuar**: A execução continua. The line with the error may be partially executed, depending on where the error is located. Continue with caution: the error may prevent the rest of your method from executing properly. We recommend clicking **Continue** only if the error is in a trivial call (such as `SET WINDOW TITLE`) that does not prevent executing and testing the rest of your code.
 
 > Tip: To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
 
