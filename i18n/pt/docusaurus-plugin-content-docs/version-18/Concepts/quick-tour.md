@@ -270,7 +270,7 @@ MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 
 ## Comentários
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+Os comentários são linhas de código inactivas. These lines are not interpreted by the 4D language and are not executed when the code is called.
 
 There are two ways to create comments:
 
@@ -292,7 +292,7 @@ For($vCounter;1;100) //Starting loop
  End for
 ```
 
-#### Inline or multiline comments (/**/)
+#### Comentários em linha ou em várias linhas (/**/)
 
 Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
 
