@@ -1738,7 +1738,7 @@ A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`
 
 #### Descrição
 
-The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da pesquisa como foi realizada em 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A propriedade `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contém uma descrição detalhada da pesquisa como foi realizada em 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
 Para saber mais veja o parágrafo **querySettings parameter** na página Dataclass[`.query()`](DataClassClass.html#query).
 
@@ -1763,7 +1763,7 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 
 #### Descrição
 
-The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contém uma descrição detalhada da pesquisa antes da execução (ou seja, a pesquisa planejada)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A propriedade `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contém uma descrição detalhada da pesquisa antes da execução (ou seja, a pesquisa planejada)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
 Para saber mais veja o parágrafo **querySettings parameter** na página Dataclass[`.query()`](DataClassClass.html#query).
 
@@ -1794,7 +1794,7 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 #### Descrição
 > Esta função só funciona com datastore remota (cliente / servidor ou conexão`Open datastore` ).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> de forma que na próxima vez que 4D exige a seleção de entidade será recarregada da database.
+A função `.refresh()` <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> de forma que na próxima vez que 4D exige a seleção de entidade será recarregada da database.
 
 Como padrão, a cache ORDA local é invaidade depois de 30 segundos. No contexto de aplicações cliente/servidor usando ORDA e a linguagem clássica, este método permite assegurar que a aplicação remota vai sempre funcionar com os últimos dados.
 
