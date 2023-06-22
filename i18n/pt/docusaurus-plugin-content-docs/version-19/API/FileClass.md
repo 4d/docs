@@ -313,7 +313,7 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 <!--REF #FileClass.getAppInfo().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                                                            |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
-| Resultados | Objeto | <- | Conteúdo do recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
+| Resultados | Object | <- | Conteúdo do recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
 |
 
@@ -499,7 +499,7 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 | Parâmetro | Tipo   |    | Descrição                                                                                              |
 | --------- | ------ | -- | ------------------------------------------------------------------------------------------------------ |
-| info      | Objeto | -> | Propriedades para escrever no recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
+| info      | Object | -> | Propriedades para escrever no recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
 
 |
 

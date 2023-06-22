@@ -17,7 +17,7 @@ The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
 
 ## Etiquetas para modelos
 
-The following 4D tags are available:
+Estão disponíveis as seguintes etiquetas 4D:
 
 - 4DTEXT, to insert 4D variables and expressions as text,
 - 4DHTML, para inserir código HTML,
@@ -69,12 +69,12 @@ You can also carry out parsing outside of the Web context when you use the `PROC
 
 Internally, the parser works with UTF-16 strings, but the data to parse may have been encoded differently. When tags contain text (for example `4DHTML`), 4D converts the data when necessary depending on its origin and the information available (charset). Below are the cases where 4D parses the tags contained in the HTML pages, as well as any conversions carried out:
 
-| Action / Command                               | Análise de conteúdo das páginas enviadas              | Suporte da sintaxe $(*)                               | Character set used for parsing tags                                                                                                                                                                         |
+| Action / Command                               | Análise de conteúdo das páginas enviadas              | Suporte da sintaxe $(*)                               | Conjunto de caracteres utilizado para a análise de etiquetas                                                                                                                                                |
 | ---------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Páginas chamadas através de URLs               | X, except for pages with “.htm” or “.html” extensions | X, except for pages with “.htm” or “.html” extensions | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `WEB SEND FILE`                                | X                                                     | -                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `WEB SEND TEXT`                                | X                                                     | -                                                     | No conversion necessary                                                                                                                                                                                     |
-| `WEB SEND BLOB`                                | X, if BLOB is of the “text/html” type                 | -                                                     | Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server                                                                                |
+| `WEB SEND BLOB`                                | X, se o BLOB for do tipo "text/html                   | -                                                     | Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server                                                                                |
 | Inclusion by the `<!--#4DINCLUDE-->` tag | X                                                     | X                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `PROCESS 4D TAGS`                              | X                                                     | X                                                     | Text data: no conversion. BLOB data: automatic conversion from the Mac-Roman character set for compatibility                                                                                                |
 

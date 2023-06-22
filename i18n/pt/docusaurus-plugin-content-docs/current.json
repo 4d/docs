@@ -224,7 +224,7 @@
     "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
-    "message": "The main concepts of the 4D Language",
+    "message": "Os principais conceitos da Linguagem 4D",
     "description": "The generated-index page description for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Class Functions": {
@@ -248,7 +248,7 @@
     "description": "The generated-index page title for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Administration.link.generated-index.description": {
-    "message": "How to monitor your 4D applications",
+    "message": "Como monitorizar as suas aplicações 4D",
     "description": "The generated-index page description for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.title": {
@@ -324,7 +324,7 @@
     "description": "The label for the doc item Managing 4D Licenses in sidebar docs, linking to the doc Admin/licenses"
   },
   "sidebar.docs.doc.Data Collection": {
-    "message": "Coleta de dados",
+    "message": "Recolha de dados",
     "description": "The label for the doc item Data Collection in sidebar docs, linking to the doc Admin/data-collect"
   },
   "sidebar.docs.doc.Client/Server": {

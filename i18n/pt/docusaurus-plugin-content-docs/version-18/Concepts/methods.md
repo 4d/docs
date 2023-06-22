@@ -223,7 +223,7 @@ com a função recursiva `Genealogia de` listada aqui:
 
 Note-se o `Genealogia do método` que se autodenomina.
 
-**Bold**: Braces displayed in bold. A segunda via é um **algoritmo recursivo**.
+A primeira forma é um **algoritmo iterativo**. A segunda via é um **algoritmo recursivo**.
 
 Ao implementar código para casos como o exemplo anterior, é importante notar que é sempre possível escrever métodos usando iteração ou recursividade. Tipicamente, a recursão fornece um código mais conciso, legível e de fácil manutenção, mas a sua utilização não é obrigatória.
 

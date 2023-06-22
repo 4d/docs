@@ -329,7 +329,7 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 | Parâmetro  | Tipo    |    | Descrição                                                                       |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed`: Força a queda mesmo se a estampa tiver mudado |
-| Resultados | Objeto  | <- | Resultado da operação drop<!-- END REF -->
+| Resultados | Object  | <- | Resultado da operação drop<!-- END REF -->
 
 |
 
@@ -473,7 +473,7 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 <!-- REF #EntityClass.fromObject().Params -->
 | Parâmetro | Tipo   |    | Descrição                                                             |
 | --------- | ------ |:--:| --------------------------------------------------------------------- |
-| filler    | Objeto | -> | Objeto para o qual vai preencher a entidade<!-- END REF -->
+| filler    | Object | -> | Objeto para o qual vai preencher a entidade<!-- END REF -->
 
 |
 
@@ -860,7 +860,7 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 | Parâmetro  | Tipo    |    | Descrição                                                                            |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk reload if stamp changed`: Recarregar antes de bloquear se o carimbo for alterado |
-| Resultados | Objeto  | <- | Resultado da operação de bloqueio|<!-- END REF -->
+| Resultados | Object  | <- | Resultado da operação de bloqueio|<!-- END REF -->
 
 |
 
@@ -1052,7 +1052,7 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 <!-- REF #EntityClass.reload().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                   |
 | ---------- | ------ |:--:| ------------------------------------------- |
-| Resultados | Objeto | <- | Objeto de estado|<!-- END REF -->
+| Resultados | Object | <- | Objeto de estado|<!-- END REF -->
 
 |
 
@@ -1116,7 +1116,7 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 | Parâmetro  | Tipo    |    | Descrição                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------- |
 | mode       | Integer | -> | `dk auto merge`: Permite o modo de fusão automática            |
-| Resultados | Objeto  | <- | Resultado da operação de salvamento|<!-- END REF -->
+| Resultados | Object  | <- | Resultado da operação de salvamento|<!-- END REF -->
 
 |
 
@@ -1252,7 +1252,7 @@ Atualizar uma entidade com a opção `dk auto merge` :
 | filterString | Text       | -> | Atributos a extrair (string separada por vírgulas)                                                       |
 | filterCol    | Collection | -> | Coleção de atributos a extrair                                                                           |
 | options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
-| Resultados   | Objeto     | <- | Objeto criado a partir da entidade|<!-- END REF -->
+| Resultados   | Object     | <- | Objeto criado a partir da entidade|<!-- END REF -->
 
 |
 
@@ -1650,7 +1650,7 @@ Nesse modo:
 <!-- REF #EntityClass.unlock().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                   |
 | ---------- | ------ |:--:| ------------------------------------------- |
-| Resultados | Objeto | <- | Objeto de estado|<!-- END REF -->
+| Resultados | Object | <- | Objeto de estado|<!-- END REF -->
 
 |
 

@@ -25,7 +25,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- defaultButton|boolean|true, false |
+ defaultButton|booléen|true, false |
 
 #### Objectos suportados
 
@@ -190,7 +190,7 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 ## Mostrar caracteres ocultos
 
-Displays/hides invisible characters
+Apresenta/oculta caracteres invisíveis
 
 #### Gramática JSON
 

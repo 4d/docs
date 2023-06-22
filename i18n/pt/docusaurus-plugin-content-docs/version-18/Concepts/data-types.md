@@ -23,7 +23,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Ponteiro](Concepts/dt_pointer.md)             | -                        | Sim                     | `C_POINTER`, `ARRAY POINTER` |
 | [Imagem](Concepts/dt_picture.md)               | Sim                      | Sim                     | `C_PICTURE`, `ARRAY PICTURE` |
 | [BLOB](Concepts/dt_blob.md)                    | Sim                      | Sim                     | `C_BLOB`, `ARRAY BLOB`       |
-| [Objeto](Concepts/dt_object.md)                | Sim                      | Sim                     | `C_OBJECT`, `ARRAY OBJECT`   |
+| [Object](Concepts/dt_object.md)                | Sim                      | Sim                     | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Collection](Concepts/dt_collection.md)        | -                        | Sim                     | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)           | -                        | Sim                     | `C_VARIANT`                  |
 
@@ -58,7 +58,7 @@ The following table illustrates these default values:
 | Ponteiro     | Nil=true                                                                            | Nil=true                | Nil=true                    |
 | Text         | ""                                                                                  | ""                      | ""                          |
 | Blob         | Tamanho do Blob =0                                                                  | Tamanho do Blob =0      | Tamanho do Blob =0          |
-| Objeto       | null                                                                                | null                    | null                        |
+| Object       | null                                                                                | null                    | null                        |
 | Collection   | null                                                                                | null                    | null                        |
 | Diferente de | indefinido                                                                          | indefinido              | indefinido                  |
 

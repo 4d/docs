@@ -54,6 +54,6 @@ The **Snapshot** button allows you to copy to the clipboard all the operations d
 ![](../assets/en/Admin/server-admin-monitor-snapshot.png)
 
 
-## Display operations at least 5 seconds
+## Mostrar operações durante pelo menos 5 segundos
 
 If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. Retained operations appear dimmed in the operation list. This feature is useful for getting information about operations that execute very quickly.

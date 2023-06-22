@@ -9,7 +9,7 @@ A 4D project can start and monitor a web server for the main (host) application 
 For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
 
 - one web server for the host application,
-- one web server for the component #1,
+- um servidor Web para o componente #1,
 - one web server for the component #2.
 
 Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
@@ -20,7 +20,7 @@ Each 4D web server, including the main application's web server, is exposed as a
 
 Each web server (host application or component) can be used in its own separate context, including:
 - `On Web Authentication` and `On Web Connection` database method calls
-- 4D tags processing and method calls,
+- o processamento das etiquetas 4D e das chamadas de métodos,
 - web sessions and TLS protocol management.
 
 This allows you to develop independant components and features that come with their own web interfaces.
@@ -106,32 +106,32 @@ These properties are defined:
 
 The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
-| Comando                         | Scope                                |
-| ------------------------------- | ------------------------------------ |
-| `SET DATABASE PARAMETER`        | Aplicação local de servidor Web      |
-| `WEB CLOSE SESSION`             | Web server that received the request |
-| `WEB GET BODY PART`             | Web server that received the request |
-| `WEB Get body part count`       | Web server that received the request |
-| `WEB Get Current Session ID`    | Web server that received the request |
-| `WEB GET HTTP BODY`             | Web server that received the request |
-| `WEB GET HTTP HEADER`           | Web server that received the request |
-| `WEB GET OPTION`                | Aplicação local de servidor Web      |
-| `WEB Get server info`           | Aplicação local de servidor Web      |
-| `WEB GET SESSION EXPIRATION`    | Web server that received the request |
-| `WEB Get session process count` | Web server that received the request |
-| `WEB GET STATISTICS`            | Aplicação local de servidor Web      |
-| `WEB GET VARIABLES`             | Web server that received the request |
-| `WEB Is secured connection`     | Web server that received the request |
-| `WEB Is server running`         | Aplicação local de servidor Web      |
-| `WEB SEND BLOB`                 | Web server that received the request |
-| `WEB SEND FILE`                 | Web server that received the request |
-| `WEB SEND HTTP REDIRECT`        | Web server that received the request |
-| `WEB SEND RAW DATA`             | Web server that received the request |
-| `WEB SEND TEXT`                 | Web server that received the request |
-| `WEB SET HOME PAGE`             | Aplicação local de servidor Web      |
-| `WEB SET HTTP HEADER`           | Web server that received the request |
-| `WEB SET OPTION`                | Aplicação local de servidor Web      |
-| `WEB SET ROOT FOLDER`           | Aplicação local de servidor Web      |
-| `WEB START SERVER`              | Aplicação local de servidor Web      |
-| `WEB STOP SERVER`               | Aplicação local de servidor Web      |
-| `WEB Validate digest`           | Web server that received the request |
+| Comando                         | Scope                             |
+| ------------------------------- | --------------------------------- |
+| `SET DATABASE PARAMETER`        | Aplicação local de servidor Web   |
+| `WEB CLOSE SESSION`             | Servidor Web que recebeu o pedido |
+| `WEB GET BODY PART`             | Servidor Web que recebeu o pedido |
+| `WEB Get body part count`       | Servidor Web que recebeu o pedido |
+| `WEB Get Current Session ID`    | Servidor Web que recebeu o pedido |
+| `WEB GET HTTP BODY`             | Servidor Web que recebeu o pedido |
+| `WEB GET HTTP HEADER`           | Servidor Web que recebeu o pedido |
+| `WEB GET OPTION`                | Aplicação local de servidor Web   |
+| `WEB Get server info`           | Aplicação local de servidor Web   |
+| `WEB GET SESSION EXPIRATION`    | Servidor Web que recebeu o pedido |
+| `WEB Get session process count` | Servidor Web que recebeu o pedido |
+| `WEB GET STATISTICS`            | Aplicação local de servidor Web   |
+| `WEB GET VARIABLES`             | Servidor Web que recebeu o pedido |
+| `WEB Is secured connection`     | Servidor Web que recebeu o pedido |
+| `WEB Is server running`         | Aplicação local de servidor Web   |
+| `WEB SEND BLOB`                 | Servidor Web que recebeu o pedido |
+| `WEB SEND FILE`                 | Servidor Web que recebeu o pedido |
+| `WEB SEND HTTP REDIRECT`        | Servidor Web que recebeu o pedido |
+| `WEB SEND RAW DATA`             | Servidor Web que recebeu o pedido |
+| `WEB SEND TEXT`                 | Servidor Web que recebeu o pedido |
+| `WEB SET HOME PAGE`             | Aplicação local de servidor Web   |
+| `WEB SET HTTP HEADER`           | Servidor Web que recebeu o pedido |
+| `WEB SET OPTION`                | Aplicação local de servidor Web   |
+| `WEB SET ROOT FOLDER`           | Aplicação local de servidor Web   |
+| `WEB START SERVER`              | Aplicação local de servidor Web   |
+| `WEB STOP SERVER`               | Aplicação local de servidor Web   |
+| `WEB Validate digest`           | Servidor Web que recebeu o pedido |

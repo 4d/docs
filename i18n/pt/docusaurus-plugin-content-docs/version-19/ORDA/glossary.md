@@ -21,7 +21,7 @@ An attributePath is the path of an attribute inside a given dataclass or entity.
 
 ## Class code
 
-Code for the user class function(s).
+Código da(s) função(ões) da classe usuário.
 
 ## Data model class
 
@@ -33,7 +33,7 @@ Database objects available through the ORDA concept, i.e. datastore, dataclasses
 
 ## Data model function
 
-Function of an ORDA data model class.
+Função de uma classe de modelo de dados ORDA.
 
 ## Dataclass
 
@@ -80,7 +80,7 @@ An entity is an object that corresponds to a dataclass model. An entity contains
 
 An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
 
-For more information, see Entities.
+Para mais informações, consulte Entidades.
 
 ## Seleção de entidades
 

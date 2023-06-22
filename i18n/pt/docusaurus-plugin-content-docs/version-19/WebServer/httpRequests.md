@@ -313,7 +313,7 @@ When 4D sends the page to a Web Browser, it looks like this:
 
 ![](../assets/en/WebServer/spiders.png)
 
-The main features of this page are:
+As principais características desta página são:
 
 - It includes three **Submit** buttons: `vsbLogOn`, `vsbRegister` and `vsbInformation`.
 - When you click **Log On**, the submission of the form is first processed by the JavaScript function `LogOn`. If no name is entered, the form is not even submitted to 4D, and a JavaScript alert is displayed.

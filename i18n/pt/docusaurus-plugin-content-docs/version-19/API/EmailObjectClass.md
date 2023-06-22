@@ -57,7 +57,7 @@ Todas as propriedades que contêm endereços de e-mail ([`de`](#from), [`cc`](#c
 - um nome+email: "Somebody <somebody@domain.com>"
 - vários emails: "Somebody <somebody@domain.com>,me@home.org"
 
-#### Objeto
+#### Object
 
 Um objeto com duas propriedades:
 
@@ -378,7 +378,7 @@ The `MAIL Convert from MIME` command <!-- REF #EmailObjectClass.to.Summary -->co
 | Parâmetro  | Tipo       |    | Descrição                               |
 | ---------- | ---------- |:--:| --------------------------------------- |
 | mime       | Blob, Text | -> | E-mail no MIME                          |
-| Resultados | Objeto     | <- | Objeto Email|<!-- END REF -->
+| Resultados | Object     | <- | Objeto Email|<!-- END REF -->
 
 |
 
@@ -462,8 +462,8 @@ $status:=$transporter.send($email)
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
 | Parâmetro  | Tipo   |    | Descrição                                                  |
 | ---------- | ------ |:--:| ---------------------------------------------------------- |
-| mail       | Objeto | -> | Objeto Email                                               |
-| options    | Objeto | -> | Opções de codificação e Charset                            |
+| mail       | Object | -> | Objeto Email                                               |
+| options    | Object | -> | Opções de codificação e Charset                            |
 | Resultados | Text   | <- | Email objeto convertido em MIME|<!-- END REF -->
 
 |

@@ -412,7 +412,7 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 * -1 = invisible check box,
 * -2 = caixa desmarcada, não editável,
 * -3 = checked box, not enterable,
-* -4 = semi-checked box, not enterable
+* -4 = caixa semi-marcada, não editável
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
 
@@ -534,7 +534,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 ![](../assets/en/FormObjects/wordwrap2.png)
 
-#### Unchecked for list box/No for input
+#### Não selecionado para list box/Não para entrada
 
 `Gramática JSON: "none"`
 
@@ -550,7 +550,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 
-#### Automatic for input (default option)
+#### Automático para entrada (opção padrão)
 
 `Gramática JSON: "automatic"`
 

@@ -65,7 +65,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 | Versão | Mudanças                                                                                           |
 | ------ | -------------------------------------------------------------------------------------------------- |
-| v19 R4 | Alias attributes in the Entity Class                                                               |
+| v19 R4 | Atributos alias na Entity Class                                                                    |
 | v19 R3 | Computed attributes in the Entity Class                                                            |
 | v18 R5 | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>

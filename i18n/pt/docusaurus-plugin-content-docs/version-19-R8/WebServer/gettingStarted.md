@@ -17,7 +17,7 @@ To start the 4D web server:
 1. Launch your 4D application and create a new, empty 4D project.
 2. In the **Run** menu, select **Start Web Server**.
 
-É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page.
+É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). Está agora pronto para processar pedidos. To check it, we'll display the default home page.
 
 ### Displaying the default home page
 
@@ -25,7 +25,7 @@ The 4D web server creates automatically a default `index.html` page in the defau
 
 1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
 
-The default home page is displayed:
+É apresentada a página inicial predefinida:
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
@@ -277,7 +277,7 @@ Then you will be logged for the session:
 
 ![](../assets/en/WebServer/login1.png)
 
-Wrong credentials would be rejected:
+As credenciais incorretas serão rejeitadas:
 
 ![](../assets/en/WebServer/login2.png)
 

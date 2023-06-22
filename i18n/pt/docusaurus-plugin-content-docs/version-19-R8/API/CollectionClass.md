@@ -455,7 +455,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
 | option       | Integer    | -> | `ck resolve pointers`: resolve ponteiros antes de copiar,<br/>`ck shared`: retorna uma coleção partilihada |
 | groupWithCol | Collection | -> | Coleção partilhada a ser agrupada com a coleção resultante                                                       |
-| groupWithObj | Objeto     | -> | Objeto partilhado a ser agrupado com a coleção resultante                                                        |
+| groupWithObj | Object     | -> | Objeto partilhado a ser agrupado com a coleção resultante                                                        |
 | Resultados   | Collection | <- | Cópia profunda da collection original|<!-- END REF -->
 
 
@@ -2185,7 +2185,7 @@ Se quiser ordenar a coleção resultante:
 | ------------- | ---------- |:--:| -------------------------------------------------------------------------------- |
 | queryString   | Text       | -> | Critérios de pesquisa                                                            |
 | value         | Mixed      | -> | Valores a comparar quando usar placeholders (valores temporários)                |
-| querySettings | Objeto     | -> | Opções de pesquisa: parâmetros, atributos                                        |
+| querySettings | Object     | -> | Opções de pesquisa: parâmetros, atributos                                        |
 | Resultados    | Collection | <- | Elementos que correspondem com queryString na coleção|<!-- END REF -->
 
 

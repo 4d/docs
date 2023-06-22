@@ -106,7 +106,7 @@ A função retorna um objeto [**POP3 transporter**](#pop3-transporter-object). T
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Parâmetro  | Tipo               |    | Descrição                                                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Objeto             | -> | Informação de servidor de correio                                              |
+| server     | Object             | -> | Informação de servidor de correio                                              |
 | Resultados | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 |
@@ -218,7 +218,7 @@ Executar esse método não remove de verdade qualquer email. O email marcado ser
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                  |
 | ---------- | ------ |:--:| ------------------------------------------ |
-| Resultados | Objeto | <- | objecto boxInfo|<!-- END REF -->
+| Resultados | Object | <- | objecto boxInfo|<!-- END REF -->
 
 |
 
@@ -230,8 +230,8 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 | Propriedade | Tipo   | Descrição                             |
 | ----------- | ------ | ------------------------------------- |
-| mailCount   | Número | Número de mensagens na caixa de email |
-| size        | Número | Tamanho da mensagem em bytes          |
+| mailCount   | Number | Número de mensagens na caixa de email |
+| size        | Number | Tamanho da mensagem em bytes          |
 
 ##### Exemplo
 
@@ -270,7 +270,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
 | msgNumber  | Integer    | -> | Número da mensagem que na lista                                                         |
 | headerOnly | Parâmetros | -> | True para descarregar apenas os cabeçalhos de correio electrónico (por defeito é False) |
-| Resultados | Objeto     | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Resultados | Object     | <- | [Email objecto](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
@@ -336,7 +336,7 @@ Se quiser saber o emissário do primeiro email da mailbox:
 | Parâmetro  | Tipo    |    | Descrição                                  |
 | ---------- | ------- |:--:| ------------------------------------------ |
 | msgNumber  | Integer | -> | Número da mensagem que na lista            |
-| Resultados | Objeto  | <- | mailInfo object|<!-- END REF -->
+| Resultados | Object  | <- | mailInfo object|<!-- END REF -->
 
 |
 
@@ -350,7 +350,7 @@ O objeto `mailInfo` retornado contém as funcionalidades abaixo:
 
 | Propriedade | Tipo   | Descrição                    |
 | ----------- | ------ | ---------------------------- |
-| size        | Número | Tamanho da mensagem em bytes |
+| size        | Number | Tamanho da mensagem em bytes |
 | id          | Text   | ID única da mensagem         |
 
 O método retorna **Null** se:
@@ -409,8 +409,8 @@ Cada objeto `mailInfo` na coleção retornada contém as propriedades abaixo:
 
 | Propriedade  | Tipo   | Descrição                                                      |
 | ------------ | ------ | -------------------------------------------------------------- |
-| \[ ].size   | Número | Tamanho da mensagem em bytes                                   |
-| \[ ].number | Número | Número da mensagem                                             |
+| \[ ].size   | Number | Tamanho da mensagem em bytes                                   |
+| \[ ].number | Number | Número da mensagem                                             |
 | \[ ].id     | Text   | ID único da mensagem (útil se armazenar a mensagem localmente) |
 
 Se a mailbox não conter uma mensagem, uma coleção vazia é retornada.

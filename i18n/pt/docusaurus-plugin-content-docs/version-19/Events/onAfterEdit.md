@@ -65,7 +65,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | Propriedade | Tipo   | Descrição                                |
 | ----------- | ------ | ---------------------------------------- |
 | fillRange   | object | Intervalo utilizado para o preenchimento |
- autoFillType|longint|Valor utilizado para o enchimento.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: Cells are filled with formatting only</li><li>3: Cells are filled with values but not formatting</li><li>4: Values are removed from the cells</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled</li><li>1: The cells to the right are filled</li><li>2: The cells above are filled</li><li>3: The cells below are filled</li>|
+ autoFillType|longint|Valor utilizado para o enchimento.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: Cells are filled with formatting only</li><li>3: Cells are filled with values but not formatting</li><li>4: Os valores são removidos das células</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0: As células à esquerda são preenchidas</li><li>1: As células à direita estão preenchidas</li><li>2: The cells above are filled</li><li>3: The cells below are filled</li>|
 
 #### action = formulaChanged
 

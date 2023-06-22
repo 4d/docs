@@ -253,7 +253,7 @@ Form events on list box or list box column objects may return the following addi
 | footerName           | text          | Nome do rodapé                                                        |
 | headerName           | text          | Nome do cabeçalho                                                     |
 | horizontalScroll     | inteiro longo | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected        | boolean       | True if row is selected, else False                                   |
+| isRowSelected        | boolean       | True se a linha estiver selecionada, senão False                      |
 | newPosition          | inteiro longo | Nova posição da coluna ou linha                                       |
 | newSize              | inteiro longo | New size (in pixels) of the column or row                             |
 | oldPosition          | inteiro longo | Previous position of the column or row                                |
@@ -1153,7 +1153,7 @@ The current unit is displayed as a button that cycles through the "unitList", "u
 
 Exemplo:
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
+We want to set up a numeric input followed by two possible units: "rows" or "pixels". O valor atual é "2" + "linhas". We use values defined directly in the object ("unitsList" attribute):
 
 ````4d
 ARRAY TEXT($_units;0)

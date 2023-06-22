@@ -29,7 +29,7 @@ Thus button can be used to launch a data compacting operation directly. This ope
 
 After the actual interruption of the application service, 4D Server carries out a standard compacting operation on the database data. If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
 
-Once the compacting is finished, 4D Server automatically restarts the application. The 4D users can then be reconnected.
+Once the compacting is finished, 4D Server automatically restarts the application. Os usuários 4D podem então ser reconectados.
 
 > If the request for compacting was carried out from a remote 4D remote machine, this machine is automatically reconnected by 4D Server.
 
@@ -43,7 +43,7 @@ This area indicates the duration of the 4D Server application execution since th
 
 ### Reiniciar o servidor...
 
-This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. The 4D users can then be reconnected.
+This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. Os usuários 4D podem então ser reconectados.
 
 > If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
 

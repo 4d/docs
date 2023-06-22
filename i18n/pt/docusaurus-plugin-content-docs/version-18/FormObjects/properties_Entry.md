@@ -38,9 +38,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                     |
-| ----------- | ------------- | ------------------------------------- |
-| contextMenu | string        | "automatic" (used if missing), "none" |
+| Nome        | Tipo de dados | Valores possíveis                                   |
+| ----------- | ------------- | --------------------------------------------------- |
+| contextMenu | string        | "automatic" (utilizado se estiver em falta), "none" |
 
 #### Objectos suportados
 
@@ -97,14 +97,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &9                            | Permitir apenas números.                                                                                                                             |
 | &A                            | Permitir apenas letras maiúsculas.                                                                                                                   |
 | &a                            | Allow only letters (uppercase and lowercase).                                                                                                        |
-| &@                            | Allow only alphanumeric characters. Sem caracteres especiais.                                                                                        |
-| ~a##                          | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                 |
+| &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                  |
+| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Allow any two letters, but convert to uppercase.                                                    |
 | !0&9##/##/##                  | Formato de entrada de data standard. Display zeros in entry spaces. Permitir quaisquer números.                                                      |
 | !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                          |
 | !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.              |
 | !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números antes de cada palavra.                                             |
 | !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers after each word.                                                   |
-| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, four entries.                         |
+| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Três entradas, hífen, quatro entradas.                       |
 | !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |
 | !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries. |
 | !0&9###-##-####               | Número de segurança social. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
@@ -130,7 +130,7 @@ When the **Focusable** property is enabled for an object, the object can have th
 
 > An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
 
-- ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
+- ![](../assets/en/FormObjects/property_focusable1.png)<br/>A caixa de verificação mostra o foco quando selecionada
 
 - ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
 

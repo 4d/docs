@@ -63,7 +63,7 @@ Here are the logical operators:
 | INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
 > The logical operators are not case-sensitive, so you can write "AND" or "and".
 
-Below is a representation of the logical operators based on two entity sets. The red section is what is returned.
+Below is a representation of the logical operators based on two entity sets. A secção vermelha é o que é devolvido.
 
 **AND**
 

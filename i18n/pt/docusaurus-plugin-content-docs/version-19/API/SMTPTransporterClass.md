@@ -44,7 +44,7 @@ Os objectos do SMTP Transporter são instanciados com o comando [SMTP New Transp
 <!-- REF #_command_.SMTP New transporter.Params -->
 | Parâmetro  | Tipo               |    | Descrição                                                               |
 | ---------- | ------------------ |:--:| ----------------------------------------------------------------------- |
-| server     | Objeto             | -> | Informação de servidor de correio                                       |
+| server     | Object             | -> | Informação de servidor de correio                                       |
 | Resultados | 4D.SMTPTransporter | <- | [SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
 
 |
@@ -120,7 +120,7 @@ A função devolve um [**objecto SMTP transporter**](#smtp-transporter-object). 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 | Parâmetro  | Tipo               |    | Descrição                                                               |
 | ---------- | ------------------ |:--:| ----------------------------------------------------------------------- |
-| server     | Objeto             | -> | Informação de servidor de correio                                       |
+| server     | Object             | -> | Informação de servidor de correio                                       |
 | Resultados | 4D.SMTPTransporter | <- | [SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
 
 |
@@ -216,8 +216,8 @@ A coleção SMTP é automaticamente fechada:
 <!-- REF #SMTPTransporterClass.send().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                             |
 | ---------- | ------ |:--:| ----------------------------------------------------- |
-| mail       | Objeto | -> | [Email](EmailObjectClass.md#email-object) para enviar |
-| Resultados | Objeto | <- | Status SMTP|<!-- END REF -->
+| mail       | Object | -> | [Email](EmailObjectClass.md#email-object) para enviar |
+| Resultados | Object | <- | Status SMTP|<!-- END REF -->
 
 |
 

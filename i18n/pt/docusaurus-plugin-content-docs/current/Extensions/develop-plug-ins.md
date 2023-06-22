@@ -15,7 +15,7 @@ The modular nature of the 4D environment allows the creation of basic applicatio
 
 A plug-in is a piece of code that 4D launches at start up. Acrescenta funcionalidade ao 4D e aumenta assim a sua capacidade.
 
-Usually, a plug-in does things that:
+Normalmente, um plug-in faz coisas que:
 - 4D cannot do (ie, specific platform technology),
 - será muito difícil de escrever usando apenas 4D,
 - só estão disponíveis como Ponto de Entrada Plug-in

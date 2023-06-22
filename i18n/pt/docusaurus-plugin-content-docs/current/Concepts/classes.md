@@ -335,7 +335,7 @@ O tipo de propriedade pode ser um dos seguintes tipos suportados:
 | `Blob`                                   | Valor BLOB                                                                                                                                        |
 | `Collection`                             | Valor colecção                                                                                                                                    |
 | `Diferente de`                           | Valor variant                                                                                                                                     |
-| `Objeto`                                 | Object with default class (4D.Object)                                                                                                             |
+| `Object`                                 | Object with default class (4D.Object)                                                                                                             |
 | `4D.<className>`                   | Objecto do nome da classe 4D                                                                                                                      |
 | `cs.<className>`                   | Objecto do nome da classe de usuário                                                                                                              |
 | `cs.<namespace>.<className>` | For a class constructor function, the `Current method name` command returns:  `<ClassName>:constructor`, for example "MyClass:constructor". |

@@ -215,9 +215,9 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
 | Plataforma  | Copiar texto selecionado para uma área de transferência | Paste contents of a clipboard at cursor location |
 | ----------- | ------------------------------------------------------- | ------------------------------------------------ |
-| **Windows** | Shift or Alt+click on clipboard icon                    | Ctrl+clique no ícone da área de transferência    |
+| **Windows** | Shift ou Alt+clique no ícone da área de transferência   | Ctrl+clique no ícone da área de transferência    |
 |             |                                                         | Ctrl+número do clipboard                         |
-| **macOS**   | Shift or Alt+click on clipboard icon                    | Cmd+clique no ícone da área de transferência     |
+| **macOS**   | Shift ou Alt+clique no ícone da área de transferência   | Cmd+clique no ícone da área de transferência     |
 |             | Cmd+Shift+clipboard number                              | Cmd+clipboard number                             |
 
 You can use a [Preferences option](Preferences/methods.md#options-1) to hide numbered clipboards.

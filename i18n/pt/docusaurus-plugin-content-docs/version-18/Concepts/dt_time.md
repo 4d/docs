@@ -4,7 +4,7 @@ title: Hora
 ---
 
 - As variáveis, campos ou expressões de tipo Hora podem pertencer a um intervalo entre 00:00:00 e 596,000:00:00.
-- As Horas estão no formato 24 horas.
+- As horas são em formato de 24 horas.
 - Um valor de Hora pode ser tratado como um número. O número retornado de uma Hora será o número de segundos desde a maia noite (00:00:00) contidos nesse valor de hora.
 
 **Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
@@ -33,13 +33,13 @@ Uma hora nula se escreve ?00:00:00?
 | -------------------- | -------------- | ---------- | ----------------------- | ---------- |
 | Adição               | Hora + Hora    | Hora       | ?02:03:04? + ?01:02:03? | ?03:05:07? |
 | Subtração            | Hora – Hora    | Hora       | ?02:03:04? ?02:03:04?   | ?01:01:01? |
-| Adição               | Hora + Número  | Número     | ?02:03:04? ?01:02:03?   | 7449       |
-| Subtração            | Hora – Número  | Número     | ?02:03:04? ?02:03:04?   | 7319       |
-| Multiplicação        | Hora * Número  | Número     | ?02:03:04? ?02:03:04?   | 14768      |
-| Divisão              | Hora / Número  | Número     | ?02:03:04? ?02:03:04?   | 3692       |
-| Divisão inteira      | Hora \ Número | Número     | ?02:03:04? ?02:03:04?   | 3692       |
+| Adição               | Hora + Número  | Number     | ?02:03:04? ?01:02:03?   | 7449       |
+| Subtração            | Hora – Número  | Number     | ?02:03:04? ?02:03:04?   | 7319       |
+| Multiplicação        | Hora * Número  | Number     | ?02:03:04? ?02:03:04?   | 14768      |
+| Divisão              | Hora / Número  | Number     | ?02:03:04? ?02:03:04?   | 3692       |
+| Divisão inteira      | Hora \ Número | Number     | ?02:03:04? ?02:03:04?   | 3692       |
 | Módulo               | Hora % Hora    | Hora       | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Módulo               | Hora % Número  | Número     | ?02:03:04? ?02:03:04?   | 0          |
+| Módulo               | Hora % Número  | Number     | ?02:03:04? ?02:03:04?   | 0          |
 | Igual                | Hora = Hora    | Parâmetros | ?01:02:03? ?01:02:03?   | True       |
 |                      |                |            | ?01:02:03? ?01:02:03?   | False      |
 | Desigualdade         | Hora # Hora    | Parâmetros | ?01:02:03? ?01:02:03?   | True       |

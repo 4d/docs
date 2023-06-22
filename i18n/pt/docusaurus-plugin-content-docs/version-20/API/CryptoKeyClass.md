@@ -56,7 +56,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Params -->
 | Parâmetro | Tipo          |    | Descrição                                                                    |
 | --------- | ------------- | -- | ---------------------------------------------------------------------------- |
-| settings  | Objeto        | -> | Parâmetros para gerar ou carregar um par de chaves                           |
+| settings  | Object        | -> | Parâmetros para gerar ou carregar um par de chaves                           |
 | result    | 4D. CryptoKey | <- | Objeto que contém um par de chaves de criptografia<!-- END REF -->
 
 |
@@ -111,8 +111,8 @@ Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nom
 | Parâmetro  | Tipo   |    | Descrição                                                                             |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------- |
 | message    | Text   | -> | String de mensagens a decodificar utilizando `options.encodingEncrypted` e descifrar. |
-| options    | Objeto | -> | Opções de codificação                                                                 |
-| Resultados | Objeto | <- | Estado|<!-- END REF -->
+| options    | Object | -> | Opções de codificação                                                                 |
+| Resultados | Object | <- | Estado|<!-- END REF -->
 
 |
 
@@ -159,7 +159,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 | Parâmetro  | Tipo   |    | Descrição                                                                                             |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------- |
 | message    | Text   | -> | String de mensagens a codificar utilizando `options.encodingDecrypted` e encriptar                    |
-| options    | Objeto | -> | Opções de decodificação                                                                               |
+| options    | Object | -> | Opções de decodificação                                                                               |
 | Resultados | Text   | <- | Mensagem criptografada e codificada utilizando `options.encodingEncrypted`|<!-- END REF -->
 
 |
@@ -273,7 +273,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 | Parâmetro  | Tipo   |    | Descrição                                                                                                     |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
 | message    | Text   | -> | String mensagem a assinar                                                                                     |
-| options    | Objeto | -> | Opções de assinatura                                                                                          |
+| options    | Object | -> | Opções de assinatura                                                                                          |
 | Resultados | Text   | <- | Assinatura na representação Base64 ou Base64URL, dependendo da opção "codificação".<!-- END REF -->
 
 |
@@ -354,8 +354,8 @@ Contém <!-- REF #CryptoKey.type.Summary -->nome do tipo da chave - "RSA", "ECDS
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------ |
 | message    | Text   | -> | String de mensagem utilizada para gerar a assinatura                                                               |
 | signature  | Text   | -> | Assinatura que vai ser verificada, em representação Base64 ou Base64URL, dependendo do valor de `options.encoding` |
-| options    | Objeto | -> | Opções de assinatura                                                                                               |
-| Resultados | Objeto | <- | Estado da verificação|<!-- END REF -->
+| options    | Object | -> | Opções de assinatura                                                                                               |
+| Resultados | Object | <- | Estado da verificação|<!-- END REF -->
 
 
 |

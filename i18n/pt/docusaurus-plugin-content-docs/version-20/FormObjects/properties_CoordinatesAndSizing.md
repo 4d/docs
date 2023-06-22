@@ -23,10 +23,10 @@ When this property is enabled, the height of every row is automatically calculat
 * The row height calculation takes into account:
   * any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
   * any control types (inputs, check boxes, lists, dropdowns),
-  * fonts, fonts styles and font sizes,
+  * tipos, estilos e tamanhos de letra,
   * the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
-* The row height calculation ignores:
+* O cálculo da altura da linha ignora:
   * conteúdo da coluna oculta
   * [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 
@@ -285,9 +285,9 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 #### Gramática JSON
 
-| Nome              | Tipo de dados | Valores possíveis              |
-| ----------------- | ------------- | ------------------------------ |
-| horizontalPadding | number        | Number of pixels (must be >=0) |
+| Nome              | Tipo de dados | Valores possíveis               |
+| ----------------- | ------------- | ------------------------------- |
+| horizontalPadding | number        | Número de pixéis (deve ser >=0) |
 
 #### Objectos suportados
 
@@ -305,9 +305,9 @@ Sets a vertical padding for the cells. The value is set in pixels (default = 0).
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis              |
-| --------------- | ------------- | ------------------------------ |
-| verticalPadding | number        | Number of pixels (must be >=0) |
+| Nome            | Tipo de dados | Valores possíveis               |
+| --------------- | ------------- | ------------------------------- |
+| verticalPadding | number        | Número de pixéis (deve ser >=0) |
 
 #### Objectos suportados
 

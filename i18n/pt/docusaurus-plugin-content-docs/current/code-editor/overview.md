@@ -50,7 +50,7 @@ The import/export function is multi-platform: a method exported under Mac OS can
 
 4D can export and import methods in two formats:
 
-- 4D method (extension *.c4d*): In this format, methods are exported in encoded form. The names of objects are tokenized. This format is used in particular for exchanging methods between 4D applications and plug-ins in different languages. Conversely, it is not possible to display them in a text editor.
+- 4D method (extension *.c4d*): In this format, methods are exported in encoded form. Os nomes dos objectos são tokenizados. This format is used in particular for exchanging methods between 4D applications and plug-ins in different languages. Conversely, it is not possible to display them in a text editor.
 - Text (extension *.txt*): In this format, methods are exported in text-only form. In this case, the methods are readable using a standard text editor or a source control tool.
 
 
@@ -84,7 +84,7 @@ With 4D Server, the method name is changed on the server when you finish editing
 
 :::info
 
-Database methods cannot be renamed. The same goes for triggers, form methods, and object methods, which are bound to objects and take their names from the object concerned.
+Os métodos base de dados não podem ser renomeados. The same goes for triggers, form methods, and object methods, which are bound to objects and take their names from the object concerned.
 
 :::
 
@@ -118,7 +118,7 @@ If you want to benefit from the preemptive mode feature, you must explicitly dec
 
 **Note:** Execution in preemptive mode is only available in compiled mode. For more information, refer to the [Preemptive 4D processes](https://doc.4d.com/4Dv19R6/4D/19-R6/Preemptive-4D-processes.300-5911166.en.html) section.
 
-The following options are provided:
+São fornecidas as seguintes opções:
 
 -   **Can be run in preemptive processes**: By checking this option, you declare that the method is capable of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. The "preemptive" property of the method is set to "capable".
 
@@ -194,7 +194,7 @@ For batch setting of method attributes:
 Use the wildcard character @ to help define groups of methods:
 
 - To designate methods whose names begin with..., type @ at the end of the string. For example: `web@`
-- To designate methods whose names contain..., type @ in the middle of the string. For example: `web@write`
+- To designate methods whose names contain..., type @ in the middle of the string. Por exemplo: `web@write`
 - To designate methods whose names end with..., type @ at the beginning of the string. For example: `@write`
 - To designate all of the methods, just type @ in the area.
 

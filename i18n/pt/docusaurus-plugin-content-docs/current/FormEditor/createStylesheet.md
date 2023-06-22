@@ -202,7 +202,7 @@ Available media features:
 
 * `prefers-color-scheme`
 
-Available media feature expressions:
+Expressões de funcionalidades multimédia disponíveis:
 
 * **light**<br/>For using a light scheme
 * **dark**<br/>For using a dark scheme

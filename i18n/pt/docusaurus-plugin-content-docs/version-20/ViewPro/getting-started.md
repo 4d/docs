@@ -38,7 +38,7 @@ You can [configure the area](configuring.md) using the Property List and 4D View
 
 ## Selection, Input and Navigation Basics
 
-Spreadsheets are composed of rows and columns. A number is associated with each row. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
+Spreadsheets are composed of rows and columns. A cada linha está associado um número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
 
 ### Selecting cells, columns and rows
 
@@ -148,7 +148,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 |             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | cell, cells, row, rows, column, columns, all, name |
 |             | \[ ].row         | number     | Row index (counting begins at 0)                                    | célula, células, linha, linhas                     |
 |             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                    |
-|             | \[ ].column      | number     | Column index (counting begins at 0)                                 | célula, células, coluna, colunas                   |
+|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                           | célula, células, coluna, colunas                   |
 |             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                     |
 
 

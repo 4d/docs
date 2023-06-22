@@ -56,7 +56,7 @@ When this option is checked, 4D rewrites every record for each table during the 
 
 - When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
 
-- When tables or fields were deleted. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
+- Quando as tabelas ou campos foram eliminados. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
 > All the indexes are updated when this option is selected.
 
 ### Compact address table

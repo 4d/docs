@@ -55,7 +55,7 @@ A String type variable that designates the URL loaded or being loading by the as
 
 Schematically, this variable functions like the address area of a Web browser. You can represent it via a text area above the Web area.
 
-### URL Variable and WA OPEN URL command
+### Variável URL e comando WA OPEN URL
 
 The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command. The following differences should nevertheless be noted:
 - For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command accepts both notations.

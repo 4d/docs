@@ -24,7 +24,7 @@ By default, the original data file will be duplicated before the repair operatio
 
 ## Reparação standard
 
-Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
+Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). Os dados são compactados e reparados. This type of repair can only be performed when the data and structure file match.
 
 When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. Se for assim, pode abrir o banco de dados imediatamente. ![](../assets/en/MSC/MSC_RepairOK.png)
 

@@ -291,7 +291,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
 
-#### Calling a virtual field in a formula
+#### Chamar um campo virtual numa fórmula
 
 To insert a reference to a virtual field in a formula, enter the field with the following syntax:
 

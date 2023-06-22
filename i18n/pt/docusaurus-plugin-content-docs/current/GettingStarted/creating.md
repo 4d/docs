@@ -71,7 +71,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 * utilizando um ficheiro `.4DLink`.
 
-### Opening a Project with a 4DLink file
+### Abrir um projeto com um ficheiro 4DLink
 
 You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. There are two ways to do this:
 

@@ -21,14 +21,14 @@ De plus, les objets fichier et dossier prennent en charge les `fileSystems`, fou
 
 Les filesystem suivants sont pris en charge :
 
-| filesystem   | Désigne                                                         |
-| ------------ | --------------------------------------------------------------- |
-| "/DATA"      | Dossier data courant                                            |
-| "/LOGS"      | Dossier Logs                                                    |
-| "/PACKAGE"   | Dossier de la base de données (avec ou sans l'extension 4dbase) |
-| "/PROJECT"   | Dossier Project                                                 |
-| "/RESOURCES" | Dossier de ressources courant de la base de données             |
-| "/SOURCES"   | Dossier de ressources courant du projet                         |
+| filesystem   | Désigne                                                |
+| ------------ | ------------------------------------------------------ |
+| "/DATA"      | Dossier data courant                                   |
+| "/LOGS"      | Dossier Logs                                           |
+| "/PACKAGE"   | Project root folder (with or without 4dbase extension) |
+| "/PROJECT"   | Dossier Project                                        |
+| "/RESOURCES" | Dossier de ressources courant du projet                |
+| "/SOURCES"   | Current project sources folder                         |
 
 ## Syntaxe POSIX
 
@@ -46,6 +46,7 @@ Dans la syntaxe POSIX, vous utiliserez généralement les chemins `filesystem` a
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 ## Syntaxe spécifique à la plate-forme

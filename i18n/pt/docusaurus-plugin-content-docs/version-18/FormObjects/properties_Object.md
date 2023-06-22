@@ -272,7 +272,7 @@ There are several types of calculations available. The following table shows whi
 | Soma dos quadrados(*)  | X   |      |      | X    |      |      | Real                    |
 | Personalizado ("none") | X   | X    | X    | X    | X    | X    | Qualquer                |
 
-(*) Only for array type list boxes.
+(*) Apenas para list boxes do tipo array.
 
 When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 

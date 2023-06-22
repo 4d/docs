@@ -21,9 +21,9 @@ Pode:
 
 #### Gramática JSON
 
-|  Nome   | Tipo de dados | Valores possíveis                     |
-|:-------:|:-------------:| ------------------------------------- |
-| tooltip |     text      | additional information to help a user |
+|  Nome   | Tipo de dados | Valores possíveis                             |
+|:-------:|:-------------:| --------------------------------------------- |
+| tooltip |     text      | informações adicionais para ajudar um usuário |
 
 #### Objectos suportados
 
