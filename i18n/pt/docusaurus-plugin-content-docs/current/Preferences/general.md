@@ -74,7 +74,7 @@ If this option is checked, when the user switches to the Application environment
 If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
 
 *   **Base de dados...**
-*   **Database from Structure Definition...**
+*   **Base de dados a partir da definição da estrutura...**
 
 ![](../assets/en/Preferences/general5.png)
 
