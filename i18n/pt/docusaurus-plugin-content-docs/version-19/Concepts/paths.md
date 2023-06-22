@@ -55,7 +55,7 @@ Platform-specific syntax depends on the operating system on which the command is
 
 ### Windows
 
-The following patterns are supported:
+São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
 - the text contains ':' and '\' as the second and third character,
