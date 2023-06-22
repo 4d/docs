@@ -28,7 +28,7 @@ An attributePath is the path of an attribute inside a given dataclass or entity.
 
 ## Class code
 
-Code for the user class function(s).
+Código da(s) função(ões) da classe usuário.
 
 
 ## Atributo calculado
@@ -45,7 +45,7 @@ Database objects available through the ORDA concept, i.e. datastore, dataclasses
 
 ## Data model function
 
-Function of an ORDA data model class.
+Função de uma classe de modelo de dados ORDA.
 
 ## Dataclass
 
