@@ -406,7 +406,7 @@ O cenário básico é o seguinte:
 * `DatabaseToEmbedInClientWinFolder`
 * `DatabaseToEmbedInClientMacFolder`
 
-3. Build the client-server application. Isto terá os seguintes efeitos:
+3. Construir a aplicação cliente-servidor. Isto terá os seguintes efeitos:
 
 * the whole folder of the single user application is copied inside the "Database" folder of the merged client
 * the *EnginedServer.4Dlink* file of the "Database" folder is not generated
