@@ -22,7 +22,7 @@ You can open the MSC in maintenance mode from two locations:
 
 ## Display in standard mode
 
-In standard mode, a database is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+No modo standard, está aberta uma base de dados. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
 
 - Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
   ![](../assets/en/MSC/mscicon.png)
