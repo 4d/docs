@@ -58,22 +58,27 @@ When Single Sign On (SSO) is enabled (see above), you must fill in this field if
 #### Network Layer
 
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
--   **ServerNet** (by default): Available since 4D v15, ServerNet is a network layer used to handle communications between 4D Server and remote 4D machines (clients). It is based on a modern and robust API, easy to maintain and facilitates the implementation of the latest network technologies while providing a high level of performance and security. For example, Preemptive 4D processes are available on remote machines only when ServerNet is enabled.
 -   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
+-   **ServerNet** (by default): Available since 4D v15, ServerNet is a network layer used to handle communications between 4D Server and remote 4D machines (clients). It is based on a modern and robust API, easy to maintain and facilitates the implementation of the latest network technologies while providing a high level of performance and security. For example, Preemptive 4D processes are available on remote machines only when ServerNet is enabled.
 -   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. This network layer is available from 4D v20 in beta version. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
-**Notes**:
-- Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
-- In case of a modification, you need to restart the application for the change to be taken into account. Any client applications that were logged must also be restarted to be able to connect with the QUIC network layer.
-- You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.fe.html) command. 
-- Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
-- QUIC communications are always in TLS, whatever your client/server settings.
-- QUIC automatically connects to the port 19813 for both application server and DB4D server.
-- When the QUIC layer option is selected:
-	-	A beta message and an alert icon are displayed near the selector.
-	-	Client-server Connections Timeout settings are hidden
-	-	The Encrypt Client-Server communication checkbox is hidden.
+  
+ 	 **Notes**:
+	- Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
+	- In case of a modification, you need to restart the application for the change to be taken into account. Any client applications that were logged must also be restarted to be able to connect with the QUIC network layer.
+	- You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.fe.html) command. 
+	- Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
+	- QUIC communications are always in TLS, whatever your client/server settings.
+	- QUIC automatically connects to the port 19813 for both application server and DB4D server.
+	- When the QUIC layer option is selected:
+		-	A beta message and an alert icon are displayed near the selector.
+		-	Client-server Connections Timeout settings are hidden
+		-	The Encrypt Client-Server communication checkbox is hidden.
 
-Note that in case of a modification, you need to restart the application for the change to be taken into account. Any client applications that were logged must also be restarted to be able to connect with the new network layer (the minimum client version for using the ServerNet layer is 4D v14 R4, see the [GET MENU ITEM PROPERTY](https://doc.4d.com/4Dv20/4D/20/GET-MENU-ITEM-PROPERTY.301-6238232.fe.html) section).
+:::note
+
+In case of a modification, you need to restart the application for the change to be taken into account. Any client applications that were logged must also be restarted to be able to connect with the new network layer.
+
+:::
 
 :::note
 
