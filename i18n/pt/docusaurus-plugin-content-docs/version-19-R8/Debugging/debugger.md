@@ -51,7 +51,7 @@ Tracing stops and normal method execution resumes.
 
 #### Passar por cima
 
-Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
+Executes the current method line, indicated by the program counter (the yellow arrow). O depurador passa para a linha seguinte.
 
 The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
@@ -335,8 +335,8 @@ This area also allows you to add or remove [**break points**](breakpoints.md).
 
 Hover your pointer over any expression to display a tool tip that indicates:
 
-* the declared type of the expression
-* the current value of the expression
+* o tipo declarado da expressão
+* o valor atual da expressão
 
 ![source-code-pane](../assets/en/Debugging/sourceCodePane.png)
 
