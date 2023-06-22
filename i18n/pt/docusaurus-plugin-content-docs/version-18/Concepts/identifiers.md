@@ -20,7 +20,7 @@ The following rules apply for all 4D frameworks.
 ### Additional rules for object property and ORDA names
 
 - Space characters are not allowed.
-- Pontos (".") and brackets ("[ ]") are not allowed.
+- Pontos (".") e parênteses ("[ ]") não são permitidos.
 - Names are case sensitive.
 
 ### Regras adicionais para SQL
