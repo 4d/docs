@@ -206,7 +206,7 @@ The log format menu provides the following options:
     -   Referer: Contains the URL of the page pointing to the requested document.
     -   User-agent: Contains the name and version of the browser or software of the client at the origin of the request.
 
-> The DLF format cannot be customized.
+> O formato DLF não pode ser personalizado.
 
 -   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
