@@ -131,7 +131,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | ---------------------------------- | ---------------------------------------------------------- | ------------------------------------- |
 | webServer object                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Text                                  |
 | `WEB SET HOME PAGE`                |                                                            | Can be different for each web process |
-| Caixa de diálogos de configurações | Configuration page/Default Home Page                       |                                       |
+| Caixa de diálogos de configurações | Página configuração/Página inicial padrão                  |                                       |
 
 Designate a default home page for the web server. This page can be static or [semi-dynamic].
 
@@ -154,7 +154,7 @@ If you do not specify any default home page, the `On Web Connection` database me
 | Pode ser definido com              | Nome                                               | Comentários                                         |
 | ---------------------------------- | -------------------------------------------------- | --------------------------------------------------- |
 | webServer object                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Boolean, true to enable the CORS (false by default) |
-| `WEB SET OPTION`                   | `Web CORS enabled`                                 | 0 (disabled, default) or 1 (enabled)                |
+| `WEB SET OPTION`                   | `Web CORS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)               |
 | Caixa de diálogos de configurações | Options (II) page/Enable CORS                      | Não seleccionado por defeito                        |
 
 The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
@@ -185,14 +185,14 @@ Indicates whether or not the web server will accept non-secure connections.
 | `WEB SET OPTION`                   | `Web HTTPS enabled`                                  |             |
 | Caixa de diálogos de configurações | Configuration page/Enable HTTPS                      |             |
 
-Status for communication over HTTPS. This option is described in [this section](Admin/tls.md).
+Estado da comunicação por HTTPS. This option is described in [this section](Admin/tls.md).
 
 ## Ativar HSTS
 
 | Pode ser definido com | Nome                                               | Comentários                                     |
 | --------------------- | -------------------------------------------------- | ----------------------------------------------- |
 | webServer object      | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Boolean, true to enable HSTS (default is false) |
-| `WEB SET OPTION`      | `Web HSTS enabled`                                 | 0 (disabled, default) or 1 (enabled)            |
+| `WEB SET OPTION`      | `Web HSTS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)           |
 
 HTTP Strict Transport Security (HSTS) status.
 
@@ -211,7 +211,7 @@ HSTS allows the 4D web server to declare that browsers should only interact with
 | webServer object      | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | número em segundos |
 | `WEB SET OPTION`      | `Web HSTS max age`                               | número em segundos |
 
-Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. Esta informação é armazenada no lado do Cliente durante a duração especificada. Default value is 63072000 (2 years)
+Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. Esta informação é armazenada no lado do Cliente durante a duração especificada. O valor por defeito é 63072000 (2 anos)
 
 > **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.
 
@@ -308,7 +308,7 @@ IP address strings on which the 4D web server will receive HTTP requests (4D loc
 
 By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. It is, for example, frequently the case of most host providers.
 
-Possible values: IP address string. Both IPv6 string formats (e.g. "2001:0db8:0000:0000:0000:ff00:0042:8329") and IPv4 string formats (e.g. "123.45.67.89") are supported.
+Valores possíveis: Cadeia de endereços IP. Both IPv6 string formats (e.g. "2001:0db8:0000:0000:0000:ff00:0042:8329") and IPv4 string formats (e.g. "123.45.67.89") are supported.
 
 #### Acerca do suporte IPv6
 
@@ -426,7 +426,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 | --------------------- | ------------------------------------ | ----------- |
 | webServer object      | [`name`](API/WebServerClass.md#name) |             |
 
-Name of the web server application. Useful when component web servers are started.
+Nome da aplicação do servidor web. Useful when component web servers are started.
 
 ## Versão OpenSSL
 
@@ -434,7 +434,7 @@ Name of the web server application. Useful when component web servers are starte
 | --------------------- | -------------------------------------------------------- | --------------- |
 | webServer object      | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Somente leitura |
 
-Version of the OpenSSL library used.
+Versão da biblioteca OpenSSL utilizada.
 
 ## Perfect Forward Secrecy
 
@@ -484,7 +484,7 @@ In this case, robots are not allowed to access the entire site.
 | ---------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | webServer object                   | [`rootFolder`](API/WebServerClass.md#rootfolder) | Text property but can be a [`4D. Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
 | `WEB SET ROOT FOLDER`              |                                                  |                                                                                                                                        |
-| Caixa de diálogos de configurações | Configuration page/Default HTML Root             |                                                                                                                                        |
+| Caixa de diálogos de configurações | Página configuração/Raiz HTML padrão             |                                                                                                                                        |
 
 Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path. The web server will need to be restarted in order for the new root folder to be taken into account.
 
@@ -499,7 +499,7 @@ You can designate another default HTML root folder by entering its pathname.
 
 - The path is relative to the [Project folder](Project/architecture.md#project-folder) (4D local and 4D Server) or to the folder containing the 4D application or software package (4D in remote mode).
 - The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
-- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name (two periods) before the folder name
+- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name (dois pontos) antes do nome da pasta
 - The path must not start with a slash (except if you want the HTML root folder to be the Project or 4D remote folder, but for access to the folders above to be forbidden, in which case you can pass "/" as the root folder).
 
 For example, if you want the HTML root folder to be the "Web" subfolder in the "MyWebApp" folder, enter "MyWebApp/Web".
@@ -531,7 +531,7 @@ Name of the cookie used for saving the session ID. Predefinição = "4DSID".
 | webServer object      | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |             |
 | `WEB SET OPTION`      | `Web session cookie path`                                      |             |
 
-"path" field of the session cookie. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
+campo "caminho" do cookie da sessão. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
 
 ## Session Cookie SameSite
 
