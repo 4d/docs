@@ -124,11 +124,11 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| Campo HTTP | Descrição                            | Exemplo                                                                                                                         |
-| ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Date       | data atual no formato RFC 822        | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
-| Server     | 4D/número da versão                  | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
-| User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
+| Campo HTTP | Descrição                              | Exemplo                                                                                                                         |
+| ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Date       | data atual no formato RFC 822          | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
+| Server     | 4D/número da versão                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
+| User-Agent | nome e versão @ endereço IP do cliente | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
 
 
