@@ -28,7 +28,7 @@ Once instantiated with the `New shared object` or `New shared collection` comman
 
 Modifications can be applied to shared objects and shared collections:
 
-- adding or removing object properties,
+- adicionar ou remover propriedades de objectos,
 - adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
 
 However, all modification instructions in a shared object or collection must be surrounded by the `Use... End use` keywords, otherwise an error is generated.
