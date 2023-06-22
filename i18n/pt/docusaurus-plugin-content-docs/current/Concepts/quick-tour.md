@@ -345,7 +345,7 @@ $str:=String("hello"+\
 
 ## Comentários
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+Os comentários são linhas de código inactivas. These lines are not interpreted by the 4D language and are not executed when the code is called.
 
 There are two ways to create comments:
 
