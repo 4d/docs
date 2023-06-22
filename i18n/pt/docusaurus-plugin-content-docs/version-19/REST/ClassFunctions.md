@@ -67,12 +67,12 @@ Entities passed in parameters are referenced on the server through their key (*i
 
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
-| Propriedades          | Tipo                                 | Descrição                                                                  |
-| --------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
-| Atributos da entidade | misto                                | Opcional - Valores a modificar                                             |
-| __DATACLASS           | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY              | Parâmetros                           | Mandatory - True to indicate to the server that the parameter is an entity |
-| __KEY                 | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
+| Propriedades          | Tipo                                       | Descrição                                                                  |
+| --------------------- | ------------------------------------------ | -------------------------------------------------------------------------- |
+| Atributos da entidade | misto                                      | Opcional - Valores a modificar                                             |
+| __DATACLASS           | String                                     | Mandatory - Indicates the Dataclass of the entity                          |
+| __ENTITY              | Parâmetros                                 | Mandatory - True to indicate to the server that the parameter is an entity |
+| __KEY                 | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                   |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
 - If __KEY is provided, the entity corresponding to__KEY is loaded on the server with the given attributes
