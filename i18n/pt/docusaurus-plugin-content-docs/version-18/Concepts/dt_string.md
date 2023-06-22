@@ -34,7 +34,7 @@ As seguintes sequências de escape podem ser utilizadas em strings de caracteres
 
 **Nota:** O carácter \ (barra invertida) é utilizado como separador em nomes de caminhos no Windows. Portanto, deve usar uma barra invertida dupla \\\ em caminhos quando quiser ter uma barra invertida à frente de um carácter usado numa das sequências de escape reconhecidas pelo 4D (por exemplo, "C:\\\MyDocuments\\\New.txt").
 
-## String operators
+## Operadores de string
 
 | Operação             | Sintaxe          | Retorna    | Expression              | Valor    |
 | -------------------- | ---------------- | ---------- | ----------------------- | -------- |
@@ -151,9 +151,9 @@ Ao contrário de outras comparações de cadeias, a pesquisa por palavras-chave 
 
 Os símbolos de referência dos caracteres: [[...]]
 
-Estes símbolos são utilizados para se referir a um único carácter numa cadeia de caracteres. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+Estes símbolos são utilizados para se referir a um único carácter numa cadeia de caracteres. Esta sintaxe permite-lhe endereçar individualmente os caracteres de uma variável de texto, de uma variável de cadeia de caracteres ou de um campo.
 
-If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
+Se os símbolos de referência de carácter aparecerem no lado esquerdo do operador de atribuição (:=), é atribuído um carácter à posição referenciada na cadeia. Por exemplo, se vsName não for uma cadeia de caracteres vazia, a linha seguinte define o primeiro carácter de vsName como maiúsculo:
 
 ```4d
 If(vsName#"")
@@ -161,7 +161,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Por exemplo:
+Caso contrário, se os símbolos de referência de caracteres aparecerem numa expressão, devolvem o carácter (a que se referem) como uma cadeia de 1 carácter. Por exemplo:
 
 ```4d
 //O exemplo a seguir testa se o último caractere de vtText é um sinal de At "@"
@@ -179,13 +179,13 @@ Otherwise, if the character reference symbols appear within an expression, they 
  End if
 ```
 
-### Advanced note about invalid character reference
+### Nota avançada sobre a referência de carácter inválido
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+Quando utiliza os símbolos de referência de caracteres, deve endereçar os caracteres existentes na cadeia da mesma forma que endereça os elementos existentes de uma matriz. Por exemplo, se endereçar o 20º carácter de uma variável de cadeia, esta variável DEVE conter pelo menos 20 caracteres.
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. Por exemplo, executando o seguinte código:
+- Se não o fizer, no modo interpretado, não causa um erro de sintaxe.
+- Se não o fizer, em modo compilado (sem opções), pode levar à corrupção da memória, se, por exemplo, escrever um carácter para além do fim de uma cadeia ou de um texto.
+- Se não o fizer, no modo compilado, causa um erro com a opção Range Checking On. Por exemplo, executando o seguinte código:
 
 ```
 //Voisas muito más e desagradáveis a fazer, boo!
@@ -199,7 +199,7 @@ accionará o erro de tempo de execução mostrado aqui:
 
 ### Exemplo
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+O seguinte método de projeto capitaliza o primeiro carácter de cada palavra do texto recebido como parâmetro e devolve o texto capitalizado resultante:
 
 ```4d
   //Método projecto Capitalize_text
