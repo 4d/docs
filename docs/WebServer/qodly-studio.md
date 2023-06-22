@@ -3,7 +3,7 @@ id: qodly-studio
 title: Qodly Studio
 ---
 
-**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the 4D cloud.
+**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the 4D Cloud.
 
 As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**. 
 
@@ -47,12 +47,12 @@ Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and di
 
 To enable access to Qodly Studio, you must explicitly allow it at two levels: 
 
-* at the 4D application level, for global access
-* at every project level
+* at 4D level (4D or 4D Server)
+* at project level
 
 If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
 
-#### At the application level
+#### At 4D level
 
 As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
@@ -70,9 +70,9 @@ After any change to these settings, you must [restart the WebAdmin web server](.
 
 :::
 
-#### At the project level
+#### At project level
 
-After you have enabled access to Qodly Studio at the application level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio). 
+After you have enabled access to Qodly Studio at the 4D level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio). 
 
 Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
 
@@ -138,77 +138,99 @@ Renderer buttons are displayed only when the [configuration options](#enabling-r
 ::: 
 
 
-## Qodly Studio Documentation
+## Using Qodly Studio
 
 The official Qodly Studio documentation is available on the [Qodly documentation website](developer.qodly.com/docs/studio).
 
-You can rely on this documentation and its associated resources for developing Qodly Studio-based webforms. However, some features (listed below) differ between on premise and cloud architectures.
+You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
 
-### Cloud-only features
+:::info
 
-The following features, detailed in the Qodly Studio documentation, are only available for a usage in the Qodly Cloud architecture. They are therefore not supported Qodly Studio within 4D.
+There is no direct compatibility between apps implemented with 4D and apps implemented with Qodly.
 
-- **Model editor**: the Qodly Studio Model editor is built upon the datastore and includes specific features. You cannot use this editor with your 4D databases. 
-- **Debugger (local mode)**: the Qodly Studio debugger can only be used when opening a 4D Server database from a remote 4D.
-- **QodlyScript**: the Qodly Studio documentation shows code examples that use **QodlyScript**, the built-in Qodly language (see below). 
+:::
 
-### 4D Language vs QodlyScript
+### Feature comparison
 
-QodlyScript inherits from the 4D Language, but with some differences. If you are familiar with the 4D language, you won't be lost, just keep in mind the following QodlyScript's specific features.
-
-#### Variables
-
-- QodlyScript does not support process or inteprocess variables; only local variables are allowed, and their name should not start with the `$` character. Declaring variables using the `var` keyword is mandatory.
-- QodlyScript does not support arrays.
-
-#### Commands
-
-- QodlyScript only supports a subset of the 4D Language commands and their related concepts. They are listed in the QodlyScript reference manual.
-- All QodlyScript commands are written in camel case without spaces. Inherited 4D command names have been rewritten to fulfill this requirement. For example, the QodlyScript version of `New collection` is `newCollection`.
-
-#### Symbols and Keywords
-
-Some basic symbols, operators, and keywords differ between the 4D Language and QodlyScript. 
-
-|Description|4D Language|QodlyScript|
+||Qodly Studio for 4D developers using 4D IDE|Qodly Studio for Qodly developers|
 |---|---|---|
-|argument separator|; |,|
-|assignment operator|:= |=|
-|comparison operator|= |==|
-||#Declare|declare|
-||Alias|alias|
-||Case of|switch|
-||Class constructor|constructor|
-||Class extends|extends|
-||Else|else|
-||End for|end|
-||End For each|end|
-||End if|end|
-||End case|end|
-||End use|end|
-||End while|end|
-||False|false|
-||For|for|
-||For each|forEach|
-||Function|function|
-||If|if|
-||Repeat|repeat|
-||This|this|
-||True|True|
-||Until|until|
-||Use|use|
-||While|while|
-|var types|||
-||Text|string|
-||Date|date|
-||Time|time|
-||Boolean|boolean|
-||Integer|integer|
-||Real|number|
-||Picture|picture|
-||Blob|blob|
-||Collection|collection|
-||Object|object|
-||Variant|variant|
+|View and edit tables (dataclasses), attributes and relations|4D Structure Editor|Qodly Studio Model Editor| 
+|Webforms|Qodly Studio Webform Editor|Qodly Studio Webform Editor| 
+|Desktop forms|4D IDE|*not supported*| 
+|Programming language|4D Language featuring ORDA|QodlyScript featuring ORDA| 
+|Coding IDE|4D IDE code editor/VS Code with 4D extension|Qodly Studio code editor| 
+|Debugger|4D IDE debugger|Qodly Studio debugger| 
+|REST/Web roles and privileges|roles.json direct edit/Qodly Studio roles and privileges editor|Qodly Studio role and privileges editor| 
 
-Unlisted items are identical.
+
+### From QodlyScript to 4D Language
+
+4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their webforms in Qodly Studio. Code examples are provided in QodlyScript, but since QodlyScript inherits from the 4D Language, you won't be lost. Converting QodlyScript code to 4D language is easy, it only requires some adaptations:
+
+#### Variable names
+
+QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D. 
+
+#### Symbols and keywords
+
+Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
+
+|QodlyScript|4D Language|Comment|
+|---|---|---|
+|, |;|argument separator|
+|= |:=|assignment operator|
+|== |=|comparison operator|
+|declare|#Declare||
+|switch|Case of||
+|constructor|Class constructor||
+|extends|Class extends||
+|end|End for, End For each, End if, End case, End use, End while||
+|forEach|For each||
+|string|Text|var type|
+|number|Real|var type|
+
+Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code. 
+
+
+#### Command names
+
+QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
+
+- Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
+- However, some command have been renamed for a better compliance. They are listed below: 
+
+|QodlyScript|4D Language|
+|---|---|---|
+|`atan` |`Arctan`|
+|`highestProcessNumber` |`Count tasks`|
+|`callChain`|`Get call chain`|
+|`objectClass`|`OB Class`|
+|`objectCopy`|`OB Copy`|
+|`objectEntries`|`OB Entries`|
+|`instanceOf`|`OB Instance of`|
+|`objectIsDefined`|`OB Is defined`|
+|`objectIsEmpty`|`OB Is empty`|
+|`objectIsShared`|`OB Is shared`|
+|`objectKeys`|`OB Keys`|
+|`objectRemove`|`OB REMOVE`|
+|`objectValues`|`OB Values`|
+|`sqrt`|`Square root`|
+
+
+#### Example
+
+- QodlyScript code:
+
+```qs
+declare(company : cs.Company)->result : cs.EmployeeSelection
+result=ds.Employee.query("employerID = :1", company.ID)
+```
+
+
+
+- 4D Language equivalent code: 
+
+```4d
+#DECLARE($company : cs.Company)->$result : cs.EmployeeSelection
+$result:=ds.Employee.query("employerID = :1"; $company.ID)
+```
