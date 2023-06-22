@@ -1116,7 +1116,7 @@ To create a server-side ORDA request log, call this function on the server machi
 | Parâmetros                    | Descrição                                 |
 | ----------------------------- | ----------------------------------------- |
 | srl log all                   | Log the response entirely (default value) |
-| srl log no response           | Disable the logging of the response       |
+| srl log no response           | Desativar o registo da resposta           |
 | srl log response without body | Registar a resposta sem o corpo           |
 
 
