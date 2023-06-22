@@ -470,7 +470,7 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
  ![](../assets/en/FormEditor/listboxBuilderFields.png)
 
- By default, all fields are selected. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
+ Por padrão, todos os campos são selecionados. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
 
  You can change the order of the fields by dragging them and dropping them.
 
@@ -700,7 +700,7 @@ To show a view that is hidden, simply select it or click on the *Show/Hide* icon
 
 #### Locking objects of a view
 
-You can lock the objects of a view. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. This function is useful for preventing handling errors.
+É possível bloquear os objectos de uma vista. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. This function is useful for preventing handling errors.
 
 By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next to each view:
 
