@@ -18,11 +18,11 @@ You can open the MSC in maintenance mode from two locations:
 
 - **From the standard project opening dialog box** The standard Open dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](../assets/en/MSC/MSC_standardOpen.png)
 - **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (project not open)  
-  ![](../assets/en/MSC/mscicon.png) When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. The project will not be opened by 4D.
+  ![](../assets/en/MSC/mscicon.png) When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. O projeto não será aberto por 4D.
 
 ## Display in standard mode
 
-In standard mode, a project is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+No modo standard, está aberto um projeto. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
 
 - Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
   ![](../assets/en/MSC/mscicon.png)
