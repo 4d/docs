@@ -38,9 +38,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                     |
-| ----------- | ------------- | ------------------------------------- |
-| contextMenu | string        | "automatic" (used if missing), "none" |
+| Nome        | Tipo de dados | Valores possíveis                                   |
+| ----------- | ------------- | --------------------------------------------------- |
+| contextMenu | string        | "automatic" (utilizado se estiver em falta), "none" |
 
 #### Objectos suportados
 
@@ -104,7 +104,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.              |
 | !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números antes de cada palavra.                                             |
 | !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers after each word.                                                   |
-| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, four entries.                         |
+| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Três entradas, hífen, quatro entradas.                       |
 | !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |
 | !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries. |
 | !0&9###-##-####               | Número de segurança social. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
