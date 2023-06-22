@@ -44,7 +44,7 @@ Os resultados dos operadores dependem dos **tipos de dados** aos quais são apli
 - [**Operadores Bitwise**](dt_number.md#bitwise-operators) (em **expressões de números inteiros longos**)
 - [**Operadores de imagem**](dt_picture.md#picture-operators)
 - [**Operadores de Ponteiros**](dt_pointer.md#pointer-operators)
-- [**String operators**](dt_string.md#string-operators)
+- [**Operadores de string**](dt_string.md#string-operators)
 - [**Operadores Null**](dt_null_undefined.md#null-operators)
 - [**Operadores indefinidos**](dt_null_undefined.md#undefined-operators)
 
