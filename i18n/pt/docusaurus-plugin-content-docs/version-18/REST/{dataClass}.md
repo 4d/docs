@@ -211,7 +211,7 @@ Retorna um objeto ou uma coleção baseada em um método projeto.
 
 Os métodos projeto são chamados através de uma classe de dados (tabela) ou uma entidade (registro), e devem retornar ou um objeto ou uma coleção.
 
-`POST  /rest/Employee/getHighSalaries`
+`POST /rest/Employee/getHighSalaries`
 
 `POST  /rest/Employee(52)/getFullName`
 
