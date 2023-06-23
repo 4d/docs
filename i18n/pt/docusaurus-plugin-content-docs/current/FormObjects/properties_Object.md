@@ -255,7 +255,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ## Título
 
-Allows inserting a label on an object. The font and the style of this label can be specified.
+Permite inserir uma etiqueta num objeto. The font and the style of this label can be specified.
 
 You can force a carriage return in the label by using the \ character (backslash).
 
