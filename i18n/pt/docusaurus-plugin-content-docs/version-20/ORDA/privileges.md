@@ -164,7 +164,7 @@ Else // you can prevent the project to open
  End if 
 ```
 
-## Initializing privileges for deployment
+## Inicialização de privilégios para implantação
 
 By default, if no specific parameters are defined in the `roles.json` file, accesses are not limited. This configuration allows you to develop the application without having to worry about accesses.
 
