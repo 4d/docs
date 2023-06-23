@@ -40,9 +40,9 @@ The **Find Same Next** and **Find Same Previous** commands are used to find char
 
 ### Bookmark All
 
-The **Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. Esto facilita la localización de todos los resultados de la búsqueda.
+The **Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. Cuando selecciona este comando, 4D pone un marcador en cada línea que contiene un elemento correspondiente al criterio de búsqueda "actual". Esto facilita la localización de todos los resultados de la búsqueda.
 
-For more information about bookmarks, refer to [Using bookmarks](./write-class-method.md#using-bookmarks).
+Para más información sobre marcadores, consulte [Uso de marcadores](./write-class-method.md#using-bookmarks).
 
 ## Reemplazar
 
