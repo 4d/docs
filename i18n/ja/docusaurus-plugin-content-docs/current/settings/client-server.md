@@ -54,14 +54,14 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.ja.html) を参照ください。
 
-#### Network Layer
+#### ネットワークレイヤー
 
-This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
--   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
--   **ServerNet** (by default): Available since 4D v15, ServerNet is based on a modern and robust API, easy to maintain and facilitates the implementation of the latest network technologies while providing a high level of performance and security.
--   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. This network layer is available from 4D v20 in beta version. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
+ここでは、ドロップダウンメニューにて 3つのネットワークオプションから選択できます: **Legacy**、**ServerNet** 、**QUIC** (プロジェクトモードのみ)。ネットワークレイヤーは、4D Server とリモートの 4Dマシン (クライアント) 間の通信を管理するのに使用されます。
+-   **Legacy**: v15以前に作成されたデータベースとの互換性を確保するため、この旧式ネットワークレイヤーは引き続きサポートされています。 旧式ネットワークレイヤーは、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.ja.html) コマンドを使用してプログラミングによって有効にすることもできます。
+-   **ServerNet** (デフォルト): 4D v15 以降で利用可能な ServerNet はモダンで堅牢な API に基づいており、メンテナンスが楽で、高いレベルのパフォーマンスとセキュリティを提供しながら、最新のネットワーク技術の実装を容易にします。
+-   **QUIC** (プロジェクトモードでのみ利用可能): サーバー上で QUICネットワークレイヤーを有効にします。 このネットワークレイヤーは、4D v20 ベータ版から使用できます。 本番環境での使用は推奨されませんが、評価目的でクライアント/サーバーアプリケーションで有効にすることができます。
 
-     **Notes**:
+     **注記**:
     - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
     - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.fe.html) command.
     - Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
