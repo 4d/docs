@@ -41,7 +41,7 @@ The page subform uses the input form indicated by the [Detail Form](properties_S
 > 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
 
-### Using the bound variable or expression
+### Utilizar a variável ou expressão ligada
 
 You can bind [a variable or an expression](properties_Object.md#variable-or-expression) to a subform container object. This is very useful to synchronize values from the parent form and its subform(s).
 
