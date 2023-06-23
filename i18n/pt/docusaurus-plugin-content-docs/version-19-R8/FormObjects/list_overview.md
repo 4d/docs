@@ -114,7 +114,7 @@ You can usually work in two ways with the contents of hierarchical lists: by pos
 - When you work by reference, 4D bases itself on the *itemRef* ID number of the list items. Each item can thus be specified individually, regardless of its position or its display in the hierarchical list.
 
 
-### Using item reference numbers (itemRef)
+### Utilização de números de referência dos items (itemRef)
 
 Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. This value is only intended for your own use: 4D simply maintains it.
 
