@@ -279,7 +279,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * cálculo
 * Comando 4D
 * method
-* and anything else that returns a value
+* e qualquer outra coisa que devolva um valor
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
