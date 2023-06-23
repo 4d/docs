@@ -54,7 +54,7 @@ Here is the list of objects whose value can be saved:
 
 | Object                                                  | Valor guardado                                                                         |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [Caixa de selecção](checkbox_overview.md)               | Value of associated variable (0, 1, 2)                                                 |
+| [Caixa de selecção](checkbox_overview.md)               | Valor da variável associada (0, 1, 2)                                                  |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
 | [Botão rádio](radio_overview.md)                        | Value of associated variable (1, 0, True or False for buttons according to their type) |
 | [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
