@@ -32,7 +32,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 | ---------- | ---- |:--:| -------------------------------------------- |
 | $1         | Text | <- | URL                                          |
 | $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
-| $3         | Text | <- | IP address of the web client (browser)       |
+| $3         | Text | <- | Endereço IP do cliente Web (browser)         |
 | $4         | Text | <- | Endereço IP do servidor                      |
 | $5         | Text | <- | Nome de usuario                              |
 | $6         | Text | <- | Senha                                        |
@@ -182,7 +182,7 @@ Here is the HTML code that corresponds to this page:
 </FORM>
 ```
 
-During data entry, type “ABCD” in the data entry area, check the "Whole word" option and validate it by clicking the **Search** button. In the request sent to the Web server:
+During data entry, type “ABCD” in the data entry area, check the "Whole word" option and validate it by clicking the **Search** button. No pedido enviado ao servidor Web:
 
 ```
 vName="ABCD"
