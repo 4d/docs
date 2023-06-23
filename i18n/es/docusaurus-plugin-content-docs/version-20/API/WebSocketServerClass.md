@@ -149,7 +149,7 @@ En el parámetro *WSSHandler*, pase una instancia de una clase usuario que será
 |            | request | Object             |    | objeto `request`. Contiene información sobre la solicitud de conexión (ver abajo)                                                                                                                                                                                                                                                                                                                                                                                            |
 | Resultado  |         | Object             | -> | objeto [`connectionHandler`](#connectionhandler-object) (ver abajo). Si esta función devuelve un objeto `connectionHandler`, se crea automáticamente un objeto [`4D.WebSocketConnection`](WebSocketConnectionClass.md#websocketconnection-object) y se añade a la colección de conexiones [](#connections). Este objeto se recibe entonces como parámetro en cada función del objeto `connectionHandler`. Si el valor devuelto es nulo o indefinido, se cancela la conexión. |
 
-This callback is called when the handshake is complete. It must be called with a valid [`connectionHandler` object](#connectionhandler-object) to create the WebSocket connection, otherwise the connection is cancelled.
+Esta retrollamada se llama cuando el establecimiento de la comunicación se ha completado. Debe ser llamada con un objeto [`connectionHandler` válido](#connectionhandler-object) para crear la conexión WebSocket, de lo contrario la conexión se cancela.
 
 
 **WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
