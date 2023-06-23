@@ -304,7 +304,7 @@ Para cada petição, os campos abaixo estão logados:
 
 ## Pedidos ORDA
 
-ORDA requests logs can record each ORDA request and server response. Two ORDA requests logs are available:
+ORDA requests logs can record each ORDA request and server response. Estão disponíveis dois registos de pedidos ORDA:
 
 - a client-side ORDA request log, in .txt format
 - a server-side ORDA request log, in .jsonl format
@@ -390,7 +390,7 @@ Os campos abaixo são registrados para cada petição:
 | response       | Server response object, can be configured in [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...] |
 | ipAddress      | Endereço IP do usuário                                                                                        | "192.168.1.5"                                           |
 | userName       | Nome do usuário 4D                                                                                            | "henry"                                                 |
-| systemUserName | Login name of the user on the machine                                                                         | "hsmith"                                                |
+| systemUserName | Nome de login do usuário na máquina                                                                           | "hsmith"                                                |
 | machineName    | Nome da máquina do utilizador                                                                                 | "PC of Henry Smith"                                     |
 
 #### Exemplo
