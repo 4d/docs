@@ -72,7 +72,7 @@ The following values can be returned in the *status* and *statusText* properties
 ## Exemplo
 
 
-We lock an entity in a first browser:
+Bloqueamos uma entidade num primeiro navegador:
 
 ```
 GET /rest/Customers(1)/?$lock=true
