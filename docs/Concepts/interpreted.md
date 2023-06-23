@@ -13,19 +13,20 @@ The advantages of the compilation are:
 - **Speed**: Your application can run from 3 to 1,000 times faster.
 - **Code checking**: Your application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
 - **Protection**: Once your application is compiled, you can delete the interpreted code. Then, the compiled application is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
-- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications (.EXE files) with their own icon.
+- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications with their own icon.
 - **Preemptive mode**: only compiled code can be executed in preemptive processes. 
 
 ## Differences between interpreted and compiled code
+
 Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler. 
 
 |Compiled|Interpreted|
 |---|---|
 |You cannot have a method with the same name as a variable.|No error is generated, but priority is given to the method|
-|All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.|Variables can be typed on-the-fly (not recommended)|
+|All variables must by typed, either through a declaration (using `var`, `#Declare`, or `Function` keywords), or by the compiler at compilation time.|Variables can be typed on-the-fly (not recommended)|
 |You cannot change the data type of any variable or array.|Changing the data type of a variable or an array is possible (not recommended)|
 |You cannot change a one-dimensional array to a two-dimensional array, or change a two-dimensional array to a one-dimensional array.|Possible|
-|Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form.||
+|Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form.||
 |The `Undefined` function always returns False for variables. Variables are always defined.||
 |If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.|Preemptive process properties are ignored|
 |The `IDLE` command is necessary to call 4D in specific loops|It is always possible to interrupt 4D|
@@ -39,10 +40,11 @@ Because of this flexibility, it is possible that an application can perform diff
 For example, if you write:
 
 ```4d
-C_LONGINT(MyInt)
+var MyInt : Integer
 ```
 
 and elsewhere in the project, you write:
+
 ```4d
 MyInt:=3.1416
 ```
@@ -59,9 +61,9 @@ The order in which the two statements appear is irrelevant to the compiler, beca
 A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
 
 ```4d
-C_POINTER($p)
-C_TEXT($name)
-C_LONGINT($age)
+var $p : Pointer
+var $name : Text
+var $age : Integer
 
 $name:="Smith"
 $age:=50
@@ -78,13 +80,12 @@ Imagine a function that returns the length (number of charaters) of values that 
 
 ```4d
   // Calc_Length (how many characters)
-  // $1 = pointer to flexible variable type, numeric, text, time, boolean
+  // $vp = pointer to flexible variable type, numeric, text, time, boolean
 
-C_POINTER($1)
-C_TEXT($result)  
-C_LONGINT($0)
-$result:=String($1->)
-$0:=Length($result)
+#DECLARE($vp : Pointer) -> $length : Integer
+var $result : Text  
+$result:=String($vp->)
+$length:=Length($result)
 ```
 
 Then this method can be called:
