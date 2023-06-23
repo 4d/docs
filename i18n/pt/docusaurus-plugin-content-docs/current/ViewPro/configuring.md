@@ -149,7 +149,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 | \         | Displays the character following it.                                                                                                                                                                                       | #.00\? mostrará 123 como 123.00?                                                                                          |
 | /          | When used with numbers, displays them as fractions. When used with text, date or time codes, displayed "as-is".                                                                                                            | #/# mostrará .75 como 3/4                                                                                                  |
 | \[ ]      | Cria formatos condicionais.                                                                                                                                                                                                | \[>100]\[GREEN]#,##0;\[`<=-100`]\[YELLOW]#,##0;\[BLUE]#,##0                                                        |
-| E          | Formato notação científica.                                                                                                                                                                                                | #E+# - will display 1,500,500 as 2E+6                                                                                      |
+| E          | Formato notação científica.                                                                                                                                                                                                | #E+# - mostrará 1.500.500 como 2E+6                                                                                        |
 | \[color]  | Formats the text or number in the color specified                                                                                                                                                                          | \[Green]###.##\[Red]-###.###                                                                                             |
 
 #### Exemplo
@@ -287,8 +287,8 @@ The following special characters allow the automatic addition or formatting of i
 | &          | Escape character                 | (ver exemplos abaixo)                                                  |                                                      |
 | P          | Página actual                    | printInfo.headerLeft:="This is page &P."                               | Esta é a página 5.|                                  |
 | N          | Contagem de páginas              | printInfo.headerLeft:="There are &N pages."                            | Existem 10 páginas.                                  |
-| D          | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | Estamos em 2015/6/19.                                |
-| T          | Hora actual                      | printInfo.headerLeft:="It is &T."                                      | São 16:30:36.                                        |
+| D          | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="É &D."                                          | Estamos em 2015/6/19.                                |
+| T          | Hora actual                      | printInfo.headerLeft:="É &T."                                          | São 16:30:36.                                        |
 | G          | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S          | Riscado                          | printInfo.headerLeft:="&SThis is text."                                | ~Isto é texto.~                                      |
 | U          | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | Isto é texto. (Sublinhado)                           |
@@ -303,15 +303,15 @@ The following special characters allow the automatic addition or formatting of i
 
 Margin attributes are used to specify the 4D View Pro area margins for printing. Expresso em centenas de polegada.
 
-| Propriedade |         | Tipo          | Descrição                                                  |
-| ----------- | ------- | ------------- | ---------------------------------------------------------- |
-| margin      |         | object        | As margens de impressão                                    |
-|             | top     | inteiro longo | Top margin, in hundredths of an inch. Valor padrão = 75    |
-|             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Valor padrão = 75 |
-|             | left    | inteiro longo | Left margin, in hundredths of an inch. Valor padrão = 70   |
-|             | direita | inteiro longo | Right margin, in hundredths of an inch. Valor padrão = 70  |
-|             | header  | inteiro longo | Header offset, in hundredths of an inch. Valor padrão = 30 |
-|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30 |
+| Propriedade |         | Tipo          | Descrição                                                     |
+| ----------- | ------- | ------------- | ------------------------------------------------------------- |
+| margin      |         | object        | As margens de impressão                                       |
+|             | top     | inteiro longo | Margem superior, em centésimos de polegada. Valor padrão = 75 |
+|             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Valor padrão = 75    |
+|             | left    | inteiro longo | Left margin, in hundredths of an inch. Valor padrão = 70      |
+|             | direita | inteiro longo | Right margin, in hundredths of an inch. Valor padrão = 70     |
+|             | header  | inteiro longo | Header offset, in hundredths of an inch. Valor padrão = 30    |
+|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30    |
 
 ### Orientação
 
@@ -435,7 +435,7 @@ Exemplo:
 
 | Propriedade                                                                |       | Tipo          | Descrição                                                                               | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------- | ----- | ------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Defines the corresponding border line                                                   |                                                                                                                                                                                                                                                                                                                                                                  |
+| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Define a linha de fronteira correspondente                                              |                                                                                                                                                                                                                                                                                                                                                                  |
 |                                                                            | color | text          | Defines the color of the border. Predefinição = black.                                  | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
 |                                                                            | style | inteiro longo | Defines the style of the border. Predefinição = vazio. Não pode ser null ou indefinido. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
