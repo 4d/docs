@@ -367,7 +367,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 The *column* parameter defines the column of the cell range's position. Pass the column index in this parameter.
 
-The *row* parameter defines the row of the cell range's position. Pass the row index in this parameter.
+The *row* parameter defines the row of the cell range's position. Passar o índice da linha neste parâmetro.
 
 In the optional *sheet* parameter, you can indicate the index of the sheet where the range will be defined. If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
 
@@ -1133,12 +1133,12 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 <!-- REF #_method_.VP Find.Params -->
 
-| Parâmetro       | Tipo   |    | Descrição                               |
-| --------------- | ------ | -- | --------------------------------------- |
-| rangeObj        | Object | -> | Range object                            |
-| searchValue     | Text   | -> | Valor da pesquisa                       |
-| searchCondition | Object | -> | Object containing search condition(s)   |
-| replaceValue    | Text   | -> | Valor de substituição                   |
+| Parâmetro       | Tipo   |    | Descrição                                   |
+| --------------- | ------ | -- | ------------------------------------------- |
+| rangeObj        | Object | -> | Range object                                |
+| searchValue     | Text   | -> | Valor da pesquisa                           |
+| searchCondition | Object | -> | Objeto que contém condição(ões) de pesquisa |
+| replaceValue    | Text   | -> | Valor de substituição                       |
 | Resultados      | Object | <- | Range object|<!-- END REF -->
 
 |
@@ -1812,7 +1812,7 @@ In *rangeObj*, pass a range whose formulas you want to retrieve. If *rangeObj* d
 
 The returned collection is two-dimensional:
 
-* The first-level collection contains subcollections of formulas. Each subcollection reprensents a row.
+* The first-level collection contains subcollections of formulas. Cada subcolecção representa uma linha.
 * Each subcollection defines cell values for the row. The first-level collection contains subcollections of formulas.
 
 #### Exemplo
@@ -2786,11 +2786,11 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <!-- REF #_method_.VP Get tables.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                       |
-| ---------- | ---------- | -- | --------------------------------------------------------------- |
-| vpAreaName | Text       | -> | 4D View Pro area form object name                               |
-| sheet      | Integer    | -> | Sheet index (current sheet if omitted)                          |
-| Resultados | Collection | <- | Text collection with all table names|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                  |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | 4D View Pro area form object name                                          |
+| sheet      | Integer    | -> | Sheet index (current sheet if omitted)                                     |
+| Resultados | Collection | <- | Coleção do textos com todos os nomes de tabelas|<!-- END REF -->
 
 |
 
@@ -2912,7 +2912,7 @@ Dates or times are treated as a datetime and completed as follows:
 
 #### Exemplo
 
-You want to get values from C4 to G6:
+Pretende obter valores de C4 a G6:
 
 ![](../assets/en/ViewPro/cmd_vpGetValues.PNG)
 
@@ -2987,7 +2987,7 @@ The `VP IMPORT DOCUMENT` command <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-In *filePath*, pass the path and name of the document to be imported. The following formats are supported :
+In *filePath*, pass the path and name of the document to be imported. São suportados os seguintes formatos:
 
 * Os documentos 4D View Pro (extensão ".4vp")
 * Microsoft Excel (extensão ".xlsx")
@@ -3634,11 +3634,11 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                       |
-| ---------- | ------- | -- | --------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                               |
-| name       | Text    | -> | Name of the named range or named formula to remove              |
-| scope      | Integer | -> | Target scope (default=current sheet)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                   |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                           |
+| name       | Text    | -> | Name of the named range or named formula to remove          |
+| scope      | Integer | -> | Âmbito alvo (padrão=folha atual)|<!-- END REF -->
 
 |
 
@@ -5020,7 +5020,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pa
 | Parâmetros              | Descrição                                | Padrão predefinido dos EUA |
 | ----------------------- | ---------------------------------------- | -------------------------- |
 | `vk pattern long date`  | Formato ISO 8601 para a data completa    | "dddd, dd MMMM yyyy"       |
-| `vk pattern month day`  | ISO 8601 format for the month and day    | "MMMM dd"                  |
+| `vk pattern month day`  | Formato ISO 8601 para o mês e o dia      | "MMMM dd"                  |
 | `vk pattern short date` | Abbreviated ISO 8601 format for the date | "MM/dd/yyyy"               |
 | `vk pattern year month` | ISO 8601 format for the month and year   | "yyyy MMMM"                |
 
@@ -5329,7 +5329,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 | Parâmetro  | Tipo    |    | Descrição                                                         |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro                                          |
-| printInfo  | Object  | -> | Object containing printing attributes                             |
+| printInfo  | Object  | -> | Objeto que contém atributos de impressão                          |
 | sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
 
 |
@@ -5535,7 +5535,7 @@ In `number`, pass a number corresponding to how many sheets the document will co
 
 #### Exemplo
 
-The document currently has one sheet:
+O documento tem atualmente uma folha:
 
 ![](../assets/en/ViewPro/vp-sheet-1.png)
 

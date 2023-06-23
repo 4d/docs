@@ -483,7 +483,7 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 #### Descrição
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->devolve um objecto que fornece informação sobre o dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve um objecto que fornece informação sobre o dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Objeto devolvido**
 

@@ -98,7 +98,7 @@ The `On Web Authentication` database method is NOT called:
 | ---------- | ---------- |:--:| ------------------------------------------------- |
 | $1         | Text       | <- | URL                                               |
 | $2         | Text       | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Text       | <- | IP address of the web client (browser)            |
+| $3         | Text       | <- | Endereço IP do cliente Web (browser)              |
 | $4         | Text       | <- | Endereço IP do servidor                           |
 | $5         | Text       | <- | Nome de usuario                                   |
 | $6         | Text       | <- | Senha                                             |

@@ -223,7 +223,7 @@ Token member names (i.e., object property names accessed using the object notati
 
 **Nota:**
 
-- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
+- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. É necessário utilizar uma variável intermédia.
 - Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
 

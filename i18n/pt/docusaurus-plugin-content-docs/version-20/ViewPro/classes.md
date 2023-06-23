@@ -65,7 +65,7 @@ The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -
 <!-- REF #TableOptions.bandColumns.Syntax -->
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Padrão = False
+A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Padrão = False
 
 
 ### .bandRows
@@ -96,14 +96,14 @@ The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn
 <!-- REF #TableOptions.showFooter.Syntax -->
 **.showFooter** : Boolean<!-- END REF -->
 
-The `.showFooter` property <!-- REF #TableOptions.showFooter.Summary -->indicates whether to display a footer<!-- END REF -->. Padrão = False
+A propriedade `.showFooter` <!-- REF #TableOptions.showFooter.Summary -->indica se deve ser mostrado um rodapé<!-- END REF -->. Padrão = False
 
 ### .showHeader
 
 <!-- REF #TableOptions.showHeader.Syntax -->
 **.showHeader** : Boolean<!-- END REF -->
 
-The `.showHeader` property <!-- REF #TableOptions.showHeader.Summary -->indicates whether to display a header<!-- END REF -->. Padrão = True
+A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica se deve ser mostrado um cabeçalho<!-- END REF -->. Padrão = True
 
 ### .showResizeHandle
 
@@ -163,9 +163,9 @@ The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[fore
 ### .font
 
 <!-- REF #TableStyle.font.Syntax -->
-**.font** : Text<!-- END REF -->
+**.font**: Text<!-- END REF -->
 
-The `.font` property is the <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md/#fonts-and-text)) of the table<!-- END REF -->.
+A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->font name (see [**Fonts and text**](configuring.md/#fonts-and-text)) of the table<!-- END REF -->.
 
 
 
@@ -237,7 +237,7 @@ A propriedade `.bandRows` <!-- REF #TableTheme.bandRows.Summary -->indicates whe
 <!-- REF #TableTheme.bandColumns.Syntax -->
 **.bandColumns** : Boolean<!-- END REF -->
 
-The `.bandColumns` property <!-- REF #TableTheme.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->.
+A propriedade `.bandColumns` <!-- REF #TableTheme.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->.
 
 
 ### .highlightLastColumn
@@ -279,7 +279,7 @@ The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstCol
 <!-- REF #TableThemeOptions.firstColumnStripStyle.Syntax -->
 **.firstColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->style of the first alternating column<!-- END REF -->.
+The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->estilo da primeira coluna alternada<!-- END REF -->.
 
 ### .firstFooterCellStyle
 
@@ -363,7 +363,7 @@ The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of 
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. O padrão=1
+The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->tamanho da segunda coluna alternada<!-- END REF -->. O padrão=1
 
 ### .secondColumnStripStyle
 
@@ -377,7 +377,7 @@ The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.second
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. O padrão=1.
+The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->tamanho da segunda coluna alternada<!-- END REF -->. O padrão=1.
 
 ### .secondRowStripStyle
 

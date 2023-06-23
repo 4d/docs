@@ -39,7 +39,7 @@ You can customize the display of the editing area. Any customization is automati
 | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **tipo de letra** e **tamanho de letra**  | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                           |
 | **estilo e cor dos elementos de sintaxe** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **espaços**                               | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                                                |
+| **espaços**                               | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espaços em branco**                                                                                                                                                                                            |
 | **temas**                                 | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
 | **width of code indentations**            | Definir a largura das indentações do código                                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
 
@@ -326,7 +326,7 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 
 You can double-click to select individual "words". When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
 
-## Checking and correcting syntax errors
+## Verificação e correção de erros de sintaxe
 
 4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
 
@@ -455,7 +455,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 
 ![](../assets/en/code-editor/bookm.png)
 
-A bookmark moves along with its original row if additional rows are inserted in the method. Bookmarks are saved with the methods.
+A bookmark moves along with its original row if additional rows are inserted in the method. Os marcadores são guardados com os métodos.
 
 Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 
@@ -553,7 +553,7 @@ Os resultados são os seguintes:
 
 ![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
 
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
+All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Estes aparecerão no primeiro nível.
 
 #### Ordem de visualização
 

@@ -92,7 +92,7 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Include tokens in project source files
+### Incluir tokens nos ficheiros de origem do projeto
 
 When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
@@ -102,7 +102,7 @@ If you intend to use VCS or external code editors with your new projects, you mi
 
 > You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
 
-#### Excluding tokens in existing projects
+#### Excluir tokens em projetos existentes
 
 You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
 

@@ -25,7 +25,7 @@ When the user enters "RB17621," the field displays:
 
  RB-1762-1
 
-The field actually contains "RB17621".
+O campo contém efetivamente "RB17621".
 
 If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
 
@@ -134,7 +134,7 @@ You can use any other characters in the format. When used alone, or placed befor
 
 a dollar sign always appears because it is placed before the placeholders.
 
-If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
+If characters are placed between placeholders, they appear only if digits are displayed on both sides. Por exemplo, se definir o formato:
 
  ###.##0
 
@@ -258,7 +258,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Truncated (centered and non-centered)
+### Truncado (centrado e não centrado)
 
 `JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
 

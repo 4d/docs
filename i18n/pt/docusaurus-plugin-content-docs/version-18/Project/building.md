@@ -129,7 +129,7 @@ Once the folder is selected, its complete pathname is displayed and, if it actua
 
 #### Modo de ligação de dados
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+This option lets you choose the linking mode between the merged application and the local data file. Estão disponíveis dois modos de ligação de dados:
 
 * **Por nome da aplicação** (por defeito) - A aplicação 4D abre automaticamente o ficheiro de dados mais recentemente aberto correspondente ao ficheiro de estrutura. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
@@ -214,7 +214,7 @@ Used to indicate the current version number for the application generated. You m
 
 #### Modo de ligação de dados
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+This option lets you choose the linking mode between the merged application and the local data file. Estão disponíveis dois modos de ligação de dados:
 
 * **Por nome da aplicação** (por defeito) - A aplicação 4D abre automaticamente o ficheiro de dados mais recentemente aberto correspondente ao ficheiro de estrutura. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
@@ -251,7 +251,7 @@ The client application update notification is carried out automatically followin
 
 It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). If you have followed the process for generating a cross-platform client application, a .*4darchive* update file is available for each platform:
 
-To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. The rest of the process is automatic.
+To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. O resto do processo é automático.
 
 Do lado do cliente, quando a aplicação cliente "antiga" tenta conectar-se à aplicação servidor atualizada, se mostra uma caixa de diálogo na máquina cliente, indicando que há uma nova versão disponível. O utilizador pode tanto actualizar a sua versão como cancelar a caixa de diálogo.
 
@@ -324,7 +324,7 @@ The page lists the elements loaded by the current 4D application:
 
 ![](../assets/en/Project/buildapppluginsProj.png)
 
-* **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+* **Active** column - Indicates that the items will be integrated into the application package built. Todos os itens são selecionados por padrão. To exclude a plug-in or a component, deselect the check box next to it.
 
 * **Plugins and components** column - Displays the name of the plug-in/component.
 

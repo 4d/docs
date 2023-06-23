@@ -44,7 +44,7 @@ Os resultados dos operadores dependem dos **tipos de dados** aos quais são apli
 - [**Operadores Bitwise**](dt_number.md#bitwise-operators) (em **expressões de números inteiros longos**)
 - [**Operadores de imagem**](dt_picture.md#picture-operators)
 - [**Operadores de Ponteiros**](dt_pointer.md#pointer-operators)
-- [**String operators**](dt_string.md#string-operators)
+- [**Operadores de string**](dt_string.md#string-operators)
 - [**Operadores Null**](dt_null_undefined.md#null-operators)
 - [**Operadores indefinidos**](dt_null_undefined.md#undefined-operators)
 
@@ -232,7 +232,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Exemplo 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Digamos que tem uma tabela chamada Employee. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
 
 ```4d
 var $phone : Text

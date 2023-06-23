@@ -104,7 +104,7 @@ Each state is represented by a different picture. In the source picture, the sta
 
 ![](../assets/en/FormObjects/property_numberOfStates.png)
 
-The following states are represented:
+Estão representados os seguintes estados:
 
 1. button not clicked / check box unchecked (variable value=0)
 2. button clicked / check box checked (variable value=1)

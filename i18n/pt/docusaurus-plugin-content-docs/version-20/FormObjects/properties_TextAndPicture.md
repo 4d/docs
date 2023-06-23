@@ -125,7 +125,7 @@ Each state is represented by a different picture. In the source picture, the sta
 
 | Nome       | Tipo de dados | Valores possíveis                               |
 | ---------- | ------------- | ----------------------------------------------- |
-| iconFrames | number        | Number of states in the icon picture. Mínimo: 1 |
+| iconFrames | number        | Número de estados na imagem do ícone. Mínimo: 1 |
 
 #### Objectos suportados
 

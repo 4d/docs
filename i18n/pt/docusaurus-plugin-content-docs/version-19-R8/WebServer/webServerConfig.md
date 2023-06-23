@@ -137,11 +137,11 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 
 ## Defaut Home page
 
-| Pode ser definido com              | Nome                                                                              | Comentários                           |
-| ---------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------- |
-| webServer object                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                        | Text                                  |
-| `WEB SET HOME PAGE`                |                                                                                   | Can be different for each web process |
-| Caixa de diálogos de configurações | [Página configuração/Página inicial padrão](../settings/web.md#default-home-page) |                                       |
+| Pode ser definido com              | Nome                                                                              | Comentários                               |
+| ---------------------------------- | --------------------------------------------------------------------------------- | ----------------------------------------- |
+| webServer object                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                        | Text                                      |
+| `WEB SET HOME PAGE`                |                                                                                   | Pode ser diferente para cada processo web |
+| Caixa de diálogos de configurações | [Página configuração/Página inicial padrão](../settings/web.md#default-home-page) |                                           |
 
 Designate a default home page for the web server. This page can be static or [semi-dynamic].
 

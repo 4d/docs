@@ -128,12 +128,12 @@ New documentation files are created with the following default contents:
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Linha                                   | Descrição                                                                                                                                              |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `<!-- Type here your summary -->` | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                       |
-| ## Description                         | Título de nível 2 em Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Exemplo                             | Heading level 2, you can use this area to show sample code                                                                                             |
-| ` ```4d Type here your example``` `     | Used to format 4D code examples (uses highlight.js library)                                                                                            |
+| Linha                                      | Descrição                                                                                                                                              |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `<!-- Escreva aqui o seu resumo -->` | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                       |
+| ## Description                            | Título de nível 2 em Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
+| ## Exemplo                                | Heading level 2, you can use this area to show sample code                                                                                             |
+| ` ```4d Type here your example``` `        | Used to format 4D code examples (uses highlight.js library)                                                                                            |
 
 
 ### Markdown suportado

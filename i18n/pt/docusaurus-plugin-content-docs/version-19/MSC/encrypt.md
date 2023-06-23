@@ -29,7 +29,7 @@ Encrypting your data for the first time using the MSC requires the following ste
 
 The encrypting process is then launched. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
 
-4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). You can do it at this moment or later. You can also open the encryption log file.
+4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo neste momento ou mais tarde. You can also open the encryption log file.
 
 If the encryption process is successful, the Encrypt page displays Encryption maintenance operations buttons.
 
@@ -60,7 +60,7 @@ In all cases, if valid information is provided, 4D restarts in maintenance mode 
 This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
 
 1. Click on **Re-encrypt data with the current encryption key**.
-2. Enter the current data encryption key.
+2. Introduzir a chave de encriptação de dados atual.
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt8.png)
 
@@ -69,7 +69,7 @@ The data file is properly re-encrypted with the current key and a confirmation m
 This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
 
 1. Click on **Change your passphrase and re-encrypt data**.
-2. Enter the current data encryption key.
+2. Introduzir a chave de encriptação de dados atual.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](../assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Desencriptar todos os dados

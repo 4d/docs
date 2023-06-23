@@ -22,7 +22,7 @@ Estão disponíveis as seguintes etiquetas 4D:
 
 - 4DTEXT, to insert 4D variables and expressions as text,
 - 4DHTML, para inserir código HTML,
-- 4DEVAL, to evaluate any 4D expression,
+- 4DEVAL, para avaliar qualquer expressão 4D,
 - 4DSCRIPT, to execute a 4D method,
 - 4DINCLUDE, to include a page within another one,
 - 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
@@ -87,7 +87,7 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
 
 
-## Prevention of malicious code insertion
+## Prevenção da inserção de código malicioso
 
 4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
 

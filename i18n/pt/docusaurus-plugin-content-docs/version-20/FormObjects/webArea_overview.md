@@ -164,7 +164,7 @@ Quando o formulário for executado, as funções da interface de navegador padr�
 
 Por razões relacionadas com os mecanismos de redesenho de janelas, a inserção de uma área web em um subformulário está sujeita às restrições abaixo:
 
-- The subform must not be able to scroll
+- O subformulário não deve poder deslocar-se
 - Os limites da área Web não devem ultrapassar o tamanho do subformulário
 
 > Não é compatível sobrepor uma área Web no topo ou debaixo dos outros objetos formulário.
