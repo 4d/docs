@@ -58,7 +58,7 @@ A barra de ferramentas contém os seguintes elementos:
 | ![](../assets/en/FormEditor/execute.png)         | Executar o formulário                                     | Utilizado para testar a execução do formulário. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.                                                                                                                |
 | ![](../assets/en/FormEditor/selection.png)       | [Ferramenta de selecção](#selecting-objects)              | Allows selecting, moving and resizing form objects.<p>Allows selecting, moving and resizing form objects.<strong x-id="1">Note</strong>: When an object of the Text or Group Box type is selected, pressing the <strong x-id="1">Enter</strong> key lets you switch to editing mode.</p>                                                                                                                                                                                                                                                                                                    |
 | ![](../assets/en/FormEditor/zOrder.png)          | [Ordem de entrada](#selecting-objects)                    | Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form.                                                                                                                                                                          |
-| ![](../assets/en/FormEditor/moving.png)          | [Deslocamento](#moving-objects)                           | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. The cursor takes the shape of a hand. This navigation mode is particularly useful when zooming in the form.                                                                                                                                           |
+| ![](../assets/en/FormEditor/moving.png)          | [Deslocamento](#moving-objects)                           | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. O cursor assume a forma de uma mão. This navigation mode is particularly useful when zooming in the form.                                                                                                                                             |
 | ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                             | Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. This feature is detailed in previous section.                                                                                                                                                     |
 | ![](../assets/en/FormEditor/alignment.png)       | [Alinhamento](#aligning-objects)                          | This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected.<p>Disponível apenas com CSS Preview None</p>                                                                                                                                                                                                       |
 | ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                     | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.<p>Disponível apenas com CSS Preview None</p>                                                                                                                                                                                         |
@@ -602,7 +602,7 @@ There is no limitation on the number of views.
 
 By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
 
-To rename a view, you can use either:
+Para mudar o nome de uma vista, pode utilizar:
 
 - Double-click directly on the view name (the selected view in this case). The name then becomes editable:
 
@@ -622,7 +622,7 @@ Note that the Default view does not change:
 
 #### Eliminar vistas
 
-To rename a view, you can use either:
+Para mudar o nome de uma vista, pode utilizar:
 
 - Click on the **Delete the selected view** button at the bottom of the View palette:
 
