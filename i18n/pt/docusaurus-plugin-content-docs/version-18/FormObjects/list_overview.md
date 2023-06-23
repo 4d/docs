@@ -110,7 +110,7 @@ You can usually work in two ways with the contents of hierarchical lists: by pos
 - When you work by position, 4D bases itself on the position in relation to the items of the list displayed on screen in order to identify them. The result will differ according to whether or not certain hierarchical items are expanded or collapsed. Note that in the case of multiple representations, each form object has its own configuration of expanded/collapsed items.
 - When you work by reference, 4D bases itself on the *itemRef* ID number of the list items. Each item can thus be specified individually, regardless of its position or its display in the hierarchical list.
 
-### Using item reference numbers (itemRef)
+### Utilização de números de referência dos items (itemRef)
 
 Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. This value is only intended for your own use: 4D simply maintains it.
 
