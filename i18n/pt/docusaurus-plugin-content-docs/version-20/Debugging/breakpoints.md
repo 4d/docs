@@ -114,7 +114,7 @@ Para remover um ponto de interrupção no comando:
 
 ### Setting a Condition for catching a command
 
-1. Click on the entry in the right column
+1. Clique na entrada na coluna da direita
 2. Enter a 4D formula (expression, command call or project method) that returns a Boolean value.
 
 > To remove a condition, delete its formula.
