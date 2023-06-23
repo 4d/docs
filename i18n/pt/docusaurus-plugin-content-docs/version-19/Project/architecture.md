@@ -195,7 +195,7 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 
 | Conteúdos                  | Descrição                                                   | Formato |
 | -------------------------- | ----------------------------------------------------------- | ------- |
-| methodPreferences.json     | Current user method editor preferences                      | JSON    |
+| methodPreferences.json     | Preferências do editor dos métodos do usuário atual         | JSON    |
 | methodWindowPositions.json | Current user window positions for methods                   | JSON    |
 | formWindowPositions.json   | Current user window positions for forms                     | JSON    |
 | workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON    |
