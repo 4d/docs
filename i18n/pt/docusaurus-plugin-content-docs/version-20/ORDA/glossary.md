@@ -107,7 +107,7 @@ An entity selection contains:
 *   uma propriedade length (sempre),
 *   queryPlan and queryPath properties (if asked while querying).
 
-An entity selection can also be empty.
+Uma seleção de entidade também pode estar vazia.
 
 
 ## Generic class
