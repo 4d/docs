@@ -207,7 +207,7 @@ An ORDA element on which any [action](#action) can be allowed or not according t
 
 ## Role
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+A role is a published [privilege](#privilege) intended to be used by an administrator. Pode conter um ou mais privilégios.
 
 
 ## Session
