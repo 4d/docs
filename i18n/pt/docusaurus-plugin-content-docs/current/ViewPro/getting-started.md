@@ -36,7 +36,7 @@ You can also select a preconfigured 4D View Pro area in the [Object library](For
 You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.
 
 
-## Selection, Input and Navigation Basics
+## Noções básicas de seleção, introdução e navegação
 
 Spreadsheets are composed of rows and columns. A cada linha está associado um número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
 
