@@ -209,7 +209,7 @@ As you begin dragging the selected object, its handles disappear. 4D displays ma
 
 When the [Magnetic Grid](#using-the-magnetic-grid) is on, objects are moved in stages indicating noticeable locations.
 
-To move an object one pixel at a time:
+Para mover um objeto um píxel de cada vez:
 
 - Select the object or objects and use the arrow keys on the keyboard to move the object. Each time you press an arrow key, the object moves one pixel in the direction of the arrow.
 
