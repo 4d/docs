@@ -29,7 +29,7 @@ Por exemplo: `$filter="firstName=john AND salary>20000"` onde `firstName` y `sal
 
 ### Using the params property
 
-You can also use 4D's params property.
+Também pode usar a propriedade params de 4D.
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
