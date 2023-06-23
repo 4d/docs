@@ -252,7 +252,7 @@ This command means that starting with the fourth parameter (included), the metho
 
 
 
-## Compiler method
+## `Compiler` method
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project. 
 
@@ -267,8 +267,9 @@ However, a 4D compiler feature allows you to declare all your parameters in a sp
 
 - you can group all local variable parameters for project methods in one or more project method(s)
 - the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
+- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
- Within such a method, you can predeclare the parameters for each method, for example:
+For example:
 
 ```4d  
  // Compiler_method
@@ -281,7 +282,7 @@ This syntax is not executable in interpreted mode.
 
 :::
 
-You can create and fill automatically this method using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
 Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
 
