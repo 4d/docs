@@ -9,7 +9,7 @@ As sessões de usuário do servidor Web permitem:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
 - share data between the processes of a web client,
-- associate privileges to user sessions,
+- associar privilégios a sessões de usuário,
 - handle access through a `Session` object and the [Session API](API/SessionClass.md).
 
 > **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
@@ -68,7 +68,7 @@ Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) prope
 
 ## Session lifetime
 
-A scalable web session is closed when:
+Uma sessão Web escalável é encerrada quando:
 
 - the web server is stopped,
 - the timeout of the session cookie has been reached.
