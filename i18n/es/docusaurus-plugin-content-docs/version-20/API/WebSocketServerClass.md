@@ -84,13 +84,13 @@ Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
 
 :::tip JS del lado del cliente
 
-See [this blog post](https://blog.4d.com/websocket-server/) for an example of client-side Javascript code handling a WebSocket connection.
+Consulte [esta entrada de blog](https://blog.4d.com/websocket-server/) para ver un ejemplo de código Javascript del lado del cliente que gestiona una conexión WebSocket.
 
 :::
 
 ### Objeto WebSocketServer
 
-WebSocket server objects provide the following properties and functions:
+Los objetos de servidor WebSocket ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -214,7 +214,7 @@ Function onTerminate($wss : Object; $event : Object)
 LogFile("*** Server closed")
 
 Function onError($wss : Object; $event : Object)
-LogFile("!!! Server error: "+$event.errors.first().message)
+LogFile("!!! Error del servidor: "+$event.errors.first().message)
 
 ```
 
