@@ -272,7 +272,7 @@ MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 
 Os comentários são linhas de código inactivas. These lines are not interpreted by the 4D language and are not executed when the code is called.
 
-There are two ways to create comments:
+Existem duas formas de criar comentários:
 
 - `//` para comentários de linha única
 - `/*...*/` para comentarios em linha ou multilinha.
