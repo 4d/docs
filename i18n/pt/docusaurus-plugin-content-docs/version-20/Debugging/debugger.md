@@ -356,7 +356,7 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 
 ### Contador do programa
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. It marks the next line to be executed.
+The yellow arrow in the left margin of the Source Code pane is called the program counter. Marca a linha seguinte a ser executada.
 
 By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
 
