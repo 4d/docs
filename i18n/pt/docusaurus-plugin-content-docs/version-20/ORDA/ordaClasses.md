@@ -936,7 +936,7 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Exemplo com uma variável de classe Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 
