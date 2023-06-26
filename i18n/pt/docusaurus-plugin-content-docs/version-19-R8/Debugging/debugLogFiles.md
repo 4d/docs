@@ -231,7 +231,7 @@ You can select the level of messages using the `Diagnostic log level` selector o
 
 | Nível da mensagem | Descrição                                                                                     | Quando seleccionado, inclui     |
 | ----------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR             | A part of the application does not work                                                       | ERROR                           |
+| ERROR             | Uma parte da aplicação não funciona                                                           | ERROR                           |
 | WARN              | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
 | INFO              | *Default level* - Important application event                                                 | ERROR, WARN, INFO               |
 | DEBUG             | Detail of application flow (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG        |
