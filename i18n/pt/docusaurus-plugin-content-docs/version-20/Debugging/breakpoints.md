@@ -51,7 +51,7 @@ Here is a description of the properties:
 
 ### Breakpoints in remote debugging
 
-The break point list is stored locally. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
+A lista de pontos de paragem é armazenada localmente. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
 
 The server break point list is automatically restored if it becomes again the attached debugger.
 
