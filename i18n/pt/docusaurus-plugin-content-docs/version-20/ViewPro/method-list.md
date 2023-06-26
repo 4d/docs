@@ -239,12 +239,12 @@ To span the First quarter and Second quarter cells across the two cells beside t
 
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| styleName  | Text    | -> | Nome do estilo                                                    |
-| styleObj   | Object  | -> | Objeto que define as propriedades do atributo                     |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| styleName  | Text    | -> | Nome do estilo                                                      |
+| styleObj   | Object  | -> | Objeto que define as propriedades do atributo                       |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -755,7 +755,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### Descrição
 
-O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->creates a table in the specified range<!-- END REF -->. You can create a table in a range of cells to make managing and analyzing a group of related data easier. A table typically contains related data in rows and columns, and takes advantage of a [data context](#vp-set-data-context).
+O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cria uma tabela no intervalo especificado<!-- END REF -->. You can create a table in a range of cells to make managing and analyzing a group of related data easier. A table typically contains related data in rows and columns, and takes advantage of a [data context](#vp-set-data-context).
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
@@ -957,7 +957,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 | includeFormatInfo          | boolean    | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                         |
 | includeBindingSource       | Parâmetros | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). Caso contrário, false. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                           |
 | sheet                      | number     | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| pdfOptions                 | object     | PDF only (optional) - Options for pdf export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>título do documento.</td></tr><tr><td>autor</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| pdfOptions                 | object     | PDF only (optional) - Options for pdf export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>título do documento.</td></tr><tr><td>autor</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>palavras-chave associadas ao documento.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | csvOptions                 | object     | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de linha. Padrão: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `\<customProperty>` | any        | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
@@ -2439,7 +2439,7 @@ borderTop:{color:green,style:10}
 | Parâmetro  | Tipo       |    | Descrição                                                          |
 | ---------- | ---------- | -- | ------------------------------------------------------------------ |
 | vpAreaName | Text       | -> | 4D View Pro area form object name                                  |
-| sheet      | Integer    | -> | Target scope (default = current sheet)                             |
+| sheet      | Integer    | -> | Âmbito alvo (padrão = folha atual)                                 |
 | Resultados | Collection | <- | Coleção de objectos de folhas de estilo|<!-- END REF -->
 
 |
@@ -2564,13 +2564,13 @@ End if
 
 <!-- REF #_method_.VP Get table column index.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                        |
-| ---------- | ------- | -- | ------------------------------------------------ |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                |
-| tableName  | Text    | -> | Nome da tabela                                   |
-| columnName | Text    | -> | Name of the table column                         |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)         |
-| Resultados | Integer | <- | Index of *columnName*|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                         |
+| ---------- | ------- | -- | ------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                 |
+| tableName  | Text    | -> | Nome da tabela                                    |
+| columnName | Text    | -> | Name of the table column                          |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)          |
+| Resultados | Integer | <- | Índice de *columnName*|<!-- END REF -->
 
 
 |
@@ -3150,7 +3150,7 @@ New rows are inserted directly before the first row in the *rangeObj*.
 
 #### Exemplo
 
-To insert 3 rows before the first row:
+Para inserir 3 linhas antes da primeira linha:
 
 ```4d
 VP INSERT ROWS(VP Row("ViewProArea";0;3))
@@ -3178,14 +3178,14 @@ O resultado é:
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Params -->
 
-| Parâmetro   | Tipo    |    | Descrição                                                         |
-| ----------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro area form object name                                 |
-| tableName   | Text    | -> | Nome da tabela                                                    |
-| column      | Integer | -> | Index in the table of the starting column to insert               |
-| count       | Text    | -> | Number of columns to add (must be >0)                             |
-| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*      |
-| sheet       | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro   | Tipo    |    | Descrição                                                           |
+| ----------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName  | Text    | -> | 4D View Pro area form object name                                   |
+| tableName   | Text    | -> | Nome da tabela                                                      |
+| column      | Integer | -> | Index in the table of the starting column to insert                 |
+| count       | Text    | -> | Number of columns to add (must be >0)                               |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*        |
+| sheet       | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -3232,14 +3232,14 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 
-| Parâmetro   | Tipo    |    | Descrição                                                         |
-| ----------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro area form object name                                 |
-| tableName   | Text    | -> | Nome da tabela                                                    |
-| row         | Integer | -> | Index in the table of the starting row to insert                  |
-| count       | Text    | -> | Number of rows to add (must be >0)                                |
-| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*         |
-| sheet       | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro   | Tipo    |    | Descrição                                                           |
+| ----------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName  | Text    | -> | 4D View Pro area form object name                                   |
+| tableName   | Text    | -> | Nome da tabela                                                      |
+| row         | Integer | -> | Index in the table of the starting row to insert                    |
+| count       | Text    | -> | Number of rows to add (must be >0)                                  |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*           |
+| sheet       | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -3553,10 +3553,10 @@ See example the example from [VP Copy to object](#vp-copy-to-object)
 
 <!-- REF #_method_.VP PRINT.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -3757,11 +3757,11 @@ Resultados:
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| styleName  | Text    | -> | Nome do estilo a remover                                          |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| styleName  | Text    | -> | Nome do estilo a remover                                            |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -3804,12 +3804,12 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nome da área View Pro                                             |
-| tableName  | Text    | -> | Nome da tabela a remover                                          |
-| options    | Integer | -> | Opções adicionais                                                 |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome da área View Pro                                               |
+| tableName  | Text    | -> | Nome da tabela a remover                                            |
+| options    | Integer | -> | Opções adicionais                                                   |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -3858,19 +3858,19 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| tableName  | Text    | -> | Nome da tabela                                                    |
-| column     | Integer | -> | Index in the table of the starting column to remove               |
-| count      | Text    | -> | Number of columns to remove (must be >0)                          |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| tableName  | Text    | -> | Nome da tabela                                                      |
+| column     | Integer | -> | Index in the table of the starting column to remove                 |
+| count      | Text    | -> | Number of columns to remove (must be >0)                            |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. The command removes values and styles.
+O comando `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. O comando remove valores e estilos.
 
 The command removes columns from the *tableName* table, NOT from the sheet. The total number of columns of the sheet is not impacted by the command. The total number of columns of the sheet is not impacted by the command.
 
@@ -3906,19 +3906,19 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| tableName  | Text    | -> | Nome da tabela                                                    |
-| row        | Integer | -> | Index in the table of the starting row to remove                  |
-| count      | Text    | -> | Number of rows to remove (must be >0)                             |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| tableName  | Text    | -> | Nome da tabela                                                      |
+| row        | Integer | -> | Index in the table of the starting row to remove                    |
+| count      | Text    | -> | Number of rows to remove (must be >0)                               |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
 #### Descrição
 
-removes one or *count* row(s) from the specified *tableName* at the specified *row* index <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->O comando `VP REMOVE TABLE ROWS`<!-- END REF -->. The command removes values and styles.
+removes one or *count* row(s) from the specified *tableName* at the specified *row* index <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->O comando `VP REMOVE TABLE ROWS`<!-- END REF -->. O comando remove valores e estilos.
 
 This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
 
@@ -3949,10 +3949,10 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 
 <!-- REF #_method_.VP RESET SELECTION.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -4189,7 +4189,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 | area                     | text             | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | onEvent                  | object (fórmula) | A callback method that will be launched when the offscreen area is ready. It can be either:<li>uma função `onEvent` de uma classe, ou</li><li>um objecto `Formula`</li>By default, the callback method is called on the [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), or [`On Timer`](../Events/onTimer.md) events. The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
 | autoQuit                 | boolean          | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                    |
-| timeout                  | number           | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| timeout                  | number           | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. Se for definido para 0, não é aplicada qualquer limitação. Default value: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | result                   | misto            | Resultado do processamento (se for caso disso)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `<customProperty>` | misto            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
@@ -4666,11 +4666,11 @@ $properties:=New object("width";100;"header";"Hello World") VP SET COLUMN ATTRIB
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
-| Parâmetro   | Tipo    |    | Descrição                                                         |
-| ----------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro area form object name                                 |
-| columnCount | Integer | -> | Número de colunas                                                 |
-| sheet       | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro   | Tipo    |    | Descrição                                                           |
+| ----------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName  | Text    | -> | 4D View Pro area form object name                                   |
+| columnCount | Integer | -> | Número de colunas                                                   |
+| sheet       | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -5022,7 +5022,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pa
 | `vk pattern long date`  | Formato ISO 8601 para a data completa    | "dddd, dd MMMM yyyy"       |
 | `vk pattern month day`  | Formato ISO 8601 para o mês e o dia      | "MMMM dd"                  |
 | `vk pattern short date` | Abbreviated ISO 8601 format for the date | "MM/dd/yyyy"               |
-| `vk pattern year month` | ISO 8601 format for the month and year   | "yyyy MMMM"                |
+| `vk pattern year month` | Formato ISO 8601 para o mês e o ano      | "yyyy MMMM"                |
 
 For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
 
@@ -5046,11 +5046,11 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 
 <!-- REF #_method_.VP SET DEFAULT STYLE.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                        |
-| ---------- | ------- | -- | ---------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                |
-| styleObj   | Object  | -> | Objecto estilo                                                   |
-| sheet      | Integer | -> | Sheet index (default = current sheet)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                         |
+| ---------- | ------- | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
+| styleObj   | Object  | -> | Objecto estilo                                                    |
+| sheet      | Integer | -> | Índice da folha (padrão = folha atual)|<!-- END REF -->
 
 |
 
@@ -5326,11 +5326,11 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 
 <!-- REF #_method_.VP SET PRINT INFO.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nome da área 4D View Pro                                          |
-| printInfo  | Object  | -> | Objeto que contém atributos de impressão                          |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome da área 4D View Pro                                            |
+| printInfo  | Object  | -> | Objeto que contém atributos de impressão                            |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -5418,7 +5418,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the rows
 | ----------- | ------- | ------------------------------------------------------------------------- |
 | height      | number  | Row height expressed in pixels                                            |
 | pageBreak   | boolean | True to insert a page break before the first row of the range, else false |
-| visible     | boolean | True if the row is visible, else false                                    |
+| visible     | boolean | True se a linha for visível, senão false                                  |
 | resizable   | boolean | True if the row can be resized, else false                                |
 | header      | text    | Texto do cabeçalho da linha                                               |
 
@@ -5446,11 +5446,11 @@ $properties:=New object("height";75;"header";"June") VP SET ROW ATTRIBUTES($row;
 
 <!-- REF #_method_.VP SET ROW COUNT.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| rowCount   | Integer | -> | Número de linhas                                                  |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| rowCount   | Integer | -> | Número de linhas                                                    |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -5605,11 +5605,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
-| Parâmetro    | Tipo   |    | Descrição                                                         |
-| ------------ | ------ | -- | ----------------------------------------------------------------- |
-| vpAreaName   | Object | -> | Nome da área 4D View Pro                                          |
-| sheetOptions | Object | -> | Opção(ões) de folha a definir                                     |
-| sheet        | Object | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro    | Tipo   |    | Descrição                                                           |
+| ------------ | ------ | -- | ------------------------------------------------------------------- |
+| vpAreaName   | Object | -> | Nome da área 4D View Pro                                            |
+| sheetOptions | Object | -> | Opção(ões) de folha a definir                                       |
+| sheet        | Object | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -5714,11 +5714,11 @@ Resultados:
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                         |
-| ---------- | ---------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text       | -> | 4D View Pro area form object name                                 |
-| visible    | Parâmetros | -> | Print lines displayed if True (default), hidden if False          |
-| sheet      | Integer    | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                           |
+| ---------- | ---------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | 4D View Pro area form object name                                   |
+| visible    | Parâmetros | -> | Print lines displayed if True (default), hidden if False            |
+| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -5771,13 +5771,13 @@ Com uma quebra de página:
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                         |
-| ---------- | ------- | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name                                 |
-| tableName  | Text    | -> | Nome da tabela                                                    |
-| column     | Integer | -> | Index of the column in the table                                  |
-| attributes | Object  | -> | Attribute(s) to apply to the *column*                             |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                           |
+| ---------- | ------- | -- | ------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
+| tableName  | Text    | -> | Nome da tabela                                                      |
+| column     | Integer | -> | Index of the column in the table                                    |
+| attributes | Object  | -> | Attribute(s) to apply to the *column*                               |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
@@ -5789,14 +5789,14 @@ In *vpAreaName*, pass the name of the 4D View Pro area.
 
 In the *attributes* parameter, pass an object that contains the properties to set:
 
-| Propriedade         | Tipo    | Descrição                                                                                                                                                                     |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Table column's property name in the data context.                                                                                                                             |
-| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. If this name already used by another column, it is not applied and a default name is automaticaly used.                   |
-| formula             | text    | Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) |
-| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                    |
-| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                  |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                     |
+| Propriedade         | Tipo    | Descrição                                                                                                                                                                           |
+| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | text    | Table column's property name in the data context.                                                                                                                                   |
+| name                | text    | Nome da coluna da tabela. Deve ser único na tabela. If this name already used by another column, it is not applied and a default name is automaticaly used.                         |
+| formula             | text    | Define a fórmula para cada célula da coluna. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) |
+| footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                          |
+| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                        |
+| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                           |
 
 In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 > A indexação começa em 0.
@@ -6154,10 +6154,10 @@ The following table lists the available workbook options:
 | allowUserEditFormula                  | boolean                 | Formulas can be entered in cells                                                                                                                                                                                                                       |
 | allowUserResize                       | boolean                 | Columns and rows can be resized                                                                                                                                                                                                                        |
 | allowUserZoom                         | boolean                 | Zooming (ctrl + mouse wheel) is allowed                                                                                                                                                                                                                |
-| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table>                                                                                                                                             |
+| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> O conteúdo ajusta automaticamente as células e os cabeçalhos</td></tr></table>                                                                                                                                             |
 | backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                          |
 | backgroundImage                       | string / picture / file | Background image for the area.                                                                                                                                                                                                                         |
-| backgroundImageLayout                 | number                  | How the background image is displayed. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                 |
+| backgroundImageLayout                 | number                  | Como é apresentada a imagem de fundo. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                  |
 | calcOnDemand                          | boolean                 | Formulas are calculated only when they are demanded.                                                                                                                                                                                                   |
 | columnResizeMode                      | number                  | Resize mode for columns. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                               |
 | copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                   |
@@ -6174,7 +6174,7 @@ The following table lists the available workbook options:
 | iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                          |
-| pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>Falso (padrão): colar dados</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
+| pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                                  |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                              |
 | rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
@@ -6233,7 +6233,7 @@ O comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->vertically a
 
 In *rangeObj*, pass a range of cells as an object to designate the cells to be viewed. The view of the *rangeObj* will be positioned vertically or horizontally (i.e., where *rangeObj* appears) based on the *vPos* and *hPos* parameters. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
 
-The following selectors are available:
+Estão disponíveis os seguintes selectores:
 
 | Selector              | Descrição                                                                                                                                                                                                                  | Disponível com *vPos* | Disponível com *hPos* |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
