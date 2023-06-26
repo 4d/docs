@@ -21,7 +21,7 @@ There are different ways to configure the 4D web server settings, depending on t
 
 | Pode ser definido com              | Nome                                                | Comentários |
 | ---------------------------------- | --------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | Configuration page/Use the 4D Web cache             |             |
+| Caixa de diálogos de configurações | Página de configuração/Utilizar a cache Web 4D      |             |
 | Caixa de diálogos de configurações | Página de configuração/Tamanho da cache das páginas |             |
 
 Enables and configures the web page cache.
