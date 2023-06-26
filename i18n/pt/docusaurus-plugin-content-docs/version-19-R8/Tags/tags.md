@@ -351,7 +351,7 @@ In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boole
 
 Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a `<!--#4DELSE-->` tag after the last `<!--#4DELSEIF-->`. If all the conditions are false, the statements following the `<!--#4DELSE-->` are executed.
 
-The two following codes are equivalent.
+Os dois códigos seguintes são equivalentes.
 
 Code using 4DELSE only:
 
