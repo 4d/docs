@@ -413,7 +413,7 @@ Function query <attributeName>($event : Object) -> $result : Text Function query
 // code
 ```
 
-This function supports three syntaxes:
+Esta função suporta três sintaxes:
 
 - With the first syntax, you handle the whole query through the `$event.result` object property.
 - With the second and third syntaxes, the function returns a value in *$result*:

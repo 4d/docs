@@ -301,7 +301,7 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 ## Dimensionamento vertical
 
-Sets a vertical padding for the cells. The value is set in pixels (default = 0).
+Define um preenchimento vertical para as células. The value is set in pixels (default = 0).
 
 #### Gramática JSON
 

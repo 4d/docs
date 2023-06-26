@@ -283,7 +283,7 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 | Intel Mac   |       &#10003;        |        &#10003;         |        &#10003;         |
 | Silicon Mac |       &#10003;        |        &#10003;         |        &#10003;         |
 
-Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
+Ambos os compiladores estão integrados em 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
 
 ### Compilador clássico
 

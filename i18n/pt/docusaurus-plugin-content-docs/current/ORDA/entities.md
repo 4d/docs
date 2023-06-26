@@ -217,6 +217,7 @@ A new entity selection is **shareable** in the following cases:
 - the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
 
 Exemplo:
+
 ```4d
 $myComp:=ds. Company.get(2) //$myComp does not belong to an entity selection
 $employees:=$myComp.employees //$employees is shareable
@@ -252,6 +253,27 @@ $lowSal:=ds. Employee.query("salary <= :1"; 10000).copy()
  //$lowSal is alterable because of the copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
+
+:::info Entity selections returned from the server
+
+In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Exemplo:
+
+```4d
+    //a function is always executed on the server
+exposed Function getSome() : cs.MembersSelection
+    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+
+    //in a method, executes on the remote side
+var $result : cs.MembersSelection
+var $alterable : Boolean
+$result:=ds.Members.getSome() //$result is shareable
+$alterable:=$result.isAlterable() //False
+
+$result:=ds.Members.getSome().copy() // $result is now alterable
+$alterable:=$result.isAlterable() // True
+```
+
+:::
 
 
 #### Sharing an entity selection between processes (example)

@@ -62,11 +62,11 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 -   **QUIC** (プロジェクトモードでのみ利用可能): サーバー上で QUICネットワークレイヤーを有効にします。 このネットワークレイヤーは、4D v20 ベータ版から使用できます。 本番環境での使用は推奨されませんが、評価目的でクライアント/サーバーアプリケーションで有効にすることができます。
 
      **注記**:
-    - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
-    - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.fe.html) command.
-    - Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
-    - QUIC automatically connects to the port 19813 for both application server and DB4D server.
-    - When the QUIC layer option is selected:
+    - このオプションを設定すると、[SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.ja.html) コマンドにより "旧式ネットワークレイヤーを使用する" オプションが設定されていても無視されます。
+    - 4Dアプリケーションが QUICネットワークレイヤーで動作しているかどうかは、[Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.ja.html) コマンドで確認できます。
+    - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
+    - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
+    - QUICレイヤーオプションを選択すると:
         -   A beta message and an alert icon are displayed near the selector.
         -   [Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
         -   The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).

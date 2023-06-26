@@ -268,7 +268,7 @@ The [current version number](build-server-application) is set on the Client/Serv
 
 #### Erro de actualização
 
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. The application is now going to quit.”
+If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. A aplicação vai agora desistir."
 
 There are many possible causes for this error. When you get this message, it is advisable to check the following parameters first off:
 

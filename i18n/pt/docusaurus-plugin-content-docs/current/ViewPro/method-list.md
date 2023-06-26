@@ -314,7 +314,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 | Parâmetro  | Tipo    |    | Descrição                                            |
 | ---------- | ------- | -- | ---------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                    |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)               |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)             |
 | Resultados | Object  | <- | Range object of all cells|<!-- END REF -->
 
 |
@@ -348,13 +348,13 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 
 <!-- REF #_method_.VP Cell.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                              |
-| ---------- | ------- | -- | -------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name      |
-| column     | Longint | -> | Índice de coluna                       |
-| row        | Longint | -> | Índice de linha                        |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted) |
-| Resultados | Object  | <- | Range object of a single cell          |
+| Parâmetro  | Tipo    |    | Descrição                                |
+| ---------- | ------- | -- | ---------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name        |
+| column     | Longint | -> | Índice de coluna                         |
+| row        | Longint | -> | Índice de linha                          |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |
+| Resultados | Object  | <- | Range object of a single cell            |
 <!-- END REF -->
 
 #### Descrição
@@ -410,7 +410,7 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 | row         | Integer | -> | Índice de linha                                  |
 | columnCount | Integer | -> | Número de colunas                                |
 | rowCount    | Integer | -> | Número de linhas                                 |
-| sheet       | Integer | -> | Sheet index (current sheet if omitted)           |
+| sheet       | Integer | -> | Índice da folha (folha atual se omitida)         |
 | Resultados  | Object  | <- | Range object of cells|<!-- END REF -->
 
 |
@@ -459,7 +459,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                |
 | column      | Integer | -> | Índice de coluna                                 |
 | columnCount | Integer | -> | Número de colunas                                |
-| sheet       | Integer | -> | Sheet index (current sheet if omitted)           |
+| sheet       | Integer | -> | Índice da folha (folha atual se omitida)         |
 | Resultados  | Object  | <- | Range object of cells|<!-- END REF -->
 
 |
@@ -1350,7 +1350,7 @@ See example for [`VP Object to font`](#vp-object-to-font).
 | Parâmetro  | Tipo    |    | Descrição                                              |
 | ---------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                      |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)                 |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)               |
 | Resultados | Object  | <- | Range object of single cell|<!-- END REF -->
 
 |
@@ -1542,7 +1542,7 @@ $attr:=VP Get column attributes($range)
 | Parâmetro  | Tipo    |    | Descrição                                           |
 | ---------- | ------- | -- | --------------------------------------------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário              |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)              |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)            |
 | Resultados | Integer | <- | Total number of columns |<!-- END REF -->
 
 |
@@ -1663,7 +1663,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 | Parâmetro  | Tipo    |    | Descrição                                           |
 | ---------- | ------- | -- | --------------------------------------------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário              |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)              |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)            |
 | Resultados | Integer | <- | Total number of columns |<!-- END REF -->
 
 |
@@ -1844,7 +1844,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 | Parâmetro  | Tipo    |    | Descrição                                                                      |
 | ---------- | ------- | -- | ------------------------------------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                              |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)                                         |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                                       |
 | Resultados | Object  | <- | Object containing frozen column and row information|<!-- END REF -->
 
 |
@@ -1947,7 +1947,7 @@ $list:=VP Get names("ViewProArea";2) //nomes na 3ª folha
 | Parâmetro  | Tipo    |    | Descrição                                                 |
 | ---------- | ------- | -- | --------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                         |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)                    |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                  |
 | Resultados | Object  | <- | Object of printing information|<!-- END REF -->
 
 |
@@ -2069,7 +2069,7 @@ $attr:=VP Get row attributes($range)
 | Parâmetro  | Tipo    |    | Descrição                                         |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário            |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)            |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)          |
 | Resultados | Integer | <- | Número total de linhas|<!-- END REF -->
 
 |
@@ -2105,7 +2105,7 @@ $rowCount:=VP Get row count("ViewProarea")
 | Parâmetro  | Tipo    |    | Descrição                                        |
 | ---------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário           |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)           |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)         |
 | Resultados | Object  | <- | Range object of cells|<!-- END REF -->
 
 |
@@ -2269,7 +2269,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 | Parâmetro  | Tipo    |    | Descrição                                          |
 | ---------- | ------- | -- | -------------------------------------------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário             |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)             |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)           |
 | Resultados | Object  | <- | Objecto opções de folha|<!-- END REF -->
 
 |
@@ -2384,11 +2384,11 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                              |
-| ---------- | ------- | -- | -------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro area form object name      |
-| styleName  | Text    | -> | Nome do estilo                         |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted) |
+| Parâmetro  | Tipo    |    | Descrição                                |
+| ---------- | ------- | -- | ---------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro area form object name        |
+| styleName  | Text    | -> | Nome do estilo                           |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida) |
 
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
@@ -2507,7 +2507,7 @@ In this case, the current sheet uses two style objects:
 | vpAreaName | Text    | -> | 4D View Pro area form object name                     |
 | tableName  | Text    | -> | Nome da tabela                                        |
 | column     | Integer | -> | Index of the column in the table                      |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)                |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)              |
 | Resultados | Object  | <- | Attributes of the *column*|<!-- END REF -->
 
 
@@ -2569,7 +2569,7 @@ End if
 | vpAreaName | Text    | -> | 4D View Pro area form object name                |
 | tableName  | Text    | -> | Nome da tabela                                   |
 | columnName | Text    | -> | Name of the table column                         |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)           |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)         |
 | Resultados | Integer | <- | Index of *columnName*|<!-- END REF -->
 
 
@@ -2624,7 +2624,7 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 | vpAreaName | Text       | -> | 4D View Pro area form object name                                                                 |
 | tableName  | Text       | -> | Nome da tabela                                                                                    |
 | reset      | Parâmetros | -> | True to clear the dirty status from the current table, False to keep it untouched. Padrão=True    |
-| sheet      | Integer    | -> | Sheet index (current sheet if omitted)                                                            |
+| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                                          |
 | Resultados | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF -->
 
 
@@ -2691,7 +2691,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | vpAreaName | Text    | -> | 4D View Pro area form object name                        |
 | tableName  | Text    | -> | Nome da tabela                                           |
 | onlyData   | Integer | -> | `vk table full range` (padrão) ou `vk table data range`  |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)                   |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)                 |
 | Resultados | Object  | <- | Range that contains the table|<!-- END REF -->
 
 |
@@ -2789,7 +2789,7 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 | Parâmetro  | Tipo       |    | Descrição                                                                  |
 | ---------- | ---------- | -- | -------------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | 4D View Pro area form object name                                          |
-| sheet      | Integer    | -> | Sheet index (current sheet if omitted)                                     |
+| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                   |
 | Resultados | Collection | <- | Coleção do textos com todos os nomes de tabelas|<!-- END REF -->
 
 |
@@ -4092,7 +4092,7 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | vpAreaName | Text    | -> | 4D View Pro area form object name                 |
 | row        | Integer | -> | Índice de linha                                   |
 | rowCount   | Integer | -> | Número de linhas                                  |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)            |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)          |
 | Resultados | Object  | <- | Range object of row(s)|<!-- END REF -->
 
 |
@@ -5237,7 +5237,7 @@ $formulas.push(New collection("";"")) // second collection VP SET FORMULAS(VP Ce
 | ---------- | ------- | -- | --------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro area form object name                   |
 | paneObj    | Object  | -> | Object containing frozen column and row information |
-| sheet      | Integer | -> | Sheet index (current sheet if omitted)              |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)            |
 <!-- END REF -->
 
 #### Descrição

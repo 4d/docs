@@ -356,7 +356,7 @@ The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeade
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
+A propriedade `.name` é o <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
 
 ### .secondColumnStripSize
 
@@ -370,7 +370,7 @@ The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondC
 <!-- REF #TableThemeOptions.secondColumnStripStyle.Syntax -->
 **.secondColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->style of the second alternating column<!-- END REF -->.
+The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->estilo da segunda coluna alternada<!-- END REF -->.
 
 ### .secondRowStripSize
 
