@@ -141,7 +141,7 @@ The **&&** and **||** operators are **short circuit operators**. A short circuit
 
 The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. They evaluate expressions as [truthy or falsy](#truthy-and-falsy), then return one of the expressions.
 
-### Short-circuit AND operator (&&)
+### Operador em curto-circuito AND (&&)
 
 <details><summary>Histórico</summary>
 
@@ -338,7 +338,7 @@ The following values are **falsy**:
 
 Todos os outros valores são considerados **truthy**, incluindo:
 
-* 0 - numeric zero (Integer or otherwise)
+* 0 - zero numérico (inteiro ou não)
 
 In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If… Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
