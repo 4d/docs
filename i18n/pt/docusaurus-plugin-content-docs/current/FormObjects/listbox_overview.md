@@ -256,7 +256,7 @@ Form events on list box or list box column objects may return the following addi
 | isRowSelected        | boolean       | True se a linha estiver selecionada, senão False                      |
 | newPosition          | inteiro longo | Nova posição da coluna ou linha                                       |
 | newSize              | inteiro longo | New size (in pixels) of the column or row                             |
-| oldPosition          | inteiro longo | Previous position of the column or row                                |
+| oldPosition          | inteiro longo | Posição anterior da coluna ou da linha                                |
 | oldSize              | inteiro longo | Previous size (in pixels) of the column or row                        |
 | row                  | inteiro longo | Número da linha                                                       |
 | Alinhamento vertical | inteiro longo | Positive if scroll is towards the bottom, negative if towards the top |
