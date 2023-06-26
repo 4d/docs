@@ -57,7 +57,7 @@ This property is used to disable the selection highlight in list boxes.
 
 When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
 
-By default, this option is not enabled.
+Por defeito, esta opção não está activada.
 
 #### Gramática JSON
 
