@@ -254,6 +254,27 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer // $lowSal が追加可能なため $comp2 も追加可能です
 ```
 
+:::note Entity selections returned from the server
+
+In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. 例:
+
+```4d
+    //a function is always executed on the server
+exposed Function getSome() : cs.MembersSelection
+    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+
+    //in a method, executes on the remote side
+var $result : cs.MembersSelection
+var $alterable : Boolean
+$result:=ds.Members.getSome() //$result is shareable
+$alterable:=$result.isAlterable() //False
+
+$result:=ds.Members.getSome().copy() // $result is now alterable
+$alterable:=$result.isAlterable() // True
+```
+
+:::
+
 
 #### プロセス間のエンティティセレクションの共有 (例題)
 
