@@ -19,7 +19,7 @@ As macros 4D são escritas em formato XML. You can use the 4D default macro file
 
 A pasta "Macros v2" pode ser localizada:
 
-- In the active 4D folder of the machine. Macros are then shared for all the databases. **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) command in the 4D *Language Reference* manual.
+- Na pasta 4D ativa da máquina. Macros are then shared for all the databases. **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) command in the 4D *Language Reference* manual.
 - Junto ao ficheiro de estrutura da base de dados. Macros are only loaded for this structure.
 - For components: in the **Components** folder of the database. Macros are then only loaded if the component is installed.
 
