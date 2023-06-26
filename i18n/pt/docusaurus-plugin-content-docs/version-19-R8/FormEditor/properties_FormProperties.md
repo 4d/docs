@@ -11,7 +11,7 @@ title: Propriedades do formulário
 This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
 *   dark - texto claro sobre um fundo escuro
-*   light - dark text on a light background
+*   light - texto escuro sobre um fundo claro
 > > A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
