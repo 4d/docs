@@ -114,7 +114,7 @@ Settings files are XML files; they can be read and modified using integrated 4D 
 
 ## Priority of settings
 
-Settings can be stored at three levels. Each setting defined at one level overrides the same setting defined at a previous level, if any:
+As definições podem ser guardadas em três níveis. Each setting defined at one level overrides the same setting defined at a previous level, if any:
 
 | **Nível de prioridade** | **Nome**                                                                  | **Localização**                                                                                                                                               | **Comentários**                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
