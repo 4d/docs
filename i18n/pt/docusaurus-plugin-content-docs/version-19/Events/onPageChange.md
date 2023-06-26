@@ -5,7 +5,7 @@ title: On Page Change
 
 | Code | Pode ser chamado por | Definição                               |
 | ---- | -------------------- | --------------------------------------- |
-| 56   | Formulário           | The current page of the form is changed |
+| 56   | Formulário           | A página atual do formulário é alterada |
 
 
 ## Descrição
