@@ -499,7 +499,7 @@ O list box final:
 
 ## Shields
 
-The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
+The 4D Form Editor uses shields to make viewing object properties easier. Pode encontrá-los na barra de ferramentas do formulário:
 
 ![](../assets/en/FormEditor/shields.png)
 
@@ -638,9 +638,9 @@ Para mudar o nome de uma vista, pode utilizar:
 Once views are created, you can use the View palette to:
 
 - Adicionar objecto às vistas,
-- Move objects from one view to another,
+- Mover objectos de uma vista para outra,
 - Select all objects of the same view in a single click,
-- Display or hide objects for each view,
+- Mostrar ou ocultar objectos para cada vista,
 - Bloquear os objectos de uma vista.
 
 #### Adicionar objectos a vistas
