@@ -11,9 +11,9 @@ The following classes can be used in 4D View Pro.
 ### .color
 
 <!-- REF #LineBorder.color.Syntax -->
-**.color** : Text<!-- END REF -->
+**.color**: Texto<!-- END REF -->
 
-The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) of the border<!-- END REF -->. Predefinição = black.
+A propriedade `.color` é a <!-- REF #LineBorder.color.Summary -->[color](configuring.md#borders) of the border<!-- END REF -->. Predefinição = black.
 
 
 ### .style
@@ -21,7 +21,7 @@ The `.color` property is the <!-- REF #LineBorder.color.Summary -->[color](confi
 <!-- REF #LineBorder.style.Syntax -->
 **.style** : Integer<!-- END REF -->
 
-The `.style` property is the <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Predefinição = vazio.
+A propriedade `.style` é o <!-- REF #LineBorder.style.Summary -->[style](configuring.md#borders) of the border<!-- END REF -->. Predefinição = vazio.
 
 
 ## TableColumn
