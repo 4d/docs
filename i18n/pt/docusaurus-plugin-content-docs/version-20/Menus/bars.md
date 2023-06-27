@@ -19,7 +19,7 @@ A custom splash screen picture can come from any graphic application. 4D lets yo
 
 The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note the "Background Image" area in the right-hand part of the window. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
 - To paste a picture from the clipboard, choose **Paste**.
-- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Once set, the picture is displayed in miniature in the area. It is then associated with the menu bar.
+- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Once set, the picture is displayed in miniature in the area. É então associado à barra de menus.
 
 ![](../assets/en/Menus/splash2.png)
 
