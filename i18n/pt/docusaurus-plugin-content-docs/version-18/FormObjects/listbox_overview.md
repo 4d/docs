@@ -682,7 +682,7 @@ Neste caso, é necessário preencher e esvaziar os arrays através do código. O
 
 * Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse` . O comando `LISTBOX GET CELL POSITION` devolve a célula em questão: retira-se tantas filas quantas forem necessárias da caixa de listagem usando o comando `LISTBOX DELETE ROWS` .
 
-## Object arrays in columns (4D View Pro)
+## Arrays objeto em colunas (4D View Pro)
 
 As colunas da caixa de listagem podem tratar de arrays de objectos. Uma vez que os arrays de objectos podem conter diferentes tipos de dados, esta nova e poderosa característica permite-lhe misturar diferentes tipos de entrada nas linhas de uma única coluna, e exibir também vários widgets. Por exemplo, poderia inserir uma entrada de texto na primeira linha, uma caixa de verificação na segunda, e uma lista drop down na terceira. Os arrays de objetos também fornecem acesso a novos tipos de widgets, tais como botões ou seletores de cores.
 

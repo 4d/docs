@@ -254,7 +254,7 @@ Column and row attributes are used to specify the beginning, end, and repetition
 | repeatColumnStart | inteiro longo | The first column of a range of columns to print on the left of each page. Default value = -1 (all columns) |
 | repeatRowEnd      | inteiro longo | The last row of a range of rows to print on the top of each page. Default value = -1 (all rows)            |
 | repeatRowStart    | inteiro longo | The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)           |
-| rowEnd            | inteiro longo | The last row to print in a cell range. Default value = -1 (all rows)                                       |
+| rowEnd            | inteiro longo | A última linha a imprimir num intervalo de células. Default value = -1 (all rows)                          |
 | rowStart          | inteiro longo | The first row to print in a cell range. Default value = -1 (all rows)                                      |
 
 ### Cabeçalhos / Rodapés
@@ -308,7 +308,7 @@ Margin attributes are used to specify the 4D View Pro area margins for printing.
 | margin      |         | object        | As margens de impressão                                       |
 |             | top     | inteiro longo | Margem superior, em centésimos de polegada. Valor padrão = 75 |
 |             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Valor padrão = 75    |
-|             | left    | inteiro longo | Left margin, in hundredths of an inch. Valor padrão = 70      |
+|             | left    | inteiro longo | Margem esquerda, em centésimos de polegada. Valor padrão = 70 |
 |             | direita | inteiro longo | Right margin, in hundredths of an inch. Valor padrão = 70     |
 |             | header  | inteiro longo | Header offset, in hundredths of an inch. Valor padrão = 30    |
 |             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30    |
@@ -487,7 +487,7 @@ Contém as seguintes propriedades:
 | dateCreation | Timestamp     | Data de criação                              |
 | dateModified | Timestamp     | Data da última modificação                   |
 | meta         | Object        | Free contents, reserved for the 4D developer |
-| spreadJS     | Object        | Reserved for the 4D View Pro component       |
+| spreadJS     | Object        | Reservado para o componente 4D View Pro      |
 
 ## 4D View Pro Form Object Variable
 

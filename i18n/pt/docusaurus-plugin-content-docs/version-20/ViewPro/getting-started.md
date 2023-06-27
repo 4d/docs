@@ -16,7 +16,7 @@ Embedding 4D View Pro areas in your forms allows you to import and export spread
 
 ## Instalação e ativação
 
-4D View Pro features are directly included in 4D, making it easy to deploy and manage. No additional installation is required.
+4D View Pro features are directly included in 4D, making it easy to deploy and manage. Não é necessária qualquer instalação adicional.
 
 However, 4D View Pro requires a license. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
 

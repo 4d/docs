@@ -1228,7 +1228,7 @@ Form.products.add(Form.product)
 
 #### Descrição
 
-The `.isOrdered()` function <!-- REF #EntitySelectionClass.isOrdered().Summary -->returns True if the entity selection is ordered<!-- END REF -->, e False se não for ordenada.
+A função `.isOrdered()` <!-- REF #EntitySelectionClass.isOrdered().Summary -->returns True if the entity selection is ordered<!-- END REF -->, e False se não for ordenada.
 > Esta função devolve sempre True quando a selecção da entidade provém de um datastore remoto.
 
 Para mais informação, consulte [Entity selection ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).

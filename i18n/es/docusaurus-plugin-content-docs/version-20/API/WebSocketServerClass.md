@@ -129,14 +129,14 @@ La llamada a esta función requiere que el [Server Web 4D](WebServerClass.md) es
 
 ### Parámetro *WSSHandler*
 
-En el parámetro *WSSHandler*, pase una instancia de una clase usuario que será llamada cada vez que ocurra un evento en el servidor WebSocket --esencialmente, eventos de conexión. The class should define the following callback functions (only `onConnection` is mandatory):
+En el parámetro *WSSHandler*, pase una instancia de una clase usuario que será llamada cada vez que ocurra un evento en el servidor WebSocket --esencialmente, eventos de conexión. La clase debe definir las siguientes funciones de retrollamada (sólo `onConnection` es obligatoria):
 
 | Propiedad    | Tipo                         | Descripción                                                                             | Por defecto |
 | ------------ | ---------------------------- | --------------------------------------------------------------------------------------- | ----------- |
 | onConnection | [Function](FunctionClass.md) | (obligatorio) Retro llamada cuando se inicia una nueva conexión cliente (ver más abajo) | indefinido  |
 | onOpen       | [Function](FunctionClass.md) | Retrollamada cuando se inicia el servidor WebSocket (ver más abajo)                     | indefinido  |
-| onTerminate  | [Function](FunctionClass.md) | Callback when the WebSocket server is terminated (see below)                            | indefinido  |
-| onError      | [Function](FunctionClass.md) | Callback when an error has occurred (see below)                                         | indefinido  |
+| onTerminate  | [Function](FunctionClass.md) | Retrollamada cuando se termina el servidor WebSocket (ver abajo)                        | indefinido  |
+| onError      | [Function](FunctionClass.md) | Retrollamada cuando se ha producido un error (ver abajo)                                | indefinido  |
 
 
 **WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null

@@ -128,10 +128,10 @@ The DerivedData folder contains cached data used internally by 4D to optimize pr
 
 The Resources folder contains any custom database resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
-| Conteúdos             | Descrição                                                                                                                                             | Formato |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Ficheiros e pastas de recursos da base de dados                                                                                                       | vários  |
-| Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
+| Conteúdos             | Descrição                                                                                                                                                         | Formato |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| *item*                | Ficheiros e pastas de recursos da base de dados                                                                                                                   | vários  |
+| Images/Library/*item* | Pictures from the Picture Library as separate files(*). Os nomes destes itens tornam-se nomes de ficheiros. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.
 

@@ -165,7 +165,7 @@ The following items are added automatically:
 | Ícone                                                                       | Elemento                                         |
 | --------------------------------------------------------------------------- | ------------------------------------------------ |
 | ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                     |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
+| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou declaração de método        |
 | ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
 | ![function-icon](../assets/en/code-editor/function.png)                     | Nome da função de classe                         |
 

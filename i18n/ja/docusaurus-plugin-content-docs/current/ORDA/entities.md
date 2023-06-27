@@ -255,7 +255,7 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer // $lowSal が追加可能なため $comp2 も追加可能です
 ```
 
-:::info Entity selections returned from the server
+:::note Entity selections returned from the server
 
 In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. 例:
 

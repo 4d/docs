@@ -249,6 +249,28 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
 ```
 
+:::note Entity selections returned from the server
+
+In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Ejemplo:
+
+```4d
+    //a function is always executed on the server
+exposed Function getSome() : cs.MembersSelection
+    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+
+    //in a method, executes on the remote side
+var $result : cs.MembersSelection
+var $alterable : Boolean
+$result:=ds.Members.getSome() //$result is shareable
+$alterable:=$result.isAlterable() //False
+
+$result:=ds.Members.getSome().copy() // $result is now alterable
+$alterable:=$result.isAlterable() // True
+```
+
+:::
+
+
 #### Compartir una selección de entidades entre procesos (ejemplo)
 
 Se trabaja con dos selecciones de entidades que se quieren pasar a un proceso worker para que envíe correos a las personas adecuadas:

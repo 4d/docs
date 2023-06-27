@@ -89,7 +89,7 @@ The most simple solution to display data is to call a [template page](templates.
 http://localhost/friends.shtml
 ```
 
-`.shtml` pages are automatically processed by the web server. Your page filled with data is returned:
+`.shtml` pages are automatically processed by the web server. A sua página preenchida com dados é devolvida:
 
 ![](../assets/en/WebServer/hello3bis.png)
 

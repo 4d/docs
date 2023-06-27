@@ -22,7 +22,7 @@ This information allows you to identify the source and context of each operation
   - Addition: Creation and storage of a record.
   - Adding a BLOB: Storage of a BLOB in a BLOB field.
   - Deletion: Deletion of a record.
-  - Modification: Modification of a record.
+  - Modificação: modificação de um registo.
   - Start of Transaction: Transaction started.
   - Validation of Transaction: Transaction validated.
   - Cancellation of Transaction: Transaction cancelled.

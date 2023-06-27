@@ -261,7 +261,7 @@ Vertical location of text within the area that contains it.
 The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
 
 - `bottom` for all data (except pictures) and
-- `top` for picture type data.
+- `topo` para dados de tipo imagem.
 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
 
@@ -357,7 +357,7 @@ O método *Color* iria conter :
 
 Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
 
-By default, this option is not enabled.
+Por defeito, esta opção não está activada.
 
 #### Gramática JSON
 

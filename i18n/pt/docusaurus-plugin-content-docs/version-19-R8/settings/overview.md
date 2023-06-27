@@ -12,7 +12,7 @@ The Settings configure how the current project functions. These parameters may b
 
 ## Accessing the settings
 
-You can access the Settings dialog box:
+Pode aceder à caixa de diálogo Parâmetros:
 
 -   using the **Design > Settings...** menu option
 -   by clicking **Settings** on the 4D toolbar

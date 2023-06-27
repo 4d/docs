@@ -125,7 +125,7 @@ Each employee can be a manager and can have a manager. To get the manager of the
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## Atribuição de valores a atributos de relação
 
 In the ORDA architecture, relation attributes directly contain data related to entities:
 
@@ -254,7 +254,7 @@ $lowSal:=ds. Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
-:::info Entity selections returned from the server
+:::note Entity selections returned from the server
 
 In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Exemplo:
 

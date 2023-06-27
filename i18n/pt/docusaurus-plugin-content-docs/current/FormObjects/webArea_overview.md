@@ -100,7 +100,7 @@ $4d.today(function(dollarZero)
 
 The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 
-4D code of `calcSum` method:
+Código 4D do método `calcSum`:
 
 ```4d
  C_REAL(${1}) // receives n REAL type parameters
