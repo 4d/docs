@@ -67,13 +67,13 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
     - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
     - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
     - QUICレイヤーオプションを選択すると:
-        -   A beta message and an alert icon are displayed near the selector.
-        -   [Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
-        -   The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
+        -   ドロップダウンメニューの隣に、ベータ版である旨のメッセージと警告アイコンが表示されます。
+        -   [クライアント/サーバー接続タイムアウト](#クライアントサーバー接続タイムアウト) の設定は非表示になります。
+        -   [クライアント-サーバー通信の暗号化](#クライアント-サーバー通信の暗号化) チェックボックスは非表示になります (セキュアモードに関わらず、QUIC 通信は常に TLS です)。
 
 :::note
 
-In case of a modification, you need to restart the application for the change to be taken into account. 接続していたクライアントアプリケーションも、新しいネットワークレイヤーで接続するため再起動しなければなりません。
+オプションを変更した場合、変更を反映するには 4Dアプリケーションを再起動する必要があります。 接続していたクライアントアプリケーションも、新しいネットワークレイヤーで接続するため再起動しなければなりません。
 
 :::
 
