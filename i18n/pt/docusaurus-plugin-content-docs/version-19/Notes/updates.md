@@ -20,7 +20,7 @@ Read [**What’s new in 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 
 #### Destaques
 
-- 4D v19.5 is certified on Windows 11 22H2
+- 4D v19.5 é certificado em Windows 11 22H2
 - 4D v19.5 is certified on macOS Ventura (macOS 13)
 - SpreadJS version has been updated (14.1.6).
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D v19.5.
