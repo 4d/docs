@@ -210,7 +210,7 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 | -------------------------- | ----------------------------------------------------------- | ------- |
 | methodPreferences.json     | Current user method editor preferences                      | JSON    |
 | methodWindowPositions.json | Current user window positions for methods                   | JSON    |
-| formWindowPositions.json   | Current user window positions for forms                     | JSON    |
+| formWindowPositions.json   | Posição da janela do usuário atual para os formulários      | JSON    |
 | workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON    |
 | debuggerCatches.json       | Chamadas aos comandos                                       | JSON    |
 | recentTables.json          | Lista ordenada de tabelas                                   | JSON    |
@@ -240,6 +240,6 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 
 Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. It is automatically created when the Web server is launched for the first time.
 
-## `.gitignore` file (optional)
+## Ficheiro `.gitignore` (opcional)
 
 File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).
