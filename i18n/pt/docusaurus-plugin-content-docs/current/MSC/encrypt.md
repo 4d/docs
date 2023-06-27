@@ -27,7 +27,7 @@ This means that the **Encryptable** status for at least one table has been modif
    You will be prompted to enter a passphrase for your data file: ![](../assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](../assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
 4. Enter to confirm your secured passphrase.
 
-The encrypting process is then launched. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
+O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
 
 4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo neste momento ou mais tarde. You can also open the encryption log file.
 
