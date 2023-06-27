@@ -44,7 +44,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 ## Expressão cor de fundo
 
-`Selection and collection type list boxes`
+`List box de tipo coleção e seleção de entidades`
 
 An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
 
