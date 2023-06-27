@@ -41,7 +41,7 @@ In local mode, the macros file can be open while using 4D. The list of available
 
 Empty or erroneous macros are not displayed.
 
-### Checking the syntax of customized macros
+### Verificando a sintaxe das macros personalizadas
 
 The macro-command files of 4D must be in conformity with the XML standard. This means more particularly that XML declaration `<?xml version="1.0" ...?>` and document declaration `<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd">` statements are mandatory at the beginning of a macro file in order for it to be loaded. The different types of XML encoding are supported. However, it is recommended to use encoding that is Mac/PC (UTF-8) compatible. 4D provides a DTD that can be used to validate the macro files. This file is found in the following location:
 
