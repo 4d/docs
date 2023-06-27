@@ -21,7 +21,7 @@ When you design menus, keep the following two rules in mind:
 To create menus and menu bars, you can use either:
 
 - the Menu editor from the Toolbox,
-- language commands for the "Menus" theme,
+- comandos de linguagem para o tema "Menus",
 - uma combinação de ambos.
 
 ## Editor de menus
