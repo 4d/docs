@@ -210,4 +210,4 @@ A seguinte linha recebe "Olá" de $MyVar e coloca-o em $NewVar:
 $NewVar:=($PointerTwo->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Importante:** A desreferência múltipla requer parênteses.
