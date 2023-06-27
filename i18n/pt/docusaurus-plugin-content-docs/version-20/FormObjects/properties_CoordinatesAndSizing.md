@@ -10,7 +10,7 @@ This property is only available for list boxes with the following [data sources]
 - collection or entity selection,
 - array (non-hierarchical).
 
-The property is not selected by default. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
+A propriedade não está selecionada por padrão. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
 
 :::note
 
