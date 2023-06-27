@@ -13,22 +13,23 @@ As vantagens da compilação são:
 - **Velocidade**: seu banco de dados é executa de 3 a 1.000 vezes mais rápido.
 - **Verificação de código**: sua aplicação de banco de dados se analisa para comprovar a coerência do código. São detectados conflitos tanto lógicos como sintácticos.
 - **Proteção:**: quando seu banco de dados for compilado, pode eliminar o código interpretado. Então, o banco de dados compilado é funcionalmente idêntico ao original, exceto que a estrutura e métodos não pode ser vista ou modificada, seja de forma deliberada ou por acidente.
-- **Aplicações independentes/stand alone com duplo clique**: os bancos compilados também podem se transformar em aplicações independentes (arquivos.EXE) com seu proprio icone.
+- **Aplicações autônomas com duplo clique**: as aplicações compiladas também podem se transformar em aplicações independentes com seu próprio ícone.
 - **Modo preemptivo**: só codigo compilado pode ser executado em processos preemptivos.
 
 ## Diferenças entre código interpretado e compilado
+
 Apesar de aplicações funcionarem da mesma forma em modo compilado e interpretado, há diferenças quando escrever código que será compilado. O 4D interpreter é mais flexível que o compilador.
 
-| Compilado                                                                                                                                                                                            | Interpretado                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| Não pode ter um método com o mesmo nome que uma variável.                                                                                                                                            | Nenhum erro é gerado, mas prioridade é dada ao método                               |
-| Todas as variáveis devem ser digitadas, seja através de uma diretiva do compilador (ex: `C_LONGINT`), ou pelo compilador no momento da compilação.                                                   | As variáveis podem ser digitadas no momento (mas não é recomendado)                 |
-| Não é possível alterar o tipo de dados de qualquer variável ou array.                                                                                                                                | É possível alterar o tipo de dados de uma variável ou de um array (não recomendado) |
-| Não é possível mudar um array unidimensional para um array bidimensional ou mudar um array bidimensional para uma array unidimensional.                                                              | Possível                                                                            |
-| Embora o compilador vá digitar a variável por você, deve especificar o tipo de dados de uma variável utilizando as directivas do compilador quando o tipo de dados for ambíguo, como num formulário. |                                                                                     |
-| A função `Undefined` retorna sempre False para variáveis. As variáveis são sempre definidas.                                                                                                         |                                                                                     |
-| Se tiver marcado a propriedade "Pode ser executado em processos preemptivos" para o método, o código não deve chamar quaisquer comandos thread-unsafe ou outros métodos thread-unsafe.               | As propriedades do processo preemptivo são ignoradas                                |
-| O comando `IDLE` é necessário para chamar 4D em loops específicos                                                                                                                                    | É sempre possível interromper 4D                                                    |
+| Compilado                                                                                                                                                                              | Interpretado                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| Não pode ter um método com o mesmo nome que uma variável.                                                                                                                              | Nenhum erro é gerado, mas prioridade é dada ao método                               |
+| Todas as variáveis têm de ser tipadas, quer através de uma declaração (utilizando as palavras-chave `var`, `#Declare`, ou `Function`), quer pelo compilador durante a compilação.      | As variáveis podem ser digitadas no momento (mas não é recomendado)                 |
+| Não é possível alterar o tipo de dados de qualquer variável ou array.                                                                                                                  | É possível alterar o tipo de dados de uma variável ou de um array (não recomendado) |
+| Não é possível mudar um array unidimensional para um array bidimensional ou mudar um array bidimensional para uma array unidimensional.                                                | Possível                                                                            |
+| Embora o compilador vá digitar a variável por você, deve especificar o tipo de dados de uma variável utilizando declarações quando o tipo de dados é ambíguo, como num formulário.     |                                                                                     |
+| A função `Undefined` retorna sempre False para variáveis. As variáveis são sempre definidas.                                                                                           |                                                                                     |
+| Se tiver marcado a propriedade "Pode ser executado em processos preemptivos" para o método, o código não deve chamar quaisquer comandos thread-unsafe ou outros métodos thread-unsafe. | As propriedades do processo preemptivo são ignoradas                                |
+| O comando `IDLE` é necessário para chamar 4D em loops específicos                                                                                                                      | É sempre possível interromper 4D                                                    |
 
 ## Utilização de directivas de compilação com o Intérprete
 
@@ -39,10 +40,11 @@ Por causa da flexibilidade, é possível que um banco de dado possa atuar direta
 Por exemplo, se escrever:
 
 ```4d
-C_LONGINT(MyInt)
+var MyInt : Integer
 ```
 
 e noutra parte do projecto, escreve-se:
+
 ```4d
 MyInt:=3.1416
 ```
@@ -59,9 +61,9 @@ A ordem na qual as duas declarações aparecem é irrelevante para o compilador 
 Uma variável não pode ser redigida de novo. No entanto, é possível utilizar um ponteiro para fazer referência a variáveis de diferentes tipos de dados. Por exemplo, o seguinte código é permitido nos modos interpretado e compilado:
 
 ```4d
-C_POINTER($p)
-C_TEXT($name)
-C_LONGINT($age)
+var $p : Pointer
+var $name : Text
+var $age : Integer
 
 $name:="Smith"
 $age:=50
@@ -77,11 +79,13 @@ $p->:=55 //atribui um valor numérico
 Imagine uma função que devolve o comprimento (número de caracteres) de valores que podem ser de qualquer tipo.
 
 ```4d
-  // Calc_Length (how many characters)
-  // $1 = pointer to flexible variable type, numeric, text, time, boolean C_POINTER($1)
-C_TEXT($result) C_LONGINT($0)
-$result:=String($1->)
-$0:=Length($result)
+  // Calc_Length (quantos caracteres)
+  // $vp = ponteiro para um tipo de variável flexível, numérica, texto, tempo, booleana
+
+#DECLARE($vp : Pointer) -> $length : Integer
+var $result : Text  
+$result:=String($vp->)
+$length:=Length($result)
 ```
 
 Em seguida, este método pode ser chamado:
