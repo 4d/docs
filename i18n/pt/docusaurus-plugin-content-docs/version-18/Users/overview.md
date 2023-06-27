@@ -27,7 +27,7 @@ Quando uma senha for estabelecida para o Designer, todos os privilégios de aces
 
 Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 
-## Users and groups in project architecture
+## Usuários e grupos na arquitetura projeto
 
 In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective in 4D Server databases. A tabela abaixo lista as principais funcionalidades de usuários e grupos e sua disponibilidade:
 
