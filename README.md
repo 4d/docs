@@ -56,7 +56,7 @@ ex: `<!-- REF #FileHandleClass.getSize().Syntax -->` and `<!-- REF #FileHandleCl
 
 
 * for a 4D command
-<!-- REF #_command_.name.Syntax --> <!-- REF #_command_.name.Summary -->
-ex: <!-- REF #_command_.IMAP New transporter.Syntax --> <!-- REF #_command_.IMAP New transporter.Summary -->
+`<!-- REF #_command_.name.Syntax -->` and `<!-- REF #_command_.name.Summary -->`
+ex: `<!-- REF #_command_.IMAP New transporter.Syntax -->` and `<!-- REF #_command_.IMAP New transporter.Summary -->`
 
 * REF = declare a ref, INCLUDE = insert a ref
