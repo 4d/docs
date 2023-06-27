@@ -120,7 +120,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 
 ## Onde é armazenado e enviado?
 
-Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+Os dados coletados são escritos em um arquivo de texto (formato JSON) por banco de dados quando 4D Servidor abandona. O ficheiro é armazenado dentro da [pasta 4D ativa](https://doc.4d.com/4dv20/help/command/en/page485.html), ou seja:
 
 - no Windows: `Utilizadores\[userName]\AppData\Roaming\4D Server`
 - em macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
