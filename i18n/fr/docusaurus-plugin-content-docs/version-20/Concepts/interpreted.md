@@ -13,22 +13,23 @@ Les avantages procurés par le compilateur sont les suivants :
 - **Vitesse :** votre application s'exécute de 3 à 1000 fois plus vite.
 - **Vérification du code** : la cohérence interne du code de votre application est entièrement contrôlée. Les conflits de logique et de syntaxe sont détectés.
 - **Protection :** une fois votre application compilée, vous pouvez en supprimer le code interprété. Alors, l'application compilée dispose des mêmes fonctionnalités que la base originale, à la différence près que la structure et les méthodes ne peuvent plus être visualisées ni modifiées délibérément ou par inadvertance.
-- **Application indépendantes "double-cliquables"** : une application compilée peut également être transformée en application indépendante (sous Windows, des fichiers ".EXE") comportant sa propre icône.
+- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications with their own icon.
 - **Exécution en mode préemptif** : seul le code compilé peut être exécuté dans un process préemptif.
 
 ## Différences entre le code interprété et le code compilé
+
 Bien que l'application fonctionnera de la même manière en modes interprété et compilé, il est important de connaitre les différences que l'on peut rencontrer pendant la saisie du code qui sera compilé. L'interpréteur de 4D est généralement plus souple que le compilateur.
 
-| Compilé                                                                                                                                                                                                                                  | Interprété                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Vous ne devez pas avoir une méthode qui aurait le même nom qu’une variable.                                                                                                                                                              | Aucune erreur n'est générée, mais la méthode est prioritaire                         |
-| Toutes les variables doivent être typées, soit via une directive de compilateur (ex : `C_ENTIER LONG`), soit via le compilateur au moment de la compilation.                                                                             | Les variables peuvent être typées à la volée (non recommandé)                        |
-| Vous ne pouvez pas modifier le type d'une variable ou d'un tableau.                                                                                                                                                                      | La modification du type d'une variable ou d'un tableau est possible (non recommandé) |
-| Vous ne pouvez pas convertir un tableau simple en tableau à deux dimensions, et vice-versa.                                                                                                                                              | Possible                                                                             |
-| Bien que le compilateur déduise le type des variables si nécessaire, il est conseillé de déclarer le type des variables à l'aide des directives de compilation lorsque le type de données est ambigu, en particulier dans un formulaire. |                                                                                      |
-| La fonction `Indefinie` retournera toujours Faux. Les variables sont toujours définies.                                                                                                                                                  |                                                                                      |
-| Si vous avez coché la propriété "Peut être exécutée dans un process préemptif" pour la méthode, le code ne doit pas appeler de commandes thread-unsafe ou d'autres méthodes thread-unsafe.                                               | Les propriétés du process préemptif sont ignorées                                    |
-| La commande `APPELER 4D` est nécessaire pour appeler des boucles spécifiques                                                                                                                                                             | Il est toujours possible d'interrompre 4D                                            |
+| Compilé                                                                                                                                                                                    | Interprété                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| Vous ne devez pas avoir une méthode qui aurait le même nom qu’une variable.                                                                                                                | Aucune erreur n'est générée, mais la méthode est prioritaire                         |
+| All variables must by typed, either through a declaration (using `var`, `#Declare`, or `Function` keywords), or by the compiler at compilation time.                                       | Les variables peuvent être typées à la volée (non recommandé)                        |
+| Vous ne pouvez pas modifier le type d'une variable ou d'un tableau.                                                                                                                        | La modification du type d'une variable ou d'un tableau est possible (non recommandé) |
+| Vous ne pouvez pas convertir un tableau simple en tableau à deux dimensions, et vice-versa.                                                                                                | Possible                                                                             |
+| Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form.            |                                                                                      |
+| La fonction `Indefinie` retournera toujours Faux. Les variables sont toujours définies.                                                                                                    |                                                                                      |
+| Si vous avez coché la propriété "Peut être exécutée dans un process préemptif" pour la méthode, le code ne doit pas appeler de commandes thread-unsafe ou d'autres méthodes thread-unsafe. | Les propriétés du process préemptif sont ignorées                                    |
+| La commande `APPELER 4D` est nécessaire pour appeler des boucles spécifiques                                                                                                               | Il est toujours possible d'interrompre 4D                                            |
 
 ## Utiliser les directives du compilateur avec l'interpréteur
 
@@ -39,10 +40,11 @@ Grâce à cet aspect flexible, il est possible qu'une application agisse différ
 Par exemple, si vous écrivez :
 
 ```4d
-C_ENTIER LONG(MyInt)
+var MyInt : Integer
 ```
 
 et ailleurs dans l'application, vous écrivez :
+
 ```4d
 MyInt:=3.1416
 ```
@@ -59,32 +61,31 @@ L'ordre d'apparition des deux déclarations importe peu au compilateur, car il s
 Il n’est pas possible de retyper une variable. Il est, en revanche, tout à fait possible de faire pointer un pointeur successivement sur des variables de type différent. Par exemple, le code suivant s'applique aussi bien dans le mode interprété que dans le mode compilé :
 
 ```4d
-C_POINTER($p)
-C_TEXT($name)
-C_LONGINT($age)
+var $p : Pointer
+var $name : Text
+var $age : Integer
 
 $name:="Smith"
 $age:=50
 
-$p:=->$name //texte cible pour le pointeur
-$p->:="Wesson" //assigne une valeur texte
+$p:=->$name //text target for the pointer
+$p->:="Wesson" //assigns a text value
 
 $p:=->$age  
-// nouvelle cible de type différent pour le pointeur
-$p->:=55 //assigne une valeur numérique
+// new target of different type for the pointer
+$p->:=55 //assigns a number value
 ```
 
 Imaginez une fonction qui retourne la longueur (nombre de caractères) de valeurs de tout type.
 
 ```4d
-  // Calc_Length (combien de caractères)
-  // $1 = pointeur vers un type de variable flexible, numérique, text, heure, booléen
+  // Calc_Length (how many characters)
+  // $vp = pointer to flexible variable type, numeric, text, time, boolean
 
-C_POINTER($1)
-C_TEXT($result)  
-C_LONGINT($0)
-$result:=String($1->)
-$0:=Length($result)
+#DECLARE($vp : Pointer) -> $length : Integer
+var $result : Text  
+$result:=String($vp->)
+$length:=Length($result)
 ```
 
 La méthode peut alors être appelée :
