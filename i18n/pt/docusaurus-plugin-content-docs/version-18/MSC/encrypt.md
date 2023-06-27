@@ -25,7 +25,7 @@ Encrypting your data for the first time using the MSC requires the following ste
    You will be prompted to enter a passphrase for your data file: ![](../assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](../assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
 4. Enter to confirm your secured passphrase.
 
-The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode.
+O processo de encriptação é então iniciado. If the MSC was opened in standard mode, the database is reopened in maintenance mode.
 
 4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo neste momento ou mais tarde. You can also open the encryption log file.
 
