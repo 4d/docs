@@ -222,8 +222,17 @@ QodlyScript command names are written in camel case without spaces. You might ne
 - QodlyScript code:
 
 ```qs
-declare(company : cs.Company)->result : cs.EmployeeSelection
-result=ds.Employee.query("employerID = :1", company.ID)
+ declare(entitySelection : 4D.EntitySelection)  
+ var dataClass : 4D.DataClass
+ var entity, duplicate : 4D.Entity
+ var status : object
+ dataClass=entitySelection.getDataClass()
+ forEach(entity,entitySelection)
+    duplicate=dataClass.new()
+    duplicate.fromObject(entity.toObject())
+    duplicate[dataClass.getInfo().primaryKey]=null
+    status=duplicate.save()
+ end
 ```
 
 
@@ -231,6 +240,16 @@ result=ds.Employee.query("employerID = :1", company.ID)
 - 4D Language equivalent code: 
 
 ```4d
-#DECLARE($company : cs.Company)->$result : cs.EmployeeSelection
-$result:=ds.Employee.query("employerID = :1"; $company.ID)
+ #DECLARE ( $entitySelection : 4D.EntitySelection )  
+ var $dataClass : 4D.DataClass
+ var $entity; $duplicate : 4D.Entity
+ var $status : Object
+ $dataClass:=$entitySelection.getDataClass()
+ For each($entity;$entitySelection)
+    $duplicate:=$dataClass.new()
+    $duplicate.fromObject($entity.toObject())
+    $duplicate[$dataClass.getInfo().primaryKey]:=Null
+    $status:=$duplicate.save()
+ End for each
+
 ```
