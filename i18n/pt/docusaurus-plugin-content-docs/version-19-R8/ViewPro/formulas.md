@@ -40,7 +40,7 @@ All formulas have operands and operators:
 
 ## Valores e operadores
 
-4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
+4D View Pro suporta cinco tipos de dados. For each data type, specific literal values and operators are supported.
 
 | Tipos de dados                       | Valores                                               | Operadores                                                                                                                                                                                                                                             |
 | ------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

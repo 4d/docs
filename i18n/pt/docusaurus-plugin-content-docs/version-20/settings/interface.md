@@ -59,7 +59,7 @@ The following schemes are available:
 -   **Dark**: the application will use the Default Dark Theme ![](../assets/en/settings/dark-appearance.png)
 -   **Inherited** (default): the application will inherit from the higher priority level (i.e., OS user preferences)
 
-> Default themes can be handled using CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
+> Os temas predefinidos podem ser tratados com CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
 
 The main application scheme will be applied to forms by default. However, it can be overriden:
 

@@ -39,7 +39,7 @@ For each row of the table, the "Action" column indicates the operations to be ca
 
 The "Status" column displays the verification status of each item using symbols:
 
-| ![](../assets/en/MSC/MSC_OK.png)  | Verification carried out with no problem       |
+| ![](../assets/en/MSC/MSC_OK.png)  | A verificação foi efetuada sem problema        |
 | --------------------------------- | ---------------------------------------------- |
 | ![](../assets/en/MSC/MSC_KO2.png) | Verification carried out, problems encountered |
 | ![](../assets/en/MSC/MSC_KO3.png) | Verificação parcialmente efectuada             |

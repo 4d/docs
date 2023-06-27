@@ -8,7 +8,7 @@ title: Coordenadas e dimensionamento
 
 `4D View Pro only: This feature requires a 4D View Pro license.`
 
-This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
+This property is only available for array-based, non-hierarchical list boxes. A propriedade não está selecionada por padrão.
 
 When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
 > When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.

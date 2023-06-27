@@ -11,7 +11,7 @@ The ORDA technology is based upon an automatic mapping of an underlying 4D struc
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
 *   Tables are mapped to dataclasses.
-*   Fields are mapped to storage attributes.
+*   Os campos são mapeados para atributos de armazenamento.
 *   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
@@ -22,7 +22,7 @@ When you call a datastore using the `ds` or the `Open datastore` command, 4D aut
 The following rules are applied for any conversions:
 
 * Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*   Uma datastore só referencia as tabelas com uma única chave primária. The following tables are not referenced:
+*   Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
     *   Tabelas sem chave primária
     *   Tabelas com chaves primárias compostas.
 *   [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore.

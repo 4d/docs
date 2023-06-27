@@ -50,7 +50,7 @@ ORDA features related to entity locking and transaction are managed at process l
 *   Classic 4D language commands (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) only apply to the main datastore (returned by `ds`). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.
 *   Locks on entities are removed and transactions are rollbacked:
     *   quando o processo é eliminado.
-    *   when the session is closed on the server
+    *   quando a sessão é encerrada no servidor
     *   when the session is killed from the server administration window.
 
 ### Closing sessions

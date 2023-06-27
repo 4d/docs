@@ -311,7 +311,7 @@ Los atributos margen se utilizan para especificar los márgenes del área 4D Vie
 |           | top    | entero largo | Margen superior, en centésimas de pulgada. Por defecto = 75                  |
 |           | bottom | entero largo | El margen inferior, en centésimas del pulgada. Por defecto = 75              |
 |           | left   | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70                   |
-|           | right  | entero largo | Margen izquierdo, en centésimas de pulgada. Por defecto = 70                 |
+|           | right  | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70                   |
 |           | header | entero largo | Desplazamiento del encabezado, en centésimas de pulgada. Por defecto = 30    |
 |           | footer | entero largo | Desplazamiento del pie de página, en centésimas de pulgada. Por defecto = 30 |
 

@@ -321,7 +321,7 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 | [Shift]+[End]                                                   | Select all the characters in the line that are to the right of the cursor                                                                  |
 | [PgUp]                                                          | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                           |
 | [PgDn]                                                          | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                           |
-| [Ctrl]+[K] or [Alt]+double-click on a project method name       | Open the project method in a new window                                                                                                    |
+| [Ctrl]+[K] or [Alt]+double-click on a project method name       | Abrir o método projeto numa nova janela                                                                                                    |
 | \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
 
 You can double-click to select individual "words". When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.

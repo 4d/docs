@@ -693,10 +693,10 @@ In *rangeObj*, pass the cell range with the values, formatting, and formulas to 
 
 You can pass an optional *options* parameter with the following properties:
 
-| Propriedade | Tipo       | Descrição                                                                                                               |
-| ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
-| copy        | Parâmetros | *True* (default) to keep the copied values, formatting and formulas after the command executes. *False* to remove them. |
-| copyOptions | Longint    | Especifica o que é copiado ou movido. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                       |
+| Propriedade | Tipo       | Descrição                                                                                                                |
+| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
+| copy        | Parâmetros | *True* (default) to keep the copied values, formatting and formulas after the command executes. *False* para os remover. |
+| copyOptions | Longint    | Especifica o que é copiado ou movido. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                        |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -790,7 +790,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
 
 * If the data passed to the command is a collection of scalar values, it must contain a collection of subcollections:
 
-  * The first-level collection contains subcollections of values. Cada subcolecção define uma linha. Pass an empty collection to skip a row. The number of values in the first subcollection determines how many columns are created.
+  * The first-level collection contains subcollections of values. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha. The number of values in the first subcollection determines how many columns are created.
   * The subcollections' indices are used as column titles.
   * Each subcollection defines cell values for the row. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value).
 
@@ -799,7 +799,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
 
 #### Exemplo
 
-To create a table using a data context:
+Para criar uma tabela utilizando um contexto de dados:
 
 ```4d
 // Set a data context
@@ -892,7 +892,7 @@ O comando `VP DELETE ROWS` <!-- REF #_method_.VP DELETE ROWS.Summary -->removes 
 In *rangeObj*, pass an object containing a range of rows  to remove. If the passed range contains:
 
 * both columns and rows, only the rows  are removed.
-* only columns, the command does nothing.
+* apenas colunas, o comando não faz nada.
 > > > Rows are deleted from bottom to top.
 
 #### Exemplo
@@ -1320,7 +1320,7 @@ Este código:
 $font:=VP Font to object("16pt arial")
 ```
 
-will return the following $font object:
+devolverá o seguinte objeto $font:
 
 ```4d
 {
@@ -1719,7 +1719,7 @@ will return this information in the *$defaultStyle* object:
 
 #### Descrição
 
-The `VP Get formula` command <!-- REF #_method_.VP Get formula.Summary -->retrieves the formula from a designated cell range<!-- END REF -->.
+O comando `VP Get formula` <!-- REF #_method_.VP Get formula.Summary -->retrieves the formula from a designated cell range<!-- END REF -->.
 
 In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
 
@@ -2934,10 +2934,10 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                         |
-| ---------- | ------ | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text   | -> | 4D View Pro area form object name                                 |
-| Resultados | Object | <- | Object containing the workbook options|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                   |
+| ---------- | ------ | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro area form object name                                           |
+| Resultados | Object | <- | Objeto que contém as opções do livro de trabalho|<!-- END REF -->
 
 |
 
@@ -3237,7 +3237,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                                   |
 | tableName   | Text    | -> | Nome da tabela                                                      |
 | row         | Integer | -> | Index in the table of the starting row to insert                    |
-| count       | Text    | -> | Number of rows to add (must be >0)                                  |
+| count       | Text    | -> | Número de linhas a adicionar (tem de ser >0)                        |
 | insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*           |
 | sheet       | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
@@ -3263,7 +3263,7 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Exemplo
 
-You create a table with a data context:
+Você cria uma tabela com um contexto de dados:
 
 ```4d
 var $context : Object
@@ -3510,7 +3510,7 @@ $cellStyle.font:=VP Object to font($font)
 | Parâmetro  | Tipo    |    | Descrição                                           |
 | ---------- | ------- | -- | --------------------------------------------------- |
 | rangeObj   | Object  | -> | Cell range object                                   |
-| dataObject | Object  | -> | Object containing the data to be pasted             |
+| dataObject | Object  | -> | Objeto que contém os dados a colar                  |
 | options    | Longint | -> | Specifies what is pasted|<!-- END REF -->
 
 |
@@ -3829,7 +3829,7 @@ In *options*, you can specify additional behavior. Valores possíveis:
 | vk table remove style | 1     | Remove style but keep data                  |
 | vk table remove data  | 2     | Remove data but keep style                  |
 
-Table names are defined at sheet level. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
+Os nomes das tabelas são definidos ao nível da folha. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
 
 #### Exemplo
 
@@ -4019,7 +4019,7 @@ If *tableName* does not exist, nothing happens.
 
 #### Exemplo
 
-You create a table with a data context:
+Você cria uma tabela com um contexto de dados:
 
 ```4d
 var $context : Object
@@ -4838,12 +4838,12 @@ Case of
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                   |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Object  | -> | 4D View Pro area form object name           |
-| dataObj    | Object  | -> | Data object to load in the data context     |
-| dataColl   | Object  | -> | Data collection to load in the data context |
-| options    | Object  | -> | Opções adicionais                           |
+| Parâmetro  | Tipo    |    | Descrição                                    |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Object  | -> | 4D View Pro area form object name            |
+| dataObj    | Object  | -> | Objeto dados a carregar no contexto de dados |
+| dataColl   | Object  | -> | Data collection to load in the data context  |
+| options    | Object  | -> | Opções adicionais                            |
 | sheet      | Integer | -> | Índice da folha|<!-- END REF -->
 
 |
@@ -5091,7 +5091,7 @@ $style.backColor:="#E6E6FA" //light purple color VP SET DEFAULT STYLE("myDoc";$s
 | Parâmetro     | Tipo     |    | Descrição                                   |
 | ------------- | -------- | -- | ------------------------------------------- |
 | rangeObj      | Object   | -> | Range object                                |
-| campo         | Ponteiro | -> | Reference to field in virtual structure     |
+| campo         | Ponteiro | -> | Referência ao campo na estrutura virtual    |
 | formatPattern | Text     | -> | Formato do campo|<!-- END REF -->
 
 |
@@ -5728,7 +5728,7 @@ O comando `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES.S
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
+In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` é passado por defeito.
 
 In *sheet*, pass the index of the target sheet. The `VP Get sheet index` command
 
@@ -5806,7 +5806,7 @@ If *tableName* is not found or if *column* is higher than the number of columns,
 
 #### Exemplo
 
-You create a table with a data context:
+Você cria uma tabela com um contexto de dados:
 
 ```4d
 var $context;$options : Object
@@ -6085,7 +6085,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 The *valuesCol* parameter is two-dimensional:
 
 
-* The first-level collection contains subcollections of values. Cada subcolecção define uma linha. Pass an empty collection to skip a row.
+* The first-level collection contains subcollections of values. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha.
 * Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:
 
  | Propriedade | Tipo                                     | Descrição                        |
@@ -6153,7 +6153,7 @@ The following table lists the available workbook options:
 | allowUserDragFill                     | boolean                 | É permitido o preenchimento por arrastamento                                                                                                                                                                                                           |
 | allowUserEditFormula                  | boolean                 | Formulas can be entered in cells                                                                                                                                                                                                                       |
 | allowUserResize                       | boolean                 | Columns and rows can be resized                                                                                                                                                                                                                        |
-| allowUserZoom                         | boolean                 | Zooming (ctrl + mouse wheel) is allowed                                                                                                                                                                                                                |
+| allowUserZoom                         | boolean                 | É permitido fazer zoom (ctrl + roda do rato)                                                                                                                                                                                                           |
 | autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> O conteúdo ajusta automaticamente as células e os cabeçalhos</td></tr></table>                                                                                                                                             |
 | backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                          |
 | backgroundImage                       | string / picture / file | Background image for the area.                                                                                                                                                                                                                         |

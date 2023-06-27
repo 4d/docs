@@ -35,7 +35,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 ## Lista de escolha
 
-Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
+Associa uma lista de opções a um objeto. It can be a choice list name (a list reference) or a collection of default values.
 
 #### Gramática JSON
 
