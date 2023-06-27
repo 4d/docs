@@ -13,22 +13,23 @@ Las ventajas de la compilación son:
 - **Velocidad**: su base aplicación se ejecuta de 3 a 1.000 veces más rápido.
 - **Verificación del código**: su aplicación se analiza para comprobar la consistencia del código. Se detectan tanto los conflictos lógicos como los sintácticos.
 - **Protección:**: una vez compilada su aplicación, puede eliminar el código interpretado. Entonces, la aplicación compilada es funcionalmente idéntica a la original, excepto que la estructura y los métodos no pueden ser vistos o modificados, deliberada o inadvertidamente.
-- **Aplicaciones independientes con doble clic**: las aplicaciones compiladas también pueden transformarse en aplicaciones independientes (archivos.EXE) con su propio icono.
+- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications with their own icon.
 - **Modo apropiativo**: sólo se puede ejecutar código compilado en procesos apropiativos.
 
 ## Diferencias entre el código interpretado y el compilado
+
 Aunque la aplicación funcionará de la misma manera en modo interpretado y compilado, hay algunas diferencias que hay que conocer cuando se escribe código que será compilado. El intérprete de 4D suele ser más flexible que el compilador.
 
-| Compilado                                                                                                                                                                                                | Interpretado                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| No se puede tener un método con el mismo nombre que una variable.                                                                                                                                        | No se genera ningún error, pero se da prioridad al método                         |
-| Todas las variables deben ser tipificadas, ya sea a través de una directiva del compilador (ej.: `C_LONGINT`), o por el compilador en tiempo de compilación.                                             | Las variables se pueden escribir sobre la marcha (no se recomienda)               |
-| No se puede cambiar el tipo de datos de ninguna variable o array.                                                                                                                                        | Es posible cambiar el tipo de datos de una variable o un array (no se recomienda) |
-| No se puede cambiar un array unidimensional a uno bidimensional, ni cambiar un array bidimensional a uno unidimensional.                                                                                 | Posible                                                                           |
-| Aunque el compilador escribirá la variable por usted, debe especificar el tipo de datos de una variable utilizando directivas del compilador cuando el tipo de datos sea ambiguo, como en un formulario. |                                                                                   |
-| La función `Undefined` siempre devuelve False para las variables. Las variables siempre están definidas.                                                                                                 |                                                                                   |
-| Si has marcado la propiedad "Puede ser ejecutado en procesos apropiativos" para el método, el código no debe llamar a ningún comando hilo no seguro u otros métodos hilo no seguro.                      | Se ignoran las propiedades de los procesos preventivos                            |
-| El comando `IDLE` es necesario para llamar a 4D en bucles específicos                                                                                                                                    | Siempre es posible interrumpir 4D                                                 |
+| Compilado                                                                                                                                                                           | Interpretado                                                                      |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| No se puede tener un método con el mismo nombre que una variable.                                                                                                                   | No se genera ningún error, pero se da prioridad al método                         |
+| All variables must by typed, either through a declaration (using `var`, `#Declare`, or `Function` keywords), or by the compiler at compilation time.                                | Las variables se pueden escribir sobre la marcha (no se recomienda)               |
+| No se puede cambiar el tipo de datos de ninguna variable o array.                                                                                                                   | Es posible cambiar el tipo de datos de una variable o un array (no se recomienda) |
+| No se puede cambiar un array unidimensional a uno bidimensional, ni cambiar un array bidimensional a uno unidimensional.                                                            | Posible                                                                           |
+| Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form.     |                                                                                   |
+| La función `Undefined` siempre devuelve False para las variables. Las variables siempre están definidas.                                                                            |                                                                                   |
+| Si has marcado la propiedad "Puede ser ejecutado en procesos apropiativos" para el método, el código no debe llamar a ningún comando hilo no seguro u otros métodos hilo no seguro. | Se ignoran las propiedades de los procesos preventivos                            |
+| El comando `IDLE` es necesario para llamar a 4D en bucles específicos                                                                                                               | Siempre es posible interrumpir 4D                                                 |
 
 ## Utilizar las directivas del compilador con el intérprete
 
@@ -39,10 +40,11 @@ Debido a esta flexibilidad, es posible que una aplicación tenga un rendimiento 
 Por ejemplo, si se escribe:
 
 ```4d
-C_LONGINT(MyInt)
+var MyInt : Integer
 ```
 
 y en otra parte del proyecto, escribe:
+
 ```4d
 MyInt:=3.1416
 ```
@@ -59,9 +61,9 @@ El orden en el que aparecen las dos declaraciones es irrelevante para el compila
 Una variable no se puede volver a escribir. Sin embargo, es posible utilizar un puntero para referirse a variables de diferentes tipos de datos. Por ejemplo, el siguiente código está permitido tanto en modo interpretado como compilado:
 
 ```4d
-C_POINTER($p)
-C_TEXT($name)
-C_LONGINT($age)
+var $p : Pointer
+var $name : Text
+var $age : Integer
 
 $name:="Smith"
 $age:=50
@@ -78,13 +80,12 @@ Imagine una función que devuelve la longitud (número de caracteres) de valores
 
 ```4d
   // Calc_Length (cuántos caracteres)
-  // $1 = puntero a tipo de variable flexible, numérica, texto, hora, booleana
+  // $vp = puntero a variable de tipo flexible, numérico, texto, tiempo, booleano
 
-C_POINTER($1)
-C_TEXT($result)  
-C_LONGINT($0)
-$result:=String($1->)
-$0:=Length($result)
+#DECLARE($vp : Pointer) -> $length : Integer
+var $result : Text  
+$result:=String($vp->)
+$length:=Length($result)
 ```
 
 Entonces se puede llamar a este método:
