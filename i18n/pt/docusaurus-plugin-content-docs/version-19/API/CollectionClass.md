@@ -746,7 +746,7 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 | Parâmetro  | Tipo       |    | Descrição                                                                          |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
 | startFrom  | Integer    | -> | Índice para início do teste em                                                     |
-| methodName | Text       | -> | Name of the method to call for the test                                            |
+| methodName | Text       | -> | Nome do método a chamar para o teste                                               |
 | param      | Mixed      | -> | Parameter(s) to pass to methodName                                                 |
 | Resultados | Parâmetros | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
 
@@ -2408,7 +2408,7 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 | Parâmetro  | Tipo       |    | Descrição                                                                          |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
 | startFrom  | Integer    | -> | Índice para início do teste em                                                     |
-| methodName | Text       | -> | Name of the method to call for the test                                            |
+| methodName | Text       | -> | Nome do método a chamar para o teste                                               |
 | param      | Mixed      | -> | Parameter(s) to pass to *methodName*                                               |
 | Resultados | Parâmetros | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
 
@@ -2490,7 +2490,7 @@ With the following *NumberGreaterThan0* method:
 
 #### Descrição
 
-A função `.shift()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
+A função `.shift()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> e também devolve a coleção ordenada.
 > Essa função modifica a coleção original.
 
 Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.
