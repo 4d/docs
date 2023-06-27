@@ -41,7 +41,7 @@ This window is available from the Code Editor or the [Source Code Pane](debugger
 
 If a break point already exists, the window is displayed for that break point. Otherwise, a break point is created and the window is displayed for the newly created break point.
 
-Here is a description of the properties:
+Segue-se uma descrição das propriedades:
 
 * **Location**: indicates the name of the method and the line number attached to the breakpoint.
 * **Break when following expression is true**: You can create **conditional breakpoints** by entering a 4D formula that returns `True` or `False`. For example, insert `Records in selection(\[aTable])=0` to make sure the break occurs only if there no record selected for the table \[aTable]. Breakpoint conditions are available in the **Condition** column of the [Break list](#break-list).
