@@ -51,7 +51,7 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 
 ## Sintaxe específica da plataforma
 
-Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
+A sintaxe específica da plataforma depende do sistema operativo em que o comando é executado. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
 
 ### Windows
 
