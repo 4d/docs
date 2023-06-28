@@ -24,7 +24,7 @@ The library is displayed in a separate window:
 The window has the following main features:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
-- You can filter the window contents by using the **Categories** menu: ![](../assets/en/FormEditor/library3.png)
+- Pode filtrar o conteúdo da janela utilizando o menu **Categorias**: ![](../assets/en/FormEditor/library3.png)
 - To use an object from the library to your form, you can either:
     - right-click on an object and select **Copy** in the contextual menu
     - or drag and drop the object from the library The object is then added to the form.
