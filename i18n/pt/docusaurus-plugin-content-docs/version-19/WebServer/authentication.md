@@ -15,7 +15,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 ### Visão Geral
 
-The operation of the 4D web server's access system is summarized in the following diagram:
+O funcionamento do sistema de acesso do servidor web 4D está resumido no diagrama seguinte:
 
 ![](../assets/en/WebServer/serverAccess.png)
 
@@ -46,7 +46,7 @@ If no custom authentication is provided, 4D calls the [`On Web Authentication`](
 
 When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
 
-> The name and password entered by the user are sent unencrypted in the HTTP request header. This mode typically requires HTTPS to provide confidentiality.
+> O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. This mode typically requires HTTPS to provide confidentiality.
 
 Os valores introduzidos são então avaliados:
 
