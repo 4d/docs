@@ -8,7 +8,7 @@ title: Breakpoints and Command Catching
 
 Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
 
-You set breakpoints on any line of code where you want the execution to be paused. You can associate a condition to the break point.
+You set breakpoints on any line of code where you want the execution to be paused. É possível associar uma condição ao ponto de interrupção.
 
 Catching a command enables you to start tracing the execution of any process as soon as a command is called by that process.
 
