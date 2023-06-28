@@ -15,7 +15,7 @@ If more than one person uses an application, which is usually the case in client
 
 
 
-## Access control in multi-user applications
+## Controlo de acesso em aplicações multi-usuário
 
 Multi-user applications are deployed with 4D Server. They include client-server, Web, or REST applications.
 
