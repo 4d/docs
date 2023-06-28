@@ -93,7 +93,7 @@ Domain name or IP address from where external pages are allowed to send data req
 
 #### Métodos HTTP autorizados (propriedade methods)
 
-Accepted HTTP method(s) for the corresponding CORS host. The following HTTP methods are supported:
+Accepted HTTP method(s) for the corresponding CORS host. São suportados os seguintes métodos HTTP:
 
 - GET
 - HEAD
@@ -245,7 +245,7 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 | `WEB SET OPTION`                   | `Web port ID`                                |             |
 | Caixa de diálogos de configurações | Página Configuração/Porta HTTP               |             |
 
-Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
+Número da porta IP (TCP) de escuta para HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
 
 > In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see [macOS HelperTool](#macos-helpertool)).
 
@@ -279,7 +279,7 @@ Listening IP port number for HTTPS connections via TLS. By default, the value is
 | ---------------------------------- | ------------------------------------------------------------------------ | ----------- |
 | webServer object                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |             |
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                           |             |
-| Caixa de diálogos de configurações | Options (I) page/Inactive Process Timeout                                | Slider      |
+| Caixa de diálogos de configurações | Página Opções (I)/Tempo limite dos processos inativos                    | Slider      |
 
 Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
@@ -397,7 +397,7 @@ Possible values: 500 000 to 2 147 483 648.
 | webServer object      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
-Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Número máximo de sessões simultâneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
 Default value: 100 (pass 0 to restore the default value).
 
@@ -575,7 +575,7 @@ This option controls the support of HTTP synchronization requests containing dep
 
 IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
 
-#### Reuse temporary contexts (in remote mode)
+#### Reutilizar contextos temporários (em modo remoto)
 
 Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed. Once the request has been dealt with, this process is killed.
 
