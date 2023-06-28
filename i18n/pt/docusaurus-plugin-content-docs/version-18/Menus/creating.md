@@ -62,12 +62,12 @@ Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in e
 
 You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
 
-To delete a menu bar, menu or menu item:
+Para eliminar uma barra de menu, um menu ou um item de menu:
 
 - Select the item to be deleted and click on the delete ![](../assets/en/Menus/MinussNew.png) button located beneath the list.
 - or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
 
-> It is not possible to delete Menu Bar #1.
+> Não é possível eliminar a barra de menus #1.
 
 ### Utilizar a linguagem 4D
 
