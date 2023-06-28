@@ -34,7 +34,7 @@ You can assign specific permission actions to the following exposed resources in
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
 
 - A permission action defined at the datastore level is automatically assigned to all dataclasses.
-- A permission action defined at a dataclass level overrides the datastore setting (if any). By default, all attributes of the dataclass inherit from the dataclass permission(s).
+- Uma ação de permissão definida ao nível da classe de dados substitui a definição do armazenamento de dados (se existir). By default, all attributes of the dataclass inherit from the dataclass permission(s).
 - Unlike dataclass permissions, a permission action defined at the attribute level does not override the parent dataclass permission(s), but is added to. For example, if you assigned the "general" privilege to a dataclass and the "detail" privilege to an attribute of the dataclass, both "general" and "detail" privileges must be set to the session to access the attribute.
 
 
@@ -70,7 +70,7 @@ Setting permissions requires to be consistent, in particular:
 
 A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
 
-A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. A privilege can include other privileges.
+A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. Um privilégio pode incluir outros privilégios.
 
 - You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
 
