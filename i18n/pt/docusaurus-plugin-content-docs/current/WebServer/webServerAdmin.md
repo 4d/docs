@@ -239,7 +239,7 @@ Configure the automatic backup parameters for the request log. First you must ch
 
 *   **No Backup**: The scheduled backup function is deactivated.
 
-*   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24 .
+*   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24.
     *   **starting at**: Used to set the time at which the first back up will begin.
 
 *   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
