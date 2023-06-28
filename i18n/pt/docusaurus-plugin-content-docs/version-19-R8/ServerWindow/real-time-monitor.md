@@ -14,7 +14,7 @@ A line is added for each long operation performed on the data. This line automat
 The following information is provided for each line:
 
 - **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
-- **Duration** (ms): duration in milliseconds of operation in progress
+- **Duração** (ms): duração em milissegundos da operação em curso
 - **Information**: title of operation.
 - **Details**: this area displays detailed information which will vary according to the type of operation selected. Mais especificamente:
     + **Created on**: indidates whether the operation results from a client action (Created on client) or if it was started explicitly on the server by means of a stored procedure or the "Execute on server" option (Created on server).
@@ -56,4 +56,4 @@ The **Snapshot** button allows you to copy to the clipboard all the operations d
 
 ## Mostrar operações durante pelo menos 5 segundos
 
-If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. Retained operations appear dimmed in the operation list. This feature is useful for getting information about operations that execute very quickly.
+If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. Retained operations appear dimmed in the operation list. Esta funcionalidade é útil para obter informações sobre operações que são executadas muito rapidamente.
