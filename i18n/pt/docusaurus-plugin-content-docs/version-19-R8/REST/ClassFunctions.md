@@ -356,7 +356,7 @@ Since no `__KEY` is given, a new Students entity is loaded on the server **with 
 
 ### Using an entity to be updated on the server
 
-Same as above but with a __KEY attribute
+O mesmo que acima, mas com um atributo __KEY
 
 You run this request:
 
@@ -391,7 +391,7 @@ Since `__KEY` is given, the Students entity with primary key 55 is loaded **with
 }
 ```
 
-### Creating an entity with a related entity
+### Criação de uma entidade com uma entidade relacionada
 
 In this example, we create a new Students entity with the Schools entity having primary key 2.
 
@@ -433,7 +433,7 @@ Corpo do pedido:
 ```
 
 
-### Updating an entity with a related entity
+### Atualização de uma entidade com uma entidade relacionada
 
 In this example, we associate an existing school to a Students entity. A classe `StudentEntity` tem um API:
 
