@@ -89,7 +89,7 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 ## Documentation location
 
-This area configures access to the 4D HTML documentation displayed in the current browser:
+Esta área configura o acesso à documentação HTML 4D mostrada no navegador atual:
 
 * When the user double-clicks on a command on the **Commands Page** of the Explorer;
 * When the user clicks on a command name in the Method editor and hits the **F1** key.
