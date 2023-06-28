@@ -39,13 +39,13 @@ Case of
  : ($1="/hello")
   WEB SEND TEXT("Hello World!")
  Else 
-  // Error 404 for example
+  // Erro 404 por exemplo
 End case 
 ```
 
 The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser.
 
-3. In your browser, enter the following URL:
+3. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/hello
@@ -81,7 +81,7 @@ The most simple solution to display data is to call a [template page](templates.
 ```
 
 2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
-3. In your browser, enter the following URL:
+3. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/friends.shtml
@@ -99,7 +99,7 @@ If we not only want to *display* data, but to *use* it, we can use ORDA and the 
 
 ![](../assets/en/WebServer/hello5.png)
 
-2. In your browser, enter the following URL:
+2. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/rest/$catalog
@@ -256,7 +256,7 @@ End if
 
 ![](../assets/en/WebServer/hello0.png)
 
-4. In your browser, enter the following URL:
+4. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
@@ -264,7 +264,7 @@ http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 
 > Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST.
 
-Then you will be logged for the session:
+Em seguida, será registado para a sessão:
 
 ![](../assets/en/WebServer/login1.png)
 
