@@ -3,35 +3,35 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
+**Os objectos partilhados** e as coleções partilhadas **** são objectos específicos [](Concepts/dt_object.md) e coleções [](Concepts/dt_collection.md) cujos conteúdos são partilhados entre processos. Ao contrário das [variáveis interprocessos](Concepts/variables.md#interprocess-variables), os objetos partilhados e as coleções partilhadas têm a vantagem de serem compatíveis com **processos 4D preemptivos**: podem ser passados por referência como parâmetros de comandos como `New process` ou `CALL WORKER`.
 
-Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
+Os objetos partilhados e as coleções partilhadas podem ser armazenados em variáveis de tipo normalizadas `Object` e `Collection` , mas têm de ser instanciados utilizando comandos específicos:
 
-- to create a shared object, use the `New shared object` command,
-- to create a shared collection, use the `New shared collection` command.
+- Para criar um objeto partilhado, utilize o comando [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) ,
+- Para criar uma coleção partilhada, utilize o comando [`New shared collection`](../API/CollectionClass.md#new-shared-collection) .
 
 :::note
 
-**Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+Os objectos e coleções partilhados podem ser definidos como propriedades de objetos ou coleções padrão (não partilhados).
 
 :::
 
-In order to modify a shared object/collection, the **Use... End use** structure must be called. Reading a shared object/collection value does not require **Use... End use**.
+Para modificar um objeto/coleção partilhado, é necessário chamar a estrutura **Use...End use** . A leitura de um valor de objeto/coleção partilhado não requer **Use...End use**.
 
 Um catálogo único e global devolvido  pelo comando `Storage` está sempre disponível em todo o banco de dados e seus componentes, e pode ser utilizado para armazenar todos os objetos e coleções compartidos.
 
 ## Utilização de objetos ou coleções compartidos
 
-Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
+Uma vez instanciados com os comandos `New shared object` ou `New shared collection` , as propriedades e os elementos do objeto/coleção partilhados podem ser modificados ou lidos a partir de qualquer processo da aplicação, sob determinadas condições.
 
 ### Modificação
 
-Modifications can be applied to shared objects and shared collections:
+As modificações podem ser aplicadas a objetos partilhados e coleções partilhadas:
 
 - adicionar ou remover propriedades de objectos,
-- adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
+- adicionar ou editar valores (desde que sejam suportados em objetos partilhados), incluindo outros objetos partilhados ou coleções (que criam um grupo partilhado, ver abaixo).
 
-However, all modification instructions in a shared object or collection must be surrounded by the `Use... End use` keywords, otherwise an error is generated.
+Todas as instruções de modificação num objeto ou coleção partilhados têm de ser protegidas dentro de um bloco [`Use...End use`](#use-end-use) , caso contrário é gerado um erro.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -40,24 +40,26 @@ However, all modification instructions in a shared object or collection must be 
  End Use
 ```
 
-For conveniency, all [collection functions](../API/CollectionClass.md) that modify the shared object or collection insert an internal `Use... End use` block so you do not have to code it yourself. Por exemplo:
+Por conveniência, todas as funções de coleção [](../API/CollectionClass.md) que modificam o objeto partilhado ou a coleção inserem um bloco interno `Use...End use` para que não tenha de o codificar. Por exemplo:
 
 ```4d
 $col:=New shared collection()
 $col.push("alpha") //.push() desencadeia internamente a utilização Use/End, pelo que não é necessário fazê-lo você mesmo
 ```
 
-If you need to execute several modifications on the same collection, you can protect all modifications with a single `Use... End use` so that modifications are performed atomically.
+Se precisar de executar várias modificações na mesma coleção, pode proteger todas as modificações com um único `Use...End use` para que as modificações sejam executadas atomicamente.
 
 ```4d
-$col:=Storage.mySharedCollection Use($col)
-    $col[0]:="omega" //modifying an element requires to be performed inside Use/End use
-    $col.push("alpha") //.push() internally triggers Use/End use, but we want to do both modifications atomically End Use
+$col:=Storage.mySharedCollection
+Use($col)
+    $col[0]:="omega" //modificar um elemento tem de ser efetuado dentro de Use/End use
+    $col.push("alpha") //.push() desencadeia internamente Use/End use, mas queremos fazer ambas as modificações atomicamente
+End Use
 ```
 
-A shared object/collection can only be modified by one process at a time. `Use` bloqueia o objeto/coleção compartido para outras threads, enquanto que o último `End use` desbloqueia todos os objetos e coleções. . Trying to modify a shared object/collection without at least one `Use... End use` generates an error. When a process calls `Use... End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use... End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
+Um objeto/coleção partilhado só pode ser modificado por um processo de cada vez. `Use` bloqueia o objeto/coleção compartido para outras threads, enquanto que o último `End use` desbloqueia todos os objetos e coleções. . A tentativa de modificar um objeto/coleção partilhado sem pelo menos um `Use...End use` gera um erro. Quando um processo chama `Use...End use` num objeto/coleção partilhado que já está a ser utilizado por outro processo, este é simplesmente colocado em espera até que o `End use` o desbloqueie (não é gerado qualquer erro). Consequentemente, as instruções em `Use... End use` estruturas devem ser executadas rapidamente e desbloquear os elementos o mais rapidamente possível. Assim, recomenda-se vivamente que se evite modificar um objeto partilhado ou uma coleção diretamente a partir da interface, por exemplo, através de uma caixa de diálogo.
 
-Assigning shared objects/collections to properties or elements of other shared objects/collections is allowed and creates **shared groups**. A shared group is automatically created when a shared object/collection is set as property value or element of another shared object/collection. Shared groups allow nesting shared objects and collections but enforce additional rules:
+A atribuição de objectos/colecções partilhados a propriedades ou elementos de outros objectos/colecções partilhados é permitida e cria **grupos partilhados**. Um grupo partilhado é criado automaticamente quando um objeto/coleção partilhado é definido como valor de propriedade ou elemento de outro objeto/coleção partilhado. Os grupos partilhados permitem o aninhamento de objectos e colecções partilhados, mas impõem regras adicionais:
 
 - Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
 - A shared object/collection can only belong to one shared group. An error is returned if you try to set an already grouped shared object/collection to a different group.

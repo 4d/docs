@@ -13,22 +13,23 @@ Die Vorteile von Kompilieren sind:
 - **Geschwindigkeit**: Ihre Anwendung läuft um den Faktor von 3 bis 1000 mal schneller.
 - **Überprüfung des Code**: Ihre Anwendung wird auf Übereinstimmung des Code geprüft. 4D Compiler findet sowohl logische als auch Syntaxfehler.
 - **Schutz**: Ist Ihre Anwendung kompiliert, können Sie den interpretierten Code löschen. Denn die kompilierte Anwendung hat dieselben Funktionalitäten wie ihr Original. Der Unterschied ist, dass Sie die Struktur und Methoden weder ansehen noch verändern können, sei es gewollt oder versehentlich.
-- **Eigenständige, doppelklickbare Anwendungen**; Kompilierte Anwendungen lassen sich in eigenständige Anwendungen (.EXE Dateien) mit ihren eigenen Icons umwandeln.
+- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications with their own icon.
 - **Preemptive Modus**: Nur kompilierter Code lässt sich in preemptive Prozessen ausführen.
 
 ## Unterschiede zwischen interpretiertem und kompiliertem Code
+
 Auch wenn Anwendungen im interpretierten und kompilierten Modus auf die gleiche Weise funktionieren, gibt es einige Unterschiede, die Sie kennen sollten, wenn Sie Code schreiben, der dann kompiliert wird. Der 4D Interpreter ist in der Regel flexibler als der Compiler.
 
-| Kompiliert                                                                                                                                                                                         | Interpretiert                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| Sie können keine Methode mit demselben Name wie eine Variable haben.                                                                                                                               | Es wird kein Fehler generiert, jedoch erhält die Methode Priorität                   |
-| Alle Variablen müssen typisiert sein, entweder über eine Compiler-Direktive (z. B. `C_LONGINT`) oder durch den Compiler beim Kompilieren.                                                          | Variablen lassen sich spontan typisieren (nicht empfohlen)                           |
-| Sie können den Datentyp von Variablen oder Arrays nicht ändern.                                                                                                                                    | Der Datentyp einer Variablen oder eines Array lässt sich verändern (nicht empfohlen) |
-| Sie können ein eindimensionales Array nicht in ein zweidimensionales Array umwandeln und umgekehrt.                                                                                                | Ist möglich                                                                          |
-| Auch wenn der Compiler den Typ der Variablen für Sie festlegt, sollten Sie bei zweideutigen Datentypen, wie z. B. in einem Formular, den Datentyp der Variablen mit Compiler-Befehlen deklarieren. |                                                                                      |
-| Die Funktion `Undefined` gibt für Variablen immer den Wert Falsch zurück. Variablen sind immer definiert.                                                                                          |                                                                                      |
-| Ist für die Methode die Eigenschaft "Als preemptive Prozess starten" markiert, darf der Code weder thread-unsafe Befehle oder andere thread-unsafe Methoden aufrufen.                              | Preemptive Prozesseigenschaften werden ignoriert                                     |
-| Der Befehl `IDLE` ist notwendig, um 4D in spezifischen Schleifen aufzurufen                                                                                                                        | Es ist immer möglich, 4D zu unterbrechen                                             |
+| Kompiliert                                                                                                                                                                      | Interpretiert                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Sie können keine Methode mit demselben Name wie eine Variable haben.                                                                                                            | Es wird kein Fehler generiert, jedoch erhält die Methode Priorität                   |
+| All variables must by typed, either through a declaration (using `var`, `#Declare`, or `Function` keywords), or by the compiler at compilation time.                            | Variablen lassen sich spontan typisieren (nicht empfohlen)                           |
+| Sie können den Datentyp von Variablen oder Arrays nicht ändern.                                                                                                                 | Der Datentyp einer Variablen oder eines Array lässt sich verändern (nicht empfohlen) |
+| Sie können ein eindimensionales Array nicht in ein zweidimensionales Array umwandeln und umgekehrt.                                                                             | Ist möglich                                                                          |
+| Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form. |                                                                                      |
+| Die Funktion `Undefined` gibt für Variablen immer den Wert Falsch zurück. Variablen sind immer definiert.                                                                       |                                                                                      |
+| Ist für die Methode die Eigenschaft "Als preemptive Prozess starten" markiert, darf der Code weder thread-unsafe Befehle oder andere thread-unsafe Methoden aufrufen.           | Preemptive Prozesseigenschaften werden ignoriert                                     |
+| Der Befehl `IDLE` ist notwendig, um 4D in spezifischen Schleifen aufzurufen                                                                                                     | Es ist immer möglich, 4D zu unterbrechen                                             |
 
 ## Compiler-Direktiven mit dem Interpreter verwenden
 
@@ -39,10 +40,11 @@ Aufgrund dieser Flexibilität kann eine Anwendung im interpretierten Modus ander
 Sie schreiben zum Beispiel:
 
 ```4d
-C_LONGINT(MyInt)
+var MyInt : Integer
 ```
 
 und an anderer Stelle im Projekt:
+
 ```4d
 MyInt:=3.1416
 ```
@@ -59,9 +61,9 @@ Die Reihenfolge, in der zwei Anweisungen erscheinen, ist für den Compiler irrel
 Eine Variable kann nicht erneut typisiert werden. Sie können jedoch einen Zeiger verwenden, um auf Variablen mit unterschiedlichen Datentypen zu verweisen. Zum Beispiel ist folgender Code sowohl im interpretierten als auch im kompilierten Modus erlaubt:
 
 ```4d
-C_POINTER($p)
-C_TEXT($name)
-C_LONGINT($age)
+var $p : Pointer
+var $name : Text
+var $age : Integer
 
 $name:="Smith"
 $age:=50
@@ -78,13 +80,12 @@ Stellen Sie sich eine Funktion vor, welche die Länge (Anzahl Zeichen) von Werte
 
 ```4d
   // Calc_Length (how many characters)
-  // $1 = pointer to flexible variable type, numeric, text, time, boolean
+  // $vp = pointer to flexible variable type, numeric, text, time, boolean
 
-C_POINTER($1)
-C_TEXT($result)  
-C_LONGINT($0)
-$result:=String($1->)
-$0:=Length($result)
+#DECLARE($vp : Pointer) -> $length : Integer
+var $result : Text  
+$result:=String($vp->)
+$length:=Length($result)
 ```
 
 Dann lässt sich diese Methode aufrufen:

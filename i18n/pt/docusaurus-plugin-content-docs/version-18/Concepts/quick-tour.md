@@ -206,44 +206,44 @@ The same symbols are often used for different operations, depending on the data 
 
 Em termos simples, as expressões retornam um valor. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
 
-Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
+Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. Utiliza expressões para escrever linhas de código, que por sua vez são utilizadas para construir os métodos. A linguagem utiliza expressões sempre que necessita de um dado.
 
-As expressões raramente são "autónomas." There are several places in 4D where an expression can be used by itself. Inclui:
+As expressões raramente são "autónomas." Há vários sítios em 4D onde uma expressão pode ser usada por si só. Inclui:
 
-- Formula editor (apply formula, query with formula, order by formula)
+- Editor de fórmulas (apply formula, query with formula, order by formula)
 - O comando `EXECUTE FORMULA`
 - A lista de propriedades, onde uma expressão pode ser usada como fonte de dados para a maioria dos widgets
 - Depurador onde o valor das expressões pode ser verificado
-- Quick Report editor as a formula for a column
+- Editor de relatórios rápidos como uma fórmula para uma coluna
 
 ### Tipos de expressões
 
-You refer to an expression by the data type it returns. Existem vários tipos de expressão. The following table gives examples of each type of expression.
+Refere-se a uma expressão pelo tipo de dados que devolve. Existem vários tipos de expressão. A tabela seguinte apresenta exemplos de cada tipo de expressão.
 
-| Expression               | Tipo                 | Descrição                                                                                                                                                                       |
-| ------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String               | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”       | String               | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). É devolvida a cadeia de caracteres "Hello there".              |
-| “Sr. ” + [People]Name    | String               | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String               | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                                      |
-| 4                        | Number               | Esta é uma constante numérica, 4.                                                                                                                                               |
-| 4 * 2                    | Number               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                                    |
-| myButton                 | Number               | Esta é uma variável associada a um botão. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                            |
-| !1997-01-25!             | Date                 | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
-| Current date+ 30         | Date                 | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
-| ?8:05:30?                | Hora                 | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
-| ?2:03:04? + ?1:02:03?    | Hora                 | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
-| True                     | Parâmetros           | Este comando devolve o valor Booleano TRUE.                                                                                                                                     |
-| 10 # 20                  | Parâmetros           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
-| “ABC” = “XYZ”            | Parâmetros           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
-| My Picture + 50          | Imagem               | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Ponteiro             | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                               |
-| Table(1)                 | Ponteiro             | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Object               | This is a command that returns MyString as an object (if proper format)                                                                                                         |
-| JSON Parse (MyJSONArray) | Collection           | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
-| Form.pageNumber          | Propriedade objecto  | An object property is an expression that can be of any supported type                                                                                                           |
-| Col[5]                   | Elemento de colecção | A collection element is an expression that can be of any supported type                                                                                                         |
-| $entitySel[0]            | Entity               | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
+| Expression               | Tipo                 | Descrição                                                                                                                                                         |
+| ------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                  | String               | A palavra Hello é uma constante cadeia de caracteres, indicada pelas aspas duplas.                                                                                |
+| “Hello ” + “there”       | String               | Duas cadeias, "Hello " e "there", são adicionadas (concatenadas) com o operador de concatenação de cadeias (+). É devolvida a cadeia de caracteres "Hello there". |
+| “Sr. ” + [People]Name    | String               | São concatenadas duas cadeias: a cadeia "Mr. " e o valor atual do campo Name na tabela People. Se o campo contiver "Smith", a expressão devolve "Mr. Smith".      |
+| Uppercase("smith")       | String               | Esta expressão utiliza `Uppercase`, um comando da linguagem, para converter a cadeia de caracteres "smith" em maiúsculas. Retorna "SMITH".                        |
+| 4                        | Number               | Esta é uma constante numérica, 4.                                                                                                                                 |
+| 4 * 2                    | Number               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                      |
+| myButton                 | Number               | Esta é uma variável associada a um botão. Devolve o valor atual do botão: 1 se foi clicado, 0 se não foi.                                                         |
+| !1997-01-25!             | Date                 | Esta é uma constante data para a data 1/25/97 (25 de janeiro de 1997).                                                                                            |
+| Current date+ 30         | Date                 | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                     |
+| ?8:05:30?                | Hora                 | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                       |
+| ?2:03:04? + ?1:02:03?    | Hora                 | This expression adds two times together and returns the time 3:05:07.                                                                                             |
+| True                     | Parâmetros           | Este comando devolve o valor Booleano TRUE.                                                                                                                       |
+| 10 # 20                  | Parâmetros           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.        |
+| “ABC” = “XYZ”            | Parâmetros           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                            |
+| My Picture + 50          | Imagem               | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                              |
+| ->[People]Name           | Ponteiro             | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                 |
+| Table(1)                 | Ponteiro             | This is a command that returns a pointer to the first table.                                                                                                      |
+| JSON Parse (MyString)    | Object               | This is a command that returns MyString as an object (if proper format)                                                                                           |
+| JSON Parse (MyJSONArray) | Collection           | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                     |
+| Form.pageNumber          | Propriedade objecto  | An object property is an expression that can be of any supported type                                                                                             |
+| Col[5]                   | Elemento de colecção | A collection element is an expression that can be of any supported type                                                                                           |
+| $entitySel[0]            | Entity               | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                          |
 
 ### Assignable vs non-assignable expressions
 

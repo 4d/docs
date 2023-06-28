@@ -93,11 +93,11 @@ São suportados os seguintes operadores de atribuição compostos:
 |               | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                                      |
 |               | Picture *= Number  | Imagem  | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 por 5)`                            |
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
+Estes operadores aplicam-se a quaisquer [expressões atribuíveis](quick-tour.md#assignable-vs-non-assignable-expressions) (exceto imagens como propriedades de objecto ou elementos de colecções).
 
-The operation "source `operator` value" is not strictly equivalent to "source := source `operator` value" because the expression designating the source (variable, field, object property, collection element) is only evaluated once. For example, in such expression as `getPointer()->+=1` the `getPointer` method is called only once.
+A operação "source `operator` value" não é estritamente equivalente a "source := source `operator` value" porque a expressão que designa a fonte (variável, campo, propriedade de objeto, elemento de coleção) só é avaliada uma vez. Por exemplo, numa expressão como `getPointer()->+=1` o método `getPointer` é chamado apenas uma vez.
 
-> [Character indexing in text](dt_string.md#character-reference-symbols) and [byte indexing in blob](dt_blob.md#accessing-a-scalar-blobs-bytes) do not support these operators.
+> [A indexação de caracteres no texto](dt_string.md#character-reference-symbols) e [a indexação de bytes no blob](dt_blob.md#accessing-a-scalar-blobs-bytes) não suportam estes operadores.
 #### Exemplos
 
 ```4d
@@ -137,9 +137,9 @@ $t2*=2 // $t2="HelloHello"
 
 ## Operadores curto-circuito
 
-The **&&** and **||** operators are **short circuit operators**. A short circuit operator is one that doesn't necessarily evaluate all of its operands.
+Os operadores **&&** e **||** são os **operadores de curto-circuito**. Um operador de curto-circuito é aquele que não avalia necessariamente todos os seus operandos.
 
-The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. They evaluate expressions as [truthy or falsy](#truthy-and-falsy), then return one of the expressions.
+A diferença em relação aos operadores booleanos simples [**&** e **|**](dt_boolean.md#logical-operators) é que os operadores de curto-circuito **&&** e **||** não devolvem um valor booleano. Avaliam as expressões como [truthy ou falsy](#truthy-and-falsy)e, em seguida, devolvem uma das expressões.
 
 ### Operador em curto-circuito AND (&&)
 
@@ -154,9 +154,9 @@ A regra é a seguinte:
 
 Dado `Expr1 && Expr2`:
 
-The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
+O operador de curto-circuito AND avalia os operandos da esquerda para a direita, retornando imediatamente com o valor do primeiro operando falsy que encontrar; se todos os valores forem [truthy](#truthy-and-falsy), o valor do último operando é retornado.
 
-The following table summarizes the different cases for the **&&** operator:
+A tabela seguinte resume os diferentes casos para o operador **&&**:
 
 | Expr1  | Expr2  | Valor devolvido |
 | ------ | ------ | --------------- |
@@ -181,7 +181,7 @@ $v := 5 && 10 && "hello" //"hello"
 
 Digamos que tem uma loja online e que alguns produtos têm uma taxa de imposto aplicada e outros não.
 
-To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
+Para calcular o imposto, multiplica-se o preço pela taxa de imposto, que pode não ter sido especificada.
 
 Portanto, pode escrever isto:
 
@@ -191,11 +191,11 @@ var $tax : Variant
 $tax:=$item.taxRate && ($item.price*$item.taxRate)
 ```
 
-`$tax` will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.
+`$tax` será NULL se tarateté é NULL (ou indefinido); caso contrário, armazenará o resultado do cálculo.
 
 #### Exemplo 3
 
-Short-circuit operators are useful in tests such as:
+Os operadores de curto-circuito são úteis em provas como:
 
 ```4d
 If(($myObject#Null) && ($myObject.value>10))
@@ -217,11 +217,11 @@ O operador || devolve o valor de um dos operandos especificados. A expressão é
 
 Dado `Expr1 || Expr2`:
 
-If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
+Se Expr1 é [truthy](#truthy-and-falsy), Expr2 não é avaliado e o cálculo devolve Expr1.
 
-If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
+Se Expr1 é [falsy](#truthy-and-falsy), o cálculo devolve Expr2.
 
-The following table summarizes the different cases and the value returned for the **||** operator:
+A tabela seguinte resume os diferentes casos e o valor retornado para o operador **||**:
 
 | Expr1  | Expr2  | Valor devolvido |
 | ------ | ------ | --------------- |
@@ -232,7 +232,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Exemplo 1
 
-Digamos que tem uma tabela chamada Employee. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Digamos que tem uma tabela chamada Employee. Alguns empregados introduziram um número de telefone e outros não. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. Mas pode escrever o seguinte:
 
 ```4d
 var $phone : Text
@@ -240,13 +240,13 @@ var $phone : Text
 $phone:=$emp.phone || "n/a"
 ```
 
-In which case `$phone` will store either a phone number or the "n/a" string.
+Nesse caso, `$phone` guardará um número de telefone ou a cadeia "n/a".
 
 #### Exemplo 2
 
-Given a table called Person with a *name* field, as well as a *maiden name* field for married women.
+Dada uma tabela chamada Person com um campo *name*, bem como um campo *maiden name* para mulheres casadas.
 
-The following example checks if there is a maiden name and stores it in a variable, otherwise it simply stores the person's name:
+O exemplo seguinte verifica se existe um nome de solteira e armazena-o numa variável; caso contrário, armazena simplesmente o nome da pessoa:
 
 ```4d
 var $name: Text
@@ -256,9 +256,9 @@ $name:=$person.maidenName || $person.name
 
 ### Precedência
 
-The `&&` and `||` operators have the same precedence as the logical operators `&` and `|`, and are evaluated left to right.
+Os operadores `&&` e `||` têm a mesma precedência que os operadores lógicos `&` e `|`, e são avaliados da esquerda para a direita.
 
-This means that `a || b && c` is evaluated as `(a || b) && c`.
+Isto significa que `a || b && c` é avaliado como `(a || b) && c`.
 
 
 ## Operador ternário
@@ -270,13 +270,13 @@ This means that `a || b && c` is evaluated as `(a || b) && c`.
 | v19 R4 | Adicionado |
 </details>
 
-The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If… Else](flow-control.md#ifelseend-if) statements.
+O operador condicional ternário permite-lhe escrever expressões condicionais de uma linha. For example, it can replace a full sequence of [If… Else](flow-control.md#ifelseend-if) statements.
 
-It takes three operands in the following order:
+Aceita três operandos na seguinte ordem:
 
 * uma condição seguida de um ponto de interrogação (?)
-* an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
-* an expression to execute if the condition is [falsy](#truthy-and-falsy)
+* uma expressão a executar se a condição é [truthy](#truthy-and-falsy), seguida de dois pontos (:)
+* uma expressão a executar se a condição é [falsy](#truthy-and-falsy)
 
 ### Sintaxe
 
@@ -298,14 +298,14 @@ $age:=26
 $beverage:=($age>=21) ? "Beer" : "Juice" ALERT($beverage) // "Beer"
 ```
 
-#### Handling data from a table
+#### Tratamento de dados de uma tabela
 
-This example stores a person's full name in a variable, and handles the case when no first name or last name has been specified:
+Este exemplo armazena o nome completo de uma pessoa numa variável e trata do caso em que não foi especificado o primeiro nome ou o último nome:
 
 ```4d
 var $fullname : Text
 
-// If one of the names is missing, store the one that exists, otherwise store an empty string
+// Se um dos nomes estiver em falta, guardar o que existe, caso contrário guardar uma cadeia vazia
 $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
@@ -318,11 +318,11 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 | v19 R4 | Adicionado |
 </details>
 
-As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**.
+Para além de um tipo, cada valor tem também um valor booliano inerente, geralmente conhecido como **truthy** ou **falsy**.
 
-> **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
+> Os valores **truthy** e **falsy** só são avaliados pelos operadores [de curto-circuito](#short-circuit-operators) e [ternários](#ternary-operator).
 
-The following values are **falsy**:
+Os seguintes valores são **falsy**:
 
 * false
 * Null
@@ -340,17 +340,17 @@ Todos os outros valores são considerados **truthy**, incluindo:
 
 * 0 - zero numérico (inteiro ou não)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If… Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
+Em 4D, a avaliação **truthy** e **falsy** reflecte a **usabilidade** de um valor, o que significa que um valor truthy existe e pode ser processado pelo código sem gerar erros ou resultados inesperados. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If… Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
-For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
+Por exemplo, quando se utiliza um [operador OR curto-circuito](#short-circuit-or-operator-):
 
 ```4d
 $value:=$object.value || $defaultValue
 ```
 
-... you get the default value whenever *$object* does not contain the `value` property OR when it is *null*. So this operator checks the existence or usability of the value instead of a specific value. Note that because the numerical value 0 exists and is usable, it is not treated specially, thus it is **truthy**.
+... obtém o valor padrão sempre que *$object* não contém a propriedade `value` OU quando é *null*. Assim, este operador verifica a existência ou a possibilidade de utilização do valor em vez de um valor específico. Note-se que, como o valor numérico 0 existe e é utilizável, não é tratado de forma especial, pelo que é **truthy**.
 
-Regarding values representing collections, objects, or strings, "empty" values are considered **falsy**. It is handy when you want to assign a default value whenever an empty one is encountered.
+Para valores que representam coleções, objetos ou cadeias de caracteres, os valores "vazios" são considerados como **falsy**. É útil quando se pretende atribuir um valor por defeito sempre que se encontra um valor vazio.
 
 ```4d
 $phone:=$emp.phone || "n/a"

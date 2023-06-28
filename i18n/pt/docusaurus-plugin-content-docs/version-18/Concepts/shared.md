@@ -4,7 +4,7 @@ title: Objetos e coleções compartilhados
 ---
 
 ## Visão Geral
-**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
+**Os objectos partilhados** e as coleções partilhadas **** são objectos específicos [](Concepts/dt_object.md) e coleções [](Concepts/dt_collection.md) cujos conteúdos são partilhados entre processos. Ao contrário das [variáveis interprocessos](Concepts/variables.md#interprocess-variables), os objetos partilhados e as coleções partilhadas têm a vantagem de serem compatíveis com **processos 4D preemptivos**: podem ser passados por referência como parâmetros de comandos como `New process` ou `CALL WORKER`.
 
 Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
 
@@ -13,7 +13,7 @@ Shared objects and shared collections can be stored in variables declared with s
 
 **Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.
 
-In order to modify a shared object/collection, the **Use... End use** structure must be called. Reading a shared object/collection value does not require **Use... End use**.
+Para modificar um objeto/coleção partilhado, é necessário chamar a estrutura **Use...End use** . A leitura de um valor de objeto/coleção partilhado não requer **Use...End use**.
 
 A unique, global catalog returned by the `Storage` command is always available throughout the database and its components, and can be used to store all shared objects and collections.
 
@@ -21,10 +21,10 @@ A unique, global catalog returned by the `Storage` command is always available t
 Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
 
 ### Modificação
-Modifications can be applied to shared objects and shared collections:
+As modificações podem ser aplicadas a objetos partilhados e coleções partilhadas:
 
 - adicionar ou remover propriedades de objectos,
-- adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
+- adicionar ou editar valores (desde que sejam suportados em objetos partilhados), incluindo outros objetos partilhados ou coleções (que criam um grupo partilhado, ver abaixo).
 
 However, all modification instructions in a shared object or collection must be surrounded by the `Use...End use` keywords, otherwise an error is generated.
 
@@ -35,9 +35,9 @@ However, all modification instructions in a shared object or collection must be 
  End Use
 ```
 
-A shared object/collection can only be modified by one process at a time. `Use` locks the shared object/collection from other threads, while the last `End use` unlocks all objects and collections. Trying to modify a shared object/collection without at least one `Use... End use` generates an error. When a process calls `Use... End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use... End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
+Um objeto/coleção partilhado só pode ser modificado por um processo de cada vez. `Use` locks the shared object/collection from other threads, while the last `End use` unlocks all objects and collections. A tentativa de modificar um objeto/coleção partilhado sem pelo menos um `Use...End use` gera um erro. Quando um processo chama `Use...End use` num objeto/coleção partilhado que já está a ser utilizado por outro processo, este é simplesmente colocado em espera até que o `End use` o desbloqueie (não é gerado qualquer erro). Consequentemente, as instruções em `Use... End use` estruturas devem ser executadas rapidamente e desbloquear os elementos o mais rapidamente possível. Assim, recomenda-se vivamente que se evite modificar um objeto partilhado ou uma coleção diretamente a partir da interface, por exemplo, através de uma caixa de diálogo.
 
-Assigning shared objects/collections to properties or elements of other shared objects/collections is allowed and creates **shared groups**. A shared group is automatically created when a shared object/collection is set as property value or element of another shared object/collection. Shared groups allow nesting shared objects and collections but enforce additional rules:
+A atribuição de objectos/colecções partilhados a propriedades ou elementos de outros objectos/colecções partilhados é permitida e cria **grupos partilhados**. Um grupo partilhado é criado automaticamente quando um objeto/coleção partilhado é definido como valor de propriedade ou elemento de outro objeto/coleção partilhado. Os grupos partilhados permitem o aninhamento de objectos e colecções partilhados, mas impõem regras adicionais:
 
 - Calling `Use` on a shared object/collection of a group will lock properties/elements of all shared objects/collections belonging to the same group.
 - A shared object/collection can only belong to one shared group. An error is returned if you try to set an already grouped shared object/collection to a different group.
