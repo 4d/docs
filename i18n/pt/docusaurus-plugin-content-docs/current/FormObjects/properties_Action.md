@@ -7,7 +7,7 @@ title: Ação
 ---
 ## Arrastável
 
-Control whether and how the user can drag the object. By default, no drag operation is allowed.
+Control whether and how the user can drag the object. Por defeito, não é permitida qualquer operação de arrastamento.
 
 Estão disponíveis dois modos de arrastamento:
 
