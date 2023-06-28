@@ -15,7 +15,7 @@ The Find/Replace commands for methods, classes or functions are located in **Edi
 
 ## Find
 
-Selecting the **Find...** command displays the following dialog box:
+Selecionar o comando **Pesquisar...** apresenta a seguinte caixa de diálogo:
 
 ![find-dialog](../assets/en/code-editor/find-dialog.png)
 
