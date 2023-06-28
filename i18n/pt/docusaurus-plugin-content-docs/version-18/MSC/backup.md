@@ -16,4 +16,4 @@ This page consists of the following three areas:
 
 The **Backup** button is used to launch a manual backup.
 
-This page cannot be used to modify the backup parameters. To do this, you must click on the **Database properties...** button.
+This page cannot be used to modify the backup parameters. Para o fazer, deve clicar no botão **Propriedades da base...**.
