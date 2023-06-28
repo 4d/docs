@@ -39,7 +39,7 @@ If the encryption process is successful, the Encrypt page displays Encryption ma
 
 When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](../assets/en/MSC/MSC_encrypt6.png)
 
-### Providing the current data encryption key
+### Fornecimento da chave de encriptação de dados atual
 
 For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
 
