@@ -63,7 +63,7 @@ If a request is sent to the remote datastore after the session has been closed, 
 
 4D provides optimizations for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). These optimizations speed up the execution of your 4D application by reducing drastically the volume of information transmitted over the network. Estes incluem:
 * the **optimization context**
-* the **ORDA cache**
+* a **cache ORDA**
 
 ### Contexto
 
