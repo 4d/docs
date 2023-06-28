@@ -211,7 +211,7 @@ Estas duas listas contêm quatro colunas:
 
 The list of local variables is sorted by database method, project method, trigger, form method, and object method, in the same order as in 4D.
 
-This list is divided into three columns:
+Esta lista está dividida em três colunas:
 
 - list of local variables used in the method;
 - tipo da variável;
