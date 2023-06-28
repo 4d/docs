@@ -206,5 +206,5 @@ Use the wildcard character @ to help define groups of methods:
 
 **Note:** If the "Published in WSDL" attribute is set to True, it will only be applied to project methods already containing the "Offered as a Web Service" attribute.
 
-4.  Click on **Apply**. The modification is applied instantly to all the project methods designated by the character string entered.
+4.  Clicar em **Aplicar**. The modification is applied instantly to all the project methods designated by the character string entered.
 
