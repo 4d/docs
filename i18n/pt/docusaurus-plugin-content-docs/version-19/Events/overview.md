@@ -49,7 +49,7 @@ The number of objects involved in an event depends on the nature of the event.
 
 ## Tabela de chamadas
 
-The following table summarizes how object and form methods are called for each event type:
+A tabela seguinte resume a forma como os métodos objeto e formulário são chamados para cada tipo de evento:
 
 | Evento                   | Métodos objecto                   | Método formulário | Que objectos               |
 | ------------------------ | --------------------------------- | ----------------- | -------------------------- |
