@@ -31,7 +31,7 @@ When the operation is completed, the compacted files automatically replace the o
 
 ## Open log file
 
-After compacting is completed, 4D generates a log file in the Logs folder of the database. This file allows you to view all the operations carried out. It is created in XML format and named:  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+Depois que a compactação é completada, 4D gera um arquivo de log na pasta Logs da base de dados. This file allows you to view all the operations carried out. It is created in XML format and named:  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
