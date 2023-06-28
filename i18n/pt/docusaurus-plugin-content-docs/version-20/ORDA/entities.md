@@ -93,7 +93,7 @@ You can handle entities like any other object in 4D and pass their references di
 Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
 > For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
 
-For example, to set a storage attribute:
+Por exemplo, para definir um atributo de armazenamento:
 
 ```4d
  $entity:=ds. Employee.get(1) //get employee attribute with ID 1
@@ -185,7 +185,7 @@ You can create an object of type [entity selection](dsMapping.md#entity-selectio
 
 You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
 
-### Shareable or alterable entity selections
+### Entity selections partilháveis ou alteráveis
 
 An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
 
@@ -323,7 +323,7 @@ O método `sendMails`:
 ```
 
 
-### Entity selections and Storage attributes
+### Selecções de entidades e atributos de armazenamento
 
 All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Por exemplo:
 
@@ -334,7 +334,7 @@ All storage attributes (text, number, boolean, date) are available as properties
 
 This code returns in *$localEmails* a collection of email addresses as strings.
 
-### Entity selections and Relation attributes
+### Selecções de entidades e atributos de relações
 
 In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
 
