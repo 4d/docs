@@ -40,7 +40,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 ## Margem horizontal
 
-This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
+Esta propriedade permite definir o tamanho (em píxeis) das margens horizontais do botão. This margin delimits the area that the button icon and title must not surpass.
 
 This parameter is useful, for example, when the background picture contains borders:
 
@@ -152,9 +152,9 @@ Here are the results using the various options for this property:
 | Option       | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
 | **Direita**  | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Topo**     | O texto é colocado por cima do ícone. The contents of the button are centered.                                                                   | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Esquerda** | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Fundo**    | O texto é colocado por baixo do ícone. The contents of the button are centered.                                                                  | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                           | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centrado** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Gramática JSON
