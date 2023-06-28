@@ -529,7 +529,7 @@
     "description": "The text for the suggested query when no results are found for the following search"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
-    "message": "Believe this query should return results?",
+    "message": "Considera que esta consulta deve devolver resultados?",
     "description": "The text for the question where the user thinks there are missing results"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
@@ -541,7 +541,7 @@
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
   "This is the documentation for the latest": {
-    "message": "This is the documentation for the latest"
+    "message": "Esta é a documentação da última"
   },
   "Looking for a LTS documentation?": {
     "message": "Looking for a LTS documentation?"
