@@ -363,7 +363,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
+The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s) if any<!-- END REF -->.
 
 Each element of the collection is an object with the following properties:
 
@@ -373,7 +373,7 @@ Each element of the collection is an object with the following properties:
 |[].message|text|Description of the 4D error|
 |[ ].componentSignature|text|Signature of the internal component which returned the error|
 
-If no error occured, `.errors` contains an empty collection.
+If no error occured, `.errors` is undefined.
 
 <!-- END REF -->
 
