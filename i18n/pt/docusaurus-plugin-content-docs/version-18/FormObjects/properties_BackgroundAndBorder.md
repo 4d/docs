@@ -53,9 +53,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                         |
-| ------------- | ------------- | ----------------------------------------- |
-| rowFillSource | string        | An expression returning a RGB color value |
+| Nome          | Tipo de dados | Valores possíveis                             |
+| ------------- | ------------- | --------------------------------------------- |
+| rowFillSource | string        | Uma expressão que retorna um valor de cor RGB |
 
 #### Objectos suportados
 
@@ -129,9 +129,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                         |
-| ------ | ------------- | ----------------------------------------- |
-| stroke | string        | any css value, "transparent", "automatic" |
+| Nome   | Tipo de dados | Valores possíveis                        |
+| ------ | ------------- | ---------------------------------------- |
+| stroke | string        | um valor css, "transparent", "automatic" |
 
 > This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
 
