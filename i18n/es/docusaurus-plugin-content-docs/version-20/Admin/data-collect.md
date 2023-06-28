@@ -91,17 +91,17 @@ También se recogen algunos datos a intervalos regulares.
 
 ### Recogida al cierre de la base y envío de los datos
 
-| Datos             | Tipo   | Notas                                                              |
-| ----------------- | ------ | ------------------------------------------------------------------ |
-| webserverHits     | Number | Número de visitas al servidor web durante la recolección de datos  |
-| restHits          | Number | Número de accesos al servidor REST durante la recolección de datos |
-| webserverBytesIn  | Number | Bytes received by the web server during the data collection        |
-| webserverBytesOut | Number | Bytes sent by the web server during the data collection            |
+| Datos             | Tipo   | Notas                                                               |
+| ----------------- | ------ | ------------------------------------------------------------------- |
+| webserverHits     | Number | Número de visitas al servidor web durante la recolección de datos   |
+| restHits          | Number | Número de accesos al servidor REST durante la recolección de datos  |
+| webserverBytesIn  | Number | Bytes recibidos por el servidor web durante la recolección de datos |
+| webserverBytesOut | Number | Bytes enviados por el servidor web durante la recolección de datos  |
 
 
 
 
-### Collected every time PHP execute is called
+### Recolección cada vez que se llama a PHP execute
 
 | Datos       | Tipo    | Notas                                                                               |
 | ----------- | ------- | ----------------------------------------------------------------------------------- |
