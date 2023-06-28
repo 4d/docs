@@ -26,7 +26,7 @@ This property defines the color scheme for the form. This property defines the c
 
 This property allows you to load specific CSS file(s) for the form.
 
-A CSS file defined at the form level will override default style sheet(s). For more information, please refer to [Style sheets](createStylesheet.md) page.
+A CSS file defined at the form level will override default style sheet(s). Para mais informações, consulte a página [Folhas de estilo](createStylesheet.md).
 
 
 #### Gramática JSON
@@ -86,7 +86,7 @@ Supported types depend on the form category:
 | ---------------------------------- | ---------------- | ------------------------------------------------------------- | ---------------------------------------- |
 | Formulário detalhado               | detailScreen     | A display form for data entry and modification                | Formulários projeto - Formulários tabela |
 | Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice | Formulários projeto - Formulários tabela |
-| Formulário lista                   | listScreen       | A form for listing records on the screen                      | Formularios tabla                        |
+| Formulário lista                   | listScreen       | Um formulário para listar os registos no ecrã                 | Formularios tabla                        |
 | Formulário de lista para impressão | listPrinter      | Um relatório impresso que lista os registos                   | Formularios tabla                        |
 | Nenhum                             | *no destination* | A form with no specific feature                               | Formulários projeto - Formulários tabela |
 
