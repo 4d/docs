@@ -42,7 +42,7 @@ Por exemplo, se escrever:
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the database, you write:
+e noutra parte da base de dados, escreve-se:
 ```4d
 MyInt:=3.1416
 ```
