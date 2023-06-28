@@ -7,7 +7,7 @@ Limits the number of entities to return (e.g., `$top=50`)
 
 ## Descrição
 
-`$top/$limit` defines the limit of entities to return. By default, the number is limited to 100. You can use either keyword: `$top` or `$limit`.
+`$top/$limit` defines the limit of entities to return. Por defeito, o número é limitado a 100. You can use either keyword: `$top` or `$limit`.
 
 When used in conjunction with [`$skip`]($skip.md), you can navigate through the entity selection returned by the REST request.
 
