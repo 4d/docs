@@ -18,7 +18,7 @@ This information allows you to identify the source and context of each operation
     - Opening of Data File: Opening of a data file.
     - Closing of Data File: Closing of an open data file.
     - Creation of a Context: Creation of a process that specifies an execution context.
-    - Closing of a Context: Closing of process.
+    - Encerramento de um contexto: encerramento de um processo.
     - Addition: Creation and storage of a record.
     - Adding a BLOB: Storage of a BLOB in a BLOB field.
     - Deletion: Deletion of a record.
