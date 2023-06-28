@@ -75,7 +75,7 @@ To associate a pop-up menu/drop-down list or a combo box with a field or variabl
 When the form is executed, 4D automatically manages the pop-up menu or combo box during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the pop-up menu when the form is displayed:
 
 ![](../assets/en/FormObjects/popupDropdown_choiceList.png)
-> It is not possible to combine this principle with using an array to initialize the object. If you enter a field name in the Variable Name area, then you must use a choice list.
+> Não é possível combinar este princípio com a utilização de um array para inicializar o objeto. If you enter a field name in the Variable Name area, then you must use a choice list.
 
 ### Salvar como
 
