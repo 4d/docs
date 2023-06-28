@@ -122,7 +122,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 - Listbox cells support [horizontal](FormObjects/propertiesCoordinatesAndSizing#horizontal-padding) and [vertical](FormObjects/propertiesCoordinatesAndSizing#vertical-padding) padding.
 - 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list#vp-remove-table) commands to handle tables in sheets.
 - Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer#basics).
-- To help us make our products always better, we now automatically collect data regarding usage statistics on running 4D Server applications. This will have no impact on performance. See the new page explaining [why and how 4D collects data](../Admin/data-collect).
+- To help us make our products always better, we now automatically collect data regarding usage statistics on running 4D Server applications. Este facto não terá qualquer impacto no desempenho. See the new page explaining [why and how 4D collects data](../Admin/data-collect).
 - Components compiled for Silicon: On macOS Silicon platforms (Apple ARM CPUs), components must be recompiled with 4D v19 R6 or higher to be used with this release.
 
 
