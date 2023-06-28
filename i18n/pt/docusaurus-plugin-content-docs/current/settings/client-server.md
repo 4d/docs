@@ -26,7 +26,7 @@ This option lets you change the publication name of a 4D Server database, *i.e.*
 
 #### Número do porto
 
-This option lets you change the TCP port number on which 4D Server publishes the database. This information is stored in the project and on each client machine. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
+Essa opção permite mudar o número da porta TCP na qual o 4D Server publica o banco de dados. This information is stored in the project and on each client machine. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
 
 Customizing this value is necessary when you want to use several 4D applications on the same machine; in this case, you must specify a different port number for each application. When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database.
 
@@ -46,7 +46,7 @@ To update any other client machines that are not connected, you just need to ent
   When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
   Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 
-#### Authentication of user with domain server
+#### Autenticação do usuário com o servidor de domínio
 
 This option allows you to implement SSO (*Single Sign On*) capabilities in your 4D Server database on Windows. When you check this option, 4D transparently connects to the Active directory of the Windows domain server and gets the available authentication tokens. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html) section.
 
@@ -65,7 +65,7 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
     - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
     - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.fe.html) command.
     - Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
-    - QUIC automatically connects to the port 19813 for both application server and DB4D server.
+    - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
     - Quando a opção de camada QUIC é selecionada:
         -   A beta message and an alert icon are displayed near the selector.
         -   [Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
@@ -79,7 +79,7 @@ In case of a modification, you need to restart the application for the change to
 
 #### Client-Server Connections Timeout
 
-This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. The Unlimited option removes the timeout. When this option is selected, client activity control is eliminated.
+This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. A opção Ilimitado remove o tempo limite. When this option is selected, client activity control is eliminated.
 
 When a timeout is selected, the server will close the connection of a client if it does not receive any requests from the latter during the specified time limit.
 
@@ -93,7 +93,7 @@ When this option is checked, all the 4D remote machines connecting to the databa
 
 This option lets you activate the secured mode for communications between the server machine and the 4D remote machines. This option is detailed in the [Encrypting Client/Server Connections](https://doc.4d.com/4Dv19/4D/19/Encrypting-ClientServer-Connections.300-5422465.en.html) section.
 
-#### Update Resources folder during a session
+#### Atualizar a pasta Resources durante uma sessão
 
 This setting can be used to globally set the updating mode for the local instance of the **Resources** folder on the connected 4D machines when the **Resources** folder of the database is modified during the session (the **Resources** folder is automatically synchronized on the remote machine each time a session is opened). Three settings are available:
 
