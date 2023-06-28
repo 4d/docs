@@ -40,7 +40,7 @@ Use this low-level repair option only when the data file is severely damaged and
 When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
 
 ![](../assets/en/MSC/mscrepair2.png)
-> If all the records and all the tables have been assigned, only the main area is displayed.
+> Se todos os registos e todas as tabelas tiverem sido atribuídos, apenas a área principal é mostrada.
 
 The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
 
