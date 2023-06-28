@@ -59,7 +59,7 @@ These options configure the various colors used in the Method editor and debugge
 
 |                                                   | Descrição                                                                                                                                                                |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Cor de fundo**                                  | Background color of Method editor window.                                                                                                                                |
+| **Cor de fundo**                                  | Cor de fundo da janela do editor de métodos.                                                                                                                             |
 | **Border of the running line in the debugger**    | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
 | **Cor de fundo da linha do cursor**               | Background color of line containing the cursor.                                                                                                                          |
 | **Execution line background color**               | Background color of line being executed in the debugger.                                                                                                                 |
