@@ -279,7 +279,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 ## Barra rolagem horizontal
 
-Sets a horizontal padding for the cells. The value is set in pixels (default = 0).
+Define um preenchimento horizontal para as células. O valor é definido em pixeis (padrão = 0).
 
 ![](../assets/en/FormObjects/padding.png)
 
@@ -301,7 +301,7 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 ## Dimensionamento vertical
 
-Define um preenchimento vertical para as células. The value is set in pixels (default = 0).
+Define um preenchimento vertical para as células. O valor é definido em pixeis (padrão = 0).
 
 #### Gramática JSON
 
