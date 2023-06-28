@@ -60,7 +60,7 @@ Allows setting a list whose values cannot be entered in the object. Se um valor 
 
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 
-Making a list required does not automatically display the list when the field is selected. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
+Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
 #### Gramática JSON
