@@ -143,7 +143,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showFooters|boolean|true (default), false|
+ showFooters|boolean|true (por padrão), false|
 
 #### Objectos suportados
 
@@ -153,7 +153,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 ## Mostrar barra de fórmulas
 
-When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. If not selected, the formula bar is hidden.
+When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. Se não estiver selecionada, a barra de fórmulas fica oculta.
 
 > This property is available only for the [Toolbar](#user-interface) interface.
 
@@ -179,7 +179,7 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showHeaders|boolean|true (default), false|
+ showHeaders|boolean|true (padrão), false|
 
 #### Objectos suportados
 
