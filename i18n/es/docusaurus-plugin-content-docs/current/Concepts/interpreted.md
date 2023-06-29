@@ -13,23 +13,23 @@ Las ventajas de la compilación son:
 - **Velocidad**: su base aplicación se ejecuta de 3 a 1.000 veces más rápido.
 - **Verificación del código**: su aplicación se analiza para comprobar la consistencia del código. Se detectan tanto los conflictos lógicos como los sintácticos.
 - **Protección:**: una vez compilada su aplicación, puede eliminar el código interpretado. Entonces, la aplicación compilada es funcionalmente idéntica a la original, excepto que la estructura y los métodos no pueden ser vistos o modificados, deliberada o inadvertidamente.
-- **Stand-alone double-clickable applications**: compiled applications can also be transformed into stand-alone applications with their own icon.
+- **Aplicaciones independientes con doble clic**: las aplicaciones compiladas también pueden transformarse en aplicaciones autónomas con su propio icono.
 - **Modo apropiativo**: sólo se puede ejecutar código compilado en procesos apropiativos.
 
 ## Diferencias entre el código interpretado y el compilado
 
 Aunque la aplicación funcionará de la misma manera en modo interpretado y compilado, hay algunas diferencias que hay que conocer cuando se escribe código que será compilado. El intérprete de 4D suele ser más flexible que el compilador.
 
-| Compilado                                                                                                                                                                           | Interpretado                                                                      |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| No se puede tener un método con el mismo nombre que una variable.                                                                                                                   | No se genera ningún error, pero se da prioridad al método                         |
-| All variables must by typed, either through a declaration (using `var`, `#Declare`, or `Function` keywords), or by the compiler at compilation time.                                | Las variables se pueden escribir sobre la marcha (no se recomienda)               |
-| No se puede cambiar el tipo de datos de ninguna variable o array.                                                                                                                   | Es posible cambiar el tipo de datos de una variable o un array (no se recomienda) |
-| No se puede cambiar un array unidimensional a uno bidimensional, ni cambiar un array bidimensional a uno unidimensional.                                                            | Posible                                                                           |
-| Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form.     |                                                                                   |
-| La función `Undefined` siempre devuelve False para las variables. Las variables siempre están definidas.                                                                            |                                                                                   |
-| Si has marcado la propiedad "Puede ser ejecutado en procesos apropiativos" para el método, el código no debe llamar a ningún comando hilo no seguro u otros métodos hilo no seguro. | Se ignoran las propiedades de los procesos preventivos                            |
-| El comando `IDLE` es necesario para llamar a 4D en bucles específicos                                                                                                               | Siempre es posible interrumpir 4D                                                 |
+| Compilado                                                                                                                                                                                  | Interpretado                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| No se puede tener un método con el mismo nombre que una variable.                                                                                                                          | No se genera ningún error, pero se da prioridad al método                         |
+| Todas las variables deben estar digitadas, ya sea mediante una declaración (utilizando las palabras claves `var`, `#Declare`, o `Function`), o por el compilador en tiempo de compilación. | Las variables se pueden escribir sobre la marcha (no se recomienda)               |
+| No se puede cambiar el tipo de datos de ninguna variable o array.                                                                                                                          | Es posible cambiar el tipo de datos de una variable o un array (no se recomienda) |
+| No se puede cambiar un array unidimensional a uno bidimensional, ni cambiar un array bidimensional a uno unidimensional.                                                                   | Posible                                                                           |
+| Although the compiler will type the variable for you, you should specify the data type of a variable by using declarations where the data type is ambiguous, such as in a form.            |                                                                                   |
+| La función `Undefined` siempre devuelve False para las variables. Las variables siempre están definidas.                                                                                   |                                                                                   |
+| Si has marcado la propiedad "Puede ser ejecutado en procesos apropiativos" para el método, el código no debe llamar a ningún comando hilo no seguro u otros métodos hilo no seguro.        | Se ignoran las propiedades de los procesos preventivos                            |
+| El comando `IDLE` es necesario para llamar a 4D en bucles específicos                                                                                                                      | Siempre es posible interrumpir 4D                                                 |
 
 ## Utilizar las directivas del compilador con el intérprete
 
