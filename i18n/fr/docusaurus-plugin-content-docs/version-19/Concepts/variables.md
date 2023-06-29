@@ -77,8 +77,8 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 | `Collection`           | Valeur collection                          |
 | `Variant`              | Valeur variant                             |
 | `Object`               | Objet avec classe par défaut (`4D.Object`) |
-| `4D.<className>` | Objet du nom de la classe 4D               |
-| `cs.<className>` | Objet du nom de la classe utilisateur      |
+| `4D.<className>` | Object de la classe 4D className           |
+| `cs.<className>` | Object de la classe utilisateur className  |
 
 #### Exemples
 
