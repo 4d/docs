@@ -100,7 +100,7 @@ Por exemplo, para definir um atributo de armazenamento:
 ```
 > Pictures attributes cannot be assigned directly with a given path in an entity.
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+Accessing a related attribute depends on the attribute kind. Por exemplo, com a seguinte estrutura:
 
 ![](../assets/en/ORDA/entityAttributes.png)
 
@@ -414,7 +414,7 @@ These principles are shown in the following diagram:
 **Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
 * Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-* Example with a lock set by an ORDA method:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+* Exemplo com um bloqueio definido por um método ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
 
 ## Client/server optimization
 
