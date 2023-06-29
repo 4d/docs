@@ -95,7 +95,7 @@ Par défaut, si le paramètre *type* est omis ou contient une chaîne vide, le `
 
 Le paramètre facultatif *disposition* vous permet de passer l'en-tête `content-disposition` de la pièce jointe. Vous pouvez passer l'une des constantes suivantes du thème de constantes "Mail" :
 
-| Constante                   | Value        | Commentaire                                                                                                                                                                                                             |
+| Constante                   | Valeur       | Commentaire                                                                                                                                                                                                             |
 | --------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Définissez la valeur de l'en-tête Content-disposition sur "attachment", ce qui signifie que le fichier joint doit être fourni sous forme de lien dans le message.                                                       |
 | mail disposition inline     | "inline"     | Définissez la valeur de l'en-tête Content-disposition sur "inline", ce qui signifie que la pièce jointe doit être rendue dans le contenu du message, à l'emplacement du "cid". Le rendu dépend du client de messagerie. |
@@ -244,7 +244,7 @@ La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition
 
 #### Description
 
-La fonction `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->renvoie le contenu de l'objet pièce jointe dans un objet `4D.Blob`<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime) command.
+La fonction `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->renvoie le contenu de l'objet pièce jointe dans un objet `4D.Blob`<!-- END REF -->. Vous pouvez utiliser cette méthode avec les pièces jointes reçues par la commande [`MAIL Convert from MIME`](EmailObjectClass.md#mail-convert-from-mime).
 
 
 

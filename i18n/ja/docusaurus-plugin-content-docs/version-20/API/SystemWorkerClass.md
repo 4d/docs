@@ -365,7 +365,7 @@ $output:=$worker.response
 
 #### 説明
 
-`.errors` プロパティは、 <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s) if any<!-- END REF -->。
+`.errors` プロパティは、 <!-- REF #SystemWorkerClass.errors.Summary -->実行エラーの場合、4Dエラーのコレクションを格納します (あれば)<!-- END REF -->。
 
 コレクションの各要素は、以下のプロパティを持つオブジェクトです:
 
@@ -375,7 +375,7 @@ $output:=$worker.response
 | [].message             | text   | 4Dエラーの詳細            |
 | [ ].componentSignature | text   | エラーを返した内部コンポーネントの署名 |
 
-If no error occured, `.errors` is undefined.
+エラーが発生しなかった場合、`.errors` は undefined です。
 
 <!-- END REF -->
 

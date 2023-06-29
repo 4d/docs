@@ -262,7 +262,7 @@ Quiere crear un alias para un archivo en su carpeta principal:
 | v17 R5  | Añadidos       |
 </details>
 
-<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
+<!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
@@ -270,7 +270,9 @@ Quiere crear un alias para un archivo en su carpeta principal:
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -279,7 +281,7 @@ La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archi
 Si el archivo está abierto, se genera un error.
 
 Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
-> **ATENCIÓN**: `.delete( )` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete( )` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
+> **WARNING**: `.delete()` can delete any file on a disk. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` should be used with extreme caution. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 #### Ejemplo
 

@@ -738,7 +738,7 @@ La collection retournée est automatiquement triée. Les valeurs **Null** ne son
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre *option*.
 
-If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
+Si la collection contient des objets, vous pouvez passer le paramètre *propertyPath* pour indiquer la propriété de l'objet dont vous souhaitez obtenir les valeurs distinctes.
 
 
 
@@ -1690,7 +1690,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). The callback is called with the parameter(s) passed in *param* (optional). Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1876,12 +1876,12 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 }
 ```
 
-*   *ascOrDesc* : Entier. Passez une des constantes suivantes du thème **Objets et collections** :
+*   *ascOrDesc* : Integer. Passez une des constantes suivantes du thème **Objets et collections** :
 
-    | Constante     | Type    | Value | Commentaire                                          |
-    | ------------- | ------- | ----- | ---------------------------------------------------- |
-    | ck ascending  | Longint | 0     | Les éléments sont triés par ordre croissant (défaut) |
-    | ck descending | Longint | 1     | Les éléments sont triés par ordre décroissant        |
+    | Constante     | Type    | Valeur | Commentaire                                          |
+    | ------------- | ------- | ------ | ---------------------------------------------------- |
+    | ck ascending  | Longint | 0      | Les éléments sont triés par ordre croissant (défaut) |
+    | ck descending | Longint | 1      | Les éléments sont triés par ordre décroissant        |
 
     Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
