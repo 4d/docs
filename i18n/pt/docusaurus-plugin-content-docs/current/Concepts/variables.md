@@ -100,7 +100,7 @@ var $myFolder : 4D. Folder
 var $myFile : 4D. File
 ```
 
-- To declare object variables of user class:
+- Para declarar as variáveis objeto da classe usuário:
 
 ```4d
 var $myClass : cs. MyClass
