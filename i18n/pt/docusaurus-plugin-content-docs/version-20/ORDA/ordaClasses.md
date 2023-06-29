@@ -139,7 +139,7 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](../assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+A classe `City` fornece uma API:
 
 ```4d  
 // cs. City class Class extends DataClass Function getCityName()
@@ -310,7 +310,7 @@ The *getter* function is mandatory to declare the *attributeName* computed attri
 
 > A computed attribute can use the value of other computed attribute(s). Recursive calls generate errors.
 
-The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
+The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. São permitidos os seguintes tipos de resultados:
 
 - Scalar (text, boolean, date, time, number)
 - Object
@@ -704,8 +704,8 @@ In the Student dataclass, an alias attribute returns all teachers of a student:
 In the Course dataclass:
 
 - an alias attribute returns another label for the "name" attribute
-- an alias attribute returns the teacher name
-- an alias attribute returns the student name
+- um atributo alias devolve o nome do professor
+- um atributo alias devolve o nome do aluno
 
 
 ```4d
@@ -713,7 +713,7 @@ In the Course dataclass:
 
 ```
 
-You can then execute the following queries:
+Em seguida, é possível executar as seguintes consultas:
 
 ```4d
 // Find course named "Archaeology"
