@@ -280,14 +280,13 @@ Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreu
 
 #### Exemple
 
-Vous souhaitez supprimer un fichier spécifique dans un sous-dossier :
+Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de données :
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
  If($tempo.exists)
     $tempo.delete()
     ALERT("User preference file deleted.")
- End if
  End if
 ```
 <!-- END REF -->
