@@ -108,7 +108,7 @@ Project development file, used to designate and launch the project. Esse arquivo
 | ------------- | ----------------------------------------------------------------------------------------- | ------- |
 | table_*n*.4dm | Métodos trigger definidos na database. One trigger file per table (n is the table number) | text    |
 
-**Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
+**Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. É compatível com as ferramentas de controlo da versão.
 
 ### Pasta Trash
 
@@ -156,7 +156,7 @@ This folder contains **user settings files for data** used for database administ
 | Conteúdos           | Descrição                                                                                                                                                                                                            | Formato |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
-| settings.4DSettings | Custom database settings for this data file                                                                                                                                                                          | XML     |
+| settings.4DSettings | Propriedades personalizadas de o banco de dados para este arquivo de dados                                                                                                                                           | XML     |
 | directory.json      | Description of 4D groups, users, and their access rights when the database is run with this data file.                                                                                                               | JSON    |
 
 ### Pasta Logs
