@@ -975,7 +975,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * in *$1.value*: element value to be filtered
 * in *$2*: *param*
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1049,7 +1049,7 @@ The code for ***TypeLookUp*** is:
 | Parâmetro  | Tipo    |    | Descrição                                                                           |
 | ---------- | ------- |:--:| ----------------------------------------------------------------------------------- |
 | startFrom  | Integer | -> | Índice onde inicia a pesquisa                                                       |
-| methodName | Text    | -> | Name of the function to call for the find                                           |
+| methodName | Text    | -> | Nome da função a chamar para a procura                                              |
 | param      | any     | -> | Parameter(s) to pass to *methodName*                                                |
 | Resultados | any     | <- | Primeiro valor encontrado ou Undefined se não encontrado|<!-- END REF -->
 
@@ -1066,7 +1066,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * in *$1.value:* element value to be evaluated
 * em *$2: param*
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1143,7 +1143,7 @@ The code for ***FindCity*** is:
 | Parâmetro  | Tipo    |    | Descrição                                                                              |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------- |
 | startFrom  | Integer | -> | Índice onde inicia a pesquisa                                                          |
-| methodName | Text    | -> | Name of the function to call for the find                                              |
+| methodName | Text    | -> | Nome da função a chamar para a procura                                                 |
 | param      | any     | -> | Parameter(s) to pass to *methodName*                                                   |
 | Resultados | Integer | <- | Indice do primeiro valor encontrado ou -1 se não encontrado|<!-- END REF -->
 
@@ -1160,7 +1160,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * em *$2: param*
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -2424,7 +2424,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *methodName* recebe os parâmetros abaixo:
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
