@@ -23,7 +23,7 @@ The manual restore of backups can be carried out either via the standard Open do
 
 To restore a database manually via a standard dialog box:
 
-1. **Content**: Contents of the backup file. It is not mandatory that a database be open. OR Execute the `RESTORE` command from a 4D method. Uma caixa de diálogo de abertura de arquivos vai aparecer.
+1. **Content**: Contents of the backup file. Não é obrigatório que uma base de dados esteja aberta. OR Execute the `RESTORE` command from a 4D method. Uma caixa de diálogo de abertura de arquivos vai aparecer.
 2. Selecione um arquivo de backup (.4bk) ou um arquivo de backup de histórico (.4bl) para ser restaurado e clique **Abrir**. Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Como padrão 4D restaura os arquivos em uma pasta chamada *Archivename* (sem extensão) que fica do lado do arquivo. Pode exibir a rota:
 
 ![](../assets/en/Backup/backup07.png)
