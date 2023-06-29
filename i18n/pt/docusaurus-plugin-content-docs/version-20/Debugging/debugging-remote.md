@@ -30,7 +30,7 @@ The attached debugger is called whenever a 4D Server encounters:
 Keep in mind that error messages are sent to the attached debugger machine. This means that in the case of a remote debugger, server error messages are displayed on the remote 4D client.
 
 Note que:
-* The code executed in the `On Server Startup Database` Method cannot be debugged remotely. It can only be debugged on the server side
+* The code executed in the `On Server Startup Database` Method cannot be debugged remotely. Só pode ser depurado no lado do servidor
 * If no debugger is attached, the running code is not stopped by debugging commands
 
 
@@ -56,7 +56,7 @@ The debugger is then attached to the remote 4D client:
 * until the end of the user session
 * until you select `Detach Remote Debugger`
 
-To attach the debugger back to the server:
+Para ligar o depurador de novo ao servidor:
 
 1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
 2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
