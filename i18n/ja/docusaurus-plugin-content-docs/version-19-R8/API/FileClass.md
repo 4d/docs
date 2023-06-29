@@ -266,26 +266,29 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 
 <!-- REF #FileClass.delete().Params -->
+
 | 引数 | タイプ |  | 説明                                           |
 | -- | --- |  | -------------------------------------------- |
 |    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 
+
 |
+
 
 
 #### 説明
 
-`.delete()` 関数は、 <!-- REF #FileClass.delete().Summary -->ファイルを削除します<!-- END REF -->。
+`.delete()` 関数は、 <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->。
 
-ファイルが現在開いている場合、エラーが生成されます。
+If the file is currently open, an error is generated.
 
-ファイルがディスク上に存在しない場合、関数は何もしません (エラーは何も生成されません)。
+If the file does not exist on disk, the function does nothing (no error is generated).
 > **WARNING**: `.delete()` can delete any file on a disk. これには、他のアプリケーションで作成されたドキュメントや、アプリケーションそのものも対象になります。 `.delete()` should be used with extreme caution. ファイルの削除は恒久的な操作であり取り消しできません。
 
 #### 例題
 
-データベースフォルダー内の特定のファイルを削除します:
+You want to delete a specific file in the database folder:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -316,9 +319,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 引数  | タイプ    |    | 説明                                                              |
-| --- | ------ | -- | --------------------------------------------------------------- |
-| 戻り値 | Object | <- | .exe/.dll のバージョンリソースや .plist ファイルの中身|<!-- END REF -->
+| 引数  | タイプ    |    | 説明                                                                               |
+| --- | ------ | -- | -------------------------------------------------------------------------------- |
+| 戻り値 | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
 
 |
@@ -326,17 +329,17 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 #### 説明
 
-`.getAppInfo()` 関数は、 <!-- REF #FileClass.getAppInfo().Summary -->**.exe** や **.dll**、**.plist** ファイルの情報をオブジェクトとして返します<!-- END REF -->。
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->。
 
-この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は空のオブジェクトを返します (エラーは生成されません)。
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-**.exe または .dll ファイルの場合に返されるオブジェクト**
+**Returned object with a .exe or .dll file**
 
 > .exe および .dll ファイルの読み取りは Windows上でのみ可能です。
 
-プロパティはすべてテキストです。
+All property values are Text.
 
 | プロパティ            | タイプ  |
 | ---------------- | ---- |
@@ -349,9 +352,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**.plist ファイルの場合に返されるオブジェクト**
+**Returned object with a .plist file**
 
-xml ファイルの中身は解析され、オブジェクトのプロパティとしてキーが返されます。キーの型 (テキスト、ブール、数値) は維持されます。 `.plist dict` は JSON オブジェクトとして返されます。また、`.plist array` は JSON 配列として返されます。
+The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
 
 #### 例題
 
@@ -411,11 +414,11 @@ ALERT($info.Copyright)
 
 
 <!--REF #FileClass.moveTo().Params -->
-| 引数                | タイプ       |    | 説明                                  |
-| ----------------- | --------- | -- | ----------------------------------- |
-| destinationFolder | 4D.Folder | -> | 宛先フォルダー                             |
-| newName           | Text      | -> | 移動先でのファイルの完全な名称                     |
-| 戻り値               | 4D.File   | <- | 移動したファイル|<!-- END REF -->
+| 引数                | タイプ       |    | 説明                                    |
+| ----------------- | --------- | -- | ------------------------------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                               |
+| newName           | Text      | -> | Full name for the moved file          |
+| 戻り値               | 4D.File   | <- | Moved file|<!-- END REF -->
 
 
 |
@@ -423,15 +426,15 @@ ALERT($info.Copyright)
 
 #### 説明
 
-`.moveTo()` 関数は、 <!-- REF #FileClass.moveTo().Summary -->`File` オブジェクトを *destinationFolder* が指定する移行先へと移動すると同時に、*newName* を指定した場合は名称も変更します<!-- END REF -->。
+The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-デフォルトで、移動したファイルは元の名前を維持します。 移動の際にファイル名を変更したい場合、新しい完全な名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
 
 **返されるオブジェクト**
 
-移動後の `File` オブジェクト。
+The moved `File` object.
 
 #### 例題
 
@@ -458,53 +461,53 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| 引数      | タイプ                              |    | 説明                                               |
-| ------- | -------------------------------- | -- | ------------------------------------------------ |
-| mode    | Text                             | -> | 開くモード: "read", "write", "append"                 |
-| options | Object                           | -> | 開くオプション                                          |
-| 戻り値     | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト|<!-- END REF -->
+| 引数      | タイプ                              |    | 説明                                                |
+| ------- | -------------------------------- | -- | ------------------------------------------------- |
+| mode    | Text                             | -> | Opening mode: "read", "write", "append"           |
+| options | Object                           | -> | Opening options                                   |
+| 戻り値     | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.open()` 関数は、 <!-- REF #FileClass.open().Summary -->対象のファイルについて、指定のモード (*mode*) またはオプション (*options*) で新規の [4D.FileHandle](FileHandleClass) オブジェクトを作成し、返します<!-- END REF -->。 [4D.FileHandle](FileHandleClass) クラスの関数とプロパティを使用して、ファイルにコンテンツを書き込んだり読み取ったり、追加したりすることができます。
+The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->。 You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
 
-*mode* (text) 引数として、どのモードで FileHandle を開くかを指定します。
+If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
 
 
-| *mode*   | 説明                                                                                                                                          |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| "read"   | (デフォルト) ファイルから値を読み取るための FileHandle を作成します。 ディスク上にファイルが存在しない場合は、エラーが返されます。 "read" モードの FileHandle は、同じ File オブジェクトに対していくつでも開くことができます。        |
-| "write"  | ファイルに値を書き込むための FileHandle を作成します (書き込みはファイルの先頭から)。 ディスク上にファイルが存在しない場合は、作成されます。 "write" モードの FileHandle は、同じ File オブジェクトに対して 1つのみ開くことができます。  |
-| "append" | ファイルに値を書き込むための FileHandle を作成します (書き込みはファイルの最後から)。 ディスク上にファイルが存在しない場合は、作成されます。 "append" モードの FileHandle は、同じ File オブジェクトに対して 1つのみ開くことができます。 |
+| *mode*   | 説明                                                                                                                                                                                                                               |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
+| "write"  | Creates a file handle to write values to the file (starting at the beginning of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "write" mode on the same File object. |
+| "append" | Creates a file handle to write values to the file (starting at the end of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "append" mode on the same File object.      |
 
 > *mode* の値は、文字の大小を区別します。
 
-*option* (object) 引数を使って、以下のプロパティを通じて FileHandle にさらなるオプションを渡すことができます (これらのプロパティはその後、開かれた [FileHandle オブジェクト](FileHandleClass) から取得できます)。
+If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| *options*         | タイプ             | 説明                                                                     | デフォルト          |
-| ----------------- | --------------- | ---------------------------------------------------------------------- | -------------- |
-| `.mode`           | Text            | 開くモード (上記の *mode* 参照)                                                  | "read"         |
-| `.charset`        | Text            | ファイルの読み取りや書き込みに使用される文字セット。 セットの標準名を使用します (たとえば、"ISO-8859-1" や "UTF-8") | "UTF-8"        |
-| `.breakModeRead`  | Text または Number | ファイルの読み取り時に使用される改行の処理モード (下記参照)                                        | "native" または 1 |
-| `.breakModeWrite` | Text または Number | ファイルの書き込み時に使用される改行の処理モード (下記参照)                                        | "native" または 1 |
+| *options*         | タイプ            | 説明                                                                                                                            | Default       |
+| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
+| `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
+| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
 
-`.breakModeRead` と `.breakModeWrite` は、改行文字に適用する処理を指定します。 以下のいずれかの値を使用できます (テキストまたは数値):
+The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
-| 改行モードの値 (テキスト) | 改行モードの値 (数値/定数)                   | 説明                                                                                                       |
-| -------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| "native"       | 1 (`Document with native format`) | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。 macOS では LF (ラインフィード) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| "crlf"         | 2 (`Document with CRLF`)          | 改行は Windows のデフォルトフォーマットである CRLF (キャリッジリターン＋ラインフィード) へと変換されます。                                           |
-| "cr"           | 3 (`Document with CR`)            | 改行はクラシック Mac OS のデフォルトフォーマットである CR (キャリッジリターン) へと変換されます。                                                 |
-| "lf"           | 4 (`Document with LF`)            | 改行は Unix および macOS のデフォルトフォーマットである LF (ラインフィード) へと変換されます。                                                |
+| Break mode as text | Break mode as number (constant)   | 説明                                                                                                                                                             |
+| ------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"           | 1 (`Document with native format`) | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
+| "crlf"             | 2 (`Document with CRLF`)          | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
+| "cr"               | 3 (`Document with CR`)            | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
+| "lf"               | 4 (`Document with LF`)            | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
 
 > *break mode as text* の値は、文字の大小を区別します。
 
 #### 例題
 
-"ReadMe.txt" ファイルを読み取るための FileHandle を作成します:
+You want to create a file handle for reading the "ReadMe.txt" file:
 
 ```4d
 var $f : 4D.File
@@ -538,28 +541,28 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
-| 引数      | タイプ     |    | 説明                                     |
-| ------- | ------- | -- | -------------------------------------- |
-| newName | Text    | -> | ファイルの新しい完全な名称                          |
-| 戻り値     | 4D.File | <- | 名称変更されたファイル|<!-- END REF -->
+| 引数      | タイプ     |    | 説明                                      |
+| ------- | ------- | -- | --------------------------------------- |
+| newName | Text    | -> | New full name for the file              |
+| 戻り値     | 4D.File | <- | Renamed file|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.rename()` 関数は、 <!-- REF #FileClass.rename().Summary -->ファイル名を *newName* に指定した名称に変更し、名称変更後の `File` オブジェクトを返します<!-- END REF -->。
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->。
 
-*newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-この関数はファイルの完全な名前を編集することに留意が必要です。つまり、*newName* に拡張子を渡さなかった場合、新しいファイル名には拡張子がありません。
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **返されるオブジェクト**
 
-名称変更された `File` オブジェクト。
+The renamed `File` object.
 
 #### 例題
 
-"ReadMe.txt" ファイルを "ReadMe_new.txt" というファイルに名称変更します:
+You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -572,57 +575,57 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容            |
-| ----- | ------------- |
-| v20   | WinIcon をサポート |
-| v19   | 追加            |
+| バージョン | 内容                 |
+| ----- | ------------------ |
+| v20   | Support of WinIcon |
+| v19   | 追加                 |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| 引数   | タイプ    |    | 説明                                                                     |
-| ---- | ------ | -- | ---------------------------------------------------------------------- |
-| info | Object | -> | .exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ|<!-- END REF -->
+| 引数   | タイプ    |    | 説明                                                                                          |
+| ---- | ------ | -- | ------------------------------------------------------------------------------------------- |
+| info | Object | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.setAppInfo()` 関数は、 <!-- REF #FileClass.setAppInfo().Summary -->*info* に渡したプロパティを **.exe** や **.dll**、**.plist** ファイルの情報として書き込みます<!-- END REF -->。
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->。
 
-この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は何もしません (エラーは生成されません)。
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。
 
-**.exe または .dll ファイル用の *info* オブジェクト**
+***info* parameter object with a .exe or .dll file**
 
 > .exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。
 
-*info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| プロパティ            | タイプ  | 説明                                                   |
-| ---------------- | ---- | ---------------------------------------------------- |
-| InternalName     | Text |                                                      |
-| ProductName      | Text |                                                      |
-| CompanyName      | Text |                                                      |
-| LegalCopyright   | Text |                                                      |
-| ProductVersion   | Text |                                                      |
-| FileDescription  | Text |                                                      |
-| FileVersion      | Text |                                                      |
-| OriginalFilename | Text |                                                      |
-| WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
+| プロパティ            | タイプ  | 説明                                                                                    |
+| ---------------- | ---- | ------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                       |
+| ProductName      | Text |                                                                                       |
+| CompanyName      | Text |                                                                                       |
+| LegalCopyright   | Text |                                                                                       |
+| ProductVersion   | Text |                                                                                       |
+| FileDescription  | Text |                                                                                       |
+| FileVersion      | Text |                                                                                       |
+| OriginalFilename | Text |                                                                                       |
+| WinIcon          | Text | Posix path of .ico file. This property applies only to 4D generated executable files. |
 
-`WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
+For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
-`WinIcon` プロパティにおいては、アイコンファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-**.plist ファイル用の *info* オブジェクト**
+***info* parameter object with a .plist file**
 
-*info* オブジェクトに設定された各プロパティは .plist ファイルにキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
 
-*info* に設定されたキーが .plist ファイル内ですでに定義されている場合は、その値が更新され、元の型が維持されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
 
 > 日付型の値を定義するには、Xcode plist エディターのようにミリ秒を除いた ISO UTC 形式の JSONタイムスタンプ文字列 (例: "2003-02-01T01:02:03Z") を使用します。
 
@@ -672,15 +675,15 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| 引数      | タイプ  |    | 説明                                       |
-| ------- | ---- | -- | ---------------------------------------- |
-| content | BLOB | -> | ファイルの新しいコンテンツ|<!-- END REF -->
+| 引数      | タイプ  |    | 説明                                                   |
+| ------- | ---- | -- | ---------------------------------------------------- |
+| content | BLOB | -> | New contents for the file|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.setContent( )` 関数は、 <!-- REF #FileClass.setContent().Summary -->*content* 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 #### 例題
 
@@ -695,10 +698,10 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                               |
-| ------ | ------------------------------------------------ |
-| v19 R3 | 新規プロジェクトのデフォルト: BOMなし、(macOS の場合) EOL として LF を使用 |
-| v17 R5 | 追加                                               |
+| バージョン  | 内容                                                      |
+| ------ | ------------------------------------------------------- |
+| v19 R3 | Default for new projects: no BOM and (macOS) LF for EOL |
+| v17 R5 | 追加                                                      |
 
 </details>
 
@@ -707,12 +710,12 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setText().Params -->
-| 引数          | タイプ     |    | 説明                                 |
-| ----------- | ------- | -- | ---------------------------------- |
-| text        | Text    | -> | ファイルに保存するテキスト                      |
-| charSetName | Text    | -> | 文字セットの名前                           |
-| charSetNum  | Integer | -> | 文字セットの番号                           |
-| breakMode   | Integer | -> | 改行の処理モード<!-- END REF -->
+| 引数          | タイプ     |    | 説明                                                         |
+| ----------- | ------- | -- | ---------------------------------------------------------- |
+| text        | Text    | -> | Text to store in the file                                  |
+| charSetName | Text    | -> | 文字セットの名前                                                   |
+| charSetNum  | Integer | -> | 文字セットの番号                                                   |
+| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
 
 |
@@ -720,30 +723,30 @@ $infoPlistFile.setAppInfo($info)
 
 #### 説明
 
-`.setText()` 関数は、 <!-- REF #FileClass.setText().Summary -->*text* に渡されたテキストをファイルの新しいコンテンツとして書き込みます<!-- END REF -->。
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->。
 
-`File` オブジェクトで参照されているファイルがディスク上に存在しない場合、このメソッドがそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
+If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
-*text* には、ファイルに書き込むテキストを渡します。 テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
+In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-任意で、コンテンツの書き込みに使用する文字セットを渡します。 これには、次の二つの方法があります:
+Optionally, you can designate the character set to be used for writing the contents. これには、次の二つの方法があります:
 
 * *charSetName* に標準の文字セット名を含んだ文字列 ("ISO-8859-1" や "UTF-8" など) を渡します。
 * *charSetNum* に標準の文字セット名の MIBEnum ID (倍長整数) を渡します。
 
 > 4D によってサポートされている文字セットの一覧については、`CONVERT FROM TEXT` コマンドを参照ください。
 
-文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに "-no-bom" 接尾辞 (例: "UTF-8-no-bom") が含まれていない場合、4D は BOM をファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで "UTF-8" の文字セットを BOMなしで使用します。
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
 
-*breakMode* には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 **System Documents** テーマ内にある、以下の定数を使用することができます:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | 定数                            | 値 | 説明                                                                                                       |
 | ----------------------------- | - | -------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0 | 何も処理をしません。                                                                                               |
 | `Document with native format` | 1 | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。 macOS では LF (ラインフィード) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
-| `Document with CRLF`          | 2 | 改行は Windows のデフォルトフォーマットである CRLF (キャリッジリターン＋ラインフィード) へと変換されます。                                           |
-| `Document with CR`            | 3 | 改行はクラシック Mac OS のデフォルトフォーマットである CR (キャリッジリターン) へと変換されます。                                                 |
-| `Document with LF`            | 4 | 改行は Unix および macOS のデフォルトフォーマットである LF (ラインフィード) へと変換されます。                                                |
+| `Document with CRLF`          | 2 | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format              |
+| `Document with CR`            | 3 | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                     |
+| `Document with LF`            | 4 | Line breaks are converted to LF (line feed), the default Unix and macOS format                           |
 
 *breakMode* 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。
 
