@@ -46,7 +46,7 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
 
-You make the Footer area smaller or larger.
+A área de rodapé pode ser aumentada ou diminuída.
 
 You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. São aceites objectos activos.
 
