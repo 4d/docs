@@ -100,11 +100,11 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
 
-The picture can contain from 2 to 6 states.
+A imagem pode conter de 2 a 6 estados.
 
 - 2 estados: false, true
 - 3 states: false, true, rollover,
-- 4 states: false, true, rollover, disabled,
+- 4 estados: false, true, rollover, desativado,
 - 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
 - 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable.
 
@@ -161,7 +161,7 @@ Here are the results using the various options for this property:
 
 | Option       | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| **Direita**  | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Direita**  | O texto é colocado à esquerda do ícone. The contents of the button are aligned to the right.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Esquerda** | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
 | **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                           | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
