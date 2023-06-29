@@ -412,9 +412,9 @@ Quer mover-se e renomear uma pasta:
 
 #### Descrição
 
-A função `.rename()` <!-- REF #FolderClass.rename().Summary -->renomeia a pasta com o nome que passou em *newName* e devolve o objecto renomeado `Folder`<!-- END REF -->.
+The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renomeia a pasta com o nome que passou em *newName* e devolve o objecto renomeado `Folder`<!-- END REF -->.
 
-O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um arquivo com o mesmo nome, é devolvido um erro.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
 **Objeto devolvido**
 
