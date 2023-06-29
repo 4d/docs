@@ -260,9 +260,11 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
+
 |Parameter|Type||Description|
 |---|----|---|---|
 ||||Does not require any parameters|<!-- END REF -->
+
 
 
 #### Description
