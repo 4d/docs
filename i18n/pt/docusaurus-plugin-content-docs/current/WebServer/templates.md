@@ -7,7 +7,7 @@ title: Template pages
 
 When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
 
-For example, if you write in an HTML page:
+Por exemplo, se escrever numa página HTML:
 
 ```html
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
