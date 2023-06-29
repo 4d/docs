@@ -196,7 +196,7 @@ $value:=$clientObj.data.address.city
 
 ## Formulários
 
-You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
+You designate a form by using a string expression that represents its name. O nome de um formulário pode conter até 31 caracteres.
 
 Exemplos:
 
