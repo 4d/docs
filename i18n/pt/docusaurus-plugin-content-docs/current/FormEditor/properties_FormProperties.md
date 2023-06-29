@@ -40,7 +40,7 @@ A CSS file defined at the form level will override default style sheet(s). Para 
 
 ## Pages
 
-Each form has is made of at least two pages:
+Cada formulário é composto por, pelo menos, duas páginas:
 
 - uma página 0 (página de fundo)
 - uma página 1 (página principal)
@@ -79,7 +79,7 @@ Each table in a database generally has at least two table forms. One for listing
 - Formulário de entrada - utilizado para entrada de dados. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
 
 
-Supported types depend on the form category:
+Os tipos suportados dependem da categoria do formulário:
 
 
 | Tipo de formulário                 | Gramática JSON   | Descrição                                                     | Suportado por                            |
