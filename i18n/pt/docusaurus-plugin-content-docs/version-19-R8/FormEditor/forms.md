@@ -79,7 +79,7 @@ Typically, you select the form category when you create the form, but you can ch
 
 ## Páginas formulário
 
-Each form has is made of at least two pages:
+Cada formulário é composto por, pelo menos, duas páginas:
 
 - uma página 1: uma página principal, exibida por defeito
 - uma página 0: uma página de fundo, cujo conteúdo é exibido em todas as outras páginas.
