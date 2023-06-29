@@ -8,7 +8,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Chaque objet est une instance de sa classe. Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([declared](#property) and [computed](#function-get-and-function-set)).
+Une fois qu'une classe utilisateur est définie, vous pouvez **instancier des objets** de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut [`étendre`](#class-extends-classname) (extend) une autre classe, et hérite alors de ses [fonctions](#function) et de ses propriétés ([déclarées](#property) et [calculées](#function-get-and-function-set)).
 
 > Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -158,8 +158,8 @@ Lorsque 4D ne trouve pas de fonction ou de propriété dans une classe, il la re
 Des mots-clés 4D spécifiques peuvent être utilisés dans les définitions de classe :
 
 - `Function <Name>` pour définir les fonctions de classe des objets.
-- `Class constructor` to initialize new objects of the class.
-- `property` to define static properties of the objects with a type.
+- `Class constructor` pour initialiser les nouveaux objets de la classe.
+- `property` pour définir les propriétés statiques des objets d'un type donné.
 - `Function get <Name>` et `Function set <Name>` pour définir les propriétés calculées des objets.
 - `Class extends <ClassName>` pour définir l'héritage.
 
@@ -178,7 +178,7 @@ Dans le fichier de définition de classe, les déclarations de fonction utilisen
 
 :::tip
 
-Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
+Si vous préfixez le nom d'une fonction par un trait de soulignement ("_"), elle ne sera pas proposée par les fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
 :::
 
@@ -299,13 +299,13 @@ Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-A class constructor function accepts optional [parameters](#parameters) and can be used to create and initialize objects of the user class.
+Une fonction class constructor accepte des [paramètres](#parameters) facultatifs et peut être utilisée pour créer et initialiser des objets de la classe utilisateur.
 
-When you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+Lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new) , le constructeur de la classe est appelé avec les paramètres facultatifs passés à la fonction `new()` .
 
-There can only be one constructor function in a class (otherwise an error is returned). A constructor can use the [`Super`](#super) keyword to call the constructor of the super class.
+Il ne peut y avoir qu'une seule fonction de construction dans une classe (sinon une erreur est renvoyée). Un constructeur peut utiliser le mot-clé [`Super`](#super) pour appeler le constructeur de la super-classe.
 
-You can create and type instance properties inside the constructor (see example). Alternatively, if your instance properties' values do not depend on parameters passed to the constructor, you can define them using the [`property`](#property) keyword.
+Vous pouvez créer et saisir des propriétés d'instance dans le constructeur (voir exemple). Alternativement, si les valeurs de vos propriétés d'instance ne dépendent pas des paramètres passés au constructeur, vous pouvez les définir en utilisant le mot-clé [`property`](#property).
 
 
 #### Exemple
@@ -319,11 +319,11 @@ Class Constructor ($name : Text ; $age : Integer)
 ```
 
 ```4d
-// In a project method
-// You can instantiate an object
+// Dans une méthode projet
+// Vous pouvez instancier un objet
 var $o : cs.MyClass
 $o:=cs.MyClass.new("John";42)  
-// $o = {"name":"HelloWorld";"age":42}
+// $o = {"name" : "HelloWorld" ; "age":42}
 ```
 
 
@@ -333,38 +333,38 @@ $o:=cs.MyClass.new("John";42)
 
 `property <propertyName>{; <propertyName2>;...}{ : <propertyType>}`
 
-The `property` keyword can be used to declare a property inside a user class. A class property has a name and a type.
+Le mot-clé `property` permet de déclarer une propriété à l'intérieur d'une classe utilisateur. Une propriété de classe a un nom et un type.
 
-Declaring class properties enhances code editor suggestions, type-ahead features and error detection.
+La déclaration des propriétés des classes améliore les suggestions de l'éditeur de code, les fonctions d'auto-complétion et la détection des erreurs.
 
-Properties are declared for new objects when you call the [`new()`](API/ClassClass.md#new) function, however they are not automatically added to objects (they are only added when they are assigned a value).
+Les propriétés sont déclarées pour les nouveaux objets lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new) , mais elles ne sont pas automatiquement ajoutées aux objets (elles ne sont ajoutées que lorsqu'une valeur leur est assignée).
 
-Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+Les noms des propriétés doivent être conformes aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
 
-The property type can be one of the following supported types:
+Le type de propriété peut être l'un des types suivants :
 
-| propertyType                             | Contenu                                                |
-| ---------------------------------------- | ------------------------------------------------------ |
-| `Text`                                   | Valeur texte                                           |
-| `Date`                                   | Valeur date                                            |
-| `Time`                                   | Valeur Heure                                           |
-| `Boolean`                                | Valeur booléen                                         |
-| `Integer`                                | Valeur entier long                                     |
-| `Real`                                   | Valeur réel                                            |
-| `Pointer`                                | Valeur pointeur                                        |
-| `Picture`                                | Valeur image                                           |
-| `Blob`                                   | Valeur Blob scalaire                                   |
-| `Collection`                             | Valeur collection                                      |
-| `Variant`                                | Valeur variant                                         |
-| `Object`                                 | Objet avec classe par défaut (4D.Object)               |
-| `4D.<className>`                   | Objet du nom de la classe 4D                           |
-| `cs.<className>`                   | Objet du nom de la classe utilisateur                  |
-| `cs.<namespace>.<className>` | Object of the `<namespace>` component class name |
+| propertyType                             | Contenu                                                        |
+| ---------------------------------------- | -------------------------------------------------------------- |
+| `Text`                                   | Valeur texte                                                   |
+| `Date`                                   | Valeur date                                                    |
+| `Time`                                   | Valeur Heure                                                   |
+| `Boolean`                                | Valeur booléen                                                 |
+| `Integer`                                | Valeur entier long                                             |
+| `Real`                                   | Valeur réel                                                    |
+| `Pointer`                                | Valeur pointeur                                                |
+| `Picture`                                | Valeur image                                                   |
+| `Blob`                                   | Valeur Blob scalaire                                           |
+| `Collection`                             | Valeur collection                                              |
+| `Variant`                                | Valeur variant                                                 |
+| `Object`                                 | Objet de classe par défaut (4D.Object)                         |
+| `4D.<className>`                   | Object de la classe 4D className                               |
+| `cs.<className>`                   | Object de la classe utilisateur className                      |
+| `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>` |
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` block.
+Le mot-clé `property` ne peut être utilisé que dans les méthodes de classe et en dehors de tout bloc `Function`.
 
 :::
 
@@ -378,13 +378,13 @@ property name : Text
 property age : Integer
 ```
 
-In a method:
+Dans une méthode :
 
 ```4d
 var $o : cs.MyClass
 $o:=cs.MyClass.new() //$o:{}
 $o.name:="John" //$o:{"name" : "John"}
-$o.age:="Smith"  //error with check syntax
+$o.age:="Smith"  //erreur pour le check syntax
 ```
 
 
