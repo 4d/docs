@@ -151,7 +151,7 @@ Here are the results using the various options for this property:
 
 | Option       | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| **Direita**  | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Direita**  | O texto é colocado à esquerda do ícone. The contents of the button are aligned to the right.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Esquerda** | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
 | **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                           | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
