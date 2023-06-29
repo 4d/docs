@@ -20,7 +20,7 @@ This group of options configures the display of the 4D Structure editor.
 
 This option varies the level of graphic detail in the Structure editor. By default, the quality is set to **High**. You can select Standard quality in order to give priority to display speed. The effect of this setting is mainly perceptible when using the zoom function (see the "Zoom" paragraph in [Structure editor](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html)).
 
-### When a folder is dimmed, its contents are:
+### Quando uma pasta é escurecida, o seu conteúdo é:
 
 This option sets the appearance of dimmed tables in the Structure editor, when you carry out selections by folder (see [Highlight/dim tables by folder](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)). The possible options are Dimmed (a shadow replaces the table image) and Invisible (the table disappears completely).
 
