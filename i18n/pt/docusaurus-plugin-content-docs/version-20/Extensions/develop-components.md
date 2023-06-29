@@ -10,7 +10,7 @@ You can develop 4D components for your own needs and keep them private. You can 
 
 ## Definições
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component.
+- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. Um projeto matricial forma um componente único.
 - **Host Project**: Application project in which a component is installed and used.
 - **Component**: Matrix project that can be compiled or [built](Desktop/building.md#build-component), copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
 
