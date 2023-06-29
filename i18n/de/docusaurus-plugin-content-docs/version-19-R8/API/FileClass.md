@@ -262,7 +262,7 @@ You want to create an alias to a file in your database folder:
 | v17 R5  | Added   |
 </details>
 
-<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
+<!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
@@ -270,7 +270,9 @@ You want to create an alias to a file in your database folder:
 | --------- | --- |  | ---------------------------------------------------------- |
 |           |     |  | Does not require any parameters|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 
@@ -279,7 +281,7 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 If the file is currently open, an error is generated.
 
 If the file does not exist on disk, the function does nothing (no error is generated).
-> **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+> **WARNING**: `.delete()` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete()` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
 
 #### Beispiel
 
@@ -471,6 +473,8 @@ The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns
 
 If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
+
+
 | *mode*   | Beschreibung                                                                                                                                                                                                                     |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
@@ -569,9 +573,10 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 <details><summary>History</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+| Version | Changes            |
+| ------- | ------------------ |
+| v20     | Support of WinIcon |
+| v19     | Added              |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -598,18 +603,21 @@ The function must be used with an existing .exe, .dll or .plist file. The functi
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Property         | Typ  |
-| ---------------- | ---- |
-| InternalName     | Text |
-| ProductName      | Text |
-| CompanyName      | Text |
-| LegalCopyright   | Text |
-| ProductVersion   | Text |
-| FileDescription  | Text |
-| FileVersion      | Text |
-| OriginalFilename | Text |
+| Property         | Typ  | Kommentar                                                                             |
+| ---------------- | ---- | ------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                       |
+| ProductName      | Text |                                                                                       |
+| CompanyName      | Text |                                                                                       |
+| LegalCopyright   | Text |                                                                                       |
+| ProductVersion   | Text |                                                                                       |
+| FileDescription  | Text |                                                                                       |
+| FileVersion      | Text |                                                                                       |
+| OriginalFilename | Text |                                                                                       |
+| WinIcon          | Text | Posix path of .ico file. This property applies only to 4D generated executable files. |
 
-If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
+For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
+
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
 ***info* parameter object with a .plist file**
 
@@ -622,13 +630,15 @@ If a key set in the *info* parameter is already defined in the .plist file, its 
 #### Beispiel
 
 ```4d
-  // set copyright and version of a .exe file (Windows)
-var $exeFile : 4D.File
+  // set copyright, version and icon of a .exe file (Windows)
+var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
+$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021"
+$info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
+$info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
@@ -638,9 +648,10 @@ var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2021" //text
+$info.Copyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
