@@ -262,7 +262,7 @@ Quiere crear un alias para un archivo en su carpeta principal:
 | v17 R5  | Añadidos       |
 </details>
 
-<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
+<!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
@@ -270,7 +270,9 @@ Quiere crear un alias para un archivo en su carpeta principal:
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -279,7 +281,7 @@ La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archi
 Si el archivo está abierto, se genera un error.
 
 Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
-> **ATENCIÓN**: `.delete( )` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete( )` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
+> **WARNING**: `.delete()` can delete any file on a disk. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` should be used with extreme caution. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 #### Ejemplo
 
@@ -471,6 +473,8 @@ La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un n
 
 Si utiliza el parámetro *mode* (text), pase el modo de apertura al gestor del archivo:
 
+
+
 | *mode*   | Descripción                                                                                                                                                                                                                                            |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | "read"   | (Por defecto) Crea un manejador de archivos para leer los valores del archivo. Si el archivo no existe en el disco, se devuelve un error. Puedes abrir tantos manejadores de archivo como quiera en modo "lectura" en el mismo objeto Archivo.         |
@@ -569,9 +573,10 @@ Quieresrenombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Versión | Modificaciones     |
+| ------- | ------------------ |
+| v20     | Soporte de WinIcon |
+| v19     | Añadidos           |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -598,18 +603,21 @@ La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el 
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
-| Propiedad        | Tipo |
-| ---------------- | ---- |
-| InternalName     | Text |
-| ProductName      | Text |
-| CompanyName      | Text |
-| LegalCopyright   | Text |
-| ProductVersion   | Text |
-| FileDescription  | Text |
-| FileVersion      | Text |
-| OriginalFilename | Text |
+| Propiedad        | Tipo | Comentario                                                                                              |
+| ---------------- | ---- | ------------------------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                                         |
+| ProductName      | Text |                                                                                                         |
+| CompanyName      | Text |                                                                                                         |
+| LegalCopyright   | Text |                                                                                                         |
+| ProductVersion   | Text |                                                                                                         |
+| FileDescription  | Text |                                                                                                         |
+| FileVersion      | Text |                                                                                                         |
+| OriginalFilename | Text |                                                                                                         |
+| WinIcon          | Text | Ruta Posix del archivo .ico. Esta propiedad sólo se aplica a los archivos ejecutables generados por 4D. |
 
-Si se pasa un texto null o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
+Para todas las propiedades excepto `WinIcon`, si se pasa un texto nulo o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.
+
+Para la propiedad `WinIcon`, si el archivo del icono no existe o tiene un formato incorrecto, se genera un error.
 
 **Parámetro *info* con un un archivo .plist**
 
@@ -623,24 +631,27 @@ Si una llave definida en el parámetro *info* ya está definida en el archivo .p
 
 ```4d
   // definir el copyright y versión de un archivo .exe (Windows)
-var $exeFile : 4D.File
+var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
+$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021"
+$info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
+$info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // establecer algunas claves en un archivo info.plist (todas las plataformas)
-var $infoPlistFile : 4D. ile
-var $info : Objeto
+  // definir algunas llaves en un archivo info.plist (todas las plataformas)
+var $infoPlistFile : 4D.File
+var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2021" //text
+$info.Copyright:="Copyright 4D 2023" //text
 $info.ProductVersion:=12 //integer
-$info.ShipmentDate:="2021-04-22T06:00:00Z" //timestamp
+$info.ShipmentDate:="2023-04-22T06:00:00Z" //timestamp
+$info.CFBundleIconFile:="myApp.icns" //for macOS
 $infoPlistFile.setAppInfo($info)
 ```
 
