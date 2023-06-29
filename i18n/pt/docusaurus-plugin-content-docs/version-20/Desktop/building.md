@@ -122,7 +122,7 @@ Checking the **Build stand-alone Application** option and clicking **Build** wil
 
 The following elements are required for the build:
 
-* 4D Volume Desktop (the 4D database engine),
+* 4D Volume Desktop (o motor de base de dados 4D),
 * uma [licença apropriada](#licenses)
 
 No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
@@ -389,7 +389,7 @@ Os elementos devem ser instalados:
   * **Server application** - next to the `<ApplicationName>Server`software package.
   * **Client application** - next to the `<ApplicationName>Client`software package.
 
-### Embedding a single-user client application
+### Incorporar uma aplicação cliente usuário único
 
 4D allows you to embed a compiled structure in the Client application. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
 
