@@ -20,7 +20,7 @@ O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para 
 
 A página do Data Explorer está disponível automaticamente quando o web server [the `WebAdmin` for iniciado](webAdmin.md#starting-the-webadmin-web-server).
 
-To connect to the Data Explorer web page:
+Para ligar à página Web do Explorador de dados:
 
 - A partir de uma aplicação 4D (com interface):
   - Se usar a aplicação 4D com interface, selecione o comando **Data Explorer...** :

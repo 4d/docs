@@ -30,7 +30,7 @@ Displaying a new debugger window uses the same configuration as the last window 
 
 The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
 
-* on the remote 4D for code running locally
+* no 4D remoto para o código que está a ser executado localmente
 * on the server machine for code running on the server (for example, a method with the **execute on server** option).
 
 > If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
@@ -162,7 +162,7 @@ This theme is composed of the following subthemes:
 | Interprocesso | List of interprocess variables being used at this point      | Sim                               |
 | Processo      | List of process variables used by the current process        | Sim                               |
 | Local         | List of local variables used by the method being traced      | Sim                               |
-| Parâmetros    | List of parameters received by the method                    | Sim                               |
+| Parâmetros    | Lista dos parâmetros recebidos pelo método                   | Sim                               |
 | Self          | Pointer to the current object, when tracing an Object Method | Não                               |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
@@ -271,7 +271,7 @@ You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/p
 
 ## Custom Watch Pane
 
-The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
+The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Qualquer tipo de expressão pode ser avaliado:
 
 * campo
 * variável

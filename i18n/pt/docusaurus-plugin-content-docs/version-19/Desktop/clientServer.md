@@ -62,7 +62,7 @@ Once a connection to the server has been established, the remote project will be
   - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
   - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 
-### Updating project files on remote machines
+### Atualizar ficheiros de projeto em máquinas remotas
 
 When an updated .4dz version of the project has been produced on 4D Server, connected remote 4D machines must log out and reconnect to 4D Server in order to benefit from the updated version.
 

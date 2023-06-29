@@ -40,12 +40,12 @@ Um objeto/coleção partilhado só pode ser modificado por um processo de cada v
 A atribuição de objectos/colecções partilhados a propriedades ou elementos de outros objectos/colecções partilhados é permitida e cria **grupos partilhados**. Um grupo partilhado é criado automaticamente quando um objeto/coleção partilhado é definido como valor de propriedade ou elemento de outro objeto/coleção partilhado. Os grupos partilhados permitem o aninhamento de objectos e colecções partilhados, mas impõem regras adicionais:
 
 - Calling `Use` on a shared object/collection of a group will lock properties/elements of all shared objects/collections belonging to the same group.
-- A shared object/collection can only belong to one shared group. An error is returned if you try to set an already grouped shared object/collection to a different group.
-- Grouped shared objects/collections cannot be ungrouped. Once included in a shared group, a shared object/collection is linked permanently to that group during the whole session. Even if all references of an object/collection are removed from the parent object/collection, they will remain linked.
+- Um objeto/coleção partilhado só pode pertencer a um grupo partilhado. É devolvido um erro se tentar definir um objeto/coleção partilhado já agrupado para um grupo diferente.
+- Os objetos/coleções partilhados agrupados não podem ser desagrupados. Uma vez incluído num grupo partilhado, um objeto/coleção partilhado está permanentemente ligado a esse grupo durante toda a sessão. Mesmo que todas as referências de um objeto/coleção sejam removidas do objeto/coleção pai, permanecerão linkadas.
 
-Please refer to example 2 for an illustration of shared group rules.
+Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
-**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
+**Nota:** Os grupos partilhados são geridos através de uma propriedade interna denominada *identificador de bloqueio*. For detailed information on this value, please refer to the 4D Developer's guide.
 
 ### Leitura
 Ao chamar a `Use` em um objeto/colección compartido de um grupo se bloquearão as propriedades/elementos de todos os objetos/coleções compartidos que pertençam ao mesmo grupo.
@@ -53,17 +53,17 @@ Ao chamar a `Use` em um objeto/colección compartido de um grupo se bloquearão 
 However, it is necessary to read a shared object/collection within `Use... End use` when several values are linked together and must be read at once, for consistency reasons.
 
 ### Duplicação
-Calling `OB Copy` with a shared object (or with an object containing shared object(s) as properties) is possible, but will return a standard (not shared) object including its contained objects (if any).
+É possível chamar `OB Copy` com um objeto partilhado (ou com um objeto que contenha objetos partilhados como propriedades), mas devolverá um objeto padrão (não partilhado), incluindo os objetos nele contidos (se existirem).
 
-### Storage
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the `Storage` command. This shared object is returned by the `Storage` command.
+### Armazenamento
+**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. This shared object is returned by the `Storage` command. É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
 
-Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
+Note-se que, ao contrário dos objetos partilhados padrão, o objeto `storage` não cria um grupo partilhado quando são adicionados objetos/coleções partilhados como suas propriedades. Esta exceção permite que o objeto **Storage** seja utilizado sem bloquear todos os objectos partilhados ou colecções ligados.
 
-For more information, refer to the `Storage` command description.
+Para mais informações, consulte a descrição do comando `Storage` .
 
 ## Use... End use
-The formal syntax of the `Use... End use` structure is:
+A sintaxe formal da estrutura `Use...End use` é a seguinte:
 
 ```4d
  Use(Shared_object_or_Shared_collection)
@@ -71,23 +71,23 @@ The formal syntax of the `Use... End use` structure is:
  End use
 ```
 
-The `Use... End use` structure defines a sequence of statements that will execute tasks on the *Shared_object_or_Shared_collection* parameter under the protection of an internal semaphore. *Shared_object_or_Shared_collection* can be any valid shared object or shared collection.
+A estrutura `Use...End use` define uma sequência de instruções que executarão tarefas no parâmetro *Shared_object_or_Shared_collection* sob a proteção de um semáforo interno. *Shared_object_or_Shared_collection* pode ser qualquer objeto partilhado ou coleção partilhada válida.
 
-Shared objects and shared collections are designed to allow communication between processes, in particular, **preemptive 4D processes**. They can be passed by reference as parameters from a process to another one. For detailed information on shared objects or shared collections, refer to the **Shared objects and shared collections** page. Surrounding modifications on shared objects or shared collections by the `Use... End use` keywords is mandatory to prevent concurrent access between processes.
+Os objectos partilhados e as colecções partilhadas são concebidos para permitir a comunicação entre processos, em particular, **processos 4D preemptivos**. Podem ser passados por referência como parâmetros de um processo para outro. For detailed information on shared objects or shared collections, refer to the **Shared objects and shared collections** page. É obrigatório rodear as modificações em objectos partilhados ou colecções partilhadas pelas palavras-chave `Use...End use` para impedir o acesso simultâneo entre processos.
 
-- Once the **Use** line is successfully executed, all _Shared_object_or_Shared_collection_ properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
-- The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
+- Quando a linha **Use** é executada com êxito, todas as propriedades/elementos de _Shared_object_or_Shared_collection_ são bloqueados para todos os outros processos com acesso de escrita até que a linha correspondente `End use` seja executada.
+- As declarações __ sequência podem executar qualquer modificação nas propriedades/elementos Shared_object_or_Shared_collection sem risco de acesso simultâneo.
 - If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group (see **Using shared objects or collections**).
-- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use... End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
+- Se outro processo tentar acessar a uma das propriedades _Shared_object_or_Shared_collection_ ou propriedades ligadas enquanto uma sequência **Use...End use** estiver sendo executada, é automaticamente colocado em espera e aguarda até que a sequência atual seja terminada.
 - The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects sharing the same locking identifier.
-- Several **Use... End use** structures can be nested in the 4D code. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed.
+- Várias estruturas **Use...End use** podem ser aninhadas no código 4D. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed.
 
 **Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
 
 
 ## Exemplo 1
 
-You want to launch several processes that perform an inventory task on different products and update the same shared object. The main process instantiates an empty shared object and then, launches the other processes, passing the shared object and the products to count as parameters:
+Se quiser lançar vários processos que executem uma tarefa de inventário em diferentes produtos e atualizem o mesmo objeto partilhado. O processo principal instancia um objeto partilhado vazio e, em seguida, lança os outros processos, passando o objeto partilhado e os produtos a contar como parâmetros:
 
 ```4d
  ARRAY TEXT($_items;0)
@@ -106,7 +106,7 @@ You want to launch several processes that perform an inventory task on different
  End for
 ```
 
-In the "HowMany" method, inventory is done and the $inventory shared object is updated as soon as possible:
+No método "HowMany", o inventário é efetuado e o objeto partilhado $inventory é atualizado o mais rapidamente possível:
 
 ```4d
  C_TEXT($1)
@@ -124,34 +124,34 @@ In the "HowMany" method, inventory is done and the $inventory shared object is u
 
 ## Exemplo 2
 
-The following examples highlight specific rules when handling shared groups:
+Os exemplos seguintes destacam regras específicas para o tratamento de grupos partilhados:
 
 ```4d
- $ob1:=New shared object
- $ob2:=New shared object
+ $ob1:=Novo objeto partilhado
+ $ob2:=Novo objeto partilhado
  Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
+    $ob1.a:=$ob2  //grupo 1 é criado
  End use
 
- $ob3:=New shared object
- $ob4:=New shared object
+ $ob3:=Novo objeto partilhado
+ $ob4:=Novo objeto partilhado
  Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
+    $ob3.a:=$ob4  //grupo 2 é criado
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilize um objeto do grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
+  //$ob4 já pertence a outro grupo
+  //atribuição não é permitida
  End use
 
  Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
+    $ob3.a:=Null //remover qualquer referência a $ob4 do grupo 2
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilizar um objeto do grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
+  //$ob4 ainda pertence ao grupo 2
+  //atribuição não é permitida
  End use
 ```

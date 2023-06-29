@@ -444,7 +444,7 @@ Two commands make it easier to move around within code structures (e.g. `If... E
 - **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
 - **End Of Block**: places the cursor at the end of the current structure, just after the final keyword.
 
-These commands are found in the **Method** menu as well as the context menu of the editor. You can also use the following shortcuts:
+These commands are found in the **Method** menu as well as the context menu of the editor. Também pode utilizar os seguintes atalhos:
 
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.

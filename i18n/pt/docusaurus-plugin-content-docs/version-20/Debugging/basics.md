@@ -46,28 +46,28 @@ Sometimes the piece of code that displays the error may be different than the co
 
 ### Erros de execução
 
-In Application mode, you might obtain errors that you don't see in interpreted mode. Aqui está um exemplo:
+No modo Aplicação, pode obter erros que não se vêem no modo interpretado. Aqui está um exemplo:
 
 ![runtime-error](../assets/en/Debugging/runtimeError.png)
 
-To quickly find the origin of the problem, reopen the interpreted version of the structure file, open the method and go to the corresponding line.
+Para encontrar rapidamente a origem do problema, reabrir a versão interpretada do ficheiro da estrutura, abrir o método e ir para a linha correspondente.
 
 ## Janela de erro sintáctico
 
-The Syntax error window automatically appears when the execution of a method is interrupted. Isto pode acontecer quando:
+A janela erro de sintaxe aparece automaticamente quando a execução de um método é interrompida. Isto pode acontecer quando:
 
-- an error prevents further code execution
-- the method produces a false assertion (see the `ASSERT` command)
+- um erro impede a continuação da execução do código
+- o método produz uma afirmação falsa (ver o comando `ASSERT`)
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
-The upper text area displays a message describing the error. The lower text area shows the line that was executing when the error occurred; the area where the error occurred is highlighted. The expanded Details section contains the "stack" of errors related to the process.
+A área de texto superior apresenta uma mensagem que descreve o erro. A área de texto inferior mostra a linha que estava a ser executada quando ocorreu o erro; a área onde ocorreu o erro é realçada. A secção Detalhes expandidos contém a "pilha" de erros relacionados com o processo.
 
-The syntax error window proposes several options:
+A janela de erro de sintaxe propõe várias opções:
 
-- **Editar**: Pára toda a execução do método. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Use this option when you immediately recognize the mistake and can fix it without further investigation.
+- **Editar**: Pára toda a execução do método. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Utilize esta opção quando reconhecer imediatamente o erro e puder corrigi-lo sem mais investigações.
 
-- **Trace**: Enters Trace/Debugger mode. The [Debugger](debugger.md) window is displayed. If the current line has only executed partially, you may have to click the **Trace** button several times.
+- **Trace**: Entra no modo Trace/Debugger. É apresentada a janela [Debugger](debugger.md). If the current line has only executed partially, you may have to click the **Trace** button several times.
 
 - **Continuar**: A execução continua. The line with the error may be partially executed, depending on where the error is located. Continue with caution: the error may prevent the rest of your method from executing properly. We recommend clicking **Continue** only if the error is in a trivial call (such as `SET WINDOW TITLE`) that does not prevent executing and testing the rest of your code.
 
@@ -90,7 +90,7 @@ The Debugger allows you to step through methods slowly. It displays all the info
 
 Another reason to use the Debugger is for developing code. Sometimes you may write an algorithm that is more complex than usual. Despite all feelings of accomplishment, you can't be totally sure that your coding is 100% correct. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
 
-## Breaks
+## Rupturas
 
 In the debugging process, you may need to skip the tracing of some parts of the code until a certain line. Or, you may want to trace the code when a given expression has a certain value (e.g. "$myVar > 1000"), or every time a specific 4D command is called.
 

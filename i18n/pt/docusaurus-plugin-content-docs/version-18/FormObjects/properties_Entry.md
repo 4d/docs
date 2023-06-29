@@ -24,7 +24,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 ## Menu de contexto
 
-Allows the user access to a standard context menu in the object when the form is executed.
+Permite ao usuário aceder a um menu de contexto padrão no objeto quando o formulário é executado.
 
 For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display#picture-format) using this menu is temporary; it is not saved with the record.
 
@@ -32,7 +32,7 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 
 - **Fonts...**: displays the font system dialog box
 - **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
-- commands for supported style modifications: font, size, style, color and background color. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
+- comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
 
@@ -267,15 +267,15 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis                        |
-| --------------- | ------------- | ---------------------------------------- |
-| shortcutAccel   | boolean       | true, false (Ctrl Windows/Command macOS) |
-| shortcutAlt     | boolean       | true, false                              |
-| shortcutCommand | boolean       | true, false                              |
-| shortcutControl | boolean       | true, false (macOS: Control)             |
-| shortcutShift   | boolean       | true, false                              |
-|                 |               |                                          |
-| shortcutKey     | string        | <ul><li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li></ul>                |
+| Nome            | Tipo de dados | Valores possíveis                          |
+| --------------- | ------------- | ------------------------------------------ |
+| shortcutAccel   | boolean       | true, false (Windows: Ctrl/macOS: Command) |
+| shortcutAlt     | boolean       | true, false                                |
+| shortcutCommand | boolean       | true, false                                |
+| shortcutControl | boolean       | true, false (macOS: Control)               |
+| shortcutShift   | boolean       | true, false                                |
+|                 |               |                                            |
+| shortcutKey     | string        | <ul><li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li></ul>                  |
 
 #### Objectos suportados
 

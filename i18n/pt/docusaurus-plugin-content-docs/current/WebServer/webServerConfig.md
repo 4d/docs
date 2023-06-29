@@ -98,7 +98,7 @@ Domain name or IP address from where external pages are allowed to send data req
 
 #### Métodos HTTP autorizados (propriedade methods)
 
-Accepted HTTP method(s) for the corresponding CORS host. The following HTTP methods are supported:
+Accepted HTTP method(s) for the corresponding CORS host. São suportados os seguintes métodos HTTP:
 
 - GET
 - HEAD
@@ -262,7 +262,7 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 | `WEB SET OPTION`                   | `Web port ID`                                                  |             |
 | Caixa de diálogos de configurações | [Página Configuração/Porta HTTP](../settings/web.md#http-port) |             |
 
-Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
+Número da porta IP (TCP) de escuta para HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
 
 > In macOS, modifying the HTTP port allows you to start the 4D web server without being the root user of the machine (see [macOS HelperTool](#macos-helpertool)).
 
@@ -300,11 +300,11 @@ Listening IP port number for HTTPS connections via TLS. By default, the value is
 
 ## Inactive Process Timeout
 
-| Pode ser definido com              | Nome                                                                                     | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------------------------------- | ----------- |
-| webServer object                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                 |             |
-| `WEB SET OPTION`                   | `Web inactive process timeout`                                                           |             |
-| Caixa de diálogos de configurações | [Options (I) page/Inactive Process Timeout](../settings/web.md#inactive-process-timeout) | Slider      |
+| Pode ser definido com              | Nome                                                                                                 | Comentários |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------- |
+| webServer object                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                             |             |
+| `WEB SET OPTION`                   | `Web inactive process timeout`                                                                       |             |
+| Caixa de diálogos de configurações | [Página Opções (I)/Tempo limite dos processos inativos](../settings/web.md#inactive-process-timeout) | Slider      |
 
 Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
@@ -428,7 +428,7 @@ Possible values: 500 000 to 2 147 483 648.
 | webServer object      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
-Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Número máximo de sessões simultâneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
 Default value: 100 (pass 0 to restore the default value).
 
@@ -480,7 +480,7 @@ Versão da biblioteca OpenSSL utilizada.
 True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forward-secrecy-pfs) section).
 
 
-## Reuse temporary contexts (in remote mode)
+## Reutilizar contextos temporários (em modo remoto)
 
 | Pode ser definido com              | Nome                                                                                             | Comentários |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------ | ----------- |

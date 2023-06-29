@@ -92,7 +92,7 @@ var $o : 4D. Object
 //also equivalent to C_OBJECT($o)
 ```
 
-- To declare object variables of 4D class:
+- Para declarar variáveis objeto da classe 4D:
 
 ```4d
 var $myFolder : 4D. Folder

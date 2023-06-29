@@ -44,19 +44,19 @@ MyLength:=Length("How did I get here?")
 
 どのようなサブルーチンでも値を返すことができます。 各メソッドやクラス関数につき、定義できる戻り値は一つだけです。
 
-Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into or from local variables within the called class function or method. Variable parameters must be [declared](#declaring-parameters) in the called code.
+入力および出力値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内のローカル変数に格納されます。 パラメーターは、呼び出されるコード内で [宣言](#パラメーターの宣言) する必要があります。
 
 
-:::info Compatibility
+:::info 互換性
 
-Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) and declared using compiler directives. Ex: `C_TEXT($1;$2)`. This legacy syntax is still supported but is no longer recommended.
+4Dドキュメントの例題では、引数が自動的に連番のローカル変数 ($0、$1など。これを順番引数と呼びます) にコピーされ、コンパイラー指示子を使って宣言されているのを見かけるかもしれません。 例: `C_TEXT($1;$2)`。 この旧シンタックスは引き続きサポートされていますが、現在は推奨されていません。
 
 :::
 
 
 ## パラメーターの宣言
 
-呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 You usually declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 通常、引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言します。
 
 - クラス関数の場合、引数は `Function` キーワードとともに宣言されます。
 - メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の `#DECLARE` キーワードを使って宣言されます。
@@ -116,7 +116,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). 例:
+矢印と出力変数名を省略して、コロン (:) 記号の後に戻り値のデータ型だけを指定した場合には、戻り値は [return文](#return-expression) を使って管理します。 例:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -243,7 +243,7 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) // 追加の引数が受け渡�
 ```
 
 
-このコマンドは、4番目以降に間接参照されるすべての引数のデータ型がテキストであることを意味します。 The first three parameters can be of any data type. $2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されればテキストと見なされます。
+このコマンドは、4番目以降に間接参照されるすべての引数のデータ型がテキストであることを意味します。 最初の 3つの引数には、いかなるデータ型も使用できます。 しかしながら、$2を間接参照した場合には、間接参照の型宣言の影響を受けます。 このため、たとえば $2 が実数であっても、間接参照されればテキストと見なされます。
 
 > 宣言に使用する数値は変数ではなく、定数でなくてはなりません。
 
@@ -251,22 +251,22 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) // 追加の引数が受け渡�
 
 
 
-## `Compiler` method
+## `Compiler` メソッド
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project.
+[インタープリターモード](interpreted.md) では必須ではないものの、プロジェクトをコンパイルする予定があれば、メソッドや関数の各パラメーターを宣言しておくべきでしょう。
 
-When using the `#DECLARE` keyword or `Function` prototype, parameters are automatically declared. 例:
+`#DECLARE` キーワード、または `Function` プロトタイプを使用すると、パラメーターは自動的に宣言されます。 例:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
     // すべての引数はデータ型とともに宣言されます
 ```
 
-However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
+また、4Dコンパイラーには、特殊なシンタックスを使って専用メソッドにてパラメーターをすべて宣言できる機能があります:
 
-- you can group all local variable parameters for project methods in one or more project method(s)
-- the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
-- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
+- プロジェクトメソッドのパラメーター宣言は、コンパイル用に 1つ以上のプロジェクトメソッドにまとめることができます。
+- これらの専用メソッドの名前は "**Compiler**" で始まります。例: "Compiler_MyParameters"。
+- 各プロジェクトメソッドのパラメーターを専用メソッド内であらかじめ宣言するには、次のように書きます: `C_XXX(methodName;parameter)`。
 
 例:
 
@@ -277,7 +277,7 @@ However, a 4D compiler feature allows you to declare all your parameters in a sp
 
 :::note
 
-This syntax is not executable in interpreted mode.
+このシンタックスはインタープリターモードでは実行されません。
 
 :::
 
@@ -285,7 +285,7 @@ You can create and fill automatically a `Compiler` method containing all you par
 
 パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
+- データベースメソッド - たとえば、`On Web Connection データベースメソッド` は 6つのテキスト型の引数を受け取ります。 たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
 
 ```4d
 // On Web Connection
@@ -318,12 +318,12 @@ You can create and fill automatically a `Compiler` method containing all you par
 間違った型の引数を呼び出すことは、正しい実行を妨げる [エラー](error-handling.md) となります。 たとえば、次のようなメソッドを書いたとします:
 
 ```4d
-// メソッド1
+// method1
 #DECLARE($value : Text)
 ```
 
 ```4d
-// メソッド2
+// method2
 method1(42) // 型間違い。期待されるのはテキスト
 ```
 
@@ -332,7 +332,7 @@ method1(42) // 型間違い。期待されるのはテキスト
 - [コンパイル済みプロジェクト](interpreted.md) では、可能な限りコンパイル時にエラーが生成されます。 それ以外の場合は、メソッドの呼び出し時にエラーが生成されます。
 - インタープリタープロジェクトでは:
     + [名前付きシンタックス](#名前付き引数) (`#DECLARE` または `Function`) を使用して引数が宣言されている場合は、メソッドの呼び出し時にエラーが発生します。
-    + if the parameter was declared using (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
+    + `C_XXX` を使用して宣言されている場合、エラーは発生せず、呼び出されたメソッドは期待される型の空の値を受け取ります。
 
 
 

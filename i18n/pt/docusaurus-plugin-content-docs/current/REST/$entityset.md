@@ -31,7 +31,7 @@ When you retrieve an existing entity set stored in 4D Server's cache, you can al
 
 ### Exemplo
 
-After you create an entity set, the entity set ID is returned along with the data. You call this ID in the following manner:
+After you create an entity set, the entity set ID is returned along with the data. Este ID é chamado da seguinte forma:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
@@ -58,7 +58,7 @@ Here are the logical operators:
 | Operador  | Descrição                                                                                                                                                  |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | AND       | Returns the entities in common to both entity sets                                                                                                         |
-| OU        | Returns the entities in both entity sets                                                                                                                   |
+| OU        | Devolve as entidades em ambos os conjuntos de entidades                                                                                                    |
 | EXCEPT    | Returns the entities in entity set #1 minus those in entity set #2                                                                                         |
 | INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
 > The logical operators are not case-sensitive, so you can write "AND" or "and".

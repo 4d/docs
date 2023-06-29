@@ -130,11 +130,11 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 #### Sintaxe: `<!--#4DCODE codeLines-->`
 
-The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
+La balise `4DCODE` permet d'insérer un bloc de code 4D de plusieurs lignes dans un template.
 
 When a `<!--#4DCODE` sequence is detected that is followed by a space, a CR or a LF character, 4D interprets all the lines of code up to the next `-->` sequence. The code block itself can contain carriage returns, line feeds, or both; it will be interpreted sequentially by 4D.
 
-For example, you can write in a template:
+Por exemplo, pode escrever num modelo:
 
 ```html
 <!--#4DCODE
@@ -275,7 +275,7 @@ The *property* parameter is a text variable automatically filled with the name o
 
 The properties of the object are processed according to their creation order. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.
 
-#### Example with the properties of an object
+#### Exemplo com as propriedades de um objeto
 
 *getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
 
@@ -593,7 +593,7 @@ Exemplo:
 
 In case of an interpretation error, the text "`<!--#4DLOOP expression-->`: description" is inserted instead of the contents located between `<!--#4DLOOP -->` and `<!--#4DENDLOOP-->`.
 
-The following messages can be displayed:
+Podem ser mostradas as seguintes mensagens:
 
 - Unexpected expression type (standard error);
 - Incorrect table name (error on the table name);
@@ -650,7 +650,7 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 - You must use process variables.
 - You can display the content of a picture field. However, it is not possible to display the content of a picture array item.
 - It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
-- You will usually work with Text variables. However, you can also use BLOB variables. You just need to generate BLOBs in `Text without length` mode.
+- You will usually work with Text variables. No entanto, também é possível utilizar variáveis BLOB. You just need to generate BLOBs in `Text without length` mode.
 
 ## Sintaxe alternativa para 4DTEXT, 4DHTML, 4DEVAL
 

@@ -425,7 +425,7 @@ You can use a **log configuration file** to easily manage log recording in a pro
 
 There are several ways to enable the log configuration file, depending on your configuration:
 
-- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
+- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. É imediatamente ativado no servidor.
 - **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). It is enabled at project startup (only on the server in client/server).
 - **a built application**: the file must be named `logConfig.json` and copied in the following folder:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`

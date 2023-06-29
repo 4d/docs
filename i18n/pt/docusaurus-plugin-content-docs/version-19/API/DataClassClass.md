@@ -693,7 +693,7 @@ onde:
 * **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade ou elemento na coleção. Pode ser um **marcador** (ver **Uso de marcadores** mais adiante) ou qualquer expressão que coincida com a propriedad de tipo de dados. Quando usar um valor constante, as regras abaixo devem ser respeitadas:
   * A constante de tipo **texto** pode ser passada com ou sem aspas simples (ver **Uso de aspas** mais abaixo). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   * Valores constantes de tipo **booleano** : **true** ou **false** (diferencia maiuscula de minúscula).
-  * Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto). date type constants: "YYYY-MM-DD" format
+  * Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto). constantes de tipo data: formato "YYYY-MM-DD"
   * **null** constante: usando a palavra chave "null" encontra as propriedades **null** e **undefined**.
   * in case of a query with an IN comparator, value must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, " characters must be escaped with "\").
 * **logicalOperator**: utilizado para unir condições múltiplas na pesquisa (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):

@@ -9,7 +9,7 @@ A spreadsheet formula is an expression that calculates the value of a cell.
 
 ### Introduzir fórmulas
 
-To enter a formula in a 4D View Pro area:
+Para introduzir uma fórmula numa área 4D View Pro:
 
 1.  Select the cell into which you will enter the formula or function.
 2.  Enter = (the equal sign).
@@ -29,7 +29,7 @@ You can also create named formulas that can be called via their name. To do so, 
 
 ### Operadores e Operandos
 
-All formulas have operands and operators:
+Todas as fórmulas têm operandos e operadores:
 
 *   **Operators**: see [Values and operators](#values-and-operators) below.
 *   **Operands** include several categories:

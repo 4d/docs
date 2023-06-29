@@ -71,7 +71,7 @@ The `Documentation` folder architecture is the following:
 
 To view documentation in the Explorer window:
 
-1. Make sure the preview area is displayed.
+1. Certifique-se de que a área de pré-visualização é mostrada.
 2. Select the documented element in the Explorer list.
 3. Click the **Documentation** button located below the preview area.
 
@@ -98,7 +98,7 @@ If a documentation file already exists for the selected element, you can open it
 
 
 
-## Viewing documentation in the code editor
+## Ver a documentação no editor de código
 
 The 4D code editor displays a part of a method's documentation in its help tip.
 

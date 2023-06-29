@@ -44,7 +44,7 @@ The [variable](properties_Object.md#variable-or-expression) bound to a page subf
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-Both objects (time variable and subform container) *have the same variable name*. In this case, when you open the parent form, 4D synchronizes both values automatically. If the variable value is set at several locations, 4D uses the value that was loaded last. It applies the following loading order: 1-Object methods of subform 2-Form method of subform 3-Object methods of parent form 4-Form method of parent form
+Both objects (time variable and subform container) *have the same variable name*. In this case, when you open the parent form, 4D synchronizes both values automatically. Se o valor da variável é definido em vários locais, 4D usa o valor que foi carregado por último. It applies the following loading order: 1-Object methods of subform 2-Form method of subform 3-Object methods of parent form 4-Form method of parent form
 
 When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Two types of interactions can occur: form to subform and vice versa.
 
@@ -134,7 +134,7 @@ For more information, refer to the description of the `CALL SUBFORM CONTAINER` c
 
 #### Comando EXECUTE METHOD IN SUBFORM
 
-The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters. This method can also receive parameters.
+The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters. Este método também pode receber parâmetros.
 
 This mechanism is illustrated in the following diagram:
 

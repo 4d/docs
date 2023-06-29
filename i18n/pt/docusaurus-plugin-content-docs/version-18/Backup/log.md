@@ -54,7 +54,7 @@ Para criar um arquivo de histórico:
 In order for you to be able to create a log file directly, the database must be in one of the following situations:
 
 - O arquivo de dados está em branco,
-- You just performed a backup of the database and no changes have yet been made to the data.
+- Acabou de efetuar uma cópia de segurança da base de dados e ainda não foram feitas quaisquer alterações aos dados.
 
 In all other cases, when you validate the Database Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. Se clicar em **Aceitar**, a cópia de segurança começa imediatamente, e depois se ativa o arquivo de histórico. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the database. This precaution is indispensable because, in order to restore a database after any incidents, you will need a copy of the database into which the operations recorded in the log file will be integrated.
 

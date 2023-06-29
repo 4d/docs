@@ -86,7 +86,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 ## Privilégios
 
-Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
+Os privilégios podem ser associados a sessões. On the web server, you can provide specific access or features depending on the privileges of the session.
 
 You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 

@@ -291,24 +291,24 @@ Refere-se a uma expressão pelo tipo de dados que devolve. Existem vários tipos
 | 4 * 2                    | Number               | Dois números, 4 e 2, são multiplicados utilizando o operador de multiplicação (*). O resultado é o número 8.                                                      |
 | myButton                 | Number               | Esta é uma variável associada a um botão. Devolve o valor atual do botão: 1 se foi clicado, 0 se não foi.                                                         |
 | !1997-01-25!             | Date                 | Esta é uma constante data para a data 1/25/97 (25 de janeiro de 1997).                                                                                            |
-| Current date+ 30         | Date                 | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                     |
-| ?8:05:30?                | Hora                 | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                       |
-| ?2:03:04? + ?1:02:03?    | Hora                 | This expression adds two times together and returns the time 3:05:07.                                                                                             |
+| Current date+ 30         | Date                 | Esta é uma expressão de tipo data que utiliza o comando `Current date` para obter a data de hoje. Adiciona 30 dias à data de hoje e devolve a nova data.          |
+| ?8:05:30?                | Hora                 | Esta é uma constante de tempo que representa 8 horas, 5 minutos e 30 segundos.                                                                                    |
+| ?2:03:04? + ?1:02:03?    | Hora                 | Esta expressão soma dois horas e devolve a hora 3:05:07.                                                                                                          |
 | True                     | Parâmetros           | Este comando devolve o valor Booleano TRUE.                                                                                                                       |
-| 10 # 20                  | Parâmetros           | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.        |
-| “ABC” = “XYZ”            | Parâmetros           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                            |
-| My Picture + 50          | Imagem               | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                              |
+| 10 # 20                  | Parâmetros           | Trata-se de uma comparação lógica entre dois números. O sinal de número (#) significa "não é igual a". Como 10 "não é igual a" 20, a expressão devolve TRUE.      |
+| “ABC” = “XYZ”            | Parâmetros           | Trata-se de uma comparação lógica entre duas cadeias. Não são iguais, pelo que a expressão devolve FALSE.                                                         |
+| My Picture + 50          | Imagem               | Esta expressão pega na imagem em My Picture, move-a 50 píxeis para a direita e devolve a imagem resultante.                                                       |
 | ->[People]Name           | Ponteiro             | Esta expressão devolve um ponteiro ao campo chamado [People]Name.                                                                                                 |
-| Table(1)                 | Ponteiro             | This is a command that returns a pointer to the first table.                                                                                                      |
-| JSON Parse (MyString)    | Object               | This is a command that returns MyString as an object (if proper format)                                                                                           |
-| JSON Parse (MyJSONArray) | Collection           | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                     |
-| Form.pageNumber          | Propriedade objecto  | An object property is an expression that can be of any supported type                                                                                             |
-| Col[5]                   | Elemento de colecção | A collection element is an expression that can be of any supported type                                                                                           |
-| $entitySel[0]            | Entity               | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                          |
+| Table(1)                 | Ponteiro             | Este é um comando que devolve um ponteiro para a primeira tabela.                                                                                                 |
+| JSON Parse (MyString)    | Object               | Este é um comando que devolve MyString como um objeto (se o formato é adequado)                                                                                   |
+| JSON Parse (MyJSONArray) | Collection           | Este é um comando que devolve MyJSONArray como uma coleção (se o formato é adequado)                                                                              |
+| Form.pageNumber          | Propriedade objecto  | Uma propriedade objeto é uma expressão que pode ser de qualquer tipo suportado                                                                                    |
+| Col[5]                   | Elemento de colecção | Um elemento de coleção é uma expressão que pode ser de qualquer tipo suportado                                                                                    |
+| $entitySel[0]            | Entity               | Um elemento de uma seleção de entidade ORDA é uma expressão do tipo entidade. Este tipo de expressão é **não atribuível**                                         |
 
-### Assignable vs non-assignable expressions
+### Expressões atribuíveis vs expressões não atribuíveis
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the left side of an assignation. Por exemplo:
+Uma expressão pode ser simplesmente uma constante literal, como o número 4 ou a string "Hello", ou uma variável como `$myButton`. Também pode utilizar operadores. Por exemplo, 4 + 2 é uma expressão que utiliza o operador de adição para somar dois números e devolver o resultado 6. Em qualquer dos casos, estas expressões são **não atribuíveis**, o que significa que não lhes pode ser atribuído um valor. Em 4D, as expressões podem ser **atribuíveis**. Uma expressão é atribuível quando pode ser utilizada no lado esquerdo de uma atribuição. Por exemplo:
 
 ```4d  
 //$myVar variable is assignable, you can write:  
@@ -316,14 +316,14 @@ $myVar:="Hello" //assign "Hello" to myVar
 //Form.pageNumber is assignable, you can write: Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable: Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+Em geral, as expressões que utilizam um operador não são atribuíveis. Por exemplo, `[Person]FirstName+" "+[Person]LastName` não é atribuível.
 
 
 ## Ponteiro
 
-The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
+A linguagem 4D fornece uma implementação avançada de ponteiros, que permite escrever código poderoso e modular. É possível utilizar ponteiros para referenciar tabelas, campos, variáveis, arrays e elementos de arrays.
 
-A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
+Um ponteiro para um elemento é criado adicionando um símbolo "->" antes do nome do elemento, e pode ser desreferenciado adicionando o símbolo "->" após o nome do ponteiro.
 
 ```4d
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
@@ -331,7 +331,7 @@ MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 
 ## Código em várias linhas
 
-You can write a single statement on several lines by terminating each line of the statement with a trailing backslash `\` character. The 4D language will consider all the lines at once. For example, both the following statements are equivalent:
+Pode escrever uma única expressão em várias linhas, terminando cada linha da expressão com um carácter de barra invertida `\`. A linguagem 4D considera todas as linhas de uma só vez. Por exemplo, as duas declarações seguintes são equivalentes:
 
 ```4d
 $str:=String("hello world!")
@@ -345,18 +345,18 @@ $str:=String("hello"+\
 
 ## Comentários
 
-Os comentários são linhas de código inactivas. These lines are not interpreted by the 4D language and are not executed when the code is called.
+Os comentários são linhas de código inactivas. Estas linhas não são interpretadas pela linguagem 4D e não são executadas quando o código é chamado.
 
 Existem duas formas de criar comentários:
 
 - `//` para comentários de linha única
 - `/*...*/` para comentarios em linha ou multilinha.
 
-Both styles of comments can be used simultaneously.
+Ambos os estilos de comentários podem ser utilizados em simultâneo.
 
 #### Single line comments (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
+Inserir `//` no início de uma linha ou depois de uma declaração para adicionar um comentário de linha única. Exemplo:
 
 ```4d
 //This is a comment For($vCounter;1;100) //Starting loop
@@ -368,7 +368,7 @@ Insert `//` at the beginning of a line or after a statement to add a single line
 
 #### Inline or multiline comments (/**/)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+Envolva o conteúdo com caracteres `/*` ... `*/` para criar comentários em linha ou blocos de comentários de várias linhas. Os blocos de comentários, tanto em linha como em várias linhas, começam com `/*` e terminam com `*/`.
 
 - **Inline comments** can be inserted anywhere in the code. Exemplo:
 

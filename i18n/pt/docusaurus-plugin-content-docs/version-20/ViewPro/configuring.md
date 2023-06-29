@@ -53,7 +53,7 @@ The following form events are available in the Property List for 4D View Pro are
 
 Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:
 
-| Eventos 4D ‘standard’                           | Specific and extended 4D View Pro events              |
+| Eventos 4D ‘standard’                           | Eventos 4D View Pro específicos e alargados           |
 | ----------------------------------------------- | ----------------------------------------------------- |
 | [On Load](../Events/onLoad.md)                  | [On VP Ready](../Events/onVpReady.md)                 |
 | [On Getting Focus](../Events/onGettingFocus.md) | [On Clicked](../Events/onClicked.md)                  |
@@ -128,7 +128,7 @@ For example, when using the [VP SET VALUE](method-list.md#vp-set-value) or [VP S
 
 ![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
-Note that when creating your own format patterns, only the display of the data is modified. The value of the data remains unchanged.
+Note that when creating your own format patterns, only the display of the data is modified. O valor dos dados mantém-se inalterado.
 
 ### Formatos número e texto
 
@@ -143,7 +143,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 | @          | Formatador de texto. Applies the format to all text in the cell                                                                                                                                                            | "\[Red]@" applies the red font color for text values.                                                                     |
 | *          | Repeats the next character to fill the column width.                                                                                                                                                                       | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
 | " "        | Displays the text within the quotes without interpreting it.                                                                                                                                                               | "8%" will display as: 8%                                                                                                   |
-| %          | Displays numbers as a percentage of 100.                                                                                                                                                                                   | 8% será exibido como 0,08                                                                                                  |
+| %          | Mostra os números como uma percentagem de 100.                                                                                                                                                                             | 8% será exibido como 0,08                                                                                                  |
 | \#       | Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                        | #.# mostrará 1.54 como 1.5                                                                                                 |
 | ?          | Digit placeholder that leaves space for extra zeros, but does not display them. Typically used to align numbers by decimal point.                                                                                          | $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                               |
 | \         | Displays the character following it.                                                                                                                                                                                       | #.00\? mostrará 123 como 123.00?                                                                                          |
@@ -248,7 +248,7 @@ Column and row attributes are used to specify the beginning, end, and repetition
 
 | Propriedade       | Tipo          | Descrição                                                                                                  |
 | ----------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
-| columnEnd         | inteiro longo | The last column to print in a cell range. Default value = -1 (all columns)                                 |
+| columnEnd         | inteiro longo | A última coluna a imprimir num intervalo de células. Default value = -1 (all columns)                      |
 | columnStart       | inteiro longo | The first column to print in a cell range. Default value = -1 (all columns)                                |
 | repeatColumnEnd   | inteiro longo | The last column of a range of columns to print on the left of each page. Default value = -1 (all columns)  |
 | repeatColumnStart | inteiro longo | The first column of a range of columns to print on the left of each page. Default value = -1 (all columns) |
@@ -303,15 +303,15 @@ The following special characters allow the automatic addition or formatting of i
 
 Margin attributes are used to specify the 4D View Pro area margins for printing. Expresso em centenas de polegada.
 
-| Propriedade |         | Tipo          | Descrição                                                     |
-| ----------- | ------- | ------------- | ------------------------------------------------------------- |
-| margin      |         | object        | As margens de impressão                                       |
-|             | top     | inteiro longo | Margem superior, em centésimos de polegada. Valor padrão = 75 |
-|             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Valor padrão = 75    |
-|             | left    | inteiro longo | Margem esquerda, em centésimos de polegada. Valor padrão = 70 |
-|             | direita | inteiro longo | Margem direita, em centésimos de polegada. Valor padrão = 70  |
-|             | header  | inteiro longo | Header offset, in hundredths of an inch. Valor padrão = 30    |
-|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30    |
+| Propriedade |         | Tipo          | Descrição                                                             |
+| ----------- | ------- | ------------- | --------------------------------------------------------------------- |
+| margin      |         | object        | As margens de impressão                                               |
+|             | top     | inteiro longo | Margem superior, em centésimos de polegada. Valor padrão = 75         |
+|             | bottom  | inteiro longo | Margem inferior, em centésimos de polegada. Valor padrão = 75         |
+|             | left    | inteiro longo | Margem esquerda, em centésimos de polegada. Valor padrão = 70         |
+|             | direita | inteiro longo | Margem direita, em centésimos de polegada. Valor padrão = 70          |
+|             | header  | inteiro longo | Deslocação do cabeçalho, em centésimos de polegada. Valor padrão = 30 |
+|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30            |
 
 ### Orientação
 
@@ -339,7 +339,7 @@ Os atributos de página são utilizados para especificar as definições gerais 
 
 ### Tamanho de papel
 
-Paper size attributes are used to specify the dimensions or model of paper to use for printing. There are two ways to define paper size:
+Paper size attributes are used to specify the dimensions or model of paper to use for printing. Existem duas formas de definir o tamanho do papel:
 
 * Custom size - height and width attributes
 * Standard size - kind attribute
@@ -389,7 +389,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 |               | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
 |               | \[ ].imageSrc | picture &#124; text* | O texto/imagem da marca de água.                                                                                                                       |
 |               | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
-|               | \[ ].width    | inteiro longo        | The width of the watermark text / image.                                                                                                               |
+|               | \[ ].width    | inteiro longo        | A largura do texto/imagem da marca de água.                                                                                                            |
 |               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
 |               | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                           |
 
@@ -470,10 +470,10 @@ Exemplo:
 
 #### Informações sobre o estilo
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                        |
-| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | text | Defines the name of the style                                                                                                                                                                                                                                                    |
-| parentName  | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet. |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                         |
+| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | text | Defines the name of the style                                                                                                                                                                                                                                                                     |
+| parentName  | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Apenas disponível quando se utiliza uma folha de estilos. |
 
 ## Objeto 4D View Pro
 

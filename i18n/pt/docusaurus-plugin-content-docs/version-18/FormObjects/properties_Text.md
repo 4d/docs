@@ -110,7 +110,7 @@ Three font themes are available:
 
 ### Família de letras
 
-There are two types of font family names:
+Existem dois tipos de nomes de famílias de letras:
 
 - *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
 - *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
@@ -164,9 +164,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                         |
-| ------ | ------------- | ----------------------------------------- |
-| stroke | string        | any css value, "transparent", "automatic" |
+| Nome   | Tipo de dados | Valores possíveis                        |
+| ------ | ------------- | ---------------------------------------- |
+| stroke | string        | um valor css, "transparent", "automatic" |
 
 #### Objectos suportados
 

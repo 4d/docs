@@ -64,15 +64,15 @@ Project development file, used to designate and launch the project. Esse arquivo
 
 #### Pasta DatabaseMethods
 
-| Conteúdos                | Descrição                                                                      | Formato |
-| ------------------------ | ------------------------------------------------------------------------------ | ------- |
-| *databaseMethodName*.4dm | Database methods defined in the database. Um ficheiro por método base de dados | text    |
+| Conteúdos                | Descrição                                                                     | Formato |
+| ------------------------ | ----------------------------------------------------------------------------- | ------- |
+| *databaseMethodName*.4dm | Métodos base definidos na base de dados. Um ficheiro por método base de dados | text    |
 
 #### Pasta Methods
 
-| Conteúdos        | Descrição                                                             | Formato |
-| ---------------- | --------------------------------------------------------------------- | ------- |
-| *methodName*.4dm | Project methods defined in the database. One file per database method | text    |
+| Conteúdos        | Descrição                                                                | Formato |
+| ---------------- | ------------------------------------------------------------------------ | ------- |
+| *methodName*.4dm | Métodos projeto definidos na base de dados. One file per database method | text    |
 
 #### Pasta Classes
 
@@ -104,9 +104,9 @@ Project development file, used to designate and launch the project. Esse arquivo
 
 #### Pasta Triggers
 
-| Conteúdos     | Descrição                                                                                   | Formato |
-| ------------- | ------------------------------------------------------------------------------------------- | ------- |
-| table_*n*.4dm | Trigger methods defined in the database. One trigger file per table (n is the table number) | text    |
+| Conteúdos     | Descrição                                                                                 | Formato |
+| ------------- | ----------------------------------------------------------------------------------------- | ------- |
+| table_*n*.4dm | Métodos trigger definidos na database. One trigger file per table (n is the table number) | text    |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
@@ -191,7 +191,7 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 | Conteúdos                  | Descrição                                              | Formato |
 | -------------------------- | ------------------------------------------------------ | ------- |
 | methodPreferences.json     | Preferências do editor dos métodos do usuário atual    | JSON    |
-| methodWindowPositions.json | Current user window positions for methods              | JSON    |
+| methodWindowPositions.json | Posição da janela do usuário atual para os métodos     | JSON    |
 | formWindowPositions.json   | Posição da janela do usuário atual para os formulários | JSON    |
 | workspace.json             | List of opened windows; on macOS, order of tab windows | JSON    |
 | debuggerCatches.json       | Chamadas aos comandos                                  | JSON    |

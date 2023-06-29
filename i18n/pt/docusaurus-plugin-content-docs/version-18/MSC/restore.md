@@ -12,7 +12,7 @@ You can manually restore an archive of the current database using the **Restore*
 
 > 4D automatic recovery systems restore databases and include data log file when necessary.
 
-The list found in the left part of the window displays any existing backups of the database. You can also click on the Browse... button found just under the area in order to open any other archive file from a different location. It is then added to the list of archives.
+The list found in the left part of the window displays any existing backups of the database. You can also click on the Browse... button found just under the area in order to open any other archive file from a different location. É então acrescentado à lista de arquivos.
 
 When you select a backup in this list, the right part of the window displays the information concerning this particular backup:
 
@@ -38,7 +38,7 @@ When restoring a backup and integrating the current log file in a encrypted data
 - If you restore a backup using an old passphrase, this passphrase will be required at the next database startup.
 - After an encryption, when opening the encrypted data file, a backup is run and a new journal file is created. Thus, it is not possible to restore a .4BK file encrypted with one key and integrate .4BL files encrypted with another key.
 
-The following sequence illustrates the principles of a multi-key backup/restore operation:
+A sequência seguinte ilustra os princípios de uma operação com várias chaves de backup/restauro:
 
 | Operação                                    | Ficheiros gerados                                 | Comentário                                                                                                                                                                                                                   |
 | ------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

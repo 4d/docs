@@ -70,7 +70,7 @@ List of static values to use as labels for the tab control object.
 
 ## Item atual
 
-`Collection or entity selection list boxes`
+`List box de tipo collection ou entity selection`
 
 Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
 > This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
@@ -89,7 +89,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 ## Posição item atual
 
-`Collection or entity selection list boxes`
+`List box de tipo collection ou entity selection`
 
 Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
 
@@ -284,7 +284,7 @@ Coluna da List Box
 
 ## Itens selecionados
 
-`Collection or entity selection list boxes`
+`List box de tipo collection ou entity selection`
 
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.
 
@@ -308,7 +308,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 `Named selection list boxes`
 
-Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica a seleção nomeada a ser utilizada. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
 > Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

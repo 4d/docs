@@ -891,7 +891,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 #### Descrição
 
-The `.isAlterable()` function <!-- REF #EntitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, e False se a seleção de entidade não for alterável.
+A função `.isAlterable()` <!-- REF #EntitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, e False se a seleção de entidade não for alterável.
 
 Para mais informação, consulte a seção [Entity selections compartilháveis ou modificáveis](ORDA/entities.md#shareable-or-alterable-entity-selections).
 

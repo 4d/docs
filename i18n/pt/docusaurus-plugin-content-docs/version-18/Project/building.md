@@ -43,7 +43,7 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
 
-* The start and end of building of targets,
+* O início e o fim da construção de objetivos,
 * The name and full access path of the files generated,
 * The date and time of the build,
 * Any errors that occurred.

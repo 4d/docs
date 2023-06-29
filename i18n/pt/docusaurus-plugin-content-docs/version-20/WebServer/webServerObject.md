@@ -21,7 +21,7 @@ Each 4D web server, including the main application's web server, is exposed as a
 Each web server (host application or component) can be used in its own separate context, including:
 - `On Web Authentication` and `On Web Connection` database method calls
 - o processamento das etiquetas 4D e das chamadas de métodos,
-- web sessions and TLS protocol management.
+- sessões Web e gestão do protocolo TLS.
 
 This allows you to develop independant components and features that come with their own web interfaces.
 

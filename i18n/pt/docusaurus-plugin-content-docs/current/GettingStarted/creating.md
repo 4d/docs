@@ -94,7 +94,7 @@ Files with the `.4DLink` extension are XML files that contain parameters intende
 * Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
 * OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
-XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
+XX represents the version number of the application. Por exemplo, "Favorites v19" para 4D v19.
 
 That folder is divided into two subfolders:
 

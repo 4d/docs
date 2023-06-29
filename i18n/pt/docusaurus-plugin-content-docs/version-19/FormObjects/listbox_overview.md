@@ -236,7 +236,7 @@ Form events on list box or list box column objects may return the following addi
 | horizontalScroll     | inteiro longo | Positive if scroll is towards the right, negative if towards the left |
 | isRowSelected        | boolean       | True se a linha estiver selecionada, senão False                      |
 | newPosition          | inteiro longo | Nova posição da coluna ou linha                                       |
-| newSize              | inteiro longo | New size (in pixels) of the column or row                             |
+| newSize              | inteiro longo | Novo tamanho (em pixéis) da coluna ou linha                           |
 | oldPosition          | inteiro longo | Posição anterior da coluna ou da linha                                |
 | oldSize              | inteiro longo | Previous size (in pixels) of the column or row                        |
 | row                  | inteiro longo | Número da linha                                                       |
@@ -1168,5 +1168,5 @@ Several events can be handled while using an object list box array:
   * numa área combo box
   * in a unit button (switch from value x to value x+1)
   * in a check box (switch between checked/unchecked)
-* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. Este evento é gerido pelo programador.
+* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. Este evento é gerido pelo programador.
