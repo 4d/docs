@@ -170,7 +170,7 @@ Por razões relacionadas com os mecanismos de redesenho de janelas, a inserção
 > Não é compatível sobrepor uma área Web no topo ou debaixo dos outros objetos formulário.
 
 
-### Web Area and Web server conflict (Windows)
+### Conflito entre a área Web e o servidor Web (Windows)
 
 Em Windows, não é recomendado acessar, através de uma área web, o servidor web da aplicação 4D que contenha a área, já que esta configuração poderia provocar um conflito que paralise a aplicação. Com certeza um 4D remoto pode acessar ao servidor web de 4D Server, mas não ao seu próprio servidor web.
 
