@@ -25,7 +25,7 @@ There are different ways to configure the 4D web server settings, depending on t
 | Caixa de diálogos de configurações | [Página de configuração/Utilizar a cache Web 4D](../settings/web.md#use-the-4d-web-cache) |             |
 | Caixa de diálogos de configurações | [Página de configuração/Tamanho da cache das páginas](../settings/web.md#page-cache-size) |             |
 
-Enables and configures the web page cache.
+Ativa e configura a cache da página Web.
 
 The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. If it finds the page, it sends it immediately. If not, 4D loads the page from disk and places it in the cache.
 
@@ -143,7 +143,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | `WEB SET HOME PAGE`                |                                                                                   | Pode ser diferente para cada processo web |
 | Caixa de diálogos de configurações | [Página configuração/Página inicial padrão](../settings/web.md#default-home-page) |                                           |
 
-Designate a default home page for the web server. This page can be static or [semi-dynamic].
+Designate a default home page for the web server. Esta página pode ser estática ou [semi-dynamic].
 
 By default, when the web server is launched for the first time, 4D creates a home page named "index.html" and puts it in the HTML root folder. If you do not modify this configuration, any browser connecting to the web server will obtain the following page:
 
@@ -251,7 +251,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 
 In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
 
-Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
+Passa o tamanho expresso em bytes como valor. By default, the compression threshold is set to 1024 bytes.
 
 
 ## Porta HTTP
@@ -385,7 +385,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 
 | Valor | Nome do formato         | Descrição                                                                                                                                                                                                                |
 | ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | Sem ficheiro de registo | O padrãO                                                                                                                                                                                                                 |
+| 0     | Sem ficheiro de registo | Default                                                                                                                                                                                                                  |
 | 1     | Registo em formato CLF  | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registo em formato DLF  | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
 | 3     | Registo em formato ELF  | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
@@ -418,7 +418,7 @@ Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is 
 
 Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes.
 
-Possible values: 500 000 to 2 147 483 648.
+Valores possíveis: 500 000 a 2 147 483 648.
 
 
 ## Número máximo de sessões
@@ -517,7 +517,7 @@ Por exemplo:
    Disallow: /GIFS/
 ```
 
-*   “User-Agent: *” - all robots are affected.
+*   "User-Agent: *" - todos os robots são afectados.
 *   “Disallow: /4D” - robots are not allowed to access URLs beginning with /4D.
 *   “Disallow: /%23%23” - robots are not allowed to access URLs beginning with /%23%23.
 *   “Disallow: /GIFS/’ - robots are not allowed to access the /GIFS/ folder or its subfolders.
@@ -672,5 +672,5 @@ Two options allow you to set how the keep-alive connections work:
 The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 *   **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection.<p>
-If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. This operation is not visible for the user.</p>
+If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o utilizador.</p>
 
