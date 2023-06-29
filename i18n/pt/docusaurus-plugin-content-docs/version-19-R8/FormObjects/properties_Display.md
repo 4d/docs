@@ -92,7 +92,7 @@ A tabela seguinte apresenta as opções disponíveis:
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
 
-4D provides various default number formats.
+4D fornece vários formatos de números padrão.
 
 ### Marcadores
 
@@ -124,7 +124,7 @@ The numeric display formats (except for scientific notations) are automatically 
 > * in a Real type field, using this key will insert the decimal separator defined in the system,
 > * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
 
-### Decimal points and other display characters
+### Pontos decimais e outros caracteres de visualização
 
 You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
@@ -317,10 +317,10 @@ The table below shows the Time field display formats and gives examples:
 | Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
 | Hour Min                     | HH_MM        |                                                                                                                                                  | 4 horas 30 minutos            |
 | HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 minutos 25 segundos       |
+| MM SS                        | mm_ss        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270:25                        |
+| Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270 minutos 25 segundos       |
 | ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (o padrão) | Standard time format defined in the system                                                                                                       | 04:30:25                      |
+| System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                     | 04:30:25                      |
 | System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                    |
 | System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC               |
 
