@@ -61,22 +61,22 @@ Si `varType` est omis, une variable de type **variant** est créée.
 
 Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 
-| varType                | Contenu                                  |
-| ---------------------- | ---------------------------------------- |
-| `Text`                 | Valeur texte                             |
-| `Date`                 | Valeur date                              |
-| `Time`                 | Valeur Heure                             |
-| `Boolean`              | Valeur booléen                           |
-| `Integer`              | Valeur entier long                       |
-| `Real`                 | Valeur réel                              |
-| `Pointer`              | Valeur pointeur                          |
-| `Picture`              | Valeur image                             |
-| `Blob`                 | Valeur Blob scalaire                     |
-| `Collection`           | Valeur collection                        |
-| `Variant`              | Valeur variant                           |
-| `Object`               | Objet avec classe par défaut (4D.Object) |
-| `4D.<className>` | Objet du nom de la classe 4D             |
-| `cs.<className>` | Objet du nom de la classe utilisateur    |
+| varType                | Contenu                                   |
+| ---------------------- | ----------------------------------------- |
+| `Text`                 | Valeur texte                              |
+| `Date`                 | Valeur date                               |
+| `Time`                 | Valeur Heure                              |
+| `Boolean`              | Valeur booléen                            |
+| `Integer`              | Valeur entier long                        |
+| `Real`                 | Valeur réel                               |
+| `Pointer`              | Valeur pointeur                           |
+| `Picture`              | Valeur image                              |
+| `Blob`                 | Valeur Blob scalaire                      |
+| `Collection`           | Valeur collection                         |
+| `Variant`              | Valeur variant                            |
+| `Object`               | Objet de classe par défaut (4D.Object)    |
+| `4D.<className>` | Object de la classe 4D className          |
+| `cs.<className>` | Object de la classe utilisateur className |
 
 #### Exemples
 
