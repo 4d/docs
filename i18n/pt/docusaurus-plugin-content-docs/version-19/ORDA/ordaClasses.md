@@ -124,7 +124,7 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](../assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+A classe `City` fornece uma API:
 
 ```4d  
 // cs.City class
