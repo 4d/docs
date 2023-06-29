@@ -325,7 +325,7 @@ Une erreur est générée si *entity* et l'entity selection ne sont pas liées �
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //The $employee entity is added to the $employees entity selection
+ $employees.add($employee) //L'entité $employee est ajoutée à l'entity selection $employees
 ```
 
 #### Exemple 2
@@ -1530,7 +1530,7 @@ Par défaut, les attributs sont triés par ordre croissant ("descending" est fal
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
-If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*, la fonction renvoie une entity selection vide.
 
 
 #### Exemple
@@ -1597,10 +1597,10 @@ La formule de *formulaString* ou *formulaObj* est exécutée pour chaque entité
 
 Par défaut, si vous omettez le paramètre *sortOrder*, l'entity selection résultante est triée par ordre croissant. Vous pouvez optionnellement passer l'une des valeurs suivantes dans le paramètre *sortOrder* :
 
-| Constante     | Value | Commentaire                     |
-| ------------- | ----- | ------------------------------- |
-| dk ascending  | 0     | Ordre de tri croissant (défaut) |
-| dk descending | 1     | Ordre de tri décroissant        |
+| Constante     | Valeur | Commentaire                     |
+| ------------- | ------ | ------------------------------- |
+| dk ascending  | 0      | Ordre de tri croissant (défaut) |
+| dk descending | 1      | Ordre de tri décroissant        |
 
 Dans *formulaString* et *formulaObj*, l'entité qui est traitée ainsi que ses attributs sont disponibles via la commande `This` (par exemple, `This.lastName`).
 
