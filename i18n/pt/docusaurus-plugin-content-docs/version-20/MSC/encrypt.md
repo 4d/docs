@@ -29,7 +29,7 @@ This means that the **Encryptable** status for at least one table has been modif
 
 O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
 
-4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo neste momento ou mais tarde. You can also open the encryption log file.
+4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo neste momento ou mais tarde. Também é possível abrir o ficheiro de registo da encriptação.
 
 If the encryption process is successful, the Encrypt page displays Encryption maintenance operations buttons.
 
@@ -62,7 +62,7 @@ This operation is useful when the **Encryptable** attribute has been modified fo
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt8.png)
 
-### Change your passphrase and re-encrypt data
+### Alterar a sua frase-chave e voltar a encriptar os dados
 This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
 
 1. Click on **Change your passphrase and re-encrypt data**.
