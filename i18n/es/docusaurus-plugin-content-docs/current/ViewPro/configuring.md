@@ -257,7 +257,7 @@ Los atributos de columna y línea se utilizan para especificar el inicio, el fin
 | repeatRowEnd      | entero largo | La última línea de un rango de líneas a imprimir en la parte superior de cada página. Valor por defecto = -1 (todas las líneas)  |
 | repeatRowStart    | entero largo | La primera línea de un rango de líneas a imprimir en la parte superior de cada página. Valor por defecto = -1 (todas las líneas) |
 | rowEnd            | entero largo | The last column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                              |
-| rowStart          | entero largo | The first column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                             |
+| rowStart          | entero largo | La primera línea a imprimir en un rango de celdas. Valor por defecto = -1 (todas las líneas)                                     |
 
 ### Encabezados / Pies de página
 
