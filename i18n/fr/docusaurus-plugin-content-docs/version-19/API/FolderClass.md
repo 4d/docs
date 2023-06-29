@@ -90,30 +90,30 @@ Dans le paramètre *path*, passez un chemin de dossier. Vous pouvez utiliser une
 
 Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre *pathType*. Les constantes suivantes sont disponibles :
 
-| Constante        | Value | Commentaire                                                                                               |
-| ---------------- | ----- | --------------------------------------------------------------------------------------------------------- |
-| fk platform path | 1     | Chemin exprimé dans une syntaxe spécifique à la plate-forme (obligatoire en cas de chemin de plate-forme) |
-| fk posix path    | 0     | Chemin exprimé avec la syntaxe POSIX (par défaut)                                                         |
+| Constante        | Valeur | Commentaire                                                                                               |
+| ---------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| fk platform path | 1      | Chemin exprimé dans une syntaxe spécifique à la plate-forme (obligatoire en cas de chemin de plate-forme) |
+| fk posix path    | 0      | Chemin exprimé avec la syntaxe POSIX (par défaut)                                                         |
 
 **Folder ( folderConstant { ; \* } )**
 
 Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier système, à l'aide d'une des constantes suivantes :
 
-| Constante                  | Value | Commentaire                                                                                                                 |
-| -------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
-| fk applications folder     | 116   |                                                                                                                             |
-| fk data folder             | 9     | Filesystem associé : "/DATA"                                                                                                |
-| fk database folder         | 4     | Filesystem associé : "/PACKAGE"                                                                                             |
-| fk desktop folder          | 115   |                                                                                                                             |
-| fk documents folder        | 117   | Dossier Documents de l'utilisateur                                                                                          |
-| fk licenses folder         | 1     | Dossier contenant les fichiers de licence 4D de la machine                                                                  |
-| fk logs folder             | 7     | Filesystem associé : "/LOGS"                                                                                                |
-| fk mobileApps folder       | 10    |                                                                                                                             |
-| fk remote database folder  | 3     | Dossier de la base de données 4D créé sur chaque machine 4D distante                                                        |
-| fk resources folder        | 6     | Filesystem associé : "/RESOURCES"                                                                                           |
-| fk system folder           | 100   |                                                                                                                             |
-| fk user preferences folder | 0     | Dossier 4D qui stocke les fichiers de préférence des utilisateurs dans le répertoire `\<userName>`.                  |
-| fk web root folder         | 8     | Dossier racine web courant du projet : "/PACKAGE/chemin" si son emplacement se trouve dans le package, sinon chemin complet |
+| Constante                  | Valeur | Commentaire                                                                                                                 |
+| -------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| fk applications folder     | 116    |                                                                                                                             |
+| fk data folder             | 9      | Filesystem associé : "/DATA"                                                                                                |
+| fk database folder         | 4      | Filesystem associé : "/PACKAGE"                                                                                             |
+| fk desktop folder          | 115    |                                                                                                                             |
+| fk documents folder        | 117    | Dossier Documents de l'utilisateur                                                                                          |
+| fk licenses folder         | 1      | Dossier contenant les fichiers de licence 4D de la machine                                                                  |
+| fk logs folder             | 7      | Filesystem associé : "/LOGS"                                                                                                |
+| fk mobileApps folder       | 10     |                                                                                                                             |
+| fk remote database folder  | 3      | Dossier de la base de données 4D créé sur chaque machine 4D distante                                                        |
+| fk resources folder        | 6      | Filesystem associé : "/RESOURCES"                                                                                           |
+| fk system folder           | 100    |                                                                                                                             |
+| fk user preferences folder | 0      | Dossier 4D qui stocke les fichiers de préférence des utilisateurs dans le répertoire `\<userName>`.                  |
+| fk web root folder         | 8      | Dossier racine web courant du projet : "/PACKAGE/chemin" si son emplacement se trouve dans le package, sinon chemin complet |
 
 Si la commande est appelée à partir d'un composant, passez le paramètre optionnel * pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre *, un objet null est systématiquement retourné.
 
@@ -228,10 +228,10 @@ Passez le nom de l'alias ou du raccourci à créer dans le paramètre *aliasName
 
 Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez également créer un lien symbolique à l'aide du paramètre *aliasType*. Les constantes suivantes sont disponibles :
 
-| Constante          | Value | Commentaire                               |
-| ------------------ | ----- | ----------------------------------------- |
-| `fk alias link`    | 0     | Lien alias (macOS uniquement)(par défaut) |
-| `fk symbolic link` | 1     | Lien symbolique (macOS uniquement)        |
+| Constante          | Valeur | Commentaire                               |
+| ------------------ | ------ | ----------------------------------------- |
+| `fk alias link`    | 0      | Lien alias (macOS uniquement)(par défaut) |
+| `fk symbolic link` | 1      | Lien symbolique (macOS uniquement)        |
 
 Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre *aliasType* est ignoré).
 
@@ -279,10 +279,10 @@ La fonction `delete()` <!-- REF #FolderClass.delete().Summary -->supprime le dos
 
 Par défaut, pour des raisons de sécurité, si vous omettez le paramètre option, `.delete()` permet uniquement de supprimer les dossiers vides. Si vous souhaitez que la commande supprime des dossiers qui ne sont pas vides, vous devez utiliser le paramètre option avec l'une des constantes suivantes :
 
-| Constante              | Value | Commentaire                                        |
-| ---------------------- | ----- | -------------------------------------------------- |
-| `Delete only if empty` | 0     | Supprime le dossier uniquement s'il est vide       |
-| `Delete with contents` | 1     | Supprime le dossier ainsi que son éventuel contenu |
+| Constante              | Valeur | Commentaire                                        |
+| ---------------------- | ------ | -------------------------------------------------- |
+| `Delete only if empty` | 0      | Supprime le dossier uniquement s'il est vide       |
+| `Delete with contents` | 1      | Supprime le dossier ainsi que son éventuel contenu |
 
 Lorsque la constante `Delete only if empty` est passée ou si vous omettez le paramètre option :
 
