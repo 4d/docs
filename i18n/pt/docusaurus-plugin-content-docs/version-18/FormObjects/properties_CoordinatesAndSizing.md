@@ -40,7 +40,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 ## Fundo
 
-Bottom coordinate of the object in the form.
+Coordenadas inferiores do objeto no formulário.
 
 #### Gramática JSON
 
