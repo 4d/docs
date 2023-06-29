@@ -40,7 +40,7 @@ The page lists all the tables of the database (including invisible tables) as we
 The **Data** page provides information about the available and used storage space in the data file.
 > This page cannot be accessed in maintenance mode
 
-The information is provided in graph form:
+As informações são fornecidas sob a forma de gráficos:
 
 ![](../assets/en/MSC/MSC_Data.png)
 > This page does not take into account any data that may be stored outside of the data file (see "External storage").
