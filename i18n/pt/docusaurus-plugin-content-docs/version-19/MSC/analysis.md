@@ -19,11 +19,11 @@ This information allows you to identify the source and context of each operation
   - Closing of Data File: Closing of an open data file.
   - Creation of a Context: Creation of a process that specifies an execution context.
   - Encerramento de um contexto: encerramento de um processo.
-  - Addition: Creation and storage of a record.
+  - Adição: Criação e armazenamento de um registo.
   - Adding a BLOB: Storage of a BLOB in a BLOB field.
   - Deletion: Deletion of a record.
   - Modificação: modificação de um registo.
-  - Start of Transaction: Transaction started.
+  - Início da transação: A transação foi iniciada.
   - Validation of Transaction: Transaction validated.
   - Cancellation of Transaction: Transaction cancelled.
   - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
