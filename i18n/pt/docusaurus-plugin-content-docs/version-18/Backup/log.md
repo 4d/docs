@@ -49,7 +49,7 @@ Para criar um arquivo de histórico:
 
 3. Clique **Salvar**. O disco e o nome do arquivo de histórico aberto agora estão exibidos na área **Use Log** da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
 
-4. Validate the Database Settings dialog box.
+4. Validar a caixa de diálogo Propriedades da base de dados.
 
 In order for you to be able to create a log file directly, the database must be in one of the following situations:
 
