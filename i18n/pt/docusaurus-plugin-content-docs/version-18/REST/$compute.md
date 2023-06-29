@@ -18,7 +18,7 @@ If you want to pass an Object attribute, you must pass one of its property. Por 
 
  `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
-You can use any of the following keywords:
+Pode utilizar qualquer uma das seguintes palavras-chave:
 
 
 | Palavra-chave | Descrição                                                                                                                                                                             |
