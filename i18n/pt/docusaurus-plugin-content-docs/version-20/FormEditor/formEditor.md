@@ -215,7 +215,7 @@ Para mover um objeto um píxel de cada vez:
 
 Para mover um objeto em passos:
 
-- Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. By default, steps are 20 pixels at a time. You can change this value on the Forms Page of the Preferences.
+- Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. Por padrão, os passos são de 20 pixéis de cada vez. You can change this value on the Forms Page of the Preferences.
 
 ### Agrupamento de objectos
 
@@ -306,7 +306,7 @@ Para distribuir objetos com igual espaçamento:
 
 To distribute objects using the Align and Distribute dialog box:
 
-1. Select the objects you want to distribute.
+1. Seleccione os objectos que pretende distribuir.
 
 2. Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor. Aparece a seguinte caixa de diálogo:![](../assets/en/FormEditor/alignmentAssistant.png)
 
@@ -390,7 +390,7 @@ When you release the mouse button, the objects enclosed or touched by the rectan
 
 #### Excluir um objeto da ordem de entrada
 
-By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
+By default, all objects that support the focusable property are included in the entry order. Para excluir um objeto da ordem de entrada:
 
 1. Selecionar o modo ordem de entrada e, em seguida
 
@@ -586,7 +586,7 @@ Qualquer objecto criado num formulário é colocado na primeira vista ("Vista 1"
 
 ![](../assets/en/FormEditor/createView.png)
 
-There are two ways to add additional views:
+Existem duas formas de adicionar vistas adicionais:
 
 - Click on the **Add a new view** button at the bottom of the View palette:
 
@@ -616,7 +616,7 @@ Para mudar o nome de uma vista, pode utilizar:
 
 You can change the display order of views by dragging/dropping them within the View palette.
 
-Note that the Default view does not change:
+Note-se que a vista padrão não é alterada:
 
 ![](../assets/en/FormEditor/reorderView.png)
 
@@ -645,7 +645,7 @@ Once views are created, you can use the View palette to:
 
 #### Adicionar objectos a vistas
 
-An object can only belong to a single view.
+Um objeto só pode pertencer a uma única vista.
 
 To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
 
