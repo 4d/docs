@@ -17,7 +17,7 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 ### Database method calls
 
-The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. The database method is called with the URL.
+The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
 
 For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
 
@@ -27,14 +27,14 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parâmetros | Tipo |    | Descrição                                    |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| $1         | Text | <- | URL                                          |
-| $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
-| $3         | Text | <- | Endereço IP do cliente Web (browser)         |
-| $4         | Text | <- | Endereço IP do servidor                      |
-| $5         | Text | <- | Nome de usuario                              |
-| $6         | Text | <- | Senha                                        |
+| Parâmetros | Tipo |    | Descrição                                             |
+| ---------- | ---- |:--:| ----------------------------------------------------- |
+| $1         | Text | <- | URL                                                   |
+| $2         | Text | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $3         | Text | <- | Endereço IP do cliente Web (browser)                  |
+| $4         | Text | <- | Endereço IP do servidor                               |
+| $5         | Text | <- | Nome de usuario                                       |
+| $6         | Text | <- | Senha                                                 |
 
 You must declare these parameters as shown below:
 
@@ -101,7 +101,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 | Parâmetros | Tipo |    | Descrição                                    |
 | ---------- | ---- |:--:| -------------------------------------------- |
-| MethodName | Text | -> | Name of the 4D project method to be executed |
+| MethodName | Text | -> | Nome do método de projeto 4D a ser executado |
 | Param      | Text | -> | Text parameter to pass to the project method |
 
 **Usage:** URL or Form action.
