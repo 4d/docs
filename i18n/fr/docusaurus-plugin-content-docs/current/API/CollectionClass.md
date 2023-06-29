@@ -248,10 +248,10 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 
 <!-- REF #collection.at().Params -->
-| Paramètres | Type    |    | Description                                          |
-| ---------- | ------- |:--:| ---------------------------------------------------- |
-| index      | Integer | -> | Index of element to return                           |
-| Résultat   | any     | <- | The element at that index|<!-- END REF -->
+| Paramètres | Type    |    | Description                                      |
+| ---------- | ------- |:--:| ------------------------------------------------ |
+| index      | Integer | -> | Index de l'élément à renvoyer                    |
+| Résultat   | any     | <- | L'élément à cet index|<!-- END REF -->
 
 
 |
@@ -259,12 +259,12 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 #### Description
 
-The `.at()` function <!-- REF #collection.at().Summary -->returns the item at position *index*, allowing for positive and negative integers<!-- END REF -->.
+La fonction `.at()` <!-- REF #collection.at().Summary -->renvoie l'élément à la position *index*, acceptant des nombres entiers positifs et négatifs<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Negative integers count back from the last item in the collection.
+Les nombres entiers négatifs déterminent la position à partir du dernier élément de la collection.
 
-The function returns Undefined if *index* is beyond collection limits.
+La fonction renvoie Undefined si l'*index* dépasse les limites de la collection.
 
 #### Exemple
 
@@ -765,10 +765,10 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
-| ------- | ---------------------------- |
-| v20     | Support of `ck count values` |
-| v16 R6  | Ajout                        |
+| Version | Modifications                        |
+| ------- | ------------------------------------ |
+| v20     | Prise en charge de `ck count values` |
+| v16 R6  | Ajout                                |
 
 </details>
 
@@ -793,14 +793,14 @@ La fonction `.distinct()` <!-- REF #collection.distinct().Summary -->renvoie une
 
 La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas renvoyées.
 
-If the collection contains objects, you can pass the *propertyPath* parameter to indicate the object property whose distinct values you want to get.
+Si la collection contient des objets, vous pouvez passer le paramètre *propertyPath* pour indiquer la propriété de l'objet dont vous souhaitez obtenir les valeurs distinctes.
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+Dans le paramètre *options* , vous pouvez passer une ou une combinaison des constantes suivantes :
 
-| Constante         | Value | Commentaire                                                                                                                                                                                           |
-| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ck diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                 |
-| `ck count values` | 32    | Return the count of elements for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*;"count":*count*}` attributes. |
+| Constante         | Valeur | Commentaire                                                                                                                                                                                                        |
+| ----------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ck diacritical`  | 8      | L'évaluation est sensible à la casse et différencie les caractères accentués. Par défaut si omis, une évaluation non diacritique est effectuée                                                                     |
+| `ck count values` | 32     | Renvoie le nombre d'éléments pour chaque valeur distincte. Lorsque cette option est activée, `.distinct()` renvoie une collection d'objets contenant une paire d'attributs `{"value":*value* ; "count":*count*}` . |
 
 
 #### Exemples
@@ -1407,10 +1407,10 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 #### Description
 
-La fonction `.first()` <!-- REF #collection.first().Summary -->returns the first element of the collection<!-- END REF -->.
+La fonction `.first()` <!-- REF #collection.first().Summary -->renvoie le premier élément de la collection<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-The function returns Undefined if the collection is empty.
+La fonction renvoie Undefined si la collection est vide.
 
 #### Exemple
 
@@ -1421,9 +1421,9 @@ var $first : Variant
 $col:=New collection(10; 20; 30; "hello"; 50)
 $first:=$col.first() // 10
 
-$emptyCol:=New collection() //empty
-// $first:=$emptyCol[0] //would return error
-$first:=$emptyCol.first() // returns Undefined
+$emptyCol:=New collection() //vide
+// $first:=$emptyCol[0] //retournerait une erreur
+$first:=$emptyCol.first() // retourne Undefined
 ```
 <!-- END REF -->
 
@@ -1445,10 +1445,10 @@ $first:=$emptyCol.first() // returns Undefined
 
 
 <!-- REF #collection.flat().Params -->
-| Paramètres | Type       |    | Description                                                           |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------- |
-| depth      | Integer    | -> | How deep a nested collection structure should be flattened. Default=1 |
-| Résultat   | Collection | <- | Flattened collection|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                                        |
+| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------- |
+| depth      | Integer    | -> | La profondeur à laquelle une structure de collection imbriquée doit être mise à plat. Par défaut=1 |
+| Résultat   | Collection | <- | Collection mise à plat|<!-- END REF -->
 
 
 |
@@ -1456,9 +1456,9 @@ $first:=$emptyCol.first() // returns Undefined
 
 #### Description
 
-The `.flat()` function <!-- REF #collection.flat().Summary -->creates a new collection with all sub-collection elements concatenated into it recursively up to the specified *depth*<!-- END REF -->.
+La fonction `.flat()` <!-- REF #collection.flat().Summary -->crée une nouvelle collection dans laquelle tous les éléments de sous-collections sont concaténés de manière récursive jusqu'à la profondeur *depth* spécifiée<!-- END REF -->.
 
-By default, if the *depth* parameter is omitted, only the first level of the nested collection structure will be flattened.
+Par défaut, si le paramètre *depth* est omis, seul le premier niveau de la structure de la collection imbriquée sera mis à plat.
 > Cette fonction ne modifie pas la collection d'origine.
 
 
@@ -1501,20 +1501,20 @@ $col.flat(MAXLONG)
 <!-- REF #collection.flatMap().Syntax -->**.flatMap**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.flatMap**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.flatMap().Params -->
-| Paramètres | Type        |    | Description                                                                               |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objet formule                                                                             |
-| methodName | Text        | -> | Nom de méthode                                                                            |
-| param      | any         | -> | Paramètre(s) à passer à *formula* ou à *methodName*                                       |
-| Résultat   | Collection  | <- | Collection of transformed values and flattened by a depth of 1|<!-- END REF -->
+| Paramètres | Type        |    | Description                                                                                           |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objet formule                                                                                         |
+| methodName | Text        | -> | Nom de méthode                                                                                        |
+| param      | any         | -> | Paramètre(s) à passer à *formula* ou à *methodName*                                                   |
+| Résultat   | Collection  | <- | Collection de valeurs transformées et mises à plat sur une profondeur de 1|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.flatMap()` function <!-- REF #collection.flatMap().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection and flattened by a depth of 1<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*.
+La fonction `.flatMap()` <!-- REF #collection.flatMap().Summary -->crée une nouvelle collection basée sur le résultat de l'appel de la fonction 4D *formula* ou de la méthode *methodName* sur chaque élément de la collection originale et mise à plat sur une profondeur de 1<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*.
 
-This function is identical to a [`map()`](#map) call followed by a [`flat()`](#flat) call of depth 1.
+Cette fonction est identique à un appel à [`map()`](#map) suivi d'un appel à [`flat()`](#flat) de profondeur 1.
 > Cette fonction ne modifie pas la collection d'origine.
 
 
@@ -1523,7 +1523,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). The callback is called with the parameter(s) passed in *param* (optional). Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1565,7 +1565,7 @@ $result:=$col.flatMap(Formula(Split string($1.value; " ")))
 
 #### Exemple 3
 
-You want to compute the percentage of each value in the collection to the total:
+Vous souhaitez calculer le pourcentage de chaque valeur de la collection par rapport au total :
 
 ```4d
 var $c; $c2 : Collection
@@ -1596,11 +1596,11 @@ $c2:=$c.flatMap($f; $c.sum())
 
 
 <!-- REF #collection.includes().Params -->
-| Paramètres | Type       |    | Description                                                              |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------ |
-| toSearch   | expression | -> | Expression à rechercher dans la collection                               |
-| startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                             |
-| Résultat   | Boolean    | <- | True if *toSearch* is found in the collection|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                 |
+| ---------- | ---------- |:--:| --------------------------------------------------------------------------- |
+| toSearch   | expression | -> | Expression à rechercher dans la collection                                  |
+| startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                |
+| Résultat   | Boolean    | <- | True si *toSearch* est trouvé dans la collection|<!-- END REF -->
 
 
 |
@@ -1608,7 +1608,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 #### Description
 
-The `.includes()` function <!-- REF #collection.includes().Summary -->returns True if the *toSearch* expression is found among collection elements, otherwise False<!-- END REF -->.
+La fonction `.includes()` <!-- REF #collection.includes().Summary -->renvoie True si l'expression *toSearch* est trouvée parmi les éléments de la collection, sinon False<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouvez passer :
@@ -1621,8 +1621,8 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans *startFrom*.
 
-*   If *startFrom* >= collection's length, False is returned, which means the collection is not searched.
-*   Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). Note that even if *startFrom* is negative, the collection is still searched from left to right.
+*   Si *startFrom* >= la longueur de la collection, False est retourné, ce qui signifie que la collection n'est pas testée.
+*   Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). Notez que même si *startFrom* est négatif, la recherche est effectuée de la gauche vers la droite.
 *   Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -1896,10 +1896,10 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 
 #### Description
 
-La fonction `.last()` <!-- REF #collection.last().Summary -->returns the last element of the collection<!-- END REF -->.
+La fonction `.last()` <!-- REF #collection.last().Summary -->renvoie le dernier élément de la collection<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-The function returns Undefined if the collection is empty.
+La fonction renvoie Undefined si la collection est vide.
 
 #### Exemple
 
@@ -1910,9 +1910,9 @@ var $last : Variant
 $col:=New collection(10; 20; 30; "hello"; 50)
 $last:=$col.last() // 50
 
-$emptyCol:=New collection() //empty
-// $last:=$emptyCol[$emptyCol.length-1] //returns an error
-$last:=$emptyCol.last() // returns Undefined
+$emptyCol:=New collection() //vide
+// $last:=$emptyCol[$emptyCol.length-1] //retournerait une erreur
+$last:=$emptyCol.last() // retourne Undefined
 
 ```
 
@@ -2059,7 +2059,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). The callback is called with the parameter(s) passed in *param* (optional). Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -2246,12 +2246,12 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 }
 ```
 
-*   *ascOrDesc* : Entier. Passez une des constantes suivantes du thème **Objets et collections** :
+*   *ascOrDesc* : Integer. Passez une des constantes suivantes du thème **Objets et collections** :
 
-    | Constante     | Type    | Value | Commentaire                                          |
-    | ------------- | ------- | ----- | ---------------------------------------------------- |
-    | ck ascending  | Longint | 0     | Les éléments sont triés par ordre croissant (défaut) |
-    | ck descending | Longint | 1     | Les éléments sont triés par ordre décroissant        |
+    | Constante     | Type    | Valeur | Commentaire                                          |
+    | ------------- | ------- | ------ | ---------------------------------------------------- |
+    | ck ascending  | Longint | 0      | Les éléments sont triés par ordre croissant (défaut) |
+    | ck descending | Longint | 1      | Les éléments sont triés par ordre décroissant        |
 
     Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
@@ -2740,7 +2740,7 @@ Elle peut définir le(s) paramètre(s) suivant(s) :
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 ```
 
 
@@ -2803,7 +2803,7 @@ Avec la méthode ***Flatten*** suivante :
 #### Description
 
 
-The `.reduceRight()` function <!-- REF #collection.reduceRight().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from right to left) to reduce it to a single value<!-- END REF -->.
+La fonction `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de droite à gauche) pour la réduire à une seule valeur<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
@@ -2833,7 +2833,7 @@ Elle peut définir le(s) paramètre(s) suivant(s) :
 ```4d
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
-$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+$r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
 ```
 
 
