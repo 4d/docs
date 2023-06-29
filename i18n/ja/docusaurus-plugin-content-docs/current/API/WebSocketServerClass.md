@@ -131,7 +131,7 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 
 *WSSHandler* 引数には、WebSocketサーバーでイベント (主に接続イベント) が発生するたびに呼び出されるユーザークラスのインスタンスを渡します。 このクラスでは、以下のコールバック関数を定義します (`onConnection` のみ必須):
 
-| プロパティ        | タイプ                          | 説明                                  | デフォルト     |
+| プロパティ        | タイプ                          | 説明                                  | Default   |
 | ------------ | ---------------------------- | ----------------------------------- | --------- |
 | onConnection | [Function](FunctionClass.md) | (必須) 新規クライアント接続が開始した時のコールバック (後述参照) | undefined |
 | onOpen       | [Function](FunctionClass.md) | WebSocketサーバーが起動した時のコールバック (後述参照)   | undefined |
@@ -326,7 +326,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 任意の *options* 引数には、以下のプロパティを持つオブジェクトを渡します:
 
-| プロパティ    | タイプ  | 説明                                                                                                                                                                                                                                  | デフォルト     |
+| プロパティ    | タイプ  | 説明                                                                                                                                                                                                                                  | Default   |
 | -------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | path     | Text | WebSocketサーバーにアクセスするためのパス。 パスが定義されていない場合、WebSocketサーバーはすべての接続を管理します                                                                                                                                                                 | undefined |
 | dataType | Text | `connectionHandler.onMessage` で受信するデータ、および [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) 関数で送信するデータの型。 値: "text", "blob", "object"。 "object" の場合: (送信) object を json形式に変換して送信します; (受信) json形式を受信して object に変換します | text      |
