@@ -271,16 +271,16 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 #### Descrição
 
-A função `.delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+A função `.delete()` <!-- REF #FileClass.delete().Summary -->apaga o arquivo<!-- END REF -->.
 
-If the file is currently open, an error is generated.
+Se o arquivo estiver aberto atualmente, um erro é gerado.
 
-If the file does not exist on disk, the function does nothing (no error is generated).
+Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
 > **ATENÇÃO**: `.delete( )` pode apagar qualquer arquivo de um disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete( )` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 #### Exemplo
 
-You want to delete a specific file in the database folder:
+Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -311,25 +311,25 @@ You want to delete a specific file in the database folder:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                        |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| Resultados | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                            |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
+| Resultados | Object | <- | Conteúdo do arquivo de recurso versão .exe/.dll ou .plist|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna os conteúdos de um arquivo de informação **.exe**, **.dll** ou **.plist** como um objeto<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o arquivo não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função devolve um objecto vazio (não é gerado nenhum erro).
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-**Returned object with a .exe or .dll file**
+**Objeto devolvido com um arquivo .exe ou .dll**
 
 > A leitura de um .exe ou .dll só é possível no Windows.
 
-All property values are Text.
+Todos os valores de propriedades são Texto.
 
 | Propriedade  | Tipo |
 | ------------ | ---- |
@@ -338,9 +338,9 @@ All property values are Text.
 
 |CompanyName|Text| |LegalCopyright|Text| |ProductVersion|Text| |FileDescription|Text| |FileVersion|Text| |OriginalFilename|Text|
 
-**Returned object with a .plist file**
+**Objecto devolvido com um arquivo .plist**
 
-The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
+O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é devolvido como um objeto JSON e `.plist array` é devolvido como um array JSON.
 
 #### Exemplo
 
@@ -396,14 +396,14 @@ ALERT($info.
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                             |
-| ----------------- | ---------- | -- | ------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                      |
-| newName           | Text       | -> | Full name for the moved file          |
-| Resultados        | 4D. File   | <- | Moved file|<!-- END REF -->
+| Parâmetro         | Tipo       |    | Descrição                                 |
+| ----------------- | ---------- | -- | ----------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                          |
+| newName           | Text       | -> | Nome completo para o arquivo movido       |
+| Resultados        | 4D. File   | <- | Arquivo movido|<!-- END REF -->
 
 
 |
@@ -411,15 +411,15 @@ ALERT($info.
 
 #### Descrição
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` na *destinationFolder* especificada<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
-The moved `File` object.
+O objecto `File` movido.
 
 #### Exemplo
 
@@ -497,25 +497,25 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                   |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info      | Object | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetro | Tipo   |    | Descrição                                                                                                        |
+| --------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
+| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades de *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o ficheiro não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função não faz nada (não é gerado qualquer erro).
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-***info* parameter object with a .exe or .dll file**
+**Parâmetro *info* com um arquivo .exe ou .dll**
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
+Cada propriedade válida definida no parâmetro objeto *info* está escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo |
 | ---------------- | ---- |
