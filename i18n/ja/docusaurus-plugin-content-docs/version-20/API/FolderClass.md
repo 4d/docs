@@ -409,9 +409,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### 説明
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->フォルダー名を *newName* に指定した名称に変更し、名称変更後の `Folder` オブジェクトを返します<!-- END REF -->。
+`.rename()` 関数は、 <!-- REF #FolderClass.rename().Summary -->フォルダー名を *newName* に指定した名称に変更し、名称変更後の `Folder` オブジェクトを返します<!-- END REF -->。
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+*newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 
 **返されるオブジェクト**
 
