@@ -83,13 +83,30 @@ Authentication on the WebAdmin web server is granted using an access key. For mo
 
 ### Enabling rendering
 
-To enable the [rendering of webforms](#rendering-webforms) that are created in Qodly Studio, the following options must be set.
+To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
 
 * The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated 
 * The [4D web server](webServer.md) must be running
 
-When rendering webforms, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+When rendering webforms in the Web Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
+:::info
+
+See [this page](https://docs.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
+
+:::
+
+Note that when you click on the "Render in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
+
+Keep in mind that the Qodly Web Studio runs through the 4D WebAdmin web server. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out). 
+
+However, webform rendering happens outside 4D Web Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
+
+:::note
+
+Renderer buttons are hidden if the configuration options are not activated.
+
+::: 
 
 ### WebAdmin server and deployment 
 
