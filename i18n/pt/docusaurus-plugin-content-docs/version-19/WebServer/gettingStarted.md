@@ -105,7 +105,7 @@ If we not only want to *display* data, but to *use* it, we can use ORDA and the 
 http://localhost/rest/$catalog
 ```
 
-The web server returns the results in JSON:
+O servidor Web devolve os resultados em JSON:
 
 ```json
 {

@@ -77,7 +77,7 @@ The optimization context is based upon the following implementations:
   * [`dataClass.query()`](../API/DataClassClass.md#query)
   * [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-* Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. the display of the next rows is optimized. The following functions automatically associate the optimization context of the source entity selection to the returned entity selection:
+* Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example, in an [entity selection-based list box](#entity-selection-based-list-box), the learning phase takes place during the display of the first row. a visualização das linhas seguintes é optimizada. The following functions automatically associate the optimization context of the source entity selection to the returned entity selection:
     *   [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
     *   [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
     *   [`entitySelection.or()`](../API/EntitySelectionClass.md#or)

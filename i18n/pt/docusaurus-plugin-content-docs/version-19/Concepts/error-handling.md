@@ -31,7 +31,7 @@ ON ERR CALL("IO_ERRORS") //Installs the error-handling method
 
 To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
 ```4d
-ON ERR CALL("") //gives back control to 4D
+ON ERR CALL("") //devolve o controlo a 4D
 ```
 
 The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. É particularmente útil no contexto dos componentes porque permite mudar temporariamente e depois restaurar o método de captura de erros do banco de dados local:
@@ -64,7 +64,7 @@ Within the custom error method, you have access to several pieces of information
   - `Error line` (entero largo): número de línea do método que provocou o erro
   - `Error formula` (text): fórmula do código 4D (texto bruto) que está na origem do erro.
 
-(*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
+(*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. Ver o manual da linguagem 4D*.
 
 - the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application.
 - o comando `Get call chain` que devolve uma coleção de objetos que descrevem cada passo da string de chamadas a métodos dentro do processo atual.

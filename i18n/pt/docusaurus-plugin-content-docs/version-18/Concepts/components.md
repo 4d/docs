@@ -16,7 +16,7 @@ Creating and installing 4D components is carried out directly from 4D. Basically
 
 The component management mechanisms in 4D require the implementation of the following terms and concepts:
 
-- **Matrix Database**: 4D database used for developing the component. The matrix database is a standard database with no specific attributes. A matrix database forms a single component. The matrix database is intended to be copied, compiled or not, into the Components folder of the 4D application or the database that will be using the component (host database).
+- **Matrix Database**: 4D database used for developing the component. The matrix database is a standard database with no specific attributes. Uma base matriz forma um único componente. The matrix database is intended to be copied, compiled or not, into the Components folder of the 4D application or the database that will be using the component (host database).
 - **Host Database**: Database in which a component is installed and used.
 - **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
 

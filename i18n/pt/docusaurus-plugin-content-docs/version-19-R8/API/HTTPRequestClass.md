@@ -120,7 +120,7 @@ Por exemplo, pode passar as seguintes cordas:
 
 No parâmetro *opções* , passe um objeto que possa conter as seguintes propriedades:
 
-| Propriedade          | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | O padrãO      |
+| Propriedade          | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | Default       |
 | -------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | body                 | Diferente de                                    | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
 | certificatesFolder   | [Folder](FolderClass.md)                        | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                           | indefinido    |
@@ -173,7 +173,7 @@ Um evento `` objecto é devolvido quando uma função de retorno de chamada [](#
 
 Um objecto de autenticação lida com o `options.serverAuthentication` ou `options.proxyAuthentication` propriedade. Pode conter as seguintes propriedades:
 
-| Propriedade | Tipo | Descrição                                                      | O padrãO   |
+| Propriedade | Tipo | Descrição                                                      | Default    |
 | ----------- | ---- | -------------------------------------------------------------- | ---------- |
 | name        | Text | Nome utilizado para autenticação                               | indefinido |
 | senha       | Text | Senha utilizada para autenticação                              | indefinido |

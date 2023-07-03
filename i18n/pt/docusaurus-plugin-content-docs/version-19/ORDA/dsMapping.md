@@ -27,7 +27,7 @@ The following rules are applied for any conversions:
 
 > ORDA mapping does not take into account:  
 > 
-> * the "Invisible" option for tables or fields,
+> * a opção "Invisível" para tabelas ou campos,
 > * the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
 > * the "Manual" or "Automatic" property of relations.
 
@@ -44,7 +44,7 @@ This option must be selected at the 4D structure level for each table and each f
 Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificações incluem:
 
 * adding or removing a table, a field, or a relation
-* renaming of a table, a field, or a relation
+* renomeação de uma tabela, um campo ou uma relação
 * changing a core property of a field (type, unique, index, autoincrement, null value support)
 
 When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.

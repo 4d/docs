@@ -38,7 +38,7 @@ $mylist:=New list
 Each representation of the list has its own specific characteristics and shares common characteristics with all the other representations. The following characteristics are specific to each representation of the list:
 
 - A selecção,
-- The expanded/collapsed state of its items,
+- O estado expandido/recolhido dos seus itens,
 - The position of the scrolling cursor.
 
 The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately. Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example `Count list items` (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
@@ -99,7 +99,7 @@ It is possible to modify the appearance of a hierarchical list form objects usin
 
 Certain properties of hierarchical lists (for example, the **Enterable** attribute or the color) can be set in different ways: in the form properties, via a command of the “Object Properties” theme or via a command of the “Hierarchical Lists” theme. When all three of these means are used to set list properties, the following order of priority is applied:
 
-1. Commands of the “Hierarchical Lists” theme
+1. Comandos do tema "Listas hierárquicas"
 2. Generic object property commands
 3. Propriedade formulário
 
@@ -135,7 +135,7 @@ Here are a few tips for using reference numbers:
 
 > If you use Bitwise Operators, you can also use item reference numbers for storing information that can be put into a Longint, i.e. 2 Integers, 4-byte values or, yet again, 32 Booleans.
 
-### When do you need unique reference numbers?
+### Quando é que são necessários números de referência únicos?
 
 In most cases, when using hierarchical lists for user interface purposes and when only dealing with the selected item (the one that was clicked or dragged), you will not need to use item reference numbers at all. Using `Selected list items` and `GET LIST ITEM` you have all you need to deal with the currently selected item. In addition, commands such as `INSERT IN LIST` and `DELETE FROM LIST` allow you to manipulate the list “relatively” with respect to the selected item.
 

@@ -14,7 +14,7 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 > Connecting to a remote projet from the **same machine as 4D Server** allows modifying the project files. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
 
-## Opening a merged client/server application
+## Abrir uma aplicação cliente/servidor fundida
 
 A merged client/server application is customized and its starting is simplified:
 
@@ -27,7 +27,7 @@ These principles are detailed in the [Build Application](building.md#what-is-a-c
 
 A primeira vez que se liga a um projecto 4D Server através de um 4D remoto, normalmente utilizará o diálogo de ligação padrão. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file.
 
-To connect remotely to a 4D Server project:
+Para conectar remotamente a um projeto 4D Server:
 
 1. Faça uma das seguintes opções:
    - Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue

@@ -29,9 +29,9 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados                       | Valores possíveis                          |
-| ------------ | ----------------------------------- | ------------------------------------------ |
-| defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
+| Nome         | Tipo de dados                       | Valores possíveis                                |
+| ------------ | ----------------------------------- | ------------------------------------------------ |
+| defaultValue | string, number, date, time, boolean | Qualquer valor e/ou um carimbo: "#D", "#H", "#N" |
 
 #### Objectos suportados
 

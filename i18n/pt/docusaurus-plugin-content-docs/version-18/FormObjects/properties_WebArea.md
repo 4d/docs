@@ -86,7 +86,7 @@ This option allows choosing between two rendering engines for the Web area, depe
 
 Note that the Blink engine has the following limitations:
     *   [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html): using this command requires that at least one page is already loaded in the area (through a call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or an assignment to the URL variable associated to the area).
-    *   Execution of JavaScript is always enabled; execution of Java applets and plug-ins is always disabled. These settings cannot be modified in Blink. The following selectors of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) and [WA GET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-GET-PREFERENCE.301-5232945.en.html) commands are ignored:
+    *   Execution of JavaScript is always enabled; execution of Java applets and plug-ins is always disabled. Esses parâmetros não podem ser alterados no Blink. The following selectors of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) and [WA GET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-GET-PREFERENCE.301-5232945.en.html) commands are ignored:
         *   `WA enable Java applets`
         *   `WA enable JavaScript`
         *   `WA enable plugins`

@@ -33,7 +33,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 
 ### Área de edição
 
-This is where you write and edit your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
+É aqui que escreve e edita o seu código. The editor automatically indents code text and colors the different syntax elements for clear code structure.
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
@@ -107,7 +107,7 @@ You can save the lists set in the Code Editor window in the form of a template. 
 
 The following parameters are stored in the template:
 
-- Relative size of the editing and list areas
+- Tamanho relativo das áreas de edição e de lista
 - Número de listas
 - Localização e conteúdo de cada lista
 - Relative width of each list
@@ -509,7 +509,7 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 ## Dicas de ajuda
 
-The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
+The Code Editor provides various contextual information using help tips. Aparecem quando se passa o rato por cima de um objeto.
 
 :::tip
 

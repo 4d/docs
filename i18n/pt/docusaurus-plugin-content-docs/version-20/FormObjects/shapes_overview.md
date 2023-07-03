@@ -5,7 +5,7 @@ title: Formas
 
 Shapes are [static objects](formObjects_overview.md#active-and-static-objects) that can be added to 4D forms.
 
-4D forms support the following basic shapes:
+As formas 4D suportam as seguintes formas básicas:
 
 - retângulos
 - linhas

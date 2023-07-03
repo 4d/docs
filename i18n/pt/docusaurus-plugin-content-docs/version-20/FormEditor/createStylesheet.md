@@ -207,7 +207,7 @@ Expressões de funcionalidades multimédia disponíveis:
 * **light**<br/>For using a light scheme
 * **dark**<br/>For using a dark scheme
 
-> Color schemes are only supported on macOS.
+> Os esquemas de cores são suportados apenas no macOS.
 
 ##### Exemplo
 

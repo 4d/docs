@@ -16,7 +16,7 @@ A custom application must contain at least one menu bar with one menu. By defaul
 
 This allows the user to access the Application environment as soon as the database is created. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
 
-The default menu bar includes three menus:
+A barra de menus predefinida inclui três menus:
 
 - **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
 - **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.

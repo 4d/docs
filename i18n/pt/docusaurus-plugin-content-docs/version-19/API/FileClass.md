@@ -313,13 +313,13 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 <!--REF #FileClass.getAppInfo().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                                                            |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
-| Resultados | Object | <- | Conteúdo do recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
+| Resultados | Object | <- | Conteúdo do arquivo de recurso versão .exe/.dll ou .plist|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna os conteúdos de um arquivo **.exe**, **.dll** ou **.plist** como um objeto.<!-- END REF -->.
+A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna os conteúdos de um arquivo de informação **.exe**, **.dll** ou **.plist** como um objeto<!-- END REF -->.
 
 A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o arquivo não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função devolve um objecto vazio (não é gerado nenhum erro).
 
@@ -329,7 +329,7 @@ A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se 
 
 > A leitura de um .exe ou .dll só é possível no Windows.
 
-Todos os valores de propriedade são Texto.
+Todos os valores de propriedades são Texto.
 
 | Propriedade  | Tipo |
 | ------------ | ---- |
@@ -340,7 +340,7 @@ Todos os valores de propriedade são Texto.
 
 **Objecto devolvido com um arquivo .plist**
 
-O conteúdo do arquivo xml é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é devolvido como um objeto JSON e `.plist array` é devolvido como um JSON array.
+O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é devolvido como um objeto JSON e `.plist array` é devolvido como um array JSON.
 
 #### Exemplo
 
@@ -411,11 +411,11 @@ ALERT($info.
 
 #### Descrição
 
-A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o arquivo `` para o objeto especificado *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` na *destinationFolder* especificada<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-Como padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName* . O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Como padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
@@ -450,32 +450,32 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->|<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                    |
-| ---------- | -------- | -- | -------------------------------------------- |
-| newName    | Text     | -> | Novo nome completo para o arquivo            |
-| Resultados | 4D. File | <- | Renomeado arquivo|<!-- END REF -->
+| Parâmetro  | Tipo     |    | Descrição                               |
+| ---------- | -------- | -- | --------------------------------------- |
+| newName    | Text     | -> | New full name for the file              |
+| Resultados | 4D. File | <- | Renamed file|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o arquivo com o nome que passou em *newName* e devolve o objecto renomeado `File`<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
-O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um arquivo com o mesmo nome, é devolvido um erro.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-Note que a função modifica o nome completo do ficheiro, isto é, se não passar uma extensão em *newName*, o ficheiro terá um nome sem uma extensão.
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **Objeto devolvido**
 
-O objecto `File` renomeado.
+The renamed `File` object.
 
 #### Exemplo
 
-Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
+You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -497,25 +497,25 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                              |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------------------ |
-| info      | Object | -> | Propriedades para escrever no recurso da versão .exe/.dll ou arquivo .plist|<!-- END REF -->
+| Parâmetro | Tipo   |    | Descrição                                                                                                        |
+| --------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
+| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
+A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades de *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente.
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o ficheiro não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função não faz nada (não é gerado qualquer erro).
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-***info* objecto de parâmetro com um arquivo .exe ou .dll**
+**Parâmetro *info* com um arquivo .exe ou .dll**
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
-Cada propriedade válida definida no parâmetro de objecto *info* está escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
+Cada propriedade válida definida no parâmetro objeto *info* está escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo |
 | ---------------- | ---- |
@@ -528,13 +528,13 @@ Cada propriedade válida definida no parâmetro de objecto *info* está escrita 
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-If you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente do texto, este é transformado em string.
+If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
-***info* objeto de parâmetro com um arquivo  .plist**
+***info* parameter object with a .plist file**
 
-Cada propriedade válida definida no parâmetro do objecto *info* está escrita no arquivo  .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
 
-Se um conjunto de chaves no parâmetro *info* já estiver definido no arquivo .plist, o seu valor é atualizado, mantendo o seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
 
 > Para definir um valor de tipo de data, o formato a utilizar é uma string de carimbo temporal json formada em ISO UTC sem milissegundos ("2003-02-01T01:02:03Z") como no editor plist de Xcode.
 
@@ -581,9 +581,9 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parâmetro | Tipo |    | Descrição                                                 |
-| --------- | ---- | -- | --------------------------------------------------------- |
-| content   | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
+| Parâmetro | Tipo |    | Descrição                                            |
+| --------- | ---- | -- | ---------------------------------------------------- |
+| content   | BLOB | -> | New contents for the file|<!-- END REF -->
 
 
 |
@@ -591,7 +591,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descrição
 
-reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteúdo ** BLOB <!-- REF #FileClass.setContent().Summary -->A função `.setContent()`<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 
@@ -615,12 +615,12 @@ reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteú
 
 
 <!--REF #FileClass.setText().Params -->
-| Parâmetro   | Tipo    |    | Descrição                                                              |
-| ----------- | ------- | -- | ---------------------------------------------------------------------- |
-| text        | Text    | -> | Texto a armazenar no arquivo                                           |
-| charSetName | Text    | -> | Nome do conjunto de caracteres                                         |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres                                      |
-| breakMode   | Integer | -> | Modo de processamento para quebras de linha|<!-- END REF -->
+| Parâmetro   | Tipo    |    | Descrição                                                  |
+| ----------- | ------- | -- | ---------------------------------------------------------- |
+| text        | Text    | -> | Text to store in the file                                  |
+| charSetName | Text    | -> | Nome do conjunto de caracteres                             |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres                          |
+| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
 
 |
@@ -628,13 +628,13 @@ reescreve todo o conteúdo do arquivo utilizando os dados armazenados no conteú
 
 #### Descrição
 
-A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve o texto ** como o novo conteúdo do arquivo<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
-Se o arquivo referenciado no arquivo `` não existir no disco, ele é criado pela função. Quando o arquivo já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
+If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
-No texto **, passe o texto para escrever para o arquivo. Pode ser um literal ("o meu texto"), ou um campo de texto 4D ou variável.
+In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-Opcionalmente, pode designar o conjunto de caracteres a ser utilizado para a escrita do conteúdo. Você pode passar também:
+Optionally, you can designate the character set to be used for writing the contents. Você pode passar também:
 
 * in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 * ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
@@ -643,15 +643,15 @@ Opcionalmente, pode designar o conjunto de caracteres a ser utilizado para a esc
 
 If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
 
-Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no arquivo. The following constants, found in the **System Documents** theme are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                               |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Não processado                                                                                                                                           |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Documento com CRLF`          | 2     | As quebras de linha são convertidas para CRLF (carriage return + line feed), o formato padrão do Windows                                                 |
-| `Documento com CR`            | 3     | As quebras de linha são convertidas para CR (carriage return), o formato padrão do Classic Mac OS                                                        |
-| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                   |
+| `Documento com CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
+| `Documento com CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
+| `Documento com LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 

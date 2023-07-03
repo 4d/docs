@@ -25,7 +25,7 @@ Para criar um novo projeto de banco de dados:
 
 Quando validar a caixa de diálogo, 4D fecha o banco de dados atual (se houver) e cria uma pasta "Project" no local indicado e coloca nela todos os arquivos necessários para o funcioanamento correto do banco de dados projeto. Para saber mais, consulte [Arquitetura de um projeto 4D](Project/architecture.md).
 
-You can then start developing your project.
+Pode então começar a desenvolver o seu projeto.
 
 ## Abrir projeto
 
@@ -87,7 +87,7 @@ Files with the `.4DLink` extension are XML files that contain parameters intende
 
 XX represents the version number of the application. Por exemplo, "Favorites v19" para 4D v19.
 
-That folder is divided into two subfolders:
+Esta pasta está dividida em duas subpastas:
 
 - the **Local** folder contains the `.4DLink` files that can be used to open local projects
 - the **Remote** folder contains the `.4DLink` files of recent remote projects

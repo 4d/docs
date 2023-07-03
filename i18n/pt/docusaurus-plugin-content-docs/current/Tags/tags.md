@@ -10,7 +10,7 @@ This principle is used in particular by the 4D Web server to build [web template
 
 These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
 
-It is possible to mix several types of tags. For example, the following HTML structure is entirely feasible:
+É possível misturar vários tipos de etiquetas. For example, the following HTML structure is entirely feasible:
 
 ```html
 <HTML>
@@ -46,7 +46,7 @@ Parsing the contents of a *template* source is done in two contexts:
 
 ### Processamento recursivo
 
-4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. For example, given the following statement:
+4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. Por exemplo, dada a seguinte instrução:
 
 ```html
 <!--#4DHTML [Mail]Letter_type-->
@@ -191,7 +191,7 @@ The number of loops is based on the number of elements of the collection. At eac
 - The *item* variable gets the same type as the first collection element. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
 
-#### Example with a collection of scalar values
+#### Exemplo com uma coleção de valores escalares
 
 *getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
 
@@ -609,7 +609,7 @@ Podem ser mostradas as seguintes mensagens:
 
 The `4DSCRIPT` tag allows you to execute 4D methods when processing the template. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string in `$1`.
 
-> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). If it returns True, 4D executes the method.
+> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). Se retornar True, 4D executa o método.
 
 O método deve devolver o texto em `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
 
@@ -650,7 +650,7 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 - You must use process variables.
 - You can display the content of a picture field. However, it is not possible to display the content of a picture array item.
 - It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
-- You will usually work with Text variables. No entanto, também é possível utilizar variáveis BLOB. You just need to generate BLOBs in `Text without length` mode.
+- Normalmente, trabalha-se com variáveis de tipo texto. No entanto, também é possível utilizar variáveis BLOB. You just need to generate BLOBs in `Text without length` mode.
 
 ## Sintaxe alternativa para 4DTEXT, 4DHTML, 4DEVAL
 

@@ -293,7 +293,7 @@ You can then run this request:
 ```
 
 
-### Using an entity to be created on the server
+### Utilizar uma entidade a ser criada no servidor
 
 
 The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. O método `checkData()` executa alguns controlos. If they are OK, the entity is saved and returned.
@@ -354,7 +354,7 @@ Since no `__KEY` is given, a new Students entity is loaded on the server **with 
 }
 ```
 
-### Using an entity to be updated on the server
+### Utilizar uma entidade a atualizar no servidor
 
 O mesmo que acima, mas com um atributo __KEY
 
@@ -473,7 +473,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 ```
 
 
-### Receiving an entity selection as parameter
+### Receber uma seleção de entidade como parâmetro
 
 In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
 

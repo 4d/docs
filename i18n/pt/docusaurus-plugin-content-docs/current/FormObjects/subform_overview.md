@@ -36,7 +36,7 @@ You can also allow the user to enter data in the List form. Depending on the con
 
 Page subforms can display the data of the current subrecord or any type of pertinent value depending on the context (variables, pictures, and so on). One of the main advantages of using page subforms is that they can include advanced functionalities and can interact directly with the parent form (widgets). Page subforms also have their own specific properties and events; you can manage them entirely by programming.
 
-The page subform uses the input form indicated by the [Detail Form](properties_Subform.md#detail-form) property. Unlike a list subform, the form used can come from the same table as the parent form. It is also possible to use a project form. When executed, a page subform has the same standard display characteristics as an input form.
+The page subform uses the input form indicated by the [Detail Form](properties_Subform.md#detail-form) property. Unlike a list subform, the form used can come from the same table as the parent form. Também é possível utilizar um formulário projeto. When executed, a page subform has the same standard display characteristics as an input form.
 
 > 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
@@ -67,7 +67,7 @@ To display a static time, you must use the appropriate [data type](properties_Da
 - If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
 - If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.
 
-The text value must be formatted "hh:mm:ss".
+O valor do texto deve ter o formato "hh:mm:ss".
 
 :::
 

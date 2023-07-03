@@ -5,7 +5,7 @@ title: Animação
 
 ## Loop back to first frame
 
-Pictures are displayed in a continuous loop. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
+As imagens são apresentadas num ciclo contínuo. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
 
 #### Gramática JSON
 
@@ -53,7 +53,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 ## Mudar a cada x ticks
 
-Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
+Enables cycling through the contents of the picture button at the specified speed (in ticks). Neste modo, todas as outras opções são ignoradas.
 
 #### Gramática JSON
 

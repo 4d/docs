@@ -16,7 +16,7 @@ This event can be used filter the data entry in keyboard enterable objects at th
 When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, *i.e.*:
 
 - Standard editing actions which modify content like paste, cut, delete or cancel;
-- Dropping a value (action similar to paste);
+- Eliminar um valor (ação semelhante a colar);
 - Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
 - Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
 
@@ -80,7 +80,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 | ----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | range       | object        | Cell range                                                                                                                                                                                               |
 | pasteOption | inteiro longo | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: somente as fórmulas são coladas</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
-| pasteData   | object        | Os dados da área de transferência a serem colados<li>"text" (text): The text from the clipboard</li><li>"html" (text): The HTML from the clipboard</li>                                                                                                    |
+| pasteData   | object        | Os dados da área de transferência a serem colados<li>"text" (texto): O texto da área de transferência</li><li>"html" (texto): O HTML da área de transferência</li>                                                                                                    |
 
 #### Exemplo
 

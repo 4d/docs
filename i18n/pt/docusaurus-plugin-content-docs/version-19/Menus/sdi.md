@@ -13,7 +13,7 @@ On Windows, 4D developers can configure their 4D merged applications to work as 
 The SDI mode is available in the following execution environment only:
 
 - Windows
-- Merged stand-alone or client 4D application
+- Aplicação 4D fundida, autônoma ou cliente
 
 ## Activação do modo SDI
 
@@ -65,7 +65,7 @@ Although it is transparently handled by 4D, the SDI mode introduces small variat
 | `Open form window`                | Options to support floating windows in SDI (`Controller form window`) and to remove the menu bar (`Form has no menu bar`)                                                                                                                                                                                       |
 | `Menu bar height`                 | Returns the height in pixels of a single menu bar line even if the menu bar has been wrapped on two or more lines. Returns 0 when the command is called from a process without a form window                                                                                                                    |
 | `SHOW MENU BAR` / `HIDE MENU BAR` | Applied to the current form window only (from where the code is executed)                                                                                                                                                                                                                                       |
-| `MAXIMIZE WINDOW`                 | The window is maximized to the screen size                                                                                                                                                                                                                                                                      |
+| `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                    |
 | `CONVERT COORDINATES`             | `XY Screen` is the global coordinate system where the main screen is positioned at (0,0). Screens on its left side or on top of it can have negative coordinates and any screens on its right side or underneath it can have coordinates greater than the values returned by `Screen height` or `Screen width`. |
 | `GET MOUSE`                       | Global coordinates are relative to the screen                                                                                                                                                                                                                                                                   |
 | `GET WINDOW RECT`                 | When -1 is passed in window parameter, the command returns 0;0;0;0                                                                                                                                                                                                                                              |

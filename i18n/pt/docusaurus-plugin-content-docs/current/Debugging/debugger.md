@@ -21,7 +21,7 @@ There are multiple ways to get the Debugger to display:
 * Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
 * Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
 
-When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. For example, in the above debugger window:
+When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. Por exemplo, na janela do depurador acima:
 
 * *Clients_BuildLogo* is the method being traced
 * The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
@@ -92,7 +92,7 @@ Saves the current configuration of the debugger window  and makes it the default
 * o tamanho e a posição da janela
 * the position of the division lines and the contents of the area that evaluates the expressions
 
-These parameters are stored in the project.
+Estes parâmetros são armazenados no projeto.
 
 This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
 

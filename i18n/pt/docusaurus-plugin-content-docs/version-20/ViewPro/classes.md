@@ -29,14 +29,14 @@ A propriedade `.style` é o <!-- REF #LineBorder.style.Summary -->[style](config
 ### .dataField
 
 <!-- REF #TableColumn.dataField.Syntax -->
-**.dataField** : Text<!-- END REF -->
+**.dataField**: Texto<!-- END REF -->
 
 A propriedade `.dataField` <!-- REF #TableColumn.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
 
 ### .formatter
 
 <!-- REF #TableColumn.formatter.Syntax -->
-**.formatter** : Text<!-- END REF -->
+**.formatter**: Text<!-- END REF -->
 
 A propriedade `.formatter` <!-- REF #TableColumn.formatter.Summary -->contém o formatador da coluna da tabela<!-- END REF -->.
 
@@ -57,7 +57,7 @@ A propriedade `.name` <!-- REF #TableColumn.name.Summary -->contains the table c
 <!-- REF #TableOptions.allowAutoExpand.Syntax -->
 **.allowAutoExpand** : Boolean<!-- END REF -->
 
-The `.allowAutoExpand` property <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. Padrão = True
+A propriedade `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary -->indicates whether to expand columns or rows of the table when values are added in empty adjacent cells<!-- END REF -->. Padrão = True
 
 
 ### .bandColumns
@@ -110,7 +110,7 @@ A propriedade `.showHeader` <!-- REF #TableOptions.showHeader.Summary -->indica 
 <!-- REF #TableOptions.showResizeHandle.Syntax -->
 **.showResizeHandle** : Boolean<!-- END REF -->
 
-The `.showResizeHandle` property <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Padrão = False
+A propriedade `.showResizeHandle` <!-- REF #TableOptions.showResizeHandle.Summary -->indicates whether to display the resize handle for tables that don't have a *source*<!-- END REF -->. Padrão = False
 
 ### .tableColumns
 
@@ -146,17 +146,17 @@ The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownLi
 ### .backColor
 
 <!-- REF #TableStyle.backColor.Syntax -->
-**.backColor** : Text<!-- END REF -->
+**.backColor**: Text<!-- END REF -->
 
-The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md/#background--foreground) of the table<!-- END REF -->.
+A propriedade `.backColor` é o <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md/#background--foreground) of the table<!-- END REF -->.
 
 
 ### .forecolor
 
 <!-- REF #TableStyle.forecolor.Syntax -->
-**.forecolor** : Text<!-- END REF -->
+**.forecolor**: Text<!-- END REF -->
 
-The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md/#background--foreground) of the table<!-- END REF -->.
+A propriedade `.forecolor` é o <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md/#background--foreground) of the table<!-- END REF -->.
 
 
 

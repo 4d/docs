@@ -38,7 +38,7 @@ Use the **Previous Error** / **Next Error** commands of the **Method** menu to n
 
 The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-files) of the errors in order to help you correct them.
 
-> Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
+> A compilação requer uma licença adequada. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
 
 ## Executar a compilação
 
@@ -98,9 +98,9 @@ You can selectively disable certain warnings during compilation by inserting the
   //%W-<warning number>
 ```
 
-Only warnings with numbers can be disabled. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning:
+Apenas os avisos com números podem ser desactivados. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning:
 
-*1: Pointer in an array declaration (518.5)*
+*1: Ponteiro numa declaração de array (518.5)*
 
 ... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
 
@@ -190,7 +190,7 @@ You can rename each of these methods in the corresponding areas, but they will a
 
 If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
 
-#### List of process and interprocess variables
+#### Lista das variáveis processo e interprocesso
 
 Estas duas listas contêm quatro colunas:
 
@@ -213,7 +213,7 @@ The list of local variables is sorted by database method, project method, trigge
 
 Esta lista está dividida em três colunas:
 
-- list of local variables used in the method;
+- lista das variáveis locais utilizadas no método;
 - tipo da variável;
 - number of dimensions if the variable is an array.
 
@@ -224,7 +224,7 @@ A complete list of your database and project methods is given at the end of the 
 - their type (procedure or function returning a value)
 - the data types of their parameters and the returned result
 - o número de chamadas
-- the Thread Safe or Thread Unsafe property.
+- a propriedade Thread Safe ou Thread Unsafe.
 
 Esta informação aparece da seguinte forma:
 

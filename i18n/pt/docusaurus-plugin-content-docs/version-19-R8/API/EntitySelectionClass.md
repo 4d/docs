@@ -1566,7 +1566,7 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
 #### Descrição
 
-The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.
+A função `.orderByFormula()` <!-- REF #EntitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.
 > Esta função não modifica a seleção de entidades original.
 
 Pode usar *formulaString* ou um parâmetro *formulaObj*:
@@ -2070,7 +2070,7 @@ $sum:=$sel.sum("salary")
 
 #### Descrição
 
-The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->correspondentes aos nomes e valores dos atributos para a selecção da entidade.
+A função `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->correspondentes aos nomes e valores dos atributos para a selecção da entidade.
 
 Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "*", todos os atributos são extraídos. Atributos com [tipo](DataClassAttributeClass.md#kind) propriedade como "relatedEntity" são extraídos com a forma simples: um objecto com propriedade \_KEY (chave primária). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
 

@@ -80,7 +80,7 @@ This area allows you to configure how the web server will handle user sessions a
 
 > The **Legacy sessions** option is only available for compatibility in databases/projects created with 4D versions prior to 4D v18 R6.
 
-#### Scalable sessions (multi-process sessions)
+#### Sessões escaláveis (sessões multi-processo)
 
 When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
 
@@ -92,7 +92,7 @@ When this option is selected, the web server does not provide any specific suppo
 In this mode, you can configure additional web server setttings:
 
 -   [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
--   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
+-   [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
 -   [Use preemptive processes](#use-preemptive-web-processes)
 
 #### Sessões herdadas (sessões de processo único)
@@ -193,7 +193,7 @@ The log format menu provides the following options:
     -   user: user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).
     -   DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds
 
-> The date and time are local to the server.
+> A data e a hora são locais para o servidor.
 
 -   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
 -   estado: resposta dada pelo servidor.
@@ -210,7 +210,7 @@ The log format menu provides the following options:
 
 -   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
--   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Like the ELF format, it can be customized.
+-   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Tal como o formato ELF, pode ser personalizado.
 
 **Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
 
@@ -271,7 +271,7 @@ For more information about the support of Web Services in 4D, refer to the [Publ
 This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
--   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. By default, 4D uses the name A_WebService.
+-   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
 -   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
 
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).

@@ -89,7 +89,7 @@ También se recogen algunos datos a intervalos regulares.
 
 
 
-### Recogida al cierre de la base y envío de los datos
+### Recolección al cierre de la base y envío de los datos
 
 | Datos             | Tipo   | Notas                                                               |
 | ----------------- | ------ | ------------------------------------------------------------------- |
@@ -103,24 +103,24 @@ También se recogen algunos datos a intervalos regulares.
 
 ### Recolección cada vez que se llama a PHP execute
 
-| Datos       | Tipo    | Notas                                                                               |
-| ----------- | ------- | ----------------------------------------------------------------------------------- |
-| phpCall     | Number  | Nùmero de llamadas a `PHP execute`                                                  |
-| externalPHP | Boolean | True if the client performs a call to `PHP execute` and uses its own version of php |
+| Datos       | Tipo    | Notas                                                                                     |
+| ----------- | ------- | ----------------------------------------------------------------------------------------- |
+| phpCall     | Number  | Nùmero de llamadas a `PHP execute`                                                        |
+| externalPHP | Boolean | True si el cliente realiza una llamada a `PHP execute` y utiliza su propia versión de php |
 
 
-### Collected at client connection
+### Recolección en la conexión del cliente
 
-| Datos                      | Tipo       | Notas                                                                              |
-| -------------------------- | ---------- | ---------------------------------------------------------------------------------- |
-| maximum4DClientConnections | Number     | Número máximo de conexiones 4D Client al servidor                                  |
-| connectionSystems          | Collection | Client OS without the build number (in parenthesis) and number of clients using it |
+| Datos                      | Tipo       | Notas                                                                                                              |
+| -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------ |
+| maximum4DClientConnections | Number     | Número máximo de conexiones 4D Client al servidor                                                                  |
+| connectionSystems          | Collection | Sistema operativo del cliente sin el número de compilación (entre paréntesis) y número de clientes que lo utilizan |
 
 
 
 ## ¿Dónde se almacena y envía?
 
-Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+Los datos recolectados se escriben en un archivo de texto (formato JSON) por base de datos cuando 4D Server cierra. El archivo se almacena dentro de la [carpeta 4D activa](https://doc.4d.com/4dv20/help/command/en/page485.html), es decir.:
 
 - en Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - en macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

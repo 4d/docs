@@ -19,7 +19,7 @@ The upper part of the page provides information about the current status of the 
 
 This button toggles and can be used to manage the access of new desktop client machines to the application server.
 
-By default, when the project is published:
+Por defeito, quando o projeto é publicado:
 - The button is titled "Reject new connections."
 - New desktop clients can connect freely (within the limit of the connections permitted by the license).
 - The project name is published in the remote connection dialog box (if the "At Startup Publish Database Name in the Connection Dialog" option is checked in the Preferences).

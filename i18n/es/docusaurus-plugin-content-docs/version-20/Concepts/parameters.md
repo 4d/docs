@@ -266,8 +266,8 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 
 However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
 
-- you can group all local variable parameters for project methods in one or more project method(s)
-- the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
+- puede agrupar todos los parámetros de variables locales para métodos de proyecto en uno o más métodos de proyecto
+- el(los) nombre(s) del método debe(n) empezar por "**Compiler**", por ejemplo "Compiler_MyParameters".
 - within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
 Por ejemplo:

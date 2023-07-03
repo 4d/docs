@@ -27,7 +27,7 @@ You can assign specific permission actions to the following exposed resources in
 
 - the datastore
 - uma classe de dados
-- an attribute (including computed and alias)
+- um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados
 
 A permission action defined at a given level is inherited by default at lower levels, but several permissions can be set:
@@ -120,7 +120,7 @@ The `roles.json` file syntax is the following:
 
 | Nome da propriedade |                 |               | Tipo                               | Obrigatório | Descrição                                                                    |
 | ------------------- | --------------- | ------------- | ---------------------------------- | ----------- | ---------------------------------------------------------------------------- |
-| privileges          |                 |               | Collection of `privilege` objects  | X           | List of defined privileges                                                   |
+| privileges          |                 |               | Coleção de objectos `privilege`    | X           | List of defined privileges                                                   |
 |                     | \[].privilege  |               | String                             |             | Nome do privilégio                                                           |
 |                     | \[].includes   |               | Coleção de strings                 |             | List of included privilege names                                             |
 | roles               |                 |               | Coleção de objetos `role`          |             | List of defined roles                                                        |

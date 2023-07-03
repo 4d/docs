@@ -1009,7 +1009,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 #### behavior
 
-The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
+The behavior attribute provides variations to the regular representation of values. Em 4D v15, uma única variação é proposta:
 
 | Atributo | Valor(es) disponível(eis) | valueType(s) | Descrição                                                                                                                                                                                     |
 | -------- | ------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1071,7 +1071,7 @@ Exemplos:
 ```
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
-#### requiredListName and requiredListReference
+#### requiredListName e requiredListReference
 
 The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
 
@@ -1202,7 +1202,7 @@ The "color" valueType allows you to display either a color or a text.
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
 Optionally, you can pass a "label" attribute.
 

@@ -196,7 +196,7 @@ A 4D expression to be associated with a column. You can enter:
 
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
+- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
   - String
   - Numeric
   - Date

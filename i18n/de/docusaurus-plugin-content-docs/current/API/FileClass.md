@@ -266,12 +266,15 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
+
 | Parameter | Typ |  | Beschreibung                                               |
 | --------- | --- |  | ---------------------------------------------------------- |
 |           |     |  | Does not require any parameters|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Beschreibung
@@ -593,7 +596,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 

@@ -112,7 +112,7 @@ Código 4D do método `calcSum`:
  End for
 ```
 
-The JavaScript code run in the Web area is:
+O código JavaScript executado na área Web é:
 
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
@@ -163,7 +163,7 @@ For reasons related to window redrawing mechanisms, the insertion of a Web area 
 
 > Superimposing a Web area on top of or beneath other form objects is not supported.
 
-### Web Area and Web server conflict (Windows)
+### Conflito entre a área Web e o servidor Web (Windows)
 
 Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
 

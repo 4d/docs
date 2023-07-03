@@ -94,15 +94,15 @@ The `On Web Authentication` database method is NOT called:
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parâmetros | Tipo       |    | Descrição                                         |
-| ---------- | ---------- |:--:| ------------------------------------------------- |
-| $1         | Text       | <- | URL                                               |
-| $2         | Text       | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Text       | <- | Endereço IP do cliente Web (browser)              |
-| $4         | Text       | <- | Endereço IP do servidor                           |
-| $5         | Text       | <- | Nome de usuario                                   |
-| $6         | Text       | <- | Senha                                             |
-| $0         | Parâmetros | -> | True = request accepted, False = request rejected |
+| Parâmetros | Tipo       |    | Descrição                                             |
+| ---------- | ---------- |:--:| ----------------------------------------------------- |
+| $1         | Text       | <- | URL                                                   |
+| $2         | Text       | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $3         | Text       | <- | Endereço IP do cliente Web (browser)                  |
+| $4         | Text       | <- | Endereço IP do servidor                               |
+| $5         | Text       | <- | Nome de usuario                                       |
+| $6         | Text       | <- | Senha                                                 |
+| $0         | Parâmetros | -> | True = request accepted, False = request rejected     |
 
 You must declare these parameters as follows:
 
@@ -169,9 +169,9 @@ The `$5` and `$6` parameters receive the user name and password entered by the u
 
 The `On Web Authentication` database method returns a boolean in $0:
 
-*   If $0 is True, the connection is accepted.
+*   Se $0 é True, a ligação é aceite.
 
-*   If $0 is False, the connection is refused.
+*   Se $0 é False, a ligação é recusada.
 
 The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
 > **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.

@@ -83,7 +83,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
 
-*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between platforms. On Windows, 4D uses Microsoft Edge WebView2. On macOS, 4D uses the current version of WebKit (Safari).
+*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between platforms. No Windows, 4D usa Microsoft Edge WebView2. On macOS, 4D uses the current version of WebKit (Safari).
 
 > On Windows, if Microsoft Edge WebView2 is not installed, 4D uses the embedded engine as system rendering engine. To know if it is installed in your system, look for "Microsoft Edge WebView2 Runtime" in your applications panel.
 

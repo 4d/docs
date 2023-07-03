@@ -163,9 +163,9 @@ Dans le paramètre `msgIDs`, vous pouvez passer soit :
 * l'ID unique (*texte*) d'un seul message ou
 * la constante suivante (*entier long*) pour tous les messages de la boîte sélectionnée :
 
- | Constante | Value | Commentaire                                             |
- | --------- | ----- | ------------------------------------------------------- |
- | IMAP all  | 1     | Sélectionner tous les messages de la boîte sélectionnée |
+ | Constante | Valeur | Commentaire                                             |
+ | --------- | ------ | ------------------------------------------------------- |
+ | IMAP all  | 1      | Sélectionner tous les messages de la boîte sélectionnée |
 
 Le paramètre `keywords` permet de définir les flags à ajouter aux `msgIDs`. Vous pouvez utiliser les flags standard suivants ainsi que des flags personnalisés (la prise en charge des flags personnalisés dépend de l'implémentation du serveur) :
 
@@ -261,7 +261,7 @@ Dans le paramètre optionnel `options`, vous pouvez passer un objet permettant d
 
 Charsets possibles :
 
-| Constante                | Value                          | Commentaire                                                                                                |
+| Constante                | Valeur                         | Commentaire                                                                                                |
 | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>bodyCharset : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                  |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                  |
@@ -1379,9 +1379,9 @@ Dans le paramètre `msgIDs`, vous pouvez passer soit :
 * l'ID unique (*texte*) d'un seul message ou
 * la constante suivante (*entier long*) pour tous les messages de la boîte sélectionnée :
 
- | Constante | Value | Commentaire                                             |
- | --------- | ----- | ------------------------------------------------------- |
- | IMAP all  | 1     | Sélectionner tous les messages de la boîte sélectionnée |
+ | Constante | Valeur | Commentaire                                             |
+ | --------- | ------ | ------------------------------------------------------- |
+ | IMAP all  | 1      | Sélectionner tous les messages de la boîte sélectionnée |
 
 Le paramètre `keywords` vous permet de définir les flags à supprimer des `msgIDs`. Vous pouvez utiliser les flags standard suivants ainsi que des flags personnalisés :
 
@@ -1692,10 +1692,10 @@ Dans le paramètre optionnel *name* passez le nom de la boite de réception à l
 
 Le paramètre optionnel *state* définit le type d'accès à la mailbox. Les valeurs possibles sont les suivantes :
 
-| Constante             | Value | Commentaire                                                                                                                                                                                                      |
-| --------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | La mailbox sélectionnée est accessible avec les privilèges de lecture seule. Les messages contenant un marqueur "recent" (indication de nouveaux messages) restent inchangés.                                    |
-| IMAP read write state | 0     | La mailbox sélectionnée est accessible avec des privilèges de lecture et d'écriture. Les messages sont considérés "seen" et perdent le marqueur "recent" (indication des nouveaux messages). (Valeur par défaut) |
+| Constante             | Valeur | Commentaire                                                                                                                                                                                                      |
+| --------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IMAP read only state  | 1      | La mailbox sélectionnée est accessible avec les privilèges de lecture seule. Les messages contenant un marqueur "recent" (indication de nouveaux messages) restent inchangés.                                    |
+| IMAP read write state | 0      | La mailbox sélectionnée est accessible avec des privilèges de lecture et d'écriture. Les messages sont considérés "seen" et perdent le marqueur "recent" (indication des nouveaux messages). (Valeur par défaut) |
 > * La fonction génère une erreur et retourne **Null** si *name* désigne une mailbox inexistante.
 > * Si aucune connexion n'est ouverte, `.selectBox()` ouvrira une connexion.
 > * Si la connexion n'a pas été utilisée depuis le délai de connexion (voir `IMAP New transporter`), la fonction [`.checkConnection( )`](#checkconnection) est automatiquement appelée.

@@ -266,12 +266,15 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 
 <!-- REF #FileClass.delete().Params -->
+
 | Paramètres | Type |  | Description                                            |
 | ---------- | ---- |  | ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -281,18 +284,17 @@ La fonction `delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichi
 Si le fichier est ouvert, une erreur est générée.
 
 Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
-> **WARNING**: `.delete()` can delete any file on a disk. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` should be used with extreme caution. La suppression d'un fichier est une opération permanente et irréversible.
+> **ATTENTION** : `.delete()` peut supprimer n'importe quel fichier sur un disque. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
 
 #### Exemple
 
-Vous souhaitez supprimer un fichier spécifique dans un sous-dossier :
+Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de données :
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
  If($tempo.exists)
     $tempo.delete()
     ALERT("User preference file deleted.")
- End if
  End if
 ```
 <!-- END REF -->
@@ -494,12 +496,12 @@ Si vous utilisez le paramètre *options* (objet), vous pouvez passer d'autres op
 
 Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
 
-| Break mode en texte | Break mode en numérique (constante) | Description                                                                                                                                                          |
-| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "native"            | 1 (`Document with native format`)   | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
-| "crlf"              | 2 (`Document with CRLF`)            | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                          |
-| "cr"                | 3 (`Document with CR`)              | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                       |
-| "lf"                | 4 (`Document with LF`)              | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                              |
+| Break mode en texte | Break mode en numérique (constante) | Description                                                                                                                                                           |
+| ------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"            | 1 (`Document with native format`)   | (Défaut) Les fins de ligne sont converties au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
+| "crlf"              | 2 (`Document with CRLF`)            | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                           |
+| "cr"                | 3 (`Document with CR`)              | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                        |
+| "lf"                | 4 (`Document with LF`)              | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                               |
 
 > La valeur du paramètre *break mode en texte* est sensible à la casse.
 

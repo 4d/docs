@@ -22,7 +22,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 ## Cor de fundo / Cor de preenchimento
 
-Defines the background color of an object.
+Define a cor de fundo de um objeto.
 
 In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 

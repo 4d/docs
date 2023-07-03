@@ -165,7 +165,7 @@ No parâmetro `msgIDs` , pode passar qualquer um dos dois:
  | ---------- | ----- | -------------------------------------------------------------- |
  | IMAP all   | 1     | Seleccione todas as mensagens na caixa de correio seleccionada |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to add to `msgIDs`. You can pass any of the following keywords:
+The `keywords` parameter lets you pass an object with keyword values for specific flags to add to `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
 
 | Parâmetro | Tipo       | Descrição                                             |
 | --------- | ---------- | ----------------------------------------------------- |
@@ -1375,7 +1375,7 @@ No parâmetro `msgIDs` , pode passar qualquer um dos dois:
  | ---------- | ----- | -------------------------------------------------------------- |
  | IMAP all   | 1     | Seleccione todas as mensagens na caixa de correio seleccionada |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. You can pass any of the following keywords:
+The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. Pode passar qualquer uma das seguintes palavras-chave:
 
 | Parâmetro | Tipo       | Descrição                                       |
 | --------- | ---------- | ----------------------------------------------- |
