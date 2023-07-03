@@ -21,7 +21,7 @@ There are multiple ways to get the Debugger to display:
 * Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
 * Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
 
-When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. For example, in the above debugger window:
+When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. Por exemplo, na janela do depurador acima:
 
 * *Clients_BuildLogo* is the method being traced
 * The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
@@ -30,7 +30,7 @@ Displaying a new debugger window uses the same configuration as the last window 
 
 The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
 
-* on the remote 4D for code running locally
+* no 4D remoto para o código que está a ser executado localmente
 * on the server machine for code running on the server (for example, a method with the **execute on server** option).
 
 > If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
@@ -51,7 +51,7 @@ Tracing stops and normal method execution resumes.
 
 #### Passar por cima
 
-Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
+Executes the current method line, indicated by the program counter (the yellow arrow). O depurador passa para a linha seguinte.
 
 The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
@@ -74,12 +74,12 @@ Stops method execution, and returns to the state before the method started execu
 
 #### Abortar e editar
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
+Pausa na execução do método. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 > **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
 
 #### Editar
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Code Editor.
+Pausa na execução do método. The method that is executing at the time you click the Edit button opens in the Code Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
@@ -89,10 +89,10 @@ If you use this button to modify a method, the modifications are only effective 
 
 Saves the current configuration of the debugger window  and makes it the default configuration. Isto inclui:
 
-* the size and position of the window
+* o tamanho e a posição da janela
 * the position of the division lines and the contents of the area that evaluates the expressions
 
-These parameters are stored in the project.
+Estes parâmetros são armazenados no projeto.
 
 This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
 
@@ -136,7 +136,7 @@ $c:=a+b
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
+2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. Nesta altura, o tema mostra:
 
     | $a | 1          |
     | -- | ---------- |
@@ -157,13 +157,13 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtema       | Descrição                                                    | Can the values be modified? |
-| ------------- | ------------------------------------------------------------ | --------------------------- |
-| Interprocesso | List of interprocess variables being used at this point      | Sim                         |
-| Processo      | List of process variables used by the current process        | Sim                         |
-| Local         | List of local variables used by the method being traced      | Sim                         |
-| Parâmetros    | List of parameters received by the method                    | Sim                         |
-| Self          | Pointer to the current object, when tracing an Object Method | Não                         |
+| Subtema       | Descrição                                                    | Os valores podem ser modificados? |
+| ------------- | ------------------------------------------------------------ | --------------------------------- |
+| Interprocesso | List of interprocess variables being used at this point      | Sim                               |
+| Processo      | List of process variables used by the current process        | Sim                               |
+| Local         | List of local variables used by the method being traced      | Sim                               |
+| Parâmetros    | Lista dos parâmetros recebidos pelo método                   | Sim                               |
+| Self          | Pointer to the current object, when tracing an Object Method | Não                               |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
@@ -271,7 +271,7 @@ You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/p
 
 ## Custom Watch Pane
 
-The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
+The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Qualquer tipo de expressão pode ser avaliado:
 
 * campo
 * variável
@@ -279,7 +279,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * cálculo
 * Comando 4D
 * method
-* and anything else that returns a value
+* e qualquer outra coisa que devolva um valor
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
@@ -335,8 +335,8 @@ This area also allows you to add or remove [**break points**](breakpoints.md).
 
 Hover your pointer over any expression to display a tool tip that indicates:
 
-* the declared type of the expression
-* the current value of the expression
+* o tipo declarado da expressão
+* o valor atual da expressão
 
 ![source-code-pane](../assets/en/Debugging/sourceCodePane.png)
 
@@ -356,7 +356,7 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 
 ### Contador do programa
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. It marks the next line to be executed.
+The yellow arrow in the left margin of the Source Code pane is called the program counter. Marca a linha seguinte a ser executada.
 
 By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
 

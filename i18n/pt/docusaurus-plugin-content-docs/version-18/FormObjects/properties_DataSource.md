@@ -35,7 +35,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 ## Lista de escolha
 
-Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
+Associa uma lista de opções a um objeto. It can be a choice list name (a list reference) or a collection of default values.
 
 #### Gramática JSON
 
@@ -68,7 +68,7 @@ List of static values to use as labels for the tab control object.
 
 ## Item atual
 
-`Collection or entity selection list boxes`
+`List box de tipo collection ou entity selection`
 
 Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
 > This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
@@ -87,7 +87,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 ## Posição item atual
 
-`Collection or entity selection list boxes`
+`List box de tipo collection ou entity selection`
 
 Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
 
@@ -118,7 +118,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ---
 
-## Default (list of) values
+## Valores padrão (lista de)
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
@@ -138,7 +138,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### Objectos suportados
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[Coluna List Box (apenas tipo array)](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -150,7 +150,7 @@ A 4D expression to be associated with a column. You can enter:
 
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
+- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
   - String
   - Numeric
   - Date
@@ -159,7 +159,7 @@ A 4D expression to be associated with a column. You can enter:
   - Boolean  
     You can use fields from the Master Table or from other tables.
 
-- A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results. The following expression types are supported:
+- A **4D expression** (simple expression, formula or 4D method). A expressão deve devolver um valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results. The following expression types are supported:
   - String
   - Numeric
   - Date
@@ -239,7 +239,7 @@ Using this property requires compliance with the following principles:
 
 ## Itens selecionados
 
-`Collection or entity selection list boxes`
+`List box de tipo collection ou entity selection`
 
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.
 
@@ -263,7 +263,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 `Named selection list boxes`
 
-Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica a seleção nomeada a ser utilizada. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
 > Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

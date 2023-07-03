@@ -12,10 +12,10 @@ Esta página é utilizada para reparar o ficheiro de dados quando este foi danif
 
 ## overview
 
-### Data file to be repaired
-Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Pathname of the current data file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
+### Ficheiro de dados a reparar
+Nome do caminho do ficheiro de dados atual. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. Pathname of the current data file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
 
-### Original files backup folder
+### Pasta de cópia de segurança dos ficheiros originais
 By default, the original data file will be duplicated before the repair operation. By default, the original data file will be duplicated before the repair operation. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
 
 ### Ficheiros reparados
@@ -24,7 +24,7 @@ By default, the original data file will be duplicated before the repair operatio
 
 ## Reparação standard
 
-Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
+Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). Os dados são compactados e reparados. This type of repair can only be performed when the data and structure file match.
 
 When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. Se for assim, pode abrir o banco de dados imediatamente. ![](../assets/en/MSC/MSC_RepairOK.png)
 
@@ -40,7 +40,7 @@ Use this low-level repair option only when the data file is severely damaged and
 When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
 
 ![](../assets/en/MSC/mscrepair2.png)
-> If all the records and all the tables have been assigned, only the main area is displayed.
+> Se todos os registos e todas as tabelas tiverem sido atribuídos, apenas a área principal é mostrada.
 
 The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
 

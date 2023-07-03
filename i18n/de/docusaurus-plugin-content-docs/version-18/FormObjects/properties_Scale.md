@@ -75,14 +75,14 @@ Specifies the location of an object's displayed text.
 
 Maximum value of an indicator.
 
-* For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+* For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 * To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
 
 #### JSON Grammar
 
-| Name |    Datentyp     | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| max  | string / number | minimum: 0 (for numeric data types) |
+| Name | Datentyp | Possible Values |
+|:----:|:--------:| --------------- |
+| max  |   Zahl   | Any number      |
 
 #### Objects Supported
 
@@ -92,13 +92,13 @@ Maximum value of an indicator.
 
 ## Minimum
 
-Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 
 #### JSON Grammar
 
-| Name |    Datentyp     | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| min  | string / number | minimum: 0 (for numeric data types) |
+| Name | Datentyp | Possible Values |
+|:----:|:--------:| --------------- |
+| min  |   Zahl   | Any number      |
 
 #### Objects Supported
 

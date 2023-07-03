@@ -17,9 +17,9 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 ## Criação de variáveis
 
-You create variables by declaring them. The 4D language offers two ways to declare variables:
+Cria-se variáveis declarando-as. A linguagem 4D oferece duas maneiras de declarar variáveis:
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
+- utilizando a palavra-chave `var` (recomendado, especialmente se o seu código utilizar objectos e classes),
 - Você cria as variáveis declarando-as mediante um dos comandos dos temas "Compilador" ou "Arrays".
 
 **Nota:** apesar de não recomendado, pode criar variáveis simplesmente usando-as; não precisa definir as variáveis formalmente como se faz com os campos. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
@@ -73,7 +73,7 @@ The following table lists all supported `varType` values:
 | `Blob`                 | Valor BLOB                            |
 | `Collection`           | Valor colecção                        |
 | `Diferente de`         | Valor variant                         |
-| `Objeto`               | Object with default class (4D.Object) |
+| `Object`               | Object with default class (4D.Object) |
 | `4D.<className>` | Objecto do nome da classe 4D          |
 | `cs.<className>` | Objeto do nome da classe usuário      |
 
@@ -91,14 +91,14 @@ var $o : 4D. Object
 //also equivalent to C_OBJECT($o)
 ```
 
-- To declare object variables of 4D class:
+- Para declarar variáveis objeto da classe 4D:
 
 ```4d
 var $myFolder : 4D. Folder
 var $myFile : 4D. File
 ```
 
-- To declare object variables of user class:
+- Para declarar as variáveis objeto da classe usuário:
 
 ```4d
 var $myClass : cs. MyClass
@@ -189,7 +189,7 @@ Frequentemente, em um banco de dados, pequenas pedaços de informação são nec
 
 Este método pede simplesmente ao utilizador que introduza uma identificação. Coloca a resposta numa variável local, $vsID, e depois procura o ID que o utilizador introduziu. Quando este método termina, a variável local $vsID é apagada da memória. Isto é ótimo, porque a variável é necessária apenas uma vez e apenas neste método.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** Os parâmetros $1, $2... passados para os métodos são variáveis locais. For more information, please refer to [Parameters](Concepts/parameters.md).
 
 ### Variáveis processo
 

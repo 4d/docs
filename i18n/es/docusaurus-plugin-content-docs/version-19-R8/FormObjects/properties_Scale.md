@@ -80,13 +80,14 @@ Valor máximo de un indicador.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos  | Valores posibles                          |
-|:------:|:---------------:| ----------------------------------------- |
-|  max   | string / number | mínimo: 0 (para tipos de datos numéricos) |
+| Nombre | Tipos de datos | Valores posibles |
+|:------:|:--------------:| ---------------- |
+|  max   |     number     | Cualquier número |
 
 #### Objetos soportados
 
 [Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+
 
 ---
 
@@ -96,9 +97,9 @@ Valor mínimo de un indicador. Para los steppers numéricos, esta propiedad repr
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos  | Valores posibles                          |
-|:------:|:---------------:| ----------------------------------------- |
-|  min   | string / number | mínimo: 0 (para tipos de datos numéricos) |
+| Nombre | Tipos de datos | Valores posibles |
+|:------:|:--------------:| ---------------- |
+|  min   |     number     | Cualquier número |
 
 #### Objetos soportados
 

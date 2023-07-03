@@ -10,7 +10,7 @@ This page is used to configure the publishing parameters, access rights, and eng
 
 See the [**Configuration of 4D SQL Server**](https://doc.4d.com/4Dv19R2/4D/19-R2/Configuration-of-4D-SQL-Server.300-5541563.en.html) page on doc.4d.com.
 
-## SQL Access Control for the default schema
+## Controlo de acesso SQL para o esquema predefinido
 
 See the [**Configuration of 4D SQL Server**](https://doc.4d.com/4Dv19R2/4D/19-R2/Configuration-of-4D-SQL-Server.300-5541563.en.html) page on doc.4d.com.
 

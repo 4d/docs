@@ -39,13 +39,13 @@ Números negativos são especificados com o sinal de menos (-). Por exemplo:
 
 | Operação             | Sintaxe          | Retorna    | Expression | Valor |
 | -------------------- | ---------------- | ---------- | ---------- | ----- |
-| Adição               | Número + Número  | Número     | 2 + 3      | 5     |
-| Subtração            | Número - Número  | Número     | 3 – 2      | 1     |
-| Multiplicação        | Número * Número  | Número     | 5 * 2      | 10    |
-| Divisão              | Número / Número  | Número     | 5 / 2      | 2.5   |
-| Divisão inteira      | Número \ Número | Número     | 5 \ 2     | 2     |
-| Módulo               | Número % Número  | Número     | 5 % 2      | 1     |
-| Exponenciação        | Número ^ Número  | Número     | 2 ^ 3      | 8     |
+| Adição               | Número + Número  | Number     | 2 + 3      | 5     |
+| Subtração            | Número - Número  | Number     | 3 – 2      | 1     |
+| Multiplicação        | Número * Número  | Number     | 5 * 2      | 10    |
+| Divisão              | Número / Número  | Number     | 5 / 2      | 2.5   |
+| Divisão inteira      | Número \ Número | Number     | 5 \ 2     | 2     |
+| Módulo               | Número % Número  | Number     | 5 % 2      | 1     |
+| Exponenciação        | Número ^ Número  | Number     | 2 ^ 3      | 8     |
 | Igual                | Número = Número  | Parâmetros | 10 = 10    | True  |
 |                      |                  |            | 10 = 11    | False |
 | Desigualdade         | Número # Número  | Parâmetros | 10 #11     | True  |

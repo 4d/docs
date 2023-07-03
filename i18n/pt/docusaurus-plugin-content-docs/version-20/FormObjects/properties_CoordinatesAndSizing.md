@@ -1,6 +1,6 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordinates & Sizing
+title: Coordenadas e dimensionamento
 ---
 
 ## Altura automática da linha
@@ -10,7 +10,7 @@ This property is only available for list boxes with the following [data sources]
 - collection or entity selection,
 - array (non-hierarchical).
 
-The property is not selected by default. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
+A propriedade não está selecionada por padrão. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
 
 :::note
 
@@ -23,10 +23,10 @@ When this property is enabled, the height of every row is automatically calculat
 * The row height calculation takes into account:
   * any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
   * any control types (inputs, check boxes, lists, dropdowns),
-  * fonts, fonts styles and font sizes,
+  * tipos, estilos e tamanhos de letra,
   * the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
-* The row height calculation ignores:
+* O cálculo da altura da linha ignora:
   * conteúdo da coluna oculta
   * [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 
@@ -51,7 +51,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 ## Fundo
 
-Bottom coordinate of the object in the form.
+Coordenadas inferiores do objeto no formulário.
 
 #### Gramática JSON
 
@@ -279,15 +279,15 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 ## Barra rolagem horizontal
 
-Sets a horizontal padding for the cells. The value is set in pixels (default = 0).
+Define um preenchimento horizontal para as células. O valor é definido em pixeis (padrão = 0).
 
 ![](../assets/en/FormObjects/padding.png)
 
 #### Gramática JSON
 
-| Nome              | Tipo de dados | Valores possíveis              |
-| ----------------- | ------------- | ------------------------------ |
-| horizontalPadding | number        | Number of pixels (must be >=0) |
+| Nome              | Tipo de dados | Valores possíveis               |
+| ----------------- | ------------- | ------------------------------- |
+| horizontalPadding | number        | Número de pixéis (deve ser >=0) |
 
 #### Objectos suportados
 
@@ -301,13 +301,13 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 ## Dimensionamento vertical
 
-Sets a vertical padding for the cells. The value is set in pixels (default = 0).
+Define um preenchimento vertical para as células. O valor é definido em pixeis (padrão = 0).
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis              |
-| --------------- | ------------- | ------------------------------ |
-| verticalPadding | number        | Number of pixels (must be >=0) |
+| Nome            | Tipo de dados | Valores possíveis               |
+| --------------- | ------------- | ------------------------------- |
+| verticalPadding | number        | Número de pixéis (deve ser >=0) |
 
 #### Objectos suportados
 

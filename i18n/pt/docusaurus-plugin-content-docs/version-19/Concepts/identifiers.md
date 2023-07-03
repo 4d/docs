@@ -5,23 +5,23 @@ title: Identificadores
 
 Esta seção descreve as convenções e regras para nomear os vários elementos da linguagem 4D (variáveis, tabelas, objetos, formulários, etc)
 
-> If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
+> Se forem utilizados caracteres não romanos nos nomes dos identificadores, o seu comprimento máximo pode ser inferior.
 
 ## Arrays
 
-Array names follow the same rules as [variables](#variables).
+Os nomes dos arrays seguem as mesmas regras que as [variáveis](#variables).
 
 ## Classes
 
 Um nome de processo pode conter até 31 caracteres.
 
-A class name must be compliant with standard [property naming rules](#object-properties) for dot notation.
+O nome de uma classe deve estar em conformidade com as [regras normais de nomeação de propriedades](#object-properties) para notação de pontos.
 
-> Giving the same name to a class and a [database table](#tables) is not recommended, in order to prevent any conflict.
+> Não se recomenda dar o mesmo nome a uma classe e a uma [tabela de base de dados](#tables), a fim de evitar qualquer conflito.
 
 ## Funções
 
-Function names must be compliant with standard [property naming rules](#object-properties) for dot notation.
+O nome de funções devem estar em conformidade com as [regras normais de nomeação de propriedades](#object-properties) para notação de pontos.
 
 > **Dica:** Começar o nome da função com um caractere de sublinhado ("_") excluirá a função dos recursos de preenchimento automático no editor de código 4D.
 
@@ -29,7 +29,7 @@ Function names must be compliant with standard [property naming rules](#object-p
 
 Um nome de objeto de formulário pode conter até 255 caracteres.
 
-Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
+As propriedades dos objetos podem fazer referência a valores escalares, elementos ORDA, funções de classe, outros objetos, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
@@ -44,7 +44,7 @@ $value:=$clientObj.data.address.city
 
 :::tip
 
-Starting an object property name with an underscore character ("_") will exclude the property from the autocompletion features in the 4D code editor. For example, if you declare `$o._myPrivateProperty`, it will not be proposed in the code editor when you type in `"$o. "`.
+Começar o nome de uma propriedade de objecto com um carácter de sublinhado ("_") excluirá a propriedade das funcionalidades de preenchimento automático no editor de código 4D. Por exemplo, se declarar `$o._myPrivateProperty`, esta não será proposta no editor de código quando escrever `"$o. "`.
 
 :::
 
@@ -113,16 +113,16 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ```
 
-> Giving the same name to a table and a [class](#classes) is not recommended, in order to prevent any conflict.
+> Não é recomendável dar o mesmo nome a uma tabela e a uma [classe](#classes), para evitar qualquer conflito.
 
 ## Variáveis.
 
 O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables).
-- A digit as first character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- O nome de uma variável tem de começar por uma letra, um sublinhado ou um dólar ("$") para os [parâmetros](parameters.md) e [variáveis locais](variables.md#local-variables), ou `<>` para as [variáveis interprocessos](variables.md#interprocess-variables).
+- Pode usar um digito como primeiro caractere, mas isso não é recomendado e nem é compatível com a declaração de sintaxe [`var`](variables.md#using-the-var-keyword).
 - A partir daí, o nome pode incluir qualquer letra ou dígito e o carácter de sublinhado ("_").
-- Space character is allowed but not recommended, and is not supported by the [`var` declaration syntax](variables.md#using-the-var-keyword).
+- Pod eusar um caractere Espaço, mas isso não é recomendado nem compatível com a sintaxe de declaração [  `var` ](variables.md#using-the-var-keyword).
 - 4D identifica os nomes utilizados nos métodos em função na seguinte ordem de ordem de prioridade:
 - O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
 
@@ -136,11 +136,11 @@ $vsMyString:="Hello there"
 
 ## Outros nomes
 
-In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
+Na linguagem 4D, vários elementos têm seus nomes manejados como strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
 
 O nome de um conjunto interprocesso pode ter até 255 caracteres, não incluindo os símbolos `<>`.
 
-- String names can contain any characters.
+- Os nomes das cadeias de caracteres podem conter quaisquer caracteres.
 - Os caracteres de espaço não estão permitidos.
 
 Exemplos:

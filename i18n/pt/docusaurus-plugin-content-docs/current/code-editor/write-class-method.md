@@ -33,17 +33,17 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 
 ### Área de edição
 
-This is where you write and edit your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
+É aqui que escreve e edita o seu código. The editor automatically indents code text and colors the different syntax elements for clear code structure.
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Opção                                    | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                                                  |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **tipo de letra** e **tamanho de letra** | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                           |
-| **style and color of syntax elements**   | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **espaços**                              | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                                                |
-| **temas**                                | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
-| **width of code indentations**           | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
+| Opção                                     | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                                                  |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **tipo de letra** e **tamanho de letra**  | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                           |
+| **estilo e cor dos elementos de sintaxe** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
+| **espaços**                               | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espaços em branco**                                                                                                                                                                                            |
+| **temas**                                 | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
+| **width of code indentations**            | Definir a largura das indentações do código                                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                      |
 
 #### Change bars
 
@@ -85,7 +85,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Table** (submenu): Field names of the table selected using the submenu.
 - **Current table**: Field names of the current table (available in triggers, form methods and object methods).
 - **Project forms**: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
-- **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. For example: [Table];"Form".
+- **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. Por exemplo: [Table]; "Form".
 - **Methods**: Database project method names.
 - **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.
 - **Folders** (submenu): Contents of the folder selected using the submenu.
@@ -107,9 +107,9 @@ You can save the lists set in the Code Editor window in the form of a template. 
 
 The following parameters are stored in the template:
 
-- Relative size of the editing and list areas
+- Tamanho relativo das áreas de edição e de lista
 - Número de listas
-- Location and contents of each list
+- Localização e conteúdo de cada lista
 - Relative width of each list
 
 To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
@@ -165,7 +165,7 @@ The following items are added automatically:
 | Ícone                                                                       | Elemento                                         |
 | --------------------------------------------------------------------------- | ------------------------------------------------ |
 | ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                     |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
+| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou declaração de método        |
 | ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
 | ![function-icon](../assets/en/code-editor/function.png)                     | Nome da função de classe                         |
 
@@ -195,7 +195,7 @@ Os resultados são os seguintes:
 
 ![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
 
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
+All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Estes aparecerão no primeiro nível.
 
 #### Ordem de visualização
 
@@ -256,7 +256,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[Alt]+G                                                   | Substituir próximo                                                                                                                         |
 | [Ctrl]+[Alt]+[Shift]+G                                           | Reemplazar anterior                                                                                                                        |
 | [**Pranchetas**](#clipboards)                                    |                                                                                                                                            |
-| [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copy selected text to a clipboard                                                                                                          |
+| [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                    |
 | [Ctrl]+[Shift]+tecla numérica                                    | Copy selected text to the number clipboard                                                                                                 |
 | [Ctrl]+click on clipboard icon                                   | Paste contents of a clipboard at cursor location                                                                                           |
 | [Ctrl]+chave numérica                                            | Paste contents of the number clipboard at cursor location                                                                                  |
@@ -401,7 +401,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
-- type a dot "." after an object or
+- digite um ponto "." depois de um objeto ou
 - use the Tab key after a dereferenced object pointer "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
@@ -509,7 +509,7 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 ## Dicas de ajuda
 
-The Code Editor provides various contextual information using help tips. They appear when you mouse over an object.
+The Code Editor provides various contextual information using help tips. Aparecem quando se passa o rato por cima de um objeto.
 
 :::tip
 
@@ -595,7 +595,7 @@ Two commands make it easier to move around within code structures (e.g. `If... E
 - **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
 - **End Of Block**: places the cursor at the end of the current structure, just after the final keyword.
 
-These commands are found in the **Method** menu as well as the context menu of the editor. You can also use the following shortcuts:
+These commands are found in the **Method** menu as well as the context menu of the editor. Também pode utilizar os seguintes atalhos:
 
 - Windows: **Ctrl + up arrow** or **Ctrl** + **down arrow**‚
 - macOS: **Command** + **up arrow** or **Command** +**down arrow**.
@@ -606,7 +606,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 
 ![](../assets/en/code-editor/bookm.png)
 
-A bookmark moves along with its original row if additional rows are inserted in the method. Bookmarks are saved with the methods.
+A bookmark moves along with its original row if additional rows are inserted in the method. Os marcadores são guardados com os métodos.
 
 Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 

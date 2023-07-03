@@ -25,7 +25,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- defaultButton|boolean|true, false |
+ defaultButton|booléen|true, false |
 
 #### Objectos suportados
 
@@ -57,7 +57,7 @@ This property is used to disable the selection highlight in list boxes.
 
 When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
 
-By default, this option is not enabled.
+Por defeito, esta opção não está activada.
 
 #### Gramática JSON
 
@@ -144,7 +144,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showFooters|boolean|true (default), false|
+ showFooters|boolean|true (por padrão), false|
 
 #### Objectos suportados
 
@@ -154,7 +154,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 ## Mostrar barra de fórmulas
 
-When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. If not selected, the formula bar is hidden.
+When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. Se não estiver selecionada, a barra de fórmulas fica oculta.
 
 > This property is available only for the [Toolbar](#user-interface) interface.
 
@@ -180,7 +180,7 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showHeaders|boolean|true (default), false|
+ showHeaders|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -190,7 +190,7 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 ## Mostrar caracteres ocultos
 
-Displays/hides invisible characters
+Apresenta/oculta caracteres invisíveis
 
 #### Gramática JSON
 
@@ -336,7 +336,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Veja também
 
-[4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[guia de referência 4D View Pro](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 ---
 
@@ -374,7 +374,7 @@ Valores disponíveis:
 
 ## Modo de visualização
 
-Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
+Sets the mode for displaying the 4D Write Pro document in the form area. Há três valores disponíveis:
 
 - **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
 - **Draft**: draft mode with basic document properties

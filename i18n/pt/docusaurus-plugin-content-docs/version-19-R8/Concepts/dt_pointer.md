@@ -20,7 +20,7 @@ Pode usar apontadores para referenciar tabelas, campos, variáveis, matrizes, el
 | Variável       | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array          | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | Elemento Array | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Objeto         | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Object         | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## Usando um ponteiro: Exemplo básico
@@ -210,4 +210,4 @@ A seguinte linha recebe "Olá" de $MyVar e coloca-o em $NewVar:
 $NewVar:=($PointerTwo->)->
 ```
 
-**Important:** Multiple dereferencing requires parentheses.
+**Importante:** A desreferência múltipla requer parênteses.

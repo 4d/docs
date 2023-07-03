@@ -40,7 +40,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 ## Margem horizontal
 
-This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
+Esta propriedade permite definir o tamanho (em píxeis) das margens horizontais do botão. This margin delimits the area that the button icon and title must not surpass.
 
 This parameter is useful, for example, when the background picture contains borders:
 
@@ -52,9 +52,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                      |
-| ------------- | ------------- | -------------------------------------- |
-| customBorderX | number        | For use with "custom" style. Mínimo: 0 |
+| Nome          | Tipo de dados | Valores possíveis                                     |
+| ------------- | ------------- | ----------------------------------------------------- |
+| customBorderX | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
@@ -104,7 +104,7 @@ Each state is represented by a different picture. In the source picture, the sta
 
 ![](../assets/en/property_numberOfStates.png)
 
-The following states are represented:
+Estão representados os seguintes estados:
 
 1. button not clicked / check box unchecked (variable value=0)
 2. button clicked / check box checked (variable value=1)
@@ -151,10 +151,10 @@ Here are the results using the various options for this property:
 
 | Option       | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| **Direita**  | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Topo**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Direita**  | O texto é colocado à esquerda do ícone. The contents of the button are aligned to the right.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Esquerda** | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Fundo**    | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                           | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centrado** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Gramática JSON
@@ -179,9 +179,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                      |
-| ------------- | ------------- | -------------------------------------- |
-| customBorderY | number        | For use with "custom" style. Mínimo: 0 |
+| Nome          | Tipo de dados | Valores possíveis                                     |
+| ------------- | ------------- | ----------------------------------------------------- |
+| customBorderY | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
@@ -217,7 +217,7 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 :::
 
-### Managing the pop-up menu
+### Gerir o menu pop-up
 
 It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
 

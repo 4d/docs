@@ -1,13 +1,13 @@
 ---
 id: advanced-programming
-title: Advanced programming with Javascript
+title: Programação avançada com Javascript
 ---
 
 A 4D View Pro Area is a [Web Area form object](../FormObjects/webArea_overview.md) that uses the [embedded web rendering engine](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). As such, it behaves just like any other web area, and you can get it to execute Javascript code by calling the [`WA Evaluate Javascript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) 4D command.
 
 Since 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html), you can also call SpreadJS Javascript methods in 4D View Pro areas.
 
-## Hands-on example: Hiding the Ribbon
+## Exemplo prático: Esconder a faixa de opções
 
 Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. The following example hides the spreadJS [Ribbon](./configuring.md#ribbon):
 
@@ -23,7 +23,7 @@ $js+="window.dispatchEvent(new Event('resize'));"
 $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 ```
 
-## Calling SpreadJS Javascript methods
+## Chamar métodos Transcriptase do SpreadJS
 
 You can tap into the SpreadJS library of Javascript methods and call them directly to control your spreadsheets.
 
@@ -37,6 +37,6 @@ The following code undoes the last action in the spreadsheet:
 WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 ```
 
-## 4D View Pro Tips repository
+## Repositório 4D View Pro Tips
 
 [4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) is a GitHub repository that contains a project full of useful functions, allowing to manage floating pictures, sort columns or rows, create a custom culture, and much more! Feel free to clone it and experiment with the project. 

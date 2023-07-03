@@ -1,6 +1,6 @@
 ---
 id: object
-title: Objeto
+title: Object
 ---
 
 Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. A estrutura dos objectos 4D "nativos" baseia-se no princípio clássico dos pares "propriedade/valor". A sintaxe desses objetos é baseada na notação JSON:
@@ -33,7 +33,7 @@ As variáveis, campos ou expressõees de tipo objeto são gerenciadas mediante o
 
 Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. Quando a notação de objeto for ativada em seu banco de dados (ver abaixo), pode usar esses valores sempre que expressões 4D forem esperadas:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- em código 4D, quer escritos nos métodos (Editor de Código) ou externalizados (fórmulas, ficheiros de etiquetas 4D processados por `PROCESS 4D TAGS` ou no Servidor Web, arquivos de exportação, documentos 4D Write Pro...),
 - nas áreas de expressão do depurador e do explorador de Runtime,
 - na lista de propriedades do editor de formulários para objectos de formulários: Variável ou Campo de expressão, bem como várias caixas de selecção e expressões de colunas (Fonte de dados, cor de fundo, estilo, ou cor da fonte).
 
@@ -126,14 +126,14 @@ A notação de objetos pode ser utilizada para acessar aos valores das proprieda
 
 Identificadores de propriedades de objetos
 
-- using a string within square brackets: > object["propertyName"]
+- usar uma string dentro de colchetes: > object["propertyName"]
 
 Exemplo:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a "dot" symbol: > object.propertyName
+- usar um simbolo "ponto": > object.propertyName
 
 Exemplos:
 ```4d

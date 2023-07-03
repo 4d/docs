@@ -44,6 +44,8 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 - Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass#response).
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new *option* property allows you to control this validation.
+- TLS v1.0 and TLS v1.1 are deprecated, they are no longer supported as `Min TLS version` on 4D Server. Version 1.3 is now selected by default and is automatically used if `_o_TLSv1_0` or `_o_TLSv1_1` constants are set with [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
+- As of 4D v20, [4D for Mobile](https://developer.4d.com/go-mobile/) is no longer installed by default in the 4D environment. To benefit from the 4D for Mobile development features in 4D, you need to [install the 4D Mobile App component](https://developer.4d.com/go-mobile/docs/getting-started/installation) in the ["Components"](../Project/architecture.md#components) folder of your projects. If a converted project uses features from the [4D Mobile App Server component](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), make sure you also install it in the "Components" folder of the project.
 
 
 ## 4D v19.5
@@ -98,7 +100,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 - The 4D internal build numbering has been modified as of 4D v19 R7:
     - releases up to 4D v19 R6 (included) are numbered 282xxx,
     - releases from 4D v19 R7 will be numbered 100xxx.   
-      Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
+      Note that a specific 4D version is still uniquely identified by a branch name and a build number. O número de build aumenta cronologicamente.
 - The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 
@@ -109,7 +111,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 - Listbox cells support [horizontal](FormObjects/propertiesCoordinatesAndSizing#horizontal-padding) and [vertical](FormObjects/propertiesCoordinatesAndSizing#vertical-padding) padding.
 - 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list#vp-remove-table) commands to handle tables in sheets.
 - Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer#basics).
-- To help us make our products always better, we now automatically collect data regarding usage statistics on running 4D Server applications. This will have no impact on performance. See the new page explaining [why and how 4D collects data](../Admin/data-collect).
+- To help us make our products always better, we now automatically collect data regarding usage statistics on running 4D Server applications. Este facto não terá qualquer impacto no desempenho. See the new page explaining [why and how 4D collects data](../Admin/data-collect).
 - Components compiled for Silicon: On macOS Silicon platforms (Apple ARM CPUs), components must be recompiled with 4D v19 R6 or higher to be used with this release.
 
 
@@ -131,8 +133,8 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
     - The new [VP SET DATA CONTEXT](../ViewPro/method-list#vp-set-data-context), [VP Get data context](../ViewPro/method-list#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
     - [VP EXPORT DOCUMENT](../ViewPro/method-list#vp-get-binding-path) and [VP Export to object](../ViewPro/method-list#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
     - (Windows only) 4D View Pro areas now use a new print settings window.
-- **Web areas**:
-    + New Windows system rendering engine: Web Areas using the [Windows system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) are now based upon **Microsoft Edge WebView2**. This impacts the following features:
+- **Áreas Web**:
+    + New Windows system rendering engine: Web Areas using the [Windows system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) are now based upon **Microsoft Edge WebView2**. Isto afeta as seguintes funcionalidades:
         * The `WA Create URL history menu` and `WA GET URL HISTORY` commands only return the current URL.
         - The [Progression variable](../FormObjects/properties_WebArea.md#progression) is no longer updated.
         - Drag and drop features are handled by a Windows API which is tagged "experimental" by Microsoft. Consequently, web areas may not work as expected when this API is not installed: Drag and drop may seem allowed even when the `WA enable URL drop` preference has been set to False. However, the drop action is blocked by default, and you can control the allowed URLs using the [`On Window Opening Denied` event](../Events/onWindowOpeningDenied.md) (see below).
@@ -259,11 +261,12 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | Hunspell   | 7.3.27       | 20               | Used for spell checking in 4D forms and 4D Write Pro                                                                                                               |
 | PDFWriter  | 4.3          | 20               | FreeType dependency in 12.2.1                                                                                                                                      |
 | SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                                                                                                  |
-| OpenSSL    | 1.1.1s       | 18 R6            |                                                                                                                                                                    |
+| OpenSSL    | 3.1.1        | 20               |                                                                                                                                                                    |
 | libZip     | 19.5         | 20               | Used by zip class, 4D Write Pro, svg and serverNet components                                                                                                      |
 | LZMA       | 5.4.1        | 20               |                                                                                                                                                                    |
 | Zlib       | 14.1.6       | 20               |                                                                                                                                                                    |
 | webKit     | WKWebView    | 19               |                                                                                                                                                                    |
 | PHP        | 8.2.4        | 20               |                                                                                                                                                                    |
 | libldap    | 2.4.48       | 18 R2            |                                                                                                                                                                    |
+| libsasl    | 2.1.28       | 20               |                                                                                                                                                                    |
 

@@ -38,7 +38,7 @@ Use the **Previous Error** / **Next Error** commands of the **Method** menu to n
 
 The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-files) of the errors in order to help you correct them.
 
-> Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
+> A compilação requer uma licença adequada. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
 
 ## Executar a compilação
 
@@ -48,7 +48,7 @@ When you switch from one mode to the other, 4D closes the current mode and opens
 
 If you modify your project in interpreted mode, you must recompile it in order to have your edits taken into account in compiled mode.
 
-## Compiler window features
+## Características da janela do compilador
 
 In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
 
@@ -90,7 +90,7 @@ When this option is checked, the warnings (if any) are displayed in the window, 
 
 Double-clicking a warning opens the corresponding method.
 
-#### Disabling warnings during compilation
+#### Desativar os avisos durante a compilação
 
 You can selectively disable certain warnings during compilation by inserting the following into the code of a 4D method:
 
@@ -98,9 +98,9 @@ You can selectively disable certain warnings during compilation by inserting the
   //%W-<warning number>
 ```
 
-Only warnings with numbers can be disabled. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning:
+Apenas os avisos com números podem ser desactivados. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning:
 
-*1: Pointer in an array declaration (518.5)*
+*1: Ponteiro numa declaração de array (518.5)*
 
 ... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
 
@@ -158,7 +158,7 @@ Two target options are proposed. The result depends on the processor of the mach
 | *Option*                                         | *no Windows Intel/AMD*                                                                     | *macOS Intel*                                                                                | *no macOS Silicon*                                                                           |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br/>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* |
-| **My processor (processor)**                     | Código para Intel/AMD                                                                      | Código para Intel/AMD                                                                        | Código para Apple Silicon                                                                    |
+| **O meu processador (processador)**              | Código para Intel/AMD                                                                      | Código para Intel/AMD                                                                        | Código para Apple Silicon                                                                    |
 
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
@@ -179,7 +179,7 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 - **Interprocess Variables**: Groups together interprocess variable declarations;
 - **Arrays**: Groups together process array declarations;
 - **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`).
+- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$a;$b)`). For more information, see [`Compiler` method](../Concepts/parameters.md#compiler-method)
 
 You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods).
 
@@ -188,11 +188,11 @@ You can rename each of these methods in the corresponding areas, but they will a
 
 ### Ficheiro Symbol
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
+If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
 
-#### List of process and interprocess variables
+#### Lista das variáveis processo e interprocesso
 
-These two lists contain four columns:
+Estas duas listas contêm quatro colunas:
 
 - Names of process and interprocess variables and arrays used in your project. These variables are listed in alphabetical order.
 - Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
@@ -211,22 +211,22 @@ These two lists contain four columns:
 
 The list of local variables is sorted by database method, project method, trigger, form method, and object method, in the same order as in 4D.
 
-This list is divided into three columns:
+Esta lista está dividida em três colunas:
 
-- list of local variables used in the method;
+- lista das variáveis locais utilizadas no método;
 - tipo da variável;
 - number of dimensions if the variable is an array.
 
-#### Complete list of methods
+#### Lista completa de métodos
 
 A complete list of your database and project methods is given at the end of the file with:
 
 - their type (procedure or function returning a value)
 - the data types of their parameters and the returned result
 - o número de chamadas
-- the Thread Safe or Thread Unsafe property.
+- a propriedade Thread Safe ou Thread Unsafe.
 
-This information appears as follows:
+Esta informação aparece da seguinte forma:
 
 ```
 Procedure or Function <Method name>(parameter data types):
@@ -298,7 +298,7 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 | Silicon Mac |       &#10003;        |        &#10003;         |        &#10003;         |
 
 
-Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
+Ambos os compiladores estão integrados em 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
 
 
 
@@ -333,5 +333,5 @@ In any cases, the 4D Silicon compiler will warn you if your configuration does n
 
 The Silicon compiler is incremental, which means that:
 
-- During the very first compilation, **all 4D methods** are compiled. This step could take a certain time. However it only occurs once.
+- During the very first compilation, **all 4D methods** are compiled. Esta etapa pode demorar algum tempo. No entanto, só ocorre uma vez.
 - During all subsequent compilations, only **new or modified methods** are processed, thus reducing drastically the compilation time. 

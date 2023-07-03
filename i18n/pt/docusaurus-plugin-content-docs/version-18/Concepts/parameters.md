@@ -58,7 +58,7 @@ Tables or array expressions can only be passed [as reference using a pointer](Co
 
 ## Funções
 
-Data can be returned from methods. A method that returns a value is called a function.
+Os dados podem ser devolvidos pelos métodos. A method that returns a value is called a function.
 
 4D or 4D Plug-in commands that return a value are also called functions.
 

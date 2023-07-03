@@ -14,20 +14,20 @@ A new folder is created each time you perform an encryption/decryption operation
 - Encrypting a database is a lengthy operation. It displays a progress indicator (which could be interrupted by the user). Note also that a database encryption operation always includes a compacting step.
 - Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.
 
-## Encrypting data for the first time
+## Encriptar dados pela primeira vez
 
 Encrypting your data for the first time using the MSC requires the following steps:
 
-1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. See the "Table properties" section.
+1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. Ver a secção "Propriedades das tabelas".
 2. Open the Encrypt page of the MSC. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](../assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](../assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note:**The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
 3. Click on the Encrypt picture button.  
    ![](../assets/en/MSC/MSC_encrypt3.png)  
    You will be prompted to enter a passphrase for your data file: ![](../assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](../assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
 4. Enter to confirm your secured passphrase.
 
-The encrypting process is then launched. If the MSC was opened in standard mode, the database is reopened in maintenance mode.
+O processo de encriptação é então iniciado. If the MSC was opened in standard mode, the database is reopened in maintenance mode.
 
-4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). You can do it at this moment or later. You can also open the encryption log file.
+4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo neste momento ou mais tarde. Também é possível abrir o ficheiro de registo da encriptação.
 
 If the encryption process is successful, the Encrypt page displays Encryption maintenance operations buttons.
 
@@ -37,14 +37,14 @@ If the encryption process is successful, the Encrypt page displays Encryption ma
 
 When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](../assets/en/MSC/MSC_encrypt6.png)
 
-### Providing the current data encryption key
+### Fornecimento da chave de encriptação de dados atual
 
 For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
 
 - If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
-- If the data encryption key is not found, you must provide it. The following dialog is displayed: ![](../assets/en/MSC/MSC_encrypt7.png)
+- If the data encryption key is not found, you must provide it. O seguinte diálogo se mostra: ![](../assets/en/MSC/MSC_encrypt7.png)
 
-At this step, you have two options:
+Nesta fase, tem duas opções:
 
 - enter the current passphrase(2) and click **OK**. OU
 - connect a device such as a USB key and click the **Scan devices** button.
@@ -58,16 +58,16 @@ In all cases, if valid information is provided, 4D restarts in maintenance mode 
 This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
 
 1. Click on **Re-encrypt data with the current encryption key**.
-2. Enter the current data encryption key.
+2. Introduzir a chave de encriptação de dados atual.
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt8.png)
 
-### Change your passphrase and re-encrypt data
+### Alterar a sua frase-chave e voltar a encriptar os dados
 
 This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
 
 1. Click on **Change your passphrase and re-encrypt data**.
-2. Enter the current data encryption key.
+2. Introduzir a chave de encriptação de dados atual.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](../assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Desencriptar todos os dados

@@ -249,6 +249,28 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer // $lowSal が追加可能なため $comp2 も追加可能です
 ```
 
+:::note サーバーから返されるエンティティセレクション
+
+クライアント/サーバーのアーキテクチャーにおいては、サーバー上で [`copy()`](API/EntitySelectionClass.md#copy) が呼び出されたとしても、サーバーから返されるエンティティセレクションは、クライアント上では常に共有可能です。 このエンティティセレクションをクライアント側で追加可能にするには、クライアント側で [`copy()`](API/EntitySelectionClass.md#copy) を実行する必要があります。 例:
+
+```4d
+    // 関数は常にサーバー上で実行されます
+exposed Function getSome() : cs.MembersSelection
+    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+
+    // クライアント側で実行されるメソッド
+var $result : cs.MembersSelection
+var $alterable : Boolean
+$result:=ds.Members.getSome() // $result は共有可能
+$alterable:=$result.isAlterable() // False
+
+$result:=ds.Members.getSome().copy() // $result が追加可能になります
+$alterable:=$result.isAlterable() // True
+```
+
+:::
+
+
 #### プロセス間のエンティティセレクションの共有 (例題)
 
 二つのエンティティセレクションを使用し、それらをワーカープロセスに渡して適切な相手にメールを送信したい場合を考えます:

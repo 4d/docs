@@ -22,7 +22,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 > This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
-### Window tabbing (macOS only)
+### Janela com guias (somente macOS)
 
 Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
 
@@ -43,7 +43,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 
 ![](../assets/en/Preferences/general4.png)
 
-Three options are available:
+Estão disponíveis três opções:
 
 *   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
 *   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
@@ -55,13 +55,13 @@ This menu lets you select the color scheme to use for the **4D development** env
 
 > You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
 
-Three options are available:
+Estão disponíveis três opções:
 
 *   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
 *   **Light**: Use the Light Theme
 *   **Dark**: Use the Dark Theme
 
-> This preference is only supported on macOS. On Windows, the "Light" scheme is always used.
+> Esta preferência só é suportada no macOS. On Windows, the "Light" scheme is always used.
 
 
 ### Exit Design when going to Application Environment
@@ -74,13 +74,13 @@ If this option is checked, when the user switches to the Application environment
 If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
 
 *   **Base de dados...**
-*   **Database from Structure Definition...**
+*   **Base de dados a partir da definição da estrutura...**
 
 ![](../assets/en/Preferences/general5.png)
 
 These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
 
-## When creating a new project
+## Ao criar um novo projeto
 
 ### Usar ficheiro de registo
 
@@ -92,7 +92,7 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Include tokens in project source files
+### Incluir tokens nos ficheiros de origem do projeto
 
 When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
@@ -102,7 +102,7 @@ If you intend to use VCS or external code editors with your new projects, you mi
 
 > You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
 
-#### Excluding tokens in existing projects
+#### Excluir tokens em projetos existentes
 
 You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
 
@@ -113,7 +113,7 @@ You can configure your existing projects to save code **without tokens** by inse
 > This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
 
 
-### Create `.gitignore` file
+### Criar o ficheiro `.gitignore`
 
 You might need or want git to ignore some files in your new projects.
 
@@ -125,7 +125,7 @@ You can define the default contents of the `.gitignore` file by clicking the pen
 
 The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
 
-### Language of text comparison
+### Linguagem de comparação de texto
 
 This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
 

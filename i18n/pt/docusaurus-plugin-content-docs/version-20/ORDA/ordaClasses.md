@@ -39,7 +39,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+All ORDA data model classes are exposed as properties of the **`cs`** class store. Estão disponíveis as seguintes classes ORDA:
 
 | Class                       | Nome do exemplo       | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -65,7 +65,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 | Versão | Mudanças                                                                                           |
 | ------ | -------------------------------------------------------------------------------------------------- |
-| v19 R4 | Alias attributes in the Entity Class                                                               |
+| v19 R4 | Atributos alias na Entity Class                                                                    |
 | v19 R3 | Computed attributes in the Entity Class                                                            |
 | v18 R5 | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
@@ -139,7 +139,7 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](../assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+A classe `City` fornece uma API:
 
 ```4d  
 // cs. City class Class extends DataClass Function getCityName()
@@ -233,7 +233,7 @@ For information, please refer to the [Alias attributes](#alias-attributes-1) sec
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Em seguida, pode chamar este código:
 
 ```4d
 var $cityManager; $city : Object
@@ -280,12 +280,12 @@ At the very minimum, a computed attribute requires a `get` function that describ
 
 A computed attribute can also implement a `set` function, which executes whenever a value is assigned to the attribute. The *setter* function describes what to do with the assigned value, usually redirecting it to one or more storage attributes or in some cases other entities.
 
-Just like storage attributes, computed attributes may be included in **queries**. By default, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In some cases this is sufficient. However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
+Just like storage attributes, computed attributes may be included in **queries**. By default, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. Em alguns casos, isto é suficiente. However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
 
 Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance.
 
 
-### How to define computed attributes
+### Como definir atributos computados
 
 You create a computed attribute by defining a `get` accessor in the [**entity class**](#entity-class) of the dataclass. The computed attribute will be automatically available in the dataclass attributes and in the entity attributes.
 
@@ -310,10 +310,10 @@ The *getter* function is mandatory to declare the *attributeName* computed attri
 
 > A computed attribute can use the value of other computed attribute(s). Recursive calls generate errors.
 
-The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
+The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. São permitidos os seguintes tipos de resultados:
 
 - Scalar (text, boolean, date, time, number)
-- Objeto
+- Object
 - Imagem
 - BLOB
 - Entity (i.e. cs. EmployeeEntity)
@@ -413,7 +413,7 @@ Function query <attributeName>($event : Object) -> $result : Text Function query
 // code
 ```
 
-This function supports three syntaxes:
+Esta função suporta três sintaxes:
 
 - With the first syntax, you handle the whole query through the `$event.result` object property.
 - With the second and third syntaxes, the function returns a value in *$result*:
@@ -437,7 +437,7 @@ The *$event* parameter contains the following properties:
 | dataClassName | Text         | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                  |
 | kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Diferente de | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                      |
-| operator      | Text         | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (greater than or equal to)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
+| operator      | Text         | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (igual a, @ é um wildcard)</li><li>=== (igual a, @ não é wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (não é igual a, @ não é wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (greater than or equal to)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
 | result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                           |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
@@ -558,7 +558,7 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 // code
 ```
 
-The `orderBy` function executes whenever the computed attribute needs to be ordered. It allows sorting the computed attribute. For example, you can sort *fullName* on first names then last names, or conversely. When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+The `orderBy` function executes whenever the computed attribute needs to be ordered. Permite ordenar o atributo calculado. For example, you can sort *fullName* on first names then last names, or conversely. When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
 > Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**.
 
@@ -570,7 +570,7 @@ The *$event* parameter contains the following properties:
 | dataClassName | Text         | Nome do dataclass                                                                                          |
 | kind          | Text         | "orderBy"                                                                                                  |
 | value         | Diferente de | Value to be handled by the computed attribute                                                              |
-| operator      | Text         | "desc" or "asc" (default)                                                                                  |
+| operator      | Text         | "desc" ou "asc" (padrão)                                                                                   |
 | descending    | Parâmetros   | `true` for descending order, `false` for ascending order                                                   |
 | result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
 
@@ -704,8 +704,8 @@ In the Student dataclass, an alias attribute returns all teachers of a student:
 In the Course dataclass:
 
 - an alias attribute returns another label for the "name" attribute
-- an alias attribute returns the teacher name
-- an alias attribute returns the student name
+- um atributo alias devolve o nome do professor
+- um atributo alias devolve o nome do aluno
 
 
 ```4d
@@ -713,7 +713,7 @@ In the Course dataclass:
 
 ```
 
-You can then execute the following queries:
+Em seguida, é possível executar as seguintes consultas:
 
 ```4d
 // Find course named "Archaeology"
@@ -754,7 +754,7 @@ $arch.save() //courseName and name are "Archaeology II"
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
-Remote requests include:
+Os pedidos remotos incluem:
 
 - Requests sent by remote 4D applications connected through `Open datastore`
 - Pedidos REST
@@ -796,7 +796,7 @@ $id:=...
 
 ```
 
-When the code is called:
+Quando o código é chamado:
 
 ```4d
 var $remoteDS; $student; $status : Object
@@ -914,7 +914,7 @@ ORDA user classes have a different icon from regular classes. Empty classes are 
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
+To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. Por exemplo, para uma classe Entity:
 
 ```
 Class extends Entity
@@ -936,7 +936,7 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Exemplo com uma variável de classe Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
 

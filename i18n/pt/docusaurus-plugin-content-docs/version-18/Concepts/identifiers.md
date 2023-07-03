@@ -20,10 +20,10 @@ The following rules apply for all 4D frameworks.
 ### Additional rules for object property and ORDA names
 
 - Space characters are not allowed.
-- Pontos (".") and brackets ("[ ]") are not allowed.
+- Pontos (".") e parênteses ("[ ]") não são permitidos.
 - Names are case sensitive.
 
-### Additional rules for SQL
+### Regras adicionais para SQL
 
 - Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
 - Names must not include any SQL keywords (command, attribute, etc.).
@@ -158,7 +158,7 @@ $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
-### Elements of two-dimensional arrays
+### Elementos de arrays bidimensionais
 
 You reference an element of a two-dimensional array by using the curly braces ({…}) duas vezes. The element referenced is denoted by two numeric expressions in two sets of curly braces.
 
@@ -196,7 +196,7 @@ $value:=$clientObj.data.address.city
 
 ## Formulários
 
-You designate a form by using a string expression that represents its name. A form name can contain up to 31 characters.
+You designate a form by using a string expression that represents its name. O nome de um formulário pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -284,7 +284,7 @@ From the scope point of view, there are two types of sets:
 - Conjuntos interprocesso
 - Conjuntos process
 
-4D Server also includes:
+4D Server também inclui:
 
 - Conjuntos clientes
 
@@ -372,26 +372,26 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 The following table summarizes 4D naming conventions.
 
-| Identifier                   | Max. Largura     | Exemplo                            |
-| ---------------------------- | ---------------- | ---------------------------------- |
-| Tabela                       | 31               | [Invoices]                         |
-| Campo                        | 31               | [Employees]Last Name               |
-| Interprocess Variable/Array  | `<>` + 31  | `<>vlNextProcessID`          |
-| Variável/Array processo      | 31               | vsCurrentName                      |
-| Variável/Array local         | $ + 31           | $vlLocalCounter                    |
-| Propriedades de objetos      | 255              | $o.myAttribute                     |
-| Formulário                   | 31               | "My Custom Web Input"              |
-| Objecto de formulário        | 255              | "MyButton"                         |
-| Métodos proyecto             | 31               | M_ADD_CUSTOMERS                  |
-| Rotina Plug-in               | 31               | PDF SET ROTATION                   |
-| Interprocess Set             | `<>` + 255 | `"<>Records to be Archived"` |
-| Conjunto process             | 255              | "Current selected records"         |
-| Client Set                   | $ + 255          | "$Previous Subjects"               |
-| Seleção nomeada              | 255              | "Employees A to Z"                 |
-| Interprocess Named Selection | `<>` + 255 | `"<>Employees Z to A"`       |
-| Processo local               | $ + 255          | "$Follow Events"                   |
-| Processo global              | 255              | "*P_INVOICES_MODULE*"            |
-| Semáforo                     | 255              | "mysemaphore"                      |
+| Identifier                     | Max. Largura     | Exemplo                            |
+| ------------------------------ | ---------------- | ---------------------------------- |
+| Tabela                         | 31               | [Invoices]                         |
+| Campo                          | 31               | [Employees]Last Name               |
+| Variável/array interprocesso   | `<>` + 31  | `<>vlNextProcessID`          |
+| Variável/Array processo        | 31               | vsCurrentName                      |
+| Variável/Array local           | $ + 31           | $vlLocalCounter                    |
+| Propriedades de objetos        | 255              | $o.myAttribute                     |
+| Formulário                     | 31               | "My Custom Web Input"              |
+| Objecto de formulário          | 255              | "MyButton"                         |
+| Métodos proyecto               | 31               | M_ADD_CUSTOMERS                  |
+| Rotina Plug-in                 | 31               | PDF SET ROTATION                   |
+| Interprocess Set               | `<>` + 255 | `"<>Records to be Archived"` |
+| Conjunto process               | 255              | "Current selected records"         |
+| Client Set                     | $ + 255          | "$Previous Subjects"               |
+| Seleção nomeada                | 255              | "Employees A to Z"                 |
+| Seleção temporal interprocesso | `<>` + 255 | `"<>Employees Z to A"`       |
+| Processo local                 | $ + 255          | "$Follow Events"                   |
+| Processo global                | 255              | "*P_MODULE_FACTURES*"            |
+| Semáforo                       | 255              | "mysemaphore"                      |
 
 **Note:** If non-Roman characters are used in the names of the identifiers, their maximum length may be smaller.
 

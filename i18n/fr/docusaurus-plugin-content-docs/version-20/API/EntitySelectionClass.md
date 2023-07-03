@@ -328,7 +328,7 @@ Une erreur est générée si *entity* et l'entity selection ne sont pas liées �
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //The $employee entity is added to the $employees entity selection
+ $employees.add($employee) //L'entité $employee est ajoutée à l'entity selection $employees
 ```
 
 #### Exemple 2
@@ -441,10 +441,10 @@ Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à Ne
 
 
 <!-- REF #EntitySelectionClass.at().Params -->
-| Paramètres | Type      |    | Description                                         |
-| ---------- | --------- |:--:| --------------------------------------------------- |
-| index      | Integer   | -> | Index of entity to return                           |
-| Résultat   | 4D.Entity | <- | The entity at that index|<!-- END REF -->
+| Paramètres | Type      |    | Description                                    |
+| ---------- | --------- |:--:| ---------------------------------------------- |
+| index      | Integer   | -> | Index de l'entité à renvoyer                   |
+| Résultat   | 4D.Entity | <- | L'entité à cet index<!-- END REF -->
 
 
 |
@@ -452,21 +452,21 @@ Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à Ne
 
 #### Description
 
-The `.at()` function <!-- REF #EntitySelectionClass.at().Summary -->returns the entity at position *index*, allowing for positive and negative integer<!-- END REF -->.
+La fonction `.at()` <!-- REF #EntitySelectionClass.at().Summary -->renvoie l'entité à la position *index*, acceptant des nombres entiers positifs et négatifs<!-- END REF -->.
 
-If *index* is negative (from -1 to -n with n : length of the entity selection), the returned entity will be based on the reverse order of the entity selection.
+Si *index* est négatif (de -1 à -n avec n : taille de l'entity selection), l'entité retournée sera basée sur l'ordre inverse de l'entity selection.
 
-The function returns Null if *index* is beyond entity selection limits.
+La fonction renvoie la valeur Null si *index* est au-delà des limites de l'entity selection.
 
 #### Exemple
 
 ```4d
 var $employees : cs.EmployeeSelection
 var $emp1; $emp2 : cs.EmployeeEntity
-$employees:=ds.Employee.query("lastName = :1";"H@")
-$emp1:=$employees.at(2)  //3rd entity of the $employees entity selection 
-$emp2:=$employees.at(-3) //starting from the end, 3rd entity
-    //of the $employees entity selection
+$employees:=ds.Employee.query("lastName = :1" ; "H@")
+$emp1:=$employees.at(2) //3e entité de l'entity selection $employees 
+$emp2:=$employees.at(-3) //en partant de la fin, 3e entité
+    //de l'entity selection $employees
 ```
 
 <!-- END REF -->
@@ -695,10 +695,10 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
-| ------- | ---------------------------- |
-| v20     | Support of `dk count values` |
-| v17     | Ajout                        |
+| Version | Modifications                        |
+| ------- | ------------------------------------ |
+| v20     | Prise en charge de `dk count values` |
+| v17     | Ajout                                |
 
 </details>
 
@@ -729,16 +729,16 @@ Dans le paramètre *attributePath* passez l'attribut d'entité dont vous voulez 
 
 Vous pouvez utiliser la notation `[]` pour désigner une collection lorsque *attributePath* est un chemin dans un objet (cf. exemples).
 
-In the *options* parameter, you can pass one or a combination of the following constants:
+Dans le paramètre *options*, vous pouvez passer une ou une combinaison des constantes suivantes :
 
-| Constante         | Value | Commentaire                                                                                                                                                                                            |
-| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dk diacritical`  | 8     | Evaluation is case sensitive and differentiates accented characters. By default if omitted, a non-diacritical evaluation is performed                                                                  |
-| `dk count values` | 32    | Return the count of entities for every distinct value. When this option is passed, `.distinct()` returns a collection of objects containing a pair of `{"value":*value*; "count":*count*}` properties. |
+| Constante         | Valeur | Commentaire                                                                                                                                                                                                         |
+| ----------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk diacritical`  | 8      | L'évaluation est sensible à la casse et différencie les caractères accentués. Par défaut si omis, une évaluation non diacritique est effectuée                                                                      |
+| `dk count values` | 32     | Renvoie le nombre d'entités pour chaque valeur distincte. Lorsque cette option est activée, `.distinct()` renvoie une collection d'objets contenant une paire de propriétés `{"value":*value* ; "count":*count*}` . |
 
 :::note
 
-The `dk count values` option is only available with storage attributes of type boolean, string, number, and date.
+L'option `dk count values` n'est disponible qu'avec les attributs storage de type booléen, chaîne, nombre et date.
 
 :::
 
@@ -766,7 +766,7 @@ $countries:=ds.Employee.all().distinct("address.country")
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ```
 
-You want to get the number of different job names in the company:
+Vous souhaitez connaître le nombre de noms de postes différents dans l'entreprise :
 
 ```4d
 var $jobs : Collection
@@ -797,10 +797,10 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
-| Paramètres | Type       |    | Description                                                   |
-| ---------- | ---------- |:--:| ------------------------------------------------------------- |
-| attribute  | Text       | -> | Object attribute name whose paths you want to get             |
-| Résultat   | Collection | <- | New collection with distinct paths|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                              |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------ |
+| attribute  | Text       | -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès  |
+| Résultat   | Collection | <- | Nouvelle collection avec les chemins distincts<!-- END REF -->
 
 
 |
@@ -808,15 +808,15 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 #### Description
 
-The `.distinctPaths()` function <!-- REF #EntitySelectionClass.distinctPaths().Summary -->returns a collection of distinct paths found in the indexed object *attribute* for the entity selection<!-- END REF -->.
+La fonction `.distinctPaths()` <!-- REF #EntitySelectionClass.distinctPaths().Summary -->renvoie une collection des chemins distincts trouvés dans l'objet indexé *attribute* pour l'entity selection<!-- END REF -->.
 
-If *attribute* is not an indexed object attribute, an error is generated.
+Si *attribute* n'est pas un attribut d'objet indexé, une erreur est générée.
 
-After the call, the size of the returned collection is equal to the number of distinct paths found in *attribute* for the entity selection. Paths are returned as strings including nested attributes and collections, for example "info.address.number" or "children[].birthdate". Entities with a null value in the *attribute* are not taken into account.
+Après l'appel, la taille de la collection renvoyée est égale au nombre de chemins distincts trouvés dans *attribute* pour l'entity selection. Les chemins sont renvoyés sous forme de chaînes, y compris les attributs imbriqués et les collections, par exemple "info.address.number" ou "children[].birthdate". Les entités ayant une valeur d'*attribut* nulle ne sont pas prises en compte.
 
 #### Exemple
 
-You want to get all paths stored in a *fullData* object attribute:
+Vous souhaitez obtenir tous les chemins d'accès stockés dans l'attribut objet *fullData* :
 
 ```4d
 var $paths : Collection
@@ -833,7 +833,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 :::note
 
-*length* is automatically added as path for nested collection properties.
+*length* est automatiquement ajouté comme chemin d'accès pour les collections imbriquées.
 
 :::
 
@@ -1668,7 +1668,7 @@ Par défaut, les attributs sont triés par ordre croissant ("descending" est fal
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
-If you pass an invalid attribute path in *pathString* or *pathObject*, the function returns an empty entity selection.
+Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*, la fonction renvoie une entity selection vide.
 
 
 #### Exemple
@@ -1735,10 +1735,10 @@ La formule de *formulaString* ou *formulaObj* est exécutée pour chaque entité
 
 Par défaut, si vous omettez le paramètre *sortOrder*, l'entity selection résultante est triée par ordre croissant. Vous pouvez optionnellement passer l'une des valeurs suivantes dans le paramètre *sortOrder* :
 
-| Constante     | Value | Commentaire                     |
-| ------------- | ----- | ------------------------------- |
-| dk ascending  | 0     | Ordre de tri croissant (défaut) |
-| dk descending | 1     | Ordre de tri décroissant        |
+| Constante     | Valeur | Commentaire                     |
+| ------------- | ------ | ------------------------------- |
+| dk ascending  | 0      | Ordre de tri croissant (défaut) |
+| dk descending | 1      | Ordre de tri décroissant        |
 
 Dans *formulaString* et *formulaObj*, l'entité qui est traitée ainsi que ses attributs sont disponibles via la commande `This` (par exemple, `This.lastName`).
 
@@ -2136,7 +2136,7 @@ Vous souhaitez obtenir une sous-sélection des 9 premières entités de l'entity
 ```4d
 var $slice : cs.EmployeeSelection
 
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) //essaie de retourner les entités de l'index 9 à 8, mais comme 9 > 8, retourne une lentity selection vide
 
 ```
 

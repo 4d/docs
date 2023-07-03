@@ -35,7 +35,7 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
 
 ## Operador de atribuição
 
-You can assign BLOBs to each other.
+É possível atribuir BLOBs uns aos outros.
 
 **Exemplo:**
 ```4d
@@ -49,7 +49,7 @@ You can assign BLOBs to each other.
 
 However, no operator can be applied to BLOBs.
 
-## Addressing BLOB contents
+## Endereçamento do conteúdo de um BLOB
 
 You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Exemplo:
 ```4d

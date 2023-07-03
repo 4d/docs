@@ -62,7 +62,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
-4D code of `today` method:
+Código 4D do método `today`:
 
 ```4d
  C_TEXT($0)
@@ -77,7 +77,7 @@ $4d.today()
 
 The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the Web area.
 
-Here is the code of the HTML page:
+Aqui está o código da página HTML:
 
 ```html
 <html>
@@ -100,7 +100,7 @@ $4d.today(function(dollarZero)
 
 The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 
-4D code of `calcSum` method:
+Código 4D do método `calcSum`:
 
 ```4d
  C_REAL(${1}) // receives n REAL type parameters
@@ -112,7 +112,7 @@ The 4D project method `calcSum` receives parameters (`$1...$n`) and returns thei
  End for
 ```
 
-The JavaScript code run in the Web area is:
+O código JavaScript executado na área Web é:
 
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
@@ -158,16 +158,16 @@ When the form is executed, standard browser interface functions are available to
 
 For reasons related to window redrawing mechanisms, the insertion of a Web area into a subform is subject to the following constraints:
 
-- The subform must not be able to scroll
+- O subformulário não deve poder deslocar-se
 - The limits of the Web area must not exceed the size of the subform
 
 > Superimposing a Web area on top of or beneath other form objects is not supported.
 
-### Web Area and Web server conflict (Windows)
+### Conflito entre a área Web e o servidor Web (Windows)
 
 Under Windows, it is not recommended to access, via a Web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own Web server.
 
-### Web plugins and Java applets
+### Plugins Web e applets Java
 
 The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
@@ -179,7 +179,7 @@ The URLs handled by programming in Web areas under macOS must begin with the pro
 
 You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
 
-### Displaying the Web inspector
+### Exibir o inspector Web
 
 The following conditions must be met in order to view the Web inspector in a Web area:
 

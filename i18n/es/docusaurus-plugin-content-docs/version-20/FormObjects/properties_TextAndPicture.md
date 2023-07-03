@@ -68,9 +68,9 @@ Designa la ubicación de un icono en relación con el objeto formulario.
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                  |
-| ------------- | -------------- | --------------------------------- |
-| iconPlacement | string         | "ninguno", "izquierda", "derecha" |
+| Nombre        | Tipos de datos | Valores posibles        |
+| ------------- | -------------- | ----------------------- |
+| iconPlacement | string         | "none", "left", "right" |
 
 #### Objetos soportados
 

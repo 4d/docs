@@ -17,7 +17,7 @@ To start the 4D web server:
 1. Launch your 4D application and create a new, empty 4D project.
 2. In the **Run** menu, select **Start Web Server**.
 
-É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page.
+É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). Está agora pronto para processar pedidos. To check it, we'll display the default home page.
 
 ### Displaying the default home page
 
@@ -25,7 +25,7 @@ The 4D web server creates automatically a default `index.html` page in the defau
 
 1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
 
-The default home page is displayed:
+É apresentada a página inicial predefinida:
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
@@ -46,7 +46,7 @@ End case
 
 The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser.
 
-3. In your browser, enter the following URL:
+3. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/hello
@@ -83,13 +83,13 @@ The most simple solution to display data is to call a [template page](templates.
 ```
 
 2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
-3. In your browser, enter the following URL:
+3. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/friends.shtml
 ```
 
-`.shtml` pages are automatically processed by the web server. Your page filled with data is returned:
+`.shtml` pages are automatically processed by the web server. A sua página preenchida com dados é devolvida:
 
 ![](../assets/en/WebServer/hello3bis.png)
 
@@ -102,13 +102,13 @@ If we not only want to *display* data, but to *use* it, we can use ORDA and the 
 
 ![](../assets/en/WebServer/hello5.png)
 
-2. In your browser, enter the following URL:
+2. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/rest/$catalog
 ```
 
-The web server returns the results in JSON:
+O servidor Web devolve os resultados em JSON:
 
 ```json
 {
@@ -265,7 +265,7 @@ End if
 ![](../assets/en/WebServer/hello0.png)
 
 
-4. In your browser, enter the following URL:
+4. No seu browser, introduza o seguinte URL:
 
 ```
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
@@ -273,11 +273,11 @@ http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 
 > Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST.
 
-Then you will be logged for the session:
+Em seguida, será registado para a sessão:
 
 ![](../assets/en/WebServer/login1.png)
 
-Wrong credentials would be rejected:
+As credenciais incorretas serão rejeitadas:
 
 ![](../assets/en/WebServer/login2.png)
 

@@ -61,7 +61,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
-4D code of `today` method:
+Código 4D do método `today`:
 
 ```4d
  C_TEXT($0)
@@ -76,7 +76,7 @@ $4d.today()
 
 The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. Queremos mostrar a data na página HTML que é carrega pela área Web.
 
-Here is the code of the HTML page:
+Aqui está o código da página HTML:
 
 ```html
 <html>
@@ -99,7 +99,7 @@ $4d.today(function(dollarZero)
 
 The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 
-4D code of `calcSum` method:
+Código 4D do método `calcSum`:
 
 ```4d
  C_REAL(${1}) // receives n REAL type parameters
@@ -157,12 +157,12 @@ Quando o formulário for executado, as funções da interface de navegador padr�
 
 Por razões relacionadas com os mecanismos de redesenho de janelas, a inserção de uma área web em um subformulário está sujeita às restrições abaixo:
 
-- The subform must not be able to scroll
+- O subformulário não deve poder deslocar-se
 - Os limites da área Web não devem ultrapassar o tamanho do subformulário
 
 > Não é compatível sobrepor uma área Web no topo ou debaixo dos outros objetos formulário.
 
-### Web Area and Web server conflict (Windows)
+### Conflito entre a área Web e o servidor Web (Windows)
 
 Em Windows, não é recomendado acessar, através de uma área web, o servidor web da aplicação 4D que contenha a área, já que esta configuração poderia provocar um conflito que paralise a aplicação. Com certeza um 4D remoto pode acessar ao servidor web de 4D Server, mas não ao seu próprio servidor web.
 
@@ -174,7 +174,7 @@ As URLs manejadas por programação em áreas web em macOS devem começar com o 
 
 Pode ver e usar um inspetor web dentro das áreas web de seus formulários. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
 
-### Displaying the web inspector
+### Exibir o inspector web
 
 To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area.
 

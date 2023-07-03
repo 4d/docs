@@ -320,7 +320,7 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 <!-- REF #FunctionClass.apply().Params -->
 | Parâmetro     | Tipo       |    | Descrição                                                                       |
 | ------------- | ---------- |:--:| ------------------------------------------------------------------------------- |
-| thisObj       | Objeto     | -> | Objeto a ser retornado pelo comando This na fórmula                             |
+| thisObj       | Object     | -> | Objeto a ser retornado pelo comando This na fórmula                             |
 | formulaParams | Collection | -> | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
 | Resultados    | any        | <- | Valores de execução de fórmula|<!-- END REF -->
 
@@ -385,7 +385,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 <!-- REF #FunctionClass.call().Params -->
 | Parâmetro  | Tipo   |    | Descrição                                                            |
 | ---------- | ------ | -- | -------------------------------------------------------------------- |
-| thisObj    | Objeto | -> | Objeto a ser retornado pelo comando This na fórmula                  |
+| thisObj    | Object | -> | Objeto a ser retornado pelo comando This na fórmula                  |
 | params     | any    | -> | Valores a serem passados como $1...$n quando a fórmula for executada |
 | Resultados | any    | <- | Valores de execução de fórmula|<!-- END REF -->
 

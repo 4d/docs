@@ -18,12 +18,12 @@ This information allows you to identify the source and context of each operation
   - Opening of Data File: Opening of a data file.
   - Closing of Data File: Closing of an open data file.
   - Creation of a Context: Creation of a process that specifies an execution context.
-  - Closing of a Context: Closing of process.
-  - Addition: Creation and storage of a record.
+  - Encerramento de um contexto: encerramento de um processo.
+  - Adição: Criação e armazenamento de um registo.
   - Adding a BLOB: Storage of a BLOB in a BLOB field.
   - Deletion: Deletion of a record.
-  - Modification: Modification of a record.
-  - Start of Transaction: Transaction started.
+  - Modificação: modificação de um registo.
+  - Início da transação: A transação foi iniciada.
   - Validation of Transaction: Transaction validated.
   - Cancellation of Transaction: Transaction cancelled.
 

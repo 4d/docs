@@ -23,7 +23,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Ponteiro](Concepts/dt_pointer.md)             | -                        | Sim                     | `C_POINTER`, `ARRAY POINTER` |
 | [Imagem](Concepts/dt_picture.md)               | Sim                      | Sim                     | `C_PICTURE`, `ARRAY PICTURE` |
 | [BLOB](Concepts/dt_blob.md)                    | Sim                      | Sim                     | `C_BLOB`, `ARRAY BLOB`       |
-| [Objeto](Concepts/dt_object.md)                | Sim                      | Sim                     | `C_OBJECT`, `ARRAY OBJECT`   |
+| [Object](Concepts/dt_object.md)                | Sim                      | Sim                     | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Collection](Concepts/dt_collection.md)        | -                        | Sim                     | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)           | -                        | Sim                     | `C_VARIANT`                  |
 
@@ -38,8 +38,8 @@ When variables are typed by means of a compiler directive, they receive a defaul
 The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
 
 - Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
-- Local variables are set:
-    - in interpreted mode: to zero
+- As variáveis locais são definidas:
+    - em modo interpretado: a zero
     - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
         - "to zero": to zero (see above),
         - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
@@ -47,20 +47,20 @@ The default value depends on the variable type and category, its execution conte
 
 The following table illustrates these default values:
 
-| Tipo         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compilado "não"        |
-| ------------ | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleano     | False                                                                               | True                    | True (varia)                 |
-| Date         | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Longint      | 0                                                                                   | 1919382119              | 909540880 (varia)            |
-| Hora         | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varia)         |
-| Imagem       | tamanho da imagem=0                                                                 | tamanho da imagem=0     | tamanho da imagem=0          |
-| Real         | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Ponteiro     | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Text         | ""                                                                                  | ""                      | ""                           |
-| Blob         | Tamanho do Blob =0                                                                  | Tamanho do Blob =0      | Tamanho do Blob =0           |
-| Objeto       | null                                                                                | null                    | null                         |
-| Collection   | null                                                                                | null                    | null                         |
-| Diferente de | indefinido                                                                          | indefinido              | indefinido                   |
+| Tipo         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compilado "não"       |
+| ------------ | ----------------------------------------------------------------------------------- | ----------------------- | --------------------------- |
+| Booleano     | False                                                                               | True                    | True (varia)                |
+| Date         | 00-00-00                                                                            | 00-00-00                | 00-00-00                    |
+| Longint      | 0                                                                                   | 1919382119              | 909540880 (varia)           |
+| Hora         | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varia)        |
+| Imagem       | tamanho da imagem=0                                                                 | tamanho da imagem=0     | tamanho da imagem=0         |
+| Real         | 0                                                                                   | 1.250753659382e+243     | 1,972748538022e-217 (varia) |
+| Ponteiro     | Nil=true                                                                            | Nil=true                | Nil=true                    |
+| Text         | ""                                                                                  | ""                      | ""                          |
+| Blob         | Tamanho do Blob =0                                                                  | Tamanho do Blob =0      | Tamanho do Blob =0          |
+| Object       | null                                                                                | null                    | null                        |
+| Collection   | null                                                                                | null                    | null                        |
+| Diferente de | indefinido                                                                          | indefinido              | indefinido                  |
 
 
 ## Conversão de tipos de dados

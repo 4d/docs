@@ -5,11 +5,11 @@ title: Sessões usuário
 
 The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
 
-Web server user sessions allow to:
+As sessões de usuário do servidor Web permitem:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
 - share data between the processes of a web client,
-- associate privileges to user sessions,
+- associar privilégios a sessões de usuário,
 - handle access through a `Session` object and the [Session API](API/SessionClass.md).
 
 > **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
@@ -68,7 +68,7 @@ Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) prope
 
 ## Session lifetime
 
-A scalable web session is closed when:
+Uma sessão Web escalável é encerrada quando:
 
 - the web server is stopped,
 - the timeout of the session cookie has been reached.
@@ -86,7 +86,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 ## Privilégios
 
-Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
+Os privilégios podem ser associados a sessões. On the web server, you can provide specific access or features depending on the privileges of the session.
 
 You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
@@ -110,7 +110,7 @@ In a CRM application, each salesperson manages their own client portfolio. The d
 We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
 
 
-1. We run this URL to open a session:
+1. Executamos este URL para abrir uma sessão:
 
 ```
 http://localhost:8044/authenticate.shtml

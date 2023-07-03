@@ -1,12 +1,12 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordinates & Sizing
+title: Coordenadas e dimensionamento
 ---
 
 
 ## Altura automática da linha
 
-This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
+This property is only available for array-based, non-hierarchical list boxes. A propriedade não está selecionada por padrão.
 
 When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
 > When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
@@ -16,10 +16,10 @@ When this property is enabled, the height of every row is automatically calculat
 * The row height calculation takes into account:
   * any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
   * any control types (inputs, check boxes, lists, dropdowns),
-  * fonts, fonts styles and font sizes,
+  * tipos, estilos e tamanhos de letra,
   * the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
-* The row height calculation ignores:
+* O cálculo da altura da linha ignora:
   * conteúdo da coluna oculta
   * [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 > > > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
@@ -38,7 +38,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 ## Fundo
 
-Bottom coordinate of the object in the form.
+Coordenadas inferiores do objeto no formulário.
 
 #### Gramática JSON
 

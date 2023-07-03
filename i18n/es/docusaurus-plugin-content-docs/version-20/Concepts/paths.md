@@ -21,14 +21,14 @@ Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen u
 
 Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designa                                                     |
-| ------------ | ----------------------------------------------------------- |
-| "/DATA"      | Carpeta de datos actual                                     |
-| "/LOGS"      | Carpeta Logs                                                |
-| "/PACKAGE"   | Carpeta de la base de datos (con o sin la extensión 4dbase) |
-| "/PROJECT"   | Carpeta Project                                             |
-| "/RESOURCES" | Carpeta de recursos actual de la base de datos              |
-| "/SOURCES"   | Carpeta de recursos actual del proyecto                     |
+| filesystem   | Designa                                                |
+| ------------ | ------------------------------------------------------ |
+| "/DATA"      | Carpeta de datos actual                                |
+| "/LOGS"      | Carpeta Logs                                           |
+| "/PACKAGE"   | Project root folder (with or without 4dbase extension) |
+| "/PROJECT"   | Carpeta Project                                        |
+| "/RESOURCES" | Carpeta de recursos actual del proyecto                |
+| "/SOURCES"   | Current project sources folder                         |
 
 ## Sintaxis POSIX
 
@@ -46,6 +46,7 @@ En la sintaxis POSIX, generalmente se utilizará los nombres de rutas `filesyste
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 

@@ -1088,7 +1088,7 @@ La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summ
 
 |
 
-For a description of the ORDA request log format, please refer to the [**ORDA requests**](../Debugging/debugLogFiles.md#orda-requests) section.
+Para una descripción del formato del registro de peticiones ORDA, consulte la sección [**Peticiones ORDA**](../Debugging/debugLogFiles.md#orda-requests).
 
 :::
 

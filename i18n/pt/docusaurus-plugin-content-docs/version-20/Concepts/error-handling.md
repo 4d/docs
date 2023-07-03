@@ -12,7 +12,7 @@ Manejo de erros responde à duas necessidades principais:
 
 :::dica Boa prática
 
-> > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis.
+> > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Quando 4D Server não está sendo executado [headless](../Admin/cli.md) (ou seja, é iniciado com sua [janela de administração](../ServerWindow/overview.md)), esse método evitaria que caixas de diálogo inesperadas fossem exibidas na máquina do servidor. No modo headless, os erros são registados no ficheiro [4DDebugLog](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) para análise posterior.
 
 :::
 

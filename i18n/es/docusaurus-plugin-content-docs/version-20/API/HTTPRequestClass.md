@@ -79,7 +79,7 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 | Versión | Modificaciones                       |
 | ------- | ------------------------------------ |
-| v20     | TLS validation by default            |
+| v20     | Validación TLS por defecto           |
 | v19 R7  | Soporte de la propiedad *decodeData* |
 
 </details>
@@ -148,7 +148,7 @@ En el parámetro *options*, pase un objeto que pueda contener las siguientes pro
 | serverAuthentication   | [authentication object](#authentication-object) | Autenticación del servidor de gestión de objetos                                                                                                                                                                                                                                            | indefinido   |
 | returnResponseBody     | Boolean                                         | Si false, el cuerpo de la respuesta no se devuelve en el objeto [`response`](#response). Devuelve un error si es false y `onData` es indefinido                                                                                                                                             | True         |
 | timeout                | Real                                            | Tiempo de espera en segundos. Indefinido = sin tiempo de espera                                                                                                                                                                                                                             | Indefinido   |
-| validateTLSCertificate | Boolean                                         | If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.                                                              | True         |
+| validateTLSCertificate | Boolean                                         | Si false, 4D no valida el certificado TLS y no devuelve un error si no es válido (es decir, caducado, autofirmado...). Importante: en la implementación actual, la propia Autoridad de Certificación no se verifica.                                                                        | True         |
 
 
 #### Función callback (retrollamada)

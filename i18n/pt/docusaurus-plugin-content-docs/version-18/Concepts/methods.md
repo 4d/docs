@@ -74,7 +74,7 @@ Usando sub-rotinas, você torna o seu código modular. Isto significa simplesmen
 
 Even for someone who doesn’t know the database, it is clear what this code does. Não é necessário examinar cada sub-rotina. Cada sub-rotina pode ter muitas linhas e realizar algumas operações complexas, mas aqui é apenas importante que desempenhe a sua tarefa. Recomendamos que divida o seu código em tarefas lógicas, ou módulos, sempre que possível.
 
-### Methods attached to objects
+### Métodos associados aos objetos
 
 Pode encapsular os seus métodos de projeto em **fórmula** objectos e chamá-los dos seus objectos.
 
@@ -223,7 +223,7 @@ com a função recursiva `Genealogia de` listada aqui:
 
 Note-se o `Genealogia do método` que se autodenomina.
 
-**Bold**: Braces displayed in bold. A segunda via é um **algoritmo recursivo**.
+A primeira forma é um **algoritmo iterativo**. A segunda via é um **algoritmo recursivo**.
 
 Ao implementar código para casos como o exemplo anterior, é importante notar que é sempre possível escrever métodos usando iteração ou recursividade. Tipicamente, a recursão fornece um código mais conciso, legível e de fácil manutenção, mas a sua utilização não é obrigatória.
 
@@ -244,4 +244,4 @@ In addition to generic **project methods**, 4D supports several specific method 
 | **Método objecto (widget)**   | Automático, quando um evento envolve a forma a que o método está ligado                     | Não                | Propriedade de um objecto de formulário (também chamado widget)                                                                                                                                   |
 | **Método formulário**         | Automático, quando um evento envolve o objecto ao qual o método está ligado                 | Não                | Propriedade de um formulário. Pode-se utilizar um método de formulário para gerir dados e objectos, mas é geralmente mais simples e mais eficiente utilizar um método de objecto para estes fins. |
 | **No**(default): No highlight | Automático, cada vez que manipula os registos de uma tabela (Adicionar, Apagar e Modificar) | Não                | Propriedade de uma tabela. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                                          |
-| **Método base**               | Automático, quando ocorre um evento de sessão de trabalho                                   | Sim (pré-definido) | Existem 16 métodos base em 4D. See Database methods section                                                                                                                                       |
+| **Método base**               | Automático, quando ocorre um evento de sessão de trabalho                                   | Sim (pré-definido) | Existem 16 métodos base em 4D. Ver secção Métodos base de dados                                                                                                                                   |

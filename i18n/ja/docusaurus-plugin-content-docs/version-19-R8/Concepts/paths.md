@@ -21,14 +21,14 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 
 以下の filesystemパス名がサポートされています:
 
-| filesystem   | 指定先                               |
-| ------------ | --------------------------------- |
-| "/DATA"      | カレントデータフォルダー                      |
-| "/LOGS"      | Logs フォルダー                        |
-| "/PACKAGE"   | データベースフォルダー (拡張子 4dbase の有無に関わらず) |
-| "/PROJECT"   | Project フォルダー                     |
-| "/RESOURCES" | カレントデータベースの Resources フォルダー       |
-| "/SOURCES"   | カレントプロジェクトの Sources フォルダー         |
+| filesystem   | 指定先                                   |
+| ------------ | ------------------------------------- |
+| "/DATA"      | カレントデータフォルダー                          |
+| "/LOGS"      | Logs フォルダー                            |
+| "/PACKAGE"   | プロジェクトのルートフォルダー (拡張子 4dbase の有無に関わらず) |
+| "/PROJECT"   | Project フォルダー                         |
+| "/RESOURCES" | カレントプロジェクトの Sources フォルダー             |
+| "/SOURCES"   | カレントプロジェクトの Sources フォルダー             |
 
 ## POSIX シンタックス
 
@@ -46,6 +46,7 @@ POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) 
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 

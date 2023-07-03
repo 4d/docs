@@ -283,7 +283,7 @@ The following table compares the three types of `For each... End for each`:
 |                                           | Loop através da coleção                            | Loop nas seleções de entidades | Loop nos objetos                 |
 | ----------------------------------------- | -------------------------------------------------- | ------------------------------ | -------------------------------- |
 | Tipo Current_Item                         | Variável do mesmo tipo que os elementos da coleção | Entity                         | Variável texto                   |
-| Tipos de expressões                       | Coleção (com elementos do mesmo tipo)              | Seleção de entidades           | Objeto                           |
+| Tipos de expressões                       | Coleção (com elementos do mesmo tipo)              | Seleção de entidades           | Object                           |
 | Número de loops (por padrão)              | Número de elementos da coleção                     | Número de entidades na seleção | Número de propriedades de objeto |
 | Compatibilidade de parâmetros begin / end | Sim                                                | Sim                            | Não                              |
 

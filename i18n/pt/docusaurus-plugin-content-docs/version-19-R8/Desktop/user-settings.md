@@ -32,7 +32,7 @@ When you check this option, the settings are separated into three dialog boxes:
 
 * **Structure Settings**
 * **User Settings**
-* **User Settings for Data file**
+* **Propriedades usuário para o arquivo de dados**
 
 You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
 
@@ -50,28 +50,28 @@ The **User Settings** and **User Settings for Data File** dialog boxes contain a
 
 The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
 
-| **Page of Structure Settings**                                                           | **Page of User Settings**                    | **Page of User Settings for Data File**      |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| [Página geral](../settings/general.md)                                                   | N/a                                          | N/a                                          |
-| [Página Interface](../settings/interface.md)                                             | Identical to standard settings               | Identical to standard settings               |
-| [Página Compilador](../settings/compiler.md)                                             | N/a                                          | N/a                                          |
-| [Página Base de dados/armazenamento de dados](../settings/database.md#data-storage)      | N/a                                          | N/a                                          |
-| [Página Base de dados/Memória](../settings/database.md#memory)                           | Identical to standard settings               | Identical to standard settings               |
-| [Página Backup/Peridiocidade](../settings/backup.md#scheduler)                           | N/a                                          | Identical to standard settings               |
-| [Página Backup/Configuração](../settings/backup.md#configuration)                        | N/a                                          | Identical to standard settings               |
-| [Página Backup/Backup e restaurar](../settings/backup.md#backup-restore)                 | N/a                                          | Identical to standard settings               |
-| [Página cliente-servidor/opções rede](../settings/client-server.md#network-options)      | Identical to standard settings               | Identical to standard settings               |
-| [Página cliente-servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Configuração](../settings/web.md#configuration)                              | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Opções (I)](../settings/web.md#options)                                      | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Opções (II)](../settings/web.md#options-ii)                                  | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Log (tipo)](../settings/web.md#log)                                          | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Log (backup)](../settings/web.md#log)                                        | Identical to standard settings               | Identical to standard settings               |
-| [Página Web/Web services](../settings/web.md#web-services)                               | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível |
-| [Página SQL](../settings/sql.md)                                                         | Identical to standard settings               | Identical to standard settings               |
-| [Página PHP](../settings/php.md)                                                         | Identical to standard settings               | Identical to standard settings               |
-| [Página segurança](../settings/security.md)                                              | N/a                                          | N/a                                          |
-| [Página de compatibilidade](../settings/compatibility.md)                                | N/a                                          | N/a                                          |
+| **Page of Structure Settings**                                                           | **Page of User Settings**                    | **Página de Propriedades usuário para ficheiro de dados** |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------- |
+| [Página geral](../settings/general.md)                                                   | N/a                                          | N/a                                                       |
+| [Página Interface](../settings/interface.md)                                             | Identical to standard settings               | Identical to standard settings                            |
+| [Página Compilador](../settings/compiler.md)                                             | N/a                                          | N/a                                                       |
+| [Página Base de dados/armazenamento de dados](../settings/database.md#data-storage)      | N/a                                          | N/a                                                       |
+| [Página Base de dados/Memória](../settings/database.md#memory)                           | Identical to standard settings               | Identical to standard settings                            |
+| [Página Backup/Peridiocidade](../settings/backup.md#scheduler)                           | N/a                                          | Identical to standard settings                            |
+| [Página Backup/Configuração](../settings/backup.md#configuration)                        | N/a                                          | Identical to standard settings                            |
+| [Página Backup/Backup e restaurar](../settings/backup.md#backup-restore)                 | N/a                                          | Identical to standard settings                            |
+| [Página cliente-servidor/opções rede](../settings/client-server.md#network-options)      | Identical to standard settings               | Identical to standard settings                            |
+| [Página cliente-servidor/Configuração IP](../settings/client-server.md#ip-configuration) | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Configuração](../settings/web.md#configuration)                              | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Opções (I)](../settings/web.md#options)                                      | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Opções (II)](../settings/web.md#options-ii)                                  | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Log (tipo)](../settings/web.md#log)                                          | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Log (backup)](../settings/web.md#log)                                        | Identical to standard settings               | Identical to standard settings                            |
+| [Página Web/Web services](../settings/web.md#web-services)                               | Opção de prefixação do método não disponível | Opção de prefixação do método não disponível              |
+| [Página SQL](../settings/sql.md)                                                         | Identical to standard settings               | Identical to standard settings                            |
+| [Página PHP](../settings/php.md)                                                         | Identical to standard settings               | Identical to standard settings                            |
+| [Página segurança](../settings/security.md)                                              | N/a                                          | N/a                                                       |
+| [Página de compatibilidade](../settings/compatibility.md)                                | N/a                                          | N/a                                                       |
 
 When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
 
@@ -100,7 +100,7 @@ In merged applications, the user settings file is placed at the following locati
 * In single-user versions: ProjectFolder/Database/Settings/settings.4DSettings
 * In client/server versions: ProjectFolder/Server Database/Settings/settings.4DSettings
 
-### User Settings for Data File
+### Propriedades usuário para arquivo de dados
 
 The user settings file linked to the data file is automatically created and placed in a settings folder at the following location:
 
@@ -114,12 +114,12 @@ Settings files are XML files; they can be read and modified using integrated 4D 
 
 ## Priority of settings
 
-Settings can be stored at three levels. Each setting defined at one level overrides the same setting defined at a previous level, if any:
+As definições podem ser guardadas em três níveis. Each setting defined at one level overrides the same setting defined at a previous level, if any:
 
 | **Nível de prioridade** | **Nome**                                                                  | **Localização**                                                                                                                                               | **Comentários**                                                                                                      |
 | ----------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | 3 (mais baixo)          | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.                        |
-| 2                       | User settings (all data files)                                            | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Overrides Structure settings. Stored within the application package.                                                 |
-| 1 (mais alto)           | User settings (current data file)                                         | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
+| 2                       | User settings (all data files)                                            | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Overrides Structure settings. Armazenado no pacote da aplicação.                                                     |
+| 1 (mais alto)           | Propriedades usuário (ficheiro de dados atual)                            | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
 
 Keep in mind that user settings files only contain a subset of relevant settings, while the structure file contains all custom settings, including core settings.

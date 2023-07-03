@@ -24,7 +24,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 ## Menu de contexto
 
-Allows the user access to a standard context menu in the object when the form is executed.
+Permite ao usuário aceder a um menu de contexto padrão no objeto quando o formulário é executado.
 
 For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display#picture-format) using this menu is temporary; it is not saved with the record.
 
@@ -32,15 +32,15 @@ For a [multi-style](properties_Text.md#multi-style) text type [input](input_over
 
 - **Fonts...**: displays the font system dialog box
 - **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
-- commands for supported style modifications: font, size, style, color and background color. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
+- comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                     |
-| ----------- | ------------- | ------------------------------------- |
-| contextMenu | string        | "automatic" (used if missing), "none" |
+| Nome        | Tipo de dados | Valores possíveis                                   |
+| ----------- | ------------- | --------------------------------------------------- |
+| contextMenu | string        | "automatic" (utilizado se estiver em falta), "none" |
 
 #### Objectos suportados
 
@@ -52,7 +52,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 The Enterable attribute indicates whether users can enter values into the object.
 
-Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. A non-enterable object only displays data. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
@@ -78,7 +78,7 @@ During data entry, an entry filter evaluates each character as it is typed. If t
 
 Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. When such a format is used, the user does not need to enter the parentheses or the dashes.
 
-### Defining an entry filter
+### Definição de um filtro de entrada
 
 Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
 
@@ -93,22 +93,22 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 | Filtro de entrada             | Descrição                                                                                                                                            |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                            | Allow any letters, but convert to uppercase.                                                                                                         |
+| ~A                            | Permite quaisquer letras, mas converte-as em maiúsculas.                                                                                             |
 | &9                            | Permitir apenas números.                                                                                                                             |
-| &A                            | Allow only capital letters.                                                                                                                          |
+| &A                            | Permitir apenas letras maiúsculas.                                                                                                                   |
 | &a                            | Allow only letters (uppercase and lowercase).                                                                                                        |
-| &@                            | Allow only alphanumeric characters. Sem caracteres especiais.                                                                                        |
-| ~a##                          | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                 |
-| !0&9##/##/##                  | Standard date entry format. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
+| &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                  |
+| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Allow any two letters, but convert to uppercase.                                                    |
+| !0&9##/##/##                  | Formato de entrada de data standard. Display zeros in entry spaces. Permitir quaisquer números.                                                      |
 | !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                          |
 | !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.              |
-| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers before each word.                                                  |
-| !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Allow any two numbers after each word.                                                   |
-| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, four entries.                         |
+| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números antes de cada palavra.                                             |
+| !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números quaisquer depois de cada palavra.                                  |
+| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Três entradas, hífen, quatro entradas.                       |
 | !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |
 | !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries. |
 | !0&9###-##-####               | Número de segurança social. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
-| ~"A-Z;0-9; ;,;.;-"            | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                        |
+| ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                            |
 | &"a-z;0-9; ;,;.;-"            | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                 |
 | &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                               |
 
@@ -130,7 +130,7 @@ When the **Focusable** property is enabled for an object, the object can have th
 
 > An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
 
-- ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
+- ![](../assets/en/FormObjects/property_focusable1.png)<br/>A caixa de verificação mostra o foco quando selecionada
 
 - ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
 
@@ -158,9 +158,9 @@ By default, the object uses the current keyboard layout.
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis                                                           |
-| --------------- | ------------- | --------------------------------------------------------------------------- |
-| keyboardDialect | text          | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| Nome            | Tipo de dados | Valores possíveis                                                                  |
+| --------------- | ------------- | ---------------------------------------------------------------------------------- |
+| keyboardDialect | text          | Código da linguajem, por exemplo, "ar-ma" ou "cs". See RFC3066, ISO639 and ISO3166 |
 
 #### Objectos suportados
 
@@ -238,7 +238,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 ---
 
-## Selection always visible
+## Selecção sempre visível
 
 This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
 
@@ -269,7 +269,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 | Nome            | Tipo de dados | Valores possíveis                                  |
 | --------------- | ------------- | -------------------------------------------------- |
-| shortcutAccel   | boolean       | true, false (Ctrl Windows/Command macOS)           |
+| shortcutAccel   | boolean       | true, false (Windows: Ctrl/macOS: Command)         |
 | shortcutAlt     | boolean       | true, false                                        |
 | shortcutCommand | boolean       | true, false                                        |
 | shortcutControl | boolean       | true, false (macOS: Control)                       |

@@ -47,7 +47,7 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta **Logs**. The log file stores the following information for each build:
 
-* The start and end of building of targets,
+* O início e o fim da construção de objetivos,
 * The name and full access path of the files generated,
 * The date and time of the build,
 * Todos os erros que forem produzidos.
@@ -57,7 +57,7 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 > Use the `Get 4D file(Build application log file)` command to get the log file location.
 
-## Application name and destination folder
+## Nome da aplicação e pasta de destino
 
 ![](../assets/en/Project/buidappstructureProj.png)
 
@@ -71,7 +71,7 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 ![](../assets/en/Project/appbuilderProj.png)
 
-### Build compiled structure
+### Construir a estrutura compilada
 
 Gera um banco de dados que contém apenas código compilado.
 
@@ -115,7 +115,7 @@ Checking the **Build stand-alone Application** option and clicking **Build** wil
 
 The following elements are required for the build:
 
-* 4D Volume Desktop (the 4D database engine),
+* 4D Volume Desktop (o motor de base de dados 4D),
 * uma [licença apropriada](#licenses)
 
 No Windows, esta funcionalidade cria um ficheiro executável (.exe). Em macOS, trata da criação de pacotes de software.
@@ -141,7 +141,7 @@ Once the folder is selected, its complete pathname is displayed and, if it actua
 
 #### Modo de ligação de dados
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+This option lets you choose the linking mode between the merged application and the local data file. Estão disponíveis dois modos de ligação de dados:
 
 * **Por nome da aplicação** (por defeito) - A aplicação 4D abre automaticamente o ficheiro de dados mais recentemente aberto correspondente ao ficheiro de estrutura. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
@@ -184,7 +184,7 @@ If your stand-alone application is used as a Web server, the files and folders r
 * *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
 * pasta raiz Web padrão.
 
-Items must be installed:
+Os elementos devem ser instalados:
 
 * **on Windows**: in the *Final Application\MyProject\Database* subfolder.
 * **on macOS**: next to the *MyProject.app* software package.
@@ -214,7 +214,7 @@ Also, the client/server application is customized and its handling simplified:
 * A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application). This is only necessary for the initial version of the client application since subsequent updates can be handled directly on the same platform using the automatic update mechanism.
 * It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
 
-### Build server application
+### Criar aplicação servidor
 
 Check this option to generate the server part of your application during the building phase. You must designate the location on your disk of the 4D Server application to be used. You must designate the location on your disk of the 4D Server application to be used.
 
@@ -263,7 +263,7 @@ Path to compiled structure of the Apple Silicon/Intel client application used to
 
 #### Modo de ligação de dados
 
-This option lets you choose the linking mode between the merged application and the local data file. Two data linking modes are available:
+This option lets you choose the linking mode between the merged application and the local data file. Estão disponíveis dois modos de ligação de dados:
 
 * **Por nome da aplicação** (por defeito) - A aplicação 4D abre automaticamente o ficheiro de dados mais recentemente aberto correspondente ao ficheiro de estrutura. This allows you to move the application package freely on the disk. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
 
@@ -271,7 +271,7 @@ This option lets you choose the linking mode between the merged application and 
 
 For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
-### Build client application
+### Criar a aplicação cliente
 
 Checking this option generates the client part of your application during the building phase.
 
@@ -325,7 +325,7 @@ The client application update notification is carried out automatically followin
 
 It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). If you have followed the process for generating a cross-platform client application, a .*4darchive* update file is available for each platform:
 
-To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. The rest of the process is automatic.
+To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. O resto do processo é automático.
 
 Do lado do cliente, quando a aplicação cliente "antiga" tenta conectar-se à aplicação servidor atualizada, se mostra uma caixa de diálogo na máquina cliente, indicando que há uma nova versão disponível. O utilizador pode tanto actualizar a sua versão como cancelar a caixa de diálogo.
 
@@ -372,7 +372,7 @@ If the server and/or client part of your double-clickable application is used as
 * *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
 * Pasta raiz Web por defeito (WebFolder).
 
-Items must be installed:
+Os elementos devem ser instalados:
 
 * **em Windows**
   * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server\Server Database` subfolder.
@@ -382,7 +382,7 @@ Items must be installed:
   * **Server application** - next to the `<ApplicationName>Server`software package.
   * **Client application** - next to the `<ApplicationName>Client`software package.
 
-### Embedding a single-user client application
+### Incorporar uma aplicação cliente usuário único
 
 4D allows you to embed a compiled structure in the Client application. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
 
@@ -399,7 +399,7 @@ O cenário básico é o seguinte:
 * `DatabaseToEmbedInClientWinFolder`
 * `DatabaseToEmbedInClientMacFolder`
 
-3. Build the client-server application. Isto terá os seguintes efeitos:
+3. Construir a aplicação cliente-servidor. Isto terá os seguintes efeitos:
 
 * the whole folder of the single user application is copied inside the "Database" folder of the merged client
 * the *EnginedServer.4Dlink* file of the "Database" folder is not generated
@@ -447,7 +447,7 @@ The page lists the elements loaded by the current 4D application:
 
 ![](../assets/en/Desktop/buildappcomps.png)
 
-* **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+* **Active** column - Indicates that the items will be integrated into the application package built. Todos os itens são selecionados por padrão. To exclude a plug-in or a component, deselect the check box next to it.
 
 * **Plugins and components** column - Displays the name of the plug-in/component.
 
@@ -632,7 +632,7 @@ More specifically, the following cases are covered:
 * Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.
 * Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
 
-To define and use a default data file:
+Para definir e utilizar um ficheiro de dados padrão:
 
 * You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 * When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
@@ -643,7 +643,7 @@ The following graphic illustrates this feature:
 
 When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
 
-## Management of client connection(s)
+## Gestão da(s) ligação(ões) cliente
 
 The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
 
@@ -667,7 +667,7 @@ The whole procedure is described in the following diagram:
 
 ![](../assets/en/Desktop/client-connect.png)
 
-### Storing the last server path
+### Armazenar o último caminho do servidor
 
 The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
 

@@ -72,7 +72,7 @@
     "description": "The label for category 4D Language Reference in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference (4D Doc Center)": {
-    "message": "4D Language Reference (4D Doc Center)",
+    "message": "Referência da linguagem 4D (4D Doc Center)",
     "description": "The label for link 4D Language Reference (4D Doc Center) in sidebar docs, linking to https://doc.4d.com/4Dv18/4D/18.4/4D-Language-Reference.100-5232397.en.html"
   }
 }

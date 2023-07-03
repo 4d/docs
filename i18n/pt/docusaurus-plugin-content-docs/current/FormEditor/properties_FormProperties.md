@@ -10,8 +10,8 @@ title: Propriedades do formulário
 
 This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
-*   dark - light text on a dark background
-*   light - dark text on a light background
+*   dark - texto claro sobre um fundo escuro
+*   light - texto escuro sobre um fundo claro
 > > A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
@@ -26,21 +26,21 @@ This property defines the color scheme for the form. This property defines the c
 
 This property allows you to load specific CSS file(s) for the form.
 
-A CSS file defined at the form level will override default style sheet(s). For more information, please refer to [Style sheets](createStylesheet.md) page.
+A CSS file defined at the form level will override default style sheet(s). Para mais informações, consulte a página [Folhas de estilo](createStylesheet.md).
 
 
 #### Gramática JSON
 
 | Nome | Tipo de dados      | Valores possíveis                                                                                        |
 | ---- | ------------------ | -------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+| css  | cadeia ou colecção | CSS file path(s) provided as:<li>uma cadeia de caracteres (um ficheiro para ambas plataformas)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
 
 ---
 
 
 ## Pages
 
-Each form has is made of at least two pages:
+Cada formulário é composto por, pelo menos, duas páginas:
 
 - uma página 0 (página de fundo)
 - uma página 1 (página principal)
@@ -79,16 +79,16 @@ Each table in a database generally has at least two table forms. One for listing
 - Formulário de entrada - utilizado para entrada de dados. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
 
 
-Supported types depend on the form category:
+Os tipos suportados dependem da categoria do formulário:
 
 
-| Tipo de formulário                 | Gramática JSON   | Descrição                                                     | Suportado por               |
-| ---------------------------------- | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Formulário detalhado               | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| Formulário lista                   | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
-| Formulário de lista para impressão | listPrinter      | A printed report that list records                            | Formularios tabla           |
-| Nenhum                             | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Tipo de formulário                 | Gramática JSON   | Descrição                                                     | Suportado por                            |
+| ---------------------------------- | ---------------- | ------------------------------------------------------------- | ---------------------------------------- |
+| Formulário detalhado               | detailScreen     | A display form for data entry and modification                | Formulários projeto - Formulários tabela |
+| Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice | Formulários projeto - Formulários tabela |
+| Formulário lista                   | listScreen       | Um formulário para listar os registos no ecrã                 | Formularios tabla                        |
+| Formulário de lista para impressão | listPrinter      | Um relatório impresso que lista os registos                   | Formularios tabla                        |
+| Nenhum                             | *no destination* | A form with no specific feature                               | Formulários projeto - Formulários tabela |
 
 
 #### Gramática JSON

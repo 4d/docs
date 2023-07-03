@@ -91,7 +91,7 @@ Nombre de dominio o dirección IP desde donde las páginas externas pueden envia
 - myProject.myDomain.com
 - \*
 
-#### Métodos HTTP autorizados (propiedad métodos)
+#### Métodos HTTP autorizados (propiedad methods)
 
 Métodos HTTP aceptados para el host CORS correspondiente. Se soportan los siguientes métodos HTTP:
 

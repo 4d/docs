@@ -15,7 +15,7 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 The main 4D web server can be started in different ways:
 
-*   Using a button/menu command.
+*   Utilizar um botão/comando de menu.
     *   4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
     *   4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 
@@ -93,7 +93,7 @@ The **/4DSTATS** URL returns several items of information in an HTML table (disp
 
 | Elemento                | Descrição                                                    |
 | ----------------------- | ------------------------------------------------------------ |
-| Tamanho actual da cache | Current size of web server cache (in bytes)                  |
+| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)            |
 | Tamanho máximo da cache | Maximum size of cache (in bytes)                             |
 | Cached Object Max Size  | Maximum size of each object in the cache (in bytes)          |
 | Cache Use               | Percentage of cache used                                     |
@@ -108,7 +108,7 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 
 | Elemento                | Descrição                                                              |
 | ----------------------- | ---------------------------------------------------------------------- |
-| Tamanho actual da cache | Current size of web server cache (in bytes)                            |
+| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                      |
 | Tamanho máximo da cache | Maximum size of cache (in bytes)                                       |
 | Cached Object Max Size  | Maximum size of each object in the cache (in bytes)                    |
 | Cache Use               | Percentage of cache used                                               |
@@ -124,11 +124,11 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| Campo HTTP | Descrição                            | Exemplo                                                                                                                         |
-| ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Date       | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
-| Server     | 4D/número da versão                  | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
-| User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
+| Campo HTTP | Descrição                              | Exemplo                                                                                                                         |
+| ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Date       | data atual no formato RFC 822          | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
+| Server     | 4D/número da versão                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
+| User-Agent | nome e versão @ endereço IP do cliente | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
 
 
@@ -161,7 +161,7 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. You need to select the log format.
+The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. É necessário selecionar o formato do registo.
 
 #### CLF/DLF
 
@@ -169,17 +169,17 @@ Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/
 
 DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent. Here is the description of CLF/DLF formats (not customizable):
 
-| Campo nome           | Descrição                                                                                                                                                           |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| host                 | IP address of the client (ex. 192.100.100.10)                                                                                                                       |
-| rfc931               | information not generated by 4D, it’s always - (a minus sign                                                                                                        |
-| user                 | user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).                     |
-| DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. The date and time are local to the server. |
-| request              | request sent by the client (ex. GET /index.htm HTTP/1.0                                                                                                             |
-| state                | reply given by the server                                                                                                                                           |
-| length               | size of the data returned (except the HTTP header) or 0                                                                                                             |
-| Referer              | DLF only- Contains the URL of the page pointing to the requested document.                                                                                          |
-| User-agent           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                       |
+| Campo nome           | Descrição                                                                                                                                                            |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| host                 | IP address of the client (ex. 192.100.100.10)                                                                                                                        |
+| rfc931               | information not generated by 4D, it’s always - (a minus sign                                                                                                         |
+| user                 | user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).                      |
+| DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
+| request              | request sent by the client (ex. GET /index.htm HTTP/1.0                                                                                                              |
+| state                | reply given by the server                                                                                                                                            |
+| length               | size of the data returned (except the HTTP header) or 0                                                                                                              |
+| Referer              | DLF only- Contains the URL of the page pointing to the requested document.                                                                                           |
+| User-agent           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                        |
 
 #### ELF/WLF
 
@@ -189,14 +189,14 @@ The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR serve
 
 ##### Configuração dos campos
 
-When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. To do so, check the desired fields.
-> You cannot select the same field twice.
+When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. Para o efeito, assinalar os campos pretendidos.
+> Não é possível selecionar o mesmo campo duas vezes.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
 | Campo          | ELF | WLF | Valor                                                                                                                       |
 | -------------- | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Number of bytes received by the server                                                                                      |
+| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                                                                     |
 | BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                                                                            |
 | C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                              |
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                                                                       |
@@ -205,20 +205,20 @@ The following table lists the fields available for each format (in alphabetical 
 | CS(HOST)       | X   | X   | Host field of the HTTP request                                                                                              |
 | CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                                                                          |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                           |
-| CS_SIP         | X   | X   | IP address of the server                                                                                                    |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                     |
 | CS_URI         | X   | X   | URI on which the request is made                                                                                            |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                                                                    |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                    |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                      |
-| STATUS         | X   | X   | Reply provided by the server                                                                                                |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                          |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                            |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                         |
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                                                                              |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
-| URL            |     | X   | URL requested by the client                                                                                                 |
+| URL            |     | X   | URL solicitado pelo cliente                                                                                                 |
 
-> Dates and times are given in GMT.
+> As datas e horas são indicadas em GMT.
 
 
 #### Backup Frequency
@@ -227,7 +227,7 @@ Since a *logweb.txt* file can become considerably large, it is possible to set u
 
 When the web log file backup is triggered, the log file is archived in a folder named "Logweb Archives," which is created at the same level as the *logweb.txt* file.
 
-The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: and 7 seconds: “D2020_09_04_T15_50_07.txt.”
+The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: e 7 segundos: “D2020_09_04_T15_50_07.txt.”
 
 #### Parâmetros de backup
 
@@ -239,7 +239,7 @@ Configure the automatic backup parameters for the request log. First you must ch
 
 *   **No Backup**: The scheduled backup function is deactivated.
 
-*   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24 .
+*   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24.
     *   **starting at**: Used to set the time at which the first back up will begin.
 
 *   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.

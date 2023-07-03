@@ -58,7 +58,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 - The 4D internal build numbering has been modified as of 4D v19 R7:
     - releases up to 4D v19 R6 (included) are numbered 282xxx,
     - releases from 4D v19 R7 will be numbered 100xxx.  
-      Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
+      Note that a specific 4D version is still uniquely identified by a branch name and a build number. O número de build aumenta cronologicamente.
 - The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 ### 4D v19.5 é certificado no Windows 11 22H2

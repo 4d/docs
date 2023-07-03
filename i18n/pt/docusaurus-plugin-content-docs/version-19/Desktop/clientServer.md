@@ -14,7 +14,7 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 > Connecting to a remote projet from the **same machine as 4D Server** allows modifying the project files. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
 
-## Opening a merged client/server application
+## Abrir uma aplicação cliente/servidor fundida
 
 A merged client/server application is customized and its starting is simplified:
 
@@ -23,11 +23,11 @@ A merged client/server application is customized and its starting is simplified:
 
 These principles are detailed in the [Build Application](building.md#what-is-a-clientserver-application) page.
 
-## Opening a remote project
+## Abrir um projecto remoto
 
 A primeira vez que se liga a um projecto 4D Server através de um 4D remoto, normalmente utilizará o diálogo de ligação padrão. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file.
 
-To connect remotely to a 4D Server project:
+Para conectar remotamente a um projeto 4D Server:
 
 1. Select **Connect to 4D Server** in the Welcome Wizard dialog, OR Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
 
@@ -54,7 +54,7 @@ Once this page assigns a server, clicking the **OK** button will allow you to co
 
 Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
 
-### Updating project files on the server
+### Atualizar ficheiros de projeto no servidor
 
 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the *.4DProject* project file (not compressed) in interpreted mode.
 
@@ -62,7 +62,7 @@ Once a connection to the server has been established, the remote project will be
   - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
   - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 
-### Updating project files on remote machines
+### Atualizar ficheiros de projeto em máquinas remotas
 
 When an updated .4dz version of the project has been produced on 4D Server, connected remote 4D machines must log out and reconnect to 4D Server in order to benefit from the updated version.
 

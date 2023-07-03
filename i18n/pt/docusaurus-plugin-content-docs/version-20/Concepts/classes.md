@@ -335,7 +335,7 @@ O tipo de propriedade pode ser um dos seguintes tipos suportados:
 | `Blob`                                   | Valor BLOB                                                                                                                                        |
 | `Collection`                             | Valor colecção                                                                                                                                    |
 | `Diferente de`                           | Valor variant                                                                                                                                     |
-| `Objeto`                                 | Object with default class (4D.Object)                                                                                                             |
+| `Object`                                 | Object with default class (4D.Object)                                                                                                             |
 | `4D.<className>`                   | Objecto do nome da classe 4D                                                                                                                      |
 | `cs.<className>`                   | Objeto do nome da classe usuário                                                                                                                  |
 | `cs.<namespace>.<className>` | For a class constructor function, the `Current method name` command returns:  `<ClassName>:constructor`, for example "MyClass:constructor". |
@@ -541,20 +541,26 @@ Function getArea()
 
 #### Exemplo 2
 
-This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
+Este exemplo ilustra a utilização de `Super` num método de membro da classe. Criou a classe `Rectangle` com uma função:
 
 ```4d
-//Class: Rectangle Function nbSides()
+//Classe: Rectângulo
+
+Function nbSides()
  var $0 : Text
  $0:="I have 4 sides"
 ```
 
-You also created the `Square` class with a function calling the superclass function:
+Também criou a classe `Square` com uma função que chama a função da superclasse:
 
 ```4d
-//Class: Square Class extends Rectangle Function description()
+//Classe: Quadrado
+
+Class extends Rectangle
+
+Function description()
  var $0 : Text
- $0:=Super.nbSides()+" which are all equal"
+ $0:=Super.nbSides()+" que são todos iguais"
 ```
 
 Depois pode escrever num método projecto:
@@ -579,14 +585,14 @@ A palavra-chave `This` devolve uma referência ao objecto actualmente processado
 
 Na maioria dos casos, o valor de `This` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Por exemplo:
+Quando uma fórmula é chamada como método membro de um objecto, o seu `This` é definido como o objecto ao qual o método é chamado. Por exemplo:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Quando se utiliza uma função [construtora de classe](#class-constructor) (com a função [`new()`](API/ClassClass.md#new) ), a sua `Esta` está ligada ao novo objecto que está a ser construído.
 
 ```4d
 //Class: ob Class Constructor  
@@ -603,9 +609,9 @@ $val:=$o.a //42
 ```
 
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Ver [este exemplo](#example-1).
+> Quando chamar o construtor da superclasse num construtor utilizando a palavra-chave [Super](#super) , esteja atento que `This` não deve ser chamado antes do construtor da superclasse, caso contrário é gerado um erro. Ver [este exemplo](#example-1).
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+Em qualquer caso, `This` refere-se ao objecto em que o método foi chamado, como se o método estivesse no objecto.
 
 ```4d
 //Class: ob Function f()
@@ -622,7 +628,7 @@ $val:=$o.f() //8
 
 ```
 
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
+Neste exemplo, o objecto atribuído à variável $o não tem a sua própria propriedade *f* , herda-a da sua classe. Uma vez que *f* é chamado como um método de $o, o seu `Este` refere-se a $o.
 
 ## Comandos de classe
 
@@ -638,4 +644,4 @@ Vários comandos da linguagem 4D permitem-lhe lidar com funcionalidades de class
 
 #### `OB Instance of ( object ; class ) -&#062; Boolean`
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`OB Instância de` devolve `true` se o objecto `` pertencer à classe `` ou a uma das suas classes herdadas, e `false` caso contrário.

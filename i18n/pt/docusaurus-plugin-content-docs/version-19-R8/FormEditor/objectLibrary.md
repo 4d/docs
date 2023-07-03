@@ -4,7 +4,7 @@ title: Bibliotecas de objetos
 ---
 
 
-You can use object librairies in your forms. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
+Pode utilizar bibliotecas de objectos nos seus formulários. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
 
 4D proposes two kinds of object libraries:
 
@@ -21,10 +21,10 @@ The library is displayed in a separate window:
 
 ![](../assets/en/FormEditor/library2.png)
 
-The window has the following main features:
+A janela tem as seguintes características principais:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
-- You can filter the window contents by using the **Categories** menu: ![](../assets/en/FormEditor/library3.png)
+- Pode filtrar o conteúdo da janela utilizando o menu **Categorias**: ![](../assets/en/FormEditor/library3.png)
 - To use an object from the library to your form, you can either:
     - right-click on an object and select **Copy** in the contextual menu
     - or drag and drop the object from the library The object is then added to the form.

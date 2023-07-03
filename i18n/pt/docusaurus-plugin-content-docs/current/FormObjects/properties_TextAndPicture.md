@@ -40,7 +40,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 ## Margem horizontal
 
-This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
+Esta propriedade permite definir o tamanho (em píxeis) das margens horizontais do botão. This margin delimits the area that the button icon and title must not surpass.
 
 This parameter is useful, for example, when the background picture contains borders:
 
@@ -52,9 +52,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                      |
-| ------------- | ------------- | -------------------------------------- |
-| customBorderX | number        | For use with "custom" style. Mínimo: 0 |
+| Nome          | Tipo de dados | Valores possíveis                                     |
+| ------------- | ------------- | ----------------------------------------------------- |
+| customBorderX | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
@@ -100,11 +100,11 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
 
-The picture can contain from 2 to 6 states.
+A imagem pode conter de 2 a 6 estados.
 
 - 2 estados: false, true
 - 3 states: false, true, rollover,
-- 4 states: false, true, rollover, disabled,
+- 4 estados: false, true, rollover, desativado,
 - 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
 - 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable.
 
@@ -125,7 +125,7 @@ Each state is represented by a different picture. In the source picture, the sta
 
 | Nome       | Tipo de dados | Valores possíveis                               |
 | ---------- | ------------- | ----------------------------------------------- |
-| iconFrames | number        | Number of states in the icon picture. Mínimo: 1 |
+| iconFrames | number        | Número de estados na imagem do ícone. Mínimo: 1 |
 
 #### Objectos suportados
 
@@ -161,10 +161,10 @@ Here are the results using the various options for this property:
 
 | Option       | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| **Direita**  | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Topo**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Direita**  | O texto é colocado à esquerda do ícone. The contents of the button are aligned to the right.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Esquerda** | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Fundo**    | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                           | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centrado** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Gramática JSON
@@ -212,9 +212,9 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                      |
-| ------------- | ------------- | -------------------------------------- |
-| customBorderY | number        | For use with "custom" style. Mínimo: 0 |
+| Nome          | Tipo de dados | Valores possíveis                                     |
+| ------------- | ------------- | ----------------------------------------------------- |
+| customBorderY | number        | Para utilizar com o estilo "personalizado". Mínimo: 0 |
 
 #### Objectos suportados
 
@@ -250,7 +250,7 @@ Refer to the [`On Alternative Click` event description](../Events/onAlternativeC
 
 :::
 
-### Managing the pop-up menu
+### Gerir o menu pop-up
 
 It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
 

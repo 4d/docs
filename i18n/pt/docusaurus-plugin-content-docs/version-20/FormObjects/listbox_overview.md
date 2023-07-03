@@ -253,10 +253,10 @@ Form events on list box or list box column objects may return the following addi
 | footerName           | text          | Nome do rodapé                                                        |
 | headerName           | text          | Nome do cabeçalho                                                     |
 | horizontalScroll     | inteiro longo | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected        | boolean       | True if row is selected, else False                                   |
-| newPosition          | inteiro longo | New position of the column or row                                     |
-| newSize              | inteiro longo | New size (in pixels) of the column or row                             |
-| oldPosition          | inteiro longo | Previous position of the column or row                                |
+| isRowSelected        | boolean       | True se a linha estiver selecionada, senão False                      |
+| newPosition          | inteiro longo | Nova posição da coluna ou linha                                       |
+| newSize              | inteiro longo | Novo tamanho (em pixéis) da coluna ou linha                           |
+| oldPosition          | inteiro longo | Posição anterior da coluna ou da linha                                |
 | oldSize              | inteiro longo | Previous size (in pixels) of the column or row                        |
 | row                  | inteiro longo | Número da linha                                                       |
 | Alinhamento vertical | inteiro longo | Positive if scroll is towards the bottom, negative if towards the top |
@@ -557,7 +557,7 @@ Custom sorts allow you to:
 
 #### Exemplo
 
-You want to sort a list box using values of a property stored in a related object attribute. You have the following structure:
+You want to sort a list box using values of a property stored in a related object attribute. Tem a seguinte estrutura:
 
 ![](../assets/en/FormObjects/relationLB.png)
 
@@ -1009,7 +1009,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 #### behavior
 
-The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
+The behavior attribute provides variations to the regular representation of values. Em 4D v15, uma única variação é proposta:
 
 | Atributo | Valor(es) disponível(eis) | valueType(s) | Descrição                                                                                                                                                                                     |
 | -------- | ------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1071,7 +1071,7 @@ Exemplos:
 ```
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
-#### requiredListName and requiredListReference
+#### requiredListName e requiredListReference
 
 The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
 
@@ -1153,7 +1153,7 @@ The current unit is displayed as a button that cycles through the "unitList", "u
 
 Exemplo:
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
+We want to set up a numeric input followed by two possible units: "rows" or "pixels". O valor atual é "2" + "linhas". We use values defined directly in the object ("unitsList" attribute):
 
 ````4d
 ARRAY TEXT($_units;0)
@@ -1202,7 +1202,7 @@ The "color" valueType allows you to display either a color or a text.
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
 Optionally, you can pass a "label" attribute.
 
@@ -1226,8 +1226,8 @@ Several events can be handled while using an object list box array:
     *   numa área combo box
     *   in a unit button (switch from value x to value x+1)
     *   in a check box (switch between checked/unchecked)
-*   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-*   **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+*   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. Este evento é gerido pelo programador.
+*   **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. Este evento é gerido pelo programador.
 
 
 

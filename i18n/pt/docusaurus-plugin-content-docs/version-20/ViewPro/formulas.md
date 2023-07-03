@@ -9,7 +9,7 @@ A spreadsheet formula is an expression that calculates the value of a cell.
 
 ### Introduzir fórmulas
 
-To enter a formula in a 4D View Pro area:
+Para introduzir uma fórmula numa área 4D View Pro:
 
 1.  Select the cell into which you will enter the formula or function.
 2.  Enter = (the equal sign).
@@ -29,7 +29,7 @@ You can also create named formulas that can be called via their name. To do so, 
 
 ### Operadores e Operandos
 
-All formulas have operands and operators:
+Todas as fórmulas têm operandos e operadores:
 
 *   **Operators**: see [Values and operators](#values-and-operators) below.
 *   **Operands** include several categories:
@@ -40,11 +40,11 @@ All formulas have operands and operators:
 
 ## Valores e operadores
 
-4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
+4D View Pro suporta cinco tipos de dados. For each data type, specific literal values and operators are supported.
 
 | Tipos de dados                       | Valores                                               | Operadores                                                                                                                                                                                                                                             |
 | ------------------------------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Número](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
+| [Number](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
 | [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
 | [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
 | [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
@@ -92,7 +92,7 @@ Formulas often refer to other cells by cell addresses. You can copy these formul
 = C6 + C7
 ```
 
-This formula refers to cells C6 and C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
+Essa fórmula se refere às células C6 e C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
 
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 
@@ -141,7 +141,7 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 - campos,
 - métodos projeto,
 - Comandos de linguagem 4D,
-- or any valid 4D expression.
+- ou qualquer expressão 4D válida.
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
 
@@ -291,7 +291,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
 
-#### Calling a virtual field in a formula
+#### Chamar um campo virtual numa fórmula
 
 To insert a reference to a virtual field in a formula, enter the field with the following syntax:
 

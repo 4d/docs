@@ -15,18 +15,18 @@ The upper part of the page provides information about the current status of the 
 - **Starting time**: Date and time the application server was launched. This date corresponds to the opening of the project by 4D Server.
 - **Uptime**: Time elapsed since last opening of the project by the server.
 
-## Accept/Reject New Connections
+## Aceitar/Rejeitar novas ligações
 
 This button toggles and can be used to manage the access of new desktop client machines to the application server.
 
-By default, when the project is published:
+Por defeito, quando o projeto é publicado:
 - The button is titled "Reject new connections."
 - New desktop clients can connect freely (within the limit of the connections permitted by the license).
 - The project name is published in the remote connection dialog box (if the "At Startup Publish Database Name in the Connection Dialog" option is checked in the Preferences).
 
 If you click on the **Reject new connections** button:
 - The button title changes to "Accept new connections."
-- No new desktop client can then connect. Clients attempting to connect will receive the following message:
+- Nenhum novo cliente pode então ligar-se. Clients attempting to connect will receive the following message:
 
 ![](../assets/en/Admin/server-error.png)
 

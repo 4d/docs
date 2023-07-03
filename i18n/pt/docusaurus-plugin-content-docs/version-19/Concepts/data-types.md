@@ -23,7 +23,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Ponteiro](Concepts/dt_pointer.md)             | -                        | Sim                     | Ponteiro                                                      | `C_POINTER`, `ARRAY POINTER`                                                                                                                                  |
 | [Imagem](Concepts/dt_picture.md)               | Sim                      | Sim                     | Imagem                                                        | `C_PICTURE`, `ARRAY PICTURE`                                                                                                                                  |
 | [BLOB](Concepts/dt_blob.md)                    | Sim                      | Sim                     | Blob                                                          | `C_BLOB`, `ARRAY BLOB`                                                                                                                                        |
-| [Objeto](Concepts/dt_object.md)                | Sim                      | Sim                     | Objeto                                                        | `C_OBJECT`, `ARRAY OBJECT`                                                                                                                                    |
+| [Object](Concepts/dt_object.md)                | Sim                      | Sim                     | Object                                                        | `C_OBJECT`, `ARRAY OBJECT`                                                                                                                                    |
 | [Collection](Concepts/dt_collection.md)        | -                        | Sim                     | Collection                                                    | `C_COLLECTION`                                                                                                                                                |
 | [Variant](Concepts/dt_variant.md)(2)           | -                        | Sim                     | Diferente de                                                  | `C_VARIANT`                                                                                                                                                   |
 
@@ -48,7 +48,7 @@ O valor por defeito depende do tipo de variável:
 | Ponteiro     | Nil=true            |
 | Text         | ""                  |
 | Blob         | Tamanho do Blob =0  |
-| Objeto       | null                |
+| Object       | null                |
 | Collection   | null                |
 | Diferente de | indefinido          |
 

@@ -79,7 +79,7 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 | Version | Modifications                                |
 | ------- | -------------------------------------------- |
-| v20     | TLS validation by default                    |
+| v20     | Validation TLS par défaut                    |
 | v19 R7  | Prise en charge de la propriété *decodeData* |
 
 </details>
@@ -148,7 +148,7 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 | serverAuthentication   | [authentication object](#authentication-object) | Objet manipulant l'authentification par serveur                                                                                                                                                                                                               | undefined   |
 | returnResponseBody     | Boolean                                         | Si faux, le body de la réponse n'est pas renvoyé dans l'objet [`response`](#response). Renvoie une erreur si faux et `onData` est undefined                                                                                                                   | True        |
 | timeout                | Real                                            | Timeout en secondes. Undefined = pas de timeout                                                                                                                                                                                                               | Undefined   |
-| validateTLSCertificate | Boolean                                         | If false, 4D does not validate the TLS certificate and does not return an error if it is invalid (i.e. expired, self-signed...). Important: In the current implementation, the Certification Authority itself is not verified.                                | True        |
+| validateTLSCertificate | Boolean                                         | Si faux, 4D ne valide pas le certificat TLS et ne renvoie pas d'erreur s'il est invalide (c'est-à-dire expiré, auto-signé...). Important : dans l'implémentation actuelle, l'autorité de certification elle-même n'est pas vérifiée.                          | True        |
 
 
 #### Fonctions de callback

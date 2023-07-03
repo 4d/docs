@@ -4,12 +4,12 @@ title: Página Verificação
 sidebar_label: Página Verificação
 ---
 
-You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
+Esta página é utilizada para verificar a integridade dos dados. The verification can be carried out on records and/or indexes. Esta página apenas verifica a integridade dos dados. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
 
 
 ## Acções
 
-The page contains action buttons that provide direct access to the verification functions.
+A página contém botões de ação que fornecem acesso direto às funções de verificação.
 > When the database is encrypted, verification includes validation of encrypted data consistency. If no valid data key has already been provided, a dialog requesting the passphrase or the data key is displayed.
 
 
@@ -38,17 +38,17 @@ The **Table list** button displays a detailed page that can be used to view and 
 
 Specifying the items to be verified lets you save time during the verification procedure.
 
-The main list displays all the tables of the database. For each table, you can limit the verification to the records and/or indexes. Expand the contents of a table or the indexed fields and select/deselect the checkboxes as desired. By default, everything is selected. You can also use the **Select all**, **Deselect all**, **All records** and **All indexes** shortcut buttons.
+The main list displays all the tables of the database. For each table, you can limit the verification to the records and/or indexes. Expand the contents of a table or the indexed fields and select/deselect the checkboxes as desired. Por padrão, tudo está selecionado. You can also use the **Select all**, **Deselect all**, **All records** and **All indexes** shortcut buttons.
 
-For each row of the table, the "Action" column indicates the operations to be carried out. When the table is expanded, the "Records" and "Indexed fields" rows indicate the number of items concerned.
+Para cada linha da tabela, a coluna "Ação" indica as operações a realizar. When the table is expanded, the "Records" and "Indexed fields" rows indicate the number of items concerned.
 
 The "Status" column displays the verification status of each item using symbols:
 
-| ![](../assets/en/MSC/MSC_OK.png)  | Verification carried out with no problem       |
+| ![](../assets/en/MSC/MSC_OK.png)  | A verificação foi efetuada sem problema        |
 | --------------------------------- | ---------------------------------------------- |
 | ![](../assets/en/MSC/MSC_KO2.png) | Verification carried out, problems encountered |
-| ![](../assets/en/MSC/MSC_KO3.png) | Verification partially carried out             |
-| ![](../assets/en/MSC/MSC_KO.png)  | Verification not carried out                   |
+| ![](../assets/en/MSC/MSC_KO3.png) | Verificação parcialmente efectuada             |
+| ![](../assets/en/MSC/MSC_KO.png)  | Verificação não efectuada                      |
 
 Click on **Verify** to begin the verification or on **Standard** to go back to the standard page.
 

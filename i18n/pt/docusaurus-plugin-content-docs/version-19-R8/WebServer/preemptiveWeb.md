@@ -26,7 +26,7 @@ The following table indicates whether the preemptive mode is used or is availabl
 
 - REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
 - Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
-- Web Service Server: handles SOAP requests
+- Servidor de serviços Web: trata dos pedidos SOAP
 - ***web setting*** means that the preemptive mode depends on a setting value:
     - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the [preemptive mode is automatically used](sessions.md#preemptive-mode) for web processes.
     - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.

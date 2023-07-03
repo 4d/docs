@@ -16,14 +16,14 @@ Embedding 4D View Pro areas in your forms allows you to import and export spread
 
 ## Instalação e ativação
 
-4D View Pro features are directly included in 4D, making it easy to deploy and manage. No additional installation is required.
+4D View Pro features are directly included in 4D, making it easy to deploy and manage. Não é necessária qualquer instalação adicional.
 
-However, 4D View Pro requires a license. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
+No entanto, 4D View Pro requer uma licença. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
 
 ![](../assets/en/ViewPro/licenseError.png)
 
 
-## Inserting a 4D View Pro area
+## Inserção de uma área 4D View Pro
 
 4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. To select this object, click on the last tool in the object bar:
 
@@ -36,9 +36,9 @@ You can also select a preconfigured 4D View Pro area in the [Object library](For
 You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.
 
 
-## Selection, Input and Navigation Basics
+## Noções básicas de seleção, introdução e navegação
 
-Spreadsheets are composed of rows and columns. A number is associated with each row. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
+Spreadsheets are composed of rows and columns. A cada linha está associado um número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
 
 ### Selecting cells, columns and rows
 
@@ -137,7 +137,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 4D View Pro range objects are composed of several properties:
 
-*   area - The name of the 4D View Pro area
+*   área - O nome da área 4D View Pro
 *   ranges - A collection of range object(s). Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
 | Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                    |
@@ -148,7 +148,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 |             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | cell, cells, row, rows, column, columns, all, name |
 |             | \[ ].row         | number     | Row index (counting begins at 0)                                    | célula, células, linha, linhas                     |
 |             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                    |
-|             | \[ ].column      | number     | Column index (counting begins at 0)                                 | cell, cells, column, columns                       |
+|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                           | célula, células, coluna, colunas                   |
 |             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                     |
 
 
@@ -157,7 +157,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 
 
-## Importing and exporting documents
+## Importação e exportação de documentos
 
 4D View Pro supports the import and export of several document formats:
 

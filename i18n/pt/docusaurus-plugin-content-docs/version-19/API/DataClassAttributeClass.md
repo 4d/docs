@@ -99,11 +99,11 @@ A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary --
 
 **Valores possíveis:**
 
-| dataClassAttribute.kind | fieldType                   | Comentário         |
-| ----------------------- | --------------------------- | ------------------ |
-| storage                 | Corresponding 4D field type | See `Type` command |
-| relatedEntity           | 38 (Is object)              |                    |
-| relatedEntities         | 42 (Is collection)          |                    |
+| dataClassAttribute.kind | fieldType                       | Comentário         |
+| ----------------------- | ------------------------------- | ------------------ |
+| storage                 | Tipo de campo 4D correspondente | See `Type` command |
+| relatedEntity           | 38 (Is object)                  |                    |
+| relatedEntities         | 42 (Is collection)              |                    |
 
 <!-- END REF -->
 

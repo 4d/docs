@@ -8,7 +8,7 @@ title: Breakpoints and Command Catching
 
 Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
 
-You set breakpoints on any line of code where you want the execution to be paused. You can associate a condition to the break point.
+You set breakpoints on any line of code where you want the execution to be paused. É possível associar uma condição ao ponto de interrupção.
 
 Catching a command enables you to start tracing the execution of any process as soon as a command is called by that process.
 
@@ -41,7 +41,7 @@ This window is available from the Code Editor or the [Source Code Pane](debugger
 
 If a break point already exists, the window is displayed for that break point. Otherwise, a break point is created and the window is displayed for the newly created break point.
 
-Here is a description of the properties:
+Segue-se uma descrição das propriedades:
 
 * **Location**: indicates the name of the method and the line number attached to the breakpoint.
 * **Break when following expression is true**: You can create **conditional breakpoints** by entering a 4D formula that returns `True` or `False`. For example, insert `Records in selection(\[aTable])=0` to make sure the break occurs only if there no record selected for the table \[aTable]. Breakpoint conditions are available in the **Condition** column of the [Break list](#break-list).
@@ -51,7 +51,7 @@ Here is a description of the properties:
 
 ### Breakpoints in remote debugging
 
-The break point list is stored locally. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
+A lista de pontos de paragem é armazenada localmente. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
 
 The server break point list is automatically restored if it becomes again the attached debugger.
 
@@ -107,17 +107,17 @@ To enable or disable a caught command, click on the bullet (•) in front of the
 
 > Disabling a caught command has almost the same effect as deleting it. During execution, the debugger spends almost no time on the entry. The advantage of disabling an entry is that you do not have to recreate it when you need it again.
 
-To delete a caught command:
+Para remover um ponto de interrupção no comando:
 
 1. Seleccione um comando na lista.
 2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
 
 ### Setting a Condition for catching a command
 
-1. Click on the entry in the right column
+1. Clique na entrada na coluna da direita
 2. Enter a 4D formula (expression, command call or project method) that returns a Boolean value.
 
-> To remove a condition, delete its formula.
+> Para remover uma condição, elimine a sua fórmula.
 
 Adding conditions allows you to stop execution when the command is invoked only if the condition is met. For example, if you associate the condition `Records in selection(\[Emp]>10)` with the break point on the `DELETE SELECTION` command, the code will not be stopped during execution of the `DELETE SELECTION` command if the current selection of the \[Emp] table only contains 9 records (or less).
 

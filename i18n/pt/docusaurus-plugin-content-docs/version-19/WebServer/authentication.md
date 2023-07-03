@@ -15,7 +15,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 ### Visão Geral
 
-The operation of the 4D web server's access system is summarized in the following diagram:
+O funcionamento do sistema de acesso do servidor web 4D está resumido no diagrama seguinte:
 
 ![](../assets/en/WebServer/serverAccess.png)
 
@@ -46,9 +46,9 @@ If no custom authentication is provided, 4D calls the [`On Web Authentication`](
 
 When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
 
-> The name and password entered by the user are sent unencrypted in the HTTP request header. This mode typically requires HTTPS to provide confidentiality.
+> O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. This mode typically requires HTTPS to provide confidentiality.
 
-Entered values are then evaluated:
+Os valores introduzidos são então avaliados:
 
 - If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md).
   - If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. If the password is incorrect, the connection is refused.
@@ -88,15 +88,15 @@ The `On Web Authentication` database method is NOT called:
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parâmetros | Tipo       |    | Descrição                                         |
-| ---------- | ---------- |:--:| ------------------------------------------------- |
-| $1         | Text       | <- | URL                                               |
-| $2         | Text       | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Text       | <- | IP address of the web client (browser)            |
-| $4         | Text       | <- | IP address of the server                          |
-| $5         | Text       | <- | Nome de usuario                                   |
-| $6         | Text       | <- | Senha                                             |
-| $0         | Parâmetros | -> | True = request accepted, False = request rejected |
+| Parâmetros | Tipo       |    | Descrição                                             |
+| ---------- | ---------- |:--:| ----------------------------------------------------- |
+| $1         | Text       | <- | URL                                                   |
+| $2         | Text       | <- | Cabeçalhos HTTP + corpo HTTP (até um limite de 32 kb) |
+| $3         | Text       | <- | Endereço IP do cliente Web (browser)                  |
+| $4         | Text       | <- | Endereço IP do servidor                               |
+| $5         | Text       | <- | Nome de usuario                                       |
+| $6         | Text       | <- | Senha                                                 |
+| $0         | Parâmetros | -> | True = request accepted, False = request rejected     |
 
 You must declare these parameters as follows:
 
@@ -151,7 +151,7 @@ The `$3` parameter receives the IP address of the browser’s machine. This info
 
 The `$4` parameter receives the IP address used to call the web server. 4D allows for multi-homing, which allows you to exploit machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.md#ip-address-to-listen).
 
-#### $5 and $6 - User Name and Password
+#### $5 e $6 - Nome de usuário e palavra-passe
 
 The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
 > If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
@@ -160,9 +160,9 @@ The `$5` and `$6` parameters receive the user name and password entered by the u
 
 The `On Web Authentication` database method returns a boolean in $0:
 
-- If $0 is True, the connection is accepted.
+- Se $0 é True, a ligação é aceite.
 
-- If $0 is False, the connection is refused.
+- Se $0 é False, a ligação é recusada.
 
 The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
 > **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.

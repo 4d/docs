@@ -3,14 +3,14 @@ id: string
 title: String
 ---
 
-String is a generic term that stands for:
+String é um termo genérico que significa:
 
-- Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.
-- Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).
+- Campos ou variáveis texto: um campo, uma variável ou uma expressão texto pode conter de 0 a 2 GB de texto.
+- Campos alfanuméricos: um campo alfanumérico pode conter de 0 a 255 caracteres (limite estabelecido aquando da definição do campo).
 
-## String literals
+## Constantes literais String
 
-A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
+Uma constante string é colocada entre aspas duplas e rectas ("..."). Eis alguns exemplos:
 
 ```4d
 "Adicionar registos"
@@ -18,11 +18,11 @@ A string literal is enclosed in double, straight quotation marks ("..."). Here a
 "Fatura "
 ```
 
-An empty string is specified by two quotation marks with nothing between them ("").
+Uma cadeia vazia é especificada por duas aspas sem nada entre elas ("").
 
-### Escape sequences
+### Sequências de escape
 
-The following escape sequences can be used within strings:
+As seguintes sequências de escape podem ser utilizadas em strings de caracteres:
 
 | Escape sequence | Carácter substituído |
 | --------------- | -------------------- |
@@ -32,9 +32,9 @@ The following escape sequences can be used within strings:
 | \\\          | \ (Barra invertida) |
 | \\"           | " (aspas)            |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
+**Nota:** O carácter \ (barra invertida) é utilizado como separador em nomes de caminhos no Windows. Portanto, deve usar uma barra invertida dupla \\\ em caminhos quando quiser ter uma barra invertida à frente de um carácter usado numa das sequências de escape reconhecidas pelo 4D (por exemplo, "C:\\\MyDocuments\\\New.txt").
 
-## String operators
+## Operadores de string
 
 | Operação             | Sintaxe          | Retorna    | Expression              | Valor    |
 | -------------------- | ---------------- | ---------- | ----------------------- | -------- |
@@ -56,18 +56,18 @@ The following escape sequences can be used within strings:
 |                      |                  |            | "Alpha Bravo" % "ravo"  | False    |
 |                      | Picture % String | Parâmetros | Picture_expr % "Mer"    | True (*) |
 
-(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
+(*) Se a palavra-chave "Mer" estiver associada à imagem armazenada na expressão de imagem (campo ou variável).
 
 ## Comparações de cadeias
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. To test if the case of two characters is different, compare their character codes. For example, the following expression returns `FALSE`:
+- As cadeias de caracteres são comparadas carácter a carácter (exceto no caso da pesquisa por palavras-chave [](dt_string.md#keywords), ver abaixo).
+- Quando as cadeias de caracteres são comparadas, o caso dos caracteres é ignorado; assim, "a"="A" devolve `TRUE`. Para testar se o caso de dois caracteres é diferente, compare os seus códigos de caracteres. Por exemplo, a seguinte expressão devolve `FALSE`:
 
 ```4d
-Character code("A")=Character code("a") // because 65 is not equal to 97
+Character code("A")=Character code("a") // porque 65 não é igual a 97
 ```
 
-- When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
+- Quando as cadeias de caracteres são comparadas, os caracteres diacríticos são tidos em conta. Por exemplo, as seguintes expressões retornam `TRUE`:
 
 ```4d
      "n"="ñ"
@@ -76,17 +76,17 @@ Character code("A")=Character code("a") // because 65 is not equal to 97
       // etc.
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Nota:** A comparação das cadeias de caracteres tem em conta as especificidades da língua **definida para o ficheiro de dados 4D** (que nem sempre é a mesma que a língua definida para o sistema).
 
-### Wilcard character (@)
+### Caractere coringa(@)
 
-The 4D language supports **@** as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is `TRUE`:
+A linguagem 4D suporta **@** como um caractere curinga. Este carácter pode ser utilizado em qualquer comparação de cadeia para corresponder a qualquer número de caracteres. Por exemplo, a seguinte expressão é `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+O carácter wildcard deve ser utilizado dentro do segundo operando (a cadeia do lado direito) para corresponder a qualquer número de caracteres. A seguinte expressão é `FALSE`, porque o @ é considerado apenas como um carácter no primeiro operando:
 
 ```4d
     "abc@"="abcdefghij"
@@ -102,36 +102,36 @@ O wildcard significa "um ou mais caracteres ou nada". As seguintes expressões s
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. A seguinte expressão é `FALSE`:
+Por outro lado, seja qual for o caso, uma comparação de cadeias de caracteres com dois wildcards consecutivos devolverá sempre `FALSE`. A seguinte expressão é `FALSE`:
 
 ```4d
 "abcdefghij"="abc@@fg"
 ```
 
-When the comparison operator is or contains a < or > symbol, only comparison with a single wildcard located at the end of the operand is supported:
+Quando o operador de comparação é ou contém um símbolo < or >, só é suportada a comparação com um único carácter universal localizado no final do operando:
 
 ```4d
      "abcd"<="abc@" // Comparação válida
      "abcd"<="abc@ef" //Não é uma comparação válida
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, for example, that you want to know if a string ends with the @ character. The following expression (if $vsValue is not empty) is always `TRUE`:
+Se quiser executar comparações ou consultas utilizando @ como um carácter (e não como um coringa), tem de utilizar a instrução `Character code(At sign)` . Imagine, por exemplo, que quer saber se uma cadeia de caracteres termina com o carácter @. A expressão seguinte (se $vsValue não estiver vazia) é sempre `TRUE`:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
 ```
 
-The following expression will be evaluated correctly:
+A seguinte expressão será avaliada correctamente:
 
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Nota:** A opção 4D no ambiente de Design permite-lhe definir a forma como o carácter @ é interpretado quando é incluído numa cadeia de caracteres.
 
 ### Palavras-chave
 
-Unlike other string comparisons, searching by keywords looks for "words" in "texts": words are considered both individually and as a whole. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.
+Ao contrário de outras comparações de cadeias, a pesquisa por palavras-chave procura "palavras" em "textos": as palavras são consideradas individualmente e como um todo. O operador **%** devolve sempre `Falso` se a consulta disser respeito a várias palavras ou apenas a parte de uma palavra (por exemplo, uma sílaba). As "palavras" são cadeias de caracteres rodeadas por "separadores", que são espaços e caracteres de pontuação e traços. Um apóstrofo, como em "Today's", é normalmente considerado como parte da palavra, mas será ignorado em certos casos (ver as regras abaixo). Os números podem ser pesquisados porque são avaliados como um todo (incluindo símbolos decimais). Outros símbolos (moeda, temperatura, etc.) serão ignorados.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo"// Retorna True
@@ -142,16 +142,16 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
 ```
 > **Notas:**
 > 
-> - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
-> - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+> - 4D usa a biblioteca ICU para comparar strings (usando `<>=#` operadores) e detetar palavras-chave. Para mais informações sobre as regras aplicadas, consultar o seguinte endereço: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
+> - Na versão japonesa, em vez de ICU, 4D usa Mecab por defeito para detectar palavras-chave.
 
-## Character Reference Symbols
+## Símbolos de referência de caracteres
 
-The character reference symbols: [[...]]
+Os símbolos de referência dos caracteres: [[...]]
 
-These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+Estes símbolos são utilizados para se referir a um único carácter numa cadeia de caracteres. Esta sintaxe permite-lhe endereçar individualmente os caracteres de uma variável de texto, de uma variável de cadeia de caracteres ou de um campo.
 
-If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
+Se os símbolos de referência de carácter aparecerem no lado esquerdo do operador de atribuição (:=), é atribuído um carácter à posição referenciada na cadeia. Por exemplo, se vsName não for uma cadeia de caracteres vazia, a linha seguinte define o primeiro carácter de vsName como maiúsculo:
 
 ```4d
 If(vsName#"")
@@ -159,10 +159,10 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Por exemplo:
+Caso contrário, se os símbolos de referência de caracteres aparecerem numa expressão, devolvem o carácter (a que se referem) como uma cadeia de 1 carácter. Por exemplo:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+//O exemplo a seguir testa se o último caractere de vtText é um sinal de At "@"
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
@@ -177,13 +177,13 @@ Otherwise, if the character reference symbols appear within an expression, they 
  End if
 ```
 
-### Advanced note about invalid character reference
+### Nota avançada sobre a referência de carácter inválido
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+Quando utiliza os símbolos de referência de caracteres, deve endereçar os caracteres existentes na cadeia da mesma forma que endereça os elementos existentes de uma matriz. Por exemplo, se endereçar o 20º carácter de uma variável de cadeia, esta variável DEVE conter pelo menos 20 caracteres.
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. Por exemplo, executando o seguinte código:
+- Se não o fizer, no modo interpretado, não causa um erro de sintaxe.
+- Se não o fizer, em modo compilado (sem opções), pode levar à corrupção da memória, se, por exemplo, escrever um carácter para além do fim de uma cadeia ou de um texto.
+- Se não o fizer, no modo compilado, causa um erro com a opção Range Checking On. Por exemplo, executando o seguinte código:
 
 ```
 //Voisas muito más e desagradáveis a fazer, boo!
@@ -197,7 +197,7 @@ accionará o erro de tempo de execução mostrado aqui:
 
 ### Exemplo
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+O seguinte método de projeto capitaliza o primeiro carácter de cada palavra do texto recebido como parâmetro e devolve o texto capitalizado resultante:
 
 ```4d
   //Método projecto Capitalize_text

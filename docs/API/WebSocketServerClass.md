@@ -65,7 +65,7 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
 ```4d
 //myServerHandler class
 
-Function onConnection($wss : Object; $param : Object) : Object
+Function onConnection($wss : Object; $event : Object) : Object
 	//returns an instance of the user class
 	//that will handle the messages
 	return cs.myConnectionHandler.new() 
@@ -109,7 +109,7 @@ WebSocket server objects provide the following properties and functions:
 <!-- REF #4D.WebSocketServer.new().Syntax -->**4D.WebSocketServer.new**( *WSSHandler* : Object { ; *options* : Object } ) : 4D.WebSocketServer<!-- END REF -->
 
 
-<!-- REF #4D.HTTPRequest.new().Params -->
+<!-- REF #4D.WebSocketServer.new().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |[WSSHandler](#wsshandler-parameter)|Object|->|Object of the user class declaring the WebSocket Server callbacks|
@@ -136,12 +136,12 @@ In the *WSSHandler* parameter, pass an instance of a user class that will be cal
 |onError|[Function](FunctionClass.md)|Callback when an error has occurred (see below)|undefined|
 
 
-**WSHandler.onConnection**(*WSServer* : Object ; *param* : Object) : Object | null 
+**WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null 
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
 |WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
-|param||Object|<-|Parameters|
+|event||Object|<-|Parameters|
 ||type|Text||"connection"|
 ||request|Object||`request` object. Contains information on the connection request (see below)|
 |Function result||Object|->|[`connectionHandler` object](#connectionhandler-object) (see below). If this function returns a `connectionHandler` object, a [`4D.WebSocketConnection` object](WebSocketConnectionClass.md#websocketconnection-object) is automatically created and added to the [collection of connections](#connections). This object is then received as parameter in each function of the `connectionHandler` object. If the returned value is null or undefined, the connection is cancelled.|
@@ -149,36 +149,35 @@ In the *WSSHandler* parameter, pass an instance of a user class that will be cal
 This callback is called when the handshake is complete. It must be called with a valid [`connectionHandler` object](#connectionhandler-object) to create the WebSocket connection, otherwise the connection is cancelled.
 
 
-**WSHandler.onOpen**(*WSServer* : Object ; *param* : Object)
+**WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
 |WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
-|param||Object|<-|Parameters|
+|event||Object|<-|Parameters|
 ||type|Text||"open"|
 
 Event emitted when the websocket server is started.
 
 
-**WSHandler.onTerminate**(*WSServer* : Object ; *param* : Object)
+**WSHandler.onTerminate**(*WSServer* : Object ; *event* : Object)
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
 |WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
-|param||Object|<-|Parameters|
+|event||Object|<-|Parameters|
 ||type|Text||"terminate"|
 
 Event emitted when the HTTP server or the WebSocket server is closed.
 
 
-**WSHandler.onError**(*WSServer* : Object ; *param* : Object)
+**WSHandler.onError**(*WSServer* : Object ; *event* : Object)
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
 |WSServer||4D.WebSocketServer|<-|Current WebSocket server object|
-|param||Object|<-|Parameters|
+|event||Object|<-|Parameters|
 ||type|Text||"error"|
-||statusText|Text||Last error returned in the 4D error stack|
 ||errors|Collection||Collection of 4D error stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
 
 
@@ -191,9 +190,9 @@ This example of a basic chat feature illustrates how to handle WebSocket server 
 ```4d
 //myWSServerHandler class 
 
-Function onConnection($wss : Object; $param : Object) : Object
+Function onConnection($wss : Object; $event : Object) : Object
 
-	If (VerifyAddress($param.request.remoteAddress))
+	If (VerifyAddress($event.request.remoteAddress))
 		// The VerifyAddress method validates the client address
 		// The returned WSConnectionHandler object will be used 
 		// by 4D to instantiate the 4D.WebSocketConnection object
@@ -205,14 +204,14 @@ Function onConnection($wss : Object; $param : Object) : Object
 		return Null 
 	End if 
 
-Function onOpen($wss : Object; $param : Object)
+Function onOpen($wss : Object; $event : Object)
 LogFile("*** Server started")
 
-Function onTerminate($wss : Object; $param : Object)
+Function onTerminate($wss : Object; $event : Object)
 LogFile("*** Server closed")
 
-Function onError($wss : Object; $param : Object)
-LogFile("!!! Server error: "+$param.statusText)
+Function onError($wss : Object; $event : Object)
+LogFile("!!! Server error: "+$event.errors.first().message)
 
 ```
 
@@ -240,50 +239,49 @@ As a result of the `WSHandler.onConnection` callback, pass a `connectionHandler`
 |onError|[Function](FunctionClass.md)|Function called when an error occured|
 
 
-**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
 |ws||[`4D.WebSocketConnection`](WebSocketConnectionClass.md)|<-|Current WebSocket connection object|
-|param||Object|<-|Parameters|
+|event||Object|<-|Parameters|
 ||type|Text||"message"|
 ||data|Text / Blob / Object||data sent by the client|
 
 This Callback for WebSocket data. Called each time the WebSocket receives data.
 
 
-**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
 |ws||[`4D.WebSocketConnection`](WebSocketConnectionClass.md)|<-|Current WebSocket connection object|
-|param||Object|<-|Parameters|
+|event||Object|<-|Parameters|
 ||type|Text||"open"|
 
 Called when the `connectionHandler` object is created (after `WSS.onConnection` event).
 
 
-**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 |Parameter||Type||Description|
 |---------|---|---|:---:|------|
 |ws||[`4D.WebSocketConnection`](WebSocketConnectionClass.md)|<-|Current WebSocket connection object|
-|param||Object|<-|Parameters|
+|event||Object|<-|Parameters|
 ||type|Text||"terminate"|
 ||code|Number||Status code indicating why the connection has been closed. If the WebSocket does not return an error code, `code` is set to 1005 if no error occurred or to 1006 if there was an error.|
 ||reason|Text||String explaining why the connection has been closed. If the websocket doesn't return an reason, code is undefined|
 
 Function called when the WebSocket is closed.
 
-**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 |Parameter|||Type||Description|
 |----|-----|---|---|:---:|------|
 |ws|||[`4D.WebSocketConnection`](WebSocketConnectionClass.md)|<-|Current WebSocket connection object|
-|param|||Object|<-|Parameters|
+|event|||Object|<-|Parameters|
 ||type||Text||"error"|
-||status||Object|||
-|||errors|Collection ||Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
+||errors|Collection ||Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li>|
 
 Function called when an error has occurred.
 

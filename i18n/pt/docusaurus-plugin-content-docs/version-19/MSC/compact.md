@@ -8,7 +8,7 @@ You use this page to access the data file compacting functions.
 
 ## Why compact your files?
 
-Compacting files meets two types of needs:
+A compactação de ficheiros responde a dois tipos de necessidades:
 
 - **Redução do tamanho e otimização dos arquivos**: os arquivos podem conter espaços não utilizados ("ocos"). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
 
@@ -42,7 +42,7 @@ When you click on the **Open log file** button, 4D displays the most recent log 
 
 The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
 
-### Compact records and indexes
+### Compactação de registros e índices
 
 The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window.
 
@@ -52,11 +52,11 @@ The second **[...]** button can be used to specify another location for the orig
 
 When this option is checked, 4D rewrites every record for each table during the compacting operation, according to its description in the structure. If this option is not checked, 4D just reorganizes the data storage on disk. This option is useful in the following cases:
 
-- When field types are changed in the application structure after data were entered. For example, you may have changed a Longint field to a Real type. 4D even allows changes between two very different types (with risks of data loss), for instance a Real field can be changed to Text and vice versa. In this case, 4D does not convert data already entered retroactively; data is converted only when records are loaded and then saved. This option forces all data to be converted.
+- When field types are changed in the application structure after data were entered. For example, you may have changed a Longint field to a Real type. 4D even allows changes between two very different types (with risks of data loss), for instance a Real field can be changed to Text and vice versa. In this case, 4D does not convert data already entered retroactively; data is converted only when records are loaded and then saved. Esta opção força a conversão de todos os dados.
 
 - When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
 
-- When tables or fields were deleted. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
+- Quando as tabelas ou campos foram eliminados. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
 > All the indexes are updated when this option is selected.
 
 ### Compact address table

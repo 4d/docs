@@ -7,7 +7,7 @@ title: Template pages
 
 When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
 
-For example, if you write in an HTML page:
+Por exemplo, se escrever numa página HTML:
 
 ```html
 Welcome to <!--#4DTEXT vtSiteName-->!</P>
@@ -17,11 +17,11 @@ The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
 
 ## Etiquetas para modelos
 
-The following 4D tags are available:
+Estão disponíveis as seguintes etiquetas 4D:
 
 - 4DTEXT, to insert 4D variables and expressions as text,
-- 4DHTML, to insert HTML code,
-- 4DEVAL, to evaluate any 4D expression,
+- 4DHTML, para inserir código HTML,
+- 4DEVAL, para avaliar qualquer expressão 4D,
 - 4DSCRIPT, to execute a 4D method,
 - 4DINCLUDE, to include a page within another one,
 - 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
@@ -32,7 +32,7 @@ The following 4D tags are available:
 
 These tags are described in the [Transformation Tags](Tags/tags.md) page.
 
-It is possible to mix tags. For example, the following HTML code is allowed:
+É possível combinar etiquetas. For example, the following HTML code is allowed:
 
 ```html
 <HTML>
@@ -69,12 +69,12 @@ You can also carry out parsing outside of the Web context when you use the `PROC
 
 Internally, the parser works with UTF-16 strings, but the data to parse may have been encoded differently. When tags contain text (for example `4DHTML`), 4D converts the data when necessary depending on its origin and the information available (charset). Below are the cases where 4D parses the tags contained in the HTML pages, as well as any conversions carried out:
 
-| Action / Command                               | Content analysis of the sent pages                    | Suporte da sintaxe $(*)                               | Character set used for parsing tags                                                                                                                                                                         |
+| Action / Command                               | Análise de conteúdo das páginas enviadas              | Suporte da sintaxe $(*)                               | Conjunto de caracteres utilizado para a análise de etiquetas                                                                                                                                                |
 | ---------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Páginas chamadas através de URLs               | X, except for pages with “.htm” or “.html” extensions | X, except for pages with “.htm” or “.html” extensions | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `WEB SEND FILE`                                | X                                                     | -                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `WEB SEND TEXT`                                | X                                                     | -                                                     | No conversion necessary                                                                                                                                                                                     |
-| `WEB SEND BLOB`                                | X, if BLOB is of the “text/html” type                 | -                                                     | Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server                                                                                |
+| `WEB SEND BLOB`                                | X, se o BLOB for do tipo "text/html                   | -                                                     | Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server                                                                                |
 | Inclusion by the `<!--#4DINCLUDE-->` tag | X                                                     | X                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `PROCESS 4D TAGS`                              | X                                                     | X                                                     | Text data: no conversion. BLOB data: automatic conversion from the Mac-Roman character set for compatibility                                                                                                |
 
@@ -84,7 +84,7 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 
 Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
 
-## Prevention of malicious code insertion
+## Prevenção da inserção de código malicioso
 
 4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
 

@@ -85,7 +85,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 | Parâmetro  | Tipo           |    | Descrição                                           |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | url        | Text           | -> | URL para onde enviar o pedido                       |
-| options    | Objeto         | -> | Pedir propriedades de configuração                  |
+| options    | Object         | -> | Pedir propriedades de configuração                  |
 | Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest|<!-- END REF -->
 
 |
@@ -122,14 +122,14 @@ Por exemplo, pode passar as seguintes cordas:
 
 No parâmetro *opções* , passe um objeto que possa conter as seguintes propriedades:
 
-| Propriedade            | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | O padrãO      |
+| Propriedade            | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | Default       |
 | ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | body                   | Diferente de                                    | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                           | indefinido    |
 | dataType               | Text                                            | Tipo de atributo do corpo de resposta. Valores: "texto", "blob", "objecto", ou "auto". Se "auto", o tipo do conteúdo do corpo será deduzido do seu tipo MIME (objecto para JSON, texto para texto, javascript, xml, mensagem http e forma codificada url, ou então um blob) | "auto"        |
 | decodeData             | Parâmetros                                      | Se for verdade, os dados recebidos em `onData` callback não são compactados                                                                                                                                                                                                 | False         |
 | encoding               | Text                                            | Utilizado apenas em caso de pedidos com um `body` (métodos `post` ou `put`). Codificação do conteúdo do corpo do pedido se for um texto, ignorado se o tipo de conteúdo for colocado dentro dos cabeçalhos                                                                  | "UTF-8"       |
-| headers                | Objeto                                          | Cabeçalhos do pedido. Sintaxe: `headers.key=valor` (*valor* pode ser uma Colecção se a mesma chave tiver de aparecer várias vezes)                                                                                                                                          | Objecto vazio |
+| headers                | Object                                          | Cabeçalhos do pedido. Sintaxe: `headers.key=valor` (*valor* pode ser uma Colecção se a mesma chave tiver de aparecer várias vezes)                                                                                                                                          | Objecto vazio |
 | method                 | Text                                            | "POST", "GET", ou outro método                                                                                                                                                                                                                                              | "GET"         |
 | minTLSVersion          | Text                                            | Define a versão mínima do TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                           | "`TLSv1_2`"   |
 | onData                 | [Function](FunctionClass.md)                    | Chamada de retorno quando os dados do corpo são recebidos. Recebe dois objectos como parâmetros (ver abaixo)                                                                                                                                                                | indefinido    |
@@ -176,7 +176,7 @@ Um evento `` objecto é devolvido quando uma função de retorno de chamada [](#
 
 Um objecto de autenticação lida com o `options.serverAuthentication` ou `options.proxyAuthentication` propriedade. Pode conter as seguintes propriedades:
 
-| Propriedade | Tipo | Descrição                                                      | O padrãO   |
+| Propriedade | Tipo | Descrição                                                      | Default    |
 | ----------- | ---- | -------------------------------------------------------------- | ---------- |
 | name        | Text | Nome utilizado para autenticação                               | indefinido |
 | senha       | Text | Senha utilizada para autenticação                              | indefinido |
@@ -220,7 +220,7 @@ Aqui está o conteúdo da propriedade `.errors` :
 | Propriedade |                       | Tipo       | Descrição                                            |
 | ----------- | --------------------- | ---------- | ---------------------------------------------------- |
 | errors      |                       | Collection | pilha de erros 4D em caso de erro                    |
-|             | [].errCode            | Número     | Código de erro 4D                                    |
+|             | [].errCode            | Number     | Código de erro 4D                                    |
 |             | [].message            | Text       | Descrição do erro 4D                                 |
 |             | [].componentSignature | Text       | Assinatura da componente interna que devolveu o erro |
 
@@ -283,10 +283,10 @@ Uma `resposta` objecto é um objecto não partilhável. Contém as seguintes pro
 | Propriedade | Tipo         | Descrição                                                                                                                                                                                                                                                               |
 | ----------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | .body       | Diferente de | Corpo da resposta. O tipo da mensagem é definido de acordo com a propriedade [`dataType`](#datatype) . Indefinido se o corpo ainda não tiver sido recebido                                                                                                              |
-| .headers    | Objeto       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos em minúsculas. `<headername>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos.                      |
-| .status     | Número       | Código de estado da resposta                                                                                                                                                                                                                                            |
+| .headers    | Object       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos em minúsculas. `<headername>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos.                      |
+| .status     | Number       | Código de estado da resposta                                                                                                                                                                                                                                            |
 | .statusText | Text         | Mensagem que explica o código de estado                                                                                                                                                                                                                                 |
-| .rawHeaders | Objeto       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos intactos (com o seu caso original). `<headerName>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos. |
+| .rawHeaders | Object       | Cabeçalhos da resposta. Os nomes dos cabeçalhos são devolvidos intactos (com o seu caso original). `<headerName>.key` = valor (valor pode ser uma colecção se a mesma chave aparecer várias vezes). Indefinido se os cabeçalhos ainda não tiverem sido recebidos. |
 
 <!-- END REF -->
 

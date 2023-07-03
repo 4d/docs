@@ -1,6 +1,6 @@
 ---
 id: object
-title: Objeto
+title: Object
 ---
 
 Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de dados. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. A sintaxe desses objetos é baseada na notação JSON:
@@ -58,14 +58,14 @@ A notação de objetos pode ser utilizada para acessar aos valores das proprieda
 
 Identificadores de propriedades de objetos
 
-- using a string within square brackets: > object["propertyName"]
+- usar uma string dentro de colchetes: > object["propertyName"]
 
 Exemplo:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a "dot" symbol: > object.propertyName
+- usar um simbolo "ponto": > object.propertyName
 
 Exemplos:
 ```4d

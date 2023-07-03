@@ -21,9 +21,9 @@ Uma variável de tipo variante pode conter um valor dos seguintes tipos de dados
 - null
 - indefinido
 
-> Arrays cannot be stored in variant variables.
+> Os arrays não podem ser armazenados em variáveis variant.
 
-In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. Por exemplo:
+Tanto no modo interpretado como no modo compilado, a uma mesma variável variante podem ser atribuídos conteúdos de tipos diferentes. Ao contrário dos tipos de variáveis regulares, o tipo de conteúdo da variável de variante é diferente do próprio tipo de variável variant. Por exemplo:
 
 ```4d
 C_VARIANT($variant)
@@ -37,7 +37,7 @@ $vtype:=Type($variant) // 12 (Is variant)
 $vtypeVal:=Value type($variant) // 1 (Is real)
 ```
 
-You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. Por exemplo:
+Pode utilizar variáveis variant onde quer que sejam esperadas variáveis, apenas tem de se certificar de que o tipo de dados do conteúdo da variável é do tipo esperado. Ao aceder a variáveis variant, apenas o seu valor actual é tido em conta. Por exemplo:
 
 ```4d
 C_VARIANT($v)
@@ -61,4 +61,4 @@ Case of
  End case
 ```
 
-> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types. 
+> Quando as variáveis variant não são necessárias (ou seja, quando o tipo de dados é conhecido), recomenda-se a utilização de variáveis de tipo regular. As variáveis de tipo regular proporcionam um melhor desempenho, tornam o código mais claro e são úteis para o compilador evitar erros relacionados com a passagem de tipos de dados inesperados. 

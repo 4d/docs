@@ -16,7 +16,7 @@ ALERT("Bonjour")
 
 Les paramètres sont passés de la même manière aux méthodes ou aux fonctions de classe (class functions). Par exemple, si une fonction de classe nommée `getArea()` accepte deux paramètres, voilà à quoi pourrait ressembler un appel à la fonction de classe :
 
-```
+```4d
 $area:=$o.getArea(50;100)
 ```
 
@@ -44,29 +44,19 @@ MaLongueur:=Length("Comment suis-je arrivé là ?")
 
 Toute sous-routine peut retourner une valeur. Un seul paramètre de sortie peut être déclaré par méthode ou fonction de classe.
 
-Les valeurs d'entrée et de sortie sont [évaluées](#valeurs-ou-références) au moment de l'appel et copiées dans des variables locales au sein de la fonction de classe ou de la méthode appelée. Deux syntaxes sont possibles pour déclarer des variables de paramètres dans le code appelé :
-
-- les [paramètres nommés](#paramètres-nommés) (recommandé dans la plupart des cas) ou
-- les [paramètres séquentiels](#paramètres-séquentiels).
+Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into or from local variables within the called class function or method. Variable parameters must be [declared](#declaring-parameters) in the called code.
 
 
-Les syntaxes nommées et séquentielles peuvent être combinées sans restriction pour déclarer des paramètres. Par exemple :
+:::info Compatibility
 
-```4d
-Function add($x : Integer)
-    var $0;$2 : Integer
-    $0:=$x+$2
-```
+Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) and declared using compiler directives. Ex: `C_TEXT($1;$2)`. This legacy syntax is still supported but is no longer recommended.
 
-### Initialisation
-
-Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur par défaut correspondant à leur type**](data-types.md#valeurs-par-defaut), qu'ils conserveront pendant la session tant que l'on ne leur aura pas affecté une valeur.
+:::
 
 
+## Déclaration des paramètres
 
-## Paramètres nommés
-
-Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. Vous pouvez déclarer des paramètres en utilisant un **nom de paramètre** avec un **type de paramètre**, séparés par deux-points.
+Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. You usually declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
 - Pour les fonctions de classe, les paramètres sont déclarés via le mot clé `Function`.
 - Pour les méthodes (méthodes projet, méthodes objet, méthodes base et triggers), les paramètres sont déclarés à l'aide du mot clé `#DECLARE` saisi au début du code de la méthode.
@@ -126,11 +116,11 @@ Vous déclarez le paramètre de retour d'une fonction en ajoutant une flèche (-
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-Vous pouvez aussi déclarer le paramètre de retour en indiquant uniquement `: type`, auquel cas il pourra être géré via le [mot-clé return](#return-expression) ou via `$0` en [syntaxe séquentielle](#valeur-retournée-1)). Par exemple :
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
-    $0:=$x+$y
+    return $x+$y
 ```
 
 
@@ -139,79 +129,23 @@ Function add($x : Variant; $y : Integer): Integer
 
 ### Type de données pris en charge
 
-Avec les paramètres nommés, vous pouvez utiliser les mêmes types de données que ceux qui sont [pris en charge par le mot-clé `var`](variables.md#utilisation-du-mot-clé-var), y compris les objets des classes.  Par exemple :
+Avec les paramètres nommés, vous pouvez utiliser les mêmes types de données que ceux qui sont [pris en charge par le mot-clé `var`](variables.md#utilisation-du-mot-clé-var), y compris les objets des classes. Par exemple :
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 ```
 
-
-
-
-
-## Paramètres séquentiels
-
-Comme alternative à la syntaxe des [paramètres nommés](#paramètres-nommés), vous pouvez déclarer les paramètres en utilisant des variables numérotées séquentiellement : **$1**, **$2**, **$3**, et ainsi de suite. La numérotation des variables locales représente l’ordre des paramètres.
-
-> Bien que cette syntaxe soit prise en charge par les fonctions de classes, il est recommandé d'utiliser la syntaxe des [paramètres nommés](#paramètres-nommés) dans ce cas.
-
-Par exemple, lorsque vous appelez une méthode projet `DO_SOMETHING` avec trois paramètres :
-
-```4d
-FAIRE QUELQUE CHOSE($AvecCeci;$EtCela;$CommeCeci)
-```
-
-Dans le code de la méthode, la valeur de chaque paramètre est automatiquement copiée dans des variables $1, $2, $3 :
-
-```4d
-  //Code de la méthode FAIRE QUELQUE CHOSE
-  //Supposons que tous les paramètres sont de type texte
- C_TEXT($1;$2;$3)
- ALERT("J'ai reçu "+$1+" et "+$2+" et aussi "+$3)
-  //$1 contient le paramètre $AvecCeci
-  //$2 contient le paramètre $EtCela
-  //$3 contient le paramètre $CommeCeci
-```
-
-
-### Valeur retournée
-
-La valeur à retourner est automatiquement placée dans la variable locale `$0`.
-
-
-Par exemple, la méthode suivante, appelée `Uppercase4`, retourne une chaîne dont les quatre premiers caractères ont été passés en majuscules :
-
-```4d
-$0:=Uppercase(Substring($1;1;4))+Substring($1;5)
-```
-
-Voici un exemple qui utilise la méthode Uppercase4 :
-
-```4d
-$NewPhrase:=Uppercase4("This is good.")
-```
-
-Dans cet exemple, la variable *$NewPhrase* prend la valeur “THIS is good.”
-
-La valeur retournée, `$0`, est une variable locale à la sous-routine. Elle peut être utilisée en tant que telle à l'intérieur de la sous-routine. Par exemple, vous pouvez écrire :
-
-```4d
-// Faire_quelque chose
-$0:=Uppercase($1)
-ALERT($0)
-```
-
-Dans cet exemple, `$0` reçoit d'abord la valeur de `$1`, puis est utilisée en tant que paramètre de la commande `ALERT`. Dans une sous-méthode, vous pouvez utiliser `$0` comme n'importe quelle autre variable locale. C'est 4D qui retourne la valeur finale de `$0` (sa valeur au moment où la sous-routine se termine) à la méthode appelée.
-
-
-### Type de données pris en charge
-
-Vous pouvez utiliser n'importe quelle [expression](quick-tour.md#types-dexpressions) comme paramètre séquentiel, à l'exception des :
-
-- tables
-- arrays
+:::note
 
 Les expressions tables ou arrays (tableaux) peuvent être passées uniquement [par référence en utilisant un pointeur](dt_pointer.md#pointers-as-parameters-to-methods).
+
+:::
+
+### Initialisation
+
+Lorsque les paramètres sont déclarés, ils sont initialisés à la [**valeur par défaut correspondant à leur type**](data-types.md#valeurs-par-defaut), qu'ils conserveront pendant la session tant que l'on ne leur aura pas affecté une valeur.
+
+
 
 ## `return {expression}`
 
@@ -308,9 +242,8 @@ Pour déclarer des paramètres génériques, utilisez une directive du compilate
  C_TEXT(${4})
 ```
 
-> La déclaration de paramètres génériques ne peut se faire qu'avec [la syntaxe séquentielle](#sequential-parameters).
 
-La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type text. Les types de $1, $2 et $3 pourront être quelconques. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Il sera donc de type texte, même si pour vous, par exemple, il était de type Réel.
+La commande ci-dessus signifie que tous les paramètres à partir du quatrième (inclus) seront adressés par indirection. Ils seront tous de type text. The first three parameters can be of any data type. En revanche, si vous utilisez $2 par indirection, le type utilisé sera le type générique. Il sera donc de type texte, même si pour vous, par exemple, il était de type Réel.
 
 > Le nombre, dans la déclaration, doit être une constante et non une variable.
 
@@ -318,66 +251,49 @@ La commande ci-dessus signifie que tous les paramètres à partir du quatrième 
 
 
 
-## Déclaration des paramètres pour le mode compilé
+## `Compiler` method
 
-Pour éviter tout conflit, vous devez déclarer chaque paramètre dans les méthodes ou fonctions appelées en [mode interprété](interpreted.md), même si cela est facultatif.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project.
 
-Lorsque vous utilisez la syntaxe des [variables nommées](#paramètres-nommés), les paramètres sont automatiquement déclarés à l'aide du mot-clé `#DECLARE` ou du prototype `Function`. Par exemple :
+When using the `#DECLARE` keyword or `Function` prototype, parameters are automatically declared. Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
     // tous les paramètres sont déclarés avec leur type
 ```
 
+However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
 
-Lorsque vous utilisez [la syntaxe de variable séquentielle](#sequential-parameters), vous devez vous assurer que tous les paramètres sont correctement déclarés. Dans l'exemple suivant, la méthode projet `ajoutCapitale` accepte un paramètre texte et retourne un résultat texte :
+- you can group all local variable parameters for project methods in one or more project method(s)
+- the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
+- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
-```4d
-  // Méthode projet ajoutCapitale
-  // ajoutCapitale ( Texte ) -> Texte
-  // ajoutCapitale( Chaîne source ) -> chaîne avec la première lettre capitale
+Par exemple :
 
- C_TEXTE($0;$1)
- $0:=Majusc(Sous chaine($1;1;1))+Minusc(Sous chaine($1;2))
-```
-
-L'utilisation de commandes telles que `New process` avec les méthodes process qui acceptent les paramètres nécessite également que les paramètres soient explicitement déclarés dans la méthode appelée. Par exemple :
-
-```4d
-C_TEXT($string)
-C_LONGINT($idProc;$int)
-C_OBJECT($obj)
-
-$idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
-```
-
-Ce code peut être exécuté en mode compilé, uniquement si "foo_method" déclare ses paramètres :
-
-```4d
-//foo_method
-C_TEXT($1)
-C_LONGINT($2)
-C_OBJECT($3)
-...
-```
-
-> En mode compilé, vous pouvez regrouper tous les paramètres de variables locales pour les méthodes projets dans un méthode spécifique avec un nom commençant par "Compiler". Dans cette méthode, vous pouvez prédéclarer les paramètres de chaque méthode, comme par exemple :
 ```4d  
  // Compiler_method
- C_REAL(OneMethodAmongOthers;$1) 
+ C_REAL(OneMethodAmongOthers;$myParam) 
 ```
-Pour plus d'informations, consultez la page [Modes interprété et compilé](interpreted.md).
+
+:::note
+
+This syntax is not executable in interpreted mode.
+
+:::
+
+You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
 La déclaration des paramètres est également obligatoire dans les contextes suivants (ces contextes ne prennent pas en charge les déclarations dans une méthode "Compiler") :
 
-- Méthodes base - Par exemple, la `méthode base Sur connexion Web` reçoit six paramètres, allant de $1 à $6, de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
+- Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
 ```4d
-// Sur connexion Web
-C_TEXT($1;$2;$3;$4;$5;$6)
+// On Web Connection
+#DECLARE ($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text) \
+  -> $RequestAccepted : Boolean
 ```
-
-> Vosu pouvez également utiliser les [paramètres nommés](#paramètres-nommés) avec le mot-clé `#DECLARE`.
 
 - Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
@@ -416,15 +332,10 @@ Ce cas est traité par 4D en fonction du contexte :
 - dans les [projets compilés](interpreted.md), une erreur est générée à l'étape de compilation lorsque cela est possible. Sinon, une erreur est générée lorsque la méthode est appelée.
 - dans les projets interprétés :
     + si le paramètre a été déclaré en utilisant [la syntaxe nommée](#named-parameters) (`#DECLARE` ou `Function`), une erreur est générée lorsque la méthode est appelée.
-    + si le paramètre a été déclaré en utilisant [la syntaxe séquentielle](#sequential-parameters) (`C_XXX`), aucune erreur n'est générée, la méthode appelée reçoit une valeur vide du type attendu.
+    + if the parameter was declared using (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
 
 
 
-
-
-## Variables d'entrée/de sortie
-
-Dans une sous-méthode, vous pouvez utiliser les paramètres $1, $2... comme n'importe quelle autre variable locale. Toutefois, dans le cas où vous utilisez des commandes qui modifient la valeur de la variable passée en paramètre (par exemple `Trouver dans champ`), les paramètres $1, $2, etc. ne peuvent pas être utilisés directement. Vous devez d'abord les recopier dans des variables locales standard (par exemple `$mavar:=$1`).
 
 
 

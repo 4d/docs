@@ -5,7 +5,7 @@ title: On Delete Action
 
 | Code | Pode ser chamado por                                                                            | Definição                           |
 | ---- | ----------------------------------------------------------------------------------------------- | ----------------------------------- |
-| 58   | [Lista hierárquica](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | The user attempts to delete an item |
+| 58   | [Lista hierárquica](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | O utilizador tenta eliminar um item |
 
 
 ## Descrição

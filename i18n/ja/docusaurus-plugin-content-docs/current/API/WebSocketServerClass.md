@@ -65,7 +65,7 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
 ```4d
 // myServerHandler クラス
 
-Function onConnection($wss : Object; $param : Object) : Object
+Function onConnection($wss : Object; $event : Object) : Object
     // ユーザークラスのインスタンスを返します
     // このインスタンスがサーバーへの接続を処理します
     return cs.myConnectionHandler.new() 
@@ -109,7 +109,7 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 <!-- REF #4D.WebSocketServer.new().Syntax -->**4D.WebSocketServer.new**( *WSSHandler* : Object { ; *options* : Object } ) : 4D.WebSocketServer<!-- END REF -->
 
 
-<!-- REF #4D.HTTPRequest.new().Params -->
+<!-- REF #4D.WebSocketServer.new().Params -->
 | 引数                           | タイプ                |    | 説明                                                      |
 | ---------------------------- | ------------------ |:--:| ------------------------------------------------------- |
 | [WSSHandler](#wsshandler-引数) | Object             | -> | WebSocketサーバー用コールバックを宣言しているユーザークラスのオブジェクト               |
@@ -139,12 +139,12 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 | onError      | [Function](FunctionClass.md) | エラーが発生した時のコールバック (後述参照)             | undefined |
 
 
-**WSHandler.onConnection**(*WSServer* : Object ; *param* : Object) : Object | null
+**WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
 
 | 引数       |         | タイプ                |    | 説明                                                                                                                                                                                                                                                                                                                                                 |
 | -------- | ------- | ------------------ |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | WSServer |         | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                                                                                                                                                                                                                                                                          |
-| param    |         | Object             | <- | 引数                                                                                                                                                                                                                                                                                                                                                 |
+| event    |         | Object             | <- | 引数                                                                                                                                                                                                                                                                                                                                                 |
 |          | type    | Text               |    | "connection"                                                                                                                                                                                                                                                                                                                                       |
 |          | request | Object             |    | `request` オブジェクト。 接続要求に関する情報を格納します (後述参照)                                                                                                                                                                                                                                                                                                          |
 | 戻り値      |         | Object             | -> | [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) (後述参照)。 この関数が `connectionHandler` オブジェクトを返す場合、[`4D.WebSocketConnection` オブジェクト](WebSocketConnectionClass.md#websocketconnection-オブジェクト) が自動的に作成され、[カレント接続のコレクション](#connections) に追加されます。 その後、このオブジェクトは `connectionHandler` オブジェクトの各関数に引数として受け取られます。 戻り値が null または undefined の場合、接続は解除されます。 |
@@ -152,37 +152,36 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 このコールバックは、ハンドシェイクが完了したときに呼び出されます。 WebSocket 接続を作成するためには、有効な [`connectionHandler` オブジェクト](#connectionhandler-オブジェクト) を指定して呼び出す必要があり、そうでない場合は接続がキャンセルされます。
 
 
-**WSHandler.onOpen**(*WSServer* : Object ; *param* : Object)
+**WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
 | 引数       |      | タイプ                |    | 説明                        |
 | -------- | ---- | ------------------ |:--:| ------------------------- |
 | WSServer |      | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト |
-| param    |      | Object             | <- | 引数                        |
+| event    |      | Object             | <- | 引数                        |
 |          | type | Text               |    | "open"                    |
 
 WebSocketサーバーが起動したときに発生するイベントです。
 
 
-**WSHandler.onTerminate**(*WSServer* : Object ; *param* : Object)
+**WSHandler.onTerminate**(*WSServer* : Object ; *event* : Object)
 
 | 引数       |      | タイプ                |    | 説明                        |
 | -------- | ---- | ------------------ |:--:| ------------------------- |
 | WSServer |      | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト |
-| param    |      | Object             | <- | 引数                        |
+| event    |      | Object             | <- | 引数                        |
 |          | type | Text               |    | "terminate"               |
 
 HTTPサーバーまたは WebSocketサーバーが終了したときに発生するイベントです。
 
 
-**WSHandler.onError**(*WSServer* : Object ; *param* : Object)
+**WSHandler.onError**(*WSServer* : Object ; *event* : Object)
 
-| 引数       |            | タイプ                |    | 説明                                                                                                   |
-| -------- | ---------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------- |
-| WSServer |            | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                            |
-| param    |            | Object             | <- | 引数                                                                                                   |
-|          | type       | Text               |    | "error"                                                                                              |
-|          | statusText | Text               |    | 4Dエラースタックに返された最後のエラー                                                                                 |
-|          | errors     | Collection         |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
+| 引数       |        | タイプ                |    | 説明                                                                                                   |
+| -------- | ------ | ------------------ |:--:| ---------------------------------------------------------------------------------------------------- |
+| WSServer |        | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                            |
+| event    |        | Object             | <- | 引数                                                                                                   |
+|          | type   | Text               |    | "error"                                                                                              |
+|          | errors | Collection         |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
 
 
 WebSocketサーバーでエラーが発生したときに発生するイベントです。
@@ -194,9 +193,9 @@ WebSocketサーバーでエラーが発生したときに発生するイベン�
 ```4d
 // myWSServerHandler クラス 
 
-Function onConnection($wss : Object; $param : Object) : Object
+Function onConnection($wss : Object; $event : Object) : Object
 
-    If (VerifyAddress($param.request.remoteAddress))
+    If (VerifyAddress($event.request.remoteAddress))
         // VerifyAddress メソッドはクライアントのアドレスを検証します
         // 返される WSConnectionHandler オブジェクトは、この接続に関連する 
         // 4D.WebSocketConnection オブジェクトをインスタンス化するために
@@ -208,14 +207,14 @@ Function onConnection($wss : Object; $param : Object) : Object
         return Null 
     End if 
 
-Function onOpen($wss : Object; $param : Object)
+Function onOpen($wss : Object; $event : Object)
 LogFile("*** サーバー起動")
 
-Function onTerminate($wss : Object; $param : Object)
+Function onTerminate($wss : Object; $event : Object)
 LogFile("*** サーバー終了")
 
-Function onError($wss : Object; $param : Object)
-LogFile("!!! サーバーエラー: "+$param.statusText)
+Function onError($wss : Object; $event : Object)
+LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 
 ```
 
@@ -243,50 +242,49 @@ LogFile("!!! サーバーエラー: "+$param.statusText)
 | onError     | [Function](FunctionClass.md) | エラーが発生したときに呼び出される関数                        |
 
 
-**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onMessage**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | 引数    |      | タイプ                                                     |    | 説明                       |
 | ----- | ---- | ------------------------------------------------------- |:--:| ------------------------ |
 | ws    |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト |
-| param |      | Object                                                  | <- | 引数                       |
+| event |      | Object                                                  | <- | 引数                       |
 |       | type | Text                                                    |    | "message"                |
 |       | data | Text / Blob / Object                                    |    | クライアントから送信されたデータ         |
 
 WebSocket データ用のコールバックです。 WebSocket がデータを受信するたびに呼び出されます。
 
 
-**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onOpen**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | 引数    |      | タイプ                                                     |    | 説明                       |
 | ----- | ---- | ------------------------------------------------------- |:--:| ------------------------ |
 | ws    |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト |
-| param |      | Object                                                  | <- | 引数                       |
+| event |      | Object                                                  | <- | 引数                       |
 |       | type | Text                                                    |    | "open"                   |
 
 `connectionHandler` オブジェクトが作成されたときに呼び出されます (`WSS.onConnection` イベントの後)。
 
 
-**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onTerminate**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
 | 引数    |        | タイプ                                                     |    | 説明                                                                                                       |
 | ----- | ------ | ------------------------------------------------------- |:--:| -------------------------------------------------------------------------------------------------------- |
 | ws    |        | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト                                                                                 |
-| param |        | Object                                                  | <- | 引数                                                                                                       |
+| event |        | Object                                                  | <- | 引数                                                                                                       |
 |       | type   | Text                                                    |    | "terminate"                                                                                              |
 |       | code   | Number                                                  |    | 接続が切断された理由を示すステータスコード。 WebSocket がエラーコードを返さない場合、エラーが発生しなかった場合は `code` が 1005 に、エラーが発生した場合は 1006 に設定されます。 |
 |       | reason | Text                                                    |    | 接続が切断された理由を説明するテキスト。 WebSocket が理由を返さない場合、reason は未定義です。                                                 |
 
 WebSocket 終了したときに呼び出されます。
 
-**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *param* : Object)
+**connectionHandler.onError**(*ws* : 4D.WebSocketConnection ; *event* : Object)
 
-| 引数    |        |        | タイプ                                                     |    | 説明                                                                                                   |
-| ----- | ------ | ------ | ------------------------------------------------------- |:--:| ---------------------------------------------------------------------------------------------------- |
-| ws    |        |        | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト                                                                             |
-| param |        |        | Object                                                  | <- | 引数                                                                                                   |
-|       | type   |        | Text                                                    |    | "error"                                                                                              |
-|       | status |        | Object                                                  |    |                                                                                                      |
-|       |        | errors | Collection                                              |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
+| 引数    |        |            | タイプ                                                     |                                                                                                      | 説明                       |
+| ----- | ------ | ---------- | ------------------------------------------------------- |:----------------------------------------------------------------------------------------------------:| ------------------------ |
+| ws    |        |            | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) |                                                  <-                                                  | カレントの WebSocket 接続オブジェクト |
+| event |        |            | Object                                                  |                                                  <-                                                  | 引数                       |
+|       | type   |            | Text                                                    |                                                                                                      | "error"                  |
+|       | errors | Collection |                                                         | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |                          |
 
 エラーが発生したときに呼び出されます。
 

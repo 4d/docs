@@ -238,14 +238,14 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 
 #### JSON 文法
 
-| 名称        | データタイプ | とりうる値                                                                                    |
-| --------- | ------ | ---------------------------------------------------------------------------------------- |
-| textAlign | string | "right", "center", "left", "automatic" ([チェックボックス](checkbox_overview.md) 非対応), "justify" |
+| 名称        | データタイプ | とりうる値                                             |
+| --------- | ------ | ------------------------------------------------- |
+| textAlign | string | "right", "center", "left", "automatic", "justify" |
 
 :::note
 
 - "automatic" は、[チェックボックス](checkbox_overview.md) および [ラジオボタン](radio_overview.md) ではサポートされていません。
-- "justify" は、[グループボックス](groupBox.md)、[入力](input_overview.md)、[テキストエリア](text.md) でのみサポートされています。
+- "justify" は、[入力](input_overview.md) と [テキストエリア](text.md) でのみサポートされています。
 
 :::
 

@@ -10,7 +10,7 @@ You can develop 4D components for your own needs and keep them private. You can 
 
 ## Definições
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. A matrix project forms a single component.
+- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. Um projeto matricial forma um componente único.
 - **Host Project**: Application project in which a component is installed and used.
 - **Component**: Matrix project that can be compiled or [built](Desktop/building.md#build-component), copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
 
@@ -147,7 +147,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 > Non-hidden functions inside a hidden class appear as suggestions when you use code completion with a class that [inherits](../Concepts/classes.md#inheritance) from it. For example, if a component has a `Teacher` class that inherits from a `_Person` class, code completion for `Teacher` suggests non-hidden functions from `_Person`.
 
 
-## Code completion for compiled components
+## Completar o código dos componentes compilados
 
 To make your component easier to use for developers, you can check the [**Generate syntax file for code completion when compiled** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings.
 

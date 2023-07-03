@@ -22,7 +22,7 @@ When this property is disabled (`legacy` value in JSON), only the rightmost colu
 
 ![](../assets/en/FormObjects/property_columnAutoResizing.png)
 
-#### About the fake (blank) column
+#### Sobre a coluna falsa (em branco)
 
 The appearance of the fake column matches that of the existing columns; it will have a fake header and/or footer if these elements are present in the existing list box columns and it will have the same background color(s) applied.
 
@@ -46,7 +46,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
-Three options are available:
+Estão disponíveis três opções:
 
 | Option   | Valor JSON | Resultados                                                                                                             |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ Three options are available:
 
 This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
-Three options are available:
+Estão disponíveis três opções:
 
 | Option   | Valor JSON | Resultados                                                                                                           |
 | -------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |

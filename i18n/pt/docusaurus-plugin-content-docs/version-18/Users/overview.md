@@ -21,13 +21,13 @@ O exemplo abaixo mostra direitos de acesso ao explorador de Execução e ao Desi
 
 You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
 
-Until you give the Designer a password, all database access are done with the Designer's access rights, even if you have set up users and groups (when the database opens, no ID is required). Any part of the database can be opened.
+Until you give the Designer a password, all database access are done with the Designer's access rights, even if you have set up users and groups (when the database opens, no ID is required). Qualquer parte da base de dados pode ser aberta.
 
 Quando uma senha for estabelecida para o Designer, todos os privilégios de acesso têm efeito. In order to connect to the database, remote users must enter a password.
 
 Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 
-## Users and groups in project architecture
+## Usuários e grupos na arquitetura projeto
 
 In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective in 4D Server databases. A tabela abaixo lista as principais funcionalidades de usuários e grupos e sua disponibilidade:
 

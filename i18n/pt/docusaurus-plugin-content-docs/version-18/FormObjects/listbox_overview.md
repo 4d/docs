@@ -682,7 +682,7 @@ Neste caso, é necessário preencher e esvaziar os arrays através do código. O
 
 * Quando um usuário clicar num botão de colapso, pode processar o evento `On Collapse` . O comando `LISTBOX GET CELL POSITION` devolve a célula em questão: retira-se tantas filas quantas forem necessárias da caixa de listagem usando o comando `LISTBOX DELETE ROWS` .
 
-## Object arrays in columns (4D View Pro)
+## Arrays objeto em colunas (4D View Pro)
 
 As colunas da caixa de listagem podem tratar de arrays de objectos. Uma vez que os arrays de objectos podem conter diferentes tipos de dados, esta nova e poderosa característica permite-lhe misturar diferentes tipos de entrada nas linhas de uma única coluna, e exibir também vários widgets. Por exemplo, poderia inserir uma entrada de texto na primeira linha, uma caixa de verificação na segunda, e uma lista drop down na terceira. Os arrays de objetos também fornecem acesso a novos tipos de widgets, tais como botões ou seletores de cores.
 
@@ -823,7 +823,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 #### behavior
 
-The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
+The behavior attribute provides variations to the regular representation of values. Em 4D v15, uma única variação é proposta:
 
 | Atributo | Valor(es) disponível(eis) | valueType(s) | Descrição                                                                                                                                                                                     |
 | -------- | ------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -884,7 +884,7 @@ Exemplos:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
-#### requiredListName and requiredListReference
+#### requiredListName e requiredListReference
 
 The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
 
@@ -964,7 +964,7 @@ The current unit is displayed as a button that cycles through the "unitList", "u
 
 Exemplo:
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
+We want to set up a numeric input followed by two possible units: "rows" or "pixels". O valor atual é "2" + "linhas". We use values defined directly in the object ("unitsList" attribute):
 
 ````4d
 ARRAY TEXT($_units;0)
@@ -1011,7 +1011,7 @@ The "color" valueType allows you to display either a color or a text.
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
 Optionally, you can pass a "label" attribute.
 
@@ -1035,5 +1035,5 @@ Several events can be handled while using an object list box array:
   * numa área combo box
   * in a unit button (switch from value x to value x+1)
   * in a check box (switch between checked/unchecked)
-* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+* **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. Este evento é gerido pelo programador.
+* **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. Este evento é gerido pelo programador.

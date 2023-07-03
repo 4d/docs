@@ -25,10 +25,10 @@ The following filesystem pathnames are supported:
 |---|---|
 |"/DATA"|Current data folder|
 |"/LOGS"|Logs folder|
-|"/PACKAGE"|Database folder (with or without 4dbase extension)|
+|"/PACKAGE"|Project root folder (with or without 4dbase extension)|
 |"/PROJECT"|Project folder|
-|"/RESOURCES"|Current database resources folder|
-|"/SOURCES"|Current project resources folder|
+|"/RESOURCES"|Current project resources folder|
+|"/SOURCES"|Current project sources folder|
 
 ## POSIX syntax
 
@@ -46,6 +46,7 @@ In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
+
 
 
 ## Platform-specific syntax

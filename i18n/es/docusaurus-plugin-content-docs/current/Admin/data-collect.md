@@ -7,8 +7,8 @@ Para que nuestros productos sean siempre mejores, recogemos automáticamente los
 
 Esta página explica:
 
-- what information is collected,
-- where information is stored and when it is sent to 4D,
+- qué información se recoge,
+- dónde se almacena la información y cuándo se envía a 4D,
 - cómo desactivar la recopilación automática de datos en las aplicaciones integradas cliente/servidor.
 
 
@@ -16,51 +16,51 @@ Esta página explica:
 
 Los datos se recogen durante los siguientes eventos:
 
-- database startup,
+- inicio de la base de datos,
 - cierre de base de datos,
-- web server startup,
-- php execution,
-- client connection,
-- data collection sending.
+- inicio del servidor web,
+- ejecución php,
+- conexión con el cliente,
+- envío de recolección de datos.
 
-Some data is also collected at regular intervals.
+También se recogen algunos datos a intervalos regulares.
 
-### Collected at database startup
+### Recogidos al iniciar la base de datos
 
-| Datos                   | Tipo                 | Notas                                                                                            |
-| ----------------------- | -------------------- | ------------------------------------------------------------------------------------------------ |
-| CPU                     | Text                 | Nombre, tipo y velocidad del procesador                                                          |
-| numberOfCores           | Number               | Número total de núcleos                                                                          |
-| memory                  | Number               | Volumen de almacenamiento de memoria (en bytes) disponible en la máquina                         |
-| system                  | Text                 | Versión del sistema operativo y número de build                                                  |
-| headless                | Boolean              | True si la aplicación se ejecuta en modo sin interfaz                                            |
-| version                 | Number               | Número de versión de la aplicación 4D                                                            |
-| buildNumber             | Number               | Número de build de la aplicación 4D                                                              |
-| license                 | Object               | Nombre comercial y descripción de las licencias de los productos                                 |
-| isRosetta               | Boolean              | True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).   |
-| uniqueID                | Text                 | Unique ID of the 4D Server                                                                       |
-| id                      | Text (hashed string) | Identificador único asociado a la base de datos (*Polinomio Rolling hash del nombre de la base*) |
-| dataFileSize            | Number               | Tamaño del archivo de datos en bytes                                                             |
-| indexesSize             | Number               | Tamaño del índice en bytes                                                                       |
-| cacheSize               | Number               | Tamaño de caché en bytes                                                                         |
-| usingLegacyNetworkLayer | Boolean              | True si se utiliza la capa de red heredada para el servidor de aplicaciones                      |
-| usingQUICNetworkLayer   | Boolean              | True si la base utiliza la capa de red QUIC                                                      |
-| encryptedConnections    | Boolean              | True if client/server connections are encrypted                                                  |
-| encrypted               | Boolean              | True si el archivo de datos está encriptado                                                      |
-| compiled                | Boolean              | True si la aplicación está compilada                                                             |
-| isEngined               | Boolean              | True si la aplicación se fusiona con 4D Volume Desktop                                           |
-| projectMode             | Boolean              | True si la aplicación es un proyecto                                                             |
-| mobile                  | Collection           | Información sobre sesiones móviles                                                               |
-
-
-### Collected at web server startup and data collection sending
-
-| Datos     | Tipo   | Notas                                                   |
-| --------- | ------ | ------------------------------------------------------- |
-| webServer | Object | "started":true if the web server is starting or started |
+| Datos                   | Tipo                    | Notas                                                                                                  |
+| ----------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------ |
+| CPU                     | Text                    | Nombre, tipo y velocidad del procesador                                                                |
+| numberOfCores           | Number                  | Número total de núcleos                                                                                |
+| memory                  | Number                  | Volumen de almacenamiento de memoria (en bytes) disponible en la máquina                               |
+| system                  | Text                    | Versión del sistema operativo y número de build                                                        |
+| headless                | Boolean                 | True si la aplicación se ejecuta en modo sin interfaz                                                  |
+| version                 | Number                  | Número de versión de la aplicación 4D                                                                  |
+| buildNumber             | Number                  | Número de build de la aplicación 4D                                                                    |
+| license                 | Object                  | Nombre comercial y descripción de las licencias de los productos                                       |
+| isRosetta               | Boolean                 | True si 4D es emulado a través de Rosetta en macOS, False en caso contrario (no emulado o en Windows). |
+| uniqueID                | Text                    | ID único de 4D Server                                                                                  |
+| id                      | Texto (cadena con hash) | Identificador único asociado a la base de datos (*Polinomio Rolling hash del nombre de la base*)       |
+| dataFileSize            | Number                  | Tamaño del archivo de datos en bytes                                                                   |
+| indexesSize             | Number                  | Tamaño del índice en bytes                                                                             |
+| cacheSize               | Number                  | Tamaño de caché en bytes                                                                               |
+| usingLegacyNetworkLayer | Boolean                 | True si se utiliza la capa de red heredada para el servidor de aplicaciones                            |
+| usingQUICNetworkLayer   | Boolean                 | True si la base utiliza la capa de red QUIC                                                            |
+| encryptedConnections    | Boolean                 | True si las conexiones cliente/servidor están encriptadas                                              |
+| encrypted               | Boolean                 | True si el archivo de datos está encriptado                                                            |
+| compiled                | Boolean                 | True si la aplicación está compilada                                                                   |
+| isEngined               | Boolean                 | True si la aplicación se fusiona con 4D Volume Desktop                                                 |
+| projectMode             | Boolean                 | True si la aplicación es un proyecto                                                                   |
+| mobile                  | Collection              | Información sobre sesiones móviles                                                                     |
 
 
-### Collected at regular intervals
+### Recogidos al inicio del servidor web y en el envío de la recolección de datos
+
+| Datos     | Tipo   | Notas                                                        |
+| --------- | ------ | ------------------------------------------------------------ |
+| webServer | Object | "started":true si el servidor web está arrancando o iniciado |
+
+
+### Recogidas a intervalos regulares
 
 | Datos                       | Tipo   | Notas                                     |
 | --------------------------- | ------ | ----------------------------------------- |
@@ -69,7 +69,7 @@ Some data is also collected at regular intervals.
 | maximumUsedVirtualMemory    | Number | Uso máximo de la memoria virtual          |
 
 
-### Collected at data collection sending
+### Recogida en el envío de datos
 
 | Datos                       | Tipo   | Notas                                                                 |
 | --------------------------- | ------ | --------------------------------------------------------------------- |
@@ -82,45 +82,45 @@ Some data is also collected at regular intervals.
 | dataSegment1.diskWriteBytes | Object | Número de bytes escritos en el archivo de datos                       |
 | dataSegment1.diskReadCount  | Object | Número de lecturas en el archivo de datos                             |
 | dataSegment1.diskWriteCount | Object | Número de escrituras en el archivo de datos                           |
-| indexSegment.diskReadBytes  | Number | Number of bytes read in the index file                                |
-| indexSegment.diskWriteBytes | Number | Number of bytes written in the index file                             |
-| indexSegment.diskReadCount  | Number | Number of reads in the index file                                     |
-| indexSegment.diskWriteCount | Number | Number of writes in the index file                                    |
+| indexSegment.diskReadBytes  | Number | Número de bytes leídos en el archivo índice                           |
+| indexSegment.diskWriteBytes | Number | Número de bytes escritos en el archivo índice                         |
+| indexSegment.diskReadCount  | Number | Número de lecturas en el archivo índice                               |
+| indexSegment.diskWriteCount | Number | Número de escrituras en el archivo índice                             |
 
 
 
-### Collected at database closure and data collection sending
+### Recolección al cierre de la base y envío de los datos
 
-| Datos             | Tipo   | Notas                                                        |
-| ----------------- | ------ | ------------------------------------------------------------ |
-| webserverHits     | Number | Number of hits on the web server during the data collection  |
-| restHits          | Number | Number of hits on the REST server during the data collection |
-| webserverBytesIn  | Number | Bytes received by the web server during the data collection  |
-| webserverBytesOut | Number | Bytes sent by the web server during the data collection      |
-
-
+| Datos             | Tipo   | Notas                                                               |
+| ----------------- | ------ | ------------------------------------------------------------------- |
+| webserverHits     | Number | Número de visitas al servidor web durante la recolección de datos   |
+| restHits          | Number | Número de accesos al servidor REST durante la recolección de datos  |
+| webserverBytesIn  | Number | Bytes recibidos por el servidor web durante la recolección de datos |
+| webserverBytesOut | Number | Bytes enviados por el servidor web durante la recolección de datos  |
 
 
-### Collected every time PHP execute is called
-
-| Datos       | Tipo    | Notas                                                                               |
-| ----------- | ------- | ----------------------------------------------------------------------------------- |
-| phpCall     | Number  | Number of calls to `PHP execute`                                                    |
-| externalPHP | Boolean | True if the client performs a call to `PHP execute` and uses its own version of php |
 
 
-### Collected at client connection
+### Recolección cada vez que se llama a PHP execute
 
-| Datos                      | Tipo       | Notas                                                                              |
-| -------------------------- | ---------- | ---------------------------------------------------------------------------------- |
-| maximum4DClientConnections | Number     | Maximum number of 4D Client connections to the server                              |
-| connectionSystems          | Collection | Client OS without the build number (in parenthesis) and number of clients using it |
+| Datos       | Tipo    | Notas                                                                                     |
+| ----------- | ------- | ----------------------------------------------------------------------------------------- |
+| phpCall     | Number  | Nùmero de llamadas a `PHP execute`                                                        |
+| externalPHP | Boolean | True si el cliente realiza una llamada a `PHP execute` y utiliza su propia versión de php |
+
+
+### Recolección en la conexión del cliente
+
+| Datos                      | Tipo       | Notas                                                                                                              |
+| -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------ |
+| maximum4DClientConnections | Number     | Número máximo de conexiones 4D Client al servidor                                                                  |
+| connectionSystems          | Collection | Sistema operativo del cliente sin el número de compilación (entre paréntesis) y número de clientes que lo utilizan |
 
 
 
 ## ¿Dónde se almacena y envía?
 
-Collected data is written in a text file (JSON format) per database when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv20/help/command/en/page485.html), i.e.:
+Los datos recolectados se escriben en un archivo de texto (formato JSON) por base de datos cuando 4D Server cierra. El archivo se almacena dentro de la [carpeta 4D activa](https://doc.4d.com/4dv20/help/command/en/page485.html), es decir.:
 
 - en Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - en macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`

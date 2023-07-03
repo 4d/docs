@@ -56,14 +56,14 @@ A notação de objetos pode ser utilizada para acessar aos valores das proprieda
 
 Identificadores de propriedades de objetos
 
-- using a string within square brackets: > object["propertyName"]
+- usar uma string dentro de colchetes: > object["propertyName"]
 
 Exemplo:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a "dot" symbol: > object.propertyName
+- usar um simbolo "ponto": > object.propertyName
 
 Exemplos:
 ```4d
@@ -213,17 +213,17 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
   // para evitar erros no código
 ```
 
-## Object property identifiers
+## Identificadores de propriedade de objetos
 
 Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
 
 - the first character must be a letter, an underscore (_), or a dollar sign ($),
 - subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
-- they are case sensitive.
+- eles são sensíveis às maiúsculas e minúsculas.
 
 **Nota:**
 
-- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
+- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. É necessário utilizar uma variável intermédia.
 - Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
 
 

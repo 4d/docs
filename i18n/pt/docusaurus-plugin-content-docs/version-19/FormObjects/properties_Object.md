@@ -52,9 +52,9 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Objeto                                                  | Valor guardado                                                                         |
+| Object                                                  | Valor guardado                                                                         |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [Caixa de selecção](checkbox_overview.md)               | Value of associated variable (0, 1, 2)                                                 |
+| [Caixa de selecção](checkbox_overview.md)               | Valor da variável associada (0, 1, 2)                                                  |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
 | [Botão rádio](radio_overview.md)                        | Value of associated variable (1, 0, True or False for buttons according to their type) |
 | [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
@@ -76,7 +76,7 @@ Here is the list of objects whose value can be saved:
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
 This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
-> Variable name size is limited to 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
+> O tamanho do nome da variável é limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
 The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
 
@@ -255,7 +255,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ## Título
 
-Allows inserting a label on an object. The font and the style of this label can be specified.
+Permite inserir uma etiqueta num objeto. The font and the style of this label can be specified.
 
 You can force a carriage return in the label by using the \ character (backslash).
 
@@ -298,7 +298,7 @@ There are several types of calculations available. The following table shows whi
 | Soma dos quadrados(*)  | X   |      |      | X    |      |      | Real                    |
 | Personalizado ("none") | X   | X    | X    | X    | X    | X    | Qualquer                |
 
-(*) Only for array type list boxes.
+(*) Apenas para list boxes do tipo array.
 
 > Only declared or dynamic [variables](Concepts/variables.md) can be used to display footer calculations. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.value` are not supported.
 

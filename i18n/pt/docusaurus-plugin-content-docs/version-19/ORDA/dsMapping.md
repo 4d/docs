@@ -10,7 +10,7 @@ The ORDA technology is based upon an automatic mapping of an underlying 4D struc
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
 * Tables are mapped to dataclasses.
-* Fields are mapped to storage attributes.
+* Os campos são mapeados para atributos de armazenamento.
 * Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
@@ -20,14 +20,14 @@ When you call a datastore using the `ds` or the `Open datastore` command, 4D aut
 The following rules are applied for any conversions:
 
 * Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-* Uma datastore só referencia as tabelas com uma única chave primária. The following tables are not referenced:
-  * Tables without a primary key
-  * Tables with composite primary keys.
+* Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
+  * Tabelas sem chave primária
+  * Tabelas com chaves primárias compostas.
 * [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. BLOB type attributes are returned as Null in entities and cannot be assigned.
 
 > ORDA mapping does not take into account:  
 > 
-> * the "Invisible" option for tables or fields,
+> * a opção "Invisível" para tabelas ou campos,
 > * the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
 > * the "Manual" or "Automatic" property of relations.
 
@@ -41,10 +41,10 @@ This option must be selected at the 4D structure level for each table and each f
 
 ### Actualização do modelo de dados
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
+Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificações incluem:
 
 * adding or removing a table, a field, or a relation
-* renaming of a table, a field, or a relation
+* renomeação de uma tabela, um campo ou uma relação
 * changing a core property of a field (type, unique, index, autoincrement, null value support)
 
 When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
@@ -90,7 +90,7 @@ The main (default) datastore is always available through the `ds` command, but t
 
 ### Dataclass
 
-A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
+Uma dataclass é o equivalente a uma tabela. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
 
 All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
 
@@ -110,7 +110,7 @@ A dataclass object can contain:
 * attributes
 * relation attributes
 
-The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. A query is done from a single dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
+The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. Uma consulta é feita a partir de uma única dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
 
 The dataclass object itself cannot be copied as an object:
 
@@ -169,7 +169,7 @@ Keep in mind that these objects describe attributes, but do not give access to d
 
 ### Entity
 
-An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
+Uma entidade é o equivalente a um registo. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
 
 The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
 
@@ -217,7 +217,7 @@ The entity selection properties are however enumerable:
   //("length", 00", "01"...)
 ```
 
-#### Ordered or unordered entity selection
+#### Entity selections ordenadas ou não ordenadas
 
 For optimization reasons, by default 4D ORDA usually creates unordered entity selections, except when you use the `orderBy( )` method or use specific options. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
 

@@ -48,7 +48,7 @@ The returned "__STATUS" object has the following properties:
 
 | Propriedade  |  | Tipo    | Descrição                                                                                                                                       |
 | ------------ |  | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-|              |  |         | ***Available only in case of success:***                                                                                                        |
+|              |  |         | ***Disponível apenas em caso de sucesso:***                                                                                                     |
 | success      |  | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case). |
 |              |  |         | ***Disponível apenas em caso de erro:***                                                                                                        |
 | status       |  | number  | Código de erro, ver abaixo                                                                                                                      |
@@ -72,7 +72,7 @@ The following values can be returned in the *status* and *statusText* properties
 ## Exemplo
 
 
-We lock an entity in a first browser:
+Bloqueamos uma entidade num primeiro navegador:
 
 ```
 GET /rest/Customers(1)/?$lock=true

@@ -24,7 +24,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 > This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
-#### Window tabbing (macOS only)
+#### Janela com guias (somente macOS)
 
 Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
 
@@ -45,7 +45,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 
 ![](../assets/en/Preferences/general4.png)
 
-Three options are available:
+Estão disponíveis três opções:
 
 * **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
 * **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
@@ -60,13 +60,13 @@ If this option is checked, when the user switches to the Application environment
 If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
 
 * **Base de dados...**
-* **Database from Structure Definition...**
+* **Base de dados a partir da definição da estrutura...**
 
 ![](../assets/en/Preferences/general5.png)
 
 These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
 
-## When creating a new project
+## Ao criar um novo projeto
 
 ### Usar ficheiro de registo
 
@@ -78,7 +78,7 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Language of text comparison
+### Linguagem de comparação de texto
 
 This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
 
@@ -89,7 +89,7 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 ## Documentation location
 
-This area configures access to the 4D HTML documentation displayed in the current browser:
+Esta área configura o acesso à documentação HTML 4D mostrada no navegador atual:
 
 * When the user double-clicks on a command on the **Commands Page** of the Explorer;
 * When the user clicks on a command name in the Method editor and hits the **F1** key.

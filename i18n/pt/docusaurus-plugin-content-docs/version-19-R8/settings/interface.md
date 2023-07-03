@@ -18,7 +18,7 @@ Click **Select...** to set the font and size for the characters used by the `MES
 
 The default font and its size depend on the platform where 4D is running.
 
-> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
+> This property also affects the following parts of 4D: <li>determinadas áreas de pré-visualização do Explorador</li><li>a régua do editor de formulários</li>
 ### Display Windows
 
 Other options configure the display of various windows in the Application mode.
@@ -59,7 +59,7 @@ The following schemes are available:
 -   **Dark**: the application will use the Default Dark Theme ![](../assets/en/settings/dark-appearance.png)
 -   **Inherited** (default): the application will inherit from the higher priority level (i.e., OS user preferences)
 
-> Default themes can be handled using CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
+> Os temas predefinidos podem ser tratados com CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
 
 The main application scheme will be applied to forms by default. However, it can be overriden:
 
@@ -70,13 +70,13 @@ The main application scheme will be applied to forms by default. However, it can
 
 You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Key icons indicate the corresponding Windows and macOS keys.
 
-The default shortcuts are as follows:
+Os atalhos predefinidos são os seguintes:
 
 -   Accept input form: **Enter**
 -   Cancel input form: **Esc**
 -   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
 
-To change the shortcut of an operation, click the corresponding **Edit** button. The following dialog box appears:
+To change the shortcut of an operation, click the corresponding **Edit** button. Aparece a seguinte caixa de diálogo:
 
 ![](../assets/en/settings/shortcut.png)
 

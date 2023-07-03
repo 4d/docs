@@ -5,7 +5,7 @@ title: Architecture of a project
 
 A 4D project is made of several folders and files, stored within a project root folder (package folder). For example:
 
-- MyProject (*project root folder*)
+- MyPackage (*project root folder*)
 	- `Components`
 	- `Data` 
 		- `Logs`
@@ -58,7 +58,7 @@ Contents|Description|Format
 catalog.4DCatalog|Table and field definitions|XML
 folders.json|Explorer folder definitions|JSON
 menus.json|Menu definitions|JSON
-settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined. **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings.|XML
+settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings.|XML
 tips.json|Defined tips|JSON
 lists.json|Defined lists|JSON
 filters.json|Defined filters|JSON
@@ -163,11 +163,11 @@ data.match|(internal) UUID matching table number|XML
 
 (*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
-### `Settings`
+### `Settings` (user data)
 
-This folder contains **user settings files for data** used for application administration. 
+This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration. 
 
-> These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files. 
+> These settings take priority over [user settings](#settings-user) and [structure settings](#sources). See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
 
 |Contents|Description|Format|
 |----|----|---|
@@ -188,11 +188,11 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 > An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html) command) for maintenance log files and in cases where data folder is read-only.
 
-## `Settings`
+## `Settings` (user)
 
-This folder contains **user settings files** used for application administration. 
+This folder contains [**user settings**](../Desktop/user-settings.md#user-settings) used for application administration. 
 
-> These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file. 
+> These settings take priority over [structure settings](#sources) file. However, if [user settings for data](#settings-user-data) exist, they take priority over the user settings. See also [Priority of settings](../Desktop/userfile-settings.md#priority-of-settings).
 
 |Contents|Description|Format|
 |----|----|---|

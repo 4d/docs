@@ -49,70 +49,70 @@ The number of objects involved in an event depends on the nature of the event.
 
 ## Tabela de chamadas
 
-The following table summarizes how object and form methods are called for each event type:
+A tabela seguinte resume a forma como os métodos objeto e formulário são chamados para cada tipo de evento:
 
-| Evento                   | Métodos objecto                     | Método formulário | Que objectos               |
-| ------------------------ | ----------------------------------- | ----------------- | -------------------------- |
-| On Load                  | Sim                                 | Sim               | Todos os objectos          |
-| On Unload                | Sim                                 | Sim               | Todos os objectos          |
-| On Validate              | Sim                                 | Sim               | Todos os objectos          |
-| On Clicked               | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Double Clicked        | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Before Keystroke      | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On After Keystroke       | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On After Edit            | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Getting Focus         | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Losing Focus          | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Activate              | Nunca                               | Sim               | Nenhum                     |
-| On Deactivate            | Nunca                               | Sim               | Nenhum                     |
-| On Outside Call          | Nunca                               | Sim               | Nenhum                     |
-| On Page Change           | Nunca                               | Sim               | Nenhum                     |
-| On Begin Drag Over       | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Drop                  | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Drag Over             | Sim                                 | Nunca             | Apenas objecto envolvido   |
-| On Mouse Enter           | Sim                                 | Sim               | Todos os objectos          |
-| On Mouse Move            | Sim                                 | Sim               | Todos os objectos          |
-| On Mouse Leave           | Sim                                 | Sim               | Todos os objectos          |
-| On Mouse Up              | Sim                                 | Nunca             | Apenas objecto envolvido   |
-| On Menu Selected         | Nunca                               | Sim               | Nenhum                     |
-| On Bound variable change | Nunca                               | Sim               | Nenhum                     |
-| On Data Change           | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Plug in Area          | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Header                | Sim                                 | Sim               | Todos os objectos          |
-| On Printing Detail       | Sim                                 | Sim               | Todos os objectos          |
-| On Printing Break        | Sim                                 | Sim               | Todos os objectos          |
-| On Printing Footer       | Sim                                 | Sim               | Todos os objectos          |
-| On Close Box             | Nunca                               | Sim               | Nenhum                     |
-| On Display Detail        | Sim                                 | Sim               | Todos os objectos          |
-| On Open Detail           | Sim (List box)                      | Sim               | Nenhum, excepto List boxes |
-| On Close Detail          | Sim (List box)                      | Sim               | Nenhum, excepto List boxes |
-| On Resize                | Nunca                               | Sim               | Nenhum                     |
-| On Selection Change      | Sim                                 | Sim               | Apenas objecto envolvido   |
-| On Load Record           | Nunca                               | Sim               | Nenhum                     |
-| On Timer                 | Nunca                               | Sim               | Nenhum                     |
-| On Scroll                | Sim                                 | Nunca             | Apenas objecto envolvido   |
-| On Before Data Entry     | Sim (List box)                      | Nunca             | Apenas objecto envolvido   |
-| On Column Moved          | Sim (List box)                      | Nunca             | Apenas objecto envolvido   |
-| On Row Moved             | Sim (List box)                      | Nunca             | Apenas objecto envolvido   |
-| On Column Resize         | Yes (List box and 4D View Pro Area) | Nunca             | Apenas objecto envolvido   |
-| On Header Click          | Yes (List box and 4D View Pro Area) | Nunca             | Apenas objecto envolvido   |
-| On Footer Click          | Sim (List box)                      | Nunca             | Apenas objecto envolvido   |
-| On After Sort            | Sim (List box)                      | Nunca             | Apenas objecto envolvido   |
-| On Long Click            | Sim (Botão)                         | Sim               | Apenas objecto envolvido   |
-| On Alternative Click     | Yes (Button and List box)           | Nunca             | Apenas objecto envolvido   |
-| On Expand                | Sim (Hier. lista e list box)        | Nunca             | Apenas objecto envolvido   |
-| On Collapse              | Sim (Hier. lista e list box)        | Nunca             | Apenas objecto envolvido   |
-| On Delete Action         | Sim (Hier. lista e list box)        | Nunca             | Apenas objecto envolvido   |
-| On URL Resource Loading  | Sim (Área Web)                      | Nunca             | Apenas objecto envolvido   |
-| On Begin URL Loading     | Sim (Área Web)                      | Nunca             | Apenas objecto envolvido   |
-| On URL Loading Error     | Sim (Área Web)                      | Nunca             | Apenas objecto envolvido   |
-| On URL Filtering         | Sim (Área Web)                      | Nunca             | Apenas objecto envolvido   |
-| On End URL Loading       | Sim (Área Web)                      | Nunca             | Apenas objecto envolvido   |
-| On Open External Link    | Sim (Área Web)                      | Nunca             | Apenas objecto envolvido   |
-| On Window Opening Denied | Sim (Área Web)                      | Nunca             | Apenas objecto envolvido   |
-| On VP Range Changed      | Sim (Área 4D View Pro)              | Nunca             | Apenas objecto envolvido   |
-| On VP Ready              | Sim (Área 4D View Pro)              | Nunca             | Apenas objecto envolvido   |
-| On Row Resize            | Sim (Área 4D View Pro)              | Nunca             | Apenas objecto envolvido   |
+| Evento                   | Métodos objecto                   | Método formulário | Que objectos               |
+| ------------------------ | --------------------------------- | ----------------- | -------------------------- |
+| On Load                  | Sim                               | Sim               | Todos os objectos          |
+| On Unload                | Sim                               | Sim               | Todos os objectos          |
+| On Validate              | Sim                               | Sim               | Todos os objectos          |
+| On Clicked               | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Double Clicked        | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Before Keystroke      | Sim                               | Sim               | Apenas objecto envolvido   |
+| On After Keystroke       | Sim                               | Sim               | Apenas objecto envolvido   |
+| On After Edit            | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Getting Focus         | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Losing Focus          | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Activate              | Nunca                             | Sim               | Nenhum                     |
+| On Deactivate            | Nunca                             | Sim               | Nenhum                     |
+| On Outside Call          | Nunca                             | Sim               | Nenhum                     |
+| On Page Change           | Nunca                             | Sim               | Nenhum                     |
+| On Begin Drag Over       | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Drop                  | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Drag Over             | Sim                               | Nunca             | Apenas objecto envolvido   |
+| On Mouse Enter           | Sim                               | Sim               | Todos os objectos          |
+| On Mouse Move            | Sim                               | Sim               | Todos os objectos          |
+| On Mouse Leave           | Sim                               | Sim               | Todos os objectos          |
+| On Mouse Up              | Sim                               | Nunca             | Apenas objecto envolvido   |
+| On Menu Selected         | Nunca                             | Sim               | Nenhum                     |
+| On Bound variable change | Nunca                             | Sim               | Nenhum                     |
+| On Data Change           | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Plug in Area          | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Header                | Sim                               | Sim               | Todos os objectos          |
+| On Printing Detail       | Sim                               | Sim               | Todos os objectos          |
+| On Printing Break        | Sim                               | Sim               | Todos os objectos          |
+| On Printing Footer       | Sim                               | Sim               | Todos os objectos          |
+| On Close Box             | Nunca                             | Sim               | Nenhum                     |
+| On Display Detail        | Sim                               | Sim               | Todos os objectos          |
+| On Open Detail           | Sim (List box)                    | Sim               | Nenhum, excepto List boxes |
+| On Close Detail          | Sim (List box)                    | Sim               | Nenhum, excepto List boxes |
+| On Resize                | Nunca                             | Sim               | Nenhum                     |
+| On Selection Change      | Sim                               | Sim               | Apenas objecto envolvido   |
+| On Load Record           | Nunca                             | Sim               | Nenhum                     |
+| On Timer                 | Nunca                             | Sim               | Nenhum                     |
+| On Scroll                | Sim                               | Nunca             | Apenas objecto envolvido   |
+| On Before Data Entry     | Sim (List box)                    | Nunca             | Apenas objecto envolvido   |
+| On Column Moved          | Sim (List box)                    | Nunca             | Apenas objecto envolvido   |
+| On Row Moved             | Sim (List box)                    | Nunca             | Apenas objecto envolvido   |
+| On Column Resize         | Sim (List box e Area 4D View Pro) | Nunca             | Apenas objecto envolvido   |
+| On Header Click          | Sim (List box e Area 4D View Pro) | Nunca             | Apenas objecto envolvido   |
+| On Footer Click          | Sim (List box)                    | Nunca             | Apenas objecto envolvido   |
+| On After Sort            | Sim (List box)                    | Nunca             | Apenas objecto envolvido   |
+| On Long Click            | Sim (Botão)                       | Sim               | Apenas objecto envolvido   |
+| On Alternative Click     | Yes (Button and List box)         | Nunca             | Apenas objecto envolvido   |
+| On Expand                | Sim (Hier. lista e list box)      | Nunca             | Apenas objecto envolvido   |
+| On Collapse              | Sim (Hier. lista e list box)      | Nunca             | Apenas objecto envolvido   |
+| On Delete Action         | Sim (Hier. lista e list box)      | Nunca             | Apenas objecto envolvido   |
+| On URL Resource Loading  | Sim (Área Web)                    | Nunca             | Apenas objecto envolvido   |
+| On Begin URL Loading     | Sim (Área Web)                    | Nunca             | Apenas objecto envolvido   |
+| On URL Loading Error     | Sim (Área Web)                    | Nunca             | Apenas objecto envolvido   |
+| On URL Filtering         | Sim (Área Web)                    | Nunca             | Apenas objecto envolvido   |
+| On End URL Loading       | Sim (Área Web)                    | Nunca             | Apenas objecto envolvido   |
+| On Open External Link    | Sim (Área Web)                    | Nunca             | Apenas objecto envolvido   |
+| On Window Opening Denied | Sim (Área Web)                    | Nunca             | Apenas objecto envolvido   |
+| On VP Range Changed      | Sim (Área 4D View Pro)            | Nunca             | Apenas objecto envolvido   |
+| On VP Ready              | Sim (Área 4D View Pro)            | Nunca             | Apenas objecto envolvido   |
+| On Row Resize            | Sim (Área 4D View Pro)            | Nunca             | Apenas objecto envolvido   |
 
 Always keep in mind that, for any event, the method of a form or an object is called if the corresponding event property is selected for the form or objects. The benefit of disabling events in the Design environment (using the Property List of the Form editor) is that you can reduce the number of calls to methods and therefore significantly optimize the execution speed of your forms.
 

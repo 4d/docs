@@ -20,9 +20,9 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 ---
 
-## Background Color / Fill Color
+## Cor de fundo / Cor de preenchimento
 
-Defines the background color of an object.
+Define a cor de fundo de um objeto.
 
 In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
 
@@ -44,7 +44,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 ## Expressão cor de fundo
 
-`Selection and collection type list boxes`
+`List box de tipo coleção e seleção de entidades`
 
 An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
 
@@ -53,9 +53,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                         |
-| ------------- | ------------- | ----------------------------------------- |
-| rowFillSource | string        | An expression returning a RGB color value |
+| Nome          | Tipo de dados | Valores possíveis                             |
+| ------------- | ------------- | --------------------------------------------- |
+| rowFillSource | string        | Uma expressão que retorna um valor de cor RGB |
 
 #### Objectos suportados
 
@@ -122,16 +122,16 @@ You can remove these empty rows by selecting this option. The bottom of the list
 Designates the color of the object's lines. The color can be specified by:
 
 * a color name - like "red"
-* a HEX value - like "#ff0000"
-* an RGB value - like "rgb(255,0,0)"
+* um valor HEX - como "#ff0000"
+* um valor RGB - como "rgb(255,0,0)"
 
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                         |
-| ------ | ------------- | ----------------------------------------- |
-| stroke | string        | any css value, "transparent", "automatic" |
+| Nome   | Tipo de dados | Valores possíveis                        |
+| ------ | ------------- | ---------------------------------------- |
+| stroke | string        | um valor css, "transparent", "automatic" |
 
 > This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
 
@@ -215,4 +215,4 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 #### Veja também
 
-[Background Color / Fill Color](#background-color-fill-color)
+[Cor de fundo / Cor de preenchimento](#background-color-fill-color)

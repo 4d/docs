@@ -227,11 +227,11 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. Estão disponíveis os seguintes níveis:
 
 | Nível da mensagem | Descrição                                                                                     | Quando seleccionado, inclui     |
 | ----------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR             | A part of the application does not work                                                       | ERROR                           |
+| ERROR             | Uma parte da aplicação não funciona                                                           | ERROR                           |
 | WARN              | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
 | INFO              | *Default level* - Important application event                                                 | ERROR, WARN, INFO               |
 | DEBUG             | Detail of application flow (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG        |
@@ -342,7 +342,7 @@ You can use a **log configuration file** to easily manage log recording in a pro
 
 There are several ways to enable the log configuration file, depending on your configuration:
 
-- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
+- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. É imediatamente ativado no servidor.
 - **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). It is enabled at project startup (only on the server in client/server).
 - **a built application**: the file must be named `logConfig.json` and copied in the following folder:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`

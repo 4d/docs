@@ -9,7 +9,7 @@ Using the tabs on the **Web** page, you can configure various aspects of the int
 
 ### Informações de publicação
 
-#### Launch Web Server at Startup
+#### Iniciar o servidor Web no arranque
 
 Indicates whether the Web server will be launched on startup of the 4D application. This option is described in the [Web server administration](../WebServer/webServerAdmin.md#starting-the-4d-web-server) section.
 
@@ -20,11 +20,11 @@ Indicates whether or not the Web server will accept non-secure connections. See 
 
 #### Porta HTTP
 
-Listening IP (TCP) port number for HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
+Número da porta IP (TCP) de escuta para HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
 
 #### Endereço IP
 
-IP address on which the 4D web server will receive HTTP requests (4D local and 4D Server). See [IP Address to listen](../WebServer/webServerConfig.md#ip-address-to-listen).
+Endereço IP em que o servidor web 4D vai receber solicitações HTTP (4D local e 4D Server). See [IP Address to listen](../WebServer/webServerConfig.md#ip-address-to-listen).
 
 
 #### Ativar HTTPS
@@ -61,7 +61,7 @@ Designate a default home page for the Web server. See [Default Home page](../Web
 
 #### Usar o cache Web 4D
 
-Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
+Ativar o cache da página Web. See [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Tamanho da cache das Páginas
 
@@ -80,7 +80,7 @@ This area allows you to configure how the web server will handle user sessions a
 
 > The **Legacy sessions** option is only available for compatibility in databases/projects created with 4D versions prior to 4D v18 R6.
 
-#### Scalable sessions (multi-process sessions)
+#### Sessões escaláveis (sessões multi-processo)
 
 When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
 
@@ -92,10 +92,10 @@ When this option is selected, the web server does not provide any specific suppo
 In this mode, you can configure additional web server setttings:
 
 -   [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
--   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
+-   [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
 -   [Use preemptive processes](#use-preemptive-web-processes)
 
-#### Legacy sessions (single process sessions)
+#### Sessões herdadas (sessões de processo único)
 
 *Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
@@ -135,7 +135,7 @@ Allows you to set the maximum timeout before closing for inactive Web processes 
 
 ### Palavras-passe Web
 
-Set the authentication system that you want to apply to your Web server. Three options are proposed:
+Set the authentication system that you want to apply to your Web server. São propostas três opções:
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
@@ -164,7 +164,7 @@ See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections
 
 Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
 
-#### Domain names/HTTP methods allowed
+#### Nomes de domínio/Métodos HTTP permitidos
 
 List of allowed hosts and methods for the CORS service. See [CORS Settings](../WebServer/webServerConfig.md#cors-settings).
 
@@ -193,10 +193,10 @@ The log format menu provides the following options:
     -   user: user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).
     -   DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds
 
-> The date and time are local to the server.
+> A data e a hora são locais para o servidor.
 
 -   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
--   state: reply given by the server.
+-   estado: resposta dada pelo servidor.
 -   length: size of the data returned (except the HTTP header) or 0.
 
 > **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
@@ -206,11 +206,11 @@ The log format menu provides the following options:
     -   Referer: Contains the URL of the page pointing to the requested document.
     -   User-agent: Contains the name and version of the browser or software of the client at the origin of the request.
 
-> The DLF format cannot be customized.
+> O formato DLF não pode ser personalizado.
 
 -   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
--   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Like the ELF format, it can be customized.
+-   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Tal como o formato ELF, pode ser personalizado.
 
 **Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
 
@@ -220,7 +220,7 @@ The following table lists the fields available for each format (in alphabetical 
 
 | Campo          | ELF | WLF | Valor                                                                      |
 | -------------- | --- | --- | -------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Number of bytes received by the server                                     |
+| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                    |
 | BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                           |
 | C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
@@ -229,28 +229,28 @@ The following table lists the fields available for each format (in alphabetical 
 | CS(HOST)       | X   | X   | Host field of the HTTP request                                             |
 | CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
-| CS_SIP         | X   | X   | IP address of the server                                                   |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                    |
 | CS_URI         | X   | X   | URI on which the request is made                                           |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                   |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
-| STATUS         | X   | X   | Reply provided by the server                                               |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                         |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                           |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                        |
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
 |                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
-| URL            |     | X   | URL requested by the client                                                |
+| URL            |     | X   | URL solicitado pelo cliente                                                |
 
-> Dates and times are given in GMT.
+> As datas e horas são indicadas em GMT.
 
 ## Log (backup)
 
 Configure the automatic backup parameters for the request log. Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
 
 -   **No Backup**: The scheduled backup function is deactivated.
--   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24 .
+-   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24.
 
     -   **starting at**: Used to set the time at which the first back up will begin.
 -   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
@@ -271,7 +271,7 @@ For more information about the support of Web Services in 4D, refer to the [Publ
 This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
--   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. By default, 4D uses the name A_WebService.
+-   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
 -   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
 
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
@@ -280,7 +280,7 @@ This area contains various options related to the use of 4D as a Web Services "s
 
 This area contains various options related to the use of 4D as a Web Services "client" i.e., subscribing to services published on the network.
 
--   **Wizard Method Prefix**: This area lets you change the prefix that is added automatically by 4D to the name of proxy methods generated by the Web Services Wizard. Proxy project methods form a link between the 4D application and the Web Services server. By default, 4D uses the prefix "proxy_".
+-   **Wizard Method Prefix**: This area lets you change the prefix that is added automatically by 4D to the name of proxy methods generated by the Web Services Wizard. Proxy project methods form a link between the 4D application and the Web Services server. Por padrão, 4D usa o prefixo "proxy_".
 
 
 ## Funcionalidades Web
@@ -291,7 +291,7 @@ This page contains the options used to enable and control advanced Web features 
 
 #### Expor como servidor REST
 
-Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
+Inicia e pára o servidor REST. See [REST Server Configuration](../REST/configuration.md).
 
 ### Acesso
 
@@ -301,4 +301,4 @@ This option specifies a group of 4D users that is authorized to establish the li
 
 #### Enable access to the web studio
 
-Enables general access to the web studio. You still need to configure it at every project level.
+Ativa o acesso geral ao Web studio. You still need to configure it at every project level.

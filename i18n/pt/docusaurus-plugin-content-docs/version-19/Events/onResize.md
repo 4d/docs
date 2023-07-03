@@ -12,5 +12,5 @@ title: On Resize
 
 Este evento é chamado:
 
-- when the window of the form is resized,
+- quando a janela do formulário é redimensionada,
 - in the context of subforms, when the size of the subform object in the parent form has changed. In this this case, this event is sent to the subform form method. 

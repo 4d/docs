@@ -21,14 +21,14 @@ In addition, file and folder objects support `fileSystems`, which provide contex
 
 The following filesystem pathnames are supported:
 
-| filesystem   | Designa                                            |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Pasta de dados actual                              |
-| "/LOGS"      | Pasta Logs                                         |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Pasta Project                                      |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | Designa                                                |
+| ------------ | ------------------------------------------------------ |
+| "/DATA"      | Pasta de dados actual                                  |
+| "/LOGS"      | Pasta Logs                                             |
+| "/PACKAGE"   | Project root folder (with or without 4dbase extension) |
+| "/PROJECT"   | Pasta Project                                          |
+| "/RESOURCES" | Current project resources folder                       |
+| "/SOURCES"   | Current project sources folder                         |
 
 ## Sintaxe POSIX
 
@@ -36,8 +36,8 @@ The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** 
 
 With this syntax:
 
-- folders are separated by "/"
-- absolute pathnames start with a "/"
+- as pastas são separadas por "/"
+- os nomes de caminho absolutos começam com um "/"
 - to move up one folder in a relative path, use "../" in front of the pathname (for security, you cannot move up the filesystem).
 
 In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
@@ -48,15 +48,16 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
 
-## Platform-specific syntax
 
-Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
+## Sintaxe específica da plataforma
+
+A sintaxe específica da plataforma depende do sistema operativo em que o comando é executado. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
 
 ### Windows
 
-The following patterns are supported:
+São suportados os seguintes padrões:
 
-- folder separators are "\"
+- os separadores de pasta são "\"
 - the text contains ':' and '\' as the second and third character,
 - the text starts with "\\".
 
@@ -89,8 +90,8 @@ The following escape sequences are recognized by 4D:
 
 The following patterns are supported (HFS+ syntax):
 
-- folder separators are ":"
-- the path must not start with a ":"
+- os separadores de pasta são ":"
+- o caminho não deve começar com um ":"
 
 Examples with [`Folder`](../API/FolderClass.md#folder):
 

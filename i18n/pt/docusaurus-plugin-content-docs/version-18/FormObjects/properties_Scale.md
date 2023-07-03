@@ -55,7 +55,7 @@ Scale display measurement.
 
 Specifies the location of an object's displayed text.
 
-* None - no label is displayed
+* Nenhum - não é apresentada qualquer etiqueta
 * Top - Displays labels to the left of or above an indicator
 * Bottom - Displays labels to the right of or below an indicator
 
@@ -75,14 +75,14 @@ Specifies the location of an object's displayed text.
 
 Maximum value of an indicator.
 
-* For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+* For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 * To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
 
 #### Gramática JSON
 
-| Nome |  Tipo de dados  | Valores possíveis                   |
-|:----:|:---------------:| ----------------------------------- |
-| max  | string / number | minimum: 0 (for numeric data types) |
+| Nome | Tipo de dados | Valores possíveis |
+|:----:|:-------------:| ----------------- |
+| max  |    number     | Any number        |
 
 #### Objectos suportados
 
@@ -92,13 +92,13 @@ Maximum value of an indicator.
 
 ## Mínimo
 
-Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and is ignored when it is associated with a date type value.
 
 #### Gramática JSON
 
-| Nome |  Tipo de dados  | Valores possíveis                   |
-|:----:|:---------------:| ----------------------------------- |
-| min  | string / number | minimum: 0 (for numeric data types) |
+| Nome | Tipo de dados | Valores possíveis |
+|:----:|:-------------:| ----------------- |
+| min  |    number     | Any number        |
 
 #### Objectos suportados
 

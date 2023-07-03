@@ -217,7 +217,7 @@ icon: url("edit.png"); /* ruta relativa al archivo del formulario */
 
 * Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
-  * css color name: `fill: red;`
+  * nombre del color css: `fill: red;`
   * valor hexadécimal: `fill: #FF0000;`
   * función `rgb()`: `fill:rgb(255,0,0)`
 

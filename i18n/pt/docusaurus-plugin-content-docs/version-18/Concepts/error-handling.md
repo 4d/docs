@@ -23,7 +23,7 @@ ON ERR CALL("IO_ERRORS") //Installs the error-handling method
 
 To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
 ```4d
-ON ERR CALL("") //gives back control to 4D
+ON ERR CALL("") //devolve o controlo a 4D
 ```
 
 ### Alcance e componentes

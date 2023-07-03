@@ -82,11 +82,11 @@ This property allows you to specify either the **font theme** or the **font fami
 
 ### Tema Fonte
 
-The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
+The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. Esses parâmetros dependem de:
 
 - a plataforma,
 - a língua do sistema,
-- and the type of form object.
+- e o tipo de objeto do formulário.
 
 With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
 
@@ -111,7 +111,7 @@ Three font themes are available:
 
 ### Família de letras
 
-There are two types of font family names:
+Existem dois tipos de nomes de famílias de letras:
 
 - *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
 - *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
@@ -156,16 +156,16 @@ Designates the font color.
 The color can be specified by:
 
 - a color name - like "red"
-- a HEX value - like "#ff0000"
-- an RGB value - like "rgb(255,0,0)"
+- um valor HEX - como "#ff0000"
+- um valor RGB - como "rgb(255,0,0)"
 
 You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                         |
-| ------ | ------------- | ----------------------------------------- |
-| stroke | string        | any css value, "transparent", "automatic" |
+| Nome   | Tipo de dados | Valores possíveis                        |
+| ------ | ------------- | ---------------------------------------- |
+| stroke | string        | um valor css, "transparent", "automatic" |
 
 #### Objectos suportados
 
@@ -239,12 +239,12 @@ Horizontal location of text within the area that contains it.
 
 | Nome      | Tipo de dados | Valores possíveis                                 |
 | --------- | ------------- | ------------------------------------------------- |
-| textAlign | string        | "automatic", "right", "center", "justify", "left" |
+| textAlign | string        | "right", "center", "left", "automatic", "justify" |
 
 :::note
 
 - "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- Negrito
+- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
 
 :::
 
@@ -261,7 +261,7 @@ Vertical location of text within the area that contains it.
 The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
 
 - `bottom` for all data (except pictures) and
-- `top` for picture type data.
+- `topo` para dados de tipo imagem.
 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
 
@@ -357,7 +357,7 @@ O método *Color* iria conter :
 
 Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
 
-By default, this option is not enabled.
+Por defeito, esta opção não está activada.
 
 #### Gramática JSON
 

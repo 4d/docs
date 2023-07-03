@@ -9,7 +9,7 @@ The **Maintenance** page of the 4D Server Administration window provides informa
 ![](../assets/en/Admin/server-maintenance.png)
 
 
-## Last verification/compacting
+## Última verificação/compactação
 
 These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
 
@@ -29,7 +29,7 @@ Thus button can be used to launch a data compacting operation directly. This ope
 
 After the actual interruption of the application service, 4D Server carries out a standard compacting operation on the database data. If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
 
-Once the compacting is finished, 4D Server automatically restarts the application. The 4D users can then be reconnected.
+Once the compacting is finished, 4D Server automatically restarts the application. Os usuários 4D podem então ser reconectados.
 
 > If the request for compacting was carried out from a remote 4D remote machine, this machine is automatically reconnected by 4D Server.
 
@@ -43,7 +43,7 @@ This area indicates the duration of the 4D Server application execution since th
 
 ### Reiniciar o servidor...
 
-This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. The 4D users can then be reconnected.
+This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. Os usuários 4D podem então ser reconectados.
 
 > If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
 
@@ -78,7 +78,7 @@ When the logs have been activated, the button title changes to **Stop Request an
 
 The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
 
-### Load logs configuration file
+### Carregar ficheiro de configuração dos registos
 
 This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 

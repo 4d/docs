@@ -48,7 +48,7 @@ The returned "__STATUS" object has the following properties:
 
 | Propriedade  |                | Tipo    | Descrição                                                                                                                                                   |
 | ------------ | -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|              |                |         | ***Available only in case of success:***                                                                                                                    |
+|              |                |         | ***Disponível apenas em caso de sucesso:***                                                                                                                 |
 | success      |                | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).             |
 |              |                |         | ***Disponível apenas em caso de erro:***                                                                                                                    |
 | status       |                | number  | Código de erro, ver abaixo                                                                                                                                  |
@@ -67,7 +67,7 @@ The returned "__STATUS" object has the following properties:
 |              |                |         | ***Disponível só para um processo trava REST:***                                                                                                            |
 |              | host           | text    | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
 |              | IPAddr         | text    | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                             |
-|              | recordNumber   | number  | Record number of the locked record                                                                                                                          |
+|              | recordNumber   | number  | Número de registo do registo bloqueado                                                                                                                      |
 |              | userAgent      | text    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 
@@ -86,7 +86,7 @@ The following values can be returned in the *status* and *statusText* properties
 ## Exemplo
 
 
-We lock an entity in a first browser:
+Bloqueamos uma entidade num primeiro navegador:
 
 ```
 GET /rest/Customers(1)/?$lock=true

@@ -143,7 +143,7 @@ Los formatos numéricos se aplican a todos los tipos de números (por ejemplo, p
 | @         | Formateador de texto. Aplica el formato a todo el texto de la celda                                                                                                                                                                                  | "\[Red]@" aplica el color de fuente rojo para los valores de texto.                                                                                    |
 | *         | Repite el siguiente caracter para llenar el ancho de la columna.                                                                                                                                                                                     | 0*- incluirá suficientes guiones después de un número para llenar la celda, mientras que *0 antes de cualquier formato incluirá ceros a la izquierda. |
 | " "       | Muestra el texto entre comillas sin interpretarlo.                                                                                                                                                                                                   | "8%" será mostrado como: 8%                                                                                                                             |
-| %         | Muestra los números como un porcentaje de 100.                                                                                                                                                                                                       | El 8% se mostrará como 0,08                                                                                                                             |
+| %         | Muestra los números como un porcentaje de 100.                                                                                                                                                                                                       | 8% se mostrará como 0,08                                                                                                                                |
 | \#      | Marcador de posición de dígitos que no muestra ceros adicionales. Si un número tiene más dígitos a la derecha del decimal que marcadores de posición, el número se redondea.                                                                         | #.# mostrará 1.54 como 1.5                                                                                                                              |
 | ?         | Marcador de posición de dígitos que deja espacio para ceros adicionales, pero no los muestra. Normalmente se utiliza para alinear números por punto decimal.                                                                                         | $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                                                        |
 | \        | Muestra el caracter que lo sigue.                                                                                                                                                                                                                    | #.00\? #.00\? will display 123 as 123.00?                                                                                                             |
@@ -257,7 +257,7 @@ Los atributos de columna y línea se utilizan para especificar el inicio, el fin
 | repeatRowEnd      | entero largo | La última línea de un rango de líneas a imprimir en la parte superior de cada página. Valor por defecto = -1 (todas las líneas)  |
 | repeatRowStart    | entero largo | La primera línea de un rango de líneas a imprimir en la parte superior de cada página. Valor por defecto = -1 (todas las líneas) |
 | rowEnd            | entero largo | The last column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                              |
-| rowStart          | entero largo | The first column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                             |
+| rowStart          | entero largo | La primera línea a imprimir en un rango de celdas. Valor por defecto = -1 (todas las líneas)                                     |
 
 ### Encabezados / Pies de página
 
@@ -311,7 +311,7 @@ Los atributos margen se utilizan para especificar los márgenes del área 4D Vie
 |           | top    | entero largo | Margen superior, en centésimas de pulgada. Por defecto = 75                  |
 |           | bottom | entero largo | El margen inferior, en centésimas del pulgada. Por defecto = 75              |
 |           | left   | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70                   |
-|           | right  | entero largo | Margen izquierdo, en centésimas de pulgada. Por defecto = 70                 |
+|           | right  | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70                   |
 |           | header | entero largo | Desplazamiento del encabezado, en centésimas de pulgada. Por defecto = 30    |
 |           | footer | entero largo | Desplazamiento del pie de página, en centésimas de pulgada. Por defecto = 30 |
 

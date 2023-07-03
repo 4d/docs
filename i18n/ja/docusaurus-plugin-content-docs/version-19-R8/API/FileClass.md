@@ -262,24 +262,29 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
+<!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
+
 | 引数 | タイプ |  | 説明                                           |
 | -- | --- |  | -------------------------------------------- |
 |    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
+
+
 |
+
+
 
 #### 説明
 
 `.delete()` 関数は、 <!-- REF #FileClass.delete().Summary -->ファイルを削除します<!-- END REF -->。
 
-ファイルが現在開いている場合、エラーが生成されます。
+ファイルが現在開かれている場合、エラーが生成されます。
 
 ファイルがディスク上に存在しない場合、関数は何もしません (エラーは何も生成されません)。
-> **警告**: `.delete( )` はディスク上の任意のファイルを削除することができます。 これには、他のアプリケーションで作成されたドキュメントや、アプリケーションそのものも対象になります。 そのため、`.delete( )` は特に十分な注意を払って使用してください。 ファイルの削除は恒久的な操作であり取り消しできません。
+> **警告**: `.delete()` はディスク上の任意のファイルを削除することができます。 これには、他のアプリケーションで作成されたドキュメントや、アプリケーションそのものも対象になります。 そのため、`.delete()` は特に十分な注意を払って使用してください。 ファイルの削除は恒久的な操作であり取り消しできません。
 
 #### 例題
 
@@ -334,7 +339,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 > .exe および .dll ファイルの読み取りは Windows上でのみ可能です。
 
-プロパティはすべてテキストです。
+プロパティ値はすべてテキストです。
 
 | プロパティ            | タイプ  |
 | ---------------- | ---- |
@@ -349,7 +354,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 **.plist ファイルの場合に返されるオブジェクト**
 
-xml ファイルの中身は解析され、オブジェクトのプロパティとしてキーが返されます。キーの型 (テキスト、ブール、数値) は維持されます。 `.plist dict` は JSON オブジェクトとして返されます。また、`.plist array` は JSON 配列として返されます。
+xml ファイルの中身は解析され、オブジェクトのプロパティとしてキーが返されます。 キーの型 (テキスト、ブール、数値) は維持されます。 `.plist dict` は JSON オブジェクトとして返されます。 また、`.plist array` は JSON 配列として返されます。
 
 #### 例題
 
@@ -425,7 +430,7 @@ ALERT($info.Copyright)
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-デフォルトで、移動したファイルは元の名前を維持します。 移動の際にファイル名を変更したい場合、新しい完全な名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
+デフォルトでは、移動したファイルは元の名前を維持します。 移動の際にファイル名を変更したい場合、新しい完全な名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
 
 **返されるオブジェクト**
 
@@ -469,6 +474,8 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 `.open()` 関数は、 <!-- REF #FileClass.open().Summary -->対象のファイルについて、指定のモード (*mode*) またはオプション (*options*) で新規の [4D.FileHandle](FileHandleClass) オブジェクトを作成し、返します<!-- END REF -->。 [4D.FileHandle](FileHandleClass) クラスの関数とプロパティを使用して、ファイルにコンテンツを書き込んだり読み取ったり、追加したりすることができます。
 
 *mode* (text) 引数として、どのモードで FileHandle を開くかを指定します。
+
+
 
 | *mode*   | 説明                                                                                                                                          |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -545,9 +552,9 @@ $fhandle:=$f.open("read")
 
 `.rename()` 関数は、 <!-- REF #FileClass.rename().Summary -->ファイル名を *newName* に指定した名称に変更し、名称変更後の `File` オブジェクトを返します<!-- END REF -->。
 
-*newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
+*newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。 そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 
-この関数はファイルの完全な名前を編集することに留意が必要です。つまり、*newName* に拡張子を渡さなかった場合、新しいファイル名には拡張子がありません。
+この関数はファイルの完全な名前を編集することに留意が必要です。 つまり、*newName* に拡張子を渡さなかった場合、新しいファイル名には拡張子がありません。
 
 **返されるオブジェクト**
 
@@ -568,9 +575,10 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| バージョン | 内容            |
+| ----- | ------------- |
+| v20   | WinIcon をサポート |
+| v19   | 追加            |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -597,18 +605,21 @@ $fhandle:=$f.open("read")
 
 *info* オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
-| プロパティ            | タイプ  |
-| ---------------- | ---- |
-| InternalName     | Text |
-| ProductName      | Text |
-| CompanyName      | Text |
-| LegalCopyright   | Text |
-| ProductVersion   | Text |
-| FileDescription  | Text |
-| FileVersion      | Text |
-| OriginalFilename | Text |
+| プロパティ            | タイプ  | 説明                                                   |
+| ---------------- | ---- | ---------------------------------------------------- |
+| InternalName     | Text |                                                      |
+| ProductName      | Text |                                                      |
+| CompanyName      | Text |                                                      |
+| LegalCopyright   | Text |                                                      |
+| ProductVersion   | Text |                                                      |
+| FileDescription  | Text |                                                      |
+| FileVersion      | Text |                                                      |
+| OriginalFilename | Text |                                                      |
+| WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
 
-値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
+`WinIcon` を除くすべてのプロパティにおいて、値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
+
+`WinIcon` プロパティにおいては、アイコンファイルが存在しないか、フォーマットが正しくない場合、エラーが発生します。
 
 **.plist ファイル用の *info* オブジェクト**
 
@@ -621,25 +632,28 @@ $fhandle:=$f.open("read")
 #### 例題
 
 ```4d
-  // .exe ファイルの著作権およびバージョン情報を設定します (Windows)
-var $exeFile : 4D.File
+  // .exe ファイルの著作権、バージョン、およびアイコン情報を設定します (Windows)
+var $exeFile; $iconFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
+$iconFile:=File("/RESOURCES/myApp.ico")
 $info:=New object
-$info.LegalCopyright:="Copyright 4D 2021"
+$info.LegalCopyright:="Copyright 4D 2023"
 $info.ProductVersion:="1.0.0"
+$info.WinIcon:=$iconFile.path
 $exeFile.setAppInfo($info)
 ```
 
 ```4d
-  // info.plist ファイルのキーをいくつか設定します (Windows および macOS)
+  // info.plist ファイルのキーをいくつか設定します (すべてのプラットフォーム)
 var $infoPlistFile : 4D.File
 var $info : Object
 $infoPlistFile:=File("/RESOURCES/info.plist")
 $info:=New object
-$info.Copyright:="Copyright 4D 2021" // テキスト
+$info.Copyright:="Copyright 4D 2023" // テキスト
 $info.ProductVersion:=12 // 整数
-$info.ShipmentDate:="2021-04-22T06:00:00Z" // タイムスタンプ
+$info.ShipmentDate:="2023-04-22T06:00:00Z" // タイムスタンプ
+$info.CFBundleIconFile:="myApp.icns" // macOS 用
 $infoPlistFile.setAppInfo($info)
 ```
 
@@ -696,12 +710,12 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setText().Params -->
-| 引数          | タイプ     |    | 説明                                 |
-| ----------- | ------- | -- | ---------------------------------- |
-| text        | Text    | -> | ファイルに保存するテキスト                      |
-| charSetName | Text    | -> | 文字セットの名前                           |
-| charSetNum  | Integer | -> | 文字セットの番号                           |
-| breakMode   | Integer | -> | 改行の処理モード<!-- END REF -->
+| 引数          | タイプ     |    | 説明                                  |
+| ----------- | ------- | -- | ----------------------------------- |
+| text        | Text    | -> | ファイルに保存するテキスト                       |
+| charSetName | Text    | -> | 文字セットの名前                            |
+| charSetNum  | Integer | -> | 文字セットの番号                            |
+| breakMode   | Integer | -> | 改行の処理モード|<!-- END REF -->
 
 
 |
@@ -711,7 +725,7 @@ $infoPlistFile.setAppInfo($info)
 
 `.setText()` 関数は、 <!-- REF #FileClass.setText().Summary -->*text* に渡されたテキストをファイルの新しいコンテンツとして書き込みます<!-- END REF -->。
 
-`File` オブジェクトで参照されているファイルがディスク上に存在しない場合、このメソッドがそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
+`File` オブジェクトで参照されているファイルがディスク上に存在しない場合、このメソッドがそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。 ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
 
 *text* には、ファイルに書き込むテキストを渡します。 テキストリテラル ("my text" など) のほか、4Dテキストフィールドや変数も渡せます。
 

@@ -5,7 +5,7 @@ title: Arquitetura de um projeto 4D
 
 A 4D project is made of several folders and files, stored within a single project root folder (package folder). Por exemplo:
 
-- MyProject (*project root folder*)
+- MyPackage (*project root folder*)
     - `Componentes`
     - `Dados`
         - `Logs`
@@ -37,12 +37,12 @@ The Project folder typically contains the following hierarchy:
     + `TableForms`
     + `Triggers`
 - `DerivedData`
-- `Trash` (if any)
+- `Trash` (se houver)
 
 
 ### *applicationName*.4DProject file
 
-Project development file, used to designate and launch the project. This file can be opened by:
+Project development file, used to designate and launch the project. Esse arquivo pode ser aberto por:
 
 - 4D
 - 4D Server (apenas leitura, ver [Desenvolver um projeto](developing.md))
@@ -55,8 +55,8 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 | Conteúdos               | Descrição                                                                                                                                                                                                                                                                                                                                                                                   | Formato |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                 | XML     |
-| folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
+| catalog.4DCatalog       | Definições de tabelas e campos                                                                                                                                                                                                                                                                                                                                                              | XML     |
+| folders.json            | Definições de pasta do Explorer                                                                                                                                                                                                                                                                                                                                                             | JSON    |
 | menus.json              | Menu definitions                                                                                                                                                                                                                                                                                                                                                                            | JSON    |
 | settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined. **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML     |
 | tips.json               | Dicas definidas                                                                                                                                                                                                                                                                                                                                                                             | JSON    |
@@ -69,9 +69,9 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `DatabaseMethods`
 
-| Conteúdos                | Descrição                                                     | Formato |
-| ------------------------ | ------------------------------------------------------------- | ------- |
-| *databaseMethodName*.4dm | Métodos de projeto definidos na database. One file per method | text    |
+| Conteúdos                | Descrição                                                                      | Formato |
+| ------------------------ | ------------------------------------------------------------------------------ | ------- |
+| *databaseMethodName*.4dm | Métodos de projeto definidos na database. Um ficheiro por método base de dados | text    |
 
 #### `Página Métodos`
 
@@ -90,9 +90,9 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 | Conteúdos                                 | Descrição                                   | Formato |
 | ----------------------------------------- | ------------------------------------------- | ------- |
-| *formName*/form.4DForm                    | Project form description                    | json    |
+| *formName*/form.4DForm                    | Descrição do formulário projeto             | json    |
 | *formName*/method.4dm                     | Método formulário projecto                  | text    |
-| *formName*/Images/*pictureName*           | Project form static picture                 | picture |
+| *formName*/Images/*pictureName*           | Imagem estática do formulário projeto       | picture |
 | *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. One file per object method | text    |
 
 #### `TableForms`
@@ -114,12 +114,12 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 | ------------- | ----------------------------------------------------------------------------------------- | ------- |
 | table_*n*.4dm | Métodos trigger definidos na database. One trigger file per table (n is the table number) | text    |
 
-**Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
+**Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. É compatível com as ferramentas de controlo da versão.
 
 
 ### `Trash`
 
-The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
+The Trash folder contains methods and forms that were deleted from the project (if any). Pode conter as seguintes pastas:
 
 - `Página Métodos`
 - `Formulários`
@@ -130,11 +130,11 @@ Within these folders, deleted element names are in parentheses, e.g. "(myMethod)
 
 ### `DerivedData`
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
+The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. Você pode ignorar essa pasta.
 
 ## `Libraries folder`
 
-> This folder is used on macOS only.
+> Esta pasta é utilizada apenas no macOS.
 
 The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
 
@@ -142,10 +142,10 @@ The Librairies folder contains the file resulting from a compilation with the [S
 
 A pasta Resources contém todos os arquivos e pastas de recursos personalizados do projeto. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
-| Conteúdos             | Descrição                                                                                                                                             | Formato |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Arquivos e pastas dos recursos do banco de dados                                                                                                      | vários  |
-| Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
+| Conteúdos             | Descrição                                                                                                                                                         | Formato |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| *item*                | Arquivos e pastas dos recursos do banco de dados                                                                                                                  | vários  |
+| Images/Library/*item* | Pictures from the Picture Library as separate files(*). Os nomes destes itens tornam-se nomes de ficheiros. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.
 
@@ -158,7 +158,7 @@ The data folder contains the data file and all files and folders relating to the
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                                                                           | binary  |
 | data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. It is generated by default when a database is created. | binary  |
-| data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | XML     |
+| data.match   | (interno) UUID correspondente ao número da tabela                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | XML     |
 
 (*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
@@ -177,7 +177,7 @@ Se existir um arquivo de propriedades de dados [em uma pasta de dados ](#setting
 
 ### `Logs`
 
-The Logs folder contains all log files used by the project. Log files include, in particular:
+The Logs folder contains all log files used by the project. Os ficheiros de registo incluem, em particular:
 
 - conversão da base de dados,
 - pedidos do servidor Web,
@@ -204,15 +204,15 @@ Esta pasta contém **arquivos de configuração de dados** utilizados para a adm
 
 ## `userPreferences.<em x-id="3">userName</em> folder`
 
-Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. It contains for example:
+Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. Contém, por exemplo:
 
 | Conteúdos                  | Descrição                                                   | Formato |
 | -------------------------- | ----------------------------------------------------------- | ------- |
 | methodPreferences.json     | Current user method editor preferences                      | JSON    |
-| methodWindowPositions.json | Current user window positions for methods                   | JSON    |
-| formWindowPositions.json   | Current user window positions for forms                     | JSON    |
+| methodWindowPositions.json | Posição da janela do usuário atual para os métodos          | JSON    |
+| formWindowPositions.json   | Posição da janela do usuário atual para os formulários      | JSON    |
 | workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON    |
-| debuggerCatches.json       | Caught calls to commands                                    | JSON    |
+| debuggerCatches.json       | Chamadas aos comandos                                       | JSON    |
 | recentTables.json          | Lista ordenada de tabelas                                   | JSON    |
 | preferences.4DPreferences  | Rota de dados atual e posições da janela principal          | XML     |
 | CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder  |
@@ -240,6 +240,6 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 
 Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. It is automatically created when the Web server is launched for the first time.
 
-## `.gitignore` file (optional)
+## Ficheiro `.gitignore` (opcional)
 
 File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).

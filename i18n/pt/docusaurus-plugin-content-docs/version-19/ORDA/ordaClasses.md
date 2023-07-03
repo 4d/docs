@@ -38,7 +38,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+All ORDA data model classes are exposed as properties of the **`cs`** class store. Estão disponíveis as seguintes classes ORDA:
 
 | Class                       | Nome do exemplo       | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -124,7 +124,7 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](../assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+A classe `City` fornece uma API:
 
 ```4d  
 // cs.City class
@@ -213,7 +213,7 @@ C_BOOLEAN($0)
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Em seguida, pode chamar este código:
 
 ```4d
 var $cityManager; $city : Object
@@ -244,7 +244,7 @@ When creating or editing data model classes, you must pay attention to the follo
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
-Remote requests include:
+Os pedidos remotos incluem:
 
 - Requests sent by remote 4D applications connected through `Open datastore`
 - Pedidos REST
@@ -286,7 +286,7 @@ $id:=...
 
 ```
 
-When the code is called:
+Quando o código é chamado:
 
 ```4d
 var $remoteDS; $student; $status : Object
@@ -398,7 +398,7 @@ ORDA user classes have a different icon from regular classes. Empty classes are 
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
+To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. Por exemplo, para uma classe Entity:
 
 ```
 Class extends Entity
@@ -418,6 +418,6 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Exemplo com uma variável de classe Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)

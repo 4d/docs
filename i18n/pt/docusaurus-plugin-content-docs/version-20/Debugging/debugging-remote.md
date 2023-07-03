@@ -16,21 +16,21 @@ This feature is particularly useful when 4D Server runs in headless mode (see [C
 
 ## Depurador anexado
 
-Only one debugger can debug a 4D Server application at a given time. It is called the **attached debugger**. The attached debugger can be:
+Only one debugger can debug a 4D Server application at a given time. It is called the **attached debugger**. O depurador ligado pode ser:
 
 * the local 4D Server debugger (default) - if the server is not running headless.
 * the debugger of a remote 4D client - if the remote session has access to Design mode.
 
 The attached debugger is called whenever a 4D Server encounters:
 * um ponto de ruptura
-* a `TRACE` command
+* um comando `TRACE`
 * a caught command
 * um erro
 
 Keep in mind that error messages are sent to the attached debugger machine. This means that in the case of a remote debugger, server error messages are displayed on the remote 4D client.
 
 Note que:
-* The code executed in the `On Server Startup Database` Method cannot be debugged remotely. It can only be debugged on the server side
+* The code executed in the `On Server Startup Database` Method cannot be debugged remotely. Só pode ser depurado no lado do servidor
 * If no debugger is attached, the running code is not stopped by debugging commands
 
 
@@ -56,7 +56,7 @@ The debugger is then attached to the remote 4D client:
 * until the end of the user session
 * until you select `Detach Remote Debugger`
 
-To attach the debugger back to the server:
+Para ligar o depurador de novo ao servidor:
 
 1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
 2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
@@ -77,7 +77,7 @@ To attach the debugger back to the server:
 
 > This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
 
-## Rejected attachment requests
+## Pedidos de ligação rejeitados
 
 While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.
 

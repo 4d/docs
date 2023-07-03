@@ -28,7 +28,7 @@ An attributePath is the path of an attribute inside a given dataclass or entity.
 
 ## Class code
 
-Code for the user class function(s).
+Código da(s) função(ões) da classe usuário.
 
 
 ## Atributo calculado
@@ -45,7 +45,7 @@ Database objects available through the ORDA concept, i.e. datastore, dataclasses
 
 ## Data model function
 
-Function of an ORDA data model class.
+Função de uma classe de modelo de dados ORDA.
 
 ## Dataclass
 
@@ -94,7 +94,7 @@ An entity is an object that corresponds to a dataclass model. An entity contains
 
 An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
 
-For more information, see Entities.
+Para mais informações, consulte Entidades.
 
 ## Seleção de entidades
 
@@ -103,11 +103,11 @@ An entity selection is an object. When querying the datastore, an entity selecti
 An entity selection contains:
 
 
-*   a set of 0 to X entity references,
-*   a length property (always),
+*   um conjunto de 0 a X referências de entidades,
+*   uma propriedade length (sempre),
 *   queryPlan and queryPath properties (if asked while querying).
 
-An entity selection can also be empty.
+Uma seleção de entidade também pode estar vazia.
 
 
 ## Generic class
@@ -150,7 +150,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 
 ## Fechadura optimista
 
-In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. See also "Pessimistic lock".
+In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. Ver também "Bloqueio pessimista".
 
 ## Bloqueio pessimista
 
@@ -163,7 +163,7 @@ The ability to run one or more [actions](#actions) on [resources](#resource). Se
 
 ## Propriedade
 
-See [Attribute](#attribute).
+Ver [Atributo](#attribute).
 > > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## PropertyPath
@@ -172,7 +172,7 @@ A propertyPath is the path to a property in a given object. If the property is n
 
 ## Regular class
 
-User class not related to an ORDA object.
+Classe usuário não relacionada com um objeto ORDA.
 
 ## Related dataclass
 
@@ -207,7 +207,7 @@ An ORDA element on which any [action](#action) can be allowed or not according t
 
 ## Role
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. It can contain one or more privileges.
+A role is a published [privilege](#privilege) intended to be used by an administrator. Pode conter um ou mais privilégios.
 
 
 ## Session
@@ -224,7 +224,7 @@ A shallow copy only duplicates the structure of elements, and keeps the same int
 
 ## Stamp
 
-Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+Utilizado na tecnologia de bloqueio "otimista". All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
 
 ## Atributo de armazenamento
 

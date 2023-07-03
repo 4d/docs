@@ -1,6 +1,6 @@
 ---
 id: datastores
-title: Using a remote datastore
+title: Utilizar um datastore remoto
 ---
 
 A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
@@ -39,16 +39,16 @@ In the following example, two processes are running for the same session:
 
 ![](../assets/en/ORDA/sessionAdmin.png)
 
-## Locking and transactions
+## Bloqueio e transacções
 
 ORDA features related to entity locking and transaction are managed at process level in remote datastores, just like in ORDA client/server mode:
 
 - If a process locks an entity from a remote datastore, the entity is locked for all other processes, even when these processes share the same session (see [Entity locking](entities.md#entity-locking)). If several entities pointing to a same record have been locked in a process, they must be all unlocked in the process to remove the lock. If a lock has been put on an entity, the lock is removed when there is no more reference to this entity in memory.
-- Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. They do not impact other datastores.
+- Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. Não têm impacto noutros datastores.
 - Classic 4D language commands (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) only apply to the main datastore (returned by `ds`). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.
 - Locks on entities are removed and transactions are rollbacked:
-  - when the process is killed.
-  - when the session is closed on the server
+  - quando o processo é eliminado.
+  - quando a sessão é encerrada no servidor
   - when the session is killed from the server administration window.
 
 ## Closing sessions

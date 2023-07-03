@@ -25,7 +25,7 @@ When the user enters "RB17621," the field displays:
 
  RB-1762-1
 
-The field actually contains "RB17621".
+O campo contém efetivamente "RB17621".
 
 If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
 
@@ -35,7 +35,7 @@ and the user enters "proportion", the field displays:
 
  (portion)
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. Não se perde nenhuma informação.
+O campo contém efetivamente "proportion". 4D accepts and stores the entire entry no matter what the display format. Não se perde nenhuma informação.
 
 #### Gramática JSON
 
@@ -54,7 +54,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 Date formats control the way dates appear when displayed or printed. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
 
-The table below shows choices available:
+A tabela seguinte apresenta as opções disponíveis:
 
 | Nome do formato                 | Cadeia JSON  | Exemplo (sistema americano)   |
 | ------------------------------- | ------------ | ----------------------------- |
@@ -92,7 +92,7 @@ The table below shows choices available:
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
 
-4D provides various default number formats.
+4D fornece vários formatos de números padrão.
 
 ### Marcadores
 
@@ -124,7 +124,7 @@ The numeric display formats (except for scientific notations) are automatically 
 > * in a Real type field, using this key will insert the decimal separator defined in the system,
 > * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
 
-### Decimal points and other display characters
+### Pontos decimais e outros caracteres de visualização
 
 You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
@@ -134,7 +134,7 @@ You can use any other characters in the format. When used alone, or placed befor
 
 a dollar sign always appears because it is placed before the placeholders.
 
-If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
+If characters are placed between placeholders, they appear only if digits are displayed on both sides. Por exemplo, se definir o formato:
 
  ###.##0
 
@@ -142,7 +142,7 @@ the point appears only if the user enters at least four digits.
 
 Spaces are treated as characters in number display formats.
 
-### Formats for positive, negative, and zero
+### Formatos para positivo, negativo e zero
 
 A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
 
@@ -165,11 +165,11 @@ In this case, the display for zero would be $0.00.
 
 ### Notação científica
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
+If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. Por exemplo, o formato:
 
  &3
 
-would display 759.62 as:
+apresentaria 759,62 como:
 
  7.60e+2
 
@@ -190,7 +190,7 @@ The `&xml` format will make a number compliant with XML standard rules. In parti
 
 You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
 
-For example, the format:
+Por exemplo, o formato:
 
  &/5
 
@@ -258,7 +258,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Truncated (centered and non-centered)
+### Truncado (centrado e não centrado)
 
 `JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
 
@@ -317,10 +317,10 @@ The table below shows the Time field display formats and gives examples:
 | Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
 | Hour Min                     | HH_MM        |                                                                                                                                                  | 4 horas 30 minutos            |
 | HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 minutos 25 segundos       |
+| MM SS                        | mm_ss        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270:25                        |
+| Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270 minutos 25 segundos       |
 | ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (o padrão) | Standard time format defined in the system                                                                                                       | 04:30:25                      |
+| System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                     | 04:30:25                      |
 | System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                    |
 | System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC               |
 
@@ -410,9 +410,9 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 * 1 = caixa marcada,
 * 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
 * -1 = invisible check box,
-* -2 = unchecked box, not enterable,
+* -2 = caixa desmarcada, não editável,
 * -3 = checked box, not enterable,
-* -4 = semi-checked box, not enterable
+* -4 = caixa semi-marcada, não editável
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
 
@@ -439,9 +439,9 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis                  |
-| ------------ | ------------- | ---------------------------------- |
-| controlTitle | string        | Any custom label for the check box |
+| Nome         | Tipo de dados | Valores possíveis                                           |
+| ------------ | ------------- | ----------------------------------------------------------- |
+| controlTitle | string        | Qualquer etiqueta personalizada para a caixa de verificação |
 
 #### Objectos suportados
 
@@ -491,7 +491,7 @@ This property allows hiding the object in the Application environment.
 
 You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
 
-#### Automatic visibility in list forms
+#### Visibilidade automática em formulários lista
 
 In the context of list forms, the Visibility property supports two specific values:
 
@@ -522,7 +522,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 Manages the display of contents when it exceeds the width of the object.
 
-#### Checked for list box/Yes for input
+#### Marcado para list box/Sim para entrada
 
 `Gramática JSON: "normal"`
 
@@ -534,7 +534,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 ![](../assets/en/FormObjects/wordwrap2.png)
 
-#### Unchecked for list box/No for input
+#### Não selecionado para list box/Não para entrada
 
 `Gramática JSON: "none"`
 
@@ -550,7 +550,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 
-#### Automatic for input (default option)
+#### Automático para entrada (opção padrão)
 
 `Gramática JSON: "automatic"`
 

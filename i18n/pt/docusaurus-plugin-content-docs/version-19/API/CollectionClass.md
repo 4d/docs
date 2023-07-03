@@ -402,7 +402,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
 | option       | Integer    | -> | `ck resolve pointers`: resolve ponteiros antes de copiar,<br/>`ck shared`: retorna uma coleção partilihada |
 | groupWithCol | Collection | -> | Coleção partilhada a ser agrupada com a coleção resultante                                                       |
-| groupWithObj | Objeto     | -> | Objeto partilhado a ser agrupado com a coleção resultante                                                        |
+| groupWithObj | Object     | -> | Objeto partilhado a ser agrupado com a coleção resultante                                                        |
 | Resultados   | Collection | <- | Cópia profunda da collection original|<!-- END REF -->
 
 |
@@ -564,11 +564,11 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse ca
 
 
 <!-- REF #collection.countValues().Params -->
-| Parâmetro    | Tipo                                            |    | Descrição                                                      |
-| ------------ | ----------------------------------------------- |:--:| -------------------------------------------------------------- |
-| value        | Text, Number, Boolean, Date, Object, Collection | -> | Valor a contar                                                 |
-| propertyPath | Text                                            | -> | Rota de propriedade objeto a ser usado para cálculos           |
-| Resultados   | Real                                            | <- | Number of occurrences of the value |<!-- END REF -->
+| Parâmetro    | Tipo                                            |    | Descrição                                                  |
+| ------------ | ----------------------------------------------- |:--:| ---------------------------------------------------------- |
+| value        | Text, Number, Boolean, Date, Object, Collection | -> | Valor a contar                                             |
+| propertyPath | Text                                            | -> | Rota de propriedade objeto a ser usado para cálculos       |
+| Resultados   | Real                                            | <- | Número de ocorrências do valor |<!-- END REF -->
 
 |
 
@@ -746,7 +746,7 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 | Parâmetro  | Tipo       |    | Descrição                                                                          |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
 | startFrom  | Integer    | -> | Índice para início do teste em                                                     |
-| methodName | Text       | -> | Name of the method to call for the test                                            |
+| methodName | Text       | -> | Nome do método a chamar para o teste                                               |
 | param      | Mixed      | -> | Parameter(s) to pass to methodName                                                 |
 | Resultados | Parâmetros | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
 
@@ -975,7 +975,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * in *$1.value*: element value to be filtered
 * in *$2*: *param*
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1049,7 +1049,7 @@ The code for ***TypeLookUp*** is:
 | Parâmetro  | Tipo    |    | Descrição                                                                           |
 | ---------- | ------- |:--:| ----------------------------------------------------------------------------------- |
 | startFrom  | Integer | -> | Índice onde inicia a pesquisa                                                       |
-| methodName | Text    | -> | Name of the function to call for the find                                           |
+| methodName | Text    | -> | Nome da função a chamar para a procura                                              |
 | param      | any     | -> | Parameter(s) to pass to *methodName*                                                |
 | Resultados | any     | <- | Primeiro valor encontrado ou Undefined se não encontrado|<!-- END REF -->
 
@@ -1066,7 +1066,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * in *$1.value:* element value to be evaluated
 * em *$2: param*
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1143,7 +1143,7 @@ The code for ***FindCity*** is:
 | Parâmetro  | Tipo    |    | Descrição                                                                              |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------- |
 | startFrom  | Integer | -> | Índice onde inicia a pesquisa                                                          |
-| methodName | Text    | -> | Name of the function to call for the find                                              |
+| methodName | Text    | -> | Nome da função a chamar para a procura                                                 |
 | param      | any     | -> | Parameter(s) to pass to *methodName*                                                   |
 | Resultados | Integer | <- | Indice do primeiro valor encontrado ou -1 se não encontrado|<!-- END REF -->
 
@@ -1160,7 +1160,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * em *$2: param*
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -1281,7 +1281,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 #### Descrição
 
-A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
+A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
 > Essa função não modifica a coleção original.
 
 O parâmetro *queryString* usa a sintaxe abaixo:
@@ -1991,7 +1991,7 @@ Se quiser ordenar a coleção resultante:
 | ------------- | ---------- |:--:| -------------------------------------------------------------------------------- |
 | queryString   | Text       | -> | Critérios de pesquisa                                                            |
 | value         | Mixed      | -> | Valores a comparar quando usar placeholders (valores temporários)                |
-| querySettings | Objeto     | -> | Opções de pesquisa: parâmetros, atributos                                        |
+| querySettings | Object     | -> | Opções de pesquisa: parâmetros, atributos                                        |
 | Resultados    | Collection | <- | Elementos que correspondem com queryString na coleção|<!-- END REF -->
 
 |
@@ -2408,7 +2408,7 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 | Parâmetro  | Tipo       |    | Descrição                                                                          |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
 | startFrom  | Integer    | -> | Índice para início do teste em                                                     |
-| methodName | Text       | -> | Name of the method to call for the test                                            |
+| methodName | Text       | -> | Nome do método a chamar para o teste                                               |
 | param      | Mixed      | -> | Parameter(s) to pass to *methodName*                                               |
 | Resultados | Parâmetros | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
 
@@ -2424,7 +2424,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *methodName* recebe os parâmetros abaixo:
-* in *$N...*: param2...paramN
+* em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
 
@@ -2490,7 +2490,7 @@ With the following *NumberGreaterThan0* method:
 
 #### Descrição
 
-A função `.shift()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
+A função `.shift()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> e também devolve a coleção ordenada.
 > Essa função modifica a coleção original.
 
 Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.

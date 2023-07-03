@@ -256,13 +256,16 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
+<!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
+
 |Parameter|Type||Description|
 |---|----|---|---|
-| |  ||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
+
+
 
 #### Description
 
@@ -272,7 +275,7 @@ If the file is currently open, an error is generated.
 
 If the file does not exist on disk, the function does nothing (no error is generated).
 
->**WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+>**WARNING**: `.delete()` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete()` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
 
 #### Example
 

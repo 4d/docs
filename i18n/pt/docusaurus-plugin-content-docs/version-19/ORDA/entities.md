@@ -31,7 +31,7 @@ $myEntity.save() //save the entity
 
 An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
 
-If you execute the following code:
+Se executar o seguinte código:
 
 ```4d
  var $e1; $e2 : cs. EmployeeEntity
@@ -91,7 +91,7 @@ You can handle entities like any other object in 4D and pass their references di
 Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
 > For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
 
-For example, to set a storage attribute:
+Por exemplo, para definir um atributo de armazenamento:
 
 ```4d
  $entity:=ds.Employee.get(1) //get employee attribute with ID 1
@@ -100,7 +100,7 @@ For example, to set a storage attribute:
 ```
 > Pictures attributes cannot be assigned directly with a given path in an entity.
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+Accessing a related attribute depends on the attribute kind. Por exemplo, com a seguinte estrutura:
 
 ![](../assets/en/ORDA/entityAttributes.png)
 
@@ -122,7 +122,7 @@ Each employee can be a manager and can have a manager. To get the manager of the
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## Atribuição de valores a atributos de relação
 
 In the ORDA architecture, relation attributes directly contain data related to entities:
 
@@ -169,7 +169,7 @@ You can assign or modify the value of a "1" related entity attribute from the "N
   //the related entity is updated
 ```
 
-## Creating an entity selection
+## Criar uma selecção de entidade
 
 You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
 
@@ -182,7 +182,7 @@ You can create an object of type [entity selection](dsMapping.md#entity-selectio
 
 You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
 
-### Shareable or alterable entity selections
+### Entity selections partilháveis ou alteráveis
 
 An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
 
@@ -249,6 +249,28 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
+:::note Entity selections returned from the server
+
+In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Exemplo:
+
+```4d
+    //a function is always executed on the server
+exposed Function getSome() : cs.MembersSelection
+    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+
+    //in a method, executes on the remote side
+var $result : cs.MembersSelection
+var $alterable : Boolean
+$result:=ds.Members.getSome() //$result is shareable
+$alterable:=$result.isAlterable() //False
+
+$result:=ds.Members.getSome().copy() // $result is now alterable
+$alterable:=$result.isAlterable() // True
+```
+
+:::
+
+
 #### Sharing an entity selection between processes (example)
 
 You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
@@ -296,7 +318,7 @@ O método `sendMails`:
  End for each
 ```
 
-### Entity selections and Storage attributes
+### Selecções de entidades e atributos de armazenamento
 
 All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Por exemplo:
 
@@ -307,7 +329,7 @@ All storage attributes (text, number, boolean, date) are available as properties
 
 This code returns in *$localEmails* a collection of email addresses as strings.
 
-### Entity selections and Relation attributes
+### Selecções de entidades e atributos de relações
 
 In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
 
@@ -342,7 +364,7 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 
 The following diagram illustrates optimistic locking:
 
-1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
@@ -392,7 +414,7 @@ These principles are shown in the following diagram:
 **Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
 * Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-* Example with a lock set by an ORDA method:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+* Exemplo com um bloqueio definido por um método ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
 
 ## Client/server optimization
 

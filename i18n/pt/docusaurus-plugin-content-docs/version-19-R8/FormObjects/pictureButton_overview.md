@@ -5,9 +5,9 @@ title: Botão imagem
 
 A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
 
-Picture buttons can be used in two ways:
+Os botões imagem podem ser utilizados de duas formas:
 
-* As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over. For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+* Como botões de comando num formulário. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over. For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
   | Propriedade                | Nome JSON              | Valor |
   | -------------------------- | ---------------------- | ----- |
@@ -21,7 +21,7 @@ Picture buttons can be used in two ways:
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 
-Clicking the object changes the picture.
+Clicar no objeto altera a imagem.
 
 
 ## Usar os botões imagem

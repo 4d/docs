@@ -10,7 +10,7 @@ Allows defining specific print settings for the form. This feature is useful to 
 
 > **Compatibility:** Even if these settings are taken into account when the form is printed in Application mode, it is discouraged to rely on this feature to store print settings for the form, due to limitations regarding the platform and driver dependency. It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful.
 
-You can modify the following print settings:
+Pode modificar os seguintes parâmetros de impressão:
 
 *   Formato de papel
 *   Orientação do papel
@@ -24,14 +24,14 @@ You can modify the following print settings:
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                                    |
-| ----------- | ------------- | ------------------------------------------------------------------------------------ |
-| pageFormat  | object        | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
-| paperName   | string        | "A4", "US Letter"...                                                                 |
-| paperWidth  | string        | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| paperHeight | string        | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| orientation | string        | "landscape" (default is "portrait")                                                  |
-| scale       | number        | mínimo: 0                                                                            |
+| Nome        | Tipo de dados | Valores possíveis                                                                        |
+| ----------- | ------------- | ---------------------------------------------------------------------------------------- |
+| pageFormat  | object        | Available print properties: paperName, paperWidth, paperHeight, orientation, scale       |
+| paperName   | string        | "A4", "US Letter"...                                                                     |
+| paperWidth  | string        | Used if a paper named paperName was not found. Requer sufixo de unidade: pt, in, mm, cm. |
+| paperHeight | string        | Used if a paper named paperName was not found. Requer sufixo de unidade: pt, in, mm, cm. |
+| orientation | string        | "landscape" (padrão é "retrato")                                                         |
+| scale       | number        | mínimo: 0                                                                                |
 
 
 ---

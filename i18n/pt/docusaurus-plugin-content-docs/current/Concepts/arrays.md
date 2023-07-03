@@ -166,7 +166,7 @@ Entretanto, em algumas circunstâncias, pode precisar trabalhar com arrays que c
 | Date            | (1+número de elementos) * 6                                            |
 | Integer         | (1+número de elementos) * 2                                            |
 | Long Integer    | (1+número de elementos) * 4                                            |
-| Objeto          | (1+número de elementos) * 8 + Soma de tamanho de cada objeto           |
+| Object          | (1+número de elementos) * 8 + Soma de tamanho de cada objeto           |
 | Imagem          | (1+número de elementos) * 8 + Soma do tamanho de cada imagem           |
 | Ponteiro        | (1+número de elementos) * 8 + Soma de tamanho de cada ponteiro         |
 | Real            | (1+número de elementos) * 8                                            |

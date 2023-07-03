@@ -67,12 +67,12 @@ Entities passed in parameters are referenced on the server through their key (*i
 
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
-| Propriedades          | Tipo                                 | Descrição                                                                  |
-| --------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
-| Atributos da entidade | misto                                | Optional - Values to modify                                                |
-| __DATACLASS           | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY              | Parâmetros                           | Mandatory - True to indicate to the server that the parameter is an entity |
-| __KEY                 | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
+| Propriedades          | Tipo                                       | Descrição                                                                  |
+| --------------------- | ------------------------------------------ | -------------------------------------------------------------------------- |
+| Atributos da entidade | misto                                      | Opcional - Valores a modificar                                             |
+| __DATACLASS           | String                                     | Mandatory - Indicates the Dataclass of the entity                          |
+| __ENTITY              | Parâmetros                                 | Mandatory - True to indicate to the server that the parameter is an entity |
+| __KEY                 | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                   |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
 - If __KEY is provided, the entity corresponding to__KEY is loaded on the server with the given attributes
@@ -93,7 +93,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 
 | Propriedades          | Tipo       | Descrição                                                                            |
 | --------------------- | ---------- | ------------------------------------------------------------------------------------ |
-| Atributos da entidade | misto      | Optional - Values to modify                                                          |
+| Atributos da entidade | misto      | Opcional - Valores a modificar                                                       |
 | __DATASET             | String     | Mandatory - entitySetID (UUID) of the entity selection                               |
 | __ENTITIES            | Parâmetros | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
@@ -201,7 +201,7 @@ You can then run this request:
 }
 ```
 
-### Using an entitySelection class function
+### Usar uma função de classe de uma seleção de entidade
 
 The EntitySelection class `CitySelection` provides an API:
 
@@ -286,7 +286,7 @@ You can then run this request:
 }
 ```
 
-### Using an entity to be created on the server
+### Utilizar uma entidade a ser criada no servidor
 
 The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. O método `checkData()` executa alguns controlos. If they are OK, the entity is saved and returned.
 
@@ -347,9 +347,9 @@ Since no `__KEY` is given, a new Students entity is loaded on the server **with 
 }
 ```
 
-### Using an entity to be updated on the server
+### Utilizar uma entidade a atualizar no servidor
 
-Same as above but with a __KEY attribute
+O mesmo que acima, mas com um atributo __KEY
 
 You run this request:
 
@@ -385,7 +385,7 @@ Since `__KEY` is given, the Students entity with primary key 55 is loaded **with
 }
 ```
 
-### Creating an entity with a related entity
+### Criação de uma entidade com uma entidade relacionada
 
 In this example, we create a new Students entity with the Schools entity having primary key 2.
 
@@ -427,7 +427,7 @@ Corpo do pedido:
 }
 ```
 
-### Updating an entity with a related entity
+### Atualização de uma entidade com uma entidade relacionada
 
 In this example, we associate an existing school to a Students entity. A classe `StudentEntity` tem um API:
 
@@ -469,7 +469,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }
 ```
 
-### Receiving an entity selection as parameter
+### Receber uma seleção de entidade como parâmetro
 
 In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
 

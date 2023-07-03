@@ -238,14 +238,14 @@ Emplacement horizontal du texte dans la zone où il apparait.
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles                                                                                         |
-| --------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| textAlign | string          | "right", "center", "left", "automatic" (not supported by [check boxes](checkbox_overview.md) ), "justify" |
+| Nom       | Type de données | Valeurs possibles                                 |
+| --------- | --------------- | ------------------------------------------------- |
+| textAlign | string          | "right", "center", "left", "automatic", "justify" |
 
 :::note
 
 - "automatic" is not supported by [check boxes](checkbox_overview.md) and [radio buttons](radio_overview.md)
-- "justify" is only supported by [group boxes](groupBox.md), [inputs](input_overview.md), and [text areas](text.md)
+- "justify" is only supported by [inputs](input_overview.md) and [text areas](text.md)
 
 :::
 

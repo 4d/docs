@@ -42,7 +42,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 There are several ways to supply the labels for a tab control:
 
-* You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
+* You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Os ícones associados aos itens da lista no editor de listas serão apresentados no controle de pestanas.
 * You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
 
 ```4d
