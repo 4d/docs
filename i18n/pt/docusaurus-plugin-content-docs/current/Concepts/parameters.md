@@ -50,14 +50,14 @@ Os valores de entrada e saída são [avaliados](#values-or-references) no moment
 
 :::info Compatibilidade
 
-Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) and declared using compiler directives. Ex: `C_TEXT($1;$2)`. This legacy syntax is still supported but is no longer recommended.
+Ao longo da documentação 4D, pode ver exemplos onde os parâmetros são automaticamente copiados em variáveis locais numeradas sequencialmente ($0, $1, etc.) e declarados usando directivas do compilador. Ex: `C_TEXT($1;$2)`. Esta sintaxe antiga ainda é suportada, mas já não é recomendada.
 
 :::
 
 
 ## Declaração de parâmetros
 
-Dentro de métodos ou funções de classe chamados, valores parâmetros são atribuidos à variáveis locais. You usually declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+Dentro de métodos ou funções de classe chamados, valores parâmetros são atribuidos à variáveis locais. Pode declarar parâmetros usando um **nome de parâmetro** junto com um **tipo de parâmetro**, separado por vírgula.
 
 - Para as funções de classe, os parâmetros se declaram junto com a palavra chave `Function`.
 - Para os métodos (métodos projeto, métodos objeto formulario, métodos base e triggers), os parâmetros se declaram utilizando a palavra chave `#DECLARE` ao principio do código do método.
@@ -116,7 +116,7 @@ Pode declarar o parâmetro retornado de uma função adicionado uma flecha (->) 
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). Por exemplo:
+Também é possível declarar o parâmetro de retorno apenas acrescentando `: type`, caso em que pode ser tratado por uma declaração de retorno [](#return-expression). Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -242,7 +242,7 @@ Para declarar parâmetros genéricos, se utiliza uma diretriz do compilador à q
 ```
 
 
-Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. The first three parameters can be of any data type. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 and $3 can be of any data type.
+Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. Os três primeiros parâmetros podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 and $3 can be of any data type.
 
 > **Nota:** O número na declaração tem que ser uma constante e não uma variável.
 
@@ -250,22 +250,22 @@ Esse comando significa que a partir do quarto parâmetro (incluído), o método 
 
 
 
-## `Compiler` method
+## `Compilador` método
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project.
+Mesmo não sendo obrigatório em [modo interpretado](Concepts/interpreted.md), deve declarar cada parâmetro nos métodos chamados para evitar problemas.
 
-When using the `#DECLARE` keyword or `Function` prototype, parameters are automatically declared. Por exemplo:
+Quando se utiliza a palavra-chave `#DECLARE` ou o protótipo `Function` , os parâmetros são automaticamente declarados. Por exemplo:
 
 ```4d
 Função add($x : Variante; $y : Integer)-> $result : Integer
     // todos os parâmetros são declarados com o seu tipo
 ```
 
-However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
+No entanto, uma caraterística do compilador 4D permite que você declare todos os seus parâmetros num método específico usando uma sintaxe especial:
 
-- you can group all local variable parameters for project methods in one or more project method(s)
-- the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
-- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
+- é possível agrupar todos os parâmetros de variáveis locais para métodos de projeto num ou mais métodos de projeto
+- o(s) nome(s) do(s) método(s) deve(m) começar por "**Compiler**", por exemplo "Compiler_MyParameters".
+- Dentro de um método deste tipo, pode pré-declarar os parâmetros de cada método utilizando a seguinte sintaxe: `C_XXX(methodName;parameter)`.
 
 Por exemplo:
 
@@ -276,15 +276,15 @@ Por exemplo:
 
 :::note
 
-This syntax is not executable in interpreted mode.
+Esta sintaxe não é executável em modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Pode criar e preencher automaticamente um método do `Compilador` contendo todos os seus parâmetros utilizando o botão [**Métodos do Compilador para...**](../Project/compiler.md#compiler-methods-for) **Métodos** botão na caixa de diálogo Configurações do compilador.
 
 A declaração de parâmetros também é obrigatóiria nos contextos abaixo (esses contextos não são compatíveis com declarações em um método "Compiler"):
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. No começo do método database, tem que escrever (mesmo se todos os parâmetros não forem usados):
+- Métodos de base de dados - Por exemplo, o método de base de dados `On Web Connection` recebe seis parâmetros do tipo de dados Text. No começo do método database, tem que escrever (mesmo se todos os parâmetros não forem usados):
 
 ```4d
 // On Web Connection
@@ -331,7 +331,7 @@ Este caso es tratado por 4D dependendo do contexto:
 - em[projetos compilados](interpreted.md), se gera um erro no passo de compilação sempre que seja possível. Senão, um erro é gerado quando o método for chamado.
 - em projetos interpretados:
     + se o parámetro se declarou utilizando la [sintaxe nomeada](#named-parameters) (`#DECLARE` ou `Function`), se gera um erro quando se chama ao método.
-    + if the parameter was declared using (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
+    + se o parâmetro foi declarado utilizando (`C_XXX`), não é gerado qualquer erro, o método chamado recebe um valor vazio do tipo esperado.
 
 
 
