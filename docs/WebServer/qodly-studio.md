@@ -200,7 +200,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 - However, some command have been renamed for a better compliance. They are listed below: 
 
 |QodlyScript|4D Language|
-|---|---|---|
+|---|---|
 |`atan` |`Arctan`|
 |`highestProcessNumber` |`Count tasks`|
 |`callChain`|`Get call chain`|
