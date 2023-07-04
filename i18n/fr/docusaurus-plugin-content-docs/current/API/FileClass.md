@@ -260,35 +260,31 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 | Version | Modifications |
 | ------- | ------------- |
 | v17 R5  | Ajout         |
+
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
-
 | Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
+| ---------- | ---- |::| ------------------------------------------------------ |
 |            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
 
 |
 
-
-
 #### Description
 
-La fonction `delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichier<!-- END REF -->.
+La fonction `delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
-Si le fichier est ouvert, une erreur est générée.
+If the file is currently open, an error is generated.
 
-Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
+If the file does not exist on disk, the function does nothing (no error is generated).
 > **ATTENTION** : `.delete()` peut supprimer n'importe quel fichier sur un disque. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
 
 #### Exemple
 
-Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de données :
+You want to delete a specific file in the database folder:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -319,9 +315,9 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Paramètres | Type   |    | Description                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| Résultat   | Object | <- | Contenu du fichier de ressource version .exe/.dll ou .plist|<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                      |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| Résultat   | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
 
 |
@@ -329,17 +325,17 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 #### Description
 
-La fonction `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retourne le contenu d'un fichier d'information **.exe**, **.dll** ou **.plist** sous forme d'objet<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction retourne un objet vide (aucune erreur n'est générée).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
-**Objet retourné dans le cas d'un fichier .exe ou .dll**
+**Returned object with a .exe or .dll file**
 
 > La lecture d'un fichier .exe ou .dll est possible uniquement sous Windows.
 
-Toutes les valeurs de propriétés sont de type Texte.
+All property values are Text.
 
 | Propriété        | Type |
 | ---------------- | ---- |
@@ -352,9 +348,9 @@ Toutes les valeurs de propriétés sont de type Texte.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Objet retourné dans le cas d'un fichier .plist**
+**Returned object with a .plist file**
 
-Le contenu xml du fichier est analysé et les clés sont retournées en tant que propriétés de l'objet, en préservant leur type (texte, booléen, numérique). `.plist dict` est retourné sous forme d'objet JSON et `.plist array` est retourné sous forme de tableau JSON.
+The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
 
 #### Exemple
 
@@ -414,11 +410,11 @@ ALERT($info.Copyright)
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Paramètres         | Type      |    | Description                                |
-| ------------------ | --------- | -- | ------------------------------------------ |
-| dossierDestination | 4D.Folder | -> | Dossier de destination                     |
-| nouveauNom         | Text      | -> | Nom complet du fichier déplacé             |
-| Résultat           | 4D.File   | <- | Fichier déplacé|<!-- END REF -->
+| Paramètres         | Type      |    | Description                           |
+| ------------------ | --------- | -- | ------------------------------------- |
+| dossierDestination | 4D.Folder | -> | Dossier de destination                |
+| nouveauNom         | Text      | -> | Full name for the moved file          |
+| Résultat           | 4D.File   | <- | Moved file|<!-- END REF -->
 
 
 |
@@ -426,15 +422,15 @@ ALERT($info.Copyright)
 
 #### Description
 
-La fonction `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->déplace ou renomme l'objet `File` dans le *destinationFolder* spécifié<!-- END REF -->.
+The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-Par défaut, le fichier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le fichier déplacé, passez le nom complet dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 **Objet retourné**
 
-L'objet `File` déplacé.
+The moved `File` object.
 
 #### Exemple
 
@@ -461,53 +457,54 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| Paramètres | Type                             |    | Description                                         |
-| ---------- | -------------------------------- | -- | --------------------------------------------------- |
-| mode       | Text                             | -> | Mode d'ouverture :"read", "write", "append"         |
-| options    | Object                           | -> | Options d'ouverture                                 |
-| Résultat   | [4D.FileHandle](FileHandleClass) | <- | Nouvel objet File handle|<!-- END REF -->
+| Paramètres | Type                             |    | Description                                       |
+| ---------- | -------------------------------- | -- | ------------------------------------------------- |
+| mode       | Text                             | -> | Opening mode: "read", "write", "append"           |
+| options    | Object                           | -> | Opening options                                   |
+| Résultat   | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
 
 |
 
 #### Description
 
-La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode * ou avec les *options* spécifié(es)<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter le contenu du fichier.
+The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
 
-Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
+If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
 
 
-| *mode*   | Description                                                                                                                                                                                                                                                 |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "read"   | (Par défaut) Crée un file handle pour lire les valeurs dans le fichier. Si le fichier n'existe pas sur disque, une erreur est renvoyée. Vous pouvez ouvrir autant de file handles que vous voulez en mode "read" sur le même objet File.                    |
-| "write"  | Crée un file handle pour écrire des valeurs dans le fichier (en commençant par le début du contenu du fichier). Si le fichier n'existe pas sur le disque, il est créé. Vous ne pouvez ouvrir qu'un seul file handle en mode "write" sur le même objet File. |
-| "append" | Crée un file handle pour écrire des valeurs dans le fichier (en commençant par la fin du fichier). Si le fichier n'existe pas sur le disque, il est créé. Vous ne pouvez ouvrir qu'un seul file handle en mode "append" sur le même objet File.             |
+
+| *mode*   | Description                                                                                                                                                                                                                      |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
+| "write"  | Creates a file handle to write values to the file (starting at the beginning of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "write" mode on the same File object. |
+| "append" | Creates a file handle to write values to the file (starting at the end of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "append" mode on the same File object.      |
 
 > La valeur du paramètre *mode* est sensible à la casse.
 
-Si vous utilisez le paramètre *options* (objet), vous pouvez passer d'autres options pour le file handle par le biais des propriétés suivantes (ces propriétés peuvent être lues ultérieurement à partir de l'[objet file handle](FileHandleClass) ouvert) :
+If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| *options*         | Type           | Description                                                                                                                                          | Par défaut    |
-| ----------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `.mode`           | Text           | Mode d'ouverture (voir *mode* ci-dessus)                                                                                                             | "read"        |
-| `.charset`        | Text           | Jeu de caractères utilisé lors de la lecture ou de l'écriture dans le fichier. Utilisez le nom standard du jeu (par exemple "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text ou number | Mode de traitement des sauts de ligne utilisés lors de la lecture du fichier (voir ci-dessous)                                                       | "native" ou 1 |
-| `.breakModeWrite` | Text ou number | Mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier (voir ci-dessous)                                                  | "native" ou 1 |
+| *options*         | Type           | Description                                                                                                                   | Default       |
+| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
+| `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
+| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
 
-Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
+The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
-| Break mode en texte | Break mode en numérique (constante) | Description                                                                                                                                                           |
-| ------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "native"            | 1 (`Document with native format`)   | (Défaut) Les fins de ligne sont converties au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
-| "crlf"              | 2 (`Document with CRLF`)            | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                           |
-| "cr"                | 3 (`Document with CR`)              | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                        |
-| "lf"                | 4 (`Document with LF`)              | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                               |
+| Break mode as text | Break mode as number (constant)   | Description                                                                                                                                                    |
+| ------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"           | 1 (`Document with native format`) | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
+| "crlf"             | 2 (`Document with CRLF`)          | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
+| "cr"               | 3 (`Document with CR`)            | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
+| "lf"               | 4 (`Document with LF`)            | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
 
 > La valeur du paramètre *break mode en texte* est sensible à la casse.
 
 #### Exemple
 
-Vous voulez créer un file handle pour lire le fichier "ReadMe.txt" :
+You want to create a file handle for reading the "ReadMe.txt" file:
 
 ```4d
 var $f : 4D.File
@@ -541,28 +538,28 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
-| Paramètres | Type    |    | Description                                |
-| ---------- | ------- | -- | ------------------------------------------ |
-| nouveauNom | Text    | -> | Nouveau nom complet du fichier             |
-| Résultat   | 4D.File | <- | Fichier renommé|<!-- END REF -->
+| Paramètres | Type    |    | Description                             |
+| ---------- | ------- | -- | --------------------------------------- |
+| nouveauNom | Text    | -> | New full name for the file              |
+| Résultat   | 4D.File | <- | Renamed file|<!-- END REF -->
 
 |
 
 #### Description
 
-La fonction `.rename()` <!-- REF #FileClass.rename().Summary -->renomme le fichier avec le nom que vous avez passé dans *newName* et renvoie l'objet `File` renommé<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
-Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-A noter que la fonction modifie le nom complet du fichier, c'est-à-dire que si vous ne passez pas une extension dans le paramètre *newName*, le fichier aura un nom sans extension.
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **Objet retourné**
 
-L'objet `File` renommé.
+The renamed `File` object.
 
 #### Exemple
 
-Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
+You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -575,57 +572,57 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications              |
-| ------- | -------------------------- |
-| v20     | Prise en charge de WinIcon |
-| v19     | Ajout                      |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v20     | Support of WinIcon |
+| v19     | Ajout              |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Paramètres | Type   |    | Description                                                                                                        |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------ |
-| info       | Object | -> | Propriétés à écrire dans le fichier .plist ou la ressource version du fichier .exe/.dll|<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                                 |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------- |
+| info       | Object | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
 
 |
 
 #### Description
 
-La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés de *info* comme contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
-**Paramètre *info* avec un fichier .exe or .dll**
+***info* parameter object with a .exe or .dll file**
 
 > Ecrire les informations de fichiers .exe ou .dll est possible uniquement sous Windows.
 
-Chaque propriété valide définie dans le paramètre objet *info* est écrite dans la ressource de version du fichier .exe ou .dll. Les propriétés disponibles sont (toute autre propriété sera ignorée) :
+Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Propriété        | Type | Commentaire                                                                                             |
-| ---------------- | ---- | ------------------------------------------------------------------------------------------------------- |
-| InternalName     | Text |                                                                                                         |
-| ProductName      | Text |                                                                                                         |
-| CompanyName      | Text |                                                                                                         |
-| LegalCopyright   | Text |                                                                                                         |
-| ProductVersion   | Text |                                                                                                         |
-| FileDescription  | Text |                                                                                                         |
-| FileVersion      | Text |                                                                                                         |
-| OriginalFilename | Text |                                                                                                         |
-| WinIcon          | Text | Chemin Posix du fichier .ico. Cette propriété ne s'applique qu'aux fichiers exécutables générés par 4D. |
+| Propriété        | Type | Commentaire                                                                           |
+| ---------------- | ---- | ------------------------------------------------------------------------------------- |
+| InternalName     | Text |                                                                                       |
+| ProductName      | Text |                                                                                       |
+| CompanyName      | Text |                                                                                       |
+| LegalCopyright   | Text |                                                                                       |
+| ProductVersion   | Text |                                                                                       |
+| FileDescription  | Text |                                                                                       |
+| FileVersion      | Text |                                                                                       |
+| OriginalFilename | Text |                                                                                       |
+| WinIcon          | Text | Posix path of .ico file. This property applies only to 4D generated executable files. |
 
-Pour toutes les propriétés à l'exception de `WinIcon`, si vous passez un texte null ou vide comme valeur, une chaîne vide est écrite dans la propriété. Si vous passez une valeur de type autre que Texte, elle est "stringifiée".
+For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
-Pour la propriété `WinIcon`, si le fichier d'icône n'existe pas ou a un format incorrect, une erreur est générée.
+For the `WinIcon` property, if the icon file does not exist or has an incorrect format, an error is generated.
 
-**Paramètre *info* avec un fichier .plist**
+***info* parameter object with a .plist file**
 
-Chaque propriété valide définie dans le paramètre objet *info* est écrite dans le fichier . plist sous forme de clé. Tous les noms de clés sont acceptés. Les types des valeurs sont préservés si possible.
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
 
-Si une clé définie dans le paramètre *info* est déjà définie dans le fichier .plist, sa valeur est mise à jour tout en conservant son type d'origine. Les autres clés définies dans le fichier .plist ne sont pas modifiées.
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
 
 > Pour définir une valeur de type Date, le format à utiliser est chaîne de timestamp json formatée en ISO UTC sans les millisecondes ("2003-02-01T01:02:03Z") comme dans l'éditeur de plist Xcode.
 
@@ -675,15 +672,15 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Paramètres | Type |    | Description                                           |
-| ---------- | ---- | -- | ----------------------------------------------------- |
-| content    | BLOB | -> | Nouveau contenu du fichier|<!-- END REF -->
+| Paramètres | Type |    | Description                                          |
+| ---------- | ---- | -- | ---------------------------------------------------- |
+| content    | BLOB | -> | New contents for the file|<!-- END REF -->
 
 |
 
 #### Description
 
-La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB *content*<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 #### Exemple
 
@@ -698,10 +695,10 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                       |
-| ------- | ----------------------------------------------------------------------------------- |
-| v19 R3  | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
-| v17 R5  | Ajout                                                                               |
+| Version | Modifications                                           |
+| ------- | ------------------------------------------------------- |
+| v19 R3  | Default for new projects: no BOM and (macOS) LF for EOL |
+| v17 R5  | Ajout                                                   |
 
 </details>
 
@@ -710,12 +707,12 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 
 <!--REF #FileClass.setText().Params -->
-| Paramètres  | Type    |    | Description                                                         |
-| ----------- | ------- | -- | ------------------------------------------------------------------- |
-| text        | Text    | -> | Texte à stocker dans le fichier                                     |
-| charSetName | Text    | -> | Nom du jeu de caractères                                            |
-| charSetNum  | Integer | -> | Numéro du jeu de caractères                                         |
-| breakMode   | Integer | -> | Mode de traitement des retours à la ligne<!-- END REF -->
+| Paramètres  | Type    |    | Description                                                |
+| ----------- | ------- | -- | ---------------------------------------------------------- |
+| text        | Text    | -> | Text to store in the file                                  |
+| charSetName | Text    | -> | Nom du jeu de caractères                                   |
+| charSetNum  | Integer | -> | Numéro du jeu de caractères                                |
+| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
 
 |
@@ -723,30 +720,30 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 #### Description
 
-La fonction `.setText()` <!-- REF #FileClass.setText().Summary -->écrit *text* comme nouveau contenu du fichier<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
-Si le fichier référencé dans l'objet `File` n'existe pas sur disque, il est créé par la fonction. Lorsque le fichier existe déjà sur disque, son contenu antérieur est supprimé, sauf s'il est déjà ouvert, auquel cas son contenu est verrouillé et une erreur est générée.
+If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
-Dans le paramètre *text*, passez le texte à écrire dans le fichier. Cela peut être un texte littéral ("my text"), ou un champ / variable texte 4D.
+In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour l'écriture du contenu. Vous pouvez passer soit :
+Optionally, you can designate the character set to be used for writing the contents. Vous pouvez passer soit :
 
 * dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou "UTF-8"),
 * ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
 
 > Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
-Si une marque d'ordre d'octet (BOM) existe pour le jeu de caractères, 4D l'insère dans le fichier, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (par exemple "UTF-8-no-bom"). Si vous n'indiquez pas un jeu de caractères, 4D utilise par défaut le jeu de caractères "UTF-8" sans BOM.
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
 
-Dans le paramètre *breakMode*, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne avant de les stocker dans le fichier. Les constantes suivantes du thème **Documents système** sont disponibles :
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 | Constante                     | Valeur | Commentaire                                                                                                                                                          |
 | ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0      | Aucun traitement                                                                                                                                                     |
 | `Document with native format` | 1      | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
-| `Document with CRLF`          | 2      | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                          |
-| `Document with CR`            | 3      | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                       |
-| `Document with LF`            | 4      | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                              |
+| `Document with CRLF`          | 2      | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                          |
+| `Document with CR`            | 3      | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                                 |
+| `Document with LF`            | 4      | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                       |
 
 Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
