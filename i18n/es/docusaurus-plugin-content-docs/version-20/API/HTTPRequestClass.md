@@ -128,7 +128,7 @@ Por ejemplo, puede pasar las siguientes cadenas:
 
 En el parámetro *options*, pase un objeto que pueda contener las siguientes propiedades:
 
-| Propiedad              | Tipo                                            | Descripción                                                                                                                                                                                                                                                                                 | Por defecto  |
+| Propiedad              | Tipo                                            | Descripción                                                                                                                                                                                                                                                                                 | Default      |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | body                   | Variant                                         | Cuerpo de la petición (necesario en el caso de las peticiones `post` o `put`). Puede ser un texto, un blob, o un objeto. El content-type se determina a partir del tipo de esta propiedad a menos que se defina dentro de los encabezados                                                   | indefinido   |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Define la carpeta de certificados de cliente activa                                                                                                                                                                                                                                         | indefinido   |
@@ -182,11 +182,11 @@ Un objeto `event` se devuelve cuando se llama una [funcipon de retrollamada](#ca
 
 Un objeto authentication maneja la propiedad `options.serverAuthentication` o `options.proxyAuthentication`. Puede contener las siguientes propiedades:
 
-| Propiedad  | Tipo | Descripción                                                       | Por defecto |
-| ---------- | ---- | ----------------------------------------------------------------- | ----------- |
-| name       | Text | Nombre usado para la autenticación                                | indefinido  |
-| contraseña | Text | Contraseña utilizada para la autenticación                        | indefinido  |
-| method     | Text | Método utilizado para la autenticación: "basic", "digest", "auto" | "auto"      |
+| Propiedad  | Tipo | Descripción                                                       | Default    |
+| ---------- | ---- | ----------------------------------------------------------------- | ---------- |
+| name       | Text | Nombre usado para la autenticación                                | indefinido |
+| contraseña | Text | Contraseña utilizada para la autenticación                        | indefinido |
+| method     | Text | Método utilizado para la autenticación: "basic", "digest", "auto" | "auto"     |
 
 <!-- END REF -->
 
