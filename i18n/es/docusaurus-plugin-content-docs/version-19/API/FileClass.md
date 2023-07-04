@@ -271,16 +271,16 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 #### Descripción
 
-La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archivo<!-- END REF -->.
+La función `.delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
-Si el archivo está abierto, se genera un error.
+If the file is currently open, an error is generated.
 
-Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
+If the file does not exist on disk, the function does nothing (no error is generated).
 > **ATENCIÓN**: `.delete( )` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete( )` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 #### Ejemplo
 
-Desea eliminar un archivo específico en la carpeta de la base de datos:
+You want to delete a specific file in the database folder:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -312,25 +312,25 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                      |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| Result     | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de un archivo de información **.exe**, **.dll** o **.plist** como un objeto<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función devuelve un objeto vacío (no se genera ningún error).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
-**Objeto devuelto con un archivo .exe o .dll**
+**Returned object with a .exe or .dll file**
 
 > La lectura de un .exe o .dll sólo es posible en Windows.
 
-Todos los valores de propiedades son de tipo Texto.
+All property values are Text.
 
 | Propiedad    | Tipo |
 | ------------ | ---- |
@@ -339,9 +339,9 @@ Todos los valores de propiedades son de tipo Texto.
 
 |CompanyName|Text| |LegalCopyright|Text| |ProductVersion|Text| |FileDescription|Text| |FileVersion|Text| |OriginalFilename|Text|
 
-**Objeto devuelto con un archivo .plist**
+**Returned object with a .plist file**
 
-El contenido xml del archivo se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). `.plist dict` se devuelve como un objeto JSON y `.plist array` se devuelve como un array JSON.
+The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
 
 #### Ejemplo
 
@@ -400,11 +400,11 @@ ALERT($info.Copyright)
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                               |
-| ----------------- | --------- | -- | ----------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino                        |
-| newName           | Text      | -> | Nombre completo del archivo trasladado    |
-| Result            | 4D.File   | <- | Archivo movido|<!-- END REF -->
+| Parámetros        | Tipo      |    | Descripción                           |
+| ----------------- | --------- | -- | ------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                    |
+| newName           | Text      | -> | Full name for the moved file          |
+| Result            | 4D.File   | <- | Moved file|<!-- END REF -->
 
 
 |
@@ -412,15 +412,15 @@ ALERT($info.Copyright)
 
 #### Descripción
 
-La función `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->mueve o renombra el objeto `File` en el *destinationFolder* especificado<!-- END REF -->.
+The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, el archivo conserva su nombre cuando se mueve. Si desea renombrar el archivo desplazado, pase el nombre completo en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 
-El objeto `File` movido.
+The moved `File` object.
 
 #### Ejemplo
 
@@ -455,28 +455,28 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parámetros | Tipo    |    | Descripción                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| newName    | Text    | -> | Nuevo nombre completo del archivo             |
-| Result     | 4D.File | <- | Archivo renombrado|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                             |
+| ---------- | ------- | -- | --------------------------------------- |
+| newName    | Text    | -> | New full name for the file              |
+| Result     | 4D.File | <- | Renamed file|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.rename()` <!-- REF #FileClass.rename().Summary -->renombra el archivo con el nombre que se le ha pasado en *newName* y devuelve el objeto `File` renombrado<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
-El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-Tenga en cuenta que la función modifica el nombre completo del archivo, es decir, si no pasa una extensión en *newName*, el archivo tendrá un nombre sin extensión.
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **Objeto devuelto**
 
-El objeto `File` renombrado.
+The renamed `File` object.
 
 #### Ejemplo
 
-Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
+You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -508,7 +508,7 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
@@ -650,9 +650,9 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Sin procesar                                                                                                                                                               |
 | `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows |
-| `Document with CRLF`          | 2     | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
-| `Document with CR`            | 3     | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
-| `Document with LF`            | 4     | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                               |
+| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                                |
+| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                                       |
+| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                             |
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
