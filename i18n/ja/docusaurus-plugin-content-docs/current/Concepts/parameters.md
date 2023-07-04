@@ -281,7 +281,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+コンパイラー設定の [**コンパイラーメソッド...**](../Project/compiler.md#コンパイラーメソッド) セクションで定義した `Compiler` メソッドは、コンパイラーウィンドウの **型宣言を生成** ボタンを使用すると自動的に作成されます。
 
 パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
 
