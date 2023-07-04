@@ -126,7 +126,7 @@ Par exemple, vous pouvez passer les chaînes suivantes :
 
 Dans le paramètre *options*, passez un objet qui peut contenir les propriétés suivantes :
 
-| Propriété            | Type                                            | Description                                                                                                                                                                                                                                                   | Par défaut  |
+| Propriété            | Type                                            | Description                                                                                                                                                                                                                                                   | Default     |
 | -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | body                 | Variant                                         | Corps de la requête (requis dans le cas des requêtes `post` ou `put`). Il peut s'agir d'un texte, d'un blob ou d'un objet. Le content-type est déterminé à partir du type de cette propriété, sauf s'il est défini dans les headers                           | undefined   |
 | certificatesFolder   | [Folder](FolderClass.md)                        | Définit le dossier actif des certificats du client                                                                                                                                                                                                            | undefined   |
@@ -179,11 +179,11 @@ Un objet `event` est renvoyé lorsqu'une [fonction de callback](#callback-functi
 
 Un objet d'authentification gère la propriété `options.serverAuthentication` ou `options.proxyAuthentication` . Il peut contenir les propriétés suivantes :
 
-| Propriété | Type | Description                                                          | Par défaut |
-| --------- | ---- | -------------------------------------------------------------------- | ---------- |
-| name      | Text | Nom utilisé pour l'authentification                                  | undefined  |
-| password  | Text | Mot de passe utilisé pour l'authentification                         | undefined  |
-| method    | Text | Méthode utilisée pour l'authentification : "basic", "digest", "auto" | "auto"     |
+| Propriété | Type | Description                                                          | Default   |
+| --------- | ---- | -------------------------------------------------------------------- | --------- |
+| name      | Text | Nom utilisé pour l'authentification                                  | undefined |
+| password  | Text | Mot de passe utilisé pour l'authentification                         | undefined |
+| method    | Text | Méthode utilisée pour l'authentification : "basic", "digest", "auto" | "auto"    |
 
 <!-- END REF -->
 
