@@ -260,35 +260,31 @@ Quiere crear un alias para un archivo en su carpeta principal:
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17 R5  | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
-
 | Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
+| ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-
 
 |
 
-
-
 #### Descripción
 
-La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archivo<!-- END REF -->.
+La función `.delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
-Si el archivo está abierto, se genera un error.
+If the file is currently open, an error is generated.
 
-Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
+If the file does not exist on disk, the function does nothing (no error is generated).
 > **ATENCIÓN**: `.delete()` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 #### Ejemplo
 
-Desea eliminar un archivo específico en la carpeta de la base de datos:
+You want to delete a specific file in the database folder:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -320,9 +316,9 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                      |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| Result     | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
 
 |
@@ -330,17 +326,17 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 #### Descripción
 
-La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de un archivo de información **.exe**, **.dll** o **.plist** como un objeto<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función devuelve un objeto vacío (no se genera ningún error).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
-**Objeto devuelto con un archivo .exe o .dll**
+**Returned object with a .exe or .dll file**
 
 > La lectura de un .exe o .dll sólo es posible en Windows.
 
-Todos los valores de propiedades son de tipo Texto.
+All property values are Text.
 
 | Propiedad        | Tipo |
 | ---------------- | ---- |
@@ -353,9 +349,9 @@ Todos los valores de propiedades son de tipo Texto.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Objeto devuelto con un archivo .plist**
+**Returned object with a .plist file**
 
-El contenido xml del archivo se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). `.plist dict` se devuelve como un objeto JSON y `.plist array` se devuelve como un array JSON.
+The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
 
 #### Ejemplo
 
@@ -415,11 +411,11 @@ ALERT($info.Copyright)
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                               |
-| ----------------- | --------- | -- | ----------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino                        |
-| newName           | Text      | -> | Nombre completo del archivo trasladado    |
-| Result            | 4D.File   | <- | Archivo movido|<!-- END REF -->
+| Parámetros        | Tipo      |    | Descripción                           |
+| ----------------- | --------- | -- | ------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                    |
+| newName           | Text      | -> | Full name for the moved file          |
+| Result            | 4D.File   | <- | Moved file|<!-- END REF -->
 
 
 |
@@ -427,15 +423,15 @@ ALERT($info.Copyright)
 
 #### Descripción
 
-La función `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->mueve o renombra el objeto `File` en el *destinationFolder* especificado<!-- END REF -->.
+The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-Por defecto, el archivo conserva su nombre cuando se mueve. Si desea renombrar el archivo desplazado, pase el nombre completo en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 
-El objeto `File` movido.
+The moved `File` object.
 
 #### Ejemplo
 
@@ -462,53 +458,54 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| Parámetros | Tipo                             |    | Descripción                                         |
-| ---------- | -------------------------------- | -- | --------------------------------------------------- |
-| mode       | Text                             | -> | Modo de apertura: "read", "write", "append"         |
-| options    | Object                           | -> | Opciones de apertura                                |
-| Result     | [4D.FileHandle](FileHandleClass) | <- | Nuevo objeto File handle|<!-- END REF -->
+| Parámetros | Tipo                             |    | Descripción                                       |
+| ---------- | -------------------------------- | -- | ------------------------------------------------- |
+| mode       | Text                             | -> | Opening mode: "read", "write", "append"           |
+| options    | Object                           | -> | Opening options                                   |
+| Result     | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un nuevo objeto [4D.FileHandle](FileHandleClass) en el archivo, en el *modo* >especificado o con las *opciones* especificadas<!-- END REF -->. Puede utilizar las funciones y las propiedades de la clase [4D.FileHandle](FileHandleClass) para escribir, leer o añadir contenido al archivo.
+The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
 
-Si utiliza el parámetro *mode* (text), pase el modo de apertura para el file handle:
+If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
 
 
-| *mode*   | Descripción                                                                                                                                                                                                                                |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| "read"   | (Por defecto) Crea un file handle para leer los valores en el archivo. Si el archivo no existe en el disco, se devuelve un error. Puede abrir tantos file handles como quiera en modo "read" en el mismo objeto File.                      |
-| "write"  | Crea un file handle para escribir valores en el archivo (empezando por el inicio del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "write" en el mismo objeto File.     |
-| "append" | Crea un file handle para escribir los valores en el archivo (empezando por el final del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un file handle en modo "append" en el mismo objeto File. |
+
+| *mode*   | Descripción                                                                                                                                                                                                                      |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
+| "write"  | Creates a file handle to write values to the file (starting at the beginning of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "write" mode on the same File object. |
+| "append" | Creates a file handle to write values to the file (starting at the end of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "append" mode on the same File object.      |
 
 > El valor *mode* distingue entre mayúsculas y minúsculas.
 
-Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el [objeto file handle](FileHandleClass) abierto):
+If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
 
-| *options*         | Tipo          | Descripción                                                                                                                                      | Por defecto  |
-| ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| `.mode`           | Text          | Modo de apertura (ver *mode* arriba)                                                                                                             | "read"       |
-| `.charset`        | Text          | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
-| `.breakModeRead`  | Text o Number | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                           | "native" o 1 |
-| `.breakModeWrite` | Text o Number | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                    | "native" o 1 |
+| *options*         | Tipo           | Descripción                                                                                                                   | Default       |
+| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
+| `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
+| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
 
-`.breakModeRead` y `.breakModeWrite` indican el tratamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
+The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
-| Break mode en texto | Break mode en numérico (constante) | Descripción                                                                                                                                                                |
-| ------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "native"            | 1 (`Document with native format`)  | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (retorno de carro + salto de línea) en Windows |
-| "crlf"              | 2 (`Document with CRLF`)           | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
-| "cr"                | 3 (`Document with CR`)             | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
-| "lf"                | 4 (`Document with LF`)             | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                               |
+| Break mode as text | Break mode as number (constant)   | Descripción                                                                                                                                                    |
+| ------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"           | 1 (`Document with native format`) | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
+| "crlf"             | 2 (`Document with CRLF`)          | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
+| "cr"               | 3 (`Document with CR`)            | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
+| "lf"               | 4 (`Document with LF`)            | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
 
 > El valor del parámetro *break mode as text* es sensible a las mayúsculas y minúsculas.
 
 #### Ejemplo
 
-Quiere crear un file handle para leer el archivo "ReadMe.txt":
+You want to create a file handle for reading the "ReadMe.txt" file:
 
 ```4d
 var $f : 4D.File
@@ -542,28 +539,28 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parámetros | Tipo    |    | Descripción                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| newName    | Text    | -> | Nuevo nombre completo del archivo             |
-| Result     | 4D.File | <- | Archivo renombrado|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                             |
+| ---------- | ------- | -- | --------------------------------------- |
+| newName    | Text    | -> | New full name for the file              |
+| Result     | 4D.File | <- | Renamed file|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.rename()` <!-- REF #FileClass.rename().Summary -->renombra el archivo con el nombre que se le ha pasado en *newName* y devuelve el objeto `File` renombrado<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
-El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-Tenga en cuenta que la función modifica el nombre completo del archivo, es decir, si no pasa una extensión en *newName*, el archivo tendrá un nombre sin extensión.
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **Objeto devuelto**
 
-El objeto `File` renombrado.
+The renamed `File` object.
 
 #### Ejemplo
 
-Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
+You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -578,7 +575,7 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v20     | Soporte de WinIcon |
+| v20     | Support of WinIcon |
 | v19     | Añadidos           |
 </details>
 
@@ -596,7 +593,7 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
@@ -745,9 +742,9 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Sin procesar                                                                                                                                                               |
 | `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows |
-| `Document with CRLF`          | 2     | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
-| `Document with CR`            | 3     | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
-| `Document with LF`            | 4     | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                               |
+| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                                |
+| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                                       |
+| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                             |
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
