@@ -25,7 +25,7 @@ Building a project package can be carried out using:
 
 :::tip
 
-You can also download and use `[Build4D]`(https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
+You can also download and use [`Build4D`](https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
 
 :::
 
