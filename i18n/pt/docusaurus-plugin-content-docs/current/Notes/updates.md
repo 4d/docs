@@ -11,6 +11,9 @@ Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 #### Destaques
 
+- New [WebSocket class](../API/WebSocketClass.md) to create and manage client WebSocket connections from 4D.
+
+
 #### Mudanças de comportamento
 
 
