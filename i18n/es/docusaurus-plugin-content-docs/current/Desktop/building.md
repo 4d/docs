@@ -25,7 +25,7 @@ Generar un paquete de proyecto puede realizarse utilizando:
 
 :::tip
 
-También puede descargar y utilizar `[Build4D]`(https://github.com/4d-depot/Build4D), un componente que ofrece clases para compilar, crear y firmar proyectos 4D, incluso desde una aplicación sin interfaz.
+You can also download and use [`Build4D`](https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
 
 :::
 
