@@ -348,9 +348,9 @@ All property values are Text.
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-**Returned object with a .plist file**
+**Objeto devolvido com um arquivo .split**
 
-The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
+O conteúdo xml do arquivo é analisado e as chaves são devolvidas como propriedades do objeto, preservando os seus tipos (texto, booleano, número). `.plist dict` é devolvido como um objeto JSON e `.plist array` é devolvido como um array JSON.
 
 #### Exemplo
 
