@@ -271,16 +271,16 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 #### Descripción
 
-La función `.delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archivo<!-- END REF -->.
 
-If the file is currently open, an error is generated.
+Si el archivo está abierto, se genera un error.
 
-If the file does not exist on disk, the function does nothing (no error is generated).
+Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
 > **ATENCIÓN**: `.delete( )` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete( )` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 #### Ejemplo
 
-You want to delete a specific file in the database folder:
+Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -312,25 +312,25 @@ You want to delete a specific file in the database folder:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                      |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| Result     | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                            |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
+| Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de un archivo de información **.exe**, **.dll** o **.plist** como un objeto<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
+La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función devuelve un objeto vacío (no se genera ningún error).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
-**Returned object with a .exe or .dll file**
+**Objeto devuelto con un archivo .exe o .dll**
 
 > La lectura de un .exe o .dll sólo es posible en Windows.
 
-All property values are Text.
+Todos los valores de propiedades son de tipo Texto.
 
 | Propiedad    | Tipo |
 | ------------ | ---- |
@@ -339,9 +339,9 @@ All property values are Text.
 
 |CompanyName|Text| |LegalCopyright|Text| |ProductVersion|Text| |FileDescription|Text| |FileVersion|Text| |OriginalFilename|Text|
 
-**Returned object with a .plist file**
+**Objeto devuelto con un archivo .plist**
 
-The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). `.plist dict` is returned as a JSON object and `.plist array` is returned as a JSON array.
+El contenido xml del archivo se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). `.plist dict` se devuelve como un objeto JSON y `.plist array` se devuelve como un array JSON.
 
 #### Ejemplo
 
@@ -400,11 +400,11 @@ ALERT($info.Copyright)
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                           |
-| ----------------- | --------- | -- | ------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino                    |
-| newName           | Text      | -> | Full name for the moved file          |
-| Result            | 4D.File   | <- | Moved file|<!-- END REF -->
+| Parámetros        | Tipo      |    | Descripción                               |
+| ----------------- | --------- | -- | ----------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                        |
+| newName           | Text      | -> | Nombre completo del archivo trasladado    |
+| Result            | 4D.File   | <- | Archivo movido|<!-- END REF -->
 
 
 |
@@ -508,7 +508,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+La función debe utilizarse con un archivo .exe, .dll o .plist existente. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
