@@ -12,18 +12,18 @@ title: WebSocket
 </details>
 
 
-The `WebSocket` class allows you to open a WebSocket client connection with a server, send and receive data, and close the connection.
+`WebSocket` クラスを使用すると、サーバーとの WebSocket クライアント接続を開いて、データを送受信し、接続を閉じることができます。
 
-WebSocket client connections are useful, for example, to receive financial data in real time or send and receive messages from a chat.
+WebSocketクライアント接続は、たとえばリアルタイムで財務データを受信したり、チャットでメッセージを送受信したりするのに便利です。
 
 ### 例題
 
-In this example, we create a very basic WebSocket client.
+この例題では、基本的な WebSocketクライアントを作成します。
 
-1. Create the `WSConnectionHandler` user class containing callback function(s) used to handle WebSocket event callbacks:
+1. WebSocket イベントコールバックを処理するためのコールバック関数を含む `WSConnectionHandler` ユーザークラスを作成します:
 
 ```4d
-// WSConnectionHandler class
+// WSConnectionHandler クラス
 
 Class constructor
 
@@ -31,16 +31,16 @@ Function onMessage($ws : 4D.WebSocket; $event : Object)
    ALERT($event.data)
 
 Function onTerminate($ws : 4D.WebSocket; $event : Object)
-   ALERT("Connection closed")
+   ALERT("接続を終了しました")
 ```
 
-2. Connect to the WebSocket server from a 4D form by instantiating a 4D.WebSocket:
+2. 4D.WebSocket をインスタンス化して、4Dフォームから WebSocketサーバーに接続します:
 
 ```4d
 Form.webSocket:=4D.WebSocket.new($wssUrl; cs.WSConnectionHandler.new())
 ```
 
-3. To send messages to the WebSocket server from the 4D form, you can write:
+3. 4Dフォームから WebSocketサーバーにメッセージを送るには、次のように書きます:
 
 ```4d
 Form.webSocket.send("Hello world")
@@ -50,9 +50,9 @@ Form.webSocket.send("Hello world")
 
 
 
-### WebSocket object
+### WebSocket オブジェクト
 
-WebSocket objects provide the following properties and functions:
+WebSocketオブジェクトは、以下のプロパティと機能を提供します:
 
 |                                                                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,46 +73,46 @@ WebSocket objects provide the following properties and functions:
 
 
 <!-- REF #4D.WebSocket.new().Params -->
-| 引数                                                | タイプ          |    | 説明                                                                   |
-| ------------------------------------------------- | ------------ |:--:| -------------------------------------------------------------------- |
-| url                                               | Text         | -> | URL to which to connect                                              |
-| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Object declaring WebSocket callbacks                                 |
-| 戻り値                                               | 4D.WebSocket | <- | New [WebSocket object](#websocket-object)|<!-- END REF -->
+| 引数                                             | タイプ          |    | 説明                                                                  |
+| ---------------------------------------------- | ------------ |:--:| ------------------------------------------------------------------- |
+| url                                            | Text         | -> | 接続先の URL                                                            |
+| [connectionHandler](#connectionHandler-パラメーター) | Object       | -> | WebSocket用コールバックを宣言しているオブジェクト                                       |
+| 戻り値                                            | 4D.WebSocket | <- | 新規の [WebSocketオブジェクト](#websocket-オブジェクト)|<!-- END REF -->
 
 
 |
 
 
-The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->。 The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
+`4D.WebSocket.new()` 関数は、 <!-- REF #4D.WebSocket.new().Summary -->*url* で指定したアドレスの WebSocketサーバーに接続された新しい [`4D.WebSocket` オブジェクト](#websocket-オブジェクト) を作成して返します<!-- END REF -->。 `4D.WebSocket` オブジェクトは、サーバーとの WebSocket接続の作成と管理、およびデータの送受信のための API を提供します。
 
-In *url*, pass the URL to which the WebSocket server will respond. The following URL patterns can be used:
+*url*には、WebSocketサーバーが応答する URL を渡します。 以下の URLパターンが使用できます:
 
-- `ws://host[:port]path[?query]` for standard connections
-- `wss://host[:port]path[?query]` for TLS secured connections
+- 標準接続用: `ws://host[:port]path[?query]`
+- TLSセキュア接続用: `wss://host[:port]path[?query]`
 
-If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
+接続できない場合、`null` オブジェクトが返され、エラーが生成されます (このエラーは `ON ERR CALL` で実装したメソッドによってインターセプトできます)。
 
 
-### *connectionHandler* parameter
+### *connectionHandler* パラメーター
 
-In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, and data type to handle.
+*connectionHandler* には、接続イベントや処理するデータ型に応じて呼び出されるコールバック関数を含むオブジェクトを渡すことができます。
 
-- Callbacks are automatically called in the context of the form or worker that initiates the connection.
-- The lifetime of the WebSocket must be at least the same as the lifetime of the form or worker.
+- コールバックは、接続を開始したフォームまたはワーカーのコンテキストで自動的に呼び出されます。
+- WebSocket の存続期間は、少なくともこれらのフォームまたはワーカーの存続期間と同じでなければなりません。
 
-| プロパティ       | タイプ                          | 説明                                                                                                                                                                                      |
-| ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onMessage   | [Function](FunctionClass.md) | Callback function for WebSocket data. Called each time the WebSocket has received data. コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "message"</li><li>`$2.data` (text, blob, or object, see `dataType`): Received data</li></ul> |
-| onError     | [Function](FunctionClass.md) | Callback function for execution errors. コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul>                                                 |
-| onTerminate | [Function](FunctionClass.md) | Callback function when the WebSocket is terminated. コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li><li>`$2.wasClean` (boolean, read-only): Indicates whether or not the connection was cleanly closed.</li></ul>                                     |
-| onOpen      | [Function](FunctionClass.md) | Callback function when the websocket is open. コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>                                        |
-| dataType    | Text                         | Type of the data received or sent. Available values: "text" (default), "blob", "object". "text" = utf-8                                                                                 |
+| プロパティ       | タイプ                          | 説明                                                                                                                                                      |
+| ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| onMessage   | [Function](FunctionClass.md) | WebSocket データ用のコールバック関数。 WebSocket がデータを受信するたびに呼び出されます。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "message"</li><li>`$2.data` (text, BLOB, または object。`dataType` 参照): 受信データ</li></ul> |
+| onError     | [Function](FunctionClass.md) | 実行エラー用のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "error"</li><li>`$2.errors`: 実行エラーの場合、4Dエラースタックのコレクション。<ul><li>`[].errCode` (number): 4Dエラーコード</li><li>`[].message` (text): 4Dエラーの説明</li><li>`[].componentSignature` (text) - エラーを返した内部コンポーネントの署名</li></ul></li></ul>                                        |
+| onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li><li>`$2.wasClean` (boolean、読み取り専用): 接続がきれいに閉じられたかどうかを示します。</li></ul>                              |
+| onOpen      | [Function](FunctionClass.md) | WebSocket が開始した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "open"</li></ul>                           |
+| dataType    | Text                         | 受信または送信されたデータの型。 可能な値: "text" (デフォルト), "blob", "object"。 "text" = utf-8                                                                                 |
 
 以下は、コールバック呼び出しの流れです:
 
-1. `onOpen` is executed once
-2. Zero or several `onMessage` are executed
-3. Zero or one `onError` is executed (stops the processing)
+1. `onOpen` は 1回実行されます。
+2. `onMessage` が 0回以上実行されます。
+3. `onError` が 0回または 1回実行されます (処理を停止します)。
 4. `onTerminate` は常に実行されます。
 
 
@@ -126,7 +126,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 #### 説明
 
-`.dataType` プロパティは、 <!-- REF #WebSocketClass.dataType.Summary -->the type of the response body content<!-- END REF -->。 It can be "text", "blob", or "object".
+`.dataType` プロパティは、 <!-- REF #WebSocketClass.dataType.Summary -->レスポンス本文のデータ型です<!-- END REF -->。 "text"、"blob"、"object" のいずれかです。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->
@@ -151,7 +151,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 #### 説明
 
-`.id` プロパティは、 <!-- REF #WebSocketClass.id.Summary -->接続の一意な識別子を格納しあmす<!-- END REF -->。
+`.id` プロパティは、 <!-- REF #WebSocketClass.id.Summary -->接続の一意な識別子を格納します<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->
@@ -166,15 +166,15 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 
 <!-- REF #WebSocketClass.send().Params -->
-| 引数      | タイプ                |    | 説明                 |
-| ------- | ------------------ |:--:| ------------------ |
-| message | Text, Blob, Object | -> | Message to be sent |
+| 引数      | タイプ                |    | 説明        |
+| ------- | ------------------ |:--:| --------- |
+| message | Text, Blob, Object | -> | 送信するメッセージ |
 <!-- END REF -->
 
 
 #### 説明
 
-`.send()` 関数は、 <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->。
+`.send()` 関数は、 <!-- REF #WebSocketClass.send().Summary -->定義されたデータ型 (Text、Blob、または Object) で、WebSocket サーバーに *message* を送信します<!-- END REF -->。
 
 *メッセージ* の型によって、以下の内容が送信されます:
 
@@ -196,7 +196,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 #### 説明
 
-`.status` プロパティは、 <!-- REF #WebSocketClass.status.Summary -->the current connection status (can be "Connecting", "Closing", "Closed", or "Connected")<!-- END REF -->。
+`.status` プロパティは、 <!-- REF #WebSocketClass.status.Summary -->現在の接続ステータスを格納します ("Connecting"、"Closing"、"Closed"、"Connected" のいずれか)<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 
@@ -210,10 +210,10 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 
 <!-- REF #WebSocketClass.terminate().Params -->
-| 引数     | タイプ     |    | 説明                                                                  |
-| ------ | ------- |:--:| ------------------------------------------------------------------- |
-| code   | Integer | -> | Status code explaining why the connection is being closed           |
-| reason | Text    | -> | The reason why the connection is closing|<!-- END REF -->
+| 引数     | タイプ     |    | 説明                                             |
+| ------ | ------- |:--:| ---------------------------------------------- |
+| code   | Integer | -> | 接続が切断される理由を示すステータスコード                          |
+| reason | Text    | -> | 接続が切断される理由を説明するテキスト|<!-- END REF -->
 
 
 
@@ -223,14 +223,14 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 #### 説明
 
-`.terminate()` 関数は、 <!-- REF #WebSocketClass.terminate().Summary -->closes the WebSocket connection, along with optional *code* and *reason* parameters<!-- END REF -->。
+`.terminate()` 関数は、 <!-- REF #WebSocketClass.terminate().Summary -->任意の *code* および *reason* 引数とともに、WebSocket 接続を閉じます<!-- END REF -->。
 
-In *code*, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
+*code* には、接続を閉じる理由を説明するステータスコードを渡すことができます ([RFC6455 の WebSocket Connection Close Code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) も参照ください):
 
-- If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
-- If specified, the value of this code parameter overrides the automatic setting. The value must be an integer. Either 1000, or a custom code in the range 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
+- 指定しなかった場合、接続のクローズコードは自動的に設定されます: 通常終了の場合は 1000、そうでない場合は、接続が切断された実際の理由を示す 1001〜1015 の標準値。
+- 指定された場合、この code パラメーターの値は自動設定の値をオーバーライドします。 値は整数でなくてはなりません。 1000、または 3000-4999 の範囲のカスタムコードが利用できます。 *code* を指定する場合は、*reason* の値も指定する必要があります。
 
-In *reason*, you can pass a string describing why the connection is being closed. 
+*reason* には、接続を閉じる理由を説明するテキストを渡すことができます。 
 
 
 <!-- END REF -->
@@ -243,7 +243,7 @@ In *reason*, you can pass a string describing why the connection is being closed
 
 #### 説明
 
-`.url` プロパティは、 <!-- REF #WebSocketClass.connections.Summary -->the URL to which the WebSocket has connected<!-- END REF -->。 It is the URL you passed to the [`new()`](#4dwebsocketnew) function.
+`.url` プロパティは、 <!-- REF #WebSocketClass.connections.Summary -->WebSocket が接続した URL を格納します<!-- END REF -->。 これは、[`new()`](#4dwebsocketnew) 関数に渡した URL と同じです。
 
 このプロパティは 読み取り専用 です。
 

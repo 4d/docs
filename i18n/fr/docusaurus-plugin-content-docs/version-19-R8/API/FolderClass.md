@@ -409,9 +409,9 @@ Vous souhaitez déplacer et renommer un dossier :
 
 #### Description
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renomme le dossier avec le nom que vous avez passé dans *newName* et renvoie l'objet `Folder` renommé<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FolderClass.rename().Summary -->renomme le dossier avec le nom que vous avez passé dans *newName* et renvoie l'objet `Folder` renommé<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 
 **Objet retourné**
 

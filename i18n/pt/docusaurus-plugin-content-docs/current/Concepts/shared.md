@@ -22,7 +22,7 @@ Um catálogo único e global devolvido  pelo comando `Storage` está sempre disp
 
 ## Utilização de objetos ou coleções compartidos
 
-Uma vez instanciados com os comandos `New shared object` ou `New shared collection` , as propriedades e os elementos do objeto/coleção partilhados podem ser modificados ou lidos a partir de qualquer processo da aplicação, sob determinadas condições.
+Quando forem instanciados com os comandos `New shared object` ou `New shared collection` , as propriedades e os elementos do objeto/coleção partilhados podem ser modificados ou lidos a partir de qualquer processo da aplicação, sob determinadas condições.
 
 ### Modificação
 
@@ -74,7 +74,7 @@ Consulte o exemplo 2 para ver uma ilustração das regras de grupos partilhados.
 
 Ao chamar a `Use` em um objeto/colección compartido de um grupo se bloquearão as propriedades/elementos de todos os objetos/coleções compartidos que pertençam ao mesmo grupo.
 
-However, it is necessary to read a shared object/collection within `Use... End use` when several values are linked together and must be read at once, for consistency reasons.
+No entanto, é necessário ler um objeto/coleção partilhado em `Use...End use` quando vários valores estão ligados entre si e devem ser lidos de uma só vez, por razões de coerência.
 
 ### Duplicação
 
@@ -111,7 +111,7 @@ Os objectos partilhados e as colecções partilhadas são concebidos para permit
 
 :::note
 
-Tenha em atenção que as funções de coleção [](../API/CollectionClass.md) que modificam coleções partilhadas desencadeiam automaticamente uma utilização interna **** para esta coleção partilhada enquanto a função for executada.
+Lembre que as funções de coleção [](../API/CollectionClass.md) que modificam coleções partilhadas desencadeiam automaticamente uma utilização interna **** para esta coleção partilhada enquanto a função for executada.
 
 :::
 
