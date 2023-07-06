@@ -58,7 +58,7 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 #### 説明
 
-`.id` プロパティは、 <!-- REF #WebSocketConnectionClass.id.Summary -->接続の一意な識別子を格納しあmす<!-- END REF -->。
+`.id` プロパティは、 <!-- REF #WebSocketConnectionClass.id.Summary -->接続の一意な識別子を格納します<!-- END REF -->。
 
 このプロパティは 読み取り専用 です。
 <!-- END REF -->
