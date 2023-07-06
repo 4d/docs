@@ -11,7 +11,7 @@ title: リリースノート
 
 #### ハイライト
 
-- New [WebSocket class](../API/WebSocketClass.md) to create and manage client WebSocket connections from 4D.
+- 新しい [WebSocket](../API/WebSocketClass.md) クラスで、4D から WebSocketクライアント接続を作成および管理できるようになりました。
 
 
 #### 動作の変更
