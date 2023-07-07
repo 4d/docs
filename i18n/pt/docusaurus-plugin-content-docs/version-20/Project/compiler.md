@@ -155,12 +155,12 @@ This setting allows you to select the processor family for which your 4D project
 
 Two target options are proposed. The result depends on the processor of the machine on which 4D is running.
 
-| *Option*                                         | *no Windows Intel/AMD*                                                                     | *macOS Intel*                                                                                | *no macOS Silicon*                                                                           |
-| ------------------------------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br/>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* |
-| **O meu processador (processador)**              | Código para Intel/AMD                                                                      | Código para Intel/AMD                                                                        | Código para Apple Silicon                                                                    |
+| *Option*                                               | *no Windows Intel/AMD*                                                                     | *macOS Intel*                                                                                | *no macOS Silicon*                                                                           |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| **Todos os processadores (Intel/AMD e Apple Silicon)** | Code for Intel/AMD<br/>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br/>*Two compiled codes will be available* |
+| **O meu processador (processador)**                    | Código para Intel/AMD                                                                      | Código para Intel/AMD                                                                        | Código para Apple Silicon                                                                    |
 
-> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
+> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang vem com a versão mais recente do Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
 ### Digitação por defeito
 
