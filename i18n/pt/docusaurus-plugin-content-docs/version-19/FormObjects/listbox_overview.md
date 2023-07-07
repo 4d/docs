@@ -504,7 +504,7 @@ O suporte de ordenação padrão depende do tipo de list box:
 
 | Tipo de list box              | Suporte de ordenação padrão | Comentários                                                                                                  |
 | ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Uma coleção de objetos        | Sim                         | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Uma coleção de objetos        | Sim                         | <li>As colunas "This.a" ou "This.a.b" podem ser ordenadas.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
 | Colecção de valores escalares | Não                         | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
 | Seleção de entidades          | Sim                         | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Selecção actual               | Sim                         | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
@@ -1146,7 +1146,7 @@ The "color" valueType allows you to display either a color or a text.
 
 The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
-Optionally, you can pass a "label" attribute.
+Opcionalmente, pode passar um atributo "label".
 
 Exemplo:
 
