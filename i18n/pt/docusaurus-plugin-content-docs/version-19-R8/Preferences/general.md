@@ -61,7 +61,7 @@ Estão disponíveis três opções:
 *   **Light**: Use the Light Theme
 *   **Dark**: Use the Dark Theme
 
-> Esta preferência só é suportada no macOS. On Windows, the "Light" scheme is always used.
+> Esta preferência só é suportada no macOS. No Windows, é sempre utilizado o esquema "Light".
 
 
 ### Exit Design when going to Application Environment
@@ -90,7 +90,7 @@ When this option is checked, a log file is automatically started and used when a
 
 When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
 
-Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
+Thanks to this principle, under macOS the database folders appear as packages having specific properties. No Windows, isto não tem qualquer impacto particular.
 
 ### Incluir tokens nos ficheiros de origem do projeto
 
