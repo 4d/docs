@@ -13,7 +13,7 @@ As formas 4D suportam as seguintes formas básicas:
 
 ## Retângulo
 
-A static rectangle is a decorative object for forms. Rectangles are constrained to squared shapes.
+A static rectangle is a decorative object for forms. Os rectângulos são limitados a formas quadradas.
 
 The design of rectangles is controlled through many properties (color, line thickness, pattern, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
 
