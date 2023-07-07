@@ -76,7 +76,7 @@ When this option is checked, a log file is automatically started and used when a
 
 When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
 
-Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
+Thanks to this principle, under macOS the database folders appear as packages having specific properties. No Windows, isto não tem qualquer impacto particular.
 
 ### Linguagem de comparação de texto
 
