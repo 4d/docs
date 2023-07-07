@@ -90,26 +90,26 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Filtro de entrada             | Descrição                                                                                                                                            |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                            | Permite quaisquer letras, mas converte-as em maiúsculas.                                                                                             |
-| &9                            | Permitir apenas números.                                                                                                                             |
-| &A                            | Permitir apenas letras maiúsculas.                                                                                                                   |
-| &a                            | Allow only letters (uppercase and lowercase).                                                                                                        |
-| &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                  |
-| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Allow any two letters, but convert to uppercase.                                                    |
-| !0&9##/##/##                  | Formato de entrada de data standard. Display zeros in entry spaces. Permitir quaisquer números.                                                      |
-| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                          |
-| !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.              |
-| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números antes de cada palavra.                                             |
-| !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números quaisquer depois de cada palavra.                                  |
-| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Três entradas, hífen, quatro entradas.                       |
-| !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                 |
-| !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-####               | Número de segurança social. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
-| ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                            |
-| &"a-z;0-9; ;,;.;-"            | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                 |
-| &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                               |
+| Filtro de entrada             | Descrição                                                                                                                                                     |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                            | Permite quaisquer letras, mas converte-as em maiúsculas.                                                                                                      |
+| &9                            | Permitir apenas números.                                                                                                                                      |
+| &A                            | Permitir apenas letras maiúsculas.                                                                                                                            |
+| &a                            | Permitir apenas letras (maiúsculas e minúsculas).                                                                                                             |
+| &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                           |
+| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Allow any two letters, but convert to uppercase.                                                             |
+| !0&9##/##/##                  | Formato de entrada de data standard. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
+| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                                   |
+| !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. São permitidos quatro números quaisquer, separados por dois pontos. |
+| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números antes de cada palavra.                                                      |
+| !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números quaisquer depois de cada palavra.                                           |
+| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Três entradas, hífen, quatro entradas.                                |
+| !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                          |
+| !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries.          |
+| !0&9###-##-####               | Número de segurança social. Display zeros in entry spaces. Permitir quaisquer números.                                                                        |
+| ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                     |
+| &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                           |
+| &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                        |
 
 #### Gramática JSON
 
@@ -131,7 +131,7 @@ When the **Focusable** property is enabled for an object, the object can have th
 
 - ![](../assets/en/FormObjects/property_focusable1.png)<br/>A caixa de verificação mostra o foco quando selecionada
 
-- ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
+- ![](../assets/en/FormObjects/property_focusable2.png)<br/>A caixa de verificação está selecionada mas não pode mostrar o foco|
 
 When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
 
