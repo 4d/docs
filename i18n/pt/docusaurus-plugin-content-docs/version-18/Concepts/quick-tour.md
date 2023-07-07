@@ -37,7 +37,7 @@ Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao inv�
 A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. You create a typed variable using a `C_XXX` command. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
 ```4d
-C_DATE(MyDate) //Date type for MyDate variable
+C_DATE(MyDate) //Tipo de data para a variável MyDate
 ```
 
 Even if it is usually not recommended, you can create variables simply by using them; you do not necessarily need to formally define them as you do with fields. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
@@ -183,7 +183,7 @@ myColl[3]  //access to 4th element of the collection
 
 ## Operadores
 
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
+When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. Estes cálculos são efectuados com operadores. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
 
 | Operador | Operação      | Exemplo   |
 | -------- | ------------- | --------- |
