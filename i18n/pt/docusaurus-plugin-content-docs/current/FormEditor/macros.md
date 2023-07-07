@@ -76,11 +76,11 @@ When macros are defined in your 4D project, you can call a macro using the conte
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macro items are sorted in alphabetical order.
+This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Os itens de macro estão ordenados por ordem alfabética.
 
 This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
 
-A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
+Uma única macro pode executar várias operações. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
 
 ## Localização do ficheiro macro
 
@@ -252,7 +252,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
 
-- Using an object with the following structure:
+- Utilizar um objeto com a seguinte estrutura:
 
 | Propriedade | Tipo | Descrição |
 | ----------- | ---- | --------- |
