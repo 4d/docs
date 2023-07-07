@@ -11,7 +11,7 @@ The 4D development environment provides several debugging tools for all types of
 
 ### Erros de dactilografia
 
-Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Aqui está um erro de dactilografia:
+Os erros de digitação são detectados pelo editor de código. They are displayed in red and additional information is provided at the bottom of the window. Aqui está um erro de dactilografia:
 
 ![break-point](../assets/en/Debugging/typing-error.png)
 
