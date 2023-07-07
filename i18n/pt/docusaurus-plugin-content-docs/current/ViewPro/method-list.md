@@ -517,7 +517,7 @@ The following columns are all the same size and don't display some of the text:
 
 ![](../assets/en/ViewPro/cmd_vpColumnAutoFit1.PNG)
 
-Selecting the columns and running this code:
+Selecionar as colunas e executar este código:
 
 ```4d
  VP COLUMN AUTOFIT(VP Get selection("ViewProarea"))
@@ -644,7 +644,7 @@ Document contents are converted with respect to their viewing attributes, includ
 
 #### Resultado
 
-The command returns a picture in SVG format.
+O comando devolve uma imagem em formato SVG.
 
 #### Exemplo
 
@@ -957,8 +957,8 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 | includeFormatInfo          | boolean    | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                         |
 | includeBindingSource       | Parâmetros | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). Caso contrário, false. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                           |
 | sheet                      | number     | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| pdfOptions                 | object     | PDF only (optional) - Options for pdf export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>título do documento.</td></tr><tr><td>autor</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>palavras-chave associadas ao documento.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| csvOptions                 | object     | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de linha. Padrão: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| pdfOptions                 | object     | Apenas PDF (opcional) - Opções para exportação de PDF <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>título do documento.</td></tr><tr><td>autor</td><td>text</td><td>nome da pessoa que criou o documento.</td></tr><tr><td>keywords</td><td>text</td><td>palavras-chave associadas ao documento.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| csvOptions                 | object     | Apenas CSV (opcional) - Opções para exportação csv <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de linha. Padrão: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `\<customProperty>` | any        | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 **Notes about Excel format**:
@@ -982,15 +982,15 @@ Once the export operation is finished, `VP EXPORT DOCUMENT` automatically trigge
 
 When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` command allows you to use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
 
-| Variável |               | Tipo    | Descrição                                                  |
-| -------- | ------------- | ------- | ---------------------------------------------------------- |
-| $1       |               | text    | O nome do objeto 4D View Pro                               |
-| $2       |               | text    | The filepath of the exported 4D View Pro object            |
-| $3       |               | object  | A reference to the command's *paramObj*                    |
-| $4       |               | object  | An object returned by the method with a status message     |
-|          | .success      | boolean | True if export with success, False otherwise.              |
-|          | .errorCode    | integer | Código de erro. Pode ser devolvido por 4D ou JavaScript.   |
-|          | .errorMessage | text    | Mensagem de erro. Pode ser devolvido por 4D ou JavaScript. |
+| Variável |               | Tipo    | Descrição                                                    |
+| -------- | ------------- | ------- | ------------------------------------------------------------ |
+| $1       |               | text    | O nome do objeto 4D View Pro                                 |
+| $2       |               | text    | The filepath of the exported 4D View Pro object              |
+| $3       |               | object  | A reference to the command's *paramObj*                      |
+| $4       |               | object  | An object returned by the method with a status message       |
+|          | .success      | boolean | True se a exportação for bem sucedida, False caso contrário. |
+|          | .errorCode    | integer | Código de erro. Pode ser devolvido por 4D ou JavaScript.     |
+|          | .errorMessage | text    | Mensagem de erro. Pode ser devolvido por 4D ou JavaScript.   |
 
 #### Exemplo 1
 
@@ -1005,7 +1005,7 @@ $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP" VP EXPORT DOCUMENT("VPArea";$do
 
 #### Exemplo 2
 
-You want to export the current sheet in PDF:
+Pretende exportar a folha atual em PDF:
 
 ```4d
 var $params: Object
@@ -1086,7 +1086,7 @@ Aqui está o resultado:
 
 #### Descrição
 
-The `VP Export to object` command <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->. You can use this command for example to store the 4D View Pro area in a 4D database object field.
+O comando `VP Export to object` <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->. You can use this command for example to store the 4D View Pro area in a 4D database object field.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -2657,7 +2657,7 @@ If *tableName* is not found or if it does not contain a modified column, the com
 
 #### Exemplo
 
-You want to count the number of edited rows:
+Pretende contar o número de linhas editadas:
 
 ```4d
 var $dirty : Collection
@@ -3252,7 +3252,7 @@ In the *insertAfter* parameter, you can pass one of the following constants to i
 | Parâmetros               | Valor | Descrição                                           |
 | ------------------------ | ----- | --------------------------------------------------- |
 | `vk table insert before` | 0     | Insert row(s) before the *row* (default if omitted) |
-| `vk table insert after`  | 1     | Insert row(s) after the *row*                       |
+| `vk table insert after`  | 1     | Inserir linha(s) após a *row*                       |
 
 This command inserts some rows in the *tableName* table, NOT in the sheet. The total number of rows of the sheet is not impacted by the command. Data present below the table (if any) are automatically moved down according to the number of added rows.
 
@@ -3863,7 +3863,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | vpAreaName | Text    | -> | 4D View Pro area form object name                                   |
 | tableName  | Text    | -> | Nome da tabela                                                      |
 | column     | Integer | -> | Index in the table of the starting column to remove                 |
-| count      | Text    | -> | Number of columns to remove (must be >0)                            |
+| count      | Text    | -> | Número de colunas a remover (tem de ser >0)                         |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
@@ -4638,7 +4638,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the colu
 | width       | number  | Column width expressed in pixels                                             |
 | pageBreak   | boolean | True to insert a page break before the first column of the range, else false |
 | visible     | boolean | True se a coluna for visível, senão false                                    |
-| resizable   | boolean | True if the column can be resized, else false                                |
+| resizable   | boolean | True se a coluna puder ser redimensionada, senão false                       |
 | header      | text    | Texto do cabeçalho da coluna                                                 |
 
 #### Exemplo
@@ -4776,7 +4776,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 |                          | parameters |            | Uma coleção de objetos | Collection of parameters (in the order they are defined in the formula)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |                          |            | \[ ].name | Text                   | Nome do parâmetro a mostrar no 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |                          |            | \[ ].type | Number                 | Type of the parameter. Tipos suportados:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If *type* is omitted or if the default value (-1) is passed, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If *type* is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value). |
-|                          | resumo     |            | Text                   | Formula description to display in 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                          | resumo     |            | Text                   | Descrição da fórmula a mostrar no 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |                          | minParams  |            | Number                 | Número mínimo de parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |                          | maxParams  |            | Number                 | Maximum number of parameters. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                                                            |
 > **AVISO**
@@ -4858,10 +4858,10 @@ In *dataObj* or *dataColl*, pass an object or a collection containing the data t
 
 To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
 
-| Propriedade | Tipo                                     | Descrição                                     |
-| ----------- | ---------------------------------------- | --------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date, Null | Valor a inserir no contexto                   |
-| time        | Real                                     | Time value (in seconds) to put in the context |
+| Propriedade | Tipo                                     | Descrição                                            |
+| ----------- | ---------------------------------------- | ---------------------------------------------------- |
+| value       | Integer, Real, Boolean, Text, Date, Null | Valor a inserir no contexto                          |
+| time        | Real                                     | Valor de hora (em segundos) a introduzir no contexto |
 
 In *options*, you can pass an object that specifies additional options. Possible properties are:
 
@@ -6149,7 +6149,7 @@ The following table lists the available workbook options:
 | allowSheetReorder                     | boolean                 | É permitida a reordenação de folhas                                                                                                                                                                                                                    |
 | allowUndo                             | boolean                 | Undoing edits is allowed.                                                                                                                                                                                                                              |
 | allowUserDeselect                     | boolean                 | Deselecting specific cells from a selection is allowed.                                                                                                                                                                                                |
-| allowUserDragDrop                     | boolean                 | Drag and drop of range data is allowed                                                                                                                                                                                                                 |
+| allowUserDragDrop                     | boolean                 | É permitido arrastar e largar dados de intervalo                                                                                                                                                                                                       |
 | allowUserDragFill                     | boolean                 | É permitido o preenchimento por arrastamento                                                                                                                                                                                                           |
 | allowUserEditFormula                  | boolean                 | Formulas can be entered in cells                                                                                                                                                                                                                       |
 | allowUserResize                       | boolean                 | Columns and rows can be resized                                                                                                                                                                                                                        |
@@ -6173,7 +6173,7 @@ The following table lists the available workbook options:
 | iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
 | iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
-| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                          |
+| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. Se a célula seguinte estiver vazia, transborda o conteúdo.</td></tr></table>                                                                                                                          |
 | pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                                  |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                              |
@@ -6188,7 +6188,7 @@ The following table lists the available workbook options:
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                          |
 | showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                             |
 | showHorizontalScrollbar               | boolean                 | Mostrar a barra de deslocação horizontal.                                                                                                                                                                                                              |
-| showResizeTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                             |
+| showResizeTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Só é mostrada a ponta de redimensionamento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                             |
 | showScrollTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                             |
 | showVerticalScrollbar                 | boolean                 | Display the vertical scroll bar.                                                                                                                                                                                                                       |
 | tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                     |
