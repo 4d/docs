@@ -30,7 +30,7 @@ Essa opção permite mudar o número da porta TCP na qual o 4D Server publica o 
 
 Customizing this value is necessary when you want to use several 4D applications on the same machine; in this case, you must specify a different port number for each application. When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database.
 
-To update any other client machines that are not connected, you just need to enter the new port number (preceded by a colon) after the IP address of the server machine on the **Custom** tab of the connection dialog box at the time of the next connection. For example, if the new port number is 19888:
+To update any other client machines that are not connected, you just need to enter the new port number (preceded by a colon) after the IP address of the server machine on the **Custom** tab of the connection dialog box at the time of the next connection. Por exemplo, se o novo número de porta é 19888:
 
 ![](../assets/en/settings/client-server-network.png)
 
