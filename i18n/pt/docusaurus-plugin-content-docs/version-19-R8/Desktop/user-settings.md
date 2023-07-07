@@ -42,7 +42,7 @@ You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://
 
 The Structure Settings dialog box is identical to the standard Settings, and provides access to all its properties (which can be overriden by user settings).
 
-## User Settings and User Settings for Data file
+## Propriedades usuário e definições do usuário para o ficheiro de dados
 
 The **User Settings** and **User Settings for Data File** dialog boxes contain a selection of relevant properties that can be defined for all data files or a single data file:
 
