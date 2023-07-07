@@ -83,9 +83,9 @@ WebSocket objects provide the following properties and functions:
 |
 
 
-The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
+A função `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
 
-In *url*, pass the URL to which the WebSocket server will respond. The following URL patterns can be used:
+In *url*, pass the URL to which the WebSocket server will respond. Podem ser utilizados os seguintes padrões de URL:
 
 - `ws://host[:port]path[?query]` for standard connections
 - `wss://host[:port]path[?query]` for TLS secured connections
@@ -93,7 +93,7 @@ In *url*, pass the URL to which the WebSocket server will respond. The following
 If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
 
 
-### *connectionHandler* parameter
+### Parâmetro *connectionHandler*
 
 In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, and data type to handle.
 
@@ -103,7 +103,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 | Propriedade | Tipo                         | Descrição                                                                                                                                                                                                               |
 | ----------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | Callback function for WebSocket data. Called each time the WebSocket has received data. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "message"</li><li>`$2.data` (text, blob, or object, see `dataType`): Received data</li></ul> |
-| onError     | [Function](FunctionClass.md) | Callback function for execution errors. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul>                                                 |
+| onError     | [Function](FunctionClass.md) | Função de retorno de chamada para erros de execução. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul>                                    |
 | onTerminate | [Function](FunctionClass.md) | Callback function when the WebSocket is terminated. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li><li>`$2.wasClean` (boolean, read-only): Indicates whether or not the connection was cleanly closed.</li></ul>                                     |
 | onOpen      | [Function](FunctionClass.md) | Callback function when the websocket is open. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>                                        |
 | dataType    | Text                         | Type of the data received or sent. Available values: "text" (default), "blob", "object". "text" = utf-8                                                                                                                 |
@@ -243,7 +243,7 @@ In *reason*, you can pass a string describing why the connection is being closed
 
 #### Descrição
 
-A propriedade `.url` contém <!-- REF #WebSocketClass.connections.Summary -->the URL to which the WebSocket has connected<!-- END REF -->. It is the URL you passed to the [`new()`](#4dwebsocketnew) function.
+A propriedade `.url` contém <!-- REF #WebSocketClass.connections.Summary -->o URL ao qual o WebSocket se ligou<!-- END REF -->. It is the URL you passed to the [`new()`](#4dwebsocketnew) function.
 
 Esta propriedade é só de leitura.
 
