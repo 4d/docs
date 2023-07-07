@@ -99,10 +99,10 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
 
-| Parâmetros | Tipo |    | Descrição                                    |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| MethodName | Text | -> | Nome do método de projeto 4D a ser executado |
-| Param      | Text | -> | Text parameter to pass to the project method |
+| Parâmetros | Tipo |    | Descrição                                           |
+| ---------- | ---- |:--:| --------------------------------------------------- |
+| MethodName | Text | -> | Nome do método de projeto 4D a ser executado        |
+| Param      | Text | -> | Parâmetro texto a ser passado para o método projeto |
 
 **Usage:** URL or Form action.
 
@@ -216,7 +216,7 @@ When the Web server receives a request with data in the header or in the URL, 4D
 
 In this case, 4D can retrieve the values of the HTML objects found in the request using the `WEB GET VARIABLES` command. The `WEB GET VARIABLES` command retrieves the values as text.
 
-Consider the following HTML page source code:
+Considere o seguinte código fonte da página HTML:
 
 ```html
 <html>
