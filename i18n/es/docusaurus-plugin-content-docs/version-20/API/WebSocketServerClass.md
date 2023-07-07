@@ -131,12 +131,12 @@ La llamada a esta función requiere que el [Server Web 4D](WebServerClass.md) es
 
 En el parámetro *WSSHandler*, pase una instancia de una clase usuario que será llamada cada vez que ocurra un evento en el servidor WebSocket --esencialmente, eventos de conexión. La clase debe definir las siguientes funciones de retrollamada (sólo `onConnection` es obligatoria):
 
-| Propiedad    | Tipo                         | Descripción                                                                             | Default    |
-| ------------ | ---------------------------- | --------------------------------------------------------------------------------------- | ---------- |
-| onConnection | [Function](FunctionClass.md) | (obligatorio) Retro llamada cuando se inicia una nueva conexión cliente (ver más abajo) | indefinido |
-| onOpen       | [Function](FunctionClass.md) | Retrollamada cuando se inicia el servidor WebSocket (ver más abajo)                     | indefinido |
-| onTerminate  | [Function](FunctionClass.md) | Retrollamada cuando se termina el servidor WebSocket (ver abajo)                        | indefinido |
-| onError      | [Function](FunctionClass.md) | Retrollamada cuando se ha producido un error (ver abajo)                                | indefinido |
+| Propiedad    | Tipo                         | Descripción                                                                             | Por defecto |
+| ------------ | ---------------------------- | --------------------------------------------------------------------------------------- | ----------- |
+| onConnection | [Function](FunctionClass.md) | (obligatorio) Retro llamada cuando se inicia una nueva conexión cliente (ver más abajo) | indefinido  |
+| onOpen       | [Function](FunctionClass.md) | Retrollamada cuando se inicia el servidor WebSocket (ver más abajo)                     | indefinido  |
+| onTerminate  | [Function](FunctionClass.md) | Retrollamada cuando se termina el servidor WebSocket (ver abajo)                        | indefinido  |
+| onError      | [Function](FunctionClass.md) | Retrollamada cuando se ha producido un error (ver abajo)                                | indefinido  |
 
 
 **WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
@@ -326,10 +326,10 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 En el parámetro opcional *options*, pase un objeto que contenga las siguientes propiedades:
 
-| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                    | Default    |
-| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| path      | Text | Representa la ruta de acceso al servidor WebSocket. Si no se define ninguna ruta, el servidor WebSocket gestiona todas las conexiones                                                                                                                                                                                                          | indefinido |
-| dataType  | Text | Tipo de los datos recibidos a través de la función `connectionHandler.onMessage` y de los datos enviados por [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send). Valores: "text", "blob","object"). Si "object": (send) transforma object en formato json y lo envía; (reception): recibe formato json y lo transforma en object | text       |
+| Propiedad | Tipo | Descripción                                                                                                                                                                                                                                                                                                                                    | Por defecto |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| path      | Text | Representa la ruta de acceso al servidor WebSocket. Si no se define ninguna ruta, el servidor WebSocket gestiona todas las conexiones                                                                                                                                                                                                          | indefinido  |
+| dataType  | Text | Tipo de los datos recibidos a través de la función `connectionHandler.onMessage` y de los datos enviados por [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send). Valores: "text", "blob","object"). Si "object": (send) transforma object en formato json y lo envía; (reception): recibe formato json y lo transforma en object | text        |
 
 
 <!-- REF #WebSocketServerClass.connections.Desc -->
