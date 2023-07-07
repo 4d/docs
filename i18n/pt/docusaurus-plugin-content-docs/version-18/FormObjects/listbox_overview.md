@@ -1013,7 +1013,7 @@ The "color" valueType allows you to display either a color or a text.
 
 The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. Nenhum dado ou valor pode ser transmitido ou devolvido.
 
-Optionally, you can pass a "label" attribute.
+Opcionalmente, pode passar um atributo "label".
 
 Exemplo:
 
