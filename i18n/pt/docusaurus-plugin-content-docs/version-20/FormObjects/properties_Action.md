@@ -88,7 +88,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 ---
 ## Métodos
 
-Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
+Referência de um método ligado ao objeto. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
 Several types of method references are supported:
 
