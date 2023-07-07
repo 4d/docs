@@ -69,7 +69,7 @@ The `Documentation` folder architecture is the following:
 
 ### Ver a documentação
 
-To view documentation in the Explorer window:
+Para visualizar a documentação na janela do Explorer:
 
 1. Certifique-se de que a área de pré-visualização é mostrada.
 2. Select the documented element in the Explorer list.
