@@ -71,7 +71,7 @@ A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indic
 ### .bandRows
 
 <!-- REF #TableOptions.bandRows.Syntax -->
-**.bandRows** : Boolean<!-- END REF -->
+**.bandRows**: Boolean<!-- END REF -->
 
 A propriedade `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->. Padrão = True
 
@@ -182,7 +182,7 @@ The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summar
 <!-- REF #TableStyle.borderLeft.Syntax -->
 **.borderLeft** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->left border line of the table <!-- END REF -->.
+A propriedade `.borderLeft` é a <!-- REF #TableStyle.borderLeft.Summary -->left border line of the table <!-- END REF -->.
 
 
 ### .borderRight
@@ -190,7 +190,7 @@ The `.borderLeft` property is the <!-- REF #TableStyle.borderLeft.Summary -->lef
 <!-- REF #TableStyle.borderRight.Syntax -->
 **.borderRight** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->right border line of the table <!-- END REF -->.
+A propriedade `.borderRight` é a <!-- REF #TableStyle.borderRight.Summary -->right border line of the table <!-- END REF -->.
 
 
 ### .borderBottom
@@ -227,7 +227,7 @@ The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summar
 ### .bandRows
 
 <!-- REF #TableTheme.bandRows.Syntax -->
-**.bandRows** : Boolean<!-- END REF -->
+**.bandRows**: Boolean<!-- END REF -->
 
 A propriedade `.bandRows` <!-- REF #TableTheme.bandRows.Summary -->indicates whether to display an alternating row style<!-- END REF -->.
 
