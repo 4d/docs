@@ -45,7 +45,7 @@ You can attach the debugger to any remote 4D client allowed to connect to the 4D
 
 > The remote 4D client's user session must have access to the Design environment of the database.
 
-To attach the debugger to a remote 4D client:
+Para anexar o depurador a um cliente 4D remoto:
 
 1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).
 2. In a remote 4D client connected to the server, select **Run** > **Attach Remote Debugger**
