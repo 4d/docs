@@ -1064,10 +1064,10 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                |
-| ------- | -------------------------------------------- |
-| v20     | Server side support, new `options` parameter |
-| v17 R6  | Ajout                                        |
+| Version | Modifications                                             |
+| ------- | --------------------------------------------------------- |
+| v20     | Prise en charge côté serveur, nouveau paramètre `options` |
+| v17 R6  | Ajout                                                     |
 
 </details>
 
@@ -1075,47 +1075,47 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Paramètres | Type    |    | Description                                                                   |
-| ---------- | ------- | -- | ----------------------------------------------------------------------------- |
-| file       | 4D.File | -> | Objet File                                                                    |
-| options    | Integer | -> | Log response option (server only)                                             |
-| reqNum     | Integer | -> | Number of requests to keep in memory (client only)|<!-- END REF -->
+| Paramètres | Type    |    | Description                                                                          |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
+| file       | 4D.File | -> | Objet File                                                                           |
+| options    | Integer | -> | Option d'enregistrement de réponse (serveur uniquement)                              |
+| reqNum     | Integer | -> | Nombre de demandes à garder en mémoire (client uniquement)<!-- END REF -->
 
 |
 
 #### Description
 
-La fonction `startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side or on the server side<!-- END REF -->. Elle est conçue à des fins de débogage dans les configurations client/serveur.
+La fonction `startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->démarre l'enregistrement des requêtes ORDA côté client ou côté serveur<!-- END REF -->. Elle est conçue à des fins de débogage dans les configurations client/serveur.
 
 :::info
 
-For a description of the ORDA request log format, please refer to the [**ORDA requests**](../Debugging/debugLogFiles.md#orda-requests) section.
+Pour une description du format du journal des requêtes ORDA, veuillez vous référer à la section [**Requêtes ORDA**](../Debugging/debugLogFiles.md#orda-requests).
 
 :::
 
-#### Client-side
+#### Côté client
 
-To create a client-side ORDA request log, call this function on a remote machine. The log can be sent to a file or to memory, depending on the parameter type:
+Pour créer un journal des requêtes ORDA côté client, appelez cette fonction sur une machine distante. Le journal peut être envoyé à un fichier ou en mémoire, selon le type de paramètre :
 
-* Si vous avez passé un objet *file* créé à l'aide de la commande `File`, les données de l'enregistrement sont écrites dans ce fichier sous forme de collection d'objets (format JSON). Chaque objet représente une requête.<br/>Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées. If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+* Si vous avez passé un objet *file* créé à l'aide de la commande `File`, les données de l'enregistrement sont écrites dans ce fichier sous forme de collection d'objets (format JSON). Chaque objet représente une requête.<br/>Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées. Si la fonction `.startRequestLog()` est appelée avec un fichier alors qu'un enregistrement des requêtes est déjà en cours en mémoire, l'enregistrement en mémoire est stoppé et vidé.
 > Un caractère \] doit être ajouté manuellement à la fin du fichier pour effectuer une validation JSON
 
 * Si vous avez passé un numéro *reqNum*, l'enregistrement en mémoire est vidé (le cas échéant) et un nouvel enregistrement est lancé. Il gardera en mémoire les requêtes jusqu'à atteindre le nombre *reqNum*, auquel cas les entrées précédentes sont vidées (pile FIFO).<br/>Si la fonction `.startRequestLog()` est appelée avec un *reqNum* alors qu'un enregistrement des requêtes dans un fichier est déjà en cours, l'enregistrement dans le fichier est stoppé.
 
 * Si vous n'avez passé aucun paramètre, l'enregistrement est lancé dans la mémoire. Si `.startRequestLog()` a été préalablement appelée avec un *reqNum* (avant un `.stopRequestLog()`), les données enregistrées sont empilées dans la mémoire jusqu'au prochain vidage ou appel de `.stopRequestLog()`.
 
-#### Server-side
+#### Côté serveur
 
-To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Each object represents a request. If the file does not already exist, it is created. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées.
+Pour créer un journal des requêtes ORDA côté serveur, appelez cette fonction sur la machine serveur. Les données du journal sont écrites dans un fichier au format `.jsonl`. Chaque objet représente une requête. Si le fichier n'existe pas encore, il est créé. Sinon, s'il existe déjà, les nouvelles données d'enregistrement y sont ajoutées.
 
-- If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
-- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
+- Si vous avez passé le paramètre *file* , les données du journal sont écrites dans ce fichier, à l'emplacement demandé. - Si vous omettez le paramètre *file* ou s'il est null, les données du journal sont écrites dans un fichier nommé *ordaRequests.jsonl* et stockées dans le dossier "/LOGS".
+- Le paramètre *options* peut être utilisé pour spécifier si la réponse du serveur doit être enregistrée et si elle doit inclure le corps du message. Par défaut, lorsque le paramètre est omis, la réponse complète est enregistrée. Les constantes suivantes peuvent être utilisées dans ce paramètre :
 
-| Constante                     | Description                               |
-| ----------------------------- | ----------------------------------------- |
-| srl log all                   | Log the response entirely (default value) |
-| srl log no response           | Disable the logging of the response       |
-| srl log response without body | Log the response without the body         |
+| Constante                     | Description                                            |
+| ----------------------------- | ------------------------------------------------------ |
+| srl log all                   | Enregistrer entièrement la réponse (valeur par défaut) |
+| srl log no response           | Désactiver l'enregistrement de la réponse              |
+| srl log response without body | Enregistrer la réponse sans le corps (body)            |
 
 
 #### Exemple 1
