@@ -112,6 +112,20 @@ Renderer buttons are hidden if the configuration options are not activated.
 
 For deployment, the WebAdmin server is not necessary. End-user access to your web application made with Qodly Studio is based on the 4D REST protocol, and as such, it works as through a conventional 4D remote application.
 
+
+### Using project methods
+
+We recommend using class functions over methods, but you can still use your project methods as REST functions in the studio.
+
+To be used in Qodly Studio, project methods must be defined as Datastore, Dataclass, Entity or Entity selection class functions. 
+
+To check if a method is available as REST function: 
+1. In the Explorer of your 4D application, **right-click a project method** > **Edit Properties...** to open the Method Properties dialog. 
+2. Check that the **REST Server** option is checked.
+
+Selecting **Scope** > **Catalog** designates the project method as a function of the Datastore class. No table (dataclass) is assigned in this case.
+
+
 ## Opening Qodly Studio
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above). 
